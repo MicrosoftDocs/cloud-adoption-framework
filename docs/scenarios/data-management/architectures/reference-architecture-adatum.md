@@ -38,17 +38,17 @@ In this reference architecture, we will deploy a data management landing zone, w
 
 A critical concept for every data management and analytics scenario is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
-### Data integrations
+### Data applications
 
-The landing zone will have two data integrations. The first integration will ingest data related to customers. This includes the customer records and their related records (like addresses, contacts, territory assignments, and contact history). This data will be imported from the Adatum CRM system.
+The landing zone will have two [data applications](data-application-source-aligned.md). The first integration will ingest data related to customers. This includes the customer records and their related records (like addresses, contacts, territory assignments, and contact history). This data will be imported from the Adatum CRM system.
 
-The second data integration will ingest sales transactions. This includes transaction headers, line item details, shipping records, and payments. All of these records will be ingested from the Adatum ERP system.
+The second data application will ingest sales transactions. This includes transaction headers, line item details, shipping records, and payments. All of these records will be ingested from the Adatum ERP system.
 
 These integrations won't transform or enrich the data. They only copy the data from the source systems and land it in the analytics platform. This allows many data products to consume the data in a scalable manner without putting another burden on the source system.
 
 ### Data products
 
-In this example, Adatum has one data product. This product combines raw data from the two data integrations and transforms them into a new dataset. From there, it can be picked up by business users for extra analysis and reporting with tools like Microsoft Power BI.
+In this example, Adatum has one data product. This product combines raw data from the two Data applications and transforms them into a new dataset. From there, it can be picked up by business users for extra analysis and reporting with tools like Microsoft Power BI.
 
 :::image type="content" source="../images/adatum.png" alt-text="Diagram of architecture." lightbox="../images/adatum.png":::
 
@@ -58,15 +58,15 @@ In this example, Adatum has one data product. This product combines raw data fro
 
 ### Why not put sales transactions and customers in their own data landing zones?
 
-One of the first decisions enterprises must make about their data management and analytics scenario is how to divide the entire data estate into landing zones. Data solutions that will frequently communicate with one another are strong candidates for inclusion in the same landing zone. This allows enterprises to reduce the costs associated with moving data across peered VNets. In this example, sales transaction data will frequently be linked to customer data. Therefore, it makes sense to store these related data integrations in the same data landing zone.
+One of the first decisions enterprises must make about their data management and analytics scenario is how to divide the entire data estate into landing zones. Data solutions that will frequently communicate with one another are strong candidates for inclusion in the same landing zone. This allows enterprises to reduce the costs associated with moving data across peered VNets. In this example, sales transaction data will frequently be linked to customer data. Therefore, it makes sense to store these related Data applications in the same data landing zone.
 
-An extra consideration for landing zones is how the teams responsible for the data are aligned within the organization. In this case, the two data integrations are owned by different teams, but those teams are both part of the sales and marketing division at Adatum.
+An extra consideration for landing zones is how the teams responsible for the data are aligned within the organization. In this case, the two Data applications are owned by different teams, but those teams are both part of the sales and marketing division at Adatum.
 
-### Why not let sales transactions and customers share one data integration?
+### Why not let sales transactions and customers share one Data application?
 
-By separating the customer data and the sales transaction data in their own data integrations, we allow the subject matter experts for those domains to make the best decisions for their particular data products. They can choose the access patterns, ingestion engines, and storage options that best meet their needs without conflicting with one another.
+By separating the customer data and the sales transaction data in their own Data applications, we allow the subject matter experts for those domains to make the best decisions for their particular data products. They can choose the access patterns, ingestion engines, and storage options that best meet their needs without conflicting with one another.
 
-For example, the team that has expertise with the CRM system will be responsible for the customer data integration. Based on the team's skill set and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers team.
+For example, the team that has expertise with the CRM system will be responsible for the customer Data application. Based on the team's skill set and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers team.
 
 ### Why move the sales team to the new data platform?
 
@@ -76,18 +76,6 @@ In this example, the corporate sales team is the first to move to the new data m
 
 Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management landing zone and all of the other landing zones. This mesh pattern allows data products and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continue to grow their data estates.
 
-## Deployment guidelines
-
-The customer scenario outlined above can be deployed by referencing the following architectures the Adatum data management landing zone and data landing zone:
-
-### Data management landing zone deployment
-
-:::image type="content" source="../images/adatum-data-management-landing-zone.png" alt-text="Adatum data management landing zone." lightbox="../images/adatum-data-management-landing-zone.png":::
-
-### Sales data landing zone deployment
-
-:::image type="content" source="../images/adatum-sales-data-landing-zone.png" alt-text="Adatum sales data landing zone." lightbox="../images/adatum-sales-data-landing-zone.png":::
-
 ### Deployment templates deployment
 
 To deploy the architecture baselines above, use the data management landing zone and the data landing zone reference implementation templates in the following GitHub repositories:
@@ -95,7 +83,7 @@ To deploy the architecture baselines above, use the data management landing zone
 - [Data management landing zone template](https://github.com/Azure/data-management-zone)
 - [Data landing zone template](https://github.com/Azure/data-landing-zone)
 
-Use the following template to deploy sales transactions, customer data integrations, and **Summary** data products in the Adatum sales data landing zones:
+Use the following template to deploy sales transactions, customer Data applications, and **Summary** data products in the Adatum sales data landing zones:
 
 - [Data product batch template](https://github.com/Azure/data-product-batch)
 
