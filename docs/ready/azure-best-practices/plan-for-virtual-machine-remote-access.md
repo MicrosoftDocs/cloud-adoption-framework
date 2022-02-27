@@ -25,9 +25,9 @@ The choice of which remote access solution is most appropriate depends on severa
 - When available, you can use existing hybrid connectivity to Azure VNets via ExpressRoute or S2S/P2S VPN connections to provide remote access from on-premises to Windows and Linux Azure VMs
 - NSGs can be used to secure SSH/RDP connections to Azure VMs
 - Just-in-time allows remote SSH/RDP access over the internet without having to deploy any additional infrastructure
-  - o	Please note that there are some [availability limitation](/azure/defender-for-cloud/just-in-time-access-usage)] with JIT access.
+  - o	Please note that there are some [availability limitation(/azure/defender-for-cloud/just-in-time-access-usage)] with JIT access.
   - o	Just-in-time access cannot be used for VMs protected by Azure Firewalls controlled by Azure Firewall Manager
-- [Azure Bastion](/azure/bastion/bastion-overview) provides an additional layer of control, enabling secure and seamless RDP/SSH connectivity to your virtual machines directly from the Azure portal or [native client](/azure/bastion/connect-native-client-windows)in preview over a secure TLS channel, also negating the need for hybrid connectivity.
+- [Azure Bastion](/azure/bastion/bastion-overview) provides an additional layer of control, enabling secure and seamless RDP/SSH connectivity to your virtual machines directly from the Azure portal or[native client](/azure/bastion/connect-native-client-windows)in preview over a secure TLS channel, also negating the need for hybrid connectivity.
 - Consider the appropriate Azure Bastion SKU to use based on your requirements as documented here [About Azure Bastion configurationsettings](/azure/bastion/configuration-settings#skus)
 - Review the [Azure Bastion FAQ](/answers/products/) for answers to common questions you may have about the service
 - Bastion can be used in VWAN topology, however there are some known limitations, such as:
