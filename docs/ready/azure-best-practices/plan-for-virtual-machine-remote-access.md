@@ -43,7 +43,7 @@ The choice of which remote access solution is most appropriate depends on severa
   - o	If in your environment is not allowed to grant users the Reader role on the Azure Bastion resource as well as the Hub VNet, use Azure Bastion (Basic or Standard SKU) to provide connectivity to virtual machines withing a spoke VNet by deploying a dedicated Azure Bastion instance into each spoke VNet that requires remote access. See Figure 3
 - Configure NSG rules to protect Azure Bastion and the Virtual Machines to which it provides connectivity as per the guidance documented in [Working with VMs and NSGs in Azure Bastion](/azure/bastion/bastion-nsg)]  
 - Configure Azure Bastion diagnostic logs to be sent to the central Log Analytics Workspace as documented here [Enable and work with Azure Bastion resource logs](/azure/bastion/diagnostic-logs)
-- Ensure the [required RBAC role assignments(/azure/bastion/bastion-faq#roles)] are made for the users/groups connecting to the Virtual Machines via Azure Bastion are in place.
+- Ensure the [required RBAC role assignments](/azure/bastion/bastion-faq#roles) are made for the users/groups connecting to the Virtual Machines via Azure Bastion are in place.
 - If connecting to Linux Virtual Machines via SSH, utilize the feature of [Connecting Using a private key stored in Azure Key Vault](/azure/bastion/bastion-connect-vm-ssh-linux#akv)
 - Deploy Azure Bastion in addition to ExpressRoute or VPN access to address specific needs such as Emergency break-glass access. 
 - Remote access to Windows and Linux VMs via public IPs directly attached to the virtual machines is discouraged and should never be deployed without very strict NSG rules and firewalling.
