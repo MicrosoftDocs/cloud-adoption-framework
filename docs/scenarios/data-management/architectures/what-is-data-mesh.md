@@ -20,7 +20,7 @@ However, as business has changed and with more and more diverse data being gener
 
 In recent years architectural patterns that uses a combination of both the data warehousing technologies and the more recent big data technologies. This modern analytical pattern is now used by many organizations successfully.
 
-:::image type="content" source="https://docs.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/media/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="https://docs.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/media/azure-analytics-end-to-end.png":::
+:::image type="content" source="../images/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="../images/azure-analytics-end-to-end.png":::
 
 However, some organizations have seen issues when deploying analytical solutions using this pattern.
 Common for all these solutions is that they still are implemented as a monolithic solution, with a single team being the provider of the platform and being the team doing the data integration. For larger organizations and companies having a single team, this team quite often becomes a bottle neck. This often results in a huge backlog with parts of the company having to wait for data integration services and finished analytical solutions. Many organizations have also seen this become a more common pattern with the adoption of data science within the company. The reason for this is that many data science solutions require more data compared to the more traditional business intelligence solutions adopted in the past.
