@@ -1,5 +1,5 @@
 ---
-title: AKS Landing Zone Accelerator
+title: AKS landing zone accelerator
 description: Learn to deploy AKS Landing Zone Accelerator.
 author: BrianBlanchard
 ms.author: brblanch
@@ -48,13 +48,13 @@ These articles provide guidelines for creating your landing zone based on the de
 
 The following conceptual reference architecture is an example that shows a golden state for an Azure Landing Zone with a corporate landing zone subscription and shows design areas and best practices.
 
-## Deploy AKS Landing Zone Accelerator
+## Deploy AKS landing zone accelerator
 
 [![AKS landing zone accelerator architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
 
 AKS landing zone accelerator is an open-source collection of ARM, Bicep and Terraform templates, available in the [`AKS landing zone accelerator`](https://aka.ms/aks-reference-implementation) repo.
 
-These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [`AKS landing zone accelerator`](https://aka.ms/aks-reference-implementation) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an Azure Landing Zone platform foundation as indicated in the image above.
+These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [`AKS landing zone accelerator`](https://aka.ms/aks-reference-implementation) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an Azure landing zone platform foundation as indicated in the image above.
 
 ## Next steps
 
