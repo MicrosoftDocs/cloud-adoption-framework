@@ -26,7 +26,7 @@ To explain the rationale behind the recommended design, this article will illust
 
 ## Single-region Data Landing Zone Connectivity
 
-:::image type="content" source="./images/SingleRegionConnectivity.png" alt-text="Single Region Connectivity":::
+:::image type="content" source="./images/single-region-connectivity.png" alt-text="Single Region Connectivity":::
 *Figure 2: Single Region Connectivity.*
 
 In the single-region setup, the Data Management Zone, the Data Landing Zones as well as all the services within them are set up in the same region. Also, all Landing Zones are connected to the same connectivity hub subscription, where shared network resources including an NVA like an Azure Firewall, an ExpressRoute Gateway, a VPN Gateway, the Hub Virtual Network in case of a Hub&Spoke architecture or the vWAN Hub in case of a vWan setup are hosted.
