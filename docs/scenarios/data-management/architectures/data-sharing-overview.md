@@ -28,4 +28,8 @@ Data contracts focus on different areas, which are:
 
 It's recommended to store all of your data contracts in a central [metadata](../govern-metadata-standards.md) repository. Such a contract repository is much more than a database. It's a control framework for your domain teams to discover data, validate and build on their data integrity. A well designed central contract repository also enables teams to analyze, see trends and violations. A good data contract repository also indirectly contributes to better data quality.
 
-About the governance, it's the data product owner or data steward's job to ensure the contract integrity, including the contract lifecycle and modifications. Data product owners also should use a workflow to enable data sharing in a self-service manner. [Azure Purview](/azure/purview), a unified data governance solution, can help you with this. It supports data use governance via [access policy enforcement](/azure/purview/tutorial-data-owner-policies-storage) for Blob storage and Azure Data Lake Storage (ADLS) Gen2. 
+About the governance, it's the data product owner or data steward's job to ensure the contract integrity, including the contract lifecycle and modifications. Data product owners also should use a workflow to enable data sharing in a self-service manner. [Azure Purview](/azure/purview), a unified data governance solution, can help you with this. It supports data use governance via [access policy enforcement](/azure/purview/tutorial-data-owner-policies-storage) for Blob storage and Azure Data Lake Storage (ADLS) Gen2.
+
+## Next steps
+
+[Getting Started Checklist](data-mesh-checklist.md)

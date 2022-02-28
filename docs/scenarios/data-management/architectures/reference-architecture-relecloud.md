@@ -3,7 +3,7 @@ title: Relecloud scenario for data management and analytics in Azure
 description: Learn about the Relecloud scenario for data management and analytics in Azure.
 author: AnalyticJeremy
 ms.author: jepeach
-ms.date: 11/25/2021
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -22,17 +22,17 @@ Relecloud is a private cloud provider offering shared computing and storage reso
 
 Although Relecloud provides compute resources of their own, they don't want to constrain their platform with their own internal operations. Therefore, they rely on Microsoft Azure for their internal computing needs. Last quarter, as the operations team was pursuing new analytics projects, the team modernized its analytics platform by migrating it to Azure. They chose to implement data management and analytics scenario to maximize the potential for scaling the platform and adding new workloads from the organization.
 
-Today, the billing group has outgrown its current analytics solution. The volume of invoices they must analyze has become too large for their on-premises server. They have decided to follow the lead of the operations group and modernize their platform in Azure.
+Today, the billing group has outgrown its current analytics solution. The volume of invoices they must analyze has become too large for their on-premises server. They've decided to follow the lead of the operations group and modernize their platform in Azure.
 
 However, analysts in the billing group have different skills than the analysts in the operations group. The billing analysts don't want to be constrained to use the same tools chosen by operations. The billing group is also in a different part of the organization, and they want the flexibility to implement the policies and procedures that meet their needs.
 
 ## Architectural solution
 
-Relecloud will scale their analytics platform by adding a new landing zone for the billing group. This will provide a virtual workspace for the billing group to implement the analytics solutions that'll meet their business needs. By having the landing zone separate from the organization's other resources, the billing group can implement its own access policies and account for the costs of its services.
+Relecloud will scale their analytics platform by adding a new landing zone for the billing group. This will provide a virtual workspace for the billing group to implement the analytics solutions that will meet their business needs. By having the landing zone separate from the organization's other resources, the billing group can implement its own access policies and account for the costs of its services.
 
 ### Data management landing zone
 
-A key concept for every data management and analytics scenario implementation is having one data management landing zone. This subscription contains resources that'll be shared across all landing zones. This includes shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance like Azure Policy and Azure Purview.
+A key concept for every data management and analytics scenario implementation is having one data management landing zone. This subscription contains resources that will be shared across all landing zones. This includes shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance like Azure Policy and Azure Purview.
 
 Relecloud created a data management landing zone when the solution was deployed for the operations group. When the billing group joins the platform, they'll use the same data management landing zone. This will allow them to share common resources with the operations group.
 
@@ -68,7 +68,7 @@ Both of these applications will be powered by pipelines in a shared Azure Synaps
 
 #### Billing data products
 
-The billing analysts will create a new data product called **Revenue by service** that'll analyze how much each cloud service generates for Relecloud. This product will rely on the data in the **Invoices** ingestion. It will also connect across to the operations landing zone and read the service usage data.
+The billing analysts will create a new data product called **Revenue by service** that will analyze how much each cloud service generates for Relecloud. This product will rely on the data in the **Invoices** ingestion. It will also connect across to the operations landing zone and read the service usage data.
 
 Like with data applications, the data product will also rely on a shared Azure Synapse workspace.
 

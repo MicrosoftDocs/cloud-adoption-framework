@@ -20,6 +20,8 @@ Use this article is to help assess and understand the access control mechanisms 
 
 You need a basic knowledge of storage containers, security groups, Azure RBAC, and ACLs. To frame the discussion, we reference a generic data lake structure of raw, enriched, and curated zones.
 
+This document can be used in conjunction with [Data Access Management](../security-provisioning.md).
+
 ## Using the built-in Azure RBAC roles
 
 Azure Storage has two layers of access: service management and data. Subscriptions and storage accounts are accessed through the service management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want a list of storage accounts from Azure, send a request to the management endpoint. If you want a list of file systems, folders, or files in a storage account, send a request to a service endpoint.

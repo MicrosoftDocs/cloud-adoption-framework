@@ -69,7 +69,7 @@ Data products should be automatically registered in a data catalog such as [Azur
 
 At the start of planning a data landing zone, you should have identified as many data products and their respective data applications that output and maintain them, as you need to help drive the data product application architecture. At the top of each decision should be conformity to implement platform governance.
 
-For your data applications, focus on how they're data producers and consumers for others. To understand further, let's assume you have identified a suite of data products (A, B, C, and D) which are produced and consumed data. You require data product A and D as a source to produce data in Data Application B for data product B. Data product B is created by Data Application B consuming data from data products A and D, and Data Application B acts as a data producer itself. It also produces data for data product C.
+For your data applications, focus on how they're data producers and consumers for others. To understand further, let's assume you've identified a suite of data products (A, B, C, and D) which are produced and consumed data. You require data product A and D as a source to produce data in Data Application B for data product B. Data product B is created by Data Application B consuming data from data products A and D, and Data Application B acts as a data producer itself. It also produces data for data product C.
 
 :::image type="content" source="../images/data-producers-consumers.png" alt-text="Diagram of a data producer and consumers.":::
 
@@ -111,7 +111,7 @@ The credit monitoring data product team requests read access to the read data st
 
 Data from the read data source is transformed into the credit monitoring data product(s). You'll store any new data products in the data lake's curated layer. These new data products should be registered, alongside the new data lineage, as part of the DevOps deployment process. A function should check registered metadata with the physical structure of the data asset. It should register the dependency on the read data source data assets/data products.
 
-The loan approval data product team take a dependency on some of the credit monitoring data products. They would request read access to the credit monitoring data products  they require for their data products. Upon release of the loan approval data product and its data application, all data product assets, lineage, and models should be registered in the relevant governance services.
+The loan approval data product team takes a dependency on some of the credit monitoring data products. They would request read access to the credit monitoring data products  they require for their data products. Upon release of the loan approval data product and its data application, all data product assets, lineage, and models should be registered in the relevant governance services.
 
 ## Sample data applications
 
@@ -170,7 +170,7 @@ The deployment and code artifacts include the following services:
 :::image type="content" source="../images/product-streaming.png" alt-text="Diagram that shows possible services that can be selected for Streaming Data Application Deployment." lightbox="../images/product-streaming.png":::
 
 - [Key Vault](/azure/key-vault/general)
-- [Event Hub](/azure/event-hubs/)
+- [Event Hubs](/azure/event-hubs/)
 - [IoT Hub](/azure/iot-hub/about-iot-hub)
 - [Stream Analytics](/azure/stream-analytics/stream-analytics-introduction) (optional)
 - [Cosmos DB](/azure/cosmos-db/introduction) (optional)
@@ -186,4 +186,4 @@ For the repositories containing the deployment templates you can refer to [Deplo
 
 ## Next steps
 
-[Overview of reference architectures for data management and analytics in Azure](./reference-architecture-overview.md)
+[Data applications (source-aligned)](data-application-source-aligned.md)

@@ -60,3 +60,7 @@ During your data journey with data management and analytics scenario, you'll fin
 ## Summary
 
 The above stages will allow you to set up a minimal viable product at stage one, learn and iterate onto stage two. Throughout this staged approach, you're growing in maturity in creating a self-service, scalable and governed platform.
+
+## Next steps
+
+[Overview of reference architectures for data management and analytics in Azure](reference-architecture-overview.md)

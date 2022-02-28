@@ -29,5 +29,8 @@ Synapse Industry Data Models are data models that can be used as predefined temp
 
 With the Lake Database technology within Azure Synapse Analytics Lake Databases provides a query and processing interface to the Data Product files stored in the Azure Data Lake.
 
-For further information on how to use  CDM refer to [Common Data Model](/common-data-model/) and for IDM refer to [Lake Database Templates](/azure/synapse-analytics/database-designer/overview-database-templates).
-  
+For more information on how to use  CDM, see [Common Data Model](/common-data-model/) and for IDM refer to [Lake Database Templates](/azure/synapse-analytics/database-designer/overview-database-templates).
+
+## Next steps
+
+[What is a data mesh?](what-is-data-mesh.md)

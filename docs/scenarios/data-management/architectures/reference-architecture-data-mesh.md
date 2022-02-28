@@ -3,7 +3,7 @@ title: Financial institution scenario for data mesh
 description: Learn about the data mesh scenario for data management and analytics in Azure.
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 10/01/2021
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -16,7 +16,7 @@ This reference architecture is written for customers that want to use data manag
 
 ## Customer profile
 
-Fictitious enterprise Woodgrove Bank is a very large financial services company with a world-wide footprint. Woodgrove Bank's data is housed in many different systems, which include on-premises and cloud deployments. Within the Woodgrove Bank architecture are several data warehouse systems for consolidated marketing and integrated reporting. This architecture also includes several data lakes for ad hoc analytics and data discovery. Finally, many of Woodgrove Bank's applications are interconnected via application integration patterns, which are mostly API-based or event-based.
+Fictitious enterprise Woodgrove Bank is a large financial services company with a world-wide footprint. Woodgrove Bank's data is housed in many different systems, which include on-premises and cloud deployments. Within the Woodgrove Bank architecture, their are several data warehouse systems for consolidated marketing and integrated reporting. This architecture also includes several data lakes for ad hoc analytics and data discovery. Finally, many of Woodgrove Bank's applications are interconnected via application integration patterns, which are mostly API-based or event-based.
 
 ## The current situation
 
@@ -26,7 +26,7 @@ Woodgrove Bank finds it challenging to distribute data toward different location
 
 Over the past several years, organizations have recognized that data is at the heart of everything. Data opens new efficiencies, drives innovation, unlocks new business models, and increases customer satisfaction. Becoming data-driven (using data at scale) remains a top priority for most companies.
 
-Reaching a stage where the deeper value of data becomes accessible to all organization members is challenging. Legacy and tightly interconnected systems, centralized monolithic platforms, and complex governance can be significant barriers to generating value out of data. For these and other reasons, data mesh is gaining a lot of traction among modern businesses.
+Reaching a stage where the deeper value of data becomes accessible to all organization members is challenging. Legacy and tightly interconnected systems, centralized monolithic platforms, and complex governance can be significant barriers to generating value out of data.
 
 ### About data mesh
 
@@ -47,7 +47,7 @@ Woodgrove Bank can embark on its transition to data mesh by using data managemen
 
 Data management and analytics scenario offers enterprises a strategic design path toward data mesh, and it can be used to quickly set up such an architecture. It offers a blueprint, including core data platform services for data management.
 
-At the highest level, data management and analytics scenario uses a data management capability, which is enabled through the data management landing zone. This zone is responsible for the federated data governance of an organization of the (self-service) platform, as well as the data domains that drive business value through data products. The benefit of this approach is that it abstracts away all technical complexity, while adhering to the same standards. It ensures that there is no proliferation of technology. It also allows enterprises to start modular, with a small footprint, and then grow over time.
+At the highest level, data management and analytics scenario use a data management capability, which is enabled through the data management landing zone. This zone is responsible for the federated data governance of an organization of the (self-service) platform, and the data domains that drive business value through data products. The benefit of this approach is that it abstracts away all technical complexity, while adhering to the same standards. It ensures that there's no proliferation of technology. It also allows enterprises to start modular, with a small footprint, and then grow over time.
 
 The data management landing zone, as you can see in the following diagram, surrounds all data domains. It glues all domains together and provides the oversight that Woodgrove Bank is looking for.
 
@@ -91,7 +91,7 @@ The following diagram illustrates a cross-domain data mesh architecture that use
 
 The network design allows a simple sharing of data products across domains without bandwidth limitations, a single point of failure, and minimal cost. To help ensure security, you can use the Microsoft *Zero Trust* security model. Data management and analytics scenario proposes the use of network isolation through private endpoints and private network communication, an identity-driven data access model that uses MIs, UMIs, and nested security groups, following the *principle of least privilege*.
 
-You can use managed identities to ensure that a least privilege access model is followed. Applications and services in this model have limited access to data products. Azure policies, in conjunction with the upcoming data policies, are used to enable self-service and enforce compliant resources within all data products, at scale. With this design, you can have uniform data access, while staying fully in control via centralized data governance and auditing.
+You can use managed identities to ensure that a least privilege access model is followed. Applications and services in this model have limited access to data products. Azure policies, with the upcoming data policies, are used to enable self-service and enforce compliant resources within all data products, at scale. With this design, you can have uniform data access, while staying fully in control via centralized data governance and auditing.
 
 :::image type="content" source="../images/data-mesh-contract.png" alt-text="Diagram illustrating a data contract." lightbox="../images/data-mesh-contract.png":::
 
@@ -99,7 +99,7 @@ You can use managed identities to ensure that a least privilege access model is 
 
 Data management and analytics scenario is designed with data mesh in mind. Data management and analytics scenario provides a proven approach by which organizations can share data across many data domains. Data management and analytics scenario allows domains to have autonomy to make choices, and at the same time it governs the architecture by ring-fencing it with data management services.
 
-A consideration to keep in mind, when you're implementing data mesh, is how to logically group and organize your domains. This requires an enterprise view and is likely also a cultural shift for your organization. The shift requires you to federate data ownership among data domains and owners who are accountable for providing their data as products. It also requires teams to conform to centralized capabilities that are offered by the data management landing zone. This new approach might require individual teams to give up their current mandates, which is likely to generate resistance. You might have to make certain political choices and strike a balance between centralized and decentralized approaches.
+A consideration to keep in mind, when you're implementing data mesh, is how to logically group and organize your domains. This requires an enterprise view and is likely also a cultural shift for your organization. The shift requires you to federate data ownership among data domains and owners who are accountable for providing their data as products. It also requires teams to conform to centralized capabilities that are offered by the data management landing zone. This new approach might require individual teams to give up their current mandates, which are likely to generate resistance. You might have to make certain political choices and strike a balance between centralized and decentralized approaches.
 
 You can scale a data mesh architecture by adding more landing zones to the architecture for individual domains. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This pattern allows you to share data products and resources across zones. And by splitting into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
 

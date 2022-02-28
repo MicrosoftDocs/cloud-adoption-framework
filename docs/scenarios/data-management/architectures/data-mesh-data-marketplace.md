@@ -11,7 +11,7 @@ ms.custom: e2e-data-management, think-tank
 ---
 # Data marketplace
 
-Data marketplaces have a strong relationship with [Metadata](../govern-metadata-standards.md). A data marketplace is an intuitive, secure, centralized, and standardized data shopping experience for all your data consumers. It is an approach to bring data closer to data analysts and scientists by utilizing the underlying metadata intensively. It is also meant to keep track over all your data products, which are typically stored across a range of data domains.
+Data marketplaces have a strong relationship with [Metadata](../govern-metadata-standards.md). A data marketplace is an intuitive, secure, centralized, and standardized data shopping experience for all your data consumers. It's an approach to bring data closer to data analysts and scientists by utilizing the underlying metadata intensively. It's also meant to keep track over all your data products, which are typically stored across a range of data domains.
 
 To democratize data via your data mesh architecture, you need to focus on several important areas:
 
@@ -23,6 +23,10 @@ To democratize data via your data mesh architecture, you need to focus on severa
 
 :::image type="content" source="../images/data-marketplace.png" alt-text="Data Marketplace Architecture" lightbox="../images/data-marketplace.png":::
 
-The *data marketplace* itself is typically a thin orchestration layer with an appealing look and feel, offering unique user experiences. It utilizes the underlying metadata repositories, which can be a mixture of homegrown [metadata](../govern-metadata-standards.md) stores and Azure services, like [Azure Purview](/azure/purview/). Depending on how smart you want to make it, you can extend it with additional analytical capabilities, such as [Cognitive Services](/azure/cognitive-services) and [Machine Learning](/azure/machine-learning).
+The *data marketplace* itself is typically a thin orchestration layer with an appealing look and feel, offering unique user experiences. It utilizes the underlying metadata repositories, which can be a mixture of homegrown [metadata](../govern-metadata-standards.md) stores and Azure services, like [Azure Purview](/azure/purview/). Depending on how smart you want to make it, you can extend it with more analytical capabilities, such as [Cognitive Services](/azure/cognitive-services) and [Machine Learning](/azure/machine-learning).
 
-Building a data marketplace is not only about tools, services and metadata. It's also about structure, culture, and people. The cultural aspects require less rigid [governance](./data-mesh-governance.md). It requires you to give users trust, to train people, and to work on awareness. These activities should not be underestimated. Your users are valuable resources; they own or use specific parts of the data landscape. Making better use of your users increases the efficiency of data knowledge and data usage.
+Building a data marketplace isn't only about tools, services and metadata. It's also about structure, culture, and people. The cultural aspects require less rigid [governance](./data-mesh-governance.md). It requires you to give users trust, to train people, and to work on awareness. These activities shouldn't be underestimated. Your users are valuable resources; they own or use specific parts of the data landscape. Making better use of your users increases the efficiency of data knowledge and data usage.
+
+## Next steps
+
+[Master Data Management in Data Mesh](data-mesh-master-data-management.md)

@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # What is a data product?
 <!---Intro -->
-Every application creates and stores data either temporarily or permanently during the process of fulfilling the primary function of the application. Many well designed application also creates and saves data for operational management purposes like error logging and health monitoring. Data produced by these applications traditionally consumed and further processed by centralized data integration teams upon need of business via ETL processes. It is also common for application operation teams to have additional data processing flows for various purposes like monitoring the application health or application KPI status.
+Every application creates and stores data either temporarily or permanently during the process of fulfilling the primary function of the application. Many well designed applications also creates and saves data for operational management purposes like error logging and health monitoring. Data produced by these applications traditionally consumed and further processed by centralized data integration teams upon need of business via ETL processes. It is also common for application operation teams to have additional data processing flows for various purposes like monitoring the application health or application KPI status.
 
 <!---Problem -->
 
@@ -58,3 +58,7 @@ Within an Azure Data Landing Zone, we can position all possible approaches for a
 :::image type="content" source="../images/data-application-options-in-adlz.png" alt-text="Diagram that shows data-application-rg resource group from Data Applications Context and  shared-application-rg resource group from Core Services Context for data management and analytics scenario." lightbox="../images/data-application-options-in-adlz.png":::
 
 In Data Management & Analytics guidance, within Azure Data Landing Zones implementations we provide three different frequently used data application patterns as a template. For detailed information on those please refer to [Data management and analytics scenario data products in Azure - Sample data applications](../architectures/data-landing-zone-data-products.md#sample-data-applications)
+
+## Next steps
+
+[Design considerations for self-serve data platforms](self-serve-data-platforms.md)

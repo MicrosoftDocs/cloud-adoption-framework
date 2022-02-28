@@ -22,11 +22,11 @@ Lamna Healthcare (Lamna) offers patient management services to healthcare provid
 
 Today, Lamna stores all of its data on-premises. The patient data is stored in a traditional database system. However, as their business has grown and the volume of data has increased, the company must migrate their patient applications to the cloud. As part of this transition, they would like to copy the data from the application into a cloud-based analytics platform that will allow their analysts to make better use of the data without putting extra load on the application database.
 
-A critical concern for Lamna is the security of the patient data. As a healthcare company, they are subject to several different data protection laws.
+A critical concern for Lamna is the security of the patient data. As a healthcare company, they're subject to several different data protection laws.
 
 ## Architectural solution
 
-Lamna will implement data management and analytics scenario as their solution for a cloud-based analytics platform. They will rely on multiple landing zones both for increased scalability and for clear separation of sensitive data products.
+Lamna will implement data management and analytics scenario as their solution for a cloud-based analytics platform. They'll rely on multiple landing zones both for increased scalability and for clear separation of sensitive data products.
 
 ### Data management landing zone
 
@@ -34,9 +34,9 @@ A critical concept for every data management and analytics scenario implementati
 
 ### Patient data landing zone
 
-In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they will have their own data landing zone in the data management and analytics scenario architecture.
+In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they'll have their own data landing zone in the data management and analytics scenario architecture.
 
-This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related data products. These data products will be loaded into the landing zone by Data applications that'll regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
+This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related data products. These data products will be loaded into the landing zone by Data applications that will regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
 
 ### Operations data landing zone
 
