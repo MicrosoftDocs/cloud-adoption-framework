@@ -3,7 +3,7 @@ title: Deployment templates for data management and analytics scenario deploymen
 description: Learn about the core starter templates for data management and analytics scenario deployments.
 author: mboswell
 ms.author: mboswell
-ms.date: 12/14/2021
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -27,7 +27,7 @@ In a production scenario, we recommend that you rely on the Azure Firewall and p
 - [Calculation 1: Pricing calculator - data management landing zone without Azure Firewall and private DNS zones](https://azure.com/e/ebb7508a6d78487b9a1583878d0948cc)
 - [Calculation 2: Pricing calculator - data management landing zone with Azure Firewall and private DNS zones](https://azure.com/e/658478643d4b46fdbf8b1972c4b0704b)
 
-Keep in mind that the following services are not listed in the overview, because they are either not available in the official pricing calculator or the pricing calculator does not allow you to set the compute hours to 0:
+Keep in mind that the following services aren't listed in the overview, because they're either not available in the official pricing calculator or the pricing calculator doesn't allow you to set the compute hours to 0:
 
 - Azure Purview
 - Synapse Private Link hub
@@ -42,7 +42,7 @@ For data landing zones, refer to the following cost calculation:
 
 You can further reduce the cost by hosting the self-hosted integration runtime (SHIR) on-premises instead of hosting it on a virtual machine scale set.
 
-Keep in mind that the following services are not listed in the overview, because they're either unavailable in the official pricing calculator or the pricing calculator doesn't allow you to set the compute hours to 0:
+Keep in mind that the following services aren't listed in the overview, because they're either unavailable in the official pricing calculator or the pricing calculator doesn't allow you to set the compute hours to 0:
 
 - Azure Databricks
 - Route table
@@ -50,4 +50,4 @@ Keep in mind that the following services are not listed in the overview, because
 
 ## Next steps
 
-- [Connect to environments privately](connect-to-environments-privately.md)
+[Solution accelerators for data management and analytics scenario](solution-accelerators.md)

@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Architectures Overview
 
-In the previous sections, we've covered the data management and analytics scenario areas which you should consider before building out your first architecture.
+In the previous sections, we've covered the data management and analytics scenario areas that you should consider before building out your first architecture.
 
 | Section                         | Description                                                                                                                                                                                                            |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ The data management and analytics scenario is scalable and [Scaling Data managem
 
 [Data mesh](what-is-data-mesh.md) can be implemented using the data management and analytics scenario.
 
-Whilst most the data management and analytics scenario guidance applies, there are some difference which needs to be taken into account. We highlight the data mesh specific for data domains, self-serve, onboarding data products, governance, data marketplace, data sharing and operating model.
+Whilst most the data management and analytics scenario guidance applies, there are some differences that need to be taken into account. We highlight the data mesh specific for data domains, self-serve, onboarding data products, governance, data marketplace, data sharing and operating model.
 
 ## Deployment templates for data management and analytics scenario
 

@@ -59,7 +59,7 @@ For more information, see [Azure Synapse Analytics data access control](data-lak
 When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called `/synapse/{workspaceName}`. It also has a container for managing any libraries that you choose to install.
 
 > [!TIP]
-> We recommend using a dedicated container on the [Development zone or data lake three](data-lake-zones.md#development-zone-or-data-lake-three) account. This container is used as primary storage to store Spark metadata.
+> We recommend using a dedicated container on the [Development layer or data lake three](data-lake-zones.md#development-layer-or-data-lake-three) account. This container is used as primary storage to store Spark metadata.
 
 Refer to [Azure Synapse Analytics data access control](data-lake-access.md#azure-synapse-analytics-data-access-control) for recommendations on how to set up data access.
 

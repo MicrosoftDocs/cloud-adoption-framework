@@ -128,29 +128,24 @@ items:
         href: ./architectures/what-is-data-mesh.md
       - name: What are data domains?
         href: ./architectures/data-domains.md
-      - name: Data products
+      - name: Data mesh products
         href: ./architectures/what-is-data-product.md
+      - name: Data Contracts
+        href: ./architectures/data-contracts.md
       - name: Self-serve data platforms
         href: ./architectures/self-serve-data-platforms.md
       - name: Data onboarding
         href: ./architectures/data-onboarding.md
       - name: Registration of data products
-        href: ./architectures/registration-of-data-products.md        
-      - name: Data mesh governance
-        href: ./architectures/data-mesh-governance.md
+        href: ./architectures/registration-of-data-products.md   
       - name: Data marketplace
         href: ./architectures/data-mesh-data-marketplace.md
       - name: Master data management in data mesh
-        href: ./architectures/data-mesh-master-data-management.md        
-
+        href: ./architectures/data-mesh-master-data-management.md
       - name: Data sharing
-        items:
-        - name: Overview
-          href: ./architectures/data-sharing-overview.md
-        - name: Alignment with application integration
-          href: ./architectures/alignment-with-application-integration.md
-        - name: Data virtualization
-          href: ./architectures/data-virtualization.md
+        href: ./architectures/data-sharing-overview.md
+      - name: Getting started checklist
+        href: ./architectures/data-mesh-checklist.md
 
     - name: Reference architectures
       items:
@@ -167,8 +162,6 @@ items:
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
-    - name: Getting started checklist
-      href: ./architectures/data-mesh-checklist.md
     - name: Solution accelerators
       href: ./architectures/solution-accelerators.md
     - name: Connecting to environments privately

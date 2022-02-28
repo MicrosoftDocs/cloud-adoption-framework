@@ -28,7 +28,7 @@ Today, instead of exposing a VM publicly, you can rely on Azure Bastion as a mor
 
 :::image type="content" source="../images/bastion-network-architecture.png" alt-text="Diagram of Azure Bastion network architecture." lightbox="../images/bastion-network-architecture.png" :::
 
-Azure Bastion provides a few additional core security benefits, including:
+Azure Bastion provides a few other core security benefits, including:
 
 - Traffic initiated from Azure Bastion to the target VM stays within the customer virtual network.
 - You get protection against port scanning, because RDP ports, SSH ports, and public IP addresses aren't publicly exposed for VMs.
@@ -40,7 +40,7 @@ For more information, see [What is Azure Bastion?](/azure/bastion/bastion-overvi
 
 ### Deployment
 
-To simplify the process for users, there is a Bicep/ARM template that can help you quickly create this setup inside your data management landing zone or data landing zone. Use the template to create the following setup inside your subscription:
+To simplify the process for users, there's a Bicep/ARM template that can help you quickly create this setup inside your data management landing zone or data landing zone. Use the template to create the following setup inside your subscription:
 
 :::image type="content" source="../images/bastion-architecture.png" alt-text="Diagram of Azure Bastion architecture." lightbox="../images/bastion-architecture.png" :::
 
@@ -56,7 +56,7 @@ After the deployment, you'll notice that two extra subnets have been created on 
 
 :::image type="content" source="../images/bastion-subnets.png" alt-text="Screenshot of the Azure Bastion and Jumpbox subnets." lightbox="../images/bastion-subnets.png" :::
 
-In addition, you will find a new resource group inside your subscription, which includes the Azure Bastion resource and a virtual machine:
+In addition, you'll find a new resource group inside your subscription, which includes the Azure Bastion resource and a virtual machine:
 
 :::image type="content" source="../images/bastion-resource-groups.png" alt-text="Screenshot of a list of Azure Bastion resource groups.":::
 

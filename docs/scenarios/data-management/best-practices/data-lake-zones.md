@@ -219,7 +219,7 @@ Sometimes these data products mature, and the enterprise should consider how the
 
 The follow diagram brings together the previous sections and illustrates how data would flow through to the data products and analytic sandbox.
 
-:::image type="content" source="../images/data-flow-data-products.png" alt-text="data flow into product container and analytics sandbox":::
+:::image type="content" source="../images/data-flow-data-products.png" alt-text="data flow into product container and analytics sandbox" lightbox="../images/data-flow-data-products.png":::
 
 ## Next steps
 
