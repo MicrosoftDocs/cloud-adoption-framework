@@ -46,7 +46,7 @@ Access to the data is restricted by a combination of access control lists (ACLs)
 > [!WARNING]
 > Some software products do not support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and development should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) files do not have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
-## Raw zone or data lake one
+## Raw layer or data lake one
 
 Using the water-based analogy, think of this layer as a reservoir that stores data in its natural and original state. It is unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or .CSV. But there might be scenarios where it makes sense to store it as a column in compressed format such as Avro, Parquet, or Databricks Delta Lake.
 
