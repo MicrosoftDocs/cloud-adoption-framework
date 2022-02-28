@@ -32,7 +32,7 @@ The choice of which remote access solution is most appropriate depends on severa
 - Consider the appropriate Azure Bastion SKU to use based on your requirements as documented here [About Azure Bastion configurationsettings](/azure/bastion/configuration-settings)
 - Review the [Azure Bastion FAQ](/answers/products/) for answers to common questions you may have about the service
 - Bastion can be used in VWAN topology, however there are some known limitations, such as:
-  - o	Azure Bastion cannot be deployed in an Azure Virtual WAN Virtual Hub
+  - Azure Bastion cannot be deployed in an Azure Virtual WAN Virtual Hub
   - o	Azure Bastion is currently not supported with Azure Virtual WAN's native routing capabilities, instead, it must be deployed within each spoke VNet to provide connectivity to VMs within the same VNet. 
   
   **Design recommendations:**
