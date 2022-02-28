@@ -79,7 +79,7 @@ The meshed network design offers maximum bandwidth and low latency at minimal co
 
 ### 2. Traditional Hub & Spoke Design (NOT Recommended)
 
-The most obvious option is to leverage the traditional Hub & Spoke network architecture that many enterprises have adopted. Network transitivity would have to be set up in the Connectivity Hub in order to be able to access data in Storage Account A from VM B. Data would traverse two Vnet peerings ((2) and (5)) as well as a Network Virtual Appliance (NVA) hosted inside the Connectivity Hub ((3) and (4)) before it gets loaded by the virtual machine (6) and then stored back into the Storage Account B (8).
+The most obvious option is to use the traditional Hub & Spoke network architecture that many enterprises have adopted. Network transitivity would have to be set up in the Connectivity Hub in order to be able to access data in Storage Account A from VM B. Data would traverse two Vnet peerings ((2) and (5)) as well as a Network Virtual Appliance (NVA) hosted inside the Connectivity Hub ((3) and (4)) before it gets loaded by the virtual machine (6) and then stored back into the Storage Account B (8).
 
 :::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture":::
 *Figure 4: Hub and spoke architecture.*
@@ -109,7 +109,7 @@ Summary: :heavy_minus_sign::heavy_minus_sign::heavy_minus_sign:
 
 #### Bandwidth & Latency
 
-This network design has serious limitations from a bandwidth perspective. The central NVA will become a critical bottleneck as the platform grows, which will limit cross-Data Landing Zone use cases and sharing of datasets and most likely lead to a situation where multiple copies of datasets will be created over time. In addition to bandwidth, latency will be heavily impacted by that network design, which is especially critical for real-time analytics scenarios.
+This network design has serious limitations from a bandwidth perspective. The central NVA will become a critical bottleneck as the platform grows, which will limit cross-Data Landing Zone use cases and sharing of datasets and most likely lead to a situation where multiple copies of datasets will be created over time. In addition to bandwidth, latency will be heavily affected by that network design, which is especially critical for real-time analytics scenarios.
 
 Summary: :heavy_minus_sign::heavy_minus_sign::heavy_minus_sign:
 
@@ -119,7 +119,7 @@ From an access management and partially from a service management perspective, t
 
 ### 3. Private Endpoint Projection (NOT Recommended)
 
-Another design alternative that was evaluated was the projection of Private Endpoints across each and every Landing Zone. With this approach, a Private Endpoint for Storage Account A would be created each Data Landing Zone. Therefore, this option leads to a first Private Endpoint in Data Landing Zone A that is connected to the Vnet in Data Landing Zone A, a second Private Endpoint in Data Landing Zone B that is connected to the Vnet in Data Landing Zone B, etc. The same applies to Storage Account B and potentially other services inside the Data Landing Zones. If the number of Data Landing Zones is defined as _n_, one would end up with _n_ Private Endpoints for at least all of the storage accounts and potentially other services within the Data Landing Zones leading to an exponential growth of the number of Private Endpoints.
+Another design alternative that was evaluated was the projection of Private Endpoints across each and every Landing Zone. With this approach, a Private Endpoint for Storage Account A would be created each Data Landing Zone. Therefore, this option leads to a first Private Endpoint in Data Landing Zone A that is connected to the Vnet in Data Landing Zone A, a second Private Endpoint in Data Landing Zone B that is connected to the Vnet in Data Landing Zone B and so on. The same applies to Storage Account B and potentially other services inside the Data Landing Zones. If the number of Data Landing Zones is defined as _n_, one would end up with _n_ Private Endpoints for at least all of the storage accounts and potentially other services within the Data Landing Zones leading to an exponential growth of the number of Private Endpoints.
 
 :::image type="content" source="./images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection":::
 *Figure 5: Private Endpoint Projection.*
@@ -167,8 +167,8 @@ The fourth option proposes to host the Private Endpoints in the Connectivity Hub
 
 In order to load a dataset stored in Storage Account A in VM B, data would have to traverse a single Vnet peering between the Connectivity Hub and the Data Landing Zone (5). Once the dataset has been loaded and processed ((3) and (4)) the dataset must traverse the Vnet peering a second time (5) before it can be stored on Storage Account B by accessing the Private Endpoint connected to the Hub Vnet (6).
 
-:::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivit Hub":::
-*Figure 6: Private Endpoints in Connectivit Hub.*
+:::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub":::
+*Figure 6: Private Endpoints in Connectivity Hub.*
 
 #### User Access Management
 
@@ -203,7 +203,7 @@ There are many benefits that come with this network architecture design. However
 
 ### Conclusion - Single-region Data Landing Zone Connectivity
 
-After reviewing all network architecture options from various angles and identifying pros and cons of each proposed pattern, [Option 1](#1-meshed-network-architecture-recommended) is the clear winner. Not only from a throughput perspective, but also from a cost and management perspective the solution has tremendous benefits and therefore should be used when deploying the Data Management and Analytics Scenario. Peering spoke Virtual Networks has not been common in the past, but not doing so has also led to various issues when starting to share datasets across domains and business units. In addition, one can also argue that the Data Management and Analytics Scenario can be seen as coherent solution that just spans across multiple subscriptions. In a single subscription setup, the network traffic flow would be equal to the flow in the meshed network architecture, with the difference that within a single subsciption users will most likely hit [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits) of the platform, which is something that the Data Management and Analytics Scenario wants to protect against.
+After reviewing all network architecture options from various angles and identifying pros and cons of each proposed pattern, [Option 1](#1-meshed-network-architecture-recommended) is the clear winner. Not only from a throughput perspective, but also from a cost and management perspective the solution has tremendous benefits and therefore should be used when deploying the Data Management and Analytics Scenario. Peering spoke Virtual Networks has not been common in the past, but not doing so has also led to various issues when starting to share datasets across domains and business units. In addition, one can also argue that the Data Management and Analytics Scenario can be seen as coherent solution that just spans across multiple subscriptions. In a single subscription setup, the network traffic flow would be equal to the flow in the meshed network architecture, with the difference that within a single subscription users will most likely hit [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits) of the platform, which is something that the Data Management and Analytics Scenario wants to protect against.
 
 ## Cross-region Data Landing Zone Connectivity
 
@@ -290,7 +290,7 @@ Summary: :heavy_minus_sign::heavy_minus_sign::heavy_minus_sign:
 
 #### Bandwidth & Latency
 
-This network design has serious limitations from a bandwidth perspective. The central NVAs will become critical bottlenecks as the platform grows, which will limit cross-region Data Landing Zone use cases and sharing of datasets and most likely lead to a situation where multiple copies of datasets will be created over time. In addition to bandwidth, latency will be heavily impacted by that network design, which is especially critical for real-time analytics scenarios, as data will have to traverse a large number of hops.
+This network design has serious limitations from a bandwidth perspective. The central NVAs will become critical bottlenecks as the platform grows, which will limit cross-region Data Landing Zone use cases and sharing of datasets and most likely lead to a situation where multiple copies of datasets will be created over time. In addition to bandwidth, latency will be heavily affected by that network design, which is especially critical for real-time analytics scenarios, as data will have to traverse a large number of hops.
 
 Summary: :heavy_minus_sign::heavy_minus_sign::heavy_minus_sign:
 
