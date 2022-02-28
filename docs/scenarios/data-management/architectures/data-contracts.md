@@ -34,7 +34,7 @@ To allow data products to change over time versioning is strongly recommended. Y
 
 ### Lineage and dependencies
 
-Having a clear understanding on how data is used across the entire federated platform is important. This includes the ability to discover the data products within the platform. Implementing data catalog product such as [Azure Purview](https://docs.microsoft.com/en-us/azure/purview/) can help with both the discoverability and the ability to discover linage and dependencies. However, contracts and dependencies between data products also need to be discoverable. This can be implemented using source control where both data contracts and data consumption can be documented.
+Having a clear understanding on how data is used across the entire federated platform is important. This includes the ability to discover the data products within the platform. Implementing data catalog product such as [Azure Purview](https://docs.microsoft.com/azure/purview/) can help with both the discoverability and the ability to discover linage and dependencies. However, contracts and dependencies between data products also need to be discoverable. This can be implemented using source control where both data contracts and data consumption can be documented.
 
 ## Summary
 
