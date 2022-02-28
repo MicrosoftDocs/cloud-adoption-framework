@@ -233,6 +233,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | `Bastion`| `Microsoft.Network/bastionHosts` | `bst` |
 | `Connection`| `Microsoft.Network/connections` | `conn` |
 | `Express Route Circuit`| `Microsoft.Network/expressRouteCircuits` | `exrc` |
+| `Express Route Gateways` | `Microsoft.Network/expressRouteGateways` | `exrgw` |
 | `Firewall Policy`| `Microsoft.Network/firewallPolicies` | `waf` |
 | `Firewall Policy Rule Group`| `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
 | `Front Door`| `Microsoft.Network/frontDoors` | `fd` |
