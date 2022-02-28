@@ -1,7 +1,7 @@
 ---
 title: Data management and analytics scenario data products in Azure
 description: Learn about data management and analytics scenario data products in Azure.
-author: SanemSSever
+author: sasever
 ms.author: sasever
 ms.date: 02/08/2022
 ms.topic: conceptual
@@ -29,11 +29,11 @@ At a high level, [data products](what-is-data-product.md) are data served as pro
     - Data product B is also created by consuming from data product C and the data in the data lake in data landing zone 3.
 
   > [!IMPORTANT]
-  > In the case of interzone data consumption, since data product B is created by reading from data landing zone 3, this read access would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
+  > In the case of interzone data consumption, since data product B is created by reading from data landing zone 3, this read access would require approval from the [data landing zone operations](../organize-roles-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-roles-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
   > [!IMPORTANT]
   > Data product B is created by consuming from data products A and C. Before this can happen, data product B must register its consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 
-- The resource group for a data product would include all the service required to make that data product, which we can call as **data application**. Examples of services that might be part of a data application that creates and maintains a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data Application samples](#sample-data-aoolications).
+- The resource group for a data product would include all the service required to make that data product, which we can call as **data application**. Examples of services that might be part of a data application that creates and maintains a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data Application samples](#sample-data-applications).
 - A data product has data from a *READ* data source that has had some data transformation applied. For example, that can be a newly curated dataset or a BI report.
 
 ## Design recommendations
@@ -42,7 +42,7 @@ We recommend building data products within your data landing zone by adhering to
 
 ### Deploy multiple resource groups
 
-Each data application is a resource group. Since data applications are compute or polyglot persistence services or both, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data applications are required, you should create multiple resource groups by data application as shown below.
+Each data application is a resource group. Since data applications are compute or polyglot persistence services or both, they could only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data applications are required, you should create multiple resource groups by data application as shown below.
 
 ![Diagram of data application resource groups.](../images/data-products-resource-group.png)
 
@@ -55,7 +55,7 @@ Azure Policy would drive the default configuration of services within a data lan
 
 ### Consume data from many places
 
-Data applications manage, organize, and make sense of the data across data assets and present the insights gained via their output data products. A data product is a result of data from one or many data integrations and other data applications within data landing zones. Therefore, a data application should access data from multiple and various sources if necessary.
+Data applications manage, organize, and make sense of the data across data assets and present the insights gained via their output data products. A data product is a result of data from one or many data applications output within data landing zones. Therefore, a data application should access data from multiple and various sources if necessary.
 
 ### Scale as needed
 
@@ -119,7 +119,7 @@ The loan approval data product team take a dependency on some of the credit moni
 
 A data application for analytics and data science might contain the services shown in sample data application (`product-analytics-rg`).
 
-:::image type="content" source="../images/ProductAnalytics.png" alt-text="Diagram that shows possible services that can be selected for Analytics Data Application Deployment." lightbox="../images/ProductAnalytics.png":::
+:::image type="content" source="../images/product-analytics.png" alt-text="Diagram that shows possible services that can be selected for Analytics Data Application Deployment." lightbox="../images/product-analytics.png":::
 
 > [!NOTE]
 > The data application above is [available as a template](https://github.com/Azure/data-product-analytics) that deploys a set of services which can be used for data analytics and data science. Like all our templates, this data product application template is a blueprint which can be used to quickly spin up environments for cross-functional teams. Any services not required must be explicitly disabled.
@@ -132,13 +132,13 @@ The deployment and code artifacts include the following services:
 - [Key Vault](/azure/key-vault/general)
 - [Application Insights](/azure/azure-monitor/app/app-insights-overview)
 - [Storage](/services/storage/)
-- [Container Registry](https://azure.microsoft.com/services/container-registry/)
-- [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) (optional)
-- [Data Factory](https://docs.microsoft.com/azure/data-factory/) (select between Data Factory and Synapse)
-- [Synapse Workspace](https://docs.microsoft.com/azure/synapse-analytics/) (select between Data Factory and Synapse)
-- [Azure Search](https://azure.microsoft.com/services/search/) (optional)
-- [SQL Pool](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
-- [BigData Pool](https://docs.microsoft.com/sql/big-data-cluster/concept-data-pool?view=sql-server-ver15) (optional)
+- [Container Registry](/services/container-registry/)
+- [Cognitive Services](/services/cognitive-services/) (optional)
+- [Data Factory](/azure/data-factory/) (select between Data Factory and Synapse)
+- [Synapse Workspace](/azure/synapse-analytics/) (select between Data Factory and Synapse)
+- [Azure Search](/services/search/) (optional)
+- [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
+- [BigData Pool](/sql/big-data-cluster/concept-data-pool) (optional)
 
 ### Batch Data Application
 
@@ -146,20 +146,20 @@ Batch Data Application template contains all templates to deploy a Data Product 
 
 The deployment and code artifacts include the following services:
 
-:::image type="content" source="../images/ProductBatch.png" alt-text="Diagram that shows possible services that can be selected for Batch Data Application Deployment." lightbox="../images/ProductBatch.png":::
+:::image type="content" source="../images/product-batch.png" alt-text="Diagram that shows possible services that can be selected for Batch Data Application Deployment." lightbox="../images/product-batch.png":::
 
-- [Key Vault](https://docs.microsoft.com/azure/key-vault/general)
-- [Data Factory](https://docs.microsoft.com/azure/data-factory/) (select between Data Factory and Synapse)
-- [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) (optional)
-- [Synapse Workspace](https://docs.microsoft.com/azure/synapse-analytics/) (select between Data Factory and Synapse)
-- [MySQL Database](https://docs.microsoft.com/azure/mysql/overview) (optional)
-- [Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/database/) (optional)
-- [PostgreSQL Database](https://docs.microsoft.com/azure/postgresql/) (optional)
-- [MariaDB Database](https://docs.microsoft.com/azure/mariadb/) (optional)
-- [SQL Pool](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
-- [SQL Server](https://docs.microsoft.com/sql/sql-server/?view=sql-server-ver15) (optional)
-- [SQL Elastic Pool](https://docs.microsoft.com/azure/azure-sql/database/elastic-pool-overview) (optional)
-- [BigData Pool](https://docs.microsoft.com/sql/big-data-cluster/concept-data-pool?view=sql-server-ver15)
+- [Key Vault](/azure/key-vault/general)
+- [Data Factory](/azure/data-factory/) (select between Data Factory and Synapse)
+- [Cosmos DB](/azure/cosmos-db/introduction) (optional)
+- [Synapse Workspace](/azure/synapse-analytics/) (select between Data Factory and Synapse)
+- [MySQL Database](/azure/mysql/overview) (optional)
+- [Azure SQL Database](/azure/azure-sql/database/) (optional)
+- [PostgreSQL Database](/azure/postgresql/) (optional)
+- [MariaDB Database](/azure/mariadb/) (optional)
+- [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
+- [SQL Server](/sql/sql-server) (optional)
+- [SQL Elastic Pool](/azure/azure-sql/database/elastic-pool-overview) (optional)
+- [BigData Pool](/sql/big-data-cluster/concept-data-pool)
 
 ### Streaming Data Application
 
@@ -167,20 +167,20 @@ Streaming Data Application template contains all templates to deploy a Data Prod
 
 The deployment and code artifacts include the following services:
 
-:::image type="content" source="../images/ProductStreaming.png" alt-text="Diagram that shows possible services that can be selected for Streaming Data Application Deployment." lightbox="../images/ProductStreaming.png":::
+:::image type="content" source="../images/product-streaming.png" alt-text="Diagram that shows possible services that can be selected for Streaming Data Application Deployment." lightbox="../images/product-streaming.png":::
 
-- [Key Vault](https://docs.microsoft.com/azure/key-vault/general)
-- [Event Hub](https://docs.microsoft.com/azure/event-hubs/)
-- [IoT Hub](https://docs.microsoft.com/azure/iot-hub/about-iot-hub)
-- [Stream Analytics](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-introduction) (optional)
-- [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) (optional)
-- [Synapse Workspace](https://docs.microsoft.com/azure/synapse-analytics/)
-- [Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/database/) (optional)
-- [SQL Pool](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
-- [SQL Server](https://docs.microsoft.com/sql/sql-server/?view=sql-server-ver15) (optional)
-- [SQL Elastic Pool](https://docs.microsoft.com/azure/azure-sql/database/elastic-pool-overview) (optional)
-- [BigData Pool](https://docs.microsoft.com/sql/big-data-cluster/concept-data-pool?view=sql-server-ver15)
-- [Data Explorer](https://docs.microsoft.com/azure/synapse-analytics/data-explorer/data-explorer-overview) (optional)
+- [Key Vault](/azure/key-vault/general)
+- [Event Hub](/azure/event-hubs/)
+- [IoT Hub](/azure/iot-hub/about-iot-hub)
+- [Stream Analytics](/azure/stream-analytics/stream-analytics-introduction) (optional)
+- [Cosmos DB](/azure/cosmos-db/introduction) (optional)
+- [Synapse Workspace](/azure/synapse-analytics/)
+- [Azure SQL Database](/azure/azure-sql/database/) (optional)
+- [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
+- [SQL Server](/sql/sql-server) (optional)
+- [SQL Elastic Pool](/azure/azure-sql/database/elastic-pool-overview) (optional)
+- [BigData Pool](/sql/big-data-cluster/concept-data-pool)
+- [Data Explorer](/azure/synapse-analytics/data-explorer/data-explorer-overview) (optional)
 
 For the repositories containing the deployment templates you can refer to [Deployment templates for data management and analytics scenario](deployment-templates.md)
 
