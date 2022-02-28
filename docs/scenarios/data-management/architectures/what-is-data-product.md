@@ -1,7 +1,7 @@
 ---
 title: What is a data product?
 description: Learn about data products
-author: SanemSSever
+author: sasever
 ms.author: sasever
 ms.date: 02/08/2022
 ms.topic: conceptual
