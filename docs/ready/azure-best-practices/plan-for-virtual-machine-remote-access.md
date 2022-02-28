@@ -14,7 +14,7 @@ ms.custom: think-tank
 This document describes the recommended guidance for providing remote access to virtual machines deployed within an Azure Landing Zones architecture.
 Azure offers different technologies for providing remote access to virtual machines: 
 
-- [Azure Bastion](/azure/bastion/bastion-overview) a PaaS solution for accessing virtual machine through a browser or currently in preview through the native SSH/RDP client on Windows workstations 
+- [Azure Bastion](/azure/bastion/bastion-overview), a PaaS solution, for accessing virtual machines through a browser or currently in preview through the native SSH/RDP client on Windows workstations 
 - Just in time [JIT](/azure/defender-for-cloud/just-in-time-access-overview) access provided through Azure Defender for Cloud 
 - Hybrid connectivity options such as ExpressRoute and VPN
 - Public IP attached directly to the Virtual Machine or through a NAT rule via an Azure public load balancer
