@@ -1,9 +1,9 @@
 ---
 title: Common Data Model & Industry Data Models
 description: Learn about Common Data Model & Industry Data Models
-author: SanemSSever
+author: sasever
 ms.author: sasever
-ms.date: 02/08/2022
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -19,7 +19,7 @@ Common Data Model(CDM) and Synapse Industry Data Models(IDM) are two enablers to
 The Common Data Model standard defines a common language for business entities covering, over time, the full range of business processes across sales, services, marketing, operations, finance, talent, and commerce and for the Customer, People, and Product entities at the core of a company's business processes. The goal of CDM is to enable data and application interoperability spanning multiple channels, service implementations, and vendors. CDM provides self-describing data (structurally and semantically), enabling applications to easily read and understand the data.
 The graphic below shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available within Common Data Model. More information: [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
 
-![Common Data Model poster.](https://docs.microsoft.com/en-us/common-data-model/media/cdm-entities-v1.png "Common Data Model poster")
+:::image type="content" source="../images/cdm-entities-v1.png" alt-text="Common Data Model poster":::
 
 [Download the Common Data Model poster](https://aka.ms/cdmposter)
 

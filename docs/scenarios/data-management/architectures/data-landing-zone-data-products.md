@@ -102,7 +102,7 @@ To explain the architecture definition process, we'll look at an example of a fi
 
 :::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define-data-product architecture in detail.":::
 
-The credit monitoring data product shown above is created by consuming data from a *read data store* that has been ingested by the [integration operations team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data product(s) also consumed for creating two other data products.
+The credit monitoring data product shown above is created by consuming data from a *read data store* that has been ingested by the [integration operations team](../organize-roles-and-teams.md#data-landing-zone-teams) and produces data product(s) also consumed for creating two other data products.
 
 > [!NOTE]
 > A read data source or store is also known as *golden record source*. These types of data sources have been cleaned but haven't had any transformation applied to them.
@@ -128,10 +128,10 @@ Analytics Data Application template contains all templates to deploy a Data Prod
 
 The deployment and code artifacts include the following services:
 
-- [Machine Learning](https://azure.microsoft.com/services/machine-learning/)
-- [Key Vault](https://docs.microsoft.com/azure/key-vault/general)
-- [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)
-- [Storage](https://azure.microsoft.com/services/storage/)
+- [Machine Learning](/services/machine-learning/)
+- [Key Vault](/azure/key-vault/general)
+- [Application Insights](/azure/azure-monitor/app/app-insights-overview)
+- [Storage](/services/storage/)
 - [Container Registry](https://azure.microsoft.com/services/container-registry/)
 - [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) (optional)
 - [Data Factory](https://docs.microsoft.com/azure/data-factory/) (select between Data Factory and Synapse)
