@@ -10,22 +10,22 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# AKS Landing Zone Accelerator
+# AKS landing zone accelerator
 
-AKS Landing Zone Accelerator represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Kubernetes Service (AKS) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones.
+AKS landing zone accelerator represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Kubernetes Service (AKS) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones.
 
 This solution is open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
 ## Implement a platform foundation
 
-AKS Landing Zone Accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing AKS Landing Zone Accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
+AKS landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing AKS landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
-- [Start with Cloud Adoption Framework AKS Landing Zone Accelerator](../../ready/enterprise-scale/index.md)
-- [Implement Cloud Adoption Framework Azure Landing Zone](../../ready/enterprise-scale/implementation.md)
+- [Start with Cloud Adoption Framework AKS landing zone accelerator](../../ready/enterprise-scale/index.md)
+- [Implement Cloud Adoption Framework Azure landing zone](../../ready/enterprise-scale/implementation.md)
 
-## What AKS Landing Zone Accelerator provides
+## What AKS landing zone accelerator provides
 
-The Landing Zone Accelerator approach for AKS provides these assets to support your project:
+The landing zone accelerator approach for AKS provides these assets to support your project:
 
 - A modular approach that allows you to customize your environment variables.
 - Design guidelines for evaluating critical decisions.
@@ -50,14 +50,14 @@ The following conceptual reference architecture is an example that shows a golde
 
 ## Deploy AKS Landing Zone Accelerator
 
-[![AKS Landing Zone Accelerator architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
+[![AKS landing zone accelerator architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
 
-AKS Landing Zone Accelerator is an open-source collection of ARM, Bicep and Terraform templates, available in the [`AKS Landing Zone Accelerator`](https://aka.ms/aks-reference-implementation) repo.
+AKS landing zone accelerator is an open-source collection of ARM, Bicep and Terraform templates, available in the [`AKS landing zone accelerator`](https://aka.ms/aks-reference-implementation) repo.
 
-These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [`AKS Landing Zone Accelerator`](https://aka.ms/aks-reference-implementation) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an Azure Landing Zone platform foundation as indicated in the image above.
+These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [`AKS landing zone accelerator`](https://aka.ms/aks-reference-implementation) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an Azure Landing Zone platform foundation as indicated in the image above.
 
 ## Next steps
 
 Learn about design considerations for identity and access management in your Azure landing zones.
 
-- [Identity and access management for Azure Kubernetes Service (AKS) Landing Zone Accelerator scenario](./eslz-identity-and-access-management.md)
+- [Identity and access management for Azure Kubernetes Service (AKS) landing Zzne accelerator scenario](./eslz-identity-and-access-management.md)
