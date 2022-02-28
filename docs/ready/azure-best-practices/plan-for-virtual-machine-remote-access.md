@@ -35,7 +35,7 @@ The choice of which remote access solution is most appropriate depends on severa
   - Azure Bastion cannot be deployed in an Azure Virtual WAN Virtual Hub
   - o	Azure Bastion is currently not supported with Azure Virtual WAN's native routing capabilities, instead, it must be deployed within each spoke VNet to provide connectivity to VMs within the same VNet. 
   
-  **Design recommendations:**
+## Design recommendations
 
 - Use existing ExpressRoute and/or VPN connectivity to provide remote access to Azure virtual machines that are accessible from on-premises via the ExpressRoute and/or VPN connections.
 - In a Virtual WAN based network topology where remote access to Azure virtual machines over the internet is required, deploy Azure Bastion in each spoke VNet of the respective VMs as depicted in Figure 1
