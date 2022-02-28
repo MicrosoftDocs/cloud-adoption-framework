@@ -35,7 +35,7 @@ Every considered design pattern will now be evaluated along the following criter
 
 ---
 
-_Virtual machine B (VM B) hosted in Data Landing Zone B loads a dataset from Storage Account A hosted in Data Landing Zone A. Next, it processes the dataset and finally it stores the processed dataset and in Storage Account B hosted in Data Landing Zone B._
+*Virtual machine B (VM B) hosted in Data Landing Zone B loads a dataset from Storage Account A hosted in Data Landing Zone A. Next, it processes the dataset and finally it stores the processed dataset and in Storage Account B hosted in Data Landing Zone B.*
 
 ---
 
@@ -119,7 +119,7 @@ From an access management and partially from a service management perspective, t
 
 ### 3. Private Endpoint Projection (NOT Recommended)
 
-Another design alternative that was evaluated was the projection of Private Endpoints across each and every Landing Zone. With this approach, a Private Endpoint for Storage Account A would be created each Data Landing Zone. Therefore, this option leads to a first Private Endpoint in Data Landing Zone A that is connected to the Vnet in Data Landing Zone A, a second Private Endpoint in Data Landing Zone B that is connected to the Vnet in Data Landing Zone B and so on. The same applies to Storage Account B and potentially other services inside the Data Landing Zones. If the number of Data Landing Zones is defined as _n_, one would end up with _n_ Private Endpoints for at least all of the storage accounts and potentially other services within the Data Landing Zones leading to an exponential growth of the number of Private Endpoints.
+Another design alternative that was evaluated was the projection of Private Endpoints across each and every Landing Zone. With this approach, a Private Endpoint for Storage Account A would be created each Data Landing Zone. Therefore, this option leads to a first Private Endpoint in Data Landing Zone A that is connected to the Vnet in Data Landing Zone A, a second Private Endpoint in Data Landing Zone B that is connected to the Vnet in Data Landing Zone B and so on. The same applies to Storage Account B and potentially other services inside the Data Landing Zones. If the number of Data Landing Zones is defined as *n*, one would end up with *n* Private Endpoints for at least all of the storage accounts and potentially other services within the Data Landing Zones leading to an exponential growth of the number of Private Endpoints.
 
 :::image type="content" source="./images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection":::
 *Figure 5: Private Endpoint Projection.*
