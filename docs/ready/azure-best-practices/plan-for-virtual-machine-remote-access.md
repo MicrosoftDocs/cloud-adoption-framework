@@ -1,7 +1,7 @@
 ---
 title: Plan for Virtual Machine remote access 
 description: Plan for Virtual Machine remote access 
-author: SimonaTarantola
+author: sitarant
 ms.author: sitarant
 ms.date: 02/25/2022
 ms.topic: conceptual
@@ -9,6 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
+
 
 This document describes the recommended guidance for providing remote access to virtual machines deployed within an Azure Landing Zones architecture.
 Azure offers different technologies for providing remote access to virtual machines: 
