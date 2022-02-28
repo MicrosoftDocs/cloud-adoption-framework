@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
-
+# Plan for Virtual Machine remote access
 
 This document describes the recommended guidance for providing remote access to virtual machines deployed within an Azure Landing Zones architecture.
 Azure offers different technologies for providing remote access to virtual machines: 
