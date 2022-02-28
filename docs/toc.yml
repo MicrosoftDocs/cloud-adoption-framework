@@ -322,6 +322,8 @@ items:
                 href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
               - name: DNS for on-premises and Azure resources
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
+              - name: Plan for virtual machine remote access
+                href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
 
         - name: Resource organization
           items:
