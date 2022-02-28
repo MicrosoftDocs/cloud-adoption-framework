@@ -21,7 +21,7 @@ Azure offers different technologies for providing remote access to virtual machi
 
 The choice of which remote access solution is most appropriate depends on several factors such as scale, topology and security requirements.
 
-**Design considerations:**
+## Design considerations
 
 - When available, you can use existing hybrid connectivity to Azure VNets via ExpressRoute or S2S/P2S VPN connections to provide remote access from on-premises to Windows and Linux Azure VMs
 - NSGs can be used to secure SSH/RDP connections to Azure VMs
