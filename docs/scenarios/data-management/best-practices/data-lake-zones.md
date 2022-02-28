@@ -54,6 +54,8 @@ This data is always immutable. It should be locked down and the permissions give
 
 Consider using [data lifecycle management](../govern-lifecycle.md) to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
 
+When you load data from source systems into the raw zone you can either choose to do full loads from systems meaning that the full data set is extracted every time, or delta loads meaning that you load only the changed data every time. It is good practice to indicate the loading pattern in the folder structure. This will simplify the use for the data consumers.
+
 Raw data from source systems for each **data application (source-aligned)** or data agnostic engine source will land into either the full or delta folder. Each ingestion process should have write access to only their associated folder.
 
 We define full load and delta loads as:
