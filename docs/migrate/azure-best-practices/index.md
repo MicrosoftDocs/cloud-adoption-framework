@@ -37,7 +37,7 @@ The following resources provide Azure cloud migration best practices that go bey
 
 ## Next steps
 
-The following step is a good starting point for reviewing Azure migration best practices.
+Review the following guide to learn about migrating multiple datacenters to the cloud.
 
 > [!div class="nextstepaction"]
 > [Multiple datacenters](./multiple-datacenters.md)
