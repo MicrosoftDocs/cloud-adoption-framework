@@ -242,7 +242,7 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 - The landing zone includes [environment-specific management groups](#landing-zones-management-group) for organizing the subscriptions and assigning different policies and role assignments.
 - The ISV decided to include the management groups for [decommissioned and sandbox subscriptions](#decommissioned-and-sandboxes-management-groups).
 
-[![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are included.](./media/isv-landing-zone/isv-landing-zone-example-2.png)](./media/isv-landing-zone-isv-landing-zone-example-2.png#lightbox)
+[![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are included.](./media/isv-landing-zone/isv-landing-zone-example-2.png)](./media/isv-landing-zone/isv-landing-zone-example-2.png#lightbox)
 
 ---
 
