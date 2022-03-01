@@ -14,6 +14,10 @@ ms.custom: internal
 
 Access control is the part of security that people experience first and most often. They see it when they sign in to their computers and mobile phones, when they share a file or try to access an application, and when they use an ID card key to enter a building or room. While access control isn't everything in security, it's critically important, and it requires proper attention so that both the user experience and the security assurances are right.
 
+Watch the following video to learn how you can develop an access control strategy that meets your specific needs.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu7p]
+
 ## From security perimeter to zero trust
 
 The traditional approach of access control for IT has been based on restricting access to a corporate network and then supplementing it with more controls as appropriate. This model restricts all resources to a corporate owned network connection and has become too restrictive to meet the needs of a dynamic enterprise.
