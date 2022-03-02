@@ -14,13 +14,13 @@ ms.custom: e2e-data-management, think-tank
 
 With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. This article series covers technical and non-technical considerations for data management and analytics in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products. It builds upon Microsoft's cloud adoption framework and requires understanding of landing zones. [What is a landing zone?](../../ready/landing-zone/index.md).
 
-Before you consider deploying the data management and analytics scenario, you need to understand how close you're to agility within your organization today.
+Before you consider deploying the data management and analytics scenario, you need to understand your organization's current state.
 
-Many enterprises have outdated data architectures that don't scale to the needs of multidisciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
+Many enterprises have outdated data architectures that don't scale to the needs of a highly data driven organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
 - If you're a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operations model.
 
-- If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like data mesh might fit your business better.
+- If you're a large multinational enterprise with the goal of autonomous business units (with their own data engineers and analysts), a distributed operating model like data mesh might fit your business better.
 
 Data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operation models.
 
@@ -28,8 +28,8 @@ Your business should consider how to best:
 
 - Serve data as a product rather than a byproduct.
 - Provide an ecosystem of data products instead of a singular data warehouse that might not best fit the data scenario.
-- Drive a default way to enforce data governance and security.
-- Drive teams to consistently prioritize business outcomes instead of obsessing over the underlying technology.
+- Drive a default approach to enforce data governance and security.
+- Drive teams to consistently prioritize business outcomes instead of focussing soley on the underlying technology.
 
 If you don't have an implementation of Azure landing zones, then it's important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
@@ -41,9 +41,9 @@ This scenario focuses on supporting two targeted outcomes:
 
 - Use the cloud to deliver increasingly mature analytics solutions.
 - Migrate data platforms to the cloud.
-- Data Democratize by making data and insights accessible to the average end user (subject to access privileges).
-- Answer complex analytical questions with cloud-based analytics tools.
-- Extend workloads with machine learning.
+- Support data democratization by making data and insights accessible to end users (subject to access privileges).
+- Enable powerful and complex analytsis of the organisations data with cloud-based analytics tools.
+- Support the development of machine learning solutions that support business outcomes 
 
 This scenario also provides a framework built on the following principles to address challenges with complex data architectures that don't scale to the needs of businesses:
 
@@ -71,7 +71,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 
 ## Reference architecture
 
-*Data management landing zone* and *data landing zone* architectures help accelerate deployment for many common data management and analytics solutions. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform which can scale according to your requirements.
+The scenario uses two key architural concepts: The *Data management landing zone* and the *data landing zones*. These architectures help accelerate deployment for many common data management and analytics solutions. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform which can scale according to your requirements.
 
 The following diagram is an overview of a data platform with a central data management landing zone and multiple data landing zones. You can start with a single landing zone and scale to multiple landing zones, which are all governed from the data management landing zone.
 :::image type="content" source="./images/data-landing-zone-index.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones.":::
