@@ -95,6 +95,14 @@ A typical example of this scenario is the case where application processing serv
 
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level, level 0, becomes the hub of lower spokes, or level 1, of the hierarchy. The spokes are required to forward the traffic to the central hub. This requirement is so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-and-spoke relationship.
 
+> [!NOTE]
+> You can use [Azure Virtual Network Manager (AVNM)]( https://docs.microsoft.com/en-us/azure/virtual-network-manager/overview) to create new or onboard existing
+hub and spoke virtual network topologies for central management of connectivity    and security controls.
+>
+> A connectivity configuration enables you to create a mesh or a hub-and-spoke network topology including direct connectivity between spoke virtual networks.
+> 
+> A security configuration allows you to define a collection of rules that you can apply to one or more network groups at the global level.
+
 ## Next steps
 
 Now that you've explored the best practices for networking, learn how to approach identity and access controls.
