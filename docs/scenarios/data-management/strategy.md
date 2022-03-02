@@ -60,19 +60,19 @@ The agility of the cloud has imposed the need for organizations to adapt quickly
 
 ## Operationalize data management
 
-In many organizations Central IT has slowly, become more decentralized to enable agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements.
+In many organizations Central IT has slowly become more decentralized to enable agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements.
 
 There are many reasons why businesses fail to tap into the full potential of their data. It might be because business functions work in silos, where each team uses different tools and standards for data analysis. Or it might be a failure to link key performance indicators to overall business goals.
 
 Data democratization helps deliver that value back to business and achieve challenging targets for business growth.
 
-- Understand and prioritize your LOBs needs'.
+- Understand and prioritize your LOBs needs.
 - Distribute data across domains to enable ownership and bring data to closer to users.
 - Deploy self-service data products to drive insights and business value.
 
 With data governance, there has to be the right balance in the decentralized world of a data democratization approach. If governance is enforced too hard, it can stifle innovation. However, not having some core principles and processes in place might create data silos. These silos can result in damaging an organization's reputation and potential revenues. That's why a holistic data governance approach is fundamental to unlocking strategic value of data in a consistent way.
 
-In the absence of a well-thought-out data strategy, there's a clear need to just "get going" and quickly start demonstrating value back to the business. In this pursuit, acting on the preceding key themes or using them as strategic principles wrapped in a framework can address current business problems. It can also help the formation of a holistic data strategy, in an iterative way with validation, and still yield timely results.
+In the absence of a well-thought-out data strategy, there is a clear need to just "get going" and quickly start demonstrating value back to the business. In this pursuit, acting on the preceding key themes or using them as strategic principles wrapped in a framework can address current business problems. It can also help the formation of a holistic data strategy, in an iterative way with validation, and still yield timely results.
 
 Business and technology leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified, structured way.
 
