@@ -60,7 +60,7 @@ The agility of the cloud has imposed the need for organizations to adapt quickly
 
 ## Operationalize data management
 
-Central IT has slowly been shifting to shadow IT, becoming more decentralized and enabling agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements.
+In many organizations Central IT has slowly, become more decentralized to enable agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements.
 
 There are many reasons why businesses fail to tap into the full potential of their data. It might be because business functions work in silos, where each team uses different tools and standards for data analysis. Or it might be a failure to link key performance indicators to overall business goals.
 
