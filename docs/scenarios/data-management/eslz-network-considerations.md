@@ -30,7 +30,7 @@ To explain the rationale behind the recommended design, this article will illust
 :::image type="content" source="./images/single-region-connectivity.png" alt-text="Single Region Connectivity":::
 *Figure 2: Single Region Connectivity.*
 
-In the single-region setup, the Data Management Zone, the Data Landing Zones as well as all the services within them are set up in the same region. Also, all Landing Zones are connected to the same connectivity hub subscription, where shared network resources including an NVA like an Azure Firewall, an ExpressRoute Gateway, a VPN Gateway, the Hub Virtual Network in case of a Hub&Spoke architecture or the vWAN Hub in case of a vWan setup are hosted.
+In the single-region setup, the Data Management Zone, the Data Landing Zones as well as all the services within them are set up in the same region. Also, all Landing Zones are connected to the same connectivity hub subscription, where shared network resources including an network virtual appliance (NVA) like an Azure Firewall, an ExpressRoute Gateway, a virtual private network (VPN) Gateway, the Hub Virtual Network in case of a hub and spoke architecture or the virtual WAN (vWAN) Hub in case of a vWan setup are hosted.
 
 Every considered design pattern will now be evaluated along the following criteria: Cost, User Access Management, Service Management and Bandwidth & Latency. Each scenario will be analyzed with the following cross-Data Landing Zone use-case in mind:
 
@@ -78,20 +78,20 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 
 The meshed network design offers maximum bandwidth and low latency at minimal cost without any compromises from a user access management perspective or on the DNS layer. Hence, this network architecture design is the recommended for customers wanting to adopt the Data Management and Analytics Scenario. If additional network policies need to be enforced within the Data Platform, it's advised to use Network Security Groups instead of central NVAs.
 
-### 2. Traditional Hub & Spoke Design (NOT Recommended)
+### 2. Traditional Hub and Spoke Design (NOT Recommended)
 
-The most obvious option is to use the traditional Hub & Spoke network architecture that many enterprises have adopted. Network transitivity would have to be set up in the Connectivity Hub in order to be able to access data in Storage Account A from VM B. Data would traverse two Vnet peerings ((2) and (5)) as well as a Network Virtual Appliance (NVA) hosted inside the Connectivity Hub ((3) and (4)) before it gets loaded by the virtual machine (6) and then stored back into the Storage Account B (8).
+The most obvious option is to use the traditional Hub and Spoke network architecture that many enterprises have adopted. Network transitivity would have to be set up in the Connectivity Hub in order to be able to access data in Storage Account A from VM B. Data would traverse two Vnet peerings ((2) and (5)) as well as a Network Virtual Appliance (NVA) hosted inside the Connectivity Hub ((3) and (4)) before it gets loaded by the virtual machine (6) and then stored back into the Storage Account B (8).
 
 :::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture":::
 *Figure 4: Hub and spoke architecture.*
 
-#### User Access Management in a traditional hub & spoke design
+#### User Access Management in a traditional hub and spoke design
 
 With this solution approach, Data Product teams will only require write access to a resource group in the respective Data Landing Zone as well as join access to their designated subnet to be able to create new services including the Private Endpoints in a self-service manner. Therefore, Data Product teams can deploy Private Endpoints themselves and don't require support to set up the necessary connectivity given that they get the necessary access rights to connect Private Endpoints to a subnet in that Spoke.
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-#### Service Management in a traditional hub & spoke design
+#### Service Management in a traditional hub and spoke design
 
 The most relevant benefit of this network architecture design is that it's well-known and consistent with the existing network setup of most organizations. Therefore, it's easy to explain and implement. In addition, a centralized and Azure native DNS solution with Private DNS Zones can be used to provide FQDN resolution inside the Azure tenant. The use of Private DNS Zones also allows for the automation of the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/). Since traffic is routed through a central NVA, network traffic that is sent from one Spoke to another one can also be logged and inspected, which can be another benefit of this design.
 
@@ -99,7 +99,7 @@ A downside of this solution from a service management perspective is that the ce
 
 Summary: :::image type="icon" source="./images/minusicon.png":::
 
-#### Cost in a traditional hub & spoke design
+#### Cost in a traditional hub and spoke design
 
 > [!NOTE]
 > When accessing a private endpoint across a peered network customers will only ever be charged for the private endpoint itself and not for the VNet peering. The official statement can be found [here (FAQ: How will billing work when accessing a private endpoint from a peered network?)](https://azure.microsoft.com/pricing/details/private-link/).
@@ -108,15 +108,15 @@ From a network perspective, customers have to pay for the two Private Endpoints 
 
 Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
 
-#### Bandwidth & Latency in a traditional hub & spoke design
+#### Bandwidth & Latency in a traditional hub and spoke design
 
 This network design has serious limitations from a bandwidth perspective. The central NVA will become a critical bottleneck as the platform grows, which will limit cross-Data Landing Zone use cases and sharing of datasets and most likely lead to a situation where multiple copies of datasets will be created over time. In addition to bandwidth, latency will be heavily affected by that network design, which is especially critical for real-time analytics scenarios.
 
 Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
 
-#### Summary Traditional Hub & Spoke Design
+#### Summary Traditional Hub and Spoke Design
 
-From an access management and partially from a service management perspective, this setup has benefits. But due to the critical limitations pointed out in the service management, cost and bandwidth & latency section, this network design can't be recommended for cross-Data Landing Zone use cases.
+From an access management and partially from a service management perspective, this setup has benefits. But due to the critical limitations pointed out in the service management, cost and bandwidth & latency section, this network design can not be recommended for cross-Data Landing Zone use cases.
 
 ### 3. Private Endpoint Projection (NOT Recommended)
 
