@@ -84,9 +84,10 @@ For many companies, the introduction of digital transformation has led to a more
 
 These data stores include data stored in edge databases, relational or NoSQL database management systems, files, cloud storage, Hadoop systems, and scalable message queuing systems, like Kafka.
 
-The other effect of digital transformation is there are many new data sources that organizations want to analyze. These data sources go beyond the traditional data found in data warehouses. These sources include machine generated data like clickstream data in web server log files, human generated data from social networks, inbound email, and open government data. Unstructured content might also be located in various documents in multiple locations.
+The other effect of digital transformation is there are many new data sources that organizations want to analyze. These data sources go beyond the traditional data found in data warehouses. These sources include machine generated data like clickstream data in web server log files, human generated data from social networks, inbound email, and open government data.
+In addition to these relational data sources unstructured or semi-structured data like images, videos, documents, and logs are valuable data sources that is used in organizations for analytical purposes.
 
-With data spread out across a hybrid multicloud and a distributed-data landscape, organizations struggle to find where their data is, to govern it. The ungoverned data can have a considerable effect on the business. Poor data quality impacts business operations because data errors cause process errors and delays. Poor data quality also affects business decision making and the ability to remain compliant. To help track and govern data activity, data governance must include:
+With data spread out across a hybrid multicloud and a distributed-data landscape, organizations struggle to find where their data is, to govern it. The ungoverned data can have a considerable effect on the business. Poor data quality impacts business operations because data errors cause process errors and delays. Poor data quality also affects business decision making and the ability to remain compliant. Ensuring data quality at the source is often preferred since fixing quality issues in the analytical system is often more complex and costly than applying data quality rules early in the ingestion phase. To help track and govern data activity, data governance must include:
 
 - Data discovery
 
