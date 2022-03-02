@@ -82,7 +82,9 @@ For more information, see [What is data governance?](./govern.md).
 
 To build a successful data strategy, you need a data-driven culture. Develop one that fosters open, collaborative participation consistently. The entire workforce can then learn, communicate, and improve the organization's business outcomes. Developing a data-driven culture will also improve each employee's ability to generate impact or influence, backed by data.
 
-Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve.
+Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve.  Here, is an example of a created maturity model measuring the maturity of the AI usage in an organization:
+
+:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ### Level 0
 
@@ -113,10 +115,6 @@ Multiple teams across the company are successfully delivering on critical busine
 ### Level 4
 
 Here, the entire company uses a data-driven culture, frameworks, and standards enterprise. Observers see automation, centers of excellence around analytics or automation, and data-driven feedback loops in action.
-
-One of the outcomes of a data-driven culture is the use of AI in a meaningful way. Here, it's easy to define a maturity model like this example:
-
-:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ## Develop business-aligned objectives
 
