@@ -72,7 +72,7 @@ A few important points to keep in mind about data landing zones:
 
 - Automated Ingestion capabilities can exist in each data landing zone. These capabilities allow subject matter experts to pull in external data sources into the data landing zone.
 - A data landing zone is instantiated based on its core architecture. It includes key capabilities to host an analytics platform.
-- A data landing zone can contain multiple [data product](#data-products).
+- A data landing zone can contain multiple [data products](#data-products).
 
 For more information, see [Data landing zone](architectures/data-landing-zone.md).
 
