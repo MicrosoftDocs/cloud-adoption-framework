@@ -1,7 +1,7 @@
 ---
 title: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud
 description: Learn how Azure Arc-enabled servers can accelerate adoption of hybrid or multicloud architectures.
-author: lanicolas
+author: likamrat
 ms.author: doalle
 ms.date: 03/01/2021
 ms.topic: conceptual
