@@ -146,7 +146,7 @@ As a SaaS ISV, you might have one SaaS product or you might have a few separate 
 
 Consider how independent your products are from each other, and ask yourself:
 
-* Do all our products use the same platforms for DevOps, identity, security, connectivity, and logging?
+* Do our products all use the same platforms for DevOps, identity, security, connectivity, and logging?
 * Are those shared services operated by a single central team?
 
 If you answered *yes* to both questions, create a single top-level **SaaS Product** management group under the **Tenant root group**.
