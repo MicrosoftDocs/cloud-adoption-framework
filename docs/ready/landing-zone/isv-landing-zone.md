@@ -189,7 +189,7 @@ SaaS ISVs often organize their cloud environments by modeling their software dev
 
 One common difference between the environments is their Azure RBAC rules, like who can access each group of subscriptions. For example, the DevOps, SaaSOps, development, and test teams might all have different levels of access to different environments.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Most Azure customers have hundreds of applications and use separate Azure subscriptions for each application team. If each application had its own development, test, staging, and production management groups, there would be a large number of management groups with near-identical policies. For most customers, the [Enterprise-Scale Landing Zone FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) advises against using separate management groups for each environment. It recommends using separate subscriptions within a single management group instead.
 >
 > However, SaaS ISVs can have different requirements than most other Azure customers, and might have good reason to use environment-specific management groups in some situations.
