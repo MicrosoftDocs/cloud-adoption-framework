@@ -3,7 +3,7 @@ title: Technology for end-to-end governance in Azure
 description: Learn about the technology needed for end-to-end governance in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/21/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -47,7 +47,7 @@ Microsoft Azure Data Factory is a fully managed, pay-as-you-use, hybrid data int
 
 It supports over 80 connectors to external data sources and databases and has templates for common data integration tasks. A visual front-end browser-based GUI enables non-programmers to create and run process pipelines to ingest, transform, and load data. More experienced programmers can incorporate custom code if necessary, for example, Python programs.
 
-Development of simple or comprehensive extract, transform, load (ETL) and extract, load, transform (ELT) processes without coding or maintenance can be easily achieved. This process includes ingest, move, prepare, transform, and process your data. Scheduling and triggers can also be designed and managed within Azure Data Factory to build an automated data integration and loading environment. It can produce trusted data assets that are described in the Azure Data Catalog business glossary.
+Development of simple or comprehensive extract, transform, load (ETL) and extract, load, transform (ELT) processes without coding or maintenance can be easily achieved. This process includes ingest, move, prepare, transform, and process your data. Scheduling and triggers can also be designed and managed within Azure Data Factory to build an automated data integration and loading environment. It can produce trusted data assets that are described in the data catalog business glossary.
 
 Azure Data Factory can be used to implement and manage a hybrid environment, which includes connectivity to on-premises, cloud, edge streaming, and software as a service (SaaS) data, in a secure and consistent way.
 
@@ -71,7 +71,7 @@ With the Azure Purview data insights, data officers and security officers can ge
 
 In the context of data governance, these technologies can be combined to produce trusted reusable data assets.
 
-:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in enterprise-scale for analytics and AI.":::
+:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in data management and analytics scenario.":::
 
 Data in disparate registered data sources across the data landscape can be ingested into Azure Data Lake Storage. It can be integrated using Azure Data Factory to create trusted, commonly understood, reusable Common Data Model assets. The assets can be persisted back in the data lake published in Azure Purview.
 

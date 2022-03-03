@@ -169,7 +169,7 @@ In addition to Database Migration Service, Contoso has some scripts that it uses
 
 #### Partner assessment tools
 
-There are several other partner tools that can help Contoso assess the on-premises environment for migration to Azure. Learn more about [Azure migration partners](https://azure.microsoft.com/migration/migration-partners/).
+There are several other partner tools that can help Contoso assess the on-premises environment for migration to Azure. Learn more about [Azure migration partners](https://azure.microsoft.com/migration/migration-center-partners/).
 
 ## Step 2: Migrate
 
@@ -276,7 +276,7 @@ Another scaling tactic that Contoso can use is to temporarily scale up the Azure
 In addition to Database Migration Service, Contoso can use other tools and services to identify VM information:
 
 - Scripts to help with manual migrations. These are available in the GitHub repo.
-- Various [partner tools](https://azure.microsoft.com/migration/migration-partners/) for migration.
+- Various [partner tools](https://azure.microsoft.com/migration/migration-center-partners/) for migration.
 
 <--! docutune:ignore "cost management tools" -->
 
@@ -321,11 +321,11 @@ Contoso begins using these services during migration. With Azure hybrid support,
 
 ### Security
 
-Contoso will rely on Azure Security Center for unified security management and Microsoft Defender for Identity across hybrid cloud workloads.
+Contoso will rely on Microsoft Defender for Cloud for unified security management and Microsoft Defender for Identity across hybrid cloud workloads.
 
-Security Center provides full visibility into and control over the security of cloud applications in Azure. Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
+Defender for Cloud provides full visibility into and control over the security of cloud applications in Azure. Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
 
-Learn more about [Security Center](https://azure.microsoft.com/services/security-center/).
+Learn more about [Defender for Cloud](https://azure.microsoft.com/services/security-center/).
 
 ### Monitoring
 

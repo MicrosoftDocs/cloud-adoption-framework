@@ -16,7 +16,7 @@ This article provides guidance on how to manage extensions to Azure Arc-enabled 
 
 Azure Arc-enabled servers, enables you to deploy Azure VM extensions to non-Azure Windows and Linux VMs, giving you a hybrid or multicloud management experience that levels to Azure VMs.
 
-You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure Arc-enabled servers, both Linux and Windows. In the following procedures, you'll use an ARM template to deploy the Log Analytics agent to your servers. This onboards them in Azure services that use this agent: Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure Arc-enabled servers, both Linux and Windows. In the following procedures, you'll use an ARM template to deploy the Log Analytics agent to your servers. This onboards them in Azure services that use this agent: Azure Monitor, Microsoft Defender for Cloud, Microsoft Sentinel, and so on.
 
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.

@@ -3,7 +3,7 @@ title: Components needed for data governance
 description: Understand the components for data governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/21/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -26,7 +26,7 @@ There are two types of metrics to be considered.
 
 The data governance strategy should include business cases where you describe the impact that ungoverned data is having on the business. Describing the business problems caused by ungoverned data helps to systematically identify candidate business cases. It also allows you to rank the business problems in order of severity and return on investment (ROI) when you solve the problems. Prioritizing problems where ungoverned data has the greatest business impact, is an effective way to get stakeholder sponsorship. It's effective because the priorities pinpoint the greatest opportunities to drive value.
 
-The data governance strategy should include the projects and initiatives needed to achieve the business objectives, meet targets, and deliver the ROI identified in business cases. It should include the budget given to these projects, who is leading the data governance program, and who is accountable for achieving them. It may also include some data principles. Two examples of data principles are:
+The data governance strategy should include the projects and initiatives needed to achieve the business objectives, meet targets, and deliver the ROI identified in business cases. It should include the budget given to these projects, who is leading the data governance program, and who is accountable for achieving them. It might also include some data principles. Two examples of data principles are:
 
 - Data should be treated as an asset
 
@@ -99,7 +99,7 @@ Data governance policies describe a set of rules to control the integrity, quali
 - Data integrity policies such as valid values, referential integrity.
 - Data quality policies with data standardization, cleansing and matching rules.
 - Data protection policies with access security and data privacy rules.
-- Data retention policies to manage the lifecycle with retention, archive, and backup rules. Multiple versions of a policy may be needed to govern the same data across different legal jurisdictions.
+- Data retention policies to manage the lifecycle with retention, archive, and backup rules. Multiple versions of a policy might be needed to govern the same data across different legal jurisdictions.
 
 The [data confidentiality classification scheme](./govern-requirements.md#data-confidentiality-classification-scheme) has five classification levels:
 

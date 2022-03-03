@@ -21,6 +21,10 @@ Operating a business comes with risk. A security team's role is to inform and ad
 
 When mature, the goal of security is to expose and mitigate risks, and then empower the business to change with minimal risk. That level of maturity requires risk insights and deep security integration. At any level of maturity for your organization, the top security risks should appear on the risk register. Those risks are then managed down to an acceptable level.
 
+Watch the following video to learn about security alignment and how you can manage risk within your organization.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu5K]
+
 ## What is cybersecurity risk?
 
 Cybersecurity risk is the potential damage or destruction of business assets, revenue, and reputation. This damage is caused by human attackers attempting to steal money, information, or technology.

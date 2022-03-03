@@ -3,7 +3,7 @@ title: Data sharing agreements in data management and analytics
 description: Learn how data sharing agreements deliver data in a stable way while managing compliance and governance in Azure.
 author: pietheinstrengholt
 ms.author: pstrengholt
-ms.date: 7/20/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
