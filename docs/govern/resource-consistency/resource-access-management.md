@@ -3,7 +3,7 @@ title: Resource access management in Azure
 description: Understand Azure resource access management concepts like Azure Resource Manager, subscriptions, resource groups, and resources.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 01/13/2022
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -12,37 +12,37 @@ ms.custom: internal
 
 # Resource access management in Azure
 
-The [Govern methodology](../index.md) outlines the Five Disciplines of Cloud Governance, which include resource management. [Resource Consistency discipline overview](./index.md) further explains how resource access management fits into the resource management discipline. Before you learn how to design a governance model, it's important to understand the resource access management controls in Azure. The configuration of the resource access management controls forms the basis of your governance model.
+The [Govern methodology](../index.md) outlines the Five Disciplines of Cloud Governance, and resource management is among them. The [Resource Consistency discipline overview](./index.md) explains how resource access management fits into the larger framework of the resource management discipline. Before you learn how to design a governance model, it's necessary to understand resource access management controls in Azure. The configuration of resource access management controls forms the basis of your governance model.
 
-Begin by taking a closer look at how resources are deployed in Azure.
+Let's look at what resources are, and how they're deployed in Azure.
 
 ## What is an Azure resource?
 
-In Azure, a *resource* is an entity managed by Azure. Virtual machines, virtual networks, and storage accounts are examples of Azure resources.
+In Azure, a resource is an entity managed by Azure. Virtual machines, virtual networks, and storage accounts are all examples of Azure resources.
 
 ![Diagram of a resource.](../../_images/govern/design/governance-1-9.png)
 
 ## What is an Azure resource group?
 
-Each resource in Azure must belong to a [resource group](/azure/azure-resource-manager/management/overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so you can manage them as a single entity **based on lifecycle and security**. For example, you can create or delete resources as a group if the resources share a similar lifecycle, such as the resources for an [n-tier application](/azure/architecture/guide/architecture-styles/n-tier). In other words, everything that you create, manage, and deprecate together belongs together in a resource group.
+Each resource in Azure must belong to a [resource group](/azure/azure-resource-manager/management/overview#resource-groups). A resource group is a logical container that associates multiple resources so you can manage them as a single entity—based on lifecycle and security. For example, you can create or delete resources as a group if the resources share a similar lifecycle—such as the resources for an [N-tier application](/azure/architecture/guide/architecture-styles/n-tier). In other words, everything that you create, manage, and deprecate together is associated within a resource group.
 
 ![Diagram of a resource group containing a resource.](../../_images/govern/design/governance-1-10.png)
 
-Associate resource groups and the resources they contain with an Azure subscription.
+Recommended best practice is to associate resource groups, and the resources they contain, with an Azure subscription.
 
 ## What is an Azure subscription?
 
-An Azure *subscription* is similar to a resource group in that it's a logical construct that groups together resource groups and their resources. An Azure subscription is also associated with Azure Resource Manager controls. Take a closer look at Azure Resource Manager to learn about the relationship between it and an Azure subscription.
+An Azure subscription is similar to a resource group in that it's a logical container that associates resource groups and their respective resources. An Azure subscription is also associated with Azure Resource Manager controls. Learn about [Azure Resource Manager](/learn/modules/use-azure-resource-manager/) and its relationship to Azure subscriptions.
 
 ![Diagram of an Azure subscription.](../../_images/govern/design/governance-1-11.png)
 
 ## What is Azure Resource Manager?
 
-In [How does Azure work?](../../get-started/what-is-azure.md), you learn that Azure includes a front end with many services that orchestrate all the functions of Azure. One of these services is [Azure Resource Manager](/azure/azure-resource-manager/). This service hosts the RESTful API clients use to manage resources.
+In [How does Azure work?](../../get-started/what-is-azure.md), you learn that Azure includes a front end with services that orchestrate Azure's functions. One of these services is [Azure Resource Manager](/azure/azure-resource-manager/). This service hosts the RESTful API clients use to manage resources.
 
 ![Diagram of Azure Resource Manager.](../../_images/govern/design/governance-1-12.png)
 
-The following figure shows three clients: [PowerShell](/powershell/azure/), the [Azure portal](https://portal.azure.com), and the [Azure CLI](/cli/azure/):
+The following figure shows three clients: [Azure PowerShell](/powershell/azure/), the [Azure portal](https://portal.azure.com), and the [Azure CLI](/cli/azure/):
 
 ![Diagram of Azure clients connecting to the Resource Manager REST API.](../../_images/govern/design/governance-1-13.png)
 
@@ -72,7 +72,7 @@ The next control is a check that the user has sufficient permission to make the 
 
 ![Users assigned to Azure roles](../../_images/govern/design/governance-1-18.png)
 
-An Azure role specifies a set of permissions a user may take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in `owner` role](/azure/role-based-access-control/built-in-roles#owner) allows a user to run any action on a resource.
+An Azure role specifies a set of permissions a user can take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in owner role](/azure/role-based-access-control/built-in-roles#owner) allows a user to run any action on a resource.
 
 The next control is a check that the request is allowed under the settings specified for [Azure resource policy](/azure/governance/policy/). Azure resource policies specify the operations allowed for a specific resource. For example, an Azure resource policy can specify that users are only allowed to deploy a specific type of virtual machine.
 
@@ -92,7 +92,7 @@ In this article, you learned about how resource access is managed in Azure using
 
 ## Next steps
 
-Now you understand how to manage resource access in Azure. Next, move on to learn how to design a governance model. Design a governance model [for a simple workload](./governance-simple-workload.md) or for [multiple teams](./governance-multiple-teams.md) using these services.
+Now you understand how to manage resource access in Azure. Next, move on to learn how to design a governance model. Design a governance model for a [simple workload](./governance-simple-workload.md) or for [multiple teams](./governance-multiple-teams.md) using these services.
 
 > [!div class="nextstepaction"]
-> [An overview of governance](../index.md)
+> [Overview of governance](../index.md)

@@ -18,6 +18,10 @@ Security governance bridges your business priorities with technical implementati
 
 **Business goals and risk** provide the best direction for security. This direction ensures that security focuses their efforts on important matters for the organization. It also informs risk owners using familiar language and processes in the risk management framework.
 
+To learn more about security governance, watch the following video.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVBWy]
+
 ## Compliance and reporting
 
 Compliance and reporting on external security requirements, and sometimes internal policy, are basic required elements of operating in a given industry. The mandatory requirements are like feeding a bear in the zoo. If you don't feed the bear every day, it might eat you.

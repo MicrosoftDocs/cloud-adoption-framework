@@ -3,7 +3,7 @@ title: Measure business outcomes using objectives and key results
 description: Use the Cloud Adoption Framework to measure business outcomes using objectives and key results (OKRs).
 author: wayneme75
 ms.author: brblanch
-ms.date: 12/23/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -30,9 +30,7 @@ The two components of all OKRs are the objective and its key results. An objecti
 - **Objective:** Where do you want to go?
 - **Key results:** How do you know you’re getting there? How do you measure that progress?
 
-OKRs move teams away from an “output” mindset (“What projects or tasks did we do?”) to an “outcome” mindset (“What was the business result of the project or task?”).
-
-Setting OKRs at the beginning of a key time period for your business (like a quarter or a fiscal year) and then checking in regularly with those OKRs can keep your team focused on the importance of their work rather than its volume.
+OKRs move teams away from an “output” mindset (“What projects or tasks did we do?”) to an “outcome” mindset (“What was the business result of the project or task?”). You can set OKRs at the beginning of a key time period for your business (like a quarter or a fiscal year) and then check in regularly with those OKRs to keep your team focused on the importance of their work rather than its volume.
 
 ## OKR key principles
 
