@@ -112,7 +112,7 @@ If you do implement your own landing zone environments, we recommend that you us
 
 ## Azure AD tenants
 
-Each Azure landing zone and its management group hierarchy is rooted in a single Azure Active Directory (Azure AD) tenant. This means that the first decision you need to make is **which Azure AD tenant to use as the source of identities for managing your Azure resources**. Identities in the Azure AD include users, groups, and service principals.
+Each Azure landing zone and its management group hierarchy is rooted in a single Azure Active Directory (Azure AD) tenant. This means that the first decision you need to make is which Azure AD tenant to use as the source of identities for managing your Azure resources. Identities in the Azure AD include users, groups, and service principals.
 
 > [!TIP]
 > The Azure AD tenant you select for your landing zone doesn't affect your application-level authentication. You can still use other identity providers like Azure AD B2C regardless of which tenant you choose.
