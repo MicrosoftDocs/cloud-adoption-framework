@@ -27,7 +27,7 @@ As an independent software vendor (ISV) building and operating your solution on 
 
 The Azure landing zones help you choose a direction for your overall Azure environment. But as an ISV, SaaS provider, or startup, your specific implementation needs might differ from more standard customer scenarios. These are just a few examples of different implementation scenarios:
 
-* Your organization's perating model separates the roles of your corporate IT team and your SaaS product teams.
+* Your organization's operating model separates the roles of your corporate IT team and your SaaS product teams.
 * You're a small ISV or startup and want to start with the lowest possible cost.
 * You're a large SaaS ISV and plan to split your SaaS application across multiple subscriptions for scale. You also want to group these subscriptions so they correspond to your development, test, staging, and production environments.
 * You have your own *control plane* and use automation scripts or software to deploy and configure Azure resources for your SaaS solutions.
@@ -65,13 +65,13 @@ In the following diagram, an ISV provides a software package or Azure Marketplac
 
 ![Diagram that shows a customer-deployed deployment model. A customer deploys resources provided by the ISV into their own Azure subscription, and users use those resources.](./media/isv-landing-zone/isv-customer-deployed-deployment.png)
 
-The *Customer's other workload* element in the diagram can represent either a customer's own workload or another ISV product the customer has deployed within the their Azure subscription. Customers frequently deploy multiple products from different ISVs into their Azure subscriptions. They combine these individual products to create solutions. For example, a customer might deploy a database product from one ISV, a network virtual appliance from another ISV, and a web application from a third ISV.
+The *Customer's other workload* element in the diagram can represent either a customer's own workload or another ISV product the customer has deployed within their Azure subscription. Customers frequently deploy multiple products from different ISVs into their Azure subscriptions. They combine these individual products to create solutions. For example, a customer might deploy a database product from one ISV, a network virtual appliance from another ISV, and a web application from a third ISV.
 
 Examples of customer-deployed ISV products include the many [virtual machine images](https://azuremarketplace.microsoft.com/marketplace/apps?filters=virtual-machine-images) (such as network and storage virtual appliances) and [Azure applications](https://azuremarketplace.microsoft.com/marketplace/apps?filters=solution-templates) in the Azure Marketplace.
 
 For some customer-deployed solutions, ISVs, Solution Integrators (SIs), and Managed Service Providers (MSPs) use [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview) to provide management and updates for the solution deployed within end-customer Azure subscriptions.
 
-Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. As an ISV building customer-deployed software, it's important for you to consider the [Azure landing zones guidance](index.md) as you design your product so it will work with the [Azure landing zones design principles](../enterprise-scale/design-principles.md) your Azure customers adopt.
+Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. As an ISV building customer-deployed software, you should consider the [Azure landing zones guidance](index.md) as you design your product to work with the [Azure landing zones design principles](../enterprise-scale/design-principles.md) your Azure customers adopt.
 
 It's especially important for you to have a good understanding of the Azure landing zone concepts as you migrate your existing customers' workloads to Azure.
 
@@ -94,7 +94,7 @@ Examples of *dual deployment SaaS* include:
 * Contoso Corporation builds Virtual Desktop Manager, a product that provides a SaaS console interface to control Azure Virtual Desktop resources in each customer's Azure subscription.
 * Fabrikam, Inc. provides a SaaS console for data analytics, and dynamically creates and deletes compute node virtual machines in each customer's Azure subscription.
 
-As a dual deployment ISV, you should refer to the Azure landing zone for guidance in two areas: structuring your own Azure environment that hosts your SaaS service, and ensuring proper interaction between your customers' landing zones and the components you deploy into your customers' Azure subscriptions.
+As a dual deployment ISV, you should refer to the Azure landing zone for guidance in two areas: structuring your own Azure environment to host your SaaS service, and ensuring proper interaction between your customers' landing zones and your components deployed into your customers' Azure subscriptions.
 
 ISVs building dual deployment SaaS solutions should consider the following questions:
 
@@ -106,9 +106,9 @@ ISVs building dual deployment SaaS solutions should consider the following quest
 
 [Azure's landing zone design principles](../enterprise-scale/design-principles.md) recommend aligning with Azure-native platform capabilities such as Log Analytics, Azure Monitor, and Azure Firewall. The principles also provide specific [Azure landing zone implementation options](./implementation-options.md).
 
-As an ISV, you might decide to implement your own landing zone environments. Perhaps you need to use your own automation to deploy Azure resources across subscriptions, or you want to continue using tools you already employ for logging, monitoring, or other platform-layer services.
+As an ISV, you might decide to implement your own landing zone environments. You might need to use your own automation to deploy Azure resources across subscriptions. Or you might want to continue using tools you already employ for logging, monitoring, and other platform-layer services.
 
-If you do implement your own landing zone environments, we recommend that you use Azure landing zone guidance and sample implementations for reference and align your approach with proven Azure landing zone designs.
+If you do implement your own landing zone environments, we recommend that you use Azure landing zone guidance and sample implementations for reference, and align your approach with proven Azure landing zone designs.
 
 ## Azure AD tenants
 
@@ -140,9 +140,9 @@ For more information on the using multiple Azure AD tenants, see the [securing A
 
 Your management group hierarchy is nested under the Azure-created **Tenant root group** management group. You don't use the **Tenant root group** directly.
 
-A standard organization that has a centralized corporate IT team managing their platform and shared services (like logging, networking, identity, and security) usually creates one top-level management group under the Azure-created **Tenant root group**. This top-level management group is usually named after the organization, such as *Contoso*, and the rest of the organization's management groups are deployed below it.
+A standard organization that has a centralized corporate IT team managing their platform and shared services (like logging, networking, identity, and security) usually creates one top-level management group under the Azure-created **Tenant root group**. This top-level management group is usually named after the organization (such as *Contoso*) and the rest of the organization's management groups are deployed below it.
 
-As a SaaS ISV, you might have one SaaS product or you might have a few completely separate SaaS products or lines of business. While you should generally use the same Azure AD tenant to manage Azure resources across all of your products (as discussed in the [Azure AD tenants](#azure-ad-tenants) section), there are scenarios where you might choose to deploy multiple management group hierarchies.
+As a SaaS ISV, you might have one SaaS product or you might have a few separate SaaS products or lines of business. While you should generally use the same Azure AD tenant to manage Azure resources across all of your products (as discussed in the [Azure AD tenants](#azure-ad-tenants) section), in some scenarios you might choose to deploy multiple management group hierarchies.
 
 Consider how independent your products are from each other, and ask yourself:
 
@@ -156,7 +156,7 @@ If you instead answered *no*, and each of your SaaS products is managed and oper
 > [!TIP]
 > It's uncommon for one ISV to have more than just a few top-level management groups. Often, several products can be combined together due to similarities in how they're managed and operated.
 
-This management approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes). However, instead of creating *Contoso* and *Contoso-Canary* under the **Tenant root group**, in this approach the example company would create the product-specific *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03* top-level managment groups under it instead. This scenario is illustrated in the following diagram:
+This management approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes). However, instead of creating *Contoso* and *Contoso-Canary* under the **Tenant root group**, in this approach the example company would create the product-specific *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03* top-level management groups under it instead. This scenario is illustrated in the following diagram:
 
 ![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS products](./media/isv-landing-zone/isv-top-level-management-group.png)
 
@@ -168,7 +168,7 @@ The **Platform** management group is frequently partitioned into **Identity**, *
 
 In your organization, you might have a single team that manages all shared platform components like identity, networking, and management. If this is the case, and you have no plans to separate that management across multiple teams, then consider using a single **Platform** management group.
 
-If you instead have separate teams that manage different parts of your centralized platform, you should deploy additional levels in the management group hierarchy under the **Platform** management group. This allows you to assign separate policies for each part of your centralized platform.
+If you instead have separate teams that manage different parts of your centralized platform, you should deploy further levels in the management group hierarchy under the **Platform** management group. This allows you to assign separate policies for each part of your centralized platform.
 
 The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a more comprehensive scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**. Each child management group contains a subscription with the relevant resources. Option B shows a more simple scenario, where the **Platform** management group contains a single platform subscription.
 
@@ -221,7 +221,7 @@ The **Sandboxes** management group usually contains Azure subscriptions that are
 > [!IMPORTANT]
 > Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to production workloads and to any non-production environments that mirror production environments.
 
-The following diagram illustrates two potential options. Option A does not include the **Decommissioned** and **Sandbox** management groups, while option B does.
+The following diagram illustrates two potential options. Option A doesn't include the **Decommissioned** and **Sandbox** management groups, while option B does.
 
 ![Diagram that shows the Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-management-group.png)
 
