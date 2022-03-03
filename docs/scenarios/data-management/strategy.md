@@ -167,7 +167,7 @@ Let's take a closer look at the considerations to make when you're building desi
 
 A key consideration for data ingestion is the ability to build a data pipeline fast, from requirements to production, in a secure and compliant manner. Important elements include metadata-driven, self-service, low-code technologies to hydrate your data lake.
 
-When you're building a pipeline, consider design, along with the ability to wrangle data, scale compute, and distribute data. Also, having the right DevOps support for the continuous integration and delivery of your pipeline is critical.
+When you are building a pipeline, consider design, along with the ability to wrangle data, scale compute, and distribute data. Also, having the right DevOps support for the continuous integration and delivery of your pipeline is critical.
 
 Tools such as Azure Data Factory support a plethora of on-premises data sources, software as a service (SaaS) data sources, and data sources from other public clouds. Having such agility from the start is always helpful.
 
@@ -187,7 +187,7 @@ For certain specialized workloads, customers can secure execution environments l
 
 ### Analytical processing
 
-The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. One of the useful capabilities is the ability to automatically detect schema drift.
+The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. As part of the analytical process a business aligned data model and a semantic model allowing implementation of business rules and Key Performance Indicators (KPI's) if often implemented. One of the useful capabilities is the ability to automatically detect schema drift.
 
 ### Data strategy summary
 
