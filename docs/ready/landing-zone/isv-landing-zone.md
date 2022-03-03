@@ -181,7 +181,7 @@ The **Landing Zones** management group contains the Azure subscriptions that hos
 This management group contains one or more child management groups. Each of the child management groups under **Landing Zones** represents a workload or subsystem *archetype*, with consistent policy and access requirements that should apply to all subscriptions. Reasons for using multiple archetypes include:
 
 * **Compliance:** If a subsystem of your SaaS product needs to be PCI-DSS compliant, consider creating a **PCI DSS** archetype child management group under **Landing Zones**. All Azure subscriptions that contain resources within the scope of PCI-DSS compliance should be placed within that management group.
-* **Tiers:** Consider creating separate landing zone archetypes for your SaaS solution's *dedicated* tier customers and *free* tier customers. [TODO - can we make the rest of this smoother?] Each of the child management groups contains different Azure Policy settings. For example, the policies in the free tier might restrict deployments to only enable specific virtual machine SKUs, and the policies in the dedicated tier might require resources to be deployed into specific regions.
+* **Tiers:** Consider creating separate landing zone archetypes for your SaaS solution's *dedicated* tier customers and *free* tier customers. Each of the child management groups contains different Azure Policy settings. For example, the policies in the free tier might restrict deployments to only enable specific virtual machine SKUs, and the policies in the dedicated tier might require resources to be deployed into specific regions.
 
 ### Environment-specific management groups
 
