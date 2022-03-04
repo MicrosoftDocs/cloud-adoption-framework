@@ -98,11 +98,17 @@ For more information, see [Organize Operations](organize.md).
 To get started with the data management and data management landing zones you need to make sure that you have the underpinning architectural components to enable a successful deployment:
 
 [Enterprise enrollment and Azure Active Directory tenants for data management and analytics scenario](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+
 [Resource organization for data management and analytics scenario](eslz-resource-organization.md)
+
 [Network topology and connectivity for data management and analytics landing zones](eslz-network-topology-and-connectivity.md)
+
 [Resource organization for data management and analytics scenario](eslz-resource-organization.md)
+
 [Security, governance, and compliance for data management and analytics](eslz-security-governance-and-compliance.md)
+
 [Management and monitoring for data management and analytics](eslz-management-and-monitoring.md)
+
 [Business continuity and disaster recovery considerations for AKS](../aks/eslz-business-continuity-and-disaster-recovery.md)
 
 ## Next steps

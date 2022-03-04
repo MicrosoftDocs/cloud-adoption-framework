@@ -24,7 +24,7 @@ There are two ways, within the Azure platform, to approach giving access to data
 
 - A custom data marketplace that uses Azure Active Directory Entitlement Management to grant access to data products.
 
-As Azure Purview (data policies) is covered in [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage), we'll concentrate on the scenario of using Azure Active Directory Entitlement Management with a custom data marketplace.
+As Azure Purview (data policies) is covered in [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage). Data owner polices can also be defined on [resource groups and subscriptions](/azure/purview/tutorial-data-owner-policies-resource-group). In this document we'll concentrate on the scenario of using Azure Active Directory Entitlement Management with a custom data marketplace.
 
 > [!NOTE]
 > Every business needs to define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured using options outlined in [Data privacy for data management and analytics in Azure](secure-data-privacy.md). For  classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
