@@ -83,8 +83,10 @@ items:
     items:
       - name: Overview
         href: ./organize.md
-      - name: Roles and teams
+      - name: Teams
         href: ./organize-roles-and-teams.md
+      - name: Roles and responsibilities
+        href: ./organize-roles-and-responsibilities.md
       - name: Teams functions
         href: ./organize-team-functions.md
 
