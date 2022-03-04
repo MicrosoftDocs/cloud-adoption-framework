@@ -1,5 +1,5 @@
 ---
-title: Understand the roles and teams for data management and analytics in Azure
+title: Understand the roles and teams for cloud-scale analytics in Azure
 description: Learn about the roles and teams for Cloud-scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand the teams for data management and analytics in Azure
+# Understand the teams for cloud-scale analytics in Azure
 
 For Cloud-scale analytics, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
@@ -23,7 +23,7 @@ Within scale analytics we identify the following teams:
 - Data landing zone ops
 - Data Application teams
 
-Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-and-responsibilities.md) and [Understand teams and functions for data management and analytics in Azure](organize-team-functions.md).
+Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-and-responsibilities.md) and [Understand teams and functions for cloud-scale analytics in Azure](organize-team-functions.md).
 
 ## Data landing zone teams
 

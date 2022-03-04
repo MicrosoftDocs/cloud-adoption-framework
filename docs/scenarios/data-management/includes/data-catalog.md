@@ -12,7 +12,7 @@ We recommend you have a catalog service provisioned to define the metadata of th
 
 The catalog registers and maintains the data information in a centralized place and makes it available for the organization. It ensures that enterprises avoid duplicate data products caused by redundant data ingestion by different project teams.
 
-Data management and analytics scenario relies on [Azure Purview](/azure/purview/overview) to serve as:
+Cloud-scale analytics relies on [Azure Purview](/azure/purview/overview) to serve as:
 
 - System of registration
 - Discovery for enterprise data sources

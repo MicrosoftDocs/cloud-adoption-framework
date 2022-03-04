@@ -114,4 +114,4 @@ Nonetheless, [Traditional Spoke-Hub-Hub-Spoke Design (NOT Recommended)](#traditi
 ## Next steps
 
 - [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md)
-- [Resource organization for data management and analytics scenario](eslz-resource-organization.md)
+- [Resource organization for cloud-scale analytics](eslz-resource-organization.md)

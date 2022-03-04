@@ -1,6 +1,6 @@
 ---
-title: How automated ingestion frameworks support data management and analytics scenario in Azure
-description: Learn about how automated ingestion frameworks support data management and analytics scenario in Azure.
+title: How automated ingestion frameworks support cloud-scale analytics in Azure
+description: Learn about how automated ingestion frameworks support cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/25/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# How automated ingestion frameworks support data management and analytics scenario in Azure
+# How automated ingestion frameworks support cloud-scale analytics in Azure
 
 This section provides guidance for how custom ingestion frameworks can drive services and processes.
 
@@ -199,4 +199,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Overview of Azure Data Lake Storage for the data management and analytics scenario](data-lake-overview.md)
+[Overview of Azure Data Lake Storage for cloud-scale analytics](data-lake-overview.md)

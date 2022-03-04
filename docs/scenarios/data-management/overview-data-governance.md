@@ -10,19 +10,19 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to data management and analytics
+# Introduction to cloud-scale analytics
 
-Data management and analytics scenario builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first data management and analytics landing zones.
+Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first cloud-scale analytics landing zones.
 
 ## Data management and analytics evaluation
 
-Often businesses seek clarity or prescriptive guidance before they start to carve out the technical details for a specific use case, project, or an end-to-end data management and analytics. It can be challenging to ensure that all strategic and required principles in the scope of the current use are considered for how the overall data strategy is formulated.
+Often businesses seek clarity or prescriptive guidance before they start to carve out the technical details for a specific use case, project, or an end-to-end cloud-scale analytics. It can be challenging to ensure that all strategic and required principles in the scope of the current use are considered for how the overall data strategy is formulated.
 
-To speed up the delivery of this end-to-end insights journey while still keeping these challenges in mind, Microsoft has developed a prescriptive scenario for data management and analytics. It aligns to the key themes discussed in [Develop a plan for data management and analytics](plan.md).
+To speed up the delivery of this end-to-end insights journey while still keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns to the key themes discussed in [Develop a plan for cloud-scale analytics](plan.md).
 
-The data management and analytics scenario builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
+Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
-The data management and analytics scenario paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
+Cloud-scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
 
 ## Observations of existing architectures
 
@@ -36,9 +36,9 @@ The data warehouse and data lake is still valuable, and will play an important r
 
 Your current implementation patterns could include data warehouse, data lake, or data lakehouse structures – or even an emerging model like data fabric or data mesh.
 
-Each has its own merits and challenges, and the data management and analytics scenario helps you work from where you are now to shift your approach to data management so it can evolve with your infrastructure.
+Each has its own merits and challenges, and cloud-scale analytics helps you work from where you are now to shift your approach to data management so it can evolve with your infrastructure.
 
-You can support any data platform with the scenario to create an end-to-end data management and analytics framework that can serve as your foundation and allow for scaling.  
+You can support any data platform with the scenario to create an end-to-end cloud-scale analytics framework that can serve as your foundation and allow for scaling.  
 
 ## Modern data platform and desired outcomes
 
@@ -123,4 +123,4 @@ Failure to comply with regulatory legislation on data privacy might result in si
 
 ## Next steps
 
-[Integrate data management and analytics into your cloud adoption strategy](./strategy.md)
+[Integrate cloud-scale analytics into your cloud adoption strategy](./strategy.md)

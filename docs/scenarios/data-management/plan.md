@@ -1,6 +1,6 @@
 ---
-title: Develop a plan for data management and analytics
-description: Understand how to build a plan for data management and analytics in Azure.
+title: Develop a plan for cloud-scale analytics
+description: Understand how to build a plan for cloud-scale analytics in Azure.
 author: pratimdas
 ms.author: brblanch
 ms.date: 01/27/2021
@@ -10,11 +10,11 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Develop a plan for data management and analytics
+# Develop a plan for cloud-scale analytics
 
 The [Plan methodology](../../plan/index.md) of the Cloud Adoption Framework helps to create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates to create your backlog and plans to build necessary skills across your teams. The backlog and plans you create are all based on what you are trying to do in the cloud.
 
-This article builds on the Plan methodology. It has specific guidance for data estate rationalization and skilling plans, specific to data management and analytics.
+This article builds on the Plan methodology. It has specific guidance for data estate rationalization and skilling plans, specific to cloud-scale analytics.
 
 ## Data estate rationalization
 
@@ -74,5 +74,5 @@ Agility is about thinking through how to understand what's going on in your curr
 The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
 
 - [Review your environment for Azure landing zones](./ready.md)
-- [Govern data management and analytics](./govern.md)
-- [Secure data management and analytics](./secure.md)
+- [Govern cloud-scale analytics](./govern.md)
+- [Secure cloud-scale analytics](./secure.md)

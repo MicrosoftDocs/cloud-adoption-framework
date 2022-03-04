@@ -63,7 +63,7 @@ Given this definition on how to define a successful product what is the definiti
 
 The code assets part of a data product would be the code that is used to generate the data product as well as the code that is used to deliver it. This would include the pipelines that are used to create the finished product as well as the report.
 
-For more information about data products, see [Data management and analytics scenario data products and data applications in Azure](data-landing-zone-data-products.md) and for specific guidance about using this guidance in data mesh, see [What is a data product?](what-is-data-product.md).
+For more information about data products, see [Cloud-scale analytics data products and data applications in Azure](data-landing-zone-data-products.md) and for specific guidance about using this guidance in data mesh, see [What is a data product?](what-is-data-product.md).
 
 ## Self Service Platform
 

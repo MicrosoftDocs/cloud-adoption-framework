@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 To be written.
 
-For now see [How automated ingestion frameworks support data management and analytics scenario in Azure](../best-practices/automated-ingestion-pattern.md)
+For now see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md)
 
 ## Next steps
 

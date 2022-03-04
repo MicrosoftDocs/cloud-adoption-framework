@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Requirements for governing data
 
-The data management and analytics scenario recommends you consider the following requirements for governing data:
+Cloud-scale analytics recommends you consider the following requirements for governing data:
 
 - Data entity definition to create a common business vocabulary in a business glossary. *Data entities in this context means concepts like customer, supplier, materials, employee and others.*
 - Data entity identification and discovery.

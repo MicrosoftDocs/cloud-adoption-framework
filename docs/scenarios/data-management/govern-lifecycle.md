@@ -20,7 +20,7 @@ Data products could have different lifecycles. We recommend applying policies to
 
 ## Managing lifecycle of data
 
-In the data management and analytics scenario their are two ways to approach data lifecycle management.
+In cloud-scale analytics their are two ways to approach data lifecycle management.
 
 - Using the inbuilt data lifecycle features of each Azure service containing persisted data such as [Azure data lake](/azure/storage/blobs/lifecycle-management-overview). This is a great start for moving data to cold and archive tiers but fails to adhere to deleting of data after X amount of time.
 
@@ -28,4 +28,4 @@ In the data management and analytics scenario their are two ways to approach dat
 
 ## Next steps
 
-[Data sharing agreements in data management and analytics](govern-data-sharing-agreements.md)
+[Data sharing agreements in cloud-scale analytics](govern-data-sharing-agreements.md)

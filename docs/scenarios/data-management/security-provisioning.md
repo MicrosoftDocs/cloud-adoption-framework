@@ -1,6 +1,6 @@
 ---
-title: Provision security for data management and analytics in Azure
-description: Learn how to provision security for the data management and analytics scenario in Azure.
+title: Provision security for cloud-scale analytics in Azure
+description: Learn how to provision security for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -27,7 +27,7 @@ There are two ways, within the Azure platform, to approach giving access to data
 As Azure Purview (data policies) is covered in [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage). Data owner polices can also be defined on [resource groups and subscriptions](/azure/purview/tutorial-data-owner-policies-resource-group). In this document we'll concentrate on the scenario of using Azure Active Directory Entitlement Management with a custom data marketplace.
 
 > [!NOTE]
-> Every business needs to define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured using options outlined in [Data privacy for data management and analytics in Azure](secure-data-privacy.md). For  classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
+> Every business needs to define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured using options outlined in [Data privacy for cloud-scale analytics in Azure](secure-data-privacy.md). For  classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
 
 ## What is Azure AD entitlement management?
 
@@ -170,6 +170,6 @@ Azure AD entitlement management creates access packages in the domains access pa
 
 ## Next steps
 
-- [Organize data operations team members for data management and analytics in Azure](./organize.md)
+- [Organize data operations team members for cloud-scale analytics in Azure](./organize.md)
 - [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?feature=youtu.be&v=zaaKvaaYwI4) (video)
 - Explore [common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios) for more information about how to manage entitlement.

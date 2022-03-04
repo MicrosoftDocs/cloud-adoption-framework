@@ -1,6 +1,6 @@
 ---
-title: Data Standardization in data management and analytics scenario.
-description: Understand data Standardization in data management and analytics scenario.
+title: Data Standardization in cloud-scale analytics.
+description: Understand data Standardization in cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
@@ -86,7 +86,7 @@ For more information on data lake zones, see (./data-lake-zones.md)
 
 ## Compliance support
 
-Delta Lake adds a transactional layer that provides structured data management on top of your data lake, it can dramatically simplify and speed up your ability to locate and remove personal information (also known as "personal data") in response to consumer requests. It supports operations such as DELETE, UPDATE, and MERGE. For more information, see [Best practices: GDPR and CCPA compliance using Delta Lake](/azure/databricks/security/privacy/gdpr-delta).
+Delta Lake adds a transactional layer that provides structured data management on top of your data lake, it can dramatically simplify and speed up your ability to locate and remove personal information (also known as "personal data") in response to consumer requests. It supports operations such as DELETE, UPDATE, and MERGE. For more information, see [Best practices: GDPR compliance using Delta Lake](/azure/databricks/security/privacy/gdpr-delta).
 
 ## Summary
 
