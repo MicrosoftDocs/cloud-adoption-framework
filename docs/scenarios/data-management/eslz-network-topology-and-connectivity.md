@@ -3,14 +3,30 @@ title: Network topology and connectivity for data management and analytics landi
 description: Learn about the network topology and connectivity for data management and analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 02/10/2022
+ms.date: 03/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Network topology and connectivity for data management and analytics landing zones
+# Overview
+
+This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the design area for network topology and connectivity article.
+
+Since data management and data landing zones are important, you should also include the guidance for the design areas in your design.
+
+The Data Management and Analytics Scenario promises the possibility to easily share and access datasets across multiple data domains and Data Landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs had to be considered, evaluated and tested to make sure that these are compatible with the existing Hub and Spoke and vWAN deployments of corporations. Based on the current capabilities of Azure Networking Services it's recommended to rely on a meshed network architecture. What this means is that it's recommended to set up Vnet peering between
+
+1. The Connectivity Hub and Data Management Zone,
+2. The Connectivity Hub and each Data Landing Zone,
+3. The Data Management Zone and each Data Landing Zone and
+4. Each Data Landing Zone.
+
+:::image type="content" source="./images/network-options-network-mesh.png" alt-text="Network architecture":::
+*Figure 1: Basic networking diagram for Cloud Adoption Framework data management and analytics.*
+
+To explain the rationale behind the recommended design, this article will illustrate the advantages and disadvantages that come with each of the different network architecture approaches that were considered when designing the Data Management and Analytics Scenario. The first section of this article will only look at a single-region pattern, where the Data Management Zone as well as all the Data Landing Zones are hosted in the same region. The second chapter will specifically focus on the cross-region setup and will provide recommendations for such data access patterns.
 
 This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
 
@@ -70,5 +86,4 @@ Handle DNS resolution for private endpoints through central [Azure Private DNS](
 
 ## Next steps
 
-- [Network architecture considerations](eslz-network-considerations.md)
-- [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md)
+- [Single-region Data Landing Zone Connectivity](eslz-network-considerations-single-region.md)
