@@ -1,6 +1,6 @@
 ---
-title: What is data governance?
-description: Learn about data governance for Azure.
+title: Cloud-scale analytics overview
+description: Learn about cloud-scale analytics for Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/22/2021
