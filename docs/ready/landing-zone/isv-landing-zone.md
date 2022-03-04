@@ -168,7 +168,7 @@ The **Platform** management group is frequently partitioned into **Identity**, *
 
 In your organization, you might have a single team that manages all shared platform components like identity, networking, and management. If this is the case, and you have no plans to separate that management across multiple teams, then consider using a single **Platform** management group.
 
-If you instead have separate teams that manage different parts of your centralized platform, you should deploy further levels in the management group hierarchy under the **Platform** management group. This allows you to assign separate policies for each part of your centralized platform.
+If you instead will have separate teams that manage different parts of your centralized platform, you should deploy further levels in the management group hierarchy under the **Platform** management group. This allows you to assign separate policies for each part of your centralized platform.
 
 The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a more comprehensive scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**. Each child management group contains a subscription with the relevant resources. Option B shows a more simple scenario, where the **Platform** management group contains a single platform subscription.
 
