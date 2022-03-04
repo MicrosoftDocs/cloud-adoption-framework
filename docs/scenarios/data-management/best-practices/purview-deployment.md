@@ -32,7 +32,7 @@ One Azure Purview account is deployed inside the data management landing zone, w
 
 The first step is the deployment of an Azure Purview account. During the deployment of the [data management landing zone](../architectures/data-management-landing-zone.md), a single Azure Purview account is deployed automatically inside the data management subscription. The goal is to centralize the entire data map into a single Azure Purview account across all data landing zones. We recommend you consider a shared single Azure Purview account inside the data management landing zone subscription per environment type.
 
-In addition to the Azure Purview account, a managed resource group is also deployed. A managed *storage account* and a managed *Event Hubs namespace* are deployed inside this resource group and are used to ingest the metadata because of scans. Since these resources are consumed by the Azure Purview catalog, they must not be removed. An Azure role-based access control RBAC *deny assignment* is added automatically for *all principals* at the resource group level at the time of deployment.
+In addition to the Azure Purview account, a managed resource group is also deployed. A managed *storage account* and a managed *Event Hubs namespace* are deployed inside this resource group and are used to ingest data asset metadata through scans. Since these resources are consumed by the Azure Purview catalog, they must not be removed. An Azure role-based access control RBAC *deny assignment* is added automatically for *all principals* at the resource group level at the time of deployment.
 
 ### Prerequisites
 
@@ -57,7 +57,7 @@ The Azure Purview account is deployed inside the Azure virtual network (VNet) wi
 
 - **Account:** A private endpoint is used to allow only client calls to Azure Purview that originate from within the private network. It's required as a prerequisite for a *portal* private endpoint.
 
-- **Portal:** A private endpoint is intended to provide private connectivity to Azure Purview Studio.
+- **Portal:** A private endpoint is intended to provide private connectivity to Azure Purview Studio. The Azure Purview Studio is the management user interface that allows you to access and manage Azure Purview from a web browser.
 
 - **Ingestion** private endpoints to scan Azure IaaS and PaaS data sources inside Azure Virtual Network and on-premises data sources through a private connection. This method ensures network isolation for your metadata flowing from the data sources to Azure Purview Data Map.
 

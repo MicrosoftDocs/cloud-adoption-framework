@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to cloud-scale analytics overview
+# Introduction to cloud-scale analytics
 
 Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first cloud-scale analytics landing zones.
 

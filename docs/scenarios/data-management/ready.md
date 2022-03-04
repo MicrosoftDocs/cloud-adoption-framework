@@ -98,11 +98,17 @@ For more information, see [Organize Operations](organize.md).
 To get started with the data management and data management landing zones you need to make sure that you have the underpinning architectural components to enable a successful deployment:
 
 [Enterprise enrollment and Azure Active Directory tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+
 [Resource organization for cloud-scale analytics](eslz-resource-organization.md)
+
 [Network topology and connectivity for cloud-scale analytics landing zones](eslz-network-topology-and-connectivity.md)
+
 [Resource organization for cloud-scale analytics](eslz-resource-organization.md)
+
 [Security, governance, and compliance for cloud-scale analytics](eslz-security-governance-and-compliance.md)
+
 [Management and monitoring for cloud-scale analytics](eslz-management-and-monitoring.md)
+
 [Business continuity and disaster recovery considerations for AKS](../aks/eslz-business-continuity-and-disaster-recovery.md)
 
 ## Next steps

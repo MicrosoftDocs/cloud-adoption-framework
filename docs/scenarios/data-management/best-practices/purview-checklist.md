@@ -63,7 +63,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 - Define whether there's an existing cloud-scale analytics [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
 
 - Manage budgets, costs, and licensing.
-  - Understand how the Azure Purview billing model works, and define how to control costs. Microsoft offers Azure Purview in a [pay-as-you-go model](https://aka.ms/purviewpricing).
+  - Understand how the Azure Purview billing model works, and define how to control costs. Microsoft offers Azure Purview in a [pay-as-you-go model](https://aka.ms/purviewpricing). Detailed pricing information can also be found in [Azure Purview pricing](/azure/purview/concept-guidelines-pricing)
   - Understand more about potential costs. For example, if you're planning to extend Microsoft 365 sensitivity labels to files and database columns in Azure Purview, you need Microsoft 365 E5 licenses.
 
 - Plan for enterprise-level communication, readiness, and awareness across different teams. These teams are the ones required to curate, use, and manage data across multiple platforms.
@@ -114,7 +114,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 - Migrate data sources to the new data landing zone.
 
-- Validate and update your Azure Purview [collections architecture](/azure/purview/manage-data-sources#manage-collections).
+- Validate and update your Azure Purview [collections architecture](/azure/purview/manage-data-sources#manage-collections). Best practice information around Azure Purview collections architecture can be found [here](/azure/purview/concept-best-practices-collections).
 
 - Validate and update the collection hierarchy inside the Azure Purview account.
 

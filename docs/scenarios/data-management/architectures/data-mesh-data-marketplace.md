@@ -27,6 +27,8 @@ The *data marketplace* itself is typically a thin orchestration layer with an ap
 
 Building a data marketplace isn't only about tools, services and metadata. It's also about structure, culture, and people. The cultural aspects require less rigid [governance](./data-mesh-governance.md). It requires you to give users trust, to train people, and to work on awareness. These activities shouldn't be underestimated. Your users are valuable resources; they own or use specific parts of the data landscape. Making better use of your users increases the efficiency of data knowledge and data usage.
 
+In some cases an external data marketplace is necessary. The purpose of the external data marketplace is to enable sharing of data products with external partners. [Azure Data Share](/azure/data-share) can be used as a component in an external data marketplace.
+
 ## Next steps
 
 [Master Data Management in Data Mesh](data-mesh-master-data-management.md)

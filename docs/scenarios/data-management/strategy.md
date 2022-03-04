@@ -229,6 +229,8 @@ For more information, see [Develop a plan for cloud-scale analytics](./plan.md).
 
 When you deliver data products against the success criteria in a standardized and structured way, that delivery will validate the iterative framework. Additionally, when you take the learning and continuously innovate, that will help build business confidence and widen the goals of a data strategy. This process will provide clearer and quicker adoption across the business.
 
+The same applies for the data platform, a mesh should in many cases be seen as something to drive towards when you have a setup with multiple teams operating fairly autonomous. Getting there is an iterative process since it in many cases requires significant changes to the organizational setup, readiness and business alignment that most likely is not be the current state today.
+
 ## Next steps
 
 The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:

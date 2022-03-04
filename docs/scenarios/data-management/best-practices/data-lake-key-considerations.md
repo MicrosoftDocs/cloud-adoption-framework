@@ -32,7 +32,7 @@ The following considerations apply to the different access tiers:
 
 - Archive storage stores data offline and offers the lowest storage costs. However, it also has the highest data rehydrate and access costs.
 
-Data stored in the cloud grows at an exponential rate. To manage costs for your expanding storage needs, it's helpful to organize your data based on attributes like frequency-of-access and planned retention period to optimize costs. Data stored in the cloud can be different based on how it's generated, processed, and accessed over its lifetime. Some data is actively accessed and modified throughout its lifetime. Some data is accessed frequently early in its lifetime, with access dropping drastically as the data ages. Some data remains idle in the cloud and is rarely, if ever, accessed after it's stored.
+For many organizations data grows at an exponential rate, this includes data stored in the cloud. To manage costs for your expanding storage needs, it's helpful to organize your data based on attributes like frequency-of-access and planned retention period to optimize costs. Data stored in the cloud can be different based on how it's generated, processed, and accessed over its lifetime. Some data is actively accessed and modified throughout its lifetime. Some data is accessed frequently early in its lifetime, with access dropping drastically as the data ages. Some data remains idle in the cloud and is rarely, if ever, accessed after it's stored.
 
 These data access scenarios benefits from a different access tier that's optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
 
@@ -44,7 +44,7 @@ With the lifecycle management policy, you can:
 
 - Transition blobs from cool to hot immediately if accessed to optimize for performance.
 
-- Transition blobs, blob versions, and blob snapshots to a cooler storage tier to optimize for cost. This transition is useful if the blobs are not accessed or modified for a period of time. For example, hot to cool, hot to archive, or cool to archive.
+- Transition blobs, blob versions, and blob snapshots to a cooler storage tier to optimize for cost. This transition is useful if the blobs are not accessed or modified for a period of time. For example, hot to cool, hot to archive, or cool to archive. *Note blob versions are not supported on storage accounts with Hierarchal Name Space feature turned on.*
 
 - Delete blobs, blob versions, and blob snapshots at the end of their lifecycle.
 

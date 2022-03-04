@@ -71,7 +71,7 @@ Cloud-scale analytics is designed to guide the end-to-end customer journey throu
 
 ## Reference architecture
 
-The scenario uses two key architectural concepts: The *Data management landing zone* and the *data landing zones*. These architectures help accelerate deployment for many common cloud-scale analytics solutions. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform which can scale according to your requirements.
+Cloud-scale analytics uses two key architectural concepts: The *Data management landing zone* and the *data landing zones*. These architectures help accelerate deployment for many common cloud-scale analytics solutions by standardizing best practice and minimizing deployment bottlenecks for development teams. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform which can scale according to your requirements.
 
 The following diagram is an overview of a data platform with a central data management landing zone and multiple data landing zones. You can start with a single landing zone and scale to multiple landing zones, which are all governed from the data management landing zone.
 :::image type="content" source="./images/data-landing-zone-index.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones.":::
