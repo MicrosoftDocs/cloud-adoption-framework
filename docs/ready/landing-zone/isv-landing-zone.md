@@ -162,7 +162,7 @@ This management approach is similar to the [testing approach for enterprise-scal
 
 ### Platform management group
 
-In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator), the **Platform** management group contains all Azure subscriptions that host components and shared services used by workloads in the landing zone subscriptions. Examples of components deployed into the platform and shared services subscriptions include centralized logging infrastructure (such as Log Analytics workspaces, DevOps, security, and automation tooling), central networking resources (such as hub-VNet and DDos Protection plans), and an ISV's control plane services.
+In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator), the **Platform** management group contains all Azure subscriptions that host components and shared services used by workloads in the landing zone subscriptions. Examples of components deployed into the platform and shared services subscriptions include centralized logging infrastructure (such as Log Analytics workspaces), DevOps, security, automation tooling, central networking resources (such as hub-VNet and DDos Protection plans), and an ISV's control plane services.
 
 The **Platform** management group is frequently partitioned into **Identity**, **Management**, and **Connectivity** child groups to provide convenient separation of roles and policies for enterprise customers.
 
