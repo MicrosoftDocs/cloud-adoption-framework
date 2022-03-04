@@ -95,7 +95,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics in Azure](./organize-data-operations.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics in Azure](./manage.md)
 
 ### Lock resources for production workloads
 
