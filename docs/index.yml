@@ -186,7 +186,7 @@ tools:
 
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./_images/learn-caf-logo.png
-      url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/
+      url: /learn/paths/cloud-adoption-framework/
 
     # Card
     - title: Azure fundamentals
@@ -196,7 +196,7 @@ tools:
     # Card
     - title: Learn the business value of Azure
       imageSrc: ./_images/learn-business-value-of-azure-logo.png
-      url: /learn/paths/learn-business-value-of-azure/
+      url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/
 
 # conceptualContent section (optional)
 
