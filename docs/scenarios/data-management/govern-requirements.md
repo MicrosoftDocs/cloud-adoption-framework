@@ -14,8 +14,8 @@ ms.custom: e2e-data-management, think-tank
 
 The data management and analytics scenario recommends you consider the following requirements for governing data:
 
-- Data item and data entity definition to create a common business vocabulary in a business glossary.
-- Data item and data entity identification and discovery.
+- Data entity definition to create a common business vocabulary in a business glossary. *Data entities in this context means concepts like customer, supplier, materials, employee and others.*
+- Data entity identification and discovery.
 - Data governance classification to govern data access security, data privacy, and data retention.
 - People, like data owners with governance accountability and data stewards responsible for data protection and quality.
 - Data governance processes.
