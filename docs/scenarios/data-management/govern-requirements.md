@@ -72,7 +72,7 @@ Is it a C-level executive? Is it a department head? Is it the head of governance
 Processes are needed, along with roles and responsibilities to:
 
 - Govern the definition and maintenance of a common business vocabulary
-- Discover and identify what data you have, what it means. And where it's stored
+- Discover and identify what data you have, what it means, and where it's stored
 - Classify data to know how to govern it
 - Govern the definition and maintenance of data access security policies
 - Govern the definition and maintenance of data privacy policies
