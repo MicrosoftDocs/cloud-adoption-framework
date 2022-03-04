@@ -1,6 +1,6 @@
 ---
-title: Understand the roles and teams for data management and analytics in Azure
-description: Learn about the roles and teams for Cloud-scale analytics in Azure.
+title: Understand the roles and responsibilities for cloud-scale analytics in Azure
+description: Learn about the roles and responsibilities for cloud-scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -10,20 +10,33 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand the roles and teams for data management and analytics in Azure
+# Roles and Responsibilities
 
 For Cloud-scale analytics, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
 ![Overview of Cloud-scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
-Within scale analytics we identify the following teams:
+## Roles
 
-- Platform ops
-- Data platform ops
-- Data landing zone ops
-- Data Application teams
+Multiple roles are involved a data management and analytics scenario deployment. The following sections outline the roles that are key to a successful deployment, and data governance roles are described further down this page.
 
-Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-and-responsibilities.md) and [Understand teams and functions for data management and analytics in Azure](organize-team-functions.md).
+| Role | Description |
+|-|-|
+|Product owners| They optimize Azure to transform solutions, bring agility to the business, and optimize business processes.|
+| Solution architects | They propose solutions for the boundaries of the enterprise business network and learn how to diagnose, analyze, design, deploy, and integrate Azure services. |
+|Developer/DevOps engineers|They use Azure DevOps or GitHub to design, build, deploy, test, and maintain continuous integration and delivery processes.|
+| Security engineers <sup>1</sup> | They support teams to design and implement secure Azure infrastructure with best practices. |
+| Technical/business managers <sup>1</sup>|They help to develop an understanding of Azure services, control costs, and optimize your team's operations and agility.|
+|Decision makers/business users|They optimize Azure to gain actionable insights in their most relevant forms and identify AI embedded in current solutions to streamline business processes.|
+| Data managers | They provision and manage access to data assets. |
+|Data/performance analysts |They use Azure to discover and share new insights from existing data assets or as-needed data queries. They create one-click AI transformations, consume prebuilt models, and generate machine learning models quickly.|
+|Data engineers | They use Azure to build, integrate, and manage data and analytics products. When necessary, they also create AI-enabled applications/solutions.|
+|Citizen data scientists |They create machine learning models with powerful visual, drag-and-drop, and no-code tools where coding isn't necessary. |
+| Data scientists | They use preferred tools and machine learning frameworks to build scalable data science solutions. They also accelerate the end-to-end machine learning lifecycle.|
+| Machine learning engineers | They support the right processes and infrastructure models to be deployed and managed easily. |
+
+> [!NOTE]
+> [Azure policies](eslz-policies.md) assist these roles to control some of the scope that they oversee.
 
 ## Data landing zone teams
 
@@ -73,7 +86,7 @@ The platform group consists of two teams:
 
 ## The digital security office
 
-Digital security deals with the entire Cloud-scale analytics. It's usually a dedicated department lead by a chief information security officer. This department works closely with data platform ops, the data governance review board, and the architecture review board.
+Digital security deals with the entire data management and analytics scenario. It's usually a dedicated department lead by a chief information security officer. This department works closely with data platform ops, the data governance review board, and the architecture review board.
 
 ## Data governance roles and responsibilities
 

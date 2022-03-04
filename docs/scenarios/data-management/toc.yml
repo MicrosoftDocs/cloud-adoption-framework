@@ -1,5 +1,5 @@
 items:
-  - name: Cloud scale analytics - Microsoft Cloud Adoption Framework for Azure
+  - name: Cloud-scale analytics - Microsoft Cloud Adoption Framework for Azure
     href: ./index.md
 
   - name: Overview
@@ -11,7 +11,7 @@ items:
 
   - name: Prepare analytics estate
     items:
-    - name: Azure landing zones for cloud scale analytics
+    - name: Azure landing zones
       href: ./ready.md
 
     - name: Design area considerations
