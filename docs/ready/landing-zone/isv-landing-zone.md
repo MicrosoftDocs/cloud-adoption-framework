@@ -38,7 +38,7 @@ The Azure landing zones help you choose a direction for your overall Azure envir
 
 ## ISV deployment models
 
-ISV solutions often fit into one of three deployment models: pure SaaS, customer-deployed, or dual-deployment SaaS. This article describes each model's different considerations for Azure landing zones.
+ISV solutions often fit into one of three deployment models: pure SaaS, customer-deployed, or dual-deployment SaaS. This section describes each model's different considerations for Azure landing zones.
 
 ### Pure SaaS
 
