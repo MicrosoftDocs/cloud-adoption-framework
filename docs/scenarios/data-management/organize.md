@@ -26,7 +26,7 @@ Cloud-scale analytics architecture was designed with a set of core principles.
 
 Across Cloud-scale analytics we prescribe moving away from horizontally siloed teams, to agile vertical cross domain teams. Data operations team focus on driving governance at the control plain whilst data application teams focus on creating data-as-a-product. This can mean organizational change a pattern which is more aligned to application development. For example, each application has a product owner, who scopes out requirements and works with cross-domain team to deliver a product. In this case, the product is data for consumption.
 
-For more information, see [Understand the roles and teams for data management and analytics in Azure](organize-roles-and-teams.md)
+For more information, see [Understand the roles and teams for cloud-scale analytics in Azure](organize-roles-and-teams.md)
 
 ## Deployment and operations
 
@@ -47,4 +47,4 @@ For more information, see [DevOps automation for Cloud-scale analytics in Azure]
 
 ## Next steps
 
-[Understand the teams for data management and analytics in Azure](organize-roles-and-teams.md)
+[Understand the teams for cloud-scale analytics in Azure](organize-roles-and-teams.md)

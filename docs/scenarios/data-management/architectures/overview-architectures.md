@@ -12,12 +12,12 @@ ms.custom: e2e-data-management, think-tank
 
 # Architectures Overview
 
-In the previous sections, we've covered the data management and analytics scenario areas that you should consider before building out your first architecture.
+In the previous sections, we've covered cloud-scale analytics areas that you should consider before building out your first architecture.
 
 | Section                         | Description                                                                                                                                                                                                            |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Building an Initial Strategy**](../strategy.md)| How to build out your data strategy and pivot to becoming a data driven organization
-| [**Defining your plan**](../plan.md)        | How to develop a plan for data management and analytics                                                                                                                                                                    |
+| [**Defining your plan**](../plan.md)        | How to develop a plan for cloud-scale analytics                                                                                                                                                                    |
 | [**Preparing analytics estate**](../ready.md)  | Overview of data management and data landing zones with key design area considerations such as enterpriser enrollment, networking, identity and access management, policies and business continuity and disaster recovery. |
 | [**Govern your analytics**](../govern.md)      | Requirements for governing data, data catalog, lineage, master data management, data quality, data sharing agreements and metadata                                                                                         |
 | [**Secure you analytics estate**](../secure.md) | How to security your analytics estate with authentication and authorization, data privacy and data access management                                                                                                       |
@@ -26,23 +26,23 @@ In the previous sections, we've covered the data management and analytics scenar
 
 ## Physical architecture
 
-This section focuses on the details of a physical implementation of the data management and analytics scenario. It maps out the physical architectures of [data management landing zone](data-management-landing-zone.md) and [data landing zone.](data-landing-zone.md).
+This section focuses on the details of a physical implementation of cloud-scale analytics. It maps out the physical architectures of [data management landing zone](data-management-landing-zone.md) and [data landing zone.](data-landing-zone.md).
 
 ## Data applications
 
 [Data applications](data-landing-zone-data-products.md) are a core concept of delivering a data product and can be aligned to both lakehouse and data mesh pattern.
 
-## Scaling Data management and analytics scenario
+## Scaling Cloud-scale analytics
 
-The data management and analytics scenario is scalable and [Scaling Data management and analytics scenario](scaling-architectures.md) addresses how to think about the number of data management landing zones you'll require.
+Cloud-scale analytics is scalable and [Scaling Cloud-scale analytics](scaling-architectures.md) addresses how to think about the number of data management landing zones you'll require.
 
 ## Data mesh
 
-[Data mesh](what-is-data-mesh.md) can be implemented using the data management and analytics scenario.
+[Data mesh](what-is-data-mesh.md) can be implemented using cloud-scale analytics.
 
-Whilst most the data management and analytics scenario guidance applies, there are some differences that need to be taken into account. We highlight the data mesh specific for data domains, self-serve, onboarding data products, governance, data marketplace, data sharing and operating model.
+Whilst most cloud-scale analytics guidance applies, there are some differences that need to be taken into account. We highlight the data mesh specific for data domains, self-serve, onboarding data products, governance, data marketplace, data sharing and operating model.
 
-## Deployment templates for data management and analytics scenario
+## Deployment templates for cloud-scale analytics
 
 This section includes many reference templates that can be deployed.
 

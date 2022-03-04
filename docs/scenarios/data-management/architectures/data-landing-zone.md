@@ -1,6 +1,6 @@
 ---
-title: Overview of the data management and analytics scenario architecture data landing zone in Azure
-description: Learn about the data management and analytics scenario architecture data landing zone in Azure.
+title: Overview of cloud-scale analytics architecture data landing zone in Azure
+description: Learn about cloud-scale analytics architecture data landing zone in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
@@ -42,7 +42,7 @@ The architecture of the data landing zone illustrates the layers, their respecti
 
 ## Core services layer
 
-Included are all the required services to enable the data landing zone within the context of data management and analytics scenario. The following resource groups form the suite of standard services available in every data landing zone that is deployed:
+Included are all the required services to enable the data landing zone within the context of cloud-scale analytics. The following resource groups form the suite of standard services available in every data landing zone that is deployed:
 
 | Resource Group        | Required | Description             |
 |-----------------------|----------|-------------------------|
@@ -95,7 +95,7 @@ Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-intr
 
 For more information, see:
 
-- [Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md)
+- [Overview of Azure Data Lake Storage for cloud-scale analytics](../best-practices/data-lake-overview.md)
 - [Data Standardization](data-standardization.md)
 - [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](../best-practices/data-lake-zones.md)
 - [Key considerations for Azure Data Lake Storage](../best-practices/data-lake-key-considerations.md)
@@ -147,7 +147,7 @@ We would suggest deploying an Azure SQL Database instance to hold metadata for A
 - Service principal credentials for the automated ingestion process
 
 > [!TIP]
-> For more information, see [How automated ingestion frameworks support data management and analytics scenario in Azure](../best-practices/automated-ingestion-pattern.md).
+> For more information, see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md).
 
 Services included in the resource group include:
 
@@ -171,7 +171,7 @@ Azure Databricks service is one of the key consumers of the Azure Data Lake Stor
 > An Azure Databricks workspace will be provisioned for all data scientists and DataOps called the Azure Databricks (analytics) workspace as shown in the shared products resource group.
 > This workspace can be configured to connect to the Azure Data Lake using Azure Active Directory passthrough or table access control. Depending on the use case, conditional access can be configured as another security measure.
 
-The data management and analytics scenario guidance follows best practices to integrate Azure Databricks:
+Cloud-scale analytics guidance follows best practices to integrate Azure Databricks:
 
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
@@ -198,7 +198,7 @@ The resource group for a data product includes all the service required to make 
 > [!TIP]
 > In the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a data application which is source aligned. For more information, see [Data applications (source-aligned)](data-application-source-aligned.md)
 
-For more information on how to onboard data products, see [Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md).
+For more information on how to onboard data products, see [Cloud-scale analytics data products in Azure](./data-landing-zone-data-products.md).
 
 ## Visualization
 
@@ -213,4 +213,4 @@ This resource group could host virtual machines for third-party visualization se
 
 ## Next steps
 
-[Data management and analytics scenario data products in Azure](data-landing-zone-data-products.md)
+[Cloud-scale analytics data products in Azure](data-landing-zone-data-products.md)

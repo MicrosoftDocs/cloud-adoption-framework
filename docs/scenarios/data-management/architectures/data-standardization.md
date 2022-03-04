@@ -1,6 +1,6 @@
 ---
-title: Data Standardization in data management and analytics scenario.
-description: Understand data Standardization in data management and analytics scenario.
+title: Data Standardization in cloud-scale analytics.
+description: Understand data Standardization in cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022

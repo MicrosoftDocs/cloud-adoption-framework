@@ -130,4 +130,4 @@ Learning from multiple deployments of cloud-scale analytics it is recommended yo
 
 ## Next steps
 
-For more information about how groups align within a data management landing zone and data landing zones, see [Understand teams and functions for data management and analytics in Azure](./organize-team-functions.md).
+For more information about how groups align within a data management landing zone and data landing zones, see [Understand teams and functions for cloud-scale analytics in Azure](./organize-team-functions.md).

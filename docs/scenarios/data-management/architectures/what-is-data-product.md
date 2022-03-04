@@ -55,9 +55,9 @@ First of all the domain application teams need to be fully equipped to be able t
 
 Within an Azure Data Landing Zone, we can position all possible approaches for a data application environment. If the domain application teams choice of data application architecture is using a shared platform, set of Services.
 
-:::image type="content" source="../images/data-application-options-in-adlz.png" alt-text="Diagram that shows data-application-rg resource group from Data Applications Context and  shared-application-rg resource group from Core Services Context for data management and analytics scenario." lightbox="../images/data-application-options-in-adlz.png":::
+:::image type="content" source="../images/data-application-options-in-adlz.png" alt-text="Diagram that shows data-application-rg resource group from Data Applications Context and  shared-application-rg resource group from Core Services Context for cloud-scale analytics." lightbox="../images/data-application-options-in-adlz.png":::
 
-In Data Management & Analytics guidance, within Azure Data Landing Zones implementations we provide three different frequently used data application patterns as a template. For detailed information on those please refer to [Data management and analytics scenario data products in Azure - Sample data applications](../architectures/data-landing-zone-data-products.md#sample-data-applications)
+In Data Management & Analytics guidance, within Azure Data Landing Zones implementations we provide three different frequently used data application patterns as a template. For detailed information on those please refer to [Cloud-scale analytics data products in Azure - Sample data applications](../architectures/data-landing-zone-data-products.md#sample-data-applications)
 
 ## Next steps
 

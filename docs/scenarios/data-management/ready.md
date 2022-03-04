@@ -1,6 +1,6 @@
 ---
 title: Review your environment for Azure landing zones
-description: Learn about how data management and analytics affects your Azure landing zone design.
+description: Learn about how cloud-scale analytics affects your Azure landing zone design.
 author: mboswell
 ms.author: mboswell
 ms.date: 12/15/2021
@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Data Management and Analytics Scenario Overview
 
-In response to the need of frictionless governance and platform to actionable insights to the business, data management and analytics scenario represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
+In response to the need of frictionless governance and platform to actionable insights to the business, cloud-scale analytics represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, data management and analytics scenario includes the following capabilities:
+The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, cloud-scale analytics includes the following capabilities:
 
 - Storage
 - Data lineage
@@ -28,13 +28,13 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Observability
 
 > [!NOTE]
-> The data management and analytics scenario builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
+> Cloud-scale analytics builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
 
-The data management and analytics scenario  builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
+Cloud-scale analytics  builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
-The data management and analytics scenario paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
+Cloud-scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
 
-Data management and analytics scenario considers five critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. Data management and analytics scenario uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure.
+Cloud-scale analytics considers five critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. Cloud-scale analytics uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure.
 
 To learn more, see:
 
@@ -45,7 +45,7 @@ To learn more, see:
 
 ## Data management landing zone
 
-At the heart of data management and analytics scenario, is its management capability. This capability is enabled through the data management landing zone.
+At the heart of cloud-scale analytics, is its management capability. This capability is enabled through the data management landing zone.
 
 :::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview." lightbox="./images/data-management-overview-1.png":::
 
@@ -57,14 +57,14 @@ The **Data management landing zone** is a subscription that governs the platform
 - [Master data management](architectures/data-management-landing-zone.md#master-data-management)
 - [API catalog](architectures/data-management-landing-zone.md#api-catalog)
 - [Data sharing and contracts](govern-data-sharing-agreements.md)
-- [Data privacy for data management and analytics in Azure](secure-data-privacy.md)
-- [Provision security for data management and analytics in Azure](security-provisioning.md)
+- [Data privacy for cloud-scale analytics in Azure](secure-data-privacy.md)
+- [Provision security for cloud-scale analytics in Azure](security-provisioning.md)
 
-For more information, see [Overview of the Azure data management and analytics scenario data management landing zone](architectures/data-management-landing-zone.md).
+For more information, see [Overview of the Azure cloud-scale analytics data management landing zone](architectures/data-management-landing-zone.md).
 
 ## Data landing zone
 
-**Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
+**Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within cloud-scale analytics represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
 
 :::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone" lightbox="./images/data-landing-zone-overview.png":::
 
@@ -82,14 +82,14 @@ A data product is anything that drives business value and is pushed to a polyglo
 
 Data products manage, organize, and make sense of the data within and across domains. A data product is a result of data from one or many transactional system integrations or other data products.
 
-For more information, see [data management and analytics scenario data products in Azure](architectures/data-landing-zone-data-products.md).
+For more information, see [cloud-scale analytics data products in Azure](architectures/data-landing-zone-data-products.md).
 
 > [!IMPORTANT]
 > When ingesting data from operational systems into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it. This drives reusability of the data product and allow other domains to consume, subject to access, for there use cases as opposed to having multiple extractions from the same operational system.
 
 ## Operational excellence
 
-The data management and analytics scenario is designed with operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
+Cloud-scale analytics is designed with operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
 
 For more information, see [Organize Operations](organize.md).
 
@@ -97,14 +97,14 @@ For more information, see [Organize Operations](organize.md).
 
 To get started with the data management and data management landing zones you need to make sure that you have the underpinning architectural components to enable a successful deployment:
 
-[Enterprise enrollment and Azure Active Directory tenants for data management and analytics scenario](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
-[Resource organization for data management and analytics scenario](eslz-resource-organization.md)
-[Network topology and connectivity for data management and analytics landing zones](eslz-network-topology-and-connectivity.md)
-[Resource organization for data management and analytics scenario](eslz-resource-organization.md)
-[Security, governance, and compliance for data management and analytics](eslz-security-governance-and-compliance.md)
-[Management and monitoring for data management and analytics](eslz-management-and-monitoring.md)
+[Enterprise enrollment and Azure Active Directory tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+[Resource organization for cloud-scale analytics](eslz-resource-organization.md)
+[Network topology and connectivity for cloud-scale analytics landing zones](eslz-network-topology-and-connectivity.md)
+[Resource organization for cloud-scale analytics](eslz-resource-organization.md)
+[Security, governance, and compliance for cloud-scale analytics](eslz-security-governance-and-compliance.md)
+[Management and monitoring for cloud-scale analytics](eslz-management-and-monitoring.md)
 [Business continuity and disaster recovery considerations for AKS](../aks/eslz-business-continuity-and-disaster-recovery.md)
 
 ## Next steps
 
-[Enterprise enrollment and Azure Active Directory tenants for data management and analytics scenario](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+[Enterprise enrollment and Azure Active Directory tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)

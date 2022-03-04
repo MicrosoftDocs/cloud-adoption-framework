@@ -1,6 +1,6 @@
 ---
-title: Solution accelerators for data management and analytics scenario
-description: Learn about the solution accelerators for data management and analytics scenario deployments.
+title: Solution accelerators for cloud-scale analytics
+description: Learn about the solution accelerators for cloud-scale analytics deployments.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/28/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Solution accelerators for data management and analytics scenario
+# Solution accelerators for cloud-scale analytics
 
 To be written
 

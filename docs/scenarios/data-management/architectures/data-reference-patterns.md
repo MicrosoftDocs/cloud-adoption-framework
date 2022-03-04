@@ -1,6 +1,6 @@
 ---
 title: Data application reference patterns
-description: Learn about Data Application Reference Patterns for data management and analytics scenario
+description: Learn about Data Application Reference Patterns for cloud-scale analytics
 author: mboswell
 ms.author: mboswell
 ms.date: 02/28/2022
@@ -20,10 +20,10 @@ To simplify the way to get started and reduce the lead time to create an environ
 - [Data Product Streaming](https://github.com/Azure/data-product-streaming)
 - [Data Product Analytics](https://github.com/Azure/data-product-analytics)
 
-Other automation can be used to further reduce any potential friction points and automate even the initial deployment of the pattern for Data Product or Data Integration teams. For more details, please take a look at [Platform automation and DevOps for a data management and analytics scenario](../manage-platform-automation-and-devops.md).
+Other automation can be used to further reduce any potential friction points and automate even the initial deployment of the pattern for Data Product or Data Integration teams. For more details, please take a look at [Platform automation and DevOps for a cloud-scale analytics](../manage-platform-automation-and-devops.md).
 
 Ultimately, the goal should be to hand over these reference implementations to the data application teams, as they should own the overall codebase of their solution. Extra abstraction layers such as Azure template specs are also an option, but just increase the number of friction points as required changes again need to be requested from a central team that owns and maintains these resources. The central team then needs to take an action to get the changes tested and released. Additionally, a more complex release management process could be required to not impact other consumers of the Template Spec. Lastly, the templates will become more complex over time as each team could require different parameters to be exposed to apply certain changes within the template. Hence, handing over the reference patterns is the easiest and most effective solution, since this allows the Data Product teams to make the necessary changes, if they need to. Exposing these teams to the concept of IaC is a good approach that could take some time but ultimately will result in better engineering practices across the data platform.
 
 ## Next steps
 
-[Scaling Data management and analytics scenario](scaling-architectures.md)
+[Scaling Cloud-scale analytics](scaling-architectures.md)

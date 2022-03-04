@@ -31,7 +31,7 @@ Another aspect that needs to be part of the data contract documentation is the t
 For more information about observability and data sharing agreements, see:
 
 - [Cloud monitoring guide: Observability](../../../manage/monitor/observability.md)
-- [Data sharing agreements in data management and analytics](../govern-data-sharing-agreements.md)
+- [Data sharing agreements in cloud-scale analytics](../govern-data-sharing-agreements.md)
 
 ### Versioning
 

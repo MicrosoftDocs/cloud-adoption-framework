@@ -8,7 +8,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-Depending on technology and vendor, the layers inside a data lake use different terminology. This table gives guidance on how data management and analytics scenario applies them:
+Depending on technology and vendor, the layers inside a data lake use different terminology. This table gives guidance on how cloud-scale analytics applies them:
 
 | Data management and analytics | Delta Lake | Other terms             | Description                                                                                                      |
 |-------------------------------|------------|-------------------------|------------------------------------------------------------------------------------------------------------------|

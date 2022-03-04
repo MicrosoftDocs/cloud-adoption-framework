@@ -1,6 +1,6 @@
 ---
-title: Data management and analytics scenario data applications (source-aligned)
-description: Learn about data management and analytics scenario data applications (source-aligned) in Azure.
+title: Cloud-scale analytics data applications (source-aligned)
+description: Learn about cloud-scale analytics data applications (source-aligned) in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
@@ -42,7 +42,7 @@ Instances of other services such as Azure Event Hubs, Azure IoT Hub, Azure Strea
 
 ## Azure Key Vault
 
-Data management and analytics scenario will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
+Cloud-scale analytics will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
 
 Each data application (source-aligned) resource group or data domain (if mesh) will have an Azure Key Vault. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and integrations.
 

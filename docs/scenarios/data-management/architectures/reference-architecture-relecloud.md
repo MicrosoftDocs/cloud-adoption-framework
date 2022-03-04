@@ -1,6 +1,6 @@
 ---
-title: Relecloud scenario for data management and analytics in Azure
-description: Learn about the Relecloud scenario for data management and analytics in Azure.
+title: Relecloud scenario for cloud-scale analytics in Azure
+description: Learn about the Relecloud scenario for cloud-scale analytics in Azure.
 author: AnalyticJeremy
 ms.author: jepeach
 ms.date: 02/28/2022
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Relecloud scenario for data management and analytics in Azure
+# Relecloud scenario for cloud-scale analytics in Azure
 
-This reference architecture can help customers who have already implemented a basic version of data management and analytics scenario and are now ready to host a new business unit that modernizes its analytics operations. It demonstrates a more complex scenario with multiple landing zones, data applications, and data products.
+This reference architecture can help customers who have already implemented a basic version of cloud-scale analytics and are now ready to host a new business unit that modernizes its analytics operations. It demonstrates a more complex scenario with multiple landing zones, data applications, and data products.
 
 ## Customer profile
 
@@ -20,7 +20,7 @@ Relecloud is a private cloud provider offering shared computing and storage reso
 
 ## Current situation
 
-Although Relecloud provides compute resources of their own, they don't want to constrain their platform with their own internal operations. Therefore, they rely on Microsoft Azure for their internal computing needs. Last quarter, as the operations team was pursuing new analytics projects, the team modernized its analytics platform by migrating it to Azure. They chose to implement data management and analytics scenario to maximize the potential for scaling the platform and adding new workloads from the organization.
+Although Relecloud provides compute resources of their own, they don't want to constrain their platform with their own internal operations. Therefore, they rely on Microsoft Azure for their internal computing needs. Last quarter, as the operations team was pursuing new analytics projects, the team modernized its analytics platform by migrating it to Azure. They chose to implement cloud-scale analytics to maximize the potential for scaling the platform and adding new workloads from the organization.
 
 Today, the billing group has outgrown its current analytics solution. The volume of invoices they must analyze has become too large for their on-premises server. They've decided to follow the lead of the operations group and modernize their platform in Azure.
 
@@ -32,7 +32,7 @@ Relecloud will scale their analytics platform by adding a new landing zone for t
 
 ### Data management landing zone
 
-A key concept for every data management and analytics scenario implementation is having one data management landing zone. This subscription contains resources that will be shared across all landing zones. This includes shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance like Azure Policy and Azure Purview.
+A key concept for every cloud-scale analytics implementation is having one data management landing zone. This subscription contains resources that will be shared across all landing zones. This includes shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance like Azure Policy and Azure Purview.
 
 Relecloud created a data management landing zone when the solution was deployed for the operations group. When the billing group joins the platform, they'll use the same data management landing zone. This will allow them to share common resources with the operations group.
 
@@ -48,7 +48,7 @@ Relecloud customers can create cloud accounts to manage resources and billing in
 
 #### Operations data products
 
-Relecloud analysts obtain value from the data in source-aligned data applications by creating new data applications that are consumer-aligned. One of these consumer-aligned data applications is a **Cloud service recommender** model. Relecloud data scientists used Azure Machine Learning to build a model that looks at the services consumed in a cloud account and suggests related services that could be useful. This model is deployed to an Azure Kubernetes Service (AKS) cluster running in the landing zone and managed by Azure Machine Learning. Applications running outside of the data management and analytics scenario can call the AKS endpoint to get recommendations.
+Relecloud analysts obtain value from the data in source-aligned data applications by creating new data applications that are consumer-aligned. One of these consumer-aligned data applications is a **Cloud service recommender** model. Relecloud data scientists used Azure Machine Learning to build a model that looks at the services consumed in a cloud account and suggests related services that could be useful. This model is deployed to an Azure Kubernetes Service (AKS) cluster running in the landing zone and managed by Azure Machine Learning. Applications running outside of cloud-scale analytics can call the AKS endpoint to get recommendations.
 
 After the billing team creates their landing zone, the operations team will be able to create a new data product that the operations management team has requested. They want to know how much revenue is generated by the **Cloud service recommender** data application. The new **Recommender revenue** data product will use Azure Synapse Analytics to combine data from **Cloud service recommender** and **Revenue by service** into a new data product. Business analysts can connect to Azure Synapse with Microsoft Power BI to find and report insights from this new data product.
 
@@ -97,9 +97,9 @@ Use the following templates to deploy other data applications and data products 
 
 ## Next steps
 
-Continue to the [Lamna Healthcare scenario for data management and analytics in Azure](./reference-architecture-lamna.md).
+Continue to the [Lamna Healthcare scenario for cloud-scale analytics in Azure](./reference-architecture-lamna.md).
 
 Learn more in:
 
-- [Azure Machine Learning as a data product for data management and analytics scenario](../best-practices/azure-machine-learning.md)
-- [Use Azure Synapse Analytics with data management and analytics scenario](../best-practices/azure-synapse-analytics-implementation.md)
+- [Azure Machine Learning as a data product for cloud-scale analytics](../best-practices/azure-machine-learning.md)
+- [Use Azure Synapse Analytics with cloud-scale analytics](../best-practices/azure-synapse-analytics-implementation.md)

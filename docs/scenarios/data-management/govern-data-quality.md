@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data quality
 
-Data Quality is a management function of the data management and analytics scenario. It resides in the data management landing zone and is a core part of governance.
+Data Quality is a management function of cloud-scale analytics. It resides in the data management landing zone and is a core part of governance.
 
 ## Data quality considerations
 

@@ -1,6 +1,6 @@
 ---
-title: Secure data management and analytics in Azure
-description: Learn about the security principles for the data management and analytics scenario in Azure.
+title: Secure cloud-scale analytics in Azure
+description: Learn about the security principles for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Secure data management and analytics in Azure
+# Secure cloud-scale analytics in Azure
 
 To limit security risk as much as possible while also providing access to do data analytics, use data governance. Data governance provides balance among operations, maintenance, and control. It follows the underlying principle of data lake solution architecture design, which uses infrastructure as code and security as code.
 
 ## Security principles
 
-The focus of the data management and analytics scenario is based on key management principles:
+The focus of cloud-scale analytics is based on key management principles:
 
 | Principle | Description |
 |--|--|
@@ -27,8 +27,8 @@ The focus of the data management and analytics scenario is based on key manageme
 | **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
 > [!TIP]
-> When you deploy data management and analytics scenario, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for data management and analytics scenario deployment](./architectures/deployment-templates.md).
+> When you deploy cloud-scale analytics, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for cloud-scale analytics deployment](./architectures/deployment-templates.md).
 
 ## Next steps
 
-[Authentication for data management and analytics in Azure](./secure-authentication.md)
+[Authentication for cloud-scale analytics in Azure](./secure-authentication.md)

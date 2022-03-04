@@ -1,6 +1,6 @@
 ---
-title: Integrate data management and analytics into your cloud adoption strategy
-description: Understand how to integrate data management and analytics into your cloud adoption strategy.
+title: Integrate cloud-scale analytics into your cloud adoption strategy
+description: Understand how to integrate cloud-scale analytics into your cloud adoption strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/22/2021
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Integrate data management and analytics into your cloud adoption strategy
+# Integrate cloud-scale analytics into your cloud adoption strategy
 
 A best practice for customers is to create a single, centralized cloud adoption strategy by using the [Strategy methodology in the Cloud Adoption Framework for Azure](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
-This article exposes considerations about data management and analytics that will affect your broader strategy.
+This article exposes considerations about cloud-scale analytics that will affect your broader strategy.
 
-Before implementing the data management and analytics scenario, you should have a plan in place for your data strategy. You can start small with a single use-case or you might have a much set of large use-cases which will require prioritization. A strategy can help you establish your processes and start off the initial conversations, within the business, on the pillars you need to concentrate on.
+Before implementing cloud-scale analytics, you should have a plan in place for your data strategy. You can start small with a single use-case or you might have a much set of large use-cases which will require prioritization. A strategy can help you establish your processes and start off the initial conversations, within the business, on the pillars you need to concentrate on.
 
 ## Prioritize business outcomes for your data strategy
 
@@ -223,7 +223,7 @@ Two strategic processes will help to deliver successfully in the context of this
 - Formation of a center of excellence
 - Adoption of an agile delivery method
 
-For more information, see [Develop a plan for data management and analytics](./plan.md).
+For more information, see [Develop a plan for cloud-scale analytics](./plan.md).
 
 ## Deliver value
 
@@ -233,7 +233,7 @@ When you deliver data products against the success criteria in a standardized an
 
 The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
 
-- [Develop a plan for data management and analytics](./plan.md)
+- [Develop a plan for cloud-scale analytics](./plan.md)
 - [Review your environment for Azure landing zones](./ready.md)
-- [Govern data management and analytics](./govern.md)
-- [Secure data management and analytics](./secure.md)
+- [Govern cloud-scale analytics](./govern.md)
+- [Secure cloud-scale analytics](./secure.md)

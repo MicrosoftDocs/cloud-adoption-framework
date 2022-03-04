@@ -1,6 +1,6 @@
 ---
-title: Identity and access management for data management and analytics
-description: Learn how this scenario can improve identity and access management for data management and analytics in Azure.
+title: Identity and access management for cloud-scale analytics
+description: Learn how this scenario can improve identity and access management for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -10,17 +10,17 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Identity and access management for data management and analytics
+# Identity and access management for cloud-scale analytics
 
-This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a data management and analytic platform on Microsoft Azure. Since data management and analytics is a mission-critical element, the guidance on the enterprise-scale design areas should also be included in your design.
+This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a data management and analytic platform on Microsoft Azure. Since cloud-scale analytics is a mission-critical element, the guidance on the enterprise-scale design areas should also be included in your design.
 
 This article builds on considerations and recommendations about Azure landing zones. For more information, see [Identity and access management](../../ready/landing-zone/design-area/identity-access.md).
 
 ## Data landing zone design
 
-Data management and analytics scenario supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
+Cloud-scale analytics supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
 
-Review the Azure administration and management activities your teams perform. Consider your data management and analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
+Review the Azure administration and management activities your teams perform. Consider your cloud-scale analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
 ## Role assignments
 
@@ -28,7 +28,7 @@ In order to develop, deliver and serve data products autonomously within the dat
 
 The development environment should be allowed to be accessed by the development team and their respective user identities to enable them to iterate more quickly, learn about certain capabilities within Azure services and troubleshoot issues effectively. Access to a development environment will help when developing or enhancing the infrastructure as code (IaC) and other code artifacts. Once an implementation within the development environment works as expected, it can be rolled out continuously to the higher environments. Higher environments, such as test and prod, should be locked off for the data application team. Only a service principal should have access to these environments and therefore all deployments must be executed through the service principal identity by using CI/CD pipelines. To summarize, in the development environment access rights should be provided to a service principal AND user identities and in higher environments access rights should only be provided to a service principal identity.
 
-To be able to create resources and role assignments between resources within the data application resource group(s), `Contributor` and `User Access Administrator` rights must be provided. This will allow the teams to create and control services within their environment within the [boundaries of Azure Policy](eslz-policies.md). Data management and analytics scenario recommends the usage of private endpoints to overcome the data exfiltration risk and as other connectivity options should be blocked by the Azure platform team via policies, data application teams will require access rights to the shared virtual network of a data landing zone to be able to successfully set up the required network connectivity for the services they're planning to use. To follow the least privilege principle, overcome conflicts between different data application teams and have a clear separation of teams, data management and analytics scenario proposes to create a dedicated subnet per data application team and create a `Network Contributor` role assignment to that subnet (child resource scope). This role assignment allows the teams to join the subnet using private endpoints.
+To be able to create resources and role assignments between resources within the data application resource group(s), `Contributor` and `User Access Administrator` rights must be provided. This will allow the teams to create and control services within their environment within the [boundaries of Azure Policy](eslz-policies.md). Cloud-scale analytics recommends the usage of private endpoints to overcome the data exfiltration risk and as other connectivity options should be blocked by the Azure platform team via policies, data application teams will require access rights to the shared virtual network of a data landing zone to be able to successfully set up the required network connectivity for the services they're planning to use. To follow the least privilege principle, overcome conflicts between different data application teams and have a clear separation of teams, cloud-scale analytics proposes to create a dedicated subnet per data application team and create a `Network Contributor` role assignment to that subnet (child resource scope). This role assignment allows the teams to join the subnet using private endpoints.
 
 These two first role assignments will enable self-service deployment of data services within these environments. To address the cost management concern, organizations should add a cost center tag to the resource groups to enable cross-charging and distributed cost ownership. This raises awareness within the teams and enforces them to make the right decisions with respect to required SKUs and service tiers.
 
@@ -151,7 +151,7 @@ Managing access to data should be done using Azure AD groups. Add user principle
 
 For data products in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
 
-Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data application teams to store data products.
+Other polyglot storage is likely to be used in cloud-scale analytics. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data application teams to store data products.
 
 - [Use Azure Active Directory for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics
@@ -161,8 +161,8 @@ We recommend that you use Azure AD groups to secure database objects instead of 
 
 This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
 
-For more information on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for data management and analytics in Azure](./security-provisioning.md).
+For more information on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for cloud-scale analytics in Azure](./security-provisioning.md).
 
 ## Next steps
 
-[Network topology and connectivity for data management and analytics landing zones](./eslz-network-topology-and-connectivity.md)
+[Network topology and connectivity for cloud-scale analytics landing zones](./eslz-network-topology-and-connectivity.md)

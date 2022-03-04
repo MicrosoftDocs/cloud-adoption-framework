@@ -1,6 +1,6 @@
 ---
-title: Data management and analytics scenario data products in Azure
-description: Learn about data management and analytics scenario data products in Azure.
+title: Cloud-scale analytics data products in Azure
+description: Learn about cloud-scale analytics data products in Azure.
 author: sasever
 ms.author: sasever
 ms.date: 02/08/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Data management and analytics scenario data products and data applications in Azure
+# Cloud-scale analytics data products and data applications in Azure
 
 At a high level, [data products](what-is-data-product.md) are data served as product and computed, saved and served by polyglot persistence services that might be required depending on certain use cases. The process of creating and serving a data product can require other services and technologies that aren't part of [data landing zone](./data-landing-zone.md) core services. One example can be reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
 
@@ -182,7 +182,7 @@ The deployment and code artifacts include the following services:
 - [BigData Pool](/sql/big-data-cluster/concept-data-pool)
 - [Data Explorer](/azure/synapse-analytics/data-explorer/data-explorer-overview) (optional)
 
-For the repositories containing the deployment templates you can refer to [Deployment templates for data management and analytics scenario](deployment-templates.md)
+For the repositories containing the deployment templates you can refer to [Deployment templates for cloud-scale analytics](deployment-templates.md)
 
 ## Next steps
 

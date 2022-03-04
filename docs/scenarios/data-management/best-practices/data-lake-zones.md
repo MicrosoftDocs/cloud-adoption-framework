@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data lake zones and containers
 
-It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for data management and analytics scenario.
+It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for cloud-scale analytics.
 
 ## Overview
 
@@ -34,7 +34,7 @@ The services should be enabled with the hierarchical name space feature to allow
 > [!IMPORTANT]
 > While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
 
-When a new system of record is registered via the data agnostic or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a Service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for data management and analytics in Azure](../organize-roles-and-teams.md).
+When a new system of record is registered via the data agnostic or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a Service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
 
 Each **data product** should have two folders in the curated data lake layer over which the data product team should have ownership.
 
