@@ -3,27 +3,27 @@ title: Network topology and connectivity for data management and analytics landi
 description: Learn about the network topology and connectivity for data management and analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 02/10/2022
+ms.date: 03/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Network topology and connectivity for data management and analytics landing zones
+# Overview
 
 This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
 
 Since data management and data landing zones are important, you should also include the guidance for the design areas in your design.
 
-This section outlines networking patterns that can help with:
+This section outlines gives a high level overview of the networking pattern with further links to deploying in both single and multiple azure regions.
 
-- Integrating across clouds.
-- Restricting data exfiltration.
-- Creating access for remote workers.
-- Interfacing with on-premises and software as a service (SaaS) solutions.
+Cloud scale analytics promises the possibility to easily share and access datasets across multiple data domains and data landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs have to be considered, evaluated and tested to make sure that these are compatible with the existing hub and spoke and vWAN deployments of corporations.
 
-:::image type="content" source="./images/network-options-network-mesh.png" alt-text="Diagram that shows a high-level overview of networking for data management and analytics scenario." lightbox="./images/network-options-network-mesh.png":::
+:::image type="content" source="images/networking-overview.png" alt-text="Networking overview" lightbox="images/networking-overview.png":::
+*Figure 1: Networking overview for cloud scale analytics.*
+
+[!INCLUDE [network-important](includes/network-important.md)]
 
 ## Data management landing zone networking
 
@@ -42,7 +42,10 @@ For every new data landing zone, you should create a virtual network peering fro
 
 ## Data landing zones to data landing zones
 
-Data landing zones connect to other data landing zones using virtual network peering.
+There are options on how to make this connectivity and depending on if you have a single or multiple region deployment it is recommended that you consider the guidance in:
+
+- [Single-region data landing zone Connectivity](eslz-network-considerations-single-region.md)
+- [Cross-region data landing zone connectivity](eslz-network-considerations-cross-region.md)
 
 ## Data management landing zone to third-party clouds
 
@@ -70,5 +73,4 @@ Handle DNS resolution for private endpoints through central [Azure Private DNS](
 
 ## Next steps
 
-- [Network architecture considerations](eslz-network-considerations.md)
-- [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md)
+- [Single-region Data Landing Zone Connectivity](eslz-network-considerations-single-region.md)
