@@ -86,7 +86,7 @@ For more information on data lake zones, see (./data-lake-zones.md)
 
 ## Compliance support
 
-Delta Lake adds a transactional layer that provides structured data management on top of your data lake, it can dramatically simplify and speed up your ability to locate and remove personal information (also known as "personal data") in response to consumer requests. It supports operations such as DELETE, UPDATE, and MERGE. For more information, see [Best practices: Personal identifiable information compliance using Delta Lake](/azure/databricks/security/privacy/gdpr-delta).
+Delta Lake adds a transactional layer that provides structured data management on top of your data lake, it can dramatically simplify and speed up your ability to locate and remove personal information (also known as "personal data") in response to consumer requests. It supports operations such as DELETE, UPDATE, and MERGE. For more information, see [Best practices: GDPR compliance using Delta Lake](/azure/databricks/security/privacy/gdpr-delta).
 
 ## Summary
 
