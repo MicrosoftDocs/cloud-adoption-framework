@@ -105,7 +105,7 @@ Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="i
 
 This setup is well-known and established at many you and therefore is easy to establish in an existing environment. However, you should consider the downsides that come with the Spoke-Hub-Hub-Spoke connectivity especially from a service management, cost, bandwidth and latency perspective. Especially as the number of cross-region use cases grows, this setup will show its challenges.
 
-## Conclusion - Cross-region data landing zone connectivity
+## Conclusion
 
 After reviewing the two options for cross-region data landing zone connectivity, it becomes clear that [Global vnet peering (Recommended)](#global-vnet-peering-recommended) between data landing zone has many advantages compared to option 2 and therefore is the recommended approach as the amount of data that needs to be exchanged across regions grows. This option can be easily managed and provides compliant, cost effective and performant connectivity across regions.
 
