@@ -1,5 +1,5 @@
 items:
-  - name: Data management and analytics scenario
+  - name: Cloud scale analytics - Microsoft Cloud Adoption Framework for Azure
     href: ./index.md
 
   - name: Overview
@@ -11,7 +11,7 @@ items:
 
   - name: Prepare analytics estate
     items:
-    - name: Azure landing zones for data management and analytics
+    - name: Azure landing zones for cloud scale analytics
       href: ./ready.md
 
     - name: Design area considerations
@@ -24,8 +24,10 @@ items:
         items:
         - name: Overview
           href: ./eslz-network-topology-and-connectivity.md
-        - name: Network architecture considerations
-          href: ./eslz-network-considerations.md
+        - name: Single-region connectivity
+          href: ./eslz-network-considerations-single-region.md
+        - name: Cross-region connectivity
+          href: ./eslz-network-considerations-cross-region.md   
         - name: Limiting cross tenant endpoint connections
           href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Resource organization
