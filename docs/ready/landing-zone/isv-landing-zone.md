@@ -44,7 +44,7 @@ ISV solutions often fit into one of three deployment models: pure SaaS, customer
 
 In the pure SaaS model, your software is deployed fully only in your Azure subscriptions. End customers consume your software without deploying it in their own Azure subscriptions. In the following diagram, users are using a pure SaaS application provided by an ISV:
 
-![Diagram that shows a pure S a a S deployment model. A user directly uses the application deployed into the I S V's Azure subscription.](./media/isv-landing-zone/isv-pure-saas-deployment.png)
+![Diagram that shows a pure SaaS deployment model. A user directly uses the application deployed into the I S V's Azure subscription.](./media/isv-landing-zone/isv-pure-saas-deployment.png)
 
 Examples of pure SaaS software include email-as-a-service, Kafka-as-a-service, cloud-data-warehouse-as-a-service, and many [SaaS listings in Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas).
 
