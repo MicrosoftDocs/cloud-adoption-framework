@@ -1,9 +1,9 @@
 ---
 title: How automated ingestion frameworks support data management and analytics scenario in Azure
 description: Learn about how automated ingestion frameworks support data management and analytics scenario in Azure.
-author: mboswell
-ms.author: mboswell
-ms.date: 11/25/2021
+author: dmarz
+ms.author: damarzol
+ms.date: 02/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -14,17 +14,28 @@ ms.custom: e2e-data-management, think-tank
 
 The [ingest process with data management and analytics scenario in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
 
-This section provides guidance for how custom ingestion frameworks can drive services and processes.
+This section discusses a design for how automated ingestion scenarios could be implemented using a combination of PowerApps, Azure Logic Apps and Metadata-driven copy tasks within Azure Data Factory.
 
-> [!NOTE]
-> The following suggestions for an automated ingestion framework aren't explained in detail, and they don't describe a specific Microsoft product.
+## Automated data registration application
 
-## Automated data source application
+Automated data ingestion scenarios are typically focused at enabling non-technical (that is, not Data Engineer) personas to publish data assets to a Data Lake so that further processing can occur. To implement this scenario requires onboarding capabilities enabling:
 
-The following illustrates how integration ops can use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
+- Data asset registration
+- Provisioning workflow
+- Metadata capture
+- Scheduling of orchestration / ingestion
 
-![Diagram of an automated ingestion process.](../images/automated-ingest-process.png)
+The interaction between the capabilities can be viewed as follows:
 
+![Diagram of data registration capabilites interactions.](../images/registration-capabilities.png)
+
+The following illustrates how new data assets can be registered using a combination of Azure services:
+
+![Diagram of an automated ingestion process.](../images/automated-ingestion-flow.png)
+
+[Metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven)
+
+This information can be captured and written to a bespoke table within Dataverse
 The application can talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into data landing zones. Once ingestion requests are approved, it uses the Azure Purview REST API to insert the sources into Azure Purview.
 
 The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the data lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
