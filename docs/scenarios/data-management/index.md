@@ -18,11 +18,11 @@ Before you consider deploying the data management and analytics scenario, you ne
 
 Many enterprises have outdated data architectures that don't scale to the needs of a highly data driven organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
-- If you're a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operations model.
+- If you are a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operating model.
 
 - If you're a large multinational enterprise with the goal of autonomous business units (with their own data engineers and analysts), a distributed operating model like data mesh might fit your business better.
 
-Data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operation models.
+Azure data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operating models.
 
 Your business should consider how to best:
 
@@ -31,7 +31,7 @@ Your business should consider how to best:
 - Drive a default approach to enforce data governance and security.
 - Drive teams to consistently prioritize business outcomes instead of focussing soley on the underlying technology.
 
-If you don't have an implementation of Azure landing zones, then it's important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
+If you do not have an implementation of Azure landing zones, then it is important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
 ## Objectives
 
@@ -42,10 +42,10 @@ This scenario focuses on supporting two targeted outcomes:
 - Use the cloud to deliver increasingly mature analytics solutions.
 - Migrate data platforms to the cloud.
 - Support data democratization by making data and insights accessible to end users (subject to access privileges).
-- Enable powerful and complex analytsis of the organisations data with cloud-based analytics tools.
-- Support the development of machine learning solutions that support business outcomes 
+- Enable powerful and complex analysis of the organizations data with cloud-based analytics tools.
+- Support the development of machine learning solutions that support business outcomes.
 
-This scenario also provides a framework built on the following principles to address challenges with complex data architectures that don't scale to the needs of businesses:
+This scenario also provides a framework built on the following principles to address challenges with complex data architectures that don not scale to the needs of businesses:
 
 | Principle | Description |
 |---------|---------|
@@ -53,7 +53,7 @@ This scenario also provides a framework built on the following principles to add
 |**Follow**     |<ul><li>Best practices for well-architected cloud services</li></ul>|
 |**Support**     |<ul><li>On-premises and multicloud scenarios</li></ul>         |
 |**Adopt**     |<ul><li>Product and vendor agnostic approach</li><li>Cloud Adoption Framework</li></ul>|
-|**Commit**     |<ul><li>Azure landing zones as the baseline infrastructure for all workloads</li><li>Operational model</li></ul>|
+|**Commit**     |<ul><li>Azure landing zones as the baseline infrastructure for all workloads</li><li>Operating model</li></ul>|
 |**Enable**     | <ul><li>Common data infrastructure</li><li>Distributed architecture under centralized governance</li><li>Secure network line-of-sight</li></ul>|
 
 ## Implementation guidance
@@ -62,16 +62,16 @@ The data management and analytics scenario is designed to guide the end-to-end c
 
 |Documentation  |Description  |
 |---------|---------|
-| [Cloud Adoption Framework](/azure/cloud-adoption-framework) |Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.         |
+| [Cloud Adoption Framework](/azure/cloud-adoption-framework) |Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.         |
 | [Azure Well-Architected Framework](./well-architected-framework.md) |Workload architecture and operations have a direct affect on data. Understand how your architecture can improve management and governance of the data used by your workload.         |
-| [Data management and analytics scenario](ready.md)  |Representing a strategic design path for an Azure data management and analytics. The data management and analytics scenario pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
+| [Data management and analytics scenario](ready.md)  |Representing a strategic design path for an Azure based data management and analytics solution. The Azure data management and analytics scenario pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
 
 > [!TIP]
-> Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](./architectures/deployment-templates.md).
+> Deployable reference implementations and templates make it easy to get started with the Azure data management and analytics scenario. To learn more, see [Deployment templates](./architectures/deployment-templates.md).
 
 ## Reference architecture
 
-The scenario uses two key architural concepts: The *Data management landing zone* and the *data landing zones*. These architectures help accelerate deployment for many common data management and analytics solutions. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform which can scale according to your requirements.
+The scenario uses two key architectural concepts: The *Data management landing zone* and the *data landing zones*. These architectures help accelerate deployment for many common data management and analytics solutions. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform which can scale according to your requirements.
 
 The following diagram is an overview of a data platform with a central data management landing zone and multiple data landing zones. You can start with a single landing zone and scale to multiple landing zones, which are all governed from the data management landing zone.
 :::image type="content" source="./images/data-landing-zone-index.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones.":::
@@ -83,7 +83,7 @@ For more information, see:
 
 ## Best practices
 
-The following advanced, level-300+ articles in the **Data management and analytics scenario** table of contents can help central IT teams deploy tools and manage processes for data management and governance:
+The following advanced, level-300+ articles in the **Azure data management and analytics scenario** table of contents can help central IT teams deploy tools and manage processes for data management and governance:
 
 - [Data lake implementation](best-practices/data-lake-overview.md)
 - [Use Azure Synapse Analytics with data management and analytics scenario](best-practices/azure-synapse-analytics-implementation.md)
@@ -94,7 +94,7 @@ The following advanced, level-300+ articles in the **Data management and analyti
 
 ## Featured Azure products
 
-Expand the **Featured Azure products** section in the **Data management and analytics scenario** table of contents to learn about the Azure products that support data management and analytics.
+Expand the **Featured Azure products** section in the **Azure data management and analytics scenario** table of contents to learn about the Azure products that support data management and analytics.
 
 ## Common customer journeys
 
@@ -108,13 +108,13 @@ The following common customer journeys support the cloud data management and ana
 
 - **Optimize individual workloads and workload teams.** Start with the [Azure Well-Architected Framework](./well-architected-framework.md) guidance to integrate data management and analytics strategies into individual workloads. The guidance describes best practices and architectures that central IT and governance teams typically deliver to accelerate individual workload development.
 
-- **Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Data management and analytics scenario** table of contents for articles about processes to onboard all of your data estate into one data management and analytics control plane.
+- **Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Azure data management and analytics scenario** table of contents for articles about processes to onboard all of your data estate into one data management and analytics control plane.
 
-- **Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Data management and analytics scenario** table of contents.
+- **Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Azure data management and analytics scenario** table of contents.
 
 ## Take action
 
-For more information about planning for Azure data management and analytics, see:
+For more information about planning for implementing the Azure data management and analytics scenario, see:
 
 - [Develop a plan for data management and analytics](plan.md)
 - [Introduction to data management and analytics scenario](ready.md)
