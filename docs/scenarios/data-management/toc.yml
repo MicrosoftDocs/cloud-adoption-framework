@@ -83,8 +83,6 @@ items:
     items:
       - name: Overview
         href: ./organize.md
-      - name: Organize for effective data operations
-        href: ./organize-data-operations.md
       - name: Roles and teams
         href: ./organize-roles-and-teams.md
       - name: Teams functions
@@ -93,6 +91,8 @@ items:
   - name: Manage your analytics estate
     items:
     - name: Overview
+      href: ./manage.md
+    - name: Platform automation
       href: ./manage-platform-automation-and-devops.md
     - name: Provision the platform
       href: ./manage-provision-platform.md

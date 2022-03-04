@@ -22,6 +22,12 @@ Cloud-scale analytics architecture was designed with a set of core principles.
 
 - **Streamlined deployments:** Ensure that common policies are available within the organization to help teams scale quickly and support teams with less experience in some core designs and artifacts.
 
+## Roles and teams
+
+Across Cloud-scale analytics we prescribe moving away from horizontally siloed teams, to agile vertical cross domain teams. Data operations team focus on driving governance at the control plain whilst data application teams focus on creating data-as-a-product. This can mean organizational change a pattern which is more aligned to application development. For example, each application has a product owner, who scopes out requirements and works with cross-domain team to deliver a product. In this case, the product is data for consumption.
+
+For more information, see [Understand the roles and teams for data management and analytics in Azure](organize-roles-and-teams.md)
+
 ## Deployment and operations
 
 The deployment process and data operations (DataOps) model is an essential part that supports some of these core principles. The following guidelines are recommended for organizations to align with the principles:
@@ -37,14 +43,8 @@ The team should present its services in a self-service manner, which can include
 
 The platform group should follow the best practices outlined in this section to achieve their objectives. Other data product teams should use the best practices in the forthcoming articles to test and automate their data.
 
-For more information, see [DevOps automation for Cloud-scale analytics in Azure](./organize-data-operations.md)
-
-## Roles and teams
-
-Across Cloud-scale analytics we prescribe moving away from horizontally siloed teams, to agile vertical cross domain teams. Data operations team focus on driving governance at the control plain whilst data application teams focus on creating data-as-a-product. This can mean organizational change a pattern which is more aligned to application development. For example, each application has a product owner, who scopes out requirements and works with cross-domain team to deliver a product. In this case, the product is data for consumption.
-
-For more information, see [Understand the roles and teams for data management and analytics in Azure](organize-roles-and-teams.md)
+For more information, see [DevOps automation for Cloud-scale analytics in Azure](./manage.md)
 
 ## Next steps
 
-[DevOps automation for Cloud-scale analytics in Azure](./organize-data-operations.md)
+[Understand the teams for data management and analytics in Azure](organize-roles-and-teams.md)
