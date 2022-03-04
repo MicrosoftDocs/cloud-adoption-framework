@@ -23,13 +23,19 @@ In recent years architectural patterns that uses a combination of both the data 
 :::image type="content" source="../images/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="../images/azure-analytics-end-to-end.png":::
 
 However, some organizations have seen issues when deploying analytical solutions using this pattern.
-Common for all these solutions is that they still are implemented as a monolithic solution, with a single team being the provider of the platform and being the team doing the data integration. For larger organizations and companies having a single team, this team quite often becomes a bottle neck. This often results in a huge backlog with parts of the company having to wait for data integration services and finished analytical solutions. Many organizations have also seen this become a more common pattern with the adoption of data science within the company. The reason for this is that many data science solutions require more data compared to the more traditional business intelligence solutions adopted in the past.
+Common for all these solutions is that they still are implemented as a monolithic solution, with a single team being the provider of the platform and being the team doing the data integration. This often works for smaller organizations or organizations that have a high degree of centralization from a team setup perspective. But larger organizations having a single team, this team quite often becomes a bottle neck. This often results in a huge backlog with parts of the company having to wait for data integration services and finished analytical solutions.
+
+Many organizations have also seen this become a more common pattern with the adoption of data science within the company. The reason for this is that many data science solutions require more data compared to the more traditional business intelligence solutions adopted in the past.
 
 Another driver for a longer backlog around data integration is the recent switch to micro services as a pattern for application development since the number of data sources increases with this switch.
 
 Having a single team handling all of data ingestion on a single platform in a large organization can also be problematic because this team is seldom the experts on all the data sources. Most business and organizations are decentralized and distributed from a business perspective. You have different business units and departments handling different parts of the operation. This also means that the experts on the data is also spread throughout the organization.  
 
-To address these problems a new architectural pattern called data mesh was introduced a couple of years ago. The intent behind this pattern is to create a way for distributed teams to work with and share information in an agile decentralized fashion. To understand this architectural pattern, there are several foundational concepts that needs to be defined
+To address these problems a new architectural pattern called data mesh was introduced a couple of years ago. The intent behind this pattern is to create a way for distributed teams to work with and share information in an agile decentralized fashion.
+
+This is not only a technical pattern but also requires organizational change. The benefits of a data mesh approach are achieved through adoption of the organizational change implementing multi disciplinary teams who both publish and consume data products.
+
+To understand this architectural pattern, there are several foundational concepts that needs to be defined
 
 * Data Domains
 * Data Products
