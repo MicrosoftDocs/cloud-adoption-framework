@@ -26,7 +26,7 @@ Structure, governance, and security are key considerations that require planning
 
 If your data lake will contain a few data assets and only has automated processes such as extract, transform, load (ETL) offloading, then the planning phase might be an easy task. If your lake will contain hundreds of data assets and have automated and manual interaction, planning will take longer. It will require more collaboration from the various data owners.
 
-You might be familiar with the dreaded *data swamp* analogy. Governance and organization are key to avoid this situation. When you create a solid foundation, it will increase the chance of sustained data lake success and business value.
+You might be familiar with the dreaded *data swamp* analogy. Governance and organization are key to avoiding this situation. When you create a solid foundation, it will increase the chance of sustained data lake success and business value.
 
 A robust data catalog system is increasingly critical as the size, or number of data assets, and complexity, or number of users or departments, of a data lake grows. The catalog will ensure that users who process, consume, and govern the lake can find, tag, and classify data.
 
