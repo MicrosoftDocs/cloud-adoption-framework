@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Overview
+# Manage cloud-scale analytics
 
 Today, DevOps has shifted the culture of how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (such as Git, Apache Subversion, or Team Foundation Version Control) and automatic build and delivery managers (such Azure Pipelines or GitHub Actions).
 

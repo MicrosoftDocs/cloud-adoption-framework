@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Overview
+# Networking overview
 
 This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
 
