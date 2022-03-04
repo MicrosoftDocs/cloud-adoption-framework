@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data lake zones and containers
 
-It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for cloud-scale analytics.
+It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. [Overview of Azure Data Lake Storage for cloud-scale analytics](data-lake-overview.md) outlines a starting point for data lakes.
 
 ## Overview
 
