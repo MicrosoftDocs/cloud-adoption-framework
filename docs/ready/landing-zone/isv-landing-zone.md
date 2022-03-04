@@ -69,7 +69,7 @@ The *Customer's other workload* element in the diagram can represent either a cu
 
 Examples of customer-deployed ISV products include the many [virtual machine images](https://azuremarketplace.microsoft.com/marketplace/apps?filters=virtual-machine-images) (such as network and storage virtual appliances) and [Azure applications](https://azuremarketplace.microsoft.com/marketplace/apps?filters=solution-templates) in the Azure Marketplace.
 
-For some customer-deployed solutions, ISVs, Solution Integrators (SIs), and Managed Service Providers (MSPs) use [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview) to provide management and updates for the solution deployed within end-customer Azure subscriptions.
+ISVs, Solution Integrators (SIs), and Managed Service Providers (MSPs) use [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview) for some customer-deployed solutions to provide management and updates for the solution they deploy within end-customer Azure subscriptions.
 
 Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. Consider the [Azure landing zones guidance](index.md) as you design your product to work with the [Azure landing zones design principles](../enterprise-scale/design-principles.md) your Azure customers adopt.
 
