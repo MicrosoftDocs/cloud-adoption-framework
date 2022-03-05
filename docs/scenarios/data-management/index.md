@@ -45,7 +45,7 @@ This scenario focuses on supporting two targeted outcomes:
 - Enable powerful and complex analysis of the organizations data with cloud-based analytics tools.
 - Support the development of machine learning solutions that support business outcomes.
 
-This scenario also provides a framework built on the following principles to address challenges with complex data architectures that don not scale to the needs of businesses:
+This scenario also provides a framework built on the following principles to address challenges with complex data architectures that do not scale to the needs of businesses:
 
 | Principle | Description |
 |---------|---------|
@@ -124,4 +124,4 @@ For more information about planning for implementing the Azure cloud-scale analy
 To start your cloud cloud-scale analytics journey, learn about data governance:
 
 > [!div class="nextstepaction"]
-> [Introduction to cloud-scale analytics overview](overview-data-governance.md)
+> [Introduction to cloud-scale analytics overview](overview-cloud-scale-analytics.md)
