@@ -1,6 +1,6 @@
 ---
 title: Azure cloud-scale analytics overview
-description: Gain an overview of an end-to-end scenario for cloud-scale analytics in the cloud, with a focus on Azure implementation.
+description: Gain an overview of an end-to-end scenario for cloud-scale analytics, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/16/2022
