@@ -37,7 +37,7 @@ The deployment process and data operations (DataOps) model is an essential part 
 - Follow a deployment process that includes a strategy for GitHub forks and branches.
 - Maintain a central repository and deploying data management landing zones.
 
-Contributors with identifiable and individual skills should establish a platform group to centrally govern data platform infrastructure and build and deploy common data infrastructure pieces for the data management landing zone, plus various data landing zones. The platform group can also build, own, and provide agnostic technology that helps data integration and data product teams to capture, process, store, and maintain their data products.
+Contributors with identifiable and individual skills should establish a platform group to centrally govern data platform infrastructure and build and deploy common data infrastructure pieces for the data management landing zone, plus various data landing zones. The platform group can also build, own, and provide agnostic technology that helps data application teams to capture, process, store, and maintain their data applications.
 
 The team should present its services in a self-service manner, which can include tools for storing big data, versioning product data, organizing/implementing the data pipeline, de-identifying data, and more. These types of tools are key to minimizing bottlenecks in the workflow and reducing lead time for creating new data products.
 

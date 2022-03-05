@@ -83,7 +83,7 @@ Cloud-scale analytics probably contains polyglot storage. Examples include Postg
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
 - [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
 
-We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these Azure AD groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
+We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these Azure AD groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data application onboarding to create these groups.
 
 > [!NOTE]
 > Data applications can store sensitive data products in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive data](./secure-data-privacy.md#sensitive-data-personal-data).
