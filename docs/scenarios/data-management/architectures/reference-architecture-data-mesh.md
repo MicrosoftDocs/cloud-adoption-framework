@@ -61,7 +61,7 @@ When you use Cloud-scale analytics as a strategic path, you need to think of the
 
 One of the patterns from domain-driven design is known as *bounded context*. Bounded contexts are used to set the logical boundaries of a domain's solution space to better manage complexity. It's important that teams understand which aspects, including data, they can change on their own and which are shared dependencies for which they need to coordinate with others. Data mesh embraces bounded context and uses this pattern for describing how organizations can organize around data domains with a focus on delivering data as a product. Each data domain, in this regard, owns and operates multiple data products with its own technology stack, which is independent from the others.
 
-:::image type="content" source="../images/data-mesh-architecture.png" alt-text="Diagram showing data mesh architecture." lightbox="../images/data-mesh-plane.png":::
+:::image type="content" source="../images/data-mesh-architecture.png" alt-text="Diagram showing data mesh architecture." lightbox="../images/data-mesh-architecture.png":::
 
 #### Data products
 
