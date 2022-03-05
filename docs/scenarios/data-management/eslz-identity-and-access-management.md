@@ -90,9 +90,9 @@ For automation purposes of deploying data landing zones, you need these roles:
 >
 > The `Private DNS Zone Contributor` is also not required if the deployment of DNS A-records of the private endpoints is automated through Azure policies with `deployIfNotExists` effect. The same is true for the `User Access Administrator` because the deployment can be automated using `deployIfNotExists` policies.
 
-### Role assignments for data integration and data products
+### Role assignments for data products
 
-The following role assignments are required for deploying a data integration and data product within a data landing zone:
+The following role assignments are required for deploying a data product within a data landing zone:
 
 :::row:::
     :::column span="1":::

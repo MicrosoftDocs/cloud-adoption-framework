@@ -70,7 +70,7 @@ As the owner of the landing zone, Azure DevOps would route the approval for chan
 
 ### Respond to new data product requests
 
-Data landing zone ops supports data application teams to create new  data products. When a data application teams request assistance, an IT service management solution, for example, an automation logic app, orchestrates the approval or deployment of a new data integration or data products repository. Data landing zone ops would be notified of new requests and approve or decline deployments. Once approved, a new DevOps project is created, the main template and artifacts are forked, and a new data integration or data product is deployed.
+Data landing zone ops supports data application teams to create new  data products. When a data application teams request assistance, an IT service management solution, for example, an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops would be notified of new requests and approve or decline deployments. Once approved, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
 
 ### Adhere to the Azure Well-Architected Framework
 
@@ -86,7 +86,7 @@ The data application team delivers new data products to the business. They sourc
 
 ### New data products
 
-Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data application team with a range of expertise. The team identifies the data products required for the data product and requests permission to the data asset. If a new data product is needed, data application team receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data integration and data product deployment process](./manage-provision-platform.md#data-application-deployment-process). The data application team receives a forked repo from the master data products template to deploy the data product.
+Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data application team with a range of expertise. The team identifies the data products required for the data product and requests permission to the data asset. If a new data product is needed, data application team receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data application deployment process](./manage-provision-platform.md#data-application-deployment-process). The data application team receives a forked repo from the master data application template to deploy the data application.
 
 ### Certify data products
 
