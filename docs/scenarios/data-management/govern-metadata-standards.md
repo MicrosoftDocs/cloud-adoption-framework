@@ -1,5 +1,5 @@
 ---
-title: metadata standards and data marketplace
+title: Metadata standards
 description: Learn about metadata standards
 author: PietheinStrengholt
 ms.author: pstrengholt
