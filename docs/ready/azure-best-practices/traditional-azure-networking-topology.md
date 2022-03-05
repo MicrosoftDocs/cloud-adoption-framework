@@ -150,7 +150,7 @@ The following figure shows both options:
 
 - Deploy each region's hub network resources into separate resource groups, and sort them into each deployed region.
 
-- Use [Azure Virtual Network Manager](azure/virtual-network-manager/overview) to manage connectivity and security configuration of virtual networks globally across subscriptions.
+- Use [Azure Virtual Network Manager](https://docs.microsoft.com/azure/virtual-network-manager/overview) to manage connectivity and security configuration of virtual networks globally across subscriptions.
 
 - Use [Azure Monitor for Networks (preview)](/azure/azure-monitor/insights/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
