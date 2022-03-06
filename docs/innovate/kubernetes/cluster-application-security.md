@@ -66,8 +66,8 @@ As you prepare the application for production, implement a minimum set of best p
 - **Configure a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls.
 
   For more information, see:
-  - [Azure Container Registry integration with Security Center](/azure/security-center/defender-for-container-registries-introduction) <br>
-  - [Azure Kubernetes Service integration with Security Center](/azure/security-center/defender-for-kubernetes-introduction)
+  - [Azure Container Registry integration with Defender for Cloud](/azure/security-center/defender-for-container-registries-introduction) <br>
+  - [Azure Kubernetes Service integration with Defender for Cloud](/azure/security-center/defender-for-kubernetes-introduction)
 
 ## Optimize and scale
 

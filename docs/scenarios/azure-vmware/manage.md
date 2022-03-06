@@ -26,7 +26,7 @@ With Azure VMware Solution, Microsoft holds responsibility for the underlying in
 
 ## Azure VMware Solution operations baseline
 
-Many times VMware environments on-premises have sprawled. Individual business units might have deployed many different workloads on servers that may not meet a standard baseline. If Azure VMware Solution becomes the first workload placed in Azure, IT engineers can make use of more Azure native resources to help streamline the operations baseline of VMs being migrated into Azure. Customers can onboard a combination of Azure Policy, Azure Security Center, Azure Monitor, and Azure Automation to ensure both state and infrastructure configuration remains consistent for each application or workload migrated into Azure VMware Solution.
+Many times VMware environments on-premises have sprawled. Individual business units might have deployed many different workloads on servers that may not meet a standard baseline. If Azure VMware Solution becomes the first workload placed in Azure, IT engineers can make use of more Azure native resources to help streamline the operations baseline of VMs being migrated into Azure. Customers can onboard a combination of Azure Policy, Microsoft Defender for Cloud, Azure Monitor, and Azure Automation to ensure both state and infrastructure configuration remains consistent for each application or workload migrated into Azure VMware Solution.
 
 ## Azure VMware Solution platform operations
 
@@ -36,7 +36,7 @@ Before deploying Azure VMware Solution, customers need to account for the follow
 2. Establish hybrid replica domain controllers for legacy authentication and authorization if necessary.
 3. Deploy a Log Analytics workspace to capture log data from each VM resource within Azure VMware Solution.
 4. Plans to Azure Arc enable all servers within Azure VMware Solution so you can see each VM as a resource within the Azure portal.
-5. Deploy Azure Security Center and configure with the Standard SKU so you can see how the VMs are reporting into the environment and measure the baselines.
+5. Deploy Microsoft Defender for Cloud and configure with the Standard SKU so you can see how the VMs are reporting into the environment and measure the baselines.
 6. Deploy and configure Azure Policy to adhere to Azure specific requirements for the VMs within Azure VMware Solution.
 7. Deploy and configure an Azure Automation account to manage Desired State Configuration within the guest VMs for Azure VMware Solution.
 

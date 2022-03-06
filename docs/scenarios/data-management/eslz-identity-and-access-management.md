@@ -1,9 +1,9 @@
 ---
 title: Identity and access management for data management and analytics
-description: Learn how this enterprise-scale scenario can improve identity and access management for data management and analytics in Azure.
+description: Learn how this scenario can improve identity and access management for data management and analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 07/19/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -14,11 +14,11 @@ ms.custom: e2e-data-management, think-tank
 
 This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a data management and analytic platform on Microsoft Azure. Since data management and analytics is a mission-critical element, the guidance on the enterprise-scale design areas should also be included in your design.
 
-This article builds on considerations and recommendations about Azure landing zones. For more information, see [Identity and access management](../../ready/enterprise-scale/identity-and-access-management.md).
+This article builds on considerations and recommendations about Azure landing zones. For more information, see [Identity and access management](../../ready/landing-zone/design-area/identity-access.md).
 
 ## Data landing zone design
 
-Enterprise-scale for analytics and AI supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
+Data management and analytics scenario supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
 
 Review the Azure administration and management activities your teams perform. Consider your data management and analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
@@ -42,7 +42,7 @@ For automation purposes of deploying data landing zones, you need these roles:
         [Private DNS Zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management zone deployment. This role is required to deploy A-records for the private endpoints.
+        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management landing zone deployment. This role is required to deploy A-records for the private endpoints.
     :::column-end:::
     :::column span="2":::
         (Resource group scope) `/subscriptions/{{dataManagement}subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -96,7 +96,7 @@ The following role assignments are required for deploying a data integration and
         [Private DNS Zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management zone deployment. This role is required to deploy A-records for the respective private endpoints.
+        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management landing zone deployment. This role is required to deploy A-records for the respective private endpoints.
     :::column-end:::
     :::column span="2":::
         (Resource group scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -129,9 +129,9 @@ The following role assignments are required for deploying a data integration and
 
 Managing access to data should be done using Azure AD groups. Add user principle names or service principal names to the Azure AD groups. Add the groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
 
-For datasets in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse Analytics, and Azure Databricks.
+For datasets in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
 
-Other polyglot storage is likely to be used in enterprise-scale for analytics and AI. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. They could be used by data integrations to store read data stores or by data product teams.
+Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data integrations to store read data stores or by data product teams.
 
 - [Use Azure Active Directory for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics
