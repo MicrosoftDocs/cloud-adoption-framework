@@ -7,7 +7,6 @@ ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---

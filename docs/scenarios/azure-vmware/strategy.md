@@ -25,8 +25,8 @@ Common motivations for choosing Azure VMware Solution are:
   - ***Multicast networking support***: Specialized software(s) may be using multicast networking while running in an on-premise environment. Azure VMware Solution provides an excellent choice for running such specialized software(s).
   - ***Functional Testing***: IT teams can reuse their existing functional testing tools and processes as defined for on-premise workloads. The tools and processes remain the same even when workloads run in Azure VMware Solutions.
 - **Operational needs:** Make use of the existing VMware skills, licenses (SRM, VMware NSX Advanced Load Balancer (formerly AVI) Load balancer) and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time. Many IT teams can take advantages of following additional benefits offered by Azure VMware Solutions.
-  - ***Less VM-level changes***: When migrated to Azure VMware Solution, a Virtual Machine (VM) has minimal configuration changes such as Disks, Memory, Network Interface Card (NIC). This reduces the testing time as well drives confidence in migration.
-  - ***Reuse existing Disaster Recovery (DR) site***: When customers migrate workloads to Azure VMware Solution from on-premise environment, they can continue to use their existing DR site, tools and processes.  
+  - **Fewer VM-level changes:** When migrated to Azure VMware Solution, a Virtual Machine (VM) has minimal configuration changes such as Disks, Memory, Network Interface Card (NIC). This reduces the testing time as well drives confidence in migration.
+  - **Reuse of existing disaster recovery (DR) sites:** When customers migrate workloads to Azure VMware Solution from an on-premise environment, they can continue to use their existing DR site, tools, and processes.
 - **Strategic needs:** To incrementally modernize your VMware-based applications with other Azure services as business requirements evolve. Change in IT hardware [supply chain environment](https://www.au.logicalis.com/news/how-the-global-chip-shortage-is-driving-data-centre-projects-to-the-cloud/) can also lead to unpredictable scenarios affecting on-premise data centers. Azure VMware Solution provides fastest way to mitigate this risk.
 
 ## Azure VMware Solution outcomes
@@ -66,7 +66,7 @@ Modernize applications running on VMware overtime through integration to [Azure 
 
 - **Deploy unified hybrid management and operational controls** using [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures.
 - **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL Managed Instance, and analytics.
-- **Deploy native Azure management controls** with Azure Monitor and Azure Security Center solutions to operate your VMware environments.
+- **Deploy native Azure management controls** with Azure Monitor and Microsoft Defender for Cloud solutions to operate your VMware environments.
 - **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement with Azure Backup and Azure Site Recovery.
 - **Achieve identity and access management consistency** with unified permissions and access control, using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
 

@@ -17,20 +17,50 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
-    - name: Design areas 
+    - name: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid
+      href: enterprise-scale-landing-zone.md
+    - name: Azure Arc-enabled servers
       items:
       - name: Identity and access management
-        href: eslz-identity-and-access-management.md
-      - name: Network connectivity
-        href: eslz-arc-servers-connectivity.md
-      - name: Governance disciplines 
-        href: eslz-security-governance-and-compliance.md  
+        href: arc-enabled-servers/eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: arc-enabled-servers/eslz-arc-servers-connectivity.md
+      - name: Resource organization
+        href: arc-enabled-servers/eslz-resource-organization.md
+      - name: Governance and security disciplines
+        href: arc-enabled-servers/eslz-security-governance-and-compliance.md
+      - name: Management disciplines
+        href: arc-enabled-servers/eslz-management-and-monitoring-arc-server.md
+      - name: Cost governance
+        href: arc-enabled-servers/eslz-cost-governance.md
+      - name: Automation disciplines
+        href: arc-enabled-servers/eslz-automation-arc-server.md
+    - name: Azure Arc-enabled Kubernetes
+      items:
+      - name: Identity and access management
+        href: arc-enabled-kubernetes/identity-access-management.md
+      - name: Network topology and connectivity
+        href: arc-enabled-kubernetes/network-connectivity.md
+      - name: Resource organization
+        href: arc-enabled-kubernetes/resource-organization.md
+      - name: Governance and security disciplines
+        href: arc-enabled-kubernetes/governance-disciplines.md
+      - name: Management disciplines
+        href: arc-enabled-kubernetes/management-disciplines.md
+      - name: Cost governance
+        href: arc-enabled-kubernetes/cost-governance.md
+      - name: Automation disciplines
+        href: arc-enabled-kubernetes/automation-disciplines.md
+      - name: Extensions management
+        href: arc-enabled-kubernetes/extensions-management.md
+      - name: CI/CD and GitOps disciplines
+        href: arc-enabled-kubernetes/cicd-gitops-disciplines.md
+      - name: Services observability
+        href: arc-enabled-kubernetes/services-observability.md
     - name: Implementation options
       items:
-      - name: Start small with basic VM management
-        href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Enterprise-scale landing zones for hybrid
-        href: enterprise-scale-landing-zone.md
+      - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
+        href: arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md
 
   - name: Migrate to the cloud
     href: migrate.md
@@ -56,7 +86,7 @@ items:
   - name: Hybrid architectures
     items:
     - name: Overview
-      href: /azure/architecture/browse/?azure_categories=hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/architecture/browse/?azure_categories=hybrid&bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Applications
       items:
@@ -141,9 +171,9 @@ items:
 
     - name: Security
       items:
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/hybrid/hybrid-security-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/solution-ideas/articles/devsecops-in-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Environmental readiness

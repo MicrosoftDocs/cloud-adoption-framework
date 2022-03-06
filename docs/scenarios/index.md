@@ -25,7 +25,7 @@ The following diagram and table outline a number of scenarios that follow the sa
 | Virtual machines | [Virtual machines](../migrate/azure-best-practices/contoso-migration-rehost-vm.md) | [Linux servers](../migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md) | [Virtual desktops](./wvd/index.md) |
 | Applications | [ASP.NET](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md) | [Java](/azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | [PHP](../migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md) |
 | Data | [SQL Server](../migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md) | [Open-source databases](../migrate/azure-best-practices/sql-migration.md) | [Analytics](../migrate/azure-best-practices/analytics/analytics-solutions-overview.md) |
-| Hybrid | [Azure Stack](./azure-stack/index.md) | [VMware](../migrate/azure-best-practices/vmware-host.md) | |
+| Hybrid | [Azure Stack](./azure-stack/index.md) | [VMware](/azure/cloud-adoption-framework/scenarios/azure-vmware/) | |
 | Technology platforms | SAP (classic and HANA) | Kubernetes | [Mainframes](../infrastructure/mainframe-migration/index.md) |
 | Additional scenarios | [Secure workloads](../migrate/azure-best-practices/migrate-best-practices-security-management.md) | [Multitenant environments](/azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | NetApp |
 
@@ -49,4 +49,5 @@ During each iteration, follow the Migrate methodology to assess, deploy, and rel
 
 ## Next steps
 
-If you aren't migrating a specific scenario, start by following the [four-step Cloud Adoption Framework migration process](../migrate/index.md).
+If you aren't migrating a specific scenario, start by following the [four-step Cloud Adoption Framework migration process](../migrate/index.md)
+.

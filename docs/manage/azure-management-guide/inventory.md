@@ -7,7 +7,6 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
@@ -176,6 +175,6 @@ Each article guides you through a series of steps to onboard these solutions:
 - Azure Log Analytics Agent Health
 - Antimalware assessment
 - Azure Monitor for VMs
-- Azure Security Center
+- Microsoft Defender for Cloud
 
 Each of the previous steps helps establish inventory and visibility.

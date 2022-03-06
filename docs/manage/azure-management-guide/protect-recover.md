@@ -7,7 +7,6 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
@@ -24,7 +23,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 | Process                 | Tool                  | Purpose                                                                                  |
 | ----------------------- | --------------------- | ---------------------------------------------------------------------------------------- |
 | Protect data            | Azure Backup          | Back up data and virtual machines in the cloud.                                          |
-| Protect the environment | Azure Security Center | Strengthen security and provide advanced threat protection across your hybrid workloads. |
+| Protect the environment | Microsoft Defender for Cloud | Strengthen security and provide advanced threat protection across your hybrid workloads. |
 
 ::: zone target="docs"
 

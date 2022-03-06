@@ -100,12 +100,12 @@ The governance MVP design will change to include new Azure policies and an imple
 - Azure Recovery Services vault implementation:
   - Define and deploy an Azure Recovery Services vault for backup and recovery processes.
   - Create a Resource Manager template for creation of a vault in each subscription.
-- Azure Security Center implementation:
-  - Configure Azure Security Center for any management group that contains protected data classifications.
+- Microsoft Defender for Cloud implementation:
+  - Configure Microsoft Defender for Cloud for any management group that contains protected data classifications.
   - Set automatic provisioning to on by default to ensure patching compliance.
   - Establish OS security configurations. The IT security team will define the configuration.
-  - Support the IT security team in the initial use of Security Center. Transition the use of Security Center to the IT security team, but maintain access for the purpose of continually improving governance.
-  - Create a Resource Manager template that reflects the changes required for Security Center configuration within a subscription.
+  - Support the IT security team in the initial use of Defender for Cloud. Transition the use of Defender for Cloud to the IT security team, but maintain access for the purpose of continually improving governance.
+  - Create a Resource Manager template that reflects the changes required for Defender for Cloud configuration within a subscription.
 - Update Azure policies for all subscriptions:
   - Audit and enforce the criticality of data and data classification across all management groups and subscriptions to identify any subscriptions with protected data classifications.
   - Audit and enforce the use of approved images only.
@@ -124,7 +124,7 @@ The governance MVP design will change to include new Azure policies and an imple
   - Create a Resource Manager template to deploy the firewall with required configurations.
 - Azure Blueprints:
   - Create a new blueprint named `protected-data`.
-  - Add the Azure Firewall templates, Azure Security Center templates, and Azure Recovery Services vault templates to the blueprint.
+  - Add the Azure Firewall templates, Microsoft Defender for Cloud templates, and Azure Recovery Services vault templates to the blueprint.
   - Add the new policies for protected data subscriptions.
   - Publish the blueprint to any management group that currently plans on hosting protected data.
   - Apply the new blueprint to each affected subscription and to existing blueprints.
