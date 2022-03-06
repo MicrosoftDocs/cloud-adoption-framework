@@ -6,5 +6,9 @@
         ".\\docs\\cspell.json"
     ],
     "words": [
+        "migratable"
+    ],
+    "ignoreWords": [
+        "himds"
     ]
 }
