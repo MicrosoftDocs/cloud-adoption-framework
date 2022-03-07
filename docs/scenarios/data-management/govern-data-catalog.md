@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data Catalog
+# Data catalog
 
 [!INCLUDE [data-catalog](includes/data-catalog.md)]
 

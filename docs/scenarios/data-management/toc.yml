@@ -49,9 +49,9 @@ items:
       href: ./govern-requirements.md
     - name: Data governance processes
       href: ./govern-components.md
-    - name: Data Catalog
+    - name: Data catalog
       href: ./govern-data-catalog.md
-    - name: Data Lineage
+    - name: Data lineage
       href: ./govern-lineage.md
     - name: Master data management
       href: ./govern-master-data.md
