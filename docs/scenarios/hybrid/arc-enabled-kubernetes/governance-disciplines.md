@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes
 
-This article walks through the key design considerations and best practices for the topics of security, governance, and compliance of Azure Arc-enabled Kubernetes deployments that should be in place as part of a CAF enterprise-scale landing zone implementation. While the enterprise-scale landing zone documentation covers "[Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)" and "[Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)" as separate topics, for Azure Arc-enabled Kubernetes, these critical design areas are consolidated as a single topic.
+This article walks through the key design considerations and best practices for the topics of security, governance, and compliance of Azure Arc-enabled Kubernetes deployments that should be in place as part of an Azure landing zones implementation. While the enterprise-scale landing zone documentation covers "[Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)" and "[Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)" as separate topics, for Azure Arc-enabled Kubernetes, these critical design areas are consolidated as a single topic.
 
 [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion at scale. By combining them with Azure Arc-enabled Kubernetes, your governance policies and security checks are extended to any Kubernetes cluster on-premises and/or multicloud environments.
 
@@ -74,9 +74,6 @@ Integrating with Azure AD also enables the use of Azure AD advance security capa
 
 - Use [Conditional Access with Azure AD](/azure/azure-arc/kubernetes/azure-rbac#use-conditional-access-with-azure-ad). Additional information on Conditional Access can be found [here](/azure/active-directory/conditional-access/overview).
 - Implement [Just-In-Time (JIT)](/azure/azure-arc/kubernetes/azure-rbac#configure-just-in-time-cluster-access-with-azure-ad) access rules for tasks that need elevated permissions. Having standing access by some users to sensitive information or critical network configuration settings in Kubernetes is a potential pathway to compromised accounts or internal threat activities. Privileged access management helps protect your organization from breaches and helps to meet compliance best practices by limiting standing access to sensitive data or access to critical configuration settings.
-
-Make sure to review [more specific identity recommendations for Azure Arc-enabled Kubernetes](./identity-access-management.md).
-
 ### Secret and certificate management
 
 Do not store secrets or certificates in application code or file systems. Secrets should be stored in key stores and provided to containers at runtime as they are needed.

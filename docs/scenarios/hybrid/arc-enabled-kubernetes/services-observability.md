@@ -57,7 +57,7 @@ There are different ways to achieve service observability. For example, you coul
 
 The following sections provide an overview on service observability using a service mesh and the self-hosted API Gateway available for Azure Arc.
 
-### Service Mesh
+## Service Mesh
 
 A service mesh provides capabilities like traffic management, resiliency, policy enforcement, transport security, identity security, and observability to your workloads. Your application is decoupled from these operational capabilities and the service mesh moves them out of the application layer, and down to the infrastructure layer. This is done by a high-performance proxy that mediates all the inbound and outbound traffic to a service.
 
@@ -65,7 +65,7 @@ A service mesh provides capabilities like traffic management, resiliency, policy
 - Other popular Service Mesh’s which will require vendor support include: [Istio](https://istio.io/), [Consul Connect](https://www.hashicorp.com/products/consul/multi-platform-service-mesh/), [Linkerd](https://linkerd.io/2.11/overview/).
 - Depending on what features are used, when implementing a service mesh, there comes additional responsibility on Application Operators who may need to define a configuration for each service such as access rules and onboarding services. Additionally, Cluster Operators will need to manage and be aware of the Service Mesh controller. Due to how service mesh leverages the [side-car pattern](/azure/architecture/patterns/sidecar), when debugging Egress and Ingress, access logs from the service mesh control plane and sidecar will be required.
 
-### Service Mesh Observability
+## Service Mesh Observability
 
 Service Meshes come with different features, with observability being an important functionality it provides. It is recommended to choose a Service Mesh that meets your minimum requirements of observability to reduce the amount of complexity and components that a service mesh can come with and is required to be configured. Evaluate the common features and use cases of observability that a service mesh would provide:
 
@@ -79,7 +79,7 @@ The following diagram shows an example of a Service Mesh Proxy functionality of 
 
  ![Example observability with a Service Mesh Proxy](./media/arc-enabled-kubernetes-obs.png)
 
-### API Management Self-hosted gateway
+## API Management Self-hosted gateway
 
 With the integration between Azure API Management and Azure Arc on Kubernetes, you can deploy the API Management gateway component as an extension in an Azure Arc-enabled Kubernetes cluster. This allows a containerized version of API Management gateway to run in your Arc-enabled Kubernetes cluster. All self-hosted gateways are managed from the API Management service they are federated with, thus providing you with the visibility and unified management experience across all internal and external APIs.
 
@@ -87,7 +87,7 @@ Configuring the self-hosted gateway to accept incoming traffic to direct to your
 
 For more information, please visit the [self-hosted gateway overview](/azure/api-management/self-hosted-gateway-overview)
 
-### API Management Self-hosted gateway Observability
+## API Management Self-hosted gateway Observability
 
 The self-hosted gateway emits metrics and stdout and stderr logs. The metrics emitted have the ability to be configured by a ConfigMap in your cluster. For information on advanced monitoring with API Management, see [Advanced Monitoring](/azure/api-management/api-management-log-to-eventhub-sample). The Self-hosted gateway observability accounts for external traffic (North-South) coming into your cluster, it does not provide any observability for pod-to-pod traffic inside the cluster (East-West).
 
@@ -96,7 +96,7 @@ Metrics are emitted to Azure Monitor by default. Using Azure Monitor for contain
 
 **Local Metrics and Logs:** Metrics and logs from the self-hosted gateway can be integrated to your local monitoring tooling or emitted by Config Map. Metrics can be configured to publish metrics to metric servers. Gateway Logs by default are output to stdout and stderr. For more information, see [Configure local metrics and logs for Azure API Management self-hosted gateway](/azure/api-management/how-to-configure-local-metrics-logs)
 
-### Technology comparison table
+## Technology comparison table
 
 The following is a table to show the potential differences to guide in choosing an implementation for obtaining services observability.
 
