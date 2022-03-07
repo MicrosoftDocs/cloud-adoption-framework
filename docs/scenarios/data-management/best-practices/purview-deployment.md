@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure Purview deployment best practices for data management and analytics scenario
 
-The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the data management and analytics scenario platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide most data management capabilities.
+The [Data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the data management and analytics scenario platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide most data management capabilities.
 
 > [!NOTE]
 > This guidance in this section explains configurations specific to data management and analytics scenario. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
