@@ -179,7 +179,7 @@ items:
           href: ./best-practices/data-ingestion.md
         - name: SAP data ingestion
           href: ./best-practices/sap-data-ingestion.md
-        - name: Automated ingestion pattern
+        - name: Data agnostic ingestion engine
           href: ./best-practices/automated-ingestion-pattern.md
       - name: Data lake implementation
         items:

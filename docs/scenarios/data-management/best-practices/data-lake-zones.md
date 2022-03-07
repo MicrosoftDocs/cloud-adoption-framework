@@ -34,7 +34,7 @@ The services should be enabled with the hierarchical name space feature to allow
 > [!IMPORTANT]
 > While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
 
-When a new system of record is registered via the data agnostic or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a Service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
+When a new system of record is registered via the data agnostic ingestion engine or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a Service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
 
 Each **data product** should have two folders in the curated data lake layer over which the data product team should have ownership.
 
@@ -56,7 +56,7 @@ Consider using [data lifecycle management](../govern-lifecycle.md) to reduce lon
 
 When you load data from source systems into the raw zone you can either choose to do full loads from systems meaning that the full data set is extracted every time, or delta loads meaning that you load only the changed data every time. It is good practice to indicate the loading pattern in the folder structure. This will simplify the use for the data consumers.
 
-Raw data from source systems for each **data application (source-aligned)** or data agnostic engine source will land into either the full or delta folder. Each ingestion process should have write access to only their associated folder.
+Raw data from source systems for each **data application (source-aligned)** or automated ingestion engine source will land into either the full or delta folder. Each ingestion process should have write access to only their associated folder.
 
 We define full load and delta loads as:
 

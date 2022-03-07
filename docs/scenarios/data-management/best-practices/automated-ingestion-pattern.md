@@ -1,20 +1,20 @@
 ---
-title: How automated ingestion frameworks support data management and analytics scenario in Azure
-description: Learn about how automated ingestion frameworks support data management and analytics scenario in Azure.
+title: How data agnostic ingestion engine scenario support cloud-scale analytics in Azure
+description: Learn about how automated ingestion frameworks support cloud-scale analytics in Azure.
 author: dmarz
 ms.author: damarzol
-ms.date: 02/18/2022
+ms.date: 03/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# How automated ingestion frameworks support cloud-scale analytics in Azure
+# Data agnostic ingestion engine
 
-This section discusses a design for how automated ingestion scenarios could be implemented using a combination of PowerApps, Azure Logic Apps and Metadata-driven copy tasks within Azure Data Factory.
+This section discusses a design for how data agnostic ingestion engine scenarios could be implemented using a combination of PowerApps, Azure Logic Apps and Metadata-driven copy tasks within Azure Data Factory.
 
-Automated data ingestion scenarios are typically focused at enabling non-technical (that is, not Data Engineer) personas to publish data assets to a Data Lake so that further processing can occur. To implement this scenario requires onboarding capabilities enabling:
+Data agnostic ingestion engine scenarios are typically focused at enabling non-technical (that is, not Data Engineer) personas to publish data assets to a Data Lake so that further processing can occur. To implement this scenario requires onboarding capabilities enabling:
 
 - Data asset registration
 - Provisioning workflow / metadata capture
@@ -28,7 +28,7 @@ The interaction between the capabilities can be viewed as follows:
 
 The following illustrates how this process can be implemented using a combination of Azure services:
 
-:::image type="content" source="../images/automated-ingestion-flow.png" alt-text="Diagram of an automated ingestion process":::
+:::image type="content" source="../images/automated-ingestion-flow.png" alt-text="Diagram of an data agnostic engine ingestion process":::
 
 *Figure 2: Automated ingestion process.*
 
@@ -39,7 +39,7 @@ Data asset registration is required to provide the metadata used to drive automa
 - Technical information: Data asset name, source system, type, format and frequency
 - Governance information: Owner, stewards, visibility (for discovery purposes) and sensitivity
 
-For the purposes of this article, PowerApps is used to capture metadata describing the data asset. A model-driven app is used by the person entering the information that is persisted to a custom Dataverse table. Once saved, further processing steps are invoked through an Automated Cloud Flow that is triggered when the metadata is either created or updated within Dataverse.
+For the purposes of this article, PowerApps is used to capture metadata describing the data asset. A model-driven app is used by the person entering the information that is persisted to a custom dataverse table. Once saved, further processing steps are invoked through an Automated Cloud Flow that is triggered when the metadata is either created or updated within dataverse.
 
 ![Diagram of an data asset registration.](../images/ingestion-step1-registration.png)
 
