@@ -21,26 +21,58 @@ This section discusses a design for how automated ingestion scenarios could be i
 Automated data ingestion scenarios are typically focused at enabling non-technical (that is, not Data Engineer) personas to publish data assets to a Data Lake so that further processing can occur. To implement this scenario requires onboarding capabilities enabling:
 
 - Data asset registration
-- Provisioning workflow
-- Metadata capture
-- Scheduling of orchestration / ingestion
+- Provisioning workflow / metadata capture
+- Scheduling of ingestion
 
 The interaction between the capabilities can be viewed as follows:
 
 ![Diagram of data registration capabilites interactions.](../images/registration-capabilities.png)
 
-The following illustrates how new data assets can be registered using a combination of Azure services:
+*Figure 1: Data registration capabilites interactions.*
+
+The following illustrates how this process can be implemented using a combination of Azure services:
 
 ![Diagram of an automated ingestion process.](../images/automated-ingestion-flow.png)
 
-[Metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven)
+*Figure 2: Automated ingestion process.*
 
-This information can be captured and written to a bespoke table within Dataverse
-The application can talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into data landing zones. Once ingestion requests are approved, it uses the Azure Purview REST API to insert the sources into Azure Purview.
+### Data asset registration
 
-The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the data lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
+Data asset registration is required to provide the metadata used to drive automated ingestion. The information captured should describe:
 
-For all job types (including indirect ingestion from sources like SAP), areas, and functions, the application should store the jobs' technical and operational metadata in a SQL database. Technical metadata can drive jobs because it has have most of the parameters required for this task. Data platform, data landing zone, and integration ops can use the metadata to:
+- Technical information: Data asset name, source system, type, format and frequency
+- Governance information: Owner, stewards, visibility (for discovery purposes) and sensitivity
+
+For the purposes of this article, PowerApps is used to capture metadata describing the data asset. A model-driven app is used by the person entering the information which is persisted to a custom Dataverse table. Once saved, further processing steps are invoked through an Automated Cloud Flow which is triggered when the metadata is either created or updated within Dataverse.
+
+![Diagram of an data asset registration.](../images/ingestion-step1-registration.png)
+
+*Figure 3: Data asset registration.*
+
+### Provisioning workflow / metadata capture
+
+The provisioning workflow stage is where the data collected in the registration stage is validated and persisted to the metastore. During this stage, both technical and business validation steps are performed including:
+
+- Validation of input data feed
+- Triggering of approval workflows
+- Processing logic to trigger persistence of metadata to the metadata store
+- Auditing activities
+
+![Diagram of registration workflow.](../images/ingestion-step2-workflow.png)
+
+*Figure 4: Registration workflow.*
+
+Once ingestion requests are approved, as part of the processing logic the workflow uses the Azure Purview REST API to insert the sources into Azure Purview.
+
+### Scheduling of ingestion
+
+Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven) provide functionality enabling orchestration pipelines to be driven by rows within a Control Table stored within Azure SQL Database. The Copy Data Tool can be used to pre-create metadata-driven pipelines. Once these have been created, the provisioning workflow adds entries to the Control Table to support ingestion from the sources identified in the data asset registration metadata. Both the Azure Data Factory pipelines and the Azure SQL Database containing the Control Table metastore can exist within each data landing zone to create new data sources and ingest them into data landing zones. 
+
+![Diagram of scheduling of data asset ingestion.](../images/ingestion-step3-orchestration.png)
+
+*Figure 5: Scheduling of data asset ingestion.*
+
+Data platform, data landing zone, and integration ops can use the captured  metadata to:
 
 - Track jobs and the latest data-loading timestamps for datasets related to their functions.
 - Track available datasets.
@@ -56,34 +88,9 @@ Operational metadata can be used to track:
 - Source metadata changes.
 - Business functions that depend on datasets.
 
-If the business needs operational reports and event notifications, data landing zone ops and integration ops can use Microsoft Power BI to query the SQL Database to build them.
+If the business needs operational reports and event notifications, data landing zone ops and integration ops can use Microsoft Power BI to query the Azure SQL Database Control Table and the underlying Azure Data Factory telemetry outputs to build them.
 
-## Register a new dataset (automated)
-
-Figure 2 recommends the following registration process for automating the ingestion of new data sources:
-
-![How new datasets are ingested (automated).](../images/new-dataset-ingestion.png)
-
-*Figure 2: How new datasets are ingested (automated).*
-
-Enterprises can use custom applications, Azure Logic Apps, or Microsoft Power Apps in the data management landing zone to enter data into the Data Factory metastore and gain the following benefits:
-
-- Source details are registered, including production and Data Factory environments.
-- Data shape, format, and quality constraints are captured.
-- Integration ops indicate if the data is **sensitive (Personal data)**, and this classification drives the process during which data lake folders are created to ingest raw and enriched data. The source names raw data, and the data asset names enriched and curated data.
-- Service principal and security groups are created for ingesting and giving access to the dataset.
-- An ingestion job is created in the data landing zone Data Factory metastore.
-- An API inserts the data definition into Azure Purview.
-- Details are validated and tested in development/testing environments.
-- Subject to the validation of the data source and approval by the ops team, details are published to a Data Factory metastore.
-
-## Ingest new data sources (automated)
-
-The following illustrates how registered data sources in a Data Factory SQL Database metastore are pulled and how data is ingested at first:
-
-![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
-
-The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
+The Azure Data Factory metadata-driven copy tasks read metadata entries from the Azure SQL Database Control Table and runs iteratively to ingest the data assets. Data moves with little to no change from the source to the raw layer in Azure Data Lake. Once landed within the raw layer, further processing can be involved where the data shape is validated, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
 
 > [!TIP]
 > The Parquet format is recommended when the input/output (I/O) patterns are more read-heavy or when the query patterns focus on a subset of columns in the records where read transactions can be optimized to retrieve specific columns instead of reading the entire record.\
