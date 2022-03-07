@@ -821,9 +821,9 @@ items:
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
         - name: Power Platform adoption
-          href: /power-platform/guidance/adoption/methodology.md
+          href: /power-platform/guidance/adoption/methodology
         - name: Power Platform automation adoption
-          href: /power-platform/guidance/automation-coe/overview.md
+          href: /power-platform/guidance/automation-coe/overview
 
       - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
@@ -1020,7 +1020,7 @@ items:
             - name: Using AI Builder
               href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Planning a Power Apps project
-              href: /powerapps/guidance/planning/introduction.md
+              href: /powerapps/guidance/planning/introduction
             - name: Power Apps patterns
               items:
                 - name: Patterns overview
@@ -1040,7 +1040,7 @@ items:
                 - name: More patterns
                   href: /powerapps/guidance/patterns/more-patterns?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Planning a Power Automate project
-              href: /power-automate/guidance/planning/introduction.md      
+              href: /power-automate/guidance/planning/introduction   
             - name: Compliance and data privacy for low-code application platform
               href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Data loss prevention policies for low-code application platform
