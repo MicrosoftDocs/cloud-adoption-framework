@@ -12,4 +12,8 @@ ms.custom: e2e-data-management, think-tank
 
 # Data onboarding
 
-xxxx
+To be written
+
+## Next steps
+
+[Registration of data products](registration-of-data-products.md)
