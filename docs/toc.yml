@@ -1005,7 +1005,7 @@ items:
           items:
           - name: Overview
             href: innovate/best-practices/apps.md
-          - name: Citizen developers
+          - name: Low-code application platform
             items:
             - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -1015,6 +1015,26 @@ items:
               href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Using AI Builder
               href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Planning a Power Apps project
+              href: /powerapps/guidance/planning/introduction
+            - name: Power Apps patterns
+              items:
+                - name: Patterns overview
+                  href: /powerapps/guidance/patterns/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Approval pattern
+                  href: /powerapps/guidance/patterns/approval-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Asset management/resource booking pattern
+                  href: /powerapps/guidance/patterns/asset-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Calculation/transformation pattern
+                  href: /powerapps/guidance/patterns/calculator-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Communication/announcement pattern
+                  href: /powerapps/guidance/patterns/communication-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Inspection/audit pattern
+                  href: /powerapps/guidance/patterns/inspection-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Project management pattern
+                  href: /powerapps/guidance/patterns/project-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: More patterns
+                  href: /powerapps/guidance/patterns/more-patterns?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Compliance and data privacy for citizen developer solutions
               href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Data loss prevention policies for citizen developer solutions
