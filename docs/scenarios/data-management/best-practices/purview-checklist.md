@@ -38,16 +38,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
   - Where is the data? Is it in the cloud? Is it on-premises?
   - What types of data sources do you have in the organization? For example, Azure SQL Database, Amazon S3, or on-premises SQL servers.
 
-- Define roles and responsibilities to build and manage a unified data governance solution. Consider the following roles for your organization:
-
-    |Role  |Description  |
-    |---------|---------|
-    |Data source admins  | Register and scan data sources. Manage credentials, runtimes and external connections |
-    |Collection admins | Manage collections and access control |
-    |Data curators     |Search and browse assets, manage classifications and glossary terms         |
-    |Data readers     |Have read-only access to search, browse, classifications and insights reports         |
-
-  For more information related to Azure Purview roles, see [Access control in Azure Purview](/azure/purview/catalog-permissions#roles).
+- Define roles and responsibilities to build and manage a unified data governance solution. Azure Purview uses a set of predefined roles to control who can access what within the account. For more information related to Azure Purview roles, see [Access control in Azure Purview](/azure/purview/catalog-permissions#roles).
 
 - Consider the following supporting roles for building an end-to-end data governance solution using Azure Purview:
 
