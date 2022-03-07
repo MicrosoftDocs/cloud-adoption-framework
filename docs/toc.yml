@@ -1009,7 +1009,7 @@ items:
           items:
           - name: Overview
             href: innovate/best-practices/apps.md
-         - name: Low-code application platform
+          - name: Low-code application platform
             items:
             - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
