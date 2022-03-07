@@ -34,7 +34,7 @@ OKRs move teams away from an “output” mindset (“What projects or tasks did
 
 ## OKR key principles
 
-[Ally.io](https://www.ally.io) is an OKR software solution that is stand-alone today but will be brought into the Viva suite in 2022. This service helps you turn your business goals into results by ensuring you keep your most important objectives in focus throughout every process. Ally.io's three key principles to provide effective OKR management are:
+[Ally.io](https://www.ally.io) is an OKR software solution. This service helps you turn your business goals into results by ensuring you keep your most important objectives in focus throughout every process. Ally.io's three key principles to provide effective OKR management are:
 
 - **Connect work and outcomes:** Clearly connecting each team's daily work with business goals
 - **Align individuals and impact:** Creating a strong culture of employee engagement and growth
