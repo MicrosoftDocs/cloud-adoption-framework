@@ -28,7 +28,7 @@ The interaction between the capabilities can be viewed as follows:
 
 ![Diagram of data registration capabilites interactions.](../images/registration-capabilities.png)
 
-*Figure 1: Data registration capabilites interactions.*
+*Figure 1: Data registration capabilities interactions.*
 
 The following illustrates how this process can be implemented using a combination of Azure services:
 
@@ -43,7 +43,7 @@ Data asset registration is required to provide the metadata used to drive automa
 - Technical information: Data asset name, source system, type, format and frequency
 - Governance information: Owner, stewards, visibility (for discovery purposes) and sensitivity
 
-For the purposes of this article, PowerApps is used to capture metadata describing the data asset. A model-driven app is used by the person entering the information which is persisted to a custom Dataverse table. Once saved, further processing steps are invoked through an Automated Cloud Flow which is triggered when the metadata is either created or updated within Dataverse.
+For the purposes of this article, PowerApps is used to capture metadata describing the data asset. A model-driven app is used by the person entering the information that is persisted to a custom Dataverse table. Once saved, further processing steps are invoked through an Automated Cloud Flow that is triggered when the metadata is either created or updated within Dataverse.
 
 ![Diagram of an data asset registration.](../images/ingestion-step1-registration.png)
 
@@ -53,7 +53,7 @@ For the purposes of this article, PowerApps is used to capture metadata describi
 
 The provisioning workflow stage is where the data collected in the registration stage is validated and persisted to the metastore. During this stage, both technical and business validation steps are performed including:
 
-- Validation of input data feed
+- Validation of input data feeds
 - Triggering of approval workflows
 - Processing logic to trigger persistence of metadata to the metadata store
 - Auditing activities
@@ -90,16 +90,16 @@ Operational metadata can be used to track:
 
 If the business needs operational reports and event notifications, data landing zone ops and integration ops can use Microsoft Power BI to query the Azure SQL Database Control Table and the underlying Azure Data Factory telemetry outputs to build them.
 
-The Azure Data Factory metadata-driven copy tasks read metadata entries from the Azure SQL Database Control Table and runs iteratively to ingest the data assets. Data moves with little to no change from the source to the raw layer in Azure Data Lake. Once landed within the raw layer, further processing can be involved where the data shape is validated, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
+The Azure Data Factory metadata-driven copy tasks read metadata entries from the Azure SQL Database Control Table and run iteratively to ingest the data assets. Data moves with little to no change from the source to the raw layer in Azure Data Lake. Once landed within the raw layer, further processing can be involved where the data shape is validated, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
 
 > [!TIP]
 > The Parquet format is recommended when the input/output (I/O) patterns are more read-heavy or when the query patterns focus on a subset of columns in the records where read transactions can be optimized to retrieve specific columns instead of reading the entire record.\
 > \
-> The Apache Avro file format is recommended where I/O patterns are more write-heavy or when query patterns retrieve multiple and whole rows of records. For example, the Avro format is favored by a message bus like Apache Event Hubs or Kafka, which write multiple events/messages in succession.
+> The Apache Avro file format is recommended where I/O patterns are more write-heavy or when query patterns retrieve multiple and whole rows of records. For example, the Avro format is favored by a message bus like Apache Event Hubs or Kafka, which writes multiple events/messages in succession.
 
 If the data is ingested, it connects to an Azure Databricks data science and engineering workspace, and a data definition is created within the data management landing zone Apache Hive metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
 
-If integration ops needs to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into the SQL pools' internal tables.
+If integration ops need to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into the SQL pools' internal tables.
 
 ## Use the Azure Purview REST API to discover data
 
