@@ -57,7 +57,7 @@ Objectives need to inspire your organization and its teams to fully understand y
 **Objective 1:** Be the top US provider of learning platforms to schools.  
 **Key results:**
 
-1. 45 percent of K-12 schools using our platform
+- 45 percent of K-12 schools using our platform
 2. A 12 percent increase in student engagement, as measured through internal systems
 3. A 95 percent satisfaction rate from quarterly parent surveys
 
