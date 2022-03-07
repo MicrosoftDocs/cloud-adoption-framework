@@ -65,4 +65,4 @@ It should then be possible to monitor data quality, privacy, access security, us
 
 ## Next steps
 
-[Data Catalog](govern-data-catalog.md)
+- [Data Catalog](govern-data-catalog.md)

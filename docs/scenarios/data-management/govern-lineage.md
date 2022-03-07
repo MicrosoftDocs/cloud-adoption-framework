@@ -21,6 +21,13 @@ One of the primary features of a data catalog is the ability to show the lineage
 > [!IMPORTANT]
 > It's recommended that Azure Data Factory or Azure Synapse pipelines be used for ingestion solutions as it will enable data lineage in Azure Purview. Other ingestion patterns should use Apache Atlas API to update data lineage as part of their data processing.
 
+## Azure Purview data lineage
+
+One of the platform features of Azure Purview is the ability to show the lineage between datasets created by data processes. Systems like Data Factory, Data Share, and Power BI capture the lineage of data as it moves. Custom lineage reporting is also supported via Atlas hooks and REST API.
+
+> [!TIP]
+> For more information, on supported systems and best practice see [Azure Purview Data Catalog lineage user guide](/azure/purview/catalog-lineage-user-guide).
+
 ## Next steps
 
 - [Master data management](govern-master-data.md)

@@ -24,4 +24,4 @@ Organize your cloud assets to support governance, operational management, and ac
 
 ## Next steps
 
-[Security, governance, and compliance for enterprise-scale cloud-scale analytics](./eslz-security-governance-and-compliance.md)
+- [Security, governance, and compliance for enterprise-scale cloud-scale analytics](./eslz-security-governance-and-compliance.md)

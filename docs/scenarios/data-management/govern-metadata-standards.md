@@ -47,4 +47,4 @@ The end result of this architecture is a company-wide graph which provides a uni
 
 ## Next steps
 
-[Secure cloud-scale analytics in Azure](./secure.md)
+- [Secure cloud-scale analytics in Azure](./secure.md)

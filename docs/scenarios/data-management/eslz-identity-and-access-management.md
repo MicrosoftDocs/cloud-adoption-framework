@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Identity and access management for cloud-scale analytics
+# Identity and access management
 
 This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a data management and analytic platform on Microsoft Azure. Since cloud-scale analytics is a mission-critical element, the guidance on the enterprise-scale design areas should also be included in your design.
 
@@ -165,4 +165,4 @@ For more information on how to drive security for data management landing zones 
 
 ## Next steps
 
-[Network topology and connectivity for cloud-scale analytics landing zones](./eslz-network-topology-and-connectivity.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)

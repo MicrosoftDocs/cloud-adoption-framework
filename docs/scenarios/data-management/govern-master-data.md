@@ -47,4 +47,4 @@ Absent a purpose-built MDMapplication, some of the technical capabilities needed
 
 ## Next steps
 
-[Data quality](govern-data-quality.md)
+- [Data quality](govern-data-quality.md)
