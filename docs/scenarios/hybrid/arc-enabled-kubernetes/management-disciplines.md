@@ -75,6 +75,7 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 **Cluster monitoring:**
 
 - Enable [Azure Monitor Container insights for Azure Arc-enabled Kubernetes clusters](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters) to collect logs and metrics to create dashboards and generate alerts for cluster related issues.
+- Enable [recommended metric alert rules from Container insights](/azure/azure-monitor/containers/container-insights-metric-alerts) to receive notifications from Azure Monitor.
 - Use [Azure Resource Graph](/azure/azure-arc/kubernetes/resource-graph-samples?tabs=azure-cli) or [Log Analytics queries](/azure/azure-monitor/logs/queries) to monitor cluster health and raise alerts.
 
   ![Arc-enabled Kubernetes cluster status resource graph query](./media/resource-graph-connected-cluster-status.png)
