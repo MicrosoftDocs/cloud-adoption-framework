@@ -34,25 +34,24 @@ The services should be enabled with the hierarchical name space feature to allow
 > [!IMPORTANT]
 > While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
 
-When a new system of record is registered via the data agnostic ingestion engine or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a Service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
+When a new system of record is registered via the data agnostic ingestion engine or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
 
-Each **data product** should have two folders in the curated data lake layer over which the data product team should have ownership.
+Each **data product** should have two folders in the data products container over which the data product team should have ownership.
 
-At the standardized container, in the enriched zone, there would be two folders per source system divided by classification. This will allow the team to store data with different security and data classification separately and different security access can be assigned to them.
+At the standardized container, in the enriched layer, there would be two folders per source system divided by classification. This will allow the team to store data with different security and data classification separately and different security access can be assigned to them.
+
 The container would contain a general folder, for *confidential or below*, and a *sensitive* personal data folder. Access will be controlled, by access control lists (ACLs). By having these two folders, you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
 
 Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (Azure AD) groups. These lists and groups control what can and cannot be accessed by other groups. Data owners and data application teams can approve or reject access to their data assets. For more information, [Data Access Management](../security-provisioning.md) and [Restricted data](../secure-data-privacy.md#restricted-data).
 
 > [!WARNING]
-> Some software products do not support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and development should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) files do not have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
+> Some software products do not support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and development should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) do not have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## Raw layer or data lake one
 
-Using the water-based analogy, think of this layer as a reservoir that stores data in its natural and original state. It is unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or .CSV. But there might be scenarios where it makes sense to store it as a column in compressed format such as Avro, Parquet, or Databricks Delta Lake.
+Using the water-based analogy, think of this layer as a reservoir that stores data in its natural and original state. It is unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or CSV, but there might be also scenarios where it is more cost effective to store the contents of the file as a column in a compressed file format such as Avro, Parquet, or Databricks Delta Lake.
 
-This data is always immutable. It should be locked down and the permissions given to any consumers, whether they are automated or human, should be read-only. The zone might be organized by using a folder per source system. Each ingestion process has write access to only its associated folder.
-
-Consider using [data lifecycle management](../govern-lifecycle.md) to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
+This data is always immutable. It should be locked down and the permissions given to any consumers, whether they are automated or human, should be read-only. The layer might be organized by using a folder per source system. Each ingestion process has write access to only its associated folder.
 
 When you load data from source systems into the raw zone you can either choose to do full loads from systems meaning that the full data set is extracted every time, or delta loads meaning that you load only the changed data every time. It is good practice to indicate the loading pattern in the folder structure. This will simplify the use for the data consumers.
 
@@ -196,8 +195,6 @@ Data assets in this zone are typically highly governed and well-documented. Perm
 
 > [!TIP]
 > When a decision is made to land the data into another read data store such as Azure SQL Database, as a high-speed serving layer, we recommend to have a copy of the data located in the curated data. Although users of the **data product** will be guided to the main read data store or Azure SQL Database instance, allowing them to do further data exploration using a wider set of tools if the data is also available in the data lake.
-
-Data assets in this layer should be highly governed and well-documented. For example, high-quality sales data might be data in the enriched data layer correlated with other demand forecasting signals such as social media trending patterns for a **data application** that's used for predictive analytics on determining the sales projections for the next fiscal year.
 
 ## Development layer or data lake three
 
