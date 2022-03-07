@@ -14,8 +14,6 @@ ms.custom: e2e-data-management, think-tank
 
 This section discusses a design for how automated ingestion scenarios could be implemented using a combination of PowerApps, Azure Logic Apps and Metadata-driven copy tasks within Azure Data Factory.
 
-## Automated data registration application
-
 Automated data ingestion scenarios are typically focused at enabling non-technical (that is, not Data Engineer) personas to publish data assets to a Data Lake so that further processing can occur. To implement this scenario requires onboarding capabilities enabling:
 
 - Data asset registration
@@ -24,17 +22,17 @@ Automated data ingestion scenarios are typically focused at enabling non-technic
 
 The interaction between the capabilities can be viewed as follows:
 
-![Diagram of data registration capabilites interactions.](../images/registration-capabilities.png)
+:::image type="content" source="../images/registration-capabilities.png" alt-text="Diagram of data registration capabilities and interactions":::
 
 *Figure 1: Data registration capabilities interactions.*
 
 The following illustrates how this process can be implemented using a combination of Azure services:
 
-![Diagram of an automated ingestion process.](../images/automated-ingestion-flow.png)
+:::image type="content" source="../images/automated-ingestion-flow.png" alt-text="Diagram of an automated ingestion process":::
 
 *Figure 2: Automated ingestion process.*
 
-### Data asset registration
+## Data asset registration
 
 Data asset registration is required to provide the metadata used to drive automated ingestion. The information captured should describe:
 
@@ -47,7 +45,7 @@ For the purposes of this article, PowerApps is used to capture metadata describi
 
 *Figure 3: Data asset registration.*
 
-### Provisioning workflow / metadata capture
+## Provisioning workflow / metadata capture
 
 The provisioning workflow stage is where the data collected in the registration stage is validated and persisted to the metastore. During this stage, both technical and business validation steps are performed including:
 
@@ -56,21 +54,23 @@ The provisioning workflow stage is where the data collected in the registration 
 - Processing logic to trigger persistence of metadata to the metadata store
 - Auditing activities
 
-![Diagram of registration workflow.](../images/ingestion-step2-workflow.png)
+:::image type="content" source="../images/ingestion-step2-workflow.png" alt-text="Diagram of registration workflow":::
 
 *Figure 4: Registration workflow.*
 
 Once ingestion requests are approved, as part of the processing logic the workflow uses the Azure Purview REST API to insert the sources into Azure Purview.
 
-### Scheduling of ingestion
+## Scheduling of ingestion
 
-Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven) provide functionality enabling orchestration pipelines to be driven by rows within a Control Table stored within Azure SQL Database. The Copy Data Tool can be used to pre-create metadata-driven pipelines. Once these have been created, the provisioning workflow adds entries to the Control Table to support ingestion from the sources identified in the data asset registration metadata. Both the Azure Data Factory pipelines and the Azure SQL Database containing the Control Table metastore can exist within each data landing zone to create new data sources and ingest them into data landing zones. 
+Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven) provide functionality enabling orchestration pipelines to be driven by rows within a Control Table stored within Azure SQL Database. The Copy Data Tool can be used to pre-create metadata-driven pipelines. Once these have been created, the provisioning workflow adds entries to the Control Table to support ingestion from the sources identified in the data asset registration metadata. Both the Azure Data Factory pipelines and the Azure SQL Database containing the Control Table metastore can exist within each data landing zone to create new data sources and ingest them into data landing zones.
 
-![Diagram of scheduling of data asset ingestion.](../images/ingestion-step3-orchestration.png)
+:::image type="content" source="../images/ingestion-step3-orchestration.png" alt-text="Diagram of scheduling of data asset ingestion":::
 
 *Figure 5: Scheduling of data asset ingestion.*
 
-Data platform, data landing zone, and integration ops can use the captured  metadata to:
+## Captured Metadata
+
+Through creating this automated data ingestion you can query the associated metadata and create dashboards to:
 
 - Track jobs and the latest data-loading timestamps for data products related to their functions.
 - Track available data products.
@@ -85,19 +85,6 @@ Operational metadata can be used to track:
 - Job failures.
 - Source metadata changes.
 - Business functions that depend on data products.
-
-If the business needs operational reports and event notifications, data landing zone ops and integration ops can use Microsoft Power BI to query the Azure SQL Database Control Table and the underlying Azure Data Factory telemetry outputs to build them.
-
-The Azure Data Factory metadata-driven copy tasks read metadata entries from the Azure SQL Database Control Table and run iteratively to ingest the data assets. Data moves with little to no change from the source to the raw layer in Azure Data Lake. Once landed within the raw layer, further processing can be involved where the data shape is validated, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
-
-> [!TIP]
-> The Parquet format is recommended when the input/output (I/O) patterns are more read-heavy or when the query patterns focus on a subset of columns in the records where read transactions can be optimized to retrieve specific columns instead of reading the entire record.\
-> \
-> The Apache Avro file format is recommended where I/O patterns are more write-heavy or when query patterns retrieve multiple and whole rows of records. For example, the Avro format is favored by a message bus like Apache Event Hubs or Kafka, which writes multiple events/messages in succession.
-
-If the data is ingested, it connects to an Azure Databricks data science and engineering workspace, and a data definition is created within the data management landing zone Apache Hive metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
-
-If integration ops need to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into the SQL pools' internal tables.
 
 ## Use the Azure Purview REST API to discover data
 
