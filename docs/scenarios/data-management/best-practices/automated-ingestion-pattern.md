@@ -10,9 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# How automated ingestion frameworks support data management and analytics scenario in Azure
-
-The [ingest process with data management and analytics scenario in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
+# How automated ingestion frameworks support cloud-scale analytics in Azure
 
 This section discusses a design for how automated ingestion scenarios could be implemented using a combination of PowerApps, Azure Logic Apps and Metadata-driven copy tasks within Azure Data Factory.
 
@@ -74,8 +72,8 @@ Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy
 
 Data platform, data landing zone, and integration ops can use the captured  metadata to:
 
-- Track jobs and the latest data-loading timestamps for datasets related to their functions.
-- Track available datasets.
+- Track jobs and the latest data-loading timestamps for data products related to their functions.
+- Track available data products.
 - Grow data volumes.
 - Obtain real-time updates about job failures.
 
@@ -86,7 +84,7 @@ Operational metadata can be used to track:
 - Data volume growth.
 - Job failures.
 - Source metadata changes.
-- Business functions that depend on datasets.
+- Business functions that depend on data products.
 
 If the business needs operational reports and event notifications, data landing zone ops and integration ops can use Microsoft Power BI to query the Azure SQL Database Control Table and the underlying Azure Data Factory telemetry outputs to build them.
 
@@ -226,4 +224,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Best practices for data science projects with data management and analytics scenario in Azure](./data-science-best-practices.md)
+[Overview of Azure Data Lake Storage for cloud-scale analytics](data-lake-overview.md)

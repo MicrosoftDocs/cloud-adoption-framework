@@ -1,28 +1,32 @@
 ---
 title: Data summary and maturity model for Azure
 description: Understand the concept of data governance in the cloud and for Azure.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 11/25/2021
+author: mboswell
+ms.author: mboswell
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data summary and maturity model for Azure
+# Data Governance Overview
 
 The key to successful data governance is to break down structured data into data entities and data subject areas. Then use a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology. This solution will help govern the lifecycle of these data entities. Establishing a common business vocabulary in a business glossary within a data catalog can help.
 
 The data catalog is critical technology. You can't govern data if you don't know where the data is or what it means. Data catalog software provides automatic data discovery, automatic profiling to determine its quality, and automatic sensitive data detection. It also helps map disparate data to your common vocabulary data names and definitions in the catalog business glossary to understand what data means.
 
-Creating data governance classification schemes such as the examples shown in [Data confidentiality classification scheme](./govern-requirements.md#data-confidentiality-classification-scheme) and [data retention classification scheme](./govern-requirements.md#data-retention-classification-scheme) provide different levels of governance classification. These schemas must be defined in the data catalog. At this point, policies and rules can be created in the data catalog and associated with different levels of governance classification.
+Data classification, is a way of categorizing data assets by assigning unique logical labels or classes to the data assets. Classification is based on the business context of the data. For example, you might classify assets by Passport Number, Driver's License Number, Credit Card Number, SWIFT Code, Person's Name, and so on.
 
-It should then be possible to label (or tag) data attributes in the business glossary with confidentiality and retention classes to specify how to govern it. And because the data catalog already knows the mappings of physical data attributes in different data stores to attributes in business glossary, then labeling an attribute in the glossary automatically determines how to govern data mapped to it in underlying data stores. Multiple technologies that integrate with the data catalog can then access this metadata to consistently enforce these policies and rules across all data stores in a distributed data landscape. The exact same governance classification labels can also be applied to unstructured data.
+Data classification schemes such as the examples shown in [data confidentiality classification scheme](./govern-requirements.md#data-confidentiality-classification-scheme). This schema must be defined in the data catalog. At this point, policies and rules can be created in the data catalog and associated with different levels of classification.
 
-Master data entities are critical because this data is so widely shared. It's also frequently associated with documents. For example, a customer and an invoice, a supplier and a contract, an asset and an operating manual. That's why master data values, such as supplier name, can be used to tag related documents to ensure that relationships between structured and unstructured data is preserved.
+For lifecycle management, on how long data should be kept, it's advisable to create a [Data lifecycle retention classification scheme](govern-requirements.md#data-lifecycle-retention-classification-scheme) to provide different levels of retention classification. A custom microservice lifecycle application could use this to maintain the lifecycle of data within your environment.
 
-When you use the common vocabulary data entities defined in the data catalog and the mappings discovered, it's possible to create pipelines using data fabric to create trusted data assets. These assets can be published in a data marketplace for all to share. The key point about data governance is that there are methods here to get your data under control and once trusted, to then use it to drive value. Success will be determined by how well you organize and collaborate to do it. This Microsoft data governance guide is provided to assist so you can systematically use people, processes, policies, and technology to get your data into a trusted well-governed state to eradicate data quality problems and the impact they have, uphold privacy, secure access, and drive business value.
+It should then be possible to label (or tag) data attributes in the business glossary with confidentiality and retention classification to specify how to govern it. And because the data catalog already knows the mappings of physical data attributes in different data stores to attributes in business glossary, then labeling an attribute in the glossary automatically determines how to govern data mapped to it in underlying data stores. Multiple technologies that integrate with the data catalog can then access this metadata to consistently enforce these policies and rules across all data stores in a distributed data landscape. The exact same classification labels can also be applied to unstructured data.
+
+Master data entities are critical because this data is so widely shared. Master data entities are frequently associated with documents. For example, a customer and an invoice, a supplier and a contract, an asset and an operating manual. That's why master data values, such as supplier name, can be used to tag related documents to ensure that relationships between structured and unstructured data is preserved.
+
+When you use the common vocabulary data entities defined in the data catalog and the mappings discovered, it's possible to create pipelines to create trusted data assets. These assets can be published in a data marketplace for all to share. The key point about data governance is that there are methods here to get your data under control and once trusted, to then use it to drive value. Success will be determined by how well you organize and collaborate to do it.
 
 ## Data governance maturity model
 
@@ -80,6 +84,10 @@ When you look at the data governance challenge, you might wonder how mature you 
 | No data privacy enforcement software | No data privacy enforcement software | Data privacy enforcement in some database management systems | Data privacy enforcement in all data stores |
 | No master data management system | Single entity master data management system | Multientity master data management system | Multientity master data management system |
 
+## Data Governance Maturity Summary
+
+Once you've worked out where you are on the governance maturity model you need to sit with your key stakeholders and map out your strategy for increasing your maturity. This requires defining your requirements, technology, data quality, metadata, data sharing and master data strategy.
+
 ## Next steps
 
-[Requirements for governing data in a modern enterprise](./govern-requirements.md)
+- [Requirements for governing data](./govern-requirements.md)

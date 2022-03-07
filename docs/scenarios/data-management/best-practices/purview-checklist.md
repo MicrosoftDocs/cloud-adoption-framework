@@ -1,6 +1,6 @@
 ---
-title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario
-description: Learn about the data management and analytics scenario Azure Purview readiness checklist
+title: Azure Purview readiness checklist for the cloud-scale analytics enterprise-scale scenario
+description: Learn about cloud-scale analytics Azure Purview readiness checklist
 author: zeinam
 ms.author: zeinam
 ms.date: 09/13/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Purview readiness checklist for data management and analytics enterprise-scale scenario
+# Azure Purview readiness checklist for cloud-scale analytics enterprise-scale scenario
 
-During your data governance journey with Azure Purview and data management and analytics scenario, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
+During your data governance journey with Azure Purview and cloud-scale analytics, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
 
 - Unified data discovery across the entire organization
 - Improved analytic collaboration
@@ -25,7 +25,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 |Phase |Description |
 |--|--|
-|![Phase 1](../images/icons/1.png) | Plan for unified data governance, learn the pre-requisite tools and approaches needed for creating a data management environment, and [develop a plan for data management and analytics](../plan.md). |
+|![Phase 1](../images/icons/1.png) | Plan for unified data governance, learn the pre-requisite tools and approaches needed for creating a data management environment, and [develop a plan for cloud-scale analytics](../plan.md). |
 |![Phase 2](../images/icons/2.png) | Build your data governance and management foundation: Deploy your enterprise-scale for analytics [data management landing zone](../architectures/data-management-landing-zone.md) with Azure Purview. This foundation is a unified enterprise data management and data governance solution. |
 |![Phase 3](../images/icons/3.png) | Onboard the first data landing zone: Start with your first [data landing zone](../architectures/data-landing-zone.md) and start small. Then expand to quickly enable low-risk adoption and build toward security, governance, and compliance over time. |
 |![Phase 4](../images/icons/4.png)| Onboard more data landing zones: Once you deploy and evaluate your baseline architecture and align your operating model with cloud-native operations, you can enable more data landing zones.
@@ -60,10 +60,10 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
     |Microsoft 365 administrators     |Microsoft Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
     |Data source owners     |Mapped to roles in Azure Purview         |
 
-- Define whether there's an existing data management and analytics scenario [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
+- Define whether there's an existing cloud-scale analytics [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
 
 - Manage budgets, costs, and licensing.
-  - Understand how the Azure Purview billing model works, and define how to control costs. Microsoft offers Azure Purview in a [pay-as-you-go model](https://aka.ms/purviewpricing).
+  - Understand how the Azure Purview billing model works, and define how to control costs. Microsoft offers Azure Purview in a [pay-as-you-go model](https://aka.ms/purviewpricing). Detailed pricing information can also be found in [Azure Purview pricing](/azure/purview/concept-guidelines-pricing)
   - Understand more about potential costs. For example, if you're planning to extend Microsoft 365 sensitivity labels to files and database columns in Azure Purview, you need Microsoft 365 E5 licenses.
 
 - Plan for enterprise-level communication, readiness, and awareness across different teams. These teams are the ones required to curate, use, and manage data across multiple platforms.
@@ -114,7 +114,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 - Migrate data sources to the new data landing zone.
 
-- Validate and update your Azure Purview [collections architecture](/azure/purview/manage-data-sources#manage-collections).
+- Validate and update your Azure Purview [collections architecture](/azure/purview/manage-data-sources#manage-collections). Best practice information around Azure Purview collections architecture can be found [here](/azure/purview/concept-best-practices-collections).
 
 - Validate and update the collection hierarchy inside the Azure Purview account.
 

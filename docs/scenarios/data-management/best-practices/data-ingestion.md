@@ -1,6 +1,6 @@
 ---
-title: The ingest process with data management and analytics scenario in Azure
-description: Understand the ingest process with data management and analytics scenario in Azure.
+title: The ingest process with cloud-scale analytics in Azure
+description: Understand the ingest process with cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -10,18 +10,11 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# The ingest process with data management and analytics scenario in Azure
-
-Data integrations and data products teams examine, transform, and release data in data management and analytics scenario.
-
-> [!IMPORTANT]
-> Data integrations don't transform data, but if the business has several use cases whose data needs to be joined together (for example, weather and location data), then the team could be asked to create this in the curated layer.\
-\
-> Data products teams can apply transformations and create their datasets in the data lake's curated layer and the [polyglot storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they've chosen to use.
+# The ingest process with cloud-scale analytics in Azure
 
 Azure provides several services to ingest and release data to native and third-party platforms. Different services can be used, depending on volume, velocity, variety, and direction. Some of these services are:
 
-- [Azure Data Factory](/azure/data-factory/introduction) is a service built for all data integration needs and skill levels. Write your own code or construct, extract, load, and transform processes within the intuitive visual environment and without code. With more than 90 natively built and maintenance-free connectors, visually integrate data sources at no added cost. Engineers can use private endpoints and link services to securely connect to Azure platform as a service (PaaS) resources without using the PaaS resource's public endpoints. Engineers can use integration runtimes to extend pipelines to third-party environments like on-premises data sources and other clouds.
+- [Azure Data Factory](/azure/data-factory/introduction) is a service built for all data application (source-aligned) needs and skill levels. Write your own code or construct, extract, load, and transform processes within the intuitive visual environment and without code. With more than 90 natively built and maintenance-free connectors, visually integrate data sources at no added cost. Engineers can use private endpoints and link services to securely connect to Azure platform as a service (PaaS) resources without using the PaaS resource's public endpoints. Engineers can use integration runtimes to extend pipelines to third-party environments like on-premises data sources and other clouds.
 
 Some of these connectors support being used as a source (read) or as a sink (write). Azure native services, Oracle, SAP, and others can be used as source or sink, but not all connectors support it. In these cases, you can use generic connectors like Open Database Connectivity (ODBC), the file system, or SSH File Transfer Protocol (SFTP) connectors.
 
@@ -31,23 +24,20 @@ Some of these connectors support being used as a source (read) or as a sink (wri
 
 Proprietary native and third-party tooling provides niche capabilities to integrate with specialized systems and near-real-time replication.
 
-- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add datasets, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
+- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add data products, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
 
 > [!IMPORTANT]
-> Every data landing zone has an [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) that exists for enterprises with an ingestion framework engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks data science and engineering workspace, which would be used by data integrations to run complex ingestion. See the [automated ingestion framework](./automated-ingestion-pattern.md#ingest-new-data-sources-automated) for potential automation patterns.
+> Every data landing zone has an [metadata-ingestion resource group](../architectures/data-landing-zone.md#data-agnostic-ingestion) that exists for businesses with an data agnostic ingestion engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks analytics workspace, which would be used by data integrations to run complex ingestion. See the [automated ingestion framework](./automated-ingestion-pattern.md#ingest-new-data-sources-automated) for potential automation patterns.
 
 ## Ingest considerations for Azure Data Factory
 
-If you have an ingestion framework engine, you should deploy a single Data Factory for each data landing zone in the ingest and processing resource group. The Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data landing zone operations should have read access to allow pipeline debugging.
+If you have an data agnostic ingestion engine, you should deploy a single Data Factory for each data landing zone in the ingest and processing resource group. The Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data landing zone operations should have read access to allow pipeline debugging.
 
-Each data integration resource group will have its own Data Factory that integration operations will use to move data from the source to raw to enriched data. Having a Data Factory in each data integration resource group supports a complete continuous integration (CI) and continuous deployment (CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
+Data application can have there own Data Factory for data movement. Having a Data Factory in each data application resource group supports a complete continuous integration (CI) and continuous deployment (CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
 
 All Data Factory workspaces will mostly use the managed virtual network (VNet) feature in Data Factory or [self-hosted integration runtime](/azure/data-factory/concepts-integration-runtime) for their data landing zone within the data management landing zone. Engineers are encouraged to use the managed VNet feature to securely connect to the Azure PaaS resource.
 
 However, it's possible to create more integration runtimes to ingest from on-premises, third-party clouds, and third-party software-as-a-service (SaaS) data sources.
-
-> [!TIP]
-> By deploying a [self-hosted integration runtime](/azure/data-factory/concepts-integration-runtime) in the data management landing zone, you can approve the IP range required to connect to on-premises or third-party cloud sources.
 
 ## Ingest considerations for Azure Databricks
 
@@ -55,21 +45,15 @@ This guidance elaborates on the information within:
 
 - [Securing access to Azure Data Lake Storage Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-- [Use Azure Databricks within data management and analytics scenario in Azure](./azure-databricks-implementation.md)
-
-- One premium Azure Databricks data engineering workspace should be deployed per data landing zone in the production ingest and processing resource group. It will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
+- [Use Azure Databricks within cloud-scale analytics in Azure](./azure-databricks-implementation.md)
 
 - For development, integration operations should have their own Azure Databricks environments before checking in code to be deployed to the single Azure Databricks workspace during testing and production.
 
-- The test and production workspaces will be locked off to users, and only managed identity/service principals will have access to it. All workspace management will be handled with a REST API.
-
-- Data Factory in the data integration resource group should provide the framework for calling Azure Databricks jobs.
+- Data Factory in the data application (source-aligned) resource group should provide the framework for calling Azure Databricks jobs.
 
 - Service principals can help to mount data lakes into this workspace. For more information, see [Pattern 1 - access via service principal](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md#pattern-1---access-via-service-principal) for more information.
 
-- Integration operations teams can deploy short, automated jobs on Azure Databricks and expect their clusters to start quickly, execute the job, and terminate. It's recommended to set up Azure Databricks pools to reduce the time it takes for clusters to spin up for jobs.
-
-- Pipelines created by the integration ops teams in Azure Databricks can take data from the source to raw, enriched, or curated data. Data integrations must use the integration ops service principal created when onboarding their data integration to deploy their notebooks in an integration ops repo. The notebook is from data integration's Data Factory resource group.
+- Data applications teams can deploy short, automated jobs on Azure Databricks and expect their clusters to start quickly, execute the job, and terminate. It's recommended to set up Azure Databricks pools to reduce the time it takes for clusters to spin up for jobs.
 
 - We recommend organizations use Azure DevOps to implement a deployment framework for new pipelines. The framework will be used to create the dataset folders, assign access control lists, and create a table with or without enforcing Databricks table access controls.
 
@@ -79,21 +63,7 @@ Organizations might need to support scenarios where publishers generate high-vel
 
 Event Hubs and IoT Hub are scalable event processing services that can ingest and process large event volumes and data with low latency and high reliability. Event Hubs is designed as a big data streaming and event ingestion service. IoT Hub is a managed service that serves as a central message hub for bidirectional communication between an IoT application and the devices it manages. From there, data can either be exported to a data lake at regular intervals (batch) and processed with Azure Databricks in near-real-time via Apache Spark Streaming, Azure Data Explorer, Stream Analytics, or Time Series Insights.
 
-The last Event Hubs or Apache Kafka landing zone inside the use case's specific landing zone should send its aggregated data to the data lake's raw layer in one of the data landing zones and to Event Hubs related to the data integration resource group in the data landing zone.
-
-## Enforce data quality
-
-As data is ingested, data quality checks should be implemented near the sources and before downstream subscribers use the datasets. If there's batch ingestion from the data lake, these checks should be done when moving data from raw to enriched.
-
-![Diagram of how to implement data quality during ingestion.](../images/adls-dq.png)
-
-- Before data is moved to enriched layer, its schema and columns are checked against the metadata registered in the data catalog.
-
-- If the data contains errors, the load will be aborted, and integration ops should be notified of the failure.
-
-- If the schema and column checks pass, the data is loaded into the enriched layers with conformed data types.
-
-- Before you move into the enriched layer, a data quality process checks for duplicate data, unknown values, and data type compliance. Integration operations can configure more checks and receive notifications about violations.
+The last Event Hubs or Apache Kafka landing zone inside the use case's specific landing zone should send its aggregated data to the data lake's raw layer in one of the data landing zones and to Event Hubs related to the data application (source-aligned) resource group in the data landing zone.
 
 ## Monitor ingestion
 
@@ -133,4 +103,4 @@ Depending on the destination, Azure Database Migration Service can replicate fro
 
 ## Next steps
 
-[SAP ingestion with data management and analytics scenario in Azure](sap-data-ingestion.md)
+[SAP ingestion with cloud-scale analytics in Azure](sap-data-ingestion.md)

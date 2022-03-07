@@ -1,6 +1,6 @@
 ---
-title: Business continuity and disaster recovery for data management and analytics
-description: Learn how this scenario can improve business continuity and disaster recovery for data management and analytics in Azure.
+title: Business continuity and disaster recovery for cloud-scale analytics
+description: Learn how this scenario can improve business continuity and disaster recovery for cloud-scale analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
 ms.date: 11/25/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Business continuity and disaster recovery for data management and analytics
+# Business continuity and disaster recovery for cloud-scale analytics
 
 When you design architecture for a cloud service, consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or region-wide. Having plans for both is important. Depending on your recovery time objective and the recovery point objective, you might choose an aggressive strategy for high availability and disaster recovery.
 
@@ -50,7 +50,7 @@ If one of the data landing zones requires geo-redundancy, with Data Lake Storage
 > [!NOTE]
 > A storage account configured as RA-GRS or GRS can be part of a disaster recovery plan but requires due diligence analyzing RPO and RTO and reviewing other options such as a dual load scenario which copies data into two different Azure regions.
 
-Each data landing zone must have a recovery point objective for its data integrations and data products. Each data landing zone must have a defined replication strategy for its use cases.
+Each data landing zone must have a recovery point objective for its data products. Each data landing zone must have a defined replication strategy for its use cases.
 
 ### Azure Databricks
 
@@ -76,4 +76,4 @@ For an overview of business continuity with Azure Synapse Analytics, see [High a
 
 ## Next steps
 
-[Platform automation and DevOps for a data management and analytics enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
+- [Data Governance Overview](govern.md)
