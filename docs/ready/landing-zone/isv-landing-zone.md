@@ -36,15 +36,15 @@ The Azure landing zones help you choose a direction for your overall Azure envir
 > [!NOTE]
 > Sometimes, ISVs want to start with just a single Azure subscription that includes both platform "shared services" aspects and actual workload resources. Although this is technically possible, you'll face challenges later on when you need to move resources between subscriptions and find that not all [resource types can be moved](/azure/cloud-adoption-framework/ready/enterprise-scale/transition#moving-resources-in-azure). Review the [impact of design deviations](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#impact-of-design-deviations) to understand what deviations are possible and their various levels of risk.
 
-ISV solutions often fit into one of three deployment models: pure SaaS, customer-deployed, or dual-deployment SaaS. This article describes each model's different considerations for Azure landing zones.
-
 ## ISV deployment models
+
+ISV solutions often fit into one of three deployment models: pure SaaS, customer-deployed, or dual-deployment SaaS. This section describes each model's different considerations for Azure landing zones.
 
 ### Pure SaaS
 
 In the pure SaaS model, your software is deployed fully only in your Azure subscriptions. End customers consume your software without deploying it in their own Azure subscriptions. In the following diagram, users are using a pure SaaS application provided by an ISV:
 
-![Diagram that shows a pure SaaS deployment model. A user directly uses the application deployed into the ISV's Azure subscription.](./media/isv-landing-zone/isv-pure-saas-deployment.png)
+![Diagram that shows a pure SaaS deployment model. A user directly uses the application deployed into the I S V's Azure subscription.](./media/isv-landing-zone/isv-pure-saas-deployment.png)
 
 Examples of pure SaaS software include email-as-a-service, Kafka-as-a-service, cloud-data-warehouse-as-a-service, and many [SaaS listings in Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas).
 
@@ -71,7 +71,7 @@ Examples of customer-deployed ISV products include the many [virtual machine ima
 
 For some customer-deployed solutions, an organization might provide management of and updates for the solution deployed within their end-customer Azure subscriptions by using [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview). ISVs, Solution Integrators (SIs), and Managed Service Providers (MSPs) all can use this strategy when it meets their particular needs.
 
-Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. As an ISV building customer-deployed software, you should consider the [Azure landing zones guidance](index.md) as you design your product to work with the [Azure landing zones design principles](../enterprise-scale/design-principles.md) your Azure customers adopt.
+Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. Consider the [Azure landing zones guidance](index.md) as you design your product to work with the [Azure landing zones design principles](../enterprise-scale/design-principles.md) your Azure customers adopt.
 
 It's especially important for you to have a good understanding of the Azure landing zone concepts as you migrate your existing customers' workloads to Azure.
 
