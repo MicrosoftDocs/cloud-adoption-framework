@@ -1,6 +1,6 @@
 ---
-title: Data management and analytics scenario data applications (source-aligned)
-description: Learn about data management and analytics scenario data applications (source-aligned) in Azure.
+title: Cloud-scale analytics data applications (source-aligned)
+description: Learn about cloud-scale analytics data applications (source-aligned) in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
@@ -12,11 +12,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Data applications (source-aligned)
 
-In the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a data application which is source aligned. It should follow the same flow as the data agnostics engine would for ingesting data from external data sources.
+In the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a data application that is source aligned. It should follow the same flow as the data agnostics engine would for ingesting data from external data sources.
 
 ## Overview
 
-This application resource group would responsible for data ingestion and enrichment only from external sources such a telemetry, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
+This application resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 
 This section explains the infrastructure that's deployed for each Data applications (source-aligned) resource group inside a data landing zone.
 
@@ -42,7 +42,7 @@ Instances of other services such as Azure Event Hubs, Azure IoT Hub, Azure Strea
 
 ## Azure Key Vault
 
-Data management and analytics scenario will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
+Cloud-scale analytics will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
 
 Each data application (source-aligned) resource group or data domain (if mesh) will have an Azure Key Vault. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and integrations.
 
@@ -59,8 +59,8 @@ It should be connected to the DevOps instance of the data application team repo 
 
 ## Event Hubs
 
-If the data application (source-aligned)n has a requirement to stream data in, it's possible to deploy downstream Event Hubs in the Data application (source-aligned) resource group.
+If the data application (source-aligned) has a requirement to stream data in, it's possible to deploy downstream Event Hubs in the Data application (source-aligned) resource group.
 
 ## Next steps
 
-[Data Application Reference Patterns](data-reference-patterns.md)
+[Data application reference patterns](data-reference-patterns.md)

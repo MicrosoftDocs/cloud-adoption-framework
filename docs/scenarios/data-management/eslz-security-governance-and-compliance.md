@@ -1,6 +1,6 @@
 ---
-title: Security, governance, and compliance for enterprise-scale data management and analytics
-description: Learn how to improve security, governance, and compliance for enterprise-scale data management and analytics in Azure.
+title: Security, governance, and compliance for enterprise-scale cloud-scale analytics
+description: Learn how to improve security, governance, and compliance for enterprise-scale cloud-scale analytics in Azure.
 author: andrehass
 ms.author: anhass
 ms.date: 02/16/2022
@@ -10,15 +10,15 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Security, governance, and compliance for data management and analytics
+# Security, governance, and compliance for cloud-scale analytics
 
-When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an data management and analytics scenario on Azure. Review [enterprise-scale security governance and compliance](../../ready/landing-zone/design-area/governance.md) to fully prepare for governance of an enterprise solution.
+When planning cloud-scale analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale cloud-scale analytics. This article also discusses design recommendations and best practices for deployment of an cloud-scale analytics on Azure. Review [enterprise-scale security governance and compliance](../../ready/landing-zone/design-area/governance.md) to fully prepare for governance of an enterprise solution.
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.
 
-The vision for data management and analytics landing zone security, compliance, and governance on Azure is to provide tools and processes that help you minimize risk and make effective decisions. The Azure landing zones define security governance and compliance roles and responsibilities.
+The vision for cloud-scale analytics landing zone security, compliance, and governance on Azure is to provide tools and processes that help you minimize risk and make effective decisions. The Azure landing zones define security governance and compliance roles and responsibilities.
 
-The data management and analytics scenario pattern relies on several security features that can be enabled in Azure. These features include encryption, role-based access control, access control lists, and networking restrictions.
+Cloud-scale analytics pattern relies on several security features that can be enabled in Azure. These features include encryption, role-based access control, access control lists, and networking restrictions.
 
 ## Security design recommendations
 
@@ -45,7 +45,7 @@ Encryption using MACsec (media access control security), an IEEE standard at the
 
 ### Manage keys and secrets
 
-To control and manage disk encryption keys and secrets for data management and analytics scenario, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs).
+To control and manage disk encryption keys and secrets for cloud-scale analytics, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs).
 
 ### Microsoft Defender for Cloud
 
@@ -81,7 +81,7 @@ Microsoft Defender for Identity is part of the advanced data security offering, 
 
 ## Networking
 
-The data management and analytics scenario prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Data management and analytics scenario networking](./eslz-network-topology-and-connectivity.md).
+Cloud-scale analytics prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Cloud-scale analytics networking](./eslz-network-topology-and-connectivity.md).
 
 ## Compliance and governance design recommendations
 
@@ -95,7 +95,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics in Azure](./organize-data-operations.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the cloud-scale analytics in Azure](./manage.md)
 
 ### Lock resources for production workloads
 
@@ -117,4 +117,4 @@ The following recommendations apply to various compliance and governance scenari
 
 ## Next steps
 
-[Azure policies for data management and analytics scenario](./eslz-policies.md)
+[Azure policies for cloud-scale analytics](./eslz-policies.md)

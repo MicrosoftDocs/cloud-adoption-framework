@@ -1,6 +1,6 @@
 ---
-title: Overview of Azure Data Lake Storage for the data management and analytics scenario
-description: Gain an overview of Azure Data Lake Storage for the data management and analytics scenario.
+title: Overview of Azure Data Lake Storage for cloud-scale analytics
+description: Gain an overview of Azure Data Lake Storage for cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Overview of Azure Data Lake Storage for the data management and analytics scenario
+# Overview of Azure Data Lake Storage for cloud-scale analytics
 
-We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `storage-rg` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. With an automated data agnostic ingestion service it's likely [Data application](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data. However, as previously stated, in the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a [data application that is source aligned](../architectures/data-application-source-aligned.md).
+We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `storage-rg` resource group described in [Azure cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three storage accounts within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. With an automated data agnostic ingestion service it's likely [Data application](../architectures/data-landing-zone-data-products.md) should only consume from the storage account that contains enriched and curated data. However, as previously stated, in the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a [data application that is source aligned](../architectures/data-application-source-aligned.md).
 
 Data Lake Storage Gen2 supports:
 
@@ -26,19 +26,19 @@ Structure, governance, and security are key considerations that require planning
 
 If your data lake will contain a few data assets and only has automated processes such as extract, transform, load (ETL) offloading, then the planning phase might be an easy task. If your lake will contain hundreds of data assets and have automated and manual interaction, planning will take longer. It will require more collaboration from the various data owners.
 
-You might be familiar with the dreaded *data swamp* analogy. Governance and organization are key to avoid this situation. When you create a solid foundation, it will increase the chance of sustained data lake success and business value.
+You might be familiar with the dreaded *data swamp* analogy. Governance and organization are key to avoiding this situation. When you create a solid foundation, it will increase the chance of sustained data lake success and business value.
 
 A robust data catalog system is increasingly critical as the size, or number of data assets, and complexity, or number of users or departments, of a data lake grows. The catalog will ensure that users who process, consume, and govern the lake can find, tag, and classify data.
 
 For more information, see [Data Governance Overview](../govern.md).
 
-## The three data lakes
+## The three storage accounts in a logical data lake
 
-A common design consideration is whether to have a single or multiple data lakes, storage accounts, and file systems. Whatever the number of data lakes, the benefit of using a single storage technology is the ability to standardize across an organization and several ways to access data.
+A common design consideration is whether to have a single or multiple storage accounts, and file systems building up the logical data lake. Whatever the number of storage solutions, the benefit of using a single storage technology is the ability to standardize across an organization and several ways to access data.
 
 Data Lake Storage Gen2 is a platform as a service (PaaS) fully managed service. Because of this, multiple storage accounts or file systems won't incur a monetary cost until you start to store and access data. When you plan your provisioning, security, and governance, including your backups and disaster recovery, keep in mind that there's administrative and operational overhead associated with each Azure resource. To decide to create one or multiple accounts has no definitive answer. It requires thought and planning based on your unique scenario.
 
-We recommend you add three data lake accounts during your discovery and design phase. The following considerations factor into our recommendation:
+We recommend you add three storage accounts during your discovery and design phase. The following considerations factor into our recommendation:
 
 - Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
 - Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.

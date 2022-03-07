@@ -1,35 +1,76 @@
 ---
-title: How automated ingestion frameworks support data management and analytics scenario in Azure
-description: Learn about how automated ingestion frameworks support data management and analytics scenario in Azure.
-author: mboswell
-ms.author: mboswell
-ms.date: 02/25/2022
+title: How data agnostic ingestion engine scenario support cloud-scale analytics in Azure
+description: Learn about how automated ingestion frameworks support cloud-scale analytics in Azure.
+author: dmarz
+ms.author: damarzol
+ms.date: 03/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# How automated ingestion frameworks support data management and analytics scenario in Azure
+# Data agnostic ingestion engine
 
-This section provides guidance for how custom ingestion frameworks can drive services and processes.
+This section discusses a design for how data agnostic ingestion engine scenarios could be implemented using a combination of PowerApps, Azure Logic Apps and Metadata-driven copy tasks within Azure Data Factory.
 
-> [!NOTE]
-> The following suggestions for an automated ingestion framework aren't explained in detail, and they don't describe a specific Microsoft product.
+Data agnostic ingestion engine scenarios are typically focused at enabling non-technical (that is, not Data Engineer) personas to publish data assets to a Data Lake so that further processing can occur. To implement this scenario requires onboarding capabilities enabling:
 
-## Automated data source application
+- Data asset registration
+- Provisioning workflow / metadata capture
+- Scheduling of ingestion
 
-The following illustrates how data application teams can use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
+The interaction between the capabilities can be viewed as follows:
 
-![Diagram of an automated ingestion process.](../images/automated-ingest-process.png)
+:::image type="content" source="../images/registration-capabilities.png" alt-text="Diagram of data registration capabilities and interactions":::
 
-A data agnostic ingestion engine UI is deployed to the data management landing zone. This could be integrated into a data marketplace or operations console.
+*Figure 1: Data registration capabilities interactions.*
 
-The application can talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into data landing zones. Once ingestion requests are approved, it uses the Azure Purview REST API to insert the sources into Azure Purview.
+The following illustrates how this process can be implemented using a combination of Azure services:
 
-The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the data lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
+:::image type="content" source="../images/automated-ingestion-flow.png" alt-text="Diagram of an data agnostic engine ingestion process":::
 
-For all job types (including indirect ingestion from sources like SAP), areas, and functions, the application should store the jobs' technical and operational metadata in a SQL database. Technical metadata can drive jobs because it has have most of the parameters required for this task. Data platform, data landing zone, and data application teams can use the metadata to:
+*Figure 2: Automated ingestion process.*
+
+## Data asset registration
+
+Data asset registration is required to provide the metadata used to drive automated ingestion. The information captured should describe:
+
+- Technical information: Data asset name, source system, type, format and frequency
+- Governance information: Owner, stewards, visibility (for discovery purposes) and sensitivity
+
+For the purposes of this article, PowerApps is used to capture metadata describing the data asset. A model-driven app is used by the person entering the information that is persisted to a custom dataverse table. Once saved, further processing steps are invoked through an Automated Cloud Flow that is triggered when the metadata is either created or updated within dataverse.
+
+![Diagram of an data asset registration.](../images/ingestion-step1-registration.png)
+
+*Figure 3: Data asset registration.*
+
+## Provisioning workflow / metadata capture
+
+The provisioning workflow stage is where the data collected in the registration stage is validated and persisted to the metastore. During this stage, both technical and business validation steps are performed including:
+
+- Validation of input data feeds
+- Triggering of approval workflows
+- Processing logic to trigger persistence of metadata to the metadata store
+- Auditing activities
+
+:::image type="content" source="../images/ingestion-step2-workflow.png" alt-text="Diagram of registration workflow":::
+
+*Figure 4: Registration workflow.*
+
+Once ingestion requests are approved, as part of the processing logic the workflow uses the Azure Purview REST API to insert the sources into Azure Purview.
+
+## Scheduling of ingestion
+
+Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven) provide functionality enabling orchestration pipelines to be driven by rows within a Control Table stored within Azure SQL Database. The Copy Data Tool can be used to pre-create metadata-driven pipelines. Once these have been created, the provisioning workflow adds entries to the Control Table to support ingestion from the sources identified in the data asset registration metadata. Both the Azure Data Factory pipelines and the Azure SQL Database containing the Control Table metastore can exist within each data landing zone to create new data sources and ingest them into data landing zones.
+
+:::image type="content" source="../images/ingestion-step3-orchestration.png" alt-text="Diagram of scheduling of data asset ingestion":::
+
+*Figure 5: Scheduling of data asset ingestion.*
+
+## Captured Metadata
+
+Through creating this automated data ingestion you can query the associated metadata and create dashboards to:
 
 - Track jobs and the latest data-loading timestamps for data products related to their functions.
 - Track available data products.
@@ -44,35 +85,6 @@ Operational metadata can be used to track:
 - Job failures.
 - Source metadata changes.
 - Business functions that depend on data products.
-
-If the business needs operational reports and event notifications, data landing zone ops and data application teams can use Microsoft Power BI to query the SQL Database to build them.
-
-## Register a new dataset (automated)
-
-Figure 2 recommends the following registration process for automating the ingestion of new data sources:
-
-![How new data products are ingested (automated).](../images/new-dataset-ingestion.png)
-
-*Figure 2: How new data products are ingested (automated).*
-
-Enterprises can use custom applications, Azure Logic Apps, or Microsoft Power Apps in the data management landing zone to enter data into the Data Factory metastore and gain the following benefits:
-
-- Source details are registered, including production and Data Factory environments.
-- Data shape, format, and quality constraints are captured.
-- Integration ops indicate if the data is **sensitive (Personal data)**, and this classification drives the process during which data lake folders are created to ingest raw and enriched data. The source names raw data, and the data asset names enriched and curated data.
-- Service principal and security groups are created for ingesting and giving access to the dataset.
-- An ingestion job is created in the data landing zone Data Factory metastore.
-- An API inserts the data definition into Azure Purview.
-- Details are validated and tested in development/testing environments.
-- Subject to the validation of the data source and approval by the ops team, details are published to a Data Factory metastore.
-
-## Ingest new data sources (automated)
-
-The following illustrates how registered data sources in a Data Factory SQL Database metastore are pulled and how data is ingested at first:
-
-![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
-
-The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to delta lake format.
 
 ## Use the Azure Purview REST API to discover data
 
@@ -199,4 +211,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Overview of Azure Data Lake Storage for the data management and analytics scenario](data-lake-overview.md)
+[Overview of Azure Data Lake Storage for cloud-scale analytics](data-lake-overview.md)

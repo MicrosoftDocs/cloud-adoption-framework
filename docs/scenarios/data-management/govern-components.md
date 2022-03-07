@@ -21,9 +21,12 @@ There are four categories of data governance processes.
 |**Data governance policy and rule enforcement processes** | A process to automate application and enforcement of data governance policies and rules <br> A process to manually apply and enforce policies and rules <br> Event-driven, on-demand and timer-driven (batch) data governance processes published as services that can be invoked to govern: <br> Data ingestion - cataloging, classification, owner assignment, and storing <br> Data quality <br> Data access security <br> Data privacy <br> Data usage, for example, including sharing and to ensure licensed data is only used for approved purposes <br> Data maintenance, such as master data <br> Data retention <br> Master data and reference data synchronization |
 | **Monitoring processes** | Monitor and audit data usage activity, data quality, data access security, data privacy, data maintenance, and data retention <br> Monitor policy rule violation detection and resolution |
 
-The common business vocabulary should be defined in a business glossary within a data catalog. Each working group should take responsibility to define a specific data entity or data subject area, such as multiple related entities. Multiple data entities in the vocabulary, along with the policies and rules, can then be worked on in parallel.
+The common business vocabulary should be defined in a business glossary within a data catalog.
+
+Data governance working groups plan and develop defining data and improving specific data domains (for example, customer, or supplier); update the data governance control board on progress; and manage stewardship across the enterprise for a specific domain. Each working group should take responsibility to define a specific data entity or data subject area, such as multiple related entities. Multiple data entities in the vocabulary, along with the policies and rules, can then be worked on in parallel. For information, see [Data governance roles and responsibilities](organize-roles-and-teams.md#data-governance-roles-and-responsibilities)
 
 :::image type="content" source="./images/defining-entities-in-a-common-business-vocabulary.png" alt-text="Diagram of defining entities in a common business vocabulary.":::
+*Figure 1: Example data governance working group*
 
 Integration of the catalog business glossary with other technologies is then needed to get consistent common data names into all technologies. Examples of other technologies to integrate with include:
 
@@ -65,4 +68,4 @@ It should then be possible to monitor data quality, privacy, access security, us
 
 ## Next steps
 
-[Data Catalog](govern-data-catalog.md)
+- [Data Catalog](govern-data-catalog.md)

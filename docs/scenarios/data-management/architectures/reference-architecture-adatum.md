@@ -1,18 +1,18 @@
 ---
-title: Adatum Corporation scenario for data management and analytics in Azure
-description: Learn about the Adatum Corporation scenario for data management and analytics in Azure.
+title: Adatum Corporation scenario for cloud-scale analytics in Azure
+description: Learn about the Adatum Corporation scenario for cloud-scale analytics in Azure.
 author: AnalyticJeremy
 ms.author: jepeach
-ms.date: 11/25/2021
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Adatum Corporation scenario for data management and analytics in Azure
+# Adatum Corporation scenario for cloud-scale analytics in Azure
 
-The data management and analytics scenario is modular by design and allows organizations to start with foundational landing zones that support their data and analytics workloads, regardless of whether the projects are being migrated or are newly developed and deployed to Azure. The architecture enables organizations to start as small as needed and scale alongside their business requirements regardless of scale point.
+Cloud-scale analytics is modular by design and allows organizations to start with foundational landing zones that support their data and analytics workloads, regardless of whether the projects are being migrated or are newly developed and deployed to Azure. The architecture enables organizations to start as small as needed and scale alongside their business requirements regardless of scale point.
 
 ## Customer profile
 
@@ -20,11 +20,11 @@ This reference architecture is ideal for customers that have identified a unit o
 
 Adatum Corporation is a large, international enterprise. In addition to the centralized business units at their headquarters, they also have subsidiaries around the globe that have their own business units, including accounting, marketing, sales, support, and operations.
 
-All of these disparate groups are producing their own data. Many of the business units have embedded analytics teams. The central IT organization has provided most of the data platform that's in use, but a few business units have gone rogue and implemented their own solutions. The data platform is comprised of various cloud services and on-premises solutions.
+All of these disparate groups are producing their own data. Many of the business units have embedded analytics teams. The central IT organization has provided most of the data platform that's in use, but a few business units have gone rogue and implemented their own solutions. The data platform is composed of various cloud services and on-premises solutions.
 
 The company's vision is to have a centralized analytics platform, a single source of truth for all data. However, it has become challenging for many different stakeholders to buy into one single technology. Given the rate at which new data is being created and new options become available, even early drafts of plans for centralization quickly become outdated. Meanwhile, the corporate sales team has outgrown their current solution, and the company urgently needs to use new analytics to pursue a new market segment.
 
-Adatum has decided to implement the data management and analytics scenario pattern in Azure to solve this problem. The enterprise is confident that the data management and analytics scenario will allow the corporate sales team to migrate their data platform today but still provide enough flexibility to accommodate other business units when they are ready to join.
+Adatum has decided to implement cloud-scale analytics pattern in Azure to solve this problem. The enterprise is confident that cloud-scale analytics will allow the corporate sales team to migrate their data platform today but still provide enough flexibility to accommodate other business units when they're ready to join.
 
 ### Current situation
 
@@ -32,11 +32,11 @@ The Adatum corporate sales group uses traditional ERP and CRM systems to process
 
 ## Architectural solution
 
-In this reference architecture, we will deploy a data management landing zone, which is needed for all ESA implementations, and a single data landing zone, which can be used by the corporate sales department.
+In this reference architecture, we'll deploy a data management landing zone, which is needed for all ESA implementations, and a single data landing zone, which can be used by the corporate sales department.
 
 ### Data management landing zone
 
-A critical concept for every data management and analytics scenario is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every cloud-scale analytics is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Data applications
 
@@ -58,7 +58,7 @@ In this example, Adatum has one data product. This product combines raw data fro
 
 ### Why not put sales transactions and customers in their own data landing zones?
 
-One of the first decisions enterprises must make about their data management and analytics scenario is how to divide the entire data estate into landing zones. Data solutions that will frequently communicate with one another are strong candidates for inclusion in the same landing zone. This allows enterprises to reduce the costs associated with moving data across peered VNets. In this example, sales transaction data will frequently be linked to customer data. Therefore, it makes sense to store these related Data applications in the same data landing zone.
+One of the first decisions enterprises must make about their cloud-scale analytics is how to divide the entire data estate into landing zones. Data solutions that will frequently communicate with one another are strong candidates for inclusion in the same landing zone. This allows enterprises to reduce the costs associated with moving data across peered VNets. In this example, sales transaction data will frequently be linked to customer data. Therefore, it makes sense to store these related Data applications in the same data landing zone.
 
 An extra consideration for landing zones is how the teams responsible for the data are aligned within the organization. In this case, the two Data applications are owned by different teams, but those teams are both part of the sales and marketing division at Adatum.
 
@@ -66,11 +66,11 @@ An extra consideration for landing zones is how the teams responsible for the da
 
 By separating the customer data and the sales transaction data in their own Data applications, we allow the subject matter experts for those domains to make the best decisions for their particular data products. They can choose the access patterns, ingestion engines, and storage options that best meet their needs without conflicting with one another.
 
-For example, the team that has expertise with the CRM system will be responsible for the customer Data application. Based on the team's skill set and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers team.
+For example, the team that has expertise with the CRM system will be responsible for the customer Data application. Based on the team's skill set and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers' team.
 
 ### Why move the sales team to the new data platform?
 
-In this example, the corporate sales team is the first to move to the new data management and analytics scenario. The solution is designed to be scalable above all else. As other business units are ready to migrate, more landing zones can be added to accommodate their workloads.
+In this example, the corporate sales team is the first to move to the new cloud-scale analytics. The solution is designed to be scalable above all else. As other business units are ready to migrate, more landing zones can be added to accommodate their workloads.
 
 ## How to evolve in the future
 
@@ -92,10 +92,10 @@ Use the following template to deploy sales transactions, customer Data applicati
 
 ## Next steps
 
-Continue to the [Relecloud scenario for data management and analytics in Azure](./reference-architecture-relecloud.md).
+Continue to the [Relecloud scenario for cloud-scale analytics in Azure](./reference-architecture-relecloud.md).
 
 Learn more in:
 
 - [Overview of the data landing zone](./data-landing-zone.md)
 - [Overview of the data management landing zone](./data-management-landing-zone.md)
-- [Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md)
+- [Cloud-scale analytics data products in Azure](./data-landing-zone-data-products.md)

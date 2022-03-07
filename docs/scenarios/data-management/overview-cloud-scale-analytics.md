@@ -1,6 +1,6 @@
 ---
-title: What is data governance?
-description: Learn about data governance for Azure.
+title: Cloud-scale analytics overview
+description: Learn about cloud-scale analytics for Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/22/2021
@@ -10,19 +10,19 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to data management and analytics overview
+# Introduction to cloud-scale analytics
 
-Data management and analytics scenario builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first data management and analytics landing zones.
+Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first cloud-scale analytics landing zones.
 
 ## Data management and analytics evaluation
 
-Often businesses seek clarity or prescriptive guidance before they start to carve out the technical details for a specific use case, project, or an end-to-end data management and analytics. It can be challenging to ensure that all strategic and required principles in the scope of the current use are considered for how the overall data strategy is formulated.
+Often businesses seek clarity or prescriptive guidance before they start to carve out the technical details for a specific use case, project, or an end-to-end cloud-scale analytics. It can be challenging to ensure that all strategic and required principles in the scope of the current use are considered for how the overall data strategy is formulated.
 
-To speed up the delivery of this end-to-end insights journey while still keeping these challenges in mind, Microsoft has developed a prescriptive scenario for data management and analytics. It aligns to the key themes discussed in [Develop a plan for data management and analytics](plan.md).
+To speed up the delivery of this end-to-end insights journey while still keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns to the key themes discussed in [Develop a plan for cloud-scale analytics](plan.md).
 
-The data management and analytics scenario builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
+Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
-The data management and analytics scenario paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
+Cloud-scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
 
 ## Observations of existing architectures
 
@@ -36,9 +36,9 @@ The data warehouse and data lake is still valuable, and will play an important r
 
 Your current implementation patterns could include data warehouse, data lake, or data lakehouse structures – or even an emerging model like data fabric or data mesh.
 
-Each has its own merits and challenges, and the data management and analytics scenario helps you work from where you are now to shift your approach to data management so it can evolve with your infrastructure.
+Each has its own merits and challenges, and cloud-scale analytics helps you work from where you are now to shift your approach to data management so it can evolve with your infrastructure.
 
-You can support any data platform with the scenario to create an end-to-end data management and analytics framework that can serve as your foundation and allow for scaling.  
+You can support any data platform with the scenario to create an end-to-end cloud-scale analytics framework that can serve as your foundation and allow for scaling.  
 
 ## Modern data platform and desired outcomes
 
@@ -62,7 +62,7 @@ Recommended areas of initial focus are:
 
 The first consideration is how will the organization implement data governance?
 
-Data governance is how you ensure data that's used in your business operations, reports, and analysis is discoverable, accurate, trusted, and can be protected.
+Data governance is how you ensure data that is used in your business operations, reports, and analysis is discoverable, accurate, trusted, and can be protected.
 
 There are many reasons why data governance is needed. These reasons include the need to govern data to maintain its quality and the need to protect it. To support this protection, you must discover data in your organization by cataloging, scanning, and classifying your data.
 
@@ -78,15 +78,16 @@ There are many reasons why data governance is needed. These reasons include the 
 
 ## Trusted data
 
-For many companies, the expectation in the boardroom is that data and AI will drive competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data-driven. For AI to become effective, the data it's using must be trusted. Otherwise, decision accuracy might be compromised, decisions might be delayed, or actions might be missed, which can affect on the bottom line. Companies don't want the quality of their data to be "garbage in, garbage out". It might seem simple to fix data quality, until you look at the effect that digital transformation has had on data.
+For many companies, the expectation in the boardroom is that data and AI will drive competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data-driven. For AI to become effective, the data it is using must be trusted. Otherwise, decision accuracy might be compromised, decisions might be delayed, or actions might be missed, which can affect on the bottom line. Companies do not want the quality of their data to be "garbage in, garbage out". It might seem simple to fix data quality, until you look at the effect that digital transformation has had on data.
 
 For many companies, the introduction of digital transformation has led to a more complex operating environment. The environment spans the edge, multiple clouds, and datacenters. This can mean that both operational and analytical systems are running in the cloud and the datacenter. Examples of operational transaction processing systems that run in the cloud include Microsoft Dynamics 365, Workday, Salesforce, ServiceNow, and Marketo. Analytical systems that run in the cloud might include data warehouses, graph databases, data lakes used by data scientists, and real-time IoT streaming analytic applications. The result is that companies have a hybrid environment with data in multiple data stores, spread across their digital landscape.
 
 These data stores include data stored in edge databases, relational or NoSQL database management systems, files, cloud storage, Hadoop systems, and scalable message queuing systems, like Kafka.
 
-The other effect of digital transformation is there are many new data sources that organizations want to analyze. These data sources go beyond the traditional data found in data warehouses. These sources include machine generated data like clickstream data in web server log files, human generated data from social networks, inbound email, and open government data. Unstructured content might also be located in various documents in multiple locations.
+The other effect of digital transformation is there are many new data sources that organizations want to analyze. These data sources go beyond the traditional data found in data warehouses. These sources include machine generated data like clickstream data in web server log files, human generated data from social networks, inbound email, and open government data.
+In addition to these relational data sources unstructured or semi-structured data like images, videos, documents, and logs are valuable data sources that is used in organizations for analytical purposes.
 
-With data spread out across a hybrid multicloud and a distributed-data landscape, organizations struggle to find where their data is, to govern it. The ungoverned data can have a considerable effect on the business. Poor data quality impacts business operations because data errors cause process errors and delays. Poor data quality also affects business decision making and the ability to remain compliant. To help track and govern data activity, data governance must include:
+With data spread out across a hybrid multicloud and a distributed-data landscape, organizations struggle to find where their data is, to govern it. The ungoverned data can have a considerable effect on the business. Poor data quality impacts business operations because data errors cause process errors and delays. Poor data quality also affects business decision making and the ability to remain compliant. Ensuring data quality at the source is often preferred since fixing quality issues in the analytical system is often more complex and costly than applying data quality rules early in the ingestion phase. To help track and govern data activity, data governance must include:
 
 - Data discovery
 
@@ -122,4 +123,4 @@ Failure to comply with regulatory legislation on data privacy might result in si
 
 ## Next steps
 
-[Integrate data management and analytics into your cloud adoption strategy](./strategy.md)
+[Integrate cloud-scale analytics into your cloud adoption strategy](./strategy.md)

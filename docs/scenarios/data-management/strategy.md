@@ -1,6 +1,6 @@
 ---
-title: Integrate data management and analytics into your cloud adoption strategy
-description: Understand how to integrate data management and analytics into your cloud adoption strategy.
+title: Integrate cloud-scale analytics into your cloud adoption strategy
+description: Understand how to integrate cloud-scale analytics into your cloud adoption strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/22/2021
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Integrate data management and analytics into your cloud adoption strategy
+# Integrate cloud-scale analytics into your cloud adoption strategy
 
 A best practice for customers is to create a single, centralized cloud adoption strategy by using the [Strategy methodology in the Cloud Adoption Framework for Azure](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
-This article exposes considerations about data management and analytics that will affect your broader strategy.
+This article exposes considerations about cloud-scale analytics that will affect your broader strategy.
 
-Before implementing the data management and analytics scenario, you should have a plan in place for your data strategy. You can start small with a single use-case or you might have a much set of large use-cases which will require prioritization. A strategy can help you establish your processes and start off the initial conversations, within the business, on the pillars you need to concentrate on.
+Before implementing cloud-scale analytics, you should have a plan in place for your data strategy. You can start small with a single use-case or you might have a much set of large use-cases which will require prioritization. A strategy can help you establish your processes and start off the initial conversations, within the business, on the pillars you need to concentrate on.
 
 ## Prioritize business outcomes for your data strategy
 
@@ -60,19 +60,19 @@ The agility of the cloud has imposed the need for organizations to adapt quickly
 
 ## Operationalize data management
 
-Central IT has slowly been shifting to shadow IT, becoming more decentralized and enabling agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements.
+In many organizations Central IT has slowly become more decentralized to enable agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements.
 
 There are many reasons why businesses fail to tap into the full potential of their data. It might be because business functions work in silos, where each team uses different tools and standards for data analysis. Or it might be a failure to link key performance indicators to overall business goals.
 
 Data democratization helps deliver that value back to business and achieve challenging targets for business growth.
 
-- Understand and prioritize your LOBs needs'.
+- Understand and prioritize your LOBs needs.
 - Distribute data across domains to enable ownership and bring data to closer to users.
 - Deploy self-service data products to drive insights and business value.
 
 With data governance, there has to be the right balance in the decentralized world of a data democratization approach. If governance is enforced too hard, it can stifle innovation. However, not having some core principles and processes in place might create data silos. These silos can result in damaging an organization's reputation and potential revenues. That's why a holistic data governance approach is fundamental to unlocking strategic value of data in a consistent way.
 
-In the absence of a well-thought-out data strategy, there's a clear need to just "get going" and quickly start demonstrating value back to the business. In this pursuit, acting on the preceding key themes or using them as strategic principles wrapped in a framework can address current business problems. It can also help the formation of a holistic data strategy, in an iterative way with validation, and still yield timely results.
+In the absence of a well-thought-out data strategy, there is a clear need to just "get going" and quickly start demonstrating value back to the business. In this pursuit, acting on the preceding key themes or using them as strategic principles wrapped in a framework can address current business problems. It can also help the formation of a holistic data strategy, in an iterative way with validation, and still yield timely results.
 
 Business and technology leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified, structured way.
 
@@ -82,7 +82,9 @@ For more information, see [What is data governance?](./govern.md).
 
 To build a successful data strategy, you need a data-driven culture. Develop one that fosters open, collaborative participation consistently. The entire workforce can then learn, communicate, and improve the organization's business outcomes. Developing a data-driven culture will also improve each employee's ability to generate impact or influence, backed by data.
 
-Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve.
+Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve.  Here, is an example of a created maturity model measuring the maturity of the AI usage in an organization:
+
+:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ### Level 0
 
@@ -113,10 +115,6 @@ Multiple teams across the company are successfully delivering on critical busine
 ### Level 4
 
 Here, the entire company uses a data-driven culture, frameworks, and standards enterprise. Observers see automation, centers of excellence around analytics or automation, and data-driven feedback loops in action.
-
-One of the outcomes of a data-driven culture is the use of AI in a meaningful way. Here, it's easy to define a maturity model like this example:
-
-:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ## Develop business-aligned objectives
 
@@ -169,7 +167,7 @@ Let's take a closer look at the considerations to make when you're building desi
 
 A key consideration for data ingestion is the ability to build a data pipeline fast, from requirements to production, in a secure and compliant manner. Important elements include metadata-driven, self-service, low-code technologies to hydrate your data lake.
 
-When you're building a pipeline, consider design, along with the ability to wrangle data, scale compute, and distribute data. Also, having the right DevOps support for the continuous integration and delivery of your pipeline is critical.
+When you are building a pipeline, consider design, along with the ability to wrangle data, scale compute, and distribute data. Also, having the right DevOps support for the continuous integration and delivery of your pipeline is critical.
 
 Tools such as Azure Data Factory support a plethora of on-premises data sources, software as a service (SaaS) data sources, and data sources from other public clouds. Having such agility from the start is always helpful.
 
@@ -189,7 +187,7 @@ For certain specialized workloads, customers can secure execution environments l
 
 ### Analytical processing
 
-The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. One of the useful capabilities is the ability to automatically detect schema drift.
+The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. As part of the analytical process a business aligned data model and a semantic model allowing implementation of business rules and Key Performance Indicators (KPI's) if often implemented. One of the useful capabilities is the ability to automatically detect schema drift.
 
 ### Data strategy summary
 
@@ -225,17 +223,19 @@ Two strategic processes will help to deliver successfully in the context of this
 - Formation of a center of excellence
 - Adoption of an agile delivery method
 
-For more information, see [Develop a plan for data management and analytics](./plan.md).
+For more information, see [Develop a plan for cloud-scale analytics](./plan.md).
 
 ## Deliver value
 
 When you deliver data products against the success criteria in a standardized and structured way, that delivery will validate the iterative framework. Additionally, when you take the learning and continuously innovate, that will help build business confidence and widen the goals of a data strategy. This process will provide clearer and quicker adoption across the business.
 
+The same applies for the data platform, a mesh should in many cases be seen as something to drive towards when you have a setup with multiple teams operating fairly autonomous. Getting there is an iterative process since it in many cases requires significant changes to the organizational setup, readiness and business alignment that most likely is not be the current state today.
+
 ## Next steps
 
 The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
 
-- [Develop a plan for data management and analytics](./plan.md)
+- [Develop a plan for cloud-scale analytics](./plan.md)
 - [Review your environment for Azure landing zones](./ready.md)
-- [Govern data management and analytics](./govern.md)
-- [Secure data management and analytics](./secure.md)
+- [Govern cloud-scale analytics](./govern.md)
+- [Secure cloud-scale analytics](./secure.md)

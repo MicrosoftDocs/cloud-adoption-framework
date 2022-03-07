@@ -1,6 +1,6 @@
 ---
-title: DevOps automation for data management and analytics in Azure
-description: Learn about DevOps automation for the data management and analytics scenario in Azure.
+title: DevOps automation for cloud-scale analytics in Azure
+description: Learn about DevOps automation for cloud-scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 02/17/2022
@@ -10,9 +10,11 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# DevOps automation for data management and analytics in Azure
+# Manage cloud-scale analytics
 
-DevOps has shifted the culture of how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (such as Git, Apache Subversion, or Team Foundation Version Control) and automatic build and delivery managers (such Azure Pipelines or GitHub Actions).
+Today, DevOps has shifted the culture of how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (such as Git, Apache Subversion, or Team Foundation Version Control) and automatic build and delivery managers (such Azure Pipelines or GitHub Actions).
+
+DevOps combined with observability is key to providing an agile and scalable platform. DevOps give teams the ability to implement source control, CI/CD pipelines,  infrastructure as code, Workflows and automation. Whilst observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to detect, predict, prevent, and resolve issues in an automated fashion and avoid eliminating downtime that would otherwise break production analytics and AI.
 
 ## Source control
 
@@ -21,7 +23,7 @@ Source control ensures that code and configurations persist and that changes are
 Branches isolate changes or feature developments without affecting other work that happens at the same time. The use of branches should be promoted to develop features, fix bugs, and safely experiment with new ideas. Pull requests merge the changes made from one branch into the default branch, and they support a controlled review process. For security purposes, the main branch should use pull requests to ensure code reviews.
 
 > [!IMPORTANT]
-> Follow these guidelines for the data management and analytics scenario repositories:
+> Follow these guidelines for cloud-scale analytics repositories:
 >
 > - Secure the repository's main branch by enforcing branches and pull requests to ensure a controlled review processes.
 > - Azure DevOps or GitHub repositories should be used for source control to track changes to the source code and allow multiple team members to develop code at the same time.
@@ -75,7 +77,7 @@ In Azure Resource Manager templates, the core provisioning is in the **resources
 ```
 
 > [!IMPORTANT]
-> Every layer of the data management and analytics scenario such as data management landing zone, data landing zones or data applications (which create data products), should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific Azure scopes.
+> Every layer of cloud-scale analytics such as data management landing zone, data landing zones or data applications (which create data products), should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific Azure scopes.
 
 ## Workflows and automation
 
@@ -90,4 +92,4 @@ Deployments to test and production should only be managed through a CI/CD pipeli
 
 ## Next steps
 
-[Understand the roles and teams for data management and analytics in Azure](organize-roles-and-teams.md)
+[Platform automation](manage-platform-automation-and-devops.md)

@@ -20,6 +20,8 @@ Use this article is to help assess and understand the access control mechanisms 
 
 You need a basic knowledge of storage containers, security groups, Azure RBAC, and ACLs. To frame the discussion, we reference a generic data lake structure of raw, enriched, and curated zones.
 
+This document can be used in conjunction with [Data Access Management](../security-provisioning.md).
+
 ## Using the built-in Azure RBAC roles
 
 Azure Storage has two layers of access: service management and data. Subscriptions and storage accounts are accessed through the service management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want a list of storage accounts from Azure, send a request to the management endpoint. If you want a list of file systems, folders, or files in a storage account, send a request to a service endpoint.
@@ -85,7 +87,7 @@ If container-level access control is sufficient, Azure RBAC assignments offer a 
 
 ### Configure access using ACLs only
 
-We recommend the access control lists configuration for data management and analytics scenario.
+We recommend the access control lists configuration for cloud-scale analytics.
 
 We recommend that you assign access control entries to a security group rather than an individual user or service principal. For more information, see [Use security groups versus individual users](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users). When adding or removing users from the group, no updates to Data Lake Storage are required. Using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the four default entries, there are only 28 remaining for permission assignments.
 
@@ -185,4 +187,4 @@ No single approach to managing data lake access suits everyone. A major benefit 
 
 ## Next steps
 
-[Use Azure Databricks within data management and analytics scenario in Azure](./azure-databricks-implementation.md)
+[Use Azure Databricks within cloud-scale analytics in Azure](./azure-databricks-implementation.md)

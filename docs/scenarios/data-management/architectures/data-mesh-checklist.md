@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Getting Started Checklist
 
-During your data journey with data management and analytics scenario, you'll find there are multiple stages in the adoption lifecycle. This section aims to give you a quick getting started checklist to adopt the scenario in stages.
+During your data journey with cloud-scale analytics, you'll find there are multiple stages in the adoption lifecycle. This section aims to give you a quick getting started checklist to adopt the scenario in stages.
 
 - Stage 1 - First landing zone
 - Stage 2 - Extra Data Domains
@@ -60,3 +60,7 @@ During your data journey with data management and analytics scenario, you'll fin
 ## Summary
 
 The above stages will allow you to set up a minimal viable product at stage one, learn and iterate onto stage two. Throughout this staged approach, you're growing in maturity in creating a self-service, scalable and governed platform.
+
+## Next steps
+
+[Overview of reference architectures for cloud-scale analytics in Azure](reference-architecture-overview.md)

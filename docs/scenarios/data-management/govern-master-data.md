@@ -12,6 +12,8 @@ ms.custom: e2e-data-management, think-tank
 
 # Master data management
 
+Master data is data that describes the objects around a business process. Examples of master data objects are, customer, product and other reference data. It is data that is infrequently changed and is used to describe transactions, master data is not transactional in its nature.
+
 Master data management (MDM) is central to any data governance program, making the creation of trusted master data critical. Create this data by defining master data entities in the business glossary in a data catalog. Then use the data catalog to register data sources. And finally, discover where various master data is located across multiple data stores in the distributed data landscape.
 
 You can map the physical data names of discovered master data to the common business vocabulary in Azure Purview. Then you'll be able to learn how to clean, match, and integrate the data discovered to create golden master data records stored in a central MDM system.
@@ -45,4 +47,4 @@ Absent a purpose-built MDMapplication, some of the technical capabilities needed
 
 ## Next steps
 
-[Data quality](govern-data-quality.md)
+- [Data quality](govern-data-quality.md)

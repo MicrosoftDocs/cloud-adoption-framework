@@ -1,5 +1,5 @@
 ---
-title: metadata standards and data marketplace
+title: Metadata standards
 description: Learn about metadata standards
 author: PietheinStrengholt
 ms.author: pstrengholt
@@ -21,7 +21,7 @@ A good metadata management strategy grows organically. It starts simple and smal
 - *Operational metadata* is a category of metadata that describes processing aspects of data at run time. Some well-known examples are process information, execution time, information about whether a process failed, ID of the job, and so on.
 - *Social metadata* is a category of metadata that describes the user perspective of the data by its consumers. Some well-known examples are use and user tracking information, data on search results, filters and clicks, viewing time, profile hits, comments, and so on.
 
-When it comes to decentralized data architecture, metadata management is mostly an organizational challenge. It's about finding the right balance between centrally managed metadata and federated managed metadata. Metadata in this respect also has a strong relationship with [understand teams and functions for data management and analytics in Azure](organize-team-functions.md), which is an advanced and collaborative data management practice focused on improving the efficiency of communication, integration, and automation of data flows between teams across an organization. DataOps addresses some of the complexity associated with metadata management. It strikes a balance between central governance and domain ownership for metadata management.
+When it comes to decentralized data architecture, metadata management is mostly an organizational challenge. It's about finding the right balance between centrally managed metadata and federated managed metadata. Metadata in this respect also has a strong relationship with [understand teams and functions for cloud-scale analytics in Azure](organize-team-functions.md), which is an advanced and collaborative data management practice focused on improving the efficiency of communication, integration, and automation of data flows between teams across an organization. DataOps addresses some of the complexity associated with metadata management. It strikes a balance between central governance and domain ownership for metadata management.
 
 Before you start implementing and deciding what metadata to manage centrally or federate to your [data domains](./architectures/data-domains.md), first ask yourself: What business metadata is critical? What technical metadata is required for interoperability? What processes and streams capture the data? Where are the models or schemas created and maintained? What information teams need to deliver centrally to allow the data governance department to do its work correctly? After you've analyzed your most important questions, you need to map out the content life cycle for each of the metadata streams and determine all dependencies. What you will end up with is a metadata model that can connect business domains, processes, technology, and data.
 
@@ -37,10 +37,14 @@ For your domain-oriented architecture, it's recommended to align your Azure Purv
 
 ## Recommendation: Use Azure Cosmos DB for your company's Knowledge Graph
 
-There's a growing trend in the industry to bring insights of your data closer to data analysts and scientists by using portals that use more metadata intensively. This trend is also known as "Data observability" and features concepts like Metadata Lake, Knowledge Graph or Metadata Graph to describe platforms where metadata is centralized. For building a unified view of data for your organization with custom user experience it's recommended to look at Azure Cosmos DB, which is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via the Gremlin API to store massive graphs with billions of vertices and edges.
+There's a growing trend in the industry to bring insights of your data closer to data analysts and scientists by using portals that use more metadata intensively. This trend is also known as "Data observability" and features concepts like Metadata Lake, Knowledge Graph or Metadata Graph to describe platforms where metadata is centralized. When you are using a data mesh which is distributed in its nature, this could be a good way build a unified view of how data are used and sourced across your organization.
+
+A solution like this has to be able to describe the relations between entities like source data and data products, between data products from one domain and dependent products from another domain, and how data is used. Modeling this can be done using a graph database as well as a custom user interface.  
+
+For building this unified view of data for your organization with custom user experience it's recommended to look at Azure Cosmos DB, which is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via the Gremlin API to store massive graphs with billions of vertices and edges.
 
 The end result of this architecture is a company-wide graph which provides a unified view of all data in your organization using end-to-end context. The metadata lake is not about only storing information. It actively organizes your metadata as a graph by connecting it to many other services and tools. This allows you cross-correlate subject areas such as: domains, data quality, data usage, business capabilities, application functions, information from your technical architecture, operational events, organizational metadata, application ownership metadata, location information, application life cycle management information, and so on.
 
 ## Next steps
 
-[Secure data management and analytics in Azure](./secure.md)
+- [Secure cloud-scale analytics in Azure](./secure.md)

@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data Catalog
+# Data catalog
 
 [!INCLUDE [data-catalog](includes/data-catalog.md)]
 
@@ -39,4 +39,4 @@ Azure Purview can scan and automatically classify documents. For example, if you
 
 ## Next steps
 
-[Data lineage](govern-lineage.md)
+- [Data lineage](govern-lineage.md)

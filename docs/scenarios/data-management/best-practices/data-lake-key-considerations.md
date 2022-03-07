@@ -1,6 +1,6 @@
 ---
 title: Key considerations for Azure Data Lake Storage
-description: Understand key Azure Data Lake Storage considerations for data management and analytics scenario.
+description: Understand key Azure Data Lake Storage considerations for cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
@@ -32,27 +32,14 @@ The following considerations apply to the different access tiers:
 
 - Archive storage stores data offline and offers the lowest storage costs. However, it also has the highest data rehydrate and access costs.
 
-Data stored in the cloud grows at an exponential rate. To manage costs for your expanding storage needs, it's helpful to organize your data based on attributes like frequency-of-access and planned retention period to optimize costs. Data stored in the cloud can be different based on how it's generated, processed, and accessed over its lifetime. Some data is actively accessed and modified throughout its lifetime. Some data is accessed frequently early in its lifetime, with access dropping drastically as the data ages. Some data remains idle in the cloud and is rarely, if ever, accessed after it's stored.
+Data in the Cool tier has slightly lower availability, but offers the same high durability, retrieval latency, and throughput characteristics as the Hot tier. For data in the Cool tier, slightly lower availability and higher access costs could be acceptable trade-offs for lower overall storage costs, as compared to the Hot tier
 
-These data access scenarios benefits from a different access tier that's optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
+For more information, see [Hot, Cool and Archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
-Data management and analytics scenario recommends that you implement a tiering policy for all three Data Lake Storage accounts.
-
-Lifecycle management uses a rule-based policy. Use this policy to transition your data to the appropriate access tiers or to expire at the end of the data's lifecycle.
-
-With the lifecycle management policy, you can:
-
-- Transition blobs from cool to hot immediately if accessed to optimize for performance.
-
-- Transition blobs, blob versions, and blob snapshots to a cooler storage tier to optimize for cost. This transition is useful if the blobs are not accessed or modified for a period of time. For example, hot to cool, hot to archive, or cool to archive.
-
-- Delete blobs, blob versions, and blob snapshots at the end of their lifecycle.
-
-- Define rules to be run once per day at the storage account level.
-
-- Apply rules to containers or a subset of blobs by using name prefixes or blob index tags as filters.
-
-For example, suppose a system has data that's used frequently during the first stages of the lifecycle, but then only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is the most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. You can use a lifecycle management policy rule to automatically move aging data to cooler tiers.
+> [!CAUTION]
+> For cloud-scale analytics we recommend that you implement [lifecycle management](../govern-lifecycle.md) using a custom microservice and carefully consider the impact of moving user discoverable data to cool storage.
+>
+>It is recommended to only move sections of the lake to cool tier for well understood workloads.
 
 ## Data lakes connectivity
 

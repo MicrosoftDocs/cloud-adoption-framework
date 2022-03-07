@@ -1,6 +1,6 @@
 ---
-title: The ingest process with data management and analytics scenario in Azure
-description: Understand the ingest process with data management and analytics scenario in Azure.
+title: The ingest process with cloud-scale analytics in Azure
+description: Understand the ingest process with cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# The ingest process with data management and analytics scenario in Azure
+# The ingest process with cloud-scale analytics in Azure
 
 Azure provides several services to ingest and release data to native and third-party platforms. Different services can be used, depending on volume, velocity, variety, and direction. Some of these services are:
 
@@ -45,7 +45,7 @@ This guidance elaborates on the information within:
 
 - [Securing access to Azure Data Lake Storage Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-- [Use Azure Databricks within data management and analytics scenario in Azure](./azure-databricks-implementation.md)
+- [Use Azure Databricks within cloud-scale analytics in Azure](./azure-databricks-implementation.md)
 
 - For development, integration operations should have their own Azure Databricks environments before checking in code to be deployed to the single Azure Databricks workspace during testing and production.
 
@@ -103,4 +103,4 @@ Depending on the destination, Azure Database Migration Service can replicate fro
 
 ## Next steps
 
-[SAP ingestion with data management and analytics scenario in Azure](sap-data-ingestion.md)
+[SAP ingestion with cloud-scale analytics in Azure](sap-data-ingestion.md)

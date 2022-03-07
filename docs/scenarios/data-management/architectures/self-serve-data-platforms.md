@@ -12,18 +12,18 @@ ms.custom: e2e-data-management, think-tank
 
 # Design considerations for self-serve data platforms
 
-Data mesh is an exciting new approach to designing and developing data architectures. Data mesh, contrasting to traditional data architecture, separates the responsibility between functional [data domains](./data-domains.md) —teams that focus on creating [data products](./what-is-data-product.md)—and the platform team who focus on technical capabilities. This separation of responsibilities also needs to be reflected in the platform, which requires you to make choices. You must strike a balance between providing domain-agnostic capabilities and enabling domain teams to model, process, and distribute their data across the organization. Designing the right level of domain granularity and rules for decoupling by using platforms isn't easy, so therefore we would like to provide you detailed guidance by running through several scenarios.
+Data mesh is an exciting new approach to designing and developing data architectures. Data mesh, contrasting to traditional data architecture, separates the responsibility between functional [data domains](./data-domains.md) that focus on creating [data products](./what-is-data-product.md) and the platform team who focus on technical capabilities. This separation of responsibilities also needs to be reflected in the platform, which requires you to make choices. You must strike a balance between providing domain-agnostic capabilities and enabling domain teams to model, process, and distribute their data across the organization. Designing the right level of domain granularity and rules for decoupling by using platforms isn't easy, so therefore we would like to provide you detailed guidance by running through several scenarios.
 
-## Azure data management and analytics scenario
+## Azure cloud-scale analytics
 
-When you want to build a data mesh on Azure, the recommended approach is to adopt [Azure data management and analytics scenario](../index.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
+When you want to build a data mesh on Azure, the recommended approach is to adopt [Azure cloud-scale analytics](../index.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
 
 * Data management landing zone: this is the fundament of your data architecture. It contains all critical capabilities for data management, such data catalog, data lineage, API catalog, master data management, and so on.
 * Data management landing zones: these are subscriptions that host your analytics and AI solutions. It includes key capabilities to host an analytics platform.
 
-:::image type="content" source="../images/high-level-design-single-data-landing-zone.png" alt-text="The following diagram shows an overview of a data management and analytics scenario platform with a data management landing zone and a single data landing zone. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within this architecture.":::
+:::image type="content" source="../images/high-level-design-single-data-landing-zone.png" alt-text="The following diagram shows an overview of a cloud-scale analytics platform with a data management landing zone and a single data landing zone. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within this architecture.":::
 
-The following diagram shows an overview of a data management and analytics scenario platform with a data management landing zone and a single data landing zone. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within the architecture. The framework isn't explicit on the exact type of data architecture you must provision. You can use it for many common data management and analytics solutions, including (enterprise) data warehouses, data lakes, data lake houses and data meshes. For the purpose of this article, we'll zoom into the latter for practically designing a data mesh.
+The following diagram shows an overview of a cloud-scale analytics platform with a data management landing zone and a single data landing zone. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within the architecture. The framework isn't explicit on the exact type of data architecture you must provision. You can use it for many common cloud-scale analytics solutions, including (enterprise) data warehouses, data lakes, data lake houses and data meshes. For this article, we'll zoom into the latter for practically designing a data mesh.
 
 Before showing any scenario, it's important to understand that all architectures adhere to the data mesh principles: domain ownership, data as product, self-serve data platform and federated computational governance. Next, different paths will lead to a data mesh. There's no right or wrong. It all boils down to making the right trade-offs.
 
@@ -83,4 +83,8 @@ It's important to stress out that multiple data management landing zones, should
 
 ## Conclusion
 
-A transition towards data mesh is mostly a cultural shift that comes with nuances, trade offs and considerations. For the technology part, you can use the data management and analytics scenario to obtain best practices and executable resources. The reference architectures as described in this article can be starting point for kick-starting your implementation.
+A transition towards data mesh is mostly a cultural shift that comes with nuances, trade offs and considerations. For the technology part, you can use cloud-scale analytics to obtain best practices and executable resources. The reference architectures as described in this article can be starting point for kick-starting your implementation.
+
+## Next Steps
+
+[Data onboarding](data-onboarding.md)

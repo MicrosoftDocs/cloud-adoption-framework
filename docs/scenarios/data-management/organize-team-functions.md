@@ -1,6 +1,6 @@
 ---
-title: Understand teams and functions for data management and analytics in Azure
-description: Learn about teams and functions for the data management and analytics scenario in Azure.
+title: Understand teams and functions for cloud-scale analytics in Azure
+description: Learn about teams and functions for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 12/15/2021
@@ -10,19 +10,19 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand teams and functions for data management and analytics in Azure
+# Understand teams and functions for cloud-scale analytics in Azure
 
-For the data management and analytics scenario, we recommend by moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
+For cloud-scale analytics, we recommend by moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
-![Diagram of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
+![Diagram of cloud-scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
 ## Platform group
 
 The platform group consists of two teams:
 
-- **Platform ops:** Platform ops is part of the platform group. It operates and owns the cloud platform. This team is responsible for instantiating the data management landing zone and data landing zone scaffolding like networking, peering, core service, and monitoring within the data management and analytics scenario.
+- **Platform ops:** Platform ops is part of the platform group. It operates and owns the cloud platform. This team is responsible for instantiating the data management landing zone and data landing zone scaffolding like networking, peering, core service, and monitoring within cloud-scale analytics.
 
-They usually help data platform ops to develop IT service management interfaces for personas in the data landing zone at the start of rolling out the data management and analytics scenario. These interfaces tend to be REST API calls to a service to onboard data products, set security, and add services to data landing zones.
+They usually help data platform ops to develop IT service management interfaces for personas in the data landing zone at the start of rolling out cloud-scale analytics. These interfaces tend to be REST API calls to a service to onboard data products, set security, and add services to data landing zones.
 
 - **Data platform ops:** The data platform ops group is housed within the platform group. Data platform ops provides services such as central monitoring, cataloging, and reusable policies for data landing zones and products. Data platform ops owns the data management landing zone, and the team's other responsibilities are:
 
@@ -44,13 +44,13 @@ Two options are available to enhance the templates:
 
 - Other data landing zone teams should be able to create improvement and backlog tickets that would enhance templates based on how the tickets are prioritized.
 
-### Azure policies for the data management and analytics scenario
+### Azure policies for cloud-scale analytics
 
-The data management and analytics scenario principles emphasize self-service agility and guardrails to protect data, costs, and patterns. Data platform ops works with platform ops to define quality, and these teams collaborate to implement specific data policies. Data platform ops should follow a review process to update and maintain new features that are added to products.
+Cloud-scale analytics principles emphasize self-service agility and guardrails to protect data, costs, and patterns. Data platform ops works with platform ops to define quality, and these teams collaborate to implement specific data policies. Data platform ops should follow a review process to update and maintain new features that are added to products.
 
 ### Deploy and operate data management landing zones
 
-Data platform ops and platform ops work together to deploy and operate data management landing zones. A data management landing zone provides shared services to data landing zones, making it a central piece of data management and analytics scenario.
+Data platform ops and platform ops work together to deploy and operate data management landing zones. A data management landing zone provides shared services to data landing zones, making it a central piece of cloud-scale analytics.
 
 ## Data landing zone ops
 
@@ -70,7 +70,7 @@ As the owner of the landing zone, Azure DevOps would route the approval for chan
 
 ### Respond to new data product requests
 
-Data landing zone ops supports data application teams to create new  data products. When a data application teams request assistance, an IT service management solution, for example, an automation logic app, orchestrates the approval or deployment of a new data integration or data products repository. Data landing zone ops would be notified of new requests and approve or decline deployments. Once approved, a new DevOps project is created, the main template and artifacts are forked, and a new data integration or data product is deployed.
+Data landing zone ops supports data application teams to create new  data products. When a data application teams request assistance, an IT service management solution, for example, an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops would be notified of new requests and approve or decline deployments. Once approved, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
 
 ### Adhere to the Azure Well-Architected Framework
 
@@ -86,7 +86,7 @@ The data application team delivers new data products to the business. They sourc
 
 ### New data products
 
-Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data application team with a range of expertise. The team identifies the data products required for the data product and requests permission to the data asset. If a new data product is needed, data application team receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data integration and data product deployment process](./manage-provision-platform.md#data-application-deployment-process). The data application team receives a forked repo from the master data products template to deploy the data product.
+Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data application team with a range of expertise. The team identifies the data products required for the data product and requests permission to the data asset. If a new data product is needed, data application team receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data application deployment process](./manage-provision-platform.md#data-application-deployment-process). The data application team receives a forked repo from the master data application template to deploy the data application.
 
 ### Certify data products
 
@@ -139,7 +139,7 @@ Analysts can use tools like Microsoft Power BI to integrate data products into r
 
 ### Run as-needed queries
 
-Data management and analytics scenario has shared workspaces where analysts can query data, subject to permissions. It's common for data products to provide dedicated compute to run queries as they're needed. In both cases, analyst can run queries against data products in the data landing zones. It's also subject to permissions. The results from the queries can be stored in Azure Data Lake workspaces to be used again.
+Cloud-scale analytics has shared workspaces where analysts can query data, subject to permissions. It's common for data products to provide dedicated compute to run queries as they're needed. In both cases, analyst can run queries against data products in the data landing zones. It's also subject to permissions. The results from the queries can be stored in Azure Data Lake workspaces to be used again.
 
 ### User feedback
 

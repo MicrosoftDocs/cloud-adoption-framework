@@ -12,27 +12,30 @@ ms.custom: e2e-data-management, think-tank
 
 # Requirements for governing data
 
-The data management and analytics scenario recommends you consider the following requirements for governing data:
+Cloud-scale analytics recommends you consider the following requirements for governing data:
 
-- Data item and data entity definition to create a common business vocabulary in a business glossary.
-- Data item and data entity identification and discovery.
-- Data governance classification to govern data access security, data privacy, and data retention.
+- Data entity definition to create a common business vocabulary in a business glossary. *Data entities in this context means concepts like customer, supplier, materials, employee and others.*
+- Data entity identification and discovery.
+- Data classification to govern data access security, data privacy, and data retention.
 - People, like data owners with governance accountability and data stewards responsible for data protection and quality.
 - Data governance processes.
+- Data lifecycle management to govern how long data should be kept for
 - Policies and rules to define how specific data should be governed throughout its lifecycle.
 - Policy enforcement across data stores in the distributed data landscape.
 - Master data management to make the data consistent. This might be across operational and analytical systems like customer, product, and supplier.
-- Metadata lineage.
+- Metadata lineage to understand the transformation and relationship of data entities.
 - Technology to make it possible to govern structured, multistructured, and unstructured data. The governance might span across the datacenter, multiple clouds, and the edge.
 
-The other challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation might apply to governing the same data in different jurisdictions. Discover what data exists across the hybrid multicloud distributed data landscape, including geographic location, to:
+One challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation might apply to governing the same data in different jurisdictions. Discover data distributed across multiple clouds and geographic locations, to:
 
 - Understand what data attributes, data entities, and data relationships exist across the distributed data landscape.
 - Classify the data to know how to govern it
-- Define policies to specify how data should be governed for each type of governance classification.
+- Define policies to specify how data should be governed for each type of data classification and lifecycle management.
 - Enforce data quality, data access security, data privacy, and lifecycle management policies across the distributed data landscape.
 
-## Data governance classification
+## Data classification
+
+Data classification, is a way of categorizing data assets by assigning unique logical tags or classes to the data assets. Classification is based on the business context of the data.
 
 There needs to be a way to classify data to understand its level of confidentiality and how long to keep it. The classification requires:
 
@@ -41,19 +44,20 @@ There needs to be a way to classify data to understand its level of confidential
 
 An example of these schemes is:
 
-## Data confidentiality classification scheme
+### Data confidentiality classification scheme
 
 [!INCLUDE [data-confidentiality-classification-scheme](./includes/data-confidentiality-classification-scheme.md)]
 
-## Data retention classification scheme
+
+### Data lifecycle retention classification scheme
 
 [!INCLUDE [data-retention-classification-scheme](./includes/data-retention-classification-scheme.md)]
 
-Automate the data confidentiality and data retention classification process using the classes defined in each scheme is needed to consistently label data across the distributed data landscape. The automation will enable it to be consistently and correctly governed. Then, define rules and policies for each class in the classification scheme to specify how to govern data according to its classification.
+Automating the data confidentiality and data lifecycle retention classification process using the classes defined in each scheme is needed to consistently label data across the distributed data landscape. The automation will enable it to be consistently and correctly governed. Then, define rules and policies for each class in the classification scheme to specify how to govern data according to its classification.
 
 ## Data governance roles and responsibilities
 
-Another requirement is the need for accountability. Without accountability, confusion lingers as to who is accountable for governing data. If there's no accountability, how do you answer the following questions?
+Another requirement is the need for accountability. Otherwise confusion lingers as to who is accountable for governing data. If there's no accountability, how do you answer the following questions?
 
 - Who sets success metrics and monitors how well the data governance program is working?
 - Who are the data owners?
@@ -72,7 +76,7 @@ Is it a C-level executive? Is it a department head? Is it the head of governance
 Processes are needed, along with roles and responsibilities to:
 
 - Govern the definition and maintenance of a common business vocabulary
-- Discover and identify what data you have, what it means. And where it's stored
+- Discover and identify what data you have, what it means, and where it's stored
 - Classify data to know how to govern it
 - Govern the definition and maintenance of data access security policies
 - Govern the definition and maintenance of data privacy policies
@@ -96,7 +100,7 @@ Associate these policies and rules with each class in the data governance classi
 
 ## Master data management
 
-Another requirement in governing data is master data management. Master data is the most widely shared data in any organization and includes core data entities. Core data entities include customer, supplier, materials, employee, and asset. It also includes financial chart of accounts data that is found in different financial applications. Because master data is so widely shared, its application agnostic. It's needed by both operational transaction processing applications and analytical systems. Keeping this data synchronized can resolve so many data errors and process errors. So, maintaining it centrally via a common process and synchronizing every system that needs it, is the ideal situation. Also, governance is needed over who is allowed to maintain it and where that maintenance needs to happen.
+Another requirement in governing data is master data management. Master data is the most widely shared data in any organization and includes core data entities. Core data entities include customer, supplier, materials, employee, and asset. It also includes financial chart of accounts data that is found in different financial applications. Because master data is so widely shared, it is application agnostic. It's needed by both operational transaction processing applications and analytical systems. Keeping this data synchronized can resolve so many data errors and process errors. So, maintaining it centrally via a common process and synchronizing every system that needs it, is the ideal situation. Also, governance is needed over who is allowed to maintain it and where that maintenance needs to happen.
 
 The same applies to reference data such as code sets and financial markets data. In this case, standardization and synchronization of code sets is known as reference data management, which is also a requirement.
 
@@ -122,4 +126,4 @@ Your data governance solution should have several components:
 
 ## Next steps
 
-[Components needed for data governance](./govern-components.md)
+- [Data governance process](./govern-components.md)
