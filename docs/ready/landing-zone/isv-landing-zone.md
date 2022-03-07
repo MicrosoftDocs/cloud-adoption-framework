@@ -15,9 +15,9 @@ ms.custom: internal
 For many organizations, the [Azure landing zones](./index.md) conceptual architecture represents the destination of their cloud adoption journey. The landing zones describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
 
 > [!TIP]
-> It can be helpful to think of Azure landing zones as being like cities. The architecture of a specific workload deployed into a landing zone is like the blueprints for a specific building built in a city.
+> It can be helpful to think of Azure landing zones as being like city plans. The architectures of workloads deployed into a landing zone are like plans for buildings in a city.
 >
-> For example, a building's water, gas, electricity, and transport connections all have to be laid out in blueprints before a new building is approved and built. Similarly, an Azure landing zone's components, including management groups, policies, subscriptions, and role-based access control (RBAC), all have to be in place before a production workload can be deployed.
+> A city's water, gas, electricity, and transport systems all must be in place before buildings can be constructed. Similarly, an Azure landing zone's components, including management groups, policies, subscriptions, and role-based access control (RBAC), all must be in place before any production workloads can be deployed.
 
 As an independent software vendor (ISV) building and operating your solution on Azure, you should refer to the following resources as you build your Azure environment:
 
