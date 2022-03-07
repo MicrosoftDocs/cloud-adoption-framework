@@ -820,7 +820,10 @@ items:
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
-
+        - name: Power Platform adoption
+          href: /power-platform/guidance/adoption/methodology.md
+        - name: Power Platform automation adoption
+          href: 
       - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
 
@@ -1000,7 +1003,6 @@ items:
               href: /azure/architecture/example-scenario/ai/news-feed-ingestion-and-near-real-time-analysis?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Load data into Azure Synapse Analytics SQL pool
               href: /azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
         - name: Engage via applications
           items:
           - name: Overview
@@ -1016,7 +1018,7 @@ items:
             - name: Using AI Builder
               href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Planning a Power Apps project
-              href: /powerapps/guidance/planning/introduction
+              href: /powerapps/guidance/planning/introduction.md
             - name: Power Apps patterns
               items:
                 - name: Patterns overview
@@ -1035,9 +1037,11 @@ items:
                   href: /powerapps/guidance/patterns/project-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
                 - name: More patterns
                   href: /powerapps/guidance/patterns/more-patterns?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Compliance and data privacy for citizen developer solutions
+            - name: Planning a Power Automate project
+              href: /power-automate/guidance/planning/introduction.md      
+            - name: Compliance and data privacy for low-code application platform
               href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Data loss prevention policies for citizen developer solutions
+            - name: Data loss prevention policies for low-code application platform
               href: /power-platform/admin/wp-data-loss-prevention?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Intelligent experiences
             items:
@@ -1630,8 +1634,7 @@ items:
         href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
-
-    - name: Security considerations
+      - name: Security considerations
       items:
       - name: Security strategy
         href: strategy/define-security-strategy.md
