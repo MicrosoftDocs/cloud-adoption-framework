@@ -107,7 +107,7 @@ ISVs building dual deployment SaaS solutions should consider the following quest
 
 ## Azure landing zone design principles and implementations
 
-[Azure's landing zone design principles](../enterprise-scale/design-principles.md) recommend aligning with Azure-native platform capabilities such as Log Analytics, Azure Monitor, and Azure Firewall. The principles also provide specific [Azure landing zone implementation options](./implementation-options.md).
+[Azure's landing zone design principles](../enterprise-scale/design-principles.md) recommend aligning with Azure-native platform capabilities such as Log Analytics, Azure Monitor, and Azure Firewall. The landing zone guidance also provides specific [Azure landing zone implementation options](./implementation-options.md).
 
 As an ISV, you might decide to implement your own landing zone environments. You might need to use your own automation to deploy Azure resources across subscriptions. Or you might want to continue using tools you already employ for logging, monitoring, and other platform-layer services.
 
@@ -159,7 +159,7 @@ If you instead answered *no*, and each of your SaaS products is managed and oper
 > [!TIP]
 > It's uncommon for one ISV to have more than just a few top-level management groups. Often, several products can be combined together due to similarities in how they're managed and operated.
 
-This management approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes). However, instead of creating *Contoso* and *Contoso-Canary* under the **Tenant root group**, in this approach the example company would create the product-specific *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03* top-level management groups under it instead. This scenario is illustrated in the following diagram:
+This management approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes). However, rather than creating *Contoso* and *Contoso-Canary* under the **Tenant root group**, in this approach the example company would create the product-specific *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03* top-level management groups under it instead. This scenario is illustrated in the following diagram:
 
 ![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS products](./media/isv-landing-zone/isv-top-level-management-group.png)
 
