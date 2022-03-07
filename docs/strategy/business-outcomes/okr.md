@@ -28,7 +28,7 @@ The OKR framework fosters innovation, drives alignment in complex work environme
 The two components of all OKRs are the objective and its key results. An objective is a statement of intent that describes what your team is trying to accomplish and why it's important. Key results are specific outcomes that track your team's progress towards the objective. You can define these components for your own OKRs by asking the following questions:
 
 - **Objective:** Where do you want to go?
-- **Key results:** How do you know you’re getting there? How do you measure that progress?
+- **Key results:** How do you know you're getting there? How do you measure that progress?
 
 OKRs move teams away from an “output” mindset (“What projects or tasks did we do?”) to an “outcome” mindset (“What was the business result of the project or task?”). You can set OKRs at the beginning of a key time period for your business (like a quarter or a fiscal year) and then check in regularly with those OKRs to keep your team focused on the importance of their work rather than its volume.
 
