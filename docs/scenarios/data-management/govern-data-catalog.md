@@ -39,4 +39,4 @@ Azure Purview can scan and automatically classify documents. For example, if you
 
 ## Next steps
 
-[Data lineage](govern-lineage.md)
+- [Data lineage](govern-lineage.md)

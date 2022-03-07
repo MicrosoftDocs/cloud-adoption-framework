@@ -49,4 +49,4 @@ Publishing contracts centrally allows providers and consumers to resolve their d
 
 ## Next steps
 
-[Metadata Standards](govern-metadata-standards.md)
+- [Metadata Standards](govern-metadata-standards.md)

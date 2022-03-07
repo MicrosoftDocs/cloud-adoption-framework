@@ -28,4 +28,4 @@ In cloud-scale analytics their are two ways to approach data lifecycle managemen
 
 ## Next steps
 
-[Data sharing agreements in cloud-scale analytics](govern-data-sharing-agreements.md)
+- [Data sharing agreements in cloud-scale analytics](govern-data-sharing-agreements.md)

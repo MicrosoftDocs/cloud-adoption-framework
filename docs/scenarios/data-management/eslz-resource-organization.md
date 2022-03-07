@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Resource organization for cloud-scale analytics
+# Resource organization
 
 To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy. Your strategy should include business and operational details as components of resource names and metadata tags. For more information, see [Develop your naming and tagging strategy for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md).
 
@@ -24,4 +24,4 @@ Organize your cloud assets to support governance, operational management, and ac
 
 ## Next steps
 
-[Security, governance, and compliance for enterprise-scale cloud-scale analytics](./eslz-security-governance-and-compliance.md)
+- [Security, governance, and compliance for enterprise-scale cloud-scale analytics](./eslz-security-governance-and-compliance.md)

@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Business continuity and disaster recovery for cloud-scale analytics
+# Business continuity and disaster recovery
 
 When you design architecture for a cloud service, consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or region-wide. Having plans for both is important. Depending on your recovery time objective and the recovery point objective, you might choose an aggressive strategy for high availability and disaster recovery.
 
@@ -76,4 +76,4 @@ For an overview of business continuity with Azure Synapse Analytics, see [High a
 
 ## Next steps
 
-[Platform automation and DevOps for a cloud-scale analytics enterprise-scale scenario](./manage-platform-automation-and-devops.md)
+- [Data Governance Overview](govern.md)

@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Single-region data landing zone Connectivity
+# Single-region data landing zone connectivity
 
 In the single-region setup, the data management landing zone, the data landing zones as well as all the services within them are set up in the same region. Also, all landing zones are connected to the same connectivity hub subscription, where shared network resources including a network virtual appliance (network virtual appliance) like an Azure Firewall, an ExpressRoute Gateway, a virtual private network (VPN) Gateway, the hub virtual network in a hub and spoke architecture or the virtual WAN (vWAN) Hub in a vWan setup are hosted.
 

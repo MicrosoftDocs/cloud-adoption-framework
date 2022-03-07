@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Enterprise enrollment and Azure Active Directory tenants for cloud-scale analytics
+# Enterprise enrollment
 
 Azure landing zones for cloud-scale analytics don't have any considerations or recommendations that affect enterprise enrollment or Azure AD tenant decisions.
 
@@ -22,4 +22,4 @@ Review [identity and access management considerations](./eslz-identity-and-acces
 
 ## Next steps
 
-[Identity and access management for cloud-scale analytics](./eslz-identity-and-access-management.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)

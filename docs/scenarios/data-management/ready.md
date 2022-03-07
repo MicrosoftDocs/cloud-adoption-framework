@@ -1,5 +1,5 @@
 ---
-title: Review your environment for Azure landing zones
+title: Review your environment for Azure landing zones for cloud-scale analytics
 description: Learn about how cloud-scale analytics affects your Azure landing zone design.
 author: mboswell
 ms.author: mboswell
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data Management and Analytics Scenario Overview
+# Azure landing zones for cloud-scale analytics
 
 In response to the need of frictionless governance and platform to actionable insights to the business, cloud-scale analytics represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
@@ -28,7 +28,7 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Observability
 
 > [!NOTE]
-> Cloud-scale analytics builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
+> Cloud-scale analytics builds on the [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
 
 Cloud-scale analytics  builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
@@ -113,4 +113,4 @@ To get started with the data management and data management landing zones you ne
 
 ## Next steps
 
-- [Enterprise enrollment and Azure Active Directory tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+- [Enterprise enrollment](eslz-enterprise-enrollment-and-azure-ad-tenants.md)

@@ -32,12 +32,10 @@ items:
           href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Resource organization
         href: ./eslz-resource-organization.md
-      - name: Governance disciplines
-        items:
-        - name: Overview
-          href: ./eslz-security-governance-and-compliance.md
-        - name: Policies
-          href: ./eslz-policies.md
+      - name: Governance and security disciplines
+        href: ./eslz-security-governance-and-compliance.md
+      - name: Policies
+        href: ./eslz-policies.md
       - name: Operations baseline
         href: ./eslz-management-and-monitoring.md
       - name: Business continuity and disaster recovery
@@ -207,6 +205,34 @@ items:
           href: ./best-practices/purview-checklist.md
         - name: Deployment best practices
           href: ./best-practices/purview-deployment.md
+        - name: Accounts architecture best practices
+          href: /azure/purview/concept-best-practices-accounts.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Accounts - Default Azure Purview account 
+          href: /azure/purview/concept-default-purview-account.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Asset lifecycle best practices
+          href: /azure/purview/concept-best-practices-asset-lifecycle.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Automation best practices 
+          href: /azure/purview/concept-best-practices-automation.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Backup, recovery and migration best practices
+          href: /azure/purview/concept-best-practices-migration.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Classification best practices 
+          href: /azure/purview/concept-best-practices-classification.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json 
+        - name: Collections architecture best practices
+          href: /azure/purview/concept-best-practices-collections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Glossary best practices
+          href: /azure/purview/concept-best-practices-glossary.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json 
+        - name: Labeling best practices
+          href: /azure/purview/concept-best-practices-sensitivity-labels.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Lineage best practices
+          href: /azure/purview/concept-best-practices-lineage-azure-data-factory.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Network architecture best practices
+          href: /azure/purview/concept-best-practices-network.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Pricing guidelines 
+          href: /azure/purview/concept-guidelines-pricing.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Scanning best practices 
+          href: /azure/purview/concept-best-practices-scanning.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Security best practices
+          href: /azure/purview/concept-best-practices-security.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Azure Machine Learning implementation
         items:
         - name: Implementation

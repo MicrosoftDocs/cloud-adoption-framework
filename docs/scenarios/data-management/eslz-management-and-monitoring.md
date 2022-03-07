@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Management and monitoring for cloud-scale analytics
+# Management and monitoring
 
 This article provides guidance about maintaining an Azure data analytics estate. It builds on considerations and recommendations of the Azure landing zones. For more information, see [Management and monitoring](../../ready/landing-zone/design-area/management.md).
 
@@ -42,4 +42,4 @@ When evaluating cloud-scale analytics, consider the following design recommendat
 
 - [Management and monitoring](../../ready/landing-zone/design-area/management.md)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
-- [Management and monitoring for cloud-scale analytics](./eslz-business-continuity-and-disaster-recovery.md)
+- [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
