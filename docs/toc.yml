@@ -823,7 +823,7 @@ items:
         - name: Power Platform adoption
           href: /power-platform/guidance/adoption/methodology.md
         - name: Power Platform automation adoption
-          href: 
+          href: /power-platform/guidance/automation-coe/overview.md
       - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
 
