@@ -1,5 +1,5 @@
 ---
-title: Measure business outcomes using objectives and key results
+title: Measure business outcomes by using objectives and key results
 description: Use the Cloud Adoption Framework to measure business outcomes using objectives and key results (OKRs).
 author: wayneme75
 ms.author: brblanch
