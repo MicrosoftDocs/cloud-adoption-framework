@@ -34,7 +34,7 @@ The data warehouse and data lake is still valuable, and will play an important r
 
 ## Implementation Patterns tied to new approach to data management
 
-Your current implementation patterns could include data warehouse, data lake, or data lakehouse structures – or even an emerging model like data fabric or data mesh.
+Your current analytical data architecture and operating model could align include data warehouse, data lake, or data lakehouse structures – or even an emerging model like data fabric or data mesh.
 
 Each has its own merits and challenges, and cloud-scale analytics helps you work from where you are now to shift your approach to data management so it can evolve with your infrastructure.
 

@@ -60,13 +60,43 @@ The provisioning workflow stage is where the data collected in the registration 
 
 Once ingestion requests are approved, as part of the processing logic the workflow uses the Azure Purview REST API to insert the sources into Azure Purview.
 
+### Detailed workflow for onboarding data products
+
+![How new datasets are ingested (automated).](../images/new-dataset-ingestion.png)
+
+*Figure 5: How new datasets are ingested (automated).*
+
+Figure 5, follows the detailed registration process for automating the ingestion of new data sources:
+
+- Source details are registered, including production and data factory environments.
+- Data shape, format, and quality constraints are captured.
+- Data application teams should indicate if the data is **sensitive (Personal data)**, and this classification drives the process during which data lake folders are created to ingest raw, enriched and curated data. The source names raw data, enriched and the data product names curated data.
+- Service principal and security groups are created for ingesting and giving access to the dataset.
+- An ingestion job is created in the data landing zone Data Factory metastore.
+- An API inserts the data definition into Azure Purview.
+- Subject to the validation of the data source and approval by the ops team, details are published to a Data Factory metastore.
+
 ## Scheduling of ingestion
 
 Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven) provide functionality enabling orchestration pipelines to be driven by rows within a Control Table stored within Azure SQL Database. The Copy Data Tool can be used to pre-create metadata-driven pipelines. Once these have been created, the provisioning workflow adds entries to the Control Table to support ingestion from the sources identified in the data asset registration metadata. Both the Azure Data Factory pipelines and the Azure SQL Database containing the Control Table metastore can exist within each data landing zone to create new data sources and ingest them into data landing zones.
 
 :::image type="content" source="../images/ingestion-step3-orchestration.png" alt-text="Diagram of scheduling of data asset ingestion":::
 
-*Figure 5: Scheduling of data asset ingestion.*
+*Figure 6: Scheduling of data asset ingestion.*
+
+### Detailed workflow ingest new data sources
+
+The following illustrates how registered data sources in a Data Factory SQL Database metastore are pulled and how data is ingested at first:
+
+![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
+
+The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
+
+If the data is ingested, it connects to an Azure Databricks data science and engineering workspace, and a data definition is created within the data landing zone Apache Hive metastore.
+
+If you needs to use Azure Synapse serverless SQL pool to expose data, then the custom solution should create views over the data in the lake.
+
+If you require row-level or column level encryption then the custom solution should land data in the data lake then ingest data directly into the SQL pools' internal tables and set-up appropriate security on the SQL pools compute.
 
 ## Captured Metadata
 
