@@ -38,6 +38,8 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 
 ## Design considerations
 
+- Review the [management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management) of the Azure landing zones to assess the impact of Azure Arc-enabled Kubernetes on your overall management model.
+
 **Cluster onboarding:**
 
 - Consider the recommendations provided in [resource organization critical design area](./resource-organization.md) and [governance and security disciplines](./governance-disciplines.md) when designing [enterprise scale landing zone subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) to onboard and manage Azure Arc-enabled Kubernetes cluster and the [extensions](/azure/azure-arc/kubernetes/extensions).
