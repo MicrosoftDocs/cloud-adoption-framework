@@ -1646,8 +1646,6 @@ items:
             href: /power-platform/guidance/adoption/tenant-isolation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Compliance and data privacy
             href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Data loss prevention policies
-            href: /power-platform/admin/wp-data-loss-prevention?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
     - name: Security considerations
       items:
