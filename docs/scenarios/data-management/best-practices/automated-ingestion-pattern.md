@@ -84,7 +84,7 @@ Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy
 
 *Figure 6: Scheduling of data asset ingestion.*
 
-## Detailed workflow ingest new data sources
+### Detailed workflow ingest new data sources
 
 The following illustrates how registered data sources in a Data Factory SQL Database metastore are pulled and how data is ingested at first:
 
