@@ -1039,7 +1039,7 @@ items:
               href: /powerapps/guidance/planning/introduction
             - name: Create a workflow with Power Automate
               href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Automate repetitive processes with robotic process automation
+            - name: Automate tasks with robotic process automation (RPA)
               href: /power-automate/desktop-flows/introduction
             - name: Plan a Power Automate project
               href: /power-automate/guidance/planning/introduction   
