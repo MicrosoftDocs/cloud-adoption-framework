@@ -1015,12 +1015,8 @@ items:
               href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Creating applications in Power Apps
               href: /powerapps/maker/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Create your first workflow with Power Automate
-              href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Using AI Builder
+            - name: Add intelligence to apps
               href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Planning a Power Apps project
-              href: /powerapps/guidance/planning/introduction
             - name: Power Apps patterns
               items:
                 - name: Patterns overview
@@ -1039,12 +1035,14 @@ items:
                   href: /powerapps/guidance/patterns/project-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
                 - name: More patterns
                   href: /powerapps/guidance/patterns/more-patterns?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Planning a Power Automate project
+            - name: Plan a Power Apps project
+              href: /powerapps/guidance/planning/introduction
+            - name: Create a workflow with Power Automate
+              href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Automate repetitive processes with robotic process automation
+              href: /power-automate/desktop-flows/introduction
+            - name: Plan a Power Automate project
               href: /power-automate/guidance/planning/introduction   
-            - name: Compliance and data privacy for low-code application platform
-              href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Data loss prevention policies for low-code application platform
-              href: /power-platform/admin/wp-data-loss-prevention?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Intelligent experiences
             items:
             - name: Modern web apps
@@ -1636,6 +1634,10 @@ items:
         href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
+      - name: Compliance and data privacy for low-code application platform
+        href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Data loss prevention policies for low-code application platform
+        href: /power-platform/admin/wp-data-loss-prevention?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
     - name: Security considerations
       items:
