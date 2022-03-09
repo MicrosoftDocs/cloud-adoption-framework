@@ -432,8 +432,9 @@ items:
             href: ready/landing-zone/foundation-blueprint.md
 
         - name: Deploy Azure landing zones with Terraform
-          href: ready/landing-zone/deploy-landing-zones-with-terraform.md
           items:
+          - name: Overview
+            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
           - name: Azure landing zones Terraform module
             href: ready/landing-zone/alz-terraform-module.md
           - name: CAF Terraform landing zones
