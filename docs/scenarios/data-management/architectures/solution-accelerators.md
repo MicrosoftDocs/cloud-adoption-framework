@@ -1,20 +1,20 @@
 ---
-title: Leverage Solution Accelerators to quickly build data product
-description: Learn how to leverage solution accelerators to quickly build data product
+title: Use Solution Accelerators to quickly build data product
+description: Learn how to use solution accelerators to quickly build data product
 author: Echowan, Malrose, Jhelgeson 
 ms.author: Echowan, Malrose, Jhelgeson
 ms.date: 03/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: architecture 
+ms.subservice: scenario 
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Leverage Solution Accelerators to quickly build data product
+# Solution Accelerators
 
 **Solution Accelerators** (SAs) are open-source projects on GitHub. They are repositories of resources and information that simplify and accelerate how problems are solved through the implementation of technology. They are produced by identifying and developing best practices and other IP from the completion of real-world engagements with customers. These SAs are tested with our Field & Partners and fine-tuned prior to GA (General Availability).
 
-With the context of Data Mesh, each one of the solution accelerators is a data product, it could be a recommendation engine, or a demand forecasting solution. All solution accelerators are end-to-end solutions, with the code, notebook, and pipeline. By leveraging SAs, customers could quickly build data products and realize the value.
+Within the context of Data Mesh, each one of the solution accelerators is a data product, it could be a recommendation engine, or a demand forecasting solution. All solution accelerators are end-to-end solutions, with the code, notebook, and pipeline. By leveraging SAs, customers could quickly build data products and realize the value.
 
 ## Solution Accelerator Table
 
