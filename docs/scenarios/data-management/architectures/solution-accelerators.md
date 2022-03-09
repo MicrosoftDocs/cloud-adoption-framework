@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-data-management
 
 # Solution Accelerators
 
-**Solution Accelerators** (SAs) are open-source projects on GitHub. They are repositories of resources and information that simplify and accelerate how problems are solved through the implementation of technology. They are produced by identifying and developing best practices and other IP from the completion of real-world engagements with customers. These SAs are tested with our Field & Partners and fine-tuned prior to GA (General Availability).
+**Solution Accelerators** are open-source projects on GitHub. They are repositories of resources and information that simplify and accelerate how problems are solved through the implementation of technology. They are produced by identifying and developing best practices and other IP from the completion of real-world engagements with customers. These solution accelerators are tested with our Field & Partners and fine-tuned prior to GA (General Availability).
 
-Within the context of Data Mesh, each one of the solution accelerators is a data product, it could be a recommendation engine, or a demand forecasting solution. All solution accelerators are end-to-end solutions, with the code, notebook, and pipeline. By leveraging SAs, customers could quickly build data products and realize the value.
+Within the context of Data Mesh, each one of the solution accelerators is a data product, it could be a recommendation engine, or a demand forecasting solution. All solution accelerators are end-to-end solutions, with the code, notebook, and pipeline. By use solution accelerators, customers could quickly build data products and realize the value.
 
 ## Solution Accelerator Table
 
