@@ -27,7 +27,7 @@ In addition to platform services it allows customers to deploy resources into ap
 
 The table below compares the two approaches for landing zones on Azure:
 
-| Capability | ALZ Terraform module | CAF terraform landingzones |
+| Capability | ALZ Terraform module | CAF Terraform landing zones |
 | - | - | - |
 | Management groups and policies | ✅ | ✅ (using the ALZ Terraform module) |
 | Platform connectivity resources | ✅ | ✅ |
