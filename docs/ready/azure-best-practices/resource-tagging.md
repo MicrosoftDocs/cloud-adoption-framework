@@ -28,6 +28,7 @@ The following tags guide implementation and processes in Cloud Adoption Framewor
 | **Business unit** | Top-level division of your company that owns the subscription or workload that the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | *BusinessUnit* <br><br> <li> `Finance` <li> `Marketing` <li> `Product XYZ` <li> `Corp` <li> `Shared` |
 | **Operations commitment** | Level of operations support provided for this workload or resource. | *OpsCommitment* <br><br> <li> `Baseline only` <li> `Enhanced baseline` <li> `Platform operations` <li> `Workload operations` |
 | **Operations team** | Team accountable for day-to-day operations. | *OpsTeam* <br><br> <li> `Central IT` <li> `Cloud operations` <li> `ControlCharts team` <li> `MSP-{Managed Service Provider name}` |
+| **Cost center** | Accounting cost center associated with this resource. | *CostCenter* <br><br> <li> `55332` |
 
 ## Other common tagging examples
 
@@ -36,17 +37,24 @@ Use the following tags to increase visibility into the usage of Azure resources.
 | Tag Name | Description | Key and example values |
 |--|--|--|
 | **Application name** | Added granularity, if the workload is subdivided across multiple applications or services. | *ApplicationName* <br><br> <li> `IssueTrackingSystem` |
-| **Approver name** | Person responsible for approving costs related to this resource. | *Approver* <br><br> <li> `chris@contoso.com` |
+| **Cost Approver** | Person responsible for approving costs related to this resource. | *CostApprover* <br><br> <li> `chris@contoso.com` |
 | **Budget required/approved** | Money approved for this application, service, or workload. | *BudgetAmount* <br><br> <li> `$200,000` |
-| **Cost center** | Accounting cost center associated with this resource. | *CostCenter* <br><br> <li> `55332` |
 | **Disaster recovery** | Business criticality of the application, workload, or service. | *DR* <br><br> <li> `Mission-critical` <li> `Critical` <li> `Essential` |
 | **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | *EndDate* <br><br> <li> `2023-10-15` |
-| **Environment** | Deployment environment of the application, workload, or service. | *Env* <br><br> <li> `Prod` <li> `Dev` <li> `QA` <li> `Stage` <li> `Test` |
+| **Environment** | Deployment environment of the application, workload, or service. | *Env* <br><br> <li> `Prod` <li> `Dev` <li> `QA` <li> `Stage` <li> `Test` <li> `Shared`  |
 | **Owner name** | Owner of the application, workload, or service. | *Owner* <br><br> <li> `jane@contoso.com` |
 | **Requester name** | User who requested the creation of this application. | *Requester* <br><br> <li> `john@contoso.com` |
 | **Service class** | Service level agreement level of the application, workload, or service. | *ServiceClass* <br><br> <li> `Dev` <li> `Bronze` <li> `Silver` <li> `Gold` |
 | **Start date of the project** | Date when the application, workload, or service was first deployed. | *StartDate* <br><br> <li> `2020-10-15` |
-
+| **Change Approver** | Person responsible for approving changes related to this resource. | *ChangeApprover* <br><br> <li> `chris@contoso.com` | 
+| **Optimization** | From a cost optimization perspective the resource can be turned off. | *Optimization* <br><br> <li> `17:00-07:00` <li> `Weekends` <li> `Sundays`|
+| **Maintenance Window** | Window definition where the resource can undergo planned maintenance. | *MaintenanceWindow* <br><br> <li> `Weekly1` <li> `Weekly1` <li> `Saturday1` <li> `Sunday1`|
+| **Business Process** | Which process is supported by this resource. *BusinessProcess* | <br><br> <li> `Finance` <li> `Logistics` <li> `Procurement` <li> `Shared`| 
+| **Deployed By** | Person or system that deployed this resource. | *DeployedBy* <br><br> <li> `chris@contoso.com` <li> `IaCpipeline1`| 
+| **Tier** | Which tier defiens this resource. | *Tier* <br><br> <li> `Frontend` <li> `Middle` <li> `Backend` <li> `Infrastructure` <li> `Shared`| 
+| **Depends On** | Which other systems/applications/resources is this resource dependant of. | *DependsOn* <br><br> <li> `System1` <li> `Application1` <li> `Resource1` | 
+| **Affects** | Which other systems/applications/resources depend on this resource. | *Affects* <br><br> <li> `System1` <li> `Application1` <li> `Resource1` | 
+  
 ## Take action
 
 Review the [resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md).
