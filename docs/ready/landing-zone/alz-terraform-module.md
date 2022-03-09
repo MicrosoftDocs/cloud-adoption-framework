@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Azure Landing Zones Terraform module
+# Using the Azure Landing Zones Terraform module
 
 The [Azure landing zones terraform module][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
 
