@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Use Terraform to build enterprise-scale landing zones
 
-The [Azure landing zones terraform accelerator][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
+The [Azure landing zones terraform module][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
 
 > [!NOTE]
 > This article describes one of two ways to implement landing zones on Azure using terraform.
@@ -31,7 +31,7 @@ For more information on how to set up the provider for deploying across multiple
 These resources align with the [Azure landing zones conceptual architecture][es-ref-arch].
 Customize them to meet the requirements of your organization.
 
-[ ![Overview of the Azure landing zones conceptual architecture.](media/ns-arch-cust-inline.png)](media/ns-arch-cust-inline.png#lightbox)
+[![Overview of the Azure landing zones conceptual architecture.](media/ns-arch-cust-inline.png)](media/ns-arch-cust-inline.png#lightbox)
 
 You can configure the module to deploy different sets of resources, each aligned to the critical design areas:
 
@@ -282,15 +282,15 @@ Once there, you can also discover how some parts of the module work.
 [caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "See the Terraform Module for Cloud Adoption Framework Enterprise-scale on Terraform Registry."
 [caf-es-dependencies]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=dependencies "See dependencies for the Terraform Module for Cloud Adoption Framework Enterprise-scale on Terraform Registry."
 
-[msdocs-alz-architecture]: ../landing-zone/index.md#azure-landing-zone-conceptual-architecture "Azure landing zones conceptual architecture."
+[msdocs-alz-architecture]: ../enterprise-scale/index.md#azure-landing-zone-conceptual-architecture "Azure landing zones conceptual architecture."
 
-[es-hierarchy]:    ../landing-zone/design-area/resource-org.md "Management group and subscription organization for enterprise-scale on the Cloud Adoption Framework."
-[es-security]:     ../landing-zone/design-area/governance.md "Security governance and compliance for enterprise-scale on the Cloud Adoption Framework."
-[es-bcdr]:         ../landing-zone/design-area/management-business-continuity-disaster-recovery.md "Business continuity and disaster recovery for enterprise-scale on the Cloud Adoption Framework."
-[es-management]:   ../landing-zone/design-area/management.md "Management and monitoring for enterprise-scale on the Cloud Adoption Framework."
-[es-connectivity]: network-topology-and-connectivity.md "Network topology and connectivity for enterprise-scale on the Cloud Adoption Framework."
-[es-identity]:     ../landing-zone/design-area/identity-access.md "Identity and access management for enterprise-scale on the Cloud Adoption Framework."
-[es-ref-arch]:     ../landing-zone/index.md#azure-landing-zone-conceptual-architecture "Enterprise-scale reference architecture."
+[es-hierarchy]:    design-area/resource-org.md "Management group and subscription organization for enterprise-scale on the Cloud Adoption Framework."
+[es-security]:     design-area/governance.md "Security governance and compliance for enterprise-scale on the Cloud Adoption Framework."
+[es-bcdr]:         design-area/management-business-continuity-disaster-recovery.md "Business continuity and disaster recovery for enterprise-scale on the Cloud Adoption Framework."
+[es-management]:   design-area/management.md "Management and monitoring for enterprise-scale on the Cloud Adoption Framework."
+[es-connectivity]: design-area/network-topology-and-connectivity.md "Network topology and connectivity for enterprise-scale on the Cloud Adoption Framework."
+[es-identity]:     design-area/identity-access.md "Identity and access management for enterprise-scale on the Cloud Adoption Framework."
+[es-ref-arch]:     index.md#azure-landing-zone-conceptual-architecture "Enterprise-scale reference architecture."
 
 [gh-es]: https://github.com/Azure/Enterprise-Scale "GitHub repository for Enterprise-Scale."
 [gh-wiki]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki "Module documentation on the GitHub Wiki."

@@ -1,5 +1,5 @@
 ---
-title: Using CAF terraform landingzones
+title: Using CAF terraform landing zones
 description: Learn to use Terraform by HashiCorp to build your landing zones. Deploy foundational governance, accounting, and security capabilities for an Azure subscription.
 author: arnaudlh
 ms.author: brblanch
@@ -16,7 +16,7 @@ Azure provides native services for deploying your landing zones. Terraform by Ha
 
 > [!NOTE]
 > This article describes one of two ways to implement landing zones on Azure using terraform.
-> For guidance on choosing the right approach, see [this guidance](../enterprise-scale/deploy-landing-zones-with-terraform.md).
+> For guidance on choosing the right approach, see [this guidance](deploy-landing-zones-with-terraform.md).
 
 ## Purpose of the landing zone
 
