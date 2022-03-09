@@ -15,7 +15,7 @@ ms.custom: think-tank
 Azure provides native services for deploying your landing zones. Terraform by HashiCorp is a third-party tool that can help with this effort. This article shows how to deploy foundational governance, accounting, and security capabilities for an Azure subscription using a sample landing zone.
 
 > [!NOTE]
-> This article describes one of two ways to implement landing zones on Azure using terraform.
+> This article describes one of two ways to implement landing zones on Azure using Terraform.
 > For guidance on choosing the right approach, see [this guidance](deploy-landing-zones-with-terraform.md).
 
 ## Purpose of the landing zone
