@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale landing zone design principles
-description: Learn about Enterprise-scale landing zone design principles that influence the design areas for enterprise-scale landing zone implementations
+title: Azure landing zone design principles
+description: Learn about the design principles that influence the design areas for enterprise-scale landing zone implementations
 author: jtracey93
 ms.author: jatracey
 ms.date: 11/19/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-## Azure landing zone - design principles
+# Azure landing zone - design principles
 
 The Azure landing zone conceptual architecture prescribed in this guidance is universally applied to any Azure landing zone process or implementation. However, if you choose to deploy the Azure Landing Zone Accelerator or use any version of the Enterprise-scale landing zone code base, those implementations build on the conceptual architecture by applying the design principles described here. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with deviation.
 
