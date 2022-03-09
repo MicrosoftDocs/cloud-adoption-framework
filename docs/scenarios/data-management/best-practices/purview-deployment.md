@@ -12,19 +12,17 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure Purview deployment best practices for cloud-scale analytics
 
-The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of cloud-scale analytics platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
+The [Data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the data management and analytics scenario platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide most data management capabilities.
 
-- [Data catalog](../govern-data-catalog.md)
-- [Data classification](../govern-data-catalog.md#data-classification)
-- [Data lineage](../govern-lineage.md)
+> [!NOTE]
+> This guidance in this section explains configurations specific to data management and analytics scenario. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
 
-Azure Purview is a unified data governance service. It helps organizations manage and govern data across on-premises, multicloud, and software as a service (SaaS). Azure Purview creates a holistic, up-to-date map of the data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview helps data consumers find valuable and trustworthy data.
+## Overview
+
+Azure Purview is a unified data governance service that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data. Create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Enable data curators to manage and secure your data estate. Empower data consumers to find valuable, trustworthy data.
 
 > [!TIP]
 > We recommend using third-party tools of your choice to integrate the remaining capabilities of the [data management landing zone](../architectures/data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
->
-> [!NOTE]
-> This guidance in this section explains configurations specific to cloud-scale analytics. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
 
 One Azure Purview account is deployed inside the data management landing zone, which serves as a centralized data catalog. From the data management landing zone, Azure Purview can communicate with each data landing zone via private network connectivity using VNet peering across data management, data landing zones, and [self-hosted integration runtimes](/azure/purview/manage-integration-runtimes). Discovery of data products in on-premises data stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
 
@@ -190,18 +188,18 @@ Before creating any credentials in Azure Purview, your Azure Purview account mus
 
 ## Azure Purview roles and access control
 
-Azure Purview has several built-in RBAC roles, such as Data Reader, Data Curator, Collection Admin, and Data Source Admin, to manage the data plane, which can be combined to provide more privileges. For example, the Data Reader role is targeted for roles such as data officers, data stewards, and chief security officers who require read-only access to the data estate. The data estate might include classifications, lineage through search options, and reports available in Azure Purview.
+Azure Purview has several built-in roles, such as Data reader, Data curator, Collection administrator, Data source administrator and Policy author to manage the data plane, which can be combined to provide more privileges. For example, the Data reader role is targeted for roles such as data officers, data stewards, and chief security officers who require read-only access to the data estate. The data estate might include classifications, lineage through search options, and reports available in Azure Purview.
 
-:::image type="content" source="../images/purview-roles-new.png" alt-text="Diagram of Azure Purview roles." lightbox="../images/purview-roles-new.png":::
-
-Once the data management landing zone deployment is complete, use the least privilege model to provide access to view or manage metadata in Azure Purview.
+Once the [Data management landing zone](../architectures/data-management-landing-zone.md) deployment is complete, use the least privilege model to provide access to view or manage metadata in Azure Purview.
 
 > [!IMPORTANT]
 > Azure Purview data plane roles must be managed inside Azure Purview Studio or using the API directly.
 
-For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's data plane](/azure/purview/catalog-permissions)
+For more information about Azure Purview roles, see [Access control in Azure Purview's data plane](/azure/purview/catalog-permissions)
 
-Review the following list of personas involved in an cloud-scale analytics deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the program:
+### Recommended Azure Purview roles
+
+Review the following list of [personas](../organize-roles-and-teams.md) involved in an data management and analytics scenario deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the deployment:
 
 | Persona | Role | Recommended Azure Purview role |
 |---|---|---|
