@@ -431,12 +431,12 @@ items:
           - name: CAF Foundation blueprint
             href: ready/landing-zone/foundation-blueprint.md
 
-        - name: Deploy Azure landing zones with terraform
+        - name: Deploy Azure landing zones with Terraform
           href: ready/landing-zone/deploy-landing-zones-with-terraform.md
           items:
-          - name: Azure landing zones terraform module
+          - name: Azure landing zones Terraform module
             href: ready/landing-zone/alz-terraform-module.md
-          - name: CAF terraform landingzones
+          - name: CAF Terraform landingzones
             href: ready/landing-zone/caf-terraform-landingzones.md
 
         - name: ISV considerations for landing zones
