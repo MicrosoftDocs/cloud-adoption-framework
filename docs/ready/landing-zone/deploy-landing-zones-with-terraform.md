@@ -23,6 +23,10 @@ Optionally, customers can choose to deploy Azure landing zones using the [CAF te
 This is a prescriptive implementation of terraform on Azure that makes use of the ALZ Terraform module for management groups and policies, but goes further.
 In addition to platform services it allows customers to deploy resources into application landing zones using terraform, as well as providing a mechanism to deploy subscriptions.
 
+The diagram below illustrates the coverage of the two approaches:
+
+![Terraform module comparison](media/tf-module-compare.png)
+
 ## Capabilities provided by the two approaches
 
 The table below compares the two approaches for landing zones on Azure:
