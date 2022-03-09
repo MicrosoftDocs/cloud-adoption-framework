@@ -18,6 +18,30 @@ This framework is collaboratively built with customers, partners, and internal M
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## March 2022
+
+### Independent software vendor (ISV) considerations for Azure landing zones
+
+The new [ISV considerations for Azure landing zones](../ready/landing-zone/isv-landing-zone.md) article describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
+
+## February 2022
+
+### New videos added to the Cloud Adoption Framework security topics
+
+These videos can help you understand how security plays a part in your cloud adoption journey.
+
+| Article | Description of video |
+|--|--|
+| [Security in the Microsoft Cloud Adoption Framework for Azure](../secure/index.md) | Watch the video to learn about the Secure methodology and how it helps guide continuing security improvements over time. |
+| [Risk management insights](../secure/risk-insights.md) | Watch the video to learn about security alignment and how you can manage risk within your organization. |
+| [Security integration](../secure/security-integration.md) | Watch the video to learn about integrating security across all areas of your business. |
+| [Business resilience](../secure/business-resilience.md) | Watch the video to learn how to build and maintain your business's resilience to security attacks. |
+| [Access control](../secure/access-control.md) | Watch the video to learn how you can develop an access control strategy that meets your specific needs. |
+| [Security operations](../secure/security-operations.md) | Watch the video to learn about SecOps and its critical role in reducing risk for your organization. |
+| [Asset protection](../secure/asset-protection.md) | Watch the video to learn about the history of asset protection and how to keep both old and new assets secure. |
+| [Security governance](../secure/security-governance.md) | Watch the video to learn about security governance. |
+| [Innovation security](../secure/innovation-security.md) | Watch the video to learn about the DevSecOps method for secure and rapid innovation. |
+
 ## January 2022
 
 ### Unified management and operations with Azure Arc-enabled servers landing zone accelerator

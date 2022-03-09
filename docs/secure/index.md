@@ -24,6 +24,10 @@ The Secure methodology provides a vision of the complete end state to guide the 
 
 The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
 
+Watch the following video to learn more about the Secure methodology and how it helps guide continuing security improvements over time.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVBXs]
+
 ## Mapping to concepts, frameworks, and standards
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which make it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. Here is a quick summary of how the disciplines in the CAF Secure methodology relate to other security concepts and guidance:
