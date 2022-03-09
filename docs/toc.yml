@@ -436,7 +436,7 @@ items:
           items:
           - name: Azure landing zones Terraform module
             href: ready/landing-zone/alz-terraform-module.md
-          - name: CAF Terraform landingzones
+          - name: CAF Terraform landing zones
             href: ready/landing-zone/caf-terraform-landingzones.md
 
         - name: ISV considerations for landing zones

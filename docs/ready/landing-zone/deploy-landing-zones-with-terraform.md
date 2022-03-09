@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Use Terraform to deploy Azure Landing Zones
 
-Azure provides native services for building your enterprise-scale landing zones.
+Azure provides native services for building your Azure landing zones.
 Other third-party tools can also help with this effort.
 One such tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
