@@ -31,15 +31,15 @@ The following images show a conceptual reference architecture that highlights th
 
 - Flux v2 Cluster Extension provisioning process
 
-    ![Flux installation](./media/arc-enabled-kubernetes-cicd-flux2-extension-install.png)
+    [ ![A diagram showing Flux extenstion installation](./media/arc-enabled-kubernetes-cicd-flux2-extension-install.png)](./media/arc-enabled-kubernetes-cicd-flux2-extension-install.png#lightbox)
 
 - Gitops Configuration process
 
-    ![GitOps configuration](./media/arc-enabled-kubernetes-cicd-flux2-config-install.png)
+    [ ![A diagram showing GitOps configuration](./media/arc-enabled-kubernetes-cicd-flux2-config-install.png)](./media/arc-enabled-kubernetes-cicd-flux2-config-install.png#lightbox)
 
 - GitOps Flow showing an application update
 
-    ![GitOps Workflow](./media/arc-enabled-kubernetes-cicd-flow.png)
+    [ ![A diagram showing GitOps Workflow](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-flow.png#lightbox)
 
 ## Design considerations
 
@@ -103,7 +103,8 @@ Platform Operators and Application Operators have several options for managing K
 With a GitOps process, to avoid manual configuration modifications to your GitOps repository, the CD pipeline can have permission or run as a service account which then has permission to open a Pull Request (PR) or commit directly to a configuration repository with the new container image change. These changes from your CD pipeline can also provision all YAML objects required for your application.
 
 The following is a process flow that contains the traditional application CI process incorporated with changes to support GitOps.
-![GitOps Process](./media/arc-enabled-kubernetes-cicd-gitops-ci.png)
+
+[ ![A diagram showing GitOps process](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-gitops-ci.png#lightbox)
 
 #### Cluster-wide component update process
 
@@ -134,7 +135,7 @@ For all updates to your configuration, to verify changes have been successfully 
 
 The following image is a reference architecture that shows the responsibilities, repositories, and pipelines to implement a GitOps process using the Azure Arc-enabled Kubernetes [Flux Extension](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
 
-![GitOps Reference](./media/arc-enabled-kubernetes-cicd-gitops-flow.png)
+[ ![A diagram showing GitOps Reference](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-gitops-flow.png#lightbox)
 
 ### Repositories
 
@@ -181,7 +182,7 @@ The following three Git repositories are included in the design:
   
 ### Security
 
-- Review [the recommendations for governance and security](./governance-disciplines.md) of your Azure Arc-enabled Kubernetes clusters.
+- Review [the recommendations for governance and security](./eslz-arc-kubernetes-governance-disciplines.md) of your Azure Arc-enabled Kubernetes clusters.
 - It is recommended to use a private Git repository that has authentication and authorization required for defining any configuration repository, this will ensure unwanted access to any cluster configuration.
   - [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
   - [Choose the right authentication mechanism for Azure DevOps](/azure/devops/integrate/get-started/authentication/authentication-guidance)
