@@ -1,9 +1,9 @@
 ---
 title: Use Solution Accelerators to quickly build data product
 description: Learn how to use solution accelerators to quickly build data product
-author: Echowan, Malrose, Jhelgeson 
-ms.author: Echowan, Malrose, Jhelgeson
-ms.date: 03/08/2022
+author: Echowan, 
+ms.author: Echowan
+ms.date: 03/09/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario 
