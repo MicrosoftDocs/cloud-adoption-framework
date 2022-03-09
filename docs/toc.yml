@@ -440,6 +440,8 @@ items:
           - name: Terraform landing zones
             href: ready/landing-zone/caf-terraform-landingzones.md
 
+        - name: ISV considerations for landing zones
+          href: ready/landing-zone/isv-landing-zone.md
         - name: Partner landing zones
           href: ready/landing-zone/partner-landing-zone.md
 

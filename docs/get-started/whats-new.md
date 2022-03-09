@@ -18,6 +18,30 @@ This framework is collaboratively built with customers, partners, and internal M
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## March 2022
+
+### Independent software vendor (ISV) considerations for Azure landing zones
+
+The new [ISV considerations for Azure landing zones](../ready/landing-zone/isv-landing-zone.md) article describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
+
+## February 2022
+
+### New videos added to the Cloud Adoption Framework security topics
+
+These videos can help you understand how security plays a part in your cloud adoption journey.
+
+| Article | Description of video |
+|--|--|
+| [Security in the Microsoft Cloud Adoption Framework for Azure](../secure/index.md) | Watch the video to learn about the Secure methodology and how it helps guide continuing security improvements over time. |
+| [Risk management insights](../secure/risk-insights.md) | Watch the video to learn about security alignment and how you can manage risk within your organization. |
+| [Security integration](../secure/security-integration.md) | Watch the video to learn about integrating security across all areas of your business. |
+| [Business resilience](../secure/business-resilience.md) | Watch the video to learn how to build and maintain your business's resilience to security attacks. |
+| [Access control](../secure/access-control.md) | Watch the video to learn how you can develop an access control strategy that meets your specific needs. |
+| [Security operations](../secure/security-operations.md) | Watch the video to learn about SecOps and its critical role in reducing risk for your organization. |
+| [Asset protection](../secure/asset-protection.md) | Watch the video to learn about the history of asset protection and how to keep both old and new assets secure. |
+| [Security governance](../secure/security-governance.md) | Watch the video to learn about security governance. |
+| [Innovation security](../secure/innovation-security.md) | Watch the video to learn about the DevSecOps method for secure and rapid innovation. |
+
 ## January 2022
 
 ### Unified management and operations with Azure Arc-enabled servers landing zone accelerator
@@ -39,7 +63,7 @@ Get started with this scenario using the following links:
 | [Identity and access management](../scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md) | Best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc. |
 | [Network topology and connectivity](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md) | Design considerations when working with Azure Arc-enabled servers and how to securely connect them to your Enterprise Scale Landing Zone. |
 | [Resource organization](../scenarios/hybrid/arc-enabled-servers/eslz-resource-organization.md) | Best practices for resource consistency and tagging strategy, that includes your hybrid and multicloud resources. |
-| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance.md) | The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
+| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance.md) | The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
 | [Management disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server.md) | Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level. |
 | [Automation disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
 | [Cost governance](../scenarios/hybrid/arc-enabled-servers/eslz-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
