@@ -1,6 +1,6 @@
 ---
-title: Terraform module for Cloud Adoption Framework enterprise-scale
-description: Learn how to use the Terraform module for Cloud Adoption Framework enterprise-scale to deploy Azure landing zones.
+title: Azure Landing Zones terraform module
+description: Learn how to use the Azure landing zones terraform accelerator to deploy Azure landing zones.
 author: krowlandson
 ms.author: brblanch
 ms.date: 10/28/2021
@@ -12,11 +12,11 @@ ms.custom: think-tank
 
 # Use Terraform to build enterprise-scale landing zones
 
-Azure provides native services for building your enterprise-scale landing zones.
-Other third-party tools can also help with this effort.
-One such tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
+The [Azure landing zones terraform accelerator][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
 
-The [caf-enterprise-scale][caf-enterprise-scale] module provides an accelerated path for deploying the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
+> [!NOTE]
+> This article describes one of two ways to implement landing zones on Azure using terraform.
+> For guidance on choosing the right approach, see [this guidance](deploy-landing-zones-with-terraform.md).
 
 ## Prerequisites
 
@@ -28,12 +28,12 @@ For more information on how to set up the provider for deploying across multiple
 
 ## Overview
 
-These resources align with the [enterprise-scale reference architecture][es-ref-arch].
+These resources align with the [Azure landing zones conceptual architecture][es-ref-arch].
 Customize them to meet the requirements of your organization.
 
-[ ![Overview of the enterprise-scale reference architecture.](media/ns-arch-cust-inline.png)](media/ns-arch-cust-inline.png#lightbox)
+[ ![Overview of the Azure landing zones conceptual architecture.](media/ns-arch-cust-inline.png)](media/ns-arch-cust-inline.png#lightbox)
 
-You can configure the module to deploy different sets of resources, each aligned to the enterprise-scale critical design areas:
+You can configure the module to deploy different sets of resources, each aligned to the critical design areas:
 
 | Resource category | Enterprise-scale critical design areas |
 | --- | --- |
@@ -48,16 +48,16 @@ By packaging these capabilities into a single Terraform module, it becomes easie
 
 Reuse of components is a fundamental principle of infrastructure as code.
 Modules are instrumental in defining standards and consistency across resource deployment within and across environments.
-The caf-enterprise-scale module is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
+The Azure landing zones terraform accelerator is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
 
 Deploying the module from the Terraform Registry provides strict version control while ensuring you always have access to the latest version. Doing so provides:
 
-- An accelerated delivery of Cloud Adoption Framework enterprise-scale in your environment.
-- A tested upgrade path to the latest version of Cloud Adoption Framework enterprise-scale.
+- An accelerated delivery of Azure landing zones in your environment.
+- A tested upgrade path to the latest version of Azure landing zones terraform accelerator.
 
 ## Benefits of using the module
 
-There are many benefits of using the caf-enterprise-scale module:
+There are many benefits of using the Azure landing zones terraform accelerator:
 
 - Managed and extensible core resource hierarchy for Subscription organization using Management Groups.
 - Scalable security governance and compliance using Azure Identity and Access Management (IAM) controls, with an extensive library of custom definitions ready to assign.
@@ -72,7 +72,7 @@ There are many benefits of using the caf-enterprise-scale module:
 
 ## Capabilities
 
-Resources deployed by the module are split logically into the following capabilities:
+Resources deployed by the Azure landing zones terraform accelerator are split logically into the following capabilities:
 
 - [Core resources](#core-resources)
 - [Management resources](#management-resources)
@@ -85,7 +85,7 @@ The following sections outline the different groups of resource types deployed a
 
 ## Core resources
 
-The core capability of this module deploys the foundations of the [Cloud Adoption Framework enterprise-scale landing zone architecture][msdocs-alz-architecture], with a focus on the central [resource hierarchy and governance][es-hierarchy]:
+The core capability of this module deploys the foundations of the [Azure landing zone conceptual architecture][msdocs-alz-architecture], with a focus on the central [resource hierarchy and governance][es-hierarchy]:
 
 ![Enterprise-scale Core Landing Zones Architecture](./media/terraform-caf-enterprise-scale-overview.png)
 

@@ -91,7 +91,7 @@ items:
     - name: Overview
       href: strategy/index.md
     - name: Assess cloud adoption strategy
-      href: strategy/cloud-adoption-strategy-evaluator.md      
+      href: strategy/cloud-adoption-strategy-evaluator.md
     - name: Motivations
       href: strategy/motivations.md
     - name: Business outcomes
@@ -419,8 +419,13 @@ items:
             href: ready/enterprise-scale/implementation.md
           - name: Testing approach for enterprise-scale
             href: ready/enterprise-scale/testing-approach.md
-          - name: Terraform module for CAF enterprise-scale
-            href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
+          - name: Deploy Azure landing zones with terraform
+            href: ready/enterprise-scale/deploy-landing-zones-with-terraform.md
+            items:
+            - name: Azure landing zones terraform module
+              href: ready/enterprise-scale/alz-terraform-module.md
+            - name: CAF terraform landingzones
+              href: ready/landing-zone/caf-terraform-landingzones.md
           - name: Scenario-specific enterprise-scale landing zones
             href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
           - name: Enterprise-scale FAQ
@@ -433,7 +438,7 @@ items:
           - name: CAF Foundation blueprint
             href: ready/landing-zone/foundation-blueprint.md
           - name: Terraform landing zones
-            href: ready/landing-zone/terraform-landing-zone.md
+            href: ready/landing-zone/caf-terraform-landingzones.md
 
         - name: Partner landing zones
           href: ready/landing-zone/partner-landing-zone.md
