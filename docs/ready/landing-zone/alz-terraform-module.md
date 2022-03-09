@@ -1,6 +1,6 @@
 ---
-title: Azure Landing Zones terraform module
-description: Learn how to use the Azure landing zones terraform accelerator to deploy Azure landing zones.
+title: Azure Landing Zones Terraform module
+description: Learn how to use the Azure landing zones Terraform module to deploy Azure landing zones.
 author: krowlandson
 ms.author: brblanch
 ms.date: 10/28/2021
@@ -15,7 +15,7 @@ ms.custom: think-tank
 The [Azure landing zones terraform module][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
 
 > [!NOTE]
-> This article describes one of two ways to implement landing zones on Azure using terraform.
+> This article describes one of two ways to implement landing zones on Azure using Terraform.
 > For guidance on choosing the right approach, see [this guidance](deploy-landing-zones-with-terraform.md).
 
 ## Prerequisites
