@@ -282,7 +282,7 @@ Once there, you can also discover how some parts of the module work.
 [caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "See the Terraform Module for Cloud Adoption Framework Enterprise-scale on Terraform Registry."
 [caf-es-dependencies]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=dependencies "See dependencies for the Terraform Module for Cloud Adoption Framework Enterprise-scale on Terraform Registry."
 
-[msdocs-alz-architecture]: ../enterprise-scale/index.md#azure-landing-zone-conceptual-architecture "Azure landing zones conceptual architecture."
+[msdocs-alz-architecture]: index.md#azure-landing-zone-conceptual-architecture "Azure landing zones conceptual architecture."
 
 [es-hierarchy]:    design-area/resource-org.md "Management group and subscription organization for enterprise-scale on the Cloud Adoption Framework."
 [es-security]:     design-area/governance.md "Security governance and compliance for enterprise-scale on the Cloud Adoption Framework."
