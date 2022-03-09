@@ -1011,14 +1011,12 @@ items:
           items:
           - name: Overview
             href: innovate/best-practices/apps.md
-          - name: Low-code application platform
+          - name: Low-code platform
             items:
             - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Creating applications in Power Apps
               href: /powerapps/maker/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Add intelligence to apps
-              href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Power Apps patterns
               items:
                 - name: Patterns overview
@@ -1046,7 +1044,7 @@ items:
             - name: Automate tasks with robotic process automation (RPA)
               href: /power-automate/desktop-flows/introduction
             - name: Plan a Power Automate project
-              href: /power-automate/guidance/planning/introduction   
+              href: /power-automate/guidance/planning/introduction
           - name: Intelligent experiences
             items:
             - name: Modern web apps
@@ -1075,14 +1073,18 @@ items:
                 href: /azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Visual search from an image
                 href: /azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Chatbots
-              items:
-              - name: Create and deploy a basic bot
-                href: /azure/bot-service/bot-service-quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: "Learning path: Create bots with the Azure Bot Service"
-                href: /learn/paths/create-conversational-ai-solutions/
-              - name: Azure bot samples on GitHub
-                href: https://github.com/Microsoft/botframework-sdk
+              - name: Intelligent low-code apps with AI Builder
+                href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Chatbots
+                items:
+                - name: Choose the right chatbot solution
+                  href: /azure/bot-service/bot-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create a bot with Composer
+                  href: /composer/quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create and deploy a Power Virtual Agents bot
+                  href: /power-virtual-agents/fundamentals-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create a bot with Bot Framework SDK
+                  href: /azure/bot-service/bot-service-quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Cloud-native applications
             items:
             - name: Microservices architecture
