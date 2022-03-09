@@ -35,7 +35,7 @@ The table below compares the two approaches for landing zones on Azure:
 | Landing zone resources | ❌ | ✅ |
 | Landing zone subscription vending machine | ❌ | ✅ |
 
-## Selecting the right approach for terraform
+## Selecting the right approach for Terraform
 
 If your organization has no current investment in terraform, the [CAF terraform landingzones][caf-terraform-landingzones] framework provides a prescriptive implementation of Terraform on Azure that is open source and community driven.
 If after consideration this approach is not to your liking, then the [ALZ terraform module][alz-tf-mod] should be used.
