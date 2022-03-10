@@ -28,7 +28,12 @@ It is important to understand the [Arc-enabled Kubernetes connectivity modes](/a
 
 The following diagram shows different Azure Arc-enabled Kubernetes components and how they interact when using [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac#architecture---azure-rbac-on-azure-arc-enabled-kubernetes) to manage the Kubernetes cluster.
 
+<<<<<<< HEAD:docs/scenarios/hybrid/arc-enabled-kubernetes/identity-access-management.md
 ![Azure RBAC on Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-rbac.png)
+=======
+[ ![A diagram showing Azure RBAC on Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-aad-integration.png)](./media/arc-enabled-kubernetes-aad-integration.png#lightbox)
+
+>>>>>>> eadf9c4e48555a968c3f9af6fc59bee01e31416d:docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md
 ### Securely access Azure Arc-enabled Kubernetes cluster from anywhere
 
 The following diagram shows [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and how the components interact with each other to manage cluster using Azure RBAC.
@@ -40,7 +45,7 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
 - Review the [identity and access management design area](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) of the Azure landing zones to assess the impact of Azure Arc-enabled Kubernetes on your overall identity and access model.
 
 - **Kubernetes cluster onboarding**
-  - Decide between Azure AD user vs service principal to onboard Kubernetes cluster to Azure Arc individually or at scale. Please review to the [Automation disciplines critical design area](./automation-disciplines.md) for additional implementation details.
+  - Decide between Azure AD user (for manual onboarding of single cluster) vs service principal (for scripted and headless onboarding of multiple clusters) to onboard Kubernetes cluster to Azure Arc individually or at scale. Please review to the [Automation disciplines critical design area](./eslz-arc-kubernetes-automation-disciplines.md) for additional implementation details.
   - Identity of the onboarding entity needs to have cluster-admin ClusterRoleBinding on the cluster, decide between using a user from on-premises or other cloud identity provider or Kubernetes service account with cluster-admin role.
 
 - **Kubernetes cluster management**
@@ -55,7 +60,11 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
   
 - **Kubernetes cluster management**
   - If on-premises identities are synchronized with Azure AD, use the same identities when using Azure RBAC for cluster management.
+<<<<<<< HEAD:docs/scenarios/hybrid/arc-enabled-kubernetes/identity-access-management.md
   - Create [security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) and map them to the Azure RBAC roles supported by Azure Arc-enabled Kubernetes to simplify access management. Assign permissions to these security groups at the resource group or subscription level depending on the resource organization and governance requirements. Please refer to the [Resource Organization critical design area](./resource-organization.md) for guidance.
+=======
+  - Create [security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) and map them to the Azure RBAC roles supported by Azure Arc-enabled Kubernetes to simplify access management. Assign permissions to these security groups at the resource group or subscription level depending on the resource organization and governance requirements. Please refer [Resource Organization CDA](./eslz-arc-kubernetes-resource-organization.md) for guidance.
+>>>>>>> eadf9c4e48555a968c3f9af6fc59bee01e31416d:docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md
   
   > [!NOTE]
   > Azure Arc-enabled Kubernetes do not support users with more than 200 security group memberships and will receive an authentication error.
@@ -86,7 +95,7 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - Review [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
 - Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
 - Review [common conditional access policies](/azure/active-directory/conditional-access/plan-conditional-access) to apply when using Azure RBAC for Azure Arc-enabled Kubernetes cluster.
-- [Resource organization](./resource-organization.md) to plan and apply governance and security using Azure RBAC.
+- [Resource organization](./eslz-arc-kubernetes-resource-organization.md) to plan and apply governance and security using Azure RBAC.
 - [Integrate Azure AD with Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/azure-rbac).
 - [Access your cluster securely](/azure/azure-arc/kubernetes/conceptual-cluster-connect) from anywhere using Cluster connect.
 - [Azure Landing Zones - Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).

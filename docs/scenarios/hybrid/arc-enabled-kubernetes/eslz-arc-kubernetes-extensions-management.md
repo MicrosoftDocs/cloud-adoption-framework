@@ -22,7 +22,7 @@ Conceptually, extensions for Azure Arc-enabled Kubernetes can be thought of as t
 
 the following image illustrates the overall integration for extensions for Azure Arc-enabled Kubernetes clusters.
 
-![Cluster Extension Diagram](./media/arc-enabled-kubernetes-cluster-extensions.png)
+[ ![A diagram showing cluster extension](./media/arc-enabled-kubernetes-cluster-extensions.png)](./media/arc-enabled-kubernetes-cluster-extensions.png#lightbox)
 
 ## Design Considerations
 

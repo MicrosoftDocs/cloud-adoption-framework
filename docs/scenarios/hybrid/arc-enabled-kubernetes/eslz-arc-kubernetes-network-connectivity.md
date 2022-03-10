@@ -20,11 +20,11 @@ This document explains network architecture to support these connectivity modes,
 
 The following is an Azure Arc-enabled Kubernetes network architecture diagram to support fully connected and semi-connected network connectivity modes.
 
-![Arc-enabled Kubernetes Network Architecture](./media/arc-enabled-kubernetes-network.png)
+[ ![A diagram showing Azure Arc-enabled Kubernetes network architecture](./media/arc-enabled-kubernetes-network.png)](./media/arc-enabled-kubernetes-network.png#lightbox)
 
 The following is a network architecture diagram that supports cluster access from any network location using [Azure Arc-enabled Kubernetes Cluster Connect capability](/azure/azure-arc/kubernetes/conceptual-cluster-connect) feature.
 
-![Arc-enabled Kubernetes Cluster Connect Network Architecture](./media/arc-enabled-kubernetes-cluster-connect-network.png)
+[ ![A diagram showing Azure Arc-enabled Kubernetes Cluster Connect network architecture](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
 
 ## Design considerations
 
@@ -33,7 +33,7 @@ The following is a network architecture diagram that supports cluster access fro
 - Consider the trade-offs between the organization's security and compliance requirements versus Azure Arc-enabled Kubernetes benefits that offer to the organizations, decide between [fully connected vs semi-connected mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes).
 - Decide between public or private endpoints to connect to [Azure Log Analytics](/azure/azure-monitor/logs/private-link-design) workspaces through ExpressRoute or VPN versus internet connectivity.
 - Decide between public or private endpoints to connect to [Azure Key Vaults](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) through ExpressRoute or VPN versus internet connectivity.
-- Decide between the network connectivity options for Azure Arc-enabled Kubernetes cluster management as Azure Arc-enabled Kubernetes cluster supports [cluster management from any network](/azure/azure-arc/kubernetes/conceptual-cluster-connect). Refer [Identity and Access Management](./identity-access-management.md) for design considerations and recommendations when deciding the network independent cluster management.
+- Decide between the network connectivity options for Azure Arc-enabled Kubernetes cluster management as Azure Arc-enabled Kubernetes cluster supports [cluster management from any network](/azure/azure-arc/kubernetes/conceptual-cluster-connect). Refer [Identity and Access Management](./eslz-arc-kubernetes-identity-access-management.md) for design considerations and recommendations when deciding the network independent cluster management.
 - Consider managing Azure Arc-enabled Kubernetes cluster securely using [Cluster Connect capability to access anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) by eliminating opening inbound network ports and allowing only outbound communication to Azure Arc services in Azure.
 - When using on-premises or multicloud [firewalls or proxy servers for TLS inspection](/azure/firewall/premium-features#tls-inspection) outbound traffic, acting as network intrusion detection and prevention system (IDPS), decide whether to exempt Azure Arc-enabled Kubernetes endpoints as some of the server certificates could not have been trusted by these firewalls or proxy servers.
 
@@ -59,7 +59,7 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - [Data exchanged between Azure Arc-enabled Kubernetes cluster and Azure](/azure/azure-arc/kubernetes/conceptual-data-exchange).
 - [Apply configurations at-scale using Azure Policy](/azure/azure-arc/kubernetes/use-azure-policy).
 - [Azure Resource Graph sample queries for Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/resource-graph-samples?tabs=azure-cli).
-- Understand [Azure Arc-enabled Open Service Mesh](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) to secure Azure Arc-enabled Kubernetes cluster communication and [services observability](./services-observability.md) critical design area.
+- Understand [Azure Arc-enabled Open Service Mesh](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) to secure Azure Arc-enabled Kubernetes cluster communication and [services observability](./eslz-arc-kubernetes-services-observability.md) critical design area.
 - [Access Azure Arc-enabled Kubernetes cluster from anywhere using Cluster Connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect).
 - Experience Azure Arc-enabled Kubernetes automated scenarios with the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).

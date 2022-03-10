@@ -16,11 +16,15 @@ Resource organization is all about preparing your environment and organizing you
 
 ## Resource consistency and organization
 
+<<<<<<< HEAD:docs/scenarios/hybrid/arc-enabled-kubernetes/resource-organization.md
 Review the [resource organization design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org) of the Azure landing zones to assess the impact of Azure Arc-enabled Kubernetes on your overall resource organization model.
 
 Before onboarding any Kubernetes cluster onto Azure Arc, it is important to define a structure on how these resources will be projected to Azure management scopes (management groups, subscriptions, and resource groups). This mapping is key, as it will determine how you will be able to interact with these resources when applying [role-based access control (RBAC)](./identity-access-management.md) roles and while assigning Azure policies as part of your governance model. Review the Cloud Adoption Framework recommendations on how to [organize resources](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org).
+=======
+Before onboarding any Kubernetes cluster onto Azure Arc, it is important to define a structure on how these resources will be projected to Azure management scopes (management groups, subscriptions, and resource groups). This mapping is key, as it will determine how you will be able to interact with these resources when applying [role-based access control (RBAC)](./eslz-arc-kubernetes-identity-access-management.md) roles and while assigning Azure policies as part of your governance model. Review the Cloud Adoption Framework recommendations on how to [organize resources](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy).
+>>>>>>> eadf9c4e48555a968c3f9af6fc59bee01e31416d:docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md
 
-When designing this structure, be aware of [Azure Resource Manager service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits), as they are also applicable to Azure Arc-enabled Kubernetes. It is important to plan for the number of clusters to be connected to a specific [resource group](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) or [subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-kubernetes-service-limits).
+When designing this structure, be aware of [Azure Resource Manager service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits), as they are also applicable to Azure Arc-enabled Kubernetes and check operations and management service's limits. It is important to plan for the number of clusters to be connected to a specific [resource group](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) or [subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-kubernetes-service-limits).
 
 After you have created a taxonomy structure and agreed on naming standards, it is recommended to apply necessary [tags](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging) to the Azure Arc-enabled Kubernetes resources. Resource tags provide the ability to add metadata to a resource to quickly locate it and automate operational tasks, which is important to your day-to-day operations.
 
@@ -30,7 +34,7 @@ After clusters are onboarded to resource groups and tags have been added, you ca
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled Kubernetes:
 
-![A diagram depicting resource tagging for Azure Arc-enabled kubernetes](./media/arc-enabled-kubernetes-resource-tagging.png)
+[ ![A diagram depicting resource tagging for Azure Arc-enabled kubernetes](./media/arc-enabled-kubernetes-resource-tagging.png)](./media/arc-enabled-kubernetes-resource-tagging.png#lightbox)
 
 ## Next steps
 
