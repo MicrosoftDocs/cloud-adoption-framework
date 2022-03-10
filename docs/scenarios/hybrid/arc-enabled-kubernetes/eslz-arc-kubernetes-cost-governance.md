@@ -67,21 +67,13 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 
 ### Governance
 
-<<<<<<< HEAD:docs/scenarios/hybrid/arc-enabled-kubernetes/cost-governance.md
 - Review the recommendations in the [resource organization](./resource-organization.md) and [governance disciplines](./governance-disciplines.md) critical design area to implement a governance strategy, organize your resources for better cost control and visibility and use least privilege access model for onboarding and management to avoid unnecessary costs.
-=======
-- Review the recommendations in the [resource organization](./eslz-arc-kubernetes-resource-organization.md) and [governance disciplines](./eslz-arc-kubernetes-governance-disciplines.md) critical design area to implement a governance strategy and organize your resources for better cost control and visibility.
-- Ensure that all Azure Arc-enabled Kubernetes clusters follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
-- Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only authorized users who will onboard Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
-- Use least privilege RBAC by assigning built-in roles to authorized users managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs. Review recommendations for [Identity and access management](./eslz-arc-kubernetes-identity-access-management.md).
->>>>>>> eadf9c4e48555a968c3f9af6fc59bee01e31416d:docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
-
 ### Azure Monitor for Containers
 
 - Review the [Management and monitoring critical design area](./eslz-arc-kubernetes-management-disciplines.md) to plan your monitoring strategy and decide on your requirements for monitoring Azure Arc-enabled Kubernetes clusters to optimize your monitoring costs.
 - Review [Azure Monitor for Containers pricing](https://azure.microsoft.com/pricing/details/monitor/).
 - Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled Kubernetes monitoring costs for Azure Log Analytics ingestion, alerts, and notifications.
-  
+
 [ ![A screenshot showing Azure Pricing Calculator](./media/arc-enabled-kubernetes-cost-pricing-calculator.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator.png#lightbox)
 
 [ ![A screenshot showing Azure Pricing Calculator AZMon](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png#lightbox)
