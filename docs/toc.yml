@@ -822,11 +822,8 @@ items:
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
-        - name: Power Platform adoption
+        - name: Adopt low-code application platform
           href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Power Platform automation adoption
-          href: /power-platform/guidance/automation-coe/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
       - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
 
@@ -1042,7 +1039,7 @@ items:
             - name: Create a workflow with Power Automate
               href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Automate tasks with robotic process automation (RPA)
-              href: /power-automate/desktop-flows/introduction
+              href: /power-automate/desktop-flows/introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Plan a Power Automate project
               href: /power-automate/guidance/planning/introduction
           - name: Intelligent experiences
@@ -1073,8 +1070,8 @@ items:
                 href: /azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Visual search from an image
                 href: /azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Intelligent low-code apps with AI Builder
-                href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Intelligent low-code apps
+                href: /ai-builder/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Chatbots
                 items:
                 - name: Choose the right chatbot solution
