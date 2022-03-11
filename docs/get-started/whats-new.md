@@ -30,6 +30,7 @@ This update provides guidance to help you prepare for adoption of low-code devel
 - [Intelligent low-code apps](/powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Securing Power Platform](/power-platform/admin/security/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 
+This is the first set of content in our plan to include Power Platform in the Cloud Adoption Framework.
 
 ### Independent software vendor (ISV) considerations for Azure landing zones
 
