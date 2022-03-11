@@ -21,7 +21,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 ## March 2022
 
 ### Low-code application platform guidance
-This update provides guidance to help you prepare for adoption of low-code development with Power Platform.
+This update provides guidance to help you prepare for adoption of low-code development. We've added content that includes best practices for adopting and securing Power Platform.
 
 - [Power Platform adoption best practices](/power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Power Apps overview](/powerapps/guidance/patterns/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
