@@ -18,9 +18,9 @@ Familiarize yourself with these principles to better understand their impact and
 
 ### Subscription democratization
 
-Subscriptions should be used as a unit of management and scale aligned with business needs and priorities to support business areas and portfolio owners to accelerate application migrations and new application development. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of workloads. 
+Subscriptions can be used as a unit of management and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of existing workloads. 
 
-Together alongside a suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md) subscription can be managed and organized efficiently to enable the organization to operate effectively at scale.
+To enable the organization to operate effectively at scale, support a subscription with suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This will allow the subscription to be managed and organized efficiently.
 
 ### Policy-driven governance
 
