@@ -59,6 +59,7 @@ This guidance affects the business, technology, and culture of enterprises. The 
 - IT governance
 - Workload development owners
 - Workload operations owners
+- Business subject matter experts
 
 Each role uses its own vocabulary, and each has different goals and key performance indicators. A single set of content can't address all audiences effectively.
 
