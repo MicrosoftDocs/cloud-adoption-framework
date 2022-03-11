@@ -27,7 +27,7 @@ For this article, assume all inventions that result in an application stem from 
 
 Based on these assumptions, the following three paths are the most common for cloud adoption teams who are developing digital inventions:
 
-- **Citizen developers:** Before engaging professional developers, business subject matter experts use citizen developer tools. These tools rapidly test and validate that a customer hypothesis can meet the needs of that customer.
+- **Low-code application platform:** Empower business subject matter experts to create apps and automate business processes with visual tools that don't require professional developer skills.
 - **Intelligent experiences:** Create modern experiences by using cloud platforms to drive rapid deployment and short feedback loops. Expand on web applications to infuse intelligence or even integrate bots.
 - **Cloud-native:** Build a new invention that naturally takes advantage of cloud capabilities.
 
