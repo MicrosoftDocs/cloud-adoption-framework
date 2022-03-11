@@ -823,9 +823,9 @@ items:
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
         - name: Power Platform adoption
-          href: /power-platform/guidance/adoption/methodology
+          href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Power Platform automation adoption
-          href: /power-platform/guidance/automation-coe/overview
+          href: /power-platform/guidance/automation-coe/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
       - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
@@ -1011,7 +1011,7 @@ items:
           items:
           - name: Overview
             href: innovate/best-practices/apps.md
-          - name: Low-code platform
+          - name: Low-code application platform
             items:
             - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json

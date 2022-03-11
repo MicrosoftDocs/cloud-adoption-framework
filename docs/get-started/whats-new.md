@@ -20,6 +20,10 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## March 2022
 
+### Low-code application platform guidance
+We've added guidance for adoption of low-code application platform, including migration best practices for [Power Platform](/power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) and [Power Platform automation](/power-platform/guidance/automation-coe/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+
+
 ### Independent software vendor (ISV) considerations for Azure landing zones
 
 The new [ISV considerations for Azure landing zones](../ready/landing-zone/isv-landing-zone.md) article describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
