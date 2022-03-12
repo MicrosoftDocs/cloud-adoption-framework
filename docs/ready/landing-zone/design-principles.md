@@ -62,9 +62,9 @@ Focus on application-centric migrations and development rather than pure infrast
 
 #### Impact of deviation
 
-**Increased operational and management overheads**&mdash;Segmenting workloads in a way that differs from the implementation options for management group hierarchy, can create a complex policy and access control structure to govern your environment. For example deviation from the organizational hierarchy structure or grouping by Azure service.
+- **Increased complexity in governance policies**&mdash;Segmenting workloads in a way that differs from the implementation options for management group hierarchy, can create a complex policy and access control structure to govern your environment. For example deviation from the organizational hierarchy structure or grouping by Azure service.
 
-This trade off introduces the risk of unintentional policy duplication and thereby exceptions, which add to operational and management overheads.
+- **Increased operational overhead**&mdash;This trade off introduces the risk of unintentional policy duplication and thereby exceptions, which add to operational and management overheads.
 
 Dev/Test/Production is another common approach considered by customers, you can read more on this in the FAQ question here: [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
 
@@ -74,6 +74,7 @@ Dev/Test/Production is another common approach considered by customers, you can 
 Leverage Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and the Azure landing zone conceptual trajectory.
 
 #### Impact of deviation
+
 **Increased complexity in integration**&mdash;Introducing third-party solutions into your Azure environment, can create a dependency upon that solution to provide feature support and integration with Azure first party services. 
 
 Sometimes bringing existing third-party solution investments into an environment is inevitable. Consider this principle and its tradeoffs carefully in alignment with your requirements. 
