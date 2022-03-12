@@ -16,35 +16,34 @@ The Azure landing zone conceptual architecture is universally applied to any Azu
 
 Familiarize yourself with these principles to better understand their impact and the trade-offs associated with deviation. Decisions made during the review of each design area may need to be adjusted slightly to adhere to these design principles. Each design principle includes one or more examples of how that principle could impact your design area decisions.
 
-> [!IMPORTANT]
-> **Impact of design deviations** 
+> [!IMPORTANT] **impact of design deviations** 
 > There might be valid reasons to deviate from the principles. For example, organizational requirements might dictate specific outcomes or approaches to how an Azure environment is designed. In such cases, it's important to understand the impact the deviation will have on the design and future operations. Carefully consider the trade offs outlined for each principle.
 
 As a general rule, be prepared to balance requirements and functionality because your journey to the  conceptual architecture will evolve over time as requirements change and you learn from your implementation. For example, utilizing preview services and taking dependencies on service roadmaps can remove technical blockers during adoption.
 
-### Subscription democratization
+## Subscription democratization
 
 Utlilize subscriptions as a unit of management and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of existing workloads. 
 
 To enable the organization to operate effectively at scale, support a subscription with suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This will allow the subscription to be managed and organized efficiently.
 
 #### Impact of design deviations
-- One approach for implementing this principle is to transition operations to business units and workload teams. This allows workload owners to have more control and autonomy of their workloads within the guardrails established by platform foundation. Customers who require central operations and do not wish to delegate control of production environments to workload teams or business units, might need to make modifications to their [resource organization](./../landing-zone/design-area/resource-org.md) design to deviate from this principle.
-- This assumes a specific management group and subscription hierarchy for all operations management subscriptions, which might not align with your operating model. However, as your organization grows and evolves, your operational model might change, which can lead to a migration of resources into separate subscriptions again, which can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before committing to an approach.
+- **Decentralized operations**&mdash;One approach for implementing this principle is to transition operations to business units and workload teams. This allows workload owners to have more control and autonomy of their workloads within the guardrails established by platform foundation. Customers who require central operations and do not wish to delegate control of production environments to workload teams or business units, might need to make modifications to their [resource organization](./../landing-zone/design-area/resource-org.md) design to deviate from this principle.
+- **Misalignment with the operating model**&mdash;This assumes a specific management group and subscription hierarchy for all operations management subscriptions, which might not align with your operating model. However, as your organization grows and evolves, your operational model might change, which can lead to a migration of resources into separate subscriptions again, which can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before committing to an approach.
 
-### Policy-driven governance
+## Policy-driven governance
 
 Use Azure Policy to provide guardrails and ensure continued compliance with your organization's platform and the applications deployed onto it. Azure Policy also provides application owners with independence and a secure, unhindered path to the cloud.
 
-### Single control and management plane
+## Single control and management plane
 
 Avoid dependency on abstraction layers, such as customer-developed portals or tooling. Having a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams) is highly recommended. Azure provides a unified and consistent control plane, across all Azure resources and provisioning channels, which is subject to role-based access and policy-driven controls. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
 
-### Application-centric and archetype-neutral
+## Application-centric and archetype-neutral
 
 Focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. The design choices shouldn't differentiate between old and new applications, infrastructure as a service (IaaS), or platform as a service (PaaS) applications. Strive to provide a safe and secure foundation for all application types to be deployed onto your Azure platform.
 
-### Align Azure-native design and roadmaps
+## Align Azure-native design and roadmaps
 
 Leverage Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and The Azure landing zone conceptual trajectory.
 
