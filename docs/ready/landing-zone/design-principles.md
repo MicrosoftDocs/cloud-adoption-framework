@@ -16,11 +16,21 @@ The Azure landing zone conceptual architecture is universally applied to any Azu
 
 Familiarize yourself with these principles to better understand their impact and the trade-offs associated with deviation. Decisions made during the review of each design area may need to be adjusted slightly to adhere to these design principles. Each design principle includes one or more examples of how that principle could impact your design area decisions.
 
+> [!IMPORTANT]
+> **Impact of design deviations** 
+> There might be valid reasons to deviate from the principles. For example, organizational requirements might dictate specific outcomes or approaches to how an Azure environment is designed. In such cases, it's important to understand the impact the deviation will have on the design and future operations. Carefully consider the trade offs outlined for each principle.
+
+As a general rule, be prepared to balance requirements and functionality because your journey to the  conceptual architecture will evolve over time as requirements change and you learn from your implementation. For example, utilizing preview services and taking dependencies on service roadmaps can remove technical blockers during adoption.
+
 ### Subscription democratization
 
-Subscriptions can be used as a unit of management and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of existing workloads. 
+Utlilize subscriptions as a unit of management and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of existing workloads. 
 
 To enable the organization to operate effectively at scale, support a subscription with suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This will allow the subscription to be managed and organized efficiently.
+
+#### Impact of design deviations
+- One approach for implementing this principle is to transition operations to business units and workload teams. This allows workload owners to have more control and autonomy of their workloads within the guardrails established by platform foundation. Customers who require central operations and do not wish to delegate control of production environments to workload teams or business units, might need to make modifications to their [resource organization](./../landing-zone/design-area/resource-org.md) design to deviate from this principle.
+- This assumes a specific management group and subscription hierarchy for all operations management subscriptions, which might not align with your operating model. However, as your organization grows and evolves, your operational model might change, which can lead to a migration of resources into separate subscriptions again, which can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before committing to an approach.
 
 ### Policy-driven governance
 
@@ -36,14 +46,14 @@ Focus on application-centric migrations and development rather than pure infrast
 
 ### Align Azure-native design and roadmaps
 
-The Azure landing zone conceptual architecture approach advocates using Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and The Azure landing zone conceptual trajectory.
+Leverage Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and The Azure landing zone conceptual trajectory.
 
-Impact of design deviations
+## Impact of design deviations
 You might identify valid reasons why you need to deviate from the principles outlined above. It's important to first understand the impact that this will have on the design and future operations.
 
 For example, organizational requirements might dictate specific outcomes or approaches to how an Azure environment is designed.
 
-By choosing to deviate from the design principles above, organizations should consider the trade offs outlined below.
+By choosing to deviate from the design principles, organizations should consider the trade offs outlined below.
 
 Be prepared to balance requirements and functionality because your journey to the Azure Landing Zone conceptual architecture will evolve over time as requirements change and you learn from your implementation. It is unlikely that everything will be required on day one so use the design principals as a compass for your Azure Landing Zones journey.
 
