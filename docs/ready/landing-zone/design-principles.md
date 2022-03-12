@@ -27,12 +27,12 @@ As a general rule, be prepared to balance requirements and functionality because
 
 ## Subscription democratization
 
-Utlilize subscriptions as a unit of management and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of existing workloads. 
+Utilize subscriptions as a unit of management and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of existing workloads. 
 
 To enable the organization to operate effectively at scale, support a subscription with suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This will allow the subscription to be managed and organized efficiently.
 
 #### Impact of deviation
-- **Decentralized operations**&mdash;One approach for implementing this principle is to transition operations to business units and workload teams. This allows workload owners to have more control and autonomy of their workloads within the guardrails established by platform foundation. Customers who require central operations and do not wish to delegate control of production environments to workload teams or business units, might need to make modifications to their [resource organization](./../landing-zone/design-area/resource-org.md) design to deviate from this principle.
+- **Decentralized operations**&mdash;One approach for implementing this principle is to transition operations to business units and workload teams. This allows workload owners to have more control and autonomy of their workloads within the guardrails established by platform foundation. Customers who require central operations and don't want to delegate control of production environments to workload teams or business units, might need to make modifications to their [resource organization](./../landing-zone/design-area/resource-org.md) design to deviate from this principle.
 - **Misalignment with the operating model**&mdash;This assumes a specific management group and subscription hierarchy for all operations management subscriptions, which might not align with your operating model. However, as your organization grows and evolves, your operational model might change, which can lead to a migration of resources into separate subscriptions again, which can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before committing to an approach.
 
 ## Policy-driven governance
@@ -47,7 +47,7 @@ As part of your design considerations, review [how Azure Policy can be used insi
 
 ## Single control and management plane
 
-Avoid dependency on abstraction layers, such as customer-developed portals or tooling. Having a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams) is highly recommended. Azure provides a unified and consistent control plane, across all Azure resources and provisioning channels, which is subject to role-based access and policy-driven controls. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
+Avoid dependency on abstraction layers, such as customer-developed portals or tooling. Having a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams) is highly recommended. Azure provides a unified and consistent control plane which is subject to role-based access and policy-driven controls. This applies across all Azure resources and provisioning channels. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
 
 #### Impact of deviation
 
@@ -69,7 +69,7 @@ Focus on application-centric migrations and development rather than pure infrast
 Dev/Test/Production is another common approach considered by customers, you can read more on this in the FAQ question here: [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
 
 
-## Align Azure-native design and roadmaps
+## Align with Azure-native design and roadmaps
 
 Leverage Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and the Azure landing zone conceptual trajectory.
 
