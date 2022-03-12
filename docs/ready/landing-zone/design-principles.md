@@ -28,15 +28,26 @@ Use Azure Policy to provide guardrails and ensure continued compliance with your
 
 ### Single control and management plane
 
-The Azure landing zone conceptual architecture shouldn't consider any abstraction layers, such as customer-developed portals or tooling. It should provide a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams). Azure provides a unified and consistent control plane across all Azure resources and provisioning channels subject to role-based access and policy-driven controls. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
+Avoid dependency on abstraction layers, such as customer-developed portals or tooling. Having a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams) is highly recommended. Azure provides a unified and consistent control plane, across all Azure resources and provisioning channels, which is subject to role-based access and policy-driven controls. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
 
 ### Application-centric and archetype-neutral
 
-The Azure landing zone conceptual architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. It shouldn't differentiate between old and new applications, infrastructure as a service (IaaS), or platform as a service (PaaS) applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto your Azure platform.
+Focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. The design choices shouldn't differentiate between old and new applications, infrastructure as a service (IaaS), or platform as a service (PaaS) applications. Strive to provide a safe and secure foundation for all application types to be deployed onto your Azure platform.
 
 ### Align Azure-native design and roadmaps
 
 The Azure landing zone conceptual architecture approach advocates using Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and The Azure landing zone conceptual trajectory.
+
+Impact of design deviations
+You might identify valid reasons why you need to deviate from the principles outlined above. It's important to first understand the impact that this will have on the design and future operations.
+
+For example, organizational requirements might dictate specific outcomes or approaches to how an Azure environment is designed.
+
+By choosing to deviate from the design principles above, organizations should consider the trade offs outlined below.
+
+Be prepared to balance requirements and functionality because your journey to the Azure Landing Zone conceptual architecture will evolve over time as requirements change and you learn from your implementation. It is unlikely that everything will be required on day one so use the design principals as a compass for your Azure Landing Zones journey.
+
+For example, utilizing preview services and taking dependencies on service roadmaps can remove technical blockers during adoption.
 
 | Design Principle | Impacts | 
 | --------------- | ------- |
