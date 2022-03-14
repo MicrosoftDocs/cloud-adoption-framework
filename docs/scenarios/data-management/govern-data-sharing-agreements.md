@@ -31,7 +31,7 @@ Data delivery contracts provide insight into coupling and dependencies between d
 
 When data products become popular and widely used, you need to implement versioning and manage compatibility and deployment. Without these disciplines, reusability can be low and interfaces can break. We recommend documenting contracts for all interfaces. Document message-format schemas, data schemas, transportation types, and their relationship to the applications.
 
-To enable discoverability and reuse, we recommend that you make all contract discoverable. You can use source control to do this. This approach allows domains to automate test routines in their continuous integration and deployment pipelines. Knowing what parts of the interfaces are consumed allows teams to test data to be delivered or exposed. Validating against the structure offers compatibility and stable consumption at large.
+To enable discoverability and reuse, we recommend that you make all contracts discoverable. You can use source control to do this. This approach allows domains to automate test routines in their continuous integration and deployment pipelines. Knowing what parts of the interfaces are consumed allows teams to test data to be delivered or exposed. Validating against the structure offers compatibility and stable consumption at large.
 
 ## Compliance and governance
 
