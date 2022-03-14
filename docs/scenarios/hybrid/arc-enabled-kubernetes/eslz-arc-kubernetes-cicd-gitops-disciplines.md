@@ -39,7 +39,7 @@ The following images show a conceptual reference architecture that highlights th
 
 - GitOps Flow showing an application update
 
-    [ ![A diagram showing GitOps Workflow](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-flow.png#lightbox)
+    [ ![A diagram showing GitOps Workflow](./media/arc-enabled-kubernetes-cicd-gitops-flow.png)](./media/arc-enabled-kubernetes-cicd-gitops-flow.png#lightbox)
 
 ## Design considerations
 
@@ -71,7 +71,7 @@ For your code repositories, you can use any branching strategy you like since it
 
 - Single repository (Branch per environment):
   - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
-  - The drawback is that there will be no sharing of the common config among environments since tooling such as [Kustomize](https://kubernetes-sigs.github.io/kustomize/) does not work with Git branches.
+  - The drawback is that there will be no sharing of the common config among environments since tooling such as [Kustomize](https://kustomize.io/) does not work with Git branches.
 - Single repository (Directory per environment):
   - As an example, this approach can be implemented using Kustomize which allows you to define a base configuration for Kubernetes objects and a set of  (i.e patches) for an environment that overrides configurations in the base.
   - This can reduce duplicating YAML files for each environment but reduces the configuration separation between environments. Making a single change to the repository has the potential to impact all environments at once, so understanding the impact of changes to base directories must be fully understood and taken with care.
@@ -104,7 +104,7 @@ With a GitOps process, to avoid manual configuration modifications to your GitOp
 
 The following is a process flow that contains the traditional application CI process incorporated with changes to support GitOps.
 
-[ ![A diagram showing GitOps process](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-gitops-ci.png#lightbox)
+[ ![A diagram showing GitOps process](./media/arc-enabled-kubernetes-cicd-gitops-ci.png](./media/arc-enabled-kubernetes-cicd-gitops-ci.png#lightbox)
 
 #### Cluster-wide component update process
 
@@ -135,7 +135,7 @@ For all updates to your configuration, to verify changes have been successfully 
 
 The following image is a reference architecture that shows the responsibilities, repositories, and pipelines to implement a GitOps process using the Azure Arc-enabled Kubernetes [Flux Extension](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
 
-[ ![A diagram showing GitOps Reference](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-gitops-flow.png#lightbox)
+[ ![A diagram showing GitOps Reference](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-flow.png#lightbox)
 
 ### Repositories
 
