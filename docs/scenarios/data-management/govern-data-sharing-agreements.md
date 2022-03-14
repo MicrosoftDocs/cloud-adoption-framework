@@ -39,7 +39,7 @@ Data sharing agreements capture usage aspects, such as intended usage, privacy a
 
 Data sharing agreements also prevent miscommunication over data usage. Before data is shared, domains should discuss data sharing and data usage issues. When they reach a collaborative understanding, they should then document that understanding in a data sharing agreement. Contexts between domains typically differ. You might want to apply both classifications and conditions to consistently apply sensitivity labels across your organization. For more information, see [Automatically label your data in Azure Purview](/azure/purview/create-sensitivity-label).
 
-The data consuming side can also apply the process of capturing metadata in source control. You might require users to register and publish the purpose of their data consumption and agree not to distribute data further. This restriction is important not only from a regulatory perspective, but also because it gives the data providers valuable information. It also enables data security enforcement. For example, Azure Synapse Analytics can use metadata to apply dynamic data masking. This approach prevents unauthorized access to sensitive labeled data.
+The data consuming side can also apply the process of capturing metadata in source control. You might require users to register and publish the purpose of their data consumption and agree not to distribute data further. This restriction is important for both regulatory compliance and supplying data providers with valuable information. For example, Azure Synapse Analytics can use metadata to apply dynamic data masking. This approach prevents unauthorized access to sensitive labeled data.
 
 ## Scalability
 
