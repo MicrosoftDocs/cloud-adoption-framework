@@ -2,7 +2,7 @@
 title: Create data management landing zone tutorial
 description: Learn about create data management landing zone tutorial
 author: andrehaas
-ms.author: anhaas
+ms.author: andrehaas
 ms.date: 02/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
