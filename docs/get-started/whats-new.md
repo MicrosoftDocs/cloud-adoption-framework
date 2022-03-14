@@ -20,6 +20,18 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## March 2022
 
+### Low-code application platform guidance
+This update provides guidance to help you prepare for adoption of low-code development. We've added content that includes best practices for adopting and securing Power Platform.
+
+- [Power Platform adoption best practices](/power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [Power Apps overview](/powerapps/guidance/patterns/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [Power Automate workflows](/power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [Automate tasks with robotic process automation](/power-automate/desktop-flows/introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [Intelligent low-code apps](/powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [Securing Power Platform](/power-platform/admin/security/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+
+This is the first set of content in our plan to include Power Platform in the Cloud Adoption Framework.
+
 ### Independent software vendor (ISV) considerations for Azure landing zones
 
 The new [ISV considerations for Azure landing zones](../ready/landing-zone/isv-landing-zone.md) article describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
