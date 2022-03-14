@@ -104,7 +104,7 @@ With a GitOps process, to avoid manual configuration modifications to your GitOp
 
 The following is a process flow that contains the traditional application CI process incorporated with changes to support GitOps.
 
-[ ![A diagram showing GitOps process](./media/arc-enabled-kubernetes-cicd-gitops-ci.png](./media/arc-enabled-kubernetes-cicd-gitops-ci.png#lightbox)
+[ ![A diagram showing GitOps process](./media/arc-enabled-kubernetes-cicd-gitops-ci.png)](./media/arc-enabled-kubernetes-cicd-gitops-ci.png#lightbox)
 
 #### Cluster-wide component update process
 
