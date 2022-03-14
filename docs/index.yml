@@ -48,7 +48,7 @@ highlightedContent:
 
 productDirectory:
   title: Cloud Adoption Framework guidance # < 60 chars (optional)
-  summary: Find guidance for each of your cloud adoption journey. # < 160 chars (optional)
+  summary: Find guidance for each phase of your cloud adoption journey. # < 160 chars (optional)
   items:
 
     # Card
