@@ -77,7 +77,7 @@ This section includes many reference templates that can be deployed.
 
 For more information, see [Deployment templates](./architectures/deployment-templates.md).
 
-### Solution accelerators
+## Solution accelerators
 
 Solution Accelerators are open-source projects on GitHub. They're repositories of resources and information that simplify and accelerate how problems are solved through the implementation of technology.
 
