@@ -1,6 +1,6 @@
 ---
-title: Data management and analytics architecture overview in Azure
-description: Learn about Data management and analytics architecture overview in Azure
+title: Cloud-scale analytics architecture overview in Azure
+description: Learn about Cloud-scale analytics architecture overview in Azure
 author: mboswell
 ms.author: mboswell
 ms.date: 02/10/2022
