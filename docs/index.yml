@@ -27,7 +27,7 @@ highlightedContent:
     # Card
     - title: Explore scenarios 
       itemType: overview
-      url: ./scenarios/index.md
+      url: ./scenarios/overview.md
 
     # Card
     - title: Get tools and templates
