@@ -60,7 +60,7 @@ The **Data management landing zone** is a subscription that governs the platform
 - [Data privacy for cloud-scale analytics in Azure](secure-data-privacy.md)
 - [Provision security for cloud-scale analytics in Azure](security-provisioning.md)
 
-For more information, see [Overview of the Azure cloud-scale analytics data management landing zone](architectures/data-management-landing-zone.md).
+For more information, see [Overview of the cloud-scale analytics data management landing zone](architectures/data-management-landing-zone.md).
 
 ## Data landing zone
 

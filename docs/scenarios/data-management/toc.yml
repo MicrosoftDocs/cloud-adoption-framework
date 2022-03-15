@@ -194,11 +194,7 @@ items:
       - name: Azure Databricks implementation
         href: ./best-practices/azure-databricks-implementation.md
       - name: Azure Synapse Analytics implementation
-        items:
-        - name: Implementation
-          href: ./best-practices/azure-synapse-analytics-implementation.md
-        - name: High availability for Azure Synapse Analytics
-          href: ../../migrate/azure-best-practices/analytics/azure-synapse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        href: ./best-practices/azure-synapse-analytics-implementation.md
       - name: Azure Purview implementation
         items:
         - name: Readiness checklist

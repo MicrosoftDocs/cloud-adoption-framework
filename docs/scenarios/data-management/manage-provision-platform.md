@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Provision the Azure cloud-scale analytics
+# Provision the cloud-scale analytics
 
 ## Data management landing zone deployment process
 
