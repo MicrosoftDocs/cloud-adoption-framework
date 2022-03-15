@@ -19,19 +19,19 @@ Cloud-scale analytics covers technical and non-technical considerations for anal
 - Serve data as a product rather than a byproduct.
 - Provide an ecosystem of data products instead of a singular data warehouse that might not best fit the data scenario.
 - Drive a default approach to enforce data governance and security.
-- Drive teams to consistently prioritize business outcomes instead of focussing just on the underlying technology.
+- Drive teams to consistently prioritize business outcomes instead of focusing just on the underlying technology.
 
-It builds upon Microsoft's cloud adoption framework and requires understanding of landing zones. [What is a landing zone?](../../ready/landing-zone/index.md). If you do not have an implementation of Azure landing zones, then it is important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
+It builds upon Microsoft's cloud adoption framework and requires understanding of landing zones. [What is a landing zone?](../../ready/landing-zone/index.md). If you don't have an implementation of Azure landing zones, then it's important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
 Reference architectures allow you to start with a small footprint and grow over time, adapting the scenario to your use cases.
 
 Cloud-scale analytics includes repeatable templates to accelerate five core infrastructure and resource deployments.
 
-Cloud-scale analytics is adaptable for the size of your business so that if you are a small enterprise with limited staff, then having a centralized operations model mixed with some business subject matter experts might fit your business. However, if you're a large multinational enterprise with the goal of autonomous business units (with their own data engineers and analysts), a distributed operating model like data mesh or data fabric might fit your business better.
+Cloud-scale analytics is adaptable for the size of your business so that if you're a small enterprise with limited staff, then having a centralized operations model mixed with some business subject matter experts might fit your business. However, if you're a large multinational enterprise with the goal of autonomous business units (with their own data engineers and analysts), a distributed operating model like data mesh or data fabric might fit your business better.
 
 ## Objectives
 
-Cloud-scale analytics provides a framework built on the following principles to address challenges with complex data architectures that do not scale to the needs of businesses:
+Cloud-scale analytics provides a framework built on the following principles to address challenges with complex data architectures that don't scale to the needs of businesses:
 
 | Principle | Description |
 |---------|---------|
@@ -44,31 +44,31 @@ Cloud-scale analytics provides a framework built on the following principles to 
 
 ## Implementation guidance
 
-Implementation guidance can be broken into two sections, those guidance set such as Cloud Adoption Framework and Azure Well-Architected Framework which apply to all workload and then the documentation which specific to cloud-scale analytics.
+Implementation guidance can be broken into two sections, guidance such as Cloud Adoption Framework and Azure Well-Architected Framework, apply to all workloads and then the documentation, which is specific to cloud-scale analytics.
 
 ### Global guidance
 
 |Documentation  |Description  |
 |---------|---------|
 | [Cloud Adoption Framework](/azure/cloud-adoption-framework) |Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.         |
-| [Azure Well-Architected Framework](./well-architected-framework.md) |Workload architecture and operations have a direct affect on data. Understand how your architecture can improve management and governance of the data used by your workload.         |
+| [Azure Well-Architected Framework](./well-architected-framework.md) |Workload architecture and operations have a direct effect on data. Understand how your architecture can improve management and governance of the data used by your workload.         |
 
-## Cloud-scale specific guidance
+### Cloud-scale specific guidance
 
 [!INCLUDE [documentation-sections](includes/documentation-sections.md)]
 
 ## Architectures
 
-This section focuses on the details of a physical implementation of cloud-scale analytics. It maps out the physical architectures of data management landing zone and data landing zone..
+This section focuses on the details of a physical implementation of cloud-scale analytics. It maps out the physical architectures of data management landing zone and data landing zone.
 
-Cloud-scale analytics uses two key architectural concepts: The *Data management landing zone* and the *data landing zones*. These architectures help accelerate deployment for many common cloud-scale analytics solutions by standardizing best practice and minimizing deployment bottlenecks for development teams. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform which can scale according to your requirements.
+Cloud-scale analytics uses two key architectural concepts: The *Data management landing zone* and the *data landing zones*. These architectures help accelerate deployment for many common cloud-scale analytics solutions by standardizing best practice and minimizing deployment bottlenecks for development teams. The guidance can be adopted for lakehouse and data mesh architectures. It highlights the capabilities required for a well-governed analytics platform that can scale according to your requirements.
 
 The following diagram is an overview of a data platform with a central data management landing zone and multiple data landing zones. You can start with a single landing zone and scale to multiple landing zones, which are all governed from the data management landing zone.
 :::image type="content" source="./images/data-landing-zone-index.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones.":::
 
 For more information, see: [Architectures Overview](architectures/overview-architectures.md)
 
-### Deployment templates
+## Deployment templates
 
 This section includes many reference templates that can be deployed.
 
@@ -78,7 +78,7 @@ For more information, see [Deployment templates](./architectures/deployment-temp
 
 ### Solution accelerators
 
-Solution Accelerators are open-source projects on GitHub. They are repositories of resources and information that simplify and accelerate how problems are solved through the implementation of technology.
+Solution Accelerators are open-source projects on GitHub. They're repositories of resources and information that simplify and accelerate how problems are solved through the implementation of technology.
 
 For more information, see [Solution Accelerators](architectures/solution-accelerators.md).
 
