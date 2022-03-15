@@ -12,10 +12,10 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure Purview deployment best practices for cloud-scale analytics
 
-The [Data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the data management and analytics scenario platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide most data management capabilities.
+The [Data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the cloud-scale analytics platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide most data management capabilities.
 
 > [!NOTE]
-> This guidance in this section explains configurations specific to data management and analytics scenario. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
+> This guidance in this section explains configurations specific to cloud-scale analytics. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
 
 ## Overview
 
@@ -199,7 +199,7 @@ For more information about Azure Purview roles, see [Access control in Azure Pur
 
 ### Recommended Azure Purview roles
 
-Review the following list of [personas](../organize-roles-and-teams.md) involved in an data management and analytics scenario deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the deployment:
+Review the following list of [personas](../organize-roles-and-teams.md) involved in an cloud-scale analytics deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the deployment:
 
 | Persona | Role | Recommended Azure Purview role |
 |---|---|---|

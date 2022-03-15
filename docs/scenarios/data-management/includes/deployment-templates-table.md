@@ -15,7 +15,6 @@ ms.custom: e2e-data-management, think-tank
 |[Data integration template - batch processing](https://github.com/Azure/data-product-batch) | Additional services required for batch data processing | No | One or more per data landing zone |
 |[Data integration template - stream processing](https://github.com/Azure/data-product-streaming) | Additional services required for processing data streams | No | One or more per data landing zone |
 |[Data product template - analytics and data science](https://github.com/Azure/data-product-analytics)| Additional services required for data analytics and AI| No | One or more per data landing zone |
-| | |
 
 These templates contain not only Azure Resource Manager templates and their parameter files, but also CI/CD pipeline definitions for resource deployment.
 
