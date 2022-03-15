@@ -28,7 +28,7 @@ The following resources can help you stay current with Azure:
 
 For deeper content that helps you stay current with Azure topics, review these resources:
 
-- [Azure Friday](https://channel9.msdn.com/shows/Azure-Friday): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights. Subscribe via the [Azure Friday RSS feed](https://s.ch9.ms/Shows/Azure-Friday/feed).
+- [Azure Friday](https://channel9.msdn.com/shows/Azure-Friday): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights. Subscribe via the [Azure Friday RSS feed](/shows/azure-friday/).
 - [`Azure Charts`](https://azurecharts.com): This visualization shows all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes. \*
 - [`AzAdvertizer`](https://www.azadvertizer.net): Release and change tracking on Azure governance capabilities such as Azure Policy, policy initiatives, policy aliases and Azure role-based access control (Azure RBAC). \*
 - [`Azure Weekly`](https://azureweekly.info)*
