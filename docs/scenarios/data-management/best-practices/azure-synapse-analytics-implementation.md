@@ -65,4 +65,4 @@ Refer to [Azure Synapse Analytics data access control](data-lake-access.md#azure
 
 ## Next steps
 
-[High availability for Azure Synapse Analytics](../../migrate/azure-best-practices/analytics/azure-synapse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json)
+- [Azure Purview readiness checklist for cloud-scale analytics](purview-checklist.md)
