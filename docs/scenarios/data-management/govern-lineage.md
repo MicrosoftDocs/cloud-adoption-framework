@@ -25,7 +25,7 @@ In addition to this native lineage reporting, Azure Purview also allows custom l
 :::image type="content" source="./images/data-lineage.png" alt-text="Diagram of data lineage." lightbox="./images/data-lineage.png":::
 
 > [!IMPORTANT]
-> Azure Data Factory andor Azure Synapse pipelines are recommended for ingestion solutions because they enable data lineage in Azure Purview. Alternate ingestion patterns should use Apache Atlas API to update data lineage as part of their data processing.
+> Azure Data Factory and Azure Synapse pipelines are recommended for ingestion solutions because they enable data lineage in Azure Purview. Alternate ingestion patterns should use Apache Atlas API to update data lineage as part of their data processing.
 
 ## Azure Purview data lineage
 
