@@ -20,9 +20,9 @@ You can map the physical data names of discovered master data to your common bus
 
 :::image type="content" source="./images/central-master-data-management.png" alt-text="Diagram that shows central master data management.":::
 
-Once it's been created and centrally stored, master data can be synchronized with all systems that use it to ensure their consistency.
+Once master data has been created and centrally stored,it can be synchronized with all systems that use master data to ensure their consistency.
 
-It's important to govern your master data maintenance. Identify where maintenance takes place, noting which tasks from which business processes are involved. You can use business process identification and create, read, update, or delete (CRUD) analysis to identify the tasks. Once you identify which tasks within a process maintain master data, you then can govern the data. Working out this data governance is often a manual task, but process mining and database log file analysis now aid you in the process.
+It's important to govern your master data maintenance. Identify where maintenance takes place, noting which tasks from which business processes are involved. You can use business process identification and create, read, update, or delete (CRUD) analysis to identify these tasks. Once you identify the tasks that maintain master data, you then are able to govern the data. Working out this data governance is often a manual task, but process mining and database log file analysis can aid you in the process.
 
 ## Master data partner solutions
 
@@ -40,13 +40,13 @@ Other vendors in this space are:
 
 Outside of a purpose-built MDMapplication, some of the technical capabilities needed to build an MDM solution can be found within the Azure ecosystem.
 
-- **Data quality:** You can build data quality into your integration processes when loading to an analytics platform. For example, you can apply data quality transformations in an [Azure Data Factory](https://azure.microsoft.com/services/data-factory/) pipeline using hardcoded scripts.
+- **Data quality:** You can build data quality into your integration processes when loading to an analytics platform. For example, you might apply data quality transformations in an [Azure Data Factory](https://azure.microsoft.com/services/data-factory/) pipeline using hardcoded scripts.
 
 - **Data standardization and enrichment:** [Azure Maps](https://azure.microsoft.com/services/azure-maps/) is available to provide data verification and standardization for address data, which can be used in Azure Functions and/or Azure Data Factory. The standardization of other data might require development of hardcoded scripts.
 
 - **Duplicate data management:** You can use Azure Data Factory to [deduplicate rows](/azure/data-factory/how-to-data-flow-dedupe-nulls-snippets) where sufficient identifiers are available for an exact match. Custom hardcoded scripts are likely required by the logic to merge matched with appropriate survivorship.
 
-- **Data stewardship:** [Power Apps](https://powerapps.microsoft.com/) can be used to quickly develop simple data stewardship solutions for managing data in Azure. The solutions contain appropriate user interfaces for review, workflow, alerts, and validations.
+- **Data stewardship:** [Power Apps](https://powerapps.microsoft.com/) can be used to quickly develop simple data stewardship solutions for managing data in Azure. These solutions contain appropriate user interfaces for review, workflow, alerts, and validations.
 
 ## Next steps
 
