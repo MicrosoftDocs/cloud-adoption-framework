@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Master data management
 
-Master data is data that describes the objects around a business process. Customer, product and other reference data are all master data objects. Master data isn't frequently altered and isn't transactional in nature.
+Master data is data that describes the objects around a business process. Customer, product and other reference data are all master data objects. Master data isn't frequently altered, and though it's used to describe transactions, it isn't transactional in nature.
 
 Master data management (MDM) is central to any data governance program, making the creation of trusted master data critical. You can create master data by defining master data entities in your data catalog's business glossary. Register data sources in your data catalog and search multiple data stores across the distributed data landscape to discover where various master data is located.
 
