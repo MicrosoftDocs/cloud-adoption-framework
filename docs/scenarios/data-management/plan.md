@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Develop a plan for cloud-scale analytics
 
-The Cloud Adoption Framework's [Plan methodology](../../plan/index.md) helps you create an overall cloud adoption plan to guide all programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates that help you create your backlog and plans that help your teams build necessary skills. The backlog and plans you create should be based on what you plan to do in the cloud.
+The Cloud Adoption Framework's [Plan methodology](../../plan/index.md) helps you create an overall cloud adoption plan to guide all programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates to help you create your backlog and plans to help your teams build necessary skills. The backlog and plans you create should be based on what you plan to do in the cloud.
 
 This article provides further guidance for data estate rationalization and skilling plans that is specific to cloud-scale analytics.
 
@@ -32,9 +32,9 @@ In your cloud migration plan, initiatives with small business impacts and lesser
 
 ### Prioritization
 
-To begin prioritizing data projects, complete an [inventory and benchmark of your data estate](../../digital-estate/inventory.md). You can use tools like Azure Migrate to capture rich benchmarking data from the infrastructure and data assets in your estate. This benchmarking data can help you track progress and measure success. It can also help you quantify the exact investment needed for people, process, and technology.
+To begin prioritizing data projects, complete an [inventory and benchmark of your data estate](../../digital-estate/inventory.md). You can use tools like Azure Migrate to capture rich benchmarking data from the infrastructure and data assets in your estate. This benchmarking data helps you track progress and measure success. It can also help you quantify the exact investment needed for people, process, and technology.
 
-A mapping of business impact (from your strategic business outcomes) and technical complexity (from your data estate inventory) can guide your prioritization of data projects. The mapping achieves this by helping you identify waves of your cloud adoption effort. Identifying these waves can guide you as you prioritize data projects. The following table describes these cloud adoption waves in more detail.
+A mapping of business impact (from your strategic business outcomes) and technical complexity (from your data estate inventory) can guide your prioritization of data projects. The mapping achieves this by helping you identify waves of your cloud adoption effort. The waves can guide you as you prioritize data projects. The following table describes these cloud adoption waves in more detail.
 
 | Wave | Rationalization | Outcomes |
 |----------|--------------|---------|
