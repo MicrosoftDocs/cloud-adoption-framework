@@ -20,8 +20,7 @@ This solution is open source. You can adapt the templates to create an architect
 
 AKS landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing AKS landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
-- [Start with Cloud Adoption Framework AKS landing zone accelerator](../../ready/enterprise-scale/index.md)
-- [Implement Cloud Adoption Framework Azure landing zone](../../ready/enterprise-scale/implementation.md)
+- [Implement Cloud Adoption Framework Azure landing zone](../../ready/landing-zone)
 
 ## What AKS landing zone accelerator provides
 
@@ -60,4 +59,4 @@ These templates are used to deploy infrastructure components such as virtual mac
 
 Learn about design considerations for identity and access management in your Azure landing zones.
 
-- [Identity and access management for Azure Kubernetes Service (AKS) landing Zzne accelerator scenario](./eslz-identity-and-access-management.md)
+- [Identity and access management for Azure Kubernetes Service (AKS) landing Zone accelerator scenario](./eslz-identity-and-access-management.md)
