@@ -16,7 +16,7 @@ Master data is data that describes the objects around a business process. Custom
 
 Master data management (MDM) is central to any data governance program, making the creation of trusted master data critical. Create master data by defining master data entities in your data catalog's business glossary. You can register data sources in your data catalog and search multiple data stores across the distributed data landscape to discover where various master data is located.
 
-You can map the physical data names of discovered master data to your common business vocabulary in Azure Purview. You can also clean, match, and integrate the data you discovered across the distributed data landscape. You can then the data to create golden master data records stored in a central MDM system.
+You can map the physical data names of discovered master data to your common business vocabulary in Azure Purview. You can also clean, match, and integrate the data you discovered across the distributed data landscape and use it to create golden master data records stored in a central MDM system.
 
 :::image type="content" source="./images/central-master-data-management.png" alt-text="Diagram that shows central master data management.":::
 
