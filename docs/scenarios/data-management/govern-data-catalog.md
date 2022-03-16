@@ -3,7 +3,7 @@ title: Data catalog
 description: Understand data catalog for data governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/16/2022
+ms.date: 03/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -16,27 +16,25 @@ ms.custom: e2e-data-management, think-tank
 
 ## Data discovery
 
-The data discovery, or catalog, reflects the state of all the data that the enterprise owns. This data is known as the data estate.
-
-The scanning process connects directly to a data source according to a schedule.
+Data discovery reflects the state of all the data that the enterprise owns. This data is known as the data estate. During data discovery, the data estate is scanned and classified. The data scanning process connects directly to the data source according to a set schedule.
 
 As you add a new data landing zone to the environment, the associated data lakes and polyglot persistence sources are registered as sources for the data catalog crawlers to scan.
 
 With automated discovery of your data estate to populate the catalog, you can:
 
 - Crawl metadata from Azure and on-premises data sources
-- Scan your data lakes, blobs, and other supported targets.
-- Extract schema from your data targets for XML, TSV, CSV, PSV, SSV, JSON, Parquet, Avro, and ORC file types.
-- Allow automated catalog updates through configurable scheduling of scans and scan rule sets.
+- Scan your data lakes, blobs, and other supported targets
+- Extract schema from your data targets for XML, TSV, CSV, PSV, SSV, JSON, Parquet, Avro, and ORC file types
+- Allow automated catalog updates through configurable scheduling of scans and scan rule sets
 
 > [!IMPORTANT]
-> When you add a new data landing zone to the environment, register the associated data lakes and Polyglot storage through Azure DevOps as a source for the data catalog crawlers to scan.
+> When you add a new data landing zone to the environment, register the associated data lakes and polyglot storage through Azure DevOps as a source for the data catalog crawlers to scan.
 
 ## Data classification
 
-Azure Purview allows you to apply system or custom classifications on file, table, or column assets.
+Azure Purview allows you to apply system or custom data classifications on file, table, or column assets.
 
-Classifications are like subject tags. They're used to mark and identify content of a specific type found within your data estate during scanning. You use sensitivity labels to identify the categories of classification types within your organizational data. You can also use labels to group the policies you wish to apply to each category. It makes use of the same sensitive information types as Microsoft 365, allowing you to stretch your existing security policies and protections across your entire content and data estate.
+Data classifications are like subject tags. Azure Purview marks and identifies the content of specific data types found within your data estate during scanning. You use sensitivity labels to identify the categories of classification types within your organizational data. You can also use sensitivity labels to group the policies you wish to apply to each category. Azure Purview makes use of the same sensitive information types as Microsoft 365, allowing you to stretch your existing security policies and protections across your entire content and data estate.
 
 Azure Purview can scan and automatically classify documents. For example, if you have a file named `multiple.docx` and it has a national ID number in its content, Azure Purview adds a classification such as `EU National Identification Number` in the asset detail page.
 
