@@ -1,9 +1,9 @@
 ---
 title: Identity and access management considerations for AKS
 description: Describes how to improve identity and access management for the Azure Kubernetes Service.
-author: TomGeske
-ms.author: thomasge
-ms.date: 04/23/2021
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 02/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -39,4 +39,5 @@ Your organization or enterprise needs to design suitable security settings to me
   - Use [AKS-managed Azure AD integration](/azure/aks/managed-aad) to use Azure AD for authentication and operator and developer access.
 - Define required RBAC roles and role bindings in Kubernetes.
   - Use [Kubernetes roles and role bindings](/azure/aks/concepts-identity#kubernetes-role-based-access-control-kubernetes-rbac) to Azure AD groups for site reliability engineering (SRE), SecOps, and developer access.
-  - SRE full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure Landing Zones](../../ready/landing-zone/design-area/identity-access.md).
+  - SRE full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../ready/landing-zone/design-area/identity-access.md).
+

@@ -435,6 +435,8 @@ items:
           - name: Terraform landing zones
             href: ready/landing-zone/terraform-landing-zone.md
 
+        - name: ISV considerations for landing zones
+          href: ready/landing-zone/isv-landing-zone.md
         - name: Partner landing zones
           href: ready/landing-zone/partner-landing-zone.md
 
@@ -820,7 +822,8 @@ items:
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
-
+        - name: Adopt low-code application platform
+          href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
 
@@ -1005,20 +1008,40 @@ items:
           items:
           - name: Overview
             href: innovate/best-practices/apps.md
-          - name: Citizen developers
+          - name: Low-code application platform
             items:
             - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Creating applications in Power Apps
               href: /powerapps/maker/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Create your first workflow with Power Automate
+            - name: Power Apps patterns
+              items:
+                - name: Patterns overview
+                  href: /powerapps/guidance/patterns/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Approval pattern
+                  href: /powerapps/guidance/patterns/approval-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Asset management/resource booking pattern
+                  href: /powerapps/guidance/patterns/asset-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Calculation/transformation pattern
+                  href: /powerapps/guidance/patterns/calculator-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Communication/announcement pattern
+                  href: /powerapps/guidance/patterns/communication-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Inspection/audit pattern
+                  href: /powerapps/guidance/patterns/inspection-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Project management pattern
+                  href: /powerapps/guidance/patterns/project-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: More patterns
+                  href: /powerapps/guidance/patterns/more-patterns?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Plan a Power Apps project
+              href: /powerapps/guidance/planning/introduction
+            - name: Real-world architecture examples
+              href: /power-platform/guidance/architecture/real-world-examples/overview
+            - name: Create a workflow with Power Automate
               href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Using AI Builder
-              href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Compliance and data privacy for citizen developer solutions
-              href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Data loss prevention policies for citizen developer solutions
-              href: /power-platform/admin/wp-data-loss-prevention?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Automate tasks with robotic process automation (RPA)
+              href: /power-automate/desktop-flows/introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Plan a Power Automate project
+              href: /power-automate/guidance/planning/introduction
           - name: Intelligent experiences
             items:
             - name: Modern web apps
@@ -1047,14 +1070,18 @@ items:
                 href: /azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Visual search from an image
                 href: /azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Chatbots
-              items:
-              - name: Create and deploy a basic bot
-                href: /azure/bot-service/bot-service-quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: "Learning path: Create bots with the Azure Bot Service"
-                href: /learn/paths/create-conversational-ai-solutions/
-              - name: Azure bot samples on GitHub
-                href: https://github.com/Microsoft/botframework-sdk
+              - name: Intelligent low-code apps
+                href: /ai-builder/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Chatbots
+                items:
+                - name: Choose the right chatbot solution
+                  href: /azure/bot-service/bot-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create a bot with Composer
+                  href: /composer/quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create and deploy a Power Virtual Agents bot
+                  href: /power-virtual-agents/fundamentals-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create a bot with Bot Framework SDK
+                  href: /azure/bot-service/bot-service-quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Cloud-native applications
             items:
             - name: Microservices architecture
@@ -1511,6 +1538,7 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
+        
 
       - name: Monitoring
         items:
@@ -1542,6 +1570,7 @@ items:
           href: /azure/architecture/resiliency/recovery-loss-azure-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Recover from data corruption or accidental deletion
           href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
     - name: Management considerations
       items:
       - name: Overview
@@ -1610,6 +1639,20 @@ items:
         href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
+      - name: Securing Power Platform
+        items:
+          - name: Overview
+            href: /power-platform/admin/security/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Security and governance considerations
+            href: /power-platform/admin/governance-considerations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Compliance and data privacy
+            href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Establish DLP policies
+            href: /power-platform/guidance/adoption/dlp-strategy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Enable cross-tenant isolation
+            href: /power-platform/admin/cross-tenant-restrictions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Data protection in connectors
+            href: /connectors/protection?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
     - name: Security considerations
       items:
