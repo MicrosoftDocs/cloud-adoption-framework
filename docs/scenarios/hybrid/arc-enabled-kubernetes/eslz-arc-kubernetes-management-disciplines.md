@@ -25,6 +25,11 @@ It is important to understand Azure Arc-enabled Kubernetes architecture and [net
 The following architecture diagram shows different Azure Arc-enabled Kubernetes components and how they interact when onboarding and managing the on-premises or multicloud Kubernetes cluster in a fully connected network connectivity mode.
 
 [ ![A diagram showing Azure Arc-enabled Kubernetes cluster management](./media/arc-enabled-kubernetes-cluster-management.png)](./media/arc-enabled-kubernetes-cluster-management.png#lightbox)
+
+
+The following diagram shows [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and how the components interact with each other to manage cluster using Azure RBAC.
+
+[ ![A diagram showing Accessing Azure Arc-enabled Kubernetes anywhere](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
 ### Cluster monitoring
 
 The following architecture diagram shows Azure Arc-enabled Kubernetes cluster monitoring in a fully connected network connectivity mode.
