@@ -153,7 +153,7 @@ For more information, see [Azure landing zones for cloud-scale analytics](ready.
 
 ## Where to start?
 
-One you've consumed this documentation set, in particular the governance, security, operating and best practices sections we would recommend trying to get a proof of concept environment running using the deployment templates. These templates, with the architecture guidance, will get you hand-on with some of the Azure technology stack. The [Getting Started Checklist](architectures/data-mesh-checklist.md) has four stages of maturity and items you need to start small with your first landing zone (stage 1) through to stage 4 (critical governance components) which can come later in your cloud-scale analytics deployment.
+One you've consumed this documentation set, in particular the governance, security, operating and best practices sections we would recommend trying to get a proof of concept environment running using the deployment templates. These templates, with the architecture guidance, will get you hands-on with some of the Azure technologies. The [Getting Started Checklist](architectures/data-mesh-checklist.md) has four stages of maturity and items you need to start small with your first landing zone (stage 1) through to stage 4 (critical governance components) which can come later in your cloud-scale analytics deployment.
 
 ## Next steps
 
