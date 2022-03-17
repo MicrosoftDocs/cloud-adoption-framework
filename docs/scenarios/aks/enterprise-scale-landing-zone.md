@@ -45,7 +45,7 @@ These articles provide guidelines for creating your landing zone based on the de
 
 ## Example conceptual reference architecture
 
-The following conceptual reference architecture is an example that shows a golden state for an Azure Landing Zone with a corporate landing zone subscription and shows design areas and best practices.
+The following conceptual reference architecture is an example that shows a golden state for an Azure landing zone with a corporate landing zone subscription and shows design areas and best practices.
 
 ## Deploy AKS landing zone accelerator
 
