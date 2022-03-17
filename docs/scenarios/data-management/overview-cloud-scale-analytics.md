@@ -76,7 +76,7 @@ With data spread out across a hybrid multicloud and a distributed-data landscape
 
 - Metadata
 
-### Secure your analytics estate
+## Secure your analytics estate
 
 Another major driver for data governance is data protection. Data protection can help you be compliant with regulatory legislation. It can help you prevent data breaches. Data privacy, and the growing number of data breaches, has made data protection a top priority in the boardroom. These breaches highlight the risk to sensitive data, such as personally identifiable customer data. The consequences of data privacy violation or a data security breach are many, and can include:
 
