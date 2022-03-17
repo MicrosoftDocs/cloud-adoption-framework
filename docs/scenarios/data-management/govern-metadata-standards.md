@@ -21,9 +21,9 @@ A good metadata management strategy grows organically. It starts simple and smal
 - **Operational metadata** describes processing aspects of data at run time. Some well-known examples include process information, execution time, process failure information, and job IDs.
 - **Social metadata** describes the user perspective of the data from its consumers. Some well-known examples include use and user tracking information, search result data, filters and clicks, viewing time, profile hits, and comments.
 
-In decentralized data architecture, metadata management is an organizational challenge. It's important for you to [understand teams and functions for cloud-scale analytics in Azure](organize-team-functions.md) as you plan your metadata management. Using a collaborative data management practice improves communication, integration, and data flow automation between your teams. You can address some of metadata management's complexity by striking the right balance between central governance and domain ownership.
+In decentralized data architecture, metadata management is an organizational challenge that requires finding a balance between centrally managed metadata and federated managed metadata. It's important for you to [understand teams and functions for cloud-scale analytics in Azure](organize-team-functions.md) as you plan your metadata management. Using a collaborative data management practice improves communication, integration, and data flow automation between your teams. You can address some of metadata management's complexity by striking the right balance between central governance and domain ownership.
 
-Before you decide what metadata to manage centrally or federate to your [data domains](./architectures/data-domains.md) and begin implementation, first ask yourself:
+As you are deciding what metadata to manage centrally or federate to your [data domains](./architectures/data-domains.md) and begin your implementation, ask yourself:
 
 - What business metadata is critical?
 - What technical metadata is required for interoperability?
@@ -31,11 +31,11 @@ Before you decide what metadata to manage centrally or federate to your [data do
 - Where are the models or schemas created and maintained?
 - What information teams need to deliver centrally to allow the data governance department to do its work correctly?
 
-Using your answers to these questions, you can map out the content life cycle for each of your metadata streams and determine all dependencies. You then have a metadata model that can connect business domains, processes, technology, and data.
+Using your answers to these questions, map out the content life cycle for each of your metadata streams and determine all dependencies. You then have a metadata model that can connect business domains, processes, technology, and data.
 
-Once you know what metadata you need, you need a place to store and process it. You can do this using Azure Preview.
+Once you know what metadata you need, you must choose a place to store and process it. You can do this using Azure Preview.
 
-## Use Azure Purview for managing your data estate at large
+## Use Azure Purview to manage your data estate at large
 
 [Azure Purview](/azure/purview) is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. It does metadata management at scale, because it's a fully automated service that intelligently performs data discovery, data scanning and access management. It also provides a holistic map of many insights about your data mesh architecture.
 
@@ -57,7 +57,7 @@ For your custom metadata attributes, like lists of domains and application metad
 
 For your domain-oriented architecture, align your Azure Purview Collections and Glossaries with your data domains. Azure Purview Collections organize assets and sources. You can use a Collection as a boundary for your assets and sources and align it with a particular domain. You can do the same thing with your Glossary. Create hierarchy structures within your Glossary and align them with your domains. Ask your domains to take ownership for creating relationships between your glossary terms and collection attributes. This creates data ownership transparency and improves your data semantics.
 
-## Use Azure Cosmos DB for your organization's Knowledge Graph
+## Use Azure Cosmos DB to create organization's Knowledge Graph
 
 There's a growing trend in the industry to bring data insights closer to data analysts and scientists using portals that use more metadata intensively. This trend is known as *data observability*. Data observability uses concepts like metadata lake, knowledge graphs, or metadata graphs to describe platforms where metadata is centralized. This is a good way for you to build a unified view of how data are used and sourced across your organization when using a distributed data mesh.
 
