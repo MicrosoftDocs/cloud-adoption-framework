@@ -28,7 +28,7 @@ It is important to understand the [Arc-enabled Kubernetes connectivity modes](/a
 
 The following diagram shows different Azure Arc-enabled Kubernetes components and how they interact when using [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac#architecture---azure-rbac-on-azure-arc-enabled-kubernetes) to manage the Kubernetes cluster.
 
-![Azure RBAC on Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-rbac.png)
+![Azure RBAC on Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-aad-integration.png)
 
 ### Securely access Azure Arc-enabled Kubernetes cluster from anywhere
 
