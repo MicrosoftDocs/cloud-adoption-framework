@@ -1,9 +1,9 @@
 ---
-title: cloud-scale analytics overview
+title: Cloud-scale analytics - Microsoft Cloud Adoption Framework for Azure
 description: Gain an overview of an end-to-end scenario for cloud-scale analytics, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/16/2022
+ms.date: 03/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -14,7 +14,9 @@ ms.custom: e2e-data-management, think-tank
 
 With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. The Azure Cloud Scale Analytics is a scalable, repeatable framework for building a modern data platform that meets your unique business needs.
 
-Cloud-scale analytics covers technical and non-technical considerations for analytics and governance in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products. Key areas are to:
+Cloud-scale analytics covers technical and non-technical considerations for analytics and governance in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products. 
+
+Key areas are:
 
 - Serve data as a product rather than a byproduct.
 - Provide an ecosystem of data products instead of a singular data warehouse that might not best fit the data scenario.
@@ -27,7 +29,7 @@ Reference architectures allow you to start with a small footprint and grow over 
 
 Cloud-scale analytics includes repeatable templates to accelerate five core infrastructure and resource deployments.
 
-Cloud-scale analytics is adaptable for the size of your business so that if you're a small enterprise with limited staff, then having a centralized operations model mixed with some business subject matter experts might fit your business. However, if you're a large multinational enterprise with the goal of autonomous business units (with their own data engineers and analysts), a distributed operating model like data mesh or data fabric might fit your business better.
+Cloud-scale analytics is adaptable for the size of your business so that if you're a small enterprise with limited resources, then having a centralized operations model mixed with some business subject matter experts might fit your business. However, if you're a larger enterprise with the goal of autonomous business units (with their own data engineers and analysts), a distributed operating model like data mesh or data fabric might fit your business better.
 
 ## Objectives
 
