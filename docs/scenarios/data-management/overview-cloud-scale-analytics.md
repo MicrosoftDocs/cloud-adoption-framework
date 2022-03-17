@@ -30,7 +30,7 @@ Understanding the evolution and looking forward, many organizations still have t
 
 The data warehouse and data lake is still valuable, and will play an important role in your overall architecture. We're highlighting some of the challenges that inevitably come forth when using these traditional practices to scale. These challenges are especially relevant in a complex organization, where data sources, requirements, teams, and outputs change.
 
-## New approach to cloud-scale analytics
+## Moving to cloud-scale analytics
 
 Your current analytical data architecture and operating model could align include data warehouse, data lake, or data lakehouse structures – or even an emerging model like data fabric or data mesh.
 
