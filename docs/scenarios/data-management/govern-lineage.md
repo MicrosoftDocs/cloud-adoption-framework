@@ -1,5 +1,5 @@
 ---
-title: Data lineage requirements
+title: Data lineage
 description: Understand data lineage for data governance.
 author: mboswell
 ms.author: mboswell
