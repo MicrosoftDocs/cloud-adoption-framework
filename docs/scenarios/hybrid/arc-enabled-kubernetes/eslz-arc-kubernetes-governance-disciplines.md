@@ -56,7 +56,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 
 The Azure Arc agent is the key component for Azure Arc-enabled Kubernetes, it contains several logical components that play a role in security, governance, and management operations. If the agent stops sending heartbeats to Azure, goes offline or loses connectivity to Azure, you will not be able to perform operational tasks on it. Hence, it is necessary to develop a plan to get notified and how you will respond.
 
-- Azure Activity Log can be used to set up [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) and remain informed on current and historical health status of the [agent's pods](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#6-view-azure-arc-agents-for-kubernetes), review [the management critical design area](./management-disciplines.md). An [Azure Arc-enabled Kubernetes cluster will be shown offline](/azure/azure-arc/kubernetes/conceptual-agent-architecture) if the service has not received an agent heartbeat for 15 minutes, review the [Azure Arc-enabled Kubernetes connectivity critical design area](./network-connectivity.md) to make sure the agent can connect to Azure's endpoints securely.
+- Azure Activity Log can be used to set up [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) and remain informed on current and historical health status of the [agent's pods](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#6-view-azure-arc-agents-for-kubernetes), review [the management critical design area](./eslz-arc-kubernetes-management-disciplines.md). An [Azure Arc-enabled Kubernetes cluster will be shown offline](/azure/azure-arc/kubernetes/conceptual-agent-architecture) if the service has not received an agent heartbeat for 15 minutes, review the [Azure Arc-enabled Kubernetes connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md) to make sure the agent can connect to Azure's endpoints securely.
 
 ## Role-based access controls (RBAC)
 
@@ -88,7 +88,7 @@ GitOps is an essential component of any IT strategy that follows a fully automat
 
 - This GitOps approach simplifies the deployment of multiple applications, across clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. By using Git as your single source of truth and as the central tool for all deployments it becomes the best way to track cluster state, account for changes and approvals over time, facilitate fault investigation while enabling automation across distributed environments.
 
-- When adding GitOps configurations it is important to secure access to the repository, its keys and set branch permissions, make sure to review [the critical design area for GitOps](./cicd-gitops-disciplines.md).
+- When adding GitOps configurations it is important to secure access to the repository, its keys and set branch permissions, make sure to review [the critical design area for GitOps](./eslz-arc-kubernetes-cicd-gitops-disciplines.md).
 
 ## Policy management and reporting
 
@@ -128,7 +128,7 @@ The following image shows a conceptual reference architecture for Microsoft Defe
 
 - If Microsoft Container Registry is used as the central private Docker registry to store and manage your container images, [Use Microsoft Defender for Containers to scan the images for vulnerabilities](/azure/defender-for-cloud/defender-for-container-registries-usage).
 
-- Make sure to review [the network connectivity critical design area](./network-connectivity.md).
+- Make sure to review [the network connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md).
 
 ## Secure cluster access
 

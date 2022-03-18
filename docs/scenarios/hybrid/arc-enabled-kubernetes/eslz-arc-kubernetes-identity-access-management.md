@@ -56,7 +56,7 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
   
 - **Kubernetes cluster management**
   - If on-premises identities are synchronized with Azure AD, use the same identities when using Azure RBAC for cluster management.
-  - Create [security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) and map them to the Azure RBAC roles supported by Azure Arc-enabled Kubernetes to simplify access management. Assign permissions to these security groups at the resource group or subscription level depending on the resource organization and governance requirements. Please refer to the [Resource Organization critical design area](./resource-organization.md) for guidance.
+  - Create [security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) and map them to the Azure RBAC roles supported by Azure Arc-enabled Kubernetes to simplify access management. Assign permissions to these security groups at the resource group or subscription level depending on the resource organization and governance requirements. Please refer to the [Resource Organization critical design area](./eslz-arc-kubernetes-resource-organization.md) for guidance.
   
   > [!NOTE]
   > Azure Arc-enabled Kubernetes do not support users with more than 200 security group memberships and will receive an authentication error.

@@ -67,7 +67,7 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 
 ### Governance
 
-- Review the recommendations in the [resource organization](./resource-organization.md) and [governance disciplines](./governance-disciplines.md) critical design area to implement a governance strategy, organize your resources for better cost control and visibility and use least privilege access model for onboarding and management to avoid unnecessary costs.
+- Review the recommendations in the [resource organization](./eslz-arc-kubernetes-resource-organization.md) and [governance disciplines](./eslz-arc-kubernetes-governance-disciplines.md) critical design area to implement a governance strategy, organize your resources for better cost control and visibility and use least privilege access model for onboarding and management to avoid unnecessary costs.
 ### Azure Monitor for Containers
 
 - Review the [Management and monitoring critical design area](./eslz-arc-kubernetes-management-disciplines.md) to plan your monitoring strategy and decide on your requirements for monitoring Azure Arc-enabled Kubernetes clusters to optimize your monitoring costs.
