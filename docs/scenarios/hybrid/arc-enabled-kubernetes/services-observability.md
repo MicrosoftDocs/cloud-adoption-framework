@@ -117,7 +117,9 @@ The following is a table to show the potential differences to guide in choosing 
 
 It is recommended to use Open Service Mesh which provides observability into the health and performance of your services. To obtain telemetry data, Open Service Mesh relies on sidecar proxies that you inject as a separate container into the same pods as your workloads. The proxies intercept all inbound and outbound HTTP traffic to the workloads and report the data to Open Service Mesh. With this system, service developers don't have to instrument their code to collect telemetry data. Enable Open Service Mesh by using the Azure Arc-enabled Kubernetes cluster extension capability, this allows Microsoft to manage the control plane for you. You can learn more by visiting [Deploy Azure Arc-enabled Open Service Mesh (Preview)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh).
 
-Both Azure Monitor and Azure Application Insights help you maximize the availability and performance of your applications and services by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. Azure Arc-enabled Open Service Mesh will have deep integrations into both of these Azure services, and provide a seamless Azure experience for viewing and responding to critical KPIs provided by OSM metrics. You can enable that by following the steps mentioned [here](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh#monitoring-application-using-azure-monitor-and-applications-insights). If you are not using Azure monitoring services, Open Service Mesh provides documented [observability integrations](https://release-v0-11.docs.openservicemesh.io/docs/guides/observability/) for metrics with Prometheus and Grafana, Tracing with Jaeger, and log forwarding with Fluent Bit. These integrations can be used to be extend to other in-house monitoring tools as needed.
+Enable [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters) to help you maximize the availability and performance of your applications and services by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. Azure Arc-enabled Open Service Mesh will have deep integrations into Azure Monitor, and provide a seamless Azure experience for viewing and responding to critical KPIs provided by OSM metrics and application container logs. You can enable OSM metrics by following the steps mentioned [here](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh#monitoring-application-using-azure-monitor-and-applications-insights). For distributed tracing, it is recommended to use [Jaeger](https://docs.openservicemesh.io/docs/guides/observability/tracing/) which has support to integrate with the OSM control plane.
+
+If you are not using Azure monitoring services, Open Service Mesh provides documented [observability integrations](https://docs.openservicemesh.io/docs/guides/observability/) for metrics with Prometheus and Grafana, Tracing with Jaeger, and log forwarding with Fluent Bit. These integrations can be used to be extend to other in-house monitoring tools as needed.
 
 As a minimum, it is recommended to define the following three RED metrics which you should measure for all services:
 
@@ -125,14 +127,17 @@ As a minimum, it is recommended to define the following three RED metrics which 
 - **Errors**: The number of failed requests or rate of failed requests per second
 - **Duration**: The amount of time it takes for a service to handle a request
 
-Open Service Mesh provides several pre-configured service workbooks in Azure Monitor so you don't have to manually set up dashboards and charts that are recommended to use. This detailed telemetry enables operators to observe service behavior and empowers them to troubleshoot, maintain, and optimize their applications. By using the OSM monitoring workbook and Azure Monitor, you can:
+Open Service Mesh provides several pre-configured service workbooks in Azure Monitor so you don't have to manually set up dashboards and charts that are recommended to use. This detailed telemetry enables operators to observe service behavior and empowers them to troubleshoot, maintain, and optimize their applications. By using the OSM monitoring workbook in Azure Monitor, you should:
 
-- Get an overview of all services in your mesh, providing critical service-level metrics on three of the four golden signals of monitoring: latency, requests, and errors.
+- Get an overview of all services in your mesh, to provide critical service-level metrics on three of the four golden signals of monitoring: latency, requests, and errors.
 - Define, review and set [alerts](/azure/azure-monitor/alerts/alerts-overview) against service level objectives (SLOs), which summarize your service's user-visible performance.
-- View metric charts for individual services and deeply analyze them with filtering and breakdowns, including by response code, protocol, destination pod, traffic source, and more.
-- Get detailed information about the endpoints for each service and see how traffic is flowing between services, and what performance looks like for each communication edge.
-- Explore a service topology graph visualization that shows services and their relationships within the Mesh.
+- View metric charts for individual services to deeply analyze them with filtering and breakdowns, including by response code, protocol, destination pod, traffic source, and more.
 
+Use visualizations from the Jaeger UI to gather the following insights:
+
+- Observe a topology graph visualization that shows which microservices are communicating with each other, where requests are going, and how long they are taking.
+- Inspect for specific requests and responses to see how and when they happen for monitoring and troubleshooting distributed systems.
+  
 Services observability is a single discipline of your cloud monitoring strategy, to see additional monitoring considerations, visit [the Management disciplines critical design area](./management-disciplines.md).
 
 ## Next steps
@@ -145,7 +150,7 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - To learn more about Azure Arc-enabled Open Service Mesh, review the following:
   - [Deploy Azure Arc-enabled Open Service Mesh (Preview)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh).
   - [Open Service Mesh AKS add-on](/azure/aks/open-service-mesh-about).
-  - [Open Service Mesh Upstream documentation](https://release-v0-11.docs.openservicemesh.io/)
+  - [Open Service Mesh Upstream documentation](https://docs.openservicemesh.io/)
 - To learn more about Open Service Mesh Monitoring with Azure Monitor, review the following : [Configure Monitoring and Observability with Open Service Mesh on Azure Kubernetes Service (AKS)](/azure/aks/open-service-mesh-azure-monitor)
 - To learn more about Monitoring on Azure Arc-enabled Kubernetes, review the following: [Management and monitoring for Azure Arc-enabled Kubernetes](./management-disciplines.md).
 - To learn more about Service meshes, review the following: [About service meshes](/azure/aks/servicemesh-about).
