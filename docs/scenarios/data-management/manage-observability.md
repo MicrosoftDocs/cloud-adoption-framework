@@ -1,6 +1,6 @@
 ---
-title: observability 
-description: Learn about data mesh observability in azure
+title: Data observability 
+description: Learn about data mesh observability in Azure.
 author: sudivate
 ms.author: mboswell
 ms.date: 03/03/2021
@@ -10,125 +10,145 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data Observability
+# Data observability
 
-## What is Data Observability?
+Data observability is your ability to understand the health of your data and data systems by collecting and correlating events across areas like data, storage, compute and processing pipelines.  
 
-Data Observability is the ability to understand the health of data and data systems by collecting and correlating events across the  areas like data, storage, compute and processing pipelines.  
+Data platforms are growing more complex across all foundational layers, including data ingestion, data storage and processing, data transformation and modeling, business intelligence and analytics, data discovery, and governance. Building and operating a resilient, scalable, and performant data platform requires adopting proven DevOps-inspired processes across teams that represent functional domains. Data observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to automate issue detection, prediction, and prevention, and to avoid eliminating downtime that can break production analytics and AI.
 
-## Why we need Data Observability?
+## Key areas of data observability
 
-Data Platforms are becoming complex across all foundational layers, including data ingestion, data storage and processing, data transformation and modeling, business intelligence and analytics, data discovery, and governance. Building and operating a resilient, scalable, and performant data platform requires adopting proven DevOps-inspired processes across teams that represent functional domains. Data Observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to detect, predict, prevent, and resolve issues in an automated fashion and avoid eliminating downtime that would otherwise break production analytics and AI.
+Most data platforms operate on these key areas of data observability:
 
-## Data Observability Areas
+- [Data Platform Service Monitoring](#data-platform-service-monitoring)
+- [Data Pipeline Performance Monitoring](#data-pipeline-performance-monitoring)
+- [Data Quality Monitoring](#data-quality-monitoring)
+- [Data Lineage](#data-lineage)
+- [Data Discovery](#data-discovery)
 
-Here are some key areas of Data Observability on which most data platform operates:
+End-to-end data observability involves not just capturing events and measuring metrics across all these components but also correlating those events and metrics. This provides a comprehensive view of your enterprise data environment's health and reliability.
 
-1. [Data Platform Service Monitoring](#data-platform-service-monitoring)
-1. [Data Pipeline Performance Monitoring](#data-pipeline-performance-monitoring)
-1. [Data Quality Monitoring](#data-quality-monitoring)
-1. [Data Lineage](#data-lineage)
-1. [Data Discovery](#data-discovery)
+This article describes each component and how it contributes to achieving data observability.
 
-End-to-end Data Observability involves not just capturing events and measuring metric across all these components but also correlating them to get a comprehensive visibility into the health and reliability of enterprise data environment.
+### Data platform service monitoring
 
-Let's understand each component and how it contributes to achieve Data Observability.
+Foundational infrastructure for an enterprise data platform can include a mix of both provider-managed and self-managed infrastructure to enable storage and computing. DevOps engineers or infrastructure engineers need to monitor this foundational infrastructure so they can identify and resolve system outages and performance bottlenecks that affect modern data and analytics pipelines.
 
-### Data Platform Service Monitoring
+Monitoring data from databases and networking layers can improve your processing throughput and minimize network latency. Teams needs tools that they can use to capture metrics, notify, track, and remediate incidents and correlate with the data and analytics issues.
 
-Foundational infrastructure for an enterprise data platform can include a mix of both provider-managed and self-managed infrastructure for enabling storage and computing. DevOps engineers platform or Infrastructure engineers need to monitor this foundational infrastructure to identify and act on systems outages and performance bottles necks that affect modern data and analytics pipelines. Monitoring data from databases and networking layers can help in improving the processing throughput and minimizing network latency. Teams needs tools that they can use to capture metrics, notify, track, and remediate incidents and correlate with the data and analytics issues.
+We recommend that your teams incorporate observability-as-code into your infrastructure-as-code layer so monitoring instrumentation is enabled out-of-box as soon as they create a resource. Most Azure services offer out-of-box instrumentation for key resource metrics like diagnostic data.
 
-We recommend that teams start incorporating observability-as-code into their infrastructure-as-code layer to enable this kind of instrumentation out-of-box at the resource creations. Most Azure services offer out-of-box instrumentation on key resource metrics, including diagnostic data.
+### Data pipeline performance monitoring
 
-### Data Pipeline Performance Monitoring
+Increasingly complex data pipelines containing multiple stages and dependencies now generate massive amounts of monitoring data. This data includes events, metrics, and logs. You can optimize your data pipeline performance by collecting and analyzing monitoring data.
 
-Increasingly complex data pipelines with multiple stages and dependencies generate massive amounts of monitoring data that includes events, metrics and logs. Collecting and analyzing these monitoring data can help optimize the performance of the data pipelines. Data teams must investigate the state of these pipelines across multiple related data products and business domains. Getting notified on failure or running longer than expected will allow teams to remediate and minimize any downtime. Correlating this data with platform service monitoring data helps craft useful performance tuning recommendations like boosting CPU and memory for high load data pipelines.
+Your data teams should track the state of your data pipelines across multiple related data products and business domains. When your team is notified early about failures or runtimes that are longer than expected, they can minimize and remediate downtime. Correlation of pipeline monitoring data and platform service monitoring can provide recommendations for performance tuning, such as boosting CPU and memory for your high load pipelines.
 
-### Data Quality Monitoring
+### Data quality monitoring
 
-Data quality is the degree to which data is accurate, complete, timely, and consistent with your business's requirements. Constantly inspecting data sets for quality is necessary to bring reliability and trust into the data applications powered by these data sets. Measuring Data Quality isn't new as DataOps has been implementing the process to improve data reliability and performance through automating Data quality tests (Unit, Functional, Integration), promoting faster and more efficient fault detection and analytics.
+Data quality is the degree to which your data is accurate, complete, timely, and consistent with your organization's requirements. You need to constantly monitor your data sets for quality to ensure that the data applications they power remain reliable and trustworthy. DataOps has been consistently improving data reliability and performance by automating data quality tests (unit, functional, and integration). These improvements make faster and more efficient fault detection and data analytics possible.
 
-To adopt DevOps and SRE principles into data quality, teams must build repeatable, iterative processes and frameworks to catch data quality issues, track them in dashboards, and alert on any deviations. Such data quality can track TTD, TTR, and other data quality metrics.
+To adopt DevOps and SRE principles into data quality, teams must build repeatable, iterative processes and frameworks to catch data quality issues, track those issues in dashboards, and set up alerts for any deviations.
 
-Time to Detection (TTD) describes the length of time it takes for your data team to surface a data quality issue of any kind, from freshness anomalies to schema changes that break entire pipelines. Time to Resolution (TTR) refers to how quickly your team can resolve a data incident once alerted. Improving data quality is more than a technical challenge and involves significant organizational and cultural support.
+Time to Detect (TTD), Time to Recovery (TTR), and other data quality metrics can be tracked from your data quality monitoring. TTD refers to the length of time it takes for your data team to detect a data quality issue of any kind, from freshness anomalies to schema changes that break entire pipelines. TTR refers the length of time it takes for your team to resolve a data incident once alerted. Improving your data quality is more than a technical challenge; it involves significant organizational and cultural support.
 
-The governance section on [Data quality](govern-data-quality.md) explores how to implement data quality within the scenario.
+The governance section on [data quality](govern-data-quality.md) explores how you can implement data quality within your scenario.
 
-### Data Lineage
+### Data lineage
 
-Data lineage is broadly understood as the lifecycle that spans the data's origin, and where it moves over time across the data estate. It's used for different kinds of backward-looking scenarios such as troubleshooting, tracing root causes in data pipelines, and debugging. Lineage is also used for data quality analysis, compliance, and "what if" scenarios often referred to as impact analysis. Lineage is represented visually to show data moving from source to destination including how the data was transformed.
+Data lineage is broadly understood as a continuous record that follows your data's origin, transformations, and movement over time across your data estate. Data lineage is used in retrospective tasks, including troubleshooting, debugging, and tracing root causes of pipeline issues. Lineage is also used for data quality analysis, compliance, and "what if" scenarios, which are often referred to as *impact analysis*.
 
-The governance section on [Data Lineage](govern-lineage.md) explores how to implement data lineage within the scenario.
+Lineage is represented visually to show data moving from source to destination, including how the data is transformed over time.
 
-### Data Discovery
+The governance section on [data lineage](govern-lineage.md) explores how you can implement data lineage within your scenario.
 
-Data discovery is the first step for a data analytics or data governance workload for data consumers.  In an enterprise data lake platform, data consumers like data scientists and analysts find it difficult to locate the data that they need and evaluate its reliability. Data catalogs with accurate metadata make a difference by offering an index of data that enables locating available data, detecting its quality, understanding its structure and lineage, and getting access to it. Data catalogs that offer search capabilities on this metadata speed the process of data discovery.
+### Data discovery
 
-The governance section on [Data Catalog](govern-data-catalog.md) explores how to implement data discovery within the scenario.
+Data discovery is the first step for a data analytics or data governance workload for consumers. In an enterprise data lake platform, it's difficult for data consumers (like data scientists and analysts) to locate the data they need and evaluate its reliability. Data catalogs with accurate metadata make searches easier using data index that provides:
 
-## How to set SLAs, SLIs and SLOs
+- locations of available data
+- data quality detection
+- data structure understanding
+- data lineage understanding
+- access to desired data
 
-Inspired from DevOps culture and to achieve data monitoring; teams can adopt the same culture of Site Reliability Engineering (SRE) by using Service Level Objectives (SLOs), Service Level Agreements (SLAs), and Service Level Indicators (SLIs) to reduce data downtime and ensure data reliability.
+Data catalogs offering these search capabilities increase the speed of all data discovery processes.
 
-Service level agreements (SLAs) require well-defined service level indicators (SLIs), quantitative measures of service quality, and agreed-upon service level objectives (SLOs), the ideal values or ranges each indicator should meet.
+The governance section on [data catalogs](govern-data-catalog.md) explores how you can implement data discovery within your scenario.
 
-Setting data SLAs requires active participation and collaboration among all the stakeholders that will be affected by SLA. These stakeholders can be data producers, data engineers, data analysts, data consumers, business analysts but not limited to.
+## Set SLAs, SLIs and SLOs
 
-For data application teams, setting reliability SLAs usually includes three steps: defining, measuring, and tracking.
+Your organization's teams can adopt DevOps-style Site Reliability Engineering (SRE) practices for data monitoring. Service level agreements (SLAs), service level indicators (SLIs), and service level objectives (SLOs) can help your organization reduce downtime and ensure your data's data reliability.
 
-### Service Level Agreement (SLA)
+### Service level agreements (SLAs)
 
-Start with what reliability means and agree upon the definition among all key stakeholders including data engineers, data consumers, and business leaders. Ensure every key stakeholder is involved and buy on the definition of reliability especially if the downstream consumers are from different teams or operate from the different geographical regions and time zone. The SLA needs to be carefully crafted if data consumers are external paid customers and usually involves legal team. For internal customers the SLA definition should include key agreed areas like data promise, data quality and process to handle data incidents if the promise isn't met.
+SLAs require well-defined SLIs, which are quantitative measures of service quality, and agreed-upon SLOs, which are the ideal values or ranges each SLI should meet.
 
-***Contoso:** Contoso is a media company that runs enterprise data lake, which powers multiple data products across different business domains. The Data application team is responsible for delivering yesterday's sales data that powers the sales dashboard. When they miss the data delivery or deliver incomplete data, the data engineering team faces frustrated executive emails and must manually triage the broken pipeline that delivers data. To measure and improve on their deliverables, the data team sets an SLA with the Sales team using the template below*
+Setting a data SLA requires the active participation and collaboration of all stakeholders that will be affected by an SLA. These stakeholders can include data producers, data engineers, data analysts, data consumers, business analysts, and others.
+
+Setting reliability SLAs usually includes three steps: defining, measuring, and tracking.
+
+Begin setting your SLA by defining what reliability means. All key stakeholders must agree on this definition. Ensure every key stakeholder is involved and buy on, especially if your downstream consumers come from different teams or different geographical regions and time zones.
+
+Your SLA needs to be carefully crafted. Involve your legal team if data consumers are external paid customers. For internal customers, your SLA definition should includ key areas like data promise, data quality, and a process to handle data incidents if the promise isn't met.
+
+### Example SLA
+
+Suppose Contoso is a media company that runs an enterprise data lake, and this data lake powers multiple data products across different business domains. The Contoso's data application team is responsible for delivering the prior-day sales data that powers Contoso's sales dashboard. When they miss a data delivery or deliver incomplete data, the data engineering team faces emails from frustrated executives and has to manually triage the broken pipeline that's supposed to deliver sales data. To measure and improve on their deliverables, the data team sets an SLA with the Sales team as demonstrated in the following section.
 
 #### Service Level Agreement - Data Team to Sales Team
 
 | Agreement | Description |
 |----|----|
-| **Business Area** | The Data team promises to empower sales team to make data driven decisions|
-|**Promise** | The Data promise to deliver yesterday's sales data that powers the sales dashboard.<br> This data can answer sales and conversion rates for all US regions.<br> Data pipelines will deliver data powering sales dashboard before 6:00 UTC|
-|**Data Quality**| **Null Check:** Customer names can't be Null.<br> **Missing Value:** Customer region can't be missing.<br> **Freshness:** Sales date should include any transaction before 24:00 UTC|
-|**Data Incident Management**|If the above promise of data delivery isn't met sales team can report the problem and we promise to resolve the problem with the TTR < 6 Hours|
+| **Business area** | The data team promises to empower the sales team's ability to make data-driven decisions |
+|**Promise** | The data team promises to deliver the prior-day sales data that powers the sales dashboard. This data can provide sales and conversion rates for all US regions. Data pipelines will deliver data to power the sales dashboard before 6:00 UTC|
+|**Data quality**| **Null check:** Customer name can't be null. **Missing value:** Customer region can't be missing. **Freshness:** Sales date should include any transaction before 24:00 UTC|
+|**Data incident management**|If the above promise of data delivery isn't met, the sales team can report the problem and the data team promises to resolve the problem with a TTR < 6 Hours|
 
-### Service Level Indicators (SLI)
+### Service level indicators (SLIs)
 
-SLI should represent the agreed-upon state in the SLA. Start with identifying key metrics that can be traced and measured to achieve agreed SLA.
+SLIs should always meet or exceed the SLOs outlined in your SLA. When setting an SLI, begin by identifying key metrics you can track and measure to achieve your agreed-upon SLA.
 
-***Contoso:** Data team identified key metric from different areas to meet the above agreed SLA. They also built Dashboard and alerts if the key metrics deviate from the set baseline and automated actions to mitigate a few issues.*
+#### SLI example
+
+Suppose Contoso's data team identifies key metrics from different areas to meet the SLA outlined in the previous example. They also build a dashboard, set up alerts for if key metrics deviate from a set baseline, and automate actions to mitigate some issues.
 
 |Metric|Purpose|
 |------|-----|
-|Spark cluster CPU and Memory usage|To measure any performance bottle neck in the underlying infrastructure used to run data pipelines|
-|Pipeline total run time in mins| To measure if pipeline takes more time than expected to run|
-|Pipeline failed and success rate| To measure data pipelines that failed or succeeded|
-|Data quality Metrics (Downstream)| To ensure the data delivered by the data pipeline meets expectations|
-|Data quality metric (Upstream)| To ensure that upstream decencies of raw data quality are met|
-|Transformation Metadata is update succeeded| To ensure lineage from upstream to downstream holds metadata about transformations applied on it|
-|Downstream data is indexed update in data catalog| To ensure the sales discover data sets that power their dashboard|
-|Defined process to create incident and measure TTD and TTR| To measure TTD and ensure TTR < 6 hours|
+|Spark cluster CPU and memory usage|To measure any performance bottle neck in the underlying infrastructure used to run data pipelines|
+|Pipeline total run time in minutes| To measure if a pipeline takes more time than expected to run|
+|Pipeline failure and success rates| To measure how many pipelines fail or succeed|
+|Data quality metrics (downstream)| To ensure the data delivered by the data pipeline meets expectations|
+|Data quality metrics (upstream)| To ensure that upstream decencies of raw data quality are met|
+|Transformation metadata updates| To ensure that lineage from upstream to downstream contains metadata about all transformations applied to data|
+|Downstream data indexing and updates| To ensure the sales team discovers all data sets that power their dashboard|
+|Defined process for measuring TTD and TTR| To measure TTD and TTR and ensure TTR < 6 hours|
 
-### Service Level Objective (SLO)
+### Service level objectives (SLOs)
 
-After SLI is identified team can now craft SLO. SLO consists of SLI, the duration over which the SLI is measured, and the targeted success rate that is practically achievable. Defining the course and targeted success can be an overwhelming task initially, and the goal isn't to expect perfection but rather a steady improvement over multiple iterations.
+An SLO consists of an SLI, the duration over which that SLI is measured, and the targeted success rate that is practically achievable. Defining your course and targeted success can be an overwhelming task initially. Don't expect perfection, but rather steady improvement over multiple iterations.
 
-***Contoso:** Data team delivers sales data 365 days across seven different US regions. If there are 210 data sets delivered every calendar year across all regions only 200 data sets are complete and met the SLA. This translates to 95.99% success for that month with acceptable error rate of 4%, which translates to 10 failed(incomplete) data sets. Data team creates a monitoring dashboard that tracks aggregated SLI to track this SLO over the period of 30 days. Both the data team and sales team are notified when target success rate isn't achieved.*
+SLOs can depend on:
 
-SLO can depend on:
+- Data product
+- Data category
+- Data source regions
+- Data observability components
 
-- Data Product
-- Data Category
-- Data Source Regions
-- Components of Data Observability (defined above)
+#### SLO example
 
-## Data Observability Maturity Model
+Suppose Contoso's data team delivers sales data across seven different United States regions. 210 data sets are delivered every calendar year across all regions, and only 200 data sets are complete and meet the SLA. These successful deliveries translate to a 95.99% success rate for that year. The 10 failed (incomplete) data sets occured at an acceptable error rate of 4%.
 
-Data Observability is an essential aspect of the DataOps framework. Attaining the highly advanced stage of Data Observability should be the goal of every enterprise that wants to get the most value out of it. Therefore, it should be considered in parallel to improve your DataOps processes. Data Observability is more of a journey than a goal. The maturity model below can help assess the current state and decide on the next steps in the journey.
+The data team creates a monitoring dashboard that tracks aggregated SLIs to monitor this SLO over a period of 30 days. Both the data team and sales team get notified when target success rate isn't achieved.
 
-|**Stage**|Data Platform Service Monitoring|<p>Data Pipeline Performance Monitoring</p>|<p>Data Quality Monitoring</p>|Data Lineage|Data Discovery|
+## Data observability maturity model
+
+Data observability is an essential part of the DataOps framework and should be considered parallel to your efforts to improve your organization's DataOps processes. The following maturity model can help you assess the current state of your data observability and decide on the next steps for your journey.
+
+| Stage | Data platform service monitoring | Data pipeline performance monitoring | Data quality monitoring | Data lineage| Data discovery |
 | :- | :- | :- | :- | :- | :- |
-|<p></p><p></p><p></p><p>**Stage 5**</p><p>**Highly Advanced** </p>|<p>Data Collected across all the Data Observability Components from one or more data products, offers a unified view and correlated using machine learning to find anomalies.</p><p></p><p>Dashboards track SLO, SLA SLI across all the Data Observability components.</p><p></p><p>Data teams and business leaders speaks SRE language (SLO, SLA, SLI) and Dashboards tracks these   </p><p></p>|<p>Data pipeline performance metrics are tracked across multiple data products.</p><p></p><p></p><p>Root cause analysis is completed driven by system.</p><p></p>|<p>High Level of Data Trust is established, and data consumers can verify reliability of data. </p><p></p>|Data lineage is visually represented and used more than one scenario like tracing root cause analysis in pipeline failure, data quality analysis and compliance. |<p>Data consumers can easily discover available data that they need for their data products.</p><p></p>|
-|<p></p><p></p><p>**Stage 4**</p><p>**Advanced**</p>|<p>Dashboards track SLO, SLA SLI across the most critical 3+ the Data Observability components.</p><p></p><p>Data platform monitoring data is now correlated to data pipeline performance monitoring with automation.  </p><p></p>|<p>Data Incident tools monitors and measure TTD and TTR metric on Incidents. </p><p></p>|Data Quality is achieved through framework that is reusable across multiple data products and tracked through dashboards.|Data lineage is now connected to data discoverability and includes data quality tags as well.|Data lineage is now connected to data discoverability and includes data quality tags as well.|
-|<p></p><p></p><p></p><p>**Stage 3**</p><p>**Evolving** </p>|<p>Well defined SLO, SLI and SLA that covers most critical almost all components for Data Observability.</p><p></p><p>Data incidents are managed through specialized tools </p><p></p>|<p>Data platform monitoring data is now correlated to data pipeline performance monitoring and includes automation to some extent.</p><p></p>|<p>Data quality checks are well defined and mapped to custom metrics that are collected. </p><p></p>|<p>Data lineage is matured to gold enough metadata required for decision making.</p><p></p>|<p>Data discoverability is achieved with specialized Data catalogs tools </p><p></p>|
-|<p></p><p></p><p></p><p>**Stage 2** </p><p>**Planning** </p>|<p>We have initial draft of SLO, SLA and SLI that covers most critical three or more components for Data Observability. </p><p></p><p>Data Platform Monitoring Data is centralized with unified view of entire Data environment.</p><p></p><p>Data Incident management is all manual, triaging done with some knowledge of where to look for.</p>|<p>Data pipelines performance metric's are defined and measured. </p><p></p>|<p>Data quality checks are mostly part of transformation with no standard metric defined, measured, and visualized.</p><p></p>|Data Linage isn't tracked or is limited to single data product. |Data discoverability is documented but lack sophisticated tools.|
-|<p></p><p></p><p>**Stage 1**</p><p>**Learning** </p>|Monitor every critical platform service (Provider managed and self-managed in our Data landscape.  |<p>Notified on pipelines are success/fails. But we don't have any insights on why the pipeline failed or why it's taking longer time than expected to run.   </p><p></p>|<p>Few DQ tests that are run from the pipeline but don't monitor the metric on DQ. </p><p></p>|Data Lineage doesn't exist. |Data Discoverability doesn't exist. We point where the data is located through collaboration tool. |
+| **Stage 5 (Highly advanced)** | Data is collected across all the data observability components from one or more data products in a unified view and is correlated using machine learning to find any anomalies. Dashboards track SLO, SLI, and SLA across all data observability components. | Data pipeline performance metrics are tracked across multiple data products. Root cause analysis is completed and driven by the system. | A high Level of trust in data quality is established. Data consumers can verify the reliability of data. | Data lineage is visually represented and is used in multiple ways, such as tracing root causes of pipeline failure, data quality analysis, and compliance. | Data consumers can easily find available data that they need. |
+| **Stage 4 (Advanced)** | Dashboards track SLO, SLI, and SLA across the most critical data observability components. Platform monitoring data and pipeline performance monitoring data are correlated using automation. | Data incident tools monitor and measure TTD and TTR metrics for any incidents. | Data quality is maintained through a framework that's usable across multiple data products and tracked using dashboards.| Data lineage includes data quality tags and is connected to data discoverability. | Data lineage is now connected to data discoverability and includes data quality tags as well. |
+| **Stage 3 (Evolving)** | Well defined SLO, SLI, and SLA cover most critical almost all components for Data Observability. Data incidents are managed with specialized tools. | Platform monitoring data is correlated with data pipeline performance monitoring using some amount of automation. | Data quality checks are well defined and mapped to custom metrics. | Data lineage has matured to contain enough metadata needed for decision making. | Data discoverability is achieved using specialized data catalog tools. |
+| **Stage 2 (Planning)** | An initial draft of SLO, SLI, and SLA covers the most critical components needed for data observability. Platform monitoring data is centralized and there is a unified view of the entire data environment. All data incident management is manual. | Data pipeline performance metrics are defined and measured. | Data quality checks exist, but no standard metric is defined, measured, and visualized. | Data lineage is limited to single data product or isn't tracked. | Data discoverability is achieved but no sophisticated tools are used. |
+| **Stage 1 Learning** | Every critical platform service (provider-managed and self-managed) is monitoried in the data landscape. | Pipeline monitoring is minimal. Failures trigger alerts, but have no insights into any possible cause. | Data quality tests are can be run from the pipeline, but no metric is measured or tracked. | Data lineage doesn't exist. | Data discoverability doesn't exist. |
