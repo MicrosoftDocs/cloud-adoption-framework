@@ -113,7 +113,7 @@ The following is a process flow that contains the traditional application CI pro
 
 For all updates to your configuration, to verify changes have been successfully applied to your desired environment, consider defining notifications in Flux to integrate to your CI/CD tools, email, or ChatOps tools to alert on successful changes as well as deployment failures. Deployment status information is also available in the Azure portal and through the k8s-configuration cli and ARM API.
 
-## Security
+## Security considerations
 
 ### Repository Auth
 
@@ -180,7 +180,7 @@ The following three Git repositories are included in the design:
 - Configure [Flux Notifications](https://fluxcd.io/docs/guides/notifications/) to alert users on GitOps configurations that are unable to synchronize or are erroring. Application Operators should configure alerts to determine when an application deployment has been deployed and is healthy. Cluster Operators should configure alerts when cluster-wide component reconciliation has failed, and additionally alert on synchronization issues with the Git repository.
 - Implement [GitOps Connector](https://github.com/microsoft/Gitops-connector) to integrate feedback from the Flux agent to your CI/CD tooling.
   
-## Security
+## Security recommendations
 
 - Review [the recommendations for governance and security](./eslz-arc-kubernetes-governance-disciplines.md) of your Azure Arc-enabled Kubernetes clusters.
 - It is recommended to use a private Git repository that has authentication and authorization required for defining any configuration repository, this will ensure unwanted access to any cluster configuration.
