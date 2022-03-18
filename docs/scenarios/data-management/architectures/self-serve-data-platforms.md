@@ -87,4 +87,4 @@ A transition towards data mesh is mostly a cultural shift that comes with nuance
 
 ## Next Steps
 
-[Data onboarding](data-onboarding.md)
+[Data marketplace](data-mesh-data-marketplace.md)
