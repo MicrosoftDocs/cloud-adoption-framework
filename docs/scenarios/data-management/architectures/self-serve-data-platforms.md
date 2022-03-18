@@ -14,9 +14,9 @@ ms.custom: e2e-data-management, think-tank
 
 Data mesh is an exciting new approach to designing and developing data architectures. Data mesh, contrasting to traditional data architecture, separates the responsibility between functional [data domains](./data-domains.md) that focus on creating [data products](./what-is-data-product.md) and the platform team who focus on technical capabilities. This separation of responsibilities also needs to be reflected in the platform, which requires you to make choices. You must strike a balance between providing domain-agnostic capabilities and enabling domain teams to model, process, and distribute their data across the organization. Designing the right level of domain granularity and rules for decoupling by using platforms isn't easy, so therefore we would like to provide you detailed guidance by running through several scenarios.
 
-## Azure cloud-scale analytics
+## Cloud-scale analytics
 
-When you want to build a data mesh on Azure, the recommended approach is to adopt [Azure cloud-scale analytics](../index.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
+When you want to build a data mesh on Azure, the recommended approach is to adopt [cloud-scale analytics](../index.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
 
 * Data management landing zone: this is the fundament of your data architecture. It contains all critical capabilities for data management, such data catalog, data lineage, API catalog, master data management, and so on.
 * Data management landing zones: these are subscriptions that host your analytics and AI solutions. It includes key capabilities to host an analytics platform.
@@ -87,4 +87,4 @@ A transition towards data mesh is mostly a cultural shift that comes with nuance
 
 ## Next Steps
 
-[Data onboarding](data-onboarding.md)
+[Data marketplace](data-mesh-data-marketplace.md)

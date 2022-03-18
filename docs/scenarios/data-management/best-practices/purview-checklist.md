@@ -1,5 +1,5 @@
 ---
-title: Azure Purview readiness checklist for the cloud-scale analytics enterprise-scale scenario
+title: Azure Purview readiness checklist for the cloud-scale analytics
 description: Learn about cloud-scale analytics Azure Purview readiness checklist
 author: zeinam
 ms.author: zeinam
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Purview readiness checklist for cloud-scale analytics enterprise-scale scenario
+# Azure Purview readiness checklist for cloud-scale analytics
 
 During your data governance journey with Azure Purview and cloud-scale analytics, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
 
