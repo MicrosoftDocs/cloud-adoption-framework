@@ -56,7 +56,7 @@ During the onboarding process, Azure Arc-enabled Kubernetes provision agents ont
 
 - We recommend enabling the auto-upgrade feature for the Azure Arc agents running inside your cluster, this is the default behavior when onboarding a cluster to Azure Arc. Review the [Upgrade Agents guidance](/azure/azure-arc/kubernetes/agent-upgrade) and the [extensions management design area](./eslz-arc-kubernetes-extensions-management.md) for more information on the auto-upgrade feature and version support policy.
 
-- The other Azure Arc components that will require updates on your cluster are extensions. For any extension installed on your cluster, we recommend leaving the default behavior to automatically upgrade the extension minor version, which can optionally be disabled during provisioning. In the case of a major version upgrade, there will be a migration path documented to move to the extension major release. Review the [Extensions management critical design area](./extensions-management.md) for more information.
+- The other Azure Arc components that will require updates on your cluster are extensions. For any extension installed on your cluster, we recommend leaving the default behavior to automatically upgrade the extension minor version, which can optionally be disabled during provisioning. In the case of a major version upgrade, there will be a migration path documented to move to the extension major release. Review the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md) for more information.
 ## Next steps
 
 For more information about your hybrid and multicloud cloud journey, see the following articles:
