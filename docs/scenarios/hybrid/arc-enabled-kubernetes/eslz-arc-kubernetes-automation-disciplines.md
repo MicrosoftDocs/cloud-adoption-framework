@@ -38,7 +38,7 @@ The following are design recommendations for Azure Arc-enabled Kubernetes cluste
 
 ### Environment preparation
 
-- Review the [requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for onboarding Kubernetes clusters to Azure Arc.
+- Review the [requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for onboarding Kubernetes clusters onto Azure Arc.
 - Review the [Identity and access management critical design area](./eslz-arc-kubernetes-identity-access-management.md) for more information surrounding required permissions.
 ### Onboard Azure Arc-enabled Kubernetes clusters
 
