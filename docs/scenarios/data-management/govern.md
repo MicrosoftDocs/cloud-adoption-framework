@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 Breaking down structured data into data entities and data subject areas is the key to successful data governance. You can then use a data governance solution to surround your specific data entities and data subject areas with people, processes, policies, and technology. This solution helps your data entities' lifecycle governance. Establishing a common business vocabulary in a business glossary within your data catalog can also help you govern your data.
 
-Your data catalog is critical technology. You can't govern your data if you don't know where it's or what it means. Data catalog software provides automatic data discovery, automatic profiling that determines data quality, and automatic sensitive data detection. It also helps you map disparate data to your common vocabulary data names and definitions in your catalog's business glossary to understand what the data means.
+Your data catalog is critical technology. You can't govern your data if you don't know where it is or what it means. Data catalog software provides automatic data discovery, automatic profiling that determines data quality, and automatic sensitive data detection. It also helps you map disparate data to your common vocabulary data names and definitions in your catalog's business glossary to understand what the data means.
 
 Data classification is a method of categorizing data assets by assigning them unique logical labels or classes. Classification is based on the data's business context. Some classification labels or classes you might use include:
 
