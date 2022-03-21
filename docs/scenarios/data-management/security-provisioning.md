@@ -86,8 +86,7 @@ The data onboarding process requires key metadata, including:
 - Classifications
 
 :::image type="content" source="images/data-access-management-create-product-security-groups.png" alt-text="Create data product security groups" lightbox="images/data-access-management-create-product-security-groups.png":::
-
-Figure 1: Data access management data product creation
+*Figure 1: Data access management data product creation*
 
 Figure 1 illustrates how your data application team can automate the security provisioning for a data product residing in a data lake. A request gets sent to the Microsoft Graph REST APIs after data product onboarding to:
 1. Create two security groups via the Azure Active Directory Graph API, one allowing read/write access and another allowing only read access.
@@ -120,8 +119,7 @@ Figure 1 illustrates how your data application team can automate the security pr
 You can automate the granting of data product access using a custom application and the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview).
 
 :::image type="content" source="images/data-access-management-request-access.png" alt-text="Request access to a data product" lightbox="images/data-access-management-request-access.png":::
-
-Figure 2: Request access to a data product.
+*Figure 2: Request access to a data product.*
 
 Figure 2 provides an overview of a data product access request workflow.
 
