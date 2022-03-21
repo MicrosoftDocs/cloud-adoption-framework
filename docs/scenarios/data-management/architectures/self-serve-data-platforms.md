@@ -43,7 +43,7 @@ In the previous model, we didn't take into account other subscriptions or on-pre
 
 :::image type="content" source="../images/domain-agnostic-infra-02.png" alt-text="Source system- and consumer-aligned landing zones" lightbox="../images/domain-agnostic-infra-02.png":::
 
-In the architecture on the left, you would generally expect services to facilitate all data onboarding, like [CDC](https://en.wikipedia.org/wiki/Change_data_capture), services that pull APIs, or data lake services for dynamically building immutable datasets. The services from this platform can pull data from either on-premises, cloud environments or SaaS vendors. Such a platform is typically also expected to have more overhead, since there's more coupling with the underlying operational applications. Therefore you might want to treat this differently from any data usage.
+In the architecture on the left, you would generally expect services to facilitate all data onboarding, like [CDC](https://en.wikipedia.org/wiki/Change_data_capture), services that pull APIs, or data lake services for dynamically building datasets. The services from this platform can pull data from either on-premises, cloud environments or SaaS vendors. Such a platform is typically also expected to have more overhead, since there's more coupling with the underlying operational applications. Therefore you might want to treat this differently from any data usage.
 
 On the right, you optimize for consumption and expect services aimed to turn data into value: machine learning, reporting, and so on. Again in these architecture domains follow all principles of data mesh. Domains take ownership of data and are allowed to directly distribute data to other domains.
 
@@ -85,6 +85,6 @@ It's important to stress out that multiple data management landing zones, should
 
 A transition towards data mesh is mostly a cultural shift that comes with nuances, trade offs and considerations. For the technology part, you can use cloud-scale analytics to obtain best practices and executable resources. The reference architectures as described in this article can be starting point for kick-starting your implementation.
 
-## Next Steps
+## Next steps
 
 [Data marketplace](data-mesh-data-marketplace.md)

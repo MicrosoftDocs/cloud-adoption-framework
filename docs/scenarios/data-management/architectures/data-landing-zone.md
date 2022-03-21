@@ -89,15 +89,18 @@ For more information, see [External Apache Hive metastore](/azure/databricks/dat
 
 :::image type="content" source="../images/data-landing-zone-data-lake-services-rg.png" alt-text="Diagram of data landing zone data lake services resource group.":::
 
-Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the single data lake services resource group as shown above. The data transformed at different stages will be saved on one of the data landing zone's three data lakes. It will be available for analytics, data science, and visualizations teams to consume.
+Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the single data lake services resource group as shown above. The data transformed at different stages will be saved on one of the data landing zone's data lakes. It will be available for analytics, data science, and visualizations teams to consume.
 
 [!INCLUDE [data-lake-layers](../includes/data-lake-layers.md)]
+
+> [!NOTE]
+> Three data lakes are illustrated in each data landing zone. However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account, while keeping another storage account called 'development' where consumers of the data can also bring other useful data products.
 
 For more information, see:
 
 - [Overview of Azure Data Lake Storage for cloud-scale analytics](../best-practices/data-lake-overview.md)
 - [Data Standardization](data-standardization.md)
-- [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](../best-practices/data-lake-zones.md)
+- [Provision Azure Data Lake Storage Gen2 accounts for each data landing zone](../best-practices/data-lake-zones.md)
 - [Key considerations for Azure Data Lake Storage](../best-practices/data-lake-key-considerations.md)
 - [Access control and data lake configurations in Azure Data Lake Storage](../best-practices/data-lake-access.md)
 
