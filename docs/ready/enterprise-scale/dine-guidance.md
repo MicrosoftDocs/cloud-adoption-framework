@@ -37,7 +37,7 @@ The Azure landing zones reference implementations use [DINE](/azure/governance/p
 - Regulatory compliance policies, standards, or law restrictions.
 - Strict change control processes that require human approval for every action within your Azure environment.
 - Lack of expertise, experience, and understanding of how to manage and use DINE policies.
-- Want all resource configuration, including auxiliary/supporting resources and settings, to be defined as Infrastructure-as-Code.
+- Organizational requirement that all workload resource configuration, including auxiliary/supporting resources and settings, are defined in Infrastructure-as-Code by the workload application teams.
 
 If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-conceptual-architecture) and adhere to its [design principles](./design-principles.md). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](./design-principles.md#policy-driven-governance).
 
