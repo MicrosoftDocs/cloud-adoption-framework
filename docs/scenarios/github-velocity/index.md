@@ -68,7 +68,7 @@ The following architecture diagram highlights the security checks that run in th
 
 - [Azure Policy](/azure/governance/policy/overview) helps teams manage and prevent IT issues through policy definitions that can enforce rules for cloud resources. For instance, if a project is about to deploy a virtual machine with an unrecognized SKU, Azure Policy sends alerts about the problem and stops the deployment.
 
-- [Azure Security Center](/azure/security-center/security-center-introduction) provides unified security management and advanced threat protection across hybrid cloud workloads.
+- [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides unified security management and advanced threat protection across hybrid cloud workloads.
 
 - [Azure Monitor](/azure/azure-monitor/overview) collects and analyzes performance metrics, activity logs, and other application telemetry. This service alerts applications and personnel when it identifies irregular conditions.
 

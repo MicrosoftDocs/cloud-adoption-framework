@@ -1,9 +1,9 @@
 ---
 title: Define your tagging strategy
-description: Review recommendations for tagging your Azure resources and assets.
+description: Learn about recommendations for tagging your Azure resources and assets and how to define your tagging strategy.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/01/2020
+ms.date: 12/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,13 +12,13 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Define your tagging strategy
 
-When you apply metadata tags to your cloud resources, you can include information about those assets that couldn't be included in the resource name. You can use that information to perform more sophisticated filtering and reporting on resources. You want these tags to include context about the resource's associated workload or application, operational requirements, and ownership information. This information can be used by IT or business teams to find resources or generate reports about resource usage and billing.
+When you apply metadata tags to your cloud resources, include information that couldn't be included in the resource name. For example, include information about the asset. You can use that information to run more sophisticated filtering and reporting on resources. You want these tags to include context about the resource's associated workload or application, operational requirements, and ownership information. IT or business teams use this information to find resources or generate reports about resource usage and billing.
 
 What tags you apply to resources and what tags are required or optional differs among organizations. The following list provides examples of common tags that capture important context and information about a resource. Use this list as a starting point to establish your own tagging conventions.
 
 ## Minimum suggested tags
 
-The following tags will guide implementation and processes in all subsequent Cloud Adoption Framework methodologies. Many of the best practices in those methodologies demonstrate automation of cloud operations and governance based on the following tags.
+The following tags guide implementation and processes in Cloud Adoption Framework methodologies. Many of the best practices in those methodologies demonstrate cloud operations automation and governance based on the following tags.
 
 | Tag Name | Description | Key and example values |
 |--|--|--|
@@ -29,15 +29,15 @@ The following tags will guide implementation and processes in all subsequent Clo
 | **Operations commitment** | Level of operations support provided for this workload or resource. | *OpsCommitment* <br><br> <li> `Baseline only` <li> `Enhanced baseline` <li> `Platform operations` <li> `Workload operations` |
 | **Operations team** | Team accountable for day-to-day operations. | *OpsTeam* <br><br> <li> `Central IT` <li> `Cloud operations` <li> `ControlCharts team` <li> `MSP-{Managed Service Provider name}` |
 
-## Additional common tagging examples
+## Other common tagging examples
 
-The following are a number of tags commonly used across Azure to increase visibility into the usage of Azure resources.
+Use the following tags to increase visibility into the usage of Azure resources.
 
 | Tag Name | Description | Key and example values |
 |--|--|--|
 | **Application name** | Added granularity, if the workload is subdivided across multiple applications or services. | *ApplicationName* <br><br> <li> `IssueTrackingSystem` |
 | **Approver name** | Person responsible for approving costs related to this resource. | *Approver* <br><br> <li> `chris@contoso.com` |
-| **Budget required/approved** | Money allocated for this application, service, or workload. | *BudgetAmount* <br><br> <li> `$200,000` |
+| **Budget required/approved** | Money approved for this application, service, or workload. | *BudgetAmount* <br><br> <li> `$200,000` |
 | **Cost center** | Accounting cost center associated with this resource. | *CostCenter* <br><br> <li> `55332` |
 | **Disaster recovery** | Business criticality of the application, workload, or service. | *DR* <br><br> <li> `Mission-critical` <li> `Critical` <li> `Essential` |
 | **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | *EndDate* <br><br> <li> `2023-10-15` |

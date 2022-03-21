@@ -16,15 +16,15 @@ This section explores key recommendations to deliver highly secure internal netw
 
 **Design considerations:**
 
-- The zero-trust model assumes a breached state and verifies each request as though it originates from an uncontrolled network.
+- The [zero-trust model](/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
 
 - An advanced zero-trust network implementation employs fully distributed ingress/egress cloud micro-perimeters and deeper micro-segmentation.
 
-- Network security groups can use Azure service tags to facilitate connectivity to Azure PaaS services.
+- Network security groups ([NSG](/azure/virtual-network/network-security-groups-overview)) can use Azure [service tags](/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure PaaS services.
 
-- Application security groups don't span or provide protection across virtual networks.
+- Application security groups ([ASG](/azure/virtual-network/application-security-groups)) don't span or provide protection across virtual networks.
 
-- NSG flow logs are now supported through Azure Resource Manager templates.
+- NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) are now supported through Azure Resource Manager templates.
 
 **Design recommendations:**
 
@@ -34,9 +34,11 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - The application team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
 
+    ![Diagram that shows how application security group works.](./media/azure-asg.png)
+
 - Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
-- Enable NSG flow logs and feed them into Traffic Analytics to gain insights into internal and external traffic flows.
+- Enable NSG flow logs and feed them into [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into internal and external traffic flows. Flow logs should be enabled on all critical VNets/subnets in your subscription as an audit-ability and security best practice.
 
 - Use NSGs to selectively allow connectivity between landing zones.
 
@@ -49,5 +51,5 @@ This section explores key recommendations to deliver highly secure internal netw
 
   | Priority | Name | Source | Destination | Service | Action | Remark |
   | --- | --- | --- | --- | --- | --- | --- |
-  | 100 | `AllowLocal` | `Any` | `VirtualNetwork` | `Any` | `Allow` | Allow traffic during normal operations. With Forced Tunneling enabled, `0.0.0.0/0` is considered part of the `VirtualNetwork` tag as long as BGP is advertising it to the ExpressRoute or VPN gateway. |
+  | 100 | `AllowLocal` | `Any` | `VirtualNetwork` | `Any` | `Allow` | Allow traffic during normal operations. With forced tunneling enabled, `0.0.0.0/0` is considered part of the `VirtualNetwork` tag as long as BGP is advertising it to the ExpressRoute or VPN Gateway. |
   | 110 | `DenyInternet` | `Any` | `Internet` | `Any` | `Deny` | Deny traffic directly to the internet if the `0.0.0.0/0` route is withdrawn from the routes advertised (for example, due to an outage or misconfiguration). |

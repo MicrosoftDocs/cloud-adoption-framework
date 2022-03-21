@@ -22,7 +22,7 @@ Your organization or enterprise needs to design suitable security settings to me
   - Decide on a method for isolation (namespace, network policy, compute (node pool), or cluster).
   - Decide about Kubernetes RBAC roles and compute allocation per application team for isolation.
   - Decide whether application teams can read other workloads in their cluster or in other clusters.
-- Decide about custom Azure RBAC roles for your [AKS landing zone](../../ready/enterprise-scale/identity-and-access-management.md).
+- Decide about custom Azure RBAC roles for your [AKS landing zone](../../ready/landing-zone/design-area/identity-access.md).
   - Decide what permissions are needed for the site reliability engineering (SRE) role to administer/troubleshoot the whole cluster.
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
@@ -39,4 +39,4 @@ Your organization or enterprise needs to design suitable security settings to me
   - Use [AKS-managed Azure AD integration](/azure/aks/managed-aad) to use Azure AD for authentication and operator and developer access.
 - Define required RBAC roles and role bindings in Kubernetes.
   - Use [Kubernetes roles and role bindings](/azure/aks/concepts-identity#kubernetes-role-based-access-control-kubernetes-rbac) to Azure AD groups for site reliability engineering (SRE), SecOps, and developer access.
-  - SRE full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in enterprise-scale](../../ready/enterprise-scale/identity-and-access-management.md).
+  - SRE full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in enterprise-scale](../../ready/landing-zone/design-area/identity-access.md).

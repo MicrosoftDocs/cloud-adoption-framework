@@ -7,7 +7,6 @@ ms.date: 04/09/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-new, AQC, setup
 ---
 

@@ -3,7 +3,7 @@ title: Understand teams and functions for data management and analytics in Azure
 description: Learn about teams and functions for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/06/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -44,13 +44,13 @@ Two options are available to enhance the templates:
 
 - Other data landing zone teams should be able to create improvement and backlog tickets that would enhance templates based on how the tickets are prioritized.
 
-### Azure policies for the enterprise-scale for analytics and AI
+### Azure policies for the data management and analytics scenario
 
-The enterprise-scale for analytics and AI principles emphasize self-service agility and guardrails to protect data, costs, and patterns. Data platform ops works with platform ops to define quality, and these teams collaborate to implement specific data policies. Data platform ops should follow a review process to update and maintain new features that are added to products.
+The data management and analytics scenario principles emphasize self-service agility and guardrails to protect data, costs, and patterns. Data platform ops works with platform ops to define quality, and these teams collaborate to implement specific data policies. Data platform ops should follow a review process to update and maintain new features that are added to products.
 
 ### Deploy and operate data management landing zones
 
-Data platform ops and platform ops work together to deploy and operate data management landing zones. A data management landing zone provides shared services to data landing zones, making it a central piece of enterprise-scale for analytics and AI.
+Data platform ops and platform ops work together to deploy and operate data management landing zones. A data management landing zone provides shared services to data landing zones, making it a central piece of data management and analytics scenario.
 
 ## Data landing zone ops
 
@@ -172,7 +172,7 @@ Analysts can use tools like Microsoft Power BI to integrate datasets into report
 
 ### Run as-needed queries
 
-Enterprise-scale for analytics and AI has shared workspaces where analysts can query data, subject to permissions. It's common for data products to provide dedicated compute to run queries as they're needed. In both cases, analyst can run queries against data assets in the data landing zones. It's also subject to permissions. The results from the queries can be stored in Azure Data Lake workspaces to be used again.
+Data management and analytics scenario has shared workspaces where analysts can query data, subject to permissions. It's common for data products to provide dedicated compute to run queries as they're needed. In both cases, analyst can run queries against data assets in the data landing zones. It's also subject to permissions. The results from the queries can be stored in Azure Data Lake workspaces to be used again.
 
 ### User feedback
 

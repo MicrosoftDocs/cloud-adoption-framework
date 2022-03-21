@@ -3,7 +3,7 @@ title: Requirements for governing Azure data in a modern enterprise
 description: Learn about requirements for governing Azure data in a modern enterprise.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/23/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Requirements for governing Azure data in a modern enterprise
 
-The requirements for governing data include:
+The data management and analytics scenario recommends you consider the following requirements for governing data::
 
 - Data item and data entity definition to create a common business vocabulary in a business glossary.
 - Data item and data entity identification and discovery.
@@ -25,7 +25,7 @@ The requirements for governing data include:
 - Metadata lineage.
 - Technology to make it possible to govern structured, multistructured, and unstructured data. The governance might span across the datacenter, multiple clouds, and the edge.
 
-The other challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation may apply to governing the same data in different jurisdictions. Discover what data exists across the hybrid multicloud distributed data landscape, including geographic location, to:
+The other challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation might apply to governing the same data in different jurisdictions. Discover what data exists across the hybrid multicloud distributed data landscape, including geographic location, to:
 
 - Understand what data attributes, data entities, and data relationships exist across the distributed data landscape.
 - Classify the data to know how to govern it
