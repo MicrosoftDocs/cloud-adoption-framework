@@ -24,6 +24,9 @@ In cloud-scale analytics their are two ways to approach data lifecycle managemen
 
 - Using the inbuilt data lifecycle features of each Azure service containing persisted data such as [Azure data lake](/azure/storage/blobs/lifecycle-management-overview). This is a great start for moving data to cold and archive tiers but fails to adhere to deleting of data after X amount of time.
 
+> [!IMPORTANT]
+> The archive tier is not currently supported for zone-redundant storage accounts. For more information, see [data redundancy](/azure/storage/common/storage-redundancy).
+
 - Integrating data lifecycle as part of an onboarding process to give the application business owners the opportunity to define their data lifecycle policy. This process would involve a custom application which would capture key metrics into [metadata standards](govern-metadata-standards.md) per data product. Part of the custom process would handle moving data from hot to cold to archive and deleting of data after X amount of time.
 
 ## Next steps

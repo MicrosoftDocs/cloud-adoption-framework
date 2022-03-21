@@ -45,12 +45,16 @@ Data integrations and data product are likely to have Azure DevOps repositories 
 
 Azure Data Lake Storage Gen2 already supports 3x replication to guard against localized hardware failures. Other replication options, such as zone-redundant storage (ZRS) or geo-zone-redundant storage (GZRS), improve high availability. Geo-redundant storage (GRS) and read-access geo-redundant storage (RA-GRS) improve disaster recovery. For high availability, if there's a service interruption, the workload needs access to the latest data as quickly as possible. The workload can switch over to a replicated instance locally or to a new region.
 
-If one of the data landing zones requires geo-redundancy, with Data Lake Storage Gen2, we recommend you geo-replicate your data by using GRS or RA-GRS. Consider ways for the application using Data Lake Storage Gen2 to automatically fail over to the secondary region. You could use monitoring triggers or length of failed attempts. Otherwise, at least send a notification to administrators for manual intervention. Keep in mind that there's trade-off of failing over versus waiting for a service to come back online.
-
-> [!NOTE]
-> A storage account configured as RA-GRS or GRS can be part of a disaster recovery plan but requires due diligence analyzing RPO and RTO and reviewing other options such as a dual load scenario which copies data into two different Azure regions.
+A storage account configured as RA-GRS or GRS can be part of a disaster recovery plan but requires due diligence analyzing RPO and RTO and reviewing other options such as a dual load scenario which copies data into two different Azure regions.
 
 Each data landing zone must have a recovery point objective for its data products. Each data landing zone must have a defined replication strategy for its use cases.
+
+> [!NOTE]
+> Customer-managed account failover is not yet supported in accounts that have a hierarchical namespace (Azure Data Lake Storage Gen2).
+>
+> In the event of a disaster that affects the primary region, Microsoft will manage the failover for accounts with a hierarchical namespace.
+
+For more information, see [Disaster recovery and storage account failover](/azure/storage/common/storage-disaster-recovery-guidance)
 
 ### Azure Databricks
 

@@ -62,18 +62,6 @@ For end-to-end protection of your blob data, we recommend enabling the following
 > [!WARNING]
 > Deleting a storage account can't be undone. Container soft delete does not protect against the deletion of a storage account, but only against the deletion of containers in that account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
-## Store business-critical blob data with immutable storage
-
-Store business-critical data objects in a write once, read many (WORM) state with Azure Blob Storage. This state makes the data non-erasable and non-modifiable for a user-specified interval. During the retention interval, blobs can be created and read but can't be modified or deleted. Immutable storage is available for general-purpose v1, general-purpose v2, BlobStorage, and BlockBlobStorage accounts in all Azure regions.
-
-For information about how to set and clear legal holds or create a time-based retention policy using the Azure portal, PowerShell, or Azure CLI, see [Set and manage immutability policies for Blob Storage](/azure/storage/blobs/immutable-policy-configure-version-scope).
-
-Immutable storage helps healthcare organizations, financial institutions, and related industries. Particularly for broker-dealer organizations to store data securely. Immutable storage can also be used in any scenario to protect critical data against modification or deletion.
-
-For more information, see [How immutable storage for Azure Blob Storage works](/azure/storage/blobs/immutable-storage-overview#about-immutable-blob-storage).
-
-Depending on your industry, we recommend that you assess immutable storage for use in the raw layer of the data lake.
-
 ## Monitoring
 
 In a data landing zone, all the monitoring should be sent to the [enterprise-scale management subscription](../../../ready/landing-zone/design-area/management.md) for analysis.

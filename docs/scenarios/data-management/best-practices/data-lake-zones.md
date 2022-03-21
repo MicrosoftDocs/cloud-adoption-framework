@@ -3,7 +3,7 @@ title: Provision three Azure Data Lake Storage Gen2 accounts for each data landi
 description: Learn about the three Azure Data Lake Storage Gen2 accounts that should be provisioned for each data landing zone.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/24/2022
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -27,12 +27,14 @@ The three data lake accounts should align to the typical layers within a data la
 | 3           | Development | 1            | Analytics Sandbox |
 | 3           | Development | #           | Synapse Primary Storage #  |
 
-Above are the standard number of containers we would recommend per data landing zone. The exception to this recommendation is where immutable or different soft delete policies are required for the data held in the container. These requirements will drive the need for more containers.
+Above are the standard number of containers we would recommend per data landing zone. The exception to this recommendation is where different soft delete policies are required for the data held in the container. These requirements will drive the need for more containers.
 
-The services should be enabled with the hierarchical name space feature to allow efficient file management. The [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) helps you organize objects and files within an account into a hierarchy of directories and nested subdirectories. It's organized in the same way that the file system on your computer is organized.
+> [!NOTE]
+> Three data lakes are illustrated in each data landing zone. The data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
+>
+> However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account; whilst keeping another storage account called 'development' where consumers of the data can also bring other useful data products. For more information on separating data lake accounts, see [Storage accounts in a logical data lake](data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
 
-> [!IMPORTANT]
-> While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
+The Azure storage should be enabled with the hierarchical name space feature to allow efficient file management. The [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) helps you organize objects and files within an account into a hierarchy of directories and nested subdirectories. It's organized in the same way that the file system on your computer is organized.
 
 When a new system of record is registered via the data agnostic ingestion engine or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
 

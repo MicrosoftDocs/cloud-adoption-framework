@@ -32,15 +32,18 @@ A robust data catalog system is increasingly critical as the size, or number of 
 
 For more information, see [Data Governance Overview](../govern.md).
 
-## The three storage accounts in a logical data lake
+## Storage accounts in a logical data lake
 
 A common design consideration is whether to have a single or multiple storage accounts, and file systems building up the logical data lake. Whatever the number of storage solutions, the benefit of using a single storage technology is the ability to standardize across an organization and several ways to access data.
 
 Data Lake Storage Gen2 is a platform as a service (PaaS) fully managed service. Because of this, multiple storage accounts or file systems won't incur a monetary cost until you start to store and access data. When you plan your provisioning, security, and governance, including your backups and disaster recovery, keep in mind that there's administrative and operational overhead associated with each Azure resource. To decide to create one or multiple accounts has no definitive answer. It requires thought and planning based on your unique scenario.
 
-We recommend you add three storage accounts during your discovery and design phase. The following considerations factor into our recommendation:
+> [!NOTE]
+> Three data lakes are illustrated in each data landing zone. However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account; whilst keeping another storage account called 'development' where consumers of the data can also bring other useful data products.
 
-- Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
+The following considerations factor into the consolidated or three storage account approach:
+
+- Isolation of data environments and predictability. For example, if you want to isolate activities that run in the raw and development zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
 - Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
 - There are good reasons to have multiple storage accounts, but be careful not to create unnecessary silos. Avoid creating duplicate data projects because of lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance, and project tracking tools are in place.
 - Data processing tools and technologies, like Azure Data Factory and Azure Databricks for Apache Spark, can easily interact with data across multiple lakes if permissions are appropriately configured.
