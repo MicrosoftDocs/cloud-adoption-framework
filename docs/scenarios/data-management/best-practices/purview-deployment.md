@@ -3,7 +3,7 @@ title: Azure Purview deployment best practices for data management and analytics
 description: Azure Purview best practices for account setup, networking, name resolution, authentication of data sources, roles, and access control.
 author: zeinam
 ms.author: zeinam
-ms.date: 05/21/2021
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -179,9 +179,7 @@ Before creating any credentials in Azure Purview, your Azure Purview account mus
 
 ## Azure Purview roles and access control
 
-Azure Purview has several built-in RBAC roles such as *Purview Data Reader*, *Purview Data Curator*, and *Purview Data Source Administrator*, to manage the data plane, which can be combined to provide more privileges. For example, the *Purview Data Reader* role is targeted for roles such as data officers, data stewards, and chief security officers who require read-only access to the data estate. The data estate might include classifications, lineage through search options, and reports available in Azure Purview.
-
-:::image type="content" source="../images/purview-roles.png" alt-text="Diagram of Azure Purview roles." lightbox="../images/purview-roles-large.png":::
+Azure Purview has several [built-in RBAC roles](/azure/purview/catalog-permissions#roles) such as *Purview Data Reader* and *Purview Data Curator* to manage the data plane, which can be combined to provide more privileges. 
 
 For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's data plane](/azure/purview/catalog-permissions)
 
