@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data lifecycle management?
+# Data lifecycle management
 
 Data Lifecycle Management is the practice of applying certain policies to effective data management. Data Lifecycle Management policy should consists of an overarching storage and data policies that drive management processes. Policies are dictated by business goals and drivers. Therefore, policies generally tie into a framework of overall IT governance and management and service level agreements (SLAs). Once you know the type of data and how it will be used, you already have an understanding of what its evolution and final destiny is likely to be. The challenge now before the teams, is to understand how their data evolves, determine how it grows, monitor how its usage change over time, and decide how long it should survive. Whilst adhering to all the rules and regulations that now apply to that data. Data Lifecycle Management is should address these issues, with a combination of processes, policies and software so that the appropriate technology can be used for each phase of the lifecycle of the data.
 

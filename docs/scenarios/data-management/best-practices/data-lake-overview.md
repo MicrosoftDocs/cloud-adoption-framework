@@ -39,7 +39,7 @@ A common design consideration is whether to have a single or multiple storage ac
 Data Lake Storage Gen2 is a platform as a service (PaaS) fully managed service. Because of this, multiple storage accounts or file systems won't incur a monetary cost until you start to store and access data. When you plan your provisioning, security, and governance, including your backups and disaster recovery, keep in mind that there's administrative and operational overhead associated with each Azure resource. To decide to create one or multiple accounts has no definitive answer. It requires thought and planning based on your unique scenario.
 
 > [!NOTE]
-> Three data lakes are illustrated in each data landing zone. However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account; whilst keeping another storage account called 'development' where consumers of the data can also bring other useful data products.
+> Three data lakes are illustrated in each data landing zone. However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account, while keeping another storage account called 'development' where consumers of the data can also bring other useful data products.
 
 The following considerations factor into the consolidated or three storage account approach:
 

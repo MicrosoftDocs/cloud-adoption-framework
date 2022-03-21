@@ -85,6 +85,6 @@ It's important to stress out that multiple data management landing zones, should
 
 A transition towards data mesh is mostly a cultural shift that comes with nuances, trade offs and considerations. For the technology part, you can use cloud-scale analytics to obtain best practices and executable resources. The reference architectures as described in this article can be starting point for kick-starting your implementation.
 
-## Next Steps
+## Next steps
 
 [Data marketplace](data-mesh-data-marketplace.md)

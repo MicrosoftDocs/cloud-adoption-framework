@@ -45,7 +45,7 @@ Data integrations and data product are likely to have Azure DevOps repositories 
 
 Azure Data Lake Storage Gen2 already supports 3x replication to guard against localized hardware failures. Other replication options, such as zone-redundant storage (ZRS) or geo-zone-redundant storage (GZRS), improve high availability. Geo-redundant storage (GRS) and read-access geo-redundant storage (RA-GRS) improve disaster recovery. For high availability, if there's a service interruption, the workload needs access to the latest data as quickly as possible. The workload can switch over to a replicated instance locally or to a new region.
 
-A storage account configured as RA-GRS or GRS can be part of a disaster recovery plan but requires due diligence analyzing RPO and RTO and reviewing other options such as a dual load scenario which copies data into two different Azure regions.
+A storage account configured as RA-GRS or GRS can be part of a disaster recovery plan but requires due diligence analyzing Recovery Point Objective(RPO) and Recovery Time Objective(RTO) and reviewing other options such as a dual load scenario which copies data into two different Azure regions.
 
 Each data landing zone must have a recovery point objective for its data products. Each data landing zone must have a defined replication strategy for its use cases.
 
@@ -54,7 +54,7 @@ Each data landing zone must have a recovery point objective for its data product
 >
 > In the event of a disaster that affects the primary region, Microsoft will manage the failover for accounts with a hierarchical namespace.
 
-For more information, see [Disaster recovery and storage account failover](/azure/storage/common/storage-disaster-recovery-guidance)
+For more information, see [Disaster recovery and storage account failover](/azure/storage/common/storage-disaster-recovery-guidance).
 
 ### Azure Databricks
 

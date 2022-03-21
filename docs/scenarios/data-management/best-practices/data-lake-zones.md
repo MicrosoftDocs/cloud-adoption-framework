@@ -30,9 +30,9 @@ The three data lake accounts should align to the typical layers within a data la
 Above are the standard number of containers we would recommend per data landing zone. The exception to this recommendation is where different soft delete policies are required for the data held in the container. These requirements will drive the need for more containers.
 
 > [!NOTE]
-> Three data lakes are illustrated in each data landing zone. The data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
+> Three data lakes are illustrated in each data landing zone. While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
 >
-> However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account; whilst keeping another storage account called 'development' where consumers of the data can also bring other useful data products. For more information on separating data lake accounts, see [Storage accounts in a logical data lake](data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
+> However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account, while keeping another storage account called 'development' where consumers of the data can also bring other useful data products. For more information on separating data lake accounts, see [Storage accounts in a logical data lake](data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
 
 The Azure storage should be enabled with the hierarchical name space feature to allow efficient file management. The [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) helps you organize objects and files within an account into a hierarchy of directories and nested subdirectories. It's organized in the same way that the file system on your computer is organized.
 

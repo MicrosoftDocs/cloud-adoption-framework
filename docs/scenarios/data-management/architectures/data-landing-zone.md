@@ -94,7 +94,7 @@ Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-intr
 [!INCLUDE [data-lake-layers](../includes/data-lake-layers.md)]
 
 > [!NOTE]
-> Three data lakes are illustrated in each data landing zone. However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account; whilst keeping another storage account called 'development' where consumers of the data can also bring other useful data products.
+> Three data lakes are illustrated in each data landing zone. However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account, while keeping another storage account called 'development' where consumers of the data can also bring other useful data products.
 
 For more information, see:
 
