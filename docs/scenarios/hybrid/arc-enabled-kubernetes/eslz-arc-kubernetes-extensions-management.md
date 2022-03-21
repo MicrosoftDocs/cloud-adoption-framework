@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 This article walks through the key design considerations and best practices for managing extensions of Azure Arc-enabled Kubernetes deployments.
 
-Before going through this document it is important to understand governance principles because of the effect of the decisions made, also make sure to review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone) to understand the relevant concepts of Enterprise Scale in a container environment.
+Before going through this document it is important to understand governance principles because of the effect of the decisions made, also make sure to review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone) to understand the relevant concepts of Azure landing zones in a container environment.
 
 ## Architecture
 
@@ -26,22 +26,21 @@ the following image illustrates the overall integration for extensions for Azure
 
 ## Design Considerations
 
-Consider the following factors when designing how to use Azure Arc-enabled Kubernetes extensions:
+- **Extension Installation**
+  - While extensions provide additional capability for Azure Arc-enabled Kubernetes clusters, consider your specific use case and the following factors when designing how to use Azure Arc-enabled Kubernetes extensions:
+    - Review which [extensions are currently available](/azure/azure-arc/kubernetes/extensions)
+    - Review which [extensions are built on top of Helm](/azure/azure-arc/kubernetes/conceptual-extensions)
 
-- Review which [extensions are currently available](/azure/azure-arc/kubernetes/extensions)
-- Review which [extensions are built on top of Helm](/azure/azure-arc/kubernetes/conceptual-extensions)
-
-Additionally, while extensions provide additional capability for Azure Arc-enabled Kubernetes clusters, consider your specific use case and needs before installing any extensions.  Furthermore, consider how extensions will be kept up-to-date over the lifespan of your cluster.
+- **Update extensions**
+  - Consider how extensions will be kept up-to-date over the lifespan of your cluster.
 
 ## Design Recommendations
 
-### Extension installation
+- **Extension installation**
+  - Standardize the way in which extensions are installed, whether that is through the Portal, Azure Policy, CLI, ARM templates, or another mechanism.  After installation, verify that the extension(s) have been installed properly.
 
-Standardize the way in which extensions are installed, whether that is through the Portal, Azure Policy, CLI, ARM templates, or another mechanism.  After installation, verify that the extension(s) have installed properly.
-
-### Update extensions
-
-Extensions are periodically updated.  Use the `--auto-upgrade-minor-version` flag to automatically upgrade minor versions of the extension as described in [Usage of Cluster Extensions](/azure/azure-arc/kubernetes/extensions#usage-of-cluster-extensions). Please refer to the specific extension's documentation to know what settings can be configured during creation and update.
+- **Update extensions**
+  - Extensions are periodically updated.  Use the `--auto-upgrade-minor-version` flag to automatically upgrade minor versions of the extension as described in [Usage of Cluster Extensions](/azure/azure-arc/kubernetes/extensions#usage-of-cluster-extensions). Please refer to the specific extension's documentation to know what settings can be configured during creation and update.
 
 ## Next steps
 

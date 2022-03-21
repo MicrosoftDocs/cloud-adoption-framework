@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Management and monitoring for Azure Arc-enabled Kubernetes
 
-This document provides key design considerations and recommendations to manage and monitor Azure Ar-enabled Kubernetes clusters to help you understand and design solutions for well architected operational excellence.
+This document provides key design considerations and recommendations to manage and monitor Azure Arc-enabled Kubernetes clusters to help you understand and design solutions for well architected operational excellence.
 
 Use guidance provided in this document along with other critical design areas referenced throughout the document, to better understand related design considerations and recommendations to focus on management and monitoring aspects of Azure Arc-enabled Kubernetes.
 
@@ -26,10 +26,10 @@ The following architecture diagram shows different Azure Arc-enabled Kubernetes 
 
 [ ![A diagram showing Azure Arc-enabled Kubernetes cluster management](./media/arc-enabled-kubernetes-cluster-management.png)](./media/arc-enabled-kubernetes-cluster-management.png#lightbox)
 
+
 The following diagram shows [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and how the components interact with each other to manage cluster using Azure RBAC.
 
 [ ![A diagram showing Accessing Azure Arc-enabled Kubernetes anywhere](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
-
 ### Cluster monitoring
 
 The following architecture diagram shows Azure Arc-enabled Kubernetes cluster monitoring in a fully connected network connectivity mode.
@@ -37,6 +37,8 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 [ ![A diagram showing Azure Arc-enabled Kubernetes cluster monitoring](./media/arc-enabled-kubernetes-cluster-monitoring.png)](./media/arc-enabled-kubernetes-cluster-monitoring.png#lightbox)
 
 ## Design considerations
+
+- Review the [management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management) of the Azure landing zones to assess the impact of Azure Arc-enabled Kubernetes on your overall management model.
 
 **Cluster onboarding:**
 
@@ -49,6 +51,7 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 - Azure [Arc-enabled Kubernetes extensions](/azure/azure-arc/kubernetes/extensions) require  additional URLs allow access rules on firewalls or proxy. Depending on the extensions being installed, consider planning to accommodate additional URLs allow access rules to minimize change management timelines.
 - If onboarding of on-premises or multicloud Kubernetes cluster is done with [auto-upgrade toggle off](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc), to control agent upgrades, consider upgrading Azure Arc-enabled Kubernetes agents on a regular basis to stay up to date with latest product releases and avoid expensive upgrade process in the future.
 - Consider using [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2) to manage Arc-enabled Kubernetes agent and cluster extension updates to maintain consistent deployments across all clusters and environments. Review [CI/CD workflow using GitOps](./eslz-arc-kubernetes-cicd-gitops-disciplines.md) and [platform disciplines](./eslz-arc-kubernetes-automation-disciplines.md) critical design areas for detailed guidance.
+- Consider using the [Azure Arc-enabled Kubernetes cluster connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect) feature to connect to the _apiserver_ without requiring any inbound port to be enabled on the firewall. Review the [network connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md) to understand how this feature works.
 
 **Cluster monitoring:**
 
@@ -69,8 +72,8 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 **Cluster management:**
 
 - Certain [Azure Arc-enabled Kubernetes extensions](/azure/azure-arc/kubernetes/conceptual-extensions) requires [custom location](/azure/azure-arc/kubernetes/conceptual-custom-locations) to deploy extension pods and configuration. Only one custom location is supported per Kubernetes namespace. It is recommended to create each custom location in its own Kubernetes namespace and deploy Azure Arc-enabled Kubernetes extension that relies on the custom location, and in the same namespace.
-- When using [the semi-connected network connectivity mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes), it is recommended to connect the cluster to Azure Arc at least once in 30 days to export billing data and once in 90 days to renew managed identity certificates, update Azure Arc-enabled Kubernetes resource and agents.
-- Recommended to deploy [Open Service Mesh (OSM)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) to encrypt and authenticate (using mTLS) service to service network traffic across cluster nodes.
+- Use the fully-connected network connectivity model for your onboarded clusters and in case there is a need for [the semi-connected network connectivity mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes), it is recommended to connect the cluster to Azure Arc at least once in 30 days to export billing data and once in 90 days to renew managed identity certificates, update Azure Arc-enabled Kubernetes resource and agents.
+- Deploy [Open Service Mesh (OSM)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) to get capabilities like mTLS security, fine-grained access control, traffic shifting, monitoring with Azure Monitor or with open source add-ons of Prometheus and Grafana, tracing with Jaeger, integration with external certification management solution.
 
 **Cluster monitoring:**
 

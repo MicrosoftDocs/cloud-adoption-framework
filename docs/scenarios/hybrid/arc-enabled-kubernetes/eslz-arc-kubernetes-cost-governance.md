@@ -44,7 +44,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 
 - **Azure Monitor Container Insights:** [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-overview) gives you telemetry visibility by collecting performance metrics from controllers, nodes, and containers that are available in Kubernetes through the Metrics API, Container logs are also collected. This is billed by data ingestion, retention, and export for Log Analytics.
 
-- **Microsoft Defender for Cloud (formerly known as Azure Security Center):**  Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/enhanced-security-features-overview#what-are-the-benefits-of-enabling-enhanced-security-features):
+- **Microsoft Defender for Cloud:**  Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/enhanced-security-features-overview#what-are-the-benefits-of-enabling-enhanced-security-features):
 
    **Without enhanced security features (Free)** - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) is enabled for free on all your Azure subscriptions when you visit the workload protection dashboard in the Azure portal for the first time, or if enabled programmatically via API. Using this free mode provides the secure score and its related features: security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure resources.
 
@@ -67,17 +67,13 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 
 ### Governance
 
-- Review the recommendations in the [resource organization](./eslz-arc-kubernetes-resource-organization.md) and [governance disciplines](./eslz-arc-kubernetes-governance-disciplines.md) critical design area to implement a governance strategy and organize your resources for better cost control and visibility.
-- Ensure that all Azure Arc-enabled Kubernetes clusters follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
-- Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only authorized users who will onboard Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
-- Use least privilege RBAC by assigning built-in roles to authorized users managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs. Review recommendations for [Identity and access management](./eslz-arc-kubernetes-identity-access-management.md).
-
+- Review the recommendations in the [resource organization](./eslz-arc-kubernetes-resource-organization.md) and [governance disciplines](./eslz-arc-kubernetes-governance-disciplines.md) critical design area to implement a governance strategy, organize your resources for better cost control and visibility and use the least privileged access model for onboarding and management to avoid unnecessary costs.
 ### Azure Monitor for Containers
 
 - Review the [Management and monitoring critical design area](./eslz-arc-kubernetes-management-disciplines.md) to plan your monitoring strategy and decide on your requirements for monitoring Azure Arc-enabled Kubernetes clusters to optimize your monitoring costs.
 - Review [Azure Monitor for Containers pricing](https://azure.microsoft.com/pricing/details/monitor/).
 - Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled Kubernetes monitoring costs for Azure Log Analytics ingestion, alerts, and notifications.
-  
+
 [ ![A screenshot showing Azure Pricing Calculator](./media/arc-enabled-kubernetes-cost-pricing-calculator.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator.png#lightbox)
 
 [ ![A screenshot showing Azure Pricing Calculator AZMon](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png#lightbox)
