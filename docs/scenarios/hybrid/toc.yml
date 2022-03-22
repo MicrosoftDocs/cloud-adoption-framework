@@ -17,7 +17,7 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
-    - name: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid
+    - name: Introduction to Azure Arc landing zone accelerator for hybrid
       href: enterprise-scale-landing-zone.md
     - name: Azure Arc-enabled servers
       items:
