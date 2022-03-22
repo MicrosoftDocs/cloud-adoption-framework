@@ -59,8 +59,6 @@ items:
       href: ./govern-data-quality.md
     - name: Data lifecycle
       href: ./govern-lifecycle.md
-    - name: Data sharing agreements
-      href: ./govern-data-sharing-agreements.md
     - name: Metadata
       href: ./govern-metadata-standards.md
 

@@ -22,7 +22,7 @@ Before you continue reading, it's recommended to look at data product distributi
 
 Data contracts are like data delivery contracts or service contracts. They’re important because when data products become popular and widely used, you need to implement versioning and manage compatibility. This is needed, because in a larger or distributed architecture it’s harder to oversee changes. Applications that access or consume data from other applications always suffer from coupling. Coupling means that there’s a high degree of interdependence. Any change to the data structure, for example, could have a direct impact on other applications. In cases where many applications are coupled to each other, a cascading effect sometimes can be seen. Even a small change to a single application can lead to the adjustment of many applications at the same time. Therefore, many architects and software engineers avoid building coupled architectures.
 
-Data contracts are positioned to be the solution to this technical problem. A data contract guarantees interface compatibility and includes the terms of service and service level agreement (SLA). The terms of service describe how the data can be used, for example, only for development, testing, or production. The SLA typically also describes the quality of data delivery and interface. It also might include uptime, error rates, and availability, as well deprecation, a roadmap, and version numbers.
+Data contracts are positioned to be the solution to this technical problem. A data contract guarantees interface compatibility and includes the terms of service and service level agreement (SLA). The terms of service describe how the data can be used, for example, only for development, testing, or production. The SLA typically also describes the quality of data delivery and interface. It also might include uptime, error rates, and availability, as well deprecation, a roadmap, and version numbers. 
 
 Data contracts are in many cases part of a metadata-driven ingestion framework. They’re stored as metadata records, for example, in a centrally managed [metastore](../govern-metadata-standards.md), and play an important role for data pipeline execution, data product creation, validation of data types, schemas, interoperability standards, protocol versions, defaulting rules on missing data, and so on. Therefore, data contracts include many technical metadata. For documenting your data pipelines and data products, there needs to be a clear description on were the data is sourced from, the transformations which been applied to the data and how it will be delivered.
 
@@ -67,7 +67,6 @@ Data contracts are a relatively new approach to data mesh. They're important as 
 For more information about observability and data sharing agreements, see:
 
 - [Cloud monitoring guide: Observability](../../../manage/monitor/observability.md)
-- [Data sharing agreements in cloud-scale analytics](../govern-data-sharing-agreements.md)
 
 ## Summary
 
