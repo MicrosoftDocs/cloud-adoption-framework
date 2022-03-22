@@ -907,7 +907,27 @@ items:
       - name: Overview (PLACEHOLDER)
         href: modernize/index.md
       - name: Envision cloud modernization (DRAFT)
-        href: modernize/envision-cloud-modernization.md 
+        href: modernize/envision-cloud-modernization.md
+      - name: Evaluate modernization options (DRAFT)
+        href: evaluate-modernization-options.md
+      - name: Modernization economics (DRAFT)
+        href: modernization-economics.md
+      - name: Complex evaluations (DRAFT)
+        href: complex-evaluations.md  
+      - name: Commit to modernization plan (DRAFT)
+        href: commit-to-modernization-plan.md
+      - name: Modernization effort (DRAFT)
+        href: modernization-effort.md
+      - name: Modernization impact (DRAFT)
+        href: modernization-impact.md
+      - name: Modernization commitment (DRAFT)
+        href: modernization-commitment.md
+      - name: Modernize examples 
+        items:
+        - name: Refactor an on-premises apps
+          href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
+        - name: Refactor a Linux app
+          href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
 
     - name: Innovate
       items:
