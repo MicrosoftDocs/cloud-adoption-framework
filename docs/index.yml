@@ -1,13 +1,13 @@
 ### YamlMime:Hub
 
 title: Microsoft Cloud Adoption Framework for Azure
-summary: Get Microsoft's proven best practices guidance, including documentation, implementation guidance, best practices, and tools that are designed to accelerate your cloud adoption journey.
+summary: Get proven guidance to help your organization define and implement business, technology, and people strategies to securely adopt the cloud with confidence and reach desired business outcomes.
 brand: azure
 
 metadata:
 
   title: Microsoft Cloud Adoption Framework for Azure
-  description: Get Microsoft's proven best practices guidance, including documentation, implementation guidance, best practices, and tools that are designed to accelerate your cloud adoption journey.
+  description: Get proven guidance to help your organization define and implement business, technology, and people strategies to securely adopt the cloud with confidence and reach desired business outcomes.
   services: cloud-adoption-framework
   author: JanetCThomas
   ms.author: janet
@@ -188,14 +188,14 @@ conceptualContent:
           text: Build and advance your cloud business case with the cloud adoption strategy assessment.
 
     # Card
-    - title: Cloud Journey Tracker
+    - title: App and Data Modernization Readiness Tool
       links:
-        - url: /assessments/?id=cloud-journey-tracker&mode=pre-assessment
+        - url: /assessments/?mode=pre-assessment&id=50adbf76-60fb-47ce-a787-f9d5f52f6a48
           itemType: get-started
-          text: Identify your cloud adoption path, based on the unique needs of your business.
+          text: Take the first step in modernizing your workloads by taking this application and modernization assessment.
 
     # Card
-    - title: Strategic Migration Assessment and Readiness Tool (SMART)
+    - title: Strategic Migration Assessment and Readiness Tool
       links:
         - url: /assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment
           itemType: get-started
