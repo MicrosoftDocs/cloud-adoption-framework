@@ -1,6 +1,6 @@
 ---
 title: Azure landing zone Azure Arc-enabled Kubernetes sandbox
-description: Learn how to deploy Azure landing zone Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures.
+description: Learn how to deploy Azure landing zone Azure Arc-enabled Kubernetes sandbox to accelerate adoption of hybrid or multicloud architectures.
 author: likamrat
 ms.author: likamrat
 ms.date: 03/22/2022
