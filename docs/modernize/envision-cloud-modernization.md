@@ -9,19 +9,18 @@ ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ---
 
-*This article or (or set of articles it may become) is the primary deliverable of the "envision" portion of the modernize methodology documentation. Depending on how the three subsections develop, they may need to be broken into separate articles, and this one would serve as an index/introduction that link to all three.*
+ Envision cloud modernization
 
-# Envision cloud modernization
+The "envision" phase of the "modernize" methodology is the first phase of business alignment for modernization. For more information, see [Modernize overview](index.md).
 
-This is a drill-down on the "envision" phase of the "modernize" methodology. It's phase 1 of business alignment for modernize. *This article should link to the [modernize overview](index.md).*
+Before you begin modernization at scale, understand business outcomes/motivations, understand your workloads, and map them to the outcomes you want to achieve. It's important to establish a rough vision of your end state before you begin your migration efforts. This article provides guidance on establishing Horizons based on your strategic objectives and to determine when to focus on migration vs. modernization.Every cloud adoption plan contains three horizons: [Migrate](../get-started/migrate.md), Modernize, and [Innovate](../get-started/innovate.md). It's important to understand the limitations of your current state workloads and best paths to modernization to help you set realistic expectations.
 
-**Key takeaway of this article (or set of articles)**: Before beginning modernization at scale, understand business outcomes/motivations, understand your workloads, and map them to the outcomes you want to achieve.
+Before you make any decisions about modernization, align or group your workloads based on how they impact your strategy. Understand the following three key elements about envisioning a modernization strategy:
 
-Three key steps the customer should understand about envisioning a modernization strategy:
-
-1. Understand your corporate & strategic motivations for modernization
-1. Flag workloads which could better deliver on those motivations if they were to be modernized. Include links to establishing-cloud-horizons and migrate-modernize-approaches
-1. Define & track *clusters* of workloads based on the motivation. Important to focus on the "clusters" aspect.
+- [Understand your corporate & strategic motivations for modernization](#understand-your-corporate--strategic-motivations-for-modernization)
+- [Flag workloads which could better deliver on those motivations if they were to be modernized](#flag-workloads-which-could-better-deliver-on-those-motivations-if-they-were-to-be-modernized)
+- [Define & track *clusters* of workloads based on the motivation](#define--track-clusters-of-workloads-based-on-the-motivation)
+- [Next steps](#next-steps)
 
 ## Understand your corporate & strategic motivations for modernization
 
@@ -29,25 +28,27 @@ Three key steps the customer should understand about envisioning a modernization
 
 :::image type="content" source="../_images/modernize/modernization-triggers.png" alt-text="img":::
 
+Identify which of the following triggers are most important to you. It's likely that multiple triggers apply.
+
 - Enabling hybrid work: enabling scale, access across networks
 - Faster time to market: PaaS + DevOps accelerates time to market
 - Cost-optimizing applications: Reducing overall spend with PaaS
 - Application innovation
 - Centralizing data by migrating web apps and infrastructure
-
-Further expand on each of these. For any given customer, it's likely that multiple apply.
-
+<!-->
+Further expand on each of these.
+-->
 In addition to the triggers shown here, there are other motivations that are good to understand. For a larger perspective on motivations for moving to the cloud, see [Motivations](../strategy/motivations.md).
 
 ## Flag workloads which could better deliver on those motivations if they were to be modernized
 
-*What* are you moving? You don't modernize *assets*, you modernize *workloads*, so conceptually reorganize your infra, data stores and apps into workloads.
+*What* are you moving? You don't modernize *assets*, you modernize *workloads*, so conceptually reorganize your infrastructure, data stores, and apps into workloads.
 
 :::image type="content" source="../_images/modernize/assets-to-workloads.png" alt-text="img":::
 
-If you've already done a migration and followed the "plan" best practices, you have likely done this exercise. If not (if you're starting with a modernization action):
+If you've already done a migration and followed the "plan" best practices, you have likely done this exercise. If not (if you're starting with a modernization action), see the following articles:
 
-- See [Cloud rationalization](../digital-estate/5-rs-of-rationalization.md) to understand what cloud rationalization is, how to conceptually break down your environment, make sense of dependencies and cross references, etc.
+- [Cloud rationalization](../digital-estate/5-rs-of-rationalization.md) to understand what cloud rationalization is, how to conceptually break down your environment, make sense of dependencies and cross references, and so on.
 - [Perform a digital estate assessment](../plan/contoso-migration-assessment.md) to help map assets to workloads.
 
 ## Define & track *clusters* of workloads based on the motivation
@@ -56,8 +57,10 @@ Align groups of workloads to motivations. This gives you something to track and 
 
 :::image type="content" source="../_images/modernize/align-workloads-motivations.png" alt-text="img":::
 
-## Summary
+## Next steps
 
-*Key takeaway of this article (or set of articles)*: Before beginning modernization at scale, understand business outcomes/motivations, understand your workloads, and map them to the outcomes you want to achieve.
+After you get these workloads aligned to motivations, what are you going to modernize?
 
-Next step is preparing for modernization: look across clusters of workloads and decide what to modernize.
+NEXTSTEPACTION
+> [!div class="nextstepaction"]
+> [Evaluate your clusters of workloads](.................)
