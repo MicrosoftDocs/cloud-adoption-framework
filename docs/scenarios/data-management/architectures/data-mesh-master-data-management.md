@@ -55,4 +55,4 @@ The last step, which is the ultimate goal, is to achieve coexistence: where impr
 
 ## Next steps
 
-[Data Sharing Overview](data-sharing-overview.md)
+[Data Contracts](data-contracts.md)
