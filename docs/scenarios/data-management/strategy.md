@@ -36,7 +36,7 @@ After you've prioritized your business outcomes, look at your current projects a
 
 There are inherent complexities and ground realities in building a data-driven culture to drive business forward in a consistent, forward-thinking, agile, and informed way. Before you move to the deployment phase, you should focus efforts toward formulating a coherent data strategy to achieve desired business outcomes.
 
-Data management and analytics are aligned to [innovation-focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
+Cloud-scale analytics are aligned to [innovation-focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
 
 - A scalable analytics framework designed to enable building an enterprise data platform
 - Self-service to empower users in data exploration, data asset creation, and product development
@@ -94,7 +94,7 @@ On this level, an organization often has unplanned analytics projects. Additiona
 
 ### Level 1
 
-Here, teams are being formed and strategy is being created, but analytics still is departmentalized. At this level, organizations tend to be good at traditional data capture and analytics. They might have a level of commitment to cloud-based approaches. For example, they might already be accessing data from the cloud.
+Here, teams are being formed and strategy is being created, but analytics still is departmentalized. At this level, organizations tend to be good at traditional data capture and analytics. They might have a level of commitment to cloud-scale approaches. For example, they might already be accessing data from the cloud.
 
 ### Level 2
 

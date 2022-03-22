@@ -74,7 +74,7 @@ In a meshed network architecture design, no network virtual appliance acts as a 
 
 This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, the Data Management and Analytics Scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
-With all the resources hosted within a single subscription, your central Azure platform team no longer inspects all data in the central Connectivity Hub, either. You can still capture network logs by using Network Security Group Flow Logs. You can consolidate and store other application and service level logs by using service-specific Diagnostic Settings.
+With all resources hosted within a single subscription, your central Azure platform team no longer inspects all data in the central Connectivity Hub, either. You can still capture network logs by using Network Security Group Flow Logs. You can consolidate and store other application and service level logs by using service-specific Diagnostic Settings.
 
 You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/).
 
@@ -278,7 +278,7 @@ While this network architecture design has multiple benefits, its previously men
 
 Out of all reviewed network architecture options and their pros and cons, [meshed network architecture](#meshed-network-architecture-recommended) is the clear winner. It has tremendous benefits for throughput and for cost and management, which is why we recommend you use it when deploying the Data Management and Analytics Scenario. Peering spoke virtual networks hasn't previously been common, and this has led to issues with sharing datasets across domains and business units.
 
-The Data Management and Analytics Scenario can be seen as a coherent solution that spans multiple subscriptions. In a single subscription setup, network traffic flow equals the flow in the meshed network architecture. Within a single subscription setup, users will most likely hit the platform's [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits), which the Data Management and Analytics Scenario aims to avoid.
+You can view the Data Management and Analytics Scenario as a coherent solution that spans multiple subscriptions. In a single subscription setup, network traffic flow equals the flow in the meshed network architecture. Within a single subscription setup, users will most likely hit the platform's [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits), which the Data Management and Analytics Scenario aims to avoid.
 
 ## Next steps
 

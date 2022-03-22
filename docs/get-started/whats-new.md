@@ -80,9 +80,9 @@ This scenario focuses on enabling specific, targeted outcomes to:
 
 ## August 2021
 
-### Data management and analytics scenario
+### Cloud-scale analytics scenario
 
-This release of the Cloud Adoption Framework provides considerations to help you prepare for [data management and analytics in the cloud](../scenarios/data-management/index.md).
+This release of the Cloud Adoption Framework provides considerations to help you prepare for [cloud-scale analytics](../scenarios/data-management/index.md).
 
 This scenario focuses on enabling a few targeted outcomes:
 
@@ -97,10 +97,10 @@ Get started with this scenario using the following links:
 | Article | Description |
 |--|--|
 | [Introduction to the cloud scale analytics](../scenarios/data-management/index.md) | In this article we introduce the principles of the cloud scale analytics.|
-| [Data governance](../scenarios/data-management/overview-data-governance.md) | This guidance reviews how data governance ensures data that's used by your business is discoverable, accurate, trusted, and can be protected. |
-| [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, review considerations for data management and analytics that will have an impact on your cloud adoption strategy.
+| [Data governance](../scenarios/data-management/govern.md) | This guidance reviews how data governance ensures data that's used by your business is discoverable, accurate, trusted, and can be protected. |
+| [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, review considerations for cloud-scale analytics that will have an impact on your cloud adoption strategy.
 | [Define a plan](../scenarios/data-management/plan.md) | Establish a clear plan for rationalizing data, skilling people, and tips for ensuring success.
-| [Azure landing zones for data management and analytics](../scenarios/data-management/ready.md) | This guidance provides an overview of the data management landing zone. A data management landing zone is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises.
+| [Azure landing zones for cloud-scale analytics](../scenarios/data-management/ready.md) | This guidance provides an overview of the data management landing zone. A data management landing zone is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises.
 | [Govern your data estate](../scenarios/data-management/govern.md) | This article reviews a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology.
 | [Secure your data estate](../scenarios/data-management/secure.md) | Best practices to improve security of your entire data estate.
 | [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the cloud scale analytics in Azure.

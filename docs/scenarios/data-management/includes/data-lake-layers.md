@@ -10,7 +10,7 @@ ms.custom: e2e-data-management, think-tank
 
 Depending on technology and vendor, the layers inside a data lake use different terminology. This table gives guidance on how cloud-scale analytics applies them:
 
-| Data management and analytics | Delta Lake | Other terms             | Description                                                                                                      |
+| Cloud-scale analytics | Delta Lake | Other terms             | Description                                                                                                      |
 |-------------------------------|------------|-------------------------|------------------------------------------------------------------------------------------------------------------|
 | Raw                           | Bronze     | Landing and Conformance | Ingestion Tables                                                                                                 |
 | Enriched                      | Silver     | Standardization Zone    | Refined Tables - stored full entity, consumption-ready recordsets from systems of record.                        |
