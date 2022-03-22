@@ -188,14 +188,14 @@ conceptualContent:
           text: Build and advance your cloud business case with the cloud adoption strategy assessment.
 
     # Card
-    - title: App and Data Modernization Readiness Tool
+    - title: App and Data Modernization Readiness
       links:
         - url: /assessments/?mode=pre-assessment&id=50adbf76-60fb-47ce-a787-f9d5f52f6a48
           itemType: get-started
           text: Take the first step in modernizing your workloads by taking this application and modernization assessment.
 
     # Card
-    - title: Strategic Migration Assessment and Readiness Tool
+    - title: Strategic Migration Assessment and Readiness
       links:
         - url: /assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment
           itemType: get-started
@@ -221,17 +221,17 @@ tools:
     - title: Microsoft Cloud Adoption Framework for Azure
 
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./_images/learn-caf-logo.png
+      imageSrc: ./_images/learn-caf-logo.svg
       url: /learn/paths/cloud-adoption-framework/
 
     # Card
     - title: Azure fundamentals
-      imageSrc: ./_images/learn-azure-fundamentals-logo.png
+      imageSrc: ./_images/learn-azure-fundamentals-logo.svg
       url: /learn/paths/az-900-describe-cloud-concepts/
 
     # Card
     - title: Learn the business value of Azure
-      imageSrc: ./_images/learn-business-value-of-azure-logo.png
+      imageSrc: ./_images/learn-business-value-of-azure-logo.svg
       url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/
 
 # additionalContent section (optional)
