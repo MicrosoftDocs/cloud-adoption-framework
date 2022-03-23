@@ -16,7 +16,7 @@ If you've chosen not to implement a data agnostics engine for ingesting data onc
 
 ## Overview
 
-Your application resource group is responsible for data ingestion and enrichment only from external sources, such telemetry, finance, or CRM. This layer can operate in real-time, batch and micro-batch.
+Your application resource group is responsible for data ingestion and enrichment only from external sources, such as telemetry, finance, or CRM. This layer can operate in real-time, batch and micro-batch.
 
 This section explains the infrastructure deployed for each data applications (source-aligned) resource group inside your data landing zone.
 
