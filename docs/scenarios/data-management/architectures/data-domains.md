@@ -120,7 +120,7 @@ Consider offering shared data services for data transformation and consumption t
 
 The reusability of data is a different and more difficult scenario. For example, if downstream consumers are interested in a combination of data from different domains, you can create data products that aggregate data or combine high-level data required by many domains. This allows you to avoid repetitive work.
 
-For your architecture, loosely couple the creation of data products and analytical use cases. In the model below, a domain takes both the ownership for aggregated data reusable data and an analytical use case. However, the two concerns are decoupled. With this approach, data consumers can safely consume new data products, while not being tightly connected to analytical use cases of the same domain. The aggregated data in this situation is input for the analytical use case.
+Don't create strong dependencies between your data products and analytical use cases. Strive for flexibility and loose coupling instead. The following model demonstrates how you can achieve flexibility. A domain takes ownership for both data products and analytical use cases, and has designed separate processes for data product creation and data usage.
 
 ### Define overlapping domain patterns
 
