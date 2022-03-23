@@ -184,7 +184,7 @@ conceptualContent:
     - title: Cloud Adoption Strategy Evaluator
       links:
         - url: /assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab
-          itemType: quickstart
+          itemType: concept
           text: Build and advance your cloud business case with the cloud adoption strategy assessment.
 
     # Card
@@ -198,7 +198,7 @@ conceptualContent:
     - title: Strategic Migration Assessment and Readiness
       links:
         - url: /assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment
-          itemType: get-started
+          itemType: deploy
           text: Drive business success by unblocking migration efforts and improving processes.
 
     # Card
