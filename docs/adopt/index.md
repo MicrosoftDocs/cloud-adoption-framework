@@ -3,7 +3,7 @@ title: Establishing adoption horizons
 description: TODO
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 3/22/2022
+ms.date: 3/23/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -11,7 +11,7 @@ ms.subservice: adopt
 
 <!-->
 *This article was called out as a dependency needed for the "envision" content of the modernize methodology documentation. Alternative proposed filename was "establishing-cloud-horizons", but naming index.md for now since it's serving as the overview for "adopt", at least for the time being.*
-
+Variety of 
 **Key takeaway of this article**: Customers should minimize the amount of effort they spend working on multiple horizons at once. It will create complexity, additional work and slowdowns.
 This article is built around this visualization - an example of a three-horizon adoption plan for a customer:
 
@@ -29,8 +29,7 @@ The methodologies required for cloud adoption generally fall into three horizons
 
 ## Find the right horizon for you
 
-Determine which horizon best fits your adoption goals and which business motivations and workloads are important to address first.
-The following image shows an example of a three-horizon adoption plan.
+Determine which horizon best fits your adoption goals and which business motivations and workloads are important to address first. The following image shows an example of a three-horizon adoption plan.
 
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
 
@@ -42,10 +41,11 @@ The following image shows an example of a three-horizon adoption plan.
 ## Migrate
 
 [Migrate](../migrate/index.md) your infrastructure and workloads, so you can improve operations as you exit the data center business.
+where it fits, rough explanation
 
 ## Modernize
 
-Modernization means more modern applications with new features and technical capabilities. This effort results in reduced technical debt.
+Modernization means that you have more modern applications with new features and technical capabilities. For example, refactoring, rearchitecting, and rebuilding apps and databases, which reduces your technical debt.
 
 ## Innovate
 
@@ -53,7 +53,7 @@ Modernization means more modern applications with new features and technical cap
 
 ## Align
 
-You'll probably want to address all three horizons, but the order in which you do so is in your hands.
+You're probably going to need all three horizons, only in a sequence that works best for you.
 
 ## Next steps
 

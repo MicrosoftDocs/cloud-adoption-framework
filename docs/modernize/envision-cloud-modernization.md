@@ -33,7 +33,7 @@ Understand limitations of current state workloads & best paths to modernization 
 
 # Envision cloud modernization
 
-Before you begin modernization efforts, it's important that you understand your business motivations and your workloads, and then map those workloads to the outcomes that you want to achieve. 
+Before you begin modernization efforts, it's important to understand your business motivations and  workloads, and then map those workloads to the outcomes that you want to achieve.
 
 <!--to determine when to focus on migration vs modernization. Every cloud adoption plan contains three horizons: [Migrate](../get-started/migrate.md), Modernize, and [Innovate](../get-started/innovate.md). It's important to understand the limitations of your current state workloads and best paths to modernization to help you set realistic expectations. CAF Strategy outlines motivations and strategic considerations. Within Modernize, we're working on Horizon efforts, which align to a modernization strategy.-->
 

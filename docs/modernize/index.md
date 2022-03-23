@@ -3,15 +3,15 @@ title: Modernize your apps and data
 description: TODO
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 3/22/2022
+ms.date: 3/23/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ---
-
+<!--Acrolinx:93, TO: meta description, image-->
 # Modernize your apps and data
 
-When your cloud journey includes modernization you'll be refactoring, rearchitecting, or rebuilding your apps and data to achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
+When your cloud adoption journey includes modernization you'll be refactoring, rearchitecting, or rebuilding your apps and data. Modernization will help you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
 
 ## Refactor apps and databases for speed and productivity
 
@@ -33,14 +33,14 @@ The following exercises will help establish the iterative processes to assess, m
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
-| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> Start with a solid plan. [Define and documenting your motivations](../strategy/motivations.md) for modernizing, create a [business case](../strategy/cloud-migration-business-case.md), aligning stakeholders, and [building a plan](../plan/plan-intro.md) that breaks out modernization projects. |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Review the five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): You can modernize at any time — before, during, or after migrating your workloads. Iteratively migrate and modernize in waves to refactor, rearchitect, or rebuild your apps and data. |
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> Start with a solid plan. [Define and document your motivations](../strategy/motivations.md) for modernizing, create a [business case](../strategy/cloud-migration-business-case.md), align stakeholders, and [build a plan](../plan/plan-intro.md) that breaks out modernization projects. |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Review the five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): You can modernize at any time—before, during, or after migrating your workloads. Iteratively migrate and modernize in waves to refactor, rearchitect, or rebuild your apps and data. |
 | <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Modernization examples](modernize-overview.md): Use example scenarios to identify common tools and approaches to modernization. |
 | <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Govern, secure, and manage cloud environments](modernize-overview.md): Is this the right fourth step?  What can we link to here? |
 
 ## Modernization examples
 
-Modify or extend your apps to further scale and optimize for cloud architectures. Take advantage of Azure platform as a service capabilities such as built-in security, patching, high availability, and auto-scaling. Typical projects include:
+Modify or extend your apps to further scale and optimize for cloud architectures. Take advantage of Azure platform and service capabilities such as built-in security, patching, high availability, and auto-scaling. Typical projects include:
 
 - [Modernize on-premises .NET apps by using Azure App Service and Azure SQL Managed Instance](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md)
 - [Modernize on-premises .NET apps by using Azure App Service and Azure SQL Database](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md)
