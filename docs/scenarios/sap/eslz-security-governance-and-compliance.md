@@ -56,7 +56,7 @@ When you enable Microsoft Defender for Cloud Standard for SAP, make sure to excl
 
 The following screenshot shows the workload protection dashboard in the Azure portal:
 
-![Workload protection dashboard](./media/security-center-dashboard.png)
+![Workload protection dashboard](./media/defender-cloud-dashboard.png)
 
 ### Enable Microsoft Sentinel
 
