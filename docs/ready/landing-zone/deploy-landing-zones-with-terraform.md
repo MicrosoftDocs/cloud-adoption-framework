@@ -16,7 +16,7 @@ Other third-party tools can also help with this effort.
 One such tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
 The [Azure landing zones (ALZ) Terraform module][alz-tf-mod] is a Terraform module that provides a efficient way to deploy the platform resources from the [Azure landing zones conceptual architecture][alz-conceptual-arch].
-The module deploys the management group hierarchy, policies and the resources in the connectivity and management subscriptions.
+The module is designed to simplify the deployment of the management group hierarchy, policies and the resources in the connectivity and management subscriptions.
 Deployment of resources to application landing zones is outside the scope of the module, leaving decisions on the deployment method and tooling to the team responsible for the application.
 
 Optionally, customers can choose to deploy Azure landing zones using the [CAF Terraform landing zones approach][caf-terraform-landingzones].
