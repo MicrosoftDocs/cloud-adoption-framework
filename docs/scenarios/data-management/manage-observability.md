@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 Data observability is your ability to understand the health of your data and data systems by collecting and correlating events across areas like data, storage, compute and processing pipelines.  
 
-Data platforms are growing more complex across all foundational layers, including data ingestion, data storage and processing, data transformation and modeling, business intelligence and analytics, data discovery, and governance. Building and operating a resilient, scalable, and performant data platform requires adopting proven DevOps-inspired processes across teams that represent functional domains. Data observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to automate issue detection, prediction, and prevention, and to avoid eliminating downtime that can break production analytics and AI.
+Building and operating a resilient, scalable, and performant data platform requires adopting proven DevOps-inspired processes across teams that represent functional domains. Data observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to automate issue detection, prediction, and prevention, and to avoid downtime that can break production analytics and AI.
 
 ## Key areas of data observability
 
@@ -88,7 +88,7 @@ Setting a data SLA requires the active participation and collaboration of all st
 
 Setting reliability SLAs usually includes three steps: defining, measuring, and tracking.
 
-Begin setting your SLA by defining what reliability means. All key stakeholders must agree on this definition. Ensure every key stakeholder is involved and buy on, especially if your downstream consumers come from different teams or different geographical regions and time zones.
+Begin setting your SLA by defining what reliability means. All key stakeholders must agree on this definition. Ensure every key stakeholder is involved and buys in, especially if your downstream consumers come from different teams or different geographical regions and time zones.
 
 Your SLA needs to be carefully crafted. Involve your legal team if data consumers are external paid customers. For internal customers, your SLA definition should includ key areas like data promise, data quality, and a process to handle data incidents if the promise isn't met.
 
@@ -126,7 +126,7 @@ Suppose Contoso's data team identifies key metrics from different areas to meet 
 
 ### Service level objectives (SLOs)
 
-An SLO consists of an SLI, the duration over which that SLI is measured, and the targeted success rate that is practically achievable. Defining your course and targeted success can be an overwhelming task initially. Don't expect perfection, but rather steady improvement over multiple iterations.
+An SLO consists of an SLI, the duration over which that SLI is measured, and the targeted success rate that is practically achievable. Defining your direction and targeted success can be an overwhelming task initially. Don't expect perfection, but rather steady improvement over multiple iterations.
 
 SLOs can depend on:
 
