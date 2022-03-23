@@ -1,7 +1,7 @@
 ---
 title: Deploy Azure Landing Zones with Terraform
 description: Learn which of the two Terraform approaches is most suited to your scenario when deploying Azure landing zones.
-author: mawhi
+author: matt-FFFFFF
 ms.author: mawhi
 ms.date: 02/07/2022
 ms.topic: conceptual
@@ -15,13 +15,13 @@ Azure provides native services for building your Azure landing zones.
 Other third-party tools can also help with this effort.
 One such tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
-The [Azure landing zones (ALZ) terraform module][alz-tf-mod] is a Terraform module that provides a efficient way to deploy the platform resources from the [Azure landing zones conceptual architecture][alz-conceptual-arch].
+The [Azure landing zones (ALZ) Terraform module][alz-tf-mod] is a Terraform module that provides a efficient way to deploy the platform resources from the [Azure landing zones conceptual architecture][alz-conceptual-arch].
 The module deploys the management group hierarchy, policies and the resources in the connectivity and management subscriptions.
 Deployment of resources to application landing zones is outside the scope of the accelerator, leaving decisions over the deployment method and tools to the team responsible for the application.
 
-Optionally, customers can choose to deploy Azure landing zones using the [CAF terraform landing zones framework][caf-terraform-landingzones].
-This is a prescriptive implementation of terraform on Azure that makes use of the ALZ Terraform module for management groups and policies, but goes further.
-In addition to platform services it allows customers to deploy resources into application landing zones using terraform, as well as providing a mechanism to deploy subscriptions.
+Optionally, customers can choose to deploy Azure landing zones using the [CAF terraform landing zones approach][caf-terraform-landingzones].
+This is a prescriptive implementation of Terraform on Azure that makes use of the ALZ Terraform module for management groups and policies, but goes further.
+In addition to platform services it allows customers to deploy resources into application landing zones using Terraform, as well as providing a mechanism to deploy subscriptions.
 
 The diagram below illustrates the coverage of the two approaches:
 
