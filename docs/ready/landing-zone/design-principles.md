@@ -58,9 +58,11 @@ Avoid dependency on abstraction layers, such as customer-developed portals or to
 For customers who are bringing an existing tooling investment to operations, security, or governance, a review of the Azure services and any dependencies is recommended.
 
 
-## Application-centric and archetype-neutral
+## Application-centric service model
 
-Focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. The design choices shouldn't differentiate between old and new applications, infrastructure as a service (IaaS), or platform as a service (PaaS) applications. Strive to provide a safe and secure foundation for all application types to be deployed onto your Azure platform.
+Focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. The design choices shouldn't differentiate between old and new applications, infrastructure as a service (IaaS), or platform as a service (PaaS) applications. 
+
+Regardless of the service model, strive to provide a secure environment for all applications deployed on the Azure platform.
 
 #### Impact of deviation
 
