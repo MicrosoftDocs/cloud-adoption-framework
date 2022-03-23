@@ -30,7 +30,7 @@ The Azure Purview method is explained in [dataset provisioning by data owners fo
 This article explains how you can use Azure Active Directory Entitlement Management with a custom data marketplace to give access to data products.
 
 > [!NOTE]
-> Every business must define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above gets secured using options outlined in [data privacy for cloud-scale analytics in Azure](secure-data-privacy.md). To learn more about classification types, see [requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
+> Every business must define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above gets secured using options outlined in [data privacy for cloud-scale analytics in Azure](secure-data-privacy.md). To learn more about classification types, see [requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-classification).
 
 ## Manage Azure AD entitlement
 
@@ -65,6 +65,7 @@ If you're implementing a data lakehouse, create a catalog in entitlement managem
 - Create another catalog for each data landing zone via the Entitlement Management portal.
 
 If you're implementing a data mesh, create a catalog in entitlement management for each domain. Depending on automation and your implementation's size, you can either:
+
 - Call the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to create a catalog for the domain.
 - Create another catalog for each domain via the Entitlement Management portal.
 
@@ -73,7 +74,7 @@ If you're implementing a data mesh, create a catalog in entitlement management f
 
 ### Data product creation
 
-Data product onboarding is discussed in [data onboarding](architectures/data-onboarding.md). For custom applications, data onboarding involves an expectation that end-to-end security will be provisioned.
+Data products are discussed in [Cloud-scale analytics data products in Azure](architectures/data-landing-zone-data-products.md). For custom applications, data onboarding involves an expectation that end-to-end security will be provisioned.
 
 The data onboarding process requires key metadata, including:
 
@@ -89,6 +90,7 @@ The data onboarding process requires key metadata, including:
 *Figure 1: Data access management data product creation*
 
 Figure 1 illustrates how your data application team can automate the security provisioning for a data product residing in a data lake. A request gets sent to the Microsoft Graph REST APIs after data product onboarding to:
+
 1. Create two security groups via the Azure Active Directory Graph API, one allowing read/write access and another allowing only read access.
     - The following Azure AD group naming conventions are suggested for Azure AD Pass-through Authentication in data lakes:
         - Domain name or data landing zone name
