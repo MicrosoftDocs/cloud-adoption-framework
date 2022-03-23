@@ -45,7 +45,7 @@ We'll analyze each scenario with the following cross-data landing zone use-case 
 
 ## Meshed network architecture (recommended)
 
-We recommend that you use a network mesh architecture when adopting the Data Management and Analytics Scenario. In addition to the existing hub and spoke network design set up within your tenant, you have to do two things to implement a network mesh architecture:
+We recommend that you use a network mesh architecture when adopting the cloud-scale analytics scenario. In addition to the existing hub and spoke network design set up within your tenant, you have to do two things to implement a network mesh architecture:
 
 - Add Vnet peerings between all data landing zone Vnets.
 - Add Vnet pairings between your data management landing zone and all data landing zones.
