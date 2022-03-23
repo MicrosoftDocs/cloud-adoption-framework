@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Using the Azure Landing Zones Terraform module
 
-The [Azure landing zones terraform module][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
+The [Azure landing zones Terraform module][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
 
 > [!NOTE]
 > This article describes one of two ways to implement landing zones on Azure using Terraform.
@@ -48,16 +48,16 @@ By packaging these capabilities into a single Terraform module, it becomes easie
 
 Reuse of components is a fundamental principle of infrastructure as code.
 Modules are instrumental in defining standards and consistency across resource deployment within and across environments.
-The Azure landing zones terraform accelerator is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
+The Azure landing zones Terraform module is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
 
 Deploying the module from the Terraform Registry provides strict version control while ensuring you always have access to the latest version. Doing so provides:
 
 - An accelerated delivery of Azure landing zones in your environment.
-- A tested upgrade path to the latest version of Azure landing zones terraform accelerator.
+- A tested upgrade path to the latest version of Azure landing zones Terraform module.
 
 ## Benefits of using the module
 
-There are many benefits of using the Azure landing zones terraform accelerator:
+There are many benefits of using the Azure landing zones Terraform module:
 
 - Managed and extensible core resource hierarchy for Subscription organization using Management Groups.
 - Scalable security governance and compliance using Azure Identity and Access Management (IAM) controls, with an extensive library of custom definitions ready to assign.
@@ -72,7 +72,7 @@ There are many benefits of using the Azure landing zones terraform accelerator:
 
 ## Capabilities
 
-Resources deployed by the Azure landing zones terraform accelerator are split logically into the following capabilities:
+Resources deployed by the Azure landing zones Terraform module are split logically into the following capabilities:
 
 - [Core resources](#core-resources)
 - [Management resources](#management-resources)
