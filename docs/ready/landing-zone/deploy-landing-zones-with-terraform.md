@@ -36,8 +36,12 @@ The table below compares the two approaches for landing zones on Azure:
 | Management groups and policies | ✅ | ✅ (using the ALZ Terraform module) |
 | Platform connectivity resources | ✅ | ✅ |
 | Platform management resources | ✅ | ✅ |
+| Platform identity resources | ❌ | ✅ |
+| Platform security resources | ❌ | ✅ |
+| Azure Active Directory resources | ❌ | ✅ |
 | Landing zone resources | ❌ | ✅ |
 | Landing zone subscription vending machine | ❌ | ✅ |
+| CI/CD tools | ✅ (azops)| ✅ (multi-vendor through containerd support)|
 
 ## Selecting the right approach for Terraform
 
