@@ -12,9 +12,11 @@ ms.custom: think-tank
 
 # Azure landing zone - design principles
 
-The Azure landing zone conceptual architecture is universally applied to any Azure landing zone process or implementation. At the foundation of the architecture is a set of core design principles that serve as a compass for subsequent design decisions across critical technical domains. The principles are intentionally aspirational to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone Accelerator or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles described here. 
+The Azure landing zone conceptual architecture is universally applied to any Azure landing zone process or implementation. At the foundation of the architecture is a set of core design principles that serve as a compass for subsequent design decisions across critical technical domains. 
 
-Decisions made during the review of each design area may need to be adjusted slightly to adhere to these design principles. Each design principle includes one or more examples of how that principle could impact your design area decisions.
+The principles are intentionally aspirational to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone accelerator or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles described here. 
+
+Using these principles as part of your implementation will serve as a useful guide for realising the benefits of cloud technologies. This cloud-orientated way, often called _Digital Native_,  represents ways of working and technical options for your organization that are not typically offered with legacy technology approaches.
 
 > [!IMPORTANT] 
 > **Impact of design deviations** 
