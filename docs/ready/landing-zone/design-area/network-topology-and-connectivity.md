@@ -43,7 +43,7 @@ Network topology is a critical element of landing zone architecture, because it 
 ## Connectivity
 
 - [Connectivity to Azure](../../azure-best-practices/connectivity-to-azure.md) expands on network topology, to consider recommended models for connecting on-premises locations to Azure.
-- [Connectivity to Azure PaaS services](../../azure-best-practices/connectivity-to-azure-paas-services.md) builds on previous connectivity sections, to explore recommended connectivity approaches for Azure platform-as-a-service (PaaS) services.
+- [Connectivity to Azure PaaS services](../../azure-best-practices/connectivity-to-azure-paas-services.md) builds on previous connectivity sections, to explore recommended connectivity approaches for Azure platform as a service (PaaS) services.
 - [Limit cross-tenant private endpoint connections](../../azure-best-practices/limit-cross-tenant-private-endpoint-connections.md) explores how to limit cross-tenant private endpoint connections to prevent data leakage and meet security and compliance goals.
 - [Connectivity to other cloud providers](../../azure-best-practices/connectivity-to-other-providers.md) describes different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture with other cloud providers.
 - [Connectivity to Oracle Cloud Infrastructure](../../azure-best-practices/connectivity-to-other-providers-oci.md) evaluates key design considerations and different approaches to integrate Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
@@ -60,3 +60,5 @@ Network topology is a critical element of landing zone architecture, because it 
 
 - [Private Link and Domain Name System (DNS) integration at scale](../../azure-best-practices/private-link-and-dns-integration-at-scale.md) describes how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub-and-spoke network architectures.
 - DNS is a critical design topic in enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities. [Configure DNS and name resolution for on-premises and Azure resources](../../azure-best-practices/dns-for-on-premises-and-azure-resources.md) explores guidance on planning DNS and name resolution for hybrid implementations.
+
+- [Plan for virtual machine remote access](../../azure-best-practices/plan-for-virtual-machine-remote-access.md) describes how to securely connect into Azure virtual machine.
