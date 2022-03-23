@@ -1,6 +1,6 @@
 ---
 title: Single-region data landing zone connectivity
-description: Learn single-region connectivity for cloud scale analytics landing zones in Azure.
+description: Learn single-region connectivity for cloud-scale analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
 ms.date: 03/19/2022
@@ -24,7 +24,7 @@ Based on Azure Networking Services' current capabilities, we recommend you use a
 - The Data Management Zone and each Data Landing Zone
 - Each Data Landing Zone
 
-This article describes the pros and cons of each network architecture option we considered for the Data Management and Analytics Scenario.
+This article describes the pros and cons of each network architecture option we considered for the cloud-scale analytics scenario.
 
 The first section of this article focuses on a single-region pattern, where the Data Management Zone and all Data Landing Zones are hosted in the same region.
 
@@ -72,7 +72,7 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 
 In a meshed network architecture design, no network virtual appliance acts as a single point of failure or throttling. The lack of datasets being sent through the Connectivity Hub reduces your central Azure platform team's overhead, provided you don't need to scale out that virtual appliance.
 
-This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, the Data Management and Analytics Scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
+This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, the cloud-scale analytics scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
 With all resources hosted within a single subscription, your central Azure platform team no longer inspects all data in the central Connectivity Hub, either. You can still capture network logs by using Network Security Group Flow Logs. You can consolidate and store other application and service level logs by using service-specific Diagnostic Settings.
 
@@ -103,7 +103,7 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 
 ### Meshed network architecture summary
 
-If you plan to adopt the Data Management and Analytics Scenario, we recommend that you use the meshed network design. A meshed network offers maximum bandwidth and low latency at minimal cost, yet makes no compromises regarding user access management or on the DNS layer.
+If you plan to adopt the cloud-scale analytics scenario, we recommend that you use the meshed network design. A meshed network offers maximum bandwidth and low latency at minimal cost, yet makes no compromises regarding user access management or on the DNS layer.
 
 If you need to enforce other network policies within the data platform, use Network Security Groups rather than central network virtual appliances.
 
@@ -196,7 +196,7 @@ Summary: :::image type="icon" source="./images/minusicon.png":::
 
 ### Service management in private endpoint projection architecture
 
-While again similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this network design has the benefit of no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, the Data Management and Analytics Scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
+While again similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this network design has the benefit of no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, the cloud-scale analytics scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
 With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub.  You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/). On the other hand, the network address space required by your data platform increases due to the exponential increase in required Private Endpoints, which isn't optimal.
 
@@ -247,7 +247,7 @@ Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="i
 
 ### Service management in Connectivity Hub architecture
 
-While similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this design has no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, the Data Management and Analytics Scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
+While similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this design has no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, the cloud-scale analytics scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
 With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub. You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/).
 
@@ -276,9 +276,9 @@ While this network architecture design has multiple benefits, its previously men
 
 ## Single-region data landing zone connectivity conclusion
 
-Out of all reviewed network architecture options and their pros and cons, [meshed network architecture](#meshed-network-architecture-recommended) is the clear winner. It has tremendous benefits for throughput and for cost and management, which is why we recommend you use it when deploying the Data Management and Analytics Scenario. Peering spoke virtual networks hasn't previously been common, and this has led to issues with sharing datasets across domains and business units.
+Out of all reviewed network architecture options and their pros and cons, [meshed network architecture](#meshed-network-architecture-recommended) is the clear winner. It has tremendous benefits for throughput and for cost and management, which is why we recommend you use it when deploying the cloud-scale analytics scenario. Peering spoke virtual networks hasn't previously been common, and this has led to issues with sharing datasets across domains and business units.
 
-You can view the Data Management and Analytics Scenario as a coherent solution that spans multiple subscriptions. In a single subscription setup, network traffic flow equals the flow in the meshed network architecture. Within a single subscription setup, users will most likely hit the platform's [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits), which the Data Management and Analytics Scenario aims to avoid.
+You can view the cloud-scale analytics scenario as a coherent solution that spans multiple subscriptions. In a single subscription setup, network traffic flow equals the flow in the meshed network architecture. Within a single subscription setup, users will most likely hit the platform's [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits), which the cloud-scale analytics scenario aims to avoid.
 
 ## Next steps
 
