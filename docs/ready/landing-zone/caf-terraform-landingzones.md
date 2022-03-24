@@ -66,7 +66,7 @@ This core concept applies for all areas of your environment, this is why as part
 As part of CAF Terraform, multiple functions are split across multiple components. That level of decomposition and de-correlation might be confusing at the beginning, but actually allows a maximum of flexibility and reusability of the components whether you're using the complete CAF Terraform landing zones, or you want to use the battlefield-tested CAF module in your own pipelines or Terraform Cloud, or benefit from the CAF naming provider inside your own enterprise-grew modules.  
 
 ![Foundational landing zone using Terraform](../../_images/ready/terraform-sre-components.png)
-*Figure 4: An overview of the Site Reliability Engineering Components provided by CAF Terraform landing zones*
+*Figure 2: An overview of the Site Reliability Engineering Components provided by CAF Terraform landing zones*
 
 Below is a quick overview of the different components.
 
@@ -137,7 +137,7 @@ A special landing zone is called launchpad and it acts as your DevOps foundation
 * Storage accounts to deploy the Terraform state files.
 * Key Vaults defining the core of secrets storage for the Terraform state.
 
-Most of the time, unless you are a core CAF contributor, you don't need to worry too much about the landing zones and will be only consuming it from the repository. In can you want to review the details, landing zones can be found [here](https://github.com/Azure/caf-terraform-landingzones)
+Most of the time, unless you are a core CAF contributor, you don't need to worry too much about the landing zones logic and will be only consuming it from the repository and customizing it with variables. In case you want to review the details, landing zones can be found [here](https://github.com/Azure/caf-terraform-landingzones)
 
 ### The starter project
 
