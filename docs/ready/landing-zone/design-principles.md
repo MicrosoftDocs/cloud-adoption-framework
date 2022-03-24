@@ -16,7 +16,7 @@ The Azure landing zone conceptual architecture is universally applied to any Azu
 
 The principles are intentionally aspirational to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone accelerator or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles described here. 
 
-Using these principles as part of your implementation will serve as a useful guide for realising the benefits of cloud technologies. This cloud-orientated way, often called _Digital Native_,  represents ways of working and technical options for your organization that are not typically offered with legacy technology approaches.
+Using these principles as part of your implementation will serve as a useful guide for realising the benefits of cloud technologies. This cloud-orientated way, often called _cloud native_,  represents ways of working and technical options for your organization that are not typically offered with legacy technology approaches.
 
 > [!IMPORTANT] 
 > **Impact of design deviations** 
@@ -70,7 +70,7 @@ Regardless of the service model, strive to provide a secure environment for all 
 
 - **Increased operational overhead**&mdash;This trade off introduces the risk of unintentional policy duplication and thereby exceptions, which add to operational and management overheads.
 
-Dev/Test/Production is another common approach considered by customers, you can read more on this in the FAQ question here: [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+Dev/Test/Production is another common approach considered by customers, you can read more on this in the FAQ question here: [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
 
 
 ## Align with Azure-native design and roadmaps
