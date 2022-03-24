@@ -8,16 +8,20 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
 ---
-meta description
+<!--Acrolinx:....., TODO: meta description, .............-->
 # Cloud migration and modernization approaches
 
-Confused about whether you should migrate or modernize first? 
+Where should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first? 
 
 Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa, or in parallel to migration, but it's important to keep those horizons separated. At least separate out your clusters of workloads. If you have one team working on migrating some workflows and another team working on modernizing others, keep them separate. For more information about workload clusters, see [Envision cloud modernization](../modernize/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
 
- Deciding whether to modernize or migrate first comes down to *what benefits you want*. There are distinct motivations, reasons, and outcomes.
+Deciding whether to modernize or migrate first comes down to *what benefits you want*.
+
+
+
  
  ## Migrate horizon benefits
+ There are distinct motivations, reasons, and outcomes for migrating first.if you're trying to get out of a data center quickly, you should probably migrate first and change things up later 
 
  Migration provides you with the following benefits:
  
@@ -29,7 +33,9 @@ Depending on your overall strategy and needs, you might migrate first and modern
 - Test your migration to ensure cloud-readiness
 
 ## Modernize horizon benefits
-If your main goal is to get a handful of apps faster time-to-market in the cloud, modernize first.
+
+If your main goal is to get a handful of apps faster time-to-market in the cloud, maybe you should modernize first.
+
 - Containers, PaaS plays
 - Faster time to market for applications
 

@@ -3,12 +3,12 @@ title: Modernize your apps and data
 description: TODO
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 3/23/2022
+ms.date: 3/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ---
-<!--Acrolinx:93, TO: meta description, image-->
+<!--Acrolinx:93, TODO: meta description, add image-->
 # Modernize your apps and data
 
 When your cloud adoption journey includes modernization you'll be refactoring, rearchitecting, or rebuilding your apps and data. Modernization will help you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
@@ -50,7 +50,7 @@ Modify or extend your apps to further scale and optimize for cloud architectures
 
 ## Next steps
 
-The steps outlined above can help you modernize at any stage of your cloud adoption journey. Modernizing apps and databases helps you get the most out of Azure capabilities including built-in security, patching, high availability, and auto-scaling. The modernization examples provide examples of common tools and approaches to modernization.
+The previously outlined steps can help you modernize at any stage of your cloud adoption journey. Modernizing apps and databases helps you get the most out of Azure capabilities including built-in security, patching, high availability, and auto-scaling. The modernization examples provide examples of common tools and approaches to modernization.
 
 > [!div class="nextstepaction"]
 > [Modernization examples](index.md)
