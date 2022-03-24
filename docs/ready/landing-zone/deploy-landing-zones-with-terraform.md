@@ -45,7 +45,7 @@ The table below compares the two approaches for landing zones on Azure:
 
 ## Selecting the right approach for Terraform
 
-If your organization has no current investment in Terraform, the [CAF Terraform landing zones][caf-terraform-landingzones] framework provides a prescriptive implementation of Terraform on Azure that is open source and community driven.
+If your organization has no current investment in Terraform, the [CAF Terraform landing zones][caf-terraform-landingzones] approach provides a prescriptive implementation of Terraform on Azure that is open source and community driven.
 However, this approach is more complex than the standalone ALZ Terraform module.
 
 You should be aware that the [CAF Terraform landing zones][caf-terraform-landingzones] approach uses a 'supermodule' and resource creation does not follow the standard model of the [azurerm][azurerm-terraform-provider] Terraform provider by Hashicorp.
