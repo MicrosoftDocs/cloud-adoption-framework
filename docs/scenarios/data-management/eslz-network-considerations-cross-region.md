@@ -44,7 +44,7 @@ Global VNet Peering has no network virtual appliance that acts as a single point
 
 In this network design, your central Azure platform team can no longer inspect and log all traffic using a layer 7 firewall. However, the cloud-scale analytics scenario is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage. You can capture network logs by using Network Security Group Flow Logs. You can consolidate and store other application and service level logs by using service-specific Diagnostic Settings.
 
-You can capture these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/).
+You can capture all of these logs at scale by using [Azure Policy definitions for diagnostic settings](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/DiagnosticSettings).
 
 In some scenarios, you need to limit due to regulatory or legal implications. For instance, you might have a local regulation that requires certain datasets to stay within a particulate datacenter, so you're not allowed to transfer them across regions. You can rely on network security groups to help you comply with this kind of rule, only allowing traffic to move in one direction from East US to West Europe and not vice versa. Within your network security groups, you can ensure that traffic originating from East US is denied while traffic originating from West Europe is allowed.
 

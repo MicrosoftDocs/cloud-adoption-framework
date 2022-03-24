@@ -76,9 +76,9 @@ This implies that the central Azure platform team can no longer inspect and log 
 
 With all resources hosted within a single subscription, your central Azure platform team no longer inspects all data in the central Connectivity Hub, either. You can still capture network logs by using Network Security Group Flow Logs. You can consolidate and store other application and service level logs by using service-specific Diagnostic Settings.
 
-You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/).
+You can capture all of these logs at scale by using [Azure Policy definitions for diagnostic settings](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/DiagnosticSettings).
 
-This design also allows you to create an Azure native DNS solution based on Private DNS Zones. You can automate the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
+This design also allows you to create an Azure native DNS solution based on Private DNS Zones. You can automate the DNS A-record lifecycle through [Azure Policy definitions for private DNS groups](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups).
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
@@ -88,6 +88,7 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 > When accessing a private endpoint across a peered network, you will only ever be charged for the private endpoint itself, not for the VNet peering. You can read the official statement in [FAQ: How will billing work when accessing a private endpoint from a peered network?](https://azure.microsoft.com/pricing/details/private-link/).
 
 In this network design, you only pay for:
+
 - your Private Endpoints (per hour)
 - the ingress and egress traffic sent through your Private Endpoints to load your raw dataset (1) and store your processed dataset (6)
 
@@ -184,13 +185,14 @@ In this setup, you can load the raw dataset in Storage Account A into VM B by ac
 This design's approach to user access management is similar to that of the [meshed network architecture](#meshed-network-architecture-recommended). However, in this design, you can require access rights for other data landing zones, to create Private Endpoints not just within a designated data landing zone and Vnet but also in other data landing zones and their respective Vnets.
 
 Because of this, your data application teams require three things, not two, to be able to create new services themselves:
+
 - write access to a resource group in a designated data landing zone
 - join access to their designated subnet
 - access to a resource group and subnet inside all the other data landing zones to create their respective local Private Endpoints
 
 This network design increases complexity in your access management layer since your data application teams require permissions in every single data landing zone. The design can also be confusing and lead to inconsistent RBAC over time.
 
-If data landing zone teams and data application teams aren't given necessary access rights, problems described in [Traditional hub and spoke design architecture (not recommended)](#traditional-hub-and-spoke-design-architecture-not-recommended) will occur.
+If data landing zone teams and data application teams aren't given necessary access rights, problems described in [traditional hub and spoke architecture (not recommended)](#traditional-hub-and-spoke-architecture-not-recommended) will occur.
 
 Summary: :::image type="icon" source="./images/minusicon.png":::
 
@@ -223,7 +225,7 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 
 ### Private Endpoint projection architecture summary
 
-The exponential growth of Private Endpoints in this network architecture can cause you to lose track of which Private Endpoints are used for what purpose in which location. You're also limited by access management issues and DNS layer complexities. Because of these problems, we can’t recommend this network design for cross-data landing zone use cases.
+The exponential growth of Private Endpoints in this network architecture can cause you to lose track of which Private Endpoints are used for what purpose in which location. You're also limited by access management issues and DNS layer complexities. Because of these problems, we can't recommend this network design for cross-data landing zone use cases.
 
 ## Private Endpoints in Connectivity Hub architecture (not recommended)
 
@@ -272,7 +274,7 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 
 #### Private Endpoints in Connectivity Hub architecture summary
 
-While this network architecture design has multiple benefits, its previously mentioned access management inconsistencies make it subpar. Therefore, we can’t recommend this design approach.
+While this network architecture design has multiple benefits, its previously mentioned access management inconsistencies make it subpar. Therefore, we can't recommend this design approach.
 
 ## Single-region data landing zone connectivity conclusion
 
