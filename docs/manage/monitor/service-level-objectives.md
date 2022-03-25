@@ -23,7 +23,7 @@ Service level objectives (SLOs) are measurable goals set on a small number of ke
 
 Upholding SLOs should be the main business goal with the commitment from all teams involved in the service delivery lifecycle.
 
-As a service broker, you are leveraging Microsoft's committment to reliability of services as defined in our service level agreements for Microsoft 365 and Azure services. This allows you to focus on your responsibilites in the service chain such as synthetic monitoring, network connectivity, and lets you focus on moe on security and compliance.
+As a service broker, you leverage Microsoft's commitment to reliability of services as defined in our service level agreements for Microsoft 365 and Azure services. This allows you to focus on your responsibilities in the service chain such as synthetic monitoring, network connectivity, and lets you focus on moe on security and compliance.
 
 ## Purpose
 
@@ -77,9 +77,9 @@ Before you start implementing an SLO and SLI based monitoring practice, let's wa
 
 - **Define SLO and corresponding SLIs** - Understand and document what you want to measure and how you'll measure it from customer point of view.
 
-- **Develop SLO agreements** - SLO should be well understood by the IT and DevOps teams, and organizational leaders. Draft an SLO agreement that describes the SLIs, their success criteria, and specify where and how you record success or failure. Once the draft agreement is considered ready, meet with all stakeholders to review and sign off on the agreement. It may require a few iterations until all stakeholders are in alignment.
+- **Develop SLO agreements** - SLO should be well understood by the IT and DevOps teams, and organizational leaders. Draft an SLO agreement that describes the SLIs, their success criteria, and specify where and how you record success or failure. Once the draft agreement is considered ready, meet with all stakeholders to review and sign off on the agreement. It might require a few iterations until all stakeholders are in alignment.
 
-- **Iterate to improve** - Evaluate performance of the service level indicators defined to identify opportunties to improve as you continue learning the behavior of the underlying service components.
+- **Iterate to improve** - Evaluate performance of the service level indicators defined to identify opportunities to improve as you continue learning the behavior of the underlying service components.
 
 ## How do you define SLOs?
 
@@ -97,7 +97,7 @@ The focus for service owners is to determine:
 
 - **What** the SLOs should be for these SLIs.
 
-SLOs can be defined with a gradual approach to drive acheivement or it's prescribed directly by the business. You use the SLOs defined by a service to make architectural decisions about the how you're building them. Therefore, it is important to carefully choose which scenarios to measure and what timeframe to measure them over.
+SLOs can be defined with a gradual approach to drive achievement or it's prescribed directly by the business. You use the SLOs defined by a service to make architectural decisions about the how you're building them. Therefore, it is important to carefully choose which scenarios to measure and what timeframe to measure them over.
 
 To summarize, an SLO is composed of the following values:
 
@@ -158,7 +158,7 @@ As we see from these examples above, the SLO/SLI categories and examples are nec
 
 ## SLO Tables/SLI categories
 
-The following examples are by no means an exhuastive list. While reliability and maintainability SLOs are hallmarks of systems for decades, you can define SLOs that include measures for cybersecurity, quality and user experience, and cost.
+The following examples are by no means an exhaustive list. While reliability and maintainability SLOs are hallmarks of systems for decades, you can define SLOs that include measures for cybersecurity, quality and user experience, and cost.
 
 ### Services
 
@@ -171,7 +171,7 @@ Typical high level measures of a service or system usually codified in service a
 |Security|Active threats and vulnerabilities (internal and external) that could or is causing harm to the business, assets and data.|Detection of [HAFNIUM Threat](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/)|
 |Compliance|Updates, servicing levels, hardening compliance, desired configuration drift|99.5% serviced updates on all assets|
 |Continuity|Ability to survive and recover from large disasters and external events.|Time (reconsitution)|
-|Quality of Service (QoS)|Characteristics of the users actual experience over time.|[Teams call quality](https://support.microsoft.com/office/monitor-call-and-meeting-quality-in-teams-7bb1747c-d91a-4fbb-84f6-ad3f48e73511) - recieved packet loss < 2%|
+|Quality of Service (QoS)|Characteristics of the users actual experience over time.|[Teams call quality](https://support.microsoft.com/office/monitor-call-and-meeting-quality-in-teams-7bb1747c-d91a-4fbb-84f6-ad3f48e73511) - received packet loss < 2%|
 
 ### Reliability
 
@@ -184,13 +184,13 @@ Reliability, the classic SLO, implies the degree of the dependability, durabilit
 
 ### Maintainability
 
-Combine support SLOs for IT service management processes such as incident and problem management, along with reliablity SLOs, so that availability measurement can be acheived.
+Combine support SLOs for IT service management processes such as incident and problem management, along with reliability SLOs, so that availability measurement can be achieved.
 
 |Category|Description|Example|
 |-|-|-|
 |Service Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.|
 |Security Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.|
-|Component Mean Time To Repair (MTTR)|From event detection through restoration or remediation.|||
+|Component Mean Time To Repair (MTTR)|From event detection through restoration or remediation.|
 |Mean Time Between Maintenance (MTBM)|Mean or average time between all maintenance actions including preventative actions where normal production work occurs.|See MDT.|
 |Maintenance Delay Time (MDT)|Total time from detection to recovery, including logistics and administrative delay.|Time to replace hardware to include ordering, shipment and installation.|
 
@@ -213,23 +213,22 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 ## Considerations
 
-- **Ensure Access.** Ensure that managers can leverage the already out of box dashboars on cloud systems especially SaaS and PaaS to avoid re-creating dashboards using third party tools.
+- **Ensure Access.** Ensure that managers can leverage the already out of box dashboards on cloud systems especially SaaS and PaaS to avoid re-creating dashboards using third party tools.
 
 - **Ensure Monitoring coverage or "total asset visibility."** Ensure agents, emitted logs, plus tables and queries for all assets that need to be managed and secured, and identify "blind spots" or gaps in coverage to ensure realism in SLOs.
 
 - **Get the right data in front of the right consumers.** Ensure consumers of SLOs and SLIs are able to interpret the underlying data itself in order to build trust and guide decisions using the information gained from data.
 
-- **Make Reasonable Promises.** When setting SLOs as "targets" especially when cost management is important, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expecations.
+- **Make Reasonable Promises.** When setting SLOs as "targets" especially when cost management is important, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expectations.
 
 - **Account for unforeseen external events.** Develop continuity plans and risk assessments to account for events not under your control, such as weather, power outages or disasters.
 
 - **Account for Change.** Ensure SLOs account for alterations to service or changes to technical reliability, throughput, quality as well as maintainablity--such as reductions in support staff.
 
-- **Provide a balanced set of SLOs.** Ensure a range of SLOs that provide a balanced or "360-degree" perspective on the service or system, as well as the focus on reliablity.
+- **Provide a balanced set of SLOs.** Ensure a range of SLOs that provide a balanced or "360-degree" perspective on the service or system, as well as the focus on reliability.
 
 ## Final thoughts
 
 You don't have to make all your SLOs binding and not all SLOs have to be agreed to or placed in service agreements. Not all SLOs need a corresponding service requirement, for example many cloud services obviate the need to create or trace requirements.
 
 ## Next steps
-
