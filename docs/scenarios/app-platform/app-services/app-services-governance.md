@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale business continuity and disaster recovery for <<Token-LongName>>
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of <<Token-Name>>.
+title: Governance considerations for <<Token-LongName>>
+description: <<Describe how this landing zone accelerator can improve can improve governance of <<Token-Name>>.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Business continuity and disaster recovery for <<Token-LongName>> enterprise-scale scenario
+# Governance considerations for <<Token-LongName>> landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
