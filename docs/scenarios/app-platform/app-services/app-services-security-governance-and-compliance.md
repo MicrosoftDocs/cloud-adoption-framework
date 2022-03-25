@@ -1,6 +1,6 @@
 ---
-title: Governance disciplines for <<Token-LongName>>
-description: <<Describe how this enterprise-scale scenario can improve security, governance, and compliance of <<Token-Name>>.>>
+title: Security considerations for <<Token-LongName>>
+description: <<Describe how this landing zone accelerator can improve security for <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Governance disciplines for <<Token-LongName>>
+# Security considerations for <<Token-LongName>> landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
