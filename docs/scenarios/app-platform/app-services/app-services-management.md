@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management and monitoring for <<Token-LongName>>
-description: <<Describe how this enterprise-scale scenario can improve management and monitoring of <<Token-Name>>.>>
+title: Operations management considerations for <<Token-LongName>>
+description: <<Describe how this landing zone accelerator can improve operations management for <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Management and monitoring for <<Token-LongName>> enterprise-scale scenario
+# Operations management considerations for <<Token-LongName>> landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
