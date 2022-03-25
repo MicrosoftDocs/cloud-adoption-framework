@@ -23,7 +23,7 @@ Service level objectives (SLOs) are measurable goals set on a small number of ke
 
 Upholding SLOs should be the main business goal with the commitment from all teams involved in the service delivery lifecycle.
 
-As a service broker, you leverage Microsoft's commitment to reliability of services as defined in our service level agreements for Microsoft 365 and Azure services. This allows you to focus on your responsibilities in the service chain such as synthetic monitoring, network connectivity, and lets you focus on moe on security and compliance.
+As a service broker, you rely on Microsoft's commitment to reliability of services as defined in our service level agreements for Microsoft 365 and Azure services. This allows you to focus on your responsibilities in the service chain such as synthetic monitoring, network connectivity, and lets you focus on moe on security and compliance.
 
 ## Purpose
 
@@ -59,7 +59,7 @@ Below are the definitions for each of these terms, as well as a brief descriptio
 
 - **Service level indicator (SLI)** is a metric that quantifies the quality or reliability of the service. At a minimum, there are four common SLIs to evaluate - availability, latency, throughput, and error rate.
 
-- **Availability** generally refers to the measurable or observable percentage of time that a system is operational and functional. You measure availability as a customer facing target for continuity of experience, which is in turn affected by one or more reliability issues (and other failure modes related to configuration changes, updates applied, etc).
+- **Availability** generally refers to the measurable or observable percentage of time that a system is operational and functional. You measure availability as a customer facing target for continuity of experience, which is in turn affected by one or more reliability issues (and other failure modes related to configuration changes, updates applied, etc.).
 
 - **Error budget** is the percentage of remaining buffer you have in terms of your SLO. Error budgets are the tool DevOps and IT uses to balance service reliability with the pace of innovation.
 
@@ -133,7 +133,7 @@ To summarize:
 
 A SLI specification is a formal statement of your users' expectations about one particular dimension of reliability for your service, like latency or availability.
 
-Start simple by selecting the right metrics to measure and collect, and not overcomplicating it by collecting too many metrics that aren't meaningful. Ensure that the SLIs you define have a direct relationship to the customer experience. This is why it is important to understand the perspective of the users in order to start with only a few indicators.
+Start simple by selecting the right metrics to measure and collect, and don't overcomplicate it by collecting too many metrics that aren't meaningful. Ensure that the SLIs you define have a direct relationship to the customer experience. This is why it is important to understand the perspective of the users in order to start with only a few indicators.
 
 If your service is resource constrained in some way, such as memory or CPU, then its saturation can also be a great SLI. However, saturation should not be used as an SLO since it does not directly correspond to a poor user experience (a service can have high memory utilization but users are unaffected).
 
@@ -168,14 +168,14 @@ Typical high level measures of a service or system usually codified in service a
 |-|-|-|
 |Availability|Simple downtime or Mean Time Between Maintenance or operational availability (MTBM/(MTBM+MDT))|99.99% over a monthly period|
 |Capacity|Ensure adequate, maximum or optimum business and service performance, throughput, storage, people, bandwidth, demand, resources and service functions. Includes labor and time limits to serve as triggers.|% Utilization (CPU, storage, memory, latency, throughput, scaling)|
-|Security|Active threats and vulnerabilities (internal and external) that could or is causing harm to the business, assets and data.|Detection of [HAFNIUM Threat](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/)|
+|Security|Active threats and vulnerabilities (internal and external) that could or is causing harm to the business, assets, and data.|Detection of [HAFNIUM Threat](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/)|
 |Compliance|Updates, servicing levels, hardening compliance, desired configuration drift|99.5% serviced updates on all assets|
-|Continuity|Ability to survive and recover from large disasters and external events.|Time (reconsitution)|
+|Continuity|Ability to survive and recover from large disasters and external events.|Time (reconstitution)|
 |Quality of Service (QoS)|Characteristics of the users actual experience over time.|[Teams call quality](https://support.microsoft.com/office/monitor-call-and-meeting-quality-in-teams-7bb1747c-d91a-4fbb-84f6-ad3f48e73511) - received packet loss < 2%|
 
 ### Reliability
 
-Reliability, the classic SLO, implies the degree of the dependability, durability, quality over time, of systems, services, resources or components to failure and failovers, with management effort applied to address failure (such as building in more redundency or adding a content delivery network) in order to increase operating time or availability.  It may also mean the accuracy, fidelity, integrity and trustworthiness of data used to measure SLOs as well. It can mean the classic *probability* that a system will perform its intended function under specified conditions such as under temperature stress. Resilience also includes built-in design factors or features that provide adaptability such as scaling, cooldown, load-balancing, recovery, unpredictable demand, degraded performance under severe stress as well as design for continuity in larger disasters (normally a separate SLO).
+Reliability, the classic SLO, implies the degree of the dependability, durability, quality over time, of systems, services, resources or components to failure and failovers, with management effort applied to address failure (such as building in more redundancy or adding a content delivery network) in order to increase operating time or availability.  It may also mean the accuracy, fidelity, integrity and trustworthiness of data used to measure SLOs as well. It can mean the classic *probability* that a system will perform its intended function under specified conditions such as under temperature stress. Resilience also includes built-in design factors or features that provide adaptability such as scaling, cooldown, load-balancing, recovery, unpredictable demand, degraded performance under severe stress as well as design for continuity in larger disasters (normally a separate SLO).
 
 |Category|Description|Example|
 |-|-|-|
@@ -206,26 +206,26 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 |Category|Description|Example|
 |-|-|-|
-|Cost|Measure expenditure, billing, invoices, by service, component, time.|Capital Expense, Operating Expense|
-|Coverage|% of components, systems and services under management (compliance)|compliance|
+|Cost|Measure expenditure, billing, invoices, by service, component, time.|Capital Expense or operating expense|
+|Coverage|% of components, systems, and services under management (compliance)|compliance|
 |Feed reliability|failures of heartbeat, connectors, etc.|
-|Productivity|Effectiveness to productively accomplish tasks|Labor, time by employee, Analyst productivity.|
+|Productivity|Effectiveness to productively accomplish tasks|Labor, time by employee, analyst productivity.|
 
 ## Considerations
 
-- **Ensure Access.** Ensure that managers can leverage the already out of box dashboards on cloud systems especially SaaS and PaaS to avoid re-creating dashboards using third party tools.
+- **Ensure Access.** Ensure managers and other personas in the organization are granted access to the visualizations available in [Azure Monitor](/azure/azure-monitor/overview.md#visualizing-monitoring-data) or from other Azure services, especially Azure SaaS and PaaS, to avoid duplicating them.
 
-- **Ensure Monitoring coverage or "total asset visibility."** Ensure agents, emitted logs, plus tables and queries for all assets that need to be managed and secured, and identify "blind spots" or gaps in coverage to ensure realism in SLOs.
+- **Ensure monitoring coverage or *total asset visibility*.** Ensure agents, emitted logs, plus tables and queries for all assets that need to be managed and secured, and identify "blind spots" or gaps in coverage to ensure realism in SLOs.
 
 - **Get the right data in front of the right consumers.** Ensure consumers of SLOs and SLIs are able to interpret the underlying data itself in order to build trust and guide decisions using the information gained from data.
 
-- **Make Reasonable Promises.** When setting SLOs as "targets" especially when cost management is important, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expectations.
+- **Make Reasonable Promises.** When setting SLOs as *targets* especially when cost management is important, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expectations.
 
-- **Account for unforeseen external events.** Develop continuity plans and risk assessments to account for events not under your control, such as weather, power outages or disasters.
+- **Account for unforeseen external events.** Develop continuity plans and risk assessments to account for events not under your control, such as weather, power outages, or disasters.
 
-- **Account for Change.** Ensure SLOs account for alterations to service or changes to technical reliability, throughput, quality as well as maintainablity--such as reductions in support staff.
+- **Account for Change.** Ensure SLOs account for alterations to service or changes to technical reliability, throughput, quality as well as maintainability - such as reductions in support staff.
 
-- **Provide a balanced set of SLOs.** Ensure a range of SLOs that provide a balanced or "360-degree" perspective on the service or system, as well as the focus on reliability.
+- **Provide a balanced set of SLOs.** Ensure a range of SLOs that provide a balanced or *360-degree* perspective on the service or system, as well as the focus on reliability.
 
 ## Final thoughts
 
