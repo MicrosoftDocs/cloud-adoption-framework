@@ -1,6 +1,6 @@
 ---
 title: Cloud monitoring service level objectives
-description: Gain an understanding of how service level objectives helps measure and quantify a given level of service to the consumers of your services.
+description: Gain an understanding of how service level objectives helps measure and quantify a given level of service to the consumers of your services hosted in Azure.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 03/25/2022
@@ -223,6 +223,10 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 ## Final thoughts
 
-You don't have to make all your SLOs binding and not all SLOs have to be agreed to or placed in service agreements. Not all SLOs need a corresponding service requirement, for example many cloud services obviate the need to create or trace requirements.
+You don't have to make all your SLOs binding, and not all SLOs have to be agreed to or placed in service agreements. Not all SLOs need a corresponding service requirement, for example many cloud services obviate the need to create or trace requirements.
 
 ## Next steps
+
+* Learn how the concept of [Continous monitoring with Azure Monitor](/azure/azure-monitor/continuous-monitoring.md) can help drive operational excellence and business value.
+
+* Review the considerations for [collecting monitoring data](data-collection.md).
