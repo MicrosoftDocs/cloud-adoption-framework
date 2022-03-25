@@ -172,7 +172,6 @@ Typical high level measures of a service or system usually codified in service a
 |Compliance|Updates, servicing levels, hardening compliance, desired configuration drift|99.5% serviced updates on all assets|
 |Continuity|Ability to survive and recover from large disasters and external events.|Time (reconsitution)|
 |Quality of Service (QoS)|Characteristics of the users actual experience over time.|[Teams call quality](https://support.microsoft.com/office/monitor-call-and-meeting-quality-in-teams-7bb1747c-d91a-4fbb-84f6-ad3f48e73511) - recieved packet loss < 2%|
-||||
 
 ### Reliability
 
@@ -180,9 +179,8 @@ Reliability, the classic SLO, implies the degree of the dependability, durabilit
 
 |Category|Description|Example|
 |-|-|-|
-|Failure Rate|Number of failures over the total operating hours|5 Failures in 973 hrs our .00514||
-|Mean Time Between Failure (MTBF)|MTBF is the inverse of Failure rate|194.6 hours||
-||||
+|Failure Rate|Number of failures over the total operating hours|5 Failures in 973 hrs our .00514|
+|Mean Time Between Failure (MTBF)|MTBF is the inverse of Failure rate|194.6 hours|
 
 ### Maintainability
 
@@ -190,31 +188,28 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 |Category|Description|Example|
 |-|-|-|
-|Service Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.||
-|Security Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.||
+|Service Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.|
+|Security Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.|
 |Component Mean Time To Repair (MTTR)|From event detection through restoration or remediation.|||
-|Mean Time Between Maintenance (MTBM)|Mean or average time between all maintenance actions including preventative actions where normal production work occurs.|See MDT.||
-|Maintenance Delay Time (MDT)|Total time from detection to recovery, including logistics and administrative delay.|Time to replace hardware to include ordering, shipment and installation.||
-||||
+|Mean Time Between Maintenance (MTBM)|Mean or average time between all maintenance actions including preventative actions where normal production work occurs.|See MDT.|
+|Maintenance Delay Time (MDT)|Total time from detection to recovery, including logistics and administrative delay.|Time to replace hardware to include ordering, shipment and installation.|
 
 ### Customer experience
 
 |Category|Description|Example|
 |-|-|-|
 |Throughput|The amount, rate or speed of workload or productive load placed on a system over time.|Transactions per unit of time.|
-|Error rate|The number of like or total errors as a percentage.|% Security event||
-|Latency|a measure of time or delay from input to output, movement of work through a process or from application to user.|Average seconds.||
-||||
+|Error rate|The number of like or total errors as a percentage.|% Security event|
+|Latency|a measure of time or delay from input to output, movement of work through a process or from application to user.|Average seconds.|
 
 ### Others
 
 |Category|Description|Example|
 |-|-|-|
-|Cost|Measure expenditure, billing, invoices, by service, component, time.|Capital Expense, Operating Expense||
+|Cost|Measure expenditure, billing, invoices, by service, component, time.|Capital Expense, Operating Expense|
 |Coverage|% of components, systems and services under management (compliance)|compliance|
-|Feed reliability|failures of heartbeat, connectors, etc.||
+|Feed reliability|failures of heartbeat, connectors, etc.|
 |Productivity|Effectiveness to productively accomplish tasks|Labor, time by employee, Analyst productivity.|
-||||
 
 ## Considerations
 
