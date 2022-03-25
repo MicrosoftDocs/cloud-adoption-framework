@@ -123,12 +123,6 @@ Monitoring approaches that look only at service (or service instance) health are
 
 When defining an SLO, it's important remember that your cloud provider(s) are a dependency on your SLA. Account for their service level agreements specified for each one of their services. For Azure, you can find them [here](https://azure.microsoft.com/support/legal/sla/).
 
-To summarize:
-
-1. Define the service
-2. Build the service in the cloud
-3. Learn the logs, metrics and traces (this is discussed in the [observability](observability.md) article).
-
 ## How do you define SLIs?
 
 A SLI specification is a formal statement of your users' expectations about one particular dimension of reliability for your service, like latency or availability.
@@ -179,8 +173,8 @@ Reliability, the classic SLO, implies the degree of the dependability, durabilit
 
 |Category|Description|Example|
 |-|-|-|
-|Failure Rate|Number of failures over the total operating hours|5 Failures in 973 hrs our .00514|
-|Mean Time Between Failure (MTBF)|MTBF is the inverse of Failure rate|194.6 hours|
+|Failure Rate|Number of failures over the total operating hours|5 failures in 973 hrs our .00514|
+|Mean Time Between Failure (MTBF)|MTBF is the inverse of failure rate|194.6 hours|
 
 ### Maintainability
 
@@ -191,24 +185,24 @@ Combine support SLOs for IT service management processes such as incident and pr
 |Service Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.|
 |Security Incident Performance|By category or product or priority.|Time and cost measures for each phase of the incident lifecycle.|
 |Component Mean Time To Repair (MTTR)|From event detection through restoration or remediation.|
-|Mean Time Between Maintenance (MTBM)|Mean or average time between all maintenance actions including preventative actions where normal production work occurs.|See MDT.|
+|Mean Time Between Maintenance (MTBM)|Mean or average time between all maintenance actions including preventative actions where normal production work occurs.|See Maintenance Delay Time|
 |Maintenance Delay Time (MDT)|Total time from detection to recovery, including logistics and administrative delay.|Time to replace hardware to include ordering, shipment and installation.|
 
 ### Customer experience
 
 |Category|Description|Example|
 |-|-|-|
-|Throughput|The amount, rate or speed of workload or productive load placed on a system over time.|Transactions per unit of time.|
-|Error rate|The number of like or total errors as a percentage.|% Security event|
-|Latency|a measure of time or delay from input to output, movement of work through a process or from application to user.|Average seconds.|
+|Throughput|The amount, rate, or speed of workload or productive load placed on a system over time.|Transactions per unit of time.|
+|Error rate|The number of like or total errors as a percentage.|% Security events|
+|Latency|A measure of time or delay from input to output, movement of work through a process, or from application to user.|Average seconds.|
 
 ### Others
 
 |Category|Description|Example|
 |-|-|-|
-|Cost|Measure expenditure, billing, invoices, by service, component, time.|Capital Expense or operating expense|
-|Coverage|% of components, systems, and services under management (compliance)|compliance|
-|Feed reliability|failures of heartbeat, connectors, etc.|
+|Cost|Measure expenditure, billing, invoices by service, component, or time.|Capital Expense or operating expense|
+|Coverage|% of components, systems, and services under management (compliance)|Compliance|
+|Feed reliability|Failures of heartbeat, connectors, changes, etc.|Tracking changes in mission-critical company data.|
 |Productivity|Effectiveness to productively accomplish tasks|Labor, time by employee, analyst productivity.|
 
 ## Considerations
