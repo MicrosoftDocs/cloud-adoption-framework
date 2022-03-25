@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management group and subscription organization for <<Token-LongName>>
-description: <<Describe how this enterprise-scale scenario can improve management group and subscription organization of <<Token-Name>>.>>
+title: Resource organization for <<Token-LongName>>
+description: <<Describe how this landing zone accelerator can improve management group and subscription organization to improve resource organization for <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Management group and subscription organization for <<Token-LongName>> enterprise-scale scenario
+# Resource organization for <<Token-LongName>> landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
