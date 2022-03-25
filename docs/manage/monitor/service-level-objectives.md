@@ -146,7 +146,7 @@ Human resources is interested in modernizing their internal time tracking web-ba
 - Usage reports and how many users are using the service over time.
 - Regular health monitoring such as availability, performance, security and compliance (service warranty).
 - Cost, such as how the service itself costs in the billing each month.
-- Cybersecurity, in terms of controlling access to resources and data by following a [Zero Trust security strategy](/security/zero-trust/).
+- Cybersecurity, in terms of controlling access to resources and data by following a [Zero Trust security strategy](/azure/security/zero-trust/).
 
 As we see from these examples above, the SLO/SLI categories and examples are necessary to define early in the design of the service. That's not any different at all from the on-premises services you've been building.  
 
