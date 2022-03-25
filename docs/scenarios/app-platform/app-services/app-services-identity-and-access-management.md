@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale identity and access management for <<Token-LongName>>
-description: <<Describe how this enterprise-scale scenario can improve identity and access management of <<Token-Name>>.>>
+title: Identity and access management considerations for <<Token-LongName>>
+description: <<Describe how this landing zone accelerator can improve identity and access management of <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Identity and access management for <<Token-LongName>> enterprise-scale scenario
+# Identity and access management for considerations for <<Token-LongName>> landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
