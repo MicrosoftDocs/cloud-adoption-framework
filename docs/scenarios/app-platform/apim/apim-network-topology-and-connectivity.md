@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale network topology and connectivity for <<Token-LongName>>
-description: <<Describe how this enterprise-scale scenario can improve network topology and connectivity of <<Token-Name>>.>>
+title: Enterprise-scale network topology and connectivity considerations for <<Token-LongName>>
+description: <<Describe how this landing zone accelerator can improve network topology and connectivity of <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Network topology and connectivity for <<Token-LongName>> enterprise-scale scenario
+# Network topology and connectivity considerations for <<Token-LongName>> landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
