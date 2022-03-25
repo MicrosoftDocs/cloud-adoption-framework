@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale enterprise enrollment and Azure AD tenants for <<Token-LongName>>
-description: <<Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of <<Token-Name>>.>>
+title: Azure billing offers and Active Directory tenant considerations for <<Token-LongName>>
+description: <<Describe how this landing zone accelerator can improve Azure billing offers and Active Directory tenants of <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Enterprise enrollment and Azure AD tenants for <<Token-LongName>> enterprise-scale scenario
+# Azure billing offers and Active Directory tenant considerations for <<Token-LongName>> landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
