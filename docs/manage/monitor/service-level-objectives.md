@@ -13,7 +13,7 @@ ms.subservice: manage
 
 Before the emergence of cloud computing, the business relied on services delivered by their IT organization hosted on-premises. While the business expects value in services delivered, that value might not have been realized because IT didn't fully understand the complexity of those services. This creates undesirable outcomes in monitoring, measuring, and delivering the minimum level of service quality.
 
-This article reviews the fundamental principles of service level objectives, and how to approach implementing and applying them.
+This article reviews the fundamental principles of service level objectives, and how to approach successfully implementing and applying them.
 
 ## Overview
 
