@@ -1,55 +1,53 @@
 ---
-title: Cloud-scale analytics architecture overview in Azure
-description: Learn about Cloud-scale analytics architecture overview in Azure
+title: Architectures overview
+description: Learn about cloud-scale analytics architectures in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/10/2022
+ms.date: 03/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Architectures Overview
+# Architectures overview
 
-In the previous sections, we've covered cloud-scale analytics areas that you should consider before building out your first architecture.
+Before you start to build out the data architectures of your cloud-scale analytics framework, review the articles in the following table.
 
 [!INCLUDE [documentation-sections](../includes/documentation-sections.md)]
 
 ## Physical architecture
 
-This section focuses on the details of a physical implementation of cloud-scale analytics. It maps out the physical architectures of [data management landing zone](data-management-landing-zone.md) and [data landing zone.](data-landing-zone.md).
+The physical implementation of cloud-scale analytics consists of two main architectures: the [data management landing zone](data-management-landing-zone.md) and [data landing zone](data-landing-zone.md).
 
 ## Data applications
 
-[Data applications](data-landing-zone-data-products.md) are a core concept of delivering a data product and can be aligned to both lakehouse and data mesh pattern.
+[Data applications](data-landing-zone-data-products.md) are a core concept for delivering a data product and can be aligned to both lakehouse and data mesh patterns.
 
-## Scaling Cloud-scale analytics
+## Cloud-scale analytics
 
-Cloud-scale analytics is scalable and [Scaling Cloud-scale analytics](scaling-architectures.md) addresses how to think about the number of data management landing zones you'll require.
+You can [scale](scaling-architectures.md) your cloud-scale analytics deployment by using multiple data landing zones.
 
 ## Data mesh
 
-[Data mesh](what-is-data-mesh.md) can be implemented using cloud-scale analytics.
-
-Whilst most cloud-scale analytics guidance applies, there are some differences that need to be taken into account. We highlight the data mesh specific for data domains, self-serve, onboarding data products, governance, data marketplace, data sharing and operating model.
+Implement [data mesh](what-is-data-mesh.md) by using cloud-scale analytics. Although most cloud-scale analytics guidance applies, there are some differences to be aware of for data domains, self-serve data platforms, onboarding data products, governance, data marketplace, and data sharing.
 
 ## Deployment templates for cloud-scale analytics
 
-This section includes many reference templates that can be deployed.
+The following table lists reference templates that you can deploy.
 
 [!INCLUDE [deployment-templates-table](../includes/deployment-templates-table.md)]
 
 ## Connect to environments privately
 
-The reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks that are raised by customers.
+The reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks.
 
-This article on how to [connect to environments privately](connect-to-environments-privately.md) via Azure Bastion host and jump boxes.
+The most simple security solution is to [host a jumpbox](connect-to-environments-privately.md#about-azure-bastion-host-and-jumpboxes) on the virtual network of the data management landing zone or data landing zone to connect to the data services through private endpoints.
 
 ## Frequently asked questions
 
-As we learn, we continue to put curate [Frequently asked questions](frequently-asked-questions.md) for others to access.
+For a list of questions and answers about cloud-scale analytics, see [Frequently asked questions](frequently-asked-questions.md).
 
 ## Next steps
 
-[Overview of the data management landing zone](data-management-landing-zone.md)
+[Cloud-scale analytics data management landing zone overview](data-management-landing-zone.md)
