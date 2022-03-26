@@ -23,7 +23,7 @@ Service level objectives (SLOs) are measurable goals set on a small number of ke
 
 Upholding SLOs should be the main business goal with the commitment from all teams involved in the service delivery lifecycle.
 
-As a service broker, you rely on Microsoft's commitment to reliability of services as defined in our service level agreements for Microsoft 365 and Azure services. This allows you to focus on your responsibilities in the service chain such as synthetic monitoring, network connectivity, and lets you focus on moe on security and compliance.
+As a service broker, you rely on Microsoft's commitment to reliability of services as defined in our service level agreements for Microsoft 365 and Azure services. This allows you to focus on your responsibilities in the service chain such as synthetic monitoring, network connectivity, and security and compliance.
 
 ## Purpose
 
