@@ -17,8 +17,8 @@ This article describes the recommended guidance for providing remote access to v
 Azure offers different technologies for providing remote access to VMs:
 
 - [Azure Bastion](/azure/bastion/bastion-overview), a platform as a service (PaaS) solution, for accessing VMs through a browser or currently in preview through the native SSH/RDP client on Windows workstations
-- Just in time ([JIT](/azure/defender-for-cloud/just-in-time-access-overview)) access provided through Microsoft Defender for Cloud
-- Hybrid connectivity options, such as Azure ExpressRoute and VPN
+- [Just in time (JIT)](/azure/defender-for-cloud/just-in-time-access-overview) access provided through Microsoft Defender for Cloud
+- Hybrid connectivity options, such as Azure ExpressRoute and VPNs
 - Public IP attached directly to the VM or through a NAT rule via an Azure public load balancer
 
 The choice of which remote access solution is most appropriate depends on factors like scale, topology, and security requirements.
@@ -43,7 +43,7 @@ The choice of which remote access solution is most appropriate depends on factor
 - In a Virtual WAN-based network topology where remote access to Azure Virtual Machines over the internet is required, deploy Azure Bastion in each spoke virtual network of the respective VMs as depicted in Figure 1.
 - In hub-and-spoke network topology, where remote access to Azure Virtual Machines over the internet is required:
   - A single Azure Bastion host can be deployed in the hub virtual network, which can provide connectivity to Azure VMs on spoke virtual networks via virtual network peering. This configuration reduces the number of Azure Bastion instances to manage in your environment. This scenario requires users who sign in to Windows and Linux VMs via Azure Bastion to have a [reader role on the Azure Bastion resource and the hub virtual network](/azure/bastion/bastion-faq#peering). Some implementations might have security or compliance considerations. See Figure 2.
-  - Your environment might not permit granting users the reader role-based access control (RBAC) role on the Azure Bastion resource and the hub virtual network. Use Azure Bastion basic or Standard to provide connectivity to VMs within a spoke virtual network. Deploy a dedicated Azure Bastion instance into each spoke virtual network that requires remote access. See Figure 3.
+  - Your environment might not permit granting users the reader role-based access control (RBAC) role on the Azure Bastion resource and the hub virtual network. Use Azure Bastion Basic or Standard to provide connectivity to VMs within a spoke virtual network. Deploy a dedicated Azure Bastion instance into each spoke virtual network that requires remote access. See Figure 3.
 - Configure NSG rules to protect Azure Bastion and the VMs to which it provides connectivity. Follow the guidance in [Working with VMs and NSGs in Azure Bastion](/azure/bastion/bastion-nsg).
 - Configure Azure Bastion diagnostic logs to be sent to the central Log Analytics workspace. Follow the guidance in [Enable and work with Azure Bastion resource logs](/azure/bastion/diagnostic-logs).
 - Ensure the [required RBAC role assignments](/azure/bastion/bastion-faq#roles) are made for the users or groups that connect to the VMs via Azure Bastion are in place.
@@ -61,5 +61,5 @@ The choice of which remote access solution is most appropriate depends on factor
 
 :::image type="content" source="./media/azure-standalone-bastion.png" alt-text="Diagram that shows Azure standalone virtual network topology." lightbox="./media/azure-standalone-bastion.png":::
 
-   *Figure 3: Azure Standalone virtual network topology.*
+   *Figure 3: Azure standalone virtual network topology.*
    
