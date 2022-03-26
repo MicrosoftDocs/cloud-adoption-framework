@@ -121,13 +121,13 @@ For example, if your customer expects that a business or infrastructure service 
 
 Monitoring approaches that look only at service (or service instance) health are vulnerable to missing customer experience issues at both ends of the spectrum; service health does not always correlate to quality of the customer experience. This is because there are different behavior characteristics between an Azure PaaS and SaaS service, the configuration of those Azure services, how and where (that is, which region) their resources are deployed, and the addition of your custom code/logic which adds further complexity.
 
-When defining an SLO, it's important remember that your cloud provider(s) are a dependency on your SLA. Account for their service level agreements specified for each one of their services. For Azure, you can find them [here](https://azure.microsoft.com/support/legal/sla/).
+When defining an SLO, it's important remember that your cloud provider(s) are a dependency on your SLA. Account for their service level agreements specified for each one of their services. For Azure, you can find them [here](https://azure.microsoft.com/support/legal/sla/), and Microsoft 365 [here](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement.md).
 
 ## How do you define SLIs?
 
 A SLI specification is a formal statement of your users' expectations about one particular dimension of reliability for your service, like latency or availability.
 
-Start simple by selecting the right metrics to measure and collect, and don't overcomplicate it by collecting too many metrics that aren't meaningful. Ensure that the SLIs you define have a direct relationship to the customer experience. This is why it is important to understand the perspective of the users in order to start with only a few indicators.
+Start simple by selecting the right metrics to measure and collect, and don't over complicate it by collecting too many metrics that aren't meaningful. Ensure that the SLIs you define have a direct relationship to the customer experience. This is why it is important to understand the perspective of the users in order to start with only a few indicators.
 
 If your service is resource constrained in some way, such as memory or CPU, then its saturation can also be a great SLI. However, saturation should not be used as an SLO since it does not directly correspond to a poor user experience (a service can have high memory utilization but users are unaffected).
 
