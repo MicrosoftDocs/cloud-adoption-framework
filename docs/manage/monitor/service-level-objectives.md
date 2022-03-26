@@ -121,7 +121,7 @@ For example, if your customer expects that a business or infrastructure service 
 
 Monitoring approaches that look only at service (or service instance) health are vulnerable to missing customer experience issues at both ends of the spectrum; service health does not always correlate to quality of the customer experience. This is because there are different behavior characteristics between an Azure PaaS and SaaS service, the configuration of those Azure services, how and where (that is, which region) their resources are deployed, and the addition of your custom code/logic which adds further complexity.
 
-When defining an SLO, it's important remember that your cloud provider(s) are a dependency on your SLA. Account for their service level agreements specified for each one of their services. For Azure, you can find them [here](https://azure.microsoft.com/support/legal/sla/), and Microsoft 365 [here](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement.md).
+When defining an SLO, it's important remember that your cloud provider(s) are a dependency on your SLA. Account for their service level agreements specified for each one of their services. For Azure, you can find them [here](https://azure.microsoft.com/support/legal/sla/), and Microsoft 365 [here](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement).
 
 ## How do you define SLIs?
 
