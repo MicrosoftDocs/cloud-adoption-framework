@@ -1,6 +1,6 @@
 ---
 title: Cloud monitoring service level objectives
-description: Gain an understanding of how service level objectives helps measure and quantify a given level of service to the consumers of your services hosted in Azure.
+description: Gain an understanding how service level objectives helps measure and quantify a given level of service to the consumers of your services hosted in Azure.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 03/25/2022
@@ -11,7 +11,7 @@ ms.subservice: manage
 
 # Cloud monitoring guide: Service Level Objectives
 
-Before the emergence of cloud computing, the business relied on services delivered by their IT organization that were hosted on-premises. While the business expected value in these services delivered by their IT organization, it may not have been fully realized as a result of not fully understanding the complexity of those services, and therefore, not being able to effectively monitor, measure, and deliver the minimum level of service quality.
+Before the emergence of cloud computing, the business relied on services delivered by their IT organization that were hosted on-premises. While the business expects value in services delivered by their IT organization, it may not have been fully realized because IT didn't properly understanding the complexity of those services. As a result it prevented them from not being able to effectively monitor, measure, and deliver the minimum level of service quality.
 
 This article reviews the fundamental principles of service level objectives, and how to approach implementing and applying them.
 
@@ -87,7 +87,7 @@ The objective of an SLO is to obtain clear signals that accurately measure quali
 
 For example, here is a simplified example of an SLO for an internal time tracking web-based application - *Requests in the last 5 minutes are served in under 1000 milliseconds at the 99th percentile.*
 
-The metrics are aggregations of time series data, called Service Level Indicators (SLIs). Where the SLIs are gathered matters a lot. In the above example, if the customer interacts with the service using an API, then measuring system latency and time to process requests are accurate SLIs. However, if the customer interacts with the service using a web portal, then the total time to service the request may also include the JavaScript performance of the web page.
+The metrics are aggregations of time series data, called Service Level Indicators (SLIs). Where the SLIs are gathered matters a lot. In the above example, if the customer interacts with the service using an API, then measuring system latency and time to process requests are accurate SLIs. However, if the customer interacts with the service using a web portal, then the total time to service the request should also include the JavaScript performance of the web page.
 
 The focus for service owners is to determine:
 
@@ -97,7 +97,7 @@ The focus for service owners is to determine:
 
 - **What** the SLOs should be for these SLIs.
 
-SLOs can be defined with a gradual approach to drive achievement or it's prescribed directly by the business. You use the SLOs defined by a service to make architectural decisions about the how you're building them. Therefore, it is important to carefully choose which scenarios to measure and what timeframe to measure them over.
+SLOs can be defined with a gradual approach to drive achievement or it's prescribed directly by the business. You use the SLOs defined by a service to make architectural decisions about the how you're building them. Therefore, it is important to carefully choose which scenarios to measure and what time frame to measure them over.
 
 To summarize, an SLO is composed of the following values:
 
@@ -169,7 +169,7 @@ Typical high level measures of a service or system usually codified in service a
 
 ### Reliability
 
-Reliability, the classic SLO, implies the degree of the dependability, durability, quality over time, of systems, services, resources or components to failure and failovers, with management effort applied to address failure (such as building in more redundancy or adding a content delivery network) in order to increase operating time or availability.  It may also mean the accuracy, fidelity, integrity and trustworthiness of data used to measure SLOs as well. It can mean the classic *probability* that a system will perform its intended function under specified conditions such as under temperature stress. Resilience also includes built-in design factors or features that provide adaptability such as scaling, cooldown, load-balancing, recovery, unpredictable demand, degraded performance under severe stress as well as design for continuity in larger disasters (normally a separate SLO).
+Reliability, the classic SLO, implies the degree of the dependability, durability, quality over time, of systems, services, resources or components to failure and failovers, with management effort applied to address failure (such as building in more redundancy or adding a content delivery network) in order to increase operating time or availability. It could also mean the accuracy, fidelity, integrity and trustworthiness of data used to measure SLOs as well. It can mean the classic *probability* that a system will perform its intended function under specified conditions such as under temperature stress. Resilience also includes built-in design factors or features that provide adaptability such as scaling, cool down, load-balancing, recovery, unpredictable demand, degraded performance under severe stress as well as design for continuity in larger disasters (normally a separate SLO).
 
 |Category|Description|Example|
 |-|-|-|
@@ -227,6 +227,6 @@ You don't have to make all your SLOs binding, and not all SLOs have to be agreed
 
 ## Next steps
 
-* Learn how the concept of [Continous monitoring with Azure Monitor](/azure/azure-monitor/continuous-monitoring.md) can help drive operational excellence and business value.
+* Learn how the concept of [Continuos monitoring with Azure Monitor](/azure/azure-monitor/continuous-monitoring.md) can help drive operational excellence and business value.
 
 * Review the considerations for [collecting monitoring data](data-collection.md).
