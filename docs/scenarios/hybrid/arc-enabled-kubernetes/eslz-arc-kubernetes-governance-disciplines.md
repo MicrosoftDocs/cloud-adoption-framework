@@ -128,7 +128,7 @@ The following image shows a conceptual reference architecture for Microsoft Defe
 
 - If Microsoft Container Registry is used as the central private Docker registry to store and manage your container images, [Use Microsoft Defender for Containers to scan the images for vulnerabilities](/azure/defender-for-cloud/defender-for-container-registries-usage).
 
-- Make sure to review [the network connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md).
+- Make sure to review [the network topology and connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md).
 
 ## Secure cluster access
 
