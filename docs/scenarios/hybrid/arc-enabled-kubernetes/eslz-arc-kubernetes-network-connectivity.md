@@ -45,7 +45,7 @@ The following is a network architecture diagram that supports cluster access fro
   - Configure a [DNS forwarder](/azure/private-link/private-endpoint-dns#on-premises-workloads-using-a-dns-forwarder) to to resolve the Azure service public DNS zone in Azure.
 - When [Azure Arc-enabled Kubernetes agents](/azure/azure-arc/kubernetes/conceptual-agent-overview) traffic is going through the firewalls or proxy servers, create a source and destination object groups and/or tags to simplify outbound internet traffic rules to support additional URL Allow list for Azure Arc extensions.
 - Use Azure Monitor to keep track of [the Azure Arc-enabled Kubernetes clusters connectivity status](/azure-arc/kubernetes/conceptual-connectivity-modes#connectivity-status) and raise alerts to notify Kubernetes cluster administrators when connectivity state changes. Use [Azure Resource Graph queries](/azure/azure-arc/kubernetes/resource-graph-samples?tabs=azure-cli) along with Azure Monitor.
-- When using [the semi-connected network connectivity mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes), it is recommended to connect the cluster to Azure Arc at least once in 30 days to export billing data and once in 90 days to renew managed identity certificates, update Azure Arc-enabled Kubernetes resource and agents.
+- When using [the semi-connected network connectivity mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes), it is recommended to connect the cluster to Azure Arc at least once in 30 days to export billing data and once in 90 days to renew managed identity certificates and update Azure Arc-enabled Kubernetes resource and agents.
 
 ## Next steps
 
