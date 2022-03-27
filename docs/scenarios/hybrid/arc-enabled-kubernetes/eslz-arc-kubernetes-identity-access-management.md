@@ -62,7 +62,7 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
 
   - Avoid direct user assignment to Azure RBAC roles as it is difficult to govern access management.
   - Assign security group owners to decentralize and delegate access management responsibility and audit assignments.
-  - Enable periodic [access reviews](/azure/active-directory/privileged-identity-management/pim-create-azure-ad-roles-and-resource-roles-review) in Azure AD to remove users that are no longer need access to the Kubernetes clusters.
+  - Enable periodic [access reviews](/azure/active-directory/privileged-identity-management/pim-create-azure-ad-roles-and-resource-roles-review) in Azure AD to remove users that no longer need access to the Kubernetes clusters.
   - Create [conditional access policies](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management) when using Azure RBAC for cluster management to enforce various conditions to meet security and governance policies.
   
 ## Role based access controls (RBAC)
