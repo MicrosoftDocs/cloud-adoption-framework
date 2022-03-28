@@ -13,10 +13,14 @@ ms.custom: internal
 <!--
 slides 29-30
 -->
-
+# Modernization examples
 
 
 ## Migrating your app to Azure IaaS and Azure SQL Database Managed Instance (MI)
+
+Evaluate indicators that would determine whether a set of workloads is a good candidate for modernization.
+
+
 
 The Azure Migrate-Server Migration moves the Web/App layer to Azure Iaas.
 The Azure Migrate-Database Migration moves the SQL data layer to Azure SQL DB MI.

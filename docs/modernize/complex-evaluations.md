@@ -13,3 +13,7 @@ ms.custom: internal
 <!--
 slides 36-37
 -->
+
+# Complex evaluations
+
+:::image type="content" source="../_images/modernize/modernization-disciplines.png" alt-text="...":::

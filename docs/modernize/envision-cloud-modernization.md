@@ -15,17 +15,17 @@ Modernization of your workloads can help you achieve the [common modernization m
 
 - What are the limitations of your current state workloads?
 
-Understand the limitations of your current state workloads and best paths to modernization to help you set realistic expectations. Every cloud adoption plan contains three horizons: [Migrate](../get-started/migrate.md), [Modernize](index.md), and [Innovate](../get-started/innovate.md). These horizon efforts align to a modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../adopt/migrate-modernize-approaches.md).
+Understand the limitations of your current state workloads and best paths to modernization to help you set realistic expectations. Every cloud adoption plan contains three horizons: [Migrate](../get-started/migrate.md), [Modernize](index.md), and [Innovate](../get-started/innovate.md). These horizon efforts align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../adopt/migrate-modernize-approaches.md).
 
 The following steps will help you envision your modernization strategy and end state, based on your strategic objectives.
 
 ## Step 1: Understand your corporate & strategic motivations for modernization
 
-*Why* are you moving to the cloud? It's critical that you understand the limitations of your current state workloads and the best paths toward modernization. This understanding helps you set realistic expectations. For more information, see [Why are we moving to the cloud?](../strategy/motivations.md).
+[Why are we moving to the cloud?](../strategy/motivations.md)? It's critical that you understand the limitations of your current state workloads and the best paths toward modernization. This understanding helps you set realistic expectations.
 
 :::image type="content" source="../_images/modernize/modernization-triggers.png" alt-text="Image showing triggers for modernization.":::
 
-It's likely that many of the following triggers apply to your scenario. Identify which of the following triggers are most important. This way you'll get your strategies down, so you'll better understand why you're moving to the cloud.
+It's likely that many of the following triggers apply to your [Motivations for cloud adoption](../strategy/motivations.md). Identify which of the following triggers are most important. This way you'll get your strategies down, so you'll better understand why you're moving to the cloud.
 
 - Enabling hybrid work: enabling scale, access across networks, developer agility and productivity
 - Faster time to market: PaaS + DevOps accelerates time to market
@@ -37,7 +37,7 @@ It's likely that many of the following triggers apply to your scenario. Identify
 <!--Further expand on each of these?-->
 ## Step 2: Flag workloads, which could better deliver on those motivations if they were to be modernized
 
-What are you moving? You don't modernize assets, you modernize workloads, so conceptually reorganize your infrastructure, data stores and apps into workloads.
+What are you moving? We don't modernize assets, we modernize workloads, so conceptually reorganize your infrastructure, data stores, and apps into workloads.
 
 :::image type="content" source="../_images/modernize/assets-to-workloads.png" alt-text="Image showing existing data center with multiple workloads, and then modernized workloads and assets grouped accordingly.":::
 

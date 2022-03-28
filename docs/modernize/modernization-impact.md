@@ -12,4 +12,9 @@ ms.custom: internal
 
 <!--slide 47-->
 
+# Modernization impact
+
+Example image to be removed:
 :::image type="content" source="../_images/modernize/modernization-impact.png" alt-text="Graphic showing example of modernization impact.":::
+
+
