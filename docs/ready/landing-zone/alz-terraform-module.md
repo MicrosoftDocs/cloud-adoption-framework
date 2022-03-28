@@ -35,12 +35,12 @@ Customize them to meet the requirements of your organization.
 
 You can configure the module to deploy different sets of resources, each aligned to the critical design areas:
 
-| Resource category | Enterprise-scale critical design areas |
+| Resource category | Azure landing zone critical design areas |
 | --- | --- |
-| Core resources | [Management group and Subscription organization][es-hierarchy]</br>[Security governance and compliance][es-security]</br>[Business continuity and disaster recovery][es-bcdr] |
-| Management resources | [Management and monitoring][es-management] |
-| Connectivity resources | [Network topology and connectivity][es-connectivity] |
-| Identity resources | [Identity and access management][es-identity] |
+| Core resources | [Resource organization][alz-resourceorg]</br>[Security][alz-security]</br> [Governance][alz-governance] |
+| Management resources | [Management and monitoring][alz-management] |
+| Connectivity resources | [Network topology and connectivity][alz-connectivity] |
+| Identity resources | [Identity and access management][alz-identity] |
 
 By packaging these capabilities into a single Terraform module, it becomes easier to build and enforce consistency across the Azure platform when operating at scale.
 
@@ -85,7 +85,7 @@ The following sections outline the different groups of resource types deployed a
 
 ## Core resources
 
-The core capability of this module deploys the foundations of the [Azure landing zone conceptual architecture][msdocs-alz-architecture], with a focus on the central [resource hierarchy and governance][es-hierarchy]:
+The core capability of this module deploys the foundations of the [Azure landing zone conceptual architecture][msdocs-alz-architecture], with a focus on the central [resource organization][alz-hierarchy]:
 
 ![Enterprise-scale Core Landing Zones Architecture](./media/terraform-caf-enterprise-scale-overview.png)
 
@@ -158,7 +158,7 @@ For more information about how to use this capability, see the [Deploy Connectiv
 
 ## Identity resources
 
-The module provides an option to enable deployment of [identity and access management][es-identity] resources into the current Subscription context.
+The module provides an option to enable deployment of [identity and access management][alz-identity] resources into the current Subscription context.
 It also ensures the specified Subscription is placed in the right Management Group.
 
 ![Enterprise-scale Identity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-identity.png)
@@ -284,13 +284,13 @@ Once there, you can also discover how some parts of the module work.
 
 [msdocs-alz-architecture]: index.md#azure-landing-zone-conceptual-architecture "Azure landing zones conceptual architecture."
 
-[es-hierarchy]:    design-area/resource-org.md "Management group and subscription organization for enterprise-scale on the Cloud Adoption Framework."
-[es-security]:     design-area/governance.md "Security governance and compliance for enterprise-scale on the Cloud Adoption Framework."
-[es-bcdr]:         design-area/management-business-continuity-disaster-recovery.md "Business continuity and disaster recovery for enterprise-scale on the Cloud Adoption Framework."
-[es-management]:   design-area/management.md "Management and monitoring for enterprise-scale on the Cloud Adoption Framework."
-[es-connectivity]: design-area/network-topology-and-connectivity.md "Network topology and connectivity for enterprise-scale on the Cloud Adoption Framework."
-[es-identity]:     design-area/identity-access.md "Identity and access management for enterprise-scale on the Cloud Adoption Framework."
-[es-ref-arch]:     index.md#azure-landing-zone-conceptual-architecture "Enterprise-scale reference architecture."
+[alz-resourceorg]:    design-area/resource-org.md "Resource organization for Azure kanding zones on the Cloud Adoption Framework."
+[alz-security]:      design-area/security.md "Security for Azure landing zones on the Cloud Adoption Framework."
+[alz-governance]:    design-area/governance.md "Governance for Azure landing zones on the Cloud Adoption Framework."
+[alz-management]:   design-area/management.md "Management and monitoring for enterprise-scale on the Cloud Adoption Framework."
+[alz-connectivity]: design-area/network-topology-and-connectivity.md "Network topology and connectivity for enterprise-scale on the Cloud Adoption Framework."
+[alz-identity]:     design-area/identity-access.md "Identity and access management for enterprise-scale on the Cloud Adoption Framework."
+[alz-ref-arch]:     index.md#azure-landing-zone-conceptual-architecture "Enterprise-scale reference architecture."
 
 [gh-es]: https://github.com/Azure/Enterprise-Scale "GitHub repository for Enterprise-Scale."
 [gh-wiki]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki "Module documentation on the GitHub Wiki."
