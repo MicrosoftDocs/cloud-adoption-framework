@@ -909,19 +909,17 @@ items:
       - name: Envision cloud modernization (DRAFT)
         href: modernize/envision-cloud-modernization.md
       - name: Evaluate modernization options (DRAFT)
-        href: evaluate-modernization-options.md
+        href: modernize/evaluate-modernization-options.md
       - name: Modernization economics (DRAFT)
-        href: modernization-economics.md
+        href: modernize/modernization-economics.md
       - name: Complex evaluations (DRAFT)
-        href: complex-evaluations.md  
-      - name: Commit to modernization plan (DRAFT)
-        href: commit-to-modernization-plan.md
+        href: modernize/complex-evaluations.md  
       - name: Modernization effort (DRAFT)
-        href: modernization-effort.md
+        href: modernize/modernization-effort.md
       - name: Modernization impact (DRAFT)
-        href: modernization-impact.md
+        href: modernize/modernization-impact.md
       - name: Modernization commitment (DRAFT)
-        href: modernization-commitment.md
+        href: modernize/modernization-commitment.md
       - name: Modernize examples 
         items:
         - name: Refactor an on-premises apps
