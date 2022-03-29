@@ -80,7 +80,7 @@ The Azure Arc agent is the key component for Azure Arc-enabled Kubernetes, it co
 
 - Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments as shown in the diagram below.
 
-  ![Azure Arc-enabled Kubernetes and Key Vault integration](./media/arc-enabled-kubernetes-keyvault.png)
+  [![Azure Arc-enabled Kubernetes and Key Vault integration](./media/arc-enabled-kubernetes-keyvault.png)](./media/arc-enabled-kubernetes-keyvault.png#lightbox)
 
 ## Enable and secure GitOps configurations
 
@@ -96,7 +96,7 @@ Having policy-driven governance is a foundational principle of cloud-native oper
 
 - Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also in-cluster policy enforcements by extending [Gatekeeper for Open Policy Agent](/azure/governance/policy/concepts/policy-for-kubernetes?toc=/azure/azure-arc/kubernetes/toc.json). It is possible to implement any of the [built-in policies](/azure/governance/policy/samples/built-in-policies#kubernetes) to be able to have compliance and enforcement at scale quickly. The following image illustrates how Azure Policy applies at-scale enforcements and safeguards on Azure Arc-enabled Kubernetes clusters:
 
-  ![Azure Arc-enabled Kubernetes Policy](./media/arc-enabled-kubernetes-policy.png)
+  [![Azure Arc-enabled Kubernetes Policy](./media/arc-enabled-kubernetes-policy.png)](./media/arc-enabled-kubernetes-policy.png#lightbox)
 
 - Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where it can be applied (management group, subscription, resource group or individual resource level) and leverage [Azure Policy's built-in library](/azure/governance/policy/samples/built-in-policies#kubernetes) for Azure Arc-enabled Kubernetes. Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization).
 
