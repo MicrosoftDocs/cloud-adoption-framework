@@ -1,5 +1,5 @@
 ---
-title: Introduction to Terraform landing zones 
+title: Introduction to Terraform landing zones
 description: CAF Recommendations to use Terraform with Microsoft Azure in enterprise context.
 author: arnaudlh
 ms.author: arnaul
@@ -13,6 +13,10 @@ ms.custom: think-tank
 <!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 
 # CAF Terraform landing zones
+
+> [!NOTE]
+> This article describes one of two ways to implement landing zones on Azure using Terraform.
+> For guidance on choosing the right approach, see [this guidance](deploy-landing-zones-with-terraform.md).
 
 Azure provides multiple native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp.
 
@@ -63,7 +67,7 @@ This core concept applies for all areas of your environment, this is why as part
 
 ## Empowering the Site Reliability Engineer
 
-As part of CAF Terraform, multiple functions are split across multiple components. That level of decomposition and de-correlation might be confusing at the beginning, but actually allows a maximum of flexibility and reusability of the components whether you're using the complete CAF Terraform landing zones, or you want to use the battlefield-tested CAF module in your own pipelines or Terraform Cloud, or benefit from the CAF naming provider inside your own enterprise-grew modules.  
+As part of CAF Terraform, multiple functions are split across multiple components. That level of decomposition and de-correlation might be confusing at the beginning, but actually allows a maximum of flexibility and reusability of the components whether you're using the complete CAF Terraform landing zones, or you want to use the battlefield-tested CAF module in your own pipelines or Terraform Cloud, or benefit from the CAF naming provider inside your own enterprise-grew modules.
 
 ![Foundational landing zone using Terraform](../../_images/ready/terraform-sre-components.png)
 *Figure 2: An overview of the Site Reliability Engineering Components provided by CAF Terraform landing zones*
