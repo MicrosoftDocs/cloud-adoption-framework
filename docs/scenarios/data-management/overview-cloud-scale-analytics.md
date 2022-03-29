@@ -12,39 +12,39 @@ ms.custom: e2e-data-management, think-tank
 
 # Introduction to cloud-scale analytics
 
-Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The main purpose of an Azure landing zone is to ensure that, when an application or workload lands on Azure, the required infrastructure is already in place. Microsoft provides sample templates to get you started. These templates can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. These templates provide agility and are compliant with security and governance requirements. Before you deploy your  cloud-scale analytics landing zones, Azure landing zones must already be in place.
+Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The main purpose of an Azure landing zone is to ensure that, when an application or workload lands on Azure, the required infrastructure is already in place. Before you deploy your  cloud-scale analytics landing zones, Azure landing zones must already be in place. Microsoft provides sample templates to get you started, which you can for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. These templates provide agility and are compliant with security and governance requirements.
 
 ## Cloud-scale analytics evaluation
 
-Often, a business seeks clarity or prescriptive guidance before it starts to carve out the technical details for a specific use case, project, or end-to-end cloud-scale analytics. It can be challenging for a business to ensure that it considers all the strategic and required principles in the scope of the current use as it formulates its overall data strategy.
+Often, a business seeks clarity or prescriptive guidance before it starts to carve out the technical details for a specific use case, project, or end-to-end cloud-scale analytics. As a business formulates its overall data strategy, it can be challenging to ensure that it considers all the strategic and required principles in the scope of the current use.
 
-To speed up the delivery of this end-to-end insights journey, while keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns to the key themes discussed in [Develop a plan for cloud-scale analytics](plan.md).
+To speed up the delivery of this end-to-end insights journey, while keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns with the key themes discussed in [Develop a plan for cloud-scale analytics](plan.md).
 
-Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework while applying the Microsoft Azure Well-Architected Framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
+Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework, while applying the Microsoft Azure Well-Architected Framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
 Cloud-scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular, while supporting autonomy and innovation.
 
 ## Data models
 
-In the late 1980s, data warehouse generation 1 was introduced, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and data lake. The mid 2010s brought the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
+In the late 1980s, data warehouse generation 1 was introduced, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of big data ecosystems like Hadoop and data lake. The mid 2010s brought the cloud data platform. It was similar to previous generations, but with the introduction of streaming data ingestion, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
 
 In spite of these advances, many organizations still use the centralized monolithic platform, generation 1. This system works well, up to a point. However, bottlenecks can occur because of interdependent processes, tightly coupled components, and hyperspecialized teams. Extract, transform, and load (ETL) jobs can become prominent and slow down delivery timelines.
 
-Data warehouse and data lake are still valuable, and play an important role in your overall architecture. We've highlighted some of the challenges that can occur when using these traditional practices to scale. These challenges are especially relevant in a complex organization, where data sources, requirements, teams, and outputs change.
+Data warehouse and data lake are still valuable, and play an important role in your overall architecture. In the documentation that follows, we've highlighted some of the challenges that can occur when using these traditional practices to scale. These challenges are especially relevant in a complex organization, where data sources, requirements, teams, and outputs change.
 
 ## Moving to cloud-scale analytics
 
-Your current analytical data architecture and operating model can align include data warehouse, data lake, or data lakehouse structures, or even an emerging model like data fabric or data mesh.
+Your current analytical data architecture and operating model can include data warehouse, data lake, and data lakehouse structures, or even an emerging model like data fabric or data mesh.
 
 Each data model has its own merits and challenges. Cloud-scale analytics helps you work from your current setup to shift your approach to data management so that it can evolve with your infrastructure.
 
-You can support any data platform and scenario to create an end-to-end cloud-scale analytics framework that can serve as your foundation and allow for scaling.
+You can support any data platform and scenario to create an end-to-end cloud-scale analytics framework that serves as your foundation and allows for scaling.
 
 ## Modern data platform and desired outcomes
 
 One of the first focus areas is to activate your data strategy to meet your challenges by iteratively building a scalable and agile modern data platform.
 
-Instead of being overwhelmed with service tickets and trying to meet competing business needs, a modern data platform enables you to play a more consultative role, freeing up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
+Instead of being overwhelmed with service tickets and trying to meet competing business needs, a modern data platform enables you to play a more consultative role by freeing up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
 
 Recommended areas of initial focus are:
 
@@ -64,18 +64,14 @@ A second consideration is to determine how the organization implements data gove
 
 Data governance is how you ensure that the data you use in your business operations, reports, and analysis is discoverable, accurate, trusted, and can be protected.
 
-For many companies, the expectation is that data and AI will drive a competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data-driven. For AI to become effective, the data it's using must be trusted. Otherwise, decision accuracy might be compromised, decisions might be delayed, or actions might be missed, which can affect on the bottom line. Companies don't want the quality of their data to be "garbage in, garbage out." At first, it might seem simple to fix data quality, until you look at the effect that digital transformation has had on data.
+For many companies, the expectation is that data and AI will drive a competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data-driven. However, for AI to become effective, the data it's using must be trusted. Otherwise, decision accuracy can be compromised, decisions might be delayed, or actions might be missed, which can affect on the bottom line. Companies don't want the quality of their data to be garbage in, garbage out. At first, it might seem simple to fix data quality, until you look at the effect that digital transformation has had on data.
 
 With data spread out across a hybrid multicloud and a distributed-data landscape, organizations struggle to find where their data is and to govern it. The ungoverned data can have a considerable effect on the business. Poor data quality impacts business operations, because data errors cause process errors and delays. Poor data quality also affects business decision making and the ability to remain compliant. Ensuring data quality at the source is often preferred, because fixing quality issues in the analytical system can be more complex and costly than applying data quality rules early in the ingestion phase. To help track and govern data activity, data governance must include:
 
 - Data discovery
-
 - Data quality
-
 - Policy creation
-
 - Data sharing
-
 - Metadata
 
 ## Secure your analytics estate
@@ -92,7 +88,7 @@ Another major driver for data governance is data protection. Data protection can
 
 - Legal action
 
-- The "domino effect" of the breach, for example, customers might fall victim to identity theft
+- The domino effect of the breach, for example, customers might fall victim to identity theft
 
 In most cases, publicly quoted companies must declare these breaches. If breaches occur, customers are more likely to blame the company first, rather than the hacker. The customer might boycott the company for several months or might never return.
 
@@ -105,7 +101,7 @@ Adopting a modern data strategy platform doesn't only change the technology that
 Cloud-scale analytics provides prescribed guidance to help you consider how to organize and skill your people and teams, including:
 
 - Persona, role, and responsibility definitions
-- Suggested structures for agile, vertical, cross-domain teams
+- Suggested structures for agile, vertical, and cross-domain teams
 - Skilling resources, including Azure data and AI certifications via Microsoft Learn
 
 It's also important to engage your end users throughout the modernization process, and as you continue to evolve your platform and onboard new use cases.
