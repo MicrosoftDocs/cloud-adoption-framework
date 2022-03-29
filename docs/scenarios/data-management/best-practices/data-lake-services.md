@@ -222,7 +222,7 @@ Below are general practices for data partitioning design.
 Data might arrive to your data lake account in different kinds of formats. Human readable formats might be used like JSON, .CSV, or XML files. Or compressed binary formats might be used like .tar or .gz. The data might be in variety of sizes that includes large files that are TB's in size, such as an export of a SQL table from your on-premises systems. Or the data might be in a large number of small files that are a few kbs like real-time events from your IoT solution. While Azure Data Lake Storage Gen2 supports storing all kinds of data without imposing any restrictions, it's better to think about data formats to maximize efficiency of your processing pipelines and optimize costs. You can achieve both by picking the right format and the right file sizes. Hadoop has a set of file formats it supports for optimized storage and processing of structured data.
 
 - [Avro](https://avro.apache.org/docs/current/)
-- [Parquet](https://parquet.apache.org/documentation/latest/)
+- [Parquet](https://parquet.apache.org/docs/)
 - [ORC](https://orc.apache.org/docs/)
 
 All of these formats are machine-readable binary file formats, offer compression to manage the file size, and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored. Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
