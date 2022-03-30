@@ -24,7 +24,7 @@ Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework, w
 
 Cloud-scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular, while supporting autonomy and innovation.
 
-## Data models
+## History of data architecture
 
 In the late 1980s, data warehouse generation 1 was introduced, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of big data ecosystems like Hadoop and data lake. The mid 2010s brought the cloud data platform. It was similar to previous generations, but with the introduction of streaming data ingestion, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
 
