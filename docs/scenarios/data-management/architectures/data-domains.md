@@ -14,9 +14,9 @@ ms.custom: e2e-data-management, think-tank
 
 Data mesh, at core, is founded in decentralization and distribution of responsibility to domains. The people who truly understand that part of the business are best positioned to manage the associated data, and to ensure it's accurate. This is the principle of domain-oriented data ownership.
 
-To promote domain-oriented data ownership, you first need to make a decomposition of your data architecture. Zhamak Dehghani, data mesh founder, promotes Domain-Driven Design (DDD), an approach to software development, as a method for identifying your data domains. The difficulty with DDD for data management is that the original use case for DDD was modeling of complex systems in the context of software development. Originally, it was never coined for modeling enterprise data, which makes the method for data management practitioners abstract and technical. Additionally, there's often a lack of understanding of (DDD): practitioners find the conceptual notions too difficult to grasp or project examples that come from software architecture or object-oriented programming on their data landscape. This article tries to take away complicated vocabulary and provides you with pragmatic guidance.
-
-## Domain-Driven-Design
+To promote domain-oriented data ownership, you first need to make a decomposition of your data architecture. Zhamak Dehghani, data mesh founder, promotes Domain-Driven Design (DDD), an approach to software development, as a method for identifying your data domains.
+The difficulty with DDD for data management is that the original use case for DDD was modeling of complex systems in the context of software development. Originally, it was never coined for modeling enterprise data, which makes the method for data management practitioners abstract and technical. Additionally, there's often a lack of understanding of (DDD): practitioners find the conceptual notions too difficult to grasp or project examples that come from software architecture or object-oriented programming on their data landscape. This article tries to take away complicated vocabulary and provides you with pragmatic guidance.
+Domain-Driven-Design
 
 Let's start with the theoretical part: Domain-Driven-Design (DDD) is a method for supporting software development that helps describe complex systems for larger organizations, originally described by Eric Evans. DDD is popular because many of its high-level practices had an impact on modern software and application development approaches, such as microservices.
 
