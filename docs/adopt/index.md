@@ -3,18 +3,17 @@ title: Establishing adoption horizons
 description: TODO
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 3/23/2022
+ms.date: 04/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
 ---
 
-<!-->
+<!--
+Acrolinx:100, TODO: meta description, more content
+
 *This article was called out as a dependency needed for the "envision" content of the modernize methodology documentation. Alternative proposed filename was "establishing-cloud-horizons", but naming index.md for now since it's serving as the overview for "adopt", at least for the time being.*
-
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
-
-Encourage the customer .
 -->
 # Establishing adoption horizons
 
@@ -36,7 +35,7 @@ where it fits, rough explanation
 
 ## Modernize
 
-Modernization means that you have more modern applications with new features and technical capabilities. For example, refactoring, rearchitecting, and rebuilding apps and databases, which reduces your technical debt.
+Modernization means that you have more modern applications with new features and technical capabilities. For example, refactoring, rearchitecting, and rebuilding apps and databases, which reduce your technical debt.
 
 ## Innovate
 

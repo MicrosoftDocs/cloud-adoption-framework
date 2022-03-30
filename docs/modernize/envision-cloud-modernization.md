@@ -3,13 +3,13 @@ title: Envision cloud modernization
 description: TODO
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 3/24/2022
+ms.date: 04/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ---
 <!--Acrolinx:98, TODO: meta description, more info for bulleted list? lines 30-35
-As a < type of user >, I want < what? > so that < why? >-->
+-->
 # Envision cloud modernization
 
 Modernization of your workloads can help you achieve the [common modernization motivations](../strategy/business-outcomes/data-innovations.md#data-innovations). Before you begin modernization efforts, it's important to understand your motivations and workloads. Then, you can start aligning or grouping workloads based on how they impact the strategy.
