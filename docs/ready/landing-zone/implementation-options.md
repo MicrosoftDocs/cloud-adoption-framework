@@ -3,7 +3,7 @@ title: Landing zone implementation options
 description: Determine which landing zone implementation option best fits your requirements.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/23/2021
+ms.date: 03/31/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,21 +12,33 @@ ms.custom: internal
 
 # Landing zone implementation options
 
-[Azure landing zones](./index.md) provide cloud adoption teams with a well-managed environment for their workloads. Follow the [landing zone design areas](./design-areas.md) guidance to take advantage of these capabilities.
+An [Azure landing zone](./index.md) provides cloud adoption teams with a well-managed environment to run their workloads. Take advantage of the best practices described in [landing zone design areas](./design-areas.md) to build a strong foundation and implement processes related to security, governance, and compliance.
 
-Each of the following implementation options is designed for a specific set of operating model dependencies to support your nonfunctional requirements. Each implementation option includes distinct automation approaches. When available, reference architectures and reference implementations are included to accelerate your cloud adoption journey. While each option is mapped to a different operating model, they share the same design areas. The difference is how you choose to implement them.
+## Environment development approaches
 
-## Platform development velocity
+There are two primary approaches. The choice will depend on how fast your teams can develop the required skills.     
 
-In addition to the recommended design areas, your platform development velocity (how fast your platform team can develop the required skills) is a key factor when choosing the best implementation option. Consider two primary modes:
+- **Start with an Azure landing zone accelerator:** If your business requirements call for a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start. You can customize the implementation used as part of the Azure landing zone accelerator, using Infrastructure-as-Code (IaC) to set up and configure your environment. For IaC, your organization will require skills in Azure Resource Manager templates and GitHub.
 
-**Start with enterprise scale:** Use this mode if your business requirements necessitate a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start. With this approach, you can use either the Azure portal or infrastructure-as-code to set up and configure your environment. You can also transition between the Azure portal and infrastructure as code (recommended) when your organization is ready. To use the recommended infrastructure-as-code approach, your organization will require skills in Azure Resource Manager templates and GitHub.
+- **Start with customization:** If it's more important to build your environment to meet specific requirements, or over time as you develop internal skills. In this approach, the landing zones focus on the basic landing zones considerations required to start cloud adoption. All technical and business requirements are considered complete when your adoption aligns with Azure landing zone. You can then focus on enhancing your landing zone.
 
-**Start small and expand:** Use this mode if it's more important to develop these skills and commit to your decisions as you learn more about the cloud. In this approach, the landing zones only focus on implementing the basic landing zones considerations required to start cloud adoption. As your adoption expands, modules in the Govern and Manage methodologies will build on top of your initial landing zones. The design principles of any Azure landing zone outline the specific design areas that will require refactoring over time.
+Finally, guidance in the [Govern](/azure/cloud-adoption-framework/govern/) and [Manage](/azure/cloud-adoption-framework/manage/) methodologies will build on top of your initial landing zones. The design of any Azure landing zone outline will likely require refactoring over time.
+
+> [!IMPORTANT]
+> Of the two approaches, Azure landing zone accelerators is recommended because it's the quickest way to achieve a scaled-out and mature environment. 
+>
+> [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
+
+Beside the use of the Azure landing zone accelerator, there are use cases where organizations have specific business or technical requirements. For those cases, some customization might be needed.
+
+To address the customization use cases, consider the [implementation options](#implementation-options) given in this article. The options are intended for users with strong skills in technologies such as Azure Resource Manager, Azure Policy, DevOps tools, and third-party deployment tools. Those technologies are required form a solid foundation on which to build a landing zone.
+
+> [!IMPORTANT]
+> The best practices used for customization will ultimately be aligned with the [Azure landing zone](./index.md) to your design. However, there's added investment in time and effort which might be justified to  to fit specific business requirements.
 
 ## Implementation options
 
-The following table describes some of the implementation options for landing zones and the variables that might drive your decision.
+This table describes some implementation options for landing zones and the variables that might drive your decision. Each implementation option in this table is designed for a specific set of operating model dependencies to support your organizations nonfunctional requirements. Every option includes distinct automation approaches and tools. Even though each option is mapped to a different operating model, they have common design areas. The difference is how you choose to implement them and the level of technical experience required.
 
 | Implementation option | Description | Deployment velocity | Deeper design principles | Deployment instructions |
 |---|---|---|---|---|
