@@ -1,9 +1,9 @@
 ---
-title: Single-region data landing zone Connectivity
-description: Learn single-region connectivity for cloud scale analytics landing zones in Azure.
+title: Single-region data landing zone connectivity
+description: Learn single-region connectivity for cloud-scale analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 02/10/2022
+ms.date: 03/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,200 +12,275 @@ ms.custom: e2e-data-management, think-tank
 
 # Single-region data landing zone connectivity
 
-In the single-region setup, the data management landing zone, the data landing zones as well as all the services within them are set up in the same region. Also, all landing zones are connected to the same connectivity hub subscription, where shared network resources including a network virtual appliance (network virtual appliance) like an Azure Firewall, an ExpressRoute Gateway, a virtual private network (VPN) Gateway, the hub virtual network in a hub and spoke architecture or the virtual WAN (vWAN) Hub in a vWan setup are hosted.
+The data management landing zone, the data landing zones, and all the services within them are set up in the same region in a single-region setup. All landing zones are within the same connectivity hub subscription. This subscription hosts shared network resources, which can include a network virtual appliance (like Azure firewall), an ExpressRoute gateway, a virtual private network (VPN) gateway, a hub virtual network, or a virtual WAN (vWAN hub).
 
 :::image type="content" source="./images/single-region-connectivity.png" alt-text="Single Region Connectivity":::
 *Figure 1: Single Region Connectivity.*
 
-Based on the current capabilities of Azure Networking Services it's recommended to rely on a meshed network architecture. What this means is that it's recommended to set up Vnet peering between:
+Based on Azure Networking Services' current capabilities, we recommend you use a meshed network architecture. You should set up Vnet peering between:
 
-1. The Connectivity Hub and Data Management Zone,
-2. The Connectivity Hub and each Data Landing Zone,
-3. The Data Management Zone and each Data Landing Zone and
-4. Each Data Landing Zone.
+- The Connectivity Hub and Data Management Zone
+- The Connectivity Hub and each Data Landing Zone
+- The Data Management Zone and each Data Landing Zone
+- Each Data Landing Zone
 
-To explain the rationale behind the recommended design, this article will illustrate the advantages and disadvantages that come with each of the different network architecture approaches that were considered when designing the cloud-scale analytics scenario. The first section of this article will only look at a single-region pattern, where the Data Management Zone as well as all the Data Landing Zones are hosted in the same region.
+This article describes the pros and cons of each network architecture option we considered for cloud-scale analytics.
 
-Every considered design pattern will be evaluated along the following criteria:
+The first section of this article focuses on a single-region pattern, where the Data Management Zone and all Data Landing Zones are hosted in the same region.
+
+Each design pattern is evaluated using the following criteria:
 
 - Cost
-- User Access Management
-- Service Management
+- User access management
+- Service management
 - Bandwidth
 - Latency
 
-Each scenario will be analyzed with the following cross-data landing zone use-case in mind:
+We'll analyze each design option with the following cross-data landing zone use-case in mind:
 
 > [!NOTE]
-> *Virtual machine B (VM B) hosted in data landing zone B loads a dataset from Storage Account A hosted in data landing zone A. Next, it processes the dataset and finally it stores the processed dataset and in Storage Account B hosted in data landing zone B.*
+> *Virtual machine B (VM B) hosted in data landing zone B loads a dataset from storage account A hosted in data landing zone A. Then VM B processes that dataset and stores it in Storage Account B, which is hosted in data landing zone B.*
 
 [!INCLUDE [network-important](includes/network-important.md)]
 
-## Meshed Network Architecture (Recommended)
+## Meshed network architecture (recommended)
 
-The recommended design proposes the use of a network mesh, which means adding Vnet peerings between all data landing zone Vnets and between the data management landing zone and each data landing zone in addition to the existing hub and spoke network design that most organizations have setup inside their tenant. For the scenario mentioned in the introduction, data loaded from Storage Account A would first transition a Vnet peering connection (2) that is set up between the two data landing zone Vnets before it would be loaded and processed by VM B ((3) and (4)). Lastly, the data can be stored on Storage Account B by sending the data through the local Private Endpoint (5). With this option, the data doesn't pass the Connectivity Hub and stays within the Data Platform consisting of a data management landing zone and one or multiple data landing zones.
+We recommend that you use a network mesh architecture when adopting cloud-scale analytics. In addition to the existing hub and spoke network design set up within your tenant, you have to do two things to implement a network mesh architecture:
+
+- Add Vnet peerings between all data landing zone Vnets.
+- Add Vnet pairings between your data management landing zone and all data landing zones.
+
+In our example scenario, data loaded from Storage Account A transits a Vnet peering connection (2) set up between the two data landing zone Vnets. It's loaded and processed by VM B ((3) and (4)), then sent through the local Private Endpoint (5) to be stored in Storage Account B.
+
+In this scenario, the data doesn't pass the Connectivity Hub. It stays within the Data Platform that consists of a data management landing zone and one or more data landing zones.
 
 :::image type="content" source="./images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture":::
-*Figure 2: Meshed Network Architecture.*
+*Figure 2: Meshed Network architecture.*
 
-### User Access Management in a Meshed Network Architecture
+### User access management in meshed network architecture
 
-With this solution approach data application teams will only require write access to their dedicated resource group in the data landing zone and join access to their designated subnet to be able to create new services including the Private Endpoints in a self-service manner. Therefore, data application teams can deploy Private Endpoints themselves and don't require support to set up the necessary connectivity if they get the necessary access rights provided to connect Private Endpoints to a subnet in that Spoke.
+In a meshed network architecture design, data application teams only require two things to be able to create new services (including Private Endpoints):
+
+- Write access to their dedicated resource group in the data landing zone
+- Join access to their designated subnet
+
+In this design, data application teams can deploy Private Endpoints themselves. As long they have the necessary access rights to connect Private Endpoints to a subnet in a given spoke, your teams need no support when setting up the necessary connectivity.
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-### Service Management in a Meshed Network Architecture
+### Service management in meshed network architecture
 
-This network design has the benefit that there's no network virtual appliance acting as a single point of failure or throttling throughput. Not sending the datasets through the Connectivity Hub also reduces the management overhead for the central Azure platform team, as there's no need for scaling out the virtual appliance. This has the implication that the central Azure platform team can no longer inspect and log all traffic that is sent between data landing zones. Nonetheless, this isn't seen as disadvantage since the cloud-scale analytics scenario can be considered as coherent platform that spans across multiple subscriptions to allow for scale and overcome platform level limitations. If all resources would be hosted inside a single subscription, traffic would also not be inspected in the central Connectivity Hub. In addition, network logs can still be captured by using Network Security Group Flow Logs and other application and service level logs can be consolidated and stored by using service specific Diagnostic Settings. All of these logs can be captured at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/). Also, this pattern allows for an Azure native DNS solution based on Private DNS Zones and allows for the automation of the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
+In a meshed network architecture design, no network virtual appliance acts as a single point of failure or throttling. The lack of datasets being sent through the Connectivity Hub reduces your central Azure platform team's overhead, provided you don't need to scale out that virtual appliance.
+
+This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
+
+With all resources hosted within a single subscription, your central Azure platform team no longer inspects all data in the central Connectivity Hub, either. You can still capture network logs by using Network Security Group Flow Logs. You can consolidate and store other application and service level logs by using service-specific Diagnostic Settings.
+
+You can capture all of these logs at scale by using [Azure Policy definitions for diagnostic settings](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/DiagnosticSettings).
+
+This design also allows you to create an Azure native DNS solution based on Private DNS Zones. You can automate the DNS A-record lifecycle through [Azure Policy definitions for private DNS groups](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups).
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-### Cost in a Meshed Network Architecture
+### Meshed network architecture cost
 
 > [!NOTE]
-> When accessing a private endpoint across a peered network you will only ever be charged for the private endpoint itself and not for the VNet peering. The official statement can be found [here (FAQ: How will billing work when accessing a private endpoint from a peered network?)](https://azure.microsoft.com/pricing/details/private-link/).
+> When accessing a private endpoint across a peered network, you will only ever be charged for the private endpoint itself, not for the VNet peering. You can read the official statement in [FAQ: How will billing work when accessing a private endpoint from a peered network?](https://azure.microsoft.com/pricing/details/private-link/).
 
-With this network design, you only pay for the Private Endpoints (charged per hour) and the ingress and egress traffic that is sent through the Private Endpoints to load the raw (1) and store the processed dataset (6). Due to the statement above, the Vnet peering won't be charged (2), which is why we end up with minimal cost with this option.
+In this network design, you only pay for:
+
+- your Private Endpoints (per hour)
+- the ingress and egress traffic sent through your Private Endpoints to load your raw dataset (1) and store your processed dataset (6)
+
+Vnet peering won't be charged (2), which is why this option has minimal cost.
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-### Bandwidth and Latency in a Meshed Network Architecture
+### Bandwidth and latency in a meshed network architecture
 
-Because there are no network virtual appliances limiting throughput for cross-data landing zone data exchange, there are no known limitations from a bandwidth and latency perspective. Physical limits in our datacenters are the only limiting factor (speed of fibre cables/light).
+This design has no known bandwidth or latency limitations because no network virtual appliances limit throughput for its cross-data landing zone data exchange. The design's only limiting factor is the physical limit of our datacenters (speed of fiber-optic cables).
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-### Summary Meshed Network Architecture
+### Meshed network architecture summary
 
-The meshed network design offers maximum bandwidth and low latency at minimal cost without any compromises from a user access management perspective or on the DNS layer. Hence, this network architecture design is the recommended for you wanting to adopt the cloud-scale analytics scenario. If other network policies need to be enforced within the Data Platform, it's advised to use Network Security Groups instead of central network virtual appliances.
+If you plan to adopt cloud-scale analytics, we recommend that you use the meshed network design. A meshed network offers maximum bandwidth and low latency at minimal cost, yet makes no compromises regarding user access management or on the DNS layer.
 
-## Traditional hub and spoke Design (NOT Recommended)
+If you need to enforce other network policies within the data platform, use Network Security Groups rather than central network virtual appliances.
 
-The most obvious option is to use the traditional hub and spoke network architecture that many enterprises have adopted. Network transitivity would have to be set up in the Connectivity Hub in order to be able to access data in Storage Account A from VM B. Data would traverse two Vnet peerings ((2) and (5)) as well as a Network Virtual Appliance (network virtual appliance) hosted inside the Connectivity Hub ((3) and (4)) before it gets loaded by the virtual machine (6) and then stored back into the Storage Account B (8).
+## Traditional hub and spoke architecture (not recommended)
+
+Hub and spoke network architecture design is the most obvious option, and one that many enterprises have adopted. In it, network transitivity gets set up in the Connectivity Hub to access data in Storage Account A from VM B. Data traverses two Vnet peerings ((2) and (5)) and a network virtual appliance hosted inside the Connectivity Hub ((3) and (4)). Then the data is loaded by the virtual machine (6) and stored back into the Storage Account B (8).
 
 :::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture":::
 *Figure 3: Hub and spoke architecture.*
 
-### User Access Management in a traditional hub and spoke design
+### User access management in traditional hub and spoke architecture
 
-With this solution approach, data application teams will only require write access to a resource group in the respective data landing zone and join access to their designated subnet to be able to create new services including the Private Endpoints in a self-service manner. Therefore, data application teams can deploy Private Endpoints themselves and don't require support to set up the necessary connectivity given that they get the necessary access rights to connect Private Endpoints to a subnet in that Spoke.
+In a traditional hub and spoke design, data application teams only require two things for them to be able to create new services (including Private Endpoints):
+
+- Write access to their resource group in the data landing zone
+- Join access to their designated subnet
+
+In this design, data application teams can deploy Private Endpoints themselves. As long they have the necessary access rights to connect Private Endpoints to a subnet in a given spoke, your teams need no support when setting up the necessary connectivity.
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-### Service Management in a traditional hub and spoke design
+### Service Management in traditional hub and spoke architecture
 
-The most relevant benefit of this network architecture design is that it's well-known and consistent with the existing network setup of most organizations. Therefore, it's easy to explain and implement. In addition, a centralized and Azure native DNS solution with Private DNS Zones can be used to provide FQDN resolution inside the Azure tenant. The use of Private DNS Zones also allows for the automation of the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/). Since traffic is routed through a central network virtual appliance, network traffic that is sent from one Spoke to another one can also be logged and inspected, which can be another benefit of this design.
+This network design is well-known and consistent with most organizations' existing network setup. This makes the design easy to explain and implement. You can also use a centralized an Azure-native DNS solution with Private DNS Zones to provide PQDN resolution inside your Azure tenant. Using Private DNS Zones allows you to automate the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
 
-A downside of this solution from a service management perspective is that the central Azure Platform team must manage Route Tables manually. This is required to ensure the necessary transitivity between Spokes to enable the process of sharing data assets across multiple data landing zones. The management of routes can become complex and error-prone over time and is something that should be considered upfront. The more critical disadvantage of this network setup is the central network virtual appliance. Firstly, the network virtual appliance acts as a single point of failure and can cause serious downtime inside the data platform in a failure. Secondly, as the dataset sizes grow inside the data platform and as the number of cross-data landing zone use cases increases more traffic will be sent through the central network virtual appliance. Over time, this can result in gigabytes or terabytes of data that is sent through the central instance. However, the bandwidth of existing network virtual appliances is often limited to a one- or two-digit gigabyte throughput. Therefore, the appliance can act as a critical bottleneck limiting the traffic flowing between data landing zones and therefore limiting the shareability of data assets. The only way to overcome this issue would be to scale out the central network virtual appliance across multiple instances, which will have huge implications on cost of this solution.
+Another benefit of this design is that traffic is routed through a central network virtual appliance, so network traffic sent from one Spoke to another can be logged and inspected.
+
+One downside of this design is that your central Azure Platform team has to manually manage Route Tables. This is necessary to ensure transitivity between Spokes, which enables data asset sharing across multiple data landing zones. Route management can become complex and error-prone over time and must be considered up front.
+
+Another downside to this network setup is the way your central network virtual appliance is set up. The network virtual appliance functions as a single point of failure and can cause serious downtime inside the data platform if a failure occurs. Also, as dataset sizes increase within a data platform and the number of cross-data landing zone use cases increases, more traffic is sent through the central network virtual appliance.
+
+Over time, this can result in gigabytes or even terabytes of data being sent through the central instance. Since bandwidth of existing network virtual appliances is often limited to just a one- or two-digit gigabyte throughput, the central network virtual appliance can become a bottleneck that critically limits traffic flow between data landing zones and limits data asset shareability.
+
+The only way to avoid this issue is to scale out your central network virtual appliance across multiple instances, which has major cost implications for this design.
 
 Summary: :::image type="icon" source="./images/minusicon.png":::
 
-### Cost in a traditional hub and spoke design
+### Traditional hub and spoke architecture cost
 
 > [!NOTE]
-> When accessing a private endpoint across a peered network you will only ever be charged for the private endpoint itself and not for the VNet peering. The official statement can be found [here (FAQ: How will billing work when accessing a private endpoint from a peered network?)](https://azure.microsoft.com/pricing/details/private-link/).
+> When accessing a private endpoint across a peered network, you will only ever be charged for the private endpoint itself and not for the VNet peering. You can read the official statement in [FAQ: How will billing work when accessing a private endpoint from a peered network?](https://azure.microsoft.com/pricing/details/private-link/).
 
-From a network perspective, you have to pay for the two Private Endpoints of the Storage Accounts (charged per hour) and the ingress and egress traffic that is sent through the Private Endpoints to load the raw (1) and store the processed dataset (8). In addition, the customer will be charged for the ingress and egress of one Vnet peering (5). Due to the statement above, the first Vnet peering won't be charged (2). Lastly, you'll end up with significant cost for the central network virtual appliance when choosing this network design ((3) and (4)). The high cost will be generated either because extra licenses need to be purchased to scale out based on demand or it will be generated because of the charge per processed gigabyte as it is done with Azure Firewall.
+For this network, you're charged per hour for your storage accounts' Private Endpoints. You're also charged for ingress and egress traffic sent through the Private Endpoints to load a raw dataset (1) and store the processed dataset (8).
 
-Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+Your customer is charged for the ingress and egress of one Vnet peering (5). As previously mentioned, the first Vnet peering isn't charged (2).
 
-### Bandwidth & Latency in a traditional hub and spoke design
-
-This network design has serious limitations from a bandwidth perspective. The central network virtual appliance will become a critical bottleneck as the platform grows, which will limit cross-data landing zone use cases and sharing of datasets and most likely lead to a situation where multiple copies of datasets will be created over time. In addition to bandwidth, latency will be heavily affected by that network design, which is especially critical for real-time analytics scenarios.
+You'll end up with a high central network virtual appliance cost if using this network design ((3) and (4)). You have to either purchase extra licenses and scale the central network virtual appliance out based on demand or pay the charge processed per gigabyte as it's done with Azure Firewall.
 
 Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
 
-### Summary Traditional hub and spoke Design
+### Bandwidth and latency in traditional hub and spoke architecture
 
-From an access management and partially from a service management perspective, this setup has benefits. But due to the critical limitations pointed out in the service management, cost and bandwidth & latency section, this network design cannot be recommended for cross-data landing zone use cases.
+This network design has serious bandwidth limitations. The central network virtual appliance becomes a critical bottleneck as your platform grows, which limits cross-data landing zone use cases and dataset sharing. It also likely creates multiple copies of datasets over time.
 
-## Private Endpoint Projection (NOT Recommended)
+This design also heavily affects latency, which becomes especially critical in real-time analytics scenarios.
 
-Another design alternative that was evaluated was the projection of Private Endpoints across each and every Landing Zone. With this approach, a Private Endpoint for Storage Account A would be created each data landing zone. Therefore, this option leads to a first Private Endpoint in data landing zone A that is connected to the Vnet in data landing zone A, a second Private Endpoint in data landing zone B that is connected to the Vnet in data landing zone B and so on. The same applies to Storage Account B and potentially other services inside the data landing zones. If the number of data landing zones is defined as *n*, one would end up with *n* Private Endpoints for at least all of the storage accounts and potentially other services within the data landing zones leading to an exponential growth of the number of Private Endpoints.
+Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+
+### Traditional hub and spoke architecture summary
+
+This hub and spoke network design has access management and some service management benefits, but due to critical limitations of service management and bandwidth and latency, we can't recommend this network design for cross-data landing zone use cases.
+
+## Private Endpoint projection architecture (not recommended)
+
+Another design option is the projection of Private Endpoints across each and every landing zone. In this design, a Private Endpoint for Storage Account A is created in each landing zone. This leads to a first Private Endpoint in data landing zone A connected to the Vnet in data landing zone A, a second Private Endpoint connected to the Vnet in data landing zone B, and so on.
+
+The same applies to Storage Account B, and potentially to other services inside the data landing zones. If we define the number of data landing zones as *n*, then we end up with *n* Private Endpoints for at least all the storage accounts and potentially other services within the data landing zones as well. This leads to an exponential increase in the number of Private Endpoints.
 
 :::image type="content" source="./images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection":::
-*Figure 4: Private Endpoint Projection.*
+*Figure 4: Private Endpoint projection architecture.*
 
-Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (for example, `storageaccounta.privatelink.blob.core.windows.net`) this solution creates challenges on the DNS layer that can't be solved with Private DNS Zones. A custom DNS solution is required that is capable of resolving DNS names based on the origin/IP-address of the requestor in order to make VM A connect to the Private Endpoints connected to the Vnet in data landing zone A and make VM B connect to the Private Endpoints connected to the Vnet in data landing zone B. This can be done with a setup based on Windows Servers, whereas the lifecycle of DNS A-records can be automated through a combination of Activity Log and Azure Functions.
+Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (such as `storageaccounta.privatelink.blob.core.windows.net`), this solution creates challenges in the DNS layer that can't be solved using Private DNS Zones. You instead need a custom DNS solution capable of resolving DNS names based on the origin/IP-address of the requestor. This allows you to make VM A connect to the Private Endpoints connected to the Vnet in data landing zone A, and to make VM B connect to the Private Endpoints connected to the Vnet in data landing zone B. You can do this with a Windows Servers-based setup, whereas you can automate the DNS A-records lifecycle through a combination of Activity Log and Azure Functions.
 
-With this setup, VM B can load the raw dataset in Storage Account A by accessing it through the local Private Endpoint (1). After the dataset has been loaded and processed ((2) and (3)) the dataset can be stored on Storage Account B by directly accessing the local Private Endpoint (4). Data must not traverse any Vnet peerings within this scenario.
+In this setup, you can load the raw dataset in Storage Account A into VM B by accessing the dataset through the local Private Endpoint (1). After you load and process the dataset ((2) and (3)), you can store it on Storage Account B by directly accessing the local Private Endpoint (4). In this scenario, data must not traverse any Vnet peerings.
 
-### User Access Management in private endpoint projection
+### User access management in private endpoint projection architecture
 
-From a user access management perspective, this scenario is similar to the first option except for the fact that access rights can also be required for other data landing zones to not just create Private Endpoints within the designated data landing zone and Vnet but also in the other data landing zones and their respective Vnets. Hence, data application teams don't only require write access to a resource group in the designated data landing zone and join access to their designated subnet to be able to create new services including the Private Endpoints in a self-service manner, but they also require access to a resource group and subnet inside the other data landing zones to create the respective local Private Endpoints. In summary, this setup increases the complexity on the access management layer since data application teams require few permissions not just in a single but in each and every data landing zone. In addition, it can lead to confusion and inconsistent RBAC over time. If necessary access rights aren't provided to data landing zone teams or data application teams, problems described in [Traditional hub and spoke Design (NOT Recommended)](#traditional-hub-and-spoke-design-not-recommended) will be applicable.
+This design's approach to user access management is similar to that of the [meshed network architecture](#meshed-network-architecture-recommended). However, in this design, you can require access rights for other data landing zones, to create Private Endpoints not just within a designated data landing zone and Vnet but also in other data landing zones and their respective Vnets.
+
+Because of this, your data application teams require three things, not two, to be able to create new services themselves:
+
+- write access to a resource group in a designated data landing zone
+- join access to their designated subnet
+- access to a resource group and subnet inside all the other data landing zones to create their respective local Private Endpoints
+
+This network design increases complexity in your access management layer since your data application teams require permissions in every single data landing zone. The design can also be confusing and lead to inconsistent RBAC over time.
+
+If data landing zone teams and data application teams aren't given necessary access rights, problems described in [traditional hub and spoke architecture (not recommended)](#traditional-hub-and-spoke-architecture-not-recommended) will occur.
 
 Summary: :::image type="icon" source="./images/minusicon.png":::
 
-### Service Management in private endpoint projection
+### Service management in private endpoint projection architecture
 
-Similar to [Meshed Network Architecture (Recommended)](#meshed-network-architecture-recommended), this network design has the benefit that there's no network virtual appliance acting as a single point of failure or throttling throughput. Not sending the datasets through the Connectivity Hub also reduces the management overhead for the central Azure platform team, as there's no need for scaling out the virtual appliance. This has the implication that the central Azure platform team can no longer inspect and log all traffic that is sent between data landing zones. Nonetheless, this isn't seen as disadvantage since the cloud-scale analytics scenario can be considered as coherent platform that spans across multiple subscriptions to allow for scale and overcome platform level limitations. If all resources would be hosted inside a single subscription, traffic would also not be inspected in the central Connectivity Hub. In addition, network logs can still be captured by using Network Security Group Flow Logs and other application and service level logs can be consolidated and stored by using service specific Diagnostic Settings. All of these logs can be captured at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/).
+While again similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this network design has the benefit of no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
-On the other hand, the exponential growth of the number of required Private Endpoints also increases the network address space required by the data platform, which isn't optimal. Lastly, the above-mentioned DNS challenges are the biggest concern of this network architecture. An Azure native solution in the form of Private DNS Zones can't be used. Hence, a third-party solution will be required that is capable of resolving FQDNS based on the origin/IP-address of the requestor. In addition, tools and workflows must be developed and maintained to automate the lifecycle of Private DNS A-records that drastically increases the management overhead compared to the proposed [Azure Policy driven solution](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/). It would also be possible to create a distributed DNS infrastructure using Private DNS Zones, but with this solution DNS islands would be created which ultimately lead to issues when trying to access private link services hosted other landing zones within the tenant. Therefore, this isn't a viable alternative.
+With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub.  You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/). On the other hand, the network address space required by your data platform increases due to the exponential increase in required Private Endpoints, which isn't optimal.
+
+The major concerns regarding this network architecture are its previously mentioned DNS challenges. You can't use an Azure native solution in the form of Private DNS Zones, so this architecture requires a third-party solution capable of resolving FQDNS based on the origin/IP-address of the requestor. You also have to develop and maintain tools and workflows to automate Private DNS A-records, which drastically increases management overhead compared to the proposed [Azure Policy driven solution](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
+
+You can create a distributed DNS infrastructure using Private DNS zones, but this creates DNS islands, which ultimately cause issues when you try to access private link services hosted in other landing zones within your tenant. Therefore, this design isn't a viable option.
 
 Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
 
-### Cost in private endpoint projection
+### Private endpoint projection architecture cost
 
 > [!NOTE]
-> When accessing a private endpoint across a peered network you will only ever be charged for the private endpoint itself and not for the VNet peering. The official statement can be found [here (FAQ: How will billing work when accessing a private endpoint from a peered network?)](https://azure.microsoft.com/pricing/details/private-link/).
+> When accessing a private endpoint across a peered network you will only ever be charged for the private endpoint itself and not for the VNet peering. You can read the official statement in [FAQ: How will billing work when accessing a private endpoint from a peered network?](https://azure.microsoft.com/pricing/details/private-link/).
 
-With this network design, you only pay for the Private Endpoints (charged per hour) as well as the ingress and egress traffic that is sent through the Private Endpoints to load the raw (1) and store the processed dataset (4). However, due to the exponential growth of the number of Private Endpoints inside the data platform extra costs must be expected and will highly depend on the number of Private Endpoints that are created since these are charged per hour.
+In this network design, you're only charged for the Private Endpoints (per hour) and the ingress and egress traffic sent through those Private Endpoints to load raw datasets (1) and store processed datasets (4). However, extra costs must be expected because of the exponential increase in the number your data platform's Private Endpoints. Since you're charged per hour, the amount of extra cost highly depends on how many Private Endpoints are created.
 
 Summary: :::image type="icon" source="./images/plusicon.png":::
 
-### Bandwidth and Latency in private endpoint projection
+### Bandwidth and latency in private endpoint projection architecture
 
-Because there are no network virtual appliances limiting throughput for cross-data landing zone data exchange, there are no known limitations from a bandwidth and latency perspective. Physical limits in our datacenters are the only limiting factor (speed of fibre cables/light).
+This design has no known bandwidth and latency limitations because it has no network virtual appliances limiting throughput for cross-data landing zone data exchange. The design's only limiting factor is the physical limit of our datacenters (speed of fiber-optic cables).
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-### Summary Private Endpoint Projection
+### Private Endpoint projection architecture summary
 
-This network architecture suffers from the potential exponential growth of Private Endpoints that can cause losing track of which Private Endpoints are used where and for which purpose. Another set of limiting factors is the access management issues described above and the complexities created on the DNS layer. Therefore, this network design can't be recommended.
+The exponential growth of Private Endpoints in this network architecture can cause you to lose track of which Private Endpoints are used for what purpose in which location. You're also limited by access management issues and DNS layer complexities. Because of these problems, we can't recommend this network design for cross-data landing zone use cases.
 
-## Private Endpoints in Connectivity Hub (NOT Recommended)
+## Private Endpoints in Connectivity Hub architecture (not recommended)
 
-The fourth option proposes to host the Private Endpoints in the Connectivity Hub and connect them to the Hub Vnet. With this solution, a single Private Endpoint for each service would be hosted on the corporate Vnet. Transitivity would also not be required due to the existing hub and spoke network architecture at most corporations and the fact that the Private Endpoints would be hosted in the Connectivity Hub with this solution. The Vnet peering between the Connectivity Hub and data landing zones allow for a direct access.
+Another network option is to host Private Endpoints in your Connectivity Hub and connect them to the Hub Vnet. In this solution, you host a single Private Endpoint for each service on your corporate Vnet. Due to the existing hub and spoke network architecture at most corporations, and the fact that your Connectivity Hub hosts your Private Endpoints in this solution, transitivity isn't required. Vnet peering between your Connectivity Hub and data landing zones allows for direct access.
 
-In order to load a dataset stored in Storage Account A in VM B, data would have to traverse a single Vnet peering between the Connectivity Hub and the data landing zone (5). Once the dataset has been loaded and processed ((3) and (4)) the dataset must traverse the Vnet peering a second time (5) before it can be stored on Storage Account B by accessing the Private Endpoint connected to the Hub Vnet (6).
+Data traverses a single Vnet peering between the Connectivity Hub and data landing zone in order to load a dataset stored in Storage Account A in VM B. Once that dataset is loaded and processed ((3) and (4)), it traverses the same Vnet peering a second time (5) before finally getting stored in Storage Account B through the Private Endpoint connected to the Hub Vnet (6).
 
 :::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub":::
-*Figure 5: Private Endpoints in Connectivity Hub.*
+*Figure 5: Private Endpoints in Connectivity Hub architecture.*
 
-### User Access Management in a connectivity hub
+### User access management in Connectivity Hub architecture
 
-When opting for this network design, data landing zone teams and data application teams must be given write permissions to a resource group in the Connectivity Hub subscription and join permissions to the Hub Vnet to be able to connect Private Endpoints to the Hub Vnet. This isn't in line with the Enterprise-Scale Landing Zone base principles, since the Connectivity Hub is a subscription that is designated for the Azure platform team of an organization and is dedicated for hosting the necessary and shared network infrastructure of an organization, including Firewalls, gateways and network management tools. This network option would make the design inconsistent since access management principles aren't followed and therefore this design alternative is something that most Azure platform teams won't approve.
+In this network design, your data landing zone teams and data application teams need two things to be able to connect Private Endpoints to the Hub Vnet:
+
+- write permissions to a resource group in your Connectivity Hub subscription
+- join permissions to the Hub Vnet
+
+Your Connectivity Hub is designated for your organization's Azure platform team and is dedicated for host your organization's necessary and shared network infrastructure (including firewalls, gateways, and network management tools). This network option makes that design inconsistent, because it doesn't follow access management principles from the Enterprise-Scale Landing Zone base principles. Therefore, most Azure platform teams won't approve this design option.
 
 Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
 
-### Service Management in a connectivity hub
+### Service management in Connectivity Hub architecture
 
-Similar to [Meshed Network Architecture (Recommended)](#meshed-network-architecture-recommended), this network design has the benefit that there's no network virtual appliance acting as a single point of failure or throttling throughput. Not sending the datasets through the Connectivity Hub also reduces the management overhead for the central Azure platform team, as there's no need for scaling out the virtual appliance. This has the implication that the central Azure platform team can no longer inspect and log all traffic that is sent between data landing zones. Nonetheless, this isn't seen as disadvantage since the cloud-scale analytics scenario can be considered as coherent platform that spans across multiple subscriptions to allow for scale and overcome platform level limitations. If all resources would be hosted inside a single subscription, traffic would also not be inspected in the central Connectivity Hub. In addition, network logs can still be captured by using Network Security Group Flow Logs and other application and service level logs can be consolidated and stored by using service specific Diagnostic Settings. All of these logs can be captured at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/). Also, this pattern allows for an Azure native DNS solution based on Private DNS Zones and allows for the automation of the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
+While similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this design has no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
+
+With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub. You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/).
+
+This design also allows you to create an Azure native DNS solution based on Private DNS Zones, and allows you to automate the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-### Cost in a connectivity hub
+### Connectivity Hub architecture cost
 
 > [!NOTE]
-> When accessing a private endpoint across a peered network you will only ever be charged for the private endpoint itself and not for the VNet peering. The official statement can be found [here (FAQ: How will billing work when accessing a private endpoint from a peered network?)](https://azure.microsoft.com/pricing/details/private-link/).
+> When accessing a private endpoint across a peered network, you will only ever be charged for the private endpoint itself and not for the VNet peering. You can read the official statement in [FAQ: How will billing work when accessing a private endpoint from a peered network?](https://azure.microsoft.com/pricing/details/private-link/).
 
-With this network design, you only pay for the Private Endpoints (charged per hour) and the ingress and egress traffic that is sent through the Private Endpoints to load the raw (1) and store the processed dataset (6).
-
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
-
-### Bandwidth and Latency in a connectivity hub
-
-Because there are no network virtual appliances limiting throughput for cross-data landing zone data exchange, there are no known limitations from a bandwidth and latency perspective. Physical limits in our datacenters are the only limiting factor (speed of fibre cables/light).
+In this network design, you're only charged for your Private Endpoints (per hour) and ingress and egress traffic sent through those Private Endpoints to load a raw dataset (1) and store the processed dataset (6).
 
 Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-#### Summary Private Endpoints in Connectivity Hub
+### Bandwidth and latency in Connectivity Hub architecture
 
-There are many benefits that come with this network architecture design. However, the above-mentioned inconsistencies from an access management perspective make the design subpar and so the approach doesn't qualify as a recommended design.
+This design has no known bandwidth and latency limitations because it has no network virtual appliances limiting throughput for cross-data landing zone data exchange. The design's only limiting factor is the physical limit of our datacenters (speed of fiber-optic cables).
 
-## Conclusion - Single-region data landing zone Connectivity
+Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
 
-After reviewing all network architecture options from various angles and identifying pros and cons of each proposed pattern, [Meshed Network Architecture (Recommended)](#meshed-network-architecture-recommended) is the clear winner. Not only from a throughput perspective, but also from a cost and management perspective the solution has tremendous benefits and therefore should be used when deploying the cloud-scale analytics scenario. Peering spoke Virtual Networks hasn't been common in the past, but not doing so has also led to various issues when starting to share datasets across domains and business units. In addition, one can also argue that the cloud-scale analytics scenario can be seen as coherent solution that just spans across multiple subscriptions. In a single subscription setup, the network traffic flow would be equal to the flow in the meshed network architecture, with the difference that within a single subscription users will most likely hit [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits) of the platform, which is something that the cloud-scale analytics scenario wants to protect against.
+#### Private Endpoints in Connectivity Hub architecture summary
+
+While this network architecture design has multiple benefits, its previously mentioned access management inconsistencies make it subpar. Therefore, we can't recommend this design approach.
+
+## Single-region data landing zone connectivity conclusion
+
+Out of all reviewed network architecture options and their pros and cons, [meshed network architecture](#meshed-network-architecture-recommended) is the clear winner. It has tremendous benefits for throughput and for cost and management, which is why we recommend you use it when deploying cloud-scale analytics. Peering spoke virtual networks hasn't previously been common, and this has led to issues with sharing datasets across domains and business units.
+
+You can view cloud-scale analytics as a coherent solution that spans multiple subscriptions. In a single subscription setup, network traffic flow equals the flow in the meshed network architecture. Within a single subscription setup, users will most likely hit the platform's [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits), which cloud-scale analytics aims to avoid.
 
 ## Next steps
 
