@@ -1,0 +1,57 @@
+<svg id="Shapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+  <defs>
+    <radialGradient id="radial-gradient" cx="30" cy="30" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b3b3b3"/>
+      <stop offset="0.12" stop-color="#adadad"/>
+      <stop offset="0.64" stop-color="#9b9b9b"/>
+      <stop offset="1" stop-color="#949494"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="24.672" y1="45.101" x2="24.672" y2="24.101" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#004dae"/>
+      <stop offset="0.21" stop-color="#0061c4"/>
+      <stop offset="0.51" stop-color="#0078dd"/>
+      <stop offset="0.78" stop-color="#0086ec"/>
+      <stop offset="1" stop-color="#008bf1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="34.519" y1="26.371" x2="50.933" y2="16.894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#32bedd"/>
+      <stop offset="0.18" stop-color="#32caea"/>
+      <stop offset="0.41" stop-color="#32d2f2"/>
+      <stop offset="0.78" stop-color="#32d4f5"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g>
+      <g>
+        <circle cx="30" cy="30" r="30" fill="#fff"/>
+        <circle cx="30" cy="30" r="30" fill="#fff"/>
+        <circle cx="30" cy="30" r="30" fill="#fff"/>
+      </g>
+      <g>
+        <path d="M39.125,38.515a6.584,6.584,0,0,0-5.641-6.383,8.291,8.291,0,0,0-8.451-8.03A8.49,8.49,0,0,0,17,29.723a7.808,7.808,0,0,0-6.785,7.628,8.029,8.029,0,0,0,8.15,7.749H32.641A6.666,6.666,0,0,0,39.125,38.515Z" fill="#fff"/>
+        <path d="M49.781,14.9c-.268,0-.493.005-.736.018-7.65.385-11.613,6.679-12.22,7.719L33.3,20.946l3.04,8.586,8.547-3.024-3.8-1.823C42.448,21.891,45.264,17.212,49.781,14.9Z" fill="#fff"/>
+      </g>
+    </g>
+    <g opacity="0.25">
+      <g>
+        <circle cx="30" cy="30" r="30" fill="#999"/>
+        <circle cx="30" cy="30" r="30" fill="#999"/>
+        <circle cx="30" cy="30" r="30" fill="#999"/>
+      </g>
+      <g>
+        <path d="M39.125,38.515a6.584,6.584,0,0,0-5.641-6.383,8.291,8.291,0,0,0-8.451-8.03A8.49,8.49,0,0,0,17,29.723a7.808,7.808,0,0,0-6.785,7.628,8.029,8.029,0,0,0,8.15,7.749H32.641A6.666,6.666,0,0,0,39.125,38.515Z" fill="#999"/>
+        <path d="M49.781,14.9c-.268,0-.493.005-.736.018-7.65.385-11.613,6.679-12.22,7.719L33.3,20.946l3.04,8.586,8.547-3.024-3.8-1.823C42.448,21.891,45.264,17.212,49.781,14.9Z" fill="#999"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <circle cx="30" cy="30" r="30" fill="#fff"/>
+        <circle cx="30" cy="30" r="30" opacity="0.35" fill="url(#radial-gradient)"/>
+      </g>
+      <g>
+        <path d="M39.125,38.515a6.584,6.584,0,0,0-5.641-6.383,8.291,8.291,0,0,0-8.451-8.03A8.49,8.49,0,0,0,17,29.723a7.808,7.808,0,0,0-6.785,7.628,8.029,8.029,0,0,0,8.15,7.749H32.641A6.666,6.666,0,0,0,39.125,38.515Z" fill="url(#linear-gradient)"/>
+        <path d="M49.781,14.9c-.268,0-.493.005-.736.018-7.65.385-11.613,6.679-12.22,7.719L33.3,20.946l3.04,8.586,8.547-3.024-3.8-1.823C42.448,21.891,45.264,17.212,49.781,14.9Z" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>
