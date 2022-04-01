@@ -66,7 +66,6 @@ In data mesh, a product is defined as the data with code assets to generate data
 
 The data part of a product is dependent on the users that use the data product. The data product can be delivered as an API, a report, a data set in a file on a data lake or a table.
 
-In order to create a successful product, following are the key aspects:
 The success of the product is assessed if the product is:
 
 - Usuable\
