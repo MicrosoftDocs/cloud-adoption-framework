@@ -11,7 +11,7 @@ ms.subservice: modernize
 <!--Acrolinx:96, TODO: meta description, add image?-->
 # Modernize your apps and data
 
-When your cloud adoption journey includes modernization, you'll be refactoring, rearchitecting, or rebuilding your apps and data. Modernization will help you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
+When your cloud adoption journey includes modernization, you'll be refactoring, rearchitecting, and rebuilding your apps and data. Modernization will help you achieve benefits like boost app innovation, increase agility, and accelerate developer velocity.
 
 ## Refactor apps and databases for speed and productivity
 
@@ -26,8 +26,6 @@ Rearchitect apps and databases when you want to modify and extend app functional
 Rebuild when you need to re-create an app using Azure cloud solutions. Consider rebuilding if your existing apps have limited functionality or lifespan.
 
 Modernization is a continuous process that involves significant organizational change management spanning people, process, and technology. Taking a holistic approach helps you navigate the journey successfully and helps ensure that your organization realizes new benefits—including efficiency, agility, and scale, after your workloads are running in the cloud.
-
-IMAGE PLACEHOLDER
 
 The following exercises will help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
 
