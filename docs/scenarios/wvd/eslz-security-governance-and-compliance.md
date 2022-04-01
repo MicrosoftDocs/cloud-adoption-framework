@@ -12,7 +12,9 @@ ms.custom: think-tank, e2e-avd
 
 # Governance baseline considerations for Azure Virtual Desktop
 
-This article covers key design considerations and recommendations for security, governance, and compliance for [Azure Virtual Desktop](/azure/virtual-desktop/overview) deployed as part of landing zone to the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Sections below cover the recommended practices across the five disciplines for cloud governance.  
+This article covers key design considerations and recommendations for security, governance, and compliance for [Azure Virtual Desktop](/azure/virtual-desktop/overview) deployed as part of landing zone to the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Sections below cover the recommended practices across the five disciplines for cloud governance. 
+
+ 
 
 ## Security
 
