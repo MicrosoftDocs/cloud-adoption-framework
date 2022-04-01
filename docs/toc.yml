@@ -911,15 +911,13 @@ items:
       - name: Evaluate modernization options (DRAFT)
         href: modernize/evaluate-modernization-options.md
       - name: Complex evaluations (DRAFT)
-        href: complex-evaluations.md
+        href: modernize/complex-evaluations.md
       - name: Commit to modernization plan (DRAFT)
         href: modernize/commit-to-modernization-plan.md
       - name: Modernization disciplines (DRAFT)
-        href: modernization-disciplines.md
+        href: modernize/modernization-disciplines.md
       - name: Application platform modernization (DRAFT)
-        href: application-platform-modernization.md
-      - name: Deploy application platforms (DRAFT)
-        href: deploy-application-platforms.md
+        href: modernize/application-platform-modernization.md
       - name: Best practices
         items: 
         - name: Data platform modernization (DRAFT)

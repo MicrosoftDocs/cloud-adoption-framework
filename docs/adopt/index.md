@@ -36,7 +36,7 @@ Modernize and get more modern applications with new features and technical capab
 <!--need another sentence-->
 ## Innovate
 
-[Innovate]by developing new data plays to drive [business value](../../innovate/business-value.md#what-is-business-value). This methodology results in repositioned business and technical solutions for your business.
+Innovate by developing new data plays to drive [business value](../innovate/business-value.md#what-is-business-value). This methodology results in repositioned business and technical solutions for your business.
 <!--need another sentence-->
 ## Align horizons
 

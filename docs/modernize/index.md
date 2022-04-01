@@ -33,8 +33,8 @@ The following exercises will help establish the iterative processes to assess, m
 |--|--|
 | <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> Start with a solid plan. [Define and document your motivations](../strategy/motivations.md) for modernizing, create a [business case](../strategy/cloud-migration-business-case.md), align stakeholders, and [build a plan](../plan/plan-intro.md) that breaks out modernization projects. |
 | <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Review the five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): You can modernize at any time—before, during, or after migrating your workloads. Iteratively migrate and modernize in waves to refactor, rearchitect, or rebuild your apps and data. |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Modernization examples](modernize-overview.md): Use example scenarios to identify common tools and approaches to modernization. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Govern, secure, and manage cloud environments](modernize-overview.md): <!--Is this the right fourth step?  What can we link to here?--> |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [[Modernization examples](evaluate-modernization-options.md#modernization-examples)]: Use example scenarios to identify common tools and approaches to modernization. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Govern, secure, and manage cloud environments](../ready/azure-setup-guide/manage-access.md): <!--Is this the right fourth step?  What can we link to here?--> |
 
 ## Modernization examples
 

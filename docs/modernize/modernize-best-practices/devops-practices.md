@@ -31,7 +31,7 @@ In this article, we help you understand how mature your devops practices are tod
 - Align waves of workloads and modernization work.
 - We recommend cross-linking to backlogs for workloads with more mature devops practices.
 
-:::image type="content" source="../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
+:::image type="content" source="../../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
 
 ## Minimum maturity: Execute iteratively
 
@@ -43,7 +43,7 @@ The baseline of devops maturity is best made within the following groups of work
 
 The following image illustrates that as modernization processes mature, you can improve devops practices in repeat waves of modernization.
 
-:::image type="content" source="../_images/modernize/improve-devops-practices-incrementally.png" alt-text="Chart showing how to improve devops practices incrementally.":::
+:::image type="content" source="../../_images/modernize/improve-devops-practices-incrementally.png" alt-text="Chart showing how to improve devops practices incrementally.":::
 
 ## Alignment with the Modernize methodology
 

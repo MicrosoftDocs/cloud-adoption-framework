@@ -15,8 +15,7 @@ WWhere should you start in your three-horizon cloud adoption plan? Should you mi
 
 Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa. You might even modernize in parallel to migration. If you decide to modernize in parallel to migration, you'd want to modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
 
-
-:::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="img":::
+:::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
 Deciding whether to modernize or migrate first comes down to *what benefits you want*.
 
@@ -48,7 +47,7 @@ Most companies want a mix between control and productivity, based on the set of 
 
 The following graphic shows an example of how a customer could break down their application portfolio into migrate and modernization approaches, so they can think about it at a deeper level. The percentages are only examples.
 
-:::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach.png" alt-text="img":::
+:::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
 ### Migration
 

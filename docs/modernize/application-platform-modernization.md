@@ -106,7 +106,7 @@ Individual service instances can easily be upgraded, changed or taken down witho
 
 ## Considerations
 
-- [Understand consideration and options](scenarios/aks/plan#considerations-for-initial-containers)
+- [Understand consideration and options](../scenarios/aks/plan.md#considerations-for-initial-containers)
 - [Compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json)
 - [Container options](/azure/cloud-adoption-framework/scenarios/aks/plan)<!--(influences core app plat decisions)-->
 - [Understand modernization disciplines](modernization-disciplines.md)
