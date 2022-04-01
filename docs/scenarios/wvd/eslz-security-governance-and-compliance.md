@@ -12,12 +12,22 @@ ms.custom: think-tank, e2e-avd
 
 # Governance baseline considerations for Azure Virtual Desktop
 
-This article covers key design considerations and recommendations for security, governance, and compliance for [Azure Virtual Desktop](/azure/virtual-desktop/overview) deployed as part of landing zone to the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. 
+This article covers key design considerations and recommendations for security, governance, and compliance for [Azure Virtual Desktop](/azure/virtual-desktop/overview) deployed as part of landing zone to the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Sections below cover the recommended practices across the five disciplines for cloud governance.  
 
 ## Security
 
+The subsections below cover the recommended security controls for the Azure Virtual Desktop landing zone. 
 ### Identity
 
+[**Azure AD Conditional Access Policy**]((/azure/active-directory/conditional-access/overview)) should be configured with Azure multifactor authentication (at the minimum) for clients using Windows Client for Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. 
+
+For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa). In addition, ensure the administrators should have additional conditions defined Conditional Access Policy to the multifactor authentication (i.e. "Trusted locations" )
+
+[**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) should be used for automation and services for Azure Virtual Desktop. Establish least permissions required for the automation account. 
+
+[**Azure RBAC**](/azure/role-based-access-control/overview) should be used to assign the *least privilege* required for the roles and its teams. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. 
+
+Consider AAD groups per host pool user access
 ### Network
 
 ### Session Hosts (VMs)
