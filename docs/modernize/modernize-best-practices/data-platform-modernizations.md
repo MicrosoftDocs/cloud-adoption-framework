@@ -1,6 +1,6 @@
 ---
-title: Collect data and modernize
-description: Learn about Azure Database Migration Service and other data modernization tools for cloud inventions and innovations.
+title: Data platform modernization
+description: TODO.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/01/2022
@@ -11,7 +11,7 @@ ms.custom: seo-caf-modernize
 keywords: collect data, migrate data, data migration, data modernization
 ---
 
-# Collect data through the migration and data modernization of existing sources
+# Data platform modernization
 
 Companies often have different kinds of existing data that they can [democratize](../../innovate/considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data modernization and data migration to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your modernization by using the [Modernize methodology](../../modernize/index.md).
 
