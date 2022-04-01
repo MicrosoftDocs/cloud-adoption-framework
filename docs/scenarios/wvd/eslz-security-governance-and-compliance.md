@@ -89,11 +89,11 @@ Consider AAD groups per host pool user access
 > This structure should be duplicated for each region you deploy into.
 
 ```text
-    - Networking:  Generally created as part of the Cloud Adoption Framework Landing zone
-    - Azure Virtual Desktop Service Objects:  Separate Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects include Workspaces, Host Pools and RemoteApp/Desktops App groups. Create a resource group for these objects.
+    - Networking:  Generally created as part of the Cloud Adoption Framework Azure Landing Zone
+    - Azure Virtual Desktop Service Objects:  Separate Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects include Workspaces, Host Pool objects (excluding the Virtual Machines), Scaling Plans, RemoteApp Applications and RemoteApp/Desktops App groups. Create a resource group for these objects.
     - Storage:  If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts
     - Images:  Create a resource group for custom VM images
-    - Host Pools:  Create a resource group for each host pool
+    - Host Pools:  Create a resource group for each host pool that will contain the Virtual Machines for that Host Pool. The Host Pool object itself should be located with the other AVD service objects.
     - Basic Structure
         - Subscription
             - rg-wu2-network-services
