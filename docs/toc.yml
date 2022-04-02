@@ -480,7 +480,7 @@ items:
 
   - name: Adopt
     items:
-    - name: Establishing adoption horizons (DRAFT)
+    - name: Establish adoption horizons (DRAFT)
       href: adopt/index.md
     - name: Approaches (DRAFT)
       href: adopt/migrate-modernize-approaches.md

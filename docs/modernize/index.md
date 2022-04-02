@@ -46,9 +46,7 @@ Modify or extend your apps to further scale and optimize for cloud architectures
 - [Modernize on-premises .NET or Java apps by containerizing them with Azure Kubernetes Service (AKS)](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes)
 - [Modernize dev/test environments to Azure DevTest Labs](../migrate/azure-best-practices/contoso-migration-devtest-to-labs.md).
 
+
 ## Next steps
 
-The previously outlined steps can help you modernize at any stage of your cloud adoption journey. Modernizing apps and databases helps you get the most out of Azure capabilities including built-in security, patching, high availability, and auto-scaling. The modernization examples provide examples of common tools and approaches to modernization.
-
-> [!div class="nextstepaction"]
-> [Modernization examples](index.md)
+The previously outlined steps can help you modernize at any stage of your cloud adoption journey. Modernizing apps and databases helps you get the most out of Azure capabilities including built-in security, patching, high availability, and auto-scaling.

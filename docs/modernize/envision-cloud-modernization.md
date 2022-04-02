@@ -19,9 +19,9 @@ Minimum: 1 article Maximum: 5 articles
 # Envision cloud modernization
 
 <!--Introduce the concept of envisioning-->
-Before you begin modernization efforts, it's important to understand your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations will help you establish your approach to the [Modernization Horizons](../adopt/index.md).
+Before you begin modernization efforts, it's important to understand your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations will help you establish your approach to the [modernization horizons](../adopt/index.md).
 
-Every cloud adoption plan contains three horizons: [Horizon 1: Migrate](../get-started/migrate.md), [Horizon 2: Modernize](index.md), and [Horizon 3: Innovate](../get-started/innovate.md). These horizon efforts align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../adopt/migrate-modernize-approaches.md).
+Every cloud adoption plan contains three horizons: [Migrate](../get-started/migrate.md), [Modernize](index.md), and [Innovate](../get-started/innovate.md). These horizons will align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../adopt/migrate-modernize-approaches.md).
 
 The following steps will help you envision your modernization strategy and end state, based on your strategic objectives.
 
@@ -51,8 +51,6 @@ When you know *why* you're moving to the cloud, you can make better technical de
 Modernization of your workloads can help you achieve the [common modernization motivations](../strategy/business-outcomes/data-innovations.md#data-innovations).
 
 It's critical that you understand the limitations of your current state workloads and the best paths toward modernization. This understanding helps you set realistic expectations. *What are you moving?* We don't modernize assets, we modernize workloads, so conceptually reorganize your infrastructure, data stores, and apps into workloads. Then, you can start aligning or grouping workloads based on how they impact the strategy.
-
-:::image type="content" source="../_images/modernize/assets-to-workloads.png" alt-text="Image showing existing data center with multiple workloads, and then modernized workloads and assets grouped accordingly.":::
 
 <!--link to breaking down adopt flow-->
 

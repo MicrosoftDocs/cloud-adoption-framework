@@ -11,7 +11,7 @@ ms.subservice: adopt
 <!--Acrolinx:96, TODO: meta description, more content -->
 # Cloud migration and modernization approaches
 
-WWhere should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first?
+Where should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first?
 
 Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa. You might even modernize in parallel to migration. If you decide to modernize in parallel to migration, you'd want to modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
 
@@ -70,9 +70,13 @@ You might have a small percentage of things that you take from a custom line of 
 
 ### Modernization
 
-Customers tend to build new apps cloud-natively using Serverless or PaaS technologies. You have options for modernizing existing apps, like using containers or Serverless to maximize cloud benefits, or lift and shift them into IaaS to take advantage of OPEX and cloud scale. For apps that aren't custom built, many customers choose to retire and replace them using SaaS or low code apps. Some apps need to stay on premises due to regulatory or data sovereignty requirements or latency issues. It’s important to enable these apps to be cloud connected.
+Developers tend to build new apps cloud-natively using Serverless or PaaS technologies. You have options for modernizing existing apps, like using containers or Serverless to maximize cloud benefits, or lift and shift them into IaaS to take advantage of OPEX and cloud scale.
 
-No matter where your applications run —in multicloud, or on-premises, or at the edge— it's important to enable consistent identity, security, management, and compliance across distributed environments.
+For apps that aren't custom built, many businesses choose to retire and replace them using SaaS or low code apps. 
+
+Some apps need to stay on premises due to regulatory or data sovereignty requirements or latency issues. It’s important to enable these apps to be cloud connected.
+
+No matter where your applications run —in multicloud, on-premises, or at the edge— it's important to enable consistent identity, security, management, and compliance across distributed environments.
 
 Usually about 35% of any on premises environment gets retired, rightsized, or eliminated during the cloud motion, although this percentage is a rough estimate.
 

@@ -13,7 +13,7 @@ This article was called out as a dependency needed for the "envision" content of
 -->
 # Establish adoption horizons
 
-The methodologies required for cloud adoption generally fall into three *horizons*: [Migrate horizon](../migrate/index.md), [Modernize horizon](../modernize/index.md), and [Innovate horizon](../innovate/index.md). It's important to identify and prioritize which horizon sequence best fits across your cloud adoption plan, based on your adoption goals.
+The methodologies required for cloud adoption generally fall into three horizons: [Migrate](../migrate/index.md), [Modernize](../modernize/index.md), and [Innovate](../innovate/index.md). It's important to identify and prioritize which horizon sequence best fits across your cloud adoption plan, based on your adoption goals.
 
 Use the following horizons to establish your organization's adoption plan. These horizons support cloud adoption efforts by capturing prioritized tasks. Your cloud adoption plan will map to the metrics and motivations defined in the cloud adoption strategy.
 
@@ -23,7 +23,7 @@ Determine which horizon best fits your adoption goals and which business motivat
 
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
 
-It's a good idea to minimize the amount of effort that you spend on multiple horizons at once to limit complexity and unnecessary work and slowdowns.
+It's a good idea to minimize the amount of effort that you spend on multiple horizons at once to limit complexity and unnecessary work and slowdowns. For more information, see [Application portfolio migration and modernization approach](migrate-modernize-approaches.md#application-portfolio-migration-and-modernization-approach)
 
 ## Migrate
 

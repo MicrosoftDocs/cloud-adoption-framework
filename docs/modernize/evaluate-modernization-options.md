@@ -22,11 +22,13 @@ The Evaluate Cloud Modernization process might need to be broken down into addit
 
 As the cloud modernizes IT, companies are being forced to transform themselves. Those that make the transformation survive.
 
-How many purchases did you make at Amazon in the last month? And how many at a brick and mortar retailer? When you were walking to that brick and mortar retailer, how many businesses did you notice that were closed, or had been replaced by someone new?
+How many purchases did you make at Amazon in the last month? How many purchases did you make at a brick and mortar retailer? When you were walking to that brick and mortar retailer, how many businesses did you notice that were closed or had been replaced by something new?
 
 Digital transformation is an economic imperative. A transformation strategy drives innovation and growth. Organizations that harness data, the cloud, and AI are driving innovation and growth and outperforming their peers.
 
 Modernization allows your organization to focus on making innovative services and applications available to the company and spend less time managing core infrastructure like server patching, networking setup, firewall configuration, and many other server-related tasks now included with Azure PaaS.
+
+Let's evaluate from both the technical and a financial perspective.
 
 ## Technical indicators
 
@@ -49,29 +51,28 @@ In previous modernization articles, we talked about the [modernization motivatio
 ## Modernization economics
 <!--(slides 26-28)-->
 
+WORK IN PROGRESS
 
+When you're thinking about modernizing things, there are a few strategies that would drive this type of motion. Motivators tend to be more around generating new income, generating new operating income, in particular by modernizing and getting more usage of...
 
-### Motivation
+With today's technology and market differentiators and to justify any kind of modernization effort, you want to see some operating income coming rather than just operating margin.
 
-Let's evaluate from both the technical and a financial perspective.
+We've grouped the following types of modernization :
 
-So when you're thinking about modernizing things, there's a couple of different strategies that would drive this type of motion. Motivators tend to be more around generating new income, generating new operating income, in particular by modernizing and getting more usage of...
+- **Operating margin:** Automating ongoing administrative work, like patching, networking, firewall configuration, with the SASS service or pass services that we have.
 
-With the technology that they have out there and maybe even creating market differentiators and realistically to justify any kind of modernization effort, you wanna see some operating income coming from this, not just operating margin.
-
-We've put the types of modernization into the following three groups to show....:
-
-- Operating margin: Automating ongoing administrative work, like patching, networking, firewall configuration, with the SASS service or pass services that we have.
-
-- Motivators: generating new income (operating income and margin), modernizing and getting more usage of the technology, creating market differentiators
+- **Motivators:** generating new income (operating income and margin), modernizing and getting more usage of the technology, creating market differentiators
 produces some significant...
 
-- Infrastructure: Operating margin: reduce administrative work, patching, firewall administration
+- **Infrastructure:** 
+- 
+- **Operating margin:** reduce administrative work, patching, firewall administration
 Apps and data, getting to market faster, drive innovations, improve delivery time by 50%
 
 ## Modernization examples
 
-Here we show you some examples modernization
+Let's look at some examples of modernization.
+
 ### Migrating your app to Azure IaaS and Azure SQL Database Managed Instance (MI)
 
 This example is for a common web application running on a database. You could modernize only your SQL database instance, keep the web layer running as is and put it into IAS servers and migrate, or you could choose to modernize your data layer as you go and move from SQL Server on-premises to SQL database managed instances in the cloud. This is ultimately a migration effort, as we haven't changed any of the underlying infrastructure to create capabilities or opportunities to capitalize on cloud benefits.
@@ -83,6 +84,8 @@ This example is for a common web application running on a database. You could mo
 You can modernize both web and data layers. Modernize the data layer by moving it to the database manager instances. We modernize the app by going from a bunch of IAS servers or just VMS over to Azure App Service.
 
 :::image type="content" source="../_images/modernize/example-azure-app-service-azure-sql-database-mi.png" alt-text="Diagram showing flow of migrating to Azure App Service and Azure SQL DB MI.":::
+
+### Migrating your app to App Service and Azure Database for MySQL/PostgreSQL/MariaDB
 
 A different approach would be to modernize your app layer, like we just mentioned, but maybe you're working with some open source data layers and you want to go to something like Azure Database for MySQL, PostgreSQL, or MariaDB.
 

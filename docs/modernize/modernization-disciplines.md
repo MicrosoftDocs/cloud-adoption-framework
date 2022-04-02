@@ -12,9 +12,9 @@ ms.custom: internal
 <!--Slide 45-->
 # Modernization disciplines
 
-To keep building and launching new code bases, you'll want to increase the capabilities for you application platform to minimize your developers' efforts for faster time to market.
+To keep building and launching new code bases, you'll want to increase the capabilities for you application platform to minimize the efforts required by your developers for faster time to market.
 
-<!--[DevOps maturity model](/azure/cloud-adoption-framework/innovate/considerations/ci-cd)-->
+[DevOps maturity model](/azure/cloud-adoption-framework/innovate/considerations/ci-cd)
 ## Application platforms discipline
 
 :::image type="content" source="../_images/modernize/migration-journey-tools-and-services.png" alt-text="Diagram showing the tools and services for your migration journey.":::
@@ -36,14 +36,18 @@ There are many of the workloads left in the cost optimizing applications motivat
 
 On the other hand, if they do well, it's going to take a lot of change to modernize and the cost savings aren't all that great. Then let's go ahead and just migrate this over and get it out of the out of the pool of things we want to move around or modernize.
 
-If they don't know, this is another case where we want to run the well architected review and find out on a workload by workload basis. Should they modernize? Should they just migrate it up and just know that they'll have that ongoing high cost of operations?
+Should they modernize? Should they just migrate it up and just know that they'll have that ongoing high cost of operations?
 
 :::image type="content" source="../_images/modernize/database-migration-process-overview.png" alt-text="Diagram showing database migration process overview.":::
 
-Is this one example of what may end up going into one of the more complex evaluation states? Similarly with hybrid work. When we talk about hybrid work, that means that different things to different people. For the customer in this article we want to help them find out really quickly. Is it your workload that's hybrid and you need some degree of portability so that you can move it to Azure but later move it to on Prem later? Move it to GCP or a WS and you want that fluidity of where your workload lives? It's very commonplace for customers that are trying to modernize right now, or conversely, is it really your workers or hybrid and you just need new network routing paths to get those workers to that workload. So when we asked that question, if it's a hybrid or portable workload, this is very clearly a case of application platform.
+Is this an example of what may end up going into one of the more complex evaluation states? When we talk about hybrid work, it means different things to different people. 
+
+Is it your workload that's hybrid and you need some degree of portability so that you can move it to Azure, but later move it to on-premises? Move it to GCP or a WS and you want that fluidity of where your workload lives? It's very commonplace for customers that are trying to modernize right now.
+
+Is it really your workers or hybrid and you just need new network routing paths to get those workers to that workload? Whether it's a hybrid or portable workload, this is clearly a case of application platform.
 
 If you've consumed considerations for data portability, you might need to modernize your data platform.
-If it's more the workers who are hybrid and not the workload, then this is a migration-only type of context.
+If it's more the workers who are hybrid and not the workload, then it would only need migration.
 
 [Data migration type](../innovate/best-practices/data-dms.md#data-migration-type)
 
