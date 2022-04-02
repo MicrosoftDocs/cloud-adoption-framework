@@ -67,7 +67,7 @@ Before defining your cluster configuration repository, consider the different la
 
 Consider different tradeoffs with how you choose a Git repository structure that will define your Kubernetes cluster state which includes applications and cluster-wide components. Depending on the responsibilities and personas identified, it is important to consider the necessary collaboration or desired team independence required for different repository structure options.
 
-For your code repositories, you can use any branching strategy you like since it is only used by your Continuous Integration (CI) process. For your GitOps configuration repositories, you need to consider the following strategies based on your organization business needs, size and tooling:
+For your code repositories, you can use any branching strategy you like since it is only used by your Continuous Integration (CI) process. For your GitOps configuration repositories, you need to consider the following strategies based on your organization's business needs, size, and tooling:
 
 - Single repository (Branch per environment):
   - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
