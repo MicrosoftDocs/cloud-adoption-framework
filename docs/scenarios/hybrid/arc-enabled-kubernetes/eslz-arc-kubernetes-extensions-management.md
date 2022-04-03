@@ -37,7 +37,7 @@ the following image illustrates the overall integration for extensions for Azure
 ## Design Recommendations
 
 - **Extension installation**
-  - Standardize the way in which extensions are installed, whether that is through the Portal, Azure Policy, CLI, ARM templates, or another mechanism.  After installation, verify that the extension(s) have been installed properly.
+  - Standardize the way in which extensions are installed, whether that is through the Portal, Azure Policy, CLI, ARM templates, or another mechanism. After installation, verify that the extensions have been installed properly.
 
 - **Update extensions**
   - Extensions are periodically updated.  Use the `--auto-upgrade-minor-version` flag to automatically upgrade minor versions of the extension as described in [Usage of Cluster Extensions](/azure/azure-arc/kubernetes/extensions#usage-of-cluster-extensions). Please refer to the specific extension's documentation to know what settings can be configured during creation and update.

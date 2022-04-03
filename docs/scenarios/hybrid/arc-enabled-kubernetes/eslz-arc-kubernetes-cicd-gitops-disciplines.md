@@ -67,7 +67,7 @@ Before defining your cluster configuration repository, consider the different la
 
 Consider different tradeoffs with how you choose a Git repository structure that will define your Kubernetes cluster state which includes applications and cluster-wide components. Depending on the responsibilities and personas identified, it is important to consider the necessary collaboration or desired team independence required for different repository structure options.
 
-For your code repositories, you can use any branching strategy you like since it is only used by your Continues Integration (CI) process. For your GitOps configuration repositories, you need to consider the following strategies based on your organization business needs, size and tooling:
+For your code repositories, you can use any branching strategy you like since it is only used by your Continuous Integration (CI) process. For your GitOps configuration repositories, you need to consider the following strategies based on your organization's business needs, size, and tooling:
 
 - Single repository (Branch per environment):
   - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
@@ -86,7 +86,7 @@ See additional ways of structuring your repository in the [Flux Guide](https://f
 
 Platform Operators and Application Operators have several options for managing Kubernetes configuration, the following are choices:
 
-- Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you are deploying, this approach works well for single environments. The drawbacks to using raw YAML files is that customizing becomes difficult when you begin to incorporate multiple environments as you need to then duplicate YAML files, and there is not a good method of re-use.
+- Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you are deploying: this approach works well for single environments. The drawbacks to using raw YAML files is that customizing becomes difficult when you begin to incorporate multiple environments as you need to then duplicate YAML files, and there is not a good method of re-use.
 - [Helm](https://helm.sh/) is a package management tool for Kubernetes objects. It’s a valid option for Cluster Operators to install third-party off-the-shelf applications. Be aware of using its templating too heavily as a configuration management tool for internal applications as it can become complex to manage as the templates grow.
   - If using Helm, Flux includes a Helm Controller, allowing one to declaratively manage Helm Chart releases with Kubernetes manifests. You can create a _HelmRelease_ object to manage that process.
 - Kustomize is a Kubernetes native configuration management tool and introduces a template-free way to customize application configuration.
