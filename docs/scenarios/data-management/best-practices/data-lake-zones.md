@@ -1,9 +1,9 @@
 ---
-title: Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone
+title: Data lake zones and containers
 description: Learn about the three Azure Data Lake Storage Gen2 accounts that should be provisioned for each data landing zone.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/21/2022
+ms.date: 04/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,11 +12,13 @@ ms.custom: e2e-data-management, think-tank
 
 # Data lake zones and containers
 
-It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. [Overview of Azure Data Lake Storage for cloud-scale analytics](data-lake-overview.md) outlines a starting point for data lakes.
+It's important to plan your data structure before you land it into a data lake. Having a plan helps you use security, partitioning, and processing effectively. 
+
+[Overview of Azure Data Lake Storage for cloud-scale analytics](data-lake-overview.md) outlines a starting point for data lakes.
 
 ## Overview
 
-The three data lake accounts should align to the typical layers within a data lake.
+Your three data lake accounts should align to the typical data lake layers.
 
 | Lake number | Layers        | Container No | Container Name    |
 |-------------|-------------|--------------|-------------------|
@@ -27,57 +29,70 @@ The three data lake accounts should align to the typical layers within a data la
 | 3           | Development | 1            | Analytics Sandbox |
 | 3           | Development | #           | Synapse Primary Storage #  |
 
-Above are the standard number of containers we would recommend per data landing zone. The exception to this recommendation is where different soft delete policies are required for the data held in the container. These requirements will drive the need for more containers.
+In the previous table, you can find the standard number of containers we recommend per data landing zone. The exception to this recommendation is if different soft delete policies are required for the data in a container. These requirements determine your need for more containers.
 
 > [!NOTE]
-> Three data lakes are illustrated in each data landing zone. While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
+> Three data lakes are illustrated in each data landing zone. While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for your data landing zone.
 >
-> However, depending on your requirements you might want to consolidate the raw, enriched and curated layers into one storage account, while keeping another storage account called 'development' where consumers of the data can also bring other useful data products. For more information on separating data lake accounts, see [Storage accounts in a logical data lake](data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
+> Depending on your requirements, you might want to consolidate raw, enriched and curated layers into one storage account, and keep another storage account named "development" for data consumers to bring other useful data products.
+>
+>For more information on separating data lake accounts, see [Storage accounts in a logical data lake](data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
 
-The Azure storage should be enabled with the hierarchical name space feature to allow efficient file management. The [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) helps you organize objects and files within an account into a hierarchy of directories and nested subdirectories. It's organized in the same way that the file system on your computer is organized.
+Azure storage should be enabled with the [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace), which allows you to efficiently manage files. The hierarchical name space feature helps you organize objects and files within an account into a hierarchy of directories and nested subdirectories. This hierarchy is organized the same way as the file system on your computer.
 
-When a new system of record is registered via the data agnostic ingestion engine or onboarding application, it should create the required folders on the containers in the raw, enriched and standardized data layers. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups. Place either a service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
+When your data agnostic ingestion engine or onboarding application registers a new system of record, it creates required folders in containers in the raw, enriched, and standardized data layers. If a data application (source-aligned) is ingesting the data, your data application team needs your data landing zone team to create the folders and security groups. Put a service principle name or managed identity into the correct group, then assign a permission level. Document this process for your data landing zone and data application teams.
 
-Each **data product** should have two folders in the data products container over which the data product team should have ownership.
+For more information on teams, see [Understand roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
 
-At the standardized container, in the enriched layer, there would be two folders per source system divided by classification. This will allow the team to store data with different security and data classification separately and different security access can be assigned to them.
+Each data product should have two folders in the data products container, which your data product team should own.
 
-The container would contain a general folder, for *confidential or below*, and a *sensitive* personal data folder. Access will be controlled, by access control lists (ACLs). By having these two folders, you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
+In a standardized container's enriched layer, there are two folders per source system, divided by classification. This allows your team to store data with different security and data classifications separately and assign them different security access.
 
-Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (Azure AD) groups. These lists and groups control what can and cannot be accessed by other groups. Data owners and data application teams can approve or reject access to their data assets. For more information, [Data Access Management](../security-provisioning.md) and [Restricted data](../secure-data-privacy.md#restricted-data).
+Your standardized container needs a general folder for *confidential or below* data and a *sensitive* folder for personal data. Control access to these folders using access control lists (ACLs). You can create a dataset with all personal data removed and store it in your general folder. You can then have another dataset that includes all personal data in your *sensitive* personal data folder.
+
+A combination of access control lists (ACLs) and Azure Active Directory (Azure AD) groups restrict data access. These lists and groups control what other groups can and can't access. Data owners and data application teams can approve or reject access to their data assets.
+
+For more information, see [Data access management](../security-provisioning.md) and [Restricted data](../secure-data-privacy.md#restricted-data).
 
 > [!WARNING]
-> Some software products do not support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and development should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) do not have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
+> Some software products do not support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and development layers should contain a single folder that then branches off to multiple folders. Set up your folder permissions carefully. When a new folder is created from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) does not have a default ACL.
+>
+>For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## Raw layer or data lake one
 
-Using the water-based analogy, think of this layer as a reservoir that stores data in its natural and original state. It is unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or CSV, but there might be also scenarios where it is more cost effective to store the contents of the file as a column in a compressed file format such as Avro, Parquet, or Databricks Delta Lake.
+Think of the raw layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or CSV, but you might also encounter scenarios where it's more cost effective to store the file contents as a column in a compressed file format like Avro, Parquet, or Databricks Delta Lake.
 
-This data is always immutable. It should be locked down and the permissions given to any consumers, whether they are automated or human, should be read-only. The layer might be organized by using a folder per source system. Each ingestion process has write access to only its associated folder.
+This raw data is always immutable. You should keep your raw data locked down, and if you give permissions to any consumers, automated or human, you should ensure they're read-only. You can organize this layer using one folder per source system. Give each ingestion process write access to only its associated folder.
 
-When you load data from source systems into the raw zone you can either choose to do full loads from systems meaning that the full data set is extracted every time, or delta loads meaning that you load only the changed data every time. It is good practice to indicate the loading pattern in the folder structure. This will simplify the use for the data consumers.
+When you load data from source systems into the raw zone, you can choose to do either:
 
-Raw data from source systems for each **data application (source-aligned)** or automated ingestion engine source will land into either the full or delta folder. Each ingestion process should have write access to only their associated folder.
+- **Full loads**, where you extract a full data set
+- **Delta loads**, where you load only changed data
 
-We define full load and delta loads as:
+Indicate your chosen loading pattern in your folder structure. This simplifies use for your data consumers.
 
-- Full Load
-  - The complete data from source can be onboarded under the below scenarios
-    - The volume of data at source is small.
-    - The source system doesn't maintain any timestamp field to identify if the data has been added, updated or deleted.
+Raw data from source systems for each data application (source-aligned) or automated ingestion engine source lands in either the full or delta folder. Each ingestion process should have write access to only its associated folder.
+
+We define full loads and delta loads as:
+
+- Full load:
+  - Complete data from source can be onboarded in the following scenarios.
+    - Data volume at source is small.
+    - The source system doesn't maintain any timestamp field that identifies if data has been added, updated or deleted.
     - The source system overwrites the complete data each time.
 
-- Delta Load
-  - The incremental data from source can be onboarded under the below scenarios
-    - The volume of data at source is huge
-    - The source system maintains a timestamp field to identify if the data has been added/updated or deleted
-    - The source system creates/updates files on data changes.
+- Delta load:
+  - Incremental data from source can be onboarded in the following scenarios.
+    - Data volume at source is large.
+    - The source system maintains a timestamp field that identifies if data has been added/updated or deleted
+    - The source system creates and updates files on data changes.
 
-The raw data lake is composed of the landing and conformance containers, each with a 100% mandatory folder structure specific to its purpose.
+Your raw data lake is composed of your landing and conformance containers, each using a 100% mandatory folder structure specific to its purpose.
 
 ### Landing container layout
 
-The landing container is reserved for raw data loaded by the data agnostic ingestion engine or a **data application (source-aligned)**, from a recognized source system of record, unaltered, and in its original supported format.
+Your landing container is reserved for raw data  from a recognized source system, loaded by your data agnostic ingestion engine or a data application (source-aligned), unaltered and in its original supported format.
 
 ```markdown
 .
@@ -100,7 +115,9 @@ The landing container is reserved for raw data loaded by the data agnostic inges
 
 ### Raw Layer conformance container
 
-This layer is containing data quality conformed data. As the data is copied to landing container the data processing and compute should be triggered to copy the data from the landing container to the conformance container. As part of this first stage data is converted into the delta lake format and land in to input folder. Data quality is run and those records that pass are copied into the output folder. Failed records land into the error folder.
+Your raw layer contains data quality conformed data. As data is copied to a landing container, data processing and compute should be triggered to copy the data from the landing container to the conformance container. In this first stage, data gets converted into the delta lake format and lands in an input folder. When data quality is run, all records that pass get copied into the output folder. Any records that fail land in an error folder.
+
+As part of this first stage data is converted into the delta lake format and land in to input folder. Data quality is run and those records that pass are copied into the output folder. Failed records land into the error folder.
 
 ```markdown
 .
@@ -133,13 +150,13 @@ This layer is containing data quality conformed data. As the data is copied to l
 ```
 
 > [!TIP]
-> Businesses need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream read data stores. It is recommended to have a [business continuity and disaster recovery](../eslz-business-continuity-and-disaster-recovery.md) plan in place for key components.
+> Think about scenarios where you might need to rebuild an analytics platform from scratch, and always consider the most granular data you'd need to rebuild downstream read data stores. Make sure you have a [business continuity and disaster recovery](../eslz-business-continuity-and-disaster-recovery.md) plan in place for your key components.
 
 ## Enriched layer or data lake two
 
-The next layer can be thought of as a filtration layer that removes impurities but could also involve enrichment.
+Think of the enriched layer as a filtration layer. It removes impurities and can also involve enrichment.
 
-The standardization container hold systems of record and masters.  Folders are segmented first by subject area, and then by entity.  Data is available in merged, partitioned tables optimized for analytics consumption.
+Your standardization container holds systems of record and masters. Folders are segmented first by subject area, then by entity. Data is available in merged, partitioned tables optimized for analytics consumption.
 
 ### Standardized container
 
@@ -164,23 +181,23 @@ The standardization container hold systems of record and masters.  Folders are s
 ```
 
 > [!NOTE]
-> This layer of data is considered the silver layer or read data source. It shouldn't have had any other transformations applied other than data quality, conversion to delta lake and alignment of data types.
+> This data layer is considered the silver layer or read data source. Data within it has had no transformations applied other than data quality, delta lake conversion, and data type alignment.
+
+The following diagram shows the flow of data lakes and containers from source data to a standardized container.
 
 :::image type="content" source="../images/data-flow-high-level.png" alt-text="High level data flow" lightbox="../images/data-flow-high-level.png":::
 
-The above diagram brings together the flow of the data lakes and containers from source data through to the standardized container.
-
 ## Curated layer or data lake two
 
-The curated layer or data lake two is the consumption layer. It's optimized for analytics rather than data ingestion or data processing. It might store data in de-normalized data marts or star schemas.
+Your curated layer is your consumption layer. It's optimized for analytics, rather than data ingestion or processing. The curated layer might store data in de-normalized data marts or star schemas.
 
-Data is taken from the standardized container and transformed into high-value **data products** that are served to the consumers of the data. Consumers of the data might include BI analysts and data scientists. This data has structure and can be served to the consumers either as-is such as data science notebooks, or through another read data store such as Azure SQL Database.
+Data is taken from your standardized container and transformed into high-value data products that are served to your data consumers. This data has structure, and can be served to the consumers either as-is (such as data science notebooks) or through another read data store (such as Azure SQL Database).
 
-The dimensional modeling is preferably done by using tools like Spark or Data Factory rather than inside the database engine. If you want to make the lake the single source of truth, then this use of tools becomes a key point.
+Use tools like Spark or Data Factory to do dimensional modeling instead of doing it inside your database engine. This use of tools becomes a key point if you want to make your lake the single source of truth.
 
-If the dimensional modeling is done outside of the lake, for example, in the data warehouse, then you might want to publish the model back to the lake for consistency. Do not expect this layer to be a replacement for a data warehouse. Typically, the performance is not adequate for responsive dashboards or end-user and consumer interactive analytics. It is best suited for internal analysts or data scientists who run large-scale ad hoc queries, analysis, or advanced analytics who do not have strict time-sensitive reporting needs. As storage costs are lower in the lake compared to the data warehouse, it might be more cost effective to keep granular, low-level data in the lake, and store only aggregated data in the warehouse. These aggregations can be generated by Spark or Azure Data Factory and persisted to the lake prior to loading the data warehouse.
+If you do dimensional modeling outside of your lake, you might want to publish models back to your lake for consistency. Don't view this layer as a replacement for a data warehouse. Its performance typically isn't adequate for responsive dashboards or end-user and consumer interactive analytics. This layer is best suited for internal analysts and data scientists who run large-scale improvised queries, analysis, or for advanced analysts who don't have strict time-sensitive reporting needs. Since storage costs are lower in your data lake than your data warehouse, it can be more cost effective to keep granular, low-level data in your lake and store only aggregated data in your warehouse. You can generate these aggregations using Spark or Azure Data Factory, and persist them to your data lake before loading them into your data warehouse. 
 
-Data assets in this zone are typically highly governed and well-documented. Permission is assigned by department or function and organized by consumer group or by data mart.
+Data assets in this zone are typically highly governed and well-documented. Assign permissions by department or function and organize permissions by consumer group or data mart.
 
 ### Data products container
 
@@ -196,30 +213,30 @@ Data assets in this zone are typically highly governed and well-documented. Perm
 ```
 
 > [!TIP]
-> When a decision is made to land the data into another read data store such as Azure SQL Database, as a high-speed serving layer, we recommend to have a copy of the data located in the curated data. Although users of the **data product** will be guided to the main read data store or Azure SQL Database instance, allowing them to do further data exploration using a wider set of tools if the data is also available in the data lake.
+> When you land data in another read data store like Azure SQL Database, ensure you have a copy of that data located in your curated data. Although users of your data product are guided to your main read data store or Azure SQL Database instance, they can also do further data exploration with extra tools if you make the data also available in your data lake.
 
 ## Development layer or data lake three
 
-Along with the data that's ingested to the standardized container, the consumers of the data can also bring other useful data products.
+Your data consumers can bring other useful data products along with the data ingested into your standardized container.
 
-In this scenario, the data platform should allocate an analytics sandbox area for these consumers so they can use the curated data along with the other data products they bring, to generate valuable insights. For example, if a data science team wants to determine the product placement strategy for a new region, they can bring other data products such as customer demographics and usage data of similar products from that region. This high-value sales insights data can be used to analyze the product market fit and the offering strategy.
-
-> [!NOTE]
-> The analytics sandbox area is intended as a working area for individual, or a small group of collaborators.  The sandbox folders will have a special set of policies intended to prevent using this area as part of a production solution.  This would include limits on total available storage and how long data can be stored.
-
-These data products are usually of unknown quality and accuracy. They're still categorized as a **data product**, but are temporary and only relevant to the user group using the data.
-
-Sometimes these data products mature, and the enterprise should consider how they promote these **data products** to the curated data layer. In order to keep data product teams responsible for new data products, it is recommended to provide these teams a dedicated folder on the curated data zone. Here they can store the new results and share them with other teams across the organization.
+In this scenario, your data platform should allocate an analytics sandbox area for these consumers. There, they can generate valuable insights using the curated data and data products they bring. For example, if a data science team wants to determine the best product placement strategy for a new region, they can bring other data products like customer demographics and usage data from similar products from that region. They team can use the high-value sales insights from this data to analyze the product market fit and offering strategy.
 
 > [!NOTE]
-> For every Azure Synapse workspace, which is created, we recommend to use data lake three to create a container that can be used as the primary storage. This is to stop Azure Synapse workspaces from interfering with the curated and enriched zones throughput limits.
+> The analytics sandbox area is intended to be a working area for an individual or a small group of collaborators. The sandbox area's folders have a special set of policies that prevent attempts to use this area as part of a production solution. These policies can include limits on total available storage and limits on how long data can be stored.
+
+These data products are usually of unknown quality and accuracy. They're still categorized as data products, but are temporary and only relevant to the user group using the data.
+
+Sometimes these data products mature, and your enterprise should consider how to promote these data products to your curated data layer. To keep your data product teams responsible for new data products, provide the teams with a dedicated folder on your curated data zone. They can store new results in it and share them with other teams across your organization.
+
+> [!NOTE]
+> For every Azure Synapse workspace you create, use data lake three to create a container you can use as primary storage. This stops Azure Synapse workspaces from interfering with your curated and enriched zones' throughput limits.
 
 ## Example of data flow into products and analytics sandbox
 
-The follow diagram brings together the previous sections and illustrates how data would flow through to the data products and analytic sandbox.
+The following diagram joins this article's sections together and shows how data flows through to a data products and analytic sandbox.
 
-:::image type="content" source="../images/data-flow-data-products.png" alt-text="data flow into product container and analytics sandbox" lightbox="../images/data-flow-data-products.png":::
+:::image type="content" source="../images/data-flow-data-products.png" alt-text="Data flow into product container and analytics sandbox" lightbox="../images/data-flow-data-products.png":::
 
 ## Next steps
 
-[Key considerations for Azure Data Lake Storage](./data-lake-key-considerations.md)
+- [Key considerations for Azure Data Lake Storage](./data-lake-key-considerations.md)
