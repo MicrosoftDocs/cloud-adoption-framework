@@ -23,7 +23,7 @@ Cloud-scale analytics has the following goals:
 - Drive a default approach to enforce data governance and security
 - Drive teams to consistently prioritize business outcomes instead of focusing just on the underlying technology.
 
-It builds upon Microsoft's cloud adoption framework and requires understanding of [landing zones](../../ready/landing-zone/index.md). If you don't already have an implementation of Azure landing zones, consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
+Cloud-scale analytics builds upon Microsoft's cloud adoption framework and requires understanding of [landing zones](../../ready/landing-zone/index.md). If you don't already have an implementation of Azure landing zones, consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
 Reference architectures allow you to begin with a small footprint and grow over time, adapting the scenario to your use cases.
 
