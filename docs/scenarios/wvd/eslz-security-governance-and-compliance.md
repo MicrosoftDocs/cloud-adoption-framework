@@ -21,11 +21,18 @@ The subsections below cover the recommended security controls for the Azure Virt
 - Establish [Azure AD Conditional Access Policy]((/azure/active-directory/conditional-access/overview)) with [Azure AD Multi-factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
 For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa).
 
-- Assign access to Azure Virtual Desktop using Azure AD groups versus individual user assignment. 
+- Use Azure AD groups vs individual users to assign access to Azure Virtual Desktop application groups. 
 
 - Map defined administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview) to assign the *least privilege* required. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. 
 
-- Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Least priviledge should be assigned to the automation account and scope limited to Azure Virtual Desktop landing zone(s). 
+- Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Least priviledge should be assigned to the automation account and scope limited to Azure Virtual Desktop landing zone(s).  Azure Key Vault can be used to in conjunction with Azure managed identities, so that the runtime environment (such as, an Azure Function) can retrieve the automation credential from the key vault.
+
+- Ensure user and admin activity logging collection is enabled for Azure Active Directory and Azure Virtual Desktop landing zone(s). For example: 
+  - [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log)
+  - [Azure Active Directory Activity Log](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+  - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+  - [Session hosts](https://docs.microsoft.com/azure/azure-monitor/agents/agent-windows)
+  - [Key Vault logs](https://docs.microsoft.com/azure/key-vault/general/logging)
 
 ### Virtual Network
 
