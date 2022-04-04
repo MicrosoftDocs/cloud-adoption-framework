@@ -16,24 +16,22 @@ This article covers key design considerations and recommendations for **security
 ## Security
 The subsections below cover the recommended security controls for the Azure Virtual Desktop landing zone.
 
-#### Identity:  
+#### Identity
 
 - Establish [Azure AD Conditional Access Policy]((/azure/active-directory/conditional-access/overview)) with [Azure AD Multi-factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
-For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa). 
+For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa).
+
+- Assign access to Azure Virtual Desktop using Azure AD groups versus individual user assignment. 
 
 - Map defined administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview) to assign the *least privilege* required. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. 
 
 - Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Least priviledge should be assigned to the automation account and scope limited to Azure Virtual Desktop landing zone(s). 
 
-
-
-Consider AAD groups per host pool user access
-
 ### Virtual Network
 
 ### Session Hosts
 
-###  Information Protection
+###  DataProtection
 
 
 ## Governance
@@ -49,13 +47,8 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
 
 ### Resource Consistency
 
-### Deployment Acceleration
 
--------------------------------------------------------------------------------------------------------------------
-
-
-
-### Data Protection 
+## Compliance
 
  Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 
