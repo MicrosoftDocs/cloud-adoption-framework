@@ -58,7 +58,7 @@ Once ingestion requests are approved, the workflow uses the Azure Purview REST A
 
 ### Detailed workflow for onboarding data products
 
-![How new datasets are ingested (automated).](../images/new-dataset-ingestion.png)
+:::image type="content" source="../images/new-dataset-ingestion.png" alt-text="Diagram showing how new datasets are ingested (automated)":::
 *Figure 5: How new datasets are ingested (automated).*
 
 Figure 5 shows the detailed registration process for automating the ingestion of new data sources:
@@ -84,7 +84,7 @@ Once a pipeline has been created, your provisioning workflow adds entries to the
 
 The following diagram shows how to pull registered data sources in a Data Factory SQL Database metastore and how data is first ingested:
 
-![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
+:::image type="content" source="../images/new-datastore-ingestion.png" alt-text="Diagram of how new data sources are ingested":::
 
 Your Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore, then runs iteratively with the correct parameters. Data travels from the source to the raw layer in Azure Data Lake with little to no change. The data shape is validated based on your Data Factory metastore. File formats are converted to either Apache Parquet or Avro formats, then copied into the enriched layer.
 
