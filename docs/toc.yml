@@ -399,10 +399,24 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/platform-automation-devops.md
-          - name: Test-driven development (TDD) for landing zones
-            href: ready/considerations/test-driven-development.md
-          - name: Landing zone TDD in Azure
-            href: ready/considerations/azure-test-driven-development.md
+          - name: DevOps
+            items:
+            - name: DevOps considerations
+              href: ready/considerations/devops-principles-and-practices.md
+            - name: Team topologies
+              href: ready/considerations/devops-teams-topologies.md
+          - name: Development Strategy
+            items:
+            - name: Development Lifecycle
+              href: ready/considerations/development-strategy-development-lifecycle.md
+            - name: Environments
+              href: ready/considerations/environments.md
+            - name: Test-driven development for Azure Landing Zones
+              href: ready/considerations/test-driven-development-tdd.md
+          - name: Security Considerations
+            items: 
+            - name: Overview
+              href: ready/considerations/security-considerations-overview.md
 
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md

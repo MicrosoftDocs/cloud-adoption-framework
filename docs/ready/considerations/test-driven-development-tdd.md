@@ -1,20 +1,22 @@
 ---
-title: Test-driven development for landing zones
-description: Test-driven development for landing zones.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/15/2020
+title: Test-driven development for Azure Landing Zones
+description: Test-driven development for Azure Landing Zones.
+author: ElisaAnzelmo, ElenaBataneroGarcia
+ms.author: elanzel, elbatane
+ms.date: 03/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
 
-# Test-driven development (TDD) for landing zones
+# Test-driven development for Azure Landing Zones
 
-Test-driven development is a common software development and DevOps process that improves the quality of new features and improvements in any code-based solution. Cloud-based infrastructure, and the underlying source code can use this process to ensure landing zones meet core requirements and are of high quality. This process is especially useful when landing zones are being developed and refactored in a parallel development effort.
+Test-driven development (TDD) is a common software development and DevOps process that improves the quality of new features and improvements in any code-based solution by creating unit test cases before developing the actual code and testing the code against them. This is as opposed to software being developed first and test cases created later.
 
-![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
+Cloud-based infrastructure and the underlying source code can use this process to ensure landing zones meet core requirements and are of high quality. This process is especially useful when landing zones are being developed and refactored in a parallel development effort.
+
+![Test-driven development process for Azure Landing Zones](../../_images/ready/test-driven-development-process.png)
 
 In the cloud, infrastructure is the output of code execution. Well-structured, tested, and verified code produces a viable landing zone. A [landing zone](../landing-zone/index.md) is an environment for hosting your workloads, preprovisioned through code. It includes foundational capabilities using a defined set of cloud services and best practices that set you up for success. This guidance describes an approach that uses test-driven development to fulfill the last part of that definition, while meeting quality, security, operations, and governance requirements.
 
@@ -30,9 +32,7 @@ As teams adopt additional workloads and cloud features, the definition of done a
 
 ## Test-driven development cycle
 
-The cycle that makes test-driven development effective is often referred to as a red/green test. In this approach, the cloud platform team starts with a failed test (red test) based on the definition of done and defined acceptance criteria. For each feature or acceptance criteria, the cloud platform team would complete development tasks until the test passes (green test). A test-driven development cycle (or red/green test) would repeat the basic steps in the following image and list below until the full definition of done can be met.
-
-![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
+The cycle that makes test-driven development effective is often referred to as a red/green test. In this approach, the cloud platform team starts with a failed test (red test) based on the definition of done and defined acceptance criteria. For each feature or acceptance criteria, the cloud platform team would complete development tasks until the test passes (green test). A test-driven development cycle (or red/green test) would repeat the basic steps in the following image and the list below until the full Definition of Done can be met. The TDD practice was created to address better design, not to create a suite of tests. The tests just happen to be an extremely valuable artifact for the process.
 
 - **Create a test:** Define a test to validate that acceptance criteria for a specific value-add feature has been met. Automate the test whenever possible.
 - **Test the landing zone:** Run the new test and any existing tests. If the required feature hasn't already been met by prior development efforts and isn't inclusive to the cloud provider's offering, the test should fail. Running existing tests will help validate that your new test doesn't reduce reliability of landing zone features delivered by existing code.
@@ -69,9 +69,29 @@ The Govern methodology within the Cloud Adoption Framework provides a narrative 
 
 The above examples are basic samples to help develop a *definition of done* for your landing zones. Additional sample policies are available for each of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md).
 
-## Next steps
 
-To accelerate test-driven development in Azure, review [test-driven development features of Azure](./azure-test-driven-development.md).
+# Azure tools to support landing zone TDD cycles
 
-> [!div class="nextstepaction"]
-> [Test-driven development in Azure](./azure-test-driven-development.md)
+![Test-driven development tools in Azure](../../_images/ready/azure-tdd-tools.png)
+
+*Figure 1: Test-driven development tools in Azure.*
+
+The toolchain of Azure-native governance products and services can be easily integrated into test-driven development for the creation of landing zones. These tools serve a specific purpose, making it easier to develop, test, and deploy your landing zone in alignment with TDD cycles.
+
+## Microsoft-provided test and deployment templates to accelerate TDD
+
+The following examples are provided by Microsoft for governance purposes. Each can be used as a test or series of tests in a test-driven development cycle for Azure Landing Zones. The following sections provide more information on each tool:
+
+- [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/): Azure blueprint groups policies and other deployment tools into a repeatable package that can be assigned to multiple landing zones. Blueprints prove useful when multiple adoption efforts share common definitions of done, which you may want to update over time. It can also help with deployment during subsequent efforts to expand and refactor landing zones. Azure Blueprints provides various [blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/), including policies for testing and templates for deployment. These blueprint samples can accelerate development, deployment, and testing efforts in TDD cycles.
+- [Azure Policy](https://docs.microsoft.com/azure/governance/policy/): When deployments or attempted deployments deviate from governance policies, Azure Policy can provide automated detection, protection, and resolution. But Azure Policy also provides the primary mechanism for testing acceptance criteria in your definition of done. In a TDD cycle, a policy definition can be created to test a single acceptance criteria. Likewise, all acceptance criteria can be added to a policy initiative assigned to the entire subscription. This approach provides a mechanism for red tests before modifying the landing zone. Once the landing zone meets the definition of done, it can be used to enforce the test criteria to avoid code changes that would cause the test to fail in future releases. Azure Policy also includes [built-in policy initiatives](https://docs.microsoft.com//azure/governance/policy/samples/built-in-initiatives), which could be used to test and enforce the full definition of done for a landing zone. Azure Policy includes [built-in policy definitions](https://docs.microsoft.com/azure/governance/policy/samples/built-in-policies) that can meet individual acceptance criteria within the definition of done.
+- [Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview): Resource Graph provides a query language for creating data-driven tests based on information about the assets deployed within a landing zone. Later in the adoption plan, this tool can also define complex tests based on the interactions between workload assets and the underlying cloud environment. Azure Graph includes advanced [query samples](https://docs.microsoft.com/azure/governance/resource-graph/samples/advanced), which can be used to understand how the workloads are deployed within a landing zone for advanced testing scenarios.
+- [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/overview): These templates provide the primary source code for any environment deployed in Azure. Some third-party tools like Terraform generate their own ARM templates, which are then submitted to Azure Resource Manager.
+- [Azure Quickstart templates](https://azure.microsoft.com/resources/templates/) provides source code templates to aid in accelerating landing zone and workload deployment.
+- [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview): Resource Manager provides a consistent platform for build and deploy functions. This platform can deploy landing zones based on source code definitions.
+
+The examples listed above can be used as tools for accelerating TDD cycles. They run on the governance tools in the following sections and allow cloud platform teams to create their own source code and tests.
+
+# Next steps
+
+To begin refactoring your first landing zone, evaluate the [refactor landing zones](../landing-zone/refactor.md) guidance.
+
