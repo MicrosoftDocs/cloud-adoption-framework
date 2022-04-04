@@ -22,8 +22,8 @@ This article on automation focuses on the operational tasks you need to run an A
 
 Automation doesn't have to mean integration with DevOps, but there are many advantages to doing so. It's worth spending the time to automate the build process for your gold image and deployment of Azure Virtual Desktop because:
 
-- Using a DevOps pipeline gives you better management of your automation flow.
-- A DevOps pipeline provides reporting and alerting on deployments.
+- Using a Continuous Integration and Continuous Deployment (CI/CD) pipeline gives you better management of your automation flow.
+- A CI/CD pipeline provides reporting and alerting on deployments.
 - You can configure your pipeline to integrate with testing frameworks and create approval gates for the stages in your automation process.
 - You can start pipelines from many predefined events like the release of a new gallery image, application or using a set schedule.
 - Automating host pool creation makes it easy to move your host pool metadata to a new geographical location as new locations are made available.
@@ -122,7 +122,7 @@ As part of your gold image build process, consider all the applications that nee
 
 To get started with Azure Image Builder, see [Create an Azure Virtual Desktop image using Azure VM Image Builder and PowerShell](/azure/virtual-machines/windows/image-builder-virtual-desktop)
 
-To invoke Azure Image Builder using DevOps pipelines, use either the [Azure Image Builder Service DevOps Task](/azure/virtual-machines/linux/image-builder-devops-task) for Azure Pipelines or the [Build Azure Virtual Machine Image Action](https://github.com/marketplace/actions/build-azure-virtual-machine-image) for GitHub Actions.
+To invoke Azure Image Builder using CI/CD pipelines, use either the [Azure Image Builder Service DevOps Task](/azure/virtual-machines/linux/image-builder-devops-task) for Azure Pipelines or the [Build Azure Virtual Machine Image Action](https://github.com/marketplace/actions/build-azure-virtual-machine-image) for GitHub Actions.
 
 HashiCorp Packer is an open source alternative and will offer the same capabilities as Azure Image Builder (AIB is built on top of HashiCorp Packer) including the ability to distribute to an Azure Compute Gallery.
 
@@ -167,6 +167,7 @@ For more information, see the [Azure Compute Gallery service overview](/azure/vi
 - For universal applications installed in the gold image, use the same Packer method as above to install applications.
 - [App-V](/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming applications on a per-user basis.
 - Use [FSLogix application masking](/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
+- Use [MSIX app attach](/azure/virtual-desktop/what-is-app-attach) where possible to dynamically deliver applications to users and reduce the overall size of your gold image. The process of packaging applications into the MSIX format can also be automated using CI/CD pipelines. To learn more, please refer to this [guide](/msix/desktop/cicd-overview)
 
 ### Deployment of languages in Azure Virtual Desktop images
 
@@ -176,12 +177,12 @@ For more information on installing language packs in Windows 10 Enterprise multi
 
 ### Create Azure Virtual Desktop host pools from images in Azure Compute Gallery
 
-Use an Infrastructure as Code (IaC) approach to the deployment and customization of Azure Virtual Desktop resources. They should be used whenever possible to ensure consistency in deployments. ARM templates can be used to deploy Azure Virtual Desktop resources as part of a DevOps pipeline task. You can also use them when using the Azure portal, Azure PowerShell, or Azure CLI.
+Use an Infrastructure as Code (IaC) approach to the deployment and customization of Azure Virtual Desktop resources. They should be used whenever possible to ensure consistency in deployments. ARM templates can be used to deploy Azure Virtual Desktop resources as part of a CI/CD pipeline task. You can also use them when using the Azure portal, Azure PowerShell, or Azure CLI.
 
 Below is a recommended host pool update strategy:
 
-- Setup a DevOps pipeline to build and distribute gold images to Azure Compute Gallery.
-- Designate a validation host pool and deploy new session hosts into the validation host pool using DevOps pipelines.
+- Setup a CI/CD pipeline to build and distribute gold images to Azure Compute Gallery.
+- Designate a validation host pool and deploy new session hosts into the validation host pool using CI/CD pipelines.
 - Test your automation by using a validation host pool.
 - Tag your session hosts with a build number or image version to identify the version of the image they are running.
 - Before you deploy, validate (or check) to ensure that you have sufficient compute quota within your subscription.
