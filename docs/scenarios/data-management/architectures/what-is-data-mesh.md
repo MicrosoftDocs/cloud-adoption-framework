@@ -34,7 +34,7 @@ Having a single team handling all of data ingestion on a single platform in a la
 
 To address these problems, a new architectural pattern called data mesh was introduced a couple of years ago. The intent behind this pattern is to create a way for distributed teams to work with and share information in an agile decentralized fashion.
 
-This technical pattern requires organizational change. The benefits of a data mesh approach are achieved through adoption of the organizational change implementing multi disciplinary teams that publish and consume data products.
+This is not only a technical pattern but also requires organizational change. The benefits of a data mesh approach are achieved through adoption of the organizational change implementing multi disciplinary teams that publish and consume data products.
 
 The following concepts are the foundational concepts to understand this architectural pattern:
 
