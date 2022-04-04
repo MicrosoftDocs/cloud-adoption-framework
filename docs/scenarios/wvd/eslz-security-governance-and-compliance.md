@@ -16,17 +16,16 @@ This article covers key design considerations and recommendations for **security
 ## Security
 The subsections below cover the recommended security controls for the Azure Virtual Desktop landing zone.
 
-#### Access Control to Azure Virtul Desktop (end-users)
+#### Identity:  
 
-[**Azure AD Conditional Access Policy**]((/azure/active-directory/conditional-access/overview)) should be configured with Azure multifactor authentication (at the minimum) for clients using Windows Client for Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. 
+- Establish [Azure AD Conditional Access Policy]((/azure/active-directory/conditional-access/overview)) with [Azure AD Multi-factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
+For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa). 
 
-For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa). In addition, ensure the administrators should have additional conditions defined Conditional Access Policy to the multifactor authentication (i.e. "Trusted locations" )
+- Map defined administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview) to assign the *least privilege* required. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. 
 
-#### Access control in Azure Virtual Desktop landing zone
+- Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Least priviledge should be assigned to the automation account and scope limited to Azure Virtual Desktop landing zone(s). 
 
-[**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) should be used for automation and services for Azure Virtual Desktop. Establish least permissions required for the automation account. 
 
-[**Azure RBAC**](/azure/role-based-access-control/overview) should be used to assign the *least privilege* required for the roles and its teams. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. 
 
 Consider AAD groups per host pool user access
 
@@ -59,7 +58,7 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
 ### Data Protection 
 
  Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
-- **Defined roles:** Defined administrative, operations, and engineering roles within your organization plays a large part in defining the day-to-day operations in the Azure Virtual Desktop environment. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. Be sure to review the identity and access management section for more information. Consider creating a RACI matrix to map who owns each responsibility, then build controls into the Cloud Adoption Framework management group structure.
+
 - **Security audit tools:** What tools and methods do you use to continually scan, and evaluate your environment for security audits, and vulnerabilities?
 - **Software updates:** Define a strategy for continuous operations to keep Windows and applications current.
 - **Disk encryption:** Do you have regulatory or internal security requirements to manage and maintain your own keys for encrypting VMs at rest? Are Azure Key Vault keys acceptable for encryption? Do you need advanced hardware encryption or in-guest OS encryption like BitLocker? How will data at rest or data in transit be encrypted?
@@ -70,8 +69,7 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
 
 ## Design recommendations
 
-- **Multifactor authentication:** Multifactor authentication for all users is essential to securing desktops and company data. Use multifactor authentication in Azure Active Directory or a partner multifactor authentication tool.
-- **Conditional access:** Conditional access helps you to manage risks when granting access to users in your Azure Virtual Desktop environment. Before deciding to grant access to a user, consider who the user is, how they sign in, and which device they use. See [What is Azure AD Conditional Access?](/azure/active-directory/conditional-access/overview) for an overview of conditional access and advice on best practices.
+
 - **Enable logging:** Enable Azure Virtual Desktop service logging, host pool logging, and workspace logging for all Azure Virtual Desktop objects. For more information, see [Use Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics). Enable Azure Virtual Desktop host logging and performance logging as outlined in the management and monitoring section of the Azure Virtual Desktop landing zone architecture.
 - **Endpoint protection:** Microsoft strongly advises enabling a next-generation antivirus to create a protection layer and response mechanism to threats. An example is [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint). It's integrated with Microsoft Defender for Cloud to provide a data analytics and AI approach to proactively maintain security. Other security needs like network protection, web content filtering, attack surface reduction, security baselines for VM hosts, and threat vulnerability management should be part of your Azure Virtual Desktop design. See the following section for links to Azure Virtual Desktop host security best practices.
 - **Microsoft Information Protection:** Enable and configure Microsoft Information Protection to discover, classify, and protect sensitive information wherever it is.
