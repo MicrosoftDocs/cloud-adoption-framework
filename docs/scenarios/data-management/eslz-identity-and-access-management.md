@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Identity and access management for data management and analytics
 
-This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a data management and analytic platform on Microsoft Azure. Since data management and analytics is a mission-critical element, the guidance on the enterprise-scale design areas should also be included in your design.
+This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a data management and analytic platform on Microsoft Azure. Since data management and analytics is a mission-critical element, the guidance on the Azure landing zone design areas should also be included in your design.
 
 This article builds on considerations and recommendations about Azure landing zones. For more information, see [Identity and access management](../../ready/landing-zone/design-area/identity-access.md).
 

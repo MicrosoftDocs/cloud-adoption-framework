@@ -18,7 +18,7 @@ Before considering a deployment, it's important for your organization to put gua
 
 A core principle of data management and analytics scenario is to make it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance. This governance is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
 
-The [enterprise-scale architecture](../../ready/enterprise-scale/index.md) already uses this concept. Data management and analytics scenario adds [Custom Azure policies](#azure-policies-for-data-management-and-analytics-scenario) to build on these standards. The standards are then applied to our data management landing zones and data landing zones.
+The [Azure landing zone architecture](../../ready/enterprise-scale/index.md) already uses this concept. Data management and analytics scenario adds [Custom Azure policies](#azure-policies-for-data-management-and-analytics-scenario) to build on these standards. The standards are then applied to our data management landing zones and data landing zones.
 
 ![Diagram that shows how Azure governance works.](./images/azure-governance.png)
 

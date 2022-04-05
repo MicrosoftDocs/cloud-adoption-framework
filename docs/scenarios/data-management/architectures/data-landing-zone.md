@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of the data landing zone in Azure
 
-Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the enterprise-scale architecture.
+Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the Azure landing zone architecture.
 
 > [!IMPORTANT]
 > Before provisioning a data landing zone, you should have your DevOps and CI/CD operating model in place and a data management landing zone deployed.
@@ -40,7 +40,7 @@ The architecture of the data landing zone illustrates the layers, their respecti
 
 ## Core services layer
 
-Included are all the required services to enable the data landing zone within the context of enterprise-scale for analytics. The following resource groups form the suite of standard services available in every data landing zone that is deployed:
+Included are all the required services to enable the data landing zone within the context of analytics landing zone accelerator. The following resource groups form the suite of standard services available in every data landing zone that is deployed:
 
 - Networking
 - Monitoring

@@ -36,7 +36,7 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Monitoring
 
 > [!NOTE]
-> The Data management and analytics scenario builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
+> The Data management and analytics scenario builds on the Cloud Adoption Framework [Azure landing zone architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
 
 ## Critical design areas
 
