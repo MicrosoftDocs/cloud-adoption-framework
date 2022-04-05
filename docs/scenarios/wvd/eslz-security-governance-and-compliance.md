@@ -69,7 +69,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - [Control device redirection](https://docs.microsoft.com/azure/virtual-desktop/customize-rdp-properties) for the session hosts. Common devices to disable include local hard drive access and USB or port restrictions. Limiting camera redirection and remote printing can help protect company data. Disable clipboard redirection to prevent copying remote content to endpoints.
 
-- Enable next-generation antivirus Endpoint Protection such as [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide) on the session hosts. If using partner endpoint solutions - ensure the Microsoft Defender for Cloud is [able to verify](https://docs.microsoft.com/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. Microsoft Defender for Endpoint directly integrates with various Microsoft Defender solutions including: 
+- Enable next-generation antivirus Endpoint Protection such as [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide) on the session hosts. If using partner endpoint solutions - ensure the Microsoft Defender for Cloud is [able to verify](https://docs.microsoft.com/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. It is recommended to include FSLogix  Microsoft Defender for Endpoint directly integrates with various Microsoft Defender solutions including: 
   - [Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
   - [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/microsoft-365-defender-sentinel-integration)
   - [Intune](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure)
@@ -94,7 +94,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - To improve the Office deployment security, we recommend you use the [Security Policy Advisor for Microsoft 365 Apps for enterprise.](https://docs.microsoft.com/deployoffice/admincenter/overview-office-cloud-policy-service) This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
 
-- AAD integration for Azure FIles 
+- [Configure identity-based authentication for Azure Files through on-premises Active Directory Domain Services (AD DS) and Azure Active Directory Domain Services (Azure AD DS).](https://docs.microsoft.com/azure/storage/files/storage-files-active-directory-overview). Configure [NTFS permissions] (https://docs.microsoft.com/fslogix/fslogix-storage-config-ht) for the authorized users to access the Azure Files. 
 
 #### Cost Management
 
