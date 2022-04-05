@@ -18,7 +18,7 @@ The subsections below cover the recommended security controls and governance for
 
 #### Identity
 
-- Establish [Azure AD Conditional Access Policy]((/azure/active-directory/conditional-access/overview)) with [Azure AD Multi-factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
+- Establish [Azure AD Conditional Access Policy](/azure/active-directory/conditional-access/overview) with [Azure AD Multi-factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
 For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa).
 
 - Map defined administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview) to assign the *least privilege* required. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. 
@@ -67,7 +67,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Create dedicated Organization Unit (OU) with Active Directory the Azure Virtual Desktop session hosts. Dedicated Group Policy for the session hosts should be applied to set controls such as: 
   - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to prevent sensitive screen information from being captured on the client endpoints
-  - [Maximum inactive/disconnection time policies](/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
+  - [Maximum inactive/disconnection time policies](/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
   - [Hide local and remote drive mappings in Windows Explorer](/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives)
   - Optionally, configuration parameters for [FSLogix Profile Containers](/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](/fslogix/cloud-cache-configuration-reference) 
 
@@ -96,7 +96,7 @@ For more information on Azure Virtual Desktop session hosts' best practices, see
   - Disk encryption using customer-managed keys. You provide your own key for disk encryption. You can bring your own keys to your Key Vault (BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including the session hosts disks).
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest using platform-managed encryption keys.
 
-- Deploy Information Protection solution such as [Microsoft Information Protection](microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
+- Deploy Information Protection solution such as [Microsoft Information Protection](/microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
 
 - To improve the Office deployment security, we recommend you use the [Security Policy Advisor for Microsoft 365 Apps for enterprise.](/deployoffice/admincenter/overview-office-cloud-policy-service) This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
 
