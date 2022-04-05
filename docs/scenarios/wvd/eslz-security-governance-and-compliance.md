@@ -64,19 +64,23 @@ For more information on how to enable Azure Multifactor authentication for Azure
 - Create dedicated Organization Unit (OU) with Active Directory the Azure Virtual Desktop session hosts. Dedicated Group Policy for the session hosts should be applied to set controls such as: 
   - [Maximum inactive/disconnection time policies](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
   - [Hide local and remote drive mappings in Windows Explorer](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives)
-  - Optionally, [FSLogix Profile Containers](https://docs.microsoft.com/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-configuration-reference) 
+  - Optionally, configuration parameters for [FSLogix Profile Containers](https://docs.microsoft.com/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-configuration-reference) 
 
 - [Control device redirection](https://docs.microsoft.com/azure/virtual-desktop/customize-rdp-properties) for the session hosts. Customize the RDP properties on the host pool(s) in accordance to your enterprise security standards. 
 
-- 
+- Enable next-generation antivirus Endpoint Protection on the session hosts. Such as [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide). It is directly integreted with various Microsoft Defender solutions including: 
+  - [Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
+  - [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/microsoft-365-defender-sentinel-integration)
+  - [Intune](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure)
+
+Alternatively, enable partner enpoint solutions on the session hosts and verify the Microsoft Defender for cloud is [able to verify](https://docs.microsoft.com/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state.
+
  
 
 - and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
 
 
-- **Endpoint protection:** Microsoft strongly advises enabling a next-generation antivirus to create a protection layer and response mechanism to threats. An example is [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint). It's integrated with Microsoft Defender for Cloud to provide a data analytics and AI approach to proactively maintain security. Other security needs like network protection, web content filtering, attack surface reduction, security baselines for VM hosts, and threat vulnerability management should be part of your Azure Virtual Desktop design. See the following section for links to Azure Virtual Desktop host security best practices.
 
-- Endpoint integration with Intune
 
 ###  Data Protection
 
