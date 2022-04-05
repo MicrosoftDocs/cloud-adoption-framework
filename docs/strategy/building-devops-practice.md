@@ -54,9 +54,9 @@ As you read through the cloud adoption framework content, you will notice that d
 2.	Take the opportunity to reimagine your organization as a cloud based organization
 3.	Operationalize your plan using repeatable agile principles
 4.	In your landing zone enable CI/CD for consistent code based management
-5.	Evaluate devsecops to understand his security fits into your devops cycles
+5.	Evaluate devsecops to understand how security fits into your devops cycles
 6.	Start to deploy your workloads through pipelines and/or actions
-7.	Establish a management baseline to provide each DevOps team with consistent tools & foundations for operations
+7.	Establish a management baseline to provide each devops team with consistent tools & foundations for operations
 8.	Integrate insights and management into your devops tooling so that you can respond appropriately to changing conditions and demands.
 9.	Create governance guardrails so devops teams can deploy with confidence that they will be able to deploy to production without violating corporate policies
 10.	Lastly, think about taking customer feedback, incorporating into your backlog and iterating rapidly for an experience that will keep them engaged
