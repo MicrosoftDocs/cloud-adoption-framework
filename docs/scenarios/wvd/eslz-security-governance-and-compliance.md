@@ -78,11 +78,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Enable Application control using [Windows Defender Application Control(WDAC) or AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/feature-availability) to ensure the applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode.](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.2)
 
-- and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
-
- loogging from session hosts
-
-
+- Verify all the logs from the session hosts are either [onboarded to Azure Monitor](https://docs.microsoft.com/azure/virtual-machines/monitor-vm) or partner monitoring solution [via Event Hub.](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/diagnostics-extension-stream-event-hubs) 
 
 ###  Data Protection
 
@@ -115,10 +111,10 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
  Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 
 
+- and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
 
 
-
-
+https://docs.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics
 
 - **Security audit tools:** What tools and methods do you use to continually scan, and evaluate your environment for security audits, and vulnerabilities?
 - **Software updates:** Define a strategy for continuous operations to keep Windows and applications current.
