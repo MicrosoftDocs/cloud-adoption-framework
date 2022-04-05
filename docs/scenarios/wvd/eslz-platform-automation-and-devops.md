@@ -137,7 +137,7 @@ To use Packer method, prerequisites are:
 
 When working with Packer in the deployment pipeline:
 
-- You must install Packer tools into the build agent that you will in your deployment pipeline.
+- You must install Packer tools on the build agent that you will use in your deployment pipeline.
 - We recommend creating a validation stage in the pipeline to validate that the build works.
 - After validation, clone the validation stage and set the deployment mode to **Incremental**.
 
