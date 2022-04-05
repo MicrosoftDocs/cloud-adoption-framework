@@ -32,7 +32,7 @@ Development lifecycle strategy explores key design considerations and recommenda
 - Consider setting repository permissions to lock down who can contribute to your source code and manage other features. 
   - Repository permissions can be set for [Azure Devops](/azure/devops/repos/git/set-git-repository-permissions?view=azure-devops) and [GitHub](https://docs.github.com/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization)  
 
-- Consider using [Infrastructure as Code](https://docs.microsoft.com/azure/architecture/framework/devops/automation-infrastructure) for deploying resources to Azure. Infrastructure as Code is the management of infrastructure in a declarative model and it is useful to reduce configuration effort, ensure consistency between deployments and avoid manual configuration of environments.
+- Consider using [Infrastructure as Code](/azure/architecture/framework/devops/automation-infrastructure) for deploying resources to Azure. Infrastructure as Code is the management of infrastructure in a declarative model and it is useful to reduce configuration effort, ensure consistency between deployments and avoid manual configuration of environments.
 
 - Azure provides support for Infrastructure as Code for Landing Zone via: 
   - [Bicep](https://github.com/Azure/ALZ-Bicep) 
@@ -41,7 +41,7 @@ Development lifecycle strategy explores key design considerations and recommenda
 **Design recommendations**
 
 - Use Git as a version control system. 
-  [Git](https://docs.microsoft.com/azure/devops/repos/git/?view=azure-devops) is the industry-standard version control system. It is a distributed version control system, where your local copy of the code is a complete version of the repository.
+  [Git](/azure/devops/repos/git/?view=azure-devops) is the industry-standard version control system. It is a distributed version control system, where your local copy of the code is a complete version of the repository.
 
 - Use private repositories when building Azure Landing Zone, as users require to be granted access to the repo, control over who can see and managed Azure Landing Zone´s code is configured.  
 
