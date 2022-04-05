@@ -13,8 +13,8 @@ ms.custom: think-tank, e2e-avd
 ## Introduction
 This article covers key design considerations and recommendations for **security, governance, and compliance** for [Azure Virtual Desktop](/azure/virtual-desktop/overview) landing zone in accordance with the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. 
  
-## Security
-The subsections below cover the recommended security controls for the Azure Virtual Desktop landing zone.
+## Security and Governance
+The subsections below cover the recommended security controls and governance for the Azure Virtual Desktop landing zone.
 
 #### Identity
 
@@ -25,24 +25,42 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Least priviledge should be assigned to the automation account and scope limited to Azure Virtual Desktop landing zone(s).  Azure Key Vault can be used to in conjunction with Azure managed identities, so that the runtime environment (such as, an Azure Function) can retrieve the automation credential from the key vault.
 
+- Ensure user and admin activity logging collection for Azure Active Directory and Azure Virtual Desktop landing zone(s)  is enabled and monitored by SIEM. For example: 
+  - [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log)
+  - [Azure Active Directory Activity Log](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+  - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+  - [Session hosts](https://docs.microsoft.com/azure/azure-monitor/agents/agent-windows)
+  - [Key Vault logs](https://docs.microsoft.com/azure/key-vault/general/logging)
+
+- Use Azure AD groups versus individual users to assign access to Azure Virtual Desktop application groups. Consider leveraging existing security groups that to business functions within the enterprise. Such approach would re-use existing user de/provisioning process as well. 
+
+- Azure Identity Protection
+
 ### Networking
 
 - Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accomondate the scale of the session hosts. Establish the baseline subnet size based on the minumum and maximum number of the session hosts per host pool. Map business units requirements to host pools. 
 
-- Establish micro-segmentation using Network Security Groups and/or Azure Firewall (or 3rd party firewall vendor). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list)
+- Establish micro-segmentation using Network Security Groups and/or Azure Firewall (or 3rd party firewall vendor). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party vendor).
 
 - Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively 3rd party vendor) at scale. 
 
-- If Azure Firewall or 3rd party vendor firewall is used to protect outbound Internet access from the session hosts - consider enabling [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection)
+- Enable [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection) for Azure Firewall or 3rd party vendor firewall used to secure Azure Virtual Desktop landing zone(s).
 
-- AVD session hosts are leveraging the Reverse Connect transport for establishing remote sessions. Use Just-in-Time access for administration and troubleshooting the session hosts. Avoid granting direct RDP access to the session hosts. 
-- 
-- 
+- If using proxy within the session hosts consider the following: 
+  - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients if using cloud proxy providers.
+  - [Avoid TLS inspection with Azure Virtual Desktop.](https://docs.microsoft.com/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) Azure Virtual Desktop traffic is [encrypted in transit](https://docs.microsoft.com/azure/virtual-desktop/network-connectivity#connection-security) by default.
+  - [Avoid proxy configuration that requires user authentication.](https://docs.microsoft.com/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations) Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. To configure the host level proxy on the session host – systemwide proxy needs to be enabled.
+
+
+
+- AVD session hosts are leveraging the Reverse Connect transport for establishing remote sessions. Use [Just-in-Time access](https://docs.microsoft.com/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting the session hosts. Avoid granting direct RDP access to the session hosts. 
+
+
 
 
 ### Session Hosts
 
-###  DataProtection
+###  Data Protection
 
 
 ## Governance
@@ -57,14 +75,7 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
 - Use Adaptive Network Hardening features in Microsoft Defender for Cloud to recommend network security group configurations which limit ports and source IPs with reference to external network traffic rules.
 
 ### Identity Baseline
-- Ensure user and admin activity logging collection is enabled for Azure Active Directory and Azure Virtual Desktop landing zone(s). For example: 
-  - [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log)
-  - [Azure Active Directory Activity Log](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-  - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
-  - [Session hosts](https://docs.microsoft.com/azure/azure-monitor/agents/agent-windows)
-  - [Key Vault logs](https://docs.microsoft.com/azure/key-vault/general/logging)
 
-- Use Azure AD groups versus individual users to assign access to Azure Virtual Desktop application groups. Consider leveraging existing security groups that to business functions within the enterprise. Such approach would re-use existing user de/provisioning process as well. 
 
 ### Resource Consistency
 
