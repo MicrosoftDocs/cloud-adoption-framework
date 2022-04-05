@@ -12,96 +12,90 @@ ms.custom: e2e-data-management, think-tank
 
 # What is a data mesh?
 
-Data mesh is an architectural pattern that creates an efficient way of implementing an enterprise data platform in large complex organizations. It helps to scale adoption of analytics beyond a single platform and a single implementation team.
+Data mesh is an architectural pattern for implementing enterprise data platforms in large, complex organizations. It helps scale analytics adoption beyond a single platform and a single implementation team.
 
 ## Background
 
-The need for analytics is not new, companies has had the need for analyzing business performance and have done so using computers since the introduction of them. Around the 1980's, companies started to build data warehousing solutions using databases specifically for decision support. These solutions served companies well for a long time.
+The need for analytics isn't new. Organizations have always needed to analyze business performance, and have done so using computers since their introduction. Around the 1980's, organizations started to build data warehousing solutions by using databases specifically for decision support. These solutions served organizations well for a long time.
 
-However, as business has changed and with more and more diverse data being generated data warehousing solutions using relational databases was potentially not the best solution in many cases. In the 2000's, big data was introduced as a common term and new solutions allowing analysis of large volumes of data with big diversity and generated with great velocity was quickly adopted. This included technology like data lakes and scale out solutions allowing analysis of large quantities of data.
+However, as business changes and with more and more diverse data being generated, data warehousing solutions that use relational databases might not always be the best solution. In the 2000's, big data was introduced as a common term. New solutions that allow analysis of large volumes of diverse data generated with great velocity were quickly adopted. This includes technology like data lakes and scale-out solutions that analyze large quantities of data.
 
-In recent years, the modern architectural and analytical patterns that uses a combination of both the data warehousing technologies and the more recent big data technologies are being used by many organizations successfully.
+In recent years, many organizations successfully use modern architectural and analytical patterns that combine data warehousing technologies and more recent big data technologies.
 
 :::image type="content" source="../images/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="../images/azure-analytics-end-to-end.png":::
 
-However, some organizations have seen issues when deploying analytical solutions using this pattern. Common for all these solutions is that they are still implemented as a monolithic solution, with a single team being the provider of the platform and being the team doing the data integration. This often works for smaller organizations or organizations that have a high degree of centralization from a team setup perspective. But larger organizations having a single team, this team quite often becomes a bottle neck. This often results in a huge backlog with parts of the company having to wait for data integration services and finished analytical solutions.
+However, some organizations encounter issues when deploying analytical solutions using this pattern. These solutions are commonly still implemented as monolithic solutions, where a single team is the platform provider and the team doing data integration. This can work for smaller organizations and organizations that have a high degree of centralization from a team setup perspective. However, using only a single team often creates a bottleneck in larger organizations. This bottleneck causes a huge backlog, with parts of an organization having to wait for data integration services and analytical solutions.
 
-Many organizations have also seen this become a more common pattern with the adoption of data science within the company. The reason for this is that many data science solutions require more data compared to the more traditional business intelligence solutions adopted in the past.
+This pattern grows more common as organizations adopt modern data science solutions. Many data science solutions require more data than traditional business intelligence solutions did in the past.
 
-Another driver for a longer backlog around data integration is the recent switch to micro services as a pattern for application development since the number of data sources increases with this switch.
+The recent switch to using microservices as an application development pattern is another driver of long backlogs around data integration because it increases the number of data sources.
 
-Having a single team handling all of data ingestion on a single platform in a large organization could also be problematic because this team is seldom the experts on all the data sources. Most business and organizations are decentralized and distributed from a business perspective. You have different business units and departments handling different parts of the operation. This also means that the experts on the data is also spread throughout the organization.  
+Having a single team handling all of data ingestion on a single platform in a large organization can also be problematic. One team rarely has experts for every data source. Most organizations are decentralized and distributed from a business perspective. Different business units and departments handle different parts of the operation, so data experts are usually spread out across various sectors.
 
-To address these problems, a new architectural pattern called data mesh was introduced a couple of years ago. The intent behind this pattern is to create a way for distributed teams to work with and share information in an agile decentralized fashion.
+A new architectural pattern called data mesh was introduced a couple of years ago to solve these problems. Data mesh's goal is to let distributed teams to work with and share information in a decentralized and agile manner.
 
-This is not only a technical pattern but also requires organizational change. The benefits of a data mesh approach are achieved through adoption of the organizational change implementing multi disciplinary teams that publish and consume data products.
+Data mesh is a technical pattern that also requires organizational change. The benefits of a data mesh approach are achieved by implementing multi-disciplinary teams that publish and consume data products.
 
-The following concepts are the foundational concepts to understand this architectural pattern:
+The following concepts are foundational for understanding data mesh architecture:
 
-* Data Domains
-* Data Products
+* Data domains
+* Data products
 * Self Service Platform
 * Federated Governance
 
-## Data Domains
+## Data domains
 
-Data Domain is the foundation for data mesh. This concept  comes from Domain Driven Development, a paradigm that is often used in Software development as a way of modeling complex software solutions. In data mesh a data domain is a way of defining the boundaries around your enterprise data. Domains can vary a lot depending on your organization, in some cases you can define domains around your business organization. In other organizations you could choose to model your data domains based on business processes, or source systems.
+Data domains are the foundation of data mesh. The concept of data domains comes from Domain Driven Development, a paradigm often used in Software development to model complex software solutions. In data mesh, a data domain is a way to define boundaries around your enterprise data. Domains can vary depending on your organization, and in some cases, you can define domains around your organization. In other cases, you might choose to model data domains based on your business processes or source systems.
 
 There are three aspects to data domains:
 
-- The most important aspect is that the boundaries that you choose renders itself to long term ownership meaning that it is something that exists over a longer time and there is an identified owner.
+- Your chosen boundaries render themselves to long term ownership. They exist over a long period of time and have identified owners.
 
-- Another important thing to consider when you describe your data domains is that your domain should match reality and should not just be theoretical concept.
+- Domains should match reality, not just theoretical concepts.
 
-- If your domain has enough atomic integrity or if you just have a group of different areas into a domain, that really do not have any relationship with each other.
+- Your domains need to have atomic integrity. If areas have no relationship with each other, don't combine them in a domain together.
 
-For more information about data domain and how to define them, see [What are data domains?](data-domains.md).
+For more information about data domains and how you should define them, see [What are data domains?](data-domains.md).
 
-## Data Products
+## Data products
 
-Another important component of data mesh is the concept of data products. The idea of data products is to take the products thinking to the world of data.
-In order for the data product to be successful, it needs to provide a long term business value to the intended users.
+Data products are another important component of data mesh. Data products aim to take product thinking to the world of data. In order for your data product to be successful, it needs to provide a long term business value to the intended users. In data mesh, a data product involves data, code assets, meta data, and related policies. Data products can be delivered as an API, report, table, or dataset in a data lake.
 
-In data mesh, a product is defined as the data with code assets to generate data product, meta data, and the polices related to the data product.
+A successful data product must be:
 
-The data part of a product is dependent on the users that use the data product. The data product can be delivered as an API, a report, a data set in a file on a data lake or a table.
+For this section, it's easier for the readers if you format it something like:
 
-The success of the product is assessed if the product is:
+- **Usable:** Your product must have users outside the immediate data domain.
+- **Valuable:** Your product must maintain value over time. If it doesn't have long-term value, it won't succeed.
+- **Feasible:** Your product must be feasible. If you can't actually build it, the product won't be a success. Your product must be feasible from both a data availability and a technical standpoint.
 
-- Usuable\
-    A product needs to be usable. In the world of data mesh this means that there needs to be a set of users outside of the immediate data domain.
-
-- Valuable\
-    The second aspect is that the product needs to be valuable and its value must exist over time.  If there is no long-term value to the product, the product will not be successful.
-
-- Feasible\
-The last aspect is that the product needs to be feasible to build. If it cannot be built it will not be a successful product. Similar in the world of data products it needs to be possible to build it both from a data availability but also from a technical perspective.
-
-The code assets part of a data product would be the code that is used to generate the data product as well as the code that is used to deliver it. This would include the pipelines that are used to create the finished product as well as the report.
+The code assets of a data product include code that generates it and code that delivers it. It also includes pipelines used to create the product and the product's final report.
 
 For more information about data products, see [Cloud-scale analytics data products and data applications in Azure](data-landing-zone-data-products.md).
 
-For specific guidance about using the data mesh, see [What is a data product?](what-is-data-product.md).
+For specific guidance on using data mesh, see [What is a data product?](what-is-data-product.md).
 
 ## Self Service Platform
 
-A core of data mesh is having a platform that allows the data domains to build their data products on their own. Meaning that they have the possibility to define their data products using the tools and processes that are relevant for their users without having a strong dependency on a central platform and a central platform team that maintains and create this platform. The reason for going for this decentralized model is that in a data mesh you will have many autonomous teams developing and managing autonomous products.
+A core of data mesh is having a platform that allows the data domains to build their data products on their own. They need the ability to define their data products by using the tools and processes that are relevant for their users without having a strong dependency on a central platform or a central platform team. In a data mesh, you have autonomous teams developing and managing autonomous products.
 
-With the decentralization and alignment with business users that understands the data you will also have more generalists that will work on the platform this means that specialized tools that requires specialist knowledge of the platform cannot be the core foundation of a mesh-based platform.
+While using decentralization and alignment with business users that understand your data, you'll also have generalists working on your platform. Because of this, you can't have specialized tools that require specialist knowledge to operate be the core foundation of your mesh-based platform.
 
-Implementing this self-serve platform on Azure can be done successfully by adopting the practices defined in detail in the  [Design considerations for self-serve data platforms](self-serve-data-platforms.md).
+You can successfully implement your self-serve platform by adopting the practices outlined in [Design considerations for self-serve data platforms](self-serve-data-platforms.md).
 
 ## Federated Governance
 
-With the adoption of a self-serve distributed data platform, an increased effort needs to be placed on governance. Lacking this aspect of data mesh will lead to more silos and data duplication across the data domains. The governance needs to be federated as the people that understands the governance need exits in the domain aligned teams and owners of the data.
+When you adopt a self-serve distributed data platform, you must place an increased emphasis on governance. Lack of governance leads to silos and data duplication across your data domains. Federate your governance, as people who understand the governance need exits in your domain aligned teams and data owners.
 
-To create this federated governance automated policies around both platform and data you can adopt a high degree of automation for testing, monitoring and with a code-first implementation strategy where standards, policies, data product and platform deployment is handled as code.
+To create your federated governance, implement automated policies around both platform and data needs. Use a high degree of automation for testing and monitoring. Adopt a code-first implementation strategy to handle standards, policies, data products, and platform deployment as code.
 
-For more information about how to implement the federated governance aspects, see [Data Governance Overview](../govern.md).
+For more information on implementing federated governance aspects, see [Data Governance Overview](../govern.md).
 
 ## Summary
 
-Data mesh is an effective way of implementing an enterprise data platform in large complex organizations with independent business units that has the need to scale adoption of analytics beyond a single platform and a single implementation team. It requires a distributed organization with an autonomous teams having the possibility to work independently. Specific considerations needs to be taken around the governance aspect of a distributed platform to ensure that silos are not implemented. To be successful a product thinking around data has to be at the core of the implementation.
+Data mesh can be an effective way to implement enterprise data platforms, but it isn't the best solution for all organizations. Data mesh requires autonomous teams that can work independently. It works best in large, complex organizations that need to scale their analytics adoption beyond a single platform and implementation team and has independent business units.
+
+When using data mesh, take special care when implementing your governance so you don't create silos. Always keep product thinking for data at the core of your implementation to ensure success.
 
 ## Next Steps
 
