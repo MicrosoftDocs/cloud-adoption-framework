@@ -88,7 +88,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Establish patch management strategy the session hosts. [Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates) supports the Azure Virtual Desktop sesison hosts to receive the updates automatically. It is recommended to patch the base images at minimum on the monthly basis. Consider using [Azure Image Builder (AIB)](https://docs.microsoft.com/azure/virtual-machines/image-builder-overview) service to establish own [imaging pipeline for Azure Virtual Desktop base image.](https://docs.microsoft.com/azure/virtual-machines/windows/image-builder-virtual-desktop).
 
-For more information on Azure Virtual Desktop best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices). For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
+For more information on Azure Virtual Desktop session hosts' best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices). For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
 
 ####  Data Protection
 
@@ -161,3 +161,13 @@ This would ensure the Azure Virtual Desktop metadata stored in the region of Azu
 Use Group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for the session hosts. 
 
 Configure [alerting](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-overview) and [automated response](https://docs.microsoft.com/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance. 
+
+Review the [Microsoft Secure Score](https://docs.microsoft.com/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide) to measure the overall organization security posture across the following products 
+  - Microsoft 365 (including Exchange Online)
+  - Azure Active Directory
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Identity
+  - Defender for Cloud Apps
+  - Microsoft Teams
+
+Review [Microsoft Defender for Cloud Secure Score](https://docs.microsoft.com/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of the Azure Virtual Landing Zones. 
