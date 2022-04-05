@@ -40,44 +40,45 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accomondate the scale of the session hosts. Establish the baseline subnet size based on the minumum and maximum number of the session hosts per host pool. Map business units requirements to host pools. 
 
-- Establish micro-segmentation using Network Security Groups and/or Azure Firewall (or 3rd party firewall vendor). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party vendor).
+- Establish micro-segmentation using Network Security Groups and/or Azure Firewall (or 3rd party firewall appliance). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party firewall appliance).
 
-- Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively 3rd party vendor) at scale. 
+- Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively 3rd party firewall appliance) at scale. 
 
-- Enable [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection) for Azure Firewall or 3rd party vendor firewall used to secure Azure Virtual Desktop landing zone(s).
+- Enable [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection) for Azure Firewall or 3rd party firewall apppliance used to secure Azure Virtual Desktop landing zone(s).
 
-- If using proxy within the session hosts consider the following: 
+- If using proxy for outbound Internet access from the session hosts consider the following: 
   - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients if using cloud proxy providers.
   - [Avoid TLS inspection with Azure Virtual Desktop.](https://docs.microsoft.com/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) Azure Virtual Desktop traffic is [encrypted in transit](https://docs.microsoft.com/azure/virtual-desktop/network-connectivity#connection-security) by default.
   - [Avoid proxy configuration that requires user authentication.](https://docs.microsoft.com/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations) Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. To configure the host level proxy on the session host – systemwide proxy needs to be enabled.
 
+-  Use [Just-in-Time access](https://docs.microsoft.com/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting the session hosts. Avoid granting direct RDP access to the session hosts. AVD session hosts are leveraging the Reverse Connect transport for establishing remote sessions.
 
+- Use [Adaptive Network Hardening features](https://docs.microsoft.com/azure/defender-for-cloud/adaptive-network-hardening#:~:text=From%20Defender%20for%20Cloud's%20menu,adaptive%20network%20hardening%20(2).&text=The%20insights%20panel%20shows%20the,defended%20with%20adaptive%20network%20hardening.) in Microsoft Defender for Cloud to recommend network security group configurations which limit ports and source IPs with reference to external network traffic rules.
 
-- AVD session hosts are leveraging the Reverse Connect transport for establishing remote sessions. Use [Just-in-Time access](https://docs.microsoft.com/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting the session hosts. Avoid granting direct RDP access to the session hosts. 
+- Ensure the Azure Firewall or 3rd party vendor firewall appliance logs are collected by Azure Monitor or partner monitoring solution. Logs should also be monitored by SIEM such as Azure Sentinel or partner solution. 
 
-
-
+- Use private endpoint only for Azure Files used for [FSLogix Profile containers.](https://docs.microsoft.com/fslogix/configure-profile-container-tutorial).
 
 ### Session Hosts
+
+- **Endpoint protection:** Microsoft strongly advises enabling a next-generation antivirus to create a protection layer and response mechanism to threats. An example is [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint). It's integrated with Microsoft Defender for Cloud to provide a data analytics and AI approach to proactively maintain security. Other security needs like network protection, web content filtering, attack surface reduction, security baselines for VM hosts, and threat vulnerability management should be part of your Azure Virtual Desktop design. See the following section for links to Azure Virtual Desktop host security best practices.
 
 ###  Data Protection
 
 
+- AAD integration for Azure FIles
+
+### Cost Management
+
+### Resource Consistency
+
+---------------------------------------------------------
 ## Governance
 
 Sections below cover the recommended practices for Azure Virtual Desktop across the five disciplines for cloud governance. 
 ![image](https://user-images.githubusercontent.com/26681656/161323479-e5672478-b859-409a-8145-1fc64acadc46.png)
+-------------------------------------------------------------------------
 
-### Cost Management
-
-### Security Baseline 
-
-- Use Adaptive Network Hardening features in Microsoft Defender for Cloud to recommend network security group configurations which limit ports and source IPs with reference to external network traffic rules.
-
-### Identity Baseline
-
-
-### Resource Consistency
 
 
 ## Compliance
@@ -96,7 +97,7 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
 
 
 - **Enable logging:** Enable Azure Virtual Desktop service logging, host pool logging, and workspace logging for all Azure Virtual Desktop objects. For more information, see [Use Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics). Enable Azure Virtual Desktop host logging and performance logging as outlined in the management and monitoring section of the Azure Virtual Desktop landing zone architecture.
-- **Endpoint protection:** Microsoft strongly advises enabling a next-generation antivirus to create a protection layer and response mechanism to threats. An example is [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint). It's integrated with Microsoft Defender for Cloud to provide a data analytics and AI approach to proactively maintain security. Other security needs like network protection, web content filtering, attack surface reduction, security baselines for VM hosts, and threat vulnerability management should be part of your Azure Virtual Desktop design. See the following section for links to Azure Virtual Desktop host security best practices.
+
 - **Microsoft Information Protection:** Enable and configure Microsoft Information Protection to discover, classify, and protect sensitive information wherever it is.
 - **Control device redirection:** Only enable what your end users need. Common devices to disable include local hard drive access and USB or port restrictions. Limiting camera redirection and remote printing can help protect company data. Disable clipboard redirection to prevent copying remote content to endpoints.
 - **Policy tools:** Use group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
