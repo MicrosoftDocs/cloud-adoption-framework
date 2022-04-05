@@ -88,6 +88,8 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Establish patch management strategy the session hosts. [Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates) supports the Azure Virtual Desktop sesison hosts to receive the updates automatically. It is recommended to patch the base images at minimum on the monthly basis. Consider using [Azure Image Builder (AIB)](https://docs.microsoft.com/azure/virtual-machines/image-builder-overview) service to establish own [imaging pipeline for Azure Virtual Desktop base image.](https://docs.microsoft.com/azure/virtual-machines/windows/image-builder-virtual-desktop).
 
+For more information on Azure Virtual Desktop best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices). For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
+
 ####  Data Protection
 
 - Azure Virtual Desktop encrypts data-at-rest to protect against ‘out of band’ attacks, such as accessing [underlying storage].(https://docs.microsoft.com/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services).  This helps ensure that attackers cannot easily read or modify the data. Microsoft’s approach to enabling two layers of encryption for data at rest is:
@@ -124,6 +126,8 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - [Use Azure Policy built-in definitions to configure the diagnostics settings](https://docs.microsoft.com/azure/azure-monitor/policy-reference) for the Azure Virtual Desktop resources such as workspaces, application groups and host pools. 
 
+Review [security best practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide) as a starting point to security within your environment, and implement as appropriate.
+
 ## Compliance
 
 Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
@@ -157,8 +161,3 @@ This would ensure the Azure Virtual Desktop metadata stored in the region of Azu
 Use Group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for the session hosts. 
 
 Configure [alerting](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-overview) and [automated response](https://docs.microsoft.com/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance. 
-
-
-Review [security best practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide) as a starting point to security within your environment, and implement as appropriate.
-
-For more information on Azure Virtual Desktop best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices). For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
