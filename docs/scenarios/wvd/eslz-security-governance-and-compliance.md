@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-## Introduction
+# Introduction
 This article covers key design considerations and recommendations for **security, governance, and compliance** for [Azure Virtual Desktop](/azure/virtual-desktop/overview) landing zone in accordance with the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. 
  
 ## Security and Governance
