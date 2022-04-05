@@ -90,7 +90,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
   - Disk encryption using customer-managed keys. You provide your own key for disk encryption. You can bring your own keys to your Key Vault (BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including the session hosts disks).
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest using platform-managed encryption keys.
 
-- Deploy Information Protection solution such as Microsoft Information Protection(https://docs.microsoft.com/microsoft-365/compliance/information-protection?view=o365-worldwide) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
+- Deploy Information Protection solution such as [Microsoft Information Protection](https://docs.microsoft.com/microsoft-365/compliance/information-protection?view=o365-worldwide) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
 
 - To improve the Office deployment security, we recommend you use the Security Policy Advisor for Microsoft 365 Apps for enterprise. This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
 
