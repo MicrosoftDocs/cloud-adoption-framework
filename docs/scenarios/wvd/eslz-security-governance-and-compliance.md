@@ -21,20 +21,24 @@ The subsections below cover the recommended security controls for the Azure Virt
 - Establish [Azure AD Conditional Access Policy]((/azure/active-directory/conditional-access/overview)) with [Azure AD Multi-factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
 For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa).
 
-- Use Azure AD groups vs individual users to assign access to Azure Virtual Desktop application groups. 
-
 - Map defined administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview) to assign the *least privilege* required. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. 
 
 - Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Least priviledge should be assigned to the automation account and scope limited to Azure Virtual Desktop landing zone(s).  Azure Key Vault can be used to in conjunction with Azure managed identities, so that the runtime environment (such as, an Azure Function) can retrieve the automation credential from the key vault.
 
-- Ensure user and admin activity logging collection is enabled for Azure Active Directory and Azure Virtual Desktop landing zone(s). For example: 
-  - [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log)
-  - [Azure Active Directory Activity Log](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-  - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
-  - [Session hosts](https://docs.microsoft.com/azure/azure-monitor/agents/agent-windows)
-  - [Key Vault logs](https://docs.microsoft.com/azure/key-vault/general/logging)
+### Networking
 
-### Virtual Network
+- Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accomondate the scale of the session hosts. Establish the baseline subnet size based on the minumum and maximum number of the session hosts per host pool. Map business units requirements to host pools. 
+
+- Establish micro-segmentation using Network Security Groups and/or Azure Firewall (or 3rd party firewall vendor). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list)
+
+- Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively 3rd party vendor) at scale. 
+
+- If Azure Firewall or 3rd party vendor firewall is used to protect outbound Internet access from the session hosts - consider enabling [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection)
+
+- AVD session hosts are leveraging the Reverse Connect transport for establishing remote sessions. Use Just-in-Time access for administration and troubleshooting the session hosts. Avoid granting direct RDP access to the session hosts. 
+- 
+- 
+
 
 ### Session Hosts
 
@@ -50,7 +54,17 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
 
 ### Security Baseline 
 
+- Use Adaptive Network Hardening features in Microsoft Defender for Cloud to recommend network security group configurations which limit ports and source IPs with reference to external network traffic rules.
+
 ### Identity Baseline
+- Ensure user and admin activity logging collection is enabled for Azure Active Directory and Azure Virtual Desktop landing zone(s). For example: 
+  - [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log)
+  - [Azure Active Directory Activity Log](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+  - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+  - [Session hosts](https://docs.microsoft.com/azure/azure-monitor/agents/agent-windows)
+  - [Key Vault logs](https://docs.microsoft.com/azure/key-vault/general/logging)
+
+- Use Azure AD groups versus individual users to assign access to Azure Virtual Desktop application groups. Consider leveraging existing security groups that to business functions within the enterprise. Such approach would re-use existing user de/provisioning process as well. 
 
 ### Resource Consistency
 
@@ -87,25 +101,7 @@ Sections below cover the recommended practices for Azure Virtual Desktop across 
 - **Azure Virtual Desktop service and internet traffic routing and inspection:** By using reverse connect, built into the Azure Virtual Desktop platform, VMs do not need a public IP. VMs communicate outbound securely to Azure Virtual Desktop service URLs over port 443. It's good practice to enable Azure Firewall or a partner firewall appliance for traffic logging, routing, or inspection. Having a web proxy filter to monitor and log internet traffic is also recommended.
 - **Azure Virtual Desktop metadata:** A good resource group design for Azure Virtual Desktop can help protect against accidental deletion of workspace and host pool objects, can separate VM machine types, and can allow for administrators from different departments. Outside the Cloud Adoption Framework best practice for RBAC, security controls and landing zone design, here is a sample resource group structure for Azure Virtual Desktop.
 
-> [!NOTE]
-> This structure should be duplicated for each region you deploy into.
 
-```text
-    - Networking:  Generally created as part of the Cloud Adoption Framework Azure Landing Zone
-    - Azure Virtual Desktop Service Objects:  Separate Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects include Workspaces, Host Pool objects (excluding the Virtual Machines), Scaling Plans, RemoteApp Applications and RemoteApp/Desktops App groups. Create a resource group for these objects.
-    - Storage:  If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts
-    - Images:  Create a resource group for custom VM images
-    - Host Pools:  Create a resource group for each host pool that will contain the Virtual Machines for that Host Pool. The Host Pool object itself should be located with the other AVD service objects.
-    - Basic Structure
-        - Subscription
-            - rg-wu2-network-services
-            - rg-wu2-wvd-storage
-            - rg-wu2-wvd-service-objects
-            - rg-wu2-wvd-images
-            - rg-wu2-wvd-hostpool1
-            - rg-wu2-wvd-hostpool2
-            - rg-wu2-wvd-hostpool3
-```
 
 ## Azure Virtual Desktop host operating system security
 
