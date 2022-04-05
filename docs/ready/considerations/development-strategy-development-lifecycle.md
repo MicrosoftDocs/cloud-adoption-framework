@@ -53,25 +53,25 @@ Development lifecycle strategy explores key design considerations and recommenda
 
 **Design considerations**
 
-- Consider a [branch strategy](https://docs.microsoft.com/azure/devops/repos/git/git-branching-guidance?view=azure-devops) that allows teams to collaborate better and avoids spending time managing version control. 
+- Consider a [branch strategy](/azure/devops/repos/git/git-branching-guidance?view=azure-devops) that allows teams to collaborate better and avoids spending time managing version control. 
 
-- A [naming convention](https://docs.microsoft.com/azure/devops/repos/git/git-branching-guidance?view=azure-devops#name-your-feature-branches-by-convention) should be considered. 
+- A [naming convention](/azure/devops/repos/git/git-branching-guidance?view=azure-devops#name-your-feature-branches-by-convention) should be considered. 
   
-- Consider [branch permissions](https://docs.microsoft.com/azure/devops/repos/git/branch-permissions?view=azure-devops) to control user´s capabilities.
+- Consider [branch permissions](/azure/devops/repos/git/branch-permissions?view=azure-devops) to control user´s capabilities.
 
 - Consider branch policies to help teams protect their important branches of development. Policies enforce your team´s code quality and change management standards: 
   - Use pull requests to merge changes into important branches. 
-  - [Require a minimum number of reviewers](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#require-a-minimum-number-of-reviewers) for pull request.
-  - [Automatically include code reviewers](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#automatically-include-code-reviewers)
-  - [Check for linked work items](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#check-for-linked-work-items) allows you to keep traceability. 
-  - [Check for comment resolution](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#check-for-comment-resolution) validates whether all PR comments are resolved. 
-  - [Limit merge types](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#limit-merge-types). 
+  - [Require a minimum number of reviewers](/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#require-a-minimum-number-of-reviewers) for pull request.
+  - [Automatically include code reviewers](/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#automatically-include-code-reviewers)
+  - [Check for linked work items](/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#check-for-linked-work-items) allows you to keep traceability. 
+  - [Check for comment resolution](/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#check-for-comment-resolution) validates whether all PR comments are resolved. 
+  - [Limit merge types](/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#limit-merge-types). 
 
 - Adopting a pull request strategy helps to keep control of the code changes merged into branches. 
-  - Define a [merge strategy](https://docs.microsoft.com/azure/devops/repos/git/merging-with-squash?view=azure-devops).
+  - Define a [merge strategy](/azure/devops/repos/git/merging-with-squash?view=azure-devops).
   - Pull request should be simple, meaning that the number of files should be minimum. This will help the reviewer to validate commits and changes.
   - Pull request must have good title and description to help reviewers know what to except when reviewing code.
-  - Consider using [pull request templates](https://docs.microsoft.com/azure/devops/repos/git/pull-request-templates?view=azure-devops).
+  - Consider using [pull request templates](/azure/devops/repos/git/pull-request-templates?view=azure-devops).
   - Consider deleting origin branch after pull request is complete. This will help to keep control and have better management of the branches.   
 
 **Design recommendations**
