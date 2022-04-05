@@ -112,7 +112,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 #### Resource Consistency
 
-- [Use Intune for Azure Virtul Desktop personal session hosts](https://docs.microsoft.com/mem/intune/fundamentals/azure-virtual-desktop) to use existing or create new configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
+- [Use Intune for Azure Virtul Desktop personal session hosts](https://docs.microsoft.com/mem/intune/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 - [Multi-session session hosts management with Intune is currently in Public Preview.](https://docs.microsoft.com/mem/intune/fundamentals/azure-virtual-desktop-multi-session) At this time configuration policies defined in the OS scope and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
