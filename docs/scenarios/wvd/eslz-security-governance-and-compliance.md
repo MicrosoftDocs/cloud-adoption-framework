@@ -18,7 +18,7 @@ The subsections below cover the recommended security controls and governance for
 
 #### Identity
 
-- Establish [Azure AD Conditional Access Policy]((/azure/active-directory/conditional-access/overview)) with [Azure AD Multi-factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
+- Establish [Azure AD Conditional Access Policy]((/azure/active-directory/conditional-access/overview)) with [Azure AD Multi-factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool to secure user access to Azure Virtual Desktop. [Additional controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) should be added depending on the users's devices and access patterns. Consider user sign in behavoir, locations and device they use. 
 For more information on how to enable Azure Multifactor authentication for Azure Virtual Desktop please see [here](/azure/virtual-desktop/set-up-mfa).
 
 - Map defined administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview) to assign the *least privilege* required. Consider integration with Azure Privileged Identity Management (PIM) for limiting the access to high privilege roles within Azure Virtual Desktop landing zone. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. 
@@ -26,11 +26,11 @@ For more information on how to enable Azure Multifactor authentication for Azure
 - Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Least priviledge should be assigned to the automation account and scope limited to Azure Virtual Desktop landing zone(s).  Azure Key Vault can be used to in conjunction with Azure managed identities, so that the runtime environment (such as, an Azure Function) can retrieve the automation credential from the key vault.
 
 - Ensure user and admin activity logging collection for Azure Active Directory and Azure Virtual Desktop landing zone(s)  is enabled and monitored by SIEM. For example: 
-  - [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log)
-  - [Azure Active Directory Activity Log](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-  - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
-  - [Session hosts](https://docs.microsoft.com/azure/azure-monitor/agents/agent-windows)
-  - [Key Vault logs](https://docs.microsoft.com/azure/key-vault/general/logging)
+  - [Azure Activity Log](/azure/azure-monitor/essentials/activity-log)
+  - [Azure Active Directory Activity Log]/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+  - [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
+  - [Session hosts](/azure/azure-monitor/agents/agent-windows)
+  - [Key Vault logs](/azure/key-vault/general/logging)
 
 - Use Azure AD groups versus individual users to assign access to Azure Virtual Desktop application groups. Consider leveraging existing security groups that to business functions within the enterprise. Such approach would re-use existing user de/provisioning process as well. 
 
@@ -40,15 +40,15 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accomondate the scale of the session hosts. Establish the baseline subnet size based on the minumum and maximum number of the session hosts per host pool. Map business units requirements to host pools. 
 
-- Establish micro-segmentation using Network Security Groups and/or [Azure Firewall](https://docs.microsoft.com/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party firewall appliance).
+- Establish micro-segmentation using Network Security Groups and/or [Azure Firewall]/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party firewall appliance).
 
 - Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively third-party firewall appliance) at scale. 
 
-- Enable [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection) for Azure Firewall or third-party firewall apppliance used to secure Azure Virtual Desktop landing zone(s).
+- Enable [Azure DDoS standard protection.](/azure/virtual-network/manage-ddos-protection) for Azure Firewall or third-party firewall apppliance used to secure Azure Virtual Desktop landing zone(s).
 
 - If using proxy for outbound Internet access from the session hosts consider the following: 
   - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients if using cloud proxy providers.
-  - [Avoid TLS inspection with Azure Virtual Desktop.](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) Azure Virtual Desktop traffic is [encrypted in transit](https://docs.microsoft.com/azure/virtual-desktop/network-connectivity#connection-security) by default.
+  - [Avoid TLS inspection with Azure Virtual Desktop.](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) Azure Virtual Desktop traffic is [encrypted in transit](/azure/virtual-desktop/network-connectivity#connection-security) by default.
   - [Avoid proxy configuration that requires user authentication.](/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations) Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. To configure the host level proxy on the session host – systemwide proxy needs to be enabled.
 
 - Verify the end-users have access to the [Azure Virtual Desktop client URLs](/azure/virtual-desktop/safe-url-list#remote-desktop-clients). If proxy agent/configuration is used on the users' devices - make sure to bypass the Azure Virtual Desktop client URLs as well. 
@@ -69,7 +69,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
   - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to prevent sensitive screen information from being captured on the client endpoints
   - [Maximum inactive/disconnection time policies](/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
   - [Hide local and remote drive mappings in Windows Explorer](/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives)
-  - Optionally, configuration parameters for [FSLogix Profile Containers](/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-configuration-reference) 
+  - Optionally, configuration parameters for [FSLogix Profile Containers](/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](/fslogix/cloud-cache-configuration-reference) 
 
 - [Control device redirection](/azure/virtual-desktop/customize-rdp-properties) for the session hosts. Common devices to disable include local hard drive access and USB or port restrictions. Limiting camera redirection and remote printing can help protect company data. Disable clipboard redirection to prevent copying remote content to endpoints.
 
@@ -78,13 +78,13 @@ For more information on how to enable Azure Multifactor authentication for Azure
   - [Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
   - [Intune](/mem/intune/protect/advanced-threat-protection-configure)
 
-- Enable threat and vulnerability management assessments. [Integrate Microsoft Defender for Endpoint's threat and vulnerability management solution with Microsoft Defender for Cloud.](/azure/defender-for-cloud/deploy-vulnerability-assessment-tvm). Or use third-party solutions. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](https://docs.microsoft.com/azure/defender-for-cloud/deploy-vulnerability-assessment-vm) as well.
+- Enable threat and vulnerability management assessments. [Integrate Microsoft Defender for Endpoint's threat and vulnerability management solution with Microsoft Defender for Cloud.](/azure/defender-for-cloud/deploy-vulnerability-assessment-tvm). Or use third-party solutions. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm) as well.
 
 - Enable Application control using [Windows Defender Application Control(WDAC) or AppLocker](/windows/security/threat-protection/windows-defender-application-control/feature-availability) to ensure the applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode.](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.2)
 
 - Enable [Trusted launch](/azure/virtual-machines/trusted-launch) for Gen2 Azure virtual machines to enable features such as Secure Boot,  vTPM and Virtualization-based security(VBS). Microsoft Defender for Cloud can monitor the session hosts configured with trusted launch. 
 
-- Verify the session hosts are [monitored by Azure Monitor](/azure/virtual-machines/monitor-vm) or partner monitoring solution [via Event Hub.](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/diagnostics-extension-stream-event-hubs) 
+- Verify the session hosts are [monitored by Azure Monitor](/azure/virtual-machines/monitor-vm) or partner monitoring solution [via Event Hub.](/azure/azure-monitor/agents/diagnostics-extension-stream-event-hubs) 
 
 - Establish patch management strategy the session hosts. [Microsoft Endpoint Configuration Manager](/azure/virtual-desktop/configure-automatic-updates) supports the Azure Virtual Desktop sesison hosts to receive the updates automatically. It is recommended to patch the base images at minimum on the monthly basis. Consider using [Azure Image Builder (AIB)](/azure/virtual-machines/image-builder-overview) service to establish own [imaging pipeline for Azure Virtual Desktop base image.](/azure/virtual-machines/windows/image-builder-virtual-desktop).
 
@@ -160,7 +160,7 @@ This would ensure the Azure Virtual Desktop metadata stored in the region of Azu
 
 Use Group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for the session hosts. 
 
-Configure [alerting](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-overview) and [automated response](/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance. 
+Configure [alerting](/azure/defender-for-cloud/alerts-overview) and [automated response](/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance. 
 
 Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide) to measure the overall organization security posture across the following products 
   - Microsoft 365 (including Exchange Online)
