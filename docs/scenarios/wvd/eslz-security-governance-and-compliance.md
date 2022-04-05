@@ -92,7 +92,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Deploy Information Protection solution such as [Microsoft Information Protection](https://docs.microsoft.com/microsoft-365/compliance/information-protection?view=o365-worldwide) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
 
-- To improve the Office deployment security, we recommend you use the Security Policy Advisor for Microsoft 365 Apps for enterprise. This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
+- To improve the Office deployment security, we recommend you use the [Security Policy Advisor for Microsoft 365 Apps for enterprise.](https://docs.microsoft.com/deployoffice/admincenter/overview-office-cloud-policy-service) This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
 
 - AAD integration for Azure FIles 
 
