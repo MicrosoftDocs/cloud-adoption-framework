@@ -68,14 +68,14 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - [Control device redirection](https://docs.microsoft.com/azure/virtual-desktop/customize-rdp-properties) for the session hosts. Customize the RDP properties on the host pool(s) in accordance to your enterprise security standards. 
 
-- Enable next-generation antivirus Endpoint Protection on the session hosts. Such as [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide). It is directly integreted with various Microsoft Defender solutions including: 
+- Enable next-generation antivirus Endpoint Protection such as [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide) on the session hosts. If using partner endpoint solutions - ensure the Microsoft Defender for Cloud is [able to verify](https://docs.microsoft.com/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. Microsoft Defender for Endpoint directly integretes with various Microsoft Defender solutions including: 
   - [Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
   - [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/microsoft-365-defender-sentinel-integration)
   - [Intune](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure)
 
-Alternatively, enable partner enpoint solutions on the session hosts and verify the Microsoft Defender for cloud is [able to verify](https://docs.microsoft.com/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state.
+- Enable threat and vulnerability management assessments. [Integrate Microsoft Defender for Endpoint's threat and vulnerability management solution with Microsoft Defender for Cloud.](https://docs.microsoft.com/azure/defender-for-cloud/deploy-vulnerability-assessment-tvm). Or use third-party solutions. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](https://docs.microsoft.com/azure/defender-for-cloud/deploy-vulnerability-assessment-vm) as well.
 
- 
+- App cpntrol app locker
 
 - and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
 
