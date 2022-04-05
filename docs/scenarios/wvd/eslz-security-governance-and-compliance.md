@@ -116,17 +116,14 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - [Multi-session session hosts management with Intune is currently in Public Preview.](https://docs.microsoft.com/mem/intune/fundamentals/azure-virtual-desktop-multi-session) At this time configuration policies defined in the OS scope and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
-DSC 
+- [Use Azure Policy's guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration) to audit and configure the hardening of the session hosts' operating system. Use Windows security baseline as a starting point for securing the Windows operating system. For more information, see [Windows security baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines).
+
+- [Use Azure Policy built-in definitions to configure the diagnostics settings](https://docs.microsoft.com/azure/azure-monitor/policy-reference) for the Azure Virtual Desktop resources such as workspaces, application groups and host pools. 
 
 ## Compliance
 
- Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
+Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 
-
-- and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
-https://docs.microsoft.com/en-us/mem/intune/fundamentals/azure-virtual-desktop
-
-- [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines)
 
 
 https://docs.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics
@@ -149,7 +146,7 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics
 - **Policy tools:** Use group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
 - **Patch management:** Patch management is a vital part of the overall security strategy for your environment. You need a consistent practice and deployment policy to maintain secure systems. Tools like Microsoft Endpoint Configuration Manager and partner applications can help manage patches and keep your systems up to date.
 
-- **Security baseline:** Use a security baseline as a starting point for securing the Windows operating system. For more information, see [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines).
+- **Security baseline:** 
 
 - **Microsoft Defender for Cloud:** Enable Defender for Cloud to help maintain security compliance and alerting within your environment.
 - **Microsoft Secure Score:** [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score) provides recommendations and best practice advice for increasing your security posture and securing surrounding infrastructure with documented best practices.
