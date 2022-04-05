@@ -104,7 +104,7 @@ For more information on Azure Virtual Desktop session hosts' best practices, see
 
 #### Cost Management
 
-- [Use Azure Tags]/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. TO identify the compute cost associated with Azure Virtual Desktop -  tag all the hosts pools and virtual machines. Tag the Azure Files or Azure NetApp Files resources to track the storage cost associated with the FSLogix User Profile Containers, Custom OS images and MSIX app attach (if used).
+- [Use Azure Tags](/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. TO identify the compute cost associated with Azure Virtual Desktop -  tag all the hosts pools and virtual machines. Tag the Azure Files or Azure NetApp Files resources to track the storage cost associated with the FSLogix User Profile Containers, Custom OS images and MSIX app attach (if used).
  
 - Define the [minimum suggested tags](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) to be set across all the Azure Virtual Desktop resources. Azure tags can be set during the deployment time or applied post-provisioning. Consider implementing [Azure Policy buit-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules. 
 
@@ -132,7 +132,7 @@ Review [security best practices for Azure Virtual Desktop](/azure/virtual-deskto
 
 Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 
-[Use Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to apply additional compliance standards to Azure Virtual Desktop Landing zone if required. Microsoft Defender for Cloud helps streamline the process for meeting regulatory compliance requirements, using the [regulatory compliance dashboard.]/azure/defender-for-cloud/regulatory-compliance-dashboard#:~:text=Defender%20for%20Cloud%20continuously%20assesses,your%20compliance%20with%20these%20standards.) Built-in or customized compliancy standards can be  added to regulatory dashboard. Available built-in regulatory standards that can be added: 
+[Use Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to apply additional compliance standards to Azure Virtual Desktop Landing zone if required. Microsoft Defender for Cloud helps streamline the process for meeting regulatory compliance requirements, using the [regulatory compliance dashboard.](/azure/defender-for-cloud/regulatory-compliance-dashboard#:~:text=Defender%20for%20Cloud%20continuously%20assesses,your%20compliance%20with%20these%20standards.) Built-in or customized compliancy standards can be  added to regulatory dashboard. Available built-in regulatory standards that can be added: 
   - PCI-DSS v3.2.1:2018
   - SOC TSP
   - NIST SP 800-53 R4
