@@ -93,6 +93,8 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - By default all disks for the sessions hosts are encrypted using Azure storage Server-Side-Encryption (SSE) for managed disks with platform managed key. 
 
+- Deploy Information Protection solution such as Microsoft Information Protection(https://docs.microsoft.com/microsoft-365/compliance/information-protection?view=o365-worldwide) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
+
 ### Cost Management
 
 Tags and budgets
