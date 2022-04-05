@@ -100,7 +100,15 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - [Use Azure Tags](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. TO identify the compute cost associated with Azure Virtual Desktop -  tag all the hosts pools and virtual machines. Tag the Azure Files or Azure NetApp Files resources to track the storage cost associated with the FSLogix User Profile Containers, Custom OS images and MSIX app attach (if used).
  
-- Define the baseline of the requried tags across all the Azure Virtual Desktop resources. Azure tags can be set during the deployment time or applied post-provisioning. Consider implementing [Azure Policy buit-in definitions](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules. 
+- Define the [minimum suggested tags](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) to be set across all the Azure Virtual Desktop resources. Azure tags can be set during the deployment time or applied post-provisioning. Consider implementing [Azure Policy buit-in definitions](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules. 
+
+- [Set the budget(s) in Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage the Azure usage cost.  When the budget thresholds you've created are exceeded, only notifications are triggered. 
+
+- [Create Azure Cost Management alerts](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor the Azure usage and spending aganist Azure Virtual Desktop Landing zone. 
+
+- Configure [Start VM on Connect feature](https://docs.microsoft.com/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them. 
+
+- Deploy scaling solution for the pooled session hosts using Azure Automation(https://docs.microsoft.com/en-us/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature(preview)](https://docs.microsoft.com/azure/virtual-desktop/autoscale-scaling-plan)
 
 #### Resource Consistency
 
