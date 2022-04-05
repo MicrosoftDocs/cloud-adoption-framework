@@ -36,7 +36,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Azure Identity Protection
 
-### Networking
+#### Networking
 
 - Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accomondate the scale of the session hosts. Establish the baseline subnet size based on the minumum and maximum number of the session hosts per host pool. Map business units requirements to host pools. 
 
@@ -59,7 +59,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Use private endpoint only for Azure Files used for [FSLogix Profile containers.](https://docs.microsoft.com/fslogix/configure-profile-container-tutorial).
 
-### Session Hosts
+#### Session Hosts
 
 - Create dedicated Organization Unit (OU) with Active Directory the Azure Virtual Desktop session hosts. Dedicated Group Policy for the session hosts should be applied to set controls such as: 
   - [Enable screen capture protection](https://docs.microsoft.com/azure/virtual-desktop/screen-capture-protection) to prevent sensitive screen information from being captured on the client endpoints
@@ -84,22 +84,23 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Establish patch management strategy the session hosts. [Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/azure/virtual-desktop/configure-automatic-updates) supports the Azure Virtual Desktop sesison hosts to receive the updates automatically. It is recommended to patch the base images at minimum on the monthly basis. Consider using [Azure Image Builder (AIB)](https://docs.microsoft.com/azure/virtual-machines/image-builder-overview) service to establish own [imaging pipeline for Azure Virtual Desktop base image.](https://docs.microsoft.com/azure/virtual-machines/windows/image-builder-virtual-desktop).
 
-###  Data Protection
+####  Data Protection
 
-- Data encryption at rest
-- To improve the Office deployment security, we recommend you use the Security Policy Advisor for Microsoft 365 Apps for enterprise. This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
-
-- AAD integration for Azure FIles
-
-- By default all disks for the sessions hosts are encrypted using Azure storage Server-Side-Encryption (SSE) for managed disks with platform managed key. 
+- Azure Virtual Desktop encrypts data-at-rest to protect against ‘out of band’ attacks, such as accessing [underlying storage].(https://docs.microsoft.com/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services).  This helps ensure that attackers cannot easily read or modify the data. Microsoft’s approach to enabling two layers of encryption for data at rest is:
+  - Disk encryption using customer-managed keys. You provide your own key for disk encryption. You can bring your own keys to your Key Vault (BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including the session hosts disks).
+  - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest using platform-managed encryption keys.
 
 - Deploy Information Protection solution such as Microsoft Information Protection(https://docs.microsoft.com/microsoft-365/compliance/information-protection?view=o365-worldwide) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
 
-### Cost Management
+- To improve the Office deployment security, we recommend you use the Security Policy Advisor for Microsoft 365 Apps for enterprise. This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
+
+- AAD integration for Azure FIles 
+
+#### Cost Management
 
 Tags and budgets
 
-### Resource Consistency
+#### Resource Consistency
 
 Intune 
 DSC 
