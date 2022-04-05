@@ -57,7 +57,7 @@ Within an Azure Data Landing Zone, we can position all possible approaches for a
 
 :::image type="content" source="../images/data-application-options-in-adlz.png" alt-text="Diagram that shows data-application-rg resource group from Data Applications Context and  shared-application-rg resource group from Core Services Context for cloud-scale analytics." lightbox="../images/data-application-options-in-adlz.png":::
 
-In Data Management & Analytics guidance, within Azure Data Landing Zones implementations we provide three different frequently used data application patterns as a template. For detailed information on those please refer to [Cloud-scale analytics data products in Azure - Sample data applications](../architectures/data-landing-zone-data-products.md#sample-data-applications)
+In cloud-scale analytics guidance, within Azure Data Landing Zones implementations we provide three different frequently used data application patterns as a template. For detailed information on those please refer to [Cloud-scale analytics data products in Azure - Sample data applications](../architectures/data-landing-zone-data-products.md#sample-data-applications)
 
 ## Next steps
 
