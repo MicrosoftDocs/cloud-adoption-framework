@@ -129,7 +129,7 @@ An application for data analytics and data science might contain the services sh
 > The data application above is [available as a template](https://github.com/Azure/data-product-analytics), which deploys a set of services you can use for data analytics and data science. Like all our templates, this data product application template is a blueprint you can use to quickly spin up environments for cross-functional teams. Any services you don't require must be explicitly disabled.
 >
 
-The Data Product Analytics template contains all templates for deploying a data product for analytics and data science inside a cloud-scale analytics Scenario data landing zone.
+The Data Product Analytics template contains all templates for deploying a data product for analytics and data science inside a cloud-scale analytics scenario data landing zone.
 
 The deployment and code artifacts include the following services:
 
@@ -147,7 +147,7 @@ The deployment and code artifacts include the following services:
 
 ### Batch Data Application
 
-The Batch Data Application template contains all templates for deploying a data product for batch data processing inside a cloud-scale analytics Scenario data landing zone.
+The Batch Data Application template contains all templates for deploying a data product for batch data processing inside a cloud-scale analytics scenario data landing zone.
 
 The deployment and code artifacts include the following services:
 
@@ -168,7 +168,7 @@ The deployment and code artifacts include the following services:
 
 ### Streaming Data Application
 
-The Streaming Data Application template contains all templates for deploying a data product for real-time data processing inside a cloud-scale analytics Scenario data landing zone
+The Streaming Data Application template contains all templates for deploying a data product for real-time data processing inside a cloud-scale analytics scenario data landing zone
 
 The deployment and code artifacts include the following services:
 
