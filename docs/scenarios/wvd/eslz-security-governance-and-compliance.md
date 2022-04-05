@@ -68,7 +68,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - [Control device redirection](https://docs.microsoft.com/azure/virtual-desktop/customize-rdp-properties) for the session hosts. Customize the RDP properties on the host pool(s) in accordance to your enterprise security standards. 
 
-- Enable next-generation antivirus Endpoint Protection such as [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide) on the session hosts. If using partner endpoint solutions - ensure the Microsoft Defender for Cloud is [able to verify](https://docs.microsoft.com/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. Microsoft Defender for Endpoint directly integretes with various Microsoft Defender solutions including: 
+- Enable next-generation antivirus Endpoint Protection such as [Microsoft Defender for Endpoint](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide) on the session hosts. If using partner endpoint solutions - ensure the Microsoft Defender for Cloud is [able to verify](https://docs.microsoft.com/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. Microsoft Defender for Endpoint directly integrates with various Microsoft Defender solutions including: 
   - [Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
   - [Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/microsoft-365-defender-sentinel-integration)
   - [Intune](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure)
