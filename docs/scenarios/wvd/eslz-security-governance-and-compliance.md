@@ -128,7 +128,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 
-[Use Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction) to apply additional compliance standards to Azure Virtual Desktop Landing zone if required. Microsoft Defender for Cloud helps streamline the process for meeting regulatory compliance requirements, using the [regulatory compliance dashboard.](https://docs.microsoft.com/azure/defender-for-cloud/regulatory-compliance-dashboard#:~:text=Defender%20for%20Cloud%20continuously%20assesses,your%20compliance%20with%20these%20standards.) Available regulatory standards that can be added: 
+[Use Microsoft Defender for Cloud](https://docs.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction) to apply additional compliance standards to Azure Virtual Desktop Landing zone if required. Microsoft Defender for Cloud helps streamline the process for meeting regulatory compliance requirements, using the [regulatory compliance dashboard.](https://docs.microsoft.com/azure/defender-for-cloud/regulatory-compliance-dashboard#:~:text=Defender%20for%20Cloud%20continuously%20assesses,your%20compliance%20with%20these%20standards.) Built-in or customized compliancy standards can be  added to regulatory dashboard. Available built-in regulatory standards that can be added: 
   - PCI-DSS v3.2.1:2018
   - SOC TSP
   - NIST SP 800-53 R4
@@ -146,8 +146,6 @@ Nearly all corporations are required to comply with government or industry regul
   - FedRAMP H
   - FedRAMP M
 
-Custom complianct standards can be also added to regulatory dashboard. 
-
  If the data residency requirements is present - consider limited deployment of Azure Virtual Desktop resources (workspaces, application groups and host pools) to the  selected geographies: 
   - United States
   - Europe
@@ -156,19 +154,11 @@ Custom complianct standards can be also added to regulatory dashboard.
  
 This would ensure the Azure Virtual Desktop metadata stored in the region of Azure Virtual Desktop resource geography as the session hosts can be deployed world-wide to accomodate the user base. 
 
+Use Group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for the session hosts. 
+
+Configure [alerting](https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-overview) and [automated response](https://docs.microsoft.com/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance. 
 
 
-
-- **Policies:** Policies for managing your Azure Virtual Desktop environment should be defined in your Cloud Adoption Framework platform design. Include policies pertaining to security, RBAC controls, regulatory governance, and types of resources that can be deployed.
-
-
-- **Policy tools:** Use group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
-
-
-
-
-- **Microsoft Defender for Cloud:** Enable Defender for Cloud to help maintain security compliance and alerting within your environment.
-
-- **Security best practices:** Review [security best practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide) as a starting point to security within your environment, and implement as appropriate.
+Review [security best practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide) as a starting point to security within your environment, and implement as appropriate.
 
 For more information on Azure Virtual Desktop best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices). For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
