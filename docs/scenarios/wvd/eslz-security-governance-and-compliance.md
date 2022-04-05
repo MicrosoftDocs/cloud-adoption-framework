@@ -40,11 +40,11 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accomondate the scale of the session hosts. Establish the baseline subnet size based on the minumum and maximum number of the session hosts per host pool. Map business units requirements to host pools. 
 
-- Establish micro-segmentation using Network Security Groups and/or Azure Firewall (or 3rd party firewall appliance). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party firewall appliance).
+- Establish micro-segmentation using Network Security Groups and/or [Azure Firewall](https://docs.microsoft.com/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](https://docs.microsoft.com/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party firewall appliance).
 
-- Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively 3rd party firewall appliance) at scale. 
+- Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively third-party firewall appliance) at scale. 
 
-- Enable [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection) for Azure Firewall or 3rd party firewall apppliance used to secure Azure Virtual Desktop landing zone(s).
+- Enable [Azure DDoS standard protection.](https://docs.microsoft.com/azure/virtual-network/manage-ddos-protection) for Azure Firewall or third-party firewall apppliance used to secure Azure Virtual Desktop landing zone(s).
 
 - If using proxy for outbound Internet access from the session hosts consider the following: 
   - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients if using cloud proxy providers.
@@ -55,7 +55,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Use [Adaptive Network Hardening features](https://docs.microsoft.com/azure/defender-for-cloud/adaptive-network-hardening#:~:text=From%20Defender%20for%20Cloud's%20menu,adaptive%20network%20hardening%20(2).&text=The%20insights%20panel%20shows%20the,defended%20with%20adaptive%20network%20hardening.) in Microsoft Defender for Cloud to recommend network security group configurations which limit ports and source IPs with reference to external network traffic rules.
 
-- Ensure the Azure Firewall or 3rd party vendor firewall appliance logs are collected by Azure Monitor or partner monitoring solution. Logs should also be monitored by SIEM such as Azure Sentinel or partner solution. 
+- Ensure the Azure Firewall or third-party vendor firewall appliance logs are collected by Azure Monitor or partner monitoring solution. Logs should also be monitored by SIEM such as Azure Sentinel or partner solution. 
 
 - Use private endpoint only for Azure Files used for [FSLogix Profile containers.](https://docs.microsoft.com/fslogix/configure-profile-container-tutorial).
 
@@ -126,7 +126,6 @@ Nearly all corporations are required to comply with government or industry regul
 
 
 
-https://docs.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics
 
 - **Security audit tools:** What tools and methods do you use to continually scan, and evaluate your environment for security audits, and vulnerabilities?
 - **Software updates:** Define a strategy for continuous operations to keep Windows and applications current.
@@ -134,14 +133,7 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics
 - **Data protection:** How will data in the VMs be protected? You can use a tool like [Azure Information Protection](/azure/information-protection/what-is-information-protection) to protect data. Consider using antimalware tools for protection.
 
 - **Policies:** Policies for managing your Azure Virtual Desktop environment should be defined in your Cloud Adoption Framework platform design. Include policies pertaining to security, RBAC controls, regulatory governance, and types of resources that can be deployed.
-- **Resource group organization:** Organize your resource groups to facilitate good management and prevent accidental deletions, and define who can manage your environment.
 
-## Design recommendations
-
-
-- **Enable logging:** Enable Azure Virtual Desktop service logging, host pool logging, and workspace logging for all Azure Virtual Desktop objects. For more information, see [Use Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics). Enable Azure Virtual Desktop host logging and performance logging as outlined in the management and monitoring section of the Azure Virtual Desktop landing zone architecture.
-
-- **Microsoft Information Protection:** Enable and configure Microsoft Information Protection to discover, classify, and protect sensitive information wherever it is.
 
 - **Policy tools:** Use group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
 - **Patch management:** Patch management is a vital part of the overall security strategy for your environment. You need a consistent practice and deployment policy to maintain secure systems. Tools like Microsoft Endpoint Configuration Manager and partner applications can help manage patches and keep your systems up to date.
