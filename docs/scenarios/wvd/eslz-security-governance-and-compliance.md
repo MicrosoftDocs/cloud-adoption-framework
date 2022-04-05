@@ -51,6 +51,8 @@ For more information on how to enable Azure Multifactor authentication for Azure
   - [Avoid TLS inspection with Azure Virtual Desktop.](https://docs.microsoft.com/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) Azure Virtual Desktop traffic is [encrypted in transit](https://docs.microsoft.com/azure/virtual-desktop/network-connectivity#connection-security) by default.
   - [Avoid proxy configuration that requires user authentication.](https://docs.microsoft.com/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations) Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. To configure the host level proxy on the session host – systemwide proxy needs to be enabled.
 
+- Verify the end-users have access to the [Azure Virtual Desktop client URLs](https://docs.microsoft.com/en-us/azure/virtual-desktop/safe-url-list#remote-desktop-clients). If proxy agent/configuration is used on the users' devices - make sure to bypass the Azure Virtual Desktop client URLs as well. 
+
 -  Use [Just-in-Time access](https://docs.microsoft.com/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting the session hosts. Avoid granting direct RDP access to the session hosts. AVD session hosts are leveraging the Reverse Connect transport for establishing remote sessions.
 
 - Use [Adaptive Network Hardening features](https://docs.microsoft.com/azure/defender-for-cloud/adaptive-network-hardening#:~:text=From%20Defender%20for%20Cloud's%20menu,adaptive%20network%20hardening%20(2).&text=The%20insights%20panel%20shows%20the,defended%20with%20adaptive%20network%20hardening.) in Microsoft Defender for Cloud to recommend network security group configurations which limit ports and source IPs with reference to external network traffic rules.
@@ -58,6 +60,8 @@ For more information on how to enable Azure Multifactor authentication for Azure
 - Ensure the Azure Firewall or third-party vendor firewall appliance logs are collected by Azure Monitor or partner monitoring solution. Logs should also be monitored by SIEM such as Azure Sentinel or partner solution. 
 
 - Use private endpoint only for Azure Files used for [FSLogix Profile containers.](https://docs.microsoft.com/fslogix/configure-profile-container-tutorial).
+
+- [Configure RDP ShortPath](https://docs.microsoft.com/azure/virtual-desktop/shortpath?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json) to complement reverse connect transport. 
 
 #### Session Hosts
 
