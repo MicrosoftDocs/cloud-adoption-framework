@@ -98,19 +98,16 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 #### Cost Management
 
-Tags and budgets
+- [Use Azure Tags](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. TO identify the compute cost associated with Azure Virtual Desktop -  tag all the hosts pools and virtual machines. Tag the Azure Files or Azure NetApp Files resources to track the storage cost associated with the FSLogix User Profile Containers, Custom OS images and MSIX app attach (if used).
+ 
+- Define the baseline of the requried tags across all the Azure Virtual Desktop resources. Azure tags can be set during the deployment time or applied post-provisioning. 
 
 #### Resource Consistency
 
 Intune 
 DSC 
 
----------------------------------------------------------
-## Governance
 
-Sections below cover the recommended practices for Azure Virtual Desktop across the five disciplines for cloud governance. 
-![image](https://user-images.githubusercontent.com/26681656/161323479-e5672478-b859-409a-8145-1fc64acadc46.png)
--------------------------------------------------------------------------
 
 
 
