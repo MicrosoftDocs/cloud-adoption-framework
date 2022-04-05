@@ -20,17 +20,17 @@ Development lifecycle strategy explores key design considerations and recommenda
 
 - Adopting a version control system such as Git provides flexibility in how your team shares and manages code. 
 
-- [Repository structure](https://docs.microsoft.com/learn/modules/structure-your-git-repo/) mono-repo vs multi-repo.
+- [Repository structure](/learn/modules/structure-your-git-repo/) mono-repo vs multi-repo.
   - With mono-repo all source code is kept in a single repository. 
   - multi-repo is organizing your projects each into their separate repository.  
 
 - Choose a visibility setting that suits the content of your repository.
   - Private repositories require users to be granted access to the repo and signed in to access the services. 
   - Public repositories can be accessed anonymously.
-  - Public and private visibility can be set for [Azure DevOps projects](https://docs.microsoft.com/azure/devops/organizations/public/make-project-public?view=azure-devops) and [GitHub repos](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility). 
+  - Public and private visibility can be set for [Azure DevOps projects](/azure/devops/organizations/public/make-project-public?view=azure-devops) and [GitHub repos](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility). 
 
 - Consider setting repository permissions to lock down who can contribute to your source code and manage other features. 
-  - Repository permissions can be set for [Azure Devops](https://docs.microsoft.com/azure/devops/repos/git/set-git-repository-permissions?view=azure-devops) and [GitHub](https://docs.github.com/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization)  
+  - Repository permissions can be set for [Azure Devops](/azure/devops/repos/git/set-git-repository-permissions?view=azure-devops) and [GitHub](https://docs.github.com/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization)  
 
 - Consider using [Infrastructure as Code](https://docs.microsoft.com/azure/architecture/framework/devops/automation-infrastructure) for deploying resources to Azure. Infrastructure as Code is the management of infrastructure in a declarative model and it is useful to reduce configuration effort, ensure consistency between deployments and avoid manual configuration of environments.
 
