@@ -61,10 +61,12 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 ### Session Hosts
 
-- Create dedicated Organization Unit (OU) with Active Directory the Azure Virtual Desktop session hosts. In addition to the enterprise Group Policies (GP) - specific to the session hosts GP should be applied to set controls such as: 
-  - [Maximum inactive/disconnection time policies and screen locks](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
+- Create dedicated Organization Unit (OU) with Active Directory the Azure Virtual Desktop session hosts. Dedicated Group Policy for the session hosts should be applied to set controls such as: 
+  - [Maximum inactive/disconnection time policies](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
   - [Hide local and remote drive mappings in Windows Explorer](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives)
-  - Prevent access to Command Prompt, the Control Panel, or Windows setting and other addtional baseline Operating System hardening controls 
+  - Optionally, [FSLogix Profile Containers](https://docs.microsoft.com/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](https://docs.microsoft.com/fslogix/cloud-cache-configuration-reference) 
+
+- [Control device redirection](https://docs.microsoft.com/azure/virtual-desktop/customize-rdp-properties) for the session hosts. Customize the RDP properties on the host pool(s) in accordance to your enterprise security standards. 
 
 - 
  
