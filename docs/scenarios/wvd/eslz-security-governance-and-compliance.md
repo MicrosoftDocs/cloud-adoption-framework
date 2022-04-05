@@ -94,7 +94,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - To improve the Office deployment security, we recommend you use the [Security Policy Advisor for Microsoft 365 Apps for enterprise.](https://docs.microsoft.com/deployoffice/admincenter/overview-office-cloud-policy-service) This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
 
-- [Configure identity-based authentication for Azure Files through on-premises Active Directory Domain Services (AD DS) and Azure Active Directory Domain Services (Azure AD DS).](https://docs.microsoft.com/azure/storage/files/storage-files-active-directory-overview). Configure [NTFS permissions] (https://docs.microsoft.com/fslogix/fslogix-storage-config-ht) for the authorized users to access the Azure Files. 
+- [Configure identity-based authentication for Azure Files used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Azure Active Directory Domain Services (Azure AD DS).](https://docs.microsoft.com/azure/storage/files/storage-files-active-directory-overview) Configure [NTFS permissions](https://docs.microsoft.com/fslogix/fslogix-storage-config-ht) for the authorized users to access the Azure Files. 
 
 #### Cost Management
 
