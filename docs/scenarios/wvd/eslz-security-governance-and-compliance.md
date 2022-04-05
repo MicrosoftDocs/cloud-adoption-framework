@@ -61,7 +61,20 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 ### Session Hosts
 
+- Create dedicated Organization Unit (OU) with Active Directory the Azure Virtual Desktop session hosts. In addition to the enterprise Group Policies (GP) - specific to the session hosts GP should be applied to set controls such as: 
+  - [Maximum inactive/disconnection time policies and screen locks](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
+  - [Hide local and remote drive mappings in Windows Explorer](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives)
+  - Prevent access to Command Prompt, the Control Panel, or Windows setting and other addtional baseline Operating System hardening controls 
+
+- 
+ 
+
+- and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
+
+
 - **Endpoint protection:** Microsoft strongly advises enabling a next-generation antivirus to create a protection layer and response mechanism to threats. An example is [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint). It's integrated with Microsoft Defender for Cloud to provide a data analytics and AI approach to proactively maintain security. Other security needs like network protection, web content filtering, attack surface reduction, security baselines for VM hosts, and threat vulnerability management should be part of your Azure Virtual Desktop design. See the following section for links to Azure Virtual Desktop host security best practices.
+
+- Endpoint integration with Intune
 
 ###  Data Protection
 
