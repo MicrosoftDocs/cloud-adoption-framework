@@ -76,7 +76,7 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Enable threat and vulnerability management assessments. [Integrate Microsoft Defender for Endpoint's threat and vulnerability management solution with Microsoft Defender for Cloud.](https://docs.microsoft.com/azure/defender-for-cloud/deploy-vulnerability-assessment-tvm). Or use third-party solutions. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](https://docs.microsoft.com/azure/defender-for-cloud/deploy-vulnerability-assessment-vm) as well.
 
-- App cpntrol app locker
+- Enable Application control using [Windows Defender Application Control(WDAC) or AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/feature-availability) to ensure the applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode.](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.2)
 
 - and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
 
@@ -86,8 +86,11 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 ###  Data Protection
 
+- To improve the Office deployment security, we recommend you use the Security Policy Advisor for Microsoft 365 Apps for enterprise. This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
 
 - AAD integration for Azure FIles
+
+- By default all disks for the sessions hosts are encrypted using Azure storage Server-Side-Encryption (SSE) for managed disks with platform managed key. 
 
 ### Cost Management
 
