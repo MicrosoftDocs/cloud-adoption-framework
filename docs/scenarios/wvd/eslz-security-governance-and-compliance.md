@@ -73,14 +73,14 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - [Control device redirection](/azure/virtual-desktop/customize-rdp-properties) for the session hosts. Common devices to disable include local hard drive access and USB or port restrictions. Limiting camera redirection and remote printing can help protect company data. Disable clipboard redirection to prevent copying remote content to endpoints.
 
-- Enable next-generation antivirus Endpoint Protection such as [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide) on the session hosts. If using partner endpoint solutions - ensure the Microsoft Defender for Cloud is [able to verify](/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. It is recommended to include [antivirus exclusions FSLogix Profile Container.](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#antivirus-exclusions) Microsoft Defender for Endpoint directly integrates with various Microsoft Defender solutions including: 
+- Enable next-generation antivirus Endpoint Protection such as [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide&preserve-view=true) on the session hosts. If using partner endpoint solutions - ensure the Microsoft Defender for Cloud is [able to verify](/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. It is recommended to include [antivirus exclusions FSLogix Profile Container.](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#antivirus-exclusions) Microsoft Defender for Endpoint directly integrates with various Microsoft Defender solutions including: 
   - [Microsoft Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
   - [Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
   - [Intune](/mem/intune/protect/advanced-threat-protection-configure)
 
 - Enable threat and vulnerability management assessments. [Integrate Microsoft Defender for Endpoint's threat and vulnerability management solution with Microsoft Defender for Cloud.](/azure/defender-for-cloud/deploy-vulnerability-assessment-tvm). Or use third-party solutions. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm) as well.
 
-- Enable Application control using [Windows Defender Application Control(WDAC) or AppLocker](/windows/security/threat-protection/windows-defender-application-control/feature-availability) to ensure the applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode.](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.2)
+- Enable Application control using [Windows Defender Application Control(WDAC) or AppLocker](/windows/security/threat-protection/windows-defender-application-control/feature-availability) to ensure the applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode.](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.2&preserve-view=true)
 
 - Enable [Trusted launch](/azure/virtual-machines/trusted-launch) for Gen2 Azure virtual machines to enable features such as Secure Boot,  vTPM and Virtualization-based security(VBS). Microsoft Defender for Cloud can monitor the session hosts configured with trusted launch. 
 
@@ -96,7 +96,7 @@ For more information on Azure Virtual Desktop session hosts' best practices, see
   - Disk encryption using customer-managed keys. You provide your own key for disk encryption. You can bring your own keys to your Key Vault (BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including the session hosts disks).
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest using platform-managed encryption keys.
 
-- Deploy Information Protection solution such as [Microsoft Information Protection](microsoft-365/compliance/information-protection?view=o365-worldwide) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
+- Deploy Information Protection solution such as [Microsoft Information Protection](microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or third party partner solution. This is to ensure sensitive information is stored, processed, and transmitted securely by the organization's technology systems.
 
 - To improve the Office deployment security, we recommend you use the [Security Policy Advisor for Microsoft 365 Apps for enterprise.](/deployoffice/admincenter/overview-office-cloud-policy-service) This tool identifies policies that can you can apply to your deployment for more security. Security Policy Advisor also recommends policies based on their impact to your security and productivity.
 
@@ -162,7 +162,7 @@ Use Group policy and a device management tools like Intune and Microsoft Endpoin
 
 Configure [alerting](/azure/defender-for-cloud/alerts-overview) and [automated response](/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance. 
 
-Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide) to measure the overall organization security posture across the following products 
+Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide&preserve-view=true) to measure the overall organization security posture across the following products 
   - Microsoft 365 (including Exchange Online)
   - Azure Active Directory
   - Microsoft Defender for Endpoint
