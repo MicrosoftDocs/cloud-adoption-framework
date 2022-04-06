@@ -16,16 +16,16 @@ The Landing zone accelerator for <<Token-LongName>> set is an open-source collec
 
 Customers adopt <<Token-LongName>> in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
-## To begin, implement an enterprise-scale landing zone
+## Implement a platform foundation
 
-The Landing zone accelerator for <<Token-LongName>> assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
+Landing zone accelerator for <<Token-LongName>> assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing Landing zone accelerator for <<Token-LongName>>, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
-## What the AKS construction set provides
+## What Landing zone accelerator for <<Token-LongName>> provides
 
-The construction set approach to landing zones provides these assets to support your project:
+The Landing zone accelerator approach to landing zones provides these assets to support your project:
 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
@@ -50,10 +50,12 @@ These articles provide guidelines for creating your landing zone:
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
 TODO: Include RA image here
+TODO: Once a reference architecture for this Landing zone accelerator has been published to Azure Architecture Center, include a link & reference here.
 
-## Obtain the <<Token-LongName>> construction set
+## Deploy Landing zone accelerator for <<Token-LongName>>
 
 The <<Token-LongName>> construction set is available here...
+TODO: Once a reference implementation for this Landing zone accelerator has been published to Azure Architecture Center, include a link & reference here.
 
 ## Next steps
 
