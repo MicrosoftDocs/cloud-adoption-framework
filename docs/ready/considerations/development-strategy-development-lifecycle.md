@@ -89,7 +89,7 @@ Development lifecycle strategy explores key design considerations and recommenda
   - Automatically include code reviewers. 
   - Check for comment resolution. 
 
-- Set squach as merge strategy, as allows you to condense the Git history of topic branches when you compleate a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squach merge adds all the files changes to a single new commit on the default branch. 
+- Set squash as merge strategy, as allows you to condense the Git history of topic branches when you complete a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squash merge adds all the files changes to a single new commit on the default branch. 
 
 ## Automated builds
 
@@ -107,9 +107,9 @@ Development lifecycle strategy explores key design considerations and recommenda
 
 - Consider including unit test in the application build process. Review the tasks available for [Azure DevOps Pipeline](/azure/devops/pipelines/tasks#test) for testing purposes. 
 
-- Manage connection to Azure by using Azure DevOps service connections or GitHub secrets. Connections should have the right privilige access to azure resources.
+- Manage connection to Azure by using Azure DevOps service connections or GitHub secrets. Connections should have the right privilege access to azure resources.
 
-- Consider using [Azure Key Vault secrets](/azure/devops/pipelines/release/key-vault-in-own-project) to store and manage sensitive information such as passwords, API keys, cretificates, etc.
+- Consider using [Azure Key Vault secrets](/azure/devops/pipelines/release/key-vault-in-own-project) to store and manage sensitive information such as passwords, API keys, certificates.
 
 - [Azure DevOps agents](/azure/devops/pipelines/agents/agents) self-hosted vs Microsoft-hosted 
   - With Microsoft-hosted agents, maintenance and upgrades are taken care of for you. Every time a build job is run a fresh virtual machine is created.
@@ -155,11 +155,11 @@ Development lifecycle strategy explores key design considerations and recommenda
 
 - Consider creating a rollback plan. Rollback a deployment involves reverting the deployment to a known good state, the ability to recover from a failed deployment is crucial. 
 
-- Consider the use of [Undo changes](/azure/devops/repos/git/undo) in Git when you need to revert changes in a commit, discart changes or reset a branch to a previous state. 
+- Consider the use of [Undo changes](/azure/devops/repos/git/undo) in Git when you need to revert changes in a commit, discard changes or reset a branch to a previous state. 
 
 **Design recommendations**
 
-- Adopt the use of undo changes in Git when looking to revert changes to committed files, discart uncommitted changes or reset a brach to a previous state. 
+- Adopt the use of undo changes in Git when looking to revert changes to committed files, discard uncommitted changes or reset a brach to a previous state. 
 
 
 
