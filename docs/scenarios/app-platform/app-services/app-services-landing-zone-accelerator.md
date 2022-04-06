@@ -38,12 +38,14 @@ The Landing zone accelerator approach to landing zones provides these assets to 
 
 These articles provide guidelines for creating your landing zone:
 
-- [<<Token-LongName>> enterprise-scale scenario](./eslz-identity-and-access-management.md)
-- [Network topology and connectivity for <<Token-LongName>> enterprise-scale scenario](./eslz-network-topology-and-connectivity.md)
-- [Management and monitoring for <<Token-LongName>> enterprise-scale scenario](./eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery for <<Token-LongName>> enterprise-scale scenario](./eslz-business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance for <<Token-LongName>> enterprise-scale scenario](./eslz-security-governance-and-compliance.md)
-- [Platform automation and DevOps for <<Token-LongName>> enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
+- [Azure Billing and Active Directory Tenant](./app-services-azure-billing-ad-tenant.md)
+- [Identity and access management](./app-services-identity-and-access-management.md)
+- [Network topology and connectivity](./app-services-network-topology-and-connectivity.md)
+- [Resource organization](./app-services-resource-organization.md)
+- [Security](./app-services-security.md)
+- [Management](./app-services-management.md)
+- [Governance](./app-services-governance.md)
+- [Platform automation and DevOps](./app-services-platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
