@@ -15,33 +15,17 @@ Azure provides native services for building your Azure landing zones.
 Other third-party tools can also help with this effort.
 One such tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
-The [Azure landing zones (ALZ) Terraform module][alz-tf-mod] is a Terraform module that provides a efficient way to deploy the platform resources from the [Azure landing zones conceptual architecture][alz-conceptual-arch].
+The [Azure landing zones (ALZ) Terraform module][alz-tf-mod] is the official Terraform module for deploying the platform resources from the [Azure landing zones conceptual architecture][alz-conceptual-arch].
 The module is designed to simplify the deployment of the management group hierarchy, policies and the resources in the connectivity and management subscriptions.
 Deployment of resources to application landing zones is outside the scope of the module, leaving decisions on the deployment method and tooling to the team responsible for the application.
 
-Optionally, customers can choose to deploy Azure landing zones using the [CAF Terraform landing zones approach][caf-terraform-landingzones].
-This is a prescriptive implementation of Terraform on Azure that makes use of the ALZ Terraform module for management groups and policies, but goes further.
+The [CAF Terraform landing zones approach][caf-terraform-landingzones] is a set of tools that provides an abstracted, opinionated implementation of Terraform to provide deployment automation in Azure.
+This approach can deploy the Azure landing zones conceptual architecture, it does so by implementing the Azure landing zones Terraform module.
 In addition to platform services it allows customers to deploy resources into application landing zones using Terraform, as well as providing a mechanism to deploy subscriptions.
 
 The diagram below illustrates the coverage of the two approaches:
 
 ![Terraform module comparison](media/tf-module-compare.png)
-
-## Capabilities provided by the two approaches
-
-The table below compares the two approaches for landing zones on Azure:
-
-| Capability | ALZ Terraform module | CAF Terraform landing zones |
-| - | - | - |
-| Management groups and policies | ✅ | ✅ (using the ALZ Terraform module) |
-| Platform connectivity resources | ✅ | ✅ |
-| Platform management resources | ✅ | ✅ |
-| Platform identity resources | ❌ | ✅ |
-| Platform security resources | ❌ | ✅ |
-| Azure Active Directory resources | ❌ | ✅ |
-| Landing zone resources | ❌ | ✅ |
-| Landing zone subscription vending machine | ❌ | ✅ |
-| CI/CD tools | ❌ (coming soon) | ✅ (multi-vendor through containerd support)|
 
 ## Selecting the right approach for Terraform
 
