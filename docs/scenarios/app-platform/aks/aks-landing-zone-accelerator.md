@@ -36,14 +36,14 @@ The Landing zone accelerator approach for AKS provides these assets to support y
 
 These articles provide guidelines for creating your landing zone based on the design areas of Azure landing zones:
 
-- [Enterprise enrollment](./eslz-enterprise-enrollment.md)
-- [Identity and access management](./eslz-identity-and-access-management.md)
-- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
-- [Resource organization](./eslz-resource-organization.md)
-- [Governance disciplines](./eslz-security-governance-and-compliance.md)
-- [Operations management](./eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
-- [Deployment options](./eslz-platform-automation-and-devops.md)
+- [Azure Billing and Active Directory Tenant](./aks-azure-billing-ad-tenant.md)
+- [Identity and access management](./aks-identity-and-access-management.md)
+- [Network topology and connectivity](./aks-network-topology-and-connectivity.md)
+- [Resource organization](./aks-resource-organization.md)
+- [Security](./aks-security.md)
+- [Management](./aks-management.md)
+- [Governance](./aks-governance.md)
+- [Platform automation and DevOps](./aks-platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
