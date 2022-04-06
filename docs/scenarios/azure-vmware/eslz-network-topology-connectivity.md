@@ -115,7 +115,7 @@ You can implement this scenario with:
 - Outbound internet via Azure Firewall in the Virtual WAN hub
 - EXR, VPN, or SD-WAN for connectivity between on-premises datacenters and Azure VMware Solution
 
-[![Diagram of secure Virtual WAN hub with default route propagation.](./media/eslz-net-scenario-1.png)](./media/eslz-net-scenario-1.png#lightbox)
+[![Diagram of Scenario 1 with Secured Virtual WAN hub with default route propagation.](./media/eslz-net-scenario-1.png)](./media/eslz-net-scenario-1.png#lightbox)
 
 ### Considerations
 
@@ -165,7 +165,7 @@ You can implement this scenario with:
 
 In this scenario, you must disable ExpressRoute Global Reach. The NVAs are responsible for providing outbound internet to Azure VMware Solution.
 
-[![Diagram of egress through a third-party NVA in Azure Virtual Network with Azure Route Server Global Reach enabled.](./media/eslz-net-scenario-2.png)](./media/eslz-net-scenario-2.png#lightbox)
+[![Diagram of Scenario 2 with Third-party N V A in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-net-scenario-2.png)](./media/eslz-net-scenario-2.png#lightbox)
 
 ### Considerations
 
@@ -198,7 +198,7 @@ You can implement this scenario with:
 - L4 DNAT using Azure Firewall
 - Internet breakout from Azure VMware Solution
 
-[![Diagram of egress from Azure V M ware Solution through N S X - T and N V A.](./media/eslz-net-scenario-3.png)](./media/eslz-net-scenario-3.png#lightbox)
+[![Diagram of Scenario 3 with Egress from A V S with or without N S X T or N V A.](./media/eslz-net-scenario-3.png)](./media/eslz-net-scenario-3.png#lightbox)
 
 ### Considerations
 
@@ -231,7 +231,7 @@ You can implement this scenario with:
 - Internet breakout on-premises
 - ExpressRoute for connectivity between on-premises datacenters and Azure VMware Solution
 
-[![Diagram of egress from Azure V M ware Solution via on-premises.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
+[![Diagram of egress Scenario 4 with Egress from A V S via quad zero route advertisement from on-premises.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
 
 ### Considerations
 
@@ -262,7 +262,7 @@ You can implement this scenario with:
 - Your third-party NVAs in your Azure Virtual Network hub are responsible for providing outbound internet to Azure VMware Solution.
 - ExpressRoute for connectivity between on-premises datacenters and Azure VMware Solution
 
-[![Diagram of egress from Azure V M ware Solution via on-premises.](./media/eslz-net-scenario-5.png)](./media/eslz-net-scenario-5.png#lightbox)
+[![Diagram of Scenario 5 with Third-party N V A in the Hub Vnet inspecting traffic between A V S and Internet, and between A V S and Azure Virtual Networks.](./media/eslz-net-scenario-5.png)](./media/eslz-net-scenario-5.png#lightbox)
 
 ### Considerations
 
