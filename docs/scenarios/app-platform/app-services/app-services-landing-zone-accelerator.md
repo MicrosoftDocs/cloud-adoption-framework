@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale support for <<Token-LongName>>
-description: <<Describe how enterprise-scale can accelerate adoption of <<Token-Name>>.>>
+title: Landing zone accelerator for <<Token-LongName>>
+description: <<Describe how Landing zone accelerator for <<Token-LongName>> can accelerate adoption of <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,15 +10,15 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Construction set for <<Token-LongName>> enterprise-scale scenario
+# Landing zone accelerator for <<Token-LongName>> 
 
-The <<Token-LongName>> construction set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting <<Token-LongName>>. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+The Landing zone accelerator for <<Token-LongName>> set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting <<Token-LongName>>. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
 
 Customers adopt <<Token-LongName>> in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
 ## To begin, implement an enterprise-scale landing zone
 
-The <<Token-LongName>> construction set assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
+The Landing zone accelerator for <<Token-LongName>> assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
