@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale for AKS
-description: Learn to deploy enterprise-scale for AKS.
+title: Landing zone accelerator for AKS
+description: overview of the landing zone accelerator for AKS.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/30/2021
@@ -10,22 +10,22 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Enterprise-scale for AKS
+# Landing zone accelerator for AKS
 
-Enterprise-scale for AKS represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Kubernetes Service (AKS) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.
+Landing zone accelerator for AKS represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Kubernetes Service (AKS) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.
 
 This solution is open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
 ## Implement a platform foundation
 
-Enterprise-scale for AKS assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing enterprise-scale for AKS, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
+Landing zone accelerator for AKS assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing Landing zone accelerator for AKS, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
-## What enterprise-scale for AKS provides
+## What Landing zone acceleratore for AKS provides
 
-The enterprise-scale approach for AKS provides these assets to support your project:
+The Landing zone accelerator approach for AKS provides these assets to support your project:
 
 - A modular approach that allows you to customize your environment variables.
 - Design guidelines for evaluating critical decisions.
