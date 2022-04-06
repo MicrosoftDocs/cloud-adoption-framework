@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale network topology and connectivity considerations for <<Token-LongName>>
+title: Network topology and connectivity considerations for <<Token-LongName>>
 description: <<Describe how this landing zone accelerator can improve network topology and connectivity of <<Token-Name>>.>>
 author: BrianBlanchard
 ms.author: brblanch
