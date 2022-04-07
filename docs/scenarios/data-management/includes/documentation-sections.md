@@ -1,7 +1,7 @@
 ---
 author: mboswell
 ms.author: mboswell
-ms.date: 04/05/2022
+ms.date: 04/06/2022
 ms.topic: include
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -17,3 +17,4 @@ ms.custom: e2e-data-management, think-tank
 | [**Secure your analytics estate**](../secure.md) | How to secure analytics estate with authentication and authorization, data privacy, and data access management.                                                                                                       |
 | [**Organize people and teams**](../organize.md)   | How to organize effective operations, roles, teams, and team functions.                                                                                                                                              |
 | [**Manage your analytics estate**](../manage-platform-automation-and-devops.md)| How to provision platform and observability for the scenario?                                                                                                                          |
+
