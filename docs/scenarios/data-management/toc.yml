@@ -59,8 +59,6 @@ items:
       href: ./govern-data-quality.md
     - name: Data lifecycle
       href: ./govern-lifecycle.md
-    - name: Data sharing agreements
-      href: ./govern-data-sharing-agreements.md
     - name: Metadata
       href: ./govern-metadata-standards.md
 
@@ -140,8 +138,6 @@ items:
         href: ./architectures/data-mesh-data-marketplace.md
       - name: Master data management in data mesh
         href: ./architectures/data-mesh-master-data-management.md
-      - name: Data sharing
-        href: ./architectures/data-sharing-overview.md
       - name: Getting started checklist
         href: ./architectures/data-mesh-checklist.md
 

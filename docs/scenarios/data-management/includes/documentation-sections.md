@@ -8,6 +8,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
+
 | Section                         | Description                                                                                                                                                                                                            |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Build an Initial Strategy**](../strategy.md)| How to build your data strategy and pivot to become a data driven organization.

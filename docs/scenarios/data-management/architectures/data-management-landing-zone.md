@@ -79,7 +79,7 @@ Cloud-scale analytics uses
 
 Your contracts should provide information on data validation, models, and security policies.
 
-For more information, see [Data sharing agreements](../govern-data-sharing-agreements.md).
+For more information, see [Data contracts](./data-contracts.md)
 
 ## Container registry
 

@@ -35,9 +35,9 @@ The concept of data mesh, a term coined by Zhamak Dehghani, encompasses data, te
 As we break down the data mesh concept into building blocks, here are some key points to consider:
 
 - **Data as a product**: Each (organizational) domain operates its data end to end. Accountability lies with the data owner within the domain. Pipelines in this respect become a first-class concern of the domains themselves.
-- **Federated data governance**: To ensure that each data owner can trust the others and share its data products, an enterprise data governance body must be established to implement data quality, central visibility of data ownership, data access management, and data privacy policies.
-- **Domain boundaries**: The enterprise should ideally define and model each data-domain node within the mesh by applying the principles of domain-oriented design.
-- **Data platform**: A data mesh requires a self-serve data platform that allows users to abstract the technical complexity and focus on their individual data use cases.
+- **Federated computational data governance**: To ensure that each data owner can trust the others and share its data products, an enterprise data governance body must be established to implement data quality, central visibility of data ownership, data access management, and data privacy policies.
+- **Domain-oriented data ownership**: The enterprise should ideally define and model each data-domain node within the mesh by applying the principles of domain-oriented design.
+- **Self-Serve data platform**: A data mesh requires a self-serve data platform that allows users to abstract the technical complexity and focus on their individual data use cases.
 
 ### Cloud-scale analytics
 
