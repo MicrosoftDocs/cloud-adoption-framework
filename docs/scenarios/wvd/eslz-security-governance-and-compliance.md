@@ -40,9 +40,9 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accommodate the scale of the session hosts. Establish the baseline subnet size based on the minimum and maximum number of the session hosts per host pool. Map business units requirements to host pools.
 
-- Establish micro-segmentation using Network Security Groups and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance). Use Azure Virtual Network service tags to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party firewall appliance).
+- Establish micro-segmentation using Network Security Groups(NSGs) and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance). Use Azure Virtual Network service tags and application service groups(ASGs) to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify the session hosts outgoing access to the [required URLs.](/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within the session hosts) and Azure Firewall (or 3rd party firewall appliance).
 
-- Based on the applications and enterprise segmentation strategy, restrict or allow traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively third-party firewall appliance) at scale.
+- Based on the applications and enterprise segmentation strategy, restrict traffic between the sessions hosts and internal resources based on network security group rules or Azure Firewall (alternatively third-party firewall appliance) at scale.
 
 - Enable [Azure DDoS standard protection.](/azure/virtual-network/manage-ddos-protection) for Azure Firewall or third-party firewall appliance used to secure Azure Virtual Desktop landing zone(s).
 
