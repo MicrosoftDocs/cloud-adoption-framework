@@ -133,45 +133,45 @@ Review [security best practices for Azure Virtual Desktop](/azure/virtual-deskto
 
 Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 
-[Use Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to apply additional compliance standards to Azure Virtual Desktop Landing zone if required. Microsoft Defender for Cloud helps streamline the process for meeting regulatory compliance requirements, using the [regulatory compliance dashboard.](/azure/defender-for-cloud/regulatory-compliance-dashboard#:~:text=Defender%20for%20Cloud%20continuously%20assesses,your%20compliance%20with%20these%20standards.) Built-in or customized compliancy standards can be  added to regulatory dashboard. Available built-in regulatory standards that can be added:
+- [Use Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to apply additional compliance standards to Azure Virtual Desktop Landing zone if required. Microsoft Defender for Cloud helps streamline the process for meeting regulatory compliance requirements, using the [regulatory compliance dashboard.](/azure/defender-for-cloud/regulatory-compliance-dashboard#:~:text=Defender%20for%20Cloud%20continuously%20assesses,your%20compliance%20with%20these%20standards.) Built-in or customized compliancy standards can be  added to regulatory dashboard. Available built-in regulatory standards that can be added:
 
-- PCI-DSS v3.2.1:2018
-- SOC TSP
-- NIST SP 800-53 R4
-- NIST SP 800 171 R2
-- UK OFFICIAL and UK NHS
-- Canada Federal PBMM
-- Azure CIS 1.1.0
-- HIPAA/HITRUST
-- SWIFT CSP CSCF v2020
-- ISO 27001:2013
-- New Zealand ISM Restricted
-- CMMC Level 3
-- Azure CIS 1.3.0
-- NIST SP 800-53 R5
-- FedRAMP H
-- FedRAMP M
+  - PCI-DSS v3.2.1:2018
+  - SOC TSP
+  - NIST SP 800-53 R4
+  - NIST SP 800 171 R2
+  - UK OFFICIAL and UK NHS
+  - Canada Federal PBMM
+  - Azure CIS 1.1.0
+  - HIPAA/HITRUST
+  - SWIFT CSP CSCF v2020
+  - ISO 27001:2013
+  - New Zealand ISM Restricted
+  - CMMC Level 3
+  - Azure CIS 1.3.0
+  - NIST SP 800-53 R5
+  - FedRAMP H
+  - FedRAMP M
 
- If the data residency requirements is present - consider limited deployment of Azure Virtual Desktop resources (workspaces, application groups and host pools) to the  selected geographies:
+- If the data residency requirements is present - consider limited deployment of Azure Virtual Desktop resources (workspaces, application groups and host pools) to the  selected geographies:
 
-- United States
-- Europe
-- United Kingdom
-- Canada
+  - United States
+  - Europe
+  - United Kingdom
+  - Canada
 
 This would ensure the Azure Virtual Desktop metadata stored in the region of Azure Virtual Desktop resource geography as the session hosts can be deployed world-wide to accommodate the user base.
 
-Use Group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for the session hosts.
+- Use Group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for the session hosts.
 
-Configure [alerting](/azure/defender-for-cloud/alerts-overview) and [automated response](/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance.
+- Configure [alerting](/azure/defender-for-cloud/alerts-overview) and [automated response](/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the Azure Virtual Desktop Landing zones overall compliance.
 
-Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide&preserve-view=true) to measure the overall organization security posture across the following products:
+- Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide&preserve-view=true) to measure the overall organization security posture across the following products:
 
-- Microsoft 365 (including Exchange Online)
-- Azure Active Directory
-- Microsoft Defender for Endpoint
-- Microsoft Defender for Identity
-- Defender for Cloud Apps
-- Microsoft Teams
+  - Microsoft 365 (including Exchange Online)
+  - Azure Active Directory
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Identity
+  - Defender for Cloud Apps
+  - Microsoft Teams
 
-Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of the Azure Virtual Landing Zones.
+- Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of the Azure Virtual Landing Zones.
