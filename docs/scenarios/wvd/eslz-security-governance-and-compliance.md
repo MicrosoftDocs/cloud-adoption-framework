@@ -36,8 +36,6 @@ For more information on how to enable Azure Multifactor authentication for Azure
 
 - Use Azure AD groups versus individual users to assign access to Azure Virtual Desktop application groups. Consider using existing security groups that to business functions within the enterprise. Such approach would re-use existing user de/provisioning process as well.
 
-- Azure Identity Protection
-
 ### Networking
 
 - Re-use existing or provision dedicated virtual network for the Azure Virtual Desktop landing zone(s). Plan the IP address space to accommodate the scale of the session hosts. Establish the baseline subnet size based on the minimum and maximum number of the session hosts per host pool. Map business units requirements to host pools.
