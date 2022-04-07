@@ -3,7 +3,7 @@ title: Cloud monitoring service level objectives
 description: Gain an understanding how service level objectives helps measure and quantify a given level of service to the consumers of your services hosted in Azure.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 03/25/2022
+ms.date: 04/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -19,9 +19,9 @@ This article reviews the fundamental principles of service level objectives, and
 
 :::image type="content" source="media/service-level-objectives/sla-foundation-with-objectives-and-indicators.png" alt-text="Service Level Agreement foundation building blocks" border="false":::
 
-Service level objectives (SLOs) are measurable goals set on a small number of key customer-centric service level indicators (SLIs). They measure your customer's experience of a business or infrastructure workload running natively in the cloud or in a hybrid scenario, and determine whether you, as the businesses service provider, are meeting the promises made to them. SLO/SLIs should be defined early in the design of any cloud business or infrastructure workload. In Azure, service level management is more lightweight, as the interfaces and functionality are predefined, and metrics are predefined by Microsoft. Consumers need to manage their service delivery expectations when utilizing cloud workloads.
+Service level objectives (SLOs) are measurable goals set on a small number of key customer-centric service level indicators (SLIs). They measure your customer's experience of a business or infrastructure workload running natively in the cloud or in a hybrid scenario, and determine whether you, as the businesses service provider, are meeting the promises made to them in a formally negotiated service level agreement (SLA) or informal agreement between all parties. SLO/SLIs should be defined early in the design of any cloud business or infrastructure workload. In Azure, service level management is more lightweight, as the interfaces and functionality are predefined, and metrics are predefined by Microsoft. Consumers need to manage their service delivery expectations when utilizing cloud workloads.
 
-Upholding SLOs should be the main business goal with the commitment from all teams involved in the service delivery lifecycle.
+Upholding SLOs should be the main business goal with the commitment from all teams involved in the service delivery lifecycle. You don't have to make all your SLOs binding, and not all SLOs have to be agreed to or placed in service agreements. Not all SLOs need a corresponding service requirement, for example many cloud services obviate the need to create or trace requirements.
 
 As a service broker, you rely on Microsoft's commitment to reliability of services as defined in our service level agreements for Microsoft 365 and Azure services. This allows you to focus on your responsibilities in the service chain such as synthetic monitoring, network connectivity, and security and compliance.
 
@@ -220,10 +220,6 @@ Combine support SLOs for IT service management processes such as incident and pr
 - **Account for Change.** Ensure SLOs account for alterations to service or changes to technical reliability, throughput, quality as well as maintainability - such as reductions in support staff.
 
 - **Provide a balanced set of SLOs.** Ensure a range of SLOs that provide a balanced or *360-degree* perspective on the service or system, as well as the focus on reliability.
-
-## Final thoughts
-
-You don't have to make all your SLOs binding, and not all SLOs have to be agreed to or placed in service agreements. Not all SLOs need a corresponding service requirement, for example many cloud services obviate the need to create or trace requirements.
 
 ## Next steps
 
