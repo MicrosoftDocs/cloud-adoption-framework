@@ -20,8 +20,8 @@ The module is designed to simplify the deployment of the management group hierar
 Deployment of resources to application landing zones is outside the scope of the module, leaving decisions on the deployment method and tooling to the team responsible for the application.
 
 The [CAF Terraform landing zones approach][caf-terraform-landingzones] is a set of tools that provides an abstracted, opinionated implementation of Terraform to provide deployment automation in Azure.
-This approach can deploy the Azure landing zones conceptual architecture, it does so by implementing the Azure landing zones Terraform module.
-In addition to platform services it allows customers to deploy resources into application landing zones using Terraform, as well as providing a mechanism to deploy subscriptions.
+It allows customers to deploy resources into application landing zones using Terraform, as well as providing a mechanism to deploy subscriptions.
+This approach can also deploy the Azure landing zones conceptual architecture, it does so by implementing the Azure landing zones Terraform module.
 
 The diagram below illustrates the coverage of the two approaches:
 
@@ -29,13 +29,13 @@ The diagram below illustrates the coverage of the two approaches:
 
 ## Selecting the right approach for Terraform
 
-If your organization has no current investment in Terraform, the [CAF Terraform landing zones][caf-terraform-landingzones] approach provides a prescriptive implementation of Terraform on Azure that is open source and community driven.
-However, this approach is more complex than the standalone ALZ Terraform module.
+The recommended approach is to use the [ALZ Terraform module][alz-tf-mod], it is consumed like a conventional Terraform module and can be incorporated into new or existing Terraform IaC automation.
 
-You should be aware that the [CAF Terraform landing zones][caf-terraform-landingzones] approach uses a 'supermodule' and resource creation does not follow the standard model of the [azurerm][azurerm-terraform-provider] Terraform provider by Hashicorp.
-This approach increases complexity and is typically suited for larger customers with strong regulatory requirements around segregation of duties, or complex infrastructure architectures not supported by the ALZ Terraform module.
+If your organisation wants to manage both platform and application resources using centralized automation, or has complex infrastructrue architectures not supported by the ALZ Terraform module, then [CAF Terraform landing zones][caf-terraform-landingzones] should be considered.
 
-If your organization has an existing investment in Terraform or would like to implement Terraform in a more conventional module-based approach, then the [ALZ Terraform module][alz-tf-mod] is the best option.
+> [!NOTE]
+> You should be aware that the [CAF Terraform landing zones][caf-terraform-landingzones] approach is abstracted from Terraform's normal [HCL][terraform_language_syntax] language.
+> Instead, inputs consist of YAML files that are then used to generate Terraform variable files.
 
 <!-- Common links -->
 
@@ -44,3 +44,4 @@ If your organization has an existing investment in Terraform or would like to im
 [alz-conceptual-arch]: index.md
 [azurerm-terraform-provider]: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 [caf-terraform-landingzones]: caf-terraform-landingzones.md "CAF terraform landingzones"
+[terraform_language_syntax]: https://www.terraform.io/language/syntax/configuration
