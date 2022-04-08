@@ -10,36 +10,70 @@ items:
     href: strategy.md
   - name: Technical planning
     href: plan.md
-  - name: Prepare your environment
+  - name: Landing zone accelerators
     items:
     - name: Azure landing zones
       href: ready.md
-    - name: Design areas
+    - name: Azure Kubernetes Service (AKS)
       items:
-      - name: Enterprise enrollment
-        href: eslz-enterprise-enrollment.md
+      - name: Landing zone accelerator for AKS
+        href: aks/aks-landing-zone-accelerator.md
+      - name: Azure Billing and Active Directory Tenant
+        href: aks/aks-azure-billing-ad-tenant.md
       - name: Identity and access management
-        href: eslz-identity-and-access-management.md
+        href: aks/aks-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: eslz-network-topology-and-connectivity.md
+        href: aks/aks-network-topology-and-connectivity.md
       - name: Resource organization
-        href: eslz-resource-organization.md
-      - name: Governance disciplines
-        href: eslz-security-governance-and-compliance.md
-      - name: Cost governance
-        href: eslz-cost-governance-with-kubecost.md
-      - name: Operations baseline
-        href: eslz-management-and-monitoring.md
-      - name: Business continuity and disaster recovery
-        href: eslz-business-continuity-and-disaster-recovery.md
-      - name: Deployment options
-        href: eslz-platform-automation-and-devops.md
-    - name: Implementation options
+        href: aks/aks-resource-organization.md
+      - name: Security
+        href: aks/aks-security.md
+      - name: Management
+        href: aks/aks-management.md
+      - name: Governance
+        href: aks/aks-governance.md
+      - name: Platform automation and DevOps
+        href: aks/aks-platform-automation-and-devops.md
+    - name: Azure API Management (APIM)
       items:
-      - name: Start small and expand with the AKS baseline
-        href: /azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Enterprise-scale for AKS
-        href: enterprise-scale-landing-zone.md
+      - name: Landing zone accelerator for APIM
+        href: apim/apim-landing-zone-accelerator.md
+      - name: Azure Billing and Active Directory Tenant
+        href: apim/apim-azure-billing-ad-tenant.md
+      - name: Identity and access management
+        href: apim/apim-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: apim/apim-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: apim/apim-resource-organization.md
+      - name: Security
+        href: apim/apim-security.md
+      - name: Management
+        href: apim/apim-management.md
+      - name: Governance
+        href: apim/apim-governance.md
+      - name: Platform automation and DevOps
+        href: apim/apim-platform-automation-and-devops.md
+    - name: Azure App Service
+      items:
+      - name: Landing zone accelerator for App Service
+        href: app-services/app-services-landing-zone-accelerator.md
+      - name: Azure Billing and Active Directory Tenant
+        href: app-services/app-services-azure-billing-ad-tenant.md
+      - name: Identity and access management
+        href: app-services/app-services-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: app-services/app-services-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: app-services/app-services-resource-organization.md
+      - name: Security
+        href: app-services/app-services-security.md
+      - name: Management
+        href: app-services/app-services-management.md
+      - name: Governance
+        href: app-services/app-services-governance.md
+      - name: Platform automation and DevOps
+        href: app-services/app-services-platform-automation-and-devops.md
 
   - name: Migrate to modern application platforms
     href: migrate.md
