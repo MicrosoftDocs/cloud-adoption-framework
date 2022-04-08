@@ -17,7 +17,7 @@ The traditional approach of a waterfall of teams and responsibilities in your da
 
 The [data mesh](./what-is-data-mesh.md) approach prevents these issues by adopting the concept of **data as a product**. Application owners and application teams treat data as a fully contained product they're responsible for, rather than a byproduct of some process that others manage. Both applications and analytical data serving tasks are within domain responsibility areas.
 
-Not every piece of data created by domain applications is a data product. Data products are created specifically for analytical consumption. They have defined and agreed-upon shapes, consumption interfaces, and maintenance and refresh cycles, all of which are documented.
+Data products are created specifically for analytical consumption. They have defined and agreed-upon shapes, consumption interfaces, and maintenance and refresh cycles, all of which are documented.
 
 Data products are processed domain data assets/datasets shared with downstream processes through interfaces in an SLO. Unless otherwise required, your raw data should be processed, shaped, cleansed, aggregated, and normalized to meet agreed-upon quality standards before you make it available for consumption.
 
