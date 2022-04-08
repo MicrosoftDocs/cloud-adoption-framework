@@ -34,6 +34,10 @@ items:
         href: aks/aks-governance.md
       - name: Platform automation and DevOps
         href: aks/aks-platform-automation-and-devops.md
+      - name: Reference Architecture (placeholder)
+        href: aks/aks-landing-zone-accelerator.md
+      - name: Reference Implementaion (placeholder)
+        href: aks/aks-landing-zone-accelerator.md
     - name: Azure API Management (APIM)
       items:
       - name: Landing zone accelerator for APIM
@@ -54,6 +58,10 @@ items:
         href: apim/apim-governance.md
       - name: Platform automation and DevOps
         href: apim/apim-platform-automation-and-devops.md
+      - name: Reference Architecture (placeholder)
+        href: apim/apim-landing-zone-accelerator.md
+      - name: Reference Implementaion (placeholder)
+        href: apim/apim-landing-zone-accelerator.md
     - name: Azure App Service
       items:
       - name: Landing zone accelerator for App Service
@@ -74,6 +82,10 @@ items:
         href: app-services/app-services-governance.md
       - name: Platform automation and DevOps
         href: app-services/app-services-platform-automation-and-devops.md
+      - name: Reference Architecture (placeholder)
+        href: app-services/app-services-landing-zone-accelerator.md
+      - name: Reference Implementaion (placeholder)
+        href: app-services/app-services-landing-zone-accelerator.md
 
   - name: Migrate to modern application platforms
     href: migrate.md
