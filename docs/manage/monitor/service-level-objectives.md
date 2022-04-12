@@ -77,13 +77,13 @@ Before you start implementing an SLO and SLI based monitoring practice, let's wa
 
 - **Define SLO and corresponding SLIs** - Understand and document what you want to measure and how you'll measure it from customer point of view.
 
-- **Develop SLO agreements** - SLO should be well understood by the IT and DevOps teams, and organizational leaders. Draft an SLO agreement that describes the SLIs, their success criteria, and specify where and how you record success or failure. Once the draft agreement is considered ready, meet with all stakeholders to review and sign off on the agreement. It might require a few iterations until all stakeholders are in alignment.
+- **Develop SLO agreements** - SLO should be well understood by the IT and DevOps teams, and organizational leaders. Draft an SLO agreement that describes the SLIs, their success criteria, and specify where and how you record success or failure. Once the draft agreement is considered ready, meet with all stakeholders to review and approve the agreement. It might require a few iterations until all stakeholders are in alignment.
 
 - **Iterate to improve** - Evaluate performance of the service level indicators defined to identify opportunities to improve as you continue learning the behavior of the underlying service components.
 
 ## How do you define SLOs?
 
-The objective of an SLO is to obtain clear signals that accurately measure quality from the customers perspective. Each service team creates a small set of Service Level Objectives (SLOs) that define the allowable range for the most important measurable metrics of the service, as experienced by the service consumer. An SLO is numeric goal that is defined for a metric emitted by a service. Metrics associated with this goal can be monitored to determine whether the service is healthy.
+The objective of an SLO is to obtain clear signals that accurately measure quality from the customer's perspective. Each service team creates a small set of Service Level Objectives (SLOs) that define the allowable range for the most important measurable metrics of the service, as experienced by the service consumer. An SLO is numeric goal that is defined for a metric emitted by a service. Metrics associated with this goal can be monitored to determine whether the service is healthy.
 
 For example, here is a simplified example of an SLO for an internal time tracking web-based application - *Requests in the last 5 minutes are served in under 1000 milliseconds at the 99th percentile.*
 
