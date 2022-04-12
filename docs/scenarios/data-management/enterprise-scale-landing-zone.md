@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
+adobe-target: true
 ---
 
 # Introduction to data management and analytics scenario
