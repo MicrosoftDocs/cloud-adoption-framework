@@ -177,9 +177,8 @@ Nearly all organizations are required to comply with government or industry regu
 - Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of the Azure Virtual Landing Zones.
 
 ## Next Steps
-
-[Security recommnded practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide)
-[Security baseline based on Azure Security Benchmark 2.0](/security/benchmark/azure/baselines/virtual-desktop-security-baseline)
+- [Security recommended practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide)
+- [Security baseline based on Azure Security Benchmark 2.0](/security/benchmark/azure/baselines/virtual-desktop-security-baseline)
 
 
 
