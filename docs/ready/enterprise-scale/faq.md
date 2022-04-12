@@ -153,3 +153,60 @@ You might want to expand into or use more Azure regions once you've completed th
 
 > [!NOTE]
 > You might be able to use [Availability Zones](/azure/availability-zones/az-overview#availability-zones) instead of deploying into an additional Azure region. Review and assess whether this is possible based on your requirements and whether [Availability Zones are supported](/azure/availability-zones/az-region) in your region and for the services you want to use.
+
+### High-level approach
+
+The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure Landing Zone for Networking & Identity:
+
+1. Decide on new Azure Region to expand into
+
+#### Networking
+
+##### Traditional Hub & Spoke Architecture
+
+> [!TIP]
+> Review the Azure Landing Zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md)
+
+1. Decide on whether a new platform landing zone subscription is needed or not
+   - The same existing subscription is generally recommended to use for most customers across multiple regions for connectivity
+2. Create new Resource Group in subscription in the new target region
+3. Create new hub Virtual Network in the new target region
+4. (optional) Deploy Azure Firewall or Network Virtual Appliances (NVA) into your new hub Virtual Network
+5. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections
+6. Establish Virtual Network Peering between the new hub Virtual Network and the other hub Virtual Networks
+7. Create and configure any required routing: Azure Route Server, User-Defined Routes etc.
+8. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
+   - Some customers might do this on their Active Directory Domain Controllers which might be part of the Identity platform landing zone subscription
+
+You can now connect application landing zone spokes via Virtual Network Peering to the new hub Virtual Network in the new region, to host your workloads.
+
+##### Virtual WAN Architecture
+
+> [!TIP]
+> Review the Azure Landing Zone design area for [Virtual WAN architecture](../azure-best-practices/virtual-wan-network-topology.md)
+
+1. Create new Virtual Hub in the existing Virtual WAN in the new target region
+2. (optional) Deploy Azure Firewall or supported Network Virtual Appliances (NVA) into your new Virtual Hub
+3. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity in the new Virtual Hub and establish connections
+4. (optional) Create and configure any additionally required routing: Virtual Hub Static Routes, etc.
+5. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
+   - Some customers might do this on their Active Directory Domain Controllers which might be part of the Identity platform landing zone subscription
+   - In Virtual WAN deployments, today, this must be in a spoke Virtual Network that is connected to the Virtual Hub via a Virtual Network Connection
+
+You can now connect application landing zone spokes via Virtual Network Connections to the new Virtual Hub in Virtual WAN in the new region, to host your workloads.
+
+#### Identity
+
+> [!TIP]
+> Review the Azure Landing Zone design area for [identity and access management](../landing-zone/design-area/identity-access.md)
+
+1. Decide on whether a new platform landing zone subscription is needed or not
+   - The same existing subscription is generally recommended to use for most customers across multiple regions for identity
+2. Create new Resource Group in subscription in the new target region
+3. Create new Virtual Network in the new target region
+4. Establish Virtual Network Peering back to the hub Virtual Network in the connectivity subscription
+5. Deploy identity workloads, like Active Directory Domain Controller Virtual Machines into new Virtual Network
+    - You might need to perform additional setup and configuration of the workloads once provisioned, like:
+      - Promoting the Active Directory Domain Controller Virtual Machines to the existing Active Directory Domain
+      - Create new Active Directory sites & subnets
+      - Configuring DNS Server settings like Conditional Forwarders
