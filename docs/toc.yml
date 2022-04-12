@@ -1550,6 +1550,8 @@ items:
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
           href: manage/monitor/observability.md
+        - name: Service Level Objectives
+          href: manage/monitor/service-level-objectives.md
         - name: Data collection
           href: manage/monitor/data-collection.md
         - name: Response
