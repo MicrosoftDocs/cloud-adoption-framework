@@ -80,7 +80,7 @@ The Azure Arc agent is the key component for Azure Arc-enabled Kubernetes, it co
 
 - Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments as shown in the diagram below.
 
-  [![Azure Arc-enabled Kubernetes and Key Vault integration](./media/arc-enabled-kubernetes-keyvault.png)](./media/arc-enabled-kubernetes-keyvault.png#lightbox)
+  [![Azure Arc-enabled Kubernetes and Key Vault integration](./media/arc-enabled-kubernetes-key-vault.png)](./media/arc-enabled-kubernetes-key-vault.png#lightbox)
 
 ## Enable and secure GitOps configurations
 
