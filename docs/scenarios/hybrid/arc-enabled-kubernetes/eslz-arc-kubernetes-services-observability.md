@@ -1,6 +1,6 @@
 ---
-title: Services Observability for Arc-enabled Kubernetes
-description: Understand the design considerations and recommendations for Services Observability on Azure Arc-enabled Kubernetes.
+title: Services observability for Arc-enabled Kubernetes
+description: Understand the design considerations and recommendations for Services observability on Azure Arc-enabled Kubernetes.
 author: jpocloud
 ms.author: johnpoole
 ms.date: 11/15/2021

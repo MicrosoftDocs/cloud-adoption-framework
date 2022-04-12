@@ -13,19 +13,19 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 # Cost governance for Azure Arc-enabled Kubernetes
 
-Cost governance is the continuous process of implementing policies to control costs of services you are using on Azure. This document will walk you through the various cost governance considerations and recommendations when using Azure Arc-enabled Kubernetes.
+Cost governance is the continuous process of implementing policies to control costs of services you are using on Azure. This document will walk you through the various cost governance considerations and recommendations when using Azure Arc-enabled Kubernetes. The article includes screenshots with pricing information as an **example only**.
 
 ## How much does Azure Arc-enabled Kubernetes cost?
 
 Azure Arc-enabled Kubernetes provides two types of services:
 
-1. Azure Arc control plane functionality, which is provided at no extra cost including:
+- Azure Arc control plane functionality, which is provided at no extra cost including:
    - Resource organization through Azure [management groups](/azure/governance/management-groups/overview) and [tags](/azure/azure-resource-manager/management/tag-resources?tabs=json).
    - Searching and indexing through [Azure Resource Graph](/azure/governance/resource-graph/overview).
    - Access control through [Azure role-based access control](/azure/role-based-access-control/overview) (RBAC) at subscription or resource group level.
    - Automation through [templates](/azure/azure-resource-manager/templates/overview) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
-2. Azure services used in conjunction with Azure Arc-enabled Kubernetes (but not limited to), incur costs according to their usage including:
+- Azure services used in conjunction with Azure Arc-enabled Kubernetes (but not limited to), incur costs according to their usage including:
    - [Kubernetes GitOps configuration](/azure/azure-arc/kubernetes/conceptual-configurations)
    - [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes)
    - [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-overview)
@@ -35,6 +35,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 
 >[!Tip]
 > Billing for the Azure services used in conjunction with Azure Arc-enabled Kubernetes is the same as Azure Kubernetes Service billing.
+
 > [!Note]
 > If the Azure Arc-enabled Kubernetes cluster is on AKS on Azure Stack HCI, then Kubernetes GitOps configuration is included at no charge.
 
@@ -52,8 +53,8 @@ Azure Arc-enabled Kubernetes provides two types of services:
 
 - **Kubernetes GitOps configuration:** [Kubernetes GitOps configuration](/azure/azure-arc/kubernetes/conceptual-configurations) delivers configuration management and application deployment using GitOps. With this capability, cluster admins can declare their cluster configuration and applications in Git. The development teams can then use pull requests and the tools they are familiar with (existing DevOps pipelines, Git, Kubernetes manifests, Helm charts) to easily deploy applications onto Azure Arc-enabled Kubernetes clusters and make updates in production. Billing is based on the number of vCPUs/hour in the cluster and is charged monthly. Clusters incur a single charge for configuration management no matter how many repositories are connected.
 
->[!Note]
->Clusters can function without a constant connection to Azure. When disconnected, each cluster’s charge will be determined based on the last known number of vCPUs that were registered with Azure Arc. If your cluster will be disconnected from Azure and you don’t want to be charged for Kubernetes Configuration, you can delete the configurations. The vCPU count is updated every 5 minutes when connected. The first 6 vCPUs are included at no cost.
+   >[!Note]
+   >Clusters can function without a constant connection to Azure. When disconnected, each cluster’s charge will be determined based on the last known number of vCPUs that were registered with Azure Arc. If your cluster will be disconnected from Azure and you don’t want to be charged for Kubernetes Configuration, you can delete the configurations. The vCPU count is updated every 5 minutes when connected. The first 6 vCPUs are included at no cost.
 
 - **Azure Policy for Kubernetes:** [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy makes it possible to manage and report on the compliance state of your Kubernetes clusters from one place. There is currently no cost for Azure Policy for Kubernetes while in public preview.
 
@@ -67,28 +68,30 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 
 ### Governance
 
-- Review the recommendations in the [resource organization](./eslz-arc-kubernetes-resource-organization.md) and [governance disciplines](./eslz-arc-kubernetes-governance-disciplines.md) critical design area to implement a governance strategy, organize your resources for better cost control and visibility and use the least privileged access model for onboarding and management to avoid unnecessary costs.
+Review the recommendations in the [resource organization](./eslz-arc-kubernetes-resource-organization.md) and [governance disciplines](./eslz-arc-kubernetes-governance-disciplines.md) critical design area to implement a governance strategy, organize your resources for better cost control and visibility and use the least privileged access model for onboarding and management to avoid unnecessary costs.
+
 ### Azure Monitor for Containers
+
 
 - Review the [Management and monitoring critical design area](./eslz-arc-kubernetes-management-disciplines.md) to plan your monitoring strategy and decide on your requirements for monitoring Azure Arc-enabled Kubernetes clusters to optimize your monitoring costs.
 - Review [Azure Monitor for Containers pricing](https://azure.microsoft.com/pricing/details/monitor/).
 - Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled Kubernetes monitoring costs for Azure Log Analytics ingestion, alerts, and notifications.
 
-[ ![A screenshot showing Azure Pricing Calculator](./media/arc-enabled-kubernetes-cost-pricing-calculator.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator.png#lightbox)
+   :::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" alt-text="A screenshot showing Azure Pricing Calculator." lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator.png":::
 
-[ ![A screenshot showing Azure Pricing Calculator AZMon](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png#lightbox)
+   :::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" alt-text="A screenshot showing Azure Pricing Calculator AZMon." lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png":::
 
 - Use [Azure Cost Management and Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor for Containers costs.
 
-[ ![A screenshot showing Azure cost management and billing](./media/arc-enabled-kubernetes-cost-billing.png)](./media/arc-enabled-kubernetes-cost-billing.png#lightbox)
+   [ ![A screenshot showing Azure cost management and billing](./media/arc-enabled-kubernetes-cost-billing.png)](./media/arc-enabled-kubernetes-cost-billing.png#lightbox)
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and have visibility on the Azure Kubernetes clusters monitored, collected logs, and their ingestion rate to avoid unnecessary ingestion costs.
 
-[ ![A screenshot showing Log Analytics insights](./media/arc-enabled-kubernetes-cost-log-analytics-insights.png)](./media/arc-enabled-kubernetes-cost-log-analytics-insights.png#lightbox)
+   [ ![A screenshot showing Log Analytics insights](./media/arc-enabled-kubernetes-cost-log-analytics-insights.png)](./media/arc-enabled-kubernetes-cost-log-analytics-insights.png#lightbox)
 
 - Use the built-in [Azure Monitor workbooks](/azure/azure-monitor/containers/container-insights-reports#billing-workbooks) to gain more insights on your clusters' billable monitoring data.
 
-[ ![A screenshot showing Azure Monitor workbook showing namespace billing](./media/arc-enabled-kubernetes-cost-monitor-workbooks.png)](./media/arc-enabled-kubernetes-cost-monitor-workbooks.png#lightbox)
+   [ ![A screenshot showing Azure Monitor workbook showing namespace billing](./media/arc-enabled-kubernetes-cost-monitor-workbooks.png)](./media/arc-enabled-kubernetes-cost-monitor-workbooks.png#lightbox)
 
 - Review [tips for reducing Log Analytics ingestion data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation to help configure data ingestion properly.
 - Consider how long to retain data on Log Analytics. Data ingested into the Log Analytics workspace can be retained at no additional charge up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as low as 4 days. Example: Usually, performance data doesn't need to be retained longer, instead, security logs may need to be retained longer.

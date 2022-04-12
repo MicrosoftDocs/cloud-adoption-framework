@@ -31,11 +31,11 @@ The following images show a conceptual reference architecture that highlights th
 
 - Flux v2 Cluster Extension provisioning process
 
-    [ ![A diagram showing Flux extenstion installation](./media/arc-enabled-kubernetes-cicd-flux2-extension-install.png)](./media/arc-enabled-kubernetes-cicd-flux2-extension-install.png#lightbox)
+    [ ![A diagram showing Flux extenstion installation](./media/arc-enabled-kubernetes-cicd-flux-2-extension-install.png)](./media/arc-enabled-kubernetes-cicd-flux-2-extension-install.png#lightbox)
 
 - Gitops Configuration process
 
-    [ ![A diagram showing GitOps configuration](./media/arc-enabled-kubernetes-cicd-flux2-config-install.png)](./media/arc-enabled-kubernetes-cicd-flux2-config-install.png#lightbox)
+    [ ![A diagram showing GitOps configuration](./media/arc-enabled-kubernetes-cicd-flux-2-config-install.png)](./media/arc-enabled-kubernetes-cicd-flux-2-config-install.png#lightbox)
 
 - GitOps Flow showing an application update
 
