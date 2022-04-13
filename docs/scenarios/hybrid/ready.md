@@ -41,7 +41,7 @@ Azure Arc enables hybrid and multicloud architectures and holds a set of technol
 
 Choosing a hybrid and multicloud environment isn't a binary decision, it's closer to a range of decisions. Before you configure your Azure environment or any other cloud environment, it's important to identify how your cloud environment will support your specific mix of cloud-hosting decisions. Here are some examples of common cloud mixes:
 
-[![Diagram that shows three illustrations of how different customers distribute workloads across cloud providers.](./media/arc-servers-graphs.png)](./media/arc-servers-graphs.png#lightbox)
+[![Diagram that shows three illustrations of how different customers distribute workloads across cloud providers.](./media/arc-distribute-graphs.png)](./media/arc-distribute-graphs.png#lightbox)
 
 Each dark blue dot is a workload, and each light blue circle is a business process, supported by a distinct environment. Each cloud mix requires a different Azure environment configuration, as seen with our three reference customers:
 
@@ -93,7 +93,7 @@ Azure Arc extends the Azure Resource Manager (ARM) APIs so any workload can be r
 - Threat detection
 - Security vulnerability management and auditing
 
-[![Diagram that shows Azure Arc overview.](./media/arc-servers-unified-operations.png)](./media/arc-servers-unified-operations.png#lightbox)
+[![Diagram that shows Azure Arc overview.](./media/arc-unified-operations.png)](./media/arc-unified-operations.png#lightbox)
 
 ## Configure your initial Azure environment
 
@@ -116,7 +116,7 @@ As such, the application landing zone subscriptions can also contain Azure Arc r
 
 Since Azure Arc resources are located outside of Azure, they can be considered a *metadata resource* in the way they're represented in Azure. So, Azure Arc resources can be treated as any other Azure resource that can be part of a landing zone. It doesn't matter if it's a platform or application, and follows the [subscription democratization and application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
 
-:::image type="content" source="./media/landing-zone-design-revised.png" alt-text="Diagram that shows a landing zone design." lightbox="./media/landing-zone-design-revised.png":::
+[![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
 
 ### Common examples of Azure Arc resources in Azure landing zones
 

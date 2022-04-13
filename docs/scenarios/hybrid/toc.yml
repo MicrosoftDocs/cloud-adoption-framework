@@ -17,9 +17,9 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
-    - name: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid
+    - name: Introduction to Azure Arc landing zone accelerator for hybrid and multicloud
       href: enterprise-scale-landing-zone.md
-    - name: Design areas
+    - name: Azure Arc-enabled servers
       items:
       - name: Identity and access management
         href: arc-enabled-servers/eslz-identity-and-access-management.md
@@ -35,10 +35,34 @@ items:
         href: arc-enabled-servers/eslz-cost-governance.md
       - name: Automation disciplines
         href: arc-enabled-servers/eslz-automation-arc-server.md
+    - name: Azure Arc-enabled Kubernetes
+      items:
+      - name: Identity and access management
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md
+      - name: Network topology and connectivity
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md
+      - name: Resource organization
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md
+      - name: Governance and security disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md
+      - name: Management disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md
+      - name: Cost governance
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
+      - name: Automation disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md
+      - name: Extensions management
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md
+      - name: CI/CD and GitOps disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md
+      - name: Services observability
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md
     - name: Implementation options
       items:
       - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
         href: arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md
+      - name: Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox
+        href: arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md
 
   - name: Migrate to the cloud
     href: migrate.md
