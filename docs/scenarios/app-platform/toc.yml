@@ -38,30 +38,30 @@ items:
         href: aks/aks-landing-zone-accelerator.md
       - name: Reference Implementaion (placeholder)
         href: aks/aks-landing-zone-accelerator.md
-    - name: Azure API Management (APIM)
+    - name: Azure API Management 
       items:
-      - name: Landing zone accelerator for APIM
-        href: apim/apim-landing-zone-accelerator.md
+      - name: Landing zone accelerator for API Management
+        href: api-management/landing-zone-accelerator.md
       - name: Azure Billing and Active Directory Tenant
-        href: apim/apim-azure-billing-ad-tenant.md
+        href: api-management/azure-billing-ad-tenant.md
       - name: Identity and access management
-        href: apim/apim-identity-and-access-management.md
+        href: api-management/identity-and-access-management.md
       - name: Network topology and connectivity
-        href: apim/apim-network-topology-and-connectivity.md
+        href: api-management/network-topology-and-connectivity.md
       - name: Resource organization
-        href: apim/apim-resource-organization.md
+        href: api-management/resource-organization.md
       - name: Security
-        href: apim/apim-security.md
+        href: api-management/security.md
       - name: Management
-        href: apim/apim-management.md
+        href: api-management/management.md
       - name: Governance
-        href: apim/apim-governance.md
+        href: api-management/governance.md
       - name: Platform automation and DevOps
-        href: apim/apim-platform-automation-and-devops.md
+        href: api-management/platform-automation-and-devops.md
       - name: Reference Architecture (placeholder)
-        href: apim/apim-landing-zone-accelerator.md
+        href: api-management/landing-zone-accelerator.md
       - name: Reference Implementaion (placeholder)
-        href: apim/apim-landing-zone-accelerator.md
+        href: api-management/landing-zone-accelerator.md
     - name: Azure App Service
       items:
       - name: Landing zone accelerator for App Service
