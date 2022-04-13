@@ -50,7 +50,7 @@ As part of your design considerations, review [how Azure Policy can be used insi
 
 ## Single control and management plane
 
-Avoid dependency on abstraction layers, such as customer-developed portals or tooling. Having a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams) is highly recommended. Azure provides a unified and consistent control plane which is subject to role-based access and policy-driven controls. This applies across all Azure resources and provisioning channels. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
+Avoid dependency on abstraction layers, such as customer-developed portals or tooling. Having a consistent experience for both Central Operations and Workload Operations is highly recommended. Azure provides a unified and consistent control plane which is subject to role-based access and policy-driven controls. This applies across all Azure resources and provisioning channels. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
 
 #### Impact of deviation
 
