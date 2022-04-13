@@ -25,7 +25,7 @@ Before you use the CAF Foundation blueprint in the Cloud Adoption Framework, rev
 
 ## Design principles
 
-This implementation option provides an opinionated approach to the common design areas shared by all Azure landing zones. For technical details, see the [assumptions](#assumptions) and [decisions](#decisions).
+This implementation option provides an opinionated approach to the common design areas shared by all Azure landing zones. For technical details, see the [Assumptions](#assumptions) section.
 
 ### Deployment options
 
