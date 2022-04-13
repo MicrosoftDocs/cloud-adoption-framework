@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of Azure data lake storage for cloud-scale analytics
 
-The Azure data lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts with in a single resource group for cloud-scale analytics. It is recommended to provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group. It is similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
+The Azure Data Lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts with in a single resource group for cloud-scale analytics. It is recommended to provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
 
-Each storage account within a data landing zone, stores data in one of its three transformation stages:
+Each storage account within a data landing zone stores data in one of the three transformation stages:
 
 - raw data
 - enriched and curated data
@@ -22,14 +22,14 @@ Each storage account within a data landing zone, stores data in one of its three
 
 With an automated data agnostic ingestion service, a [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account. For ingesting data from operational sources, if you don't implement data agnostics engine or facilitate complex connections, you can create a [source aligned data application](../architectures/data-application-source-aligned.md). This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
 
-Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protects data at file and folder level. The access control lists help enterprises implement tight security measures for authentication and authorization for data products to:
+Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protects data at the file and folder levels. The access control lists help enterprises implement tight security measures for authentication and authorization for data products to:
 
 - store data securely through encryption at rest
-- Access controls for Azure Active Directory (AAD) users and security groups, through AAD integration
+- access controls for Azure Active Directory (AAD) users and security groups, through AAD integration
 
 ## Data lake planning
 
-Structure, governance, and security are key considerations that require planning for the size and complexity of each data lake.
+The key considerations that require planning for the size and complexity of each data lake are structure, governance, and security.
 The structure and organization of a data lake is dependent on the:
 
 - type of data
@@ -39,11 +39,14 @@ The structure and organization of a data lake is dependent on the:
 
 Consumers and producers are grouped based on the need for accessibility and data. It's good to plan implementation and access control governance across the data lake.
 
-Planning of a data lake is easier if the data lake contains a few data assets and automated processes like extract, transform, load (ETL) offloading. Planning takes longer if the data lake contains a large number of data assets with automated and manual interaction. Planning also requires more collaboration with the data owners.
+Planning of a data lake is easier if the data lake contains a few data assets and automated processes like extract, transform, load (ETL) offloading. Planning takes longer if the data lake:
+
+- contains a large number of data assets with automated and manual interaction
+- requires more collaboration with the data owners.
 
 ### Data swamp analogy
 
-A data swamp is an un-managed data lake that is either inaccessible to intended users or provides little value. Data swamps occur when enough data quality and data governance measures are not implemented. Sometimes a data swamp can also arise from a data warehouse due to existing hybrid models.
+A data swamp is an un-managed data lake that is almost inaccessible to users. Data swamps occur when the data quality and data governance measures are not implemented. Sometimes a data swamp is seen from a data warehouse with existing hybrid models.
 
 Governance and organization are key to avoid data swamps. When you create a solid foundation, it increases the chance of sustained data lake success and business value.
 
