@@ -23,7 +23,7 @@ Before you use the Cloud Adoption Framework Migration landing zone blueprint, re
 
 ## Design principles
 
-This implementation option is an opinionated approach to the common design areas shared by all Azure landing zones. For more technical details, see the following assumptions and decisions.
+This implementation option is an opinionated approach to the common design areas shared by all Azure landing zones. For technical details, see the [assumptions](#assumptions) and [decisions](#decisions).
 
 ### Deployment options
 
@@ -31,11 +31,11 @@ This implementation option deploys a minimum viable product (MVP) to start a mig
 
 The specific resources deployed by this MVP approach are outlined in the [decisions](#decisions) section below.
 
-### Enterprise enrollment
+### Azure billing and Active Directory tenant
 
 This implementation option doesn't take an inherent position on enterprise enrollment. This approach is designed to be applicable no matter what contractual agreements you have with Microsoft or Microsoft partners. Before you deploy this implementation option, it's assumed that you've created a target subscription.
 
-### Identity
+### Identity and access management
 
 This implementation option assumes that the target subscription is already associated with an Azure Active Directory (Azure AD) instance. Using this association follows the [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
@@ -51,7 +51,7 @@ This approach is based on an assumption that the cloud adoption effort won't exc
 
 If this complexity changes through the course of the cloud adoption plan, you might need to refactor your resource organization using the guidance in the [Govern methodology](../../govern/index.md).
 
-### Governance disciplines
+### Governance
 
 This implementation option doesn't implement any governance tooling. In the absence of defined policy automation, you shouldn't use this landing zone for any mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
 
@@ -60,7 +60,7 @@ To accelerate parallel development of governance disciplines, review the [Govern
 > [!WARNING]
 > As the governance disciplines mature, refactoring might be required. You might need to move resources [to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
-### Operations baseline
+### Management
 
 This implementation option doesn't implement any operations. In the absence of a defined operations baseline, you shouldn't use this landing zone for any mission critical workloads or sensitive data. It's assumed your using this landing zone for limited production deployment. This deployment starts the learning, iteration, and development of the operating model in parallel with these early migration efforts.
 
@@ -69,9 +69,7 @@ To accelerate parallel development of an operations baseline, review the [Manage
 > [!WARNING]
 > As you develop the operations baseline, you might need to refactor. You might need to move resources [to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
-### Business continuity and disaster recovery (BCDR)
-
-This implementation option doesn't implement any BCDR solution. It's assumed that the solution for protection and recovery will be addressed by the development of the operations baseline.
+This implementation option doesn't implement any business continuity and disaster recovery (BCDR) solution. It's assumed that the solution for protection and recovery will be addressed by the development of the operations baseline.
 
 ## Assumptions
 
