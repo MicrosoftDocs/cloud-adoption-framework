@@ -91,7 +91,7 @@ items:
     - name: Overview
       href: strategy/index.md
     - name: Assess cloud adoption strategy
-      href: strategy/cloud-adoption-strategy-evaluator.md      
+      href: strategy/cloud-adoption-strategy-evaluator.md
     - name: Motivations
       href: strategy/motivations.md
     - name: Business outcomes
@@ -106,7 +106,7 @@ items:
         href: strategy/business-outcomes/fiscal-outcomes.md
       - name: Agility outcomes
         href: strategy/business-outcomes/agility-outcomes.md
-      - name: Global Reach outcomes
+      - name: Global reach outcomes
         href: strategy/business-outcomes/reach-outcomes.md
       - name: Customer engagement outcomes
         href: strategy/business-outcomes/engagement-outcomes.md
@@ -409,7 +409,7 @@ items:
         items:
         - name: Choose a landing zone option
           href: ready/landing-zone/choose-landing-zone-option.md
-        - name: Tailoring the Azure Landing Zones Architecture
+        - name: Tailoring the Azure landing zones architecture
           href: ready/landing-zone/tailoring-alz.md
         - name: Start with enterprise scale
           items:
