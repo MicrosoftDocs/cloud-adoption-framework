@@ -1,6 +1,6 @@
 ---
 title: Governance considerations for Azure API Management
-description: <<Describe how this landing zone accelerator can improve can improve governance of Azure API Management
+description: Learn about design considerations and recommendations for governance in the Azure API Management landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/12/2022
@@ -10,32 +10,21 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Governance considerations for API Managment landing zone accelerator
+# Governance considerations for API Management landing zone accelerator
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of API Management.
-
-- Research the available built-in RBAC roles available for the API Management service
+- Research the available [built-in RBAC roles](/azure/api-management/api-management-role-based-access-control) available for the API Management service.
+- Review the [Azure Policy built-in policy definitions for Azure API Management](/azure/api-management/policy-reference) and the [Azure Policy Regulatory Compliance controls for Azure API Management](/azure/api-management/security-controls-policy). Azure policy might enforce vital management and security conventions across Azure platform services. 
 - Consider what level of logging is necessary to meet your organization’s compliance requirements. 
 - Consider how non-compliance should be detected.
 - Consider how to standardize error responses returned by APIs.
 
 ## Design recommendations
 
-The following is a bulleted list of best practices that should be included in any deployment of API Management
-
 - Use Azure built-in roles to provide least privilege permissions to manage the API Management service.
-- Configure diagnostics settings within API Management to output logs and metrics to Azure Monitor.
-- Implement an error handling policy at the global level.
-- All policies should call <base/>
-
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for <<Token-LongName>>.
-
-## Additional considerations
-
-Create as many H2 "##" headers as is required to educate the customer on this topic.
+- Configure [diagnostics settings](azure/api-management/api-management-howto-use-azure-monitor) within API Management to output logs and metrics to Azure Monitor.
+- Implement an [error handling policy](/azure/api-management/api-management-error-handling-policies) at the global level.
+- All API Management policies should include a [`<base/>` element](azure/api-management/set-edit-policies#use-base-element-to-set-policy-evaluation-order).

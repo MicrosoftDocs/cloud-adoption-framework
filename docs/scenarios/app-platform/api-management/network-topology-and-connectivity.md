@@ -1,6 +1,6 @@
 ---
 title: Network topology and connectivity considerations for Azure API Management
-description: <<Describe how this landing zone accelerator can improve network topology and connectivity of Azure API Management.>>
+description: Learn about design considerations and recommendations for network topology and connectivity in the Azure API Management landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/12/2022
@@ -10,30 +10,35 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Network topology and connectivity considerations for <<Token-LongName>> landing zone accelerator
+# Network topology and connectivity considerations for API Management landing zone accelerator
 
-[Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.]
+This article provides design considerations and recommendations for network topology and connectivity when using the API Management landing zone accelerator. Networking is central to almost everything inside a landing zone. It enables connectivity to other Azure services, external users, and internal and external APIs. 
 
+Learn more about the [Network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) design area.
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of API Management
-
-- Decide if the Gateway should be deployed to an internal network 
 - Decide if the APIs are accessible externally or internally
-- Decide if there should be multiple gateways deployed (and how these are load balanced) e.g. by using Application Gateway
+- Decide if there should be multiple gateways deployed and how these are load balanced - for example, by using Application Gateway
 - Decide if the network setup requires cross-region connectivity
-- Decide if private end point connectivity is required
-- Decide how to connect to on-prem workloads
-- Decide how to connect to external (3rd party) w
+- Decide if [private endpoint connectivity](/azure/api-management/private-endpoint) to the API Management instance is required
+- Decide how to connect to external (3rd party) workloads
+- Decide whether [virtual network connection](/azure/api-management/virtual-network-options) is required and the access type for virtual network connection ([external](/azure/api-management/api-management-using-with-vnet) or [internal](/azure/api-management/api-management-using-with-internal-vnet))
+- Decide whether connectivity to on-premises or multi-cloud environments is required
+- Decide if [multi-region deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required to service geographically distributed API consumers
+- Consider using a load balancing solution such as [Application Gateway](/azure/application-gateway/overview) or [Azure Front Door](/azure/frontdoor/front-door-overview)
 
 ## Design recommendations
 
-The following is a bulleted list of best practices that should be included in any deployment of <<Token-LongName>>.
+- Use [Application Gateway](/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway) for external access to API Management when the instance deployed in a VNet in internal mode. 
+- Use Azure Front Door for multi-region deployment 
+- Ensure [required ports](/azure/api-management/virtual-network-reference) (such as `80`, `443`) are open between the calling client and the backend API Manaagement gateway
+- Deploy the gateway in a VNet to allow access to backend services in the network
+- VNet peering supports high performance in a region but has a scalability limit of 500 networks. If you require more workloads to be connected, use [hub spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) or PLE.
+- When a VNet is used in internal mode, make it easy for consumers to onboard (connect) to you API Management platform. Provide an open network path (through upstream hub or network security group setup) to remove friction when connecting to API Management.
 
 ## Enterprise-scale assumptions
 
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for <<Token-LongName>>.
+The following are assumptions that went into the development of the landing zone accelerator for API Management:
 
-## Additional considerations
-
-Create as many H2 "##" headers as is required to educate the customer on this topic.
+- Deployment of the API Management instance in a dedicated VNet subnet in internal mode
+- External access to API Management using Azure Application Gateway.

@@ -1,6 +1,6 @@
 ---
 title: Security considerations for Azure API Management
-description: <<Describe how this landing zone accelerator can improve security for Azure API Management.>>
+description: Learn about design considerations and recommendations for security in the Azure API Management landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/12/2022
@@ -10,34 +10,38 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Security considerations for API Managementlanding zone accelerator
+# Security considerations for API Management landing zone accelerator
 
-[Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.]
+This article provides design considerations and recommendations for security when using the API Management landing zone accelerator. Security covers multiple aspects including securing the frontend APIs, securing backends, and securing the developer portal.
+
+Learn more about the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/secure) design area.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of API Management.
+- Consider how you want to secure your frontend APIs beyond using [subscription keys](/azure/api-management/api-management-howto-create-subscriptions), [OAuth 2.0](/azure/api-management/api-management-howto-protect-backend-with-aad), OpenID Connect, and [mutual TLS](/azure/api-management/api-management-howto-mutual-certificates-for-clients) are common options with built-in support.
+- Think about how you want to protect your backend services behind API Management. [Client certificates](s/azure/api-management/api-management-howto-mutual-certificates) and [OAuth 2.0](/azure/api-management/api-management-howto-protect-backend-with-aad) are two supported options.
+- Consider which client and backend [protocols and ciphers](/azure/api-management/api-management-howto-manage-protocols-ciphers) are required to meet your security requirements.
+- Consider API Management [validation policies](/azure/api-management/validation-policies) to validate REST or SOAP API requests and responses against schemas defined in the API definition or supplementary schemas. These policies are not a replacement for a Web Application Firewall but can provide additional protection against some threats.
 
-- Consider how you want to secure your frontend APIs beyond using subscription keys. OAuth 2.0, OpenID Connect, and mutual TLS are common options with built-in support.
-- Think about how you want to protect your backend services behind API Management. Client certificates and OAuth 2.0 are two supported options.
-- Consider which client and backend protocols and ciphers are required to meet your security requirements.
-- API Management validation policies are available to validate API requests and responses against an OpenAPI schema. These is not a replacement for a Web Application Firewall but can provide additional protection against some threats. Note that adding validation policies can have performance implications, so we recommend performance load tests to assess their impact on API throughput.
+    > [!NOTE]
+    > Adding validation policies can have performance implications, so we recommend performance load tests to assess their impact on API throughput.
 - Consider which identity providers besides Azure AD need to be supported.
 
 ## Design recommendations
 
-The following is a bulleted list of best practices that should be included in any deployment of API Management.
-
-- Deploy a Web Application Firewall (WAF) in front of API Management to provide protection against common web application exploits and vulnerabilities. 
-- Use Azure Key Vault to securely store and manage secrets and make them available through named values within API Management.
-- Create a system assigned Managed Identity within API Management to establish trust relationships between the service and other resources protected by Azure Active Directory, including Key Vault and backend services.
+- Deploy a Web Application Firewall (WAF) in front of API Management to protect against common web application exploits and vulnerabilities. 
+- Use Azure Key Vault to securely store and manage secrets and make them available through [named values](/azure/api-management/api-management-howto-properties) in API Management.
+- Create a [system-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) in API Management to establish trust relationships between the service and other resources protected by Azure Active Directory, including Key Vault and backend services.
 - APIs should only be accessible over HTTPS to protect data in-transit and ensure its integrity.
-- Use the latest TLS version when encrypting information in transit and disable outdated and unnecessary protocols and ciphers when possible.
+- Use the latest TLS version when encrypting information in transit. Disable outdated and unnecessary protocols and ciphers when possible.
 
-## Enterprise-scale assumptions
+## ## Enterprise scale assumptions
 
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for <<Token-LongName>>.
+The following are assumptions that went into the development of the landing zone accelerator for API Management:
 
-## Additional considerations
+- Configuration of Azure Application Gateway as a WAF
+- Protection of the API Management instance in a VNet that controls internal and external connectivity
 
-Create as many H2 "##" headers as is required to educate the customer on this topic.
+## Next steps
+
+- See [Azure security baseline for API Management](/security/benchmark/azure/baselines/api-management-security-baseline?toc=/azure/api-management/TOC.json    ) 
