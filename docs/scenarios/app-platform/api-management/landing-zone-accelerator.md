@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Landing zone accelerator for API Management 
 
-The Landing zone accelerator for API Management set is an open-source collection of Bicep templates that you can use to automate the deployment of an environment capable of hosting API Management. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+Landing zone accelerator for API Management provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable API Management infrastructure. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.
 
 Customers adopt API Management in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
@@ -20,8 +20,8 @@ Customers adopt API Management in various ways. The construction set can be adap
 
 Landing zone accelerator for API Management assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing Landing zone accelerator for API Management, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
-- [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
-- [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
+- [Start with Cloud Adoption Framework enterprise-scale landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/)
+- [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation)
 
 ## What Landing zone accelerator for API Management provides
 

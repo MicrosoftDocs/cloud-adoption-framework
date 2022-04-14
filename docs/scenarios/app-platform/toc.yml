@@ -42,14 +42,10 @@ items:
       items:
       - name: Landing zone accelerator for API Management
         href: api-management/landing-zone-accelerator.md
-      - name: Azure Billing and Active Directory Tenant
-        href: api-management/azure-billing-ad-tenant.md
       - name: Identity and access management
         href: api-management/identity-and-access-management.md
       - name: Network topology and connectivity
         href: api-management/network-topology-and-connectivity.md
-      - name: Resource organization
-        href: api-management/resource-organization.md
       - name: Security
         href: api-management/security.md
       - name: Management
