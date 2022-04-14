@@ -3,7 +3,7 @@ title: Introduction to Terraform landing zones
 description: CAF recommendations to use Terraform with Microsoft Azure in enterprise context.
 author: arnaudlh
 ms.author: arnaul
-ms.date: 03/23/2022
+ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
