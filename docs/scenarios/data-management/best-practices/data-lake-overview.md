@@ -52,7 +52,7 @@ For more information, see [data governance overview](../govern.md).
 
 ## Storage accounts in a logical data lake
 
-Consider whether your organization needs one or many storage accounts, and consider what file systems you require to build your logical data lake. Whatever your number of storage solutions, using single storage technology enables you to standardize across your organization and provides several ways to access data.
+Consider whether your organization needs one or many storage accounts, and consider what file systems you require to build your logical data lake. Single storage technology provides multiple data access methods and helps you standardize across your organization.
 
 Data Lake Storage Gen2 is a fully managed platform as a service (PaaS). Multiple storage accounts or file systems can't incur a monetary cost until data is accessed or stored. Note that each Azure resource has associated administrative and operational overhead during provisioning, security, and governance, including backups and disaster recovery.
 
