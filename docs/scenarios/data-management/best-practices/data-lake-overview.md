@@ -36,53 +36,50 @@ When planning a data lake, always give appropriate consideration to structure, g
 - who accesses its data
 - what its typical access patterns are
 
-Consumers and producers are grouped based on the need for accessibility and data. It's good to plan implementation and access control governance across the data lake.
+Group consumers and producers based on their data access needs. It's a good idea to plan implementation and access control governance across your data lake.
 
-Planning of a data lake is easier if the data lake contains a few data assets and automated processes like extract, transform, load (ETL) offloading. Planning takes longer if the data lake:
-
-- contains a large number of data assets with automated and manual interaction
-- requires more collaboration with the data owners.
+If your data lake contains a few data assets and automated processes like extract, transform, load (ETL) offloading, your planning is likely to be fairly easy. If your data lake contains hundreds of data assets and involves automated and manual interaction, expect to spend a longer time planning, as you'll need a lot more collaboration from data owners.
 
 ### Data swamp analogy
 
-A data swamp is an un-managed data lake that is almost inaccessible to users. Data swamps occur when the data quality and data governance measures are not implemented. Sometimes a data swamp is seen from a data warehouse with existing hybrid models.
+A data swamp is an un-managed data lake that is almost inaccessible to users. Data swamps occur when you don't implement data quality and data governance measures. You can sometimes see a data swamp in a data warehouse with existing hybrid models.
 
-Governance and organization are key to avoid data swamps. When you create a solid foundation, it increases the chance of sustained data lake success and business value.
+Proper governance and organization prevent data swamps. When you build a solid foundation for your data lake, it increases your chance of sustained data lake success and business value.
 
-A robust data catalog system is increasingly critical if the size, number of data assets, complexity, or number of users or departments, of a data lake grows. The catalog will ensure that the users that process, consume, and govern the data lake can find, tag, and classify data.
+As the size, complexity, number of data assets, and number of users or departments of your data lake grows, it's increasingly critical for you to have a robust data catalog system. Your data catalog system ensures that your users can find, tag, and classify data while they process, consume, and govern your data lake.
 
 For more information, see [data governance overview](../govern.md).
 
 ## Storage accounts in a logical data lake
 
-A common design consideration is to have a single or multiple storage accounts, and file systems that build the logical data lake. Whatever the number of storage solutions, the benefit of using a single storage technology is the ability to standardize across an organization and several ways to access data.
+Consider whether your organization needs one or many storage accounts, and consider what file systems you require to build your logical data lake. Whatever your number of storage solutions, using single storage technology enables you to standardize across your organization and provides several ways to access data.
 
-Data Lake Storage Gen2 is a fully managed platform as a service (PaaS). Multiple storage accounts or file systems can't incur a monetary cost until the data is accessed or stored. It's important to note that there's administrative and operational overhead associated with each Azure resource during provisioning, security, and governance, including backups and disaster recovery. I
+Data Lake Storage Gen2 is a fully managed platform as a service (PaaS). Multiple storage accounts or file systems can't incur a monetary cost until data is accessed or stored. Note that each Azure resource has associated administrative and operational overhead during provisioning, security, and governance, including backups and disaster recovery.
 
 > [!NOTE]
 >
-> Three data lakes are illustrated in each data landing zone. However, depending on your requirements you can consolidate the raw, enriched and curated layers into one storage account. You can keep another storage account called 'development' where consumers of the data can bring other useful data products.
+> Three data lakes are illustrated in each data landing zone. However, depending on your requirements, you might be able to consolidate the raw, enriched and curated layers into one storage account. You can create another storage account called 'development' where data consumers can bring other useful data products.
 
-Consider the following factors into a consolidated or three storage account approach:
+Consider the following factors when deciding between a consolidated or three storage account approach:
 
 - Isolation of data environments and predictability
-    - For example, you can isolate activities that run in a raw and development zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
+    - You might isolate activities that run in the raw and development zones to avoid potential effect on the curated zone, which holds data with great business value that's needed for critical decision making
 - Features and functionality at the storage account level
     - You can choose if lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
-    - It's good to create multiple storage accounts, but not create unwanted silos.
-    - Avoid duplicate data projects with lack of visibility or knowledge-sharing across the organization.
-    - Ensure that a data catalog, good data governance, and project tracking tools are in place.
-- Data processing tools and technologies, like Azure Data Factory and Azure Databricks for Apache Spark, can interact with data across multiple lakes based on the configured permissions.
-- Regional versus global lakes.
+    - Create multiple storage accounts, but not unwanted silos.
+    - Avoid duplicate data projects from lack of visibility or knowledge-sharing across your organization.
+    - Ensure that you have good data governance, project tracking tools, and a data catalog in place.
+- Interaction of data processing tools and technologies with data across multiple lakes based on the configured permissions.
+- Regional versus global lakes
     - Globally distributed consumers or processes on the lake are sensitive to latency caused by geographic distances.
-    - Its a good practice to store data locally.
-    - Regulatory constraints or data sovereignty requires data to remain in a particular region.
+    - Storing data locally is a good practice.
+    - Regulatory constraints and data sovereignty can require data to remain in a particular region.
     - For more information, see [multi-region deployments](#multiregion-deployments).
 
-## Multiregion deployments
+## Multi-region deployments
 
-The Azure data lake account is created in multiple Azure regions when data residency rules and the requirement to have data close to a user base are met.
-It's recommended to create a data landing zone in one region and then replicate global data using AzCopy, Azure Data Factory or third-party products. Local data lives in-region while global data is replicated across multiple regions.
+When dictated by data residency rules or a requirement that you keep data close to a user base, you might need to create Azure Data Lake accounts in multiple Azure regions.
+To do this, create a data landing zone in one region, then replicate global data using AzCopy, Azure Data Factory or third-party products. Local data lives in-region, while global data gets replicated across multiple regions.
 
 ## Next steps
 
