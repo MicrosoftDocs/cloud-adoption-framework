@@ -1,5 +1,5 @@
 ---
-title: Overview of Azure Data Lake Storage for cloud-scale analytics
+title: Azure Data Lake Storage
 description: How to use Azure Data Lake Storage for cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
@@ -10,32 +10,31 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Overview of Azure data lake storage for cloud-scale analytics
+# Overview of Azure Data Lake Storage for cloud-scale analytics
 
-The Azure Data Lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts with in a single resource group for cloud-scale analytics. It is recommended to provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
+The Azure Data Lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts within a single resource group for cloud-scale analytics. We recommended provisioning three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
 
-Each storage account within a data landing zone stores data in one of the three transformation stages:
+Each storage account within your data landing zone stores data in one of three stages:
 
 - raw data
 - enriched and curated data
 - development data lakes
 
-With an automated data agnostic ingestion service, a [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account. For ingesting data from operational sources, if you don't implement data agnostics engine or facilitate complex connections, you can create a [source aligned data application](../architectures/data-application-source-aligned.md). This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
+A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account using an automated data agnostic ingestion service. You can create a [source aligned data application](../architectures/data-application-source-aligned.md) if you don't implement data agnostics engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
 
-Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protects data at the file and folder levels. The access control lists help enterprises implement tight security measures for authentication and authorization for data products to:
+Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protect data at the file and folder levels. Access control lists can help your organization implement tight security measures for authentication and authorization for data products to:
 
 - store data securely through encryption at rest
-- access controls for Azure Active Directory (AAD) users and security groups, through AAD integration
+- access controls for Azure Active Directory (AAD) users and security groups through AAD integration
 
 ## Data lake planning
 
-The key considerations that require planning for the size and complexity of each data lake are structure, governance, and security.
-The structure and organization of a data lake is dependent on the:
+When planning a data lake, always give appropriate consideration to structure, governance, and security. Multiple factors influence each data lake's structure and organization:
 
-- type of data
-- data transformation
-- data accessibility
-- data access patterns
+- the type of data stored
+- how its data is transformed
+- who accesses its data
+- what its typical access patterns are
 
 Consumers and producers are grouped based on the need for accessibility and data. It's good to plan implementation and access control governance across the data lake.
 
