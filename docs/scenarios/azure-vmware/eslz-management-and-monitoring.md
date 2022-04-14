@@ -18,33 +18,41 @@ You can achieve operational excellence when you design Azure VMware Solution wit
 
 Review the following considerations for platform management and monitoring of Azure VMware Solution.
 
-- Create alerts and dashboards on the metrics that are most important to your operations teams. See [Configure alerts for Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities) for available monitoring and alerting metrics.
+- Create alerts and dashboards on the metrics that are most important to your operations teams. See [Configure alerts for Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities) for available monitoring and alerting metrics.  An example monitoring dashboard is [available on GitHub](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Monitoring/AVS-Dashboard).
 
-- License VMware eco-system solutions like vRealize Operations Manager and vRealize Network Insight. These solutions provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T distributed firewall. *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution . Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported.
+- Consider continuing to use VMware solutions like vRealize Operations Manager and vRealize Network Insights to provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T distributed firewall. *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution . Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported.  SNMP Traps are not supported.
+
+- While Microsoft monitors the health of vSAN, it is possible to utilize vCenter to query and monitor the performance of vSAN.  Performance metrics can be viewed from a VM or backend perspective, showing average latency, IOPS, throughput, and outstanding IO through vCenter.
+
+- vCenter logs can be sent to a Storage Account or Event Hub using the Diagnostic Settings within the Private Cloud resource in Azure.  This is not directly configurable within vCenter, only cia the Private Cloud resource in Azure.  This is raw syslog, so consider retention and downstream processing before enabling.
 
 - In-guest memory collection isn't supported by vRealize Operations using VMware tools. Active and consumed memory use will continue to work.
 
-- vSAN storage is a finite resource, so you need to manage vSAN capacity. Use vSAN storage for guest virtual machine (VM) workloads only. Examine the following design considerations to help reduce unnecessary storage on vSAN.
+- vSAN storage is a finite resource that needs to be managed to maintain availability and performance. Use vSAN storage for guest virtual machine (VM) workloads only. Review the following design considerations to reduce unnecessary storage use on vSAN.
 
   - [Configure content libraries on Azure Blob Storage](https://avs.ms/centralized-avs-content-library-on-azure-blob/) to move VM template storage off of vSAN.
   - Store backups on an Azure virtual machine, either with [Microsoft tooling](/azure/azure-vmware/set-up-backup-server-for-azure-vmware-solution) or choose a [partner vendor](/azure/azure-vmware/ecosystem-back-up-vms).
 
 - Azure VMware Solution uses a local identity provider. After deployment, use a single administrative user account for the initial Azure VMware Solution configurations. Integrating Azure VMware Solution with [Active Directory](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-B23B1360-8838-4FF2-B074-71643C4CB040.html) enables traceability of actions to users. Review guidance from the identity portion <!-- link to CDA for identity after finalized --> of the enterprise-scale landing zone documentation.
 
+- The Activity Log provides an immutable reference of operations performed within Azure.  These operations inlcude creation, updates, deletion, and special operations like listing credentials or keys.  As an exmaple, Azure VMware SOlution will emit a 'List PrivateClouds AdminCredentials' whenever someone visits the 'Identity' tab within the Azure portal or programmatically requiests CloudAdmin credentials.  Alert rules can be configured to send notifications when specific activities are logged.
+
 ## Design recommendations
 
 Review the following recommendations for platform management and monitoring of Azure VMware Solution.
 
-- Conduct baseline performance monitoring of Azure VMware Solution infrastructure through the [Azure portal](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities).
+- Configure Azure Service Health to send alerts for service issues, planned maintenance, and other events that may impact Azure VMware Solution and other services.  These notifications are sent to Action Groups, which can be used to send email, SMS, push notifications, and voice calls to addresses of your choice.  Actions can also trigger Azure and 3rd party systems, including Azure Functions, Logc Apps, Automation Runbooks, Event Hubs, and Webhooks.
 
-- Set the following alerts when the cluster is nearing capacity for disk, CPU, or RAM:
+- Conduct baseline performance monitoring of Azure VMware Solution infrastructure through [Azure Monitor - Metrics](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities).  These metrics can be queried and filtered from the Azure Portal, queried via REST API, or directed to Log Analytics, Azure Storage, Event Hubs, or [Partner Integrations](https://docs.microsoft.com/en-us/azure/azure-monitor/partners).
 
-    | Metric  | Alert  |
-    |---------|---------|
-    | Monitor and alert on vSAN % datastore disk used   | >70% warning  |
-    | Monitor and alert on vSAN % datastore disk used   | >75% critical |
-    | Monitor and alert on % CPU | >80% warning |
-    | Monitor and alert on average memory usage | >80% warning |
+- Configure the following alerts when the Azure VMware Solution cluster is nearing key threshholds for disk, CPU, or RAM:
+
+    | Metric                                    | Alert         |
+    |-------------------------------------------|---------------|
+    | Disk - Percentage Datastore Disk Used (%) | >70% warning  |
+    | Disk - Percentage Datastore Disk Used (%) | >75% critical |
+    | CPU - Percentage CPU (%)                  | >80% warning  |
+    | Memory - Average Memory Usage (%)         | >80% warning  |
 
 - For service-level agreement (SLA) purposes, Azure VMware Solution requires that the cluster keep slack space of 25 percent available on vSAN.
 
@@ -61,7 +69,11 @@ Review the following recommendations for platform management and monitoring of A
 
 Review the following recommendations for guest management and monitoring of workloads running in Azure VMware Solution.
 
-- During workload migration, it might make sense to manage and monitor Azure VMware Solution workloads like on-premises workloads. After migration, consider using an [Azure Arc](/azure/azure-arc/servers/overview) server to enable management and monitoring of Azure VMware Solution hosted workloads with Azure native solutions.
+- Virtual Machines within Azure VMware Solution are treated the same as on-premises VMware virtual machines by default.  This allows you to continue using existing VM-level monitoring within AVS via existing agents
+
+- During workload migration, this model of "monitor-as-on-premises" minimizes change during migration. After migration, consider using an [Azure Arc](/azure/azure-arc/servers/overview) server to enable management and monitoring of Azure VMware Solution hosted workloads with Azure native solutions.
+
+- Azure VMware Solution Virtual Machines won't show up in the Azure Portal unless Azure Arc for Servers is deployed to them.  Azure Arc for Servers allows for an agent-based approach to VM management & monitoring from the Azure control plane.  This allows you to apply Azure Policy guest configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest Virtual Machines.
 
 - Azure VMware Solution implements a default storage policy with thick provisioning enabled. For efficient use of vSAN capacity, evaluate using thin provisioning for VMs. The risk factor is low if you adopt the monitoring methodology above for vSAN datastore capacity alerting.
 
@@ -69,13 +81,13 @@ Review the following recommendations for guest management and monitoring of work
 
 - Configure guest monitoring for VMs running in Azure VMware Solution by following the [hybrid guidance](/azure/azure-monitor/vm/monitor-virtual-machine) for Windows and Linux. Configure both Windows and Linux this way for the following Azure integrations:
 
-    |Integration | Description  |
-    |---------|---------|
-    | [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) | Primary tool for aggregating, querying, and interactively analyzing logs generated by Azure resources. |
+    | Integration                                                                         | Description                                                                                                                                                                                                                                                                  |
+    |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)                   | Primary tool for aggregating, querying, and interactively analyzing logs generated by Azure resources.                                                                                                                                                                       |
     | [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) | Unified infrastructure security management system that strengthens security posture by providing advanced threat protection across hybrid and Azure resources. Assessments continually run and vulnerabilities of the Azure VMware Solution VMs report to the Azure service. |
-    | [Microsoft Sentinel](/azure/sentinel/overview) | Cloud-native security information and event management solution. This Azure resource provides security analytics, alert detection, and automated threat response across on-premises and cloud environments. |
-    | [Azure Update Management](/azure/automation/update-management/overview) |  Manages operating system updates for Windows and Linux machines on-premises and in cloud environments. |
-    | [Azure Monitor](/azure/azure-monitor/overview) | Comprehensive monitoring solution for collecting, analyzing, and acting upon telemetry from cloud and on-premises environments. |
+    | [Microsoft Sentinel](/azure/sentinel/overview)                                      | Cloud-native security information and event management solution. This Azure resource provides security analytics, alert detection, and automated threat response across on-premises and cloud environments.                                                                  |
+    | [Azure Update Management](/azure/automation/update-management/overview)             | Manages operating system updates for Windows and Linux machines on-premises and in cloud environments.                                                                                                                                                                       |
+    | [Azure Monitor](/azure/azure-monitor/overview)                                      | Comprehensive monitoring solution for collecting, analyzing, and acting upon telemetry from cloud and on-premises environments.                                                                                                                                              |
 
 ## Other considerations
 
