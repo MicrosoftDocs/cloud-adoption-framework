@@ -74,7 +74,7 @@ Consider the following factors when deciding between a consolidated or three sto
     - Globally distributed consumers or processes on the lake are sensitive to latency caused by geographic distances.
     - Storing data locally is a good practice.
     - Regulatory constraints and data sovereignty can require data to remain in a particular region.
-    - For more information, see [multi-region deployments](#multiregion-deployments).
+    - For more information, see [multi-region deployments](#multi-region-deployments).
 
 ## Multi-region deployments
 
