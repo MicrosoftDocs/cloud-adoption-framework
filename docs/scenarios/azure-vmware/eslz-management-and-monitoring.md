@@ -24,7 +24,7 @@ Review the following considerations for platform management and monitoring of Az
 
 - While Microsoft monitors the health of vSAN, it is possible to utilize vCenter to query and monitor the performance of vSAN.  Performance metrics can be viewed from a VM or backend perspective, showing average latency, IOPS, throughput, and outstanding IO through vCenter.
 
-- vCenter logs can be sent to a Storage Account or Event Hub using the Diagnostic Settings within the Private Cloud resource in Azure.  This is not directly configurable within vCenter, only cia the Private Cloud resource in Azure.  This is raw syslog, so consider retention and downstream processing before enabling.
+- vCenter logs can be sent to a Storage Account or Event Hub using the Diagnostic Settings within the Private Cloud resource in Azure.  This is not directly configurable within vCenter, only via the Private Cloud resource in Azure.  This is raw syslog, so consider retention and downstream processing before enabling.
 
 - In-guest memory collection isn't supported by vRealize Operations using VMware tools. Active and consumed memory use will continue to work.
 
