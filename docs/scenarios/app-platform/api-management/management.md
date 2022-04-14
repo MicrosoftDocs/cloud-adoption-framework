@@ -25,41 +25,41 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 ### Design considerations
 
 - Be aware of maximum [throughput limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#api-management-limits) of each API Management service tier. These limits are approximate and not guaranteed.
-- Be aware of the maximum number of [scale units](https://azure.microsoft.com/pricing/details/api-management/) per API Management service tier
-- Be aware of the time required to scale-out, deploy into another region, or convert to a different service tier
-- API Management does not scale-out automatically. Additional configuration is required for [autoscale](azure/api-management/api-management-howto-autoscale).
-- There is no downtime during a scale-out event
+- Be aware of the maximum number of [scale units](https://azure.microsoft.com/pricing/details/api-management/) per API Management service tier.
+- Be aware of the time required to scale out, deploy tp another region, or convert to a different service tier.
+- API Management doesn't scale out automatically. [Additional configuration](/azure/api-management/api-management-howto-autoscale) is required.
+- There is no downtime during a scale-out event.
 - Only the gateway component of API Management is deployed to all regions in a [multi-region deployment](/azure/api-management/api-management-howto-deploy-multi-region). 
 - Be aware of the possible performance impact of [Application Insights logging](/azure/api-management/api-management-howto-app-insights) at high loads.
-- Be aware of the number of inbound and outbound policies applied and their impact to performance
+- Be aware of the number of inbound and outbound policies applied and their impact to performance.
 - API Management policies are code and should be under version control
 - API Management's [built-in cache](/azure/api-management/api-management-howto-cache) is shared by all units in the same region in the same API Management service.
-- Utilize [availability zones](/azure/api-management/zone-redundancy). The number of scale units selected must distribute evenly across the zones
+- Use [availability zones](/azure/api-management/zone-redundancy). The number of scale units selected must distribute evenly across the zones.
 - If using a [self-hosted gateway](/azure/api-management/self-hosted-gateway-overview), be aware that credentials expire every 30 days and must be rotated. 
 - The URI `/status-0123456789abcdef` can be used as a common health endpoint for the API Management service.
-- The API Management service is not a WAF. Deploy a WAF such as Azure Application Gateway in front to add additional layers of protection
-- Client certificate negotiation is enabled in a per-gateway configuration 
+- The API Management service is not a WAF. Deploy a WAF such as Azure Application Gateway in front to add additional layers of protection.
+- Client certificate negotiation is enabled in a per-gateway configuration.
 - Certificates and secrets in Key Vault are updated within 4 hours after being set. You can also manually refresh the secret using the Azure portal or via the management REST API.
 - [Custom domains](/azure/api-management/configure-custom-domain) can be applied to all endpoints or just a subset. The Premium tier supports setting multiple host names for the Gateway endpoint.
-- API Management can be [backed up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore) using its management REST API. Backups expire after 30 days. Be aware of what API Management does not back up.
+- API Management can be [backed up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore) using its management REST API. Backups expire after 30 days. Be aware of what API Management doesn't back up.
 - [Named values](/azure/api-management/api-management-howto-properties) are global in scope.
 - API operations can be grouped into [products](/azure/api-management/api-management-howto-add-products) and [subscriptions](/azure/api-management/api-management-subscriptions). Base the design on actual business requirements.
 
 ### Design recommendations
 
-- Apply custom domains to the gateway endpoint only
-- Use [Event Hub policy](/azure/api-management/api-management-howto-log-event-hubs) for logging at high performance levels 
-- Use an [external cache](/azure/api-management/api-management-howto-cache-external) for control and fastest performance 
-- Deploy at least two scale units spread over two availabilit zones per region for best availability and performance 
-- Utilize Azure Monitor to [autoscale](/azure/api-management/api-management-howto-autoscale) API Management. If using a self-hosted gateway, use Kubernetes horizonal pod autoscaler to scale out the gateway.
-- Deploy self-hosted gateways where Azure does not have a region close to the back-end APIs
-- Utilize Key Vault for Certificate storage, notification, and rotation
-- Do not enable 3DES, TLS1.1, or lower encryption protocols unless absolutely required. 
-- Utilize DevOps and infrastructure-as-code practices to handle all deployments, updates, and disaster recovery. 
-- Create an API revision and change log entry for every API update.  
-- Utilize [backends](/azure/api-management/backends) to eliminate redundant API backend configurations.
-- Utilize [named values](/azure/api-management/api-management-howto-properties) to store common values that can be used in policies.
-- Utilize Key Vault to store secrets that named values can reference.
+- Apply custom domains to the gateway endpoint only.
+- Use [Event Hub policy](/azure/api-management/api-management-howto-log-event-hubs) for logging at high performance levels.
+- Use an [external cache](/azure/api-management/api-management-howto-cache-external) for control and fastest performance.
+- Deploy at least two scale units spread over two availability zones per region for best availability and performance.
+- Use Azure Monitor to [autoscale](/azure/api-management/api-management-howto-autoscale) API Management. If using a self-hosted gateway, use Kubernetes horizontal pod autoscaler to scale out the gateway.
+- Deploy self-hosted gateways where Azure doesn't have a region close to the backend APIs.
+- Use Key Vault for certificate storage, notification, and rotation.
+- Do not enable 3DES, TLS 1.1, or lower encryption protocols unless absolutely required. 
+- Use DevOps and infrastructure-as-code practices to handle all deployments, updates, and disaster recovery. 
+- Create an API [revision](/azure/api-management/api-management-revisions) and change log entry for every API update.  
+- Use [backends](/azure/api-management/backends) to eliminate redundant API backend configurations.
+- Use [named values](/azure/api-management/api-management-howto-properties) to store common values that can be used in policies.
+- Use Key Vault to store secrets that named values can reference.
 - Secrets updated in the key vault are automatically rotated in API Management
 - Develop a communication strategy to notify users of breaking API version updates.
 - Configure [diagnostic settings](/azure/api-management/api-management-howto-use-azure-monitor#resource-logs) to forward AllMetrics and AllLogs to Log Analytics workspace.
@@ -76,7 +76,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
   - A multiregion deployment requires a DNS-based load balancer such as Traffic manager to fail over.
 - API Management can be [backed up using its Management REST API](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#calling-the-backup-and-restore-operations). 
   * Backups expire after 30 days. 
-  * Be aware of [what APIM does not back up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#what-is-not-backed-up)
+  * Be aware of [what APIM doesn't back up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#what-is-not-backed-up)
 
 ### Design recommendations
 

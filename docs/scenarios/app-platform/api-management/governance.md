@@ -12,7 +12,9 @@ ms.custom: internal
 
 # Governance considerations for API Management landing zone accelerator
 
-Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
+This article provides design considerations and recommendations for governance when using the API Management landing zone accelerator. Azure governance establishes the tooling needed to support cloud governance, compliance auditing, and automated guardrails.
+
+Learn more about the [Azure governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) design area.
 
 ## Design considerations
 
@@ -25,6 +27,6 @@ Intro paragraph. Disclose any required dependency on ESLZ design area or other A
 ## Design recommendations
 
 - Use Azure built-in roles to provide least privilege permissions to manage the API Management service.
-- Configure [diagnostics settings](azure/api-management/api-management-howto-use-azure-monitor) within API Management to output logs and metrics to Azure Monitor.
+- Configure [diagnostics settings](/azure/api-management/api-management-howto-use-azure-monitor) within API Management to output logs and metrics to Azure Monitor.
 - Implement an [error handling policy](/azure/api-management/api-management-error-handling-policies) at the global level.
-- All API Management policies should include a [`<base/>` element](azure/api-management/set-edit-policies#use-base-element-to-set-policy-evaluation-order).
+- All API Management policies should include a [`<base/>` element](/azure/api-management/set-edit-policies#use-base-element-to-set-policy-evaluation-order).

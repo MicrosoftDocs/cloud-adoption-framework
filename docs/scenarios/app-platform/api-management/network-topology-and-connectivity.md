@@ -31,14 +31,14 @@ Learn more about the [Network topology and connectivity](/azure/cloud-adoption-f
 
 - Use [Application Gateway](/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway) for external access to API Management when the instance deployed in a VNet in internal mode. 
 - Use Azure Front Door for multi-region deployment 
-- Ensure [required ports](/azure/api-management/virtual-network-reference) (such as `80`, `443`) are open between the calling client and the backend API Manaagement gateway
+- Ensure [required ports](/azure/api-management/virtual-network-reference) (such as `80`, `443`) are open between the calling client and the backend API Management gateway
 - Deploy the gateway in a VNet to allow access to backend services in the network
 - VNet peering supports high performance in a region but has a scalability limit of 500 networks. If you require more workloads to be connected, use [hub spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) or PLE.
-- When a VNet is used in internal mode, make it easy for consumers to onboard (connect) to you API Management platform. Provide an open network path (through upstream hub or network security group setup) to remove friction when connecting to API Management.
+- When a VNet is used in internal mode, make it easy for consumers to onboard (connect) to your API Management platform. Provide an open network path (through upstream hub or network security group setup) to remove friction when connecting to API Management.
 
 ## Enterprise-scale assumptions
 
 The following are assumptions that went into the development of the landing zone accelerator for API Management:
 
-- Deployment of the API Management instance in a dedicated VNet subnet in internal mode
+- Deployment of the API Management instance in a dedicated VNet subnet in internal mode.
 - External access to API Management using Azure Application Gateway.

@@ -12,9 +12,9 @@ ms.custom: internal
 
 # Identity and access management considerations for API Management landing zone accelerator
 
-This article provides design considerations and recommendations for identity and access management when using the API Management landing zone accelerator. Identity and access management covers multiple aspects including access to manage the API Management instance, API developer access, and client access to APIs .
+This article provides design considerations and recommendations for identity and access management when using the API Management landing zone accelerator. Identity and access management covers multiple aspects including access to manage the API Management instance, API developer access, and client access to APIs.
 
-Learn more about the [identity and access management](azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) design area.
+Learn more about the [identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) design area.
 
 ## Design considerations
 

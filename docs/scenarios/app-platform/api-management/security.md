@@ -19,7 +19,7 @@ Learn more about the [security](/azure/cloud-adoption-framework/ready/landing-zo
 ## Design considerations
 
 - Consider how you want to secure your frontend APIs beyond using [subscription keys](/azure/api-management/api-management-howto-create-subscriptions), [OAuth 2.0](/azure/api-management/api-management-howto-protect-backend-with-aad), OpenID Connect, and [mutual TLS](/azure/api-management/api-management-howto-mutual-certificates-for-clients) are common options with built-in support.
-- Think about how you want to protect your backend services behind API Management. [Client certificates](s/azure/api-management/api-management-howto-mutual-certificates) and [OAuth 2.0](/azure/api-management/api-management-howto-protect-backend-with-aad) are two supported options.
+- Think about how you want to protect your backend services behind API Management. [Client certificates](/azure/api-management/api-management-howto-mutual-certificates) and [OAuth 2.0](/azure/api-management/api-management-howto-protect-backend-with-aad) are two supported options.
 - Consider which client and backend [protocols and ciphers](/azure/api-management/api-management-howto-manage-protocols-ciphers) are required to meet your security requirements.
 - Consider API Management [validation policies](/azure/api-management/validation-policies) to validate REST or SOAP API requests and responses against schemas defined in the API definition or supplementary schemas. These policies are not a replacement for a Web Application Firewall but can provide additional protection against some threats.
 
@@ -35,7 +35,7 @@ Learn more about the [security](/azure/cloud-adoption-framework/ready/landing-zo
 - APIs should only be accessible over HTTPS to protect data in-transit and ensure its integrity.
 - Use the latest TLS version when encrypting information in transit. Disable outdated and unnecessary protocols and ciphers when possible.
 
-## ## Enterprise scale assumptions
+## Enterprise scale assumptions
 
 The following are assumptions that went into the development of the landing zone accelerator for API Management:
 
