@@ -3,7 +3,7 @@ title: Azure Landing Zones Terraform module
 description: Learn how to use the Azure landing zones Terraform module to deploy Azure landing zones.
 author: krowlandson
 ms.author: brblanch
-ms.date: 10/28/2021
+ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
