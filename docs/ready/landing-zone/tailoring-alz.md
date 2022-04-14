@@ -89,7 +89,7 @@ The customer can then place new or move existing Azure subscriptions into the ne
 
 Some customers might also wish to tailor the area highlighted in orange, beneath the 'platform' management group. These are referred to as platform landing zones.
 
-For example, a customer might have a dedicated SOC team that require their own archetype to host their workloads that need to meet a different set of Azure Policy and RBAC assignment requirements than what the 'management' management group does. Therefore the customer can create a new 'security' management group beneath the 'platform' management group and make the required Azure Policy and RBAC assignments to it and then place new or move existing Azure subscriptions into the new 'security' management group to make it inherit the required additional policies; forming the new archetype.
+For example, a customer might have a dedicated SOC team that requires their own archetype to host their workloads that need to meet a different set of Azure Policy and RBAC assignment requirements than what the 'management' management group does. Therefore the customer can create a new 'security' management group beneath the 'platform' management group and make the required Azure Policy and RBAC assignments to it and then place new or move existing Azure subscriptions into the new 'security' management group to make it inherit the required additional policies; forming the new archetype.
 
 ### Example of a tailored Azure landing zone hierarchy
 
