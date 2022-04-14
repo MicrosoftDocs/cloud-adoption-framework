@@ -59,8 +59,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 - Create an API [revision](/azure/api-management/api-management-revisions) and change log entry for every API update.  
 - Use [backends](/azure/api-management/backends) to eliminate redundant API backend configurations.
 - Use [named values](/azure/api-management/api-management-howto-properties) to store common values that can be used in policies.
-- Use Key Vault to store secrets that named values can reference.
-- Secrets updated in the key vault are automatically rotated in API Management
+- Use Key Vault to store secrets that named values can reference. Secrets updated in the key vault are automatically rotated in API Management
 - Develop a communication strategy to notify users of breaking API version updates.
 - Configure [diagnostic settings](/azure/api-management/api-management-howto-use-azure-monitor#resource-logs) to forward AllMetrics and AllLogs to Log Analytics workspace.
 
@@ -69,7 +68,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 ### Design considerations
 
 
-- Determine the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for the API Management instances that we want to protect and the value chains they support (consumers and providers). Consider the feasibility of deploying fresh instances or having a hot/cold standby.
+- Determine the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for the API Management instances that you want to protect and the value chains they support (consumers and providers). Consider the feasibility of deploying fresh instances or having a hot/cold standby.
 - API Management supports [multizone](/azure/api-management/zone-redundancy) and [multiregion](/azure/api-management/api-management-howto-deploy-multi-region) deployments. Based on the requirements, you could enable just one or both.
 - Failover can be automated:
   - A multizone deployment automatically fails over
@@ -88,5 +87,5 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 
 The following are assumptions that went into the development of the landing zone accelerator for API Management:
 
-- A Premium tier instance of API Management that supports availability zones and multiregion deployments is included in the reference implementation.
-- DevOps pipelines are used to managed and deploy infrastructure as code.
+- A Premium tier instance of API Management that supports availability zones and multiregion deployments is recommended.
+- DevOps pipelines are used to manage and deploy infrastructure as code.
