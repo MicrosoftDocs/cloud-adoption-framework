@@ -411,6 +411,8 @@ items:
         items:
         - name: Choose a landing zone option
           href: ready/landing-zone/choose-landing-zone-option.md
+        - name: Tailoring the Azure landing zones architecture
+          href: ready/landing-zone/tailoring-alz.md
         - name: Start with enterprise scale
           items:
           - name: Overview
