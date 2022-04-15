@@ -12,29 +12,29 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of Azure Data Lake Storage for cloud-scale analytics
 
-The Azure Data Lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts within a single resource group for cloud-scale analytics. We recommended provisioning three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
+The Azure Data Lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts within a single resource group for cloud-scale analytics. We recommend provisioning three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
 
 Each storage account within your data landing zone stores data in one of three stages:
 
-- raw data
-- enriched and curated data
-- development data lakes
+- Raw data
+- Enriched and curated data
+- Development data lakes
 
 A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account using an automated data agnostic ingestion service. You can create a [source aligned data application](../architectures/data-application-source-aligned.md) if you don't implement data agnostics engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
 
 Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protect data at the file and folder levels. Access control lists can help your organization implement tight security measures for authentication and authorization for data products to:
 
-- store data securely through encryption at rest
-- access controls for Azure Active Directory (AAD) users and security groups through AAD integration
+- Store data securely through encryption at rest.
+- Access controls for Azure Active Directory (Azure AD) users and security groups through Azure AD integration.
 
 ## Data lake planning
 
-When planning a data lake, always give appropriate consideration to structure, governance, and security. Multiple factors influence each data lake's structure and organization:
+When you plan a data lake, always consider appropriate consideration to structure, governance, and security. Multiple factors influence each data lake's structure and organization:
 
-- the type of data stored
-- how its data is transformed
-- who accesses its data
-- what its typical access patterns are
+- The type of data stored
+- How its data is transformed
+- Who accesses its data
+- What its typical access patterns are
 
 Group consumers and producers based on their data access needs. It's a good idea to plan implementation and access control governance across your data lake.
 
@@ -69,7 +69,7 @@ Consider the following factors when deciding between a consolidated or three sto
     - Create multiple storage accounts, but not unwanted silos.
     - Avoid duplicate data projects from lack of visibility or knowledge-sharing across your organization.
     - Ensure that you have good data governance, project tracking tools, and a data catalog in place.
-- Interaction of data processing tools and technologies with data across multiple lakes based on the configured permissions.
+- Interaction of data processing tools and technologies with data across multiple lakes based on the configured permissions
 - Regional versus global lakes
     - Globally distributed consumers or processes on the lake are sensitive to latency caused by geographic distances.
     - Storing data locally is a good practice.
