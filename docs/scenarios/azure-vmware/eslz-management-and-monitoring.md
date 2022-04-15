@@ -14,8 +14,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 You can achieve operational excellence when you design Azure VMware Solution with management and monitoring in mind. VMware is a critical platform. As a result, you should also include guidance in the enterprise-scale design areas in your planning phase. Guidance is available in the Azure enterprise-scale landing zone for management and monitoring [documentation](../../ready/landing-zone/design-area/management.md).
 
-## ** TODO **
- - Add collateral around the shared responsiblity matrix.
+As you plan out your management and monitoring environment for Azure VMware Solution, it's critical to understand the [Azure VMware Solution shared responsiblity matrix](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/manage), which shows what components Microsoft is responsible for and what components you are responsible for managing and monitoring.  Microsoft abstracts much of the ongoing maintenance, security, and management, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
 
 ## Platform management and monitoring
 
