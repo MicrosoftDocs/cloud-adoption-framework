@@ -139,7 +139,7 @@ items:
       - name: Master data management in data mesh
         href: ./architectures/data-mesh-master-data-management.md
       - name: Getting started checklist
-        href: ./architectures/data-mesh-checklist.md
+        href: ../cloud-scale-analytics/architectures/data-mesh-checklist.md
 
     - name: Reference architectures
       items:
