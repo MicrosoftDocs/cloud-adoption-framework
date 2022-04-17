@@ -501,6 +501,20 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/scenarios/data-management/eslz-provision-platform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/manage-provision-platform",
+         "redirect_document_id": false
+      },
+
+
+
+
+
+
+
+
+
+      {
          "source_path": "docs/scenarios/data-management/eslz-deployment-templates.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/architectures/deployment-templates",
          "redirect_document_id": false

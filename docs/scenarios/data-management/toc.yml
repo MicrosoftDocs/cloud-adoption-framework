@@ -93,7 +93,7 @@ items:
     - name: Platform automation
       href: ../cloud-scale-analytics/manage-platform-automation-and-devops.md
     - name: Provision the platform
-      href: ./manage-provision-platform.md
+      href: ../cloud-scale-analytics/manage-provision-platform.md
     - name: Observability
       href: ../cloud-scale-analytics/manage-observability.md
 
