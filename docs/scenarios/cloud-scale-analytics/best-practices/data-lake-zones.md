@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 It's important to plan your data structure before you land it into a data lake. Having a plan helps you use security, partitioning, and processing effectively. 
 
-[Overview of Azure Data Lake Storage for cloud-scale analytics](data-lake-overview.md) outlines a starting point for data lakes.
+[Overview of Azure Data Lake Storage for cloud-scale analytics](../../data-management/best-practices/data-lake-overview.md) outlines a starting point for data lakes.
 
 ## Overview
 
@@ -36,7 +36,7 @@ In the previous table, you can find the standard number of containers we recomme
 >
 > Depending on your requirements, you might want to consolidate raw, enriched and curated layers into one storage account, and keep another storage account named "development" for data consumers to bring other useful data products.
 >
->For more information on separating data lake accounts, see [Storage accounts in a logical data lake](data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
+>For more information on separating data lake accounts, see [Storage accounts in a logical data lake](../../data-management/best-practices/data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
 
 Azure storage should be enabled with the [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace), which allows you to efficiently manage files. The hierarchical name space feature helps you organize objects and files within an account into a hierarchy of directories and nested subdirectories. This hierarchy is organized the same way as the file system on your computer.
 
@@ -52,7 +52,7 @@ Your standardized container needs a general folder for *confidential or below* d
 
 A combination of access control lists (ACLs) and Azure Active Directory (Azure AD) groups restrict data access. These lists and groups control what other groups can and can't access. Data owners and data application teams can approve or reject access to their data assets.
 
-For more information, see [Data access management](../security-provisioning.md) and [Restricted data](../secure-data-privacy.md#restricted-data).
+For more information, see [Data access management](../../data-management/security-provisioning.md) and [Restricted data](../../data-management/secure-data-privacy.md#restricted-data).
 
 > [!WARNING]
 > Some software products do not support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and development layers should contain a single folder that then branches off to multiple folders. Set up your folder permissions carefully. When a new folder is created from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) does not have a default ACL.
@@ -150,7 +150,7 @@ As part of this first stage data is converted into the delta lake format and lan
 ```
 
 > [!TIP]
-> Think about scenarios where you might need to rebuild an analytics platform from scratch, and always consider the most granular data you'd need to rebuild downstream read data stores. Make sure you have a [business continuity and disaster recovery](../eslz-business-continuity-and-disaster-recovery.md) plan in place for your key components.
+> Think about scenarios where you might need to rebuild an analytics platform from scratch, and always consider the most granular data you'd need to rebuild downstream read data stores. Make sure you have a [business continuity and disaster recovery](../../data-management/eslz-business-continuity-and-disaster-recovery.md) plan in place for your key components.
 
 ## Enriched layer or data lake two
 
@@ -185,7 +185,7 @@ Your standardization container holds systems of record and masters. Folders are 
 
 The following diagram shows the flow of data lakes and containers from source data to a standardized container.
 
-:::image type="content" source="../images/data-flow-high-level.png" alt-text="High level data flow" lightbox="../images/data-flow-high-level.png":::
+:::image type="content" source="../media/data-flow-high-level.png" alt-text="High level data flow" lightbox="../media/data-flow-high-level.png":::
 
 ## Curated layer or data lake two
 
@@ -235,8 +235,8 @@ Sometimes these data products mature, and your enterprise should consider how to
 
 The following diagram joins this article's sections together and shows how data flows through to a data products and analytic sandbox.
 
-:::image type="content" source="../images/data-flow-data-products.png" alt-text="Data flow into product container and analytics sandbox" lightbox="../images/data-flow-data-products.png":::
+:::image type="content" source="../media/data-flow-data-products.png" alt-text="Data flow into product container and analytics sandbox" lightbox="../media/data-flow-data-products.png":::
 
 ## Next steps
 
-- [Key considerations for Azure Data Lake Storage](./data-lake-key-considerations.md)
+- [Key considerations for Azure Data Lake Storage](../../data-management/best-practices/data-lake-key-considerations.md)

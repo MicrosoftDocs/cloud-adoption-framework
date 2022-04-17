@@ -21,7 +21,7 @@ Multi-region deployments generally have a connectivity hub subscription in each 
 - VPN Gateways
 - Hub Virtual Networks (in a hub and spoke architecture) or vWAN Hubs (in a vWan setup)
 
-:::image type="content" source="./images/cross-region-connectivity.png" alt-text="Cross-region Connectivity":::
+:::image type="content" source="./media/cross-region-connectivity.png" alt-text="Cross-region Connectivity":::
 *Figure 1: Cross-region Connectivity.*
 
 In hub-spoke-spoke-hub architecture, connectivity hubs' virtual networks are often connected using Global VNet Peering. For larger environments, a common alternative is to use ExpressRoute Global Reach. Whichever connectivity option you choose, you can achieve global routing and connectivity between spoke networks across multiple geographies. This means you can move data across regions using network virtual appliances, network security groups, and Route Tables, given that your traffic doesn't get blocked in either connectivity subscription.
@@ -36,7 +36,7 @@ You can connect data landing zones across regions using direct Global VNet Peeri
 
 There are no particular pros or cons for either of the proposed cross-region data landing zone connectivity options.
 
-Summary: :::image type="icon" source="./images/plusicon.png":::/:::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png":::/:::image type="icon" source="./media/minus-icon.png":::
 
 ### Service management in Global VNet Peering
 
@@ -50,7 +50,7 @@ In some scenarios, you need to limit due to regulatory or legal implications. Fo
 
 This solution approach doesn't impact bandwidth and latency, and allows customers to remain compliant while still combining datasets from multiple regions. This option also has no impact on your DNS architecture and allows you to use an Azure-native solution based on Azure Private DNS Zones.
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Global VNet Peering cost
 
@@ -59,13 +59,13 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 
 With this network design, you're charged for your Private Endpoints (per hour) and all ingress and egress traffic sent through them. You also have to pay a [data transfer cost](https://azure.microsoft.com/pricing/details/bandwidth/) for traffic between regions. However, you'll NOT be charged any Global VNet Peering ingress and egress cost. Because of this, the Global VNet Peering option has noteworthy cost benefits the traditional spoke-hub-hub-spoke option described later in this article.
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Bandwidth and latency in Global VNet Peering
 
 Impact on bandwidth and latency is much lower in Global VNet Peering than in the traditional spoke-hub-hub-spoke option. Global VNet Peering contains a lower number of hops for cross-region data landing zone data exchange and has no network virtual appliances limiting throughput. The only things dictating the bandwidth and latency you can achieve for cross-region traffic are the physical limits of our datacenters (speed of fiber-optic cables, gateways and routers).
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Global VNet Peering summary
 
@@ -79,7 +79,7 @@ Your other option for cross-region data transfers is the traditional spoke-hub-h
 
 There are no particular pros or cons for either of the proposed cross-region data landing zone connectivity options.
 
-Summary: :::image type="icon" source="./images/plusicon.png":::/:::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png":::/:::image type="icon" source="./media/minus-icon.png":::
 
 ### Service management in traditional spoke-hub-hub-spoke design
 
@@ -91,7 +91,7 @@ You should also note that in this option, connectivity hubs act as single points
 
 You should monitor the amount of data you need to transfer across regions while using this solution approach. Over time, this monitoring can involve gigabytes or terabytes of data moving through your central instances. Since the bandwidth of network virtual appliances is often limited to a one- or two-digit gigabyte throughput, the appliances can act as a critical bottleneck limiting the traffic flow between regions and the shareability of your data assets. Because of this, your shared network resources can require scaling mechanisms, which are often time consuming and costly, and can impact other workloads in your tenant.
 
-Summary: :::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png":::
 
 ### Traditional Spoke-Hub-Hub-Spoke design cost
 
@@ -102,13 +102,13 @@ In the traditional spoke-hub-hub-spoke design, you're charged your two storage a
 
 Your central network virtual appliances will also be a significant cost if you choose this network design. This is because you either have to purchase extra licenses to scale the appliances out based on demand or you have to pay the charge per processed gigabyte for them, as with Azure Firewall.
 
-Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png":::
 
 ### Bandwidth and latency in traditional spoke-hub-hub-spoke design
 
 This network design has serious bandwidth limitations. Your central network virtual appliances become critical bottlenecks as your platform grows, which limits cross-region data landing zone use cases and sharing of your datasets. It also makes it likely that multiple copies of your datasets get created over time. This design also heavily affects latency, which is especially critical for real-time analytics scenarios, since your data traverses many hops.
 
-Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png":::
 
 ### Summary traditional spoke-hub-hub-spoke design
 
@@ -121,4 +121,4 @@ The spoke-hub-hub-spoke design is well-known and established at many organizatio
 ## Next steps
 
 - [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md)
-- [Resource organization for cloud-scale analytics](eslz-resource-organization.md)
+- [Resource organization for cloud-scale analytics](../data-management/eslz-resource-organization.md)

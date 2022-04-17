@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 The data management landing zone, the data landing zones, and all the services within them are set up in the same region in a single-region setup. All landing zones are within the same connectivity hub subscription. This subscription hosts shared network resources, which can include a network virtual appliance (like Azure firewall), an ExpressRoute gateway, a virtual private network (VPN) gateway, a hub virtual network, or a virtual WAN (vWAN hub).
 
-:::image type="content" source="./images/single-region-connectivity.png" alt-text="Single Region Connectivity":::
+:::image type="content" source="../data-management/images/single-region-connectivity.png" alt-text="Single Region Connectivity":::
 *Figure 1: Single Region Connectivity.*
 
 Based on Azure Networking Services' current capabilities, we recommend you use a meshed network architecture. You should set up Vnet peering between:
@@ -54,7 +54,7 @@ In our example scenario, data loaded from Storage Account A transits a Vnet peer
 
 In this scenario, the data doesn't pass the Connectivity Hub. It stays within the Data Platform that consists of a data management landing zone and one or more data landing zones.
 
-:::image type="content" source="./images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture":::
+:::image type="content" source="../data-management/images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture":::
 *Figure 2: Meshed Network architecture.*
 
 ### User access management in meshed network architecture
@@ -66,7 +66,7 @@ In a meshed network architecture design, data application teams only require two
 
 In this design, data application teams can deploy Private Endpoints themselves. As long they have the necessary access rights to connect Private Endpoints to a subnet in a given spoke, your teams need no support when setting up the necessary connectivity.
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Service management in meshed network architecture
 
@@ -80,7 +80,7 @@ You can capture all of these logs at scale by using [Azure Policy definitions fo
 
 This design also allows you to create an Azure native DNS solution based on Private DNS Zones. You can automate the DNS A-record lifecycle through [Azure Policy definitions for private DNS groups](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups).
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Meshed network architecture cost
 
@@ -94,13 +94,13 @@ In this network design, you only pay for:
 
 Vnet peering won't be charged (2), which is why this option has minimal cost.
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Bandwidth and latency in a meshed network architecture
 
 This design has no known bandwidth or latency limitations because no network virtual appliances limit throughput for its cross-data landing zone data exchange. The design's only limiting factor is the physical limit of our datacenters (speed of fiber-optic cables).
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Meshed network architecture summary
 
@@ -112,7 +112,7 @@ If you need to enforce other network policies within the data platform, use Netw
 
 Hub and spoke network architecture design is the most obvious option, and one that many enterprises have adopted. In it, network transitivity gets set up in the Connectivity Hub to access data in Storage Account A from VM B. Data traverses two Vnet peerings ((2) and (5)) and a network virtual appliance hosted inside the Connectivity Hub ((3) and (4)). Then the data is loaded by the virtual machine (6) and stored back into the Storage Account B (8).
 
-:::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture":::
+:::image type="content" source="../data-management/images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture":::
 *Figure 3: Hub and spoke architecture.*
 
 ### User access management in traditional hub and spoke architecture
@@ -124,7 +124,7 @@ In a traditional hub and spoke design, data application teams only require two t
 
 In this design, data application teams can deploy Private Endpoints themselves. As long they have the necessary access rights to connect Private Endpoints to a subnet in a given spoke, your teams need no support when setting up the necessary connectivity.
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Service Management in traditional hub and spoke architecture
 
@@ -140,7 +140,7 @@ Over time, this can result in gigabytes or even terabytes of data being sent thr
 
 The only way to avoid this issue is to scale out your central network virtual appliance across multiple instances, which has major cost implications for this design.
 
-Summary: :::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png":::
 
 ### Traditional hub and spoke architecture cost
 
@@ -153,7 +153,7 @@ Your customer is charged for the ingress and egress of one Vnet peering (5). As 
 
 You'll end up with a high central network virtual appliance cost if using this network design ((3) and (4)). You have to either purchase extra licenses and scale the central network virtual appliance out based on demand or pay the charge processed per gigabyte as it's done with Azure Firewall.
 
-Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png":::
 
 ### Bandwidth and latency in traditional hub and spoke architecture
 
@@ -161,7 +161,7 @@ This network design has serious bandwidth limitations. The central network virtu
 
 This design also heavily affects latency, which becomes especially critical in real-time analytics scenarios.
 
-Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png":::
 
 ### Traditional hub and spoke architecture summary
 
@@ -173,7 +173,7 @@ Another design option is the projection of Private Endpoints across each and eve
 
 The same applies to Storage Account B, and potentially to other services inside the data landing zones. If we define the number of data landing zones as *n*, then we end up with *n* Private Endpoints for at least all the storage accounts and potentially other services within the data landing zones as well. This leads to an exponential increase in the number of Private Endpoints.
 
-:::image type="content" source="./images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection":::
+:::image type="content" source="../data-management/images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection":::
 *Figure 4: Private Endpoint projection architecture.*
 
 Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (such as `storageaccounta.privatelink.blob.core.windows.net`), this solution creates challenges in the DNS layer that can't be solved using Private DNS Zones. You instead need a custom DNS solution capable of resolving DNS names based on the origin/IP-address of the requestor. This allows you to make VM A connect to the Private Endpoints connected to the Vnet in data landing zone A, and to make VM B connect to the Private Endpoints connected to the Vnet in data landing zone B. You can do this with a Windows Servers-based setup, whereas you can automate the DNS A-records lifecycle through a combination of Activity Log and Azure Functions.
@@ -194,7 +194,7 @@ This network design increases complexity in your access management layer since y
 
 If data landing zone teams and data application teams aren't given necessary access rights, problems described in [traditional hub and spoke architecture (not recommended)](#traditional-hub-and-spoke-architecture-not-recommended) will occur.
 
-Summary: :::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png":::
 
 ### Service management in private endpoint projection architecture
 
@@ -206,7 +206,7 @@ The major concerns regarding this network architecture are its previously mentio
 
 You can create a distributed DNS infrastructure using Private DNS zones, but this creates DNS islands, which ultimately cause issues when you try to access private link services hosted in other landing zones within your tenant. Therefore, this design isn't a viable option.
 
-Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png":::
 
 ### Private endpoint projection architecture cost
 
@@ -215,13 +215,13 @@ Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="i
 
 In this network design, you're only charged for the Private Endpoints (per hour) and the ingress and egress traffic sent through those Private Endpoints to load raw datasets (1) and store processed datasets (4). However, extra costs must be expected because of the exponential increase in the number your data platform's Private Endpoints. Since you're charged per hour, the amount of extra cost highly depends on how many Private Endpoints are created.
 
-Summary: :::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png":::
 
 ### Bandwidth and latency in private endpoint projection architecture
 
 This design has no known bandwidth and latency limitations because it has no network virtual appliances limiting throughput for cross-data landing zone data exchange. The design's only limiting factor is the physical limit of our datacenters (speed of fiber-optic cables).
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Private Endpoint projection architecture summary
 
@@ -233,7 +233,7 @@ Another network option is to host Private Endpoints in your Connectivity Hub and
 
 Data traverses a single Vnet peering between the Connectivity Hub and data landing zone in order to load a dataset stored in Storage Account A in VM B. Once that dataset is loaded and processed ((3) and (4)), it traverses the same Vnet peering a second time (5) before finally getting stored in Storage Account B through the Private Endpoint connected to the Hub Vnet (6).
 
-:::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub":::
+:::image type="content" source="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub":::
 *Figure 5: Private Endpoints in Connectivity Hub architecture.*
 
 ### User access management in Connectivity Hub architecture
@@ -245,7 +245,7 @@ In this network design, your data landing zone teams and data application teams 
 
 Your Connectivity Hub is designated for your organization's Azure platform team and is dedicated for host your organization's necessary and shared network infrastructure (including firewalls, gateways, and network management tools). This network option makes that design inconsistent, because it doesn't follow access management principles from the Enterprise-Scale Landing Zone base principles. Therefore, most Azure platform teams won't approve this design option.
 
-Summary: :::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png"::::::image type="icon" source="./images/minusicon.png":::
+Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png":::
 
 ### Service management in Connectivity Hub architecture
 
@@ -255,7 +255,7 @@ With all resources hosted within a single subscription, traffic isn't inspected 
 
 This design also allows you to create an Azure native DNS solution based on Private DNS Zones, and allows you to automate the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Connectivity Hub architecture cost
 
@@ -264,13 +264,13 @@ Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="ic
 
 In this network design, you're only charged for your Private Endpoints (per hour) and ingress and egress traffic sent through those Private Endpoints to load a raw dataset (1) and store the processed dataset (6).
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 ### Bandwidth and latency in Connectivity Hub architecture
 
 This design has no known bandwidth and latency limitations because it has no network virtual appliances limiting throughput for cross-data landing zone data exchange. The design's only limiting factor is the physical limit of our datacenters (speed of fiber-optic cables).
 
-Summary: :::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png"::::::image type="icon" source="./images/plusicon.png":::
+Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
 #### Private Endpoints in Connectivity Hub architecture summary
 

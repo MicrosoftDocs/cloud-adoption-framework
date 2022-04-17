@@ -51,7 +51,7 @@ You can position all possible approaches for your data application environment w
 
 :::image type="content" source="../media/data-application-options-in-adlz.png" alt-text="Diagram showing the data-application-rg resource group from Data Applications Context and the shared-application-rg resource group from Core Services Context." lightbox="../media/data-application-options-in-adlz.png":::
 
-You can find three different data application pattern templates for Azure data landing zones in [Cloud-scale analytics data products in Azure - Sample data applications](../architectures/data-landing-zone-data-products.md#sample-data-applications).
+You can find three different data application pattern templates for Azure data landing zones in [Cloud-scale analytics data products in Azure - Sample data applications](../../data-management/architectures/data-landing-zone-data-products.md#sample-data-applications).
 
 ## Next steps
 

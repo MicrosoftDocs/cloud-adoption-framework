@@ -71,7 +71,7 @@ For this section, it's easier for the readers if you format it something like:
 
 The code assets of a data product include code that generates it and code that delivers it. It also includes pipelines used to create the product and the product's final report.
 
-For more information about data products, see [Cloud-scale analytics data products and data applications in Azure](data-landing-zone-data-products.md).
+For more information about data products, see [Cloud-scale analytics data products and data applications in Azure](../../data-management/architectures/data-landing-zone-data-products.md).
 
 For specific guidance on using data mesh, see [What is a data product?](what-is-data-product.md).
 
@@ -89,7 +89,7 @@ When you adopt a self-serve distributed data platform, you must place an increas
 
 To create your federated governance, implement automated policies around both platform and data needs. Use a high degree of automation for testing and monitoring. Adopt a code-first implementation strategy to handle standards, policies, data products, and platform deployment as code.
 
-For more information on implementing federated governance aspects, see [Data Governance Overview](../govern.md).
+For more information on implementing federated governance aspects, see [Data Governance Overview](../../data-management/govern.md).
 
 ## Summary
 
