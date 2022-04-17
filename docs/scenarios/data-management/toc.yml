@@ -121,7 +121,7 @@ items:
     - name: Data standardization
       href: ../cloud-scale-analytics/architectures/data-standardization.md
     - name: Common Data Models
-      href: ./architectures/models-cdm.md
+      href: ../cloud-scale-analytics/architectures/common-industry-data-models.md
     - name: Data mesh specific guidance
       items:
       - name: Overview
