@@ -24,6 +24,4 @@ Other automation can be used to further reduce any potential friction points and
 
 Ultimately, the goal should be to hand over these reference implementations to the data application teams, as they should own the overall codebase of their solution. Extra abstraction layers such as Azure template specs are also an option, but just increase the number of friction points as required changes again need to be requested from a central team that owns and maintains these resources. The central team then needs to take an action to get the changes tested and released. Additionally, a more complex release management process could be required to not impact other consumers of the Template Spec. Lastly, the templates will become more complex over time as each team could require different parameters to be exposed to apply certain changes within the template. Hence, handing over the reference patterns is the easiest and most effective solution, since this allows the Data Product teams to make the necessary changes, if they need to. Exposing these teams to the concept of IaC is a good approach that could take some time but ultimately will result in better engineering practices across the data platform.
 
-## Next steps
-
-[Scaling Cloud-scale analytics](scaling-architectures.md)
+For more information, see [Scaling Cloud-scale analytics](scaling-architectures.md).

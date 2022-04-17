@@ -115,11 +115,11 @@ items:
         - name: Data application (source-aligned)
           href: ../cloud-scale-analytics/architectures/data-application-source-aligned.md
         - name: Data application reference patterns
-          href: ./architectures/data-reference-patterns.md
+          href: ../cloud-scale-analytics/architectures/data-reference-patterns.md
     - name: Scaling the architecture
       href: ./architectures/scaling-architectures.md
     - name: Data standardization
-      href: ./architectures/data-standardization.md
+      href: ../cloud-scale-analytics/architectures/data-standardization.md
     - name: Common Data Models
       href: ./architectures/models-cdm.md
     - name: Data mesh specific guidance
