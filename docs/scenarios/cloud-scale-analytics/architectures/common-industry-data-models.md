@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Common Data Model & industry data models
 
-The Common Data Model (CDM) and industry data models (IDMs) enable [data product interoperability](what-is-data-product.md#characteristics-of-data-served-as-a-product). Both model types help you organize the way your data is shaped and shared and ensure that it meets industry-wide standards. Since standardizing data interfaces helps keep your data understandable, you should use the CDM or an IDM as your base data model.
+The Common Data Model (CDM) and industry data models (IDMs) enable [data product interoperability](what-is-data-product.md#data-product-characteristics). Both model types help you organize the way your data is shaped and shared and ensure that it meets industry-wide standards. Since standardizing data interfaces helps keep your data understandable, you should use the CDM or an IDM as your base data model.
 
 ## Common Data Model
 

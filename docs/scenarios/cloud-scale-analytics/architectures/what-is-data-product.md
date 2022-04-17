@@ -43,13 +43,13 @@ Fully equip your domain application teams to build the data applications and pro
 
 Ensure that your data products have the common characteristics described in this article, your lineage repository reflects your data application lineage, and your implementation and access are governed.
 
-:::image type="content" source="../images/logical-data-application-options-in-adlz.png" alt-text="Diagram that shows possible data application logical lay outs in domains and landing zones." lightbox="../images/logical-data-application-options-in-adlz.png":::
+:::image type="content" source="../media/logical-data-application-options-in-adlz.png" alt-text="Diagram that shows possible data application logical lay outs in domains and landing zones." lightbox="../media/logical-data-application-options-in-adlz.png":::
 
 ## Data Product and Data Application Guidance for Azure
 <!---Direct Guidance for MS Products -->
 You can position all possible approaches for your data application environment within Azure data landing zones if your domain application teams use a shared platform and set of services.
 
-:::image type="content" source="../images/data-application-options-in-adlz.png" alt-text="Diagram showing the data-application-rg resource group from Data Applications Context and the shared-application-rg resource group from Core Services Context." lightbox="../images/data-application-options-in-adlz.png":::
+:::image type="content" source="../media/data-application-options-in-adlz.png" alt-text="Diagram showing the data-application-rg resource group from Data Applications Context and the shared-application-rg resource group from Core Services Context." lightbox="../media/data-application-options-in-adlz.png":::
 
 You can find three different data application pattern templates for Azure data landing zones in [Cloud-scale analytics data products in Azure - Sample data applications](../architectures/data-landing-zone-data-products.md#sample-data-applications).
 

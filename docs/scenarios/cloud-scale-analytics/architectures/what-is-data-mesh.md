@@ -22,7 +22,7 @@ However, as business changes and with more and more diverse data being generated
 
 In recent years, many organizations successfully use modern architectural and analytical patterns that combine data warehousing technologies and more recent big data technologies.
 
-:::image type="content" source="../images/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="../images/azure-analytics-end-to-end.png":::
+:::image type="content" source="../media/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="../media/azure-analytics-end-to-end.png":::
 
 However, some organizations encounter issues when deploying analytical solutions using this pattern. These solutions are commonly still implemented as monolithic solutions, where a single team is the platform provider and the team doing data integration. This can work for smaller organizations and organizations that have a high degree of centralization from a team setup perspective. However, using only a single team often creates a bottleneck in larger organizations. This bottleneck causes a huge backlog, with parts of an organization having to wait for data integration services and analytical solutions.
 

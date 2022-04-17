@@ -23,7 +23,7 @@ When you want to build a data mesh with Azure, we recommend you adopt [cloud-sca
 - **Data management landing zone:** The foundation of your data architecture. It contains all critical capabilities for data management, like data catalog, data lineage, API catalog, master data management, and so on.
 - **Data management landing zones:** Subscriptions that host your analytics and AI solutions. They include key capabilities for hosting an analytics platform.
 
-:::image type="content" source="../images/high-level-design-single-data-landing-zone.png" alt-text="A diagram showing an overview of a cloud-scale analytics platform that contains a data management landing zone and a single data landing zone.":::
+:::image type="content" source="../media/high-level-design-single-data-landing-zone.png" alt-text="A diagram showing an overview of a cloud-scale analytics platform that contains a data management landing zone and a single data landing zone.":::
 
 The following diagram provides an overview of a cloud-scale analytics platform with a data management landing zone and a single data landing zone. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts resource organization within this architecture.
 
@@ -35,7 +35,7 @@ Understand that all architectures adhere to the data mesh principles: domain own
 
 The simplest deployment pattern for building a data mesh architecture involves one data management landing zone and one data landing zone. The data architecture in such a scenario would look like the following:
 
-:::image type="content" source="../images/domain-agnostic-infra-01.png" alt-text="A diagram showing the simplest possible data mesh architecture, which as a single data management landing zone and a single data landing zone." lightbox="../images/domain-agnostic-infra-01.png":::
+:::image type="content" source="../media/domain-agnostic-infra-01.png" alt-text="A diagram showing the simplest possible data mesh architecture, which as a single data management landing zone and a single data landing zone." lightbox="../media/domain-agnostic-infra-01.png":::
 
 In this model, all your functional data domains reside same data landing zone. A single subscription contains a standard set of services. Resource groups segregate different data domains and data products. Standard data services, like Azure Data Lake Store, Azure Logic Apps and Azure Synapse Analytics, apply to all domains.
 
@@ -47,7 +47,7 @@ This deployment option can be useful for smaller companies or greenfield project
 
 In the previous model, we didn't take into account other subscriptions or on-premises applications. You can slightly alter the previous model by adding a source system-aligned landing zone to manage all incoming data. Data onboarding is a difficult process, so having two data landing zones is useful. Onboarding remains one of the most challenging parts of using data at large. Onboarding also often requires extra tools to address integration, because its challenges differ from those of integration. It helps to distinguish between providing data and consuming data.
 
-:::image type="content" source="../images/domain-agnostic-infra-02.png" alt-text="Source system- and consumer-aligned landing zones" lightbox="../images/domain-agnostic-infra-02.png":::
+:::image type="content" source="../media/domain-agnostic-infra-02.png" alt-text="Source system- and consumer-aligned landing zones" lightbox="../media/domain-agnostic-infra-02.png":::
 
 In the architecture on the left of this diagram, services facilitate all data onboarding, like [CDC](https://en.wikipedia.org/wiki/Change_data_capture), services for pulling APIs, or data lake services for dynamically building datasets. Services in this platform can pull data from on-premises, cloud environments or SaaS vendors. This type of platform typically also has more overhead, because there's more coupling with underlying operational applications. You might want to treat this differently from any data usage.
 
@@ -59,7 +59,7 @@ These architecture domains follow all principles of data mesh. Domains take owne
 
 The next deployment option is another iteration of the previous design. This deployment follows a governed mesh topology: data is distributed via a central hub, in which data is partitioned per domain, logically isolated, and not integrated. This model's hub uses its own (domain-agnostic) data landing zone, and can be owned by a central data governance team overseeing which data is distributed to which other domains. The hub also carries services that facilitate data onboarding.
 
-:::image type="content" source="../images/domain-agnostic-infra-03.png" alt-text="Hub-, generic- and special data landing zones" lightbox="../images/domain-agnostic-infra-03.png":::
+:::image type="content" source="../media/domain-agnostic-infra-03.png" alt-text="Hub-, generic- and special data landing zones" lightbox="../media/domain-agnostic-infra-03.png":::
 
 For domains that require standard services for consuming, using, analyzing and creating new data, use generic data landing zone. This single subscription holds a standard set of services. Also apply data virtualization, as most of your data products are already persisted in the hub and you don't need more data duplication.
 
@@ -71,7 +71,7 @@ If your organization needs to control which data is distributed and consumed by 
 
 Provisioning multiple data landing zones can help you group functional domains based on cohesion and efficiency for working and sharing data. All your data landing zones adhere to the same auditing and controls, but you can still have flexibility and design changes between different data landing zones.
 
-:::image type="content" source="../images/domain-agnostic-infra-04.png" alt-text="Functional and regionally aligned data landing zones" lightbox="../images/domain-agnostic-infra-04.png":::
+:::image type="content" source="../media/domain-agnostic-infra-04.png" alt-text="Functional and regionally aligned data landing zones" lightbox="../media/domain-agnostic-infra-04.png":::
 
 Multiple aspects determine which functional data domains you should logically group together and make candidates for a shared data landing zone. For example, regional boundaries can result in you implementing the same blueprints. Ownership, security, or legal boundaries can force you to segregate domains. Flexibility, the pace of change, and separation or selling of your capabilities are also important factors.
 
@@ -87,7 +87,7 @@ Deploying multiple data landing zones is good option if your data architecture i
 
 Large enterprises operating on a global scale can have contrasting data management requirements between different parts of their organization. You can deploy multiple data management and data landing zones together to address this issue. The following diagram shows an example of this type of architecture:
 
-:::image type="content" source="../images/domain-agnostic-infra-05.png" alt-text="Large scale enterprise requiring different data management zones" lightbox="../images/domain-agnostic-infra-05.png":::
+:::image type="content" source="../media/domain-agnostic-infra-05.png" alt-text="Large scale enterprise requiring different data management zones" lightbox="../media/domain-agnostic-infra-05.png":::
 
 Multiple data management landing zones should justify your overhead and integration complexity. For example, another data management landing zone might make sense for situations where your organization's (meta)data must not be seen by anyone outside your organization.
 

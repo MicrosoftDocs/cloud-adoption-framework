@@ -38,7 +38,7 @@ Each large organization has thousands of data consumers, not just one. A complic
 
 ## Methods for scaling
 
-:::image type="content" source="../images/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones.":::
+:::image type="content" source="../media/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones.":::
 
 > [!NOTE]
 > The following diagram does not contain all Azure services. The diagram has been simplified to highlight the core concepts of resource organization within the architecture.
