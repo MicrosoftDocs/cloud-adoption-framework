@@ -64,4 +64,4 @@ These four development stages allow you to set up a minimal viable product in st
 
 ## Next steps
 
-- [Overview of reference architectures for cloud-scale analytics in Azure](reference-architecture-overview.md)
+- [Overview of reference architectures for cloud-scale analytics in Azure](../../data-management/architectures/reference-architecture-overview.md)

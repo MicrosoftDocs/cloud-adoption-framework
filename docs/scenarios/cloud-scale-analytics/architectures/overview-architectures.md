@@ -18,11 +18,11 @@ Before you start to build out the data architectures of your cloud-scale analyti
 
 ## Physical architecture
 
-The physical implementation of cloud-scale analytics consists of two main architectures: the [data management landing zone](data-management-landing-zone.md) and [data landing zone](data-landing-zone.md).
+The physical implementation of cloud-scale analytics consists of two main architectures: the [data management landing zone](../../data-management/architectures/data-management-landing-zone.md) and [data landing zone](../../data-management/architectures/data-landing-zone.md).
 
 ## Data applications
 
-[Data applications](data-landing-zone-data-products.md) are a core concept for delivering a data product and can be aligned to both lakehouse and data mesh patterns.
+[Data applications](../../data-management/architectures/data-landing-zone-data-products.md) are a core concept for delivering a data product and can be aligned to both lakehouse and data mesh patterns.
 
 ## Cloud-scale analytics
 
@@ -42,12 +42,12 @@ The following table lists reference templates that you can deploy.
 
 The reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks.
 
-The most simple security solution is to [host a jumpbox](connect-to-environments-privately.md#about-azure-bastion-host-and-jumpboxes) on the virtual network of the data management landing zone or data landing zone to connect to the data services through private endpoints.
+The most simple security solution is to [host a jumpbox](../../data-management/architectures/connect-to-environments-privately.md#about-azure-bastion-host-and-jumpboxes) on the virtual network of the data management landing zone or data landing zone to connect to the data services through private endpoints.
 
 ## Frequently asked questions
 
-For a list of questions and answers about cloud-scale analytics, see [Frequently asked questions](frequently-asked-questions.md).
+For a list of questions and answers about cloud-scale analytics, see [Frequently asked questions](../../data-management/architectures/frequently-asked-questions.md).
 
 ## Next steps
 
-[Cloud-scale analytics data management landing zone overview](data-management-landing-zone.md)
+[Cloud-scale analytics data management landing zone overview](../../data-management/architectures/data-management-landing-zone.md)

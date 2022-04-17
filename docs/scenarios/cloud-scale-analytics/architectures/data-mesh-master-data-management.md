@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 Enterprises using a data mesh architecture often have a large number of domains, each containing unique systems and data. 
 
-This wide spread of data increases complexity because multiple versions of the same data might exist in this setup. Integration requires more effort because owners have to integrate and harmonize all the different parts of the same data from multiple domains. Data can be inconsistent in contexts between these different domains. Data quality can also vary. Apply [master data management (MDM)](../govern-master-data.md) to address these challenges.
+This wide spread of data increases complexity because multiple versions of the same data might exist in this setup. Integration requires more effort because owners have to integrate and harmonize all the different parts of the same data from multiple domains. Data can be inconsistent in contexts between these different domains. Data quality can also vary. Apply [master data management (MDM)](../../data-management/govern-master-data.md) to address these challenges.
 
 ## Domain-oriented master data management
 
@@ -22,7 +22,7 @@ Master identification numbers are an important aspect of your MDM. Your master i
 
 MDM works differently in domain-oriented architectures due to their distributed nature. Consistency is harder to achieve because you rely on MDM within your domains.
 
-One way you could achieve consistency is to ask your domains conform themselves to centrally managed master data when distributing [data products](./data-landing-zone-data-products.md). You can publish a list of master data in a master data store or central repository. Your domain can classify data using the enterprise reference identifiers from your enterprise reference data when distributing data products across other domains. This lets your other domains quickly recognize any master data within those data products.
+One way you could achieve consistency is to ask your domains conform themselves to centrally managed master data when distributing [data products](../../data-management/architectures/data-landing-zone-data-products.md). You can publish a list of master data in a master data store or central repository. Your domain can classify data using the enterprise reference identifiers from your enterprise reference data when distributing data products across other domains. This lets your other domains quickly recognize any master data within those data products.
 
 :::image type="content" source="../media/master-data-management-01.png" alt-text="Master Data Management Domain" lightbox="../media/master-data-management-01.png":::
 
@@ -62,4 +62,4 @@ The final step, and your ultimate goal, is achieving coexistence. Your improveme
 
 ## Next steps
 
-- [Data Sharing Overview](data-sharing-overview.md)
+- [Data Sharing Overview](data-contracts.md)

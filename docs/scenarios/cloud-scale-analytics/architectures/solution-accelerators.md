@@ -44,4 +44,4 @@ In data mesh, each solution accelerator is a data product. One might be a recomm
 
 ## Next steps
 
-- [Connect to environments privately](connect-to-environments-privately.md)
+- [Connect to environments privately](../../data-management/architectures/connect-to-environments-privately.md)

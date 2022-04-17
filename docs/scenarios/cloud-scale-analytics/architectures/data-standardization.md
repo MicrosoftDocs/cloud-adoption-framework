@@ -87,7 +87,7 @@ The general practices for data partitioning design are:
 > [!TIP]
 > Your folder structures should have partitioning strategies that can optimize access patterns and appropriate file sizes. In the curated zones, plan the structure based on optimal retrieval, be cautious of choosing a partition key with high cardinality, which leads to over partitioning, which in turn leads to suboptimal file sizes.
 
-For more information on data lake zones, see [Data lake zones and containers](./data-lake-zones.md)
+For more information on data lake zones, see [Data lake zones and containers](../best-practices/data-lake-zones.md)
 
 ## Compliance support
 
@@ -99,4 +99,4 @@ Apply the data standardizations listed in this article to your platform. Begin w
 
 ## Next steps
 
-- [Common Data Model & Industry Data Models](models-cdm.md)
+- [Common Data Model & Industry Data Models](common-industry-data-models.md)

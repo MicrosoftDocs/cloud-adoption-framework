@@ -18,7 +18,7 @@ Choosing the right level of domain granularity and rules for decoupling using pl
 
 ## Cloud-scale analytics
 
-When you want to build a data mesh with Azure, we recommend you adopt [cloud-scale analytics](../index.md). This framework is a deployable reference architecture and comes with open-source templates and best practices. Cloud-scale analytics architecture has two main building blocks that are fundamental for all deployment choices:
+When you want to build a data mesh with Azure, we recommend you adopt [cloud-scale analytics](../../data-management/index.md). This framework is a deployable reference architecture and comes with open-source templates and best practices. Cloud-scale analytics architecture has two main building blocks that are fundamental for all deployment choices:
 
 - **Data management landing zone:** The foundation of your data architecture. It contains all critical capabilities for data management, like data catalog, data lineage, API catalog, master data management, and so on.
 - **Data management landing zones:** Subscriptions that host your analytics and AI solutions. They include key capabilities for hosting an analytics platform.
