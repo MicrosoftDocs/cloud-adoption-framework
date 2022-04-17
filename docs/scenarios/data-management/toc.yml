@@ -25,9 +25,9 @@ items:
         - name: Overview
           href: ./eslz-network-topology-and-connectivity.md
         - name: Single-region connectivity
-          href: ./eslz-network-considerations-single-region.md
+          href: ../cloud-scale-analytics/eslz-network-considerations-single-region.md
         - name: Cross-region connectivity
-          href: ./eslz-network-considerations-cross-region.md   
+          href: ../cloud-scale-analytics/eslz-network-considerations-cross-region.md   
         - name: Limiting cross tenant endpoint connections
           href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Resource organization
@@ -178,7 +178,7 @@ items:
         - name: Data lake overview
           href: ./best-practices/data-lake-overview.md
         - name: Data lake zones
-          href: ./best-practices/data-lake-zones.md
+          href: ../cloud-scale-analytics/best-practices/data-lake-zones.md
         - name: Data lake key considerations
           href: ./best-practices/data-lake-key-considerations.md
         - name: Managing data lake access
