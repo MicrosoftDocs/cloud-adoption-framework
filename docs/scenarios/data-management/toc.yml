@@ -127,7 +127,7 @@ items:
       - name: Overview
         href: ./architectures/what-is-data-mesh.md
       - name: What are data domains?
-        href: ./architectures/data-domains.md
+        href: ../cloud-scale-analytics/architectures/data-domains.md
       - name: Data mesh products
         href: ./architectures/what-is-data-product.md
       - name: Data Contracts

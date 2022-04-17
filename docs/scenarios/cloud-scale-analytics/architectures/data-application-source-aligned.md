@@ -23,7 +23,7 @@ This section explains the infrastructure deployed for each data applications (so
 > [!TIP]
 > For data mesh, you can chose to deploy one of these per source or one per domain. The principles of data standardization, data quality, and data lineage must still be followed. Data platform ops teams can develop snippets of standard code and call upon them to achieve this.
 
-:::image type="content" source="../images/data-application-source-aligned.png" alt-text="Data application (source-aligned) resource group":::
+:::image type="content" source="../media/data-application-source-aligned.png" alt-text="Data application (source-aligned) resource group":::
 
 For each data application (source-aligned) resource group in your data landing zone, you should create:
 
