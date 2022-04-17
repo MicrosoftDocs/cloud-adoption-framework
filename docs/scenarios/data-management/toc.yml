@@ -80,11 +80,11 @@ items:
       - name: Overview
         href: ./organize.md
       - name: Teams
-        href: ./organize-roles-and-teams.md
+        href: ../cloud-scale-analytics/organize-roles-and-teams.md
       - name: Roles and responsibilities
         href: ../cloud-scale-analytics/organize-roles-and-responsibilities.md
       - name: Teams functions
-        href: ../cloud-scale-analytics/organize-team-functions.md
+        href: ./organize-team-functions.md
 
   - name: Manage your analytics estate
     items:
