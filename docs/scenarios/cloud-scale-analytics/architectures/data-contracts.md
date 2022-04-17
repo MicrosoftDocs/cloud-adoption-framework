@@ -24,7 +24,7 @@ Data contracts are positioned to be the solution to this technical problem. A da
 
 Data contracts are in many cases part of a metadata-driven ingestion framework. They’re stored as metadata records, for example, in a centrally managed [metastore](../govern-metadata-standards.md), and play an important role for data pipeline execution, data product creation, validation of data types, schemas, interoperability standards, protocol versions, defaulting rules on missing data, and so on. Therefore, data contracts include many technical metadata. For documenting your data pipelines and data products, there needs to be a clear description on were the data is sourced from, the transformations which been applied to the data and how it will be delivered.
 
-:::image type="content" source="../images/data-contracts.png" alt-text="Diagram showing data contracts." lightbox="../images/data-contracts.png":::
+:::image type="content" source="../media/data-contracts.png" alt-text="Diagram showing data contracts." lightbox="../media/data-contracts.png":::
 
 It's recommendation, for a distributed architecture, is to distribute your data pipeline framework across different domains. Domains, in this approach, conform to a common way of working. Domains process data themselves, which means that the control and responsibility stay with your domains. The framework and metadata, however, remain under central governance.
 
