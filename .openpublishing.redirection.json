@@ -515,13 +515,61 @@
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize-roles-and-teams",
          "redirect_document_id": false
       },
-
-
-
-
-
-
-
+      {
+         "source_path": "docs/scenarios/data-management/architectures/data-landing-zone-data-integration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/overview-cloud-scale-analytics",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/architectures/policies.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/solution-accelerators",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/best-practices/data-lake-services.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/best-practices/synapse.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/best-practices/azure-synapse-analytics-implementation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/enterprise-scale-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/eslz-network-considerations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/eslz-network-topology-and-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/eslz-platform-automation-and-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/eslz-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/govern-data-sharing-agreements.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-data-quality",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/govern-technology.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/govern-requirements",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/overview-data-governance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/overview-cloud-scale-analytics",
+         "redirect_document_id": false
+      },
       {
          "source_path": "docs/scenarios/data-management/eslz-deployment-templates.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/architectures/deployment-templates",
