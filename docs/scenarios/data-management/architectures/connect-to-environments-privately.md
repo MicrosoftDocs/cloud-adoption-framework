@@ -86,7 +86,7 @@ To connect to the VM by using Azure Bastion, do the following:
 
 If all the virtual networks have been peered with each other, only a single jumpbox in one data landing zone is required to access services across all data landing zones and data management landing zones.
 
-To learn why we recommend this network setup, see [Network architecture considerations](../eslz-network-considerations-single-region.md). We recommend a maximum of one Azure Bastion service per data landing zone. If more users require access to the environment, you can add extra Azure VMs to the data landing zone.
+To learn why we recommend this network setup, see [Network architecture considerations](../../cloud-scale-analytics/eslz-network-considerations-single-region.md). We recommend a maximum of one Azure Bastion service per data landing zone. If more users require access to the environment, you can add extra Azure VMs to the data landing zone.
 
 ## Use point-to-site connections
 

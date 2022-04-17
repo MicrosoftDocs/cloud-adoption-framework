@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of Azure Data Lake Storage for cloud-scale analytics
 
-We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `storage-rg` resource group described in [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three storage accounts within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and development data lakes. With an automated data agnostic ingestion service it's likely [Data application](../architectures/data-landing-zone-data-products.md) should only consume from the storage account that contains enriched and curated data. However, as previously stated, in the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a [data application that is source aligned](../architectures/data-application-source-aligned.md).
+We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `storage-rg` resource group described in [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three storage accounts within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and development data lakes. With an automated data agnostic ingestion service it's likely [Data application](../architectures/data-landing-zone-data-products.md) should only consume from the storage account that contains enriched and curated data. However, as previously stated, in the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a [data application that is source aligned](../../cloud-scale-analytics/architectures/data-application-source-aligned.md).
 
 Data Lake Storage Gen2 supports:
 
@@ -55,4 +55,4 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 
 ## Next steps
 
-[Data lake zones and containers](./data-lake-zones.md)
+[Data lake zones and containers](../../cloud-scale-analytics/best-practices/data-lake-zones.md)

@@ -23,7 +23,7 @@ There are four categories of data governance processes.
 
 The common business vocabulary should be defined in a business glossary within a data catalog.
 
-Data governance working groups plan and develop defining data and improving specific data domains (for example, customer, or supplier); update the data governance control board on progress; and manage stewardship across the enterprise for a specific domain. Each working group should take responsibility to define a specific data entity or data subject area, such as multiple related entities. Multiple data entities in the vocabulary, along with the policies and rules, can then be worked on in parallel. For information, see [Data governance roles and responsibilities](organize-roles-and-teams.md#data-governance-roles-and-responsibilities)
+Data governance working groups plan and develop defining data and improving specific data domains (for example, customer, or supplier); update the data governance control board on progress; and manage stewardship across the enterprise for a specific domain. Each working group should take responsibility to define a specific data entity or data subject area, such as multiple related entities. Multiple data entities in the vocabulary, along with the policies and rules, can then be worked on in parallel. For information, see [Data governance roles and responsibilities](../cloud-scale-analytics/organize-roles-and-teams.md#data-governance-roles-and-responsibilities)
 
 :::image type="content" source="./images/defining-entities-in-a-common-business-vocabulary.png" alt-text="Diagram of defining entities in a common business vocabulary.":::
 *Figure 1: Example data governance working group*
@@ -68,4 +68,4 @@ It should then be possible to monitor data quality, privacy, access security, us
 
 ## Next steps
 
-- [Data Catalog](govern-data-catalog.md)
+- [Data Catalog](../cloud-scale-analytics/govern-data-catalog.md)
