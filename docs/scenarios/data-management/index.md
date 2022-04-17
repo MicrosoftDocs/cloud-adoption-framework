@@ -58,7 +58,7 @@ Implementation guidance can be broken into two sections:
 
 ### Cloud-scale specific guidance
 
-[!INCLUDE [documentation-sections](includes/documentation-sections.md)]
+[!INCLUDE [documentation-sections](../cloud-scale-analytics/includes/documentation-sections.md)]
 
 ## Architectures
 
@@ -77,13 +77,13 @@ The following diagram provides an overview of a data platform that contains a ce
 
 You can start with a single landing zone and scale to multiple landing zones, and govern all of them from the data management landing zone.
 
-For more information, see: [Architectures Overview](architectures/overview-architectures.md)
+For more information, see: [Architectures Overview](../cloud-scale-analytics/architectures/overview-architectures.md)
 
 ## Deployment templates
 
 This section includes many reference templates that can be deployed.
 
-[!INCLUDE [deployment-templates-table](includes/deployment-templates-table.md)]
+[!INCLUDE [deployment-templates-table](../cloud-scale-analytics/includes/deployment-templates-table.md)]
 
 For more information, see [Deployment templates](./architectures/deployment-templates.md).
 
@@ -91,7 +91,7 @@ For more information, see [Deployment templates](./architectures/deployment-temp
 
 Solution Accelerators are open-source projects on GitHub. These repositories contain resources and information that simplify and accelerate your ability to solve problems using technology.
 
-For more information, see [Solution accelerators](architectures/solution-accelerators.md).
+For more information, see [Solution accelerators](../cloud-scale-analytics/architectures/solution-accelerators.md).
 
 ## Best practices
 
@@ -116,7 +116,7 @@ The following common customer journeys support cloud-scale analytics:
 
 - **Improve controls across your data estate.** Focus on the [Govern your data estate](./govern.md) and [Secure your data estate](./secure.md) articles to integrate cloud-scale analytics into your existing operations.
 
-- **Influence changes to individual workloads.** As your cloud-scale analytics processes improve, your central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the [Architecture](./architectures/overview-architectures.md) articles to understand how you can use the scenarios within for your use case.
+- **Influence changes to individual workloads.** As your cloud-scale analytics processes improve, your central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the [Architecture](../cloud-scale-analytics/architectures/overview-architectures.md) articles to understand how you can use the scenarios within for your use case.
 
 - **Optimize individual workloads and workload teams.** Start with the [Azure Well-Architected Framework](./well-architected-framework.md) guidance to integrate cloud-scale analytics strategies into individual workloads. This guidance describes best practices and architectures that central IT and governance teams should use to accelerate individual workload development.
 
@@ -136,4 +136,4 @@ For more information about planning for implementing the cloud-scale analytics, 
 Begin your cloud-scale analytics journey:
 
 > [!div class="nextstepaction"]
-> [Introduction to cloud-scale analytics](overview-cloud-scale-analytics.md)
+> [Introduction to cloud-scale analytics](../cloud-scale-analytics/overview-cloud-scale-analytics.md)
