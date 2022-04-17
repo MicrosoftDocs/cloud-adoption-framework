@@ -505,8 +505,16 @@
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/manage-provision-platform",
          "redirect_document_id": false
       },
-
-
+      {
+         "source_path": "docs/scenarios/data-management/organize-data-operations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/manage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/data-management/organize-persona-and-teams.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize-roles-and-teams",
+         "redirect_document_id": false
+      },
 
 
 
