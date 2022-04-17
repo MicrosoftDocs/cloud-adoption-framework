@@ -91,11 +91,11 @@ items:
     - name: Overview
       href: ./manage.md
     - name: Platform automation
-      href: ./manage-platform-automation-and-devops.md
+      href: ../cloud-scale-analytics/manage-platform-automation-and-devops.md
     - name: Provision the platform
       href: ./manage-provision-platform.md
     - name: Observability
-      href: ./manage-observability.md
+      href: ../cloud-scale-analytics/manage-observability.md
 
   - name: Well-architected considerations
     href: ./well-architected-framework.md
