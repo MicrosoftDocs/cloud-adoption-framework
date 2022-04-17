@@ -125,15 +125,15 @@ items:
     - name: Data mesh specific guidance
       items:
       - name: Overview
-        href: ./architectures/what-is-data-mesh.md
+        href: ../cloud-scale-analytics/architectures/what-is-data-mesh.md
       - name: What are data domains?
         href: ../cloud-scale-analytics/architectures/data-domains.md
       - name: Data mesh products
-        href: ./architectures/what-is-data-product.md
+        href: ../cloud-scale-analytics/architectures/what-is-data-product.md
       - name: Data Contracts
         href: ../cloud-scale-analytics/architectures/data-contracts.md
       - name: Self-serve data platforms
-        href: ./architectures/self-serve-data-platforms.md
+        href: ../cloud-scale-analytics/architectures/self-serve-data-platforms.md
       - name: Data marketplace
         href: ../cloud-scale-analytics/architectures/data-mesh-data-marketplace.md
       - name: Master data management in data mesh
@@ -157,7 +157,7 @@ items:
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
     - name: Solution accelerators
-      href: ./architectures/solution-accelerators.md
+      href: ../cloud-scale-analytics/architectures/solution-accelerators.md
     - name: Connecting to environments privately
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
