@@ -12,8 +12,6 @@ ms.custom: e2e-data-management, think-tank
 
 # Data contracts
 
-## Background
-
 In a federated architecture, in which responsibilities are distributed between [domains](./data-domains.md), it’s harder to oversee dependencies and obtain insights in data usage. This is where data contracts come into play. Why do data contracts matter? Because they provide insights into who owns what [data products](./what-is-data-product.md). They support setting standards and managing your data pipelines with confidence. They provide information on what data products are being consumed, by whom and for what purpose. Bottom line: data contracts are essential for robust data management!
 
 Before you continue reading, it's recommended to look at data product distribution and usage from two dimensions. First, there are technical concerns, such as data pipeline handling and mutual expectations on data stability. Second, there are business concerns, like agreeing on the purpose of data sharing, which may include usage, privacy, and purpose (including limitations) objectives. Typically, different roles come into play for each dimension. For technical concerns, you commonly rely on application owners or data engineers. For business concerns, you commonly rely on product owners or business representatives.

@@ -113,7 +113,7 @@ items:
         - name: Overview
           href: ./architectures/data-landing-zone-data-products.md
         - name: Data application (source-aligned)
-          href: ./architectures/data-application-source-aligned.md
+          href: ../cloud-scale-analytics/architectures/data-application-source-aligned.md
         - name: Data application reference patterns
           href: ./architectures/data-reference-patterns.md
     - name: Scaling the architecture
@@ -131,7 +131,7 @@ items:
       - name: Data mesh products
         href: ./architectures/what-is-data-product.md
       - name: Data Contracts
-        href: ./architectures/data-contracts.md
+        href: ../cloud-scale-analytics/architectures/data-contracts.md
       - name: Self-serve data platforms
         href: ./architectures/self-serve-data-platforms.md
       - name: Data marketplace
