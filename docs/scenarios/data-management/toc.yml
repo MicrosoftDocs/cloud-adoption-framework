@@ -50,17 +50,17 @@ items:
     - name: Data governance processes
       href: ./govern-components.md
     - name: Data catalog
-      href: ./govern-data-catalog.md
+      href: ../cloud-scale-analytics/govern-data-catalog.md
     - name: Data lineage
-      href: ./govern-lineage.md
+      href: ../cloud-scale-analytics/govern-lineage.md
     - name: Master data management
       href: ./govern-master-data.md
     - name: Data quality
-      href: ./govern-data-quality.md
+      href: ../cloud-scale-analytics/govern-data-quality.md
     - name: Data lifecycle
-      href: ./govern-lifecycle.md
+      href: ../cloud-scale-analytics/govern-lifecycle.md
     - name: Metadata
-      href: ./govern-metadata-standards.md
+      href: ../cloud-scale-analytics/govern-metadata-standards.md
 
   - name: Secure your analytics estate
     items:
