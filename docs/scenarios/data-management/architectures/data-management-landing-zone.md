@@ -28,9 +28,9 @@ Your data management landing zone is a separate subscription that has the same s
 
 *Resource group: governance-rg*
 
-[!INCLUDE [data-catalog](../includes/data-catalog.md)]
+[!INCLUDE [data-catalog](../../cloud-scale-analytics/includes/data-catalog.md)]
 
-For more information, see [Data Catalog](../govern-data-catalog.md) and [Azure Purview deployment best practices for cloud-scale analytics](../best-practices/purview-deployment.md).
+For more information, see [Data Catalog](../../cloud-scale-analytics/govern-data-catalog.md) and [Azure Purview deployment best practices for cloud-scale analytics](../best-practices/purview-deployment.md).
 
 ## Data quality management
 
@@ -42,7 +42,7 @@ You should manage data quality as close to your data source as possible so you a
 
 Data lineage also provides data quality confidence, and you should provide it for all data products and products.
 
-For more information on data quality management, see [Data quality](../govern-data-quality.md).
+For more information on data quality management, see [Data quality](../../cloud-scale-analytics/govern-data-quality.md).
 
 ## Data modeling repository
 
@@ -56,7 +56,7 @@ Many customers use [ER Studio](https://www.idera.com/products/er-studio/enterpri
 
 *Resource group: governance-rg2*
 
-Master data management control resides in the data management landing zone. [Master data management in data mesh](data-mesh-master-data-management.md) contains specific considerations you should call out for data mesh.
+Master data management control resides in the data management landing zone. [Master data management in data mesh](../cloud-scale-analytics/architectures/data-mesh-master-data-management.md) contains specific considerations you should call out for data mesh.
 
 Many master data management solutions fully integrate with Azure Active Directory. This integration allows you to secure your data and provide different views for different user groups.
 
@@ -79,7 +79,7 @@ Cloud-scale analytics uses
 
 Your contracts should provide information on data validation, models, and security policies.
 
-For more information, see [Data contracts](./data-contracts.md)
+For more information, see [Data contracts](../../cloud-scale-analytics/architectures/data-contracts.md)
 
 ## Container registry
 
@@ -106,7 +106,7 @@ For more information, see [Connect to Azure Synapse studio using private links](
 
 Your organization might decide to create many automation services to augment cloud-scale analytics capabilities. These automation services drive conformity and onboarding solutions for your analytics state.
 
-If you decide to build these automation services, you should have a user interface that acts as both a data marketplace and an operation console. This interface should rely on an underlying metadata store like we've previously discussed in [Metadata Standards](../govern-metadata-standards.md).
+If you decide to build these automation services, you should have a user interface that acts as both a data marketplace and an operation console. This interface should rely on an underlying metadata store like we've previously discussed in [Metadata Standards](../../cloud-scale-analytics/govern-metadata-standards.md).
 
 Your data marketplace or operations console calls a middle tier of microservices to facilitate onboarding, metadata registration, security provisioning, data lifecycle, and observability.
 
@@ -119,13 +119,13 @@ You can provision the **automationdb-rg** resource group to host your metadata s
 
 | Service                        | Service Scope                                                                                                                                                                                                                                                                                     |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data landing zone provisioning | This service creates a new data landing zone. It's unlikely to have a high usage, but is included for end-to-end onboarding solution completeness. For more information, see [Provision the cloud-scale analytics](../manage-provision-platform.md)                                        |
-| Data product onboarding        | This service creates and amends resource groups that pertain to an onboarded tenant. It also contains capabilities to upgrade and degrade SKUs and to activate and deactivate resource groups for any onboarded tenant or service. It creates a new data landing zone DevOps. For more information, see [Provision the cloud-scale analytics](../manage-provision-platform.md) |
+| Data landing zone provisioning | This service creates a new data landing zone. It's unlikely to have a high usage, but is included for end-to-end onboarding solution completeness. For more information, see [Provision the cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md)                                        |
+| Data product onboarding        | This service creates and amends resource groups that pertain to an onboarded tenant. It also contains capabilities to upgrade and degrade SKUs and to activate and deactivate resource groups for any onboarded tenant or service. It creates a new data landing zone DevOps. For more information, see [Provision the cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md) |
 | Access provisioning            | This service creates Access Packages, Access Policies, and Asset access approval process (manual or automatic) using SPN/UPN. It can also expose an API to provide a list of subscription requests (assets) that users have submitted in the past 90 days. For more information, see [Data Access Management](../security-provisioning.md)         |
 | Data agnostic ingestion        | This microservice creates new data sources for ingestion into your data landing zones. It does this by communicating with an Azure Data Factory SQL Database metastore in each data landing zone. For more information, see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md) |
-| Metadata                       | This service exposed and creates metadata for the platform. For more information, see [Metadata Standards](../govern-metadata-standards.md) |
-| Data lifecycle                 | This service is responsible for maintaining your data lifecycle based on metadata. This maintenance can include moving data to cold storage and deleting records that no longer need to be retained. For more information, see [Data lifecycle management](../govern-lifecycle.md)                                                                                              |
-| Data domain onboarding         | ONLY APPLICABLE TO DATA MESH. This service captures metadata pertaining to new domains and onboards the new domains as needed. It can also create, update, activate, and deactivate any domain or service line you might build into a microservice. For more information, see [Provision the cloud-scale analytics](../manage-provision-platform.md) |
+| Metadata                       | This service exposed and creates metadata for the platform. For more information, see [Metadata Standards](../../cloud-scale-analytics/govern-metadata-standards.md) |
+| Data lifecycle                 | This service is responsible for maintaining your data lifecycle based on metadata. This maintenance can include moving data to cold storage and deleting records that no longer need to be retained. For more information, see [Data lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md)                                                                                              |
+| Data domain onboarding         | ONLY APPLICABLE TO DATA MESH. This service captures metadata pertaining to new domains and onboards the new domains as needed. It can also create, update, activate, and deactivate any domain or service line you might build into a microservice. For more information, see [Provision the cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md) |
 
 ### Data standardization
 
@@ -134,7 +134,7 @@ Although it isn't a specific feature or product of your data management landing 
 >[!TIP]
 > Use delta-lake format wherever possible as the defacto standard across all services and storage.
 
-For more information, see [Data standardization](data-standardization.md).
+For more information, see [Data standardization](../../cloud-scale-analytics/architectures/data-standardization.md).
 
 ## Next steps
 

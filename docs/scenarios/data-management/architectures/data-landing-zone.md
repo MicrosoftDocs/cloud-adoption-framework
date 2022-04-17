@@ -24,9 +24,9 @@ Your Azure subscription associated with your data landing zone has the following
 
 | Layer | Required |Resource groups |
 |---|---|---|
-|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Monitoring for Azure Databricks workspaces](#monitoring-for-azure-databricks-workspaces) <li>[Hive metastore for Azure Databricks](#hive-metastore-for-azure-databricks) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [CI/CD Agents](#cicd-agents) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared Databricks](#shared-databricks) <li> [Shared Azure Synapse Analytics](#shared-azure-synapse-analytics) |
+|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Monitoring for Azure Databricks workspaces](#azure-databricks-workspaces-monitoring) <li>[Hive metastore for Azure Databricks](#hive-metastore-for-azure-databricks) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [CI/CD Agents](#cicd-agents) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared Databricks](#shared-databricks) <li> [Shared Azure Synapse Analytics](#shared-azure-synapse-analytics) |
 |[Data application](#data-application)     |Optional         |<ul><li>[Data application](#data-product-resource-group) (1 or more)</li></ul>         |
-|[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#reporting-and-visualization)</li></ul>         |
+|[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#visualization)</li></ul>         |
 
 > [!NOTE]
 > A data application produces one or more data products.
@@ -38,7 +38,7 @@ Data landing zone architecture illustrates the layers, their resource groups, an
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
-> Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](scaling-architectures.md).
+> Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../cloud-scale-analytics/architectures/scaling-architectures.md).
 
 ## Core services layer
 
@@ -93,7 +93,7 @@ For more information, see [External Apache Hive metastore](/azure/databricks/dat
 
 As shown in the previous diagram, three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts are provisioned in a single data lake services resource group. Data transformed at different stages is saved in one of your data landing zone's data lakes. The data is available for consumption by your analytics, data science, and visualization teams.
 
-[!INCLUDE [data-lake-layers](../includes/data-lake-layers.md)]
+[!INCLUDE [data-lake-layers](../../cloud-scale-analytics/includes/data-lake-layers.md)]
 
 > [!NOTE]
 > In the previous diagram, each data landing zone has three data lakes. However, depending on your requirements, you might want to consolidate your raw, enriched and curated layers into one storage account, and maintain another storage account called 'development' for data consumers to bring in other useful data products.
@@ -101,8 +101,8 @@ As shown in the previous diagram, three [Azure Data Lake Storage Gen2](/azure/st
 For more information, see:
 
 - [Overview of Azure Data Lake Storage for cloud-scale analytics](../best-practices/data-lake-overview.md)
-- [Data Standardization](data-standardization.md)
-- [Provision Azure Data Lake Storage Gen2 accounts for each data landing zone](../best-practices/data-lake-zones.md)
+- [Data Standardization](../cloud-scale-analytics/architectures/data-standardization.md)
+- [Provision Azure Data Lake Storage Gen2 accounts for each data landing zone](../cloud-scale-analytics/best-practices/data-lake-zones.md)
 - [Key considerations for Azure Data Lake Storage](../best-practices/data-lake-key-considerations.md)
 - [Access control and data lake configurations in Azure Data Lake Storage](../best-practices/data-lake-access.md)
 
@@ -205,7 +205,7 @@ Each data landing zone can have multiple data products. You can create these dat
 Your data product resource group product includes all the services required to make that data product. For example, an Azure Database is required for MySQL, which is used by a visualization tool. Data must be ingested and transformed before it lands into that MySQL database. In this case, you can deploy Azure Database for MySQL and an Azure Data Factory into the data product resource group.
 
 > [!TIP]
-> If you choose not to implement a data agnostics engine for ingesting once from operational sources, or  ifcomplex connections aren't facilitated in your data agnostics engine, create a source aligned data application. For more information, see [Data applications (source-aligned)](data-application-source-aligned.md)
+> If you choose not to implement a data agnostics engine for ingesting once from operational sources, or  ifcomplex connections aren't facilitated in your data agnostics engine, create a source aligned data application. For more information, see [Data applications (source-aligned)](../cloud-scale-analytics/architectures/data-application-source-aligned.md)
 
 For more information on how to onboard data products, see [Cloud-scale analytics data products in Azure](./data-landing-zone-data-products.md).
 

@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-data-management
 
 Cloud-scale analytics has the following core starter templates:
 
-[!INCLUDE [deployment-templates-table](../includes/deployment-templates-table.md)]
+[!INCLUDE [deployment-templates-table](../../cloud-scale-analytics/includes/deployment-templates-table.md)]
 
 ## Cost estimates
 

@@ -66,7 +66,7 @@ If we project capability mapping to Tailwind Traders, bounded context boundaries
 
 In this diagram, Customer management is built upon subject matter expertise and therefore knows best what data to serve to other domains. Customer management's inner architecture is decoupled, so all application components within these boundaries can directly communicate using application-specific interfaces and data models. 
 
-[Data products](./data-landing-zone-data-products.md) and clear interoperability standards are used to formalize data distribution to other domains. In this approach, all data products also align with the domain and inherit the ubiquitous language, which is a constructed, formalized language agreed upon by stakeholders and designers from the same domain, to serve the needs of that domain.
+[Data products](../../data-management/architectures/data-landing-zone-data-products.md) and clear interoperability standards are used to formalize data distribution to other domains. In this approach, all data products also align with the domain and inherit the ubiquitous language, which is a constructed, formalized language agreed upon by stakeholders and designers from the same domain, to serve the needs of that domain.
 
 ### Extra domains from multiple capability realizations
 
@@ -162,7 +162,7 @@ Granularity for functional domains and setting bounded contexts is one dimension
 
 Set fine-grained boundaries where possible for data distribution. Becoming data-driven is all about making data available for intensive reuse. If you make your boundaries too loose, you'll force undesired couplings between many applications and lose data reusability. Strive for decoupling each time data crosses boundaries of business capabilities. Within a domain, tight coupling within the inner architecture of the domain is allowed. However, when crossing the boundaries of business capabilities, domains must stay decoupled and distribute read-optimized data products for sharing with other domains.
 
-Granularity for technical domains and infrastructure utilization is the other important dimension. Your [data landing zones](./data-landing-zone.md) enable agility for servicing [data applications](./data-landing-zone-data-products.md), which create data products. How do you create this kind of landing zone with shared infrastructure and services underneath? Functional domains are logically grouped together and are good candidates for sharing platform infrastructure. Here are some factors to consider when creating these landing zones:
+Granularity for technical domains and infrastructure utilization is the other important dimension. Your [data landing zones](../../data-management/architectures/data-landing-zone.md) enable agility for servicing [data applications](../../data-management/architectures/data-landing-zone-data-products.md), which create data products. How do you create this kind of landing zone with shared infrastructure and services underneath? Functional domains are logically grouped together and are good candidates for sharing platform infrastructure. Here are some factors to consider when creating these landing zones:
 
 * Cohesion and efficiency when working with and sharing data is a strong driver of aligning functional domains to a data landing zone. This relates to data gravity, the tendency to constantly share large data products between domains.
 * Regional boundaries can result extra data landing zones being implemented.

@@ -23,7 +23,7 @@ Cloud-scale analytics promises the possibility to easily share and access datase
 :::image type="content" source="images/networking-overview.png" alt-text="Networking overview" lightbox="images/networking-overview.png":::
 *Figure 1: Networking overview for cloud-scale analytics.*
 
-[!INCLUDE [network-important](includes/network-important.md)]
+[!INCLUDE [network-important](../cloud-scale-analytics/includes/network-important.md)]
 
 ## Data management landing zone networking
 
@@ -44,8 +44,8 @@ For every new data landing zone, you should create a virtual network peering fro
 
 There are options on how to make this connectivity and depending on if you have a single or multiple region deployment it is recommended that you consider the guidance in:
 
-- [Single-region data landing zone Connectivity](eslz-network-considerations-single-region.md)
-- [Cross-region data landing zone connectivity](eslz-network-considerations-cross-region.md)
+- [Single-region data landing zone Connectivity](../cloud-scale-analytics/eslz-network-considerations-single-region.md)
+- [Cross-region data landing zone connectivity](../cloud-scale-analytics/eslz-network-considerations-cross-region.md)
 
 ## Data management landing zone to third-party clouds
 
