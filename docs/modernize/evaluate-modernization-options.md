@@ -1,52 +1,55 @@
 ---
 title: 'Evaluate modernization options'
-description: ..............
+description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/01/2022
+ms.date: 04/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
-ms.custom: internal
+ms.custom: internal, seo-caf-modernize
+keywords: evaluate, technical, financial indicators, workloads, modernize, cloud adoption framework
 ---
-<!--minimum: One article     maximum: Four articles
-Primary Deliverable: CAF/Modernize/Evaluate-Modernization-Options.md​
+<!--Primary Deliverable: CAF/Modernize/Evaluate-Modernization-Options.md​
 Potential additional deliverables: 
 - modernization-economics.md (slides 26-28)
 - modernization-examples.md (slides 29-30)
-- complex-evaluations.md (slides 36-37)
-Unknown deliverables:​
-The Evaluate Cloud Modernization process might need to be broken down into additional articles to keep read times under 10 minutes.
--->
+- complex-evaluations.md (slides 36-37)-->
 # Evaluate modernization options
 
-As the cloud modernizes IT, companies are being forced to transform themselves. Those that make the transformation survive.
+As the cloud modernizes IT, companies are being forced to transform themselves. Those companies that have made the transformation are the ones surviving. Digital transformation is an economic imperative. Organizations that harness data, the cloud, and AI are driving innovation and growth and outperforming their peers.
 
-How many purchases did you make at Amazon in the last month? How many purchases did you make at a brick and mortar retailer? When you were walking to that brick and mortar retailer, how many businesses did you notice that were closed or had been replaced by something new?
+The following image shows examples of how a transformation strategy drives innovation and growth.
 
-Digital transformation is an economic imperative. A transformation strategy drives innovation and growth. Organizations that harness data, the cloud, and AI are driving innovation and growth and outperforming their peers.
+:::image type="content" source="../_images/modernize/cloud-adoption-outperforming-peers.png" alt-text="Graphic showing statistics about organization that harness data, the cloud, and AI outperforming their peers.":::
 
-Modernization allows your organization to focus on making innovative services and applications available to the company and spend less time managing core infrastructure like server patching, networking setup, firewall configuration, and many other server-related tasks now included with Azure PaaS.
+- **Infrastructure:** You can focus on making innovative services and applications available to the company and spend less time managing core infrastructure like server patching, networking setup, firewall configuration, and many other server-related tasks now included with Azure PaaS.
+- **Apps:** Websites are up and running within minutes, app delivery time is improved by 50%, and there's not waiting for servers.
+- **Data:** Insights from data is of strategic importance. Cloud accelerates advanced data analysis. You get away from managing core infrastructure and instead focus on making innovative services available to the company. By using sophisticated data analysis, you can make a personal connection with your customers that stands out in the vast sea of information that washes over us daily.
 
-Let's evaluate from both the technical and a financial perspective.
+Let's evaluate your modernization options from both the technical and a financial perspective, which will help you determine whether a set of workloads is a good candidate for modernization.
 
 ## Technical indicators
 
-Evaluate the following technical indicators, which will help you determine whether a set of workloads is a good candidate for modernization.
+Ask the following common technical questions of your business when you're evaluating your modernization options.
 
-- **Can you modernize the workload?** You can't modernize a workload with commercial off the shelf solutions (COTS), where you buy a product and run it on servers that can't be modernized, unless the vendor who sold you that product has already done that modernization. These indicators are easy to weed out.
-- **Is the business actively investing in maturing these workloads?** This would include workloads that don't create a competitive advantage, or workloads built with the support of a consulting firm that's no longer making changes and is running through its life cycle. If your business isn't actively investing in it, should you put in more investment?
-- **Will these modernized workloads need to operate in hybrid or multi-cloud environment?**
+- **Can you modernize the workload?** What if you have a workload with commercial off-the-shelf solutions (COTS), where you buy a product and run it on servers that can't be modernized, unless the vendor who sold you that product has already done that modernization? These indicators are easy to weed out.
+- **Is the business actively investing in maturing these workloads?** Are you investing in workloads that don't create a competitive advantage? Are your workloads built with the support of a consulting firm that's no longer making changes and is running through its life cycle? If your business isn't actively investing in it, should you put in more investment?
+- **Will these modernized workloads need to operate in hybrid or multi-cloud environment?** Do you want to manage, govern, and secure apps seamlessly across on-premises infrastructure with public, private, and hybrid cloud capabilities?
 
 ## Financial indicators
 
-Evaluate the following financial indicators, which will help you determine whether a set of workloads is a good candidate for modernization.
+Ask the following common financial questions of your business when you're evaluating your modernization options.
 
 - **Can you quantify the business value of modernizing these workloads?** Consider whether the business values will lead to revenue and whether you've forecasted that revenue. If the values lead to cost savings, have you forecasted that cost savings? For instance, if you save a little bit of admin time, unfortunately, you can only often times realize that revenue savings if you let go of some of your people. So that's a little bit of a soft cost that's hard to quantify.
 - **Have you compared the hosting costs of these workloads in a migrated vs modernized approach?** A lot of times people don't think about that and some modernization efforts can actually increase your cost.
 - **Are these workloads considered business-critical?** If outages of a workload truly are business critical and downtime costs you money in the 1,000,000 per hour, the cost of runtime doesn't matter as much. If it's truly business-critical, then it's probably a good candidate for modernization.
 
-In previous modernization articles, we talked about the [modernization motivations](envision-cloud-modernization.md) and mapping different workload categories to those motivations. Some workloads are going to get mapped to multiple modernization motivations, so it's important to look for. Evaluate modernization paths, dependencies, and compatibility of your current state to establish realistic expectations.
+In previous modernization articles, we discussed the [modernization motivations](envision-cloud-modernization.md) and mapping different workload categories to those motivations. Some workloads are going to get mapped to multiple modernization motivations, so that's important to look for. To establish realistic expectations for modernization, evaluate the following items:
+
+- Modernization paths
+- Modernization dependencies
+- Compatibility of your current state
 
 ## Modernization economics
 <!--(slides 26-28)-->

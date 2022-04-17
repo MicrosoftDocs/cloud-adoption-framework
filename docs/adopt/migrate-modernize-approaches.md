@@ -1,14 +1,15 @@
 ---
 title: Approaches to cloud migration and modernization
-description: TODO
+description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/01/2022
+ms.date: 04/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
+ms.custom: internal, seo-caf-adopt
+keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
-<!--Acrolinx:96, TODO: meta description, more content -->
 # Cloud migration and modernization approaches
 
 Where should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first?
@@ -23,7 +24,7 @@ Deciding whether to modernize or migrate first comes down to *what benefits you 
 
 There are distinct motivations, reasons, and outcomes for migrating first. For instance, if you're trying to get out of a data center quickly, you might want to migrate first and change things later. If you're more focused on control, you might choose to lift-and-shift, go straight to Iaas, do some resizing, and migrate workloads.
 
-Migrate first if you immediately want the following benefits:
+Migrate first if you immediately want the following benefits for your organization:
 
 - Reduce your data center footprint quickly
 - Save immediately in costs
@@ -32,9 +33,9 @@ Migrate first if you immediately want the following benefits:
 
 ## Modernize first, Migrate later approach
 
-If your main goal is to get a handful of apps faster time-to-market in the cloud, you might want to modernize first. If you're more interested in productivity, you might conversion to SaaS, PaaS, and serverless solutions.
+If your main goal is to get a handful of apps faster time-to-market in the cloud, you might want to modernize first.
 
-Modernize first if you immediately want the following benefits:
+Modernize first if you immediately want the following benefits for your organization:
 
 - Faster time to market for applications
 - Increased app innovation
@@ -43,9 +44,9 @@ Modernize first if you immediately want the following benefits:
 
 ## Application portfolio migration and modernization approach
 
-Most companies want a mix between control and productivity, based on the set of workloads that they're assessing. We tend to see a mixed approach to the horizons. So, in this section we focus less on the horizon separation and sequence, and more on the breakdown of quantity and value of things.
+Most companies want a combination of control and productivity, based on the set of workloads they're assessing. So, we tend to see a mixed approach to the horizons. In this section we focus less on the horizon separation and sequence, and more on the breakdown of quantity and value of your workloads.
 
-The following graphic shows an example of how a customer could break down their application portfolio into migrate and modernization approaches, so they can think about it at a deeper level. The percentages are only examples.
+The following image shows an example of how a customer could break down their application portfolio into migrate and modernization approaches, so they can approach it at a deeper level. The percentages are examples only.
 
 :::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
@@ -53,30 +54,41 @@ The following graphic shows an example of how a customer could break down their 
 
 #### First to move
 
-Most things in an environment can be moved easily, and might even be able to be modernized without a significant modernization effort. These items can include basic web apps, advanced portals, new solutions, and any modernized solutions.
+Most things in an environment can be moved easily, and might even be able to be modernized without a significant modernization effort. Your first items to move could include:
+
+- Basic web apps
+- Advanced portals
+- New solutions
+- Any modernized solutions
 
 #### Next to move
 
-Usually what we see when we migrate next are things like high input and output transactional processing systems or regulatory and high business impact systems. Those items tend to be more difficult to do any kind of modernization on and migrations are a forced option many times.
+Usually, what we see when we migrate next are things like high input and output transactional processing systems or regulatory and high business impact systems. Those items tend to be more difficult to do any kind of modernization on and migrations are a forced option many times.
 
 #### Hard or costly to move
 
-There's always a group of things that are hard to move like your legacy source, control systems, or workloads that can't modernize. They're going to require deep architectural change.
+There's always the following group of items that's hard to move:
+
+- HVA systems
+- PKI systems
+- Legacy source control
+- Workloads that can't be modernized
+- Workloads that require deep architectural change
 
 > [!IMPORTANT]
-> With regard to the last bullet in the previous image, *Workloads requiring deep architectural change*, if this scenario applies to you, you need *rearchitecture* rather than modernization. In this case, use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/). Additionally, the top row of bullets (shifting pieces of LoB apps to PowerApps, and so on) is also not part of modernization, it's [innovation](../innovate/index.md).
+> If you have *workloads that require deep architectural change*, you need to *rearchitect* rather than modernize. In this case, use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/). Also, shifting pieces of LoB apps to PowerApps, and so on, is part of [innovation](../innovate/index.md), rather than modernization.
 
-You might have a small percentage of things that you take from a custom line of business app over to power apps. This task is outside of modernization and can be dealt with in the innovation space.
+You might have a small percentage of things that you take from a custom line of business app over to power apps. This task is outside of modernization and can be handled in the [innovation](../innovate/index.md) space.
 
 ### Modernization
 
-Developers tend to build new apps cloud-natively using Serverless or PaaS technologies. You have options for modernizing existing apps, like using containers or Serverless to maximize cloud benefits, or lift and shift them into IaaS to take advantage of OPEX and cloud scale.
+Developers tend to build new apps cloud-natively using Serverless or PaaS technologies. Modernizing your existing apps employs using containers or Serverless to maximize cloud benefits, or [lift and shift](/virtualization/windowscontainers/quick-start/lift-shift-to-containers) into IaaS to take advantage of OPEX and cloud scale.
 
-For apps that aren't custom built, many businesses choose to retire and replace them using SaaS or low code apps. 
+For apps that aren't custom built, many businesses choose to retire and replace them using SaaS or low code apps.
 
-Some apps need to stay on premises due to regulatory or data sovereignty requirements or latency issues. It’s important to enable these apps to be cloud connected.
+Some apps need to stay on premises due to regulatory or data sovereignty requirements or latency issues. It’s important to enable these apps to be cloud-connected.
 
-No matter where your applications run —in multicloud, on-premises, or at the edge— it's important to enable consistent identity, security, management, and compliance across distributed environments.
+No matter where your applications run, in multicloud, on-premises, or at the edge, it's important to enable consistent identity, security, management, and compliance across distributed environments.
 
 Usually about 35% of any on premises environment gets retired, rightsized, or eliminated during the cloud motion, although this percentage is a rough estimate.
 

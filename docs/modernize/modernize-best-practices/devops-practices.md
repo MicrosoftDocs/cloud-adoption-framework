@@ -11,29 +11,31 @@ ms.custom: internal
 ---
 
 <!--
-Dependencies: This article has a few potential dependencies for cross linking​
-Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.
-Primary Deliverable: CAF/modernize/.....devops-practices.md​
-Potential additional deliverables:​
-CAF/modernize/best-practices/devops-practices (Copy/Move from current location)​
-Copy/move links to additional best practices
-This deliver should be able to fit into one net new article. However, there might be minor modifications to the existing CI-CD guidance in innovate when moving it over.​
-Minimum: 1 article Maximum: 1 new article – up to 2 modified articles – TOC changes
--->
+Dependencies: cross linking​
+Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.-->
 
 # DevOps practices
 
-In this article, we help you understand how mature your devops practices are today and evaluate things you might want to strengthen as a pre-requisite to Modernization.
+When you understand how mature your devops practices are today, you can evaluate things you might want to strengthen as a pre-requisite to Modernization.
+As devops modernization processes mature, your investment in improving devops practices grows incrementally. This article provides key modernization links to help you get started with each stage of the [DevOps maturity model](/azure/cloud-adoption-framework/innovate/considerations/ci-cd).
 
-## Minimum requirement
+## Ideal state: Modernize through devops
+
+1. Identify the components to modernize.
+2. Update configuration in your code base to reference the new component.
+3. Test the changes.
+4. Change the resource type and cloud API in your deployment pipeline.
+5. Deploy the modernized solution to the cloud, including configuration for new components.
+
+:::image type="content" source="../../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
+
+### Minimum requirement
 
 - Track your efforts in an iterative backlog management tool.
 - Align waves of workloads and modernization work.
 - We recommend cross-linking to backlogs for workloads with more mature devops practices.
 
-:::image type="content" source="../../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
-
-## Minimum maturity: Execute iteratively
+### Minimum maturity: Execute iteratively
 
 The baseline of devops maturity is best made within the following groups of work:
 
@@ -41,24 +43,27 @@ The baseline of devops maturity is best made within the following groups of work
 - **Use free tools:** Use free first-party migration tools to modernize components of each wave of workloads.
 - **Analyze dependencies:** Use dependency mapping and test migration to ensure your modernization cut-overs are predictable and successful.
 
+
+## Tools to improve devops practices in Azure
+
+
+
 The following image illustrates that as modernization processes mature, you can improve devops practices in repeat waves of modernization.
 
-:::image type="content" source="../../_images/modernize/improve-devops-practices-incrementally.png" alt-text="Chart showing how to improve devops practices incrementally.":::
+:::image type="content" source="../../_images/modernize/improve-devops-practices-incrementally.png" alt-text="Diagram that shows the Cloud Adoption Framework approach to improve devops practices.":::
 
 ## Alignment with the Modernize methodology
 
-You can accelerate this type of digital invention through the following levels of maturity. Technical guidance to accelerate digital modernization is listed in the table of contents on the left side of this page. Those articles are grouped by maturity model level.
+You can accelerate this type of digital modernization through the following levels of maturity. Technical guidance to accelerate digital modernization is listed in the table of contents on the left side of this page. Those articles are grouped by maturity model level.
 
 - **Shared solution:** Establish a centralized repository for all aspects of the solution.
-- **Feedback loops:** Ensure feedback loops can be managed consistently throughout iterations.
-- **Continuous integration:** Regularly build and consolidate a continuous integration and continuous deployment (CI/CD) solution.
 - **Reliable testing:** Validate solution quality and expected changes to drive ensuring measurements.
 - **Solution deployment:** Deploy a solution to allow a team to quickly share changes with customers.
 - **Integrated measurement:** Add learning metrics to the feedback loop for clear analysis by the full team.
 
 ## Toolchain
 
-For adoption teams that are mature professional development teams with many contributors, the Azure toolchain starts with GitHub and Azure DevOps.
+For modernization teams that are mature professional development teams with many contributors, the Azure toolchain starts with GitHub and Azure DevOps.
 
 As your need grows, you can expand this foundation to use other tool features. The expanded foundation might involve tools like:
 
@@ -75,3 +80,4 @@ The table of contents on the left side of this page outlines many articles. Thes
 
 > [!NOTE]
 > Some links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
+

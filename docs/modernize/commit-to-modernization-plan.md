@@ -1,13 +1,14 @@
 ---
 title: 'Modernization commitment'
-description: TODO
+description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/01/2022
+ms.date: 04/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
-ms.custom: internal
+ms.custom: internal, seo-caf-modernize
+keywords: effort, impact, balance, modern, cloud modernization, cloud adoption framework
 ---
 <!--This article might have dependencies or require links to future articles related to the modernization disciplines. But no other known links or dependencies are identified at this point.
 Primary Deliverable: CAF/Modernize/Commit-to-modernization-plan.md
@@ -39,23 +40,31 @@ If you haven't evaluated your assets to determine the best way to modernize each
 
 This section of the Cloud Adoption Framework teaches readers how to maximize the return from each phase required to modernize. The actions required to migrate workloads generally fall into three phases for each workload:
 
-- **Assess workloads:** Assess each batch of workloads to evaluate cost, architecture, and deployment tooling.
+- **Assess workloads:** Assess each batch of workloads(epics) to evaluate cost, architecture, and deployment tooling.
 - **Deploy workloads:** Replicate functionality in the cloud using IaaS, PaaS, cloud-native, or other modernization solutions.
 - **Release workloads:** Test, optimize, document, and review. Release by handing off for governance, management, and security.
 
 :::image type="content" source="../_images/modernize/methodology.png" alt-text="Diagram that shows the Cloud Adoption Framework modernization effort.":::
 
-In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as SAP, might take several two-week iterations to complete all three phases of migration effort for a single workload. 
+In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as SAP, might take several two-week iterations to complete all three phases of migration effort for a single workload.
 
 Evaluate the efforts required for establishing epics, creating user stories and tasks, determining iterations, and aligning your priorities.
 
 |Effort  |Description | Example |
 |---------|---------|
 |Epics    |Capture business value and overall transformation and record the overall wave of things to modernize, grouped around a common set of modernization behaviors. What do you need to do per workload as you go through modernization to a common foundation set of technology?   | Enabling hybrid work, Faster time to market, Cost-optimizing applications, Application innovation, and Centralizing data.
-|User stories     | Capture each workload to track your work.     | |
-|Tasks     | Capture the environmental configurations associated with your architecture or other dependencies, workload-specific tasks, and repeatable processes.   |Changes made by modernization tools.  |
+|User stories     | Capture each workload to track progress toward completion.     |4 workloads could roll up to one epic for application innovation. Additional user stories for iteration 0, testing modernized workloads, and identifying workloads for post modernization WAF review. |
+|Tasks     | Capture the environmental configurations associated with your architecture or other dependencies, workload-specific tasks, and repeatable processes.   |Required to use modernization tools and for any changes made by modernization tools affecting applications, infrastructure, and data.  |
 
-Experience and complexity both have a significant impact on timelines and migration velocity.
+Experience and complexity both have significant impact on timelines and migration velocity.
+
+Here's an example of what a plan might look like:
+
+Epic
+
+Critical to the epic - setting up the Landing Zone Accelerator, using the Azure Migrate tool, Cost optimizing app, Well Architected Review.
+
+Test modernized
 
 ### Assess workloads
 
@@ -93,3 +102,4 @@ WORK IN PROGRESS
 WORK IN PROGRESS
 
 
+Stakeholders are committed to move forward with prioritized modernization plan.

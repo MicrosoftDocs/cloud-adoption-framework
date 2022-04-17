@@ -1,21 +1,22 @@
 ---
 title: Modernize your apps and data
-description: TODO
+description: Learn how cloud adoption-related modernization can provide business value by unlocking new technical skills and expanded business capabilities.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/01/2022
+ms.date: 04/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
+ms.custom: internal, seo-caf-modernize
+keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
-<!--Acrolinx:96, TODO: meta description, add image?-->
 # Modernize your apps and data
 
-When your cloud adoption journey includes modernization, you'll be refactoring, rearchitecting, and rebuilding your apps and data. Modernization will help you achieve benefits like boost app innovation, increase agility, and accelerate developer velocity.
+When your cloud adoption journey includes modernization, you'll be <!--DON'T USE: refactoring, rearchitecting, and rebuilding--> your apps and data. Modernization will help you achieve benefits like boost app innovation, increase agility, and accelerate developer velocity.
 
 ## Refactor apps and databases for speed and productivity
 
-Refactor or repackage apps when you want to make minimal changes and ensure they connect easily to Azure. For example, you might want to refactor relational databases directly into a cloud database service like Azure SQL Database.
+Refactor or repackage apps when you want to make minimal changes and ensure they connect easily to Azure. For example, you might want to <!--refactor--> relational databases directly into a cloud database service like Azure SQL Database.
 
 ## Rearchitect apps and databases for cloud scalability and productivity
 
@@ -32,7 +33,7 @@ The following exercises will help establish the iterative processes to assess, m
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> Start with a solid plan. [Define and document your motivations](../strategy/motivations.md) for modernizing, create a [business case](../strategy/cloud-migration-business-case.md), align stakeholders, and [build a plan](../plan/plan-intro.md) that breaks out modernization projects. |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Review the five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): You can modernize at any time—before, during, or after migrating your workloads. Iteratively migrate and modernize in waves to refactor, rearchitect, or rebuild your apps and data. |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Review the five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): You can modernize at any time—before, during, or after migrating your workloads. Iteratively migrate and modernize in waves to <!--refactor, rearchitect, or rebuild--> your apps and data. |
 | <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [[Modernization examples](evaluate-modernization-options.md#modernization-examples)]: Use example scenarios to identify common tools and approaches to modernization. |
 | <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Govern, secure, and manage cloud environments](../ready/azure-setup-guide/manage-access.md): <!--Is this the right fourth step?  What can we link to here?--> |
 
@@ -45,7 +46,6 @@ Modify or extend your apps to further scale and optimize for cloud architectures
 - [Modernize Linux web apps by using Azure App Service and Azure Database for MySQL](../migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md).
 - [Modernize on-premises .NET or Java apps by containerizing them with Azure Kubernetes Service (AKS)](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes)
 - [Modernize dev/test environments to Azure DevTest Labs](../migrate/azure-best-practices/contoso-migration-devtest-to-labs.md).
-
 
 ## Next steps
 

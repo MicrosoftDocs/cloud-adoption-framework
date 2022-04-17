@@ -1,25 +1,20 @@
 ---
 title: Envision cloud modernization
-description: TODO
+description: Learn how understanding your cloud adoption motivations will help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/01/2022
+ms.date: 04/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
+ms.custom: internal, seo-caf-modernize
+keywords: envision, motivations, approach, modernization, cloud adoption framework
 ---
-<!--
-Primary Deliverable: CAF/Modernize/Envision-Cloud-Modernization.md​
-Potential additional deliverables: ​
-- CAF/Modernize/Establishing-Cloud-Horizons.md (temporarily used as index.md in the new CAF/Adopt folder.)
-- CAF/Modernize/Migrate-Modernize-Approaches.md​
-Keep read times under 10 minutes.​
-Minimum: 1 article Maximum: 5 articles
--->
 # Envision cloud modernization
 
-<!--Introduce the concept of envisioning-->
-Before you begin modernization efforts, it's important to understand your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations will help you establish your approach to the [modernization horizons](../adopt/index.md).
+Before you begin modernization efforts, it's important to share a clear *vision* of your goals and objectives. Moving forward without a vision is like sailing a ship without a compass: The ship is going somewhere, but where? Do the crew members know where they're going? Will the passengers arrive to where they paid to go?
+
+Envisioning modernization starts with understanding your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations will help you envision and establish your approach to the [modernization horizons](../adopt/index.md).
 
 Every cloud adoption plan contains three horizons: [Migrate](../get-started/migrate.md), [Modernize](index.md), and [Innovate](../get-started/innovate.md). These horizons will align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../adopt/migrate-modernize-approaches.md).
 
@@ -40,12 +35,10 @@ It's likely that many of the following triggers apply to your [Motivations for c
 - **Application innovation:** With the transformation of products or services and new technical capabilities, you have less dependency on infrastructure. You gain the ability to have portable applications, so you can start to innovate applications beyond boundaries.
 - **Centralize data:** Migrate your web apps and infrastructure to the cloud and modernize the underlying data set.
 
-In addition to these triggers, there are many other motivations that you might be considering when you go to the cloud. It's good to understand those motivations including your modernization triggers versus [innovation types of triggers](/azure/cloud-adoption-framework/innovate/).
+In addition to these triggers, there are many other motivations that you might be considering when you go to the cloud. Soon you'll need to evaluate your modernization options, which will include exploring your motivations from a [technical](evaluate-modernization-options.md#technical-indicators) and [financial](evaluate-modernization-options.md#financial-indicators) perspective. It's good to understand those motivations including your modernization triggers versus [innovation types of triggers](/azure/cloud-adoption-framework/innovate/).
 
 When you know *why* you're moving to the cloud, you can make better technical decisions.
 
-<!--Further expand on each of these?
--->
 ## Step 2: Flag workloads, which could better deliver on those motivations if they were to be modernized
 
 Modernization of your workloads can help you achieve the [common modernization motivations](../strategy/business-outcomes/data-innovations.md#data-innovations).

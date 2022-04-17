@@ -1,6 +1,6 @@
 ---
 title: 'Complex evaluations'
-description: TODO
+description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/01/2022

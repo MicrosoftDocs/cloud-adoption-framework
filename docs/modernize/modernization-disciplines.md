@@ -1,20 +1,22 @@
 ---
 title: 'Modernization disciplines'
-description: TODO
+description: Learn how modernization disciplines lead toward alignment and increased application platform capabilities.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 03/28/2022
+ms.date: 04/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
-ms.custom: internal
+ms.custom: internal, seo-caf-modernize
+keywords: disciplines, application platform, developer, data, modernize, cloud adoption framework
+
 ---
 <!--Slide 45-->
 # Modernization disciplines
 
-To keep building and launching new code bases, you'll want to increase the capabilities for you application platform to minimize the efforts required by your developers for faster time to market.
+To keep building and launching new code bases, you'll want to increase the capabilities for your application platform to minimize the efforts required by your developers for faster time to market.
 
-[DevOps maturity model](/azure/cloud-adoption-framework/innovate/considerations/ci-cd)
+
 ## Application platforms discipline
 
 :::image type="content" source="../_images/modernize/migration-journey-tools-and-services.png" alt-text="Diagram showing the tools and services for your migration journey.":::

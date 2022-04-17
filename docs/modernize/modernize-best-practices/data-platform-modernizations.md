@@ -35,7 +35,7 @@ When you use Azure Database Migration Service for data migration and data modern
 - The current version
 - The future platform and version that best supports the customer hypothesis or target
 
-### Data migration type
+### Data migration types
 
 With an offline migration, application downtime starts when the migration starts. For an online migration, downtime is limited to the time to cut over at the end of migration.
 
