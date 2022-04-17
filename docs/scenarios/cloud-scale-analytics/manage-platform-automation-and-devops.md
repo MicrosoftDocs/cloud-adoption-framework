@@ -35,7 +35,7 @@ The data landing zone has specific requirements over the standard configuration.
 
 The following diagram shows how automation principles are implemented for a data landing zone.
 
-:::image type="content" source="./images/automation-high-level.png" alt-text="Diagram that shows a high-level overview of automation." lightbox="./images/automation-high-level.png":::
+:::image type="content" source="../data-management/images/automation-high-level.png" alt-text="Diagram that shows a high-level overview of automation." lightbox="../data-management/images/automation-high-level.png":::
 
 ## Deployment models
 

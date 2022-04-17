@@ -84,7 +84,7 @@ items:
       - name: Roles and responsibilities
         href: ../cloud-scale-analytics/organize-roles-and-responsibilities.md
       - name: Teams functions
-        href: ./organize-team-functions.md
+        href: ../cloud-scale-analytics/organize-team-functions.md
 
   - name: Manage your analytics estate
     items:

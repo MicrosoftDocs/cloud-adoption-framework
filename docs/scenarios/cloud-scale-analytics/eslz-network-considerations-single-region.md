@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 The data management landing zone, the data landing zones, and all the services within them are set up in the same region in a single-region setup. All landing zones are within the same connectivity hub subscription. This subscription hosts shared network resources, which can include a network virtual appliance (like Azure firewall), an ExpressRoute gateway, a virtual private network (VPN) gateway, a hub virtual network, or a virtual WAN (vWAN hub).
 
-:::image type="content" source="../data-management/images/single-region-connectivity.png" alt-text="Single Region Connectivity":::
+:::image type="content" source="./media/single-region-connectivity.png" alt-text="Single Region Connectivity":::
 *Figure 1: Single Region Connectivity.*
 
 Based on Azure Networking Services' current capabilities, we recommend you use a meshed network architecture. You should set up Vnet peering between:

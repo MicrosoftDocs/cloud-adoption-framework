@@ -18,7 +18,7 @@ Cloud-scale analytics builds upon Azure landing zones for ease of deployment and
 
 Often, a business seeks clarity or prescriptive guidance before it starts to carve out the technical details for a specific use case, project, or end-to-end cloud-scale analytics. As a business formulates its overall data strategy, it can be challenging to ensure that it considers all the strategic and required principles in the scope of the current use.
 
-To speed up the delivery of this end-to-end insights journey, while keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns with the key themes discussed in [Develop a plan for cloud-scale analytics](plan.md).
+To speed up the delivery of this end-to-end insights journey, while keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns with the key themes discussed in [Develop a plan for cloud-scale analytics](../data-management/plan.md).
 
 Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework, while applying the Microsoft Azure Well-Architected Framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
@@ -143,7 +143,7 @@ As you decide between single and multiple landing zones, consider regional depen
 
 Regardless of your initial decision, you can add or remove data landing zones as needed. If you're starting with a single landing zone, we recommend that you plan to extend to multiple landing zones to avoid future needs for migration.
 
-For more information about landing zones, see [Azure landing zones for cloud-scale analytics](ready.md).
+For more information about landing zones, see [Azure landing zones for cloud-scale analytics](../data-management/ready.md).
 
 ## Conclusion
 
@@ -151,4 +151,4 @@ After you've read this documentation set, in particular the governance, security
 
 ## Next steps
 
-[Integrate cloud-scale analytics into your cloud adoption strategy](./strategy.md)
+[Integrate cloud-scale analytics into your cloud adoption strategy](../data-management/strategy.md)

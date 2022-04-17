@@ -21,7 +21,7 @@ A good metadata management strategy grows organically. It starts simple and smal
 - **Operational metadata** describes processing aspects of data at run time. Some well-known examples include process information, execution time, process failure information, and job IDs.
 - **Social metadata** describes the user perspective of the data from its consumers. Some well-known examples include use and user tracking information, search result data, filters and clicks, viewing time, profile hits, and comments.
 
-In decentralized data architecture, metadata management is an organizational challenge that requires finding a balance between centrally managed metadata and federated managed metadata. It's important for you to [understand teams and functions for cloud-scale analytics in Azure](organize-team-functions.md) as you plan your metadata management. Using a collaborative data management practice improves communication, integration, and data flow automation between your teams. You can address some of metadata management's complexity by striking the right balance between central governance and domain ownership.
+In decentralized data architecture, metadata management is an organizational challenge that requires finding a balance between centrally managed metadata and federated managed metadata. It's important for you to [understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md) as you plan your metadata management. Using a collaborative data management practice improves communication, integration, and data flow automation between your teams. You can address some of metadata management's complexity by striking the right balance between central governance and domain ownership.
 
 As you are deciding what metadata to manage centrally or federate to your [data domains](./architectures/data-domains.md) and begin your implementation, ask yourself:
 
@@ -81,4 +81,4 @@ The end result of Azure Cosmos DB's architecture is organization-wide graph that
 
 ## Next steps
 
-- [Secure cloud-scale analytics in Azure](./secure.md)
+- [Secure cloud-scale analytics in Azure](../data-management/secure.md)

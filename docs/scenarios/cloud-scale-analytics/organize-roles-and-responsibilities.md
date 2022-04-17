@@ -177,4 +177,4 @@ A cloud-scale analytics deployment involves multiple areas of responsibility. Th
 ## Next steps
 
 Learn about group alignment within data management landing zones and data landing zones: 
-- [Understand teams and functions for cloud-scale analytics in Azure](./organize-team-functions.md).
+- [Understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md).

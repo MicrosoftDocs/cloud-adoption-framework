@@ -38,7 +38,7 @@ Data landing zone architecture illustrates the layers, their resource groups, an
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
-> Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../cloud-scale-analytics/architectures/scaling-architectures.md).
+> Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../../cloud-scale-analytics/architectures/scaling-architectures.md).
 
 ## Core services layer
 
@@ -101,8 +101,8 @@ As shown in the previous diagram, three [Azure Data Lake Storage Gen2](/azure/st
 For more information, see:
 
 - [Overview of Azure Data Lake Storage for cloud-scale analytics](../best-practices/data-lake-overview.md)
-- [Data Standardization](../cloud-scale-analytics/architectures/data-standardization.md)
-- [Provision Azure Data Lake Storage Gen2 accounts for each data landing zone](../cloud-scale-analytics/best-practices/data-lake-zones.md)
+- [Data Standardization](../../cloud-scale-analytics/architectures/data-standardization.md)
+- [Provision Azure Data Lake Storage Gen2 accounts for each data landing zone](../../cloud-scale-analytics/best-practices/data-lake-zones.md)
 - [Key considerations for Azure Data Lake Storage](../best-practices/data-lake-key-considerations.md)
 - [Access control and data lake configurations in Azure Data Lake Storage](../best-practices/data-lake-access.md)
 
@@ -205,7 +205,7 @@ Each data landing zone can have multiple data products. You can create these dat
 Your data product resource group product includes all the services required to make that data product. For example, an Azure Database is required for MySQL, which is used by a visualization tool. Data must be ingested and transformed before it lands into that MySQL database. In this case, you can deploy Azure Database for MySQL and an Azure Data Factory into the data product resource group.
 
 > [!TIP]
-> If you choose not to implement a data agnostics engine for ingesting once from operational sources, or  ifcomplex connections aren't facilitated in your data agnostics engine, create a source aligned data application. For more information, see [Data applications (source-aligned)](../cloud-scale-analytics/architectures/data-application-source-aligned.md)
+> If you choose not to implement a data agnostics engine for ingesting once from operational sources, or if complex connections aren't facilitated in your data agnostics engine, create a source aligned data application. For more information, see [Data applications (source-aligned)](../../cloud-scale-analytics/architectures/data-application-source-aligned.md)
 
 For more information on how to onboard data products, see [Cloud-scale analytics data products in Azure](./data-landing-zone-data-products.md).
 

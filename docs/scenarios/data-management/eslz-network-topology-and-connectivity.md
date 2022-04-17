@@ -73,4 +73,4 @@ Handle DNS resolution for private endpoints through central [Azure Private DNS](
 
 ## Next steps
 
-- [Single-region Data Landing Zone Connectivity](eslz-network-considerations-single-region.md)
+- [Single-region Data Landing Zone Connectivity](../cloud-scale-analytics/eslz-network-considerations-single-region.md)

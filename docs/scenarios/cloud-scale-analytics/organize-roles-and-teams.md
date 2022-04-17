@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 For Cloud-scale analytics, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
-![Overview of Cloud-scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)
+![Overview of Cloud-scale analytics teams.](../data-management/images/enterprise-scale-analytics-ai-teams.png)
 
 Within scale analytics we identify the following teams:
 
@@ -23,7 +23,7 @@ Within scale analytics we identify the following teams:
 - Data landing zone ops
 - Data Application teams
 
-Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-and-responsibilities.md) and [Understand teams and functions for cloud-scale analytics in Azure](organize-team-functions.md).
+Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-and-responsibilities.md) and [Understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md).
 
 ## Data landing zone teams
 
@@ -91,7 +91,7 @@ There are many data governance roles and responsibilities related to people. The
 |Data security team  |  This team is responsible and accountable for enforcing data access security and a data privacy policy.|
 |Data publishing manager   | This person is responsible and accountable for checking QA and publishing new, trusted data assets in a data marketplace for consumer use.|
 
-:::image type="content" source="./images/data-governance-review-board.png" alt-text="Diagram of the structure of how to organize data governance.":::
+:::image type="content" source="../data-management/images/data-governance-review-board.png" alt-text="Diagram of the structure of how to organize data governance.":::
 
 The goal is for businesses to organize governance in a way that allows them to divide and conquer when governing data throughout its lifecycle across a hybrid computing environment. One way is to have multiple working groups reporting to a data governance control board, with each working group responsible for a particular data domain or entity, for example, the customer, or a data subject area that consists of multiple data entities.
 

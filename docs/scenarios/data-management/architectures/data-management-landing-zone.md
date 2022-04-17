@@ -56,7 +56,7 @@ Many customers use [ER Studio](https://www.idera.com/products/er-studio/enterpri
 
 *Resource group: governance-rg2*
 
-Master data management control resides in the data management landing zone. [Master data management in data mesh](../cloud-scale-analytics/architectures/data-mesh-master-data-management.md) contains specific considerations you should call out for data mesh.
+Master data management control resides in the data management landing zone. [Master data management in data mesh](../../cloud-scale-analytics/architectures/data-mesh-master-data-management.md) contains specific considerations you should call out for data mesh.
 
 Many master data management solutions fully integrate with Azure Active Directory. This integration allows you to secure your data and provide different views for different user groups.
 

@@ -22,7 +22,7 @@ A primary of any data catalog is its ability to show the lineage between data pr
 
 In addition to this native lineage reporting, Azure Purview also allows custom lineage reporting via Apache Atlas hooks or REST API.
 
-:::image type="content" source="./images/data-lineage.png" alt-text="Diagram of data lineage." lightbox="./images/data-lineage.png":::
+:::image type="content" source="../data-management/images/data-lineage.png" alt-text="Diagram of data lineage." lightbox="../data-management/images/data-lineage.png":::
 
 > [!IMPORTANT]
 > Azure Data Factory and Azure Synapse pipelines are recommended for ingestion solutions because they enable data lineage in Azure Purview. Alternate ingestion patterns should use Apache Atlas API to update data lineage as part of their data processing.
@@ -39,4 +39,4 @@ One of Azure Purview's platform features is its ability to show the lineage betw
 Learn how to manage master data in Azure.
 
 > [!div class="nextstepaction"]
-> [Master data management](govern-master-data.md)
+> [Master data management](../data-management/govern-master-data.md)

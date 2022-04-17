@@ -48,7 +48,7 @@ Data profiles help users answer questions about data products, including:
 
 Users can view the data product profile by using a reporting dashboard within their data marketplace.
 
-:::image type="content" source="images/data-quality-profile.png" alt-text="Screenshot showing an example of a data quality profile score report.":::
+:::image type="content" source="media/data-quality-profile.png" alt-text="Screenshot showing an example of a data quality profile score report.":::
 
 As shown in this dashboard screenshot, you can report on such items as:
 
@@ -64,7 +64,7 @@ To implement data quality, you need to use both human and computational power as
 - Use domain experts who can step in when there's a requirement to train an algorithm due to a high number of errors passing through the compute layer.
 - Validate early. Traditional solutions have extracted, transformed, and loaded data before any data quality has been applied. By this time, the data product is already being consumed and errors surfaced to downstream data products. Instead, as data is ingested from the source, implement data quality checks near the sources and before downstream consumers use the data products. If there's batch ingestion from the data lake, do these checks when you move data from raw to enriched.
 
-   :::image type="content" source="images/adls-dq.png" alt-text="Diagram of how to implement data quality during ingestion.":::
+   :::image type="content" source="../data-management/images/adls-dq.png" alt-text="Diagram of how to implement data quality during ingestion.":::
 
 - Before data is moved to the enriched layer, its schema and columns are checked against the metadata registered in the data catalog.
 

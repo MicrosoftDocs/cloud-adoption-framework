@@ -50,4 +50,4 @@ Keep in mind that the following services aren't listed in the overview, because 
 
 ## Next steps
 
-[Solution accelerators for cloud-scale analytics](solution-accelerators.md)
+[Solution accelerators for cloud-scale analytics](../../cloud-scale-analytics/architectures/solution-accelerators.md)
