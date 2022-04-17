@@ -21,7 +21,7 @@ To democratize data via your data mesh architecture, focus on several important 
 
 - **Data Mesh Experience Plane:** Helps you keep sight of the health status of all interfaces, data pipelines, [data contracts](./data-contracts.md), provisioned components, central tools, and so on. [Azure Monitor](/azure/azure-monitor/) helps you maximize the availability and performance of your applications and services and achieve monitoring and insight. For data observability, create an umbrella on top your self-service collaboration portal and other metadata services. Consider designing your own [metadata lake](../govern-metadata-standards.md) using services like [Azure Cosmos DB](/azure/cosmos-db/) and [Azure Event Hubs](/azure/event-hubs/).
 
-:::image type="content" source="../images/data-marketplace.png" alt-text="Data Marketplace Architecture" lightbox="../images/data-marketplace.png":::
+:::image type="content" source="../media/data-marketplace.png" alt-text="Data Marketplace Architecture" lightbox="../media/data-marketplace.png":::
 
 A data marketplace is typically a thin orchestration layer with an appealing look and feel, which offers unique user experiences. Data marketplaces utilize underlying metadata repositories, which can be a mixture of homegrown [metadata](../govern-metadata-standards.md) stores and Azure services like [Azure Purview](/azure/purview/). You can extend your data marketplace with extra analytical capabilities like [Cognitive Services](/azure/cognitive-services) and [Machine Learning](/azure/machine-learning).
 
