@@ -35,7 +35,7 @@ Consider the following information when using access tiers:
 For more information, see [Hot, Cool and Archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
 > [!CAUTION]
-> For cloud-scale analytics, we recommend that you implement [lifecycle management](../govern-lifecycle.md) using a custom microservice and carefully consider the impact of moving user discoverable data to cool storage.
+> For cloud-scale analytics, we recommend that you implement [lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md) using a custom microservice and carefully consider the impact of moving user discoverable data to cool storage.
 >
 > You should only move sections of your data lake to cool tier for well understood workloads.
 
