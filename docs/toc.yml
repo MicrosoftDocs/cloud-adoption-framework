@@ -480,9 +480,9 @@ items:
 
   - name: Adopt
     items:
-    - name: Establish adoption horizons (DRAFT)
+    - name: Establish adoption horizons 
       href: adopt/index.md
-    - name: Approaches (DRAFT)
+    - name: Approaches 
       href: adopt/migrate-modernize-approaches.md
     - name: Migrate
       items:
@@ -904,27 +904,27 @@ items:
     
     - name: Modernize
       items:
-      - name: Overview (DRAFT)
+      - name: Overview  
         href: modernize/index.md
-      - name: Envision cloud modernization (DRAFT)
+      - name: Envision cloud modernization 
         href: modernize/envision-cloud-modernization.md
-      - name: Evaluate modernization options (DRAFT)
+      - name: Evaluate modernization options 
         href: modernize/evaluate-modernization-options.md
-      - name: Complex evaluations (DRAFT)
-        href: modernize/complex-evaluations.md
-      - name: Commit to modernization plan (DRAFT)
-        href: modernize/commit-to-modernization-plan.md
-      - name: Modernization disciplines (DRAFT)
-        href: modernize/modernization-disciplines.md
-      - name: Application platform modernization (DRAFT)
+      - name: Commit to modernization plan 
+        href: modernize/commit-to-modernization-plan.md      
+      - name: Data platforms
+        href: modernize/data-platform-modernization.md
+      - name: Application platforms
         href: modernize/application-platform-modernization.md
+      - name: Developer alignment
+        href: modernize/developer-alignment-modernization.md
+      - name: Testing and architecture
+        href: modernize/testing-architecture-modernization.md
       - name: Best practices
         items: 
-        - name: Data platform modernization (DRAFT)
-          href: modernize/modernize-best-practices/data-platform-modernizations.md   
-        - name: DevOps practices (DRAFT)
+        - name: DevOps practices 
           href: modernize/modernize-best-practices/devops-practices.md
-        - name: Tools to empower adoption in Azure (DRAFT)
+        - name: Tools to empower adoption in Azure 
           href: modernize/modernize-best-practices/improve-devops-practices.md
         - name: Empower adoption
           items:
@@ -935,7 +935,7 @@ items:
             - name: Get started with a shared repository via GitHub
               href: https://guides.github.com/introduction/git-handbook/
             - name: Get started with a shared backlog
-              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
             - name: Synchronize Power Apps with Azure DevOps
               href: /power-platform/alm/devops-build-tools?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Feedback loops
@@ -951,7 +951,7 @@ items:
           - name: Reliable testing
             items:
             - name: Manage and track test plans
-              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
           - name: Solution deployment
             items:
             - name: Continuous deployment with Azure Pipelines and GitHub
@@ -1358,7 +1358,7 @@ items:
             - name: Get started with a shared repository via GitHub
               href: https://guides.github.com/introduction/git-handbook/
             - name: Get started with a shared backlog
-              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
             - name: Synchronize Power Apps with Azure DevOps
               href: /power-platform/alm/devops-build-tools?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Feedback loops
@@ -1374,7 +1374,7 @@ items:
           - name: Reliable testing
             items:
             - name: Manage and track test plans
-              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
           - name: Solution deployment
             items:
             - name: Continuous deployment with Azure Pipelines and GitHub

@@ -17,6 +17,7 @@ Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption 
 # DevOps practices
 
 When you understand how mature your devops practices are today, you can evaluate things you might want to strengthen as a pre-requisite to Modernization.
+
 As devops modernization processes mature, your investment in improving devops practices grows incrementally. This article provides key modernization links to help you get started with each stage of the [DevOps maturity model](/azure/cloud-adoption-framework/innovate/considerations/ci-cd).
 
 ## Ideal state: Modernize through devops
@@ -35,18 +36,11 @@ As devops modernization processes mature, your investment in improving devops pr
 - Align waves of workloads and modernization work.
 - We recommend cross-linking to backlogs for workloads with more mature devops practices.
 
-### Minimum maturity: Execute iteratively
-
-The baseline of devops maturity is best made within the following groups of work:
+The baseline of devops maturity is best made by executing following groups of work iteratively:
 
 - **Modernize in waves:** Follow an iterative, workload-based, wave-oriented approach to migration.
 - **Use free tools:** Use free first-party migration tools to modernize components of each wave of workloads.
 - **Analyze dependencies:** Use dependency mapping and test migration to ensure your modernization cut-overs are predictable and successful.
-
-
-## Tools to improve devops practices in Azure
-
-
 
 The following image illustrates that as modernization processes mature, you can improve devops practices in repeat waves of modernization.
 

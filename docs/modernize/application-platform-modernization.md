@@ -11,32 +11,36 @@ ms.custom: internal, seo-caf-modernize
 keywords: application platform, modern, cloud modernization, cloud adoption framework
 ---
 <!--
-Dependencies: This article has a few potential dependencies for cross linking but none of them quite tell the story [Compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) (We are concerned with a subset of this decision tree that relates to app plat)
-[Container options](/azure/cloud-adoption-framework/scenarios/aks/plan) (Influences core app plat decisions)
+Dependencies: Cross-link to [Compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) - We are concerned with a subset of this decision tree that relates to app plat)
 Primary Deliverable: CAF/modernize/application-platform-modernization.md
-Potential additional deliverables:
-- CAF/Modernize/deploy-application-platforms.md
-- CAF/Modernize/Migrate-to-modern-app-plat.md 
-This should fit into one net new article. However, there might be minor modifications to the existing data-dms guidance, if you decide to move that into modernize.
-Minimum: 1 article		Maximum: 1 new article – 1 modified article – TOC changes
+This should fit into one net new article.
 -->
 
 # Application platform modernization
 
-In this article, you'll gain understanding and know how to evaluate your options for adopting modern application platforms.
-
 Increasingly, we're seeing customers who value the idea of innovating at a faster pace. They're using cloud-native architectures with loosely coupled microservices, managed databases, AI, DevOps support, and built-in monitoring to detect failures and problems before they happen.
+
+## Use of this article
+
+This article outlines how to evaluate your options for adopting modern application platforms during cloud adoption-related modernization.
+
+## Adopt modern application platform
+
+Adopting a modern application platform with Azure means that your apps run anywhere with limitless scale, intelligence, insights, and machine learning.
 
 :::image type="content" source="../_images/modernize/future-state-vision.png" alt-text="Diagram showing intelligent cloud-native applications as future state vision.":::
 
-**Cloud-native intelligent apps:** Package application code and dependencies in containers deploy as microservices, harness the power of data & AI, and build and deploy with developer tools and DevOps.
-Such apps are typically powered by elastic infrastructure that adjusts to the varying load, supports zero downtime rollouts, and provides low latency access to data worldwide. Only Azure empowers your teams with the most advanced machine learning capabilities to build responsible AI solutions on their terms. Building net new cloud native applications, we have a database that fits your specific use case and needs.
+**Cloud-native intelligent apps:** You can package application code and dependencies in containers, deploy as microservices, harness the power of data & AI, and build and deploy with developer tools and DevOps. These apps are typically powered by elastic infrastructure that adjusts to the varying load, supports zero downtime rollouts, and provides low latency access to data worldwide. Azure empowers your teams with the most advanced machine learning capabilities to build responsible AI solutions on your terms. Building net new cloud native applications, we have a database that fits your specific use case and needs.
 
 **Analytics and insights:**  As the volume, variety, and velocity of data continue to grow, so too does the need to get timely insights. Only Azure provides the scale and performance needed to deliver immediate insights on your business, at incredible value. No other cloud analytics service comes close to Azure Synapse Analytics’ price-performance. Not AWS Redshift, Snowflake or GCP BigQuery.
 
 **Data science:** A strong data and analytics foundation unlocks the potential of data science and machine learning.
 
-For more information, see [Build cloud-native applications that run anywhere.](https://azure.microsoft.com/blog/build-cloudnative-applications-that-run-anywhere/) and [Harness the power of data and AI in your applications with Azure](https://azure.microsoft.com/blog/harness-the-power-of-data-and-ai-in-your-applications-with-azure/) and [Data migration types](modernize-best-practices/data-platform-modernizations.md#data-migration-type).
+For more information, see the following articles:
+
+- [Build cloud-native applications that run anywhere.](https://azure.microsoft.com/blog/build-cloudnative-applications-that-run-anywhere/)
+- [Harness the power of data and AI in your applications with Azure](https://azure.microsoft.com/blog/harness-the-power-of-data-and-ai-in-your-applications-with-azure/) 
+- [Data migration types](modernize-best-practices/data-platform-modernizations.md#data-migration-typeS)
 
 ## Deploy modern application platform
 
@@ -67,11 +71,11 @@ You can also use a combination of all of these services. For more information, s
 
 ### Landing zone accelerator options
 
-To accelerate application platform modernization, we have the [AKS Landing Zone accelerator](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone). This accelerator supports containerization of multiple workloads.
+To accelerate application platform modernization, we have the [AKS Landing Zone accelerator](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone). This ready-made deployment experience supports containerization of multiple workloads.
 
 :::image type="content" source="../_images/modernize/azure-landing-zones.png" alt-text="Graphic showing three landing zone implementation options.":::
 
-Each landing zone supports one or more applications in your cloud portfolio using the inherited controls.
+Each [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) supports one or more applications in your cloud portfolio using the inherited controls.
 
 Landing zone implementations establish an enterprise control plane by defining environmental configuration and controls required for compliant operations management.
 
@@ -81,13 +85,13 @@ For more information about planning and understanding your modernization options
 - [Understand considerations and options for initial containers](../scenarios/aks/plan.md#considerations-for-initial-containers)
 - [Compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json)
 - [Container options](/azure/cloud-adoption-framework/scenarios/aks/plan)<!--(influences core app plat decisions)-->
-- [Understand modernization disciplines](modernization-disciplines.md)
+- [Understand modernization disciplines](../modernization-disciplines/index.md)
 
 ## Migrate applications
 
-NEED INTRO CONTENT
+NEED CONTENT
 
-In the following image, you see an example of quick modernization without a single line of code.
+In the following image, you see an example of quick modernization flow without a single line of code.
 
 :::image type="content" source="../_images/modernize/quick-modernization-without-code.png" alt-text="Graphic showing process of modernization without a single line of code.":::
 
@@ -118,7 +122,7 @@ At the center of the Serverless platform, are our compute offerings: Azure Funct
 
 :::image type="content" source="../_images/modernize/serverless-application-platform-components.png" alt-text="Graphic showing serverless app plat components.":::
 
-Let's say you have your apps up and running using Serverless. Congratulations! Next, collect intelligence from different apps across platforms to action on. There are the following essential components, which we think are core to building Serverless applications:
+Let's say you have your apps up and running using Serverless. Congratulations! Next, collect intelligence from different apps across platforms to action on. The following essential components are core to building Serverless applications:
 
 - **Data/Storage:** Functions has triggers and bindings with Azure document DB and Azure Blob storage.
 - **Triggers:** Event responses used to trigger your custom code. They allow you to respond to events across the Azure platform or on premise.
