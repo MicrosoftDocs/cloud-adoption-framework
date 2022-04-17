@@ -135,9 +135,9 @@ items:
       - name: Self-serve data platforms
         href: ./architectures/self-serve-data-platforms.md
       - name: Data marketplace
-        href: ./architectures/data-mesh-data-marketplace.md
+        href: ../cloud-scale-analytics/architectures/data-mesh-data-marketplace.md
       - name: Master data management in data mesh
-        href: ./architectures/data-mesh-master-data-management.md
+        href: ../cloud-scale-analytics/architectures/data-mesh-master-data-management.md
       - name: Getting started checklist
         href: ../cloud-scale-analytics/architectures/data-mesh-checklist.md
 
