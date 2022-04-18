@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
+adobe-target: true
 ---
 
 # A financial institution scenario for data mesh
