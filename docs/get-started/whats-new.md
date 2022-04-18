@@ -263,3 +263,6 @@ To help you accelerate adoption and innovation, we've added new information abou
 | [Choose&nbsp;a&nbsp;landing&nbsp;zone&nbsp;option](../ready/landing-zone/choose-landing-zone-option.md) | Microsoft offers two implementation options for landing zones: *Start small and expand* and *Enterprise-scale*. Use this new article to review both options and choose the right approach for your organization. |
 
 <!-- docutune:ignoreNextStep -->
+
+
+*******************test commit***************
