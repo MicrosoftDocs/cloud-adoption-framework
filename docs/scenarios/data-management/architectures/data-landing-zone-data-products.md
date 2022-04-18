@@ -29,7 +29,7 @@ A data landing zone can be served multiple data products created by ingesting da
   - Data product B also consumes data from data product C and the data in landing zone 3's data lake.
 
 > [!IMPORTANT]
-> In the case of interzone data consumption, since data product B is created by reading from data landing zone 3, this read access requires approval from the [data landing zone operations](../../cloud-scale-analytics/organize-roles-and-teams.md#data-landing-zone-teams) and [integration operations](../../cloud-scale-analytics/organize-roles-and-teams.md#data-landing-zone-teams) teams of data landing zone 3.
+> In the case of interzone data consumption, since data product B is created by reading from data landing zone 3, this read access requires approval from the [data landing zone operations](../../cloud-scale-analytics/organize-roles-teams.md#data-landing-zone-teams) and [integration operations](../../cloud-scale-analytics/organize-roles-teams.md#data-landing-zone-teams) teams of data landing zone 3.
 
 > [!IMPORTANT]
 > Data product B consumes data from data products A and C. Before this can happen, data product B must register its consumption of data products via data sharing agreements. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
@@ -104,7 +104,7 @@ To understand the architecture definition process, explore the following example
 
 :::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define-data-product architecture in detail.":::
 
-The credit monitoring data product shown in this diagram consumes data from a *read data store* that has been ingested by the [integration operations team](../../cloud-scale-analytics/organize-roles-and-teams.md#data-landing-zone-teams). It produces data product(s) also consumed by two other data products.
+The credit monitoring data product shown in this diagram consumes data from a *read data store* that has been ingested by the [integration operations team](../../cloud-scale-analytics/organize-roles-teams.md#data-landing-zone-teams). It produces data product(s) also consumed by two other data products.
 
 > [!NOTE]
 > A read data source or store is also known as a *golden record source*. These data sources have been cleaned but haven't had any transformations applied to them.

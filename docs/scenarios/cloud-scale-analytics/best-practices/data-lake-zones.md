@@ -42,7 +42,7 @@ Azure storage should be enabled with the [hierarchical name space feature](/azur
 
 When your data agnostic ingestion engine or onboarding application registers a new system of record, it creates required folders in containers in the raw, enriched, and standardized data layers. If a data application (source-aligned) is ingesting the data, your data application team needs your data landing zone team to create the folders and security groups. Put a service principle name or managed identity into the correct group, then assign a permission level. Document this process for your data landing zone and data application teams.
 
-For more information on teams, see [Understand roles and teams for cloud-scale analytics in Azure](../organize-roles-and-teams.md).
+For more information on teams, see [Understand roles and teams for cloud-scale analytics in Azure](../organize-roles-teams.md).
 
 Each data product should have two folders in the data products container, which your data product team should own.
 

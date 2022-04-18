@@ -14,7 +14,8 @@ ms.custom: e2e-data-management, think-tank
 
 The data management landing zone, the data landing zones, and all the services within them are set up in the same region in a single-region setup. All landing zones are within the same connectivity hub subscription. This subscription hosts shared network resources, which can include a network virtual appliance (like Azure firewall), an ExpressRoute gateway, a virtual private network (VPN) gateway, a hub virtual network, or a virtual WAN (vWAN hub).
 
-:::image type="content" source="./media/single-region-connectivity.png" alt-text="Single Region Connectivity":::
+:::image type="content" source="./media/single-region-connectivity.png" alt-text="Single Region Connectivity" lightbox="./media/single-region-connectivity.png":::
+
 *Figure 1: Single Region Connectivity.*
 
 Based on Azure Networking Services' current capabilities, we recommend you use a meshed network architecture. You should set up Vnet peering between:
@@ -54,7 +55,8 @@ In our example scenario, data loaded from Storage Account A transits a Vnet peer
 
 In this scenario, the data doesn't pass the Connectivity Hub. It stays within the Data Platform that consists of a data management landing zone and one or more data landing zones.
 
-:::image type="content" source="../data-management/images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture":::
+:::image type="content" source="../data-management/images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture" lightbox="../data-management/images/network-options-meshed-network-architecture.png":::
+
 *Figure 2: Meshed Network architecture.*
 
 ### User access management in meshed network architecture
@@ -112,7 +114,8 @@ If you need to enforce other network policies within the data platform, use Netw
 
 Hub and spoke network architecture design is the most obvious option, and one that many enterprises have adopted. In it, network transitivity gets set up in the Connectivity Hub to access data in Storage Account A from VM B. Data traverses two Vnet peerings ((2) and (5)) and a network virtual appliance hosted inside the Connectivity Hub ((3) and (4)). Then the data is loaded by the virtual machine (6) and stored back into the Storage Account B (8).
 
-:::image type="content" source="../data-management/images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture":::
+:::image type="content" source="../data-management/images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture" lightbox="../data-management/images/network-options-hub-and-spoke.png":::
+
 *Figure 3: Hub and spoke architecture.*
 
 ### User access management in traditional hub and spoke architecture
@@ -173,10 +176,11 @@ Another design option is the projection of Private Endpoints across each and eve
 
 The same applies to Storage Account B, and potentially to other services inside the data landing zones. If we define the number of data landing zones as *n*, then we end up with *n* Private Endpoints for at least all the storage accounts and potentially other services within the data landing zones as well. This leads to an exponential increase in the number of Private Endpoints.
 
-:::image type="content" source="../data-management/images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection":::
+:::image type="content" source="../data-management/images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection" lightbox="../data-management/images/network-options-private-endpoint-projection.png":::
+
 *Figure 4: Private Endpoint projection architecture.*
 
-Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (such as `storageaccounta.privatelink.blob.core.windows.net`), this solution creates challenges in the DNS layer that can't be solved using Private DNS Zones. You instead need a custom DNS solution capable of resolving DNS names based on the origin/IP-address of the requestor. This allows you to make VM A connect to the Private Endpoints connected to the Vnet in data landing zone A, and to make VM B connect to the Private Endpoints connected to the Vnet in data landing zone B. You can do this with a Windows Servers-based setup, whereas you can automate the DNS A-records lifecycle through a combination of Activity Log and Azure Functions.
+Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (such as `storageaccounta.privatelink.blob.core.windows.net`), this solution creates challenges in the DNS layer that can't be solved using Private DNS Zones. You instead need a custom DNS solution capable of resolving DNS names based on the origin/IP-address of the requestor. This allows you to make VMA connect to the Private Endpoints connected to the Vnet in data landing zone A, and to make VM B connect to the Private Endpoints connected to the Vnet in data landing zone B. You can do this with a Windows Servers-based setup, whereas you can automate the DNS A-records lifecycle through a combination of Activity Log and Azure Functions.
 
 In this setup, you can load the raw dataset in Storage Account A into VM B by accessing the dataset through the local Private Endpoint (1). After you load and process the dataset ((2) and (3)), you can store it on Storage Account B by directly accessing the local Private Endpoint (4). In this scenario, data must not traverse any Vnet peerings.
 
@@ -233,7 +237,8 @@ Another network option is to host Private Endpoints in your Connectivity Hub and
 
 Data traverses a single Vnet peering between the Connectivity Hub and data landing zone in order to load a dataset stored in Storage Account A in VM B. Once that dataset is loaded and processed ((3) and (4)), it traverses the same Vnet peering a second time (5) before finally getting stored in Storage Account B through the Private Endpoint connected to the Hub Vnet (6).
 
-:::image type="content" source="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub":::
+:::image type="content" source="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub" lightbox="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png":::
+
 *Figure 5: Private Endpoints in Connectivity Hub architecture.*
 
 ### User access management in Connectivity Hub architecture

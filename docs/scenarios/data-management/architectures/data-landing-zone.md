@@ -38,7 +38,7 @@ Data landing zone architecture illustrates the layers, their resource groups, an
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
-> Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../../cloud-scale-analytics/architectures/scaling-architectures.md).
+> Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../../cloud-scale-analytics/architectures/scale-architectures.md).
 
 ## Core services layer
 

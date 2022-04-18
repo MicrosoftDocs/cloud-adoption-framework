@@ -92,4 +92,4 @@ Deployments to test and production should only be managed through a CI/CD pipeli
 
 ## Next steps
 
-[Platform automation](manage-platform-automation-and-devops.md)
+[Platform automation](manage-platform-automation-devops.md)

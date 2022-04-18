@@ -21,7 +21,7 @@ Multi-region deployments generally have a connectivity hub subscription in each 
 - VPN Gateways
 - Hub Virtual Networks (in a hub and spoke architecture) or vWAN Hubs (in a vWan setup)
 
-:::image type="content" source="./media/cross-region-connectivity.png" alt-text="Cross-region Connectivity":::
+:::image type="content" source="./media/cross-region-connectivity.png" alt-text="Cross-region Connectivity" lightbox="./media/cross-region-connectivity.png":::
 *Figure 1: Cross-region Connectivity.*
 
 In hub-spoke-spoke-hub architecture, connectivity hubs' virtual networks are often connected using Global VNet Peering. For larger environments, a common alternative is to use ExpressRoute Global Reach. Whichever connectivity option you choose, you can achieve global routing and connectivity between spoke networks across multiple geographies. This means you can move data across regions using network virtual appliances, network security groups, and Route Tables, given that your traffic doesn't get blocked in either connectivity subscription.

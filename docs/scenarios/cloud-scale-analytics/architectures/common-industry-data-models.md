@@ -22,7 +22,7 @@ The following poster shows some elements of the [standard entities](https://gith
 
 For more information, see [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
 
-:::image type="content" source="../media/cdm-entities-v1.png" alt-text="Common Data Model poster":::
+:::image type="content" source="../media/cdm-entities-v1.png" alt-text="Common Data Model poster" lightbox="../media/cdm-entities-v1.png":::
 
 For more information, see [Common Data Model](/common-data-model/)
 

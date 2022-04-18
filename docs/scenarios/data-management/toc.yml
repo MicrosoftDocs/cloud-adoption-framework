@@ -80,9 +80,9 @@ items:
       - name: Overview
         href: ./organize.md
       - name: Teams
-        href: ../cloud-scale-analytics/organize-roles-and-teams.md
+        href: ../cloud-scale-analytics/organize-roles-teams.md
       - name: Roles and responsibilities
-        href: ../cloud-scale-analytics/organize-roles-and-responsibilities.md
+        href: ../cloud-scale-analytics/organize-roles-responsibilities.md
       - name: Teams functions
         href: ./organize-team-functions.md
 
@@ -91,7 +91,7 @@ items:
     - name: Overview
       href: ../cloud-scale-analytics/manage.md
     - name: Platform automation
-      href: ../cloud-scale-analytics/manage-platform-automation-and-devops.md
+      href: ../cloud-scale-analytics/manage-platform-automation-devops.md
     - name: Provision the platform
       href: ../cloud-scale-analytics/manage-provision-platform.md
     - name: Observability
@@ -117,7 +117,7 @@ items:
         - name: Data application reference patterns
           href: ../cloud-scale-analytics/architectures/data-reference-patterns.md
     - name: Scaling the architecture
-      href: ../cloud-scale-analytics/architectures/scaling-architectures.md
+      href: ../cloud-scale-analytics/architectures/scale-architectures.md
     - name: Data standardization
       href: ../cloud-scale-analytics/architectures/data-standardization.md
     - name: Common Data Models

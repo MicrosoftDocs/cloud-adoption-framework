@@ -26,7 +26,7 @@ The physical implementation of cloud-scale analytics consists of two main archit
 
 ## Cloud-scale analytics
 
-You can [scale](scaling-architectures.md) your cloud-scale analytics deployment by using multiple data landing zones.
+You can [scale](scale-architectures.md) your cloud-scale analytics deployment by using multiple data landing zones.
 
 ## Data mesh
 
