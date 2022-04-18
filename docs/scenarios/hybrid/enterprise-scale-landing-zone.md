@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud
+# Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud
 
 Enterprises are currently building and running applications across various ecosystems that can be on-premises, in multiple public clouds, and on the edge. On these distributed environments, it's critical to ensure compliance and find an effective way to manage servers, applications, and data at scale, while maintaining agility.
 
@@ -64,3 +64,5 @@ The design guidelines provide recommendations to the critical decisions that dri
 | [Management disciplines](./arc-enabled-servers/eslz-management-and-monitoring-arc-server.md) | Similar to governance techniques, Azure management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise-scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level. |
 | [Cost governance](./arc-enabled-servers/eslz-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
 | [Automation disciplines](./arc-enabled-servers/eslz-automation-arc-server.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your enterprise-scale landing zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
+
+
