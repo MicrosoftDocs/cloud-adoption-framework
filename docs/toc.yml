@@ -13,7 +13,7 @@ items:
       href: scenarios/overview.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
-    - name: Data management and analytics
+    - name: Cloud-scale analytics
       href: scenarios/data-management/index.md
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
