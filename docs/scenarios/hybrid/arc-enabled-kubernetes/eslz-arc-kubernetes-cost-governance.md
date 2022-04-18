@@ -80,7 +80,7 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 
 <!-- [ ![A screenshot showing Azure Pricing Calculator](./media/arc-enabled-kubernetes-cost-pricing-calculator.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator.png#lightbox) -->
 
-:::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" alt-text="A screenshot showing Azure Pricing Calculator" lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" border=true:::
+:::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" alt-text="A screenshot showing Azure Pricing Calculator" lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" border="true":::
 
 <!-- [ ![A screenshot showing Azure Pricing Calculator AZMon](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png#lightbox) -->
 
