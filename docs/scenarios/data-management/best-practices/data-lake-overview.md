@@ -12,6 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of Azure Data Lake Storage for cloud-scale analytics
 
+
 The Azure Data Lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts within a single resource group for cloud-scale analytics. We recommend provisioning three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
 
 Each storage account within your data landing zone stores data in one of three stages:
@@ -83,4 +84,4 @@ To do this, create a data landing zone in one region, then replicate global data
 
 ## Next steps
 
-[Data lake zones and containers](./data-lake-zones.md)
+[Data lake zones and containers](../../cloud-scale-analytics/best-practices/data-lake-zones.md)

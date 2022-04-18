@@ -57,4 +57,4 @@ On top of these environmental controls, the workload team should consider:
 
 ## Next steps
 
-[Introduction to architectures for cloud-scale analytics](architectures/overview-architectures.md)
+[Introduction to architectures for cloud-scale analytics](../cloud-scale-analytics/architectures/overview-architectures.md)

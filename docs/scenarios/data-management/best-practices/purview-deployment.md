@@ -199,7 +199,7 @@ For more information about Azure Purview roles, see [Access control in Azure Pur
 
 ### Recommended Azure Purview roles
 
-Review the following list of [personas](../organize-roles-and-teams.md) involved in an cloud-scale analytics deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the deployment:
+Review the following list of [personas](../../cloud-scale-analytics/organize-roles-teams.md) involved in an cloud-scale analytics deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the deployment:
 
 | Persona | Role | Recommended Azure Purview role |
 |---|---|---|
@@ -216,7 +216,7 @@ Review the following list of [personas](../organize-roles-and-teams.md) involved
 | Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning lifecycle. | <li> Data Source Admin <li> Data Curator |
 | Machine learning engineers | Enable right processes and infrastructure for easy model deployment and model management. | <li> Data Source Admin <li> Data Curator |
 
-For more information about data roles, see [Roles and teams](../organize-roles-and-teams.md).
+For more information about data roles, see [Roles and teams](../../cloud-scale-analytics/organize-roles-teams.md).
 
 ## Next steps
 

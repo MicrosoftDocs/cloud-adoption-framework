@@ -18,12 +18,12 @@ Since data management and data landing zones are important, you should also incl
 
 This section outlines gives a high level overview of the networking pattern with further links to deploying in both single and multiple azure regions.
 
-Cloud scale analytics promises the possibility to easily share and access datasets across multiple data domains and data landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs have to be considered, evaluated and tested to make sure that these are compatible with the existing hub and spoke and vWAN deployments of corporations.
+Cloud-scale analytics promises the possibility to easily share and access datasets across multiple data domains and data landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs have to be considered, evaluated and tested to make sure that these are compatible with the existing hub and spoke and vWAN deployments of corporations.
 
 :::image type="content" source="images/networking-overview.png" alt-text="Networking overview" lightbox="images/networking-overview.png":::
-*Figure 1: Networking overview for cloud scale analytics.*
+*Figure 1: Networking overview for cloud-scale analytics.*
 
-[!INCLUDE [network-important](includes/network-important.md)]
+[!INCLUDE [network-important](../cloud-scale-analytics/includes/network-important.md)]
 
 ## Data management landing zone networking
 
@@ -44,8 +44,8 @@ For every new data landing zone, you should create a virtual network peering fro
 
 There are options on how to make this connectivity and depending on if you have a single or multiple region deployment it is recommended that you consider the guidance in:
 
-- [Single-region data landing zone Connectivity](eslz-network-considerations-single-region.md)
-- [Cross-region data landing zone connectivity](eslz-network-considerations-cross-region.md)
+- [Single-region data landing zone Connectivity](../cloud-scale-analytics/eslz-network-considerations-single-region.md)
+- [Cross-region data landing zone connectivity](../cloud-scale-analytics/eslz-network-considerations-cross-region.md)
 
 ## Data management landing zone to third-party clouds
 
@@ -73,4 +73,4 @@ Handle DNS resolution for private endpoints through central [Azure Private DNS](
 
 ## Next steps
 
-- [Single-region Data Landing Zone Connectivity](eslz-network-considerations-single-region.md)
+- [Single-region Data Landing Zone Connectivity](../cloud-scale-analytics/eslz-network-considerations-single-region.md)

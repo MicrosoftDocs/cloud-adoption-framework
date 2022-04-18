@@ -35,7 +35,7 @@ If a data application team onboards a **confidential or below** data asset, then
 
 This pattern enables any compute product that supports Azure AD Pass-through Authentication to connect to the data lake and authenticate logged-in users. If a user is part of the data asset's Azure AD group, they can access the data via Azure AD Pass-through Authentication. It allows those users inside the group to read the entire data asset without policy filters. Access can then be audited in detail with appropriate logs and Microsoft Graph.
 
-For recommendations on the layout of your data lake please review [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](best-practices/data-lake-zones.md).
+For recommendations on the layout of your data lake please review [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](../cloud-scale-analytics/best-practices/data-lake-zones.md).
 
 > [!NOTE]
 > Examples of compute products are Azure Databricks, Azure Synapse Analytics, Apache Spark, and Azure Synapse SQL on-demand pools enabled with Azure AD Pass-through Authentication.
