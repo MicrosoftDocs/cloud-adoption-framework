@@ -1,5 +1,5 @@
 ---
-title: 'Evaluate modernization options'
+title: Evaluate modernization options
 description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
@@ -36,7 +36,7 @@ produces some significant...
 - **Infrastructure:** reduce administrative work, patching, firewall administration
 Apps and data, getting to market faster, drive innovations, improve delivery time by 50%
 
-You'll want to evaluate your modernization options from both the technical and a financial perspective, which will help you determine whether a set of workloads is a good candidate for modernization.
+You'll want to evaluate your modernization options from both the technical and a financial perspective, which helps you determine whether a set of workloads is a good candidate for modernization.
 
 ## Technical indicators
 
@@ -51,8 +51,8 @@ Ask the following common technical questions of your organization when you're ev
 Ask the following common financial questions of your business when you're evaluating your modernization options.
 
 - **Can you quantify the business value of modernizing these workloads?** Consider whether the business values will lead to revenue and whether you've forecasted that revenue. If the values lead to cost savings, have you forecasted that cost savings? For instance, if you save a little bit of admin time, unfortunately, you can only often times realize that revenue savings if you let go of some of your people. So that's a little bit of a soft cost that's hard to quantify.
-- **Have you compared the hosting costs of these workloads in a migrated vs modernized approach?** A lot of times people don't think about that and some modernization efforts can actually increase your cost.
-- **Are these workloads considered business-critical?** If outages of a workload truly are business critical and downtime costs you money in the 1,000,000 per hour, the cost of runtime doesn't matter as much. If it's truly business-critical, then it's probably a good candidate for modernization.
+- **Have you compared the hosting costs of these workloads in a migrated versus modernized approach?** A lot of times people don't think about that and some modernization efforts can actually increase your cost.
+- **Are these workloads considered business-critical?** If outages of a workload truly are critical and downtime costs you money in the 1,000,000 per hour, the cost of runtime doesn't matter as much. If it's truly business-critical, then it's probably a good candidate for modernization.
 
 In previous modernization articles, we discussed the [modernization motivations](envision-cloud-modernization.md) and mapping different workload categories to those motivations. Some workloads are going to get mapped to multiple modernization motivations, so that's important to look for. To establish realistic expectations for modernization, evaluate modernization paths and dependencies, along with compatibility of your current state.
 
@@ -78,7 +78,7 @@ Let's look at the following examples of modernization for a common web app runni
 
 ### Migrating your app to Azure IaaS and Azure SQL Database Managed Instance (MI)
 
-This example is for a common web application running on a database. You could modernize only your SQL database instance, keep the web layer running as is and put it into IAS servers and migrate, or you could choose to modernize your data layer as you go and move from SQL Server on-premises to SQL database managed instances in the cloud. This is ultimately a migration effort, as we haven't changed any of the underlying infrastructure to create capabilities or opportunities to capitalize on cloud benefits.
+This example is for a common web application running on a database. You could modernize only your SQL database instance, keep the web layer running as is and put it into IAS servers and migrate, or you could choose to modernize your data layer as you go and move from SQL Server on-premises to SQL database managed instances in the cloud. This is a migration effort, as we haven't changed any of the underlying infrastructure to create capabilities or opportunities to capitalize on cloud benefits.
 
 ### Migrating your app to Azure App Service and AzureSQL Database MI
 

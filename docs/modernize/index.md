@@ -12,15 +12,15 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 ---
 # Modernize your apps and data
 
-When your cloud adoption journey includes modernization, you'll be repackaging, redesigning, and rebuilding your apps and data. Modernization will help you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
+When your cloud adoption journey includes modernization, you'll be repackaging, redesigning, and rebuilding your apps and data. Modernization helps you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
 
 ## Repackage apps and databases for speed and productivity
 
-When you want to make minimal changes and ensure they connect easily to Azure, repackage your apps and databases. For example, you might want to reposition relational databases directly into a cloud database service like Azure SQL Database.
+When you want to make minimal changes and ensure they connect to Azure, repackage your apps and databases. For example, you might want to reposition relational databases directly into a cloud database service like Azure SQL Database.
 
 ## Redesign apps and databases for cloud scalability and productivity
 
-Redesign apps and databases when you want to modify and extend app functionality and code to optimize for cloud scalability. For example, break down monolithic apps into groups of microservices that work together and scale easily.
+Redesign apps and databases when you want to modify and extend app functionality and code to optimize for cloud scalability. For example, break down monolithic apps into groups of microservices that work together and scale.
 
 ## Rebuild with cloud-native technologies to accelerate developer velocity
 
@@ -28,7 +28,7 @@ Consider rebuilding if your existing apps have limited functionality or lifespan
 
 Modernization is a continuous process that involves significant organizational change management spanning people, process, and technology. Taking a holistic approach helps you navigate the journey successfully and helps ensure that your organization realizes new benefits—including efficiency, agility, and scale, after your workloads are running in the cloud.
 
-The following exercises will help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
+The following exercises help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|

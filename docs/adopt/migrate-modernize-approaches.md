@@ -10,7 +10,7 @@ ms.subservice: adopt
 ms.custom: internal, seo-caf-adopt
 keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
-# Cloud migration and modernization approaches
+# Approaches to cloud migration and modernization
 
 Where should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first?
 
@@ -22,11 +22,11 @@ Deciding whether to modernize or migrate first comes down to *what benefits you 
 
 ## Migrate first, Modernize later approach
 
-There are distinct motivations, reasons, and outcomes for migrating first. For instance, if you're trying to get out of a data center quickly, you might want to migrate first and change things later. If you're more focused on control, you might choose to lift-and-shift, go straight to Iaas, do some resizing, and migrate workloads.
+There are distinct motivations, reasons, and outcomes for migrating first. For instance, if you're trying to get out of a data center now, you might want to migrate first and change things later. If you're more focused on control, you might choose to lift-and-shift, go straight to Iaas, do some resizing, and migrate workloads.
 
 Migrate first if you immediately want the following benefits for your organization:
 
-- Reduce your data center footprint quickly
+- Reduce your data center footprint fast
 - Save immediately in costs
 - Have immediate compatibility with IaaS VMs
 - Test your migration to ensure cloud-readiness
@@ -54,7 +54,7 @@ The following image shows an example of how a customer could break down their ap
 
 #### First to move
 
-Most things in an environment can be moved easily, and might even be able to be modernized without a significant modernization effort. Your first items to move could include:
+Most things in an environment can be moved and perhaps modernized without a significant modernization effort. Your first items to move could include:
 
 - Basic web apps
 - Advanced portals

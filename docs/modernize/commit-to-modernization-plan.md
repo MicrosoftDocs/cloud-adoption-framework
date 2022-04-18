@@ -1,5 +1,5 @@
 ---
-title: 'Modernization commitment'
+title: Modernization commitment
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
@@ -15,7 +15,7 @@ Primary Deliverable: CAF/Modernize/Commit-to-modernization-plan.md
 Effort, Impact, Commitment
 Minimum: 1 article		Maximum: 4 articles-->
 
-# Commit to a modernization plan
+# Modernization commitment
 
 Commitment to a modernization plan can only occur once you've found a balance between your modernization effort and modernization impact. When you outline the efforts required and their respective impact on your business, it delivers your case for modernization and helps you gain commitment from stakeholders.
 
@@ -56,9 +56,9 @@ In a standard two-week iteration, an experienced migration team can complete thi
 
 ## Assess workloads
 
-Workloads will undergo a primary transformation. For each primary transformation, there's iteration zero.
+Workloads undergo a primary transformation. For each primary transformation, there's iteration zero.
 
-Workloads that have undergone any significant architectural change will go back through the [Well Architected Framework review](/azure/architecture/framework/).
+Workloads that have undergone any significant architectural change go back through the [Well Architected Framework review](/azure/architecture/framework/).
 
 NEED CONTENT
 

@@ -12,7 +12,7 @@ keywords: testing, architecture, modernization, application, platform
 ---
 
 
-# Testing and architecture for modernization
+# Testing and architecture
 
 NEED CONTENT, IN PROGRESS
 

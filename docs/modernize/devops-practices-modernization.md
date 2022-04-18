@@ -1,5 +1,5 @@
 ---
-title: 'DevOps practices'
+title: DevOps practices
 description: TODO.
 author: BrianBlanchard
 ms.author: brblanch
@@ -14,7 +14,7 @@ ms.custom: internal
 Dependencies: cross linking​
 Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.-->
 
-# DevOps practices for modernization
+# DevOps practices
 
 When you understand how mature your devops practices are today, you can evaluate things you might want to strengthen as a pre-requisite to Modernization.
 
@@ -52,7 +52,7 @@ You can accelerate this type of digital modernization through the following leve
 
 - **Shared solution:** Establish a centralized repository for all aspects of the solution.
 - **Reliable testing:** Validate solution quality and expected changes to drive ensuring measurements.
-- **Solution deployment:** Deploy a solution to allow a team to quickly share changes with customers.
+- **Solution deployment:** Deploy a solution to allow a team to share changes with customers.
 - **Integrated measurement:** Add learning metrics to the feedback loop for clear analysis by the full team.
 
 ## Toolchain

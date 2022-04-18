@@ -15,7 +15,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The methodologies required for cloud adoption generally fall into three horizons: [Migrate](../migrate/index.md), [Modernize](../modernize/index.md), and [Innovate](../innovate/index.md). It's important to identify and prioritize which horizon sequence best fits across your cloud adoption plan, based on your adoption goals.
 
-Use the following horizons to establish your organization's adoption plan. These horizons support cloud adoption efforts by capturing prioritized tasks. Your cloud adoption plan will map to the metrics and motivations defined in your [cloud adoption strategy](/azure/cloud-adoption-framework/strategy/cloud-adoption-strategy-evaluator).
+Use the following horizons to establish your organization's adoption plan. These horizons support cloud adoption efforts by capturing prioritized tasks. Your cloud adoption plan maps to the metrics and motivations defined in your [cloud adoption strategy](/azure/cloud-adoption-framework/strategy/cloud-adoption-strategy-evaluator).
 
 ## Find the right horizon for you
 

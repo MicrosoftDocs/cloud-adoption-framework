@@ -1,5 +1,5 @@
 ---
-title: 'Application platform modernization'
+title: Application platform modernization
 description: Learn how to evaluate your options for adopting modern application platforms during cloud adoption-related modernization.
 author: BrianBlanchard
 ms.author: brblanch
@@ -104,7 +104,7 @@ In the following image, you see an example of quick modernization flow without a
 
 Microservices architecture means breaking large software projects into smaller, independent, and loosely coupled modules. The range of Azure offerings gives you the flexibility to implement independent services with a framework designed for distributed systems, using containers, or with a serverless approach.
 
-:::image type="content" source="../_images/modernize/rearchitect-with-microservices.png" alt-text="Graphic showing monolithic vs. microservices.":::
+:::image type="content" source="../_images/modernize/rearchitect-with-microservices.png" alt-text="Graphic showing monolithic versus microservices.":::
 
 When you use microservices:
 
@@ -112,8 +112,8 @@ When you use microservices:
 - You can use any language or stack that best fits current requirements.
 - Scaling up is easier than with VMs or containers, as it only requires deploying more services as needed.
 - Application maintenance is easier. Developers work on individual services, so the code base the developer works with is smaller, easier to manage, and easier to understand.
-- Microservices-based applications are more resilient and stable. If one or more services should fail, the application continues to work.
-- Individual service instances can easily be upgraded, changed or taken down without negative impact to the entire application.
+- Microservices-based applications are more resilient and stable. If one or more services fail, the application continues to work.
+- Individual service instances can be upgraded, changed or taken down without negative impact to the entire application.
 
 ### Serverless application platform components
 
