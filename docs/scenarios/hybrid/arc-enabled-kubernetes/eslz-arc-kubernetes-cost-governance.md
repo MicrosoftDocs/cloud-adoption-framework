@@ -78,31 +78,21 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 - Review [Azure Monitor for Containers pricing](https://azure.microsoft.com/pricing/details/monitor/).
 - Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled Kubernetes monitoring costs for Azure Log Analytics ingestion, alerts, and notifications.
 
-<!-- [ ![A screenshot showing Azure Pricing Calculator](./media/arc-enabled-kubernetes-cost-pricing-calculator.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator.png#lightbox) -->
-
 :::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" alt-text="A screenshot showing Azure Pricing Calculator" lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" border="true":::
 
-<!-- [ ![A screenshot showing Azure Pricing Calculator AZMon](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png)](./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png#lightbox) -->
-
-:::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" alt-text="A screenshot showing Azure Pricing Calculator AZMon" lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png":::
+:::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" alt-text="A screenshot showing Azure Pricing Calculator AZMon" lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" border="true":::
 
 - Use [Azure Cost Management and Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor for Containers costs.
 
-<!-- [ ![A screenshot showing Azure cost management and billing](./media/arc-enabled-kubernetes-cost-billing.png)](./media/arc-enabled-kubernetes-cost-billing.png#lightbox) -->
-
-:::image type="content" source="./media/arc-enabled-kubernetes-cost-billing.png" alt-text="A screenshot showing Azure cost management and billing" lightbox="./media/arc-enabled-kubernetes-cost-billing.png":::
+:::image type="content" source="./media/arc-enabled-kubernetes-cost-billing.png" alt-text="A screenshot showing Azure cost management and billing" lightbox="./media/arc-enabled-kubernetes-cost-billing.png" border="true":::
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and have visibility on the Azure Kubernetes clusters monitored, collected logs, and their ingestion rate to avoid unnecessary ingestion costs.
 
-<!-- [ ![A screenshot showing Log Analytics insights](./media/arc-enabled-kubernetes-cost-log-analytics-insights.png)](./media/arc-enabled-kubernetes-cost-log-analytics-insights.png#lightbox) -->
-
-:::image type="content" source="./media/arc-enabled-kubernetes-cost-log-analytics-insights.png" alt-text="A screenshot showing Log Analytics insights" lightbox="./media/arc-enabled-kubernetes-cost-log-analytics-insights.png":::
+:::image type="content" source="./media/arc-enabled-kubernetes-cost-log-analytics-insights.png" alt-text="A screenshot showing Log Analytics insights" lightbox="./media/arc-enabled-kubernetes-cost-log-analytics-insights.png" border="true":::
 
 - Use the built-in [Azure Monitor workbooks](/azure/azure-monitor/containers/container-insights-reports#billing-workbooks) to gain more insights on your clusters' billable monitoring data.
 
-<!-- [ ![A screenshot showing Azure Monitor workbook showing namespace billing](./media/arc-enabled-kubernetes-cost-monitor-workbooks.png)](./media/arc-enabled-kubernetes-cost-monitor-workbooks.png#lightbox) -->
-
-:::image type="content" source="./media/arc-enabled-kubernetes-cost-monitor-workbooks.png" alt-text="A screenshot showing Azure Monitor workbook showing namespace billing" lightbox="./media/arc-enabled-kubernetes-cost-monitor-workbooks.png":::
+:::image type="content" source="./media/arc-enabled-kubernetes-cost-monitor-workbooks.png" alt-text="A screenshot showing Azure Monitor workbook showing namespace billing" lightbox="./media/arc-enabled-kubernetes-cost-monitor-workbooks.png" border="true":::
 
 - Review [tips for reducing Log Analytics ingestion data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation to help configure data ingestion properly.
 - Consider how long to retain data on Log Analytics. Data ingested into the Log Analytics workspace can be retained at no additional charge up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as low as 4 days. Example: Usually, performance data doesn't need to be retained longer, instead, security logs may need to be retained longer.
@@ -132,9 +122,7 @@ Resources
 
 - Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to have visibility on Kubernetes GitOps configuration costs.
 
-<!-- [ ![A screenshot showing Kubernetes GitOps configuration cost in Azure portal](./media/arc-enabled-kubernetes-configuration-cost.png)](./media/arc-enabled-kubernetes-configuration-cost.png#lightbox) -->
-
-:::image type="content" source="./media/arc-enabled-kubernetes-configuration-cost.png" alt-text="A screenshot showing Kubernetes GitOps configuration cost in Azure portal" lightbox="./media/arc-enabled-kubernetes-configuration-cost.png":::
+:::image type="content" source="./media/arc-enabled-kubernetes-configuration-cost.png" alt-text="A screenshot showing Kubernetes GitOps configuration cost in Azure portal" lightbox="./media/arc-enabled-kubernetes-configuration-cost.png" border="true":::
 
 ### Azure Policy for Kubernetes
 
@@ -146,15 +134,11 @@ Resources
 - Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
-<!-- [ ![A screenshot showing Azure Sentinel costs](./media/arc-enabled-kubernetes-cost-sentinel-costs.png)](./media/arc-enabled-kubernetes-cost-sentinel-costs.png#lightbox) -->
-
-:::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" alt-text="A screenshot showing Azure Sentinel costs" lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png":::
+:::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" alt-text="A screenshot showing Azure Sentinel costs" lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" border="true":::
 
 - Use [Azure Cost Management and Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Azure Sentinel analysis costs.
 
-<!-- [ ![A screenshot showing Azure Sentinel cost analysis](./media/arc-enabled-kubernetes-cost-sentinel.png)](./media/arc-enabled-kubernetes-cost-sentinel.png#lightbox) -->
-
-:::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel.png" alt-text="A screenshot showing Azure Sentinel cost analysis](./media/arc-enabled-kubernetes-cost-sentinel.png" lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png":::
+:::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel.png" alt-text="A screenshot showing Azure Sentinel cost analysis](./media/arc-enabled-kubernetes-cost-sentinel.png" lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" border="true":::
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Azure Sentinel.
 - Filter the [right level of logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for the Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
@@ -170,9 +154,7 @@ Resources
 - Review [recommendations for security and governance](./eslz-arc-kubernetes-management-disciplines.md) to understand how to use Azure Key vault to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters.
 - Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor secrets operations on your Azure Arc-enabled Kubernetes.
 
-    <!-- [ ![A screenshot showing Azure Key Vault insights](./media/arc-enabled-kubernetes-cost-key-vault-insights.png)](./media/arc-enabled-kubernetes-cost-key-vault-insights.png#lightbox) -->
-
-    :::image type="content" source="./media/arc-enabled-kubernetes-cost-key-vault-insights.png" alt-text="A screenshot showing Azure Key Vault insights" lightbox="./media/arc-enabled-kubernetes-cost-key-vault-insights.png":::
+    :::image type="content" source="./media/arc-enabled-kubernetes-cost-key-vault-insights.png" alt-text="A screenshot showing Azure Key Vault insights" lightbox="./media/arc-enabled-kubernetes-cost-key-vault-insights.png" border="true":::
 
 ## Next steps
 
