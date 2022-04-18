@@ -58,6 +58,9 @@ Azure Arc-enabled servers provide two types of services:
 
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
 
+> [!Note]
+> In this section, pricing information described in the provided screenshots are examples and provided to allow demonstrating the usage of the Azure Calculator and do not reflect the actual pricing information you might be seeing in your own Azure Arc deployments.
+
 ### Governance
 
 - Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
