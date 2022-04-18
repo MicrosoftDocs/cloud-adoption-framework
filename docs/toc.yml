@@ -1036,6 +1036,13 @@ items:
               items:
               - name: Refactor Access database to Azure SQL Database
                 href: /data-migration/
+        - name: Modernize scenarios
+          items:
+          - name: Refactor an on-premises apps
+            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
+          - name: Refactor a Linux app
+            href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
+          
           - name: Azure Database Migration Service tutorials
             items:
             - name: Azure Database Migration Service overview
@@ -1064,13 +1071,6 @@ items:
               href: /azure/dms/tutorial-mongodb-cosmos-db-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Oracle to Azure Database for PostgreSQL online
               href: /azure/postgresql/howto-migrate-from-oracle?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-
-      - name: Modernize examples 
-        items:
-        - name: Refactor an on-premises apps
-          href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
-        - name: Refactor a Linux app
-          href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
         - name: Azure Database Migration Guide
           items:
             - name: Refactor SQL Server to Azure SQL Database

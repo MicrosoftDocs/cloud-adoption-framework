@@ -14,7 +14,7 @@ keywords: testing, architecture, modernization, application, platform
 
 # Testing and architecture
 
-NEED CONTENT, IN PROGRESS
+IN PROGRESS
 
 If you determine that your application needs some hybrid portability capabilities, we can understand what's needed on a workload-by-workload basis with a [Well-Architected Review](https://azure.microsoft.com/blog/introducing-the-microsoft-azure-wellarchitected-framework/).
 

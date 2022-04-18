@@ -88,7 +88,8 @@ For more information about planning and understanding your modernization options
 
 ## Migrate applications
 
-NEED CONTENT
+Today, your workloads are on VMs. When you modernize, you can allow workload portability between container hosts across hybrid, multicloud and the edge with diverse container orchestration options.
+[Azure Kubernetes Service](/services/kubernetes-service/) offers fully managed Kubernetes clusters for deployment, scaling, and management of containerized applications.
 
 In the following image, you see an example of quick modernization flow without a single line of code.
 

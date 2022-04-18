@@ -60,7 +60,7 @@ Workloads undergo a primary transformation. For each primary transformation, the
 
 Workloads that have undergone any significant architectural change go back through the [Well Architected Framework review](/azure/architecture/framework/).
 
-NEED CONTENT
+IN PROGRESS
 
 Consider how you'd prioritize your workloads, first, second, third, and so on.
 
