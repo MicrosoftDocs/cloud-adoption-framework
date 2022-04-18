@@ -3,7 +3,7 @@ title: 'Application platform modernization'
 description: Learn how to evaluate your options for adopting modern application platforms during cloud adoption-related modernization.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/14/2022
+ms.date: 04/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -39,8 +39,8 @@ Adopting a modern application platform with Azure means that your apps run anywh
 For more information, see the following articles:
 
 - [Build cloud-native applications that run anywhere.](https://azure.microsoft.com/blog/build-cloudnative-applications-that-run-anywhere/)
-- [Harness the power of data and AI in your applications with Azure](https://azure.microsoft.com/blog/harness-the-power-of-data-and-ai-in-your-applications-with-azure/) 
-- [Data migration types](modernize-best-practices/data-platform-modernizations.md#data-migration-typeS)
+- [Harness the power of data and AI in your applications with Azure](https://azure.microsoft.com/blog/harness-the-power-of-data-and-ai-in-your-applications-with-azure/)
+- [Data migration types](modernize/../data-platform-modernization.md)
 
 ## Deploy modern application platform
 
@@ -68,7 +68,6 @@ You can also use a combination of all of these services. For more information, s
 - [Java -> App Service](/azure/migrate/tutorial-app-containerization-java-app-service)
 - [CI/CD Day 2](/azure/migrate/tutorial-app-containerization-azure-pipeline)
 
-
 ### Landing zone accelerator options
 
 To accelerate application platform modernization, we have the [AKS Landing Zone accelerator](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone). This ready-made deployment experience supports containerization of multiple workloads.
@@ -85,7 +84,7 @@ For more information about planning and understanding your modernization options
 - [Understand considerations and options for initial containers](../scenarios/aks/plan.md#considerations-for-initial-containers)
 - [Compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json)
 - [Container options](/azure/cloud-adoption-framework/scenarios/aks/plan)<!--(influences core app plat decisions)-->
-- [Understand modernization disciplines](../modernization-disciplines/index.md)
+- <!--Link to Understanding modernize disciplines-->
 
 ## Migrate applications
 
@@ -142,5 +141,3 @@ We've highlighted the following top scenarios and use cases for Serverless:
 - **SaaS event processing:** Uses Functions and Logic Apps to analyze data from an excel file in OneDrive and perform validation, filtration, sorting, and convert data into consumable business charts.
 - **Web app architecture:** Used often in creating targeted marketing collateral. When you select on a webpage, it triggers a webhook that uses a function to create an ad that matches your customer profile and displays a completed webpage.
 - **Real-time bot messaging:** When you send a message to a chatbot, Functions calls Cortana analytics to generate appropriate answers and sends a response back.
-
-

@@ -3,7 +3,7 @@ title: 'Evaluate modernization options'
 description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/14/2022
+ms.date: 04/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -14,7 +14,7 @@ keywords: evaluate, technical, financial indicators, workloads, modernize, cloud
 Economics, Examples, Evaluations-->
 # Evaluate modernization options
 
-As the cloud modernizes IT, companies are being forced to transform themselves. Those companies that have made the transformation are the ones surviving. Digital transformation is an economic imperative. Organizations that harness data, the cloud, and AI are driving innovation and growth and outperforming their peers.
+As the cloud modernizes IT, companies are being forced to transform themselves. Digital transformation is an economic imperative. Organizations that harness data, the cloud, and AI are driving innovation and growth and outperforming their peers.
 
 A transformation strategy drives innovation and growth.
 
@@ -56,10 +56,6 @@ Ask the following common financial questions of your business when you're evalua
 
 In previous modernization articles, we discussed the [modernization motivations](envision-cloud-modernization.md) and mapping different workload categories to those motivations. Some workloads are going to get mapped to multiple modernization motivations, so that's important to look for. To establish realistic expectations for modernization, evaluate modernization paths and dependencies, along with compatibility of your current state.
 
-## Complex evaluations
-
-IN PROGRESS/NEED CONTENT
-
 ### Enabling hybrid work
 
 Are your workloads hybrid and portable, or are your workers hybrid?
@@ -95,3 +91,7 @@ You can modernize both web and data layers. Modernize the data layer by moving i
 A different approach would be to modernize your app layer, like we just mentioned, but maybe you're working with some open source data layers and you want to go to something like Azure Database for MySQL, PostgreSQL, or MariaDB.
 
 :::image type="content" source="../_images/modernize/example-app-service-azure-db.png" alt-text="Diagram showing flow of migrating your app to App Service and Azure Database for MySQL and so on.":::
+
+## Complex evaluations
+
+IN PROGRESS/NEED CONTENT

@@ -912,6 +912,8 @@ items:
         href: modernize/evaluate-modernization-options.md
       - name: Commit to modernization plan 
         href: modernize/commit-to-modernization-plan.md      
+      - name: DevOps practices 
+        href: modernize/devops-practices-modernization.md
       - name: Data platforms
         href: modernize/data-platform-modernization.md
       - name: Application platforms
@@ -922,8 +924,6 @@ items:
         href: modernize/testing-architecture-modernization.md
       - name: Best practices
         items: 
-        - name: DevOps practices 
-          href: modernize/modernize-best-practices/devops-practices.md
         - name: Tools to empower adoption in Azure 
           href: modernize/modernize-best-practices/improve-devops-practices.md
         - name: Empower adoption

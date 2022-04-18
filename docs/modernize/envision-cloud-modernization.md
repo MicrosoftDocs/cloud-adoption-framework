@@ -3,7 +3,7 @@ title: Envision cloud modernization
 description: Learn how understanding your cloud adoption motivations will help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/14/2022
+ms.date: 04/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -27,7 +27,7 @@ There's a dividing line that breaks up the motivations of going to the cloud int
 :::image type="content" source="../_images/modernize/modernization-triggers.png" alt-text="Image showing triggers for modernization.":::
 
 The Modernize methodology in the Cloud Adoption Framework focuses on motivations aligned to technology.
-It's likely that many of the following triggers apply to your [Motivations for cloud adoption](../strategy/motivations.md). Identify which of the following triggers signal that you're looking to modernize and identify inside your business, which is most important to you. Likely, multiple triggers will apply.
+It's likely that many of the following triggers apply to your [Motivations for cloud adoption](../strategy/motivations.md). Identify which of the following triggers signal that you're looking to modernize and identify inside your business what's most important to you. Likely, multiple triggers will apply.
 
 - **Enable hybrid work:** Hybrid helps you to scale and move across networks, which allows internal people to jump in and get to applications the way they need to, and when they need to. Hybrid increases developer agility and productivity.
 - **Faster time to market:** PaaS gives you faster acceleration to get an application and application updates out to market, especially when you couple with some DevOps strategies.
@@ -63,13 +63,13 @@ Generally, a workload is a combination of apps and data coming together to solve
 
 :::image type="content" source="../_images/modernize/existing-datacenters.png" alt-text="Graphic showing existing data center.":::
 
-Inside of a workload type of classification system, if you've already done a migration and you followed the best practices in your plan, you already have something that looks like the following image, showing clusters of workloads.
+Inside of a workload classification system, if you've already done a migration and you followed the best practices in your plan, you already have clusters of workloads, like in the following image.
 
 :::image type="content" source="../_images/modernize/workload-clusters.png" alt-text="Graphic showing workload clusters.":::
 
-Align groups of workloads to your motivations, so you have something to track and work against.
+When you align groups of workloads to your motivations, you have something to track and work against.
 
-:::image type="content" source="../_images/modernize/align-workloads-motivations.png" alt-text="Image showing alignment of workload clusters with motivations.":::
+:::image type="content" source="../_images/modernize/align-workload-motivations.png" alt-text="Image showing alignment of workload clusters with motivations.":::
 
 ## Next steps
 

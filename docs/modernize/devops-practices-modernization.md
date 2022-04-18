@@ -14,7 +14,7 @@ ms.custom: internal
 Dependencies: cross linking​
 Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.-->
 
-# DevOps practices
+# DevOps practices for modernization
 
 When you understand how mature your devops practices are today, you can evaluate things you might want to strengthen as a pre-requisite to Modernization.
 
@@ -74,4 +74,3 @@ The table of contents on the left side of this page outlines many articles. Thes
 
 > [!NOTE]
 > Some links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
-
