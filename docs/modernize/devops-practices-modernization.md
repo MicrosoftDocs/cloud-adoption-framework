@@ -28,7 +28,7 @@ As devops modernization processes mature, your investment in improving devops pr
 4. Change the resource type and cloud API in your deployment pipeline.
 5. Deploy the modernized solution to the cloud, including configuration for new components.
 
-:::image type="content" source="../../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
+:::image type="content" source="../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
 
 ### Minimum requirement
 
@@ -44,7 +44,7 @@ The baseline of devops maturity is best made by executing following groups of wo
 
 The following image illustrates that as modernization processes mature, you can improve devops practices in repeat waves of modernization.
 
-:::image type="content" source="../../_images/modernize/improve-devops-practices-incrementally.png" alt-text="Diagram that shows the Cloud Adoption Framework approach to improve devops practices.":::
+:::image type="content" source="../_images/modernize/improve-devops-practices-incrementally.png" alt-text="Diagram that shows the Cloud Adoption Framework approach to improve devops practices.":::
 
 ## Alignment with the Modernize methodology
 
