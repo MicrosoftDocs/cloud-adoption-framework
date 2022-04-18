@@ -1,6 +1,6 @@
 ---
 title: What is a data mesh?
-description: Learn about data mesh in azure
+description: Learn about data mesh in Azure.
 author: simonlid
 ms.author: simonlid
 ms.date: 04/01/2022

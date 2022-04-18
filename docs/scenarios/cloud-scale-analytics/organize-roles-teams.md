@@ -23,7 +23,7 @@ Within scale analytics we identify the following teams:
 - Data landing zone ops
 - Data Application teams
 
-Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-and-responsibilities.md) and [Understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md).
+Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-responsibilities.md) and [Understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md).
 
 ## Data landing zone teams
 
@@ -109,4 +109,4 @@ The feedback and support operating board receives feedback about processes and w
 
 ## Next steps
 
-[Roles and Responsibilities](organize-roles-and-responsibilities.md)
+[Roles and Responsibilities](organize-roles-responsibilities.md)

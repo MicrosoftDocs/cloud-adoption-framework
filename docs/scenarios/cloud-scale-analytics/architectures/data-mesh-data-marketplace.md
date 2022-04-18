@@ -29,6 +29,4 @@ Building a data marketplace involves structure, culture, and people. It requires
 
 In some cases, you might need an external data marketplace. External data marketplaces enable sharing of your data products with external partners. You can use [Azure Data Share](/azure/data-share) as a component.
 
-## Next steps
-
-- [Master Data Management in Data Mesh](data-mesh-master-data-management.md)
+For more information, see [Master Data Management in Data Mesh](data-mesh-master-data-management.md).

@@ -512,7 +512,7 @@
       },
       {
          "source_path": "docs/scenarios/data-management/organize-persona-and-teams.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize-roles-and-teams",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize-roles-teams",
          "redirect_document_id": false
       },
       {
@@ -522,7 +522,7 @@
       },
       {
          "source_path": "docs/scenarios/data-management/architectures/policies.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/solution-accelerators",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/solution-accelerators",
          "redirect_document_id": false
       },
       {
