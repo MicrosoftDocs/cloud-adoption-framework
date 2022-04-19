@@ -26,7 +26,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 
 - Be aware of maximum [throughput limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#api-management-limits) of each API Management service tier. These limits are approximate and not guaranteed.
 - Be aware of the maximum number of [scale units](https://azure.microsoft.com/pricing/details/api-management/) per API Management service tier.
-- Be aware of the time required to scale out, deploy tp another region, or convert to a different service tier.
+- Be aware of the time required to scale out, deploy to another region, or convert to a different service tier.
 - API Management doesn't scale out automatically; [additional configuration](/azure/api-management/api-management-howto-autoscale) is required.
 - There is no downtime during a scale-out event.
 - Only the gateway component of API Management is deployed to all regions in a [multi-region deployment](/azure/api-management/api-management-howto-deploy-multi-region). 
