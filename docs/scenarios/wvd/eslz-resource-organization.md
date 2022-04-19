@@ -58,9 +58,27 @@ Create management groups under your root-level management group to represent the
 
 Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
-Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
+Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns. An AVD shared services subscription is recommended but not required.
 
-Below is the recommended structure and Resource Groups to be created and use as administrative domains and lifecycle purposes for each Azure Region deployed.
+This below is the suggested structure for AVD resources to be created. The subscriptions and Resource Group function as administrative domains and lifecycle purposes for each Azure Region deployed.
+
+```text
+    - Azure Virtual Desktop Service Objects:  Separate Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.  
+    - Networking:  Generally created as part of the Cloud Adoption Framework Landing zone
+    - Storage:  If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts
+    - Images:  Create a resource group for custom VM images
+    
+    - Basic Structure:
+        - Subscription (AVD-Shared-Services)
+            - rg-<Azure-Region>-avd-shared-resources
+        - Subscription (AVD)
+            - rg-<Azure-Region>-avd-<Workload>-service-objects
+            - rg-<Azure-Region>-avd-<Workload>-network
+            - rg-<Azure-Region>-avd-<Workload>-pool-compute
+            - rg-<Azure-Region>-avd-<Workload>-storage
+```
+
+Below is an example from the recommended structure above for the AVD resources already deployed.
 
 ![AVD base subscription](../../../docs/scenarios/wvd/media/avd-resource-management-1.png)
 
