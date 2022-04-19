@@ -1,149 +1,194 @@
 ---
-title: Data management and analytics scenario data products in Azure
-description: Learn about data management and analytics scenario data products in Azure.
-author: mboswell
-ms.author: mboswell
-ms.date: 09/21/2021
+title: Cloud-scale analytics data products in Azure
+description: Learn about cloud-scale analytics data products in Azure.
+author: sasever
+ms.author: sasever
+ms.date: 03/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Data management and analytics scenario data products in Azure
+# Cloud-scale analytics data products in Azure
 
-At a high level, data products are computed or polyglot persistence services that might be required depending on certain use cases. A data product is anything that drives business value, for example, reports, workbooks, bespoke database, or data API. It can use other services and technologies that aren't part of [data landing zone](./data-landing-zone.md) core services. One example is reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
+[Data products](../../cloud-scale-analytics/architectures/what-is-data-product.md) are data served as product and computed, saved, and served by polyglot persistence services, which can be required by certain use cases. The process of creating and serving a data product can require services and technologies that aren't included in the [data landing zone](./data-landing-zone.md) core services. An example of this would be reporting with niche requirements, such as compliance and tax reporting.
 
 ## Design considerations
 
-- A data landing zone can have multiple data products that are created by ingesting data either inside the same data landing zone or from across multiple data landing zones as shown below.
+A data landing zone can be served multiple data products created by ingesting data from within the same data landing zone or from across multiple data landing zones. This is showing in the following diagram.
 
   :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
 
   The example above shows:
 
-  - Intrazone data consumption:
-    - Data product B consumes from data product A and the data lake within its data landing zone; for example, data landing zone 1.
-    - Data products C and D only consume from within their own respective data landing zones.
-  - Interzone data consumption:
-    - Data product B also consumes from data product C and the data lake in data landing zone 3.
+- Intrazone data consumption:
+  - Data product B consumes data from data product A and other data or data products existing in the data lake within its own landing zone.
+  - Data products C and D only consume data from within their own respective data landing zones.
+- Interzone data consumption:
+  - Data product B also consumes data from data product C and the data in landing zone 3's data lake.
 
-  > [!IMPORTANT]
-  > In the case of interzone data consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
-  > [!IMPORTANT]
-  > Data product B consumes from data products A and C. Before this can happen, data product B must register its consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
+> [!IMPORTANT]
+> In the case of interzone data consumption, since data product B is created by reading from data landing zone 3, this read access requires approval from the [data landing zone operations](../../cloud-scale-analytics/organize-roles-teams.md#data-landing-zone-teams) and [integration operations](../../cloud-scale-analytics/organize-roles-teams.md#data-landing-zone-teams) teams of data landing zone 3.
 
-- The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data product samples](#sample-data-products).
-- A data product has data from a *READ* data source that has had some data transformation applied. For example, tt can be a newly curated dataset or a BI report.
+> [!IMPORTANT]
+> Data product B consumes data from data products A and C. Before this can happen, data product B must register its consumption of data products via data sharing agreements. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
+
+The resource group for a data product includes all services required to create and maintain it. We can call this resource group a **data application**. Examples of services that might be part of a data application include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [data application samples](#sample-data-applications).
+
+Data products have data from *READ* data sources that have had some data transformations applied. Examples might be a newly curated dataset or a BI report.
 
 ## Design recommendations
 
-We recommend building data products within your data landing zone by adhering to design principles that allow you to scale with data governance. Following are design recommendations to help you plan your data products ecosystem.
+Build data products within your data landing zone by adhering to design principles that allow you to scale with data governance. The following sections provide design recommendations to help as you plan your data application ecosystem.
 
 ### Deploy multiple resource groups
 
-Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
+Each data application is a resource group. Since data applications are compute services, polyglot persistence services, or both, they can only be required depending on certain use cases. As such, they're considered an optional data landing zone component. In a case where you do need data applications, create multiple resource groups by data application as the following diagram shows.
 
-![Diagram of data product resource groups.](../images/data-products-resource-group.png)
+![Diagram of data application resource groups.](../images/data-products-resource-group.png)
 
 ### Set guardrails
 
-Azure Policy would drive the default configuration of services within a data landing zone. Consider operational analytics as multiple resource groups that the data product team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
+Azure Policy drives the default configuration of services within a data landing zone. Think of operational analytics as multiple resource groups that your data product team can request from a standard service catalog. Using Azure Policy, you can configure the security boundary and required feature set.
 
 > [!IMPORTANT]
-> To drive consistency we recommend configuring an Azure Policy per data product.
+> To drive consistency, configure one Azure Policy for each data application.
 
-### Consume data from many places
+### Consume data from multiple places
 
-Data products manage, organize, and make sense of the data across data assets and present the insights gained. A data product is a result of data from one or many data integrations and other data products within data landing zones. Therefore, a data product should access data from multiple and various sources if necessary.
+Data applications manage, organize, and make sense of data from multiple data assets and present any insights gained. A data product is the result of data from one or many data applications within data landing zones. Allow your data applications to access data from multiple and various sources when necessary.
 
 ### Scale as needed
 
-Services that make up a data product are an incremental deployment to the data landing zone therefore we recommend you scale data products as needed.
+Services that make up data applications are incremental deployments to the data landing zone. Scale your data applications as needed.
 
 ### Enable data discovery
 
-Data products should be automatically registered in a data catalog such as [Azure Purview](../best-practices/purview-deployment.md) to allow scanning of data.
+Automatically register your data products in a data catalog such as [Azure Purview](../best-practices/purview-deployment.md) to allow data scanning.
 
 ### Identify your data products
 
-At the start of planning a data landing zone, you should have identified as many data products as you need to help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
+While starting to plan a data landing zone, identify as many data products (and the data applications that output and maintain them) as necessary to help drive your data product application architecture. Conformity to implemented platform governance should play the largest role in your decisions.
 
-For your data products, focus on how they're data producers and consumers for others. To understand further, let's assume you have identified a suite of data products (A, B, C, and D) which produce and consume data. You require data product A and D to produce data for data product B. Data product B consumes from data products A and D, and acts as a data producer itself. It also produces data for data product C.
+Focus on how your data applications are data producers and consumers for others. For example, assume you've identified a suite of data products (A, B, C, and D) which are produced and consumed data. You require data products A and D as sources for the data in Data Application B for data product B. Data product B is created from the data that Data Application B consumes from data products A and D. Data Application B acts as a data producer itself, and also produces data for data product C.
 
 :::image type="content" source="../images/data-producers-consumers.png" alt-text="Diagram of a data producer and consumers.":::
 
-### Control the environment with infrastructure as code
+### Control your data application environment with infrastructure-as-code
 
-Across the whole of your data products ecosystem, governance and infrastructure as code should control the environment as shown in the diagram above.
+Governance and infrastructure-as-code should control the data application environment across your data products ecosystem, as shown in the previous diagram.
 
 ### Publish data models
 
-Data product teams should publish their data model in a modeling repository.
+Your data product teams should publish their data models in a modeling repository.
 
 ### Set expectations for data product users
 
-Service-level agreements and certification for the data product, should update the data sharing contracts to set the right expectation for potential users of the data product.
+Update your data sharing contracts with service-level agreements and certifications for your data products so you to convey accurate expectations to potential users of the data product.
 
 ### Capture lineage
 
-As data product B is consuming from data product A and D, we want to make sure the lineage is captured from A and D to B. A further lineage would be captured for data product C consuming from data product B. It should be captured in a data lineage application before every release of a data product.
+If data product B is created from data coming from data products A and D, lineage must be captured from A and D to B. Further lineage should also be captured for data product C, since it's created using data from data product B. Updated lineage should be captured in a data lineage application before every release of your data product.
 
 > [!NOTE]
-> Using Azure Pipelines would allow building of approval gates to invoke functions to make sure metadata, lineage and SLAs are registered in the correct governance service.
+> Using Azure Pipelines allows you to build approval gates and invoke functions that can make sure metadata, lineage, and SLAs are registered in the correct governance service.
 
-### Define your data product's architecture
+### Define data application architecture
 
-Fully defining a data product's relationship with other data products, its dependencies, and access requirements requires a detailed architecture for a given data product.
+You must create a detailed architecture for each data product that fully defines its relationship to other data products, its dependencies, and its access requirements.
 
-#### Example scenario
+#### Example design scenario
 
-To explain the architecture definition process, we'll look at an example of a financial institution and its credit monitoring data product.
+To understand the architecture definition process, explore the following example of a financial institution and its credit monitoring data product.
 
 :::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define-data-product architecture in detail.":::
 
-The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [integration operations team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
+The credit monitoring data product shown in this diagram consumes data from a *read data store* that has been ingested by the [integration operations team](../../cloud-scale-analytics/organize-roles-teams.md#data-landing-zone-teams). It produces data product(s) also consumed by two other data products.
 
 > [!NOTE]
-> A read data source or store is also known as *golden record source*. These types of data sources have been cleaned but haven't had any transformation applied to them.
+> A read data source or store is also known as a *golden record source*. These data sources have been cleaned but haven't had any transformations applied to them.
 
-The credit monitoring data product team requests read access to the read data stores they require for their data product. These requests are routed through the owners of the data for approval. Upon approval, the product teams can start to build the credit monitoring data product.
+The credit monitoring data product team requests read access to read data stores they need for their data product creation. Their requests are routed to the owners of the data for approval. Once they receive approval, the product team can begin building their data application.
 
-Data from the read data source is transformed into the credit monitoring data product. You'll store any new data assets in the data lake's curated layer. These new data assets should be registered, alongside the new data lineage, as part of the DevOps deployment process. A function should check registered metadata with the physical structure of the data asset. It should register the dependency on the read data source data assets.
+Data from the read data source is transformed into the credit monitoring data product(s). Any new data products get stored in the data lake's curated layer. These new data products and the new data lineage should be registered as part of the DevOps deployment process. A function can check registered metadata with the physical structure of the data asset. It should register the dependency on the read data source data assets and data products.
 
-The loan approval data product team take a dependency on some of the credit monitoring data assets. They would request read access to the credit monitoring data product assets they require for their data product. Upon release of the loan approval data product, all data assets, lineage, and models should be registered in the relevant governance services.
+The loan approval data product team has a dependency on some of the credit monitoring data products. They loan approval team might request read access to the credit monitoring data products they require for their data products. Once they release their loan approval data product and its data application, all data product assets, lineage, and models should be registered in the relevant governance services.
 
-## Sample data products
+## Sample data applications
 
-### Visualization data product
+The following sections contain sample data applications to further illustrate data application scenarios.
 
-For every data landing zone, an empty visualization resource group is created. Visualization is a data product, and depending on the complexity, can be created via a self-serve process or managed by a data product team.
+### Data analytics and data science data application
 
-![Diagram of a visualization resource group.](../images/visualization-resource-group.png)
+An application for data analytics and data science might contain the services shown in sample data application `product-analytics-rg`.
 
-> [!NOTE]
-> Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
-
-While an initial visualization resource group will be deployed for a new data landing zone, data products might require their own reporting and visualization resource group. Security boundaries or a requirement to cross-charge for usage are the reason. It's important to remember that using Azure Active Directory passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
-
-Power BI is Microsoft's strategic visualization tool for self-service analytics and for citizen data scientists.
-
-Aligned to Microsoft investments and roadmap, we recommend using Power BI premium as the primary option for specific cases where refresh frequency, performance, or users licensing can't be met by Power BI professional.
-
-Azure Analysis Services should be used on an exception basis. There are specific use cases where it might be required such as multidimensional models, and CI/CD advanced requirements.
-
-As part of low-level design, we recommend enterprises consider an approach that allows access to a trial Power BI premium capacity by business users who want to evaluate whether it's a good fit for their use cases.
-
-### Data analytics and data science data product
-
-A data product for analytics and data science might contain the services shown in sample data product (`product-analytics-rg`).
-
-:::image type="content" source="../images/data-product-analytics-data-science.png" alt-text="Diagram of data analytics and data science.":::
+:::image type="content" source="../images/product-analytics.png" alt-text="Diagram that shows possible services that can be selected for Analytics Data Application Deployment." lightbox="../images/product-analytics.png":::
 
 > [!NOTE]
-> The data product above is [available as a template](https://github.com/Azure/data-product-analytics) that deploys a set of services which can be used for data analytics and data science. Like all our templates, this data product template is a blueprint which can be used to quickly spin up environments for cross-functional teams. Any services not required must be explicitly disabled.
+> The data application above is [available as a template](https://github.com/Azure/data-product-analytics), which deploys a set of services you can use for data analytics and data science. Like all our templates, this data product application template is a blueprint you can use to quickly spin up environments for cross-functional teams. Any services you don't require must be explicitly disabled.
 >
+
+The Data Product Analytics template contains all templates for deploying a data product for analytics and data science inside a cloud-scale analytics scenario data landing zone.
+
+The deployment and code artifacts include the following services:
+
+- [Machine Learning](/services/machine-learning/)
+- [Key Vault](/azure/key-vault/general)
+- [Application Insights](/azure/azure-monitor/app/app-insights-overview)
+- [Storage](/services/storage/)
+- [Container Registry](/services/container-registry/)
+- [Cognitive Services](/services/cognitive-services/) (optional)
+- [Data Factory](/azure/data-factory/) (select between Data Factory and Synapse)
+- [Synapse Workspace](/azure/synapse-analytics/) (select between Data Factory and Synapse)
+- [Azure Search](/services/search/) (optional)
+- [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
+- [BigData Pool](/sql/big-data-cluster/concept-data-pool) (optional)
+
+### Batch Data Application
+
+The Batch Data Application template contains all templates for deploying a data product for batch data processing inside a cloud-scale analytics scenario data landing zone.
+
+The deployment and code artifacts include the following services:
+
+:::image type="content" source="../images/product-batch.png" alt-text="Diagram that shows possible services that can be selected for Batch Data Application Deployment." lightbox="../images/product-batch.png":::
+
+- [Key Vault](/azure/key-vault/general)
+- [Data Factory](/azure/data-factory/) (select between Data Factory and Synapse)
+- [Cosmos DB](/azure/cosmos-db/introduction) (optional)
+- [Synapse Workspace](/azure/synapse-analytics/) (select between Data Factory and Synapse)
+- [MySQL Database](/azure/mysql/overview) (optional)
+- [Azure SQL Database](/azure/azure-sql/database/) (optional)
+- [PostgreSQL Database](/azure/postgresql/) (optional)
+- [MariaDB Database](/azure/mariadb/) (optional)
+- [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
+- [SQL Server](/sql/sql-server) (optional)
+- [SQL Elastic Pool](/azure/azure-sql/database/elastic-pool-overview) (optional)
+- [BigData Pool](/sql/big-data-cluster/concept-data-pool)
+
+### Streaming Data Application
+
+The Streaming Data Application template contains all templates for deploying a data product for real-time data processing inside a cloud-scale analytics scenario data landing zone
+
+The deployment and code artifacts include the following services:
+
+:::image type="content" source="../images/product-streaming.png" alt-text="Diagram that shows possible services that can be selected for Streaming Data Application Deployment." lightbox="../images/product-streaming.png":::
+
+- [Key Vault](/azure/key-vault/general)
+- [Event Hubs](/azure/event-hubs/)
+- [IoT Hub](/azure/iot-hub/about-iot-hub)
+- [Stream Analytics](/azure/stream-analytics/stream-analytics-introduction) (optional)
+- [Cosmos DB](/azure/cosmos-db/introduction) (optional)
+- [Synapse Workspace](/azure/synapse-analytics/)
+- [Azure SQL Database](/azure/azure-sql/database/) (optional)
+- [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
+- [SQL Server](/sql/sql-server) (optional)
+- [SQL Elastic Pool](/azure/azure-sql/database/elastic-pool-overview) (optional)
+- [BigData Pool](/sql/big-data-cluster/concept-data-pool)
+- [Data Explorer](/azure/synapse-analytics/data-explorer/data-explorer-overview) (optional)
+
+To find the repositories containing the previously-mentioned deployment templates, refer to [deployment templates for cloud-scale analytics](deployment-templates.md)
 
 ## Next steps
 
-[Overview of reference architectures for data management and analytics in Azure](./reference-architecture-overview.md)
+[Data applications (source-aligned)](../../cloud-scale-analytics/architectures/data-application-source-aligned.md)

@@ -3,7 +3,7 @@ title: Network topology and connectivity for connecting to environments privatel
 description: Learn about the network topology for connecting to environments privately.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 11/08/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -28,7 +28,7 @@ Today, instead of exposing a VM publicly, you can rely on Azure Bastion as a mor
 
 :::image type="content" source="../images/bastion-network-architecture.png" alt-text="Diagram of Azure Bastion network architecture." lightbox="../images/bastion-network-architecture.png" :::
 
-Azure Bastion provides a few additional core security benefits, including:
+Azure Bastion provides a few other core security benefits, including:
 
 - Traffic initiated from Azure Bastion to the target VM stays within the customer virtual network.
 - You get protection against port scanning, because RDP ports, SSH ports, and public IP addresses aren't publicly exposed for VMs.
@@ -40,7 +40,7 @@ For more information, see [What is Azure Bastion?](/azure/bastion/bastion-overvi
 
 ### Deployment
 
-To simplify the process for users, there is a Bicep/ARM template that can help you quickly create this setup inside your data management landing zone or data landing zone. Use the template to create the following setup inside your subscription:
+To simplify the process for users, there's a Bicep/ARM template that can help you quickly create this setup inside your data management landing zone or data landing zone. Use the template to create the following setup inside your subscription:
 
 :::image type="content" source="../images/bastion-architecture.png" alt-text="Diagram of Azure Bastion architecture." lightbox="../images/bastion-architecture.png" :::
 
@@ -56,7 +56,7 @@ After the deployment, you'll notice that two extra subnets have been created on 
 
 :::image type="content" source="../images/bastion-subnets.png" alt-text="Screenshot of the Azure Bastion and Jumpbox subnets." lightbox="../images/bastion-subnets.png" :::
 
-In addition, you will find a new resource group inside your subscription, which includes the Azure Bastion resource and a virtual machine:
+In addition, you'll find a new resource group inside your subscription, which includes the Azure Bastion resource and a virtual machine:
 
 :::image type="content" source="../images/bastion-resource-groups.png" alt-text="Screenshot of a list of Azure Bastion resource groups.":::
 
@@ -86,7 +86,7 @@ To connect to the VM by using Azure Bastion, do the following:
 
 If all the virtual networks have been peered with each other, only a single jumpbox in one data landing zone is required to access services across all data landing zones and data management landing zones.
 
-To learn why we recommend this network setup, see [Network architecture considerations](../eslz-network-considerations.md). We recommend a maximum of one Azure Bastion service per data landing zone. If more users require access to the environment, you can add extra Azure VMs to the data landing zone.
+To learn why we recommend this network setup, see [Network architecture considerations](../../cloud-scale-analytics/eslz-network-considerations-single-region.md). We recommend a maximum of one Azure Bastion service per data landing zone. If more users require access to the environment, you can add extra Azure VMs to the data landing zone.
 
 ## Use point-to-site connections
 
@@ -102,4 +102,4 @@ The recommended, Azure-native approach to such connectivity is the use of Expres
 
 ## Next steps
 
-For more information about setting up connectivity to Azure, see [Connectivity to Azure](../../../ready/azure-best-practices/connectivity-to-azure.md).
+[Enterprise-scale FAQ](../../../ready/enterprise-scale/faq.md)
