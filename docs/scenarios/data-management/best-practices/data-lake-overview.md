@@ -21,7 +21,7 @@ Each storage account within your data landing zone stores data in one of three s
 - Enriched and curated data
 - Development data lakes
 
-A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account using an automated data agnostic ingestion service. You can create a [source aligned data application](../architectures/data-application-source-aligned.md) if you don't implement data agnostics engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
+A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account which has been ingested an automated data agnostic ingestion service. You can create a [source aligned data application](../architectures/data-application-source-aligned.md) if you don't implement data agnostics engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
 
 Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protect data at the file and folder levels. Access control lists can help your organization implement tight security measures for authentication and authorization for data products to:
 
