@@ -2,7 +2,7 @@
 title: Implementation design area guidance for Azure Virtual Desktop
 description: Explore the resource organization design area and how to apply it to an Azure Virtual Desktop implementation.
 author: XavierElizondo
-ms.author: xaelizon
+ms.author: xelizondo
 ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
