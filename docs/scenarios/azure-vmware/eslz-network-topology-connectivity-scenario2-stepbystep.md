@@ -25,6 +25,10 @@ This step-by-step guidance assumes that the following resources have been alread
 - An Azure VNet hosting an Expressroute gateway and a firewalling solution (Azure Firewall or third-party NVA clusters). The VNet is typically the hub VNet of an hub&spoke network deployed in a single Azure region. However, a fully-fledged hub&spoke topology is not strictly required to successfully implement the solution described in this article. This VNet will be referred to as the "Firewall VNet".
 - A fully provisioned Expressroute circuit, connected both to the on-prem site(s) and the Expressroute Gateway hosted in the Firewall Vnet.
 
+The picture below shows how your environment should look like for the steps below to be applicable to it.
+
+[img](./media/azure-vmware-eslz-network-scenario-2-stepbystep-fig1.PNG)
+
 It is not required for the resources listed above to be in the same Azure subscription, nor in subscriptions associated to the same AAD tenant.
 
 By followoing the steps in this article, the following new resources will be deployed:
@@ -36,6 +40,10 @@ By followoing the steps in this article, the following new resources will be dep
 - One or more third-party, BGPv4-capable NVAs .
 - A Custom Route Table, attached to one the NVAs subnets (more details provided below).
 - An Azure Route Server hosted in the Firewall VNet.
+
+At the end of this step-by-step guide, your environemnt will look like the one in the picture below.
+
+[img](./media/azure-vmware-eslz-network-scenario-2-stepbystep-fig2.PNG)
 
 Connectivity among the AVS private cloud, the Transit VNet, the Firewall VNet and the on-prem site(s) is entirely based on Expressroute and VNet peering, both of which  work cross-subscription and cross-tenant. Therefore, the resources listed above can be deployed in different/multiple subscriptions, if so mandated by security/billing/governance requirements. 
 
