@@ -37,7 +37,7 @@ Operational management of your data workloads can include advanced automation th
 
 Security and [data management](/azure/architecture/patterns/category/data-management) must be built into the architectural process at layers for every application and workload. Cloud-scale analytics focuses on establishing a foundation for security. This foundation is built when you configure your Azure landing zones and you manage them separate from the workload. However, the workload team is still responsible for validating the following minimum requirements. If necessary, workload-specific solutions might be required to augment the configuration of the environment.
 
-- Ensure [confidentiality and integrity of data, including privilege management, data privacy, and establishing appropriate controls](https://azure.microsoft.com/resources/seven-key-principles-of-cloud-security-and-privacy/).
+- Ensure confidentiality and integrity of data, including privilege management, data privacy, and establishing appropriate controls.
 - Implement appropriate [network isolation](/azure/security/fundamentals/network-best-practices) and [end-to-end encryption](/azure/security/fundamentals/encryption-overview), auditing, and policies at the platform level.
 - Use single sign-on (SSO) integration, multifactor authentication backed conditional access, and managed service identities.
 - Adhere to separation of concerns, such as control pane versus data plane, through proper application of [role-based access control (RBAC)](/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC).
