@@ -37,7 +37,7 @@ Consider each management group in the resource hierarchy as contributing to the 
 
 There's a close relationship between management groups and landing zone archetypes, but a management group alone isn't a landing zone archetype. Instead, it forms part of the framework that's used to implement each of the landing zone archetypes in your environment.
 
-You can see this relationship in the Azure landing zone conceptual architecture. Policy assignments are created at the intermediate root management group, which is Contoso, for settings that must apply to all workloads. More policy assignments are created at lower levels of the hierarchy for more specific requirements.
+You can see this relationship in the Azure landing zone conceptual architecture. Policy assignments are created at the intermediate root management group, for example *Contoso*, for settings that must apply to all workloads. More policy assignments are created at lower levels of the hierarchy for more specific requirements.
 
 Subscription placement within the management group hierarchy determines the resultant set of Azure Policy and access control (IAM) assignments that are inherited, applied, and enforced to that particular landing zone (Azure subscription).
 
