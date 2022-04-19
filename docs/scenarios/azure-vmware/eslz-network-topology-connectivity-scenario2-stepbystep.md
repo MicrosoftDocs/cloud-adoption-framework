@@ -27,7 +27,7 @@ This step-by-step guidance assumes that the following resources have been alread
 
 The picture below shows how your environment should look like for the steps below to be applicable to it.
 
-[img](./media/azure-vmware-eslz-network-scenario-2-stepbystep-fig1.PNG)
+![figure1](./media/azure-vmware-eslz-network-scenario-2-stepbystep-fig1.PNG)
 
 It is not required for the resources listed above to be in the same Azure subscription, nor in subscriptions associated to the same AAD tenant.
 
@@ -43,7 +43,7 @@ By followoing the steps in this article, the following new resources will be dep
 
 At the end of this step-by-step guide, your environemnt will look like the one in the picture below.
 
-[img](./media/azure-vmware-eslz-network-scenario-2-stepbystep-fig2.PNG)
+![figure2](./media/azure-vmware-eslz-network-scenario-2-stepbystep-fig2.PNG)
 
 Connectivity among the AVS private cloud, the Transit VNet, the Firewall VNet and the on-prem site(s) is entirely based on Expressroute and VNet peering, both of which  work cross-subscription and cross-tenant. Therefore, the resources listed above can be deployed in different/multiple subscriptions, if so mandated by security/billing/governance requirements. 
 
