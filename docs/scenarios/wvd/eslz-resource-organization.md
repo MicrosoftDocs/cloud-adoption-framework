@@ -1,9 +1,9 @@
 ---
 title: Implementation design area guidance for Azure Virtual Desktop
 description: Explore the resource organization design area and how to apply it to an Azure Virtual Desktop implementation.
-author: DominicAllen
-ms.author: doalle
-ms.date: 06/18/2021
+author: XavierElizondo
+ms.author: xaelizon
+ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -80,9 +80,9 @@ This below is the suggested structure for AVD resources to be created. The subsc
 
 Below is an example from the recommended structure above for the AVD resources already deployed.
 
-![AVD base subscription](../../../docs/scenarios/wvd/media/avd-resource-management-1.png)
+![AVD Shared Resources Subscription](../../../docs/scenarios/wvd/media/avd-resource-management-1.png)
 
-![AVD shared services subscription](../../../docs/scenarios/wvd/media/avd-resource-management-2.png)
+![AVD Service Objects and compute Subscription](../../../docs/scenarios/wvd/media/avd-resource-management-2.png)
 
 ## Next steps
 
