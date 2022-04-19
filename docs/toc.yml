@@ -13,7 +13,7 @@ items:
       href: scenarios/overview.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
-    - name: Data management and analytics
+    - name: Cloud-scale analytics
       href: scenarios/data-management/index.md
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
@@ -411,6 +411,8 @@ items:
         items:
         - name: Choose a landing zone option
           href: ready/landing-zone/choose-landing-zone-option.md
+        - name: Tailoring the Azure landing zones architecture
+          href: ready/landing-zone/tailoring-alz.md
         - name: Start with enterprise scale
           items:
           - name: Overview
@@ -1550,6 +1552,8 @@ items:
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
           href: manage/monitor/observability.md
+        - name: Service Level Objectives
+          href: manage/monitor/service-level-objectives.md
         - name: Data collection
           href: manage/monitor/data-collection.md
         - name: Response
