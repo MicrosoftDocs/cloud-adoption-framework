@@ -31,7 +31,7 @@ Learn more about the [identity and access management](/azure/cloud-adoption-fram
 - Use [built-in roles](/azure/api-management/api-management-role-based-access-control#built-in-roles) to delegate responsibilities across teams to manage the API Management instance.
 - Use custom roles based on API Management [RBAC operations](/azure/role-based-access-control/resource-provider-operations#microsoftapimanagement) to set fine-grained access to API Management entities. Examples: API developers, backup operators, DevOps automation, etc.
 - Associate subscriptions at the appropriate scope, such as products.
-- Create appropriate groups to control the visibility of the products.
+- Create appropriate [groups](api-management-howto-create-groups) to control the visibility of the products.
 - Manage access to the developer portal using [Azure Active Directory B2C](/azure/api-management/api-management-howto-aad-b2c).
 - Reporting:
   - Make use of built-in [analytics](/azure/api-management/howto-use-analytics).

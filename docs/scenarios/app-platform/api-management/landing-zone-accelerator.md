@@ -18,14 +18,14 @@ Customers adopt API Management in various ways. The construction set can be adap
 
 ## Implement a platform foundation
 
-Landing zone accelerator for API Management assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing Landing zone accelerator for API Management, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
+Landing zone accelerator for API Management assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize an enterprise-scale landing zone has been successfully implemented. This isn't mandatory when implementing Landing zone accelerator for API Management, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation)
 
 ## What Landing zone accelerator for API Management provides
 
-The Landing zone accelerator approach to landing zones provides these assets to support your project:
+The Landing zone accelerator approach for API Management provides these assets to support your project:
 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
@@ -36,7 +36,7 @@ The Landing zone accelerator approach to landing zones provides these assets to 
 
 ## Design guidelines
 
-These articles provide guidelines for creating your landing zone:
+These articles provide guidelines for creating your landing zone based on the design areas of Azure landing zones:
 
 - [Identity and access management](./identity-and-access-management.md)
 - [Network topology and connectivity](./network-topology-and-connectivity.md)
@@ -48,8 +48,6 @@ These articles provide guidelines for creating your landing zone:
 ## Example conceptual reference architecture
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
-
-:::image type="content" source="media/landing-zone-accelerator/reference-implementation.png" alt-text="Reference implementation":::
 
 [![Landing zone accelerator for API Management architecture](./media/landing-zone-accelerator/reference-implementation.png)](./media/landing-zone-accelerator/reference-implementation.png#lightbox)
 

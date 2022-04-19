@@ -27,7 +27,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 - Be aware of maximum [throughput limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#api-management-limits) of each API Management service tier. These limits are approximate and not guaranteed.
 - Be aware of the maximum number of [scale units](https://azure.microsoft.com/pricing/details/api-management/) per API Management service tier.
 - Be aware of the time required to scale out, deploy tp another region, or convert to a different service tier.
-- API Management doesn't scale out automatically. [Additional configuration](/azure/api-management/api-management-howto-autoscale) is required.
+- API Management doesn't scale out automatically; [additional configuration](/azure/api-management/api-management-howto-autoscale) is required.
 - There is no downtime during a scale-out event.
 - Only the gateway component of API Management is deployed to all regions in a [multi-region deployment](/azure/api-management/api-management-howto-deploy-multi-region). 
 - Be aware of the possible performance impact of [Application Insights logging](/azure/api-management/api-management-howto-app-insights) at high loads.
@@ -37,9 +37,9 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 - Use [availability zones](/azure/api-management/zone-redundancy). The number of scale units selected must distribute evenly across the zones.
 - If using a [self-hosted gateway](/azure/api-management/self-hosted-gateway-overview), be aware that credentials expire every 30 days and must be rotated. 
 - The URI `/status-0123456789abcdef` can be used as a common health endpoint for the API Management service.
-- The API Management service is not a WAF. Deploy a WAF such as Azure Application Gateway in front to add additional layers of protection.
+- The API Management service is not a WAF. Deploy a WAF such as Azure Application Gateway in front for additional layers of protection.
 - Client certificate negotiation is enabled in a per-gateway configuration.
-- Certificates and secrets in Key Vault are updated within 4 hours after being set. You can also manually refresh the secret using the Azure portal or via the management REST API.
+- Certificates and secrets in Key Vault are updated in API Management within 4 hours after being set. You can also manually refresh a secret using the Azure portal or via the management REST API.
 - [Custom domains](/azure/api-management/configure-custom-domain) can be applied to all endpoints or just a subset. The Premium tier supports setting multiple host names for the Gateway endpoint.
 - API Management can be [backed up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore) using its management REST API. Backups expire after 30 days. Be aware of what API Management doesn't back up.
 - [Named values](/azure/api-management/api-management-howto-properties) are global in scope.
@@ -51,7 +51,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 - Use [Event Hub policy](/azure/api-management/api-management-howto-log-event-hubs) for logging at high performance levels.
 - Use an [external cache](/azure/api-management/api-management-howto-cache-external) for control and fastest performance.
 - Deploy at least two scale units spread over two availability zones per region for best availability and performance.
-- Use Azure Monitor to [autoscale](/azure/api-management/api-management-howto-autoscale) API Management. If using a self-hosted gateway, use Kubernetes horizontal pod autoscaler to scale out the gateway.
+- Use Azure Monitor to [autoscale](/azure/api-management/api-management-howto-autoscale) API Management. If using a self-hosted gateway, use Kubernetes [horizontal pod autoscaler](/azure/api-management/how-to-self-hosted-gateway-on-kubernetes-in-production#autoscaling) to scale out the gateway.
 - Deploy self-hosted gateways where Azure doesn't have a region close to the backend APIs.
 - Use Key Vault for certificate storage, notification, and rotation.
 - Do not enable 3DES, TLS 1.1, or lower encryption protocols unless absolutely required. 
@@ -71,21 +71,21 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 - Determine the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for the API Management instances that you want to protect and the value chains they support (consumers and providers). Consider the feasibility of deploying fresh instances or having a hot/cold standby.
 - API Management supports [multizone](/azure/api-management/zone-redundancy) and [multiregion](/azure/api-management/api-management-howto-deploy-multi-region) deployments. Based on the requirements, you could enable just one or both.
 - Failover can be automated:
-  - A multizone deployment automatically fails over
-  - A multiregion deployment requires a DNS-based load balancer such as Traffic manager to fail over.
-- API Management can be [backed up using its Management REST API](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#calling-the-backup-and-restore-operations). 
+  - A multizone deployment automatically fails over.
+  - A multiregion deployment requires a DNS-based load balancer such as Traffic Manager to fail over.
+- API Management can be [backed up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#calling-the-backup-and-restore-operations) using its Management REST API. 
   * Backups expire after 30 days. 
   * Be aware of [what APIM doesn't back up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#what-is-not-backed-up)
 
 ### Design recommendations
 
-- Use a [user-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) for API Management to prevent downtime during redeployment from ARM templates
-- Use automated DevOps pipelines to run backups
-- Decide whether [multiregion deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required
+- Use a [user-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) for API Management to prevent downtime during redeployment from ARM templates.
+- Use automated DevOps pipelines to run backups.
+- Decide whether [multiregion deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required.
 
 ## Enterprise-scale assumptions
 
 The following are assumptions that went into the development of the landing zone accelerator for API Management:
 
 - A Premium tier instance of API Management that supports availability zones and multiregion deployments is recommended.
-- DevOps pipelines are used to manage and deploy infrastructure as code.
+- DevOps pipelines are used to manage and deploy infrastructure-as-code.
