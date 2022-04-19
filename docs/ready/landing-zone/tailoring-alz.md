@@ -53,7 +53,7 @@ More processes and tooling might be required to ensure a landing zone has the re
 >
 > For more information, see [Adopt policy-driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance).
 
-## Azure landing zones conceptual architectures "built-in" archetypes
+## Built-in archetypes for the Azure landing zone conceptual architecture
 
 The conceptual architecture includes example landing zone archetypes for application workloads such as *corp* and *online*. These archetypes might apply to your organization and meet your requirements. You might want to make changes to these archetypes or create new ones. Your decision depends on your organization's needs and requirements.
 
@@ -72,9 +72,9 @@ The following landing zone archetype examples from the conceptual architecture h
 
 ## Scenarios where tailoring might be required
 
-As mentioned, we provide some common landing zone archetypes in [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
+As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
 
-Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the Azure landing zone conceptual architecture default hierarchy.
+Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone conceptual architecture.
 
 ![Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted.](media/alz-tailor-hierarchy-default.png)
 
@@ -116,10 +116,11 @@ Consider the following points when you think about tailoring your implementation
 - Tailoring the hierarchy isn't mandatory. The default archetypes and hierarchy we provide are suitable for most scenarios.
 - Don't re-create your organizational hierarchy, teams, or departments in archetypes.
 - Always try to build on the existing archetypes and hierarchy to meet new requirements.
-- Only create new archetypes when they're truly needed:
-  - For example, a new compliance requirement like PCI is required for only a subset of application workloads and doesn't need to apply to all workloads.
+- Only create new archetypes when they're truly needed.
+  
+  For example, a new compliance requirement like PCI is required for only a subset of application workloads and doesn't need to apply to all workloads.
 - Only create new archetypes in the highlighted areas shown in the preceding diagrams.
-- Avoid going beyond a hierarchy depth of four layers to avoid complexity and unnecessary exclusions:
-  - Expand archetypes horizontally instead of vertically in the hierarchy.
+- Avoid going beyond a hierarchy depth of four layers to avoid complexity and unnecessary exclusions. Expand archetypes horizontally instead of vertically in the hierarchy.
 - Don't create archetypes for environments like development, test, and production.
-  - For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+  
+  For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
