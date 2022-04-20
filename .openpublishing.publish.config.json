@@ -13,6 +13,10 @@
         "ContextObject": "Toc"
       },
       "build_entry_point": "docs",
+      "redirection_files": [
+        ".openpublishing.redirection.json",
+        ".openpublishing.redirection.scenarios.json"
+      ],
       "template_folder": "_themes"
     }
   ],
