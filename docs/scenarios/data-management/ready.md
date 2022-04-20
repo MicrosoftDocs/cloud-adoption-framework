@@ -56,7 +56,7 @@ The **Data management landing zone** is a subscription that governs the platform
 - [Data modeling repository](architectures/data-management-landing-zone.md#data-modeling-repository)
 - [Master data management](architectures/data-management-landing-zone.md#master-data-management)
 - [API catalog](architectures/data-management-landing-zone.md#api-catalog)
-- [Data sharing and contracts](govern-data-sharing-agreements.md)
+- [Data sharing and contracts](../cloud-scale-analytics/govern-data-quality.md)
 - [Data privacy for cloud-scale analytics in Azure](secure-data-privacy.md)
 - [Provision security for cloud-scale analytics in Azure](security-provisioning.md)
 
@@ -114,3 +114,4 @@ To get started with the data management and data management landing zones you ne
 ## Next steps
 
 - [Enterprise enrollment](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+-
