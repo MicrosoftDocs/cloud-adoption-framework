@@ -1,6 +1,6 @@
 ---
-title: Azure Landing Zones Terraform module
-description: Learn how to use the Azure landing zones Terraform module to deploy Azure landing zones.
+title: Terraform module for Azure landing zones
+description: Learn how to use the Terraform module to deploy Azure landing zones.
 author: krowlandson
 ms.author: brblanch
 ms.date: 04/13/2022
@@ -10,124 +10,110 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Using the Azure Landing Zones Terraform module
+# Terraform module for Azure landing zones
 
-The [Azure landing zones Terraform module][caf-enterprise-scale] module provides an rapid implementation of the recommended platform resources you need to manage [Azure landing zones][msdocs-alz-architecture] at scale using Terraform.
+The [Terraform Module for Cloud Adoption Framework Enterprise-scale][caf-enterprise-scale] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs-alz-architecture] at scale by using Terraform.
 
 > [!NOTE]
-> This article describes one of two ways to implement landing zones on Azure using Terraform.
-> For guidance on choosing the right approach, see [this guidance](deploy-landing-zones-with-terraform.md).
+> This article describes one of two ways to implement landing zones on Azure by using Terraform. For guidance on choosing the right approach, see [this article](deploy-landing-zones-with-terraform.md).
 
 ## Prerequisites
 
-If you're new to Terraform, refer to the [Install Terraform tutorial][tf-install] on HashiCorp Learn.
-The article covers installation and use of Terraform.
-It's also a good idea to check out the [AzureRM provider guides][azurerm-auth] for information on how to set up the provider and authenticate with Azure.
+If you're new to Terraform and you want information about installing and using it, see the [Install Terraform][tf-install] tutorial on HashiCorp Learn.
 
-For more information on how to set up the provider for deploying across multiple Subscriptions, see the [Provider Configuration][wiki_provider_configuration] wiki page.
+For information on how to set up the Terraform provider and authenticate with Azure, see the [azurerm provider guides][azurerm-auth] on the Terraform website. To learn how to set up the provider for deploying across multiple subscriptions, see the [Provider Configuration][wiki_provider_configuration] wiki page.
 
-## Overview
+## Importance of using standard modules
 
-These resources align with the [Azure landing zones conceptual architecture][es-ref-arch].
-Customize them to meet the requirements of your organization.
+Reuse of components is a fundamental principle of infrastructure as code.
+Modules are instrumental in defining standards and consistency across resource deployment within and across environments.
 
-[![Overview of the Azure landing zones conceptual architecture.](media/ns-arch-cust-inline.png)](media/ns-arch-cust-inline.png#lightbox)
+The Terraform module for Azure landing zones is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
 
-You can configure the module to deploy different sets of resources, each aligned to the critical design areas:
+Deploying the module from the Terraform Registry provides:
 
-| Resource category | Azure landing zone critical design areas |
+- An accelerated delivery of Azure landing zones in your environment.
+- A tested upgrade path to the latest version of Azure landing zones Terraform module, along with strict version control.
+
+## Benefits of using the module
+
+Benefits of using the Terraform module for Azure landing zones include:
+
+- A managed and extensible core resource hierarchy for subscription organization through management groups.
+- Scalable security governance and compliance through Azure identity and access management (IAM) controls, with an extensive library of custom definitions ready to assign.
+- Enforcement of policy across subscriptions through management group inheritance.
+- Managed resources for management and connectivity landing zones. These resources provide:
+  - Assured policy compliance through tight integration of resources managed by the module and corresponding policy assignments.
+  - Integration between resources to reduce management overhead and provide an improved user experience, like automatic creation of virtual network links for Azure Private DNS.
+
+> [!TIP]
+> The template library is updated programmatically from the [Azure/Enterprise-Scale][gh-es] GitHub repository. To stay up to date with the latest archetype configuration, policies, and roles, make sure you're using the latest version of the module.
+
+## Resource deployment
+
+You can configure the module to deploy sets of resources that align with critical design areas in Azure landing zones. Customize these resources to meet the requirements of your organization.
+
+| Resource category | Critical design area |
 | --- | --- |
 | Core resources | [Resource organization][alz-resourceorg]</br>[Security][alz-security]</br> [Governance][alz-governance] |
 | Management resources | [Management and monitoring][alz-management] |
 | Connectivity resources | [Network topology and connectivity][alz-connectivity] |
 | Identity resources | [Identity and access management][alz-identity] |
 
-By packaging these capabilities into a single Terraform module, it becomes easier to build and enforce consistency across the Azure platform when operating at scale.
+Packaging these capabilities into a single Terraform module makes it easier to build and enforce consistency across the Azure platform when you're operating at scale.
 
-## Use standard modules
+These resources align with the following conceptual architecture for Azure landing zones:
 
-Reuse of components is a fundamental principle of infrastructure as code.
-Modules are instrumental in defining standards and consistency across resource deployment within and across environments.
-The Azure landing zones Terraform module is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
+[![Diagram of the Azure landing zones conceptual architecture.](media/ns-arch-cust-inline.png)](media/ns-arch-cust-inline.png#lightbox)
 
-Deploying the module from the Terraform Registry provides strict version control while ensuring you always have access to the latest version. Doing so provides:
+You can deploy these resources, by capability, across multiple Subscriptions by using the [Provider Configuration][wiki_provider_configuration] on the module block.
 
-- An accelerated delivery of Azure landing zones in your environment.
-- A tested upgrade path to the latest version of Azure landing zones Terraform module.
+The following sections outline the resource types and configuration options.
 
-## Benefits of using the module
+### Core resources
 
-There are many benefits of using the Azure landing zones Terraform module:
+The core capability of this module deploys the foundations of the [conceptual architecture for Azure landing zones][msdocs-alz-architecture], with a focus on the central [resource organization][alz-hierarchy]:
 
-- Managed and extensible core resource hierarchy for Subscription organization using Management Groups.
-- Scalable security governance and compliance using Azure Identity and Access Management (IAM) controls, with an extensive library of custom definitions ready to assign.
-- Enforcement of policy across Subscriptions through Management Group inheritance.
-- Managed resources for Management and Connectivity landing zones, providing:
-  - Assured policy compliance through tight integration of resources managed by the module and corresponding policy assignments.
-  - Integration between resources to reduce management overhead and provide an improved end-user experience, like automatic creation of virtual network links for Azure Private DNS.
+![Diagram of an enterprise-scale architecture for core resources in Azure landing zones.](./media/terraform-caf-enterprise-scale-overview.png)
 
-> [!TIP]
-> The template library is updated programmatically from the [Azure/Enterprise-Scale][gh-es] GitHub repository.
-> To stay up to date with the latest archetype configuration, policies, and roles, make sure you're using the latest version of the module.
-
-## Capabilities
-
-Resources deployed by the Azure landing zones Terraform module are split logically into the following capabilities:
-
-- [Core resources](#core-resources)
-- [Management resources](#management-resources)
-- [Connectivity resources](#connectivity-resources)
-- [Identity resources](#identity-resources)
-
-You can deploy these resources, by capability, across multiple Subscriptions using the [Provider Configuration][wiki_provider_configuration] on the module block.
-
-The following sections outline the different groups of resource types deployed and managed by this module, depending on the configuration options specified.
-
-## Core resources
-
-The core capability of this module deploys the foundations of the [Azure landing zone conceptual architecture][msdocs-alz-architecture], with a focus on the central [resource organization][alz-hierarchy]:
-
-![Enterprise-scale Core Landing Zones Architecture](./media/terraform-caf-enterprise-scale-overview.png)
-
-When using the core resources capability, the module deploys and manages the following resource types:
+When you're using core resources, the module deploys and manages the following resource types:
 
 | Resource | Azure resource type | Terraform resource type |
 | --- | --- | --- |
-| Management Groups | [`Microsoft.Management/managementGroups`][arm_management_group] | [`azurerm_management_group`][azurerm_management_group] |
-| Management Group Subscriptions | [`Microsoft.Management/managementGroups/subscriptions`][arm_management_group_subscriptions] | [`azurerm_management_group`][azurerm_management_group] |
-| Policy Assignments | [`Microsoft.Authorization/policyAssignments`][arm_policy_assignment] | [`azurerm_management_group_policy_assignment`][azurerm_management_group_policy_assignment] |
-| Policy Definitions | [`Microsoft.Authorization/policyDefinitions`][arm_policy_definition] | [`azurerm_policy_definition`][azurerm_policy_definition] |
-| Policy Set Definitions | [`Microsoft.Authorization/policySetDefinitions`][arm_policy_set_definition] | [`azurerm_policy_set_definition`][azurerm_policy_set_definition] |
-| Role Assignments | [`Microsoft.Authorization/roleAssignments`][arm_role_assignment] | [`azurerm_role_assignment`][azurerm_role_assignment] |
-| Role Definitions | [`Microsoft.Authorization/roleDefinitions`][arm_role_definition] | [`azurerm_role_definition`][azurerm_role_definition] |
+| Management groups | [`Microsoft.Management/managementGroups`][arm_management_group] | [`azurerm_management_group`][azurerm_management_group] |
+| Management group subscriptions | [`Microsoft.Management/managementGroups/subscriptions`][arm_management_group_subscriptions] | [`azurerm_management_group`][azurerm_management_group] |
+| Policy assignments | [`Microsoft.Authorization/policyAssignments`][arm_policy_assignment] | [`azurerm_management_group_policy_assignment`][azurerm_management_group_policy_assignment] |
+| Policy definitions | [`Microsoft.Authorization/policyDefinitions`][arm_policy_definition] | [`azurerm_policy_definition`][azurerm_policy_definition] |
+| Policy set definitions | [`Microsoft.Authorization/policySetDefinitions`][arm_policy_set_definition] | [`azurerm_policy_set_definition`][azurerm_policy_set_definition] |
+| Role assignments | [`Microsoft.Authorization/roleAssignments`][arm_role_assignment] | [`azurerm_role_assignment`][azurerm_role_assignment] |
+| Role definitions | [`Microsoft.Authorization/roleDefinitions`][arm_role_definition] | [`azurerm_role_definition`][azurerm_role_definition] |
 
-The exact number of resources created depends on the module configuration. In general, you can expect the module to create upwards of 180 resources for a default installation, based on the [example below](#simple-example).
+The exact number of resources that the module creates depends on the module configuration. In general, you can expect the module to create up to 180 resources for a default installation, based on the [example later in this article](#simple-example).
 
 > [!TIP]
-> None of these resources get deployed at the Subscription scope, but Terraform still requires a Subscription to establish an authenticated session with Azure.
-> For more information on authenticating with Azure, see [Azure Provider: Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli).
+> None of these resources are deployed at the subscription scope, but Terraform still requires a subscription to establish an authenticated session with Azure. For more information on authenticating with Azure, see [Azure Provider: Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli) in the Terraform Registry.
 
-## Management resources
+### Management resources
 
-The module provides an option to enable deployment of [management and monitoring][es-management] resources into the specified Subscription as described on the [Provider Configuration][wiki_provider_configuration] wiki page.
-It also ensures the specified Subscription is placed in the right Management Group.
-The module provides the benefit of managing the full lifecycle of these resources using Terraform, with native integration, into the corresponding policy assignments to ensure full policy compliance.
+The module provides an option to enable deployment of [management and monitoring][es-management] resources into the specified subscription, as described on the [Provider Configuration][wiki_provider_configuration] wiki page. The module also ensures that the specified subscription is placed in the right management group.
 
-![Enterprise-scale Management Landing Zone Architecture](./media/terraform-caf-enterprise-scale-management.png)
+The module provides the benefit of managing the full lifecycle of these resources by using Terraform, with native integration, into the corresponding policy assignments to ensure full policy compliance.
 
-When you enable the Management resources capability, the module deploys and manages the following resource types:
+![Diagram of an enterprise-scale architecture for management resources in Azure landing zones.](./media/terraform-caf-enterprise-scale-management.png)
+
+When you enable management resources, the module deploys and manages the following resource types:
 
 | Resource | Azure resource type | Terraform resource type |
 | --- | --- | --- |
-| Resource Groups | [`Microsoft.Resources/resourceGroups`][arm_resource_group] | [`azurerm_resource_group`][azurerm_resource_group] |
-| Log Analytics Workspace | [`Microsoft.OperationalInsights/workspaces`][arm_log_analytics_workspace] | [`azurerm_log_analytics_workspace`][azurerm_log_analytics_workspace] |
-| Log Analytics Solutions | [`Microsoft.OperationsManagement/solutions`][arm_log_analytics_solution] | [`azurerm_log_analytics_solution`][azurerm_log_analytics_solution] |
-| Automation Account | [`Microsoft.Automation/automationAccounts`][arm_automation_account] | [`azurerm_automation_account`][azurerm_automation_account] |
-| Log Analytics Linked Service | [`Microsoft.OperationalInsights/workspaces /linkedServices`][arm_log_analytics_linked_service] | [`azurerm_log_analytics_linked_service`][azurerm_log_analytics_linked_service] |
+| Resource groups | [`Microsoft.Resources/resourceGroups`][arm_resource_group] | [`azurerm_resource_group`][azurerm_resource_group] |
+| Log Analytics workspace | [`Microsoft.OperationalInsights/workspaces`][arm_log_analytics_workspace] | [`azurerm_log_analytics_workspace`][azurerm_log_analytics_workspace] |
+| Log Analytics solutions | [`Microsoft.OperationsManagement/solutions`][arm_log_analytics_solution] | [`azurerm_log_analytics_solution`][azurerm_log_analytics_solution] |
+| Automation account | [`Microsoft.Automation/automationAccounts`][arm_automation_account] | [`azurerm_automation_account`][azurerm_automation_account] |
+| Log Analytics linked service | [`Microsoft.OperationalInsights/workspaces /linkedServices`][arm_log_analytics_linked_service] | [`azurerm_log_analytics_linked_service`][azurerm_log_analytics_linked_service] |
 
 For more information about how to use this capability, see the [Deploy Management Resources][wiki_deploy_management_resources] wiki page.
 
-## Connectivity resources
+### Connectivity resources
 
 The module provides an option to enable deployment of [network topology and connectivity][es-connectivity] resources into the current Subscription context.
 It also ensures the specified Subscription is placed in the right Management Group.
@@ -156,7 +142,7 @@ When you enable the Connectivity resources capability, the module deploys and ma
 
 For more information about how to use this capability, see the [Deploy Connectivity Resources][wiki_deploy_connectivity_resources] wiki page.
 
-## Identity resources
+### Identity resources
 
 The module provides an option to enable deployment of [identity and access management][alz-identity] resources into the current Subscription context.
 It also ensures the specified Subscription is placed in the right Management Group.
