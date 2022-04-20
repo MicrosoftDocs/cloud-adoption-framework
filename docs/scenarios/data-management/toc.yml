@@ -3,7 +3,7 @@ items:
     href: ./index.md
 
   - name: Overview
-    href: ./overview-cloud-scale-analytics.md
+    href: ../cloud-scale-analytics/overview-cloud-scale-analytics.md
   - name: Build an initial strategy
     href: ./strategy.md
   - name: Define your plan
@@ -25,9 +25,9 @@ items:
         - name: Overview
           href: ./eslz-network-topology-and-connectivity.md
         - name: Single-region connectivity
-          href: ./eslz-network-considerations-single-region.md
+          href: ../cloud-scale-analytics/eslz-network-considerations-single-region.md
         - name: Cross-region connectivity
-          href: ./eslz-network-considerations-cross-region.md   
+          href: ../cloud-scale-analytics/eslz-network-considerations-cross-region.md   
         - name: Limiting cross tenant endpoint connections
           href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Resource organization
@@ -50,17 +50,17 @@ items:
     - name: Data governance processes
       href: ./govern-components.md
     - name: Data catalog
-      href: ./govern-data-catalog.md
+      href: ../cloud-scale-analytics/govern-data-catalog.md
     - name: Data lineage
-      href: ./govern-lineage.md
+      href: ../cloud-scale-analytics/govern-lineage.md
     - name: Master data management
       href: ./govern-master-data.md
     - name: Data quality
-      href: ./govern-data-quality.md
+      href: ../cloud-scale-analytics/govern-data-quality.md
     - name: Data lifecycle
-      href: ./govern-lifecycle.md
+      href: ../cloud-scale-analytics/govern-lifecycle.md
     - name: Metadata
-      href: ./govern-metadata-standards.md
+      href: ../cloud-scale-analytics/govern-metadata-standards.md
 
   - name: Secure your analytics estate
     items:
@@ -80,22 +80,22 @@ items:
       - name: Overview
         href: ./organize.md
       - name: Teams
-        href: ./organize-roles-and-teams.md
+        href: ../cloud-scale-analytics/organize-roles-teams.md
       - name: Roles and responsibilities
-        href: ./organize-roles-and-responsibilities.md
+        href: ../cloud-scale-analytics/organize-roles-responsibilities.md
       - name: Teams functions
         href: ./organize-team-functions.md
 
   - name: Manage your analytics estate
     items:
     - name: Overview
-      href: ./manage.md
+      href: ../cloud-scale-analytics/manage.md
     - name: Platform automation
-      href: ./manage-platform-automation-and-devops.md
+      href: ../cloud-scale-analytics/manage-platform-automation-devops.md
     - name: Provision the platform
-      href: ./manage-provision-platform.md
+      href: ../cloud-scale-analytics/manage-provision-platform.md
     - name: Observability
-      href: ./manage-observability.md
+      href: ../cloud-scale-analytics/manage-observability.md
 
   - name: Well-architected considerations
     href: ./well-architected-framework.md
@@ -103,7 +103,7 @@ items:
   - name: Architectures
     items:
     - name: Overview
-      href: ./architectures/overview-architectures.md
+      href: ../cloud-scale-analytics/architectures/overview-architectures.md
     - name: Data management landing zone
       href: ./architectures/data-management-landing-zone.md
     - name: Data landing zone
@@ -113,33 +113,33 @@ items:
         - name: Overview
           href: ./architectures/data-landing-zone-data-products.md
         - name: Data application (source-aligned)
-          href: ./architectures/data-application-source-aligned.md
+          href: ../cloud-scale-analytics/architectures/data-application-source-aligned.md
         - name: Data application reference patterns
-          href: ./architectures/data-reference-patterns.md
+          href: ../cloud-scale-analytics/architectures/data-reference-patterns.md
     - name: Scaling the architecture
-      href: ./architectures/scaling-architectures.md
+      href: ../cloud-scale-analytics/architectures/scale-architectures.md
     - name: Data standardization
-      href: ./architectures/data-standardization.md
+      href: ../cloud-scale-analytics/architectures/data-standardization.md
     - name: Common Data Models
-      href: ./architectures/models-cdm.md
+      href: ../cloud-scale-analytics/architectures/common-industry-data-models.md
     - name: Data mesh specific guidance
       items:
       - name: Overview
-        href: ./architectures/what-is-data-mesh.md
+        href: ../cloud-scale-analytics/architectures/what-is-data-mesh.md
       - name: What are data domains?
-        href: ./architectures/data-domains.md
+        href: ../cloud-scale-analytics/architectures/data-domains.md
       - name: Data mesh products
-        href: ./architectures/what-is-data-product.md
+        href: ../cloud-scale-analytics/architectures/what-is-data-product.md
       - name: Data Contracts
-        href: ./architectures/data-contracts.md
+        href: ../cloud-scale-analytics/architectures/data-contracts.md
       - name: Self-serve data platforms
-        href: ./architectures/self-serve-data-platforms.md
+        href: ../cloud-scale-analytics/architectures/self-serve-data-platforms.md
       - name: Data marketplace
-        href: ./architectures/data-mesh-data-marketplace.md
+        href: ../cloud-scale-analytics/architectures/data-mesh-data-marketplace.md
       - name: Master data management in data mesh
-        href: ./architectures/data-mesh-master-data-management.md
+        href: ../cloud-scale-analytics/architectures/data-mesh-master-data-management.md
       - name: Getting started checklist
-        href: ./architectures/data-mesh-checklist.md
+        href: ../cloud-scale-analytics/architectures/data-mesh-checklist.md
 
     - name: Reference architectures
       items:
@@ -157,7 +157,7 @@ items:
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
     - name: Solution accelerators
-      href: ./architectures/solution-accelerators.md
+      href: ../cloud-scale-analytics/architectures/solution-accelerators.md
     - name: Connecting to environments privately
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
@@ -178,7 +178,7 @@ items:
         - name: Data lake overview
           href: ./best-practices/data-lake-overview.md
         - name: Data lake zones
-          href: ./best-practices/data-lake-zones.md
+          href: ../cloud-scale-analytics/best-practices/data-lake-zones.md
         - name: Data lake key considerations
           href: ./best-practices/data-lake-key-considerations.md
         - name: Managing data lake access

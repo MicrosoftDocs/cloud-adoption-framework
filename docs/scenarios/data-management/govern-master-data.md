@@ -50,4 +50,4 @@ Outside of a purpose-built MDMapplication, some of the technical capabilities ne
 
 ## Next steps
 
-- [Data quality](govern-data-quality.md)
+- [Data quality](../cloud-scale-analytics/govern-data-quality.md)

@@ -46,7 +46,7 @@ Like all business data, there's an element of sensitivity to these data products
 
 #### Data applications
 
-The operations landing zone has a [data application](data-application-source-aligned.md) that loads the healthcare provider data from Lamna's on-premises operations system. Like all data applications, this lands the data in the cloud as-is and doesn't apply transformations to the data products.
+The operations landing zone has a [data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) that loads the healthcare provider data from Lamna's on-premises operations system. Like all data applications, this lands the data in the cloud as-is and doesn't apply transformations to the data products.
 
 #### Data products
 

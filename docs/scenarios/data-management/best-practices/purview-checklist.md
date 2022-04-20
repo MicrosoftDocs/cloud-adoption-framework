@@ -139,4 +139,4 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 - Optimize classifications rules.
 
-- Use Azure RBAC model to manage access to metadata and optimize the Azure Purview access model.
+- Use Azure Purview fine-grained roles inside collections.

@@ -40,7 +40,7 @@ A critical concept for every cloud-scale analytics is having one data management
 
 ### Data applications
 
-The landing zone will have two [data applications](data-application-source-aligned.md). The first integration will ingest data related to customers. This includes the customer records and their related records (like addresses, contacts, territory assignments, and contact history). This data will be imported from the Adatum CRM system.
+The landing zone will have two [data applications](../../cloud-scale-analytics/architectures/data-application-source-aligned.md). The first integration will ingest data related to customers. This includes the customer records and their related records (like addresses, contacts, territory assignments, and contact history). This data will be imported from the Adatum CRM system.
 
 The second data application will ingest sales transactions. This includes transaction headers, line item details, shipping records, and payments. All of these records will be ingested from the Adatum ERP system.
 

@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 03/22/2021
+ms.date: 04/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -252,4 +252,4 @@ Summarize the plan to ensure it communicates and informs all relevant consumers,
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Collect the right data](./data-collection.md)
+> [Service Level Objectives](./service-level-objectives.md)

@@ -23,11 +23,13 @@ Data agnostic ingestion engine scenarios are typically focused on letting non-te
 You can see how these capabilities interact:
 
 :::image type="content" source="../images/registration-capabilities.png" alt-text="Diagram of data registration capabilities and interactions":::
+
 *Figure 1: Data registration capabilities interactions.*
 
 The following diagram shows how to implement this process using a combination of Azure services:
 
 :::image type="content" source="../images/automated-ingestion-flow.png" alt-text="Diagram of an data agnostic engine ingestion process":::
+
 *Figure 2: Automated ingestion process.*
 
 ## Data asset registration
@@ -39,7 +41,8 @@ To provide the metadata used to drive automated ingestion, you need data asset r
 
 PowerApps is used to capture metadata describing each data asset. Use a model-driven app to enter the information that gets persisted to a custom Dataverse table. When metadata is created or updated within Dataverse, it triggers an Automated Cloud flow that invokes further processing steps.
 
-![Diagram of an data asset registration.](../images/ingestion-step1-registration.png)
+![Diagram of an data asset registration.](../images/ingestion-step-1-registration.png)
+
 *Figure 3: Data asset registration.*
 
 ## Provisioning workflow / metadata capture
@@ -51,7 +54,8 @@ In the provisioning workflow stage, you validate and persist data collected in t
 - Logic processing to trigger persistence of metadata to the metadata store
 - Activity auditing
 
-:::image type="content" source="../images/ingestion-step2-workflow.png" alt-text="Diagram of registration workflow":::
+:::image type="content" source="../images/ingestion-step-2-workflow.png" alt-text="Diagram of registration workflow":::
+
 *Figure 4: Registration workflow.*
 
 Once ingestion requests are approved, the workflow uses the Azure Purview REST API to insert the sources into Azure Purview.
@@ -59,6 +63,7 @@ Once ingestion requests are approved, the workflow uses the Azure Purview REST A
 ### Detailed workflow for onboarding data products
 
 :::image type="content" source="../images/new-dataset-ingestion.png" alt-text="Diagram showing how new datasets are ingested (automated)":::
+
 *Figure 5: How new datasets are ingested (automated).*
 
 Figure 5 shows the detailed registration process for automating the ingestion of new data sources:
@@ -77,7 +82,8 @@ Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy
 
 Once a pipeline has been created, your provisioning workflow adds entries to the Control Table to support ingestion from sources identified by the data asset registration metadata. The Azure Data Factory pipelines and the Azure SQL Database containing your Control Table metastore can both exist within each data landing zone to create new data sources and ingest them into data landing zones.
 
-:::image type="content" source="../images/ingestion-step3-orchestration.png" alt-text="Diagram of scheduling of data asset ingestion":::
+:::image type="content" source="../images/ingestion-step-3-orchestration.png" alt-text="Diagram of scheduling of data asset ingestion":::
+
 *Figure 6: Scheduling of data asset ingestion.*
 
 ### Detailed workflow for ingesting new data sources

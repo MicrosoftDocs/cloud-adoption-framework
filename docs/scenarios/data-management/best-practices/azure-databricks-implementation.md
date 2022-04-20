@@ -71,7 +71,7 @@ You might want to enable the following options for the Azure Databricks analytic
 
 ## Deploy Azure Databricks
 
-TIf you deploy the Azure Databricks workspaces as part of a new data landing zone deployment. This following image shows a sample workflow of deploying an Azure Databricks environment in cloud-scale analytics.
+If you deploy the Azure Databricks workspaces as part of a new data landing zone deployment. This following image shows a sample workflow of deploying an Azure Databricks environment in cloud-scale analytics.
 
 ![Diagram of an Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
 
