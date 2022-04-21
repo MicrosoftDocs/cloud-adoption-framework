@@ -1,6 +1,6 @@
 ---
-title: Enterprise enrollment considerations for AKS
-description: AKS guidelines for enterprise enrollment
+title:  Azure billing offers and Active Directory tenant considerations for AKS
+description: AKS guidelines for Azure billing offers and Active Directory tenants
 author: brianblanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Enterprise enrollment considerations for AKS (optional)
+# Azure billing and Active Directory tenant considerations for AKS (optional)
 
 Enterprise enrollment is not a requirement for enterprise-scale for AKS. For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for AKS. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether AKS requirements would impact existing tenant decisions.
 
