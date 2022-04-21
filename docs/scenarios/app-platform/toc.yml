@@ -38,7 +38,7 @@ items:
         href: aks/aks-landing-zone-accelerator.md
       - name: Reference Implementation (placeholder)
         href: aks/aks-landing-zone-accelerator.md
-    - name: Azure API Management 
+      - name: Azure API Management 
         href: aks/landing-zone-accelerator.md
       - name: Reference Implementaion (placeholder)
         href: aks/landing-zone-accelerator.md
