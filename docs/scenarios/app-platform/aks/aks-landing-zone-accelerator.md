@@ -35,14 +35,14 @@ The Landing zone accelerator approach for AKS provides these assets to support y
 
 These articles provide guidelines for creating your landing zone based on the design areas of Azure landing zones:
 
-- [Azure Billing and Active Directory Tenant](./aks-azure-billing-ad-tenant.md)
-- [Identity and access management](./aks-identity-and-access-management.md)
-- [Network topology and connectivity](./aks-network-topology-and-connectivity.md)
-- [Resource organization](./aks-resource-organization.md)
-- [Security](./aks-security.md)
-- [Management](./aks-management.md)
-- [Governance](./aks-governance.md)
-- [Platform automation and DevOps](./aks-platform-automation-and-devops.md)
+- [Azure Billing and Active Directory Tenant](./azure-billing-ad-tenant.md)
+- [Identity and access management](./identity-and-access-management.md)
+- [Network topology and connectivity](./network-topology-and-connectivity.md)
+- [Resource organization](./resource-organization.md)
+- [Security](./security.md)
+- [Management](./management.md)
+- [Governance](./governance.md)
+- [Platform automation and DevOps](./platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
@@ -60,4 +60,4 @@ These templates are used to deploy infrastructure components such as virtual mac
 
 Learn about design considerations for identity and access management in your Azure landing zones.
 
-- [Identity and access management for Azure Kubernetes Service (AKS) landing Zone accelerator scenario](./eslz-identity-and-access-management.md)
+- [Identity and access management for Azure Kubernetes Service (AKS) landing Zone accelerator scenario](./identity-and-access-management.md)
