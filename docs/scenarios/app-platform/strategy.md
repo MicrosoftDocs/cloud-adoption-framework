@@ -25,7 +25,7 @@ Application services and containers can accelerate cloud adoption strategies, if
 
 Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through abstraction options like applications services (PaaS solutions) and orchestrated containers, can contribute to the success of these common motivations.
 
-## Modern container outcomes
+## Modern application platform outcomes
 
 To measure the impact of modern application platform adoption efforts, the following are a few key outcomes that can be tracked and evaluated:
 
