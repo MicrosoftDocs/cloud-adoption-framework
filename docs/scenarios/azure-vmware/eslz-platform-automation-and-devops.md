@@ -3,7 +3,7 @@ title: Enterprise-scale platform automation for Azure VMware Solution
 description: Learn about considerations for the initial deployment of Azure VMware Solution, and find guidance for operational automation.
 author: ScottHolden
 ms.author: scholden
-ms.date: 09/20/2021
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -22,7 +22,7 @@ This article covers considerations and recommendations in the following areas:
 
 - Deployment options for Azure VMware Solution, including manual and automated.
 - Automated scale considerations and implementation details.
-- Considerations for VMware-level automation within a private cloud.
+- Considerations for VMware SDDC-level automation within a private cloud.
 - Recommendations on automation approaches extended from an enterprise landing zone.
 - Considerations on automation technologies to use for deployment and management, like Azure CLI, Azure Resource Manager (ARM), Bicep, and PowerShell.
 
@@ -37,7 +37,7 @@ You can configure and deploy an Azure VMware Solution private cloud graphically 
 - You can use [manual deployments](/azure/azure-vmware/tutorial-create-private-cloud) for initial pilots and small-scale environments. You can also use them where you don't have an existing automation or infrastructure-as-code practice in place.
 - When you deploy Azure VMware Solution via the Azure portal, [Azure CLI](/cli/azure/vmware/private-cloud#az_vmware_private_cloud_create), or [Azure PowerShell modules](/powershell/module/az.vmware/new-azvmwareprivatecloud), you'll see a series of terms and conditions about data protection in the solution. If you're using the ARM APIs directly or deploying via an ARM or Bicep template, consider reviewing these [terms and conditions](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.AVS?tab=Overview) before deploying automation.
 - For on-demand environments that are spun-up as required, consider automating the Azure VMware Solution private cloud creation process to limit the amount of manual interaction.
-- You can use the deployments blade of the target resource group within the Azure portal to monitor the private cloud creation process. Once you've deployed the private cloud, confirm that it's in the *Succeeded* status before proceeding. If the private cloud shows a [*Failed* status](/azure/azure-vmware/fix-deployment-failures), you might be unable to connect to vCenter. Removal and redeployment of the private cloud might be required.
+- You can use the deployments blade of the target resource group within the Azure portal to monitor the private cloud creation process. Once you've deployed the private cloud, confirm that it's in the *Succeeded* status before proceeding. If the private cloud shows a [*Failed* status](/azure/azure-vmware/fix-deployment-failures), you might be unable to connect to vCenter Server. Removal and redeployment of the private cloud might be required.
 
 **Recommendations:**
 
@@ -59,7 +59,7 @@ You can use automated deployments to deploy Azure VMware Solution environments i
 
 - Deploy a minimal private cloud and then scale as required.
 - [Request host quota](/azure/azure-vmware/request-host-quota-azure-vmware-solution) or capacity ahead of time to ensure a successful deployment.
-- Monitor both the private cloud deployment process and the status of the private cloud before deploying subresources. Further configuration updates to the private cloud can only be processed once the private cloud is in a *Succeeded* status. For private clouds that are in a [*Failed* status](/azure/azure-vmware/fix-deployment-failures), we recommend you stop any further operations and raise a support ticket.
+- Monitor both the private cloud deployment process and the status of the private cloud before deploying subresources. Further configuration updates to the private cloud can only be processed once the private cloud is in a *Succeeded* status. For private clouds that are in a [*Failed* status](/azure/azure-vmware/fix-deployment-failures), we recommend you stop any further operations and raise a support ticket to resolve.
 - Include relevant resource locks within the automated deployment or ensure they're applied via policy.
 
 ### Automated connectivity
@@ -76,10 +76,11 @@ For more information about recommended network topologies, see [Network topology
 - You can connect an Azure VMware Solution private cloud to an Azure virtual network or an existing ExpressRoute. This connection automatically advertises routes from both the management networks and workload networks within the private cloud. As there are no overlap checks in place, consider validating advertised networks before connecting.
 - You can align the names of ExpressRoute authorization keys with existing naming schemes for the resources they connect to. This alignment provides easy identification of related resources.
 - ExpressRoute virtual network gateways and ExpressRoute circuits might live in a different subscription than the Azure VMware Solution private cloud. Decide whether you want a single service principal to have access to all of these resources or if you want to keep them separate.
-- The NSX-T workload networking via the Azure portal can deploy essential network resources into a private cloud, but NSX-T Manager gives more control over NSX-T components. It's worth considering what level of control you require over the network segments.
-  - Use the NSX-T workload networking within the Azure portal to set up Domain Name System (DNS) zones for private DNS integration.
-  - For network topologies that only require a single tier-one gateway, use NSX-T workload networking within the Azure portal.
+- The NSX-T Data Center workload networking via the Azure portal can deploy essential network resources into a private cloud, but NSX-T Manager gives more control over NSX-T Data Center components. It's worth considering what level of control you require over the network segments.
+  - Use the NSX-T Data Center workload networking within the Azure portal to set up Domain Name System (DNS) zones for private DNS integration.
+  - For network topologies that only require a single tier-one gateway, use NSX-T Data Center workload networking within the Azure portal.
   - For advanced configurations, you can use NSX-T Manager directly.
+  - Consider the level of skill of your network administrators. If they have little or no knowledge of VMware NSX-T Data Center, consider using the Azure portal instead to reduce risk for network operations.
 
 **Recommendations:**
 
@@ -93,7 +94,7 @@ By default, an Azure VMware Solution cluster has a fixed number of hosts defined
 **Considerations:**
 
 - Automated scale-out can provide more capacity on-demand, but it's important to consider the cost of more hosts. This cost is limited to the quota that's provided to the subscription, but manual limits should be in place.
-- Before you automate the scale-in, consider the impact on running workloads and storage policies applied within the cluster. For example, workloads that have RAID 5 assigned can't be scaled in to a three-node cluster. It's also important to consider memory and storage use, as this usage might block a scale-in operation.
+- Before you automate the scale-in, consider the impact on running workloads and storage policies applied within the cluster. For example, workloads that have RAID-5 assigned can't be scaled in to a three-node cluster. It's also important to consider memory and storage use, as this usage might block a scale-in operation.
 - Only one single-scale operation can be done at a time, so it's important to consider the orchestration of scale operations between multiple clusters.
 - An Azure VMware Solution scale operation isn't instantaneous, and you must consider the time it takes to [add another node to an existing cluster](/azure/azure-vmware/faq#how-long-does-it-take-to-provision-the-initial-three-hosts-in-a-cluster).
 - Third-party solutions and integrations might not expect hosts to be continuously removed and added. Consider validating the behavior of all third-party products. This validation ensures more steps aren't required to refresh or reconfigure the product when hosts are added or removed.
@@ -136,9 +137,9 @@ You should implement Azure VMware Solution deployment automation as a series of 
 - Private cloud deployment
 - ExpressRoute gateway connectivity
 - Global Reach connectivity
-- Simplified NSX-T DHCP, DNS, and segment creation
+- Simplified NSX-T Data Center DHCP, DNS, and segment creation
 
-After you deploy your private cloud, you can deploy resources within the private cloud. For more information, see [VMware platform automation](#vmware-platform-automation).
+After you deploy your private cloud, you can deploy resources within the private cloud. For more information, see [VMware SDDC platform automation](#vmware-platform-automation).
 
 **Considerations:**
 
@@ -147,31 +148,31 @@ After you deploy your private cloud, you can deploy resources within the private
 
 ## VMware platform automation
 
-Within an Azure VMware Solution private cloud, you might also choose to automate the creation of resources within vCenter and NSX-T Manager. The following series of considerations are listed to help design VMware-level automation.
+Within an Azure VMware Solution private cloud, you might also choose to automate the creation of resources within vCenter Server and NSX-T Manager. The following series of considerations are listed to help design VMware SDDC-level automation.
 
-### vCenter automation - PowerCLI
+### vCenter Server automation - PowerCLI
 
 **Considerations:**
 
-- Use [PowerCLI](https://developer.vmware.com/powercli) to create and configure virtual machines (VMs), resource pools, and VM templates, giving you full programmatic control over vCenter.
-- As vCenter is only available through private connectivity, or private IP, you must run PowerCLI on a machine that has line of sight to the Azure VMware Solution management networks. Consider using a self-hosted agent for your pipeline execution. With this agent, you can run PowerCLI on a VM within a virtual network or NSX-T segment.
+- Use [PowerCLI](https://developer.vmware.com/powercli) to create and configure virtual machines (VMs), resource pools, and VM templates, giving you full programmatic control over vCenter Server.
+- As vCenter Server is only available through private connectivity, or private IP, you must run PowerCLI on a machine that has line of sight to the Azure VMware Solution management networks. Consider using a self-hosted agent for your pipeline execution. With this agent, you can run PowerCLI on a VM within a virtual network or NSX-T Data Center segment.
 - You might not have access to do certain operations, as you're limited by the CloudAdmin role. Consider mapping out required permissions for the automation you plan to implement and validate it against the [CloudAdmin permissions](/azure/azure-vmware/concepts-identity).
-- For least privilege access, consider using a service account for vCenter level automation via Active Directory integration.
+- For least privilege access, consider using a service account for vCenter Server level automation via Active Directory integration.
 
-### NSX-T automation - PowerCLI
-
-**Considerations:**
-
-- In an Azure VMware Solution private cloud, the admin user has administrative access to NSX-T by default. Because of this default access, consider the impact of changes made via [PowerCLI](https://developer.vmware.com/powercli) or the NSX-T APIs directly. Making modifications to Microsoft-managed components like the transport zone and tier-zero gateway aren't permitted, and caution is advised.
-- Private connectivity is required from the VM running PowerCLI to the Azure VMware Solution private cloud to interact with NSX-T.
-- You can control workload networking via ARM. This control enables a subset of operations to be done via the ARM API, which then enables operations via Azure CLI and PowerShell using Azure RBAC instead of NSX-T identity.
-
-### Terraform vSphere and NSX-T providers
+### NSX-T Data Center automation - PowerCLI
 
 **Considerations:**
 
-- You can use [vSphere](https://registry.terraform.io/providers/hashicorp/vsphere/latest/docs) and [NSX-T](https://registry.terraform.io/providers/vmware/nsxt/latest/docs) providers for Terraform to deploy resources. These resources are deployed within the scope of the private cloud in a declarative fashion.
-- As Terraform needs to talk to the API endpoints within vCenter and NSX-T Manager, it needs to have private connectivity to the private cloud management network. Consider deploying from an Azure virtual machine that can route to the private cloud.
+- In an Azure VMware Solution private cloud, the admin user has administrative access to NSX-T Data Center by default. Because of this default access, consider the impact of changes made via [PowerCLI](https://developer.vmware.com/powercli) or the NSX-T Data Center APIs directly. Making modifications to Microsoft-managed components like the transport zone and tier-zero gateway aren't permitted, and caution is advised.
+- Private connectivity is required from the VM running PowerCLI to the Azure VMware Solution private cloud to interact with NSX-T Data Center.
+- You can control workload networking via ARM. This control enables a subset of operations to be done via the ARM API, which then enables operations via Azure CLI and PowerShell using Azure RBAC instead of NSX-T Data Center identity.
+
+### Terraform vSphere and NSX-T Data Center providers
+
+**Considerations:**
+
+- You can use [vSphere](https://registry.terraform.io/providers/hashicorp/vsphere/latest/docs) and [NSX-T Data Center](https://registry.terraform.io/providers/vmware/nsxt/latest/docs) providers for Terraform to deploy resources. These resources are deployed within the scope of the private cloud in a declarative fashion.
+- As Terraform needs to talk to the API endpoints within vCenter Server and NSX-T Manager, it needs to have private connectivity to the private cloud management network. Consider deploying from an Azure virtual machine that can route to the private cloud.
 
 ### vRealize Automation and vRealize Operations
 
