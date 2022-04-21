@@ -194,7 +194,8 @@
       "source_path": "docs/scenarios/data-management/well-architected-framework.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/well-architected-framework",
       "redirect_document_id": true
-    }
+    },
+    {
       "source_path": "docs/scenarios/data-management/best-practices/automated-ingestion-pattern.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/automated-ingestion-pattern",
       "redirect_document_id": true
@@ -253,6 +254,6 @@
       "source_path": "docs/scenarios/data-management/best-practices/sap-data-ingestion.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion",
       "redirect_document_id": true
-    },
+    }
   ]
 }
