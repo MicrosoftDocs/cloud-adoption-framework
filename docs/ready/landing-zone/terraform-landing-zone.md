@@ -1,202 +1,158 @@
 ---
-title: Use Terraform to build your landing zones
-description: Learn to use Terraform by HashiCorp to build your landing zones. Deploy foundational governance, accounting, and security capabilities for an Azure subscription.
+title: Introduction to Terraform landing zones
+description: CAF recommendations to use Terraform with Microsoft Azure in enterprise context.
 author: arnaudlh
-ms.author: brblanch
-ms.date: 01/07/2022
+ms.author: arnaul
+ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Use Terraform to build your landing zones
+<!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 
-Azure provides native services for deploying your landing zones. Terraform by HashiCorp is a third-party tool that can help with this effort. This article shows how to deploy foundational governance, accounting, and security capabilities for an Azure subscription using a sample landing zone.
+# CAF Terraform landing zones
 
-## Purpose of the landing zone
+> [!NOTE]
+> This article describes one of two ways to implement landing zones on Azure using Terraform.
+> For guidance on choosing the right approach, see [This guidance](deploy-landing-zones-with-terraform.md).
 
-The Cloud Adoption Framework foundations landing zone for Terraform can enforce logging, accounting, and security. This landing zone uses standard components known as *Terraform modules*. The modules enforce consistency across resources deployed in the environment.
+Azure provides multiple native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp.
 
-## Use standard modules
+In this section, we illustrate a methodology used by some customers for Terraform on Microsoft Azure to run complex infrastructure-as-code projects. To some extent, it can also be called everything-as-code. To help you take actions, we provide public open-source artifacts where the community builds on GitHub. Those components are curated by our experts and the community and are published and verified on the HashiCorp registry.
 
-Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. To get the modules to deploy this first landing zone, see the official [Terraform registry](https://registry.terraform.io/modules/aztfmod).
+Those components are here to help you to put DevOps to work and evolve the operating model of your organization toward site reliability engineering (SRE) model.
 
-## Architecture diagram
+The following video is a good introduction of what CAF Terraform landing zones are, and what are the main components it defines or uses:
 
-The first landing zone deploys the following components in your subscription:
+<!-- markdownlint-disable MD034 -->
 
-![Diagram shows the foundational landing zone using Terraform, with hub-core-sec and hub-operations.](../../_images/ready/foundations-terraform-landing-zone.png)
-*Figure 1: A foundation landing zone using Terraform.*
+> [!VIDEO https://channel9.msdn.com/Shows/Azure-Enablement/Deploying-Azure-Landing-Zones-using-Terraform/player]
 
-## Capabilities
+<!-- markdownlint-enable MD034 -->
 
-The deployed components fill the following responsibilities:
+Before deploying any component on an Azure subscription, we need to understand a few key concepts to be successful with Terraform on Azure:
 
-| Component | Responsibility |
-|---|---|
-| Resource groups | Core resource groups needed for the foundation |
-| Activity logging | Auditing all subscription activities and archiving: <li> Storage account <li> Azure Event Hubs |
-| Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
-| Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> `NetworkMonitoring` <li> `AdAssessment` <li> `AdReplication` <li> `AgentHealthAssessment` <li> `DnsAnalytics` <li> `KeyVaultAnalytics` |
-| Microsoft Defender for Cloud | Security hygiene metrics and alerts sent to email and phone number |
+### Start with DevOps
 
-## Use this blueprint
+While the Terraform experience starts with one individual on a laptop, it's likely that you are going to work in a team and adopt DevOps and GitOps concepts to realize benefits such as continuous integration and continuous deployment, more reliability, and predictability on your deployments.
 
-Before you use the Cloud Adoption Framework foundation landing zone, review the following assumptions, decisions, and implementation guidance.
+On the journey, you will realize there can be disruption between the local experience (it works on the developer's laptop) and the pipelines. If there is too much difference between the two environments, you are likely to spend much time troubleshooting issues that are related to this dichotomy and lose focus off delivering value.
 
-### Assumptions
+Another common caveat is the difficulty of consistent development or running environment for the different developers: Terraform is evolving frequently so you need to make sure all your developers are running the right versions, but you also need some code excellence tools (pre-commit validation hooks to avoid wrong things to be committed in a repository, static code analysis tools, plan-phase compliance tools, and so on). DevOps is not achieved by one and single tool, your running environment might be assuming presence of more tools like: jq, Azure CLI, PowerShell, PowerShell DSC, Ansible, Chef, Puppet, and so on.
 
-Review the following assumptions or constraints for this initial landing zone. If these assumptions align with your needs, you can use the blueprint to create a landing zone. Or, you can extend this blueprint to create a landing zone blueprint that meets your needs.
+![Seemless experience from coding to pipelines](../../_images/ready/terraform-dev-rover.png)
+*Figure 1: An overview of Developer environment including Inner feedback loop with pipelines*
 
-- **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Two common indicators are an excess of 25,000 virtual machines or 10,000 vCPUs.
-- **Compliance:** No third-party compliance requirements are needed for this landing zone.
-- **Architectural complexity:** Architectural complexity doesn't require more production subscriptions.
-- **Shared services:** No existing shared services in Azure require this subscription to be treated like a spoke in a hub-and-spoke architecture.
+For all of those reasons, we recommend the usage of containers to be used on the developer's machine as well as in the pipelines. We provide you with the CAF rover serving this purpose, and this is why in all our repo, you will see a `.devcontainer` folder that contains reference to our container (rover) containing our recommended runtime environment.
 
-If these assumptions match your current environment, this blueprint might be a good way to start building your landing zone.
+>[!TIP]
+>Although very useful, rover is not mandatory and you can perfectly use any CAF Terraform component separately.
 
-### Design decisions
+### Organize the Terraform state files for the enterprise
 
-The following decisions are represented in the CAF Terraform modules:
+When working with Terraform in a team of DevOps engineers and with pipelines, you will need to share the Terraform state files. We have seen many organizations struggling with finding the right level of state management, and while customers can use solutions like Terraform cloud or Terraform enterprise from HashiCorp, Cloud Adoption Framework also comes with a structured approach based on Azure Storage accounts to achieve those objectives.
 
-| Component              | Decisions                                                | Alternative approaches |
-|------------------------|----------------------------------------------------------|------------------------|
-| Logging and monitoring | Azure Monitor Log Analytics workspace is used. A diagnostics storage account and an event hub is provisioned. | |
-| Network                | N/A. Network is implemented in another landing zone. | [Networking decisions](../considerations/networking-options.md) |
-| Identity               | It's assumed that the subscription is already associated with an Azure Active Directory instance. | [Identity management best practices](/azure/security/fundamentals/identity-management-best-practices) |
-| Policy                 | This landing zone currently assumes that no Azure policies are to be applied. | |
-| Subscription design    | N/A. This landing zone is designed for a single production subscription. | [Create initial subscriptions](../azure-best-practices/initial-subscriptions.md) |
-| Resource groups        | N/A. This landing zone is designed for a single production subscription.  | [Scale subscriptions](../azure-best-practices/scale-subscriptions.md)  |
-| Management groups      | N/A. This landing zone is designed for a single production subscription.   | [Organize subscriptions](../azure-best-practices/organize-subscriptions.md)  |
-| Data                   | N/A         | [Choose the correct SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) and [Azure data store guidance](/azure/architecture/guide/technology-choices/data-store-overview) |
-| Storage                | N/A | [Azure Storage guidance](../considerations/storage-options.md)  |
-| Naming standards       | When the environment is created, a unique prefix is also created. Resources that require a globally unique name, such as storage accounts, use this prefix. The custom name is appended with a random suffix. Tag usage is mandated as described in the following table. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md) |
-| Cost management        | N/A              | [Tracking costs](../azure-best-practices/track-costs.md)     |
-| Compute                | N/A          | [Compute options](/azure/architecture/guide/technology-choices/compute-decision-tree)  |
+In the model proposed by CAF Terraform landing zones, you can observe the composability where a state file from one level down can be read but cannot be changed.
 
-#### Tagging standards
+This model allows you to manage multiple state files to segregate different level of privileges and also compose the environment with independent pipelines. The mechanisms to deploy those different levels, as well as reading and composing from different levels are provided as part of the DevOps toolset.
 
-The minimum set of tags shown below must be present on all resources and resource groups:
+### Innovate faster with inner-sourcing
 
-| Key               | Description                      | Example values |
-|-------------------|----------------------------------|----------------|
-| `BusinessUnit`    | Top-level division of your company that owns the subscription or workload the resource belongs to. | `finance`, `marketing`, `<product-name>`, `corp`, `shared` |
-| `CostCenter`      | Accounting cost center associated with this resource. | `<cost-center-number>` |
-| `DR`              | Business criticality of the application, workload, or service.  | `dr-enabled`, `non-dr-enabled` |
-| `Env`             | Deployment environment of the application, workload, or service. | `prod`, `dev`, `qa`, `staging`, `test`, `training` |
-| `Owner`           | Owner of the application, workload, or service. | `<email>` |
-| `DeploymentType`  | Defines how the resources are being maintained. | `manual`, `terraform` |
-| `Version`         | Version of the blueprint deployed. | `v0.1` |
-| `ApplicationName` | Name of the associated application, service, or workload associated with the resource. | `<app-name>` |
+We have frequently observed that at the beginning of working with Terraform, the DevOps teams tend to spend a large amount of time curating their own artifacts and only over time and with experience start defining a set of common engineering criteria.
 
-## Customize and deploy your first landing zone
+In essence, having one code for the module and multiple configuration files used across the organization could be a good way to centralize the quality of the engineering while having the common engineering criteria enumerated will allow the community (internal business users, or public contributors for the CAF module). The more people will use the module, contribute and test it, the more quality you will have.
 
-You can [clone your Terraform foundation landing zone](https://github.com/azure/caf-terraform-landingzones). Get started easily with the landing zone by modifying the Terraform variables. In our example, we use **blueprint_foundations.sandbox.auto.tfvars**, so Terraform automatically sets the values in this file for you.
+This core concept applies for all areas of your environment, this is why as part of CAF Terraform landing zones, we are publishing modules, landing zones, and application landing zone solution accelerators where you can use the community to increase the velocity of the innovation in the enterprise. You can use those components from the community and contribute directly or fork the public components in your private Git repositories to validate them, and then periodically resync with the public (upstream) repository, to sync on latest innovation or to contribute back to the community.
 
-Let's look at the different variable sections.
+## Empowering the site reliability engineer
 
-In this first object, we create two resource groups in the `southeastasia` region named `-hub-core-sec` and `-hub-operations` along with a prefix added at runtime.
+As part of CAF Terraform, multiple functions are split across multiple components. That level of decomposition and de-correlation might be confusing at the beginning, but actually allows a maximum of flexibility and reusability of the components whether you're using the complete CAF Terraform landing zones, or you want to use the battlefield-tested CAF module in your own pipelines or Terraform cloud, or benefit from the CAF naming provider inside your own enterprise-grew modules.
 
-```hcl
-resource_groups_hub = {
-    HUB-CORE-SEC    = {
-        name = "-hub-core-sec"
-        location = "southeastasia"
-    }
-    HUB-OPERATIONS  = {
-        name = "-hub-operations"
-        location = "southeastasia"
-    }
-}
-```
+![Foundational landing zone using Terraform](../../_images/ready/terraform-sre-components.png)
+*Figure 2: An overview of the Site Reliability Engineering Components provided by CAF Terraform landing zones*
 
-Next, we specify the regions where we can set the foundations. Here, `southeastasia` is used to deploy all the resources.
+Below is a quick overview of the different components.
 
-```hcl
-location_map = {
-    region1   = "southeastasia"
-    region2   = "eastasia"
-}
-```
+### The CAF supermodule
 
-Then, we specify the retention period for the operations logs and the Azure subscription logs. This data is stored in separate storage accounts and an event hub. The account and event hub names are randomly generated because they must be unique.
+We have seen numerous customers spending much times creating their own Terraform modules in their own private repositories and while it's hard to find the right balance of what components should be inside a single module, it's a very time consuming task. As part of our engagements with customers, we took an approach enabled by Terraform 0.13 to develop a concept of supermodule (similar to the concept of superapp) allowing you to create configurations files for any Azure components while focusing on one tested logic. The advantage of having one module is to be able to easily compose across all components inside the module: ie: you can describe a virtual machine, how it's linked to a virtual network, a key vault and so on.
 
-```hcl
-azure_activity_logs_retention = 365
-azure_diagnostics_logs_retention = 60
-```
+The core concept of the module is to compose an environment based on Terraform configuration files instead of writing ad hoc code for each components. We want to promote "infrastructure-as-data" in favor of ad hoc "infrastructure-as-code", to make composition more accessible and rely on a strong community to write code.
 
-Into the `tags_hub`, we specify the minimum set of tags that are applied to all resources created.
+Using this module you can:
 
-```hcl
-tags_hub = {
-    environment     = "DEV"
-    owner           = "Arnaud"
-    deploymentType  = "Terraform"
-    costCenter      = "65182"
-    BusinessUnit    = "SHARED"
-    DR              = "NON-DR-ENABLED"
-}
-```
+- Accelerate innovation with the community: many users use and contribute to the module across the world, have tested it and using it in production, so your DevOps teams can focus on delivering value instead of coding and testing a module.
+- Compose across all the Azure components enables you to compose new architectures with an unmatchable speed.
 
-We specify the Log Analytics name and a set of solutions that analyze the deployment. We kept network monitoring, Active Directory assessment and replication, DNS Analytics, and Key Vault analytics.
+It's important to note that although the module is part of the CAF landing zones solution, it can be used as any standalone module, directly from the Terraform registry or from pipelines, as showed in the [HashiCorp blog post](https://www.hashicorp.com/blog/go-big-or-go-small-building-in-azure-caf-with-terraform-cloud).
 
-```hcl
+The CAF Terraform module is verified by HashiCorp and is present in the [HashiCorp Terraform registry here](https://registry.terraform.io/modules/aztfmod) and you can contribute to the module [on GitHub](https://github.com/aztfmod/terraform-azurerm-caf).
 
-analytics_workspace_name = "lalogs"
+### The CAF provider
 
-solution_plan_map = {
-    NetworkMonitoring = {
-        "publisher" = "Microsoft"
-        "product"   = "OMSGallery/NetworkMonitoring"
-    },
-    ADAssessment = {
-        "publisher" = "Microsoft"
-        "product"   = "OMSGallery/ADAssessment"
-    },
-    ADReplication = {
-        "publisher" = "Microsoft"
-        "product"   = "OMSGallery/ADReplication"
-    },
-    AgentHealthAssessment = {
-        "publisher" = "Microsoft"
-        "product"   = "OMSGallery/AgentHealthAssessment"
-    },
-    DnsAnalytics = {
-        "publisher" = "Microsoft"
-        "product"   = "OMSGallery/DnsAnalytics"
-    },
-    KeyVaultAnalytics = {
-        "publisher" = "Microsoft"
-        "product"   = "OMSGallery/KeyVaultAnalytics"
-    }
-}
+Naming convention is important, the CAF provider helps you manage naming convention (either relying on CAF recommended naming convention or using your own).
 
-```
+The naming convention provider allows you to go faster from integration to production: while you are running it testing mode, it will generate name randomly (useful to test resources which names need to be unique in the world). Once you are done and ready to deploy for production, you select pass-through mode to use your own name (after cleaning the name based on the allowed character set for each Azure resources).
 
-Next, we configured the alert parameters for Microsoft Defender for Cloud.
+The CAF Terraform provider is verified by HashiCorp and is present in the [HashiCorp Terraform registry here](https://registry.terraform.io/providers/aztfmod/azurecaf/latest) and you can contribute to it [on GitHub](https://github.com/aztfmod/terraform-azurerm-caf).
 
-```hcl
-# Azure Security Center Configuration
+### The rover
 
-security_center = {
-    contact_email   = "joe@contoso.com"
-    contact_phone   = "+6500000000"
-}
-```
+Although as a first approach it might seem more natural and simple to use Terraform on your laptop, the CAF **rover** is helping you managing your enterprise Terraform deployments on Microsoft Azure and is composed of two parts:
 
-## Take action
+- **A Docker container**
+  - Allows consistent developer experience on PC, Mac, Linux, including the right tools, Git hooks and DevOps tools.
+  - Native integration with [Visual Studio Code](https://code.visualstudio.com/docs/remote/containers), [GitHub Codespaces](https://github.com/features/codespaces).
+  - Contains the versioned toolset you need to apply landing zones.
+  - Helps you switching components versions fast by separating the run environment and the configuration environment.
+  - Ensure pipeline ubiquity and abstraction run the rover everywhere, whichever pipeline technology.
 
-After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover. The rover is a Docker container that allows deployment from Windows, Linux, or macOS. You can get started with the [landing zones](https://github.com/azure/caf-terraform-landingzones).
+- **A Terraform wrapper**
+  - Helps you store and retrieve Terraform state files transparently on Azure Storage account.
+  - Facilitates the transition to CI/CD.
+  - Enables seamless experience (state connection, execution traces, and so on.) Locally and inside pipelines.
 
-## Next steps
+Using rover has the following advantages:
 
-The foundation landing zone lays the groundwork for a complex environment in a decomposed manner. This edition provides a set of simple capabilities. You can extend the capabilities by adding other modules or layering other landing zones on top of it.
+- Simplifies setup and configuration across DevOps teams: everyone works with the same versions of the tools.
+- Abstracts and helps with the Terraform state management.
+- Helps preserve stability across components versions.
+- Helps testing different versions of binaries (new version of Terraform, Azure CLI, jq, tflint and so on.)
+- Facilitates the identity transition to any CI/CD: namely all CI/CD have container capabilities.
+- Allows easy transition from one DevOps environment to another (GitHub Actions, Azure DevOps, Jenkins, CircleCI and so on.)
 
-It's a good practice to layer your landing zones. That practice helps decouple systems, version each component that you're using, and allows fast innovation and stability for your infrastructure-as-code deployment.
+Rover is an open-source project and you can use it directly from [Docker hub](https://hub.docker.com/search?q=aztfmod&type=image), or create your own, to match your organization's own DevOps toolkit. You can find the [rover project here](https://github.com/aztfmod/rover).
 
-Future reference architectures will demonstrate this concept for a hub and spoke topology.
+### The Azure landing zone module
+
+We use the Azure landing zones (enterprise-scale) module to deploy the management groups and policies recommendations per the enterprise-scale critical design area. The this module is available from the [HashiCorp Terraform registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest).
+
+The configuration of enterprise-scale module using either the default parameters or a highly customized environment for management groups and policy is left to the implementation phase to map the needs of each organization.
+
+### The landing zones
+
+In CAF Terraform, a landing zone is a set of resources that are sharing a Terraform state and that deliver an environment.
+
+We mainly distinguish core **platform** and **application landing zones**.
+
+A special landing zone is called launchpad and it acts as your DevOps foundations and deploys:
+
+- Storage accounts to deploy the Terraform state files.
+- Key vaults defining the core of secrets storage for the Terraform state.
+
+Most of the time, unless you are a core CAF contributor, you don't need to worry too much about the landing zones logic and will be only consuming it from the repository and customizing it with variables. In case you want to review the details, landing zones can be found [here](https://github.com/Azure/caf-terraform-landingzones).
+
+### The starter project
+
+The starter project is a template for your configuration repository for your IaC. It's purpose is to show you an example of configuration files put together in order to deploy a complete environment.
+
+You can find the starter project [here](https://github.com/Azure/caf-terraform-landingzones-platform-starter).
+
+## Getting started
+
+You can get started with the [landing zones](https://aka.ms/caf/terraform).
 
 > [!div class="nextstepaction"]
-> [Review the sample foundation Terraform landing zone](https://github.com/azure/caf-terraform-landingzones)
+> [Get started](https://aka.ms/caf/terraform)
