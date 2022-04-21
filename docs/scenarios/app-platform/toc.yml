@@ -17,27 +17,27 @@ items:
     - name: Azure Kubernetes Service (AKS)
       items:
       - name: Landing zone accelerator for AKS
-        href: aks/aks-landing-zone-accelerator.md
+        href: aks/landing-zone-accelerator.md
       - name: Azure Billing and Active Directory Tenant
-        href: aks/aks-azure-billing-ad-tenant.md
+        href: aks/azure-billing-ad-tenant.md
       - name: Identity and access management
-        href: aks/aks-identity-and-access-management.md
+        href: aks/identity-and-access-management.md
       - name: Network topology and connectivity
-        href: aks/aks-network-topology-and-connectivity.md
+        href: aks/network-topology-and-connectivity.md
       - name: Resource organization
-        href: aks/aks-resource-organization.md
+        href: aks/resource-organization.md
       - name: Security
-        href: aks/aks-security.md
+        href: aks/security.md
       - name: Management
-        href: aks/aks-management.md
+        href: aks/management.md
       - name: Governance
-        href: aks/aks-governance.md
+        href: aks/governance.md
       - name: Platform automation and DevOps
-        href: aks/aks-platform-automation-and-devops.md
+        href: aks/platform-automation-and-devops.md
       - name: Reference Architecture (placeholder)
-        href: aks/aks-landing-zone-accelerator.md
+        href: aks/landing-zone-accelerator.md
       - name: Reference Implementaion (placeholder)
-        href: aks/aks-landing-zone-accelerator.md
+        href: aks/landing-zone-accelerator.md
     - name: Azure API Management (APIM)
       items:
       - name: Landing zone accelerator for APIM
