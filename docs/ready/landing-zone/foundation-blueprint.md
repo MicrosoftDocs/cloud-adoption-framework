@@ -23,13 +23,13 @@ Before you use the CAF Foundation blueprint in the Cloud Adoption Framework, rev
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample](/azure/governance/blueprints/samples/caf-foundation/deploy)
 
-## Design principles
-
-This implementation option provides an opinionated approach to the common design areas shared by all Azure landing zones. For technical details, see the [Assumptions](#assumptions) section.
-
 ### Deployment options
 
 This implementation option deploys a minimum viable product (MVP) to serve as the foundation for your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [Govern methodology](../../govern/index.md).
+
+## Design areas
+
+This implementation option provides an opinionated approach to the common design areas shared by all Azure landing zones. For technical details, see the [Assumptions](#assumptions) section.
 
 ### Azure billing and Active Directory tenant
 
@@ -58,14 +58,11 @@ To aid in this comparison early in adoption cycles, the following articles shoul
 
 To aid in this comparison when teams are further along with cloud adoption, see the governance patterns section of the [governance guide: prescriptive guidance](../../govern/guides/complex/prescriptive-guidance.md#application-of-governance-defined-patterns) article. This section of the prescriptive guidance demonstrates a set of patterns based on a specific narrative and operating model. That guidance also includes links to other patterns that should be considered.
 
-### Governance
+### Security
 
-This implementation demonstrates one approach to maturity in the Cost Management discipline of the Govern methodology. Specifically, it demonstrates how Azure Policy can be used to create an allow list of specific SKUs. Limiting the types and sizes of resources that can be deployed into a landing zone reduces the risk of overspending.
+This implementation option doesn't implement any controls for the primary purpose of security. In the absence of defined security controls, you shouldn't use this landing zone for any mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
 
-To accelerate parallel development of the other governance disciplines, review the [Govern methodology](../../govern/index.md). To continue maturing the Cost Management discipline of governance, see the [Cost Management discipline guidance](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices).
-
-> [!WARNING]
-> As the governance disciplines mature, refactoring may be required. Refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+To accelerate parallel development of security disciplines, review the [Secure methodology](../../secure/index.md). Consider deploying the [Cloud Adoption Framework Foundation blueprint](./foundation-blueprint.md) along with the Cloud Adoption Framework Migration landing zone blueprint.
 
 ### Management
 
@@ -77,6 +74,21 @@ To accelerate parallel development of an operations baseline, review the [Manage
 > As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 This implementation option does not implement any BCDR solution. It is assumed that the solution for protection and recover will be addressed by the development of the operations baseline.
+
+### Governance
+
+This implementation demonstrates one approach to maturity in the Cost Management discipline of the Govern methodology. Specifically, it demonstrates how Azure Policy can be used to create an allow list of specific SKUs. Limiting the types and sizes of resources that can be deployed into a landing zone reduces the risk of overspending.
+
+To accelerate parallel development of the other governance disciplines, review the [Govern methodology](../../govern/index.md). To continue maturing the Cost Management discipline of governance, see the [Cost Management discipline guidance](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices).
+
+> [!WARNING]
+> As the governance disciplines mature, refactoring may be required. Refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Platform automation and DevOps
+
+This implementation option doesn't implement automated DevOps pipelines. In the absence of defined automation, you shouldn't use this landing zone for any mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
+
+To accelerate parallel development of security disciplines, review the [Ready methodology](../../ready/index.md). Consider deploying the [Cloud Adoption Framework Foundation blueprint](./foundation-blueprint.md) along with the Cloud Adoption Framework Migration landing zone blueprint.
 
 ## Assumptions
 
