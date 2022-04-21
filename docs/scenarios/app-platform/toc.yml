@@ -35,9 +35,9 @@ items:
       - name: Platform automation and DevOps
         href: aks/platform-automation-and-devops.md
       - name: Reference Architecture (placeholder)
-        href: aks/aks-landing-zone-accelerator.md
+        href: aks/landing-zone-accelerator.md
       - name: Reference Implementation (placeholder)
-        href: aks/aks-landing-zone-accelerator.md
+        href: aks/landing-zone-accelerator.md
       - name: Azure API Management 
         href: aks/landing-zone-accelerator.md
       - name: Reference Implementaion (placeholder)
