@@ -58,18 +58,19 @@ Create management groups under your root-level management group to represent the
 
 Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
-Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns. An AVD shared services subscription is recommended but not required.
+Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns. A separate subscription for AVD shared resources is recommended for manageability and scalability purposes, but not required.
 
-This below is the suggested structure for AVD resources to be created. The subscriptions and Resource Group function as administrative domains and lifecycle purposes for each Azure Region deployed.
+This below is the suggested structure for AVD resources. The subscriptions and Resource Groups function as administrative domains and lifecycle purposes for each Azure Region deployed.
 
 ```text
-    - Azure Virtual Desktop Service Objects:  Separate Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.  
+    - Azure Virtual Desktop Service Objects:  Create a Resource Group for AVD Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.  
     - Networking:  Generally created as part of the Cloud Adoption Framework Landing zone
     - Storage:  If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts
-    - Images:  Create a resource group for custom VM images
+    - Session hosts compute: Create a Resource Group for Virtual Machines, Disks and Network Interfaces. These have a different life cycle than the AVD Service Objects. 
+    - Shared Resources:  Create a Resource Group for shared resources like custom VM images, this encourages self-service so you could have a subscription for each business line, for instance.
     
     - Basic Structure:
-        - Subscription (AVD-Shared-Services)
+        - Subscription (AVD-Shared-Resources)
             - rg-<Azure-Region>-avd-shared-resources
         - Subscription (AVD)
             - rg-<Azure-Region>-avd-<Workload>-service-objects
