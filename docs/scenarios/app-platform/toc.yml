@@ -36,32 +36,28 @@ items:
         href: aks/platform-automation-and-devops.md
       - name: Reference Architecture (placeholder)
         href: aks/landing-zone-accelerator.md
-      - name: Reference Implementaion (placeholder)
+      - name: Reference Implementation (placeholder)
+        href: aks/landing-zone-accelerator.md
+      - name: Azure API Management 
+        href: aks/landing-zone-accelerator.md
+      - name: Reference Implementation (placeholder)
         href: aks/landing-zone-accelerator.md
     - name: Azure API Management (APIM)
       items:
-      - name: Landing zone accelerator for APIM
-        href: apim/apim-landing-zone-accelerator.md
-      - name: Azure Billing and Active Directory Tenant
-        href: apim/apim-azure-billing-ad-tenant.md
+      - name: Landing zone accelerator for API Management
+        href: api-management/landing-zone-accelerator.md
       - name: Identity and access management
-        href: apim/apim-identity-and-access-management.md
+        href: api-management/identity-and-access-management.md
       - name: Network topology and connectivity
-        href: apim/apim-network-topology-and-connectivity.md
-      - name: Resource organization
-        href: apim/apim-resource-organization.md
+        href: api-management/network-topology-and-connectivity.md
       - name: Security
-        href: apim/apim-security.md
+        href: api-management/security.md
       - name: Management
-        href: apim/apim-management.md
+        href: api-management/management.md
       - name: Governance
-        href: apim/apim-governance.md
+        href: api-management/governance.md
       - name: Platform automation and DevOps
-        href: apim/apim-platform-automation-and-devops.md
-      - name: Reference Architecture (placeholder)
-        href: apim/apim-landing-zone-accelerator.md
-      - name: Reference Implementaion (placeholder)
-        href: apim/apim-landing-zone-accelerator.md
+        href: api-management/platform-automation-and-devops.md
     - name: Azure App Service
       items:
       - name: Landing zone accelerator for App Service
@@ -84,7 +80,7 @@ items:
         href: app-services/app-services-platform-automation-and-devops.md
       - name: Reference Architecture (placeholder)
         href: app-services/app-services-landing-zone-accelerator.md
-      - name: Reference Implementaion (placeholder)
+      - name: Reference Implementation (placeholder)
         href: app-services/app-services-landing-zone-accelerator.md
 
   - name: Migrate to modern application platforms
