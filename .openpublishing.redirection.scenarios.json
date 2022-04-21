@@ -71,6 +71,131 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/scenarios/data-management/plan-capabilities.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-business-continuity-and-disaster-recovery",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-enterprise-enrollment-and-azure-ad-tenants.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-enterprise-enrollment-and-azure-ad-tenants",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-identity-and-access-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-management-and-monitoring.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-management-and-monitoring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-network-topology-and-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-network-topology-and-connectivity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-policies.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-resource-organization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/eslz-security-governance-and-compliance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/govern-components.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/govern-master-data.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-master-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/govern-requirements.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/govern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/organize-team-functions.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize-team-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/organize.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/plan",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/ready",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/secure-analytics-role-based-access-control.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure-analytics-role-based-access-control",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/secure-authentication.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/secure-data-privacy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure-data-privacy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/secure.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/security-provisioning.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/security-provisioning",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/strategy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/strategy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/data-management/well-architected-framework.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/well-architected-framework",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/scenarios/data-management/best-practices/automated-ingestion-pattern.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/automated-ingestion-pattern",
       "redirect_document_id": true
@@ -129,6 +254,6 @@
       "source_path": "docs/scenarios/data-management/best-practices/sap-data-ingestion.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion",
       "redirect_document_id": true
-    },
+    }
   ]
 }
