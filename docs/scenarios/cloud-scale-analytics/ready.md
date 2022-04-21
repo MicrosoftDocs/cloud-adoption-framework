@@ -109,7 +109,7 @@ To get started with the data management and data management landing zones you ne
 
 - [Management and monitoring for cloud-scale analytics](eslz-management-and-monitoring.md)
 
-- [Business continuity and disaster recovery considerations for AKS](../app-platform/aks/eslz-business-continuity-and-disaster-recovery.md)
+- [Business continuity and disaster recovery considerations for AKS](../app-platform/aks/management.md)
 
 ## Next steps
 
