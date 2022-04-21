@@ -412,7 +412,7 @@ items:
             - name: Environments
               href: ready/considerations/environments.md
             - name: Test-driven development for Azure Landing Zones
-              href: ready/considerations/test-driven-development-tdd.md
+              href: ready/considerations/development-strategy-test-driven-development.md
           - name: Security Considerations
             items: 
             - name: Overview
