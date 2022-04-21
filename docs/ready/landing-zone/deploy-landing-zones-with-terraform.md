@@ -1,6 +1,6 @@
 ---
 title: Deploy Azure landing zones by using Terraform
-description: Learn which of the two Terraform approaches is most suited to your scenario when you're deploying Azure landing zones.
+description: Learn which of the two Terraform approaches is more suited to your scenario when you're deploying Azure landing zones.
 author: matt-FFFFFF
 ms.author: mawhi
 ms.date: 04/13/2022
@@ -12,7 +12,7 @@ ms.subservice: ready
 # Deploy Azure landing zones by using Terraform
 
 Azure provides native services for building your Azure landing zones.
-Other partner tools can also help with this effort.
+Other tools can also help with this effort.
 One such tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
 The [Terraform Module for Cloud Adoption Framework Enterprise-scale][alz-tf-mod] is the official Terraform module for deploying the platform resources from the [conceptual architecture for Azure landing zones][alz-conceptual-arch]. The module is designed to simplify the deployment of the management group hierarchy, policies, and resources in the connectivity and management subscriptions.
@@ -34,7 +34,7 @@ We recommended that you use the [Terraform Module for Cloud Adoption Framework E
 If your organization wants to manage both platform and application resources by using centralized automation, or has complex infrastructure architectures not supported by the Terraform module for landing zones, then you should consider [Cloud Adoption Framework Terraform landing zones][caf-terraform-landingzones].
 
 > [!NOTE]
-> The [Cloud Adoption Framework Terraform landing zones][caf-terraform-landingzones] approach is abstracted from Terraform's normal [HCL][terraform_language_syntax] language. Instead, inputs consist of YAML files that are then used to generate Terraform variable files.
+> The approach of Cloud Adoption Framework Terraform landing zones is abstracted from Terraform's normal [HCL][terraform_language_syntax] language. Instead, inputs consist of YAML files that are then used to generate Terraform variable files.
 
 <!-- Common links -->
 
