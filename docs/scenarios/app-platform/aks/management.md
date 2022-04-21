@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Operations management considerations for Azure Kubernetes Service
 
-Kubernetes is a relatively new technology, rapidly evolving with an impressive ecosystem. As such, it can be challenging to manage and protect it. 
+Kubernetes is a relatively new technology, rapidly evolving with an impressive ecosystem. As such, it can be challenging to manage and protect it.
 
 ## Operations baseline for AKS
 

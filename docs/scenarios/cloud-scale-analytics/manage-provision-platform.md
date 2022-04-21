@@ -36,7 +36,7 @@ The data landing zone operations team can now change or add Azure Resource Manag
 
 This workflow can be automated using multiple service sets on the Azure platform. Handle some of the steps, such as renaming parameters in parameter files, using CI/CD pipelines. Other steps can be executed using other workflow orchestration tools such as Logic Apps.
 
-![Diagram of forked DevOps model.](../data-management/images/forked-dev-ops.png)
+![Diagram of forked DevOps model.](./images/forked-dev-ops.png)
 
 The forking pattern allows teams to update their templates from the original templates used to fork them. Also, if improvements or new features are implemented in the template repositories, operations teams can pull them into their fork.
 
@@ -51,7 +51,7 @@ Adopt best practices for repositories, such as:
 > [!TIP]
 > Coordinate activities between teams to ensure that improvements or new features in the original templates are replicated in all data landing zone instances. Operations teams can pull original template changes into their fork.
 
-![Diagram of a data landing zone automation process.](../data-management/images/data-landing-zone-auto-process.png)
+![Diagram of a data landing zone automation process.](./images/data-landing-zone-auto-process.png)
 
 The onboarding process is separate from the data landing zone deployment process. This separation is based on the assumption that most organizations have a standard Azure subscription deployment process as part of their cloud operating model. The onboarding process deploys standard corporate components (such as a third-party IT service management tool). Data landing zone-specific components are deployed next.
 
@@ -64,7 +64,7 @@ There are no Git APIs available to clone/update/commit/push in the proposed auto
 
 The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can do create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the `GitAutomation` module installed inside an Azure Automation account:
 
-:::image type="content" source="../data-management/images/git-automation.png" alt-text="Diagram of `GitAutomation` module for working with Git repositories." lightbox="../data-management/images/git-automation.png":::
+:::image type="content" source="./images/git-automation.png" alt-text="Diagram of `GitAutomation` module for working with Git repositories." lightbox="./images/git-automation.png":::
 
 Use the `Copy-GitRepository` function from the `GitAutomation` module to clone the main Git repository from the URL specified by `URL` to the data platform Git path specified by `DestinationPath`.
 
@@ -93,7 +93,7 @@ Deployment is done either directly using DevOps tooling or called via pipelines/
 
 The above patterns provide control, agility, self-service, and lifecycle management of policies.
 
-![Diagram of the overall DataOps model.](../data-management/images/overall-data-ops-model.png)
+![Diagram of the overall DataOps model.](./images/overall-data-ops-model.png)
 
 At the start of the project, the data platform has one Azure DevOps project with one or more Azure Boards. Individual DevOps teams focus on:
 
