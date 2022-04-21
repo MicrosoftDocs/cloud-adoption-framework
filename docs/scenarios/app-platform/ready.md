@@ -38,17 +38,18 @@ The questions will influence landing zone design, since each suggests a need for
 
 To maximize output during initial implementations, the remainder of this guidance focuses on implementing Azure Kubernetes services (AKS) with the ability to add an overlay for Azure App Service on Kubernetes with Azure Arc. This approach narrows the scope of options by providing a reference architecture and implementation.
 
-To establish a foundation for other [Azure products](./azure-products.md) for modern application platforms, see the [container architectures](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) tab in the left navigation for rich architecture and implementation references for each tool.
+To establish a foundation for other [Azure products](./azure-products.md) for modern application platforms, see the [container architectures](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json) tab in the left navigation for rich architecture and implementation references for each tool.
 
 ## Implementation option considerations
 
 Selecting the best Azure landing zone implementation option will have a direct impact on how well a landing zone can support the implementation options above. For more information on Azure landing zone implementation options, review the [Azure landing zones](../../ready/landing-zone/index.md) article series. Which of the Azure landing zone implementation options best addresses the strategy and planning considerations governing your modern application platforms scenario?
 
 - **Existing Azure landing zone strategy:** If your organization has already implemented an Azure landing zone strategy, it's likely that your modern application platforms scenario might need to adhere to the existing strategy. Otherwise, choose one of the following as your first step toward repeatable landing zone environments.
-- **Start-small and expand with the AKS baseline:** The [baseline architecture for an Azure Kubernetes Service (AKS) cluster](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) provides a proven approach to deploying your first AKS environment.
+- **Start-small and expand with the AKS baseline:** The [baseline architecture for an Azure Kubernetes Service (AKS) cluster](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json) provides a proven approach to deploying your first AKS environment.
   - This option is most commonly used when developer or DevOps teams are directly responsible for operations of the clusters, cloud environments, and the applications.
   - Processes and best practices in the Ready, Govern, and Manage methodologies of the Cloud Adoption Framework could be added later to prepare this deployment for central operations and shared hosts.
-- **Enterprise-scale landing zones:** [Enterprise-scale for AKS](./enterprise-scale-landing-zone.md) includes a reference implementation to deploy an instance of the AKS baseline into an enterprise-scale landing zone to support your AKS platform, within the specific environmental configuration required by the broader enterprise-scale landing zone solutions.
+- **Enterprise-scale landing zones:** [Enterprise-scale for AKS](./aks/landing-zone-accelerator.md) includes a reference implementation to deploy an instance of the AKS baseline into an enterprise-scale landing zone to support your AKS platform, within the specific environmental configuration required by the broader enterprise-scale landing zone solutions.
+- **Enterprise-scale landing zones:** [Enterprise-scale for AKS](./aks/landing-zone-accelerator.md) includes a reference implementation to deploy an instance of the AKS baseline into an enterprise-scale landing zone to support your AKS platform, within the specific environmental configuration required by the broader enterprise-scale landing zone solutions.
   - This is the most common option when compliance, governance, or security requirements must be applied centrally to any container environment.
   - It's also the most common option for centralized teams who deliver container hosting operations, allowing developers to focus more on the application and less on developing for Kubernetes.
 
@@ -69,14 +70,14 @@ The choice of these two options depends on host operations practices and the deg
 
 All Azure landing zones are designed around a set of common design areas listed below. Each article includes a set of AKS-specific considerations and recommendations that can help the modern application platforms team prepare a landing zone for AKS containers:
 
-- [Enterprise enrollment](./eslz-enterprise-enrollment.md)
-- [Identity and access management](./eslz-identity-and-access-management.md)
-- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
-- [Resource organization](./eslz-resource-organization.md)
-- [Governance disciplines](./eslz-security-governance-and-compliance.md)
-- [Operations baseline](./eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
-- [Deployment options](./eslz-platform-automation-and-devops.md)
+- [Enterprise enrollment](./aks/azure-billing-ad-tenant.md)
+- [Identity and access management](./aks/identity-and-access-management.md)
+- [Network topology and connectivity](./aks/network-topology-and-connectivity.md)
+- [Resource organization](./aks/resource-organization.md)
+- [Governance disciplines](./aks/security.md)
+- [Operations baseline](./aks/management.md)
+- [Business continuity and disaster recovery](./aks/management.md)
+- [Deployment options](./aks/platform-automation-and-devops.md)
 
 ## Next step: Migrate workloads to modern application platforms
 

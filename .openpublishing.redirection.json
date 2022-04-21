@@ -466,6 +466,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/ready/enterprise-scale/terraform-module-caf-enterprise-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-module",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/scenarios/lamp/moodle/vpn-gateway.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/lamp/moodle/migration-overview",
          "redirect_document_id": false
@@ -501,11 +506,6 @@
          "redirect_document_id": true
       },
       {
-         "source_path": "docs/scenarios/data-management/eslz-deployment-templates.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/architectures/deployment-templates",
-         "redirect_document_id": false
-      },
-      {
          "source_path": "docs/reference/migration-with-enterprise-scaffold.md",
          "redirect_url": "/azure/cloud-adoption-framework/resources/migration-with-enterprise-scaffold",
          "redirect_document_id": true
@@ -538,11 +538,6 @@
       {
          "source_path": "docs/secure/best-practices/security-governance-and-compliance.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/best-practices/end-to-end-governance",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/scenarios/data-management/plan-capabilities.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/strategy",
          "redirect_document_id": false
       }
    ]
