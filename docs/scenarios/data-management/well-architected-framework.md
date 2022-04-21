@@ -2,7 +2,7 @@
 title: The Azure Well-Architected Framework for data workloads
 description: Use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your data estate.
 author: pratimdas
-ms.author: prda
+ms.author: prdasgu
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -35,9 +35,9 @@ Operational management of your data workloads can include advanced automation th
 
 ## Security
 
-Security and [data management](/azure/architecture/patterns/category/data-management) must be built into the architectural process at layers for every application and workload. The data management and analytics scenario focuses on establishing a foundation for security. This foundation is built when you configure your Azure landing zones and you manage them separate from the workload. However, the workload team is still responsible for validating the following minimum requirements. If necessary, workload-specific solutions might be required to augment the configuration of the environment.
+Security and [data management](/azure/architecture/patterns/category/data-management) must be built into the architectural process at layers for every application and workload. Cloud-scale analytics focuses on establishing a foundation for security. This foundation is built when you configure your Azure landing zones and you manage them separate from the workload. However, the workload team is still responsible for validating the following minimum requirements. If necessary, workload-specific solutions might be required to augment the configuration of the environment.
 
-- Ensure [confidentiality and integrity of data, including privilege management, data privacy, and establishing appropriate controls](https://azure.microsoft.com/resources/seven-key-principles-of-cloud-security-and-privacy/).
+- Ensure confidentiality and integrity of data, including privilege management, data privacy, and establishing appropriate controls.
 - Implement appropriate [network isolation](/azure/security/fundamentals/network-best-practices) and [end-to-end encryption](/azure/security/fundamentals/encryption-overview), auditing, and policies at the platform level.
 - Use single sign-on (SSO) integration, multifactor authentication backed conditional access, and managed service identities.
 - Adhere to separation of concerns, such as control pane versus data plane, through proper application of [role-based access control (RBAC)](/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC).
@@ -57,4 +57,4 @@ On top of these environmental controls, the workload team should consider:
 
 ## Next steps
 
-[Overview of the data management and analytics scenario data management landing zone in Azure](./architectures/data-management-landing-zone.md)
+[Introduction to architectures for cloud-scale analytics](../cloud-scale-analytics/architectures/overview-architectures.md)
