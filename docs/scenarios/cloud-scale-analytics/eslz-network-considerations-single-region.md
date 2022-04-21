@@ -55,7 +55,7 @@ In our example scenario, data loaded from Storage Account A transits a Vnet peer
 
 In this scenario, the data doesn't pass the Connectivity Hub. It stays within the Data Platform that consists of a data management landing zone and one or more data landing zones.
 
-:::image type="content" source="../data-management/images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture" lightbox="../data-management/images/network-options-meshed-network-architecture.png":::
+:::image type="content" source="./images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture" lightbox="./images/network-options-meshed-network-architecture.png":::
 
 *Figure 2: Meshed Network architecture.*
 
@@ -114,7 +114,7 @@ If you need to enforce other network policies within the data platform, use Netw
 
 Hub and spoke network architecture design is the most obvious option, and one that many enterprises have adopted. In it, network transitivity gets set up in the Connectivity Hub to access data in Storage Account A from VM B. Data traverses two Vnet peerings ((2) and (5)) and a network virtual appliance hosted inside the Connectivity Hub ((3) and (4)). Then the data is loaded by the virtual machine (6) and stored back into the Storage Account B (8).
 
-:::image type="content" source="../data-management/images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture" lightbox="../data-management/images/network-options-hub-and-spoke.png":::
+:::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture" lightbox="./images/network-options-hub-and-spoke.png":::
 
 *Figure 3: Hub and spoke architecture.*
 
@@ -176,7 +176,7 @@ Another design option is the projection of Private Endpoints across each and eve
 
 The same applies to Storage Account B, and potentially to other services inside the data landing zones. If we define the number of data landing zones as *n*, then we end up with *n* Private Endpoints for at least all the storage accounts and potentially other services within the data landing zones as well. This leads to an exponential increase in the number of Private Endpoints.
 
-:::image type="content" source="../data-management/images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection" lightbox="../data-management/images/network-options-private-endpoint-projection.png":::
+:::image type="content" source="./images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection" lightbox="./images/network-options-private-endpoint-projection.png":::
 
 *Figure 4: Private Endpoint projection architecture.*
 
@@ -237,7 +237,7 @@ Another network option is to host Private Endpoints in your Connectivity Hub and
 
 Data traverses a single Vnet peering between the Connectivity Hub and data landing zone in order to load a dataset stored in Storage Account A in VM B. Once that dataset is loaded and processed ((3) and (4)), it traverses the same Vnet peering a second time (5) before finally getting stored in Storage Account B through the Private Endpoint connected to the Hub Vnet (6).
 
-:::image type="content" source="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub" lightbox="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png":::
+:::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub" lightbox="./images/network-options-private-endpoints-in-connectivity-hub.png":::
 
 *Figure 5: Private Endpoints in Connectivity Hub architecture.*
 
