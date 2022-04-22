@@ -544,6 +544,11 @@
          "source_path": "docs/scenarios/data-management/plan-capabilities.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/strategy",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/design-principles.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-principles",
+         "redirect_document_id": false
+      }          
    ]
 }
