@@ -539,6 +539,11 @@
          "source_path": "docs/secure/best-practices/security-governance-and-compliance.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/best-practices/end-to-end-governance",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/design-principles.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-principles",
+         "redirect_document_id": false
+      }          
    ]
 }
