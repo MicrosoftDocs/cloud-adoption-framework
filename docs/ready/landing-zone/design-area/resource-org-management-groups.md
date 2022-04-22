@@ -81,8 +81,8 @@ The following decisions have been made and included in the implementation for th
 |**Decommissioned**| The dedicated management group for landing zones that are being canceled. Canceled landing zones will be moved to this management group before deletion by Azure after 30-60 days. |
 
 > [!NOTE]
-> For many customers, the default `Corp` and `Online` Management Groups will provide an ideal starting point.
-> Some organizations will need to add more, whilst others will feel these aren't relevant to them.
+> For many organization, the default `Corp` and `Online` management groups provide an ideal starting point.
+> Some organizations need to add more, while others don't fine them relevant to their organization.
 >
 > If you are considering making changes to the Management Group hierarchy, please refer to our [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md) guidance.
 
