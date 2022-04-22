@@ -37,11 +37,11 @@ Before you deploy any component on an Azure subscription, you need to understand
 
 ### Start with DevOps
 
-The Terraform experience starts with one individual on a laptop. But it's likely that you'll work in a team and adopt DevOps and GitOps concepts to realize benefits such as continuous integration and continuous deployment, more reliability, and predictability on your deployments.
+The Terraform experience starts with one individual on a laptop. But it's likely that you'll work in a team and adopt DevOps and GitOps concepts to realize benefits such as continuous integration and continuous delivery (CI/CD), more reliability, and predictability on your deployments.
 
 On the journey, you'll realize that disruption can happen between the local experience (it works on the developer's laptop) and the pipelines. If there's too much difference between the two environments, you'll likely spend much time troubleshooting issues that are related to this dichotomy and lose focus on delivering value.
 
-Another common caveat is the difficulty of having a consistent development or running environment for the various developers. Terraform is evolving frequently, so make sure that all your developers are running the right versions. You also need some code excellence tools, like pre-commit validation hooks to avoid committing wrong things in a repository, static code analysis tools, and plan-phase compliance tools. 
+Another common caveat is the difficulty of having a consistent development or running environment for the various developers. Terraform is always evolving, so make sure that all your developers are running the right versions. You also need some code excellence tools, like pre-commit validation hooks to avoid committing wrong things in a repository, static code analysis tools, and plan-phase compliance tools. 
 
 DevOps is not achieved by a single tool. Your running environment might include more tools, like jq, the Azure CLI, PowerShell, PowerShell DSC, Ansible, Chef, and Puppet.
 
@@ -67,7 +67,7 @@ The DevOps toolset provides mechanisms to deploy those levels, along with readin
 
 ### Innovate faster with inner sourcing
 
-At the beginning of working with Terraform, DevOps teams tend to spend a large amount of time curating their own artifacts. Over time and with experience, those teams start defining a set of common engineering criteria.
+When DevOps teams start working with Terraform, they tend to spend a large amount of time curating their own artifacts. Over time and with experience, those teams start defining a set of common engineering criteria.
 
 In essence, having one code for the module and multiple configuration files used across the organization can centralize the quality of the engineering. Having the common engineering criteria enumerated will encourage community involvement (internal business users, or public contributors for the Cloud Adoption Framework module). The more people use the module, contribute to it, and test it, the more quality you'll have.
 
@@ -109,13 +109,13 @@ The Cloud Adoption Framework Terraform module is verified by HashiCorp and is in
 
 The Cloud Adoption Framework provider helps you manage naming conventions, whether you're relying on Cloud Adoption Framework recommendations or using your own naming conventions.
 
-The provider allows you to go faster from integration to production. While you're running in test mode, it will generate names randomly. This function is useful for test resources in which names need to be unique. When you're ready to deploy to production, you select pass-through mode to use your own name (after cleaning the name based on the allowed character set for each Azure resource).
+The provider allows you to go faster from integration to production. While you're running in test mode, it generates names randomly. This function is useful for test resources in which names need to be unique. When you're ready to deploy to production, you select pass-through mode to use your own name (after cleaning the name based on the allowed character set for each Azure resource).
 
 The Cloud Adoption Framework provider is verified by HashiCorp and is in the [HashiCorp Terraform Registry](https://registry.terraform.io/providers/aztfmod/azurecaf/latest). You can contribute to it on [GitHub](https://github.com/aztfmod/terraform-azurerm-caf).
 
 ### Rover
 
-Although as a first approach it might seem more natural and simple to use Terraform on your laptop, Rover in the Cloud Adoption Framework helps you manage your enterprise Terraform deployments on Microsoft Azure. It has two parts:
+Although as a first approach it might seem more natural and simple to use Terraform on your laptop, Rover in the Cloud Adoption Framework helps you manage your enterprise Terraform deployments on Azure. It has two parts:
 
 - **Docker container**:
   - Allows a consistent developer experience on PC, Mac, and Linux, including the right tools, Git hooks, and DevOps tools.
@@ -126,7 +126,7 @@ Although as a first approach it might seem more natural and simple to use Terraf
 
 - **Terraform wrapper**:
   - Helps you store and retrieve Terraform state files transparently on an Azure storage account.
-  - Facilitates the transition to continuous integration and continuous delivery (CI/CD).
+  - Facilitates the transition to CI/CD.
   - Enables a seamless experience (with elements like state connection and execution traces) locally and inside pipelines.
 
 Using Rover has the following advantages:
@@ -142,7 +142,7 @@ Rover is an open-source project. You can use it directly from [Docker Hub](https
 
 ### Azure landing zone module
 
-You can use the Azure landing zone module, officially titled Terraform Module for Cloud Adoption Framework Enterprise-scale, to deploy the management groups and policy recommendations for the enterprise-scale critical design area. The this module is available from the [HashiCorp Terraform Registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest).
+You can use the Azure landing zone module, officially titled Terraform Module for Cloud Adoption Framework Enterprise-scale, to deploy the management groups and policy recommendations for the enterprise-scale critical design area. This module is available from the [HashiCorp Terraform Registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest).
 
 The configuration of the enterprise-scale module, through either the default parameters or a highly customized environment for management groups and policies, is left to the implementation phase to map the needs of each organization.
 
@@ -150,12 +150,12 @@ The configuration of the enterprise-scale module, through either the default par
 
 In the Cloud Adoption Framework, a landing zone is a set of resources that share a Terraform state and that deliver an environment.
 
-In addition to *core platform* and *application* landing zones, there's a special landing zone called *launchpad.* It acts as your DevOps foundation and deploys:
+In addition to *core platform* and *application* landing zones, a special landing zone called *launchpad* acts as your DevOps foundation. Launchpad deploys:
 
 - Storage accounts to deploy the Terraform state files.
 - Key vaults that define the storage of secrets for the Terraform state.
 
-Most of the time, unless you're a core Cloud Adoption Framework contributor, you don't need to worry too much about the logic of landing zones. You just consume it from the repository and customize it with variables. If you want to review the details, you can find them on [GitHub](https://github.com/Azure/caf-terraform-landingzones).
+Most of the time, unless you're a core Cloud Adoption Framework contributor, you don't need to worry about the logic of landing zones. You just consume it from the repository and customize it with variables. If you want to review the details, you can find them on [GitHub](https://github.com/Azure/caf-terraform-landingzones).
 
 ### Starter project
 

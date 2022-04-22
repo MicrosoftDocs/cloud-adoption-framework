@@ -72,7 +72,7 @@ The following sections outline the resource types and configuration options.
 
 ### Core resources
 
-The core capability of this module deploys the foundations of the [conceptual architecture for Azure landing zones][msdocs-alz-architecture], with a focus on the central [resource organization][alz-resourceorg]:
+The core capability of this module deploys the foundations of the [conceptual architecture for Azure landing zones][msdocs-alz-architecture], with a focus on the central [resource organization][alz-resourceorg].
 
 ![Diagram of an enterprise-scale architecture for core resources in Azure landing zones.](./media/terraform-caf-enterprise-scale-overview.png)
 
@@ -122,7 +122,7 @@ This capability currently enables deployment of a multiple-region hub-and-spoke 
 ![Diagram of an enterprise-scale architecture for connectivity resources in Azure landing zones.](./media/terraform-caf-enterprise-scale-connectivity.png)
 
 > [!NOTE]
-> The module currently configures only the networking hub and dependent resources for the connectivity subscription. Although we provide an option to enable outbound virtual network peering from hub to spoke, users still need to initiate peering from spoke to hub. This is due to limitations in how the AzureRM provider targets a specific subscription for deployment.
+> The module currently configures only the networking hub and dependent resources for the connectivity subscription. Although there's an option to enable outbound virtual network peering from hub to spoke, users still need to initiate peering from spoke to hub. This is due to limitations in how the AzureRM provider targets a specific subscription for deployment.
 
 When you enable connectivity resources, the module deploys and manages the following resource types:
 
@@ -165,7 +165,7 @@ You can view module and provider dependencies on the [Dependencies][caf-es-depen
 >
 > We'll release major versions of the module when changes are needed. New major releases will ensure compatibility with the latest Terraform and AzureRM provider versions. Major releasees might result in changes to the minimum supported versions.
 >
-> To get the latest features, ensure the module version is set to the latest version. If you're upgrading to a later version of the module, run `terraform init -upgrade`.
+> To get the latest features, ensure that the module version is set to the latest version. If you're upgrading to a later version of the module, run `terraform init -upgrade`.
 >
 > ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat&logo=github)
 
@@ -174,7 +174,7 @@ You can view module and provider dependencies on the [Dependencies][caf-es-depen
 This example code will deploy the minimum recommended [management group and subscription organization][arm_management_group_subscriptions] from the enterprise-scale reference architecture. After you have this simple example up and running, you can start to customize your deployment.
 
 > [!TIP]
-> Even though `root_parent_id` is the module's only mandatory variable, we also recommend setting `root_id`. Changing the `root_id` value will initiate a full redeployment of all resources that the module manages, including downstream dependencies.
+> Even though `root_parent_id` is the module's only mandatory variable, we also recommend setting `root_id`. Changing the `root_id` value will start a full redeployment of all resources that the module manages, including downstream dependencies.
 
 The following code is a simple starting configuration for your `main.tf` root module:
 
@@ -238,7 +238,7 @@ module "enterprise_scale" {
 
 The [Terraform module for Cloud Adoption Framework enterprise-scale][caf-enterprise-scale] provides an accelerated path to building out your enterprise-scale landing zones. It also provides the flexibility to expand and customize your deployment while maintaining a simplified approach to managing the configuration of each landing zone.
 
-To find out more, [review the module on the Terraform Registry][caf-enterprise-scale], and explore the [module documentation][gh-wiki] on GitHub. We'll post more examples and tutorials there that will cover how to customize your deployment.
+To find out more, [review the module on the Terraform Registry][caf-enterprise-scale] and explore the [module documentation][gh-wiki] on GitHub. In the documentation, you'll find more examples and tutorials about how to customize your deployment.
 
 Learn how to [deploy the Terraform Module for Cloud Adoption Framework Enterprise-scale][hcl-deploy-es] through HashiCorp Learn. From there, you can also discover how some parts of the module work.
 

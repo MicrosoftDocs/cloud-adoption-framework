@@ -22,13 +22,13 @@ Deployment of resources to application landing zones is outside the scope of the
 
 This approach can also deploy the conceptual architecture for Azure landing zones. It does so by implementing the Terraform module for Azure landing zones.
 
-The following diagram illustrates the coverage of the two approaches:
+The following diagram illustrates the coverage of the two approaches.
 
 ![Diagram that compares Terraform modules.](media/tf-module-compare.png)
 
 ## Selecting the right approach for Terraform
 
-We recommended that you use the [Terraform Module for Cloud Adoption Framework Enterprise-scale][alz-tf-mod] approach. It's consumed like a conventional Terraform module and can be incorporated into new or existing Terraform infrastructure as code (IaC) automation.
+We recommend that you use the [Terraform Module for Cloud Adoption Framework Enterprise-scale][alz-tf-mod] approach. It's consumed like a conventional Terraform module and can be incorporated into new or existing Terraform infrastructure as code (IaC) automation.
 
 If your organization wants to manage both platform and application resources by using centralized automation, or has complex infrastructure architectures not supported by the Terraform module for landing zones, then you should consider [Cloud Adoption Framework Terraform landing zones][caf-terraform-landingzones].
 
