@@ -207,7 +207,7 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 ## Considerations
 
-- **Ensure Access.** Ensure managers and other personas in the organization are granted access to the visualizations available in [Azure Monitor](/azure/azure-monitor/overview.md#visualizing-monitoring-data) or from other Azure services, especially Azure SaaS and PaaS, to avoid duplicating them.
+- **Ensure Access.** Ensure managers and other personas in the organization are granted access to the visualizations available in [Azure Monitor](/azure/azure-monitor/overview#visualizing-monitoring-data) or from other Azure services, especially Azure SaaS and PaaS, to avoid duplicating them.
 
 - **Ensure monitoring coverage or *total asset visibility*.** Ensure agents, emitted logs, plus tables and queries for all assets that need to be managed and secured, and identify "blind spots" or gaps in coverage to ensure realism in SLOs.
 
@@ -223,6 +223,6 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 ## Next steps
 
-* Learn how the concept of [Continuous monitoring with Azure Monitor](/azure/azure-monitor/continuous-monitoring.md) can help drive operational excellence and business value.
+* Learn how the concept of [Continuous monitoring with Azure Monitor](/azure/azure-monitor/continuous-monitoring) can help drive operational excellence and business value.
 
 * Review the considerations for [collecting monitoring data](data-collection.md).
