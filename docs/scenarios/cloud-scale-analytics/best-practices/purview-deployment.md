@@ -3,7 +3,7 @@ title: Microsoft Purview deployment best practices for cloud-scale analytics
 description: Microsoft Purview best practices for account setup, networking, name resolution, authentication of data sources, roles, and access control.
 author: zeinam
 ms.author: zeinam
-ms.date: 22/04/2022
+ms.date: 04/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
