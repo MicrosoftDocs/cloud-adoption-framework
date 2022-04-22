@@ -19,9 +19,9 @@ These tools operate as an integrated unit for planning, continuous integration, 
 
 - Different kind of DevOps toolchain can be adopted:
     - all-in-one:
-      it provides a complete solution that may not integrate with other third-party tools. This can be useful for companies beginning their DevOps journey. E.g. Full stack Azure DevOps toolchain.
+      it provides a complete solution that may not integrate with other third-party tools. This can be useful for companies beginning their DevOps journey. E.g. [Full stack Azure DevOps toolchain](#full-stack-azure-devops-toolchain).
     - customized:
-      This allows teams to bring and mix the existing tools they know and they have already in use into the wider DevOps toolchain. Integration is essential for these types of toolchains avoiding team members spending unnecessary time switching between screens, logging in to multiple places, and having the challenge to share information between tools. E.g. Azure DevOps and GitHub toolchain.
+      This allows teams to bring and mix the existing tools they know and they have already in use into the wider DevOps toolchain. Integration is essential for these types of toolchains avoiding team members spending unnecessary time switching between screens, logging in to multiple places, and having the challenge to share information between tools. E.g. [Azure DevOps and GitHub toolchain](#azure-devops-and-github-toolchain).
 
 - Consider toolchains that are regurarly updated and for which you can get assistance when you need it by email or online, this is a requirement for any product or service that is on the critical path to market.     
 ### Planning
@@ -39,7 +39,7 @@ These tools operate as an integrated unit for planning, continuous integration, 
 
 ### Continuous Integration and Continuous Delivery
 - When implementing [Continuous Integration (CI)](/devops/develop/what-is-continuous-integration)/[Continuous Delivery (CD)](/devops/deliver/what-is-continuous-delivery) consider adopting a tool that supports:
-    - Version Control System: everything in your project must be checked in to a single version control repository such as Git. Refer to [What is Continuous Integration article](https://devopsdojodocs.azurewebsites.net/white-belt/capabilities/continuous-integration/what-is-continuous-integration.html) for more details
+    - Version Control System: everything in your project must be checked in to a single version control repository such as Git. Refer to [What is Continuous Integration article](https://devopsdojodocs.azurewebsites.net/white-belt/capabilities/continuous-integration/what-is-continuous-integration.html) for more details.
     - [Branching strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy)
     - [Automated Build](../considerations/development-strategy-development-lifecycle.md#automated-builds)
 
@@ -47,7 +47,7 @@ These tools operate as an integrated unit for planning, continuous integration, 
 
 - To minimize the amount of manual configuration needed to provision resources consider adopting [Infrastructure as Code](/azure/architecture/checklist/dev-ops#management). Infrastructure as Code helps also to document configuration. Keep scripts and and templates in source control, like any other code you maintain.
 
-- Adopt [code scanning tools](/devops/devsecops/enable-devsecops-azure-github#secure-your-code-with-github) that help you detect code defects as soon as possible and include pre-deployment checks to validate and confirm changes before a deployment (E.g. ["what-if" function](../considerations/development-strategy-development-lifecycle.md#deployment-strategy)).
+- Adopt [code scanning tools](/devops/devsecops/enable-devsecops-azure-github#secure-your-code-with-github) that help you detect code defects as soon as possible and include pre-deployment checks to validate and confirm changes before a deployment (E.g. ["what-if" ](../considerations/development-strategy-development-lifecycle.md#deployment-strategy)) function.
 
 - CI/CD tools should speed up the time to market for your product. Tools that allow you to parallelize tasks and take advantage of elastic scalability on cloud-hosted infrastructure will enhance the performance of your CI/CD process. 
 
@@ -55,8 +55,8 @@ These tools operate as an integrated unit for planning, continuous integration, 
 
 ### Continuous Operations
 - The goals of [Continuous Operations](https://devopsdojodocs.azurewebsites.net/white-belt/capabilities/continuous-operations/what-is-continuous-operations.html) are
-- to reduce or eliminate the need for planned downtimes or interruptions such as scheduled maintenance, capacity optimization and deployment.
-- to increase overall the reliability and resiliency of the systems in three aspects with people, process and tools.
+  - to reduce or eliminate the need for planned downtimes or interruptions such as scheduled maintenance, capacity optimization and deployment.
+  - to increase overall the reliability and resiliency of the systems in three aspects with people, process and tools.
 
 - Use cloud-native tools to:
   - [Monitor key metrics](../considerations/devops-principles-and-practices.md#implement-your-desired-devops-metrics) for service performance and availability.
@@ -85,33 +85,28 @@ products and possibly streamline key processes.
 of a well-integrated solution.
 
 ### Full stack Azure DevOps toolchain
+
+![Full stack Azure DevOps toolchain](./media/devops-toolchain-azure-devops.png)
+
 | DevOps stage | tools |
 | - | - |
-| Planning | - Azure Boards provides powerful and flexible planning capabilities to developers and other personas, 
-including hierarchical backlogs, customizable Kanban boards, rich process customization, team 
-dashboards, and custom reporting.|
-| CI/ CD| |
-| Operations | |
-| Collaborations and Feedbacks| |
+| Planning | **Azure Boards** provides powerful and flexible planning capabilities to developers and other personas, including hierarchical backlogs, customizable Kanban boards, rich process customization, team dashboards, and custom reporting.|
+| CI/ CD| **Azure Repo** allows to create private Git repositories, supporting different Git clients, branching strategy and protection. With Azure Repo you can benefit of localized data residency in the cloud to enable compliance with European regulations. **Azure Pipelines** allows customers to set up automated pipelines for CI/CD, including advanced test reporting. Azure Pipelines is currently strong in CD because of its support for multi-stage pipelines. Fine-grain permissions, gates, custom checks, and automated test result reporting in Azure Pipelines help you enforce security, compliance, and safe deployment best practices in your organization. They also support parallel steps execution and scalability. **Azure Artifacts** feed to store packages and to review and validate each package for security purposes. Azure Artifacts provide granular permission control and auditing. **Azure Test Plans** Azure Test Plans in Azure DevOps provides a browser-based test management solution for exploratory, manual, and user acceptance testing. Users of Azure Test Plans also typically use Azure Boards for planning and project management. You can link user stories and other requirements to test cases, or document bugs found as a result of testing. DevOps **Extensions** should be adopted to improve the static code analysis: CredScan, OSS Scan, Sonar Qube, etc.  |
+| Operations | **Azure Dashboards and reporting** provide custom reporting to monitor key service performance metrics. [Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics) and [Application Insights](/azure/application-insights) are the standard method of tracking the health and status of Azure resources. [Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview) provides centralized monitoring and management. [Azure Automation](/azure/automation/overview) can be used to create event-based automation to diagnose and resolve issues.  |
+| Collaborations and Feedbacks| [Azure DevOps Wiki](azure/devops/project/wiki/about-readme-wiki?view=azure-devops) allows sharing of information with other team's members, it supports collaborative editing of its content and structure. [Azure Boards](/azure/devops/boards/?view=azure-devops) provide Kanban collaboration and support for comments and discussions in backlog items. **Microsoft Teams** can be [integrated with Azure DevOps](https://www.azuredevopslabs.com/labs/vstsextend/teams/) to complete the team collaboration experience. |
 ### Azure DevOps and GitHub toolchain
+
+![Azure DevOps and GitHub toolchain](./media/devops-toolchain-github.png)
+
 | DevOps stage | tools |
 | - | - |
-| Planning | |
-| CI/ CD|GitHub Enterprise Server for Repos, GitHub Advanced Security (GHAS) |
-| Operations | |
-| Collaborations and Feedbacks| |
+| Planning | If your source code is in GitHub Repos, consider GitHub Issues, Projects, and Discussions to get a tight integration between code and issues. If you’re using a repo other than GitHub, or if you have needs that are unmet by GitHub Issues, Projects and Discussions, such as hierarchical work items or data visualization, consider using **Azure Boards**. [Azure Boards integrates with GitHub](https://github.com/marketplace/azure-boards), allowing you to link work items with commits in GitHub. Azure Boards also allows you to choose your ideal workflow, either starting with a simple, out-of-the-box workflow or using the powerful and flexible customization engine to build a workflow that suits your needs. When it comes time to visualize your data, Azure Boards enables you to easily build custom dashboards, configure their layout, and easily monitor progress throughout the lifecycle of your project. |
+| CI/ CD| The recommended version of GitHub is the Enterprise (GHE) including  **GitHub Repo** for repository and **GitHub Advanced Security (GHAS)** wich include [CodeQL](https://codeql.github.com/), [Code Scanning](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning), [Secret Scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning), [Security Overview](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning) and [Dependency Review](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review). GHE offers also **Codespaces**, a cloud IDE that can be used to develop code, replacing **Visual Studio Code** usually adopted in the Full-stack Azure DevOps scenario. **GitHub Actions** can be used to automate non build workflows if your repositories are in GitHub. If you are in more complex scenarios were you need to access code from outside of GitHub or you need centralized management of workflow templates and build pipelines you should adopt **Azure Pipelines**. As for the Azure Boards, [integration of Azure Pipelines with GitHub](https://github.com/marketplace/azure-pipelines) repositories is available. Detaild information about integration of Azure DevOps and GitHub are available in: [Work with Azure DevOps and GitHub](/azure/developer/github/integrate-azure-devops). **GitHub Packages** is the software package service that allows you to host your own packages privately or publicly. GitHub offers container registry support for hosting Docker or OCI images. Access tokens are required to publish, install, or delete packages, keeping the lifecycle management of your packages secure. There is also automation support for packages: you can integrate GitHub Packages with GitHub Actions, GitHub APIs and webhooks to create DevOps workflows including your code, CI, and deployment all in one interface. |
+| Operations | **Github Insights** provides analytic reports based on data from your GitHub Enterprise Server instance to help you understand and improve your software delivery process. For Landing Zone diagnostics and management the same Azure services recommended in [Full-stack Azure DevOps](#full-stack-azure-devops-toolchain) scenario should be adopted.|
+| Collaborations and Feedbacks| **GitHub Discussions** can be used to share questions, ideas, conversations, requests for comment (RFC), resource planning, and announcements. Use **Azure Boards** to easily build custom dashboards, configure their layout, and easily monitor progress throughout the lifecycle of your project. **Microsoft Teams** can be adopted to complete the team collaboration experience.|
 
 
 
-
-
-
-
-
-
---------------------------------------------
->>> wich kind of code?
->>> selfhosted agents? increment nr of licences to have parallel job
 
 
 
