@@ -12,8 +12,7 @@ ms.subservice: ready
 # Deploy Azure landing zones by using Terraform
 
 Azure provides native services for building your Azure landing zones.
-Other tools can also help with this effort.
-One such tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
+Other tools can also help with this effort. One tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
 The [Terraform Module for Cloud Adoption Framework Enterprise-scale][alz-tf-mod] is the official Terraform module for deploying the platform resources from the [conceptual architecture for Azure landing zones][alz-conceptual-arch]. The module is designed to simplify the deployment of the management group hierarchy, policies, and resources in the connectivity and management subscriptions.
 
