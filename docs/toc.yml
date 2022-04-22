@@ -257,6 +257,8 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Design principles
+        href: ready/landing-zone/design-principles.md
       - name: Journey to the target architecture
         href: ready/landing-zone/landing-zone-journey.md
       - name: Design areas
@@ -417,8 +419,6 @@ items:
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
-          - name: Design principles
-            href: ready/enterprise-scale/design-principles.md
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
           - name: Testing approach for enterprise-scale
