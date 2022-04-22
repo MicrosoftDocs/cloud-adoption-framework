@@ -75,13 +75,13 @@ The following decisions have been made and included in the implementation for th
 |**Connectivity**| This management group contains a dedicated subscription for connectivity. This subscription will host the Azure networking resources required for the platform, like Azure Virtual WAN, Azure Firewall, and Azure DNS private zones. |
 |**Identity**| This management group contains a dedicated subscription for identity. This subscription is a placeholder for Windows Server Active Directory Domain Services (AD DS) virtual machines (VMs) or Azure Active Directory Domain Services. The subscription also enables AuthN or AuthZ for workloads within the landing zones. Specific Azure policies are assigned to harden and manage the resources in the identity subscription. |
 |**Landing Zones**| The parent management group for all the landing zone child management groups. It will have workload agnostic Azure policies assigned to ensure workloads are secure and compliant. |
-|**Online**| [OPTIONAL] The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network. |
-|**Corp**| [OPTIONAL] The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |
+|**Online**| The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network. |
+|**Corp**| The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |
 |**Sandboxes**| The dedicated management group for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
 |**Decommissioned**| The dedicated management group for landing zones that are being canceled. Canceled landing zones will be moved to this management group before deletion by Azure after 30-60 days. |
 
 > [!NOTE]
-> For many Enterprise customers, the default `Corp` and `Online` Management Groups will provide an ideal starting point.
+> For many customers, the default `Corp` and `Online` Management Groups will provide an ideal starting point.
 > Some organizations will need to add more, whilst others will feel these aren't relevant to them.
 >
 > If you are considering making changes to the Management Group hierarchy, please refer to our [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md) guidance.
