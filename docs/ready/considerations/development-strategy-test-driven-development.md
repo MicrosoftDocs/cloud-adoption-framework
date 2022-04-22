@@ -93,6 +93,4 @@ The examples listed above can be used as tools for accelerating TDD cycles. They
 
 # Next steps
 
-To begin refactoring your first landing zone, evaluate the [refactor landing zones](../landing-zone/refactor.md) guidance.
-
-// NOTE TO SELF change this to how to write tests
+To begin testing your first landing zone, refer to guides for [ARM](https://github.com/Azure/AzOps), [Bicep](https://github.com/Azure/ALZ-Bicep), or [Terraform](https://www.hashicorp.com/resources/tdd-for-infrastructure-code).
