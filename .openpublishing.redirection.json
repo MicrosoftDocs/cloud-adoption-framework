@@ -466,6 +466,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/ready/enterprise-scale/terraform-module-caf-enterprise-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-module",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/scenarios/lamp/moodle/vpn-gateway.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/lamp/moodle/migration-overview",
          "redirect_document_id": false
@@ -499,11 +504,6 @@
          "source_path": "docs/reference/fundamental-concepts/hosting-hierarchy.md",
          "redirect_url": "/azure/cloud-adoption-framework/resources/fundamental-concepts/hosting-hierarchy",
          "redirect_document_id": true
-      },
-      {
-         "source_path": "docs/scenarios/data-management/eslz-deployment-templates.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/architectures/deployment-templates",
-         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/migration-with-enterprise-scaffold.md",
