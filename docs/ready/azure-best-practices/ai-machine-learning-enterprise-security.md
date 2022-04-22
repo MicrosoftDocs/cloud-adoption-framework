@@ -106,7 +106,7 @@ In a self-service pattern, data scientists can create and manage workspaces. Thi
 
 1. When data scientists create compute resources, they can assign the managed identities to the compute instances to gain data access.
 
-For best practices, see [Authentication for data management and analytics](../../scenarios/data-management/secure-authentication.md).
+For best practices, see [Authentication for cloud-scale analytics](../../scenarios/data-management/secure-authentication.md).
 
 ### Data-centric pattern
 
