@@ -18,9 +18,9 @@ An [Azure landing zone](./index.md) provides cloud adoption teams with a well-ma
 
 There are two primary approaches. The choice will depend on how fast your teams can develop the required skills.     
 
-- **Start with the Azure landing zone accelerator:** If your business requirements call for a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start. You can customize the implementation used as part of the Azure landing zone accelerator, using Infrastructure-as-Code (IaC) to set up and configure your environment. For IaC, your organization will require skills in Azure Resource Manager templates and GitHub.
+- **Start with the Azure landing zone accelerator:** If your business requirements call for a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start. If you need to, you can modify using Infrastructure-as-Code (IaC) to set up and configure an environment per your requirements. For IaC, your organization will require skills in Azure Resource Manager templates and GitHub.
 
-- **Customize:** If it's more important to build your environment to meet specific requirements, or develop internal skills. In this approach, focus on the basic landing zones considerations required to start cloud adoption. All technical and business requirements are considered complete when your adoption aligns with Azure landing zone. You can then focus on enhancing your landing zone.
+- **Customize:** If it's more important to build your environment to meet specific requirements, or develop internal skills. In this approach, focus on the basic landing zones considerations required to start cloud adoption. All technical and business requirements are considered complete when your environment configuration aligns with Azure landing zone conceptual architecture. You can then focus on enhancing your landing zone.
 
 > [!IMPORTANT]
 > Of the two approaches, the Azure landing zone accelerator is recommended because it's the quickest way to achieve a scaled-out and mature environment. 
