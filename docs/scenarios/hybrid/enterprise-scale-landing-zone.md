@@ -35,17 +35,17 @@ It's beneficial to have familiarity with the enterprise-scale landing zone. For 
 
 ## Azure Arc
 
-Azure provides various management tools to help you monitor and govern infrastructure and applications at scale. When you implement a hybrid landing zone, you should also extend these Azure tools to control infrastructure and applications running outside of Azure. This builds you a single management plane and single view of your entire hybrid estate, which make monitorinand management at scale, as straightforward as possible.
+Azure provides various management tools to help you monitor and govern infrastructure and applications at scale. When you implement a hybrid landing zone, you should also extend these Azure tools to control infrastructure and applications running outside of Azure. This creates a single management plane and single view of your entire hybrid estate, which makes monitoring and management at scale as straightforward as possible.
 
 [ ![Diagram that shows Azure Arc high level architecture.](./media/single-control-plane.png)](./media/single-control-plane.png#lightbox)
 
-[Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multicloud and on-premises management platform. Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
+[Azure Arc](/azure/azure-arc/) simplifies governance and management by providing a consistent multicloud and on-premises management platform. Azure Arc lets you to manage your entire environment with a single pane of glass by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 
 You can now manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure. Regardless of where they live, you can use familiar Azure services and management capabilities. Azure Arc enables you to continue using traditional ITOps, while introducing DevOps practices to support new cloud native patterns in your environment.
 
-## Azure Arc-enabled servers design guidelines
+## Azure Arc-enabled server design guidelines
 
-The design guidelines provide recommendations to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone, in a hybrid multicloud environment. There are seven critical design areas that need to be considered, as part of your enterprise-scale landing zone implementation, when working with Azure Arc:
+The design guidelines provide recommendations for the critical decisions driving the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone in a hybrid multicloud environment. There are seven critical design areas you need to consider as part of your enterprise-scale landing zone implementation when you're working with Azure Arc:
 
 | CDA | Description |
 |--|--|
