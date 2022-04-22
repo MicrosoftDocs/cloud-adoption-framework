@@ -16,7 +16,7 @@ The Azure landing zone conceptual architecture is universally applied to any Azu
 
 The principles are intentionally aspirational to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone accelerator or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles described here. 
 
-Using these principles as part of your implementation will serve as a useful guide for realising the benefits of cloud technologies. This cloud-orientated way, often called _cloud native_,  represents ways of working and technical options for your organization that are not typically offered with legacy technology approaches.
+Using these principles as part of your implementation will serve as a useful guide for realizing the benefits of cloud technologies. This cloud-orientated way, often called _cloud native_,  represents ways of working and technical options for your organization that are not typically offered with legacy technology approaches.
 
 > [!IMPORTANT] 
 > **Impact of design deviations** 
