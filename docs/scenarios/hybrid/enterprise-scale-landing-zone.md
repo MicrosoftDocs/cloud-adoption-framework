@@ -12,38 +12,30 @@ ms.custom: think-tank, e2e-hybrid
 
 # Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud
 
-Enterprises are currently building and running applications across various ecosystems that can be on-premises, in multiple public clouds, and on the edge. On these distributed environments, it's critical to ensure compliance and find an effective way to manage servers, applications, and data at scale, while maintaining agility.
+Enterprises are currently building and running applications across various ecosystems on-premises, in multiple public clouds, and on the edge. When you're working in these distributed environments, it's critical that you find a way to ensure compliance and manage servers, applications, and data at scale while you still maintain agility.
 
-[Enterprise-scale landing zone provides a specific architectural approach](/azure/cloud-adoption-framework/ready/landing-zone/), reference architecture, and reference implementations to help prepare your landing zones for mission-critical technology platforms and supported workloads.
+[Enterprise-scale landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
 
 [ ![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
 
-Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires two simple additions to the reference architecture:
+Enterprise-scale was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two simple additions:
 
-- Hybrid and multicloud connectivity: understand key network design considerations and recommendations when working with Azure Arc.
-- Unified operations: include Azure Arc-enabled resources to extend governance and operations support with consistent tooling.
+- **Hybrid and multicloud connectivity:** Understand key network design considerations and recommendations for working with Azure Arc.
+- **Unified operations:** Include Azure Arc-enabled resources to extend your governance and operations support with consistent tooling.
 
 ## Why hybrid?
 
-As organizations look to adopt modern cloud services and the benefits they bring, there will be an inevitable period of parallel-running, alongside the legacy on-premises infrastructure.
+As organizations adopt modern cloud services and their associated benefits, periods of parallel-running alongside the legacy on-premises infrastructure are inevitable. As your organization further evaluates cloud services, or as business requirements dictate, your organization might choose to run more than one public cloud service. Operating a distributed heterogeneous estate requires simplified, consolidated management and governance in order to reduce operational impact.
 
-As cloud services are further evaluated, or as business requirements dictate, organizations might choose to run more than one public cloud service.
+You can use landing zone concepts introduced as part of the Cloud Adoption Framework guidance to establish patterns for building out hybrid architectures and introducing standards for connectivity, governance, and monitoring. This helps when your strategic intent is to simplify and combine the infrastructure and services following migration projects. Setting standards for management processes and tools removes the need to retrofit workloads after you move them into Azure.
 
-A distributed heterogeneous estate requires simplified consolidated management and governance, in order to reduce the operational impact.
+## Prerequisites
 
-Landing zone concepts introduced as part of the Cloud Adoption Framework guidance, can be used to establish patterns for building out hybrid architectures and introducing standards for connectivity, governance, and monitoring.
-
-This is helpful when the strategic intent is to simplify and combine the infrastructure and services, following migration projects. Setting standards for management processes and tools, means workloads won't have to be retrofitted after moving into Azure.
-
-## Prerequisite
-
-Familiarity with enterprise-scale landing zone is beneficial. For more information on this prerequisite, review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
+It's beneficial to have familiarity with the enterprise-scale landing zone. For more information, see the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and enterprise-scale [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
 ## Azure Arc
 
-Azure provides organizations with various management tools that enable infrastructure and applications to be monitored and governed at scale. When implementing a hybrid landing zone, these Azure tools should be extended to control infrastructure and applications running outside of Azure.
-
-This provides a single management plane and a single view on the entire hybrid estate, in order to make monitoring and management at scale, as straightforward as possible.
+Azure provides various management tools to help you monitor and govern infrastructure and applications at scale. When you implement a hybrid landing zone, you should also extend these Azure tools to control infrastructure and applications running outside of Azure. This builds you a single management plane and single view of your entire hybrid estate, which make monitorinand management at scale, as straightforward as possible.
 
 [ ![Diagram that shows Azure Arc high level architecture.](./media/single-control-plane.png)](./media/single-control-plane.png#lightbox)
 
