@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Platform automation and devops for API Management landing zone accelerator
+# Platform automation and DevOps for API Management landing zone accelerator
 
 This article provides design considerations and recommendations for platform automation and DevOps when using the API Management landing zone accelerator. Platform automation and DevOps provide opportunities to modernize your approach to environmental deployment with infrastructure-as-code options.
 
@@ -49,3 +49,7 @@ The following are assumptions that went into the development of the landing zone
 
 * Using infrastructure-as-code Bicep files to deploy API Management infrastructure and backends.
 * Deployment of infrastructure templates using pipelines.
+
+## Next steps
+
+* [Automate API deployments with APIOps](/azure/architecture/example-scenario/devops/automated-api-deployments-apiops)

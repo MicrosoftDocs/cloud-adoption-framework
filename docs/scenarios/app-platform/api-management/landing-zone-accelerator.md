@@ -14,7 +14,9 @@ ms.custom: internal
 
 Landing zone accelerator for API Management provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable API Management infrastructure. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.
 
-Customers adopt API Management in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
+Customers adopt API Management in various ways. The architectural approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using API Management. The reference implementation can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale. 
+
+The provided infrastructure-as-code template can be modified to fit your naming conventions, use existing resources (DevOps agent, key vault, and so on), and extend to different backends. For example, add connections to APIs hosted on App Service, AKS, etc.
 
 ## Implement a platform foundation
 
@@ -55,7 +57,7 @@ It consists of API Management deployed in a virtual network in internal mode, fr
 
 ## Deploy Landing zone accelerator for API Management
 
-The enterprise-scale API Management reference implementation with infrastructure-as-code templates is available on [GitHub](https://github.com/cykreng/Enterprise-Scale-APIM).
+The enterprise-scale API Management reference implementation with infrastructure-as-code templates is available on [GitHub](https://github.com/Azure/apim-landing-zone-accelerator).
 
 ## Next steps
 
