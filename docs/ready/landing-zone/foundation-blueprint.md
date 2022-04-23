@@ -60,20 +60,20 @@ To aid in this comparison when teams are further along with cloud adoption, see 
 
 ### Security
 
-This implementation option doesn't implement any controls for the primary purpose of security. In the absence of defined security controls, you shouldn't use this landing zone for any mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
+This implementation option doesn't implement controls for the primary purpose of security. In the absence of defined security controls, you shouldn't use this landing zone for mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
 
 To accelerate parallel development of security disciplines, review the [Secure methodology](../../secure/index.md). Consider deploying the [Cloud Adoption Framework Foundation blueprint](./foundation-blueprint.md) along with the Cloud Adoption Framework Migration landing zone blueprint.
 
 ### Management
 
-This implementation option does not implement any aspects of the operations baseline. In the absence of a defined operations baseline, this landing zone should not be used for any mission critical workloads or sensitive data. It is assumed that this landing zone is being used for limited production deployment to initiate learning, iteration, and development of the overall operating model in parallel to these early stage migration efforts.
+This implementation option does not implement key aspects of the operations baseline. In the absence of a defined operations baseline, this landing zone should not be used for mission critical workloads or sensitive data. It is assumed that this landing zone is being used for limited production deployment to initiate learning, iteration, and development of the overall operating model in parallel to these early stage migration efforts.
 
 To accelerate parallel development of an operations baseline, review the [Manage methodology](../../manage/index.md) and consider deploying the [Azure server management guide](../../manage/azure-server-management/index.md).
 
 > [!WARNING]
 > As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
-This implementation option does not implement any BCDR solution. It is assumed that the solution for protection and recover will be addressed by the development of the operations baseline.
+This implementation option doesn't have affordances for business continuity and disaster recovery (BCDR). It's assumed that the solution for protection and recovery will be addressed by the development of the operations baseline.
 
 ### Governance
 
@@ -86,7 +86,7 @@ To accelerate parallel development of the other governance disciplines, review t
 
 ### Platform automation and DevOps
 
-This implementation option doesn't implement automated DevOps pipelines. In the absence of defined automation, you shouldn't use this landing zone for any mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
+This implementation option doesn't implement automated DevOps pipelines. In the absence of defined automation, you shouldn't use this landing zone for mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
 
 To accelerate parallel development, review the [Ready methodology](../../ready/index.md). Consider deploying the [Cloud Adoption Framework Foundation blueprint](./foundation-blueprint.md) along with the Cloud Adoption Framework Migration landing zone blueprint.
 
