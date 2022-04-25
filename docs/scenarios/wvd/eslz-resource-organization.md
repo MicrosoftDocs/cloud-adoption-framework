@@ -3,7 +3,7 @@ title: Design guidance for Azure Virtual Desktop
 description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation.
 author: DominicAllen
 ms.author: doalle
-ms.date: 06/18/2021
+ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -76,9 +76,28 @@ Subscriptions serve as a scale unit so component workloads can scale within your
 
 Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns. The following diagrams show the structure and Resource Groups we recommend you create and use as administrative domains and lifecycle purposes for each Azure Region you deploy.
 
-![AVD base subscription](../../../docs/scenarios/wvd/media/avd-resource-management-1.png)
+```text
+    - Azure Virtual Desktop Service Objects:  Create a Resource Group for AVD Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.  
+    - Networking:  Generally created as part of the Cloud Adoption Framework Landing zone
+    - Storage:  If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts
+    - Session hosts compute: Create a Resource Group for Virtual Machines, Disks and Network Interfaces. These have a different life cycle than the AVD Service Objects. 
+    - Shared Resources:  Create a Resource Group for shared resources like custom VM images, this encourages self-service so you could have a subscription for each business line, for instance.
+    
+    - Basic Structure:
+        - Subscription (AVD-Shared-Resources)
+            - rg-<Azure-Region>-avd-shared-resources
+        - Subscription (AVD)
+            - rg-<Azure-Region>-avd-<Workload>-service-objects
+            - rg-<Azure-Region>-avd-<Workload>-network
+            - rg-<Azure-Region>-avd-<Workload>-pool-compute
+            - rg-<Azure-Region>-avd-<Workload>-storage
+```
 
-![AVD shared services subscription](../../../docs/scenarios/wvd/media/avd-resource-management-2.png)
+Below is an example from the recommended structure above for the AVD resources already deployed.
+
+![AVD Shared Resources Subscription](../../../docs/scenarios/wvd/media/avd-resource-management-1.png)
+
+![AVD Service Objects and compute Subscription](../../../docs/scenarios/wvd/media/avd-resource-management-2.png)
 
 ## Next steps
 
