@@ -1,7 +1,7 @@
 ---
 title: DevOps considerations
 description: Design area guidance for DevOps considerations in Azure Landing Zones
-author: AlvaroGuadamillasHerranz
+author: alguadam
 ms.author: alguadam
 ms.date: 01/04/2022
 ms.topic: conceptual
@@ -54,28 +54,28 @@ The decisions you make when reviewing cloud operating models might influence how
 
 To establish your DevOps framework, consider any of the frameworks that are already available to start with a set of pre-defined proven practices:
 
-- [Microsoft DevOps Resource Center](https://docs.microsoft.com/devops/what-is-devops) provides a rich set of definitions, practices and capabilities that can be adapted to Azure Landing Zone lifecycle management, including:
-  - [Planning](https://docs.microsoft.com/devops/plan/planning-efficient-workloads-with-devops)
-  - [Development and Continuous Integration](https://docs.microsoft.com/devops/develop/developing-modern-software-with-devops)
-  - [Continuous Delivery](https://docs.microsoft.com/devops/deliver/delivering-quality-services-with-devops)
-  - [Operations and Reliability](https://docs.microsoft.com/devops/operate/operating-reliable-systems-with-devops)
-  - [DevSecOps](https://docs.microsoft.com/devops/operate/security-in-devops)
+- [Microsoft DevOps Resource Center](/devops/what-is-devops) provides a rich set of definitions, practices and capabilities that can be adapted to Azure Landing Zone lifecycle management, including:
+  - [Planning](/devops/plan/planning-efficient-workloads-with-devops)
+  - [Development and Continuous Integration](/devops/develop/developing-modern-software-with-devops)
+  - [Continuous Delivery](/devops/deliver/delivering-quality-services-with-devops)
+  - [Operations and Reliability](/devops/operate/operating-reliable-systems-with-devops)
+  - [DevSecOps](/devops/operate/security-in-devops)
 
 - [Microsoft DevOps Dojo](https://devblogs.microsoft.com/devops/intro-of-devops-dojo/) establishes a DevOps taxonomy built on four foundation pillars and eight different capabilities:
   - Pillars:
-    - [Culture](https://docs.microsoft.com/learn/modules/introduce-foundation-pillars-devops/3-explore-first-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Lean Product](https://docs.microsoft.com/learn/modules/introduce-foundation-pillars-devops/4-explore-second-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Architecture](https://docs.microsoft.com/learn/modules/define-foundation-pillars/2-explore-third-foundation-pillar?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Technology](https://docs.microsoft.com/learn/modules/define-foundation-pillars/3-explore-last-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Culture](/learn/modules/introduce-foundation-pillars-devops/3-explore-first-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Lean Product](/learn/modules/introduce-foundation-pillars-devops/4-explore-second-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Architecture](/learn/modules/define-foundation-pillars/2-explore-third-foundation-pillar?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Technology](/learn/modules/define-foundation-pillars/3-explore-last-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
   - Capabilities:
-    - [Continuous Planning](https://docs.microsoft.com/learn/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Integration](https://docs.microsoft.com/learn/modules/analyze-devops-continuous-planning-intergration/3-analyze-continuous-integration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Delivery](https://docs.microsoft.com/learn/modules/explain-devops-continous-delivery-quality/2-use-continuous-delivery-release-faster?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Operations](https://docs.microsoft.com/learn/modules/explore-devops-continuous-security-operations/3-explore-continuous-operations?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Security](https://docs.microsoft.com/learn/modules/explore-devops-continuous-security-operations/2-explore-continuous-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Quality](https://docs.microsoft.com/learn/modules/explain-devops-continous-delivery-quality/3-explore-continuous-quality?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Improvement](https://docs.microsoft.com/learn/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Collaboration](https://docs.microsoft.com/learn/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Planning](/learn/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Integration](/learn/modules/analyze-devops-continuous-planning-intergration/3-analyze-continuous-integration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Delivery](/learn/modules/explain-devops-continous-delivery-quality/2-use-continuous-delivery-release-faster?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Operations](/learn/modules/explore-devops-continuous-security-operations/3-explore-continuous-operations?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Security](/learn/modules/explore-devops-continuous-security-operations/2-explore-continuous-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Quality](/learn/modules/explain-devops-continous-delivery-quality/3-explore-continuous-quality?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Improvement](/learn/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Collaboration](/learn/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
 
 ### Define the DevOps practices to adopt for your Azure Landing Zones management
 
@@ -94,16 +94,16 @@ Define and align your DevOps implementation journey with your organization's [cl
   - The [technical skills](../suggested-skills.md) in your team.
   - The current [cloud operations model](../../operating-model/define.md) adopted by your team.
 - Define the desired model for your team according to your organization's cloud adoption plan.
-- Establish an iterative roadmap to implement the desired model in an iterative and incremental mode in alignment with your organization's [transformation timeline](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/digital-transformation-timeline).
+- Establish an iterative roadmap to implement the desired model in an iterative and incremental mode in alignment with your organization's [transformation timeline](/azure/cloud-adoption-framework/strategy/digital-transformation-timeline).
 
 ### Implement your desired DevOps metrics
 
-Identify what metrics will be used to measure your team's DevOps performance. Use metrics as a way to drive the desired habits in your team that is connected with [business outcomes](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/learning-metrics). Establish metrics to let your team measure impact over activities. Make the key metrics visible to all, as transparency promotes trust and drives alignment to organizational objectives.
+Identify what metrics will be used to measure your team's DevOps performance. Use metrics as a way to drive the desired habits in your team that is connected with [business outcomes](/azure/cloud-adoption-framework/strategy/learning-metrics). Establish metrics to let your team measure impact over activities. Make the key metrics visible to all, as transparency promotes trust and drives alignment to organizational objectives.
 
 Following some examples of metrics that measure DevOps performance to improve business impact:
 
 - Business Outcomes:
-  - Use [Objectives and Key Results](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an “output” mindset to an “outcome” mindset. E.g. Amount of workloads that improved their compliance rating over the number of policies deployed to Azure.
+  - Use [Objectives and Key Results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an “output” mindset to an “outcome” mindset. E.g. Amount of workloads that improved their compliance rating over the number of policies deployed to Azure.
   - Customer or end user satisfaction. E.g. Net Promoter Score (NPS), surveys, interviews.
   - Business growth. E.g. Increased profitability, increased revenue, acquiring new revenue sources
   - People metrics. E.g. Employee Net Promoter Score (eNPS), utilization, retention, satisfaction.
@@ -145,4 +145,4 @@ E.g. of DevOps framework with Azure DevOps toolchain selection:
 
 E.g. of DevOps framework with Azure DevOps and GitHub toolchain selection:
 
-![Example of DevOps framework with Azure DevOps toolchain selection](./media/devops-toolchain-github.png)
+![Example of DevOps framework with Azure DevOps and GitHub toolchain selection](./media/devops-toolchain-github.png)

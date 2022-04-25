@@ -1,7 +1,7 @@
 ---
 title: DevOps teams topologies
 description: Design area guidance for DevOps teams topologies in Azure Landing Zones
-author: AlvaroGuadamillasHerranz
+author: alguadam
 ms.author: alguadam
 ms.date: 01/04/2022
 ms.topic: conceptual
