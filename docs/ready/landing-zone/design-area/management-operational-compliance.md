@@ -37,6 +37,11 @@ Learn more about the [guest configuration feature of Azure Policy](/azure/govern
 - Are there groups of resources that share similar update schedules?
 - Are there groups of resources that cannot be updated at the same time for business continuity reasons?
 
+## Operational compliance recommendations
+
+- Use [Update Management in Azure Automation](/azure/automation/update-management/overview) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing Update Management configurations through Azure Policy ensures that all VMs are included in the patch management regimen. It also provides application teams with the ability to manage patch deployment for their VMs. It also provides visibility and enforcement capabilities to the central IT team across all VMs.
+- Monitor in-guest virtual machine (VM) configuration drift using Azure Policy. Enabling [guest configuration](/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps application team workloads to consume feature capabilities immediately, with little effort.
+
 ## Next steps
 
 Learn how workload teams can use a federated model and operationally maintain their workloads.
