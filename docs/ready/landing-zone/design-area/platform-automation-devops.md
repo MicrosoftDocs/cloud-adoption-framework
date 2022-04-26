@@ -48,7 +48,7 @@ The ability to make changes at scale through a prescribed automated process migh
 
 - [Development lifecycle](../../considerations/development-strategy-development-lifecycle.md) explores key design considerations and recommendations surrounding the repository, branch, automated builds, deployment, and rollback strategy during the creation of the landing zone via automation.
 - [Environments](../../considerations/environments.md) explains the purpose of a multi-environments to build, test, and release code with greater speed and frequency so that deployment is as straightforward as possible.
-- [Test-driven development](../../considerations/test-driven-development-tdd.md) explains how to use Unit Testing to improve the quality of new features and improvements in the Azure Landing Zone code-base.
+- [Test-driven development](../../considerations/development-strategy-test-driven-development.md) explains how to use Unit Testing to improve the quality of new features and improvements in the Azure Landing Zone code-base.
 
 ## Security considerations
 
