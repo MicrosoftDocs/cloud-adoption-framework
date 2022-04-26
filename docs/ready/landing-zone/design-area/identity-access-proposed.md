@@ -101,7 +101,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Take advantage of the agile nature of the cloud
 
-         Prevent the violation of any critical security or governance boundary
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prevent the violation of any critical security or governance boundary
 
     o Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
 
