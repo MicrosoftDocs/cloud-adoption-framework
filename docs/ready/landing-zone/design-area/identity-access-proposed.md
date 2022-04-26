@@ -118,9 +118,9 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
     o Add on-premises groups to the Azure AD-only group if a group management system is already in place.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By using Azure AD-only groups, you can add both users and groups that are synchronized from on-premises, via Azure AD Connect. You can also add Azure AD-only (also known as cloud only) users and groups to a single Azure AD-only group, including guest users.
+- By using Azure AD-only groups, you can add both users and groups that are synchronized from on-premises, via Azure AD Connect. You can also add Azure AD-only (also known as cloud only) users and groups to a single Azure AD-only group, including guest users.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Groups that are synchronized from on-premises can only be managed and updated from the identity source of truth (on-premises Active Directory). These groups can only contain members from the same identity source, which doesn't provide flexibility like Azure AD-only groups do.
+- Groups that are synchronized from on-premises can only be managed and updated from the identity source of truth (on-premises Active Directory). These groups can only contain members from the same identity source, which doesn't provide flexibility like Azure AD-only groups do.
 
 - Integrate Azure AD logs with the platform-central [Log Analytics workspace](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
 
