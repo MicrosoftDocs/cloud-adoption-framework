@@ -1,8 +1,8 @@
 ---
 title: Test-driven development for Azure Landing Zones
 description: Test-driven development for Azure Landing Zones.
-author: ElisaAnzelmo, ElenaBataneroGarcia
-ms.author: elanzel, elbatane, vitoc, yeeshian
+author: elbatane
+ms.author: elbatane
 ms.date: 03/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -70,7 +70,7 @@ The Govern methodology within the Cloud Adoption Framework provides a narrative 
 The above examples are basic samples to help develop a *definition of done* for your landing zones. Additional sample policies are available for each of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md).
 
 
-# Azure tools and features to support landing zone TDD cycles
+## Azure tools and features to support landing zone TDD cycles
 
 ![Test-driven development tools in Azure](../../_images/ready/azure-tdd-tools.png)
 
@@ -91,7 +91,7 @@ Other tools that are helpful, depending on your preferred approach:
 - [Azure Landing Zones using Bicep](https://github.com/Azure/ALZ-Bicep)
 - [AzOps: PowerShell module which deploys (Push) Resource Templates & Bicep files at all Azure scope levels and exports (Pull) ARM resource hierarchy](https://github.com/Azure/AzOps)
 
-# Next steps
+## Next steps
 
 Review the [security considerations](./security-considerations-overview.md) that will be important in your implementation.
 
