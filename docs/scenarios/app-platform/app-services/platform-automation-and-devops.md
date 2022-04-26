@@ -1,6 +1,6 @@
 ---
-title: Platform automation and DevOps for <<Token-LongName>>
-description: <<Describe how this landing zone accelerator can improve platform automation and devops of <<Token-Name>>.>>
+title: Platform automation and DevOps for Azure App Service
+description: Learn about design considerations and recommendations for platform automation and DevOps in the Azure App Service landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,13 +10,15 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Platform automation and devops for <<Token-LongName>> landing zone accelerator
+# Platform automation and devops for App Service landing zone accelerator
 
-Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
+This article provides design considerations and recommendations for platform automation and DevOps when using the API Management landing zone accelerator. Platform automation and DevOps provide opportunities to modernize your approach to environmental deployment with infrastructure-as-code options.
+
+Learn more about the [platform automation and DevOps](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops) design area.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of <<Token-LongName>>.
+The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service.
 
 - When securing and protecting access to development, test, Q&A, and production environments, consider security options from a CI/CD perspective. Deployments happen automatically, so map access control accordingly.
 - Consider using prefixes and suffixes with well-defined conventions to uniquely identify every deployed resource. These naming conventions avoid conflicts when deploying solutions next to each other and improve overall team agility and throughput.
@@ -28,7 +30,7 @@ The following is a bulleted list of things you must think about when preparing f
 
 ## Design recommendations
 
-The following is a bulleted list of best practices that should be included in any deployment of <<Token-LongName>>.
+The following is a bulleted list of best practices that should be included in any deployment of App Service.
 
 - Rely on pipelines or actions to:
     - Maximize applied practices across the team.
@@ -40,11 +42,3 @@ The following is a bulleted list of best practices that should be included in an
 -  Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings.
 -  Embrace [shift left](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/shift-left-make-testing-fast-reliable) security by adding vulnerability and secret scanning tools like container scanning early in the pipeline.
 - Leverage blue/green deployment using deployment slots to validate application changes and minimize downtime. 
-
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for <<Token-LongName>>.
-
-## Additional considerations
-
-Create as many H2 "##" headers as is required to educate the customer on this topic.

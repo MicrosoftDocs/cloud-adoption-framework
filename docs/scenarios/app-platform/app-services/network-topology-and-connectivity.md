@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale network topology and connectivity considerations for Azure App Service
-description: <<Describe how this landing zone accelerator can improve network topology and connectivity of App Service.>>
+description: Learn about design considerations and recommendations for network topology and connectivity in the Azure App Service landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Network topology and connectivity considerations for <<Token-LongName>> landing zone accelerator
+# Network topology and connectivity considerations for App Service landing zone accelerator
 
-Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
+This article provides design considerations and recommendations for network topology and connectivity when using the App Service landing zone accelerator. Networking is central to almost everything inside a landing zone. It enables connectivity to other Azure services, external users, and internal and external APIs. 
 
 ## Design considerations
 
@@ -52,10 +52,6 @@ The following is a bulleted list of best practices that should be included in an
 - Avoid [SNAT port exhaustion](https://docs.microsoft.com/en-us/azure/app-service/troubleshoot-intermittent-outbound-connection-errors) by utilizing connection pools.  The creation of new connections repetitively to the same host and port can cause slow response times, intermittent 5xx errors, timeouts, or external endpoint connection issues.
 - Review and follow the recommendations outlined in the [Network Security section](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/app-service-security-baseline?toc=/azure/app-service/toc.json#network-security) of the Azure security baseline for App Service.
 
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Azure App Service
-
 ## Additional considerations
 
 ### Multi-tenanted
@@ -63,5 +59,6 @@ The following are assumptions that went into the development of the deployable a
 -	If you need a dedicated outbound address when connecting to an multi-tenanted App Service, use a [NAT Gateway](https://docs.microsoft.com/en-us/azure/app-service/networking/nat-gateway-integration). 
 -	Since subnet size can't be changed after assignment, use a subnet that's large enough to accommodate whatever scale your app might reach. To avoid any issues with subnet capacity, you should use a /26 with 64 addresses for Vnet integration.
 
-### App Service Enviornment:
+### App Service Environment:
+
 -	Your subnet should be sized with a /24 CIDR range, providing 256 addresses. 
