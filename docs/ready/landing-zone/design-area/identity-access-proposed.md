@@ -111,11 +111,11 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 ### Platform access - design recommendations
 
 - Centralizing Identity means having only one location in the cloud and the integration of the Directories services, control access, authentication, and applications. It provides better management from the IT team.
-- 
+
     o For centralized Directories the best practice is to have only one Azure AD tenant.
 
 - Use Azure AD-only groups for Azure control-plane resources and Azure AD Privileged Identity Management when you grant access to resources.
-- 
+
     o Add on-premises groups to the Azure AD-only group if a group management system is already in place.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By using Azure AD-only groups, you can add both users and groups that are synchronized from on-premises, via Azure AD Connect. You can also add Azure AD-only (also known as cloud only) users and groups to a single Azure AD-only group, including guest users.
