@@ -214,8 +214,7 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
    | Subscription owner                 | Delegated role for subscription owner generated from subscription Owner role                                       | `*`                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
    | Application owners (DevOps/AppOps) | Contributor role granted for application/operations team at resource group level                                 | `*`                                                                                                                                                                                                                   | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                         |
 
-
-*********** - [Azure Ad roles built-in](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings Azure built-in roles:
+- [Azure Ad roles built-in](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings Azure built-in roles:
 
 | Role | Usage | Note
 |---|---|---|
