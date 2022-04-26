@@ -195,34 +195,15 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 Use custom role definitions within the Azure AD tenant while you consider the following key roles:
 
-Azure platform owner (such as the built-in Owner role) 
 
-- Management group and subscription lifecycle management 
+   | Role | Usage | Actions | No actions |
+   |---|---|---|---|
+   | Azure platform owner (such as the built-in Owner role)               | Management group and subscription lifecycle management                                                           | `*`                                                                                                                                                                                                                  |                                                                                                                                                                                         |
+   | Network management (NetOps)        | Platform-wide global connectivity management: virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others            | `*/read`, `Microsoft.Network/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Support/*`                            |                                                                                                                                                                               |
+   | Security operations (SecOps)       | Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy | `*/read`, `*/register/action`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`, `Microsoft.PolicyInsights/*`, `Microsoft.Authorization/policyAssignments/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyExemptions/*`, `Microsoft.Authorization/policySetDefinitions/*`, `Microsoft.Insights/alertRules/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Security/*`, `Microsoft.Support/*` |                                                                            |
+   | Subscription owner                 | Delegated role for subscription owner generated from subscription Owner role                                       | `*`                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
+   | Application owners (DevOps/AppOps) | Contributor role granted for application/operations team at resource group level                                 | `*`                                                                                                                                                                                                                   | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                         |
 
-Network management (NetOps)
-
-- Platform-wide global connectivity management: virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others:
-
-- */read, Microsoft.Network/*, Microsoft.Resources/deployments/*, Microsoft.Support/*
-
-
-Security operations (SecOps)
-
-- Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy:
-
-- */read, */register/action, Microsoft.KeyVault/locations/deletedVaults/purge/action, Microsoft.PolicyInsights/*, Microsoft.Authorization/policyAssignments/*, Microsoft.Authorization/policyDefinitions/*, Microsoft.Authorization/policyExemptions/*, Microsoft.Authorization/policySetDefinitions/*, Microsoft.Insights/alertRules/*, Microsoft.Resources/deployments/*, Microsoft.Security/*, Microsoft.Support/*
-
-Subscription owner
-
-- Delegated role for subscription owner generated from subscription Owner role:
-
-Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnSites/*
-
-Application owners (DevOps/AppOps)
-
-- Contributor role granted for application/operations team at resource group level
-
-- Microsoft.Authorization/*/write, Microsoft.Network/publicIPAddresses/write, Microsoft.Network/virtualNetworks/write, Microsoft.KeyVault/locations/deletedVaults/purge/action 
 
 *********** - [Azure Ad roles built-in](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings Azure built-in roles:
 
