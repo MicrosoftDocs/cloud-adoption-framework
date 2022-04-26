@@ -1,6 +1,6 @@
 ---
 title: Terraform module for Azure landing zones
-description: Learn how to use the Terraform Module for Cloud Adoption Framework Enterprise-scale to deploy Azure landing zones.
+description: Learn how to use the Terraform module to deploy Azure landing zones.
 author: krowlandson
 ms.author: brblanch
 ms.date: 04/13/2022
@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Terraform module for Azure landing zones
 
-The [Terraform Module for Cloud Adoption Framework Enterprise-scale][caf-enterprise-scale] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs-alz-architecture] at scale by using Terraform.
+The [Terraform module for Azure landing zones][caf-enterprise-scale] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs-alz-architecture] at scale by using Terraform.
 
 > [!NOTE]
 > This article describes one of two ways to implement landing zones on Azure by using Terraform. For guidance on choosing the right approach, see [this article](deploy-landing-zones-with-terraform.md).
@@ -25,10 +25,9 @@ For information on how to set up the Terraform provider and authenticate with Az
 
 ## Importance of using standard modules
 
-Reuse of components is a fundamental principle of infrastructure as code.
-Modules are instrumental in defining standards and consistency across resource deployment within and across environments.
+Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments.
 
-The Terraform Module for Cloud Adoption Framework Enterprise-scale is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
+The Terraform module for Azure landing zones is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
 
 Deploying the module from the Terraform Registry provides:
 
@@ -37,7 +36,7 @@ Deploying the module from the Terraform Registry provides:
 
 ## Benefits of using the module
 
-Benefits of using the Terraform Module for Cloud Adoption Framework Enterprise-scale for Azure landing zones include:
+Benefits of using the Terraform module for Azure landing zones include:
 
 - A managed and extensible core resource hierarchy for subscription organization through management groups.
 - Scalable security governance and compliance through Azure identity and access management (IAM) controls, with an extensive library of custom definitions ready to assign.
@@ -236,11 +235,11 @@ module "enterprise_scale" {
 
 ## Next steps
 
-The [Terraform module for Cloud Adoption Framework enterprise-scale][caf-enterprise-scale] provides an accelerated path to building out your enterprise-scale landing zones. It also provides the flexibility to expand and customize your deployment while maintaining a simplified approach to managing the configuration of each landing zone.
+The [Terraform module for Cloud Adoption Framework Enterprise-scale][caf-enterprise-scale] provides an accelerated path to building out your enterprise-scale landing zones. It also provides the flexibility to expand and customize your deployment while maintaining a simplified approach to managing the configuration of each landing zone.
 
 To find out more, [review the module on the Terraform Registry][caf-enterprise-scale] and explore the [module documentation][gh-wiki] on GitHub. In the documentation, you'll find more examples and tutorials about how to customize your deployment.
 
-Learn how to [deploy the Terraform Module for Cloud Adoption Framework Enterprise-scale][hcl-deploy-es] through HashiCorp Learn. From there, you can also discover how some parts of the module work.
+Learn how to [deploy the Terraform module for Azure landing zones][hcl-deploy-es] through HashiCorp Learn. From there, you can also discover how some parts of the module work.
 
 <!-- Common links -->
 
@@ -248,8 +247,8 @@ Learn how to [deploy the Terraform Module for Cloud Adoption Framework Enterpris
 
 [hcl-deploy-es]: https://learn.hashicorp.com/tutorials/terraform/microsoft-caf-enterprise-scale "Deploy the Microsoft Cloud Adoption Framework Enterprise-Scale Module."
 
-[caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "See the Terraform Module for Cloud Adoption Framework Enterprise-scale on the Terraform Registry."
-[caf-es-dependencies]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=dependencies "See dependencies for the Terraform Module for Cloud Adoption Framework Enterprise-scale on the Terraform Registry."
+[caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "See the Terraform module for Azure landing zones on the Terraform Registry."
+[caf-es-dependencies]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=dependencies "See dependencies for the Terraform module for Azure landing zones on the Terraform Registry."
 
 [msdocs-alz-architecture]: index.md#azure-landing-zone-conceptual-architecture "Conceptual architecture for Azure landing zones."
 
