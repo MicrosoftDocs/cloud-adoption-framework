@@ -46,11 +46,11 @@ The adoption of Infrastructure as Code (IaC) is recommended to speed up deployme
 
 ### Workloads
 
-For recommendation about how to manage environments for Workloads refer to [Enterprise-scale FAQ](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+For recommendation about how to manage environments for Workloads refer to [Enterprise-scale FAQ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
 
 ### Azure Landing Zones
 
-The adoption of multiple environments for Azure Landing Zones deployments is common in scenarios where customers want to test the impact and results of new Azure Policy Assignments, Azure RBAC role assignments, Azure AD group memberships, Azure resources' creation, etc. Two different approaches are described in [Testing approach for enterprise-scale](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach):
+The adoption of multiple environments for Azure Landing Zones deployments is common in scenarios where customers want to test the impact and results of new Azure Policy Assignments, Azure RBAC role assignments, Azure AD group memberships, Azure resources' creation, etc. Two different approaches are described in [Testing approach for enterprise-scale](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach):
 - Replication of management group hierarchy in Canary and Production environment 
 - Sandbox subscriptions 
 
@@ -60,6 +60,6 @@ Independently from the selected scenario, its recommended to:
 - implement automated checks and approvals to validate and approve changes by a designated user(s) prior to deploying a change to a particular environment
 
 ## Next steps
-- [Create and Target Environments in Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops)
+- [Create and Target Environments in Azure DevOps](/azure/devops/pipelines/process/environments?view=azure-devops)
 
 - [Using environments for deployment in GitHub](https://docs.github.com/en/github-ae@latest/actions/deployment/targeting-different-environments/using-environments-for-deployment)
