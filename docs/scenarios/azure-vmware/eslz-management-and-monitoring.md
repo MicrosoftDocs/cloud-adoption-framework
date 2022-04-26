@@ -23,8 +23,8 @@ Review the following considerations for platform management and monitoring of Az
 ### Azure tooling considerations
 
 - Create alerts and dashboards on the metrics that are most important to your operations teams. See [Configure alerts for Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities) for available monitoring and alerting metrics.  An example monitoring dashboard is [available on GitHub](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Monitoring/AVS-Dashboard).
-- vSAN storage is a finite resource that needs to be managed to maintain availability and performance. Use vSAN storage for guest virtual machine (VM) workloads only. Review the following design considerations to reduce unnecessary storage use on vSAN.
-  - [Configure content libraries on Azure Blob Storage]() to move VM template storage off of vSAN.
+- vSAN storage is a finite resource that needs to be managed to maintain availability and performance. Familiarize yourself with the Azure VMware Solution storage concepts documented [here](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-storage). Use vSAN storage for guest virtual machine (VM) workloads only. Review the following design considerations to reduce unnecessary storage use on vSAN.
+  - [Configure content libraries on Azure Blob Storage](https://vskeeball.com/2022/03/31/vsphere-content-library-on-azure-blob/) to move VM template storage off of vSAN.
   - Store backups on an Azure virtual machine, either with [Microsoft tooling](/azure/azure-vmware/set-up-backup-server-for-azure-vmware-solution) or choose a [partner vendor](/azure/azure-vmware/ecosystem-back-up-vms).
 - The Activity Log provides an immutable reference of operations performed within Azure.  These operations inlcude creation, updates, deletion, and special operations like listing credentials or keys.  As an example, Azure VMware Solution will emit a 'List PrivateClouds AdminCredentials' whenever someone visits the 'Identity' tab within the Azure portal or programmatically requiests CloudAdmin credentials.  Alert rules can be configured to send notifications when specific activities are logged.
 - Azure VMware Solution uses a local identity provider. After deployment, use a single administrative user account for the initial Azure VMware Solution configurations. Integrating Azure VMware Solution with [Active Directory](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-B23B1360-8838-4FF2-B074-71643C4CB040.html) enables traceability of actions to users. Review guidance from the identity portion <!-- link to CDA for identity after finalized --> of the enterprise-scale landing zone documentation.
@@ -34,13 +34,13 @@ Review the following considerations for platform management and monitoring of Az
 - Consider continuing to use VMware solutions like vRealize Operations Manager and vRealize Network Insights to provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T distributed firewall. 
 - *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution . Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported.  SNMP Traps are not supported.
 - While Microsoft monitors the health of vSAN, it is possible to utilize vCenter to query and monitor the performance of vSAN.  Performance metrics can be viewed from a VM or backend perspective, showing average latency, IOPS, throughput, and outstanding IO through vCenter.
-- vCenter logs can be sent to a Storage Account or Event Hub using the Diagnostic Settings within the Private Cloud resource in Azure.  This is not directly configurable within vCenter, only via the Private Cloud resource in Azure.  This is raw syslog, so consider retention and downstream processing before enabling.
+- vCenter logs can be sent to a Storage Account or Event Hub using the Diagnostic Settings within the Private Cloud resource in Azure.  This is not directly configurable within vCenter, only via the Private Cloud resource in Azure - this is documented [here](https://docs.microsoft.com/en-us/azure/azure-vmware/configure-vmware-syslogs).  This is raw syslog, so consider retention and downstream processing before enabling.
 - In-guest memory collection isn't supported by vRealize Operations using VMware tools. Active and consumed memory use will continue to work.
 
 ### Guest workload management considerations
 
 - Virtual Machines within Azure VMware Solution are treated the same as on-premises VMware virtual machines by default.  This allows you to continue using existing VM-level monitoring within AVS via existing agents
-- Azure VMware Solution Virtual Machines won't show up in the Azure Portal unless Azure Arc for Servers is deployed to them.  Azure Arc for Servers allows for an agent-based approach to VM management & monitoring from the Azure control plane.  This allows you to apply Azure Policy guest configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest Virtual Machines.
+- Azure VMware Solution Virtual Machines won't show up in the Azure Portal unless Azure Arc for Servers is deployed to them.  [Azure Arc for Servers](https://docs.microsoft.com/en-us/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers) allows for an agent-based approach to VM management & monitoring from the Azure control plane.  This allows you to apply Azure Policy guest configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest Virtual Machines.
 
 ## Design recommendations
 
@@ -61,10 +61,10 @@ Review the following recommendations for platform management and monitoring of A
 
 - For service-level agreement (SLA) purposes, Azure VMware Solution requires that the cluster keep slack space of 25 percent available on vSAN.
 - Integrate the Azure VMware Solution vCenter with an existing identity provider<!-- link to identity CDA after completed -->.
-- In a hybrid environment, [monitor the ExpressRoute circuit from on-premises into Azure](/azure/network-watcher/connection-monitor-create-using-portal).
-- Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
-  - [Configure the first Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an Azure-based resource and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of the network connection between Azure and Azure VMware Solution over ExpressRoute.
-  - [Configure the second Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an on-premises-based VM and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of network connections between on-premises and Azure VMware Solution over ExpressRoute Global Reach.
+- In a hybrid environment, [monitor the ExpressRoute circuit from on-premises into Azure](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor-create-using-portal).
+- Configure two connection monitors in [Azure Network Watcher](https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
+  - [Configure the first Connection Monitor](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor-create-using-portal) between an Azure-based resource and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of the network connection between Azure and Azure VMware Solution over ExpressRoute.
+  - [Configure the second Connection Monitor](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor-create-using-portal) between an on-premises-based VM and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of network connections between on-premises and Azure VMware Solution over ExpressRoute Global Reach.
 
 ### VMware tooling recommendations
 
