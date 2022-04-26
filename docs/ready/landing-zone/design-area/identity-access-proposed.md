@@ -99,9 +99,9 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
     o Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations:
 
-        - Take advantage of the agile nature of the cloud
+         Take advantage of the agile nature of the cloud
 
-        - Prevent the violation of any critical security or governance boundary
+         Prevent the violation of any critical security or governance boundary
 
     o Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
 
