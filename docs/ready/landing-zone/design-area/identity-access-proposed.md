@@ -137,11 +137,11 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 ### Hosting infrastructure as a service (IaaS) identity solution design considerations
 
-- For scenarios where it is needed to integrate on-premises AD with Azure, evaluate which options satisfy the organization requirements by [Integrate on-premises AD with Azure](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/).
+- For scenarios where on-premises AD is integrated with Azure, evaluate which options satisfy the organization requirements by [Integrate on-premises AD with Azure](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/).
 
-- The authentication process can occur in the Cloud, Cloud, and On-premises or only On-premises. Explore the authentication methods offered by Azure Active Directory as part of your identity planning. [Authentication for Azure AD hybrid identity solutions](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json).
+- The authentication process can occur in the Cloud + on-premises or only on-premises. Explore the authentication methods offered by Azure Active Directory as part of your identity planning. [Authentication for Azure AD hybrid identity solutions](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json).
 
-- It can be set up Password hash Synchronization as a backup if you have AD FS because you require sign-in across multiples IdP. However, the scenario seamless SSO is not supported in Active Directory Federation Services.
+- Password hash Synchronization can be used as a backup if you have AD FS because you require sign-in across multiples Identity Providers. Seamless SSO is not supported in Active Directory Federation Services.
 
 - Validate the right Synchronization tool for your Identity on the cloud [Hybrid identity design - directory sync](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-directory-sync-requirements)
 
@@ -149,24 +149,25 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 ### Hosting infrastructure as a service (IaaS) identity solution design recommendations
 
-- For applications that are hosted partly on-premises and partly in Azure, verify which integration on-premises base on your scenario.  
+- For applications that are hosted partly on-premises and partly in Azure, verify which integration makes sense based on your scenario.  
 
 - See the following guidance for [deploying Active Directory Domain Services](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/adds-extend-domain) in Azure.  
 
-- In the case you have ADFS, it is recommended to move to the cloud since it could reduce costs. However, in the case the ADFS is still part of your Identity solution it is highly recommended installing Connect Health.
-
-
+- If you have ADFS, it is recommended to move to the cloud since it could reduce costs. However, in the case that ADFS is still part of your Identity solution it is highly recommended installing Connect Health.
 
 ## Prerequisites for a landing zone- design considerations
 
 ### Role-based access control (RBAC) design considerations
 
-- For built-in role is Azure Free, but for custom is requires Azure Ad premium P1. Overview of Azure Active Directory role-based access control (RBAC) | Microsoft Docs
-- Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see Azure RBAC service limits.
-    o There's a limit of 4,000 role assignments per subscription.
-    o There's a limit of 500 role assignments per management group.
-    o A maximum of 30 Azure AD custom roles can be created in an Azure AD organization.
+- For built-in RBAC roles you can you the free version of Azure Active Directory, but for custom roles Azure AD Premium P1 is required. [Overview of Azure Active Directory role-based access control (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview#:~:text=Azure%20role-based%20access%20control%20%28Azure%20RBAC%29%20helps%20you,that%20provides%20fine-grained%20access%20management%20of%20Azure%20resources.)
 
+- Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see Azure RBAC service limits.
+
+    o There's a limit of 4,000 role assignments per subscription.
+
+    o There's a limit of 500 role assignments per management group.
+
+    o A maximum of 30 Azure AD custom roles can be created in an Azure AD organization.
 
 ### Managed Identities - design considerations
 
@@ -188,15 +189,17 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Transferring resources to another Azure AD Subscriptions, for user-assigned or system-assigned cannot be updated automatically. It needs to move this manually.
 
-### Prerequisites for a landing zone- design recommendations
+### Prerequisites for a landing zone - design recommendations
 
 - Use [Azure RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or an SQL database.
 
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
-    o In the case the authentication outside of Azure please use custom control, please check the information about any limitation on this link [Custom controls CA](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/controls)
+
+    o If authentication originates from outside of Azure, please check the information about any limitation on this link: [Custom controls CA](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/controls)
 
 - Enforce multifactor authentication for any user with rights to the Azure environments. Multifactor authentication enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
-    o In the case is used the corporate credential to login in a VM that is not intended to have sign-ins interactive, configure this as service principal to don’t prompt for MFA or token refresh.
+
+    o Consider using service principles for non-interactive resource logins so that MFA and token refreshes will not affect the operation.
 
 - Don't add users directly to Azure resource scopes. Instead add users to defined roles, which are then assigned to resource scopes. Direct user assignments circumvent centralized management, greatly increasing the management required to prevent unauthorized access to restricted data.
 
@@ -227,7 +230,6 @@ Hybrid environment	Hybrid Identity Administrator
 Authentication	Security Administrator	
 Enterprise application/ Application Proxy setting	Application Administrator	No consent global admin
 
-
 - Use Azure AD-managed identities for Azure resources to avoid authentication based on usernames and passwords. Many security breaches of public cloud resources originate with credential theft embedded in code or other text sources. For this reason, enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
 Use Microsoft Defender for Cloud just-in-time access for all infrastructure as a service (IaaS) resources. Doing so lets you enable network-level protection for ephemeral user access to IaaS virtual machines.
@@ -243,8 +245,6 @@ Use Azure [AD Privileged Identity Management (PIM)](https://docs.microsoft.com
 Use Azure AD PIM access reviews to periodically validate resource entitlements. Access reviews are part of many compliance frameworks. As a result, many organizations will already have a process in place to address this requirement.
 
 Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
-
-
 
 ## Identity and access management in the Azure landing zone accelerator
 
