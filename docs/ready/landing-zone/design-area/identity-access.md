@@ -183,11 +183,13 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - System-assigned is part of the solution that can be configured to login into a VM using Azure Ad authentication. See this link for more information [VM Sign-in Azure](https://docs.microsoft.com/en-us/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
 
-- Which services or applications within your landing zone support Azure Active Directory authentication?
-
 - Service Principal with Managed Identities can be easy to confuse in how is used getting access to Azure Resources. See this article for further analysis [SP vs MSI] (https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities/)
 
 - Transferring resources to another Azure AD Subscriptions, for user-assigned or system-assigned cannot be updated automatically. It needs to move this manually.
+
+- Which tasks and functions should the organization control with managed identities?
+
+-Which services or applications within your landing zone support Azure Active Directory authentication?
 
 ### Prerequisites for a landing zone - design recommendations
 
@@ -214,7 +216,7 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
    | Subscription owner                 | Delegated role for subscription owner generated from subscription Owner role                                       | `*`                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
    | Application owners (DevOps/AppOps) | Contributor role granted for application/operations team at resource group level                                 | `*`                                                                                                                                                                                                                   | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                         |
 
-- [Azure Ad roles built-in](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings Azure built-in roles:
+- [Azure Ad roles built-in](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings:
 
 | Role | Usage | Note
 |---|---|---|
@@ -223,27 +225,22 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
 | Authentication | Security Administrator | |
 | Enterprise application/Application Proxy | Application Administrator | No consent global admin |
 
-Role	Usage	Note
-Global Admin		It is recommended do not have more than 5 people assigned in this role
-Hybrid environment	Hybrid Identity Administrator	
-Authentication	Security Administrator	
-Enterprise application/ Application Proxy setting	Application Administrator	No consent global admin
 
 - Use Azure AD-managed identities for Azure resources to avoid authentication based on usernames and passwords. Many security breaches of public cloud resources originate with credential theft embedded in code or other text sources. For this reason, enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
-Use Microsoft Defender for Cloud just-in-time access for all infrastructure as a service (IaaS) resources. Doing so lets you enable network-level protection for ephemeral user access to IaaS virtual machines.
+- Use Microsoft Defender for Cloud just-in-time access for all infrastructure as a service (IaaS) resources. Doing so lets you enable network-level protection for ephemeral user access to IaaS virtual machines.
 
-Use Azure [AD Privileged Identity Management (PIM)](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can:
+- Use Azure [AD Privileged Identity Management (PIM)](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can:
 
-- Be an extension of current tools and processes
+     o Be an extension of current tools and processes
 
-- Use Azure native tools as outlined
+     o Use Azure native tools as outlined
 
-- Use both as needed
+     o Use both as needed
 
-Use Azure AD PIM access reviews to periodically validate resource entitlements. Access reviews are part of many compliance frameworks. As a result, many organizations will already have a process in place to address this requirement.
+- Use Azure AD PIM access reviews to periodically validate resource entitlements. Access reviews are part of many compliance frameworks. As a result, many organizations will already have a process in place to address this requirement.
 
-Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
+- Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
 
 ## Identity and access management in the Azure landing zone accelerator
 
