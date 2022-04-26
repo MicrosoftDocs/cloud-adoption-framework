@@ -1,8 +1,8 @@
 ---
 title: DevOps Toolchain
 description: Guidance on decisions to consider when choosing a DevOps tooling stack
-author: ElisaAnzelmo, ElenaBataneroGarcia
-ms.author: elanzel, elbatane
+author: elanzel
+ms.author: elanzelm
 ms.date: 04/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
