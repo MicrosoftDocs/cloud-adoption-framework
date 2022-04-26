@@ -413,6 +413,8 @@ items:
               href: ready/considerations/environments.md
             - name: Test-driven development for Azure Landing Zones
               href: ready/considerations/development-strategy-test-driven-development.md
+            - name: DevOps Toolchain Considerations
+              href: ready/considerations/devops-toolchain.md
           - name: Security Considerations
             items: 
             - name: Overview

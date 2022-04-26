@@ -1,8 +1,8 @@
 ---
 title: Development Strategy - Environments
 description: Design area guidance for multistage environments in the development strategy
-author: ElenaBataneroGarcia, ElisaAnzelmo
-ms.author: elbatane, elanzelm
+author: elbatane
+ms.author: elbatane
 ms.date: 03/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
