@@ -99,7 +99,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
     o Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations:
 
-         Take advantage of the agile nature of the cloud
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Take advantage of the agile nature of the cloud
 
          Prevent the violation of any critical security or governance boundary
 
