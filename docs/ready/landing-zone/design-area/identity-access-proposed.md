@@ -59,11 +59,11 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Applications that rely on domain services and use older protocols might be able to use [Azure AD DS](https://docs.microsoft.com/en-us/azure/active-directory-domain-services)
 
-- There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs and understand and document the authentication provider that each one will be using. Then plan for all applications. Visit this link for more information [Compare Active Directory to Azure Active Directory | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide - CAF](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/identity/?branch=main).
+- There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs and understand and document the authentication provider that each one will be using. Then plan for all applications. Visit this link for more information [Compare Active Directory to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide - CAF](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/identity/?branch=main).
 
-- Evaluate scenarios where it is needed to set up external users, customers, or partners to secure access to resources. It involves B2B or B2C scenario. For more information, consult this link [External-identities in Azure](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/external-identities-overview).
+- Evaluate scenarios involving the set up of external users, customers, or partners to secure access to resources. Determine whether these scenarios involve B2B or B2C configuration. For more information, consult this link [External-identities in Azure](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/external-identities-overview).
 
-- For Azure proxy, consider not using intranet access for the application since it could add latency to the user experience. Further considerations please check this link [Considerations-before-configuring-azure-ad-application-proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
+- For Azure application proxy, consider not using intranet access for the application since it could add latency to the user experience. For other considerations regarding Azure application proxy [Considerations-before-configuring-azure-ad-application-proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
 
 ### Design Recommendations
 
@@ -72,7 +72,9 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 - These types of privileged operations require special permissions:
 
     o Creating service principal objects
+
     o Registering applications in Azure AD
+
     o Procuring and handling certificates or wildcard certificates
 
     Consider which users will be handling such requests and how to secure and monitor their accounts with the necessary diligence.
