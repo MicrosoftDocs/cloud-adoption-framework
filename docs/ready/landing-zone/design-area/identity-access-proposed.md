@@ -207,6 +207,13 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
 
 *********** - [Azure Ad roles built-in](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings Azure built-in roles:
 
+| Role | Usage | Note
+|---|---|---|
+| Global Admin | | It is recommended to not have more than 5 people assigned in this role
+| Hybrid Environment | Hybrid Identity Administrator | |
+| Authentication | Security Administrator | |
+| Enterprise application/Application Proxy | Application Administrator | No consent global admin |
+
 Role	Usage	Note
 Global Admin		It is recommended do not have more than 5 people assigned in this role
 Hybrid environment	Hybrid Identity Administrator	
