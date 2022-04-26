@@ -63,13 +63,13 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Evaluate scenarios involving the set up of external users, customers, or partners to secure access to resources. Determine whether these scenarios involve B2B or B2C configuration. For more information, consult this link [External-identities in Azure](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/external-identities-overview).
 
-- For Azure application proxy, consider not using intranet access for the application since it could add latency to the user experience. For other considerations regarding Azure application proxy [Considerations-before-configuring-azure-ad-application-proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
+- For Azure Application Proxy, consider not using intranet access for the application since it could add latency to the user experience. For other considerations regarding Azure AD Application Proxy [Considerations-before-configuring-azure-ad-application-proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
 
 ### Design Recommendations
 
 - Use centralized and delegated responsibilities to manage resources deployed inside the landing zone based on role and security requirements.
 
-- These types of privileged operations require special permissions:
+- The following types of privileged operations require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the necessary diligence:
 
     o Creating service principal objects
 
@@ -77,19 +77,15 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
     o Procuring and handling certificates or wildcard certificates
 
-    Consider which users will be handling such requests and how to secure and monitor their accounts with the necessary diligence.
-
-- If an organization has a scenario where an application that uses On-premises authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy).
+- If an organization has a scenario where an application that uses on-premises authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy).
 
 - Evaluate the compatibility of workloads for AD DS on Windows Server and for Azure AD DS.
 
-- Ensure your network design allows resources that require AD DS on Windows Server for local authentication and management to access the appropriate domain controllers.
+- Ensure your network design allows resources that require AD DS on Windows Server for local authentication and management can access the appropriate domain controllers. For AD DS on Windows Server, consider shared service environments that offer local authentication and host management in a larger enterprise-wide network context.
 
-    o For AD DS on Windows Server, consider shared services environments that offer local authentication and host management in a larger enterprise-wide network context.
+- When deploying Azure AD Domain Services or integrating on-premises in Azure, consider locations within Availability Zones for redundancy.
 
-- Deploying Azure AD DS or integrating On-premises in Azure, consider redundancy adding location within the Availability zone.
-
-- Deploy Azure AD DS within the primary region because this service can only be projected into one subscription. Azure Active Directory Domain Service can be expanded to further regions with replica sets.
+- Deploy Azure AD Domain Services within the primary region because this service can only be projected into one subscription. Azure Active Directory Domain Service can be expanded to further regions with replica sets.
 
 - Use managed identities instead of service principals for authentication to Azure services. This approach reduces exposure to credential theft.
 
@@ -98,10 +94,15 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 ### Platform access - design considerations
 
 - Centralized versus federated resource ownership:
-    o Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It's standard practice for any organization that grants or denies access to confidential or critical business resources.
+
+    o Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It is a standard practice for any organization that grants or denies access to confidential or critical business resources.
+
     o Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations:
-         Take advantage of the agile nature of the cloud
-         Prevent the violation of any critical security or governance boundary
+
+        - Take advantage of the agile nature of the cloud
+
+        - Prevent the violation of any critical security or governance boundary
+
     o Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
 
 - As part of the guidelines for best practices enabling MFA, Azure AD Identity protection has a feature to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any risk flag event. Verify the full benefits base on the licenses in this link[overview-identity-protection#license-requirements](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection%23license-requirements).
