@@ -209,7 +209,12 @@ You need to enable internet access on the Azure portal. With this design, the ou
 
 The NVA is BYOL, and it's your responsibility to bring the license and implement high availability for the NVA.
 
-See the VMware documentation for NVA placement options, and for information about the VMware limitation of up to eight virtual network interface cards (NICs) on a VM. For more information, see [Firewall integration in Azure VMware Solution](https://techcommunity.microsoft.com/t5/azure-migration-and/firewall-integration-in-azure-vmware-solution/ba-p/2254961).
+In the scenario of HCX-extended VLANs with MON (Mobility Optimized Networking) enabled on an isolated T1 gateway for 3rd party NVA device, create a link between isolated T1 and T0 gateways. Block the route distribution on this link. This link is going to be used for HCX control traffic only. Because MON creates static route on isolated T1 gateway where route distribution is blocked, a /32 static route for migrated VM needs to be manually inserted into BGP configuration.
+
+See the VMware documentation for NVA placement options, and for information about the VMware limitation of up to eight virtual network interface cards (NICs) on a VM. For more information, use following resources.
+
+* [Firewall integration in Azure VMware Solution](https://techcommunity.microsoft.com/t5/azure-migration-and/firewall-integration-in-azure-vmware-solution/ba-p/2254961).
+* [Azure VMware Solution: Networking, Security in a Hybrid Cloud Environment](https://www.vmware.com/vmworld/en/video-library/search.html#text=%22MCL2404%22&year=2021). VMworld login needed.
 
 ## Scenario 4: Egress from Azure VMware Solution via `0.0.0.0/0` advertisement from on-premises
 
