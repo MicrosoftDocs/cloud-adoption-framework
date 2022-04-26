@@ -20,9 +20,9 @@ This AVD solution is open source. You can adapt its templates to create an archi
 
 ## Adopt Azure Virtual Desktop Landing Zone Accelerator
 
-Not everyone adopts Azure Virtual Desktop in the same way; architectures vary between organizations. This construction set's technical considerations and design recommendations might result in trade-offs based on your organization's needs.
+Not everyone adopts Azure Virtual Desktop in the same way; architectures vary between organizations. This landing zone accelerator's technical considerations and design recommendations might result in trade-offs based on your organization's needs.
 
-Some variation normal. If you follow the core recommendations, your resulting architecture will prepare your organization for sustainable scaling. The AVD Landing Zone Accelerator is modular by design to let you customize environmental variables.
+Some variation is normal. If you follow the core recommendations, your resulting architecture will prepare your organization for sustainable scaling. The AVD Landing Zone Accelerator is modular by design to let you customize environmental variables.
 
 ### Design guidelines
 
