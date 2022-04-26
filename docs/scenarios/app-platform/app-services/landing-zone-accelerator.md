@@ -38,14 +38,12 @@ The Landing zone accelerator approach to landing zones provides these assets to 
 
 These articles provide guidelines for creating your landing zone:
 
-- [Azure Billing and Active Directory Tenant](./app-services-azure-billing-ad-tenant.md)
-- [Identity and access management](./app-services-identity-and-access-management.md)
-- [Network topology and connectivity](./app-services-network-topology-and-connectivity.md)
-- [Resource organization](./app-services-resource-organization.md)
-- [Security](./app-services-security.md)
-- [Management](./app-services-management.md)
-- [Governance](./app-services-governance.md)
-- [Platform automation and DevOps](./app-services-platform-automation-and-devops.md)
+- [Identity and access management](./identity-and-access-management.md)
+- [Network topology and connectivity](./network-topology-and-connectivity.md)
+- [Security](./security.md)
+- [Management](./management.md)
+- [Governance](./governance.md)
+- [Platform automation and DevOps](./platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
@@ -59,4 +57,4 @@ The enterprise-scale App Service reference implementation with infrastructure-as
 
 ## Next steps
 
-- Review the Azure App Service construction set critical design areas to make complete considerations and recommendations for your Azure App Service construction set architecture. See [Azure App Service enterprise-scale scenario](./eslz-identity-and-access-management.md).
+- Review the Azure App Service construction set critical design areas to make complete considerations and recommendations for your Azure App Service construction set architecture. See [Azure App Service enterprise-scale scenario](./identity-and-access-management.md).
