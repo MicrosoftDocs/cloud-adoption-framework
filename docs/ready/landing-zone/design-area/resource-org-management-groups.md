@@ -80,6 +80,12 @@ The following decisions have been made and included in the implementation for th
 |**Sandboxes**| The dedicated management group for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
 |**Decommissioned**| The dedicated management group for landing zones that are being canceled. Canceled landing zones will be moved to this management group before deletion by Azure after 30-60 days. |
 
+> [!NOTE]
+> For many organization, the default `Corp` and `Online` management groups provide an ideal starting point.
+> Some organizations need to add more, while others won't find them relevant to their organization.
+>
+> If you are considering making changes to the Management Group hierarchy, please refer to our [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md) guidance.
+
 ## Permissions for the Azure landing zone accelerator
 
 - Requires a dedicated service principal name (SPN) to execute management group operations, subscription management operations, and role assignment. Using an SPN reduces the number of users who have elevated rights and follows least-privilege guidelines.
