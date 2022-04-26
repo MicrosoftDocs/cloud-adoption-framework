@@ -60,6 +60,6 @@ Independently from the selected scenario, its recommended to:
 - implement automated checks and approvals to validate and approve changes by a designated user(s) prior to deploying a change to a particular environment
 
 ## Next steps
-- [Create and Target Environments in Azure DevOps](/azure/devops/pipelines/process/environments?view=azure-devops)
+- [Create and Target Environments in Azure DevOps](/azure/devops/pipelines/process/environments)
 
 - [Using environments for deployment in GitHub](https://docs.github.com/en/github-ae@latest/actions/deployment/targeting-different-environments/using-environments-for-deployment)
