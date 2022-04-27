@@ -74,10 +74,6 @@ items:
         href: app-services/governance.md
       - name: Platform automation and DevOps
         href: app-services/platform-automation-and-devops.md
-      - name: Reference Architecture (placeholder)
-        href: app-services/landing-zone-accelerator.md
-      - name: Reference Implementation (placeholder)
-        href: app-services/landing-zone-accelerator.md
 
   - name: Migrate to modern application platforms
     href: migrate.md
