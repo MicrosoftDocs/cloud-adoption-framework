@@ -27,7 +27,7 @@ This release provides a considerable update to the Data Management and Analytics
 | Article | Description |
 |--|--|
 | [Cloud-scale analytics](../scenarios/cloud-scale-analytics/index.md) | An overview of how this cloud-scale analytics scenario can help your organization building modern data platforms. |
-| [Govern](../scenarios/cloud-scale-analytics/govern.md), [secure](../scenarios/cloud-scale-analytics/secure.md), and [organize](../scenarios/cloud-scale-analytics/organize.md) analytics estate. | Updated guidance about how to govern, and secure your analytics estate, and organize your people and teams. |
+| [Govern](../scenarios/cloud-scale-analytics/govern.md), [secure](../scenarios/cloud-scale-analytics/secure.md), and [organize](../scenarios/cloud-scale-analytics/organize.md) | Updated guidance about how to govern, and secure your analytics estate, and organize your people and teams. |
 | [Managing your analytics estate](../scenarios/cloud-scale-analytics/manage.md) | New guidance helps you learn how DevOps combined with observability is key to providing an agile and scalable platform. |
 | [Architectural guidance](../scenarios/cloud-scale-analytics/architectures/overview-architectures.md) | Review data architectures for cloud-scale analytics.|
 | [Data product](../scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products.md) | New information about Cloud-scale analytics data products in Azure. |
