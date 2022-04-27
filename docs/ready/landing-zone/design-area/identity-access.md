@@ -107,7 +107,6 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - As part of the guidelines for best practices enabling MFA, Azure AD Identity protection has a feature to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection%23license-requirements).
 
-
 ### Platform access - design recommendations
 
 - Centralizing Identity means having only one location in the cloud and the integration of the Directories services, control access, authentication, and applications. It provides better management from the IT team.
@@ -128,11 +127,10 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - If Identity protection is used as part your Identity solution, please make sure you exclude Break-glass admin account.
 
-
 ### Workload access - design considerations
 
 - Based on your cloud operating model, which teams will require access to workloads within the landing zone?
-- What roles or functions will those teams with access carry out?
+- What roles or functions will those teams with access carry out? 
 - What is the minimum level of privilege they would require to carry out their responsibilities?
 
 ### Hosting infrastructure as a service (IaaS) identity solution design considerations
@@ -153,7 +151,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - See the following guidance for [deploying Active Directory Domain Services](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-extend-domain) in Azure.  
 
-- If you have ADFS, it is recommended to move to the cloud since it could reduce costs. However, in the case that ADFS is still part of your Identity solution it is highly recommended installing Connect Health.
+- If you have Active Directory Federation Services, it is recommended to move to the cloud since it could reduce costs. However, in the case that ADFS is still part of your Identity solution it is highly recommended installing Connect Health.
 
 ## Prerequisites for a landing zone- design considerations
 
@@ -189,7 +187,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Which tasks and functions should the organization control with managed identities?
 
--Which services or applications within your landing zone support Azure Active Directory authentication?
+- Which services or applications within your landing zone support Azure Active Directory authentication?
 
 ### Prerequisites for a landing zone - design recommendations
 
@@ -207,7 +205,6 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 Use custom role definitions within the Azure AD tenant while you consider the following key roles:
 
-
    | Role | Usage | Actions | No actions |
    |---|---|---|---|
    | Azure platform owner (such as the built-in Owner role)               | Management group and subscription lifecycle management                                                           | `*`                                                                                                                                                                                                                  |                                                                                                                                                                                         |
@@ -224,7 +221,6 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
 | Hybrid Environment | Hybrid Identity Administrator | |
 | Authentication | Security Administrator | |
 | Enterprise application/Application Proxy | Application Administrator | No consent global admin |
-
 
 - Use Azure AD-managed identities for Azure resources to avoid authentication based on usernames and passwords. Many security breaches of public cloud resources originate with credential theft embedded in code or other text sources. For this reason, enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
