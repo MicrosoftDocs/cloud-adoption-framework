@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Landing zone accelerator for App Service
 
-The Landing zone accelerator for Azure App Service set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting Azure App Service. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+The Landing zone accelerator for Azure App Service an open-source collection of Terraform templates to automate deployment of environments capable of hosting Azure App Service. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
 
 Customers adopt Azure App Service in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 

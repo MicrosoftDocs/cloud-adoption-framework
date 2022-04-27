@@ -40,5 +40,5 @@ The following is a bulleted list of best practices that should be included in an
 - Use [Azure built-in roles](/azure/role-based-access-control/built-in-roles#web-plan-contributor) to provide least privilege permissions to manage App Service Plans and Websites
 - Utilize system-assigned [managed identities](/azure/app-service/overview-managed-identity?tabs=dotnet) to securely access AAD-protected backend resources.
 - Ensure that users with access to Production resources in Azure are controlled and limited.
-- For automated deployment purposes, setup a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) that has the minimum required permissions to deploy from the pipeline
+- For automated deployment purposes, set up a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) that has the minimum required permissions to deploy from the pipeline
 - Review and follow the recommendations outlined in the [Identity and Access Control section](/security/benchmark/azure/baselines/app-service-security-baseline?toc=/azure/app-service/toc.json#identity-and-access-control) of the Azure security baseline for App Service.
