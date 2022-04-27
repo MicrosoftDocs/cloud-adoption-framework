@@ -1,8 +1,8 @@
 ---
 title: Azure identity and access management design area
 description: Understand the identity and access management design area as part of the Azure landing zone design areas.
-author: anaishoekstra
-ms.author: anaishoekstra
+author: anlucen
+ms.author: anais.lucena
 ms.date: 04/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -55,15 +55,15 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 ### Design Considerations
 
-- Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone [Centralize management operations CAF](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/centralize-operations).
+- Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone [Centralize management operations CAF](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/centralize-operations).
 
-- Applications that rely on domain services and use older protocols might be able to use [Azure AD DS](https://docs.microsoft.com/en-us/azure/active-directory-domain-services)
+- Applications that rely on domain services and use older protocols might be able to use [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services)
 
-- There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs and understand and document the authentication provider that each one will be using. Then plan for all applications. Visit this link for more information [Compare Active Directory to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide - CAF](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/identity/?branch=main).
+- There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs and understand and document the authentication provider that each one will be using. Then plan for all applications. Visit this link for more information [Compare Active Directory to Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide - CAF](https://review.docs.microsoft.com/azure/cloud-adoption-framework/decision-guides/identity/?branch=main).
 
-- Evaluate scenarios involving the set up of external users, customers, or partners to secure access to resources. Determine whether these scenarios involve B2B or B2C configuration. For more information, consult this link [External-identities in Azure](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/external-identities-overview).
+- Evaluate scenarios involving the set up of external users, customers, or partners to secure access to resources. Determine whether these scenarios involve B2B or B2C configuration. For more information, consult this link [External-identities in Azure](https://docs.microsoft.com/azure/active-directory/external-identities/external-identities-overview).
 
-- For Azure Application Proxy, consider not using intranet access for the application since it could add latency to the user experience. For other considerations regarding Azure AD Application Proxy [Considerations-before-configuring-azure-ad-application-proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
+- For Azure Application Proxy, consider not using intranet access for the application since it could add latency to the user experience. For other considerations regarding Azure AD Application Proxy [Considerations-before-configuring-azure-ad-application-proxy](https://docs.microsoft.com/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
 
 ### Design Recommendations
 
@@ -77,7 +77,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
     o Procuring and handling certificates or wildcard certificates
 
-- If an organization has a scenario where an application that uses on-premises authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy).
+- If an organization has a scenario where an application that uses on-premises authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/app-proxy/application-proxy).
 
 - Evaluate the compatibility of workloads for AD DS on Windows Server and for Azure AD DS.
 
@@ -105,7 +105,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
     o Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
 
-- As part of the guidelines for best practices enabling MFA, Azure AD Identity protection has a feature to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection%23license-requirements).
+- As part of the guidelines for best practices enabling MFA, Azure AD Identity protection has a feature to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection%23license-requirements).
 
 
 ### Platform access - design recommendations
@@ -122,7 +122,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Groups that are synchronized from on-premises can only be managed and updated from the identity source of truth (on-premises Active Directory). These groups can only contain members from the same identity source, which doesn't provide flexibility like Azure AD-only groups do.
 
-- Integrate Azure AD logs with the platform-central [Log Analytics workspace](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
+- Integrate Azure AD logs with the platform-central [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
 
 - If any data sovereignty requirements exist, custom user policies can be deployed to enforce them.
 
@@ -137,13 +137,13 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 ### Hosting infrastructure as a service (IaaS) identity solution design considerations
 
-- For scenarios where on-premises AD is integrated with Azure, evaluate which options satisfy the organization requirements by [Integrate on-premises AD with Azure](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/).
+- For scenarios where on-premises AD is integrated with Azure, evaluate which options satisfy the organization requirements by [Integrate on-premises AD with Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/).
 
-- The authentication process can occur in the Cloud + on-premises or only on-premises. Explore the authentication methods offered by Azure Active Directory as part of your identity planning. [Authentication for Azure AD hybrid identity solutions](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json).
+- The authentication process can occur in the Cloud + on-premises or only on-premises. Explore the authentication methods offered by Azure Active Directory as part of your identity planning. [Authentication for Azure AD hybrid identity solutions](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json).
 
 - Password hash Synchronization can be used as a backup if you have AD FS because you require sign-in across multiples Identity Providers. Seamless SSO is not supported in Active Directory Federation Services.
 
-- Validate the right Synchronization tool for your Identity on the cloud [Hybrid identity design - directory sync](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-directory-sync-requirements)
+- Validate the right Synchronization tool for your Identity on the cloud [Hybrid identity design - directory sync](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-directory-sync-requirements)
 
 - Are there applications that are partly hosted on-premises and partly hosted in Azure?
 
@@ -151,7 +151,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - For applications that are hosted partly on-premises and partly in Azure, verify which integration makes sense based on your scenario.  
 
-- See the following guidance for [deploying Active Directory Domain Services](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/identity/adds-extend-domain) in Azure.  
+- See the following guidance for [deploying Active Directory Domain Services](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-extend-domain) in Azure.  
 
 - If you have ADFS, it is recommended to move to the cloud since it could reduce costs. However, in the case that ADFS is still part of your Identity solution it is highly recommended installing Connect Health.
 
@@ -159,7 +159,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 ### Role-based access control (RBAC) design considerations
 
-- For built-in RBAC roles you can you the free version of Azure Active Directory, but for custom roles Azure AD Premium P1 is required. [Overview of Azure Active Directory role-based access control (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview#:~:text=Azure%20role-based%20access%20control%20%28Azure%20RBAC%29%20helps%20you,that%20provides%20fine-grained%20access%20management%20of%20Azure%20resources.)
+- For built-in RBAC roles you can you the free version of Azure Active Directory, but for custom roles Azure AD Premium P1 is required. [Overview of Azure Active Directory role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview#:~:text=Azure%20role-based%20access%20control%20%28Azure%20RBAC%29%20helps%20you,that%20provides%20fine-grained%20access%20management%20of%20Azure%20resources.)
 
 - Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see Azure RBAC service limits.
 
@@ -171,17 +171,17 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 ### Managed Identities - design considerations
 
-- Evaluate using Managed Identities for Azure resources that don’t need to manage credentials. There are two options: system-assigned or user-assigned managed identity. See this link for more information [Managed identities for Azure resources](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
+- Evaluate using Managed Identities for Azure resources that don’t need to manage credentials. There are two options: system-assigned or user-assigned managed identity. See this link for more information [Managed identities for Azure resources](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
 
-- Consider reading this [guidance](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations) for choosing the right identities (user- assigned or system-assigned) option based on your scenario.
+- Consider reading this [guidance](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations) for choosing the right identities (user- assigned or system-assigned) option based on your scenario.
 
-- Verify which Azure resources are supported by this feature [Azure Services with managed identities support](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
+- Verify which Azure resources are supported by this feature [Azure Services with managed identities support](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
 
-- Managed Identity can be used by applications that need to be authenticated against an Azure service. Verify which services support Azure AD authentication [Azure Ad auth Services](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
+- Managed Identity can be used by applications that need to be authenticated against an Azure service. Verify which services support Azure AD authentication [Azure Ad auth Services](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
 
 - Which tasks and functions should the organization control with managed identities?
 
-- System-assigned is part of the solution that can be configured to login into a VM using Azure Ad authentication. See this link for more information [VM Sign-in Azure](https://docs.microsoft.com/en-us/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
+- System-assigned is part of the solution that can be configured to login into a VM using Azure Ad authentication. See this link for more information [VM Sign-in Azure](https://docs.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
 
 - Service Principal with Managed Identities can be easy to confuse in how is used getting access to Azure Resources. See this article for further analysis [SP vs MSI] (https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities/)
 
@@ -193,11 +193,11 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 ### Prerequisites for a landing zone - design recommendations
 
-- Use [Azure RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or an SQL database.
+- Use [Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or an SQL database.
 
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 
-    o If authentication originates from outside of Azure, please check the information about any limitation on this link: [Custom controls CA](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/controls)
+    o If authentication originates from outside of Azure, please check the information about any limitation on this link: [Custom controls CA](https://docs.microsoft.com/azure/active-directory/conditional-access/controls)
 
 - Enforce multifactor authentication for any user with rights to the Azure environments. Multifactor authentication enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
 
@@ -216,7 +216,7 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
    | Subscription owner                 | Delegated role for subscription owner generated from subscription Owner role                                       | `*`                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
    | Application owners (DevOps/AppOps) | Contributor role granted for application/operations team at resource group level                                 | `*`                                                                                                                                                                                                                   | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                         |
 
-- [Azure Ad roles built-in](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings:
+- [Azure Ad roles built-in](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings:
 
 | Role | Usage | Note
 |---|---|---|
@@ -230,7 +230,7 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
 
 - Use Microsoft Defender for Cloud just-in-time access for all infrastructure as a service (IaaS) resources. Doing so lets you enable network-level protection for ephemeral user access to IaaS virtual machines.
 
-- Use Azure [AD Privileged Identity Management (PIM)](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can:
+- Use Azure [AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can:
 
      o Be an extension of current tools and processes
 
