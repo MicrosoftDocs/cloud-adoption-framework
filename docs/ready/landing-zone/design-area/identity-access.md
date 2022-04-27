@@ -159,7 +159,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - For built-in RBAC roles you can you the free version of Azure Active Directory, but for custom roles Azure AD Premium P1 is required. [Overview of Azure Active Directory role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview#:~:text=Azure%20role-based%20access%20control%20%28Azure%20RBAC%29%20helps%20you,that%20provides%20fine-grained%20access%20management%20of%20Azure%20resources.)
 
-- Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see Azure RBAC service limits.
+- Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](https://docs.microsoft.com/azure/role-based-access-control/troubleshooting).
 
     o There's a limit of 4,000 role assignments per subscription.
 
