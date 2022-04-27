@@ -27,7 +27,7 @@ Updated guidance based on feedback and lessons learned from many customers.
 - Rename Data Management and Analytics to [Cloud-scale analytics](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/).
 - Updated guidance for [governance](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern), [securing](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure), [organizing](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize) analytics estate.
 - New guidance for [managing your analytics estate](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/manage) including observability
-- Updated [architectural guidance](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures) on how landing zones work with landing zones
+- Updated [architectural guidance](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures) 
 - New [data product](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products), [scaling](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/scale-architectures), and [data standardization](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-standardization).
 - Specific guidance for deploying [data mesh](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/what-is-data-mesh) on Azure.
 - New guidance for [data lake zones](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones)
