@@ -12,8 +12,12 @@ ms.custom: think-tank, e2e-avd
 
 # Enterprise enrollment considerations for an Azure Virtual Desktop implementation
 
-For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for Azure Virtual Desktop. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether Azure Virtual Desktop requirements would impact existing tenant decisions.
+When Azure landing zones for Azure Virtual Desktop are deployed, the standard best practices around enterprise enrollment and Active Directory tenants are not changed for most customer implementations. There are several specific considerations or recommendations that impacts enterprise enrollment or Active Directory tenant decisions.
 
-However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Active Directory tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
+See the following considerations to determine whether Azure Virtual Desktop requirements can create an impact in existing tenant decisions:
 
-You might also want to review the [identity and access management considerations](./eslz-identity-and-access-management.md) to understand how the Active Directory tenant is applied in the design of authentication and authorization solutions. You might also want to evaluate the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment might be organized into management groups, subscriptions, and resource groups.
+- It is important for the cloud platform team to understand the existing [enterprise enrollment or Active Directory tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
+
+- You can review the [identity and access management considerations](./eslz-identity-and-access-management.md) to understand how the Active Directory tenant is applied in authentication and authorization solutions design.
+
+- You can also refer to the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment is organized into management groups, subscriptions, and resource groups.
