@@ -18,9 +18,24 @@ This framework is collaboratively built with customers, partners, and internal M
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## April 20222
+
+### Updated Cloud-scale analytic v2 guidance
+
+Updated guidance based on feedback and lessons learned from many customers.
+
+- Rename Data Management and Analytics to [Cloud-scale analytics](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/).
+- Updated guidance for [governance](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern), [securing](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure), [organizing](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/organize) analytics estate.
+- New guidance for [managing your analytics estate](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/manage) including observability
+- Updated [architectural guidance](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures) on how landing zones work with landing zones
+- New [data product](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products), [scaling](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/scale-architectures), and [data standardization](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-standardization).
+- Specific guidance for deploying [data mesh](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/what-is-data-mesh) on Azure.
+- New guidance for [data lake zones](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/data-lake-zones)
+
 ## March 2022
 
 ### Low-code application platform guidance
+
 This update provides guidance to help you prepare for adoption of low-code development. We've added content that includes best practices for adopting and securing Power Platform.
 
 - [Power Platform adoption best practices](/power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
