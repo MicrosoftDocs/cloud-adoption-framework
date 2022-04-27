@@ -26,14 +26,14 @@ This release provides a considerable update to the Data Management and Analytics
 
 | Article | Description |
 |--|--|
-| [Cloud-scale analytics](../scenarios/cloud-scale-analytics/) | An overview of how this cloud-scale analytics scenario can help your organization building modern data platforms. |
-| [Govern](../scenarios/cloud-scale-analytics/govern), [secure](../scenarios/cloud-scale-analytics/secure), and [organize](../scenarios/cloud-scale-analytics/organize) analytics estate. | Updated guidance about how to govern, and secure your analytics estate, and organize your people and teams. |
-| [Managing your analytics estate](../scenarios/cloud-scale-analytics/manage) | New guidance helps you learn how DevOps combined with observability is key to providing an agile and scalable platform. |
-| [Architectural guidance](../scenarios/cloud-scale-analytics/architectures/overview-architectures) | Review data architectures for cloud-scale analytics.|
-| [Data product](../scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products) | New information about Cloud-scale analytics data products in Azure. |
-| [Data standardization](../scenarios/cloud-scale-analytics/architectures/data-standardization) | Consider your data formats to ensure processing pipeline efficiency and to optimize costs. |
-| [Data mesh](../scenarios/cloud-scale-analytics/architectures/what-is-data-mesh) | Learn what Data mesh is and get guidance on scaling analytics adoption beyond a single platform and a single implementation team. |
-| [Data lake zones](../scenarios/cloud-scale-analytics/best-practices/data-lake-zones) | New guidance to help you plan your data structure before you land it into a data lake. |
+| [Cloud-scale analytics](../scenarios/cloud-scale-analytics/index.md) | An overview of how this cloud-scale analytics scenario can help your organization building modern data platforms. |
+| [Govern](../scenarios/cloud-scale-analytics/govern.md), [secure](../scenarios/cloud-scale-analytics/secure.md), and [organize](../scenarios/cloud-scale-analytics/organize.md) analytics estate. | Updated guidance about how to govern, and secure your analytics estate, and organize your people and teams. |
+| [Managing your analytics estate](../scenarios/cloud-scale-analytics/manage.md) | New guidance helps you learn how DevOps combined with observability is key to providing an agile and scalable platform. |
+| [Architectural guidance](../scenarios/cloud-scale-analytics/architectures/overview-architectures.md) | Review data architectures for cloud-scale analytics.|
+| [Data product](../scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products.md) | New information about Cloud-scale analytics data products in Azure. |
+| [Data standardization](../scenarios/cloud-scale-analytics/architectures/data-standardization.md) | Consider your data formats to ensure processing pipeline efficiency and to optimize costs. |
+| [Data mesh](../scenarios/cloud-scale-analytics/architectures/what-is-data-mesh.md) | Learn what Data mesh is and get guidance on scaling analytics adoption beyond a single platform and a single implementation team. |
+| [Data lake zones](../scenarios/cloud-scale-analytics/best-practices/data-lake-zones.md) | New guidance to help you plan your data structure before you land it into a data lake. |
 
 
 ## March 2022
