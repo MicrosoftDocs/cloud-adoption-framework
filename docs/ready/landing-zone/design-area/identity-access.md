@@ -183,7 +183,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - System-assigned is part of the solution that can be configured to login into a VM using Azure Ad authentication. See this link for more information [VM Sign-in Azure](https://docs.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
 
-- Service Principal with Managed Identities can be easy to confuse in how is used getting access to Azure Resources. See this article for further analysis [SP vs MSI] (https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities/)
+- Service Principal with Managed Identities can be easy to confuse in how is used getting access to Azure Resources. See this article for further analysis [SP vs MSI](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities/)
 
 - Transferring resources to another Azure AD Subscriptions, for user-assigned or system-assigned cannot be updated automatically. It needs to move this manually.
 
