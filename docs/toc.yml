@@ -91,7 +91,7 @@ items:
     - name: Overview
       href: strategy/index.md
     - name: Assess cloud adoption strategy
-      href: strategy/cloud-adoption-strategy-evaluator.md      
+      href: strategy/cloud-adoption-strategy-evaluator.md
     - name: Motivations
       href: strategy/motivations.md
     - name: Business outcomes
@@ -399,6 +399,10 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/platform-automation-devops.md
+          - name: Platform automation
+            items:
+            - name: Automation considerations
+              href: ready/considerations/automation-considerations.md
           - name: DevOps
             items:
             - name: DevOps considerations
@@ -416,7 +420,7 @@ items:
             - name: DevOps Toolchain Considerations
               href: ready/considerations/devops-toolchain.md
           - name: Security Considerations
-            items: 
+            items:
             - name: Overview
               href: ready/considerations/security-considerations-overview.md
 
