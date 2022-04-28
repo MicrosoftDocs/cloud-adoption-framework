@@ -42,7 +42,6 @@ These tools operate as an integrated unit for planning, continuous integration, 
     - Version Control System. Everything in your project must be checked in to a single version control repository such as Git: code, tests, database scripts, build and deployment scripts, and anything else needed to create, install, run and test your application. 
     - [Branching strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy)
     - [Automated Build](../considerations/development-strategy-development-lifecycle.md#automated-builds)
-
 - Note that the choose of the repository is also influenced by data sovereignty/residency requirements. If you need your data to be hosted locally, in countries other than US, you'll need Azure DevOps repositories for example, while GitHub Repos cannot be used.
 
 - To minimize the amount of manual configuration needed to provision resources consider adopting [Infrastructure as Code](/azure/architecture/checklist/dev-ops#management). [Infrastructure as Code](/dotnet/architecture/cloud-native/infrastructure-as-code) allows you to apply software engineering practices such as testing and versioning, this make your infrastructure and deployments automated, consistent, and repeatable. Keep scripts and templates in source control, like any other code you maintain.
