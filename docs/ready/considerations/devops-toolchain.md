@@ -63,6 +63,7 @@ These tools operate as an integrated unit for planning, continuous integration, 
   - Automate proactive maintenance and tasks such as deployment or systems updates. [Azure Automation](/azure/automation/overview) is a cloud-native tool that can be used to create event-based automation to diagnose and resolve issues.
 
 ### Collaboration & feedback
+
 - Rapid feedback loops are at the heart of the CI/CD process. A CI/CD tool uses that feedback to resolve conditions in the CI/CD workflow logic and displays the information back to users, usually on a dashboard. 
 Support for email notifications and integrations with IDEs or communication platforms ensure you stay informed of what’s happening without having to check the dashboard. Ensure you have the flexibility to configure the alerts you receive, as getting too many alerts would transform them in background noise.
 
