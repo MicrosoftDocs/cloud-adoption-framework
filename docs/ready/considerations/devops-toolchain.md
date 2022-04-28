@@ -75,6 +75,7 @@ These tools operate as an integrated unit for planning, continuous integration, 
   - Team room
 
 ## DevOps toolchain recommendation for Azure Landing Zones
+
 - A DevOps toolchain for Azure Landing Zone implementation should consider all the DevOps phases discussed above: planning, CI/CD (including automation capabilities like Infrastructure as code), operations, collaborations and feedbacks. Guidance about the landing zone deployment and considerations for chosing an implementation option are in [Choosing landing zone adoption](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option#deployment-considerations) documentation.
 
 - Regardless the selected methodology (Start small and expand or Enterprise-scale), there are a few common topologies that enterprises tend to follow when designing their DevOps workflows and toolchains:
