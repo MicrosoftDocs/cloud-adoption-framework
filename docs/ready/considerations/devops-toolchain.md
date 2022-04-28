@@ -56,7 +56,6 @@ These tools operate as an integrated unit for planning, continuous integration, 
 - Continuous Operations is a focus by which an organization maintains continuity of output between internal systems and customers through uninterrupted delivery of critical services or functions. The goals of Continuous Operations are
   - to reduce or eliminate the need for planned downtimes or interruptions such as scheduled maintenance, capacity optimization and deployment.
   - to increase overall the reliability and resiliency of the systems in three aspects with people, process and tools.
-
 - Use cloud-native tools to:
   - [Monitor key metrics](../considerations/devops-principles-and-practices.md#implement-your-desired-devops-metrics) for service performance and availability.
   - Gain digital experience and customer insights.
