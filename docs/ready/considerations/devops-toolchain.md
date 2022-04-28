@@ -38,6 +38,7 @@ These tools operate as an integrated unit for planning, continuous integration, 
     - Retrospective
 
 ### Continuous Integration and Continuous Delivery
+
 - When implementing [Continuous Integration (CI)](/devops/develop/what-is-continuous-integration)/[Continuous Delivery (CD)](/devops/deliver/what-is-continuous-delivery) consider adopting a tool that supports:
     - Version Control System. Everything in your project must be checked in to a single version control repository such as Git: code, tests, database scripts, build and deployment scripts, and anything else needed to create, install, run and test your application. 
     - [Branching strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy)
