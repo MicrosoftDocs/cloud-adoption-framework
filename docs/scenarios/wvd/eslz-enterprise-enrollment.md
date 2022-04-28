@@ -10,14 +10,14 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Enterprise enrollment considerations for an Azure Virtual Desktop implementation
+# Azure Virtual Desktop enterprise enrollment considerations
 
-When Azure landing zones for Azure Virtual Desktop are deployed, the standard best practices around enterprise enrollment and Active Directory tenants are not changed for most customer implementations. There are several specific considerations or recommendations that impacts enterprise enrollment or Active Directory tenant decisions.
+Standard best practices for deploying Azure landing zones rarely differ between customers for enterprise enrollment and Active Directory tenants. It's unusual for organizations to have any specific consideration or recommendation that impacts those decisions.
 
-See the following considerations to determine whether Azure Virtual Desktop requirements can create an impact in existing tenant decisions:
+Make sure you understand any decisions your cloud platform team previously made, since that can help you identify existing [enterprise enrollment or Active Directory tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
 
 - It is important for the cloud platform team to understand the existing [enterprise enrollment or Active Directory tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
 
-- You can review the [identity and access management considerations](./eslz-identity-and-access-management.md) to understand how the Active Directory tenant is applied in authentication and authorization solutions design.
+- To learn about applying an Active Directory tenant to your authentication and authorization solution design, see [Identity and access management considerations](./eslz-identity-and-access-management.md)
 
-- You can also refer to the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment is organized into management groups, subscriptions, and resource groups.
+- To learn how to organize your enrollment into subscriptions, management groups, and resource groups, see [Resource organization considerations](./eslz-resource-organization.md).
