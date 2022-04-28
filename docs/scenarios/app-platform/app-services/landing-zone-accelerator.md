@@ -50,7 +50,7 @@ These articles provide guidelines for creating your landing zone:
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-[![Landing zone accelerator for App Service architecture](./media/landing-zone-accelerator/reference-implementation.png)](./media/landing-zone-accelerator/reference-implementation.png#lightbox)
+:::image type="content" source="./media/landing-zone-accelerator/reference-implementation.png" alt-text="Diagram that shows landing zone accelerator for App Service architecture":::
 
 ## Deploy Landing zone accelerator for Azure App Service
 
