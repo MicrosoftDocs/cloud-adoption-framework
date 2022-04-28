@@ -387,8 +387,8 @@
     },
     {
       "source_path": "docs/scenarios/aks/index.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/index",
-      "redirect_document_id": false
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/index",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/scenarios/aks/innovate.md",
