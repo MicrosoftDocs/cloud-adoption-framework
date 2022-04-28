@@ -18,7 +18,7 @@ The combination RBAC models your organization should use depends on what usage n
 
 - Onboarding a Kubernetes cluster to Azure Arc
 - Managing an Arc-enabled Kubernetes cluster
-- Installing Azure Arc extensions
+- Installing Azure Arc cluster extensions
 - Running applications on an Arc-enabled Kubernetes cluster
 - Using Azure RBAC to access Azure resources
 
