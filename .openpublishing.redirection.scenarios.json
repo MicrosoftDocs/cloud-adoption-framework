@@ -367,7 +367,7 @@
     },
     {
       "source_path": "docs/scenarios/aks/eslz-scalability.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/eslz-scalability",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/scalability",
       "redirect_document_id": true
     },
     {
@@ -377,7 +377,7 @@
     },
     {
       "source_path": "docs/scenarios/aks/eslz-storage.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/eslz-storage",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/storage",
       "redirect_document_id": true
     },
     {

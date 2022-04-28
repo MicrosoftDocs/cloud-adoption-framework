@@ -34,6 +34,10 @@ items:
         href: aks/governance.md
       - name: Platform automation and DevOps
         href: aks/platform-automation-and-devops.md
+      - name: Scalability considerations for AKS
+        href: aks/scalability.md
+      - name: Storage considerations for AKS
+        href: aks/storage.md
       - name: Reference Architecture (placeholder)
         href: aks/landing-zone-accelerator.md
       - name: Reference Implementation (placeholder)
