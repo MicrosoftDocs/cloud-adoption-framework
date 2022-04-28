@@ -62,14 +62,10 @@ items:
       items:
       - name: Landing zone accelerator for App Service
         href: app-services/landing-zone-accelerator.md
-      - name: Azure Billing and Active Directory Tenant
-        href: app-services/azure-billing-ad-tenant.md
       - name: Identity and access management
         href: app-services/identity-and-access-management.md
       - name: Network topology and connectivity
         href: app-services/network-topology-and-connectivity.md
-      - name: Resource organization
-        href: app-services/resource-organization.md
       - name: Security
         href: app-services/security.md
       - name: Management
@@ -78,10 +74,6 @@ items:
         href: app-services/governance.md
       - name: Platform automation and DevOps
         href: app-services/platform-automation-and-devops.md
-      - name: Reference Architecture (placeholder)
-        href: app-services/landing-zone-accelerator.md
-      - name: Reference Implementation (placeholder)
-        href: app-services/landing-zone-accelerator.md
 
   - name: Migrate to modern application platforms
     href: migrate.md
