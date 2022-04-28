@@ -46,7 +46,6 @@ These tools operate as an integrated unit for planning, continuous integration, 
     - [Automated Build](../considerations/development-strategy-development-lifecycle.md#automated-builds)
 - Note that the choose of the repository is also influenced by data sovereignty/residency requirements. If you need your data to be hosted locally, in countries other than US, you'll need Azure DevOps repositories for example, while GitHub Repos cannot be used.
 - To minimize the amount of manual configuration needed to provision resources consider adopting [Infrastructure as Code](/azure/architecture/checklist/dev-ops#management). [Infrastructure as Code](/dotnet/architecture/cloud-native/infrastructure-as-code) allows you to apply software engineering practices such as testing and versioning, this make your infrastructure and deployments automated, consistent, and repeatable. Keep scripts and templates in source control, like any other code you maintain.
-
 - Adopt [code scanning tools](/devops/devsecops/enable-devsecops-azure-github#secure-your-code-with-github) that help you detect code defects as soon as possible and include pre-deployment checks to validate and confirm changes before a deployment (E.g. ["what-if"](../considerations/development-strategy-development-lifecycle.md#deployment-strategy)) function.
 
 - CI/CD tools should speed up the time to market for your product. Tools that allow you to parallelize tasks and take advantage of elastic scalability on cloud-hosted infrastructure will enhance the performance of your CI/CD process. 
