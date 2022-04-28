@@ -65,7 +65,7 @@ These tools operate as an integrated unit for planning, continuous integration, 
 ### Collaboration & feedback
 
 - Rapid feedback loops are at the heart of the CI/CD process. A CI/CD tool uses that feedback to resolve conditions in the CI/CD workflow logic and displays the information back to users, usually on a dashboard. 
-Support for email notifications and integrations with IDEs or communication platforms ensure you stay informed of what’s happening without having to check the dashboard. Ensure you have the flexibility to configure the alerts you receive, as getting too many alerts would transform them in background noise.
+- Support for email notifications and integrations with IDEs or communication platforms ensure you stay informed of what’s happening without having to check the dashboard. Ensure you have the flexibility to configure the alerts you receive, as getting too many alerts would transform them in background noise.
 
 - The tool choosen for the collaboration should support the following collaboration practices:
   - Kanban collaboration
