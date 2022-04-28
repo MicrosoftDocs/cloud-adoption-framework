@@ -18,7 +18,7 @@ This framework is collaboratively built with customers, partners, and internal M
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
-## April 20222
+## April 2022
 
 ### Cloud-scale analytics 
 
