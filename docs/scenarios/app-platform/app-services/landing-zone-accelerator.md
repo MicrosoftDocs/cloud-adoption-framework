@@ -20,8 +20,8 @@ Customers adopt <<Token-LongName>> in various ways. The construction set can be 
 
 Landing zone accelerator for <<Token-LongName>> assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing Landing zone accelerator for <<Token-LongName>>, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
-- [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
-- [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
+- [Start with Cloud Adoption Framework enterprise-scale landing zones](../../../ready/enterprise-scale/index.md)
+- [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../../ready/enterprise-scale/implementation.md)
 
 ## What Landing zone accelerator for <<Token-LongName>> provides
 
@@ -38,14 +38,14 @@ The Landing zone accelerator approach to landing zones provides these assets to 
 
 These articles provide guidelines for creating your landing zone:
 
-- [Azure Billing and Active Directory Tenant](./app-services-azure-billing-ad-tenant.md)
-- [Identity and access management](./app-services-identity-and-access-management.md)
-- [Network topology and connectivity](./app-services-network-topology-and-connectivity.md)
-- [Resource organization](./app-services-resource-organization.md)
-- [Security](./app-services-security.md)
-- [Management](./app-services-management.md)
-- [Governance](./app-services-governance.md)
-- [Platform automation and DevOps](./app-services-platform-automation-and-devops.md)
+- [Azure Billing and Active Directory Tenant](./azure-billing-ad-tenant.md)
+- [Identity and access management](./identity-and-access-management.md)
+- [Network topology and connectivity](./network-topology-and-connectivity.md)
+- [Resource organization](./resource-organization.md)
+- [Security](./security.md)
+- [Management](./management.md)
+- [Governance](./governance.md)
+- [Platform automation and DevOps](./platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
@@ -61,4 +61,4 @@ TODO: Once a reference implementation for this Landing zone accelerator has been
 
 ## Next steps
 
-- Review the <<Token-LongName>> construction set critical design areas to make complete considerations and recommendations for your <<Token-LongName>> construction set architecture. See [<<Token-LongName>> enterprise-scale scenario](./eslz-identity-and-access-management.md).
+- Review the <<Token-LongName>> construction set critical design areas to make complete considerations and recommendations for your <<Token-LongName>> construction set architecture. See [<<Token-LongName>> enterprise-scale scenario](./identity-and-access-management.md).
