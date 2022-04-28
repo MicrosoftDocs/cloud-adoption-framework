@@ -1,6 +1,6 @@
 ---
 title: Identity and access management considerations for Azure App Service
-description: Learn about design considerations and recommendations for identity and access management in the Azure App Service landing zone accelerator
+description: Learn about design considerations and recommendations for identity and access management in the landing zone accelerator for Azure App Service
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,11 +10,9 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Identity and access management for considerations for App Service landing zone accelerator
+# Identity and access management for considerations for the landing zone accelerator for App Service
 
-Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
-
-This article provides design considerations and recommendations for identity and access management when using the App Service landing zone accelerator. Identity and access management covers multiple aspects including authentication and app configuration.
+This article provides design considerations and recommendations for identity and access management when using the landing zone accelerator for App Service. Identity and access management covers multiple aspects including authentication and app configuration.
 
 Learn more about the [identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) design area.
 

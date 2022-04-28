@@ -1,6 +1,6 @@
 ---
 title: Operations management considerations for Azure App Service
-description: Learn about design considerations and recommendations for operations management in the Azure App Service landing zone accelerator
+description: Learn about design considerations and recommendations for operations management in the landing zone accelerator for Azure App Service
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Operations management considerations for App Service landing zone accelerator
+# Operations management considerations for landing zone accelerator for App Service
 
-This article provides design considerations and recommendations for operations management when using the App Service landing zone accelerator. Operations management covers multiple aspects including:
+This article provides design considerations and recommendations for operations management when using the landing zone accelerator for App Service. Operations management covers multiple aspects including:
 * Application Gateway
 * Traffic Manager
 * Geographic Redundancy

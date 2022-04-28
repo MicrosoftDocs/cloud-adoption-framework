@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale network topology and connectivity considerations for Azure App Service
-description: Learn about design considerations and recommendations for network topology and connectivity in the Azure App Service landing zone accelerator
+description: Learn about design considerations and recommendations for network topology and connectivity in the landing zone accelerator for App Service
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Network topology and connectivity considerations for App Service landing zone accelerator
+# Network topology and connectivity considerations for landing zone accelerator for App Service
 
-This article provides design considerations and recommendations for network topology and connectivity when using the App Service landing zone accelerator. Networking is central to almost everything inside a landing zone. It enables connectivity to other Azure services, external users, and internal and external APIs. 
+This article provides design considerations and recommendations for network topology and connectivity when using the landing zone accelerator for App Service. Networking is central to almost everything inside a landing zone. 
 
 ## Design considerations
 
-The following bulleted list are design considerations to think about when preparing for **any** deployment of Azure App Service.
+The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service:
 
 - Networking requirements
 - Use cases
