@@ -22,7 +22,6 @@ These tools operate as an integrated unit for planning, continuous integration, 
       it provides a complete solution that may not integrate with other third-party tools. This can be useful for companies beginning their DevOps journey. E.g. [Full stack Azure DevOps toolchain](#full-stack-azure-devops-toolchain).
     - customized:
       This allows teams to bring and mix the existing tools they know and they have already in use into the wider DevOps toolchain. Integration is essential for these types of toolchains avoiding team members spending unnecessary time switching between screens, logging in to multiple places, and having the challenge to share information between tools. E.g. [Azure DevOps and GitHub toolchain](#azure-devops-and-github-toolchain).
-
 - Consider toolchains that are regurarly updated and for which you can get assistance when you need it by email or online, this is a requirement for any product or service that is on the critical path to market.     
 ### Planning
 - Consider adopting a tool that supports [Continuous Planning](/learn/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning) practices:
