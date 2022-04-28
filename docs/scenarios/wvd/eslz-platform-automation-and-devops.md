@@ -89,7 +89,7 @@ Or:
 
 ### Source code management
 
-- We recommend using [Git](https://git-scm.com/) for source code management and [keeping a simple branching strategy.](/azure/devops/repos/git/git-branching-guidance&preserve-view=true?view=azure-devops/)
+- We recommend using [Git](https://git-scm.com/) for source code management and [keeping a simple branching strategy.](/azure/devops/repos/git/git-branching-guidance?view=azure-devops&preserve-view=true)
 - The Git repo and Azure DevOps project (or GitHub repo) should be private unless your company policy specifies that repositories must be public.
 - Initialize the repo with a README file. The file lets you start filling information into the repository about your project.
 - Amend your project permissions to allow other team members access to the project.
@@ -98,7 +98,7 @@ Or:
 
 ### Pipelines
 
-The pipeline deployment system will be dictated by the source code management system you choose. If your organization has standardized on Azure DevOps, then use [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines&preserve-view=true?view=azure-devops). If your organization has standardized on GitHub, then use [GitHub Actions](https://docs.github.com/actions). Either option gives you the ability to deploy a self-hosted agent within in your network. This has several benefits including:
+The pipeline deployment system will be dictated by the source code management system you choose. If your organization has standardized on Azure DevOps, then use [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops&preserve-view=true). If your organization has standardized on GitHub, then use [GitHub Actions](https://docs.github.com/actions). Either option gives you the ability to deploy a self-hosted agent within in your network. This has several benefits including:
 
 - Allowing for longer build times.
 - Ability to access resources within your network.
@@ -109,7 +109,7 @@ Deployment pipelines should be gated so that they can be automatically triggered
 
 - When working in Azure Pipelines, use variable groups.
 - Variable groups let you have repeatable parameters in your pipelines, such as secrets and file locations.
-- Variables within variable groups can be stored as key/value pairs, but the recommended way is to [link to a variable group to an Azure Key Vault](/azure/devops/pipelines/release/azure-key-vault&preserve-view=true?view=azure-devops) to pull in secrets for use in your deployment pipeline.
+- Variables within variable groups can be stored as key/value pairs, but the recommended way is to [link to a variable group to an Azure Key Vault](/azure/devops/pipelines/release/azure-key-vault&preserve-view=true?view=azure-devops&preserve-view=true) to pull in secrets for use in your deployment pipeline.
 
 ### Creation of Azure Virtual Desktop images
 
