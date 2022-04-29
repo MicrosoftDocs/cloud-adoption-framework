@@ -1,5 +1,5 @@
 ---
-title: Governance disciplines for Azure Kubernetes Service (AKS)
+title: Security for Azure Kubernetes Service (AKS)
 description: Learn more about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,11 +10,11 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Governance disciplines for AKS
+# Security for AKS
 
 This article walks through aspects of Azure Kubernetes Service (AKS) security governance to think about before implementing any solution.
 
-Most of this content is technology-agnostic, because implementation varies among customers. The article focuses on how to implement solutions using Azure and open-source software. The decisions made when you create an enterprise-scale landing zone can partially predefine your governance, as described in [Enterprise-scale security governance and compliance](../../ready/landing-zone/design-area/governance.md). It's important to understand governance principles because of the effect of the decisions made.
+Most of this content is technology-agnostic, because implementation varies among customers. The article focuses on how to implement solutions using Azure and open-source software. The decisions made when you create an enterprise-scale landing zone can partially predefine your governance, as described in [Enterprise-scale security governance and compliance](../../../ready/landing-zone/design-area/governance.md). It's important to understand governance principles because of the effect of the decisions made.
 
 ## Attack surfaces
 

@@ -210,7 +210,7 @@ We've added new content that includes the financial and technical considerations
 
 ### Modern application platform
 
-We expanded and revised the modern application platform content in this release. Commonly, customers need to provide their developers with a consistent application platform. This article series outlines how you can use orchestrated containers to manage pools of workloads in one or more centralized clusters, thus providing that consistent application platform. The articles in this series for [modern application platform](../scenarios/aks/index.md) combine technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
+We expanded and revised the modern application platform content in this release. Commonly, customers need to provide their developers with a consistent application platform. This article series outlines how you can use orchestrated containers to manage pools of workloads in one or more centralized clusters, thus providing that consistent application platform. The articles in this series for [modern application platform](../scenarios/app-platform/index.md) combine technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
 
 ## April 2021
 
@@ -236,7 +236,7 @@ Most notable in this release is the addition of adoption journeys, which provide
 | Journey | Description |
 |--|--|
 | [Hybrid&nbsp;and&nbsp;multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
-| [Modern containers](../scenarios/aks/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
+| [Modern containers](../scenarios/app-platform/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
 | [SAP on Azure](../scenarios/sap/index.md) | As part of our One Migrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
 
 ### Cloud economics
