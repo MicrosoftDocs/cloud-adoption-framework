@@ -28,11 +28,11 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, y
 
 Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) and [governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) design areas of the Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your overall governance and security models.
 
-### Agent Provisioning
+### Agent provisioning
 
 Define a strategy for provisioning the [Azure Arc-enabled Kubernetes agent](/azure/azure-arc/kubernetes/conceptual-agent-overview) and use the least privilege principle when creating the onboarding service principal. Consider using automation for bulk enrollment.
 
-### Agent Management
+### Agent management
 
 Azure Arc-enabled Kubernetes agents play a critical role in the hybrid operations of your Azure Arc-enabled Kubernetes clusters, as they let you manage clusters from Azure. Implement solutions that keep track of [agent connectivity status](/azure/azure-arc/kubernetes/conceptual-agent-architecture#connectivity-status). Make sure you define a process for upgrading your Azure Arc-enabled Kubernetes agents.
 
@@ -80,13 +80,13 @@ The implementation of a service mesh can help with authentication, authorization
 
 This section contains design recommendations you should follow while planning the security and governance of your Azure Arc-enabled Kubernetes cluster resources.
 
-### Agent Provisioning
+### Agent provisioning
 
 - Define a strategy for onboarding your clusters into Azure Arc, including a method of automation for bulk enrollment. Establish a formal plan that takes into account the scope of your deployment and includes objectives, selection criteria, success criteria, training plans, rollback, and risks.
 
 - You can [using a service principal](/azure/azure-arc/kubernetes/create-onboarding-service-principal) to integrate agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines. You should limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure (the "Kubernetes Cluster - Azure Arc Onboarding" role), since it can only be used to onboard Kubernetes, not undoing the process or deleting the resource.
 
-### Agent Management
+### Agent management
 
 Azure Arc agents are key components of Azure Arc-enabled Kubernetes, containing several logical components that play a role in security, governance, and management operations.
 
@@ -158,7 +158,6 @@ For more information, review the best practices for [designing your Azure Monito
 ### Threat protection and cloud security posture management
 
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides a unified security management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security in your hybrid landing zone, you need to protect the data and assets hosted in Azure and elsewhere. 
-- 
 - Microsoft Defender for Containers extends the capabilities of Microsoft Defender for Cloud to Azure Arc-enabled Kubernetes. To heighten security on your hybrid landing zone, consider:
   - Using Azure Arc-enabled Kubernetes extension to onboard Arc-enabled Kubernetes resources in Microsoft Defender for Cloud.
   - Enabling the Microsoft Defender for Containers plan for all subscriptions. By default, the plan is configured to automatically deploy the Defender extension on any Arc-enabled Kubernetes cluster that is onboarded to the same subscription. You can optionally modify this configuration.
