@@ -10,10 +10,14 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Enterprise enrollment considerations for an Azure Virtual Desktop implementation
+# Azure Virtual Desktop enterprise enrollment considerations
 
-For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for Azure Virtual Desktop. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether Azure Virtual Desktop requirements would impact existing tenant decisions.
+Standard best practices for deploying Azure landing zones rarely differ between customers for enterprise enrollment and Active Directory tenants. It's unusual for organizations to have any specific consideration or recommendation that impacts those decisions.
 
-However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Active Directory tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
+Make sure you understand any decisions your cloud platform team previously made, since that can help you identify existing [enterprise enrollment or Active Directory tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
 
-You might also want to review the [identity and access management considerations](./eslz-identity-and-access-management.md) to understand how the Active Directory tenant is applied in the design of authentication and authorization solutions. You might also want to evaluate the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment might be organized into management groups, subscriptions, and resource groups.
+- It is important for the cloud platform team to understand the existing [enterprise enrollment or Active Directory tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
+
+- To learn about applying an Active Directory tenant to your authentication and authorization solution design, see [Identity and access management considerations](./eslz-identity-and-access-management.md)
+
+- To learn how to organize your enrollment into subscriptions, management groups, and resource groups, see [Resource organization considerations](./eslz-resource-organization.md).

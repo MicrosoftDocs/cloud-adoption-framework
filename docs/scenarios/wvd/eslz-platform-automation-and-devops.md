@@ -120,7 +120,7 @@ Gate your deployment pipelines so they can be automatically triggered to deploy 
 
 Use variable groups when working in Azure Pipelines.
 - Variable groups let you have repeatable parameters in your pipelines like secrets and file locations.
-- Variables within variable groups can be stored as key/value pairs, but the recommended method is [Linking a variable group to an Azure Key Vault](/azure/devops/pipelines/release/azure-key-vault?view=azure-devops) to pull in secrets for use in your deployment pipeline.
+- Variables within variable groups can be stored as key/value pairs, but the recommended method is [Linking a variable group to an Azure Key Vault](/azure/devops/pipelines/release/azure-key-vault?view=azure-devops&preserve-view=true) to pull in secrets for use in your deployment pipeline.
 
 ### Create Azure Virtual Desktop images
 
