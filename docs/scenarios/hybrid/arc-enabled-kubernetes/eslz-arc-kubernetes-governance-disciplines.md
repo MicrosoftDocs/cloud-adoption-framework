@@ -34,7 +34,7 @@ Define a strategy for provisioning the [Azure Arc-enabled Kubernetes agent](/azu
 
 ### Agent Management
 
-Arc-enabled Kubernetes agents play a critical role in the hybrid operations of your Azure Arc-enabled Kubernetes clusters, as they let you manage clusters from Azure. Implement solutions that keep track of [agent connectivity status](/azure/azure-arc/kubernetes/conceptual-agent-architecture#connectivity-status). Make sure you define a process for upgrading your Azure Arc-enabled Kubernetes agents.
+Azure Arc-enabled Kubernetes agents play a critical role in the hybrid operations of your Azure Arc-enabled Kubernetes clusters, as they let you manage clusters from Azure. Implement solutions that keep track of [agent connectivity status](/azure/azure-arc/kubernetes/conceptual-agent-architecture#connectivity-status). Make sure you define a process for upgrading your Azure Arc-enabled Kubernetes agents.
 
 ### Role-based access controls (RBAC)
 
