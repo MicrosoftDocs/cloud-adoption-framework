@@ -45,7 +45,7 @@ Review the following sections to find recommended security controls and governan
 
 - If you use proxy for outbound internet access from your session hosts:
   - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients (if using cloud proxy providers).
-  - Use Azure Virtual Desktop to [Avoid TLS inspection](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server). Azure Virtual Desktop traffic is [encrypted in transit](/azure/virtual-desktop/network-connectivity#connection-security) by default.
+  - [Don't use TLS inspection](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server). In Azure Virtual Desktop, traffic is [encrypted in transit](/azure/virtual-desktop/network-connectivity#connection-security) by default.
   - [Avoid proxy configuration that requires user authentication](/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations). Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. System-wide proxy must benabled for you to configure the host level proxy on your session host.
 
 - Verify your end-users have access to [Azure Virtual Desktop client URLs](/azure/virtual-desktop/safe-url-list#remote-desktop-clients). If proxy agent/configuration is used on your users' devices, make sure you bypass the Azure Virtual Desktop client URLs as well.
@@ -62,7 +62,7 @@ Review the following sections to find recommended security controls and governan
 
 ## Session Hosts
 
-- Create dedicated hosts to be Organization Units (OUs) with Active Directory, the Azure Virtual Desktop session, for each host pool. Apply dedicated Group Policy to your session hosts to manage controls such as:
+- Place dedicated Organization Units (OUs) in the Azure Virtual Desktop session hosts for each host pool. Apply dedicated Group Policy to your session hosts to manage controls such as:
   - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to you prevent sensitive screen information from being captured on the client endpoints.
   - Set [maximum inactive/disconnection time policies](/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit).
   - [Hide local and remote drive mappings](/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives) in Windows Explorer.
@@ -91,10 +91,10 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 ## Data Protection
 
-- Azure Virtual Desktop encrypts data-at-rest to protect it from ‘out of band’ attacks, such as attempts to access [underlying storage](/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services).  This encryption helps ensure that attackers can't easily read or modify your data. Microsoft’s approach to enabling two layers of encryption for data at rest involves:
+- Microsoft Azure encrypts data-at-rest to protect it from ‘out of band’ attacks, such as attempts to access [underlying storage](/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services).  This encryption helps ensure that attackers can't easily read or modify your data. Microsoft’s approach to enabling two layers of encryption for data at rest involves:
   - Disk encryption using customer-managed keys. Users provide their own key for disk encryption. They can bring their own keys to their Key Vault (a practice known as BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including session host disks).
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest through platform-managed encryption keys.
-  - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk data and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
+  - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
 
 - Deploy an information protection solution like [Microsoft Information Protection](/microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or a third party solution, which makes sure sensitive information gets stored, processed, and transmitted securely by your organization's technology systems.
 
