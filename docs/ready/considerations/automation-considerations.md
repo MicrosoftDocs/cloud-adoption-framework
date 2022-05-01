@@ -15,10 +15,17 @@ ms.custom: internal
 Describe why a platform team should consider automating platform deployment/configuration for an evolving platform.
 https://www.thinkautomation.com/productivity/ten-benefits-of-automation/
 https://www.productivity.com/benefits-of-automation/
+https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code?in=terraform/azure-get-started
+
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/terraform-module
+https://www.terraform.io/cloud-docs/guides/recommended-practices/part3.2
 
 Describe how parts of the platform can be automated in different ways. with their opportunities and trade-offs.
 
 Deployment layering?
+
+Single source of truth.
 
 Scheduling, event-driven, state-driven, both, or none?
 
@@ -49,8 +56,8 @@ Consider an approach of treating **Everything as Code** including but not limite
 What is being deployed and configured
 Details on how the automation does what it does (i.e. deployment logic as code, yml pipelines vs Release pipelines)
 How to handle rollback of changes
-- Infrastructure as Code
-- Azure Policy
+- Infrastructure as Code (CI/CD, GitOps, DevOps)
+- Azure Policy (Blueprint?)
 - Azure Automation
 - Azure Functions
 
