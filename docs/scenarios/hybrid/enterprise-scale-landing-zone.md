@@ -43,7 +43,7 @@ Azure provides various management tools to help you monitor and govern infrastru
 
 You can now manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure. Regardless of where they live, you can use familiar Azure services and management capabilities. Azure Arc enables you to continue using traditional ITOps, while introducing DevOps practices to support new cloud native patterns in your environment.
 
-## Azure Arc-enabled server design guidelines
+## Azure Arc-enabled servers design guidelines
 
 The design guidelines provide recommendations for the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone in a hybrid multicloud environment. There are seven critical design areas you have to consider when working with Azure Arc:
 
