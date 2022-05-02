@@ -22,17 +22,17 @@ To build the right architecture for your organization to onboard on-premises or 
 
 The following architecture diagram shows different Azure Arc-enabled Kubernetes components and how they interact when an organization onboards and manages an on-premises or multicloud Kubernetes cluster in a fully connected network connectivity mode.
 
-[ ![A diagram showing Azure Arc-enabled Kubernetes cluster management](./media/arc-enabled-kubernetes-cluster-management.png)](./media/arc-enabled-kubernetes-cluster-management.png#lightbox)
+[![A diagram showing Azure Arc-enabled Kubernetes cluster management.](./media/arc-enabled-kubernetes-cluster-management.png)](./media/arc-enabled-kubernetes-cluster-management.png#lightbox)
 
 The following diagram portrays [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and how components interact with each other to manage clusters using Azure RBAC.
 
-[ ![A diagram showing Accessing Azure Arc-enabled Kubernetes anywhere](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
+[![A diagram showing Accessing Azure Arc-enabled Kubernetes anywhere.](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
 
 ### Cluster monitoring
 
 The following architecture diagram shows Azure Arc-enabled Kubernetes cluster monitoring in a fully connected network connectivity mode.
 
-[ ![A diagram showing Azure Arc-enabled Kubernetes cluster monitoring](./media/arc-enabled-kubernetes-cluster-monitoring.png)](./media/arc-enabled-kubernetes-cluster-monitoring.png#lightbox)
+[![A diagram showing Azure Arc-enabled Kubernetes cluster monitoring.](./media/arc-enabled-kubernetes-cluster-monitoring.png)](./media/arc-enabled-kubernetes-cluster-monitoring.png#lightbox)
 
 ## Design considerations
 
@@ -81,7 +81,7 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 
 The following diagram shows Azure Resource Graph being used for status monitoring:
 
-[ ![A screenshot showing Azure Arc-enabled Kubernetes cluster management](./media/arc-enabled-kubernetes-resource-graph-connected-cluster-status.png)](./media/arc-enabled-kubernetes-resource-graph-connected-cluster-status.png#lightbox)
+[![A screenshot showing Azure Arc-enabled Kubernetes cluster management.](./media/arc-enabled-kubernetes-resource-graph-connected-cluster-status.png)](./media/arc-enabled-kubernetes-resource-graph-connected-cluster-status.png#lightbox)
 
 ## Next steps
 
