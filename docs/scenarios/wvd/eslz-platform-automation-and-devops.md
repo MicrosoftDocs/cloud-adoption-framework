@@ -73,7 +73,7 @@ As your Azure Virtual Desktop environments start to scale out, you may need to l
 
 ### Deployment locations
 
-Azure Virtual Desktop offers more freedom around the geographic placement of your host pools than traditional desktop environments do. This freedom exists because all Azure locations support Azure Virtual Desktop. Avoid creating VMs from an image across a broad wide area network (WAN) by makeing your gold image available in each of the same locations as your users.
+Azure Virtual Desktop offers more freedom around the geographic placement of your host pools than traditional desktop environments do. This freedom exists because all Azure locations support Azure Virtual Desktop. Avoid creating VMs from an image across a broad wide area network (WAN) by making your gold image available in each of the same locations as your users.
 
 ### Host pool gold image updates
 
