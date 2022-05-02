@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale support for Azure Virtual Desktop
-description: Learn how enterprise-scale support for the Azure Virtual Desktop construction set can accelerate the adoption of Azure Virtual Desktop.
+description: Learn how enterprise-scale support for the Azure Virtual Desktop construction set can accelerate your adoption of Azure Virtual Desktop.
 author: wahidsaleemi
 ms.author: wasaleem
 ms.date: 03/04/2022
@@ -12,17 +12,21 @@ ms.custom: think-tank, e2e-avd
 
 # Enterprise-scale support for Azure Virtual Desktop
 
-Azure Virtual Desktop (AVD) Landing Zone Accelerator provides you with a specific architectural approach and reference implementation. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for an enterprise Azure Virtual Desktop (AVD) deployment. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale. This solution is used after you've implemented an enterprise-scale landing zones. Review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the enterprise-scale for Azure Virtual Desktop solution.
+The Azure Virtual Desktop (AVD) Landing Zone Accelerator provides a specific architectural approach and reference implementation for preparing landing zone subscriptions for an enterprise Azure Virtual Desktop (AVD) deployment.
 
-This solution is open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing an enterprise ready AVD deployment in your landing zone.
+Its reference implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a particular focus on the enterprise-scale design principles. Use this solution after implementing an enterprise-scale landing zone. Review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the enterprise-scale for Azure Virtual Desktop solution.
+
+This AVD solution is open source. You can adapt its templates to create an architecture that meets your specific needs. This article's guidance includes design considerations for building an enterprise ready AVD deployment.
 
 ## Adopt Azure Virtual Desktop Landing Zone Accelerator
 
-Not everyone adopts Azure Virtual Desktop in the same way and architectures vary between organizations. The technical considerations and design recommendations of the construction set might result in trade-offs based on your organization's needs. Some variation happens, but if you follow the core recommendations, the resulting architecture prepares your organization for sustainable scale. The Azure Virtual Desktop Landing Zone Accelerator is modular by design so that you can customize environment variables.
+Not everyone adopts Azure Virtual Desktop in the same way; architectures vary between organizations. This landing zone accelerator's technical considerations and design recommendations might result in trade-offs based on your organization's needs.
+
+Some variation is normal. If you follow the core recommendations, your resulting architecture will prepare your organization for sustainable scaling. The AVD Landing Zone Accelerator is modular by design to let you customize environmental variables.
 
 ### Design guidelines
 
-Learn about guidelines that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are eight critical design areas:
+Learn the guidelines that direct the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. The guidelines cover eight critical design areas:
 
 - [Enterprise enrollment](./eslz-enterprise-enrollment.md)
 - [Identity and access management](./eslz-identity-and-access-management.md)
@@ -35,15 +39,17 @@ Learn about guidelines that drive the design of the Cloud Adoption Framework for
 
 ### Architecture
 
-The following image shows a conceptual reference architecture that demonstrates design areas and best practices.
+The following diagram shows a conceptual reference architecture that demonstrates major design areas and design best practices in an AVD environment.
 
-[![A diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
+[![Diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
 
 ## Deploy Azure Virtual Desktop Landing Zone Accelerator
 
-AVD Landing Zone Accelerator includes an open source collection of Azure Resource Manager, Bicep and Terraform templates, available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo.
+The AVD Landing Zone Accelerator includes an open source collection containing Azure Resource Manager plus Bicep and Terraform templates. The collection is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo.
 
-These templates are used to deploy infrastructure components such as virtual machines, networks, and storage to Azure. To get the templates, see the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo. There, you will find scenarios to help get you started on setting up your AVD environment quickly. Conceptually, this workload should sit in the landing zones management group of an enterprise-scale landing zones deployment and be connected to the hub.
+These templates help you deploy infrastructure components like virtual machines, networks, and storage to Azure. To get the templates, see the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo. There, you'll find scenarios that can help get you started setting up your AVD environment quickly. 
+
+Conceptually, this workload should sit in the landing zones management group of an enterprise-scale landing zones deployment and be connected to the hub.
 
 ### Custom deployments
 
@@ -51,7 +57,7 @@ The [automate Azure Virtual Desktop deployments in Azure](https://github.com/Azu
 
 ## Next steps
 
-Review the critical design considerations and recommendations related to identity and access management specific to the deployment of Azure Virtual Desktop.
+Review the critical design considerations and recommendations for identity and access management specific to the deployment of Azure Virtual Desktop.
 
 > [!div class="nextstepaction"]
 > [Identity and access management](./eslz-identity-and-access-management.md)
