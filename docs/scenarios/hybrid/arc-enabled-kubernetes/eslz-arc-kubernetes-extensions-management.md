@@ -24,7 +24,7 @@ Keep these two categories in mind as you design your deployment of Azure Arc-ena
 
 The following diagram illustrates overall integration for extensions for Azure Arc-enabled Kubernetes clusters.
 
-[![A diagram showing oveall integration for extensions in an Azure Arc-enabled Kubernetes cluster.](./media/arc-enabled-kubernetes-cluster-extensions.png)](./media/arc-enabled-kubernetes-cluster-extensions.png#lightbox)
+[![A diagram showing overall integration for extensions in an Azure Arc-enabled Kubernetes cluster.](./media/arc-enabled-kubernetes-cluster-extensions.png)](./media/arc-enabled-kubernetes-cluster-extensions.png#lightbox)
 
 ## Design considerations
 
