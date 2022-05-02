@@ -62,7 +62,7 @@ Review the following sections to find recommended security controls and governan
 
 ## Session Hosts
 
-- Place dedicated Organization Units (OUs) in the Azure Virtual Desktop session hosts for each host pool. Apply dedicated Group Policy to your session hosts to manage controls such as:
+- Create a dedicated Organization Unit(s) (OU) in the Active Directory for the Azure Virtual Desktop session hosts. Apply dedicated Group Policy to your session hosts to manage controls such as:
   - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to you prevent sensitive screen information from being captured on the client endpoints.
   - Set [maximum inactive/disconnection time policies](/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit).
   - [Hide local and remote drive mappings](/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives) in Windows Explorer.
