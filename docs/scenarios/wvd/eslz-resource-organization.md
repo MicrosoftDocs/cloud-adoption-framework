@@ -95,9 +95,9 @@ Subscriptions provide a management boundary for governance and isolation, which 
 
 Below is an example from the recommended structure above for the AVD resources already deployed.
 
-![AVD Shared Resources Subscription](../../../docs/scenarios/wvd/media/avd-resource-management-1.png)
+:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-1.png" alt-text="Screenshot showing A V D Shared Resources Subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-1.png":::
 
-![AVD Service Objects and compute Subscription](../../../docs/scenarios/wvd/media/avd-resource-management-2.png)
+:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-2.png" alt-text="Screenshot showing A V D Service Objects and compute Subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-2.png":::
 
 ## Next steps
 

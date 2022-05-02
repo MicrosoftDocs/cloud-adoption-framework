@@ -84,14 +84,14 @@ This scenario is ideal if:
 - You don't need to control the public IPs use to SNAT Azure Virtual Desktop internet outbound connections.
 - You don't enforce Azure Virtual Desktops networks internal traffic.
 - You have pre-existing hybrid connectivity to on-premises (Express Route or S2S VPN).
-- You have pre-existing ADDS and DNS custom servers.
+- You have pre-existing AD DS and DNS custom servers.
 - You consume Azure Virtual Desktop with standard connection model (No RDP Shortpath).
 
 ### Architectural components
 
 You can implement this scenario with:
 
-- ADDS servers and custom DNS servers.
+- AD DS servers and custom DNS servers.
 - Network security groups.
 - Network Watcher.
 - Outbound internet via default Azure vNet path.
@@ -128,8 +128,8 @@ Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/
 
 Identity services connectivity requirements of Azure Virtual Desktop session hosts depends on the identity model that is chosen.
 
-- Azure AD Domain Services (ADDS) joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
-- [Azure AD (AAD) joined VMs](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-azure-active-directory-join): Azure Virtual Desktop session hosts create outbound connections to AAD public endpoints, therefore no private connectivity configurations required.
+- Azure AD Domain Services (AD DS) joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
+- [Azure AD (Azure AD) joined VMs](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-azure-active-directory-join): Azure Virtual Desktop session hosts create outbound connections to Azure AD public endpoints, therefore no private connectivity configurations required.
 
 ### DNS
 
