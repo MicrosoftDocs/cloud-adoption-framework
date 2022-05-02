@@ -68,8 +68,8 @@ Review the [identity and access management design area](/azure/cloud-adoption-fr
   - If your on-premises identities are synchronized with Azure AD, use the same identities when using Azure RBAC for cluster management.
   - Simplify your access management by creating [security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) and map them to the Azure RBAC roles supported by Azure Arc-enabled Kubernetes. Assign permissions to these security groups at the resource group or subscription level depending on your resource organization and governance requirements. For more information, see the [Resource Organization critical design area](./eslz-arc-kubernetes-resource-organization.md).
   
-> [!NOTE]
-> Azure Arc-enabled Kubernetes does not support users with more than 200 security group memberships and will instead give an authentication error.
+  > [!NOTE]
+  > Azure Arc-enabled Kubernetes does not support users with more than 200 security group memberships and will instead give an authentication error.
 
 - Avoid direct user assignment to Azure RBAC roles, since it's difficult to govern access management.
 - Decentralize and delegate access management responsibility and audit assignments by assigning security group owners.
