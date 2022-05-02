@@ -22,7 +22,7 @@ Identify the networking capabilities that your landing zone needs to support. As
 
 For each application or service you'll deploy to your landing zone, use the following decision tree to help you determine the networking tools or services to use:
 
-![Azure networking services decision tree](../../_images/ready/network-decision-tree.png)
+:::image type="content" source="/../../_images/ready/network-decision-tree.png" alt-text="Screenshot of Azure networking services decision tree.":::
 
 The following questions help you make decisions based on the Azure networking services decision tree:
 
