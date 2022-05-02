@@ -3,14 +3,14 @@ title: Security, governance, and compliance for Azure Virtual Desktop infrastruc
 description: Learn key design considerations and recommendations for security and governance in Azure Virtual Desktop.
 author: nataliakon
 ms.author: nataliak
-ms.date: 02/23/2022
+ms.date: 05/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Security and Governance
+# Security and governance
 
 This article provides key design considerations and recommendations for **security, governance, and compliance** in [Azure Virtual Desktop](/azure/virtual-desktop/overview) landing zones in accordance with Microsoft's [Cloud Adoption Framework](../../overview.md).
 
@@ -46,7 +46,7 @@ Review the following sections to find recommended security controls and governan
 - If you use proxy for outbound internet access from your session hosts:
   - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients (if using cloud proxy providers).
   - [Don't use TLS inspection](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server). In Azure Virtual Desktop, traffic is [encrypted in transit](/azure/virtual-desktop/network-connectivity#connection-security) by default.
-  - [Avoid proxy configuration that requires user authentication](/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations). Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. System-wide proxy must benabled for you to configure the host level proxy on your session host.
+  - [Avoid proxy configuration that requires user authentication](/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations). Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. System-wide proxy must be enabled for you to configure the host level proxy on your session host.
 
 - Verify your end-users have access to [Azure Virtual Desktop client URLs](/azure/virtual-desktop/safe-url-list#remote-desktop-clients). If proxy agent/configuration is used on your users' devices, make sure you bypass the Azure Virtual Desktop client URLs as well.
 
@@ -60,7 +60,7 @@ Review the following sections to find recommended security controls and governan
 
 - [Configure the RDP ShortPath](/azure/virtual-desktop/shortpath) to complement reverse connect transport.
 
-## Session Hosts
+## Session hosts
 
 - Create a dedicated Organization Unit(s) (OU) in the Active Directory for the Azure Virtual Desktop session hosts. Apply dedicated Group Policy to your session hosts to manage controls such as:
   - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to you prevent sensitive screen information from being captured on the client endpoints.
@@ -89,7 +89,7 @@ For more information on best practices for Azure Virtual Desktop session host se
 
 For a detailed list of best practices for Azure VM security, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
 
-## Data Protection
+## Data protection
 
 - Microsoft Azure encrypts data-at-rest to protect it from ‘out of band’ attacks, such as attempts to access [underlying storage](/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services).  This encryption helps ensure that attackers can't easily read or modify your data. Microsoft’s approach to enabling two layers of encryption for data at rest involves:
   - Disk encryption using customer-managed keys. Users provide their own key for disk encryption. They can bring their own keys to their Key Vault (a practice known as BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including session host disks).
@@ -102,7 +102,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Configure identity-based authentication for Azure Files](/azure/storage/files/storage-files-active-directory-overview) used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Azure Active Directory Domain Services (Azure AD DS). Configure [NTFS permissions](/fslogix/fslogix-storage-config-ht) so authorized users can access your Azure Files.
 
-## Cost Management
+## Cost management
 
 - [Use Azure Tags](/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. To identify Azure Virtual Desktop's associated compute cost, tag all your host pools and virtual machines. Tag Azure Files or Azure NetApp Files resources to track the storage cost associated with FSLogix User Profile Containers, custom OS images, and MSIX app attach (if used).
 
@@ -116,7 +116,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - Deploy scaling solutions for pooled session hosts through [Azure Automation](/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature(preview)](/azure/virtual-desktop/autoscale-scaling-plan)
 
-## Resource Consistency
+## Resource consistency
 
 - [Use Intune for Azure Virtual Desktop personal session hosts](/mem/intune/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure your VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
@@ -175,6 +175,6 @@ Nearly all organizations must comply with various government or industry regulat
 
 - Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of your Azure Virtual Landing Zones.
 
-## Next Steps
+## Next steps
 - [Azure Virtual Desktop recommended security practices](/azure/virtual-desktop/security-guide)
 - [Security baseline for Azure Virtual Desktop based on Azure Security Benchmark](/security/benchmark/azure/baselines/virtual-desktop-security-baseline)
