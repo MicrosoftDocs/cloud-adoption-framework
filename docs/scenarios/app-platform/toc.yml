@@ -38,14 +38,14 @@ items:
         href: aks/scalability.md
       - name: Storage considerations for AKS
         href: aks/storage.md
-      - name: Reference Architecture (placeholder)
-        href: aks/landing-zone-accelerator.md
-      - name: Reference Implementation (placeholder)
-        href: aks/landing-zone-accelerator.md
+#      - name: Reference Architecture (placeholder)
+#        href: aks/landing-zone-accelerator.md
+#      - name: Reference Implementation (placeholder)
+#        href: aks/landing-zone-accelerator.md
       - name: Azure API Management 
         href: aks/landing-zone-accelerator.md
-      - name: Reference Implementation (placeholder)
-        href: aks/landing-zone-accelerator.md
+#      - name: Reference Implementation (placeholder)
+#        href: aks/landing-zone-accelerator.md
     - name: Azure API Management (APIM)
       items:
       - name: Landing zone accelerator for API Management
