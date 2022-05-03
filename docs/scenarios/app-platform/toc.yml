@@ -18,7 +18,7 @@ items:
       items:
       - name: Landing zone accelerator for AKS
         href: aks/landing-zone-accelerator.md
-      - name: Azure Billing and Active Directory tenant considerations
+      - name: Azure Billing and Active Directory tenant
         href: aks/azure-billing-ad-tenant.md
       - name: Identity and access management
         href: aks/identity-and-access-management.md
