@@ -48,9 +48,9 @@ Review the following recommendations for platform management and monitoring of A
 
 ### Azure tooling recommendations
 
-- Configure Azure Service Health to send alerts for service issues, planned maintenance, and other events that may impact Azure VMware Solution and other services.  These notifications are sent to Action Groups, which can be used to send email, SMS, push notifications, and voice calls to addresses of your choice.  Actions can also trigger Azure and 3rd party systems, including Azure Functions, Logic Apps, Automation Runbooks, Event Hubs, and Webhooks.
+- Configure Azure Service Health to send alerts for service issues, planned maintenance, and other events that may impact Azure VMware Solution and other services.  These notifications are sent to Action Groups, which can be used to send email, SMS, push notifications, and voice calls to addresses of your choice.  Actions can also trigger Azure and 3rd party systems, including Azure Functions, Logic Apps, Automation Runbooks, Event Hubs, and Webhooks.  Configuring Azure Service Health Alerts is documented [here](https://docs.microsoft.com/en-us/azure/service-health/resource-health-alert-monitor-guide). 
 - Conduct baseline performance monitoring of Azure VMware Solution infrastructure through [Azure Monitor - Metrics](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities).  These metrics can be queried and filtered from the Azure Portal, queried via REST API, or directed to Log Analytics, Azure Storage, Event Hubs, or [Partner Integrations](https://docs.microsoft.com/en-us/azure/azure-monitor/partners).
-- Configure the following alerts in Azure Monitor for when the Azure VMware Solution cluster is nearing key threshholds for disk, CPU, or RAM:
+- [Configure the following alerts in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview) for when the Azure VMware Solution cluster is nearing key threshholds for disk, CPU, or RAM:
 
     | Metric                                    | Alert         |
     |-------------------------------------------|---------------|
@@ -60,6 +60,7 @@ Review the following recommendations for platform management and monitoring of A
     | Memory - Average Memory Usage (%)         | >80% warning  |
 
 - For service-level agreement (SLA) purposes, Azure VMware Solution requires that the cluster keep slack space of 25 percent available on vSAN.
+- For service-level agreement (SLA) purposes, Azure VMware Solution requires the number of failures to tolerate = 1 for clusters that have between three and five and the number of failures to tolerate = 2 for clusters that have between six and sixteen hosts.  The full SLA is documented [here](https://azure.microsoft.com/en-us/support/legal/sla/azure-vmware/v1_1/).
 - Integrate the Azure VMware Solution vCenter with an existing identity provider<!-- link to identity CDA after completed -->.
 - In a hybrid environment, [monitor the ExpressRoute circuit from on-premises into Azure](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor-create-using-portal).
 - Configure two connection monitors in [Azure Network Watcher](https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
