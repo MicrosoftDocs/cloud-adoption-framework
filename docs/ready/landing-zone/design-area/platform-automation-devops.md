@@ -1,9 +1,9 @@
 ---
 title: Platform automation and DevOps design area
 description: Design area guidance for platform automation and DevOps
-author: DominicAllen
-ms.author: doalle
-ms.date: 01/04/2022
+author: alguadam
+ms.author: alguadam
+ms.date: 01/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -47,8 +47,9 @@ The ability to make changes at scale through a prescribed automated process migh
 ## Development Strategy
 
 - [Development lifecycle](../../considerations/development-strategy-development-lifecycle.md) explores key design considerations and recommendations surrounding the repository, branch, automated builds, deployment, and rollback strategy during the creation of the landing zone via automation.
+- [Infrastructure as Code](../../considerations/infrastructure-as-code.md) explains the benefits of addressing Azure Landing Zones via Infrastructure as Code and what considerations need to be taken around code structure, tools and technology.
 - [Environments](../../considerations/environments.md) explains the purpose of a multi-environments to build, test, and release code with greater speed and frequency so that deployment is as straightforward as possible.
-- [Test-driven development](../../considerations/development-strategy-test-driven-development.md) explains how to use Unit Testing to improve the quality of new features and improvements in the Azure Landing Zone code-base.
+- [Test-driven development](../../considerations/development-strategy-test-driven-development.md) addresses how to use Unit Testing to improve the quality of new features and improvements in the Azure Landing Zone code-base.
 
 ## Security considerations
 
