@@ -12,9 +12,17 @@ ms.custom: e2e-data-management, think-tank
 
 # Data contracts
 
-In a federated architecture, in which responsibilities are distributed between [domains](./data-domains.md), it’s harder to oversee dependencies and obtain insights in data usage. This is where data contracts come into play. Why do data contracts matter? Because they provide insights into who owns what [data products](./what-is-data-product.md). They support setting standards and managing your data pipelines with confidence. They provide information on what data products are being consumed, by whom and for what purpose. Bottom line: data contracts are essential for robust data management!
+It can be difficult to oversee dependencies and obtain insights in data usage in a federated architecture because responsibilities are distributed between [domains](./data-domains.md). Data contracts help you obtain data usage insights by providing information on who owns which [data products](./what-is-data-product.md). They can help you set standards and manage your data pipelines with confidence. Data contracts are essential for robust data management, providing information about:
 
-Before you continue reading, it's recommended to look at data product distribution and usage from two dimensions. First, there are technical concerns, such as data pipeline handling and mutual expectations on data stability. Second, there are business concerns, like agreeing on the purpose of data sharing, which may include usage, privacy, and purpose (including limitations) objectives. Typically, different roles come into play for each dimension. For technical concerns, you commonly rely on application owners or data engineers. For business concerns, you commonly rely on product owners or business representatives.
+- Which data products are being consumed
+
+- Who is consuming them
+
+- What they are consumed for
+
+Data product distribution and usage involves two dimensions: technical concerns and business concerns. Technical concerns include data pipeline handling and mutual data stability expectations. Business concerns include agreements on the purpose of data sharing, including usage, privacy, and purpose objectives (including limitations). 
+
+Different roles are involved in the two separate dimensions. You should generally rely on application owners or data engineers for technical concerns, and product owners or business representatives for business concerns.
 
 ## Data contracts
 
@@ -50,13 +58,13 @@ How to get started with data contracts? How to make things practical? The recomm
 
 1. First, create stability over your technical data pipelines. If they’re unstable and subject to unexpected and disruptive changes, none of your use cases will make it into production.
 
-2. For your data sharing agreements, start simple and pragmatic by putting a process in place. Don’t overcomplicate things. You could, for example, start with a simple form or template that is designed in Microsoft Forms. You should draft it in clear, concise language that is easy to understand. Accept manual processes. Limit your initial metadata requirements. Your first phase is about cultural shift and collecting requirements. Iterate until your metadata requirements become stable.
+1. For your data sharing agreements, start simple and pragmatic by putting a process in place. Don’t overcomplicate things. You could, for example, start with a simple form or template that is designed in Microsoft Forms. You should draft it in clear, concise language that is easy to understand. Accept manual processes. Limit your initial metadata requirements. Your first phase is about cultural shift and collecting requirements. Iterate until your metadata requirements become stable.
 
-3. After you put your first processes in place, try to replace your manual forms with a web-based application, database and/or message queue. During this stage, your central data governance team will still be overseeing. The level of granularity of data access is typically coarse-grained, so on folders or files. Try to utilize REST APIs for automatically provisioning data access policies or ACLs.
+1. After you put your first processes in place, try to replace your manual forms with a web-based application, database and/or message queue. During this stage, your central data governance team will still be overseeing. The level of granularity of data access is typically coarse-grained, so on folders or files. Try to utilize REST APIs for automatically provisioning data access policies or ACLs.
 
-4. Your next stage is implementing a stronger workflow for handling approvals. Put your data owners or data stewards in the lead. Your central data governance team will be overseeing from the back seat. This team reviews all data contracts regularly. By this stage you should also have a data catalog, such as [Azure Purview](/azure/purview/), up and running showing all ready-for-consumption data products. Make improvements to your data security and enforcement capabilities. Allow for finer-grained selections and filters. Consider techniques like dynamic data masking to prevent data duplication.
+1. Your next stage is implementing a stronger workflow for handling approvals. Put your data owners or data stewards in the lead. Your central data governance team will be overseeing from the back seat. This team reviews all data contracts regularly. By this stage you should also have a data catalog, such as [Azure Purview](/azure/purview/), up and running showing all ready-for-consumption data products. Make improvements to your data security and enforcement capabilities. Allow for finer-grained selections and filters. Consider techniques like dynamic data masking to prevent data duplication.
 
-5. At the end of your journey, everything will be self-service and fully automated. This includes automated security enforcement and machine learning for predicting data approvals. Secure views, for example, are automatically deployed after approval.
+1. At the end of your journey, everything will be self-service and fully automated. This includes automated security enforcement and machine learning for predicting data approvals. Secure views, for example, are automatically deployed after approval.
 
 Data contracts are a relatively new approach to data mesh. They're important as they provide transparency over your dependencies and data usage. Start small and focus on technical stability and standardization first. Iterate by using a lessons-learned process. Data governance is essential, but too much will cause overhead. Slowly build up and automate.
 
