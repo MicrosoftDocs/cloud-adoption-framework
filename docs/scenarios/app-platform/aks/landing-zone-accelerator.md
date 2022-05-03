@@ -35,13 +35,11 @@ The Landing zone accelerator approach for AKS provides these assets to support y
 
 These articles provide guidelines for creating your landing zone based on the design areas of Azure landing zones:
 
-- [Azure Billing and Active Directory Tenant](./azure-billing-ad-tenant.md)
 - [Identity and access management](./identity-and-access-management.md)
 - [Network topology and connectivity](./network-topology-and-connectivity.md)
 - [Resource organization](./resource-organization.md)
 - [Security](./security.md)
 - [Management](./management.md)
-- [Governance](./governance.md)
 - [Platform automation and DevOps](./platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
