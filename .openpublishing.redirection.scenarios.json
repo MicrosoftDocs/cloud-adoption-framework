@@ -332,7 +332,7 @@
     },
     {
       "source_path": "docs/scenarios/aks/eslz-cost-governance-with-kubecost.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/governance",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/cost-governance-with-kubecost",
       "redirect_document_id": true
     },
     {
@@ -419,6 +419,6 @@
       "source_path": "docs/scenarios/aks/strategy.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/strategy",
       "redirect_document_id": true
-    }
+    }    
   ]
 }
