@@ -1,0 +1,102 @@
+---
+title: Azure Identity Landing Zones
+description: Understand how to implement identity within a landing zone.
+author: anlucen
+ms.author: anais.lucena
+ms.date: 04/29/2022
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: think-tank
+---
+
+# Prerequisites for a landing zone - design considerations
+
+## Role-based access control (RBAC) design considerations
+
+- For built-in RBAC roles you can you the free version of Azure Active Directory, but for custom roles Azure AD Premium P1 is required. [Overview of Azure Active Directory role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview#:~:text=Azure%20role-based%20access%20control%20%28Azure%20RBAC%29%20helps%20you,that%20provides%20fine-grained%20access%20management%20of%20Azure%20resources.)
+
+- Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](https://docs.microsoft.com/azure/role-based-access-control/troubleshooting).
+
+    o There's a limit of 4,000 role assignments per subscription.
+
+    o There's a limit of 500 role assignments per management group.
+
+    o A maximum of 30 Azure AD custom roles can be created in an Azure AD organization.
+
+## Managed Identities - design considerations
+
+- Evaluate using Managed Identities for Azure resources that don’t need to manage credentials. There are two options: system-assigned or user-assigned managed identity. See this link for more information [Managed identities for Azure resources](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+
+- Consider reading this [guidance](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations) for choosing the right identities (user- assigned or system-assigned) option based on your scenario.
+
+- Verify which Azure resources are supported by this feature [Azure Services with managed identities support](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
+
+- Managed Identity can be used by applications that need to be authenticated against an Azure service. Verify which services support Azure AD authentication [Azure Ad auth Services](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
+
+- Which tasks and functions should the organization control with managed identities?
+
+- System-assigned is part of the solution that can be configured to login into a VM using Azure Ad authentication. See this link for more information [VM Sign-in Azure](https://docs.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
+
+- Service Principal with Managed Identities can be easy to confuse in how is used getting access to Azure Resources. See this article for further analysis [SP vs MSI](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities/)
+
+- Transferring resources to another Azure AD Subscriptions, for user-assigned or system-assigned cannot be updated automatically. It needs to move this manually.
+
+- Which tasks and functions should the organization control with managed identities?
+
+- Which services or applications within your landing zone support Azure Active Directory authentication?
+
+## Landing zones - design recommendations
+
+- Use [Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or an SQL database.
+
+- Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
+
+    o If authentication originates from outside of Azure, please check the information about any limitation on this link: [Custom controls CA](https://docs.microsoft.com/azure/active-directory/conditional-access/controls)
+
+- Enforce multifactor authentication for any user with rights to the Azure environments. Multifactor authentication enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
+
+    o Consider using service principles for non-interactive resource logins so that MFA and token refreshes will not affect the operation.
+
+- Don't add users directly to Azure resource scopes. Instead add users to defined roles, which are then assigned to resource scopes. Direct user assignments circumvent centralized management, greatly increasing the management required to prevent unauthorized access to restricted data.
+
+Use custom role definitions within the Azure AD tenant while you consider the following key roles:
+
+   | Role | Usage | Actions | No actions |
+   |---|---|---|---|
+   | Azure platform owner (such as the built-in Owner role)               | Management group and subscription lifecycle management                                                           | `*`                                                                                                                                                                                                                  |                                                                                                                                                                                         |
+   | Network management (NetOps)        | Platform-wide global connectivity management: virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others            | `*/read`, `Microsoft.Network/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Support/*`                            |                                                                                                                                                                               |
+   | Security operations (SecOps)       | Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy | `*/read`, `*/register/action`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`, `Microsoft.PolicyInsights/*`, `Microsoft.Authorization/policyAssignments/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyExemptions/*`, `Microsoft.Authorization/policySetDefinitions/*`, `Microsoft.Insights/alertRules/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Security/*`, `Microsoft.Support/*` |                                                                            |
+   | Subscription owner                 | Delegated role for subscription owner generated from subscription Owner role                                       | `*`                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
+   | Application owners (DevOps/AppOps) | Contributor role granted for application/operations team at resource group level                                 | `*`                                                                                                                                                                                                                   | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                         |
+
+- [Azure Ad roles built-in](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) suggestions to manage the Identity settings:
+
+| Role | Usage | Note
+|---|---|---|
+| Global Admin | | It is recommended to not have more than 5 people assigned in this role
+| Hybrid Environment | Hybrid Identity Administrator | |
+| Authentication | Security Administrator | |
+| Enterprise application/Application Proxy | Application Administrator | No consent global admin |
+
+- Use Azure AD-managed identities for Azure resources to avoid authentication based on usernames and passwords. Many security breaches of public cloud resources originate with credential theft embedded in code or other text sources. For this reason, enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
+
+- Use Microsoft Defender for Cloud just-in-time access for all infrastructure as a service (IaaS) resources. Doing so lets you enable network-level protection for ephemeral user access to IaaS virtual machines.
+
+- Use Azure [AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can:
+
+     o Be an extension of current tools and processes
+
+     o Use Azure native tools as outlined
+
+     o Use both as needed
+
+- Use Azure AD PIM access reviews to periodically validate resource entitlements. Access reviews are part of many compliance frameworks. As a result, many organizations will already have a process in place to address this requirement.
+
+- Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
+
+## Identity and access management in the Azure landing zone accelerator
+
+Identity and access management are core features of the Azure landing zone accelerator implementation. The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment.
+
+The implementation also includes options to assign recommended policies to govern identity and domain controllers
