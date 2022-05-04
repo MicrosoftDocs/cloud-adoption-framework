@@ -80,7 +80,7 @@ To accelerate parallel development of governance disciplines, review the [Govern
 
 ### Platform automation and DevOps
 
-This implementation option doesn't implement automated DevOps pipelines. In the absence of defined automation, you shouldn't use this landing zone for mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
+This implementation option doesn't implement automated Azure pipelines in DevOps. In the absence of defined automation, you shouldn't use this landing zone for mission critical workloads or sensitive data. It's assumed you're using this landing zone for limited production deployment. This deployment starts your learning, iteration, and development of the operating model in parallel with these early migration efforts.
 
 To accelerate parallel development, review the [Ready methodology](../../ready/index.md). Consider deploying the [Cloud Adoption Framework Foundation blueprint](./foundation-blueprint.md) along with the Cloud Adoption Framework Migration landing zone blueprint.
 
