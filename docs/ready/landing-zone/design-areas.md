@@ -16,7 +16,7 @@ ms.custom: internal
 
 Each Azure landing zone implementation option provides a deployment approach and defined design principles. Learn about these design areas before choosing an implementation option.
 
-![Azure landing zone design areas](./media/design-area.png)
+![Azure landing zone design areas](./media/alz-design-areas.svg)
 
 ## Environment design areas
 
