@@ -153,7 +153,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - If you have Active Directory Federation Services, it is recommended to move to the cloud since it could reduce costs. However, in the case that ADFS is still part of your Identity solution it is highly recommended installing Connect Health.
 
-## Prerequisites for a landing zone- design considerations
+## Prerequisites for a landing zone - design considerations
 
 ### Role-based access control (RBAC) design considerations
 
