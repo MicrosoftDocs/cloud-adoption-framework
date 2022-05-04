@@ -336,6 +336,11 @@
       "redirect_document_id": true
     },
     {
+        "source_path": "docs/scenarios/app-platform/aks/governance.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/cost-governance-with-kubecost",
+        "redirect_document_id": false
+      },
+    {
       "source_path": "docs/scenarios/aks/eslz-enterprise-enrollment.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/azure-billing-ad-tenant",
       "redirect_document_id": true
