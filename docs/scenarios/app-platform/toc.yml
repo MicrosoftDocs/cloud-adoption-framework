@@ -16,7 +16,7 @@ items:
       href: ready.md
     - name: Azure Kubernetes Service (AKS)
       items:
-      - name: Landing zone accelerator for AKS
+      - name: AKS landing zone accelerator
         href: aks/landing-zone-accelerator.md
       - name: Azure Billing and Active Directory tenant
         href: aks/azure-billing-ad-tenant.md
@@ -48,7 +48,7 @@ items:
 #        href: aks/landing-zone-accelerator.md
     - name: Azure API Management (APIM)
       items:
-      - name: Landing zone accelerator for API Management
+      - name: API Management landing zone accelerator 
         href: api-management/landing-zone-accelerator.md
       - name: Identity and access management
         href: api-management/identity-and-access-management.md
@@ -64,7 +64,7 @@ items:
         href: api-management/platform-automation-and-devops.md
     - name: Azure App Service
       items:
-      - name: Landing zone accelerator for App Service
+      - name: App Service landing zone accelerator 
         href: app-services/landing-zone-accelerator.md
       - name: Identity and access management
         href: app-services/identity-and-access-management.md
