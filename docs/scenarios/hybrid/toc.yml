@@ -31,10 +31,10 @@ items:
         href: arc-enabled-servers/eslz-security-governance-and-compliance.md
       - name: Management disciplines
         href: arc-enabled-servers/eslz-management-and-monitoring-arc-server.md
-      - name: Cost governance
-        href: arc-enabled-servers/eslz-cost-governance.md
       - name: Automation disciplines
         href: arc-enabled-servers/eslz-automation-arc-server.md
+      - name: Cost governance
+        href: arc-enabled-servers/eslz-cost-governance.md        
     - name: Azure Arc-enabled Kubernetes
       items:
       - name: Identity and access management
@@ -47,8 +47,6 @@ items:
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md
       - name: Management disciplines
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md
-      - name: Cost governance
-        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
       - name: Automation disciplines
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md
       - name: Extensions management
@@ -57,6 +55,8 @@ items:
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md
       - name: Services observability
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md
+      - name: Cost governance
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md        
     - name: Implementation options
       items:
       - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
