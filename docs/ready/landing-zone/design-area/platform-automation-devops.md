@@ -28,16 +28,11 @@ Many traditional IT operating models aren't compatible with the cloud and must u
 
 ## Platform automation
 
-Platform automation focuses on tools and techniques that enable the streamlining of tasks. These tasks might have been performed manually or using automation tools such as Azure DevOps Services, or GitHub.
-
-By automating tasks, the effort to complete them reduces the risk of human-error that might come from issues resulting from the task.
-This automation then enables the tasks to be completed quicker and more often, supporting the concepts of (CI/CD).
+The ability to make changes at scale through a prescribed automated process provides direct benefits to the organization's ability to expand beyond the baseline configuration, which comes from security, governance, and management.
 
 Platform automation is directly applicable to the outcomes associated with implementing an Azure landing zone, and supports the concept of building repeatable, scalable environments.
 
-Automated processes and tools enable deployment activities to be configured as 'stages' in a pipeline. This sequence of tasks is completed in a prescribed order, which include built-in tests and checks to ensure successful completion.
-
-The ability to make changes at scale through a prescribed automated process might provide direct benefits to the organization's ability to expand beyond the baseline configuration, which comes from security, governance, and management.
+- [Automation considerations](../../considerations/automation-considerations.md) focuses on tools and techniques that enable the streamlining of automation tasks for Landing Zone development, deployment, provisioning and operations using automation tools such as Azure DevOps Services, or GitHub.
 
 ## DevOps
 
@@ -54,3 +49,4 @@ The ability to make changes at scale through a prescribed automated process migh
 ## Security considerations
 
 - [Security considerations](../../considerations/security-considerations-overview.md) addresses security and governance considerations that must be taken to account in the DevOps lifecycle of Azure Landing Zones.
+- [Role-based Access Control for DevOps Tools](../../considerations/security-considerations-rbac.md) explains the access control considerations to be considered when addressing Azure Landing Zones lifecycle through DevOps tools.
