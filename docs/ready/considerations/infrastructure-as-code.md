@@ -1,6 +1,6 @@
 ---
 title: Infrastructure as Code
-description: Design area guidance for DevOps principles and practices in Azure Landing Zones
+description: Infrastructure as Code for Azure Landing Zones
 author: emguzman13
 ms.author: emguzman
 ms.date: 04/08/2022
