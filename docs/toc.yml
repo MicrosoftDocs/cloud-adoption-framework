@@ -409,6 +409,8 @@ items:
             items:
             - name: Development Lifecycle
               href: ready/considerations/development-strategy-development-lifecycle.md
+            - name: Infrastructure as Code
+              href: ready/considerations/infrastructure-as-code.md
             - name: Environments
               href: ready/considerations/environments.md
             - name: Test-driven development for Azure Landing Zones
