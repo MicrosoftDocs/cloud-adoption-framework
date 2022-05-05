@@ -14,9 +14,9 @@ ms.custom: think-tank
 
 A critical design decision that an enterprise organization must make when adopting Azure is whether to extend a current on-premises identity domain into Azure or to create a brand new one.
 
-Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server, Azure AD Domain Services (Azure AD DS), or both.
+Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server on premises, Azure AD Domain Services (Azure AD DS) in the Cloud, or both.
 
-Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
+Policy management in the cloud is handled differently depending on your Active Directory strategy. If you are using on premises domain controllers, use the on premises group policy management. If you are using Azure AD Domain Services, administer Group policy from the cloud by following the instructions at this link: [Administer Group Policy in an Azure Active Directory Domain Services managed domain](https://docs.microsoft.com/zure/active-directory-domain-services/manage-group-policy)
 
 ## Design Considerations
 
@@ -24,15 +24,15 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Applications that rely on domain services and use older protocols might be able to use [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services)
 
-- There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs and understand and document the authentication provider that each one will be using. Then plan for all applications. Visit this link for more information [Compare Active Directory to Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide - CAF](https://review.docs.microsoft.com/azure/cloud-adoption-framework/decision-guides/identity/?branch=main).
+- There are differences between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs. You can do the application reviews by first understanding and documenting the authentication provider that each one will be using. Use the reviews to help plan which flavor of Active Directory your organization should utilize. Use these links: [Compare Active Directory to Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide - CAF](https://review.docs.microsoft.com/azure/cloud-adoption-framework/decision-guides/identity/?branch=main).
 
-- Evaluate scenarios involving the set up of external users, customers, or partners to secure access to resources. Determine whether these scenarios involve B2B or B2C configuration. For more information, consult this link [External-identities in Azure](https://docs.microsoft.com/azure/active-directory/external-identities/external-identities-overview).
+- Evaluate scenarios involving the set up of external users, customers, or partners to secure access to resources. Determine whether these scenarios involve [B2B](https://docs.microsoft.com/azure/active-directory/external-identities/what-is-b2b) or [B2C](https://docs.microsoft.com/azure/active-directory-b2c/overview) configuration. For more information, consult this link: [External-identities in Azure](https://docs.microsoft.com/azure/active-directory/external-identities/external-identities-overview).
 
-- For Azure Application Proxy, consider not using intranet access for the application since it could add latency to the user experience. For other considerations regarding Azure AD Application Proxy [Considerations-before-configuring-azure-ad-application-proxy](https://docs.microsoft.com/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
+- For Azure Application Proxy, consider not using intranet access for the application since it could add latency to the user experience. For other considerations regarding Azure AD Application Proxy, please visit this link: [Azure Application proxy](https://docs.microsoft.com/azure/active-directory/app-proxy/application-proxy-deployment-plan%23important-considerations-before-configuring-azure-ad-application-proxy).
 
 ## Design Recommendations
 
-- Use centralized and delegated responsibilities to manage resources deployed inside the landing zone based on role and security requirements.
+- Use centralized and delegated responsibilities to manage resources deployed inside the landing zone based on role and security requirements. [CAF Best Practices](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/best-practices)
 
 - The following types of privileged operations require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the necessary diligence:
 
@@ -48,11 +48,11 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Ensure your network design allows resources that require AD DS on Windows Server for local authentication and management can access the appropriate domain controllers. For AD DS on Windows Server, consider shared service environments that offer local authentication and host management in a larger enterprise-wide network context.
 
-- When deploying Azure AD Domain Services or integrating on-premises in Azure, consider locations within Availability Zones for redundancy.
+- When deploying Azure AD Domain Services or integrating on-premises in Azure, consider locations within [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview) for redundancy.
 
-- Deploy Azure AD Domain Services within the primary region because this service can only be projected into one subscription. Azure Active Directory Domain Service can be expanded to further regions with replica sets.
+- Deploy Azure AD Domain Services within the primary region because this service can only be projected into one subscription. Azure Active Directory Domain Service can be expanded to further regions with [replica sets](https://docs.microsoft.com/azure/active-directory-domain-services/concepts-replica-sets).
 
-- Use managed identities instead of service principals for authentication to Azure services. This approach reduces exposure to credential theft.
+- Use managed identities instead of service principals for authentication to Azure services. This approach reduces exposure to credential theft. [Managed Identity Identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
 
 ## Next steps
 
