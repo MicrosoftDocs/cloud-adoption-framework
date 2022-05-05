@@ -196,7 +196,7 @@ Describe how parts of the platform can be automated in different ways. with thei
 ## Platform automation design recommendation
 
 - Follow an **Everything as Code** approach for full transparency and configuration control of the Azure platform, documentation, deployment and testing process.
-- Use version control to manage all the code repositories, including Infrastructure-, Policy-, Configuration-, and Documentation-as-Code.
+- Use version control to manage all the code repositories, including Infrastructure-, Policy-, Configuration-, Deployment- and Documentation-as-Code.
 
 
 ## Read more
