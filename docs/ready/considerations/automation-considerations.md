@@ -12,27 +12,24 @@ ms.custom: internal
 
 # Automation considerations
 
-## Overview
+<!--
+Describe why a platform team should consider automating platform deployment/configuration for an evolving platform.
+Describe how parts of the platform can be automated in different ways. with their opportunities and trade-offs.
+-->
 
-Cloud Infra is software defined, where you can provision, configure and manage your cloud infrastructure using
-different approaches and tools. With a software defined infrastructure teams can shift to manage and operate
-their infrastructure as code (IaC) and automate provisioning, configuration and management using code and services.
+Cloud Infrastructure is software defined, where you can provision, configure and manage your cloud infrastructure using
+different approaches and tools. As teams evolve and grow they shift from using portals and manual steps,
+to using code and automation to provision, configure and manage the infrastructure and services they own.
 
-With automation done right, teams can see benefits such as:
-- Faster Time To Market/Production
-  - The level of automation through the IaC deployment allows for a dramatic increase in workflow streamlining and the speed of the infrastructure provisioning process during the stages of development, testing, and production. It also shortens the time needed for scaling and/or taking down production infrastructure when necessary. Thanks to its codifying and documenting of all the components, the IaC benefits the companies with faster and automated provisioning of traditional infrastructures, the process that would otherwise involve many time-consuming procedures.
-- Efficiency and cost savings
-  - Development automation via Infrastructure as Code and DevOps approach enables a more simple provisioning process, resulting in more consistent and much more accelerated phases of the software delivery lifecycle.
-  - Perhaps the most enticing of IaC benefits is the combo of reduced costs and increased Return on Investment. Not only does the utilization of IaC reduce the amount of effort, time, and specialized skills necessary for successful infra provisioning and scaling, it also allows you to leverage all the cost-reduction potential that a highly scalable consumption-based cost structure can provide.
-- Faster development lifecycle
-  - automation lets you quickly establish your entire infrastructure by operating a script. You may do this for all environments, from development through to production, going through QA, staging, and the like. automation could help streamline the whole software development lifecycle.
+With transitioning to a code and automation approach, teams can start seeing some clear benefits such as:
+- Shorter time to provision and change infrastructure and services, by streamlining the process of describing a change to having the infrastructure provisioning provisioned to production.
+- Automation enables teams to quickly establish an entire infrastructure by operating a set of code artifacts. You may do this for all environments, from development through to production, going through QA, staging, and the like. automation could help streamline the whole software development lifecycle.
 - Consistancy and reliability of the provisioning and configuration of the cloud infrastructure
   - This is one of the IaC benefits that is derived from the aforementioned ‘configuration drift’ issue that tends to cause mismatched development, test, and/or deployment environments due to ad-hoc configuration changes and updates. These issues can further jeopardize the deployment process and lead to security-based risks during app and service development, which can be especially vulnerable to the projects that are required to meet strict regulatory compliance standards. IaC benefits businesses as it obviates drift by provisioning the same environment every time, enabling improved infrastructure consistency at all times.
 - Accuracy and consistency
   - Manual processes often lead to mistakes due to human error and poor communication. Manual infrastructure management will, in most cases, lead to discrepancies. automation deals with this issue by ensuring the configuration files are the single source of truth. This makes sure that the same configurations will be carried out without inconsistencies.
-- Improved Security
-  - Visibility and accountability
-    - automation configuration files can be versioned like any source code file, so you can achieve full visibility into the modifications that each configuration has undergone.
+- Improved Security by having the deployment process, documentation, infrastructure declaration scripts and more available for inspection.
+- Increased accountability by having trach on who did what and when through audit logs and version control.
   - If implemented right, the IaC-based infrastructure can improve the overall security of your computing architecture and the data stored within it. It takes care of misconfigured IaC files throughout the development process, while it also transforms the run-time security issues into build-time governance, but does so only if it is:
     - Automated
     - Delivered as code
@@ -40,18 +37,9 @@ With automation done right, teams can see benefits such as:
     - Increased Workflow Transparency & Structural Arrangement
     - Companies that successfully implement Infrastructure as Code and DevOps approach can enjoy one of the most underrated IaC benefits that is – workflow transparency. Instead of everything being thrown around in a diffuse manner across the Graphical User Interface, the structural arrangement of your workloads are much more organized and transparent, allowing for a more streamlined workflow and increased consistency.
 
-### Approaches
-
-Automation best practices:
-
-- If you are a startup organization and an application or platform has not yet been created, don’t attempt to automate all processes from the start (this is because of the fast rate of change). When the platform is more stable, you will be ready to automate its maintenance and provisioning.
-- Use peer reviews with Pull requests and version control in the same manner as you would when detailing with developers. This will let you fully experience the advantages of infrastructure code being used by many team members and you will always have an additional set of eyes monitoring your infrastructure.
-- Use quality control and CI/CD for repository alongside your IaC—this will enable you to ensure a high level of code and get quick feedback loops from your DevOps developers or teammates (once changes have been applied). Fortunately, test frameworks exist that can help you write the tests—the earlier you attempt to cover everything, the greater benefit you will gain from it and you will experience fewer unexpected issues with infrastructure. You can’t deal with the application mistakes here, but you can be more assured of your infrastructure.
-- Apply the idempotency design principle. IaC code should generally be maintained in a manner that allows it to generate consistent results when you apply something and run it repeatedly. This typically requires eliminating certain bash scripts created by your system admins and replacing them with more dependable components of your IaC ecosystem.
-- Modularize the code. Most IaC tools let you write roles, modules, or any other abstraction that collects blocks of code into a single logical unit. By using modules, you can gain the same advantages as you would from creating a mature program in any language.
-- What you do not automate, make a backlog item for it!
-
-
+- As cloud infrastrucutre and services are software-defined and can be managed through code and development principles, consider embracing a modern change management processes to submit, review and implement changes.
+    By treating 'Everything-as-code' and using version control on the codebase
+- With a new approach, there are new
 
 ## Operation models
 
@@ -73,9 +61,7 @@ NoOps can be contrasted with DevOps, a concept in which the line between develop
 > Why should a human have to look at a screen to see if the server is patched? We believe that’s a waste of a valuable human."
 > –Gerry Miller, Founder & CEO, Cloudticity
 
-
 The highest progression of DevOps is known as NoOps, a term originally coined by Forrester in 2011. NoOps is an ideal state where both application development and infrastructure are fully automated, allowing developers to move even faster and more securely.
-
 
 First is CI/CD, Continuous Integration and Continuous Delivery.
 Then came DevOps, the next evolution of Agile for software development. DevOps widens Agile's principles to include systems and operations by encouraging close cooperation between development and operations teams during the entire SDLC. It solves the problems with previous methodologies by evolving and improving products at a faster pace, resulting in a 25 -30% increase in capacity creation, a 50-75% reduction in time to market, and a greater than 50% reduction in failure rates.
@@ -125,14 +111,19 @@ Simply put, DevOps teams use CI/CD to deliver software with less risk, to improv
 
 ### ClickOps
 
-The use of clicking in portals, GUI applications, and wizards to do deployment and changes.
-Typical results:
-- Slow and error prone
-- Tedious to replicate and document
-- no versioning control
-- difficult to test
+Whilst “ClickOps” is an effective and simple method of learning to navigate the cloud console and familiarizing yourself with the CSP’s offerings.
+ClickOps is used as a term to describe the process of how clicking in portals, management console, and wizards to provision, configure and manage resources and services.
+Teams which are working though establishing and evolving their practicess to use more codification and automation of their infrastructure typically see the following patterns:
 
-- Progressing away from ClickOps and the error prone process of deploying things manually to more control:
+- Time consuming to document
+- Slow and error-prone to execute changes
+- Difficult to test and verify
+- Difficult to roll back to previous state
+- Difficult to replicate exactly to other environments
+- No versioning control, so if the process change over time, its hard to know what changed when
+
+
+- Progressing away from ClickOps and the error-prone process of deploying things manually to more control:
   -  [Azure landing zone accelerator (with AzOps)](../../ready/landing-zone/index.md#azure-landing-zone-accelerator)
 
 #### Evolving from ClickOps to DevOps to NoOps
@@ -167,7 +158,6 @@ IaC is an essential DevOps practice that eliminates the friction from the numero
 
 ### Scribbles
 
-
 Deployment vs lifecycle management
 Configuration drift / lifecycle management.
 Not only deploy resources, but also change existing resources.
@@ -182,12 +172,31 @@ Describe how parts of the platform can be automated in different ways. with thei
     - Managing exemtions
 - Deployment layering
 
-## Considerations Platform automation
 
-## Recommendations for Platform automation
+## Platform automation design considerations
 
-Use **Everything as Code** approach for full transparency and configuration control of the Azure platform.
-Packages for deploying, where are the packages coming from (Single/Multi repo, Bicep Reg)?
+<!--
+    Discuss different approaches to automation of the platform deployment and configuration (day 2 ops).
+    Configuration changes on the platform can have huge implications on workloads running on it.
+    Establishing a '4 eyes principle' could limit errors and mistakes when deploying or reconfiguring the platform.
+    Different solutions to consider as teams transition from a 'ClickOps' approach where changes happen in the portal.
+    Tools that can push and pull configuration to and from Azure, allowing a dual mode of 'ClickOps' and 'DevOps'.
+    Use of CI/CD to enable a 'fail fast' approach where validation happens before deployment.
+    Consider an approach of treating 'Everything as Code' including but not limited to:
+    What is being deployed and configured
+    Details on how the automation does what it does (i.e. deployment logic as code, yml pipelines vs Release pipelines)
+    How to handle rollback of changes
+    - Infrastructure as Code
+    - Azure Policy
+    - Azure Automation
+    - Functions
+-->
+
+
+## Platform automation design recommendation
+
+- Follow an **Everything as Code** approach for full transparency and configuration control of the Azure platform, documentation, deployment and testing process.
+- Use version control to manage all the code repositories, including Infrastructure-, Policy-, Configuration-, and Documentation-as-Code.
 
 
 ## Read more
