@@ -69,7 +69,7 @@ and can grow as the team evolves:
   or by implementing a quick fix using code. Quick fixes should be registered in the team's backlog so the fix can be reworked at a later point, to limit technical dept. Too much technical
   dept will lead the team to decelerate at a later point, as there is code in the platform that is not fully reviewed and does not meet the teams coding guidelines and principles.
 
-- Some automation can be added to the platform using Azure Policies. Consider using Infrastructure as Code to deploy and manage Azure Policies (often referred to as Policy-as-Code)
+- Some automation can be added to the platform using [Azure Policies](/azure/governance/policy/overview). Consider using Infrastructure as Code to deploy and manage Azure Policies (often referred to as Policy-as-Code)
   to automate some of the activities, such as log collection. Many Policy as Code frameworks also have the added feature of implementing an exemption process. Plan for workload teams to
   request exemptions from policies.
 
