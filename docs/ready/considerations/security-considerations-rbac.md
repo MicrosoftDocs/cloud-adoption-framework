@@ -1,6 +1,6 @@
 ---
 title: Role-based Access Control for DevOps Tools
-description: Test-driven development for Azure Landing Zones.
+description: Security considerations for Role-based Access Controls in DevOps Tools for Landing Zones
 author: sikovatc
 ms.author: sikovatc
 ms.date: 04/27/2022
@@ -17,7 +17,7 @@ Microsoft keeps the underlying cloud infrastructure secure, but it's up to you t
 
 ## Pre-requisites
 
-Once you've decided on which Azure Landing Zones templates to deploy, you'll need to clone them into your own repository and set up the CI/CD pipelines. For both GitHub and ADO (Azure DevOps), there are several authentication methods available, such as PAT tokens (personal access) or integrating with an identity provider, such as Azure Active Directory. For more information, see the article on [authenticating to Azure DevOps with Personal Access Tokens](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).
+Once you've decided on which Azure Landing Zones templates to deploy, you'll need to clone them into your own repository and set up the CI/CD pipelines. For both GitHub and ADO (Azure DevOps), there are several authentication methods available, such as PAT tokens (personal access) or integrating with an identity provider, such as Azure Active Directory. For more information, see the article on [authenticating to Azure DevOps with Personal Access Tokens](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate).
 
 It is strongly recommended to integrate with AAD in order to leverage all its capabilities and help streamline your role assignment process and identity lifecycle management. Refer to the docs on [integrating Azure DevOps with your Azure Active Directory (AAD) tenant](/azure/devops/organizations/accounts/connect-organization-to-azure-ad). If you are using GitHub, consider [integrating GitHub Enterprise with Azure AD](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial).
 
@@ -32,7 +32,7 @@ In the next sections, we will dive into specific RBAC recommendations for Azure 
 
 ## Azure DevOps Role-based Access Considerations
 
-Manage security in Azure DevOps with security groups, policies, and settings at the organization/collection, project, or object level. If integrating with an identity provider such as Azure Active Directory, consider creating [Conditional Access Policies to enforce MFA for all users](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops) with access to your Azure DevOps organization, and potentially, more granular restrictions around IP address, type of device used for access, and device compliance. 
+Manage security in Azure DevOps with security groups, policies, and settings at the organization/collection, project, or object level. If integrating with an identity provider such as Azure Active Directory, consider creating [Conditional Access Policies to enforce MFA for all users](/azure/devops/organizations/accounts/change-application-access-policies) with access to your Azure DevOps organization, and potentially, more granular restrictions around IP address, type of device used for access, and device compliance. 
 
 For the majority of the team members in your Platform team that is managing your Azure Landing Zones, the Basic access level and Contributor default security group should provide sufficient access. The Contributor security group will allow them to edit the Azure Landing Zone templates in your repository and the CI/CD pipelines that validate and deploy them. It is recommended that you assign your Platform team to the Contributor security group at the project level of Azure DevOps in order to follow the principle of least privilege. These assignments can be done through the Project Settings page shown below. 
 
@@ -41,12 +41,13 @@ For the majority of the team members in your Platform team that is managing your
 Another best practice for your Azure DevOps projects and organizations is to disable inheritance where possible as users will automatically inherit permissions allowed by their security group assignments. Due to the allow-by-default nature of inheritance, unexpected users can get access or permissions.
 For example, if you assign your Platform team Contributor security group membership, take care to verify their permissions on the Azure Landing Zones repository. You should have branch policies in place so verify that the security group is not allowed to bypass those policies during pull requests. This can be verified under **Project Settings** > **Repositories**.
 
-After you've assigned permissions to users, you should periodically review audit events to monitor and react to unexpected usage patterns by administrators and other users.This can be done by first [creating an audit stream to a Log Analytics workspace](/azure/devops/organizations/audit/azure-devops-auditing?view=azure-devops&tabs=preview-page). If it is a Sentinel-enabled workspace, you should create analytics rules to alert you on notable events, such as improper use of permissions. 
+After you've assigned permissions to users, you should periodically review audit events to monitor and react to unexpected usage patterns by administrators and other users.This can be done by first [creating an audit stream to a Log Analytics workspace](/azure/devops/organizations/audit/azure-devops-auditing). If it is a Sentinel-enabled workspace, you should create analytics rules to alert you on notable events, such as improper use of permissions. 
 
 For more information, reference the links below:
- - [Azure DevOps security best practices](/azure/devops/organizations/security/security-best-practices?view=azure-devops)
-- [Detailed review of Azure DevOps groups and permissions](/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page)
-- [Review of Azure DevOps access levels](/azure/devops/organizations/security/access-levels?view=azure-devops)
+
+- [Azure DevOps security best practices](/azure/devops/organizations/security/security-best-practices)
+- [Detailed review of Azure DevOps groups and permissions](/azure/devops/organizations/security/permissions)
+- [Review of Azure DevOps access levels](/azure/devops/organizations/security/access-levels)
 
 ## GitHub Role-based Access Considerations
 
