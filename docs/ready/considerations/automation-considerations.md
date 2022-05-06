@@ -55,7 +55,7 @@ and can grow as the team evolves:
     supports team still using a **ClickOps** approach. **ClickOps** is the process of provisioning, configuring, and managing resources by clicking in portals, management
     consoles, and wizards. The solution allows teams to use the portal, Azure CLI, PowerShell or IaC. Changes done in code is pushed to Azure, while changes done
     in the portal can be pulled back to code.
-  - As teams gain confidence, technical skills and grow their capabilities, a more codified approach can be adopted, namely **DevOps**. To support a transition to
+  - As teams gain confidence, technical skills and grow their capabilities, a more codified approach can be adopted, namely **[DevOps](./devops-principles-and-practices.md)**. To support a transition to
     DevOps, the team should base itself heavily on Infrastructure as Code, CI/CD, and modern development practices and transition away from having access to Azure on their
     personal account to basing all operations on the CI/CD and permissions that of a service account. To accelerate the transition, teams should consider using the IaC
     based accelerators, such as [ALZ-Bicep](https://github.com/Azure/ALZ-Bicep) or the [Terraform module for Cloud Adoption Framework enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md).
