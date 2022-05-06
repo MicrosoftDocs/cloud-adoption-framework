@@ -57,8 +57,8 @@ and can grow as the team evolves:
     in the portal can be pulled back to code.
   - As teams gain confidence, technical skills and grow their capabilities, a more codified approach can be adopted, namely **DevOps**. To support a transition to
     DevOps, the team should base itself heavily on Infrastructure as Code, CI/CD, and modern development practices and transition away from having access to Azure on their
-    personal account. Everything should be deployed through CI/CD. To accelerate the transition, teams should consider using the IaC based accelerators,
-    such as [ALZ-Bicep](https://github.com/Azure/ALZ-Bicep) or the [Terraform module for Cloud Adoption Framework enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md).
+    personal account to basing all operations on the CI/CD and permissions that of a service account. To accelerate the transition, teams should consider using the IaC
+    based accelerators, such as [ALZ-Bicep](https://github.com/Azure/ALZ-Bicep) or the [Terraform module for Cloud Adoption Framework enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md).
 
 - The accelerator mentioned above are limited in what they manage. As new versions are released, they get more capabilities and resources they manage. Teams that choose
   to use the accelerators should consider a layered approach, where they start with an accelerator and then add a layer of automation which adds capabilities that the team
