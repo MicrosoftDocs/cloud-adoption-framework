@@ -28,15 +28,15 @@ control systems, teams can track changes and control what changes they want into
 code quality, let the team share responsibility for code changes and increase the team’s knowledge on what is deployed or agreed on.
 In addition, reviewing code is a fantastic way to learn new techniques and ways of coding and automating.
 
-- The practice of peer-review should be enforced by using version control systems, such as Git, together with Git repositories. Git repositories
-let's teams define important branches and protect them using branch policies. Depending on the policy, code changes on these branches can only
+- The practice of peer-review should be enforced by using version control systems, such as Git, together with Git repositories. [Git repositories](../considerations/development-strategy-development-lifecycle.md#repository-strategy)
+let's teams define important branches and protect them using [branch policies](../considerations/development-strategy-development-lifecycle.md#branch-strategy). Depending on the policy, code changes on these branches can only
 be merged into the protected branch when certain criteria are met. i.e., number of approvals from team members.
 
-- Teams should connect the practice of keeping 'Everything as Code', the review process together with a continuous integration and deployment (CI/CD)
+- Teams should connect the practice of keeping 'Everything as Code', the review process together with a [continuous integration and deployment (CI/CD)](../considerations/development-strategy-development-lifecycle.md#automated-builds)
 process. Changes that are made on a custom branch should automatically trigger a CI process, where static code analysis, validation, and test deployments
 are executed. This will help developers check their code early (often referred to as **fail fast** or **shift-left testing**) for errors that could potentially cause
 issues if deployed to production. Depending on the branching strategy that the team has, a change to an important branch, such as `dev` or `test` should
-trigger deployments to different environments. With the final stage running after an approval to change the code in `main`, leading to a change being
+trigger deployments to different [environments](../considerations/environments.md). With the final stage running after an approval to change the code in `main`, leading to a change being
 deployed to production. This way of treating production code gives the team a **Single source of truth** for what is running in each environment.
 
 - To get to the point where the platform is fully self-healing and provides self-service for workload teams, the platform team needs to seek to **automate everything**
@@ -50,7 +50,7 @@ building tools, scripts and enhancing capabilities in the platform.
 
 - There are multiple options available for teams to get started with their Azure Landing Zone deployment. These options depend on the teams' current capabilities
 and can grow as the team evolves:
-  - New and emerging platform teams which are getting to know Infrastructure as Code and more familiar with using the portal to deploy and manage resources,
+  - New and emerging platform teams which are getting to know [Infrastructure as Code](/azure/architecture/checklist/dev-ops#management) and more familiar with using the portal to deploy and manage resources,
     could start by using the [Azure landing zone accelerator (with AzOps)](\landing-zone\index.md#azure-landing-zone-accelerator). This accelerator
     supports team still using a **ClickOps** approach. **ClickOps** is the process of provisioning, configuring, and managing resources by clicking in portals, management
     consoles, and wizards. The solution allows teams to use the portal, Azure CLI, PowerShell or IaC. Changes done in code is pushed to Azure, while changes done
