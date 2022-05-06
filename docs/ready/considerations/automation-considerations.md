@@ -91,7 +91,7 @@ and can grow as the team evolves:
 - Use one of the available accelerators that matches the team's capabilities, to get started with deploying Azure Landing Zones.
 - Plan for adding a layered deployment approach to add capabilities that is not covered by an accelerator which is needed to fully support workload teams.
 - Establish a process for implementing quick fixes using code. Quick fixes must be registered in the team's backlog so the fix can be reworked at a later point, to limit technical dept.
-- Use Infrastructure as Code to deploy and manage Azure Policies (often referred to as Policy-as-Code)
+- Use [Infrastructure as Code](./infrastructure-as-code.md) to deploy and manage [Azure Policies](/azure/governance/policy/overview) (often referred to as Policy-as-Code)
 - Implement an exemption process for policies. Plan for workload teams to request exemptions from policies and be ready to unblock the teams when needed.
 - Use 'Policy-driven-governance' to block workload teams when they are attempting to deploy resources which do not meet a security control. This help teams reducing configuration
   drift, where the code declares a different state then what is deployed.
