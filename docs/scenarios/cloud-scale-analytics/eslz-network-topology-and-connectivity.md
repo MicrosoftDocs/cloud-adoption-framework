@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Networking overview
 
-This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
+This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [Azure landing zone design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
 
-Since data management and data landing zones are important, you should also include the guidance for the design areas in your design.
+Since data management and data landing zones are important, you should also include the guidance for the Azure landing zone design areas in your design.
 
 This section outlines gives a high level overview of the networking pattern with further links to deploying in both single and multiple azure regions.
 
