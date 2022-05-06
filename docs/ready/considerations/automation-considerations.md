@@ -76,7 +76,7 @@ and can grow as the team evolves:
 - Use 'Policy-driven-governance' to signal to workload teams when they are attempting to deploy resources which do not meet a security control. For these situations, consider deploying policies
   with the `deny` effect. This will allow workload teams to also treat Everything as Code and avoid teams having configuration drift, where the code declares one thing, and the policy changed a setting
   on deployment time. In other words, avoid using `modify` effects. i.e., a workload team deploying a storage account with `supportOnlyHttpsTraffic = false` defined in their code, where a `modify` policy
-  changes that to `false` on deployment time to keep it compliant. This leads the workload teams code to be at drift with what is actually deployed.
+  changes that to `false` on deployment time to keep it compliant. This leads the workload teams' code to be drifted from what is actually deployed.
 
 ## Platform automation design recommendation
 
