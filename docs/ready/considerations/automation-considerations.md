@@ -40,7 +40,7 @@ trigger deployments to different environments. With the final stage running afte
 deployed to production. This way of treating production code gives the team a **Single source of truth** for what is running in each environment.
 
 - To get to the point where the platform is fully self-healing and provides self-service for workload teams, the platform team needs to seek to **automate everything**
-  (often referred to as **Extreme Automation**) such as provisioning, configuration and management of the platform and the provisioning of landing zone
+  (often referred to as **Extreme Automation**) from provisioning, configuration, and management of the platform to provisioning of the landing zone
   subscriptions for workload teams. Additional benefits of extreme automation are that the platform team can focus more on what provides value, rather than spending time
   deploying, configuring, and managing the platform. It creates a self-enhancing cycle, allowing for more time to build automation.
 
