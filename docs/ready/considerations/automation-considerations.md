@@ -65,7 +65,7 @@ and can grow as the team evolves:
   needs to fully support their workload teams with platform features, i.e., deploying domain controllers for legacy applications.
 
 - As platform teams transition to a more DevOps approach, and reduce the use of their personal accounts, a process should be established for how to handle emergency fixes.
-  To start with teams could use Privilege Identity Management (PIM) eligible permissions to request access to perform fixes, and then later bring this back to code to limit configuration drift,
+  For a start, the teams could use Privilege Identity Management (PIM) eligible permissions to request access to perform fixes, and then later bring this back to code to limit configuration drift,
   or by implementing a quick fix using code. Quick fixes should be registered in the team's backlog so the fix can be reworked at a later point, to limit technical dept. Too much technical
   dept will lead the team to decelerate at a later point, as there is code in the platform that is not fully reviewed and does not meet the teams coding guidelines and principles.
 
