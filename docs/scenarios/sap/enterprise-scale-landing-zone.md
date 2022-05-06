@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale for SAP on Azure
-description: Learn about enterprise-scale for SAP on Azure.
+title: SAP on Azure landing zone accelerator
+description: Learn about SAP on Azure landing zone accelerator.
 author: JefferyMitchell
 ms.author: brblanch
 ms.date: 02/15/2021
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-# Enterprise-scale for SAP on Azure
+# SAP on Azure landing zone accelerator
 
-Enterprise-scale for SAP on Azure provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. After you have successfully implemented an enterprise-scale landing zone, they can use enterprise-scale for SAP on Azure. Review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying enterprise-scale for SAP on Azure.
+SAP on Azure landing zone accelerator provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. After you have successfully implemented an enterprise-scale landing zone, they can use SAP on Azure landing zone accelerator. Review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying SAP on Azure landing zone accelerator.
 
-## Adopt enterprise-scale for SAP on Azure
+## Adopt SAP on Azure landing zone accelerator
 
-Not all customers adopt SAP on Azure in the same way. The enterprise-scale for SAP on Azure architecture varies between customers. The technical considerations and design recommendations of enterprise-scale for SAP on Azure might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The enterprise-scale for SAP on Azure is modular by design. You can customize environmental variables. This solution approach to landing zones includes three sets of assets to support cloud teams:
+Not all customers adopt SAP on Azure in the same way. The SAP on Azure landing zone accelerator architecture varies between customers. The technical considerations and design recommendations of SAP on Azure landing zone accelerator might lead to different trade-offs based on your organization's scenario. If you follow the core recommendations, the resulting architecture sets your organization on a path to a sustainable scale. The SAP on Azure landing zone accelerator is modular by design. You can customize environmental variables. This solution approach to landing zones includes three sets of assets to support cloud teams:
 
 - [Design guidelines](#design-guidelines)
 - [Architecture](#architecture)
@@ -37,7 +37,7 @@ You have to make critical decisions that drive the design of the Cloud Adoption 
 
 The following image shows a conceptual reference architecture that demonstrates design areas:
 
-:::image type="content" source="./media/overview-architecture.png" alt-text="A diagram depicting the Enterprise-scale for SAP on Azure conceptual reference architecture." lightbox="./media/overview-architecture.png":::
+:::image type="content" source="./media/overview-architecture.png" alt-text="A diagram depicting the SAP on Azure landing zone accelerator conceptual reference architecture." lightbox="./media/overview-architecture.png":::
 
 ## Implementation
 
@@ -60,6 +60,6 @@ Deploy and install the Ansible playbook components on the infrastructure that th
 
 ## Next steps
 
-Review the design areas of enterprise-scale for SAP on Azure that are critical to making complete considerations and recommendations for your enterprise-scale for SAP on Azure architecture:
+Review the design areas of SAP on Azure landing zone accelerator that are critical to making complete considerations and recommendations for your SAP on Azure landing zone accelerator architecture:
 
 - [Identity and access management](./eslz-identity-and-access-management.md)
