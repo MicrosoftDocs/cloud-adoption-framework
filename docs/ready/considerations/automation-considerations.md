@@ -1,8 +1,8 @@
 ---
 title: Automation considerations
-description: Describes the different considerations and recomentation when automating deployment of Azure Landing Zone and platform services
+description: Describes the different considerations and recommendations when automating deployment of Azure Landing Zone and platform services
 author: MariusStorhaug
-ms.author: MariusStorhaug
+ms.author: mastorha
 ms.date: 04/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -19,7 +19,7 @@ Cloud Infrastructure could be software defined, where teams can provision, confi
 - To unlock key benefits and start setting a good development culture, teams should start with treating **Everything as Code**, letting everyone in the team inspect what is being deployed and how. It also enables platform teams to adopt key development practices that will help them to be more agile and efficient. By keeping code in repositories and using version control systems, teams can track changes and control what changes they want into production.
 - When the team wants to deploy a change to the infrastructure or update a chapter in their documentation, they should consider following **the 4-eyes principle** where they do _peer-programming_ or _peer-review_, where changes to code is never done alone. This will increase code quality, let the team share responsibility for code changes and increase the team’s knowledge on what is deployed or agreed on. In addition, reviewing code is a fantastic way to learn new techniques and ways of coding and automating.
 - The practice of peer-review should be enforced by using version control systems, such as Git, together with Git repositories. [Git repositories](../considerations/development-strategy-development-lifecycle.md#repository-strategy) let's teams define important branches and protect them using [branch policies](../considerations/development-strategy-development-lifecycle.md#branch-strategy). Depending on the policy, code changes on these branches can only be merged into the protected branch when certain criteria are met. i.e., number of approvals from team members.
-- Teams should connect the practice of keeping 'Everything as Code', the review process together with a [continuous integration and continuous delivery (CI/CD)](../considerations/development-strategy-development-lifecycle.md#automated-builds) process. Changes that are made on code should automatically trigger a CI process, where static code analysis, validation, and test deployments are executed. This will help developers check their code early (often referred to as **fail fast** or **shift-left testing**) for errors that could potentially cause issues before they deployed to production. Depending on the [branching strategy](development-strategy-development-lifecycle.md#branch-strategy.) that the team has, a change to an important branch should trigger deployments to different [environments](../considerations/environments.md). When changes are approved and merged to `main` the CD process deploys the changes to production. This way of treating code gives the team a **single source of truth** for what is running in each environment.
+- Teams should connect the practice of keeping 'Everything as Code', the review process together with a [continuous integration and continuous delivery (CI/CD)](../considerations/development-strategy-development-lifecycle.md#automated-builds) process. Changes that are made on code should automatically trigger a CI process, where static code analysis, validation, and test deployments are executed. This will help developers check their code early (often referred to as **fail fast** or **shift-left testing**) for errors that could potentially cause issues before they deployed to production. Depending on the [branching strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy.) that the team has, a change to an important branch should trigger deployments to different [environments](../considerations/environments.md). When changes are approved and merged to `main` the CD process deploys the changes to production. This way of treating code gives the team a **single source of truth** for what is running in each environment.
 - To get to the point where the platform is fully self-healing and provides self-service for workload teams, the platform team needs to seek to **automate everything** (often referred to as **Extreme Automation**) from provisioning, configuration, and management of the platform to provisioning of the landing zone subscriptions for workload teams. Additional benefits of extreme automation are that the platform team can focus more on providing value, rather than spending time deploying, configuring, and managing the platform. It creates a self-enhancing cycle, allowing for more time to build automation.
 - As platform teams automate more of the operational activities, reducing human intervention, the teams focus should shift to more important tasks that helps enable and accelerate workload teams' innovation on Azure. To get to this point, the platform team needs to go through multiple iterations of developing and building tools, scripts and enhancing capabilities in the platform.
 - There are multiple options available for teams to get started with their Azure Landing Zone deployment. These options depend on the teams' current capabilities and can grow as the team evolves:
@@ -48,10 +48,10 @@ Cloud Infrastructure could be software defined, where teams can provision, confi
 
 ## Read more
 
-- [Adopt policy-driven guardrails - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
-- [Fundamentals of Bicep - Learn | Microsoft Docs](https://docs.microsoft.com/learn/paths/fundamentals-bicep/)
-- [Intermediate Bicep - Learn | Microsoft Docs](https://docs.microsoft.com/learn/paths/intermediate-bicep/)
-- [Advanced Bicep - Learn | Microsoft Docs](https://docs.microsoft.com/learn/paths/advanced-bicep/)
-- [Deploy Azure resources by using Bicep and GitHub Actions - Learn | Microsoft Docs](https://docs.microsoft.com/learn/paths/bicep-github-actions/)
-- [Deploy Azure resources by using Bicep and Azure Pipelines - Learn | Microsoft Docs](https://docs.microsoft.com/learn/paths/bicep-azure-pipelines/)
-- [Control and govern your Azure environment by deploying your infrastructure as code - Learn | Microsoft Docs](https://docs.microsoft.com/learn/modules/control-govern-azure-environment-deploying-infrastructure-code/)
+- [Adopt policy-driven guardrails - Cloud Adoption Framework | Microsoft Docs](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
+- [Fundamentals of Bicep - Learn | Microsoft Docs](/learn/paths/fundamentals-bicep)
+- [Intermediate Bicep - Learn | Microsoft Docs](/learn/paths/intermediate-bicep)
+- [Advanced Bicep - Learn | Microsoft Docs](/learn/paths/advanced-bicep)
+- [Deploy Azure resources by using Bicep and GitHub Actions - Learn | Microsoft Docs](/learn/paths/bicep-github-actions)
+- [Deploy Azure resources by using Bicep and Azure Pipelines - Learn | Microsoft Docs](/learn/paths/bicep-azure-pipelines)
+- [Control and govern your Azure environment by deploying your infrastructure as code - Learn | Microsoft Docs](/learn/modules/control-govern-azure-environment-deploying-infrastructure-code/)
