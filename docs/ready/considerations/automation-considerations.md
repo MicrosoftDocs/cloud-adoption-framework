@@ -45,7 +45,7 @@ deployed to production. This way of treating production code gives the team a **
   deploying, configuring, and managing the platform. It creates a self-enhancing cycle, allowing for more time to build automation.
 
 - As platform teams automates more of the operational activities, reducing human intervention, the teams focus should shift to more important tasks that help
-enable and accelerate workload teams' innovation on Azure. To be able to get to this point, the platform team needs to go through multiple iterations of developing and
+enable and accelerate workload teams' innovation on Azure. To get to this point, the platform team needs to go through multiple iterations of developing and
 building tools, scripts and enhancing capabilities in the platform.
 
 - There are multiple options available for teams to get started with their Azure Landing Zone deployment. These options depend on the teams' current capabilities
