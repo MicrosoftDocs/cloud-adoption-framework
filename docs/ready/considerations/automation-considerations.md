@@ -81,7 +81,7 @@ and can grow as the team evolves:
 ## Platform automation design recommendation
 
 - Follow an **Everything as Code** approach for full transparency and configuration control of the Azure platform, documentation, deployment, and testing process.
-- Use version control to manage all the code repositories, including Infrastructure-, Policy-, Configuration-, Deployment- and Documentation-as-Code.
+- Use [version control](/devops/develop/git/what-is-version-control) to manage all the code repositories, including Infrastructure-, Policy-, Configuration-, Deployment- and Documentation-as-Code.
 - Implement **the 4-eyes principle** and a process for _peer-programming_ or _peer-review_ to ensure that code changes are reviewed by the team before being
   deployed to production. This will help increase code quality and let the team share responsibility for code changes and increase the team’s knowledge on what is deployed.
 - Adopt a [simple branching strategy](/azure/devops/repos/git/git-branching-guidance) for your team and [set branch policies](/azure/devops/repos/git/branch-policies) to the branches that you want to protect. With branch policies, teams are forced to merge changes via [Pull Request](/azure/devops/repos/git/about-pull-requests).
