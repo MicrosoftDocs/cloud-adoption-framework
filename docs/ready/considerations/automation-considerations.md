@@ -85,7 +85,7 @@ and can grow as the team evolves:
 - Implement **the 4-eyes principle** and a process for _peer-programming_ or _peer-review_ to ensure that code changes are reviewed by the team before being
   deployed to production. This will help increase code quality and let the team share responsibility for code changes and increase the team’s knowledge on what is deployed.
 - Adopt a [simple branching strategy](/azure/devops/repos/git/git-branching-guidance) for your team and [set branch policies](/azure/devops/repos/git/branch-policies) to the branches that you want to protect. With branch policies, teams are forced to merge changes via [Pull Request](/azure/devops/repos/git/about-pull-requests).
-- Use continuous integration and deployment (CI/CD) to automate testing and deployment of code to different environments.
+- Use [continuous integration and continuous delivery (CI/CD)](./devops-principles-and-practices.md#define-your-devops-framework) to automate testing and deployment of code to different environments.
 - Seek to **automate everything** such as provisioning, configuration and management of platform and the provisioning of landing zone subscriptions for workload teams.
   Automating processes will give the team more time to automate other processes and create a self-enhancing cycle.
 - Use one of the available accelerators that matches the team's capabilities, to get started with deploying Azure Landing Zones.
