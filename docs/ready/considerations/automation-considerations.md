@@ -44,7 +44,7 @@ deployed to production. This way of treating production code gives the team a **
   subscriptions for workload teams. Additional benefits of extreme automation are that the platform team can focus more on providing value, rather than spending time
   deploying, configuring, and managing the platform. It creates a self-enhancing cycle, allowing for more time to build automation.
 
-- As platform teams automates more of the operational activities, reducing human intervention, the teams focus should shift to more important tasks that help
+- As platform teams automate more of the operational activities, reducing human intervention, the teams focus should shift to more important tasks that helps
 enable and accelerate workload teams' innovation on Azure. To get to this point, the platform team needs to go through multiple iterations of developing and
 building tools, scripts and enhancing capabilities in the platform.
 
