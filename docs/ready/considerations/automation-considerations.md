@@ -20,7 +20,7 @@ to using code and automation to provision, configure, and manage the infrastruct
 
 - To unlock key benefits and start setting a good development culture, teams should start with treating **Everything as Code**,
 letting everyone in the team inspect what is being deployed and how. It also enables platform teams to adopt key
-development practices that will help them to be more agile and efficient. With keeping code in repositories and using version
+development practices that will help them to be more agile and efficient. By keeping code in repositories and using version
 control systems, teams can track changes and control what changes they want into production.
 
 - When the team wants to deploy a change to the infrastructure or update a chapter in their documentation, they should consider following
