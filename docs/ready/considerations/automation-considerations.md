@@ -33,7 +33,7 @@ let's teams define important branches and protect them using branch policies. De
 be merged into the protected branch when certain criteria are met. i.e., number of approvals from team members.
 
 - Teams should connect the practice of keeping 'Everything as Code', the review process together with a continuous integration and deployment (CI/CD)
-process. Changes that a developer is doing on their custom branch should automatically trigger a CI process, where static code analysis, validation, and test deployments
+process. Changes that are made on a custom branch should automatically trigger a CI process, where static code analysis, validation, and test deployments
 are executed. This will help developers check their code early (often referred to as **fail fast** or **shift-left testing**) for errors that could potentially cause
 issues if deployed to production. Depending on the branching strategy that the team has, a change to an important branch, such as `dev` or `test` should
 trigger deployments to different environments. With the final stage running after an approval to change the code in `main`, leading to a change being
