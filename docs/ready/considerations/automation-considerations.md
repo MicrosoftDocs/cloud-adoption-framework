@@ -26,7 +26,7 @@ control systems, teams can track changes and control what changes they want into
 - When the team wants to deploy a change to the infrastructure or update a chapter in their documentation, they should consider following
 **the 4-eyes principle** where they do _peer-programming_ or _peer-review_, where changes to code is never done alone. This will increase
 code quality, let the team share responsibility for code changes and increase the team’s knowledge on what is deployed or agreed on.
-The added benefit is that this is also a key learning path for many where reviewing code can show new techniques and ways of coding and automating.
+In addition, reviewing code is a fantastic way to learn new techniques and ways of coding and automating.
 
 - The practice of peer-review should be enforced by using version control systems, such as Git, together with Git repositories. Git repositories
 let's teams define important branches and protect them using branch policies. Depending on the policy, code changes on these branches can only
