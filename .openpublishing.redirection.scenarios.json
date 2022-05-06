@@ -314,6 +314,111 @@
       "source_path": "docs/scenarios/data-management/best-practices/sap-data-ingestion.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/azure-products.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/azure-products",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/enterprise-scale-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-cost-governance-with-kubecost.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/governance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-enterprise-enrollment.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/azure-billing-ad-tenant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/identity-and-access-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-management-and-monitoring.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-network-topology-and-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/network-topology-and-connectivity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-platform-automation-and-devops.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/platform-automation-and-devops",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/resource-organization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-scalability.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/scalability",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/security",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/eslz-storage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/aks/storage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/govern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/govern",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/innovate.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/innovate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/manage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/manage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/migrate.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/migrate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/plan",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/ready",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/aks/strategy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/strategy",
+      "redirect_document_id": true
     }
   ]
 }
