@@ -37,7 +37,7 @@ process. Changes that a developer is doing on their custom branch should automat
 are executed. This will help developers check their code early (often referred to as **fail fast** or **shift-left testing**) for errors that could potentially cause
 issues if deployed to production. Depending on the branching strategy that the team has, a change to an important branch, such as `dev` or `test` should
 trigger deployments to different environments. With the final stage running after an approval to change the code in `main`, leading to a change being
-deployed to production. This way of treating production code give the team a **Single source of truth** for what is running in their environments.
+deployed to production. This way of treating production code gives the team a **Single source of truth** for what is running in each environment.
 
 - To get to the point where the platform is fully self-healing and provides self-service for workload teams, the platform team needs to seek to **automate everything**
   (often referred to as **Extreme Automation**) such as provisioning, configuration and management of the platform and the provisioning of landing zone
