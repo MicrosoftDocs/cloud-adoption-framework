@@ -425,7 +425,8 @@ items:
             items:
             - name: Overview
               href: ready/considerations/security-considerations-overview.md
-
+            - name: Role-based Access Control for DevOps Tools
+              href: ready/considerations/security-considerations-rbac.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
