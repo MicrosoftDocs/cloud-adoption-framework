@@ -14,7 +14,7 @@ ms.custom: internal
 
 Cloud Infrastructure is software defined, where teams can provision, configure, and manage cloud infrastructure using
 different tools and techniques. As they evolve and grow, they shift from using portals and manual steps,
-to using code and automation to provision, configure and manage the infrastructure and services.
+to using code and automation to provision, configure, and manage the infrastructure and services.
 
 ## Platform automation considerations
 
