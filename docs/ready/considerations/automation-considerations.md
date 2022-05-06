@@ -61,7 +61,7 @@ and can grow as the team evolves:
     such as [ALZ-Bicep](https://github.com/Azure/ALZ-Bicep) or the [Terraform module for Cloud Adoption Framework enterprise-scale](../enterprise-scale/terraform-module-caf-enterprise-scale.md).
 
 - The accelerator mentioned above are limited in what they manage. As new versions are released, they get more capabilities and resources they manage. Teams that choose
-  to use the accelerators should consider a layered approach, where they start with the accelerator and then add a layer of automation which adds capabilities that the team
+  to use the accelerators should consider a layered approach, where they start with an accelerator and then add a layer of automation which adds capabilities that the team
   needs to fully support their workload teams with platform features, i.e., deploying domain controllers for legacy applications.
 
 - As platform teams transition to a more DevOps approach, and reduce the use of their personal accounts, a process should be established for how to handle emergency fixes.
