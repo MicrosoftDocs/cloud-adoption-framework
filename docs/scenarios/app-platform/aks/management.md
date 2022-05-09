@@ -141,8 +141,6 @@ The following are best practices for your design:
 
   - Setting resources quotas at the cluster level can cause problems when deploying partner services that don't have proper requests and limits.
 
-- Regularly run the latest version of the [`kube-advisor` open-source tool](/azure/aks/operator-best-practices-scheduler#regularly-check-for-cluster-issues-with-kube-advisor) to detect issues in your cluster.
-
 - Store your container images in [Azure Container Registry](/azure/aks/operator-best-practices-multi-region#enable-geo-replication-for-container-images) and geo-replicate the registry to each AKS region.
 
 - AKS can be used as a free service, but that tier doesn't offer a financially backed SLA. To get that SLA, you have to add an uptime SLA to what you buy. We recommend all production clusters use this option. Reserve clusters without this option for preproduction clusters. When combined with Availability Zones, the Kubernetes API server SLA is increased to 99.95%. Your node pools, and other resources are covered under their own SLA.
