@@ -82,7 +82,7 @@ The following decisions have been made and included in the implementation for th
 
 > [!NOTE]
 > For many organization, the default `Corp` and `Online` management groups provide an ideal starting point.
-> Some organizations need to add more, while others don't fine them relevant to their organization.
+> Some organizations need to add more, while others won't find them relevant to their organization.
 >
 > If you are considering making changes to the Management Group hierarchy, please refer to our [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md) guidance.
 

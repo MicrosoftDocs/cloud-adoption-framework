@@ -50,12 +50,12 @@ When building a cloud adoption plan, each workload is documented following the g
 
 ### Business inputs
 
-The following are business related data points which may influence the decision to include a workload in the modern application platform strategy.
+The following are business related data points which might influence the decision to include a workload in the modern application platform strategy.
 
 - **Compliance drivers:** What specific compliance criteria are driving considerations to host this workload in a private cloud?
 - **Data protection drivers:** What data protection measures are driving considerations to host this workload in a private cloud?
 - **Operational constraints:** What operational constraints are driving considerations to host this workload in a private cloud?
-- **Modern container outcomes:** Which of the following is the driver behind evaluating this workload as a container candidate? DevOps, portability, consolidation, legacy, or multiple of these drivers.
+- **Modern application platform outcomes:** Which of the following is the driver behind evaluating this workload as a container candidate? DevOps, portability, consolidation, legacy, or multiple of these drivers.
 - **Operating model:** Will this workload be managed centrally (by central IT/CCoE), de-centrally (by workload team), or with enterprise operations (central support and workload specific operations)?
 
 ### Technical inputs
@@ -139,7 +139,7 @@ When workloads must be run in a private cloud or edge environment, but the workl
 - **Azure Stack HCI for AKS:** Allows for hosting of custom runtimes running on AKS within Azure Stack, managed by Azure Stack and AKS operators to allow for portability to other Kubernetes solutions.
 - **Azure App Service on Kubernetes with Azure Arc:** Allows any Kubernetes host to provide application services in Azure. All hosts become a small instance of Azure App Service. Since each host is also onboarded into Azure Arc, those hosts can also be managed through consistent cloud-based host operations.
 
-## Modern container readiness plan
+## Modern application platform readiness plan
 
 In addition to the cloud-adoption skilling plan, the cloud adoption teams might need to develop skills related to container and Kubernetes before executing your plan:
 
