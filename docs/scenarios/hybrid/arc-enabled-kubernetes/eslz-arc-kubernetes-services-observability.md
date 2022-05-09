@@ -31,11 +31,11 @@ Azure Arc-enabled Kubernetes provides two integrated extension options to help y
 
 The following diagram illustrates the three pillars of Services Observability with data volume impact.
 
-[ ![A diagram depicting Services Observability Pillars](./media/arc-enabled-kubernetes-obs-pillars.png)](./media/arc-enabled-kubernetes-obs-pillars.png#lightbox)
+[ ![A diagram depicting Services Observability Pillars.](./media/arc-enabled-kubernetes-obs-pillars.png)](./media/arc-enabled-kubernetes-obs-pillars.png#lightbox)
 
 The following diagram shows various Open Service Mesh components running in an Arc-enabled Kubernetes cluster. It also shows a sample application enabled in the service mesh, which is automatically configured with an Envoy side-car container.
 
-[ ![A diagram depicting Open Service Mesh running in Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-obs-osm.png)](./media/arc-enabled-kubernetes-obs-osm.png#lightbox)
+[ ![A diagram depicting Open Service Mesh running in Azure Arc-enabled Kubernetes.](./media/arc-enabled-kubernetes-obs-osm.png)](./media/arc-enabled-kubernetes-obs-osm.png#lightbox)
 
 ## Design considerations
 
@@ -45,7 +45,7 @@ The three pillars of observability are metrics, logs, and traces. Incorporate th
 
 The following screenshot shows a visualization of an example HTTP request metric for a service. The metric in this example is displayed as HTTP request rate per minute over a specified time period.  
 
-[![A screenshot showing HTTP request metric for a service](./media/arc-enabled-kubernetes-obs-metrics-example.png)](./media/arc-enabled-kubernetes-obs-metrics-example.png#lightbox)
+[![A screenshot showing H T T P request metric for a service.](./media/arc-enabled-kubernetes-obs-metrics-example.png)](./media/arc-enabled-kubernetes-obs-metrics-example.png#lightbox)
 
 - **Logs** can store various data types that have their own structures. A log contains details about transactions that can allow you to obtain a more complete story for a given event. Application logs typically include timestamps, log levels, and any information necessary to understand the context of an event. Logs are collected and shipped to a log service for storage and analysis.
 
@@ -53,7 +53,7 @@ The following screenshot shows a visualization of an example HTTP request metric
 
 The following screenshot shows a visualization of an end-to-end transaction using Application Insights. This visual allows for easy understanding of response times, response codes, and any exceptions that occur between requests in a transaction chain.  
 
-[![A screenshot showing end-to-end transaction trace](./media/arc-enabled-kubernetes-obs-trace-example.png)](./media/arc-enabled-kubernetes-obs-trace-example.png#lightbox)
+[![A screenshot showing end-to-end transaction trace.](./media/arc-enabled-kubernetes-obs-trace-example.png)](./media/arc-enabled-kubernetes-obs-trace-example.png#lightbox)
 
 The three pillars of metrics, logs, and distributed tracing are interconnected. Metrics are stored as numerical values in a time-series database. They're also much smaller than logs, which makes them easier to evaluate and useful for near-real-time alerting. Logs capture and convey much more information than metrics, which makes them useful for deeper debugging. Traces are request-scoped, and useful for getting visibility into a request as it traverses various components of a distributed system.
 
@@ -89,7 +89,7 @@ Observability is an important functionality among the many that service meshes p
 
 The following diagram shows an example of the Service Mesh Proxy functionality of data collection and forwarding.
 
-[![A diagram depicting an example observability with a Service Mesh Proxy](./media/arc-enabled-kubernetes-obs.png)](./media/arc-enabled-kubernetes-obs.png#lightbox)
+[![A diagram depicting an example observability with a Service Mesh Proxy.](./media/arc-enabled-kubernetes-obs.png)](./media/arc-enabled-kubernetes-obs.png#lightbox)
 
 ## API management self-hosted gateway
 
