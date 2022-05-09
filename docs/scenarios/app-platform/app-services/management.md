@@ -26,7 +26,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service.
 
 - If an Application Gateway is used along with [App Service](/azure/app-service/networking/app-gateway-with-service-endpoints) or [App Service Environment](/azure/app-service/environment/integrate-with-application-gateway#:~:text=The%20integration%20of%20the%20application%20gateway%20with%20the,specific%20apps%20in%20your%20ILB%20App%20Service%20Environment.), consider Recovery Point Objective (RPO) and Recovery Time Objective(RTO) requirements, as those will dictate if App Gateway needs to be deployed in:
-  - Single or Multi Region
+  - Single region or multiregion
   - Active-Active or Active-Standby Configuration
 
 - Consider whether a single point of entry or multiple entry points is required based on where the requests are coming from. This will facilitate decision for [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) or [Azure Front Door](/azure/frontdoor/front-door-overview)
