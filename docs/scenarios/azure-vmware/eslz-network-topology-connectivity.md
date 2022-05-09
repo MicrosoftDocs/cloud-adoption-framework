@@ -12,13 +12,13 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Network topology and connectivity for Azure VMware Solution
 
-When using a VMware software-defined datacenter (SDDC) with an Azure cloud ecosystem, you have a unique set of design considerations to follow for both cloud-native and hybrid scenarios. This article provides key considerations and best practices for networking and connectivity to, from, and within Azure and [Azure VMware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/introduction) deployments.
+When using a VMware software-defined datacenter (SDDC) with an Azure cloud ecosystem, you have a unique set of design considerations to follow for both cloud-native and hybrid scenarios. This article provides key considerations and best practices for networking and connectivity to, from, and within Azure and [Azure VMware Solution](https://docs.microsoft.com/azure/azure-vmware/introduction) deployments.
 
-This article builds on several Cloud Adoption Framework [enterprise-scale landing zones](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity) architectural principles and recommendations for managing network topology and connectivity at scale. You can use the enterprise-scale design area guidance for mission-critical Azure VMware Solution platforms. Design foundations include:
+This article builds on several Cloud Adoption Framework [enterprise-scale landing zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity) architectural principles and recommendations for managing network topology and connectivity at scale. You can use the enterprise-scale design area guidance for mission-critical Azure VMware Solution platforms. Design foundations include:
 
-- **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
+- **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
 - **Performance and reliability at scale** for workload scalability and consistent, low-latency experience.
-- **Zero-trust-based network security** for network perimeter and traffic flow security. For more information, see [Network security strategies on Azure](https://docs.microsoft.com/en-us/azure/architecture/framework/security/design-network).
+- **Zero-trust-based network security** for network perimeter and traffic flow security. For more information, see [Network security strategies on Azure](https://docs.microsoft.com/azure/architecture/framework/security/design-network).
 - **Extensibility** for easy expansion of network footprints without any need for design reworks.
 
 ## Networking components and concepts
