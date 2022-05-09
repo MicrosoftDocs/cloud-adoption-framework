@@ -82,7 +82,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
    :::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" alt-text="A screenshot showing Azure Pricing Calculator." lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator.png" border="true":::
 
-   :::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" alt-text="A screenshot showing Azure Pricing Calculator A Z Mon." lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" border="true":::
+   :::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" alt-text="A screenshot showing Azure Pricing Calculator Azure Monitor." lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" border="true":::
 
 - Use [Azure Cost Management and Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to view the costs of Azure Monitor for Containers.
 
