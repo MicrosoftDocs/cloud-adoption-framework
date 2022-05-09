@@ -10,13 +10,14 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Operations management considerations for API Management landing zone accelerator
+# Operations management considerations for the API Management landing zone accelerator
 
-This article provides design considerations and recommendations for operations management when using the API Management landing zone accelerator. Operations management covers multiple aspects including:
-* Provisioning, scaling, and monitoring the API Management instance 
-* Configuring policies in the gateway
-* Managing APIs
-* Preparing for business continuity and disaster recovery
+This article provides design considerations and recommendations for operations management when using the API Management landing zone accelerator. Operations management covers multiple aspects, including:
+
+- Provisioning, scaling, and monitoring the API Management instance
+- Configuring policies in the gateway
+- Managing APIs
+- Preparing for business continuity and disaster recovery
 
 Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management) design area.
 
@@ -85,7 +86,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 
 ## Enterprise-scale assumptions
 
-The following are assumptions that went into the development of the landing zone accelerator for API Management:
+The following are assumptions that went into the development of the API Management landing zone accelerator:
 
 - A Premium tier instance of API Management that supports availability zones and multiregion deployments is recommended.
 - DevOps pipelines are used to manage and deploy infrastructure-as-code.

@@ -64,7 +64,7 @@ items:
         href: api-management/platform-automation-and-devops.md
     - name: Azure App Service
       items:
-      - name: App Service landing zone accelerator 
+      - name: Azure App Service landing zone accelerator 
         href: app-services/landing-zone-accelerator.md
       - name: Identity and access management
         href: app-services/identity-and-access-management.md

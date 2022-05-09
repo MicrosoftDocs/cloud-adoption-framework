@@ -1,6 +1,6 @@
 ---
 title: Operations management considerations for Azure App Service
-description: Learn about design considerations and recommendations for operations management in the landing zone accelerator for Azure App Service
+description: Learn about design considerations and recommendations for operations management in the Azure App Service landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,13 +10,14 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Operations management considerations for landing zone accelerator for App Service
+# Operations management considerations for the Azure App Service landing zone accelerator
 
-This article provides design considerations and recommendations for operations management when using the landing zone accelerator for App Service. Operations management covers multiple aspects including:
-* Application Gateway
-* Traffic Manager
-* Geographic Redundancy
-* Preparing for business continuity and disaster recovery
+This article provides design considerations and recommendations for operations management when using the Azure App Service landing zone accelerator. Operations management covers multiple aspects including:
+
+- Application Gateway
+- Traffic Manager
+- Geographic Redundancy
+- Preparing for business continuity and disaster recovery
 
 Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management) design area.
 
@@ -25,12 +26,13 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service.
 
 - If an Application Gateway is used along with [App Service](/azure/app-service/networking/app-gateway-with-service-endpoints) or [App Service Environment](/azure/app-service/environment/integrate-with-application-gateway#:~:text=The%20integration%20of%20the%20application%20gateway%20with%20the,specific%20apps%20in%20your%20ILB%20App%20Service%20Environment.), consider Recovery Point Objective (RPO) and Recovery Time Objective(RTO) requirements, as those will dictate if App Gateway needs to be deployed in:
-    - Single or Multi Region
-    - Active-Active or Active-Standby Configuration
+  - Single or Multi Region
+  - Active-Active or Active-Standby Configuration
+
 - Consider whether a single point of entry or multiple entry points is required based on where the requests are coming from. This will facilitate decision for [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) or [Azure Front Door](/azure/frontdoor/front-door-overview)
-    - Is cost a concern?
-    - Is latency or an extra hop a concern?
-    - Any third-party solution used to direct traffic to App Gateway? 
+  - Is cost a concern?
+  - Is latency or an extra hop a concern?
+  - Any third-party solution used to direct traffic to App Gateway?
 - Backup of App Gateway configuration – Only ARM Template? Where is it stored and how it’ll be utilized – Manually or through automation e.g., ADO pipelines?
 - Consider the [information that can be backed up](/azure/app-service/manage-backup#what-gets-backed-up) and the [requirements and restrictions](/azure/app-service/manage-backup#requirements-and-restrictions)
 
@@ -42,8 +44,8 @@ The following is a bulleted list of things you must think about when preparing f
 
 ### App Service Environment
 
-- Guidance on architecting an [ASE-based solution for high availability within a region](/azure/architecture/reference-architectures/enterprise-integration/ase-high-availability-deployment)
-- Guidance on [geographic redundancy](/azure/app-service/environment/app-service-app-service-environment-geo-distributed-scale) 
+- Guidance on designing an [ASE-based solution for high availability within a region](/azure/architecture/reference-architectures/enterprise-integration/ase-high-availability-deployment)
+- Guidance on [geographic redundancy](/azure/app-service/environment/app-service-app-service-environment-geo-distributed-scale)
 
 ## Design recommendations
 

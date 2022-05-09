@@ -1,6 +1,6 @@
 ---
 title: AKS landing zone accelerator
-description: Overview of the landing zone accelerator for AKS.
+description: Overview of the AKS landing zone accelerator.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2022
@@ -18,7 +18,7 @@ This solution is open source. You can adapt the templates to create an architect
 
 ## Implement a platform foundation
 
-The AKS landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing Landing zone accelerator for AKS, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
+The AKS landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing the AKS landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
 - [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/index.md)
 

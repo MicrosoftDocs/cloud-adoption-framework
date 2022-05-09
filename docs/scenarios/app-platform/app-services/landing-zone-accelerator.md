@@ -1,6 +1,6 @@
 ---
 title: Azure App Service landing zone accelerator
-description: The landing zone accelerator for Azure App Service set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting Azure App Service.
+description: The Azure App Service landing zone accelerator set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting Azure App Service.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -20,7 +20,7 @@ The provided infrastructure-as-code template can be modified to fit your naming 
 
 ## Implement a platform foundation
 
-Azure App Service landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing landing zone accelerator for Azure App Service, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review this article:
+Azure App Service landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing the Azure App Service landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review this article:
 
 - [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/index.md)
 
@@ -29,7 +29,7 @@ Azure App Service landing zone accelerator assumes that a platform foundation th
 The landing zone accelerator approach provides these assets to support your project:
 
 - A modular approach, so that you can customize environment variables
-- Design guidelines to aid in evaluating critical decisions. For guidance that is specific to multi-tenant App Service or App Service Environments, individual sections are listed, otherwise the guidance should apply to either deployment. 
+- Design guidelines to aid in evaluating critical decisions. For guidance that is specific to multi-tenant App Service or App Service Environments, individual sections are listed, otherwise the guidance should apply to either deployment.
 - An implementation that includes:
   - A deployable reference capable of creating the environment for your Azure App Service deployment
   - A Microsoft-approved Azure App Service reference implementation to test the deployed environment
