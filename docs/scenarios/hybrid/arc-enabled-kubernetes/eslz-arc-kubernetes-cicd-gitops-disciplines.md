@@ -31,15 +31,15 @@ The following diagrams illustrate a conceptual reference architecture that highl
 
 Flux v2 Cluster Extension provisioning process:
 
-[![A diagram showing Flux extenstion installation](./media/arc-enabled-kubernetes-cicd-flux-2-extension-install.png)](./media/arc-enabled-kubernetes-cicd-flux-2-extension-install.png#lightbox)
+[![Diagram that shows Flux extension installation.](./media/arc-enabled-kubernetes-cicd-flux-2-extension-install.png)](./media/arc-enabled-kubernetes-cicd-flux-2-extension-install.png#lightbox)
 
 GitOps Configuration process:
 
-[![A diagram showing GitOps configuration](./media/arc-enabled-kubernetes-cicd-flux-2-config-install.png)](./media/arc-enabled-kubernetes-cicd-flux-2-config-install.png#lightbox)
+[![Diagram that shows how to configure GitOps.](./media/arc-enabled-kubernetes-cicd-flux-2-config-install.png)](./media/arc-enabled-kubernetes-cicd-flux-2-config-install.png#lightbox)
 
 GitOps Flow showing an application update:
 
-[![A diagram showing GitOps Workflow](./media/arc-enabled-kubernetes-cicd-gitops-flow.png)](./media/arc-enabled-kubernetes-cicd-gitops-flow.png#lightbox)
+[![Diagram that shows a typical GitOps workflow.](./media/arc-enabled-kubernetes-cicd-gitops-flow.png)](./media/arc-enabled-kubernetes-cicd-gitops-flow.png#lightbox)
 
 ## Design considerations
 
@@ -108,7 +108,7 @@ To avoid manual configuration modifications to your GitOps repository, you can r
 
 The following process diagram illustrates the traditional application CI process incorporated with changes that support GitOps.
 
-[![A diagram showing GitOps process](./media/arc-enabled-kubernetes-cicd-gitops-ci.png)](./media/arc-enabled-kubernetes-cicd-gitops-ci.png#lightbox)
+[![Diagram that shows the standard GitOps process.](./media/arc-enabled-kubernetes-cicd-gitops-ci.png)](./media/arc-enabled-kubernetes-cicd-gitops-ci.png#lightbox)
 
 #### Cluster-wide component update process
 
@@ -143,7 +143,7 @@ Review the following design recommendations when planning to implement GitOps fo
 
 The following diagram contains reference architecture that illustrates the responsibilities, repositories, and pipelines needed to implement a GitOps process using the Azure Arc-enabled Kubernetes [Flux Extension](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
 
-[ ![A diagram showing GitOps Reference](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-flow.png#lightbox)
+[ ![Diagram that shows a GitOps Reference flow.](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-flow.png#lightbox)
 
 ### Repositories
 

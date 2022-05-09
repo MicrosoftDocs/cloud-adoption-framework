@@ -18,7 +18,7 @@ Azure Arc-enabled Kubernetes clusters allow you to manage Kubernetes clusters th
 
 The following diagram contains a conceptual reference architecture that highlights onboarding and automation design areas for Azure Arc-enabled Kubernetes:
 
-[![A diagram showing onboarding and extension Integration](./media/arc-enabled-kubernetes-onboarding.png)](./media/arc-enabled-kubernetes-onboarding.png#lightbox)
+[![Diagram that shows onboarding and extension Integration.](./media/arc-enabled-kubernetes-onboarding.png)](./media/arc-enabled-kubernetes-onboarding.png#lightbox)
 
 ## Design Considerations
 

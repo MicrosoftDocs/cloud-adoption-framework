@@ -20,7 +20,7 @@ This article provides key design considerations and best practices for security,
 
 The following diagram shows a conceptual reference architecture depicting the security, compliance, and governance design areas for Azure Arc-enabled Kubernetes:
 
-[ ![A diagram depicting the Enterprise-scale security, governance, and compliance for Azure Arc-enabled Kubernetes on Azure conceptual reference architecture](./media/arc-enabled-kubernetes-security-compliance-governance.png)](./media/arc-enabled-kubernetes-security-compliance-governance.png#lightbox)
+[ ![Diagram showing the Enterprise-scale security, governance, and compliance for Azure Arc-enabled Kubernetes.](./media/arc-enabled-kubernetes-security-compliance-governance.png)](./media/arc-enabled-kubernetes-security-compliance-governance.png#lightbox)
 
 ## Design considerations
 
@@ -120,7 +120,7 @@ Don't store secrets or certificates in application code or file systems. Secrets
 
 Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments as shown in the following diagram.
 
-  [![Azure Arc-enabled Kubernetes and Key Vault integration](./media/arc-enabled-kubernetes-key-vault.png)](./media/arc-enabled-kubernetes-key-vault.png#lightbox)
+  [![Diagram showing Azure Arc-enabled Kubernetes and Key Vault integration.](./media/arc-enabled-kubernetes-key-vault.png)](./media/arc-enabled-kubernetes-key-vault.png#lightbox)
 
 ### Enable and secure GitOps configurations
 
@@ -136,7 +136,7 @@ Policy-driven governance is a foundational principle of cloud-native operations 
 
 Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also in-cluster policy enforcements by extending [Gatekeeper for Open Policy Agent](/azure/governance/policy/concepts/policy-for-kubernetes?toc=/azure/azure-arc/kubernetes/toc.json). You can implement any of the [built-in policies](/azure/governance/policy/samples/built-in-policies#kubernetes) to quickly achieve compliance and enforcement at scale. The following diagram illustrates how Azure Policy applies at-scale enforcements and safeguards to Azure Arc-enabled Kubernetes clusters.
 
-[![Azure Arc-enabled Kubernetes Policy](./media/arc-enabled-kubernetes-policy.png)](./media/arc-enabled-kubernetes-policy.png#lightbox)
+[![Diagram showing Azure Arc-enabled Kubernetes Policy.](./media/arc-enabled-kubernetes-policy.png)](./media/arc-enabled-kubernetes-policy.png#lightbox)
 
 Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where you can apply it (management group, subscription, resource group or individual resource level). Use [Azure Policy's built-in library](/azure/governance/policy/samples/built-in-policies#kubernetes) for Azure Arc-enabled Kubernetes. Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise scale guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization).
 
@@ -166,7 +166,7 @@ For more information, review the best practices for [designing your Azure Monito
 
 The following diagram illustrates a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes cluster resource.
 
-[ ![A diagram depicting the Microsoft Defender for Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-defender.png)](./media/arc-enabled-kubernetes-defender.png#lightbox)
+[ ![A diagram depicting the Microsoft Defender for Azure Arc-enabled Kubernetes.](./media/arc-enabled-kubernetes-defender.png)](./media/arc-enabled-kubernetes-defender.png#lightbox)
 
 If you use Microsoft Container Registry as a central private Docker registry for storing and managing your container images, you should [Use Microsoft Defender for Containers to scan the images for vulnerabilities](/azure/defender-for-cloud/defender-for-container-registries-usage).
 

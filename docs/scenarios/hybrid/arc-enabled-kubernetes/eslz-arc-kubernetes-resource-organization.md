@@ -32,7 +32,7 @@ Once you've onboarded clusters to resource groups and added tags, you can use [R
 
 The following diagram provides a visual overview of resource tagging for Azure Arc-enabled Kubernetes:
 
-[ ![A diagram depicting resource tagging for Azure Arc-enabled kubernetes](./media/arc-enabled-kubernetes-resource-tagging.png)](./media/arc-enabled-kubernetes-resource-tagging.png#lightbox)
+[ ![A diagram depicting resource tagging for Azure Arc-enabled kubernetes.](./media/arc-enabled-kubernetes-resource-tagging.png)](./media/arc-enabled-kubernetes-resource-tagging.png#lightbox)
 
 ## Next steps
 

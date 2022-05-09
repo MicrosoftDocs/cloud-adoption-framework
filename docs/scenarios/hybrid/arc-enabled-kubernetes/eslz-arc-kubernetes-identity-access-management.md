@@ -34,13 +34,13 @@ To design the right architecture for your organization, you need to understand [
 
 The following diagram shows various Azure Arc-enabled Kubernetes components and how they interact when [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac#architecture---azure-rbac-on-azure-arc-enabled-kubernetes) is used to manage a Kubernetes cluster.
 
-[![A diagram showing Azure RBAC on Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-aad-integration.png)](./media/arc-enabled-kubernetes-aad-integration.png#lightbox)
+[![A diagram showing Azure R B A C on Azure Arc-enabled Kubernetes.](./media/arc-enabled-kubernetes-azure-ad-integration.png)](./media/arc-enabled-kubernetes-azure-ad-integration.png#lightbox)
 
 ### Securely access Azure Arc-enabled Kubernetes cluster from anywhere
 
 The following diagram displays [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and shows how components interact with each other to manage a cluster using Azure RBAC.
 
-![Access Arc-enabled Kubernetes anywhere](./media/arc-enabled-kubernetes-cluster-connect-network.png)
+[![Diagram that shows how to access Arc-enabled Kubernetes anywhere.](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lighbox)
 
 ## Design considerations
 
