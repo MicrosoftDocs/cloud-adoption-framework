@@ -79,7 +79,7 @@ The **Microsoft Purview readiness checklist** provides high-level guidance that 
   - Generate and register integration runtime for data sources inside IaaS or on-premises VMs.
   - If there's multiple environments, such as production and nonproduction, prepare to deploy the respective data management landing zones with Microsoft Purview accounts.
 
-- Import your glossary terms to Microsoft Purview and define the formatting. Use an Microsoft Purview default template or create new term templates in Microsoft Purview.
+- Import your glossary terms to Microsoft Purview and define the formatting. Use a Microsoft Purview default template or create new term templates in Microsoft Purview.
 
 - Build your custom classifications and classification rules.
 
