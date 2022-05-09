@@ -137,7 +137,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 ### Microsoft Sentinel
 
 - Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
-- Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing) for your organization..
+- Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing) for your organization.
 
    :::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" alt-text="A screenshot showing Azure Sentinel costs." lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" border="true":::
 
