@@ -16,7 +16,7 @@ The enterprise-scale landing zone uses a series of best practices for automation
 
 This solution is made up of two key parts. The first part is guidance around deployment and automation practices for Azure VMware Solution. The second part is a set of open-source artifacts that can be adapted to help with the deployment of your private cloud. While this solution aims to start an end-to-end automation journey, your organization can decide what components to deploy manually based on the considerations in this article.
 
-[Enterprise Scale for Azure VMware Solution automation](https://github.com/Azure/Enterprise-Scale-for-AVS) is designed to help you get started deploying Azure VMware Solution using the templates and scripts within this repository. Before you deploy, we recommend reviewing the templates to understand the resources that are deployed and the associated costs.
+[Azure VMware Solution landing zone accelerator automation](https://github.com/Azure/Enterprise-Scale-for-AVS) is designed to help you get started deploying Azure VMware Solution using the templates and scripts within this repository. Before you deploy, we recommend reviewing the templates to understand the resources that are deployed and the associated costs.
 
 This article covers considerations and recommendations in the following areas:
 
@@ -190,4 +190,4 @@ Within individual workloads on Azure VMware Solution, you can choose to set up a
 Now that you've read through the design areas, learn about the architectural approach and implementation for Azure VMware Solution in an enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Enterprise-scale for Azure VMware Solution](./enterprise-scale-landing-zone.md)
+> [Azure VMware Solution landing zone accelerator](./enterprise-scale-landing-zone.md)
