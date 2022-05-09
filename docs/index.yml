@@ -177,7 +177,7 @@ conceptualContent:
 # itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
 
   title: Assessments # < 60 chars (optional)
-  summary: Plan your cloud journey by using an assessment. An assessment helps you measure the difference between your current state and your cloud adoption goals. Assessment results provide curated technical guidance to help you reach your goals. # < 160 Chars (optional)
+  summary: Plan your cloud journey with assessments that help you measure the difference between your current state and cloud adoption goals. Assessment results provide curated technical guidance to help you reach your goals. # < 160 Chars (optional)
   items:
 
      # Card
@@ -192,7 +192,7 @@ conceptualContent:
       links:
         - url: /assessments/?mode=pre-assessment&id=50adbf76-60fb-47ce-a787-f9d5f52f6a48
           itemType: get-started
-          text: Take the first step in modernizing your workloads by taking this application and modernization assessment.
+          text: Take the first step in modernizing your workloads by taking this application and data modernization assessment.
 
     # Card
     - title: Strategic Migration Assessment and Readiness
@@ -225,7 +225,7 @@ tools:
       url: /learn/paths/cloud-adoption-framework/
 
     # Card
-    - title: Azure fundamentals
+    - title: Azure Fundamentals
       imageSrc: ./_images/learn-azure-fundamentals-logo.svg
       url: /learn/paths/az-900-describe-cloud-concepts/
 
@@ -243,7 +243,7 @@ additionalContent:
   # Supports up to 3 sections
   sections:
     - title: Find help  # < 60 chars (optional)
-      summary: Microsoft has dedicated resources to help unblocked your cloud adoption journey.  # < 160 chars (optional)
+      summary: Microsoft has dedicated resources to help unblock your cloud adoption journey.  # < 160 chars (optional)
       items:
 
         # Card
@@ -252,7 +252,7 @@ additionalContent:
           url: https://azure.microsoft.com/programs/azure-fasttrack/
 
         # Card
-        - title: Azure migration and modernization program
+        - title: Azure Migration and Modernization Program
           summary: Get support migrating workloads to the cloud
           url: https://azure.microsoft.com/migration/migration-modernization-program/
 
@@ -262,4 +262,4 @@ additionalContent:
           url: https://aka.ms/adopt/findapartner
 
   # footer (optional)
-  footer: "Why Microsoft Cloud Adoption Framework for Azure is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework)"
+  footer: "Why the Microsoft Cloud Adoption Framework for Azure is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework)"
