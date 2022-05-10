@@ -10,13 +10,14 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Operations management considerations for API Management landing zone accelerator
+# Operations management considerations for the API Management landing zone accelerator
 
-This article provides design considerations and recommendations for operations management when using the API Management landing zone accelerator. Operations management covers multiple aspects including:
-* Provisioning, scaling, and monitoring the API Management instance 
-* Configuring policies in the gateway
-* Managing APIs
-* Preparing for business continuity and disaster recovery
+This article provides design considerations and recommendations for operations management when using the API Management landing zone accelerator. Operations management covers multiple aspects, including:
+
+- Provisioning, scaling, and monitoring the API Management instance
+- Configuring policies in the gateway
+- Managing APIs
+- Preparing for business continuity and disaster recovery
 
 Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management) design area.
 
@@ -48,7 +49,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 ### Design recommendations
 
 - Apply custom domains to the gateway endpoint only.
-- Use [Event Hub policy](/azure/api-management/api-management-howto-log-event-hubs) for logging at high performance levels.
+- Use [Event Hubs policy](/azure/api-management/api-management-howto-log-event-hubs) for logging at high performance levels.
 - Use an [external cache](/azure/api-management/api-management-howto-cache-external) for control and fastest performance.
 - Deploy at least two scale units spread over two availability zones per region for best availability and performance.
 - Use Azure Monitor to [autoscale](/azure/api-management/api-management-howto-autoscale) API Management. If using a self-hosted gateway, use Kubernetes [horizontal pod autoscaler](/azure/api-management/how-to-self-hosted-gateway-on-kubernetes-in-production#autoscaling) to scale out the gateway.
@@ -80,12 +81,12 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 ### Design recommendations
 
 - Use a [user-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) for API Management to prevent downtime during redeployment from ARM templates.
-- Use automated DevOps pipelines to run backups.
+- Use automated Azure Pipelines to run backups.
 - Decide whether [multiregion deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required.
 
 ## Enterprise-scale assumptions
 
-The following are assumptions that went into the development of the landing zone accelerator for API Management:
+The following are assumptions that went into the development of the API Management landing zone accelerator:
 
 - A Premium tier instance of API Management that supports availability zones and multiregion deployments is recommended.
-- DevOps pipelines are used to manage and deploy infrastructure-as-code.
+- Azure Pipelines are used to manage and deploy infrastructure-as-code.
