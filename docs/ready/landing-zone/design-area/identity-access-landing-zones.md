@@ -12,9 +12,11 @@ ms.custom: think-tank
 
 # Prerequisites for a landing zone - design considerations
 
+Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server on premises or in the cloud, or Azure AD Domain Services (Azure AD DS) in the cloud.
+
 ## Role-based access control (RBAC) design considerations
 
-- For built-in RBAC roles you can you the free version of Azure Active Directory, but for custom roles Azure AD Premium P1 is required. [Overview of Azure Active Directory role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview#:~:text=Azure%20role-based%20access%20control%20%28Azure%20RBAC%29%20helps%20you,that%20provides%20fine-grained%20access%20management%20of%20Azure%20resources.)
+- For built-in RBAC roles the free version of Azure Active Directory can be used, but for custom roles Azure AD Premium P1 is required. [Overview of Azure Active Directory role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview#:~:text=Azure%20role-based%20access%20control%20%28Azure%20RBAC%29%20helps%20you,that%20provides%20fine-grained%20access%20management%20of%20Azure%20resources.)
 
 - Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](https://docs.microsoft.com/azure/role-based-access-control/troubleshooting).
 
@@ -33,8 +35,6 @@ ms.custom: think-tank
 - Verify which Azure resources are supported by this feature [Azure Services with managed identities support](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
 
 - Managed Identity can be used by applications that need to be authenticated against an Azure service. Verify which services support Azure AD authentication [Azure Ad auth Services](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
-
-- Which tasks and functions should the organization control with managed identities?
 
 - System-assigned is part of the solution that can be configured to login into a VM using Azure Ad authentication. See this link for more information [VM Sign-in Azure](https://docs.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
 

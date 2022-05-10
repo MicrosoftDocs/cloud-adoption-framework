@@ -26,7 +26,7 @@ ms.custom: think-tank
 
     o Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
 
-- As part of the guidelines for best practices enabling MFA, Azure AD Identity protection has a feature to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection%23license-requirements).
+- As part of the guidelines for best practices enabling MFA, you can used a tool called Azure AD Identity Protection to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection).
 
 ## Platform access - design recommendations
 
