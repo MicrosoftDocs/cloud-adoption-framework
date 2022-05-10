@@ -14,9 +14,7 @@ ms.custom: think-tank
 
 A critical design decision that an enterprise organization must make when adopting Azure is whether to extend a current on-premises identity domain into Azure or to create a brand new one.
 
-Policy management in the cloud is handled differently depending on your Active Directory strategy. If you are using on premises domain controllers, use the on premises group policy management. If you are using Azure AD Domain Services, administer Group policy from the cloud by following the instructions at this link: [Administer Group Policy in an Azure Active Directory Domain Services managed domain](https://docs.microsoft.com/zure/active-directory-domain-services/manage-group-policy)
-
-Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management. Policy management in the cloud is handled differently depending on your Active Directory strategy. If you are using on premises domain controllers, use the on-premises group policy management. If you are using Azure AD Domain Services, administer Group policy from the cloud by following the instructions at this link:
+Most Azure environments will use Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management. Policy management in the cloud is handled differently depending on your Active Directory strategy. If you are using on premises domain controllers, use the on-premises group policy management. If you are using Azure AD Domain Services, administer Group policy from the cloud by following the instructions at this link: [Administer Group Policy in an Azure Active Directory Domain Services managed domain](https://docs.microsoft.com/zure/active-directory-domain-services/manage-group-policy)
 
 ## Design Considerations
 
