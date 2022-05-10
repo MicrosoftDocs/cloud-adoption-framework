@@ -46,7 +46,7 @@ These articles provide guidelines for creating your landing zone based on the de
 
 The following conceptual reference architecture is an example that shows a golden state for an Azure landing zone with a corporate landing zone subscription and shows design areas and best practices.
 
-[![AKS landing zone accelerator architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
+[![Diagram that shows the A K S landing zone accelerator architecture.](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
 
 ## Deploy AKS landing zone accelerator
 

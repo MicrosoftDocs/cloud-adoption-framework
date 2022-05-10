@@ -51,7 +51,7 @@ These articles provide guidelines for creating your landing zone based on the de
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-[![Azure API Management landing zone accelerator architecture](./media/landing-zone-accelerator/reference-implementation.png)](./media/landing-zone-accelerator/reference-implementation.png#lightbox)
+[![Diagram that shows Azure A P I Management landing zone accelerator architecture.](./media/landing-zone-accelerator/reference-implementation.png)](./media/landing-zone-accelerator/reference-implementation.png#lightbox)
 
 It consists of API Management deployed in a virtual network in internal mode, fronted by an Application Gateway, with sample Azure Functions backends.
 
