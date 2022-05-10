@@ -39,7 +39,7 @@ This article builds on several Cloud Adoption Framework [enterprise-scale landin
   - Azure Firewall
   - Encryption for private connectivity
 
-- **Hub-spoke network topology** involves a hub virtual network acing as a central point of connectivity for many spoke virtual networks. Your hub can also be the connectivity point for on-premises datacenter access. All spoke virtual networks peer with your hub, and you can use them to isolate workloads.
+- **Hub-spoke network topology** involves a hub virtual network acting as a central point of connectivity for many spoke virtual networks. Your hub can also be the connectivity point for on-premises datacenter access. All spoke virtual networks peer with your hub, and you can use them to isolate workloads.
 
 - **VXLAN (virtual extension LAN)** is a network virtualization technology for scaling cloud networks. VXLAN generates a virtual network to overlap a local area network (LAN) by using Layer 3 (L3) technology to extend the network.
 
