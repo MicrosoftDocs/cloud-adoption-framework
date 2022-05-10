@@ -59,7 +59,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 
 - **Azure Policy for Kubernetes:** [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy makes it possible to manage and report on the compliance state of your Kubernetes clusters from one place. There's currently no cost for Azure Policy for Kubernetes while in public preview.
 
-- **Microsoft Sentinel:** [Microsoft Sentinel](/azure/sentinel/overview) provides intelligent security analytics across your enterprise. The data for its analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled Kubernetes clusters.
+- **Microsoft Sentinel:** [Microsoft Sentinel](/azure/sentinel/overview) provides intelligent security analytics across your enterprise. The data for its analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Microsoft Sentinel and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled Kubernetes clusters.
 
 - **Azure Key Vault:** The [Azure Key Vault](/azure/key-vault/general/basic-concepts) Provider for Secrets Store CSI Driver allows for the integration of an Azure Key Vault as a store of secrets with a Kubernetes cluster via a CSI volume. Azure Key Vault is billed by the operations performed on certificates, keys, and secrets.
 
@@ -136,20 +136,20 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
 ### Microsoft Sentinel
 
-- Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
-- Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing) for your organization.
+- Review [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
+- Use the Azure Pricing Calculator to estimate [Microsoft Sentinel costs](/azure/sentinel/azure-sentinel-billing) for your organization.
 
-   :::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" alt-text="A screenshot showing Azure Sentinel costs." lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" border="true":::
+<!--   :::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" alt-text="A screenshot showing Microsoft Sentinel costs." lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" border="true"::: -->
 
-- Use [Azure Sentinel Cost Management and Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to understand Azure Sentinel analysis costs.
+- Use [Microsoft Sentinel Cost Management and Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to understand Microsoft Sentinel analysis costs.
 
-   :::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel.png" alt-text="A screenshot showing Azure Sentinel cost analysis." lightbox="./media/arc-enabled-kubernetes-cost-sentinel.png" border="true":::
+   :::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel.png" alt-text="A screenshot showing Microsoft Sentinel cost analysis." lightbox="./media/arc-enabled-kubernetes-cost-sentinel.png" border="true":::
 
-- Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace Azure Sentinel uses.
+- Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace Microsoft Sentinel uses.
 - Filter the [right level of logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for your Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
 - Use [Log Analytics queries](/azure/sentinel/azure-sentinel-billing#run-queries-to-understand-your-data-ingestion) and the [Workspace Usage Report workbook](/azure/sentinel/azure-sentinel-billing#deploy-a-workbook-to-visualize-data-ingestion) to understand your data ingestion trends.
-- Create a [cost management playbook](/azure/sentinel/azure-sentinel-billing#use-a-playbook-for-cost-management-alerts) to send notifications if your Azure Sentinel workspace exceeds your budget.
-- Azure Sentinel integrates with other Azure services to provide enhanced capabilities. Review the [pricing details](/azure/sentinel/azure-sentinel-billing#costs-for-other-services) for these services.
+- Create a [cost management playbook](/azure/sentinel/azure-sentinel-billing#use-a-playbook-for-cost-management-alerts) to send notifications if your Microsoft Sentinel workspace exceeds your budget.
+- Microsoft Sentinel integrates with other Azure services to provide enhanced capabilities. Review the [pricing details](/azure/sentinel/azure-sentinel-billing#costs-for-other-services) for these services.
 - Consider using [Commitment Tier](/azure/sentinel/azure-sentinel-billing#set-or-change-pricing-tier) pricing based on your data ingestion volume.
 - Consider [separating non-security](/azure/sentinel/azure-sentinel-billing#separate-non-security-data-in-a-different-workspace) operational data into a different Azure Log Analytics workspace.
 
