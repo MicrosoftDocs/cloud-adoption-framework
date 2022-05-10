@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Resource organization considerations for AKS (optional)
 
-Resource organization consideration is mostly managed by the platform foundation, however here are some of the ways the platform foundation may affect AKS landing zone accelerator.
+Resource organization consideration is mostly managed by the platform foundation, however here are some of the ways the platform foundation might affect the AKS landing zone accelerator.
 
 The overall subscription and resource group design determined by generic enterprise-scale landing zone recommendations, will play a fundamental role in how the AKS resource organization is managed. As described in [Management group and subscription organization](../../../ready/landing-zone/design-area/resource-org.md), management groups and subscriptions are used to assign policies to the resources underneath them, and subscriptions are the management boundary for governance and isolation of resources.
 
