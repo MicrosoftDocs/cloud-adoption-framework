@@ -81,7 +81,7 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 ### Design recommendations
 
 - Use a [user-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) for API Management to prevent downtime during redeployment from ARM templates.
-- Use automated Azure pipelines to run backups.
+- Use automated Azure Pipelines to run backups.
 - Decide whether [multiregion deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required.
 
 ## Enterprise-scale assumptions
@@ -89,4 +89,4 @@ Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-
 The following are assumptions that went into the development of the API Management landing zone accelerator:
 
 - A Premium tier instance of API Management that supports availability zones and multiregion deployments is recommended.
-- Azure pipelines are used to manage and deploy infrastructure-as-code.
+- Azure Pipelines are used to manage and deploy infrastructure-as-code.
