@@ -42,7 +42,7 @@ The initial subscription model has the following benefits:
 
 If innovation goals are part of your cloud adoption strategy, it is recommended to create one or more sandbox subscriptions. You can apply security policies to keep the test subscriptions isolated from your production and non-production environments and experiment with Azure capabilities. Use an Azure Dev/Test offer to create these subscriptions.
 
-The image below show the subscription model with *production*, *nonproduction*, and *sandbox* subscriptions.
+The image below show the subscription model with *production*, *non-production*, and *sandbox* subscriptions.
 
 ![Subscription model showing keys next to boxes labeled production, nonproduction, and sandboxes](../../_images/ready/initial-subscription-model-with-sandboxes.png)
 
@@ -50,9 +50,9 @@ The image below show the subscription model with *production*, *nonproduction*, 
 
 If you're planning to host **more than 1,000 VMs or compute instances in the cloud within 24 months**, create another Azure subscription to host shared services. This supports your end-state enterprise architecture.
 
-Subscription model with shared services.
+The image below show the subscription model with *production*, *non-production* and *shared services* subscriptions.
 
-![An initial subscription model showing keys next to boxes labeled production and shared services.](../../_images/ready/initial-subscription-model-with-shared-services.png)
+![An initial subscription model showing keys next to boxes labeled production, non-production and shared services.](../../_images/ready/initial-subscription-model-with-shared-services.png)
 
 ## Next steps
 
