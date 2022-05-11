@@ -3,7 +3,7 @@ title: Approaches to cloud migration and modernization
 description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/14/2022
+ms.date: 05/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -14,13 +14,13 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 Where should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first?
 
-Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa. You might even modernize in parallel to migration. If you decide to modernize in parallel to migration, you'd want to modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
+Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa. You could even modernize in parallel to migration. If you decide to modernize in parallel to migration, you'd want to modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
 
 :::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
 Deciding whether to modernize or migrate first comes down to *what benefits you want*.
 
-## Migrate first, Modernize later approach
+## Migrate first, modernize later approach
 
 There are distinct motivations, reasons, and outcomes for migrating first. For instance, if you're trying to get out of a data center now, you might want to migrate first and change things later. If you're more focused on control, you might choose to lift-and-shift, go straight to Iaas, do some resizing, and migrate workloads.
 
@@ -31,7 +31,7 @@ Migrate first if you immediately want the following benefits for your organizati
 - Have immediate compatibility with IaaS VMs
 - Test your migration to ensure cloud-readiness
 
-## Modernize first, Migrate later approach
+## Modernize first, migrate later approach
 
 If your main goal is to get a handful of apps faster time-to-market in the cloud, you might want to modernize first.
 

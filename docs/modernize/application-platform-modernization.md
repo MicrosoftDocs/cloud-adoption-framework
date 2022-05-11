@@ -70,7 +70,7 @@ You can also use a combination of all of these services. For more information, s
 
 ### Landing zone accelerator options
 
-To accelerate application platform modernization, we have the [AKS Landing Zone accelerator](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone). This ready-made deployment experience supports containerization of multiple workloads.
+To accelerate application platform modernization, use the [AKS Landing Zone accelerator](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone). This ready-made deployment experience supports containerization of multiple workloads.
 
 :::image type="content" source="../_images/modernize/azure-landing-zones.png" alt-text="Graphic showing three landing zone implementation options.":::
 
