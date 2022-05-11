@@ -118,6 +118,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
+| MariaDB database | `Microsoft.DBforMariaDB/servers` | `mariadb-` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb-` |
