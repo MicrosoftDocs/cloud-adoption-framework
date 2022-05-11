@@ -16,7 +16,7 @@ items:
       href: ready.md
     - name: Azure Kubernetes Service (AKS)
       items:
-      - name: Landing zone accelerator for AKS
+      - name: AKS landing zone accelerator
         href: aks/landing-zone-accelerator.md
       - name: Azure Billing and Active Directory tenant considerations
         href: aks/azure-billing-ad-tenant.md
@@ -30,25 +30,21 @@ items:
         href: aks/security.md
       - name: Management
         href: aks/management.md
-      - name: Governance
-        href: aks/governance.md
       - name: Platform automation and DevOps
         href: aks/platform-automation-and-devops.md
       - name: Scalability considerations for AKS
         href: aks/scalability.md
       - name: Storage considerations for AKS
         href: aks/storage.md
+      - name: Cost governance with Kubecost
+        href: aks/cost-governance-with-kubecost.md
 #      - name: Reference Architecture (placeholder)
 #        href: aks/landing-zone-accelerator.md
 #      - name: Reference Implementation (placeholder)
 #        href: aks/landing-zone-accelerator.md
-      - name: Azure API Management 
-        href: aks/landing-zone-accelerator.md
-#      - name: Reference Implementation (placeholder)
-#        href: aks/landing-zone-accelerator.md
     - name: Azure API Management (APIM)
       items:
-      - name: Landing zone accelerator for API Management
+      - name: API Management landing zone accelerator 
         href: api-management/landing-zone-accelerator.md
       - name: Identity and access management
         href: api-management/identity-and-access-management.md
@@ -64,7 +60,7 @@ items:
         href: api-management/platform-automation-and-devops.md
     - name: Azure App Service
       items:
-      - name: Landing zone accelerator for App Service
+      - name: Azure App Service landing zone accelerator 
         href: app-services/landing-zone-accelerator.md
       - name: Identity and access management
         href: app-services/identity-and-access-management.md

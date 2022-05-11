@@ -1,6 +1,6 @@
 ---
 title: Platform automation and DevOps for Azure App Service
-description: Learn about design considerations and recommendations for platform automation and DevOps in the landing zone accelerator for Azure App Service
+description: Learn about design considerations and recommendations for platform automation and DevOps in the Azure App Service landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Platform automation and devops for landing zone accelerator for App Service
+# Platform automation and DevOps for the Azure App Service landing zone accelerator
 
 This article provides design considerations and recommendations for platform automation and DevOps when using the API Management landing zone accelerator. Platform automation and DevOps provide opportunities to modernize your approach to environmental deployment with infrastructure-as-code options.
 

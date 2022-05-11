@@ -1,5 +1,5 @@
 ---
-title: Governance considerations for Azure API Management
+title: Governance considerations for the Azure API Management landing zone accelerator
 description: Learn about design considerations and recommendations for governance in the Azure API Management landing zone accelerator
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Governance considerations for API Management landing zone accelerator
+# Governance considerations for the API Management landing zone accelerator
 
 This article provides design considerations and recommendations for governance when using the API Management landing zone accelerator. Azure governance establishes the tooling needed to support cloud governance, compliance auditing, and automated guardrails.
 
@@ -19,8 +19,8 @@ Learn more about the [Azure governance](/azure/cloud-adoption-framework/ready/la
 ## Design considerations
 
 - Research the available [built-in RBAC roles](/azure/api-management/api-management-role-based-access-control) available for the API Management service.
-- Review the [Azure Policy built-in policy definitions](/azure/api-management/policy-reference) and the [Azure Policy Regulatory Compliance controls](/azure/api-management/security-controls-policy) for API Management. Azure Policy can help enforce vital management and security conventions across Azure platform services. 
-- Consider what level of logging is necessary to meet your organization’s compliance requirements. 
+- Review the [Azure Policy built-in policy definitions](/azure/api-management/policy-reference) and the [Azure Policy Regulatory Compliance controls](/azure/api-management/security-controls-policy) for API Management. Azure Policy can help enforce vital management and security conventions across Azure platform services.
+- Consider what level of logging is necessary to meet your organization’s compliance requirements.
 - Consider how non-compliance should be detected.
 - Consider how to standardize error responses returned by APIs.
 
