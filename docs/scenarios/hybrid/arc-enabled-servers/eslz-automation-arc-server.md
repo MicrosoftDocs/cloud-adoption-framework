@@ -92,7 +92,7 @@ Once your servers are onboarded to Azure, it's recommended to [enable patch and 
 
 We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) solution in Azure Automation, to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
 
-You can use the [user Hybrid Runbook Worker](/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows) feature of Azure Automation to run runbooks directly on Azure Arc-enabled servers. 
+You can use the [User Hybrid Runbook Worker](/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows) feature of Azure Automation to run runbooks directly on Azure Arc-enabled servers. 
 
 ## Next steps
 
