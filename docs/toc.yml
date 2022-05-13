@@ -1649,21 +1649,6 @@ items:
         href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
-      - name: Securing Power Platform
-        items:
-          - name: Overview
-            href: /power-platform/admin/security/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Security and governance considerations
-            href: /power-platform/admin/governance-considerations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Compliance and data privacy
-            href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Establish DLP policies
-            href: /power-platform/guidance/adoption/dlp-strategy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Enable cross-tenant isolation
-            href: /power-platform/admin/cross-tenant-restrictions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Data protection in connectors
-            href: /connectors/protection?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
     - name: Security considerations
       items:
       - name: Security strategy
