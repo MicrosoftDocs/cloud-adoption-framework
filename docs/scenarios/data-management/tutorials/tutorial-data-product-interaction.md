@@ -71,8 +71,6 @@ az sql db create --resource-group $resourceGroupName --server $sqlServerName --n
 az sql db create --resource-group $resourceGroupName --server $sqlServerName --name AdatumERP --service-objective Basic --sample-name AdventureWorksLT
 ```
 
-### Conclusion
-
 When the scripts finish running, you will have on the Azure SQL Server _`[DPprefix]`_`-dev-sqlserver001` two new Azure SQL Databases: **AdatumCRM** and **AdatumERP**, both on the Basic compute tier. They are located in the same resource group _`[DLZprefix]`_`-dev-dp001` where you deployed the data product.
 
 ## Set up Purview to catalog the Data Product Batch
@@ -738,3 +736,102 @@ Now lets extract the data from the AdatumERP Azure SQL Database representing the
 1. Finish the wizard for the second time, rename the pipeline to CopyPipeline_ERP_to_DevRaw , publish all, then run the trigger on this newly created pipeline, to have the 7 tables you selected copied from SQL DB to ADLS.
 
 After finishing these steps, there will be ten .csv files in Azure Data Lake storage _`[DLZprefix]`_`devraw`. You can now proceed to the next step to start curating the files in the _`[DLZprefix]`_`devencur` Data Lake.
+
+## Curate Data in ADLS
+
+### Curate Data
+
+After finishing the creation of the ten _.csv_ files in the "raw" _`[DLZprefix]`_`devraw` Data Lake storage, in this step you will transform these files as needed as you copy them to the "Curated" _`[DLZprefix]`_`devencur` Data Lake storage.
+
+Continue using Azure Data Factory to create these new pipelines to orchestrate this data movement.
+
+### CRM to Customer
+
+With this Data flow that you are about to create you will get the .csv files in the Data\CRM folder in _`[DLZprefix]`_`devraw` transform them and copy the transformed files to folder "Data\Customer" in _`[DLZprefix]`_`devencur` in .parquet format.
+
+Here are the steps:
+
+1. On the home page of Azure Data Factory, select Orchestrate.
+
+:::image type="content" source="../images/Orchestrate.png" alt-text="Add header to file":::
+
+1. In the General tab for the pipeline, name it "Pipeline_transform_CRM".
+
+1. In the Activities pane, expand the Move and Transform accordion. Drag and drop the Data Flow activity from the pane to the pipeline canvas.
+
+:::image type="content" source="../images/Activities.png" alt-text="Activities":::
+
+1. In the Adding Data Flow pop-up, select Create new Data flow and then name your data flow "CRM_to_Customer". Click Finish when done.
+
+>[!NOTE]
+>In the top bar of the pipeline canvas, slide the Data flow debug slider on. Debug mode allows for interactive testing of transformation logic against a live Spark cluster. Data Flow clusters take 5-7 minutes to warm up and users are recommended to turn on debug first if they plan to do Data Flow development.
+
+:::image type="content" source="../images/DataFlowDebug.png" alt-text="Open Data Flow":::
+
+1. When you are finished selecting all the options in the Data flow "CRM_to_Customer", the pipeline "Pipeline_transform_CRM" will look like this:
+
+:::image type="content" source="../images/Pipeline_transform_CRM.png" alt-text="Pipeline_transform_CRM":::
+
+and the Data flow will look like this:
+
+:::image type="content" source="../images/CRM_to_Customer.png" alt-text="CRM_to_Customer":::
+
+These are the settings you need to modify in the Data Flow when manipulating these files:
+
+For the source "CRMAddress":
+
+- Create a new dataset from "Azure Data Lake Storage Gen2" with format "DelimitedText" and call it "DevRaw_CRM_Address"
+- Connect to the linked service to _`[DLZprefix]`_`devraw`
+- Select file Data\CRM\SalesLTAddress.csv as the source.
+
+And for it's pair, the sink "CustAddress":
+
+- Create a new dataset called DevEncur_Cust_Address
+- Select file Data\Customer\ in _`[DLZprefix]`_`devencur` as the sink.
+- Convert the file to "Address.parquet" (under "Settings\Output to single file").
+
+>[!NOTE]
+>For the rest of the Data flow configuration, use the information on the table below for each component. Note that CRMAddress and CustAddress are the first two rows. Use them as an example for the other objects.
+
+>[!NOTE]
+>There is one item that is not on the table, which is the "RemovePasswords" Select Schema Modifier. As you can see on the picture of the Data flow "CRM_to_Customer" this goes in between "CRMCustomer"
+and "CustCustomer". When you add this Select, go to "Select settings" and remove fields "PasswordHash" and "PasswordSalt".
+
+>[!NOTE]
+>"CRMCustomer" brings back a schema with 15 columns from the .crv file, and "CustCustomer" will write only 13 columns after the Select Schema Modifier removes the two password columns.
+
+#### Complete Table
+
+| Name | Object Type | Dataset Name | Data Store | Format Type | Linked Service | File or Folder |
+|---|---|---|---|---|---|---|
+| CRMAddress | source | DevRaw_CRM_Address | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\CRM\SalesLTAddress.csv |
+| CustAddress | sink | DevEncur_Cust_Address | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Customer\Address.parquet |
+| CRMCustomer | source | DevRaw_CRM_Customer | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\CRM\SalesLTCustomer.csv |
+| CustCustomer | sink | DevEncur_Cust_Customer | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Customer\Customer.parquet |
+| CRMCustomerAddress | source | DevRaw_CRM_CustomerAddress | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\CRM\SalesLTCustomerAddress.csv |
+| CustCustomerAddress | sink | DevEncur_Cust_CustomerAddress | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Customer\CustomerAddress.parquet |
+
+### ERP to Sales
+
+Now repeat similar steps and create pipeline "Pipeline_transform_ERP", create a Data flow "ERP_to_Sales" to transform the .csv files in the Data\ERP folder in _`[DLZprefix]`_`devraw` and copy the transformed files to folder "Data\Sales" in _`[DLZprefix]`_`devencur`
+
+On the table below you will find the objects to create in the "ERP_to_Sales" Data Flow and the settings you need to modify for each one of them. Note that each .csv file gets mapped to a .parquet sink.
+
+| Name | Object Type | Dataset Name | Data Store | Format Type | Linked Service | File or Folder |
+|---|---|---|---|---|---|---|
+| ERPProduct | source | DevRaw_ERP_Product | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProduct.csv |
+| SalesProduct | sink | DevEncur_Sales_Product | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\Product.parquet |
+| ERPProductCategory | source | DevRaw_ERP_ProductCategory | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductCategory.csv |
+| SalesProductCategory | sink | DevEncur_Sales_ProductCategory | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductCategory.parquet |
+| ERPProductDescription | source | DevRaw_ERP_ProductDescription | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductDescription.csv |
+| SalesProductDescription | sink | DevEncur_Sales_ProductDescription | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductDescription.parquet |
+| ERPProductModel | source | DevRaw_ERP_ProductModel | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductModel.csv |
+| SalesProductModel | sink | DevEncur_Sales_ProductModel | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductModel.parquet |
+| ERPProductModelProductDescription | source | DevRaw_ERP_ProductModelProductDescription | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductModelProductDescription.csv |
+| SalesProductModelProductDescription | sink | DevEncur_Sales_ProductModelProductDescription | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductModelProductDescription.parquet |
+| ERPProductSalesOrderDetail | source | DevRaw_ERP_ProductSalesOrderDetail | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductSalesOrderDetail.csv |
+| SalesProductSalesOrderDetail | sink | DevEncur_Sales_ProductSalesOrderDetail | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductSalesOrderDetail.parquet |
+| ERPProductSalesOrderHeader | source | DevRaw_ERP_ProductSalesOrderHeader | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductSalesOrderHeader.csv |
+| SalesProductSalesOrderHeader | sink | DevEncur_Sales_ProductSalesOrderHeader | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductSalesOrderHeader.parquet |
+
+Congratulations You have reached the completion of the tutorial
