@@ -42,11 +42,11 @@ The first step to start this hands-on experience is to create two sample Azure S
 
     :::image type="content" source="../images/CloudShell.png" alt-text="Azure CLoud Shell":::
 
-1. Select **bash** in the Cloud Shell environment and run the script below. 
+1. Select **bash** in the Cloud Shell environment and run the script below.
 
     - The script will find the _`[DLZprefix]`_`-dev-dp001` resource group and the Azure SQL Server _`[DPprefix]`_`-dev-sqlserver001` in it, then it will create the two Azure SQL Databases on this server.
 
-    - Make sure to replace the \<subscription ID\> parameters with your own subscription ID. 
+    - Make sure to replace the \<subscription ID\> parameters with your own subscription ID.
 
 >[!NOTE]
 The databases will be pre-populated with AdventureWorks sample data, containing the required tables you will use on this lab.
@@ -75,12 +75,10 @@ az sql db create --resource-group $resourceGroupName --server $sqlServerName --n
 
 When the scripts finish running, you will have on the Azure SQL Server _`[DPprefix]`_`-dev-sqlserver001` two new Azure SQL Databases: **AdatumCRM** and **AdatumERP**, both on the Basic compute tier. They are located in the same resource group _`[DLZprefix]`_`-dev-dp001` where you deployed the data product.
 
-
 ## Set up Purview to catalog the Data Product Batch
 
 >[!NOTE]
 >Through the rest of the document, _`DLZprefix`_ refers to the prefix provided for the Data Landing Zone deployment. _`DMLZprefix`_ refers to the prefix used for the Data Management Landing Zone deployment. _`DPprefix`_ refers to the prefix used for the Data Product deployment.
-
 
 ### Create Service Principal
 
@@ -112,7 +110,6 @@ az ad sp create-for-rbac \
 
 >[!NOTE]
 >Make a note of this as this will be needed for the subsequent steps.
-
 
 ```JSON
 {
@@ -171,12 +168,11 @@ To set this up, please follow the steps below.
 - _`[DLZprefix]`_`devencur`
 - _`[DLZprefix]`_`devwork`
 
-
 ### Azure SQL Database Permissions
 
-For this step you will need to connect to SQL Server using the Query Editor. Since all the resources are behind a private endpoint, you will need to log into the Azure Portal using a bastion host Virtual Machine. 
+For this step you will need to connect to SQL Server using the Query Editor. Since all the resources are behind a private endpoint, you will need to log into the Azure Portal using a bastion host Virtual Machine.
 
-Using the Azure Portal, connect to the virtual machine deployed in the _`[DMLZPrefix]`_`-dev-bastion` resource group. 
+Using the Azure Portal, connect to the virtual machine deployed in the _`[DMLZPrefix]`_`-dev-bastion` resource group.
 If you are unsure on how to connect to the virtual machine using bastion host service, please refer to **Connecting to the VM** in [Deploy Bastion Host and Jumpbox](/lab1/6_deploy_bastion_host/).
 
 To add the service principal as a user within the database, you might need to add yourself as the active directory admin first. Steps 1 to 3 below explain how to do this. The remainder of the steps explain how to give the service principal permissions to the database. Once logged into Portal from the bastion Host Virtual Machine, search for SQL Servers in the Azure Portal.
@@ -217,7 +213,7 @@ Repeat steps 4 through 6 for the `AdatumERP` database.
 
 ### Setting up the Key Vault
 
-Purview will read the service principal key from a Key Vault. We will use the Key Vault instance deployed along with the **Data Management Landing Zone**. The following steps are required to set up the Key Vault. 
+Purview will read the service principal key from a Key Vault. We will use the Key Vault instance deployed along with the **Data Management Landing Zone**. The following steps are required to set up the Key Vault.
 
 - Add the Service Principal key to the Key Vault as a secret.
 - Give the Purview MSI Secrets Reader permissions on the Key Vault
@@ -317,7 +313,7 @@ The next step is for us to link Purview with the Key Vault. To do this, follow t
 
     | Field| Suggested Value(s)  |
     |:-------|:--------------------|
-    | Name| _`[DMLZprefix]`_`-dev-vault001` | 
+    | Name| _`[DMLZprefix]`_`-dev-vault001` |
     | Azure Subscription | Select the subscription hosting the key vault|
     | Key Vault Name | Select the key vault _`[DMLZprefix]`_`-dev-vault001`|
 
@@ -337,7 +333,7 @@ The final step is to create a credential within Purview pointing to the secret w
 
     | Field| Suggested Value(s)  |
     |:-------|:--------------------|
-    | Name| `purviewServicePrincipal` | 
+    | Name| `purviewServicePrincipal` |
     | Authentication Method | Service Principal|
     | Tenant ID | This is automatically populated|
     | Service Principal ID | This is the Application (Client ID/App ID) of the Service principal|
@@ -350,7 +346,9 @@ The final step is to create a credential within Purview pointing to the secret w
 
 At this point, Purview has visibility of the service principal. We can now proceed with registering and setting up the data sources.
 
-### Register ADLS Gen 2 Storage Accounts
+### Register ADLS
+
+ Gen 2 Storage Accounts
 
 The following steps outline the process to register an ADLS Gen 2 Storage account.
 
@@ -366,13 +364,12 @@ The following steps outline the process to register an ADLS Gen 2 Storage accoun
 
     | Field| Suggested Value(s)  |
     |:-------|:--------------------|
-    | Name| _`[DLZprefix]`_`dldevraw` (or another suitable name)| 
+    | Name| _`[DLZprefix]`_`dldevraw` (or another suitable name)|
     | Azure Subscription | Select the subscription hosting the storage account|
     | Storage account Name| Select the relevant storage account|
     | Endpoint|  This should be automatically populated based on the selected storage account|
     | Select a collection | Select the root collection.|  
 
-  
     :::image type="content" source="../images/purview-register-add-dl-raw.png" alt-text="Register ADLS raw":::
 
 Click **Register** to create the data source.
@@ -447,7 +444,6 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
 1. Click on the **New Scan** icon on the Azure SQL DB data source.
 
- 
     :::image type="content" source="../images/scan-database.png" alt-text="New Scan SQL DB":::
 
 1. Provide the following values and click on **Test Connection** to ensure the connectivity and permissions are correct. Click on **Continue**
