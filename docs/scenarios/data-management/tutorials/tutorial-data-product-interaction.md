@@ -49,7 +49,7 @@ The first step to start this hands-on experience is to create two sample Azure S
     - Make sure to replace the \<subscription ID\> parameters with your own subscription ID.
 
 >[!NOTE]
-The databases will be pre-populated with AdventureWorks sample data, containing the required tables you will use on this lab.
+The databases will be pre-populated with AdventureWorks sample data, containing the required tables you will use on this tutorial.
 
 ```Bash
 # Azure SQL Database Setup
