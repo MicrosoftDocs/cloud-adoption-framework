@@ -28,7 +28,7 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
       | Subscription | Select the subscription to deploy the Data Product to. If you have access to multiple subscriptions, please choose the correct one. |
       | Resource Group | Type "dev-dp001" on the dropdown and select the resource group that has the DLZ prefix you created earlier plus the "-dev-dp001" suffix. |  
       | Location | Select from the dropdown. If there are no organizational policies influencing the location, it is a good idea to pick a region that is physically close to you. Please verify that this region is supported for Enterprise Scale Analytics. A list of supported regions are available [here](/lab1/0_data_management_landing_zone_overview/) and navigate to "Supported Regions". |
-      | Environment | We recommend you choose Development, as this is a lab. You could use the same process to deploy a Test or Production environment as well. |
+      | Environment | We recommend you choose Development, as this is a tutorial. You could use the same process to deploy a Test or Production environment as well. |
       | Data Product Name | This is a prefix added to all the deployed data product resources to make them unique within the subscription. This can be a max of 10 alphanumeric characters. |
 
       :::image type="content" source="../images/dataproduct-deployment-1.png" alt-text="Data Product":::

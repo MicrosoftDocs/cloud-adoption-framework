@@ -100,7 +100,7 @@ Before we start with the deployment, please make sure that you have the followin
       |:-------|:--------------------|
       | Subscription | Select the subscription to deploy the Data Landing Zone to. If you have access to multiple subscriptions, please choose the correct one. |
       |Location | Select from the dropdown. If there are no organizational policies influencing the location, it is a good idea to pick a region that is physically close to you. Please verify that this region is supported for Enterprise Scale Analytics. A list of supported regions are available [here](#supported-regions) |
-      | Environment | We recommend you choose Development, as this is a lab. You could use the same process to deploy a Test or Production environment as well. |
+      | Environment | We recommend you choose Development, as this is a tutorial. You could use the same process to deploy a Test or Production environment as well. |
       | Data Landing Zone prefix | This is a prefix added to all the deployed resource groups and resources to make them unique within the subscription. This can be a max of 10 alphanumeric characters. |
 
     :::image type="content" source="../images/dlz-1.png" alt-text="Data Landing Zone":::
