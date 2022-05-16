@@ -45,21 +45,35 @@ You can place the metadata that captures these details under source control, whi
 
 Data contracts provide insight into coupling and dependencies between domains and applications. A contract also allows for [contract testing](/azure/data-factory/continuous-integration-delivery#cicd-lifecycle), which ensures that all application and interface changes are validated against your consumers' data requirements. You can tell when your data flows become vulnerable to upstream data source changes by detecting schema drift. For more information, see [Schema drift in mapping data flow](/azure/data-factory/concepts-data-flow-schema-drift).
 
-Data contracts are often part of metadata-driven ingestion frameworks. You might store data contracts in metadata records within a centrally managed [metastore](../govern-metadata-standards.md), and from there, your data contracts can play an important role in data multiple areas of data ingestion, including pipeline execution, data product creation, validation of data types, schemas, interoperability standards, protocol versions, defaulting rules on missing data, and so on.
+Data contracts are often part of metadata-driven ingestion frameworks. You can store data contracts in metadata records within a centrally managed [metastore](../govern-metadata-standards.md). From that central location your data contracts play an important role in data multiple areas of data ingestion, including:
 
-Data contracts involve a large amount of technical metadata. To document your data pipelines and data products, you need to have a clear description of each data's source, any transformations you've applied to your data, and the way you ultimately deliver your data.
+- Pipeline execution
+
+- Data product creation
+
+- Data type validation
+
+- Schemas
+
+- Interoperability standards
+
+- Protocol versions
+
+- Defaulting rules on missing data
+
+Data contracts involve large quanitities of technical metadata. To document your data pipelines and data products, you must have a clear description of your data sources, all transformations your data has undergone, and how you ultimately deliver the data.
 
 :::image type="content" source="../media/data-contracts.png" alt-text="Diagram showing data contracts." lightbox="../media/data-contracts.png":::
 
-When you use a distributed architecture, you distribute your data pipeline framework across different domains. In this approach, domains conform to a common way of working. Since the domains process data themselves, control and responsibility stay with your domains, while your framework and metadata remain under central governance.
+In a distributed architecture, you distribute a data pipeline framework across different domains, and the domains conform to a common way of working. Since the domains process data themselves, control and responsibility stay with them, while the framework and metadata remain under central governance.
 
-Start small when you implement a federated method. Begin with basics, like metadata storage for schema validation, enterprise identifiers, and references to other datasets in your shared metadata repository. Add data [lineage](../govern-lineage.md) support to help you visualize data movement. Bootstrap your processes and use libraries like [Great Expectations](https://greatexpectations.io/) to implement controls for technical data quality validation.
+When implementing a federated method, start small. Begin with basics, like metadata storage for schema validation, enterprise identifiers, and references to other datasets in your shared metadata repository. Add data [lineage](../govern-lineage.md) support to help you visualize data movement. Bootstrap your processes and use libraries like [Great Expectations](https://greatexpectations.io/) to implement controls for technical data quality validation.
 
-All your controls should be part of your continuous integration procedures. Capture all runtime information, including metrics and logging. Make that information part of your metadata foundation for gaining insight into data pipeline stability. This setup ensures that you have a feedback loop between your domains and your central management cockpit.
+All your controls should be part of your continuous integration procedures. Capture all runtime information, including metrics and logging, and make that information part of your metadata foundation for gaining data pipeline stability insights. This setup ensures that you have a feedback loop between your domains and your central management cockpit.
 
-As you stabilize all data movement, capture which data attributes (like tables and columns) are used by which data consumers and use this information to continue scaling. You can include this information in your centrally managed metastore. You need data usage information to detect breaking changes and to identify any ways they affect your data producers and consumers. If a data product dataset doesn't have any consumers, you can allow it to experience disruptive changes. Use source control (like Git) to allow a handshake process between providers and consumers of your data.
+As you stabilize all data movement, capture which data attributes (like tables and columns) are used by which data consumers and use this information to continue scaling. You can include this information in your centrally managed metastore. Data usage information allows you to detect breaking changes and to identify their effects on your data producers and consumers. If a data product dataset has no consumers, you can allow it to experience disruptive changes. Use source control (like Git) to allow a handshake process between providers and consumers of your data.
 
-## Data Sharing Agreement
+## Data sharing agreements
 
 Data sharing agreements are an extension of data contracts. The agreements outline data usage, privacy, and purpose, including any limitations. Data sharing agreements are interface independent and offer insights into what data is used for a particular purpose. They also function as input for data security controls. You can use a data sharing agreement to outline which filters or security protections must be applied to your data.
 
