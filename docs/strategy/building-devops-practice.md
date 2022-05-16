@@ -1,5 +1,5 @@
 ---
-title: Building your devops practice
+title: Building your DevOps practice
 description: Use the Azure Cloud Adoption Framework to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 author: wayneme
 ms.author: brblanch
@@ -10,115 +10,91 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-# Building your devops practice
+# Building your DevOps practice
 
-This article helps guide you to consider the various aspects of building out a devops practice. It can help you answer critical questions like:
+This article guides you through various considerations as you plan to build out your DevOps practice. The following sections can help you answer critical questions such as:
 
-- Should we invest in building a devops team?
+- Should our organization invest in building a DevOps team?
 - What makes infrastructure-as-code preferable?
 - How can automated workload and application deployment benefit our organization?
-- How does our operating model need to evolve over time?
+- In what ways does our operating model need to evolve over time?
 
-Cloud architectures offer a new way to do business and include benefits like:
+Cloud architectures offer a new way to do business, offering benefits that include:
 
-- Making IT teams able to scale and democratize services
-- Global expansion opportunities
-- Increased consistency and velocity
+- Giving IT teams the ability to scale and democratize services
+- Enabling global expansion opportunities
+- Providing increased consistency and velocity
 
-As your customers evolve and look to deliver differentiated services to accelerate business, a well-designed devops practice can enable your teams to collaborate effectively and build software at a higher velocity while still maintaining necessary controls, security and governance. A mature devops practice is the key to maintaining a strong cloud business. Unifying people, process, and technology allows you to transition a cloud practice from being a destination to being a model.
+As your customers evolve and look to deliver differentiated services to accelerate business, use a well-designed DevOps practice in your organization to ensure your teams can collaborate effectively and build software at a higher velocity while also maintaining necessary controls, security and governance.
 
-## Cloud as a destination, not a place
+To have a strong cloud business, you need a mature DevOps practice. Unifying people, process, and technology helps you transition your organization's cloud practice into an effective operating model.
 
-Using cloud as a destination typically indicates that practices and delivery of services haven't been transformed yet. 
+## The cloud is an operating model, not a destination
 
-We build in the same way, usually having a high dependency on central IT teams to provision and then hand off to developers or application teams. 
+Treating the cloud as a destination is typically an indicator that an organization hasn't yet transformed its practices and delivery of services. Organizations in this mode are often highly dependent on central IT teams for provisioning. The central IT teams then hand off the system to application teams or developers. This type of workflow can slow progress and drive up costs.
 
-This model can slow us down and drive up costs. 
+When they adopt a cloud strategy, organizations:
 
-When customers transform to the model of cloud, they tend to democratize IT resources, use more cloud native services, they enable self-service, use repeatable builds and rely on skills not only in the immediate IT teams but empowering others across the business. 
+- Democratize IT resources
+- Use more cloud native services
+- Enable self-service
+- Use repeatable builds
+- Rely on skills both in IT teams and across the entire organization
 
-By no means are we indicating that VMs and infrastructure as a service are bad, many customers start here, this is just the start we need to transition to microservices and platform services that can reduce overhead, costs and improve service delivery. 
-
-The role of IT evolves to one of governance and empowerment.
+It's not wrong to use VMs and infrastructure as a service. However, you can reduce costs and overhead and improve your service delivery if you transition to using microservices and platform services and shift the role of your central IT team to governance and empowerment.
 
 ## Evolve traditional functions to make them cloud aligned
 
-In the Organize section of the adoption framework we cover the functions needed for a cloud practice, breaking down silos and looking across the organization to get the best skills. 
+The Organize section of the Azure Cloud Adoption Framework describes the functions necessary for your cloud practice. It also offers guidance on data silo avoidance and how you can empower users and tap into resources across your entire organization. Even small IT teams can accomplish a lot by removing barriers and enabling self-service for others within your organization. As you build your cloud capabilities, you'll see operations teams embracing infrastructure-as-code and traditional network, security, and system admins writing scripts to drive greater consistency.
 
-We attempt to show that small IT teams can accomplish a lot when removing barriers and enabling others to self-serve in a compliant way. 
+As an example, imagine that the fictional organization Contoso Corporation acquires a new company. They need to incorporate this company, and all its applications and data, into Contoso's Azure environment. Contoso has fully scripted a new landing zone deployment. In it, they provision a subscription with appropriate permissions, network peering that connects it back to their hub network, and policies that comply with Contoso's corporate governance. The entire process takes no longer than 10 minutes before the new company can begin to migrate their applications into the new landing zone Contoso created.
 
-As we build these capabilities we begin to see operations teams embracing infrastructure as code, traditional network, security and system admins writing scripts to drive greater consistency. 
+In more traditional environments, the process involves a much longer waterfall approach:
 
-To put this into a practical example, Contoso acquires a new company and needs to incorporate them into their Azure environment, the new company has their own applications and data. 
+- The organization acquires the hardware or service
+- IT team deploys the infrastructure
+- Networking configures the routing
+- Security validates and applies security policies
+- Governance checks compliance and applies missing policies
 
-Contoso has a new landing zone deployment fully scripted. 
-
-In the landing zone they'll provision a subscription, with network peering to connect back to the hub network, policies to comply with Contoso’s corporate governance, and appropriate permissions have been set. 
-
-This onboarding process takes no more than 10 min to execute. 
-
-The new company can now begin the process of migrating their applications into their newly created landing zone. 
-
-In more traditional environments, you would have had a waterfall approach to these projects, you would have had to acquire hardware or the service, once the acquisition had been made IT would then deploy the infrastructure, then networking would need to configure the routing, then security would have had to validate and apply security policies, governance teams would then need to check compliance and apply missing policies. 
-
-Each of the phases can take weeks or months to complete. 
+Each of these phases in a traditional environment can take weeks or months to complete, in contrast to the mere minutes required in a modern cloud approach.
 
 ## Repeatability drives velocity
 
-Moving to a code-based infrastructure doesn't need to be overly complex, there are simple things that can be done initially to help you move in the right direction. 
+Your move to a code-based infrastructure doesn't need to be complicated. Some simple changes can carry you a long way.
 
-You can start by simply creating repeatable templates to automate your workload deployments. 
+Create repeatable templates to automate your workload deployments. Build golden image VMs that have your desired security parameters, storage accounts for your long term and short term storage needs, and templates for Linux-based web applications that enable SSL only.
 
-Think about golden images for VMs with the right security parameters, storage accounts for long term and short-term storage needs, templates for web apps based on Linux and which enable ssl only. 
-
-The possibilities are endless. 
-
-Storing the code for these templates can be done in numerous ways as well, whether they reside in a git repository (Azure DevOps or GitHub) or using something like Template Specs in Azure that can be version controlled. 
-
-It doesn’t matter which system an organization chooses it's about the muscle that we start to flex and develop. 
-
-Build, code, deploy, reuse, learn.
+You can house the code for these templates in various storage options, including a git repository (like Azure DevOps or GitHub) or something like version-controlled Template Specs in Azure. The particular system your organization chooses doesn't matter so much as the adoption of the process as a whole: build, code, deploy, reuse, learn.
 
 ## Should I build all workloads through code?
 
-Even if devops is critical to your strategy, not all workloads are great candidates for devops. 
-
-Identify early where you're making investments in apps & understand the value you’ll get from devops. 
-
-Likewise identify apps that may not produce a return from similar investments. 
-
-Consider how those workloads will be managed & by who. 
-
-Examples include: commercial off the shelf (COTS), apps slated for sunset, & some legacy apps.
+Even if DevOps is critical for your strategy, not every workload is a good candidate. It's important that you identify early on which applications might benefit from an investment in DevOps and which applications won't offer much return on that investment. Consider the best way to manage these workloads and who you should make responsible for their management. Some examples of these applications include commercial off-the-shelf (COTS) applications, applications slated for sunsetting, and some legacy applications.
 
 ## Customers are key
 
-Listening and learning from customers is a key part of the devops practice. 
+Listening and learning from your customers is a key to your DevOps practice. As you build and maintain your organization's DevOps practice, get feedback from your users, incorporate it into your backlog, and use it as a source for continuous improvement.
 
-As you develop and enhance your practice take feedback from your users, incorporate into your backlog, triage and use this as a source of continuous improvement. 
+As an example, one of the places in our own DevOps process where we provided customers to give us direct feedback is in our documentation articles on docs.microsoft.com. Each article on the website has an edit button at the top. Readers are able to edit the article, initiating a pull request that goes to a specific document's owner. The owner can then review and incorporate suggestions directly from a reader. Through this process, Microsoft is able to apply skills and expertise from our entire user base in addition to the expertise within our organization.
 
-Here's a Microsoft example of where we have given customers the option to give direct feedback. 
+DevOps is more than just developers building a specific product. It's an approach involving multiple key elements of the product lifecycle–a practice known as *everything as code*.
 
-In our documentation on docs.microsoft.com each article has an edit button at the top, as a reader you can edit the documentation, this will kick off a pull request, which goes directly to the document owner so that they can review and incorporate – for Microsoft no longer are we bound by our own employees creating documentation, but we can apply on the broad set of skills and expertise in the market to contribute. 
+## Takeaway
 
-As you can see from this devops doesn't only touch on developers building product, but other key elements of the product lifecycle – everything as code.
+As you read through the Cloud Adoption Framework documentation, notice how DevOps is present in all phases. Consider using the following process as you begin your own implementation.
+
+1. Design your strategy with DevOps in mind.
+2. Reimagine your organization as a cloud based organization.
+3. Operationalize your plan using repeatable agile principles.
+4. Enable CI/CD in your landing zone for consistent code based management
+5. Evaluate DevSecOps to understand how security fits within your DevOps cycles.
+6. Deploy your workloads through pipelines and/or actions.
+7. Establish a management baseline to provide each DevOps team with consistent tools and foundations for operations.
+8. Integrate insights and management into your DevOps tooling so that you can appropriately respond to changing conditions and demands.
+9. Create governance guardrails so your DevOps team(s) can be confident in their ability to deploy to production without violating corporate policies.
+10. Finally, consider gathering user feedback, incorporating it into your backlog, and iterating rapidly to keep your users engaged.
 
 ## Next steps
 
-As you read through the cloud adoption framework content, you'll notice that devops is present across all phases. Here are some points to follow as you begin:
-
-1.	Build your strategy with devops in mind
-2.	Take the opportunity to reimagine your organization as a cloud based organization
-3.	Operationalize your plan using repeatable agile principles
-4.	In your landing zone, enable CI/CD for consistent code based management
-5.	Evaluate devsecops to understand how security fits into your devops cycles
-6.	Start to deploy your workloads through pipelines and/or actions
-7.	Establish a management baseline to provide each devops team with consistent tools & foundations for operations
-8.	Integrate insights and management into your devops tooling so that you can respond appropriately to changing conditions and demands.
-9.	Create governance guardrails so devops teams can deploy with confidence that they'll be able to deploy to production without violating corporate policies
-10.	Lastly, think about taking customer feedback, incorporating into your backlog and iterating rapidly for an experience that will keep them engaged
-
-
-
 > [!div class="nextstepaction"]
-> [Overview of business outcomes](./business-outcomes/index.md)
+> [Business outcomes overview](./business-outcomes/index.md)
