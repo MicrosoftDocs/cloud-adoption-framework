@@ -75,7 +75,7 @@ Even if DevOps is critical for your strategy, not every workload is a good candi
 
 Listening and learning from your customers is a key to your DevOps practice. As you build and maintain your organization's DevOps practice, get feedback from your users, incorporate it into your backlog, and use it as a source for continuous improvement.
 
-As an example, one of the places in our own DevOps process where we provided customers to give us direct feedback is in our documentation articles on docs.microsoft.com. Each article on the website has an edit button at the top. Readers are able to edit the article, initiating a pull request that goes to a specific document's owner. The owner can then review and incorporate suggestions directly from a reader. Through this process, Microsoft is able to apply skills and expertise from our entire user base in addition to the expertise within our organization.
+As an example, one of the places in our own DevOps process where we provide customers to give us direct feedback is in our documentation articles on docs.microsoft.com. Each article on the website has an edit button at the top. Readers are able to edit the article, initiating a pull request that goes to a specific document's owner. The owner can then review and incorporate suggestions directly from a reader. Through this process, Microsoft is able to apply skills and expertise from our entire user base in addition to the expertise within our organization.
 
 DevOps is more than just developers building a specific product. It's an approach involving multiple key elements of the product lifecycle–a practice known as *everything as code*.
 
