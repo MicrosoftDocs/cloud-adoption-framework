@@ -140,6 +140,8 @@ items:
       href: strategy/digital-transformation-timeline.md
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
+    - name: Building your devops practice
+      href: strategy/building-devops-practice.md  
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
