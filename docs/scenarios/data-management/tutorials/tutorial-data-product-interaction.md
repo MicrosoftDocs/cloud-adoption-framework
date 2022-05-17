@@ -83,7 +83,7 @@ When the scripts finish running, you will have on the Azure SQL Server _`[DPpref
 1. Open the Azure Portal. On the top right, click on the highlighted icon below to open the cloud shell.
   :::image type="content" source="../images/CloudShell.png" alt-text="Azure CLoud Shell":::
   
-1. Update the command below to replace the **subscription ID** with our own subscriptionID and the **service principal name** created in the step earlier. After updating the values run in the cloud shell **bash**. The service principal name should be unique within the subscription.
+1. Update the command below to replace the **subscription ID** with your own subscriptionID and the **service principal name** created in the step earlier. After updating the values run in the cloud shell **bash**. The service principal name should be unique within the subscription.
 
 >[!IMPORTANT]
 >Replace the parameters with a service principal name of your choice and your subscription ID.
