@@ -232,12 +232,12 @@ Purview will read the service principal key from a Key Vault. We will use the Ke
 
 1. On the next screen, search for `Key Vault Administrator`, select the role `Key Vault Administrator` and click on **Next**.
   
-    :::image type="content" source="../images/purview-keyvault-administrator.png" alt-text="Purview Add Role Assignment":::
+    :::image type="content" source="../images/purview-keyvault-administrator.png" alt-text="Search Key Vault Administrator":::
 
 1. Click on **+ Select Members** and add the account currently logged.
 
     :::image type="content" source="../images/keyvault-administrator-select-member.png" alt-text="Purview Select Member":::
-    :::image type="content" source="../images/keyvault-administrator-your-account.png" alt-text="Purview Select Member":::
+    :::image type="content" source="../images/keyvault-administrator-your-account.png" alt-text="Purview Select your account":::
 
 1. In Select Members, search for the account currently logged, click to add the relevant account, and click on **select**
 
@@ -340,7 +340,7 @@ The final step is to create a credential within Purview pointing to the secret w
     | Key Vault Connection| Select the Key Vault Connection created in the previous step|
     | Secret Name | Type in the name of the secret in the Key Vault (`service-principal-secret`)|  
 
-    :::image type="content" source="../images/purview-credential-values.png" alt-text="New Purview Credentials":::
+    :::image type="content" source="../images/purview-credential-values.png" alt-text="Credentials Values":::
 
 ## Registering Data Sources
 
@@ -358,7 +358,7 @@ The following steps outline the process to register an ADLS Gen 2 Storage accoun
 
 1. Select **ADLS Gen 2** and click on **Continue**
 
-    :::image type="content" source="../images/register-adls.png" alt-text="Register Data":::
+    :::image type="content" source="../images/register-adls.png" alt-text="Register ADLS Gen2":::
 
 1. Fill in the values for all the fields
 
@@ -490,7 +490,7 @@ As the environment is locked to public access, you need to first log into the Az
 
 1. Select Connect -> Bastion
 
-    :::image type="content" source="../images/bastionVM-connect.png" alt-text="Bastion VM":::
+    :::image type="content" source="../images/bastionVM-connect.png" alt-text="Bastion VM Connect":::
 
 1. Enter the VM's Username and Password and click **Connect**.
 
@@ -577,7 +577,7 @@ And here is an example of how to approve a private endpoint access request by cl
 
 When you are done with all approvals, the "Managed private endpoints" pane should look similar to this, with all the approval state fields marked as "Approved":
 
-:::image type="content" source="../images/ManagedPrivateEndPointsComplete.png" alt-text="Private Endpoint SQL Connections":::
+:::image type="content" source="../images/ManagedPrivateEndPointsComplete.png" alt-text="Private Endpoint SQL Connections Approved":::
 
 ### Role Assignments
 
@@ -638,7 +638,7 @@ The permissions are set, Purview can now see the Data Factory, and the next step
 
 1. Here is how the setting should look like while selecting the new connection:
   
-    :::image type="content" source="../images/ConnectPurviewToDataFactory.png" alt-text="Purview Role Assignment":::
+    :::image type="content" source="../images/ConnectPurviewToDataFactory.png" alt-text="Purview Role Assignment final":::
 
 1. In the _`[DLZprefix]`_`-dev-integration-datafactory001` Data Factory Studio, refresh the **Azure Purview account** under **Manage>Azure Purview.** and the "Data Lineage - Pipeline" will show the green icon **"Connected"** as depicted on the image below:
 
@@ -691,7 +691,7 @@ Follow each step on the Copy Data tool wizard:
 
 1. Go to the next screen and select "Add header to file".
 
-    :::image type="content" source="../images/AddHeaderToFile.png" alt-text="Add header to file":::
+    :::image type="content" source="../images/AddHeaderToFile.png" alt-text="header to file":::
 
 1. Finish the wizard with a screen similar to this one:
 
@@ -703,7 +703,7 @@ When you are done with the wizard, it will show under Pipelines the new pipeline
 
 - Rename the pipeline and the Datasets to the names you see on the image below, publish all, then run the Trigger to have the 3 tables copied from SQL DB to ADLS.
 
-    :::image type="content" source="../images/TriggerRunCRM.png" alt-text="Copy Data Tool completed":::
+    :::image type="content" source="../images/TriggerRunCRM.png" alt-text="Copy Data Tool SQLDB to ADLS":::
 
 This process you just finished will create 3 .csv files in the "data\CRM" folder, one for each of the selected tables of database AdatumCRM.
 
@@ -731,7 +731,7 @@ Now lets extract the data from the AdatumERP Azure SQL Database representing the
 
 1. Select Add header to file.
 
-:::image type="content" source="../images/AddHeaderToFile.png" alt-text="Add header to file":::
+:::image type="content" source="../images/AddHeaderToFile.png" alt-text="header to file":::
 
 1. Finish the wizard for the second time, rename the pipeline to CopyPipeline_ERP_to_DevRaw , publish all, then run the trigger on this newly created pipeline, to have the 7 tables you selected copied from SQL DB to ADLS.
 
