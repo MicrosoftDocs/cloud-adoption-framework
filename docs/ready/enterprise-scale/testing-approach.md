@@ -50,7 +50,7 @@ The platform resources in scope for this article and this testing approach are:
 
 ## Example scenarios and outcomes
 
-An example of this scenario is an organization that wants to test the impact and result of a new Azure Policy to govern resources and settings in all landing zones, as per the [Policy-driven governance design principle](./design-principles.md#policy-driven-governance). They don't want to make this change directly to the production environment as they're concerned about the impact it might have.
+An example of this scenario is an organization that wants to test the impact and result of a new Azure Policy to govern resources and settings in all landing zones, as per the [Policy-driven governance design principle](../landing-zone/design-principles.md#policy-driven-governance). They don't want to make this change directly to the production environment as they're concerned about the impact it might have.
 
 Using the canary environment to test this platform change will allow the organization to implement and review the impact and result of the Azure Policy change. This process will ensure it satisfies the organization's requirements before they implement the Azure Policy to their production environment.
 
