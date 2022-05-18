@@ -3,7 +3,7 @@ title: Evaluate modernization options
 description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/18/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -18,7 +18,7 @@ As the cloud modernizes IT, companies are being forced to transform themselves. 
 
 A transformation strategy drives innovation and growth.
 
-:::image type="content" source="../_images/modernize/cloud-adoption-outperforming-peers.png" alt-text="Graphic showing statistics about organization that harness data, the cloud, and AI outperforming their peers.":::
+:::image type="content" source="../../_images/modernize/cloud-adoption-outperforming-peers.png" alt-text="Graphic showing statistics about organization that harness data, the cloud, and AI outperforming their peers.":::
 
 - **Infrastructure:** You can focus on making innovative services and applications available to the company and spend less time managing core infrastructure like server patching, networking setup, firewall configuration, and many other server-related tasks now included with Azure PaaS.
 - **Apps:** Websites are up and running within minutes, app delivery time is improved by 50%, and there's not waiting for servers.
@@ -77,10 +77,10 @@ This example is for a common web application running on a database. You could mo
 
 You can modernize both web and data layers. Modernize the data layer by moving it to the database manager instances. We modernize the app by going from a bunch of IAS servers or just VMS over to Azure App Service.
 
-:::image type="content" source="../_images/modernize/example-azure-app-service-azure-sql-database-mi.png" alt-text="Diagram showing flow of migrating to Azure App Service and Azure SQL DB MI.":::
+:::image type="content" source="../../_images/modernize/example-azure-app-service-azure-sql-database-mi.png" alt-text="Diagram showing flow of migrating to Azure App Service and Azure SQL DB MI.":::
 
 ### Migrating your app to App Service and Azure Database for MySQL/PostgreSQL/MariaDB
 
 A different approach would be to modernize your app layer, like we just mentioned, but maybe you're working with some open source data layers and you want to go to something like Azure Database for MySQL, PostgreSQL, or MariaDB.
 
-:::image type="content" source="../_images/modernize/example-app-service-azure-db.png" alt-text="Diagram showing flow of migrating your app to App Service and Azure Database for MySQL and so on.":::
+:::image type="content" source="../../_images/modernize/example-app-service-azure-db.png" alt-text="Diagram showing flow of migrating your app to App Service and Azure Database for MySQL and so on.":::

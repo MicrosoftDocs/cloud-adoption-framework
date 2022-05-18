@@ -918,22 +918,26 @@ items:
       items:
       - name: Overview  
         href: modernize/index.md
-      - name: Envision cloud modernization 
-        href: modernize/envision-cloud-modernization.md
-      - name: Evaluate modernization options 
-        href: modernize/evaluate-modernization-options.md
-      - name: Commit to modernization plan 
-        href: modernize/commit-to-modernization-plan.md      
-      - name: DevOps practices 
-        href: modernize/devops-practices-modernization.md
-      - name: Data platforms
-        href: modernize/data-platform-modernization.md
-      - name: Application platforms
-        href: modernize/application-platform-modernization.md
-      - name: Developer alignment
-        href: modernize/developer-alignment-modernization.md
-      - name: Testing and architecture
-        href: modernize/testing-architecture-modernization.md
+      - name: Business alignment
+        items:
+        - name: Envision cloud modernization 
+          href: modernize/business-alignment/envision-cloud-modernization.md
+        - name: Evaluate modernization options 
+          href: modernize/business-alignment/evaluate-modernization-options.md
+        - name: Commit to modernization plan 
+          href: modernize/business-alignment/commit-to-modernization-plan.md      
+      - name: Modernization disciplines
+        items:
+        - name: DevOps practices 
+          href: modernize/modernize-disciplines/devops-practices-modernization.md
+        - name: Data platforms
+          href: modernize/modernize-disciplines/data-platform-modernization.md
+        - name: Application platforms
+          href: modernize/modernize-disciplines/application-platform-modernization.md
+        - name: Developer alignment
+          href: modernize/modernize-disciplines/developer-alignment-modernization.md
+        - name: Testing and architecture
+          href: modernize/modernize-disciplines/testing-architecture-modernization.md
       - name: Best practices
         items: 
         - name: Tools to empower adoption in Azure 

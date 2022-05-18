@@ -3,7 +3,7 @@ title: Modernization commitment
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/18/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -38,7 +38,7 @@ This section of the Cloud Adoption Framework teaches readers how to maximize the
 - **Deploy workloads:** Replicate functionality in the cloud using IaaS, PaaS, cloud-native, or other modernization solutions.
 - **Release workloads:** Test, optimize, document, and review. Release by handing off for governance, management, and security.
 
-:::image type="content" source="../_images/modernize/methodology.png" alt-text="Diagram that shows the Cloud Adoption Framework modernization effort.":::
+:::image type="content" source="../../_images/modernize/methodology.png" alt-text="Diagram showing the Cloud Adoption Framework modernization efforts required.":::
 
 Evaluate the efforts that are required for establishing epics, creating user stories and tasks, determining iterations, and aligning your priorities.
 
@@ -60,24 +60,21 @@ Workloads undergo a primary transformation. For each primary transformation, the
 
 Workloads that have undergone any significant architectural change go back through the [Well Architected Framework review](/azure/architecture/framework/).
 
-IN PROGRESS
-
 Consider how you'd prioritize your workloads, first, second, third, and so on.
 
-:::image type="content" source="../_images/modernize/existing-datacenters.png" alt-text="...":::
+:::image type="content" source="../../_images/modernize/existing-datacenters.png" alt-text="Graphic showing an example of existing datacenters.":::
 
-:::image type="content" source="../_images/modernize/workload-clusters.png" alt-text="...":::
+:::image type="content" source="../../_images/modernize/workload-clusters.png" alt-text="Graphic showing an example of workload clusters.":::
 
 Align your motivations with workloads.
 
-:::image type="content" source="../_images/modernize/align-workload-motivations.png" alt-text="...":::
-
+:::image type="content" source="../../_images/modernize/align-workload-motivations.png" alt-text="Graphic showing an example of aligning your motivations with workloads.":::
 
 ## Modernization disciplines
 
 Align your motivations with the Modernization disciplines.
 
-:::image type="content" source="../_images/modernize/align-motivations-disciplines.png" alt-text="...":::
+:::image type="content" source="../../_images/modernize/align-motivations-disciplines.png" alt-text="...":::
 
 ### Personnel
 
@@ -93,6 +90,6 @@ If you're starting your cloud adoption journey with the Migrate horizon, you mig
 
 ## Commitment
 
-:::image type="content" source="../_images/modernize/commitment-to-modernization-plan.png" alt-text="Graphic showing modernization plan commitment flow.":::
+:::image type="content" source="../../_images/modernize/commitment-to-modernization-plan.png" alt-text="Graphic showing modernization plan commitment flow.":::
 
 Stakeholders are committed to move forward with prioritized modernization plan.

@@ -1,9 +1,9 @@
 ---
 title: Data platform modernization
-description: TODO - data platform modernization.
+description: Understand and evaluate options for maturing your underlying data platforms for modernization.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/18/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -12,7 +12,7 @@ keywords: collect data, migrate data, data migration, data modernization
 ---
 # Data platform modernization
 
-Companies often have different kinds of existing data that they can [democratize](../innovate/considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data modernization and data migration to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your modernization by using the [Modernize methodology](index.md).
+Companies often have different kinds of existing data that they can [democratize](../../innovate/considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data modernization and data migration to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your modernization by using the [Modernize methodology](index.md).
 
 This article outlines a series of data platform modernization approaches that align with the Modernize methodology. You can best align these approaches to the standard [database migration toolchain](/data-migration/).
 
@@ -22,7 +22,7 @@ During the assess workloads phase, a cloud adoption team assesses the current st
 
 When you migrate and modernize on-premises data, the most common Azure tool choice is the [Azure Database Migration Service](/azure/dms/). This service is part of the broader [Azure Migrate hub](/azure/migrate/migrate-services-overview). For existing SQL Server data sources, [Data Migration Assistant](/sql/dma/dma-overview) helps you assess and migrate data structures.
 
-:::image type="content" source="../_images/modernize/migration-journey-tools-and-services.png" alt-text="Diagram showing the tools and services for your migration journey.":::
+:::image type="content" source="../../_images/modernize/migration-journey-tools-and-services.png" alt-text="Diagram showing the tools and services for your migration journey.":::
 
 To support Oracle and NoSQL data migrations, you can also use [Azure Database Migration Service](/azure/dms/) for certain types of source-to-target databases, like migrating Oracle databases to PostgreSQL and MongoDB databases to Azure Cosmos DB. More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine (VM) options based on infrastructure as a service (IaaS).
 
@@ -36,6 +36,8 @@ Before you use the [Azure Database Migration Service](/azure/dms/) for data migr
 - Size of databases
 - Acceptable business downtime during the migration pro
 - Future platform and version that best supports your hypothesis or target
+
+:::image type="content" source="../../_images/modernize/automate-database-modernization.png" alt-text="Graphic showing the Database Migration Service works with PowerShell to automatically modernize a list of databases.":::
 
 ### Data migration types
 
@@ -55,3 +57,5 @@ The following data migration type table shows source and target pairs to review 
 | PostgreSQL | Azure Database for PostgreSQL | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-postgresql-azure-postgresql-online) |
 | MongoDB | Azure Cosmos DB API for MongoDB | Database Migration Service | Offline | [Tutorial](/azure/dms/tutorial-mongodb-cosmos-db) |
 | MongoDB | Azure Cosmos DB API for MongoDB | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-mongodb-cosmos-db-online) |
+
+:::image type="content" source="../../_images/modernize/database-migration-process-overview.png" alt-text="Graphic showing process overview for database migration.":::

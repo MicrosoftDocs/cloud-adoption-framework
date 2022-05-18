@@ -3,7 +3,7 @@ title: Approaches to cloud migration and modernization
 description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/11/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -14,7 +14,7 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 Where should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first?
 
-Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa. You could even modernize in parallel to migration. If you decide to modernize in parallel to migration, you'd want to modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
+Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa. You could even modernize in parallel to migration. If you decide to modernize in parallel to migration, you'd want to modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/business-alignment/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
 
 :::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
@@ -95,4 +95,4 @@ Usually about 35% of any on premises environment gets retired, rightsized, or el
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Evaluate your modernization options](../modernize/evaluate-modernization-options.md)
+> [Evaluate your modernization options](../modernize/business-alignment/evaluate-modernization-options.md)

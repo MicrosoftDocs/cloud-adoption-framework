@@ -3,7 +3,7 @@ title: Application platform modernization
 description: Learn how to evaluate your options for adopting modern application platforms during cloud adoption-related modernization.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/18/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -28,7 +28,7 @@ This article outlines how to evaluate your options for adopting modern applicati
 
 Adopting a modern application platform with Azure means that your apps run anywhere with limitless scale, intelligence, insights, and machine learning.
 
-:::image type="content" source="../_images/modernize/future-state-vision.png" alt-text="Diagram showing intelligent cloud-native applications as future state vision.":::
+:::image type="content" source="../../_images/modernize/future-state-vision.png" alt-text="Diagram showing intelligent cloud-native applications as future state vision.":::
 
 **Cloud-native intelligent apps:** You can package application code and dependencies in containers, deploy as microservices, harness the power of data & AI, and build and deploy with developer tools and DevOps. These apps are typically powered by elastic infrastructure that adjusts to the varying load, supports zero downtime rollouts, and provides low latency access to data worldwide. Azure empowers your teams with the most advanced machine learning capabilities to build responsible AI solutions on your terms. Building net new cloud native applications, we have a database that fits your specific use case and needs.
 
@@ -46,7 +46,7 @@ For more information, see the following articles:
 
 While lift and shift to IaaS is a viable path to the cloud for many applications, this route won't unlock all possible cloud benefits. If you're looking to get the most from the cloud and tap into advanced capabilities like improved resiliency, global scale, or maximum agility, cloud native applications are built from the ground up and optimized for cloud scale and performance. They’re based on microservices architectures and they use Azure Managed Services, taking advantage of continuous delivery to achieve reliability and faster time to market.
 
-:::image type="content" source="../_images/modernize/app-platform-infrastructure-abstraction.png" alt-text="Graphic showing infrastructure abstraction as an app platform modernization option.":::
+:::image type="content" source="../../_images/modernize/app-platform-infrastructure-abstraction.png" alt-text="Graphic showing infrastructure abstraction as an app platform modernization option.":::
 
 Azure is a turn-key delivery platform for modern applications that offers a broad range of managed services for all application scenarios. Azure allows you to choose the best approach for your cloud-native applications, like:
 
@@ -62,9 +62,9 @@ You can also use a combination of all of these services. For more information, s
 
 - [.NET -> AKS](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes)
 - [Java -> AKS](/azure/migrate/tutorial-app-containerization-java-kubernetes)
-- [Identity Baseline](../_images/govern/identity-baseline.png)
+- [Identity Baseline](../../_images/govern/identity-baseline.png)
 - [.NET -> App Service](/azure/migrate/tutorial-app-containerization-aspnet-app-service)
-- [Resource Consistency](../_images/govern/resource-consistency.png)
+- [Resource Consistency](../../_images/govern/resource-consistency.png)
 - [Java -> App Service](/azure/migrate/tutorial-app-containerization-java-app-service)
 - [CI/CD Day 2](/azure/migrate/tutorial-app-containerization-azure-pipeline)
 
@@ -72,7 +72,7 @@ You can also use a combination of all of these services. For more information, s
 
 To accelerate application platform modernization, use the [AKS Landing Zone accelerator](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone). This ready-made deployment experience supports containerization of multiple workloads.
 
-:::image type="content" source="../_images/modernize/azure-landing-zones.png" alt-text="Graphic showing three landing zone implementation options.":::
+:::image type="content" source="../../_images/modernize/azure-landing-zones.png" alt-text="Graphic showing three landing zone implementation options.":::
 
 Each [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) supports one or more applications in your cloud portfolio using the inherited controls.
 
@@ -81,7 +81,7 @@ Landing zone implementations establish an enterprise control plane by defining e
 For more information about planning and understanding your modernization options, see the following articles:
 
 - [Plan for modern application platforms](/azure/cloud-adoption-framework/scenarios/aks/plan)
-- [Understand considerations and options for initial containers](../scenarios/aks/plan.md#considerations-for-initial-containers)
+- [Understand considerations and options for initial containers](../../scenarios/aks/plan.md#considerations-for-initial-containers)
 - [Compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json)
 - [Container options](/azure/cloud-adoption-framework/scenarios/aks/plan)<!--(influences core app plat decisions)-->
 - <!--Link to Understanding modernize disciplines-->
@@ -93,19 +93,19 @@ Today, your workloads are on VMs. When you modernize, you can allow workload por
 
 In the following image, you see an example of quick modernization flow without a single line of code.
 
-:::image type="content" source="../_images/modernize/quick-modernization-without-code.png" alt-text="Graphic showing process of modernization without a single line of code.":::
+:::image type="content" source="../../_images/modernize/quick-modernization-without-code.png" alt-text="Graphic showing process of modernization without a single line of code.":::
 
 - Run any container of your choice on Azure
 - Build your own or use a prescriptive platform
 - Faster app deployment with integrated Visual Studio family of products and Visual Studio Team Server
 
-:::image type="content" source="../_images/modernize/dotnet-to-azure-app-service-azure-sql.png" alt-text="Graphic showing Azure server and database migration flow examples.":::
+:::image type="content" source="../../_images/modernize/dotnet-to-azure-app-service-azure-sql.png" alt-text="Graphic showing Azure server and database migration flow examples.":::
 
 ### Use microservices
 
 Microservices architecture means breaking large software projects into smaller, independent, and loosely coupled modules. The range of Azure offerings gives you the flexibility to implement independent services with a framework designed for distributed systems, using containers, or with a serverless approach.
 
-:::image type="content" source="../_images/modernize/rearchitect-with-microservices.png" alt-text="Graphic showing monolithic versus microservices.":::
+:::image type="content" source="../../_images/modernize/rearchitect-with-microservices.png" alt-text="Graphic showing monolithic versus microservices.":::
 
 When you use microservices:
 
@@ -120,7 +120,7 @@ When you use microservices:
 
 At the center of the Serverless platform, are our compute offerings: Azure Functions and Azure Logic Apps. Azure Functions is an event-based Serverless compute experience that helps you accelerate your development. Logic Apps is a powerful orchestration tool. It enables building a Serverless app in minutes by orchestrating multiple functions using a visual workflow tool.
 
-:::image type="content" source="../_images/modernize/serverless-application-platform-components.png" alt-text="Graphic showing serverless app plat components.":::
+:::image type="content" source="../../_images/modernize/serverless-application-platform-components.png" alt-text="Graphic showing serverless app plat components.":::
 
 Let's say you have your apps up and running using Serverless. Congratulations! Next, collect intelligence from different apps across platforms to action on. The following essential components are core to building Serverless applications:
 

@@ -3,7 +3,7 @@ title: Establish adoption horizons
 description: Use the Cloud Adoption Framework for Azure to understand the adoption horizons necessary to identify and prioritize, based on your adoption goals.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/14/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -23,25 +23,25 @@ Determine which horizon best fits your adoption goals and which business motivat
 
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
 
-It's a good idea to minimize the amount of effort that you spend on multiple horizons at once to limit complexity and unnecessary work and slowdowns. For more information, see [Application portfolio migration and modernization approach](migrate-modernize-approaches.md#application-portfolio-migration-and-modernization-approach)
+To limit complexity and unnecessary work and slowdowns, minimize the amount of effort that you spend on multiple horizons at once. For more information, see [Application portfolio migration and modernization approach](migrate-modernize-approaches.md#application-portfolio-migration-and-modernization-approach)
 
 ## Migrate
 
-[Migration](../migrate/index.md) is about moving your apps and data to more cloud-native platforms. Your migration workloads require cost, architecture, and tooling evaluation, replication of functionality, and review and handoff for governance, management, and security. Migration ultimately results in improved operations as you exit the data center business.
+Cloud [migration](../migrate/index.md) is the process of moving applications, infrastructure, and data from one location, often a company's private, on-site ("on-premises") datacenter to a public cloud provider’s infrastructure. As an example, migrating an on-premises physical or virtual server to cloud infrastructure-as-a-service (IaaS). The main cloud migration benefits include reducing IT costs, enhancing security and resilience, and on-demand scale.
 
 ## Modernize
 
-[Modernization](../modernize/index.md) involves improving the design and function of your existing apps and databases. Your data and application platform infrastructure get vastly improved with new features and technical capabilities, resulting in reduced technical debt.
+Cloud [modernization](../modernize/index.md) is the process of updating existing (sometimes legacy) applications for newer computing approaches, including newer application frameworks and use of cloud-native technologies. This can be done using PaaS, Containers, Low code apps, and Database-as-a-Service architectures. Key benefits include app innovation, agility, developer velocity, and cost optimization.
 
 ## Innovate
 
-[Innovation](../innovate/index.md) involves engaging with and getting feedback from your customers, creating new solutions, and then applying those solutions. Developing new data plays unlocks new technical skills, resulting in repositioned business and technical solutions to drive [business value](../innovate/business-value.md#what-is-business-value).
+[Innovation](../innovate/index.md) is the process of developing and applying ideas that improve the way things are done or what can be achieved. With focus on understanding your customer needs, you can rapidly invent and build inventions that shape how your customers interact with your products.
 
 ## Align horizons
 
-Most likely, you're going to visit all three horizons during your cloud adoption journey. Based on your goals and priorities, you can determine which sequence works best for you. Do you want to [modernize or migrate first](migrate-modernize-approaches.md)? How will you [evaluate your modernization options](../modernize/evaluate-modernization-options.md)?
-<!--need another sentence-->
+Most likely, you're going to visit all three horizons during your cloud adoption journey. Based on your goals and priorities, you can determine which sequence works best for you. Do you want to [modernize or migrate first](migrate-modernize-approaches.md)? How will you [evaluate your modernization options](../modernize/business-alignment/evaluate-modernization-options.md)?
+
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Envision cloud modernization](../modernize/envision-cloud-modernization.md)
+> [Envision cloud modernization](../modernize/business-alignment/envision-cloud-modernization.md)

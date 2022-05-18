@@ -3,7 +3,7 @@ title: Envision cloud modernization
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/18/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -14,9 +14,9 @@ keywords: envision, motivations, approach, modernization, cloud adoption framewo
 
 Before you begin modernization efforts, it's important to share a clear *vision* of your goals and objectives. Moving forward without a vision is like sailing a ship without a compass: The ship is going somewhere, but where? Do the crew members know where they're going? Will the passengers arrive to where they paid to go?
 
-Envisioning modernization starts with understanding your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations help you envision and establish your approach to the [modernization horizons](../adopt/index.md).
+Envisioning modernization starts with understanding your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations help you envision and establish your approach to the [modernization horizons](../../adopt/index.md).
 
-Every cloud adoption plan contains three horizons: [Migrate](../get-started/migrate.md), [Modernize](index.md), and [Innovate](../get-started/innovate.md). These horizons align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../adopt/migrate-modernize-approaches.md).
+Every cloud adoption plan contains three horizons: [Migrate](../../get-started/migrate.md), [Modernize](index.md), and [Innovate](../../get-started/innovate.md). These horizons align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../../adopt/migrate-modernize-approaches.md).
 
 The following steps help you envision your modernization strategy and end state, based on your strategic objectives.
 
@@ -24,10 +24,10 @@ The following steps help you envision your modernization strategy and end state,
 
 There's a dividing line that breaks up the motivations of going to the cloud into the following modernization triggers for focus.
 
-:::image type="content" source="../_images/modernize/modernization-triggers.png" alt-text="Image showing triggers for modernization.":::
+:::image type="content" source="../../_images/modernize/modernization-triggers.png" alt-text="Image showing triggers for modernization.":::
 
 The Modernize methodology in the Cloud Adoption Framework focuses on motivations aligned to technology.
-It's likely that many of the following triggers apply to your [Motivations for cloud adoption](../strategy/motivations.md). Identify which of the following triggers signal that you're looking to modernize and identify inside your business what's most important to you. Likely, multiple triggers apply.
+It's likely that many of the following triggers apply to your [Motivations for cloud adoption](../../strategy/motivations.md). Identify which of the following triggers signal that you're looking to modernize and identify inside your business what's most important to you. Likely, multiple triggers apply.
 
 - **Enable hybrid work:** Hybrid helps you to scale and move across networks, which allows internal people to jump in and get to applications the way they need to, and when they need to. Hybrid increases developer agility and productivity.
 - **Faster time to market:** PaaS gives you faster acceleration to get an application and application updates out to market, especially when you couple with some DevOps strategies.
@@ -41,7 +41,7 @@ When you know *why* you're moving to the cloud, you can make better technical de
 
 ## Step 2: Flag workloads, which could better deliver on those motivations if they were to be modernized
 
-Modernization of your workloads can help you achieve the [common modernization motivations](../strategy/business-outcomes/data-innovations.md#data-innovations).
+Modernization of your workloads can help you achieve the [common modernization motivations](../../strategy/business-outcomes/data-innovations.md#data-innovations).
 
 It's critical that you understand the limitations of your current state workloads and the best paths toward modernization. This understanding helps you set realistic expectations. *What are you moving?* We don't modernize assets, we modernize workloads, so conceptually reorganize your infrastructure, data stores, and apps into workloads. Then, you can start aligning or grouping workloads based on how they impact the strategy.
 
@@ -50,10 +50,10 @@ It's critical that you understand the limitations of your current state workload
 If you've already done a migration and followed the "plan" best practices, you've likely done this exercise. If not (if you're starting with a modernization action), do the following tasks:
 
 - See [Cloud rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization) to understand what cloud rationalization is. You'll also learn how to conceptually break down your environment, make sense of dependencies and cross references, and so on.
-- [Perform a digital estate assessment](../plan/contoso-migration-assessment.md) to help map assets to workloads.
-- [Assess workloads and refine plans](/migrate/azure-migration-guide/assess.md).
-- [Review migration and modernization approaches](../adopt/migrate-modernize-approaches.md) to understand the three adoption horizons and how to prioritize.
-- Review the adoption horizons, [Migrate](./../migrate/index.md), [Modernize](index.md), and [Innovate](../innovate/index.md) to help you prioritize your goals.
+- [Perform a digital estate assessment](../../plan/contoso-migration-assessment.md) to help map assets to workloads.
+- [Assess workloads and refine plans](../../migrate/azure-migration-guide/assess.md).
+- [Review migration and modernization approaches](../../adopt/migrate-modernize-approaches.md) to understand the three adoption horizons and how to prioritize.
+- Review the adoption horizons, [Migrate](./../../migrate/index.md), [Modernize](index.md), and [Innovate](../../innovate/index.md) to help you prioritize your goals.
 
 ## Step 3: Define & track *clusters* of workloads based on the motivation
 
@@ -61,19 +61,19 @@ In any existing datacenter, you have lots of information from different data sou
 
 Generally, a workload is a combination of apps and data coming together to solve a business problem. You'll want to classify those assets that you have in your data center today. The following image shows an example of an existing data center's apps, infrastructure, and data.
 
-:::image type="content" source="../_images/modernize/existing-datacenters.png" alt-text="Graphic showing existing data center.":::
+:::image type="content" source="../../_images/modernize/existing-datacenters.png" alt-text="Graphic showing existing data center.":::
 
 Inside of a workload classification system, if you've already done a migration and you followed the best practices in your plan, you already have clusters of workloads, like in the following image.
 
-:::image type="content" source="../_images/modernize/workload-clusters.png" alt-text="Graphic showing workload clusters.":::
+:::image type="content" source="../../_images/modernize/workload-clusters.png" alt-text="Graphic showing workload clusters.":::
 
 When you align groups of workloads to your motivations, you have something to track and work against.
 
-:::image type="content" source="../_images/modernize/align-workload-motivations.png" alt-text="Image showing alignment of workload clusters with motivations.":::
+:::image type="content" source="../../_images/modernize/align-workload-motivations.png" alt-text="Image showing alignment of workload clusters with motivations.":::
 
 ## Next steps
 
 Once you've mapped your motivations to workloads, you'll need to determine your approach.
 
 > [!div class="nextstepaction"]
-> [Migration and modernization approaches](../adopt/migrate-modernize-approaches.md)
+> [Migration and modernization approaches](../../adopt/migrate-modernize-approaches.md)
