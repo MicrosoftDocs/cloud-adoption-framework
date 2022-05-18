@@ -95,6 +95,12 @@ Cost transparency is a critical management challenge faced by every large enterp
 
 - Use Azure Advisor to check recommendations for optimizing costs.
 
+- Establish charge back modal for better distribution of cost across organization.
+
+- Implement policy to prevent deploying resources not authorized to deployed in your organization environment.
+
+- Established regular schedule and cadence to review cost and right size resources for workloads.
+
 ## Subscriptions recommendations
 
 ### Subscription organization and governance recommendations
