@@ -986,107 +986,15 @@ items:
               href: /azure/azure-monitor/app/website-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Monitor VMs hosting traditional applications
               href: /azure/azure-monitor/vm/monitor-virtual-machine?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Migration scenarios
+      - name: Modernization scenarios
         items:
-        - name: Overview
-          href: scenarios/index.md
-        - name: SQL Server workloads
-          items:
-          - name: Migrate SQL Server databases to Azure
-            href: migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md
-          - name: Rehost an application on Azure VMs and Azure SQL Managed Instance
-            href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
-        - name: Data platforms
-          items:
-          - name: Overview
-            href: migrate/azure-best-practices/sql-migration.md
-          - name: Azure Database Migration Guide
-            items:
-            - name: Refactor SQL Server to Azure SQL Database
-              href: /data-migration/
-            - name: Refactor SQL Server to Azure SQL Managed Instance
-              href: /data-migration/
-            - name: Refactor SQL Server to SQL Server on Azure VMs
-              href: /data-migration/
-            - name: Refactor SQL Server to Azure SQL Data Warehouse
-              href: /data-migration/
-            - name: MySQL
-              items:
-              - name: Refactor MySQL to Azure SQL Database
-                href: /data-migration/
-              - name: Refactor MySQL to Azure Database for MySQL
-                href: /data-migration/
-            - name: PostgreSQL
-              items:
-              - name: Refactor PostgreSQL to Azure Database for PostgreSQL
-                href: /data-migration/
-            - name: MariaDB
-              items:
-              - name: Refactor MariaDB to Azure Database for MariaDB
-                href: /data-migration/
-            - name: MongoDB
-              items:
-              - name: Refactor MongoDB to Azure Cosmos DB
-                href: /data-migration/
-            - name: Cassandra
-              items:
-              - name: Refactor Cassandra to Azure Cosmos DB
-                href: /data-migration/
-            - name: Oracle
-              items:
-              - name: Refactor Oracle to Azure SQL Database
-                href: /data-migration/
-              - name: Refactor Oracle to Azure Database for PostgreSQL
-                href: /data-migration/
-              - name: Rearchitect Oracle to Azure SQL Data Warehouse
-                href: /data-migration/
-            - name: DB2
-              items:
-              - name: Refactor DB2 to Azure SQL Database
-                href: /data-migration/
-            - name: SAP ASE
-              items:
-              - name: Refactor SAP ASE to Azure SQL Database
-                href: /data-migration/
-            - name: Access
-              items:
-              - name: Refactor Access database to Azure SQL Database
-                href: /data-migration/
-        - name: Modernize scenarios
-          items:
-          - name: Refactor an on-premises apps
-            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
-          - name: Refactor a Linux app
-            href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
+        - name: Modernization scenarios list
+          href: modernize/modernize-scenarios/modernization-scenarios.md
+        - name: Refactor an on-premises apps
+          href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md?bc=/azure/cloud-adoption-framework/modernize/_bread/toc.json&toc=/azure/cloud-adoption-framework/modernize/toc.json
+        - name: Refactor a Linux app
+          href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md?bc=/azure/cloud-adoption-framework/modernize/_bread/toc.json&toc=/azure/cloud-adoption-framework/modernize/toc.json
           
-          - name: Azure Database Migration Service tutorials
-            items:
-            - name: Azure Database Migration Service overview
-              href: /azure/dms/dms-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate SQL Server to Azure SQL Database offline
-              href: /azure/dms/tutorial-sql-server-to-azure-sql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate SQL Server to Azure SQL Database online
-              href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate SQL Server to Azure SQL Managed Instance offline
-              href: /azure/dms/tutorial-sql-server-to-managed-instance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate SQL Server to Azure SQL Managed Instance online
-              href: /azure/dms/tutorial-sql-server-managed-instance-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate Amazon RDS SQL Server to Azure SQL Database or Azure SQL Managed Instance online
-              href: /azure/dms/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate MySQL to Azure Database for MySQL online
-              href: /azure/dms/tutorial-mysql-azure-mysql-offline-portal?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate Amazon RDS MySQL to Azure Database for MySQL online
-              href: /azure/dms/tutorial-mysql-azure-mysql-offline-portal?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate PostgreSQL to Azure Database for PostgreSQL online
-              href: /azure/dms/tutorial-postgresql-azure-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate Amazon RDS PostgreSQL to Azure Database for PostgreSQL online
-              href: /azure/dms/tutorial-rds-postgresql-server-azure-db-for-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB offline
-              href: /azure/dms/tutorial-mongodb-cosmos-db?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB online
-              href: /azure/dms/tutorial-mongodb-cosmos-db-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate Oracle to Azure Database for PostgreSQL online
-              href: /azure/postgresql/howto-migrate-from-oracle?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Azure Database Migration Guide
           items:
             - name: Refactor SQL Server to Azure SQL Database

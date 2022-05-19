@@ -3,7 +3,7 @@ title: Modernize your apps and data
 description: Learn how cloud adoption-related modernization can provide business value by unlocking new technical skills and expanded business capabilities.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/18/2022
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -13,6 +13,26 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 # Modernize your apps and data
 
 When your cloud adoption journey includes modernization, you'll be repackaging, redesigning, and rebuilding your apps and data. Modernization helps you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
+
+The following exercises help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
+
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | [Align your modernization efforts to business needs.](business-alignment/index.md) |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | [Build skills and adopt repeatable processes for modernizing waves of workloads.](modernize-disciplines/index.md) |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | Consult the [Modernization Scenarios](modernization-scenarios.md) to find examples of repeatable processes based on the technologies you're modernizing. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | Review [best practices](modernize-best-practices/improve-devops-practices.md) to find new ways to improve your processes and accelerate modernization. |
+
+## Methodology overview
+
+This methodology is designed to help you modernize a portfolio of applications at scale using repeatable processes. For modernization of individual workloads and deeper review of architectural decisions, consult W Architecture Framework (WAF).
+
+:::image type="content" source="../_images/modernize/modernize-methodology-graphic.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
+
+To further understand the modernization methodology, begin with the following article series, based on your role:
+
+- Decision makers: [Business alignment](business-alignment/index.md)
+- Technical readers: [Modernization disciplines](modernize-disciplines/index.md)
 
 ## Repackage apps and databases for speed and productivity
 
@@ -28,18 +48,9 @@ Consider rebuilding if your existing apps have limited functionality or lifespan
 
 Modernization is a continuous process that involves significant organizational change management spanning people, process, and technology. Taking a holistic approach helps you navigate the journey successfully and helps ensure that your organization realizes new benefits—including efficiency, agility, and scale, after your workloads are running in the cloud.
 
-The following exercises help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
-
-| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
-|--|--|
-| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> Start with a solid plan. [Define and document your motivations](../strategy/motivations.md) for modernizing, create a [business case](../strategy/cloud-migration-business-case.md), align stakeholders, and [build a plan](../plan/plan-intro.md) that breaks out modernization projects. |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> <!--What should I replace this with?-->[Review the five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): You can modernize at any time—before, during, or after migrating your workloads. Iteratively migrate and modernize in waves to improve design, function, and build for your apps and data. |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Modernization examples](business-alignment/evaluate-modernization-options.md#modernization-examples)]: Use example scenarios to identify common tools and approaches to modernization. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Govern, secure, and manage cloud environments](../ready/azure-setup-guide/manage-access.md): <!--Is this the right fourth step?  What can we link to here?--> |
-
 ## Modernization examples
 
-Modify or extend your apps to further scale and optimize for cloud architectures. Take advantage of Azure platform and service capabilities such as built-in security, patching, high availability, and auto-scaling. Typical projects include:
+Modify or extend your apps to further scale and optimize for cloud architectures. Take advantage of Azure platform and service capabilities such as built-in security, patching, high availability, and auto-scaling. Typical projects include the following examples:
 
 - [Modernize on-premises .NET apps by using Azure App Service and Azure SQL Managed Instance](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md)
 - [Modernize on-premises .NET apps by using Azure App Service and Azure SQL Database](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md)
