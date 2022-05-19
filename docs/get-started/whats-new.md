@@ -18,6 +18,34 @@ This framework is collaboratively built with customers, partners, and internal M
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## May 2022
+
+### App Service landing zone accelerator
+
+The new App Service landing zone accelerator provides recommendations and considerations for that can help accelerate adoption of App Service. The architectural approach can be used in greenfield scenarios as design guidelines and in brownfield scenarios as an assessment. The scenario covers both multi-tenanted App Service as well as App Service Environment deployments. The reference implementation covers an architecture using an internal App Service Environment v3 for line of business applications.
+
+Get started with this landing zone accelerator using the following links:
+
+- [Identity and access management](../scenarios/app-platform/app-services/identity-and-access-management.md)
+- [Network topology and connectivity](../scenarios/app-platform/app-services/network-topology-and-connectivity.md)
+- [Security](../scenarios/app-platform/app-services/security.md)
+- [Management](../scenarios/app-platform/app-services/management.md)
+- [Governance](../scenarios/app-platform/app-services/governance.md)
+- [Platform automation and DevOps](../scenarios/app-platform/app-services/platform-automation-and-devops.md)
+
+### API Management landing zone accelerator
+
+The API Management landing zone accelerator provides recommendations and considerations that can help accelerate adoption of API Management. The architectural approach can be used in greenfield scenarios as design guidelines and in brownfield scenarios as an assessment. The reference implementation covers an architecture where customers hope to host both internal and external facing APIs on an internal API Management instance with an Application Gateway as the web application firewall in a single region deployment.
+
+Get started with this landing zone accelerator using the following links:
+
+- [Identity and access management](../scenarios/app-platform/api-management/identity-and-access-management.md)
+- [Network topology and connectivity](../scenarios/app-platform/api-management/network-topology-and-connectivity.md)
+- [Security](../scenarios/app-platform/api-management/security.md)
+- [Management](../scenarios/app-platform/api-management/management.md)
+- [Governance](../scenarios/app-platform/api-management/governance.md)
+- [Platform automation and DevOps](../scenarios/app-platform/api-management/platform-automation-and-devops.md)
+
 ## April 2022
 
 ### Cloud-scale analytics 
@@ -223,60 +251,5 @@ To help you plan your Azure Storage migration, we've provided guidance in a new 
 
 - Migration of unstructured data, such as files and objects.
 - Migration of block-based devices, such as disks and storage area networks.
-
-## March 2021
-
-This release is the largest update of the framework yet, adding a number of new broad-reaching collections of guidance that span across the entire framework.
-
-### Adoption journeys
-
-Most notable in this release is the addition of adoption journeys, which provide a short, consumable overlay or lenses that rest on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance in the Cloud Adoption Framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), the [Azure Architecture Center](/azure/architecture/), [Microsoft Learn](/learn/), and other [Microsoft documentation](/) to the adoption of specific technology platforms. The following table provides links to the overview page for each of the new journeys:
-
-| Journey | Description |
-|--|--|
-| [Hybrid&nbsp;and&nbsp;multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
-| [Modern containers](../scenarios/app-platform/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
-| [SAP on Azure](../scenarios/sap/index.md) | As part of our One Migrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
-
-### Cloud economics
-
-Building on feedback and lessons learned, this is our first step to refresh the [Strategy methodology](../strategy/index.md) by integrating Microsoft's [cloud economics program](https://azure.microsoft.com/overview/cloud-economics/).
-
-We've updated the introduction to each category of business outcomes with references to case studies on cloud economics, demonstrating how organizations achieve the related business objective. The refreshed introductions with illustrative case studies include:
-
-- [Fiscal outcomes](../strategy/business-outcomes/fiscal-outcomes.md)
-- [Agility outcomes](../strategy/business-outcomes/agility-outcomes.md)
-- [Global reach outcomes](../strategy/business-outcomes/reach-outcomes.md)
-- [Customer engagement outcomes](../strategy/business-outcomes/engagement-outcomes.md)
-- [Performance outcomes](../strategy/business-outcomes/performance-outcomes.md)
-- [Sustainability goals](../strategy/business-outcomes/sustainability.md)
-
-### Enterprise-scale updates
-
-The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/landing-zone/design-area/resource-org.md) in Azure to meet cloud governance requirements.
-
-### Antipatterns
-
-Companies often miss important steps in their cloud adoption journey. The new [cloud adoption antipatterns](../antipatterns/antipatterns-to-avoid.md) guidance highlights common customer pain points, what skipped step led to that pain, and the fastest path to recovery. The antipatterns are distributed throughout each methodology, but a top 10 list is available in the getting started section of the framework.
-
-### AI + machine learning
-
-When planning an Azure Machine Learning deployment for an enterprise environment, there are common decision points that affect how you create the workspaces. We've published a new article, [Organize and set up Azure Machine Learning environments](../ready/azure-best-practices/ai-machine-learning-resource-organization.md), that highlights these decision areas and the benefits of each:
-
-- **Team structure:** How your machine learning teams are organized and collaborate on a project's given use case and data segregation, or cost management requirements.
-- **Environments:** The environments used as part of your development and release workflow to segregate development from production.
-- **Region:** The location of your data and the intended audience for your machine learning solution.
-
-We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
-
-## January 2021
-
-To help you accelerate adoption and innovation, we've added new information about using GitHub and updated best practices for machine learning. We've published a new article and video to help you choose the best landing zone.
-
-| Article | Description |
-|--|--|
-| [How&nbsp;GitHub&nbsp;accelerates&nbsp;cloud&nbsp;adoption](../scenarios/github-velocity/index.md) | This article outlines the benefits of using GitHub to accelerate cloud adoption by taking advantage of open-source assets, collaborative development environments, automation and security features. |
-| [Best practices for machine learning](../innovate/best-practices/machine-learning.md) | We've updated and expanded the best practice guidance for machine learning. Included in the best practices are: <br><br> <li> [How to approach machine learning operations](../innovate/best-practices/how-to-approach-mlops.md) and the [MLOps process](../innovate/best-practices/mlops-process.md) <li> [Machine learning security](../innovate/best-practices/ml-security.md) <li> [Machine learning inference and deployment](../innovate/best-practices/ml-deployment-inference.md) <li> [Determine compute instances for your model](../innovate/best-practices/dev-train-comp-instances-for-ml.md) <li> [Set up machine learning workspaces](../innovate/best-practices/set-up-ml-workspaces.md) <li> [Responsible and trusted AI](../innovate/best-practices/trusted-ai.md) |
-| [Choose&nbsp;a&nbsp;landing&nbsp;zone&nbsp;option](../ready/landing-zone/choose-landing-zone-option.md) | Microsoft offers two implementation options for landing zones: *Start small and expand* and *Enterprise-scale*. Use this new article to review both options and choose the right approach for your organization. |
 
 <!-- docutune:ignoreNextStep -->
