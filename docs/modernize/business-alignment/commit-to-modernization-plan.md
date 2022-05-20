@@ -38,7 +38,7 @@ This section of the Cloud Adoption Framework teaches readers how to maximize the
 - **Deploy workloads:** Replicate functionality in the cloud using IaaS, PaaS, cloud-native, or other modernization solutions.
 - **Release workloads:** Test, optimize, document, and review. Release by handing off for governance, management, and security.
 
-:::image type="content" source="../../_images/modernize/methodology.png" alt-text="Diagram showing the Cloud Adoption Framework modernization efforts required.":::
+:::image type="content" source="../../_images/modernize/modernize-methodology-graphic.png" alt-text="Diagram showing the Cloud Adoption Framework modernization efforts required.":::
 
 Evaluate the efforts that are required for establishing epics, creating user stories and tasks, determining iterations, and aligning your priorities.
 

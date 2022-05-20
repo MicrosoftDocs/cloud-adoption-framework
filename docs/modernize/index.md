@@ -20,7 +20,7 @@ The following exercises help establish the iterative processes to assess, migrat
 |--|--|
 | <br> :::image type="icon" source="../_images/icons/1.png"::: | [Align your modernization efforts to business needs.](business-alignment/index.md) |
 | <br> :::image type="icon" source="../_images/icons/2.png"::: | [Build skills and adopt repeatable processes for modernizing waves of workloads.](modernize-disciplines/index.md) |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | Consult the [Modernization Scenarios](modernization-scenarios.md) to find examples of repeatable processes based on the technologies you're modernizing. |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | Consult the [Modernization Scenarios](modernize-scenarios/modernization-scenarios.md) to find examples of repeatable processes based on the technologies you're modernizing. |
 | <br> :::image type="icon" source="../_images/icons/4.png"::: | Review [best practices](modernize-best-practices/improve-devops-practices.md) to find new ways to improve your processes and accelerate modernization. |
 
 ## Methodology overview
