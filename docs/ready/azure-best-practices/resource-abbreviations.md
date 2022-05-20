@@ -49,7 +49,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule-`|
 | Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw-` |
-| NAT gateway | Microsoft.Network/natGateways | `ng` |
+| NAT gateway | Microsoft.Network/natGateways | `ng-` |
 | Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-`|
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr-` |
@@ -70,8 +70,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn-` |
 | VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst-` |
 | Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
-| Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
-| Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
+| Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf-` |
+| Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg-` |
 
 ## Compute and Web
 
@@ -81,20 +81,20 @@ This list provides recommended abbreviations for various Azure resource types to
 | App Service plan | `Microsoft.Web/serverFarms` | `plan-` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail-` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs-` |
-| Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
+| Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck-` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld-` |
-| Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
+| Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des-` |
 | Function app | `Microsoft.Web/sites` | `func-` |
-| Gallery | `Microsoft.Compute/galleries` | `gal` |
-| Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
-| Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
+| Gallery | `Microsoft.Compute/galleries` | `gal-` |
+| Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk-` |
+| Managed disk (data) | `Microsoft.Compute/disks` | `disk-` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf-` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns-` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap-` |
 | Static web app | `Microsoft.Web/staticSites` | `stapp-` |
-| Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
+| Virtual machine | `Microsoft.Compute/virtualMachines` | `vm-` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss-` |
-| VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
+| VM storage account | `Microsoft.Storage/storageAccounts` | `stvm-` |
 | Web app | `Microsoft.Web/sites` | `app-` |
 
 ## Containers
@@ -102,8 +102,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/entity | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks-` |
-| Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
-| Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
+| Container registry | `Microsoft.ContainerRegistry/registries` | `cr-` |
+| Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci-` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf-` |
 
 ## Databases
@@ -114,10 +114,10 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis-` |
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql-` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb-` |
-| Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
-| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
-| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
+| Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn-` |
+| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw-` |
+| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp-` |
+| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp-` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb-` |
@@ -127,8 +127,8 @@ This list provides recommended abbreviations for various Azure resource types to
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
-| Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
+| Storage account | `Microsoft.Storage/storageAccounts` | `st-` |
+| Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp-` |
 
 ## AI and Machine Learning
 
@@ -142,14 +142,14 @@ This list provides recommended abbreviations for various Azure resource types to
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
+| Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as-` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw-` |
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa-` |
-| Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
-| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
+| Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec-` |
+| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb-` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf-` |
-| Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
-| Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
+| Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls-` |
+| Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla-` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns-` |
 | Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh-` |
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd-` |
@@ -180,7 +180,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs-` |
-| SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
+| SignalR | `Microsoft.SignalRService/SignalR` | `sigr-` |
 
 ## Integration
 
