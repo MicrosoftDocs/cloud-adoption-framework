@@ -3,7 +3,7 @@ title: Envision cloud modernization
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/18/2022
+ms.date: 05/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -16,18 +16,18 @@ Before you begin modernization efforts, it's important to share a clear *vision*
 
 Envisioning modernization starts with understanding your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations help you envision and establish your approach to the [modernization horizons](../../adopt/index.md).
 
-Every cloud adoption plan contains three horizons: [Migrate](../../get-started/migrate.md), [Modernize](index.md), and [Innovate](../../get-started/innovate.md). These horizons align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migrate and modernization approaches](../../adopt/migrate-modernize-approaches.md).
+Every cloud adoption plan contains three horizons: [Migrate](../../get-started/migrate.md), [Modernize](index.md), and [Innovate](../../get-started/innovate.md). These horizons align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migration and modernization approaches](../../adopt/migrate-modernize-approaches.md).
 
 The following steps help you envision your modernization strategy and end state, based on your strategic objectives.
 
 ## Step 1: Understand your corporate & strategic motivations for modernization
 
-There's a dividing line that breaks up the motivations of going to the cloud into the following modernization triggers for focus.
+Some of the common modernization triggers include the need to deliver applications and features faster, urgent capacity needs, or a software or hardware refresh.
 
 :::image type="content" source="../../_images/modernize/modernization-triggers.png" alt-text="Image showing triggers for modernization.":::
 
-The Modernize methodology in the Cloud Adoption Framework focuses on motivations aligned to technology.
-It's likely that many of the following triggers apply to your [Motivations for cloud adoption](../../strategy/motivations.md). Identify which of the following triggers signal that you're looking to modernize and identify inside your business what's most important to you. Likely, multiple triggers apply.
+The modernize methodology in the Cloud Adoption Framework focuses on motivations aligned to technology.
+It's likely that many of the following triggers apply to your [motivations for cloud adoption](../../strategy/motivations.md). Identify which of the following triggers signal that you're looking to modernize and identify inside your business what's most important to you. Likely, multiple triggers apply.
 
 - **Enable hybrid work:** Hybrid helps you to scale and move across networks, which allows internal people to jump in and get to applications the way they need to, and when they need to. Hybrid increases developer agility and productivity.
 - **Faster time to market:** PaaS gives you faster acceleration to get an application and application updates out to market, especially when you couple with some DevOps strategies.

@@ -3,7 +3,7 @@ title: Application platform modernization
 description: Learn how to evaluate your options for adopting modern application platforms during cloud adoption-related modernization.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/18/2022
+ms.date: 05/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -26,7 +26,7 @@ This article outlines how to evaluate your options for adopting modern applicati
 
 ## Adopt modern application platform
 
-Adopting a modern application platform with Azure means that your apps run anywhere with limitless scale, intelligence, insights, and machine learning.
+Adopting a modern application platform with Azure means that your apps run anywhere with limitless scale, intelligence, insights, and machine learning. *What percentage of your applications currently leverage a microservices architecture?* *Are there specific compliance or country-specific data requirements?* *Do your apps handle any sensitive personally identifiable information?*
 
 :::image type="content" source="../../_images/modernize/future-state-vision.png" alt-text="Diagram showing intelligent cloud-native applications as future state vision.":::
 
@@ -50,13 +50,13 @@ While lift and shift to IaaS is a viable path to the cloud for many applications
 
 Azure is a turn-key delivery platform for modern applications that offers a broad range of managed services for all application scenarios. Azure allows you to choose the best approach for your cloud-native applications, like:
 
-- Containerize your applications and let Azure Managed Services handle container orchestration, provisioning, upgrading, and scaling cluster resources based on demand.
+- Containerize your applications and let Azure Managed Services handle container orchestration, provisioning, upgrading, and scaling cluster resources based on demand. *What has kept you from adopting containers?* *Do you currently deploy, or intend to deploy applications using containers on multi-cloud/hybrid environments?*
 - Simplify the development of distributed cloud applications and take advantage of an enterprise-grade microservices platform with built-in security and autoscaling.
 - Build cloud-native apps without the need to provision and manage infrastructure using a fully managed platform where scaling, availability, and performance are handled for you.
 
-One way of evaluating the different options is to look at productivity versus infrastructure control and the level of infrastructure abstraction. If you want to focus on your code and application functionality first, and not the underlying infrastructure, then options like Serverless or Azure App Service can be right for you. Here, the underlying infrastructure gets handled for you, which saves you time and allows you to focus only on what’s most important to you.
+One way of evaluating the different options is to look at productivity versus infrastructure control and the level of infrastructure abstraction. If you want to focus on your code and application functionality first, and not the underlying infrastructure, then options like Serverless or [Azure App Service](/rest/api/appservice/) can be right for you. Here, the underlying infrastructure gets handled for you, which saves you time and allows you to focus only on what’s most important to you.
 
-Alternatively, if you want to keep tighter control over infrastructure management, then options like containers and Kubernetes might be the best choice for you.
+Alternatively, if you want to keep tighter control over infrastructure management, then options like containers and [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) might be the best choice for you.
 
 You can also use a combination of all of these services. For more information, see the following articles:
 
@@ -88,10 +88,10 @@ For more information about planning and understanding your modernization options
 
 ## Migrate applications
 
-Today, your workloads are on VMs. When you modernize, you can allow workload portability between container hosts across hybrid, multicloud and the edge with diverse container orchestration options.
-[Azure Kubernetes Service](/services/kubernetes-service/) offers fully managed Kubernetes clusters for deployment, scaling, and management of containerized applications.
+Today, your workloads are on virtual machines (VMs). When you modernize, you can allow workload portability between container hosts across hybrid, multicloud, and the edge with diverse container orchestration options.
+[Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) offers fully managed Kubernetes clusters for deployment, scaling, and management of containerized applications.
 
-In the following image, you see an example of quick modernization flow without a single line of code.
+In the following image, see an example of quick modernization flow without a single line of code.
 
 :::image type="content" source="../../_images/modernize/quick-modernization-without-code.png" alt-text="Graphic showing process of modernization without a single line of code.":::
 

@@ -3,7 +3,7 @@ title: Testing and architecture
 description: Understand how testing and architecture fit into the modernization phase of your cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/18/2022
+ms.date: 05/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize

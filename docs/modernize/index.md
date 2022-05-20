@@ -36,7 +36,7 @@ To further understand the modernization methodology, begin with the following ar
 
 ## Repackage apps and databases for speed and productivity
 
-When you want to make minimal changes and ensure they connect to Azure, repackage your apps and databases. For example, you might want to reposition relational databases directly into a cloud database service like Azure SQL Database.
+When you want to make minimal changes and ensure they connect to Azure, repackage your apps and databases. For example, you might want to reposition relational databases directly into a cloud database service like [Azure SQL Database](/azure/azure-sql/database/?view=azuresql&preserve-view=true).
 
 ## Redesign apps and databases for cloud scalability and productivity
 

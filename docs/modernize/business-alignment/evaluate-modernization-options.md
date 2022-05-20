@@ -3,7 +3,7 @@ title: Evaluate modernization options
 description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/18/2022
+ms.date: 05/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -21,7 +21,7 @@ A transformation strategy drives innovation and growth.
 :::image type="content" source="../../_images/modernize/cloud-adoption-outperforming-peers.png" alt-text="Graphic showing statistics about organization that harness data, the cloud, and AI outperforming their peers.":::
 
 - **Infrastructure:** You can focus on making innovative services and applications available to the company and spend less time managing core infrastructure like server patching, networking setup, firewall configuration, and many other server-related tasks now included with Azure PaaS.
-- **Apps:** Websites are up and running within minutes, app delivery time is improved by 50%, and there's not waiting for servers.
+- **Apps:** Websites are up and running within minutes, app delivery time is improved by 50%, and there's no waiting for servers.
 - **Data:** Insights from data is of strategic importance. Cloud accelerates advanced data analysis. You get away from managing core infrastructure and instead focus on making innovative services available to the company. By using sophisticated data analysis, you can make a personal connection with your customers that stands out in the vast sea of information that washes over us daily.
 
 ## Modernization economics
@@ -29,9 +29,9 @@ A transformation strategy drives innovation and growth.
 You'll want to consider various strategies for modernization, such as your operating margin, motivation, and infrastructure.
 
 - **Operating margin:** Automating ongoing administrative work, like patching, networking, firewall configuration, with the SASS service or pass services that we have. With today's technology and market differentiators and to justify any kind of modernization effort, you want to see some operating income rather than just operating margin.
-- **Motivators:** Generating new income (operating income and margin), modernizing and getting more usage of the technology, creating market differentiators
-- **Infrastructure:** reduce administrative work, patching, firewall administration
-Apps and data, getting to market faster, drive innovations, improve delivery time by 50%
+- **Motivators:** Generating new income (operating income and margin), modernizing and getting more usage of the technology, creating market differentiators.
+- **Infrastructure:** reduce administrative work, patching, firewall administration,
+apps and data, and getting to market faster, and drive innovations and improve delivery time by 50%.
 
 Evaluate your modernization options from both the technical and a financial perspectives, which helps you determine whether a set of workloads is a good candidate for modernization.
 
@@ -41,7 +41,7 @@ Ask the following common technical questions of your organization when you're ev
 
 - **Can you modernize the workload?** What if you have a workload with commercial off-the-shelf solutions (COTS), where you buy a product and run it on servers that can't be modernized, unless the vendor who sold you that product has already done that modernization? These indicators are easy to weed out.
 - **Is the business actively investing in maturing these workloads?** Are you investing in workloads that don't create a competitive advantage? Are your workloads built with the support of a consulting firm that's no longer making changes and is running through its life cycle? If your business isn't actively investing in it, should you put in more investment?
-- **Will these modernized workloads need to operate in hybrid or multi-cloud environment?** Do you want to manage, govern, and secure apps seamlessly across on-premises infrastructure with public, private, and hybrid cloud capabilities?
+- **Will these modernized workloads need to operate in hybrid or multi-cloud environment?** What percentage of your internal and external apps are currently on-premises? Do you want to manage, govern, and secure apps seamlessly across on-premises infrastructure with public, private, and hybrid cloud capabilities?
 - **Are your workloads hybrid and portable? Are your workers hybrid?** Based on your answers, do the following:
   - **Hybrid workers:** Migration only
   - **Hybrid or portable workloads:** Modernize application platforms
@@ -75,12 +75,12 @@ This example is for a common web application running on a database. You could mo
 
 ### Migrating your app to Azure App Service and AzureSQL Database MI
 
-You can modernize both web and data layers. Modernize the data layer by moving it to the database manager instances. We modernize the app by going from a bunch of IAS servers or just VMS over to Azure App Service.
+You can modernize both web and data layers. Modernize the data layer by moving it to the database manager instances. We modernize the app by going from a bunch of IAS servers or just virtual machines over to [Azure App Service](/rest/api/appservice/).
 
 :::image type="content" source="../../_images/modernize/example-azure-app-service-azure-sql-database-mi.png" alt-text="Diagram showing flow of migrating to Azure App Service and Azure SQL DB MI.":::
 
 ### Migrating your app to App Service and Azure Database for MySQL/PostgreSQL/MariaDB
 
-A different approach would be to modernize your app layer, like we just mentioned, but maybe you're working with some open source data layers and you want to go to something like Azure Database for MySQL, PostgreSQL, or MariaDB.
+A different approach would be to modernize your app layer, like we just mentioned, but maybe you're working with some open source data layers and you want to go to something like [Azure Database for MySQL](/azure/mysql/single-server/overview), [PostgreSQL](/azure/postgresql/single-server/overview), or [MariaDB](https://azure.microsoft.com/services/mariadb/).
 
 :::image type="content" source="../../_images/modernize/example-app-service-azure-db.png" alt-text="Diagram showing flow of migrating your app to App Service and Azure Database for MySQL and so on.":::

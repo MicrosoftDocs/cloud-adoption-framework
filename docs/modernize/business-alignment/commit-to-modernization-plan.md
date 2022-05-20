@@ -3,7 +3,7 @@ title: Modernization commitment
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/18/2022
+ms.date: 05/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -52,7 +52,7 @@ Evaluate the efforts that are required for establishing epics, creating user sto
 
 Experience and complexity both have significant impact on timelines and migration velocity.
 
-In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as SAP, might take several two-week iterations to complete all three phases of migration effort for a single workload.
+In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as [SAP](https://azure.microsoft.com/solutions/sap/azure-solutions/), might take several two-week iterations to complete all three phases of migration effort for a single workload.
 
 ## Assess workloads
 

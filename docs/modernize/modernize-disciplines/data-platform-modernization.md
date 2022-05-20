@@ -3,7 +3,7 @@ title: Data platform modernization
 description: Understand and evaluate options for maturing your underlying data platforms for modernization.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/18/2022
+ms.date: 05/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -24,7 +24,7 @@ When you migrate and modernize on-premises data, the most common Azure tool choi
 
 :::image type="content" source="../../_images/modernize/migration-journey-tools-and-services.png" alt-text="Diagram showing the tools and services for your migration journey.":::
 
-To support Oracle and NoSQL data migrations, you can also use [Azure Database Migration Service](/azure/dms/) for certain types of source-to-target databases, like migrating Oracle databases to PostgreSQL and MongoDB databases to Azure Cosmos DB. More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine (VM) options based on infrastructure as a service (IaaS).
+To support Oracle and NoSQL data migrations, you can also use [Azure Database Migration Service](/azure/dms/) for certain types of source-to-target databases, like migrating Oracle databases to [Azure Database for PostgreSQL](/azure/postgresql/single-server/overview) and MongoDB databases to [Azure Cosmos DB](/azure/cosmos-db/cosmosdb-migrationchoices). More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine (VM) options based on infrastructure as a service (IaaS).
 
 ## Considerations and guidance
 
