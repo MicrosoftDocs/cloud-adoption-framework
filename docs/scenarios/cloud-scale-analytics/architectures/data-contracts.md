@@ -3,7 +3,7 @@ title: Data contracts
 description: Data contracts in a data mesh
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 05/15/2022
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -87,36 +87,36 @@ Data sharing agreements also help prevent miscommunication over data usage. Doma
 
 - Further distribution of data
 
-Apply classifications and conditions like to your data, such as sensitivity labels or filtering conditions. This becomes a concern when securing data. In the diagram from the previous section, you witness a “data product sidecar”. Zhamak Dehghani refers to this as a component or layer for injecting policy execution, such as data access controls or output method of data consumption. It’s a security abstraction over your domain data for handling your security enforcement. It will generate this enforcement by using your data contracts. It can be an ACL or serverless view, which is dynamically created from your data contract repository after reaching a common understanding. Or duplicated dataset, which is selected and filtered for a specific consumer. Your end goal must be to derive these security views from your data contracts in a fully automated manner.
+Apply classifications and conditions like sensitivity labels or filtering conditions to secure your data. 
 
-Finally, it is encouraged you to also make a relationship between your data contract attributes and documentation. Ensure semantic context is provided and a relationship is made to your glossary. This allows consumers to understand how the translation from business requirements to an actual implementation has been made. If a relationship to business terms is important to you, consider implementing policies. For example, a contract can only be established when all data product attributed are linked to business term entities. Same policies might also apply for contextual changes, such as relationship and definition adjustments.
+The previous section's diagram shows certain elements labeled *data product sidecar*. A data product sidecar is a component or layer for injecting policy execution, like data access controls or data consumption output methods. It's a security abstraction that uses data contracts to handle security enforcement over your domain data. You can create a data product sidecar from your data contract repository as an access control list (ACL) or serverless view, or you can create one using a duplicated dataset that you select and filter for a specific consumer. Either way, the goal is to derive security views from your data contracts in a fully automated manner.
 
-## Getting started with using data contracts
+Connect data contract attributes and your documentation. Ensure that you provide sematic context and a relationship to your glossary, so that your consumers can understand how business requirements translate to an actual implementation. If a relationship with business terms is important to your organization, consider implementing policies such as only allowing data contracts to be established after all data product attributes are linked to business term entities. You might also apply this type of policy to contextual changes like relationship or definition adjustments.
 
-How to get started with data contracts? How to make things practical? The recommendation is to start slow. It’s mostly an organizational challenge. Don’t introduce too many changes after each other. Data contracts are a cultural shift. Users need to become familiar and must understand the importance of data ownership. The transition is also about finding the sweet spot between too few and too many metadata attributes. About the transition:
+## Using data contracts
 
-1. First, create stability over your technical data pipelines. If they’re unstable and subject to unexpected and disruptive changes, none of your use cases will make it into production.
+Start slow when beginning to use data contracts. Don't introduce too many changes at once; data contracts require a cultural shift, and your users need time to become familiar with them and understand the importance of data ownership. You also need to find the sweet spot between too few and too many metadata attributes in your data contracts.
 
-1. Start simple for your data sharing agreements. Put a simple and pragmatic process in place and don’t overcomplicate things. You can start creat just a simple form or template that you design in Microsoft Forms. Write in clear, concise language that is easy to understand. Accept manual processes, and limit your initial metadata requirements. Your first phase is about cultural shift and collecting requirements. Iterate until your metadata requirements become stable.
+The following steps outline the process of implementing data contracts for your organization. 
 
-1. After you put your first processes in place, try to replace your manual forms with a web-based application, database and/or message queue. During this stage, your central data governance team will still be overseeing. The level of granularity of data access is typically coarse-grained, so on folders or files. Try to utilize REST APIs for automatically provisioning data access policies or ACLs.
+1. Ensure your technical data pipelines are stable. Use cases can't reach production if the pipelines they travel through experience unexpected disruptions.
 
-1. Your next stage is implementing a stronger workflow for handling approvals. Put your data owners or data stewards in the lead. Your central data governance team will be overseeing from the back seat. This team reviews all data contracts regularly. By this stage you should also have a data catalog, such as [Azure Purview](/azure/purview/), up and running showing all ready-for-consumption data products. Make improvements to your data security and enforcement capabilities. Allow for finer-grained selections and filters. Consider techniques like dynamic data masking to prevent data duplication.
+1. Put simple and pragmatic processes in place as you start using sharing agreements. You can begin by designing a simple form or template in Microsoft Forms. Write in clear, concise language that readers can easily understand. The focus of this first phase is a cultural shift and collecting requirements. Make sure you don't overcomplicate things; accept manual processes, limit your initial metadata requirements, and iterate until those requirements are stable.
+
+1. Once you have your first processes firmly in place, begin replacing your manual forms with a web-based application, database, and/or message queue. Your central data governance team should still be responsible for oversight during this phase. Data access granularity at this point is typically course-grained, focusing on folders or files. Whenever possible, use REST APIs to automatically provision your data access policies or ACLs.
+
+1. Put data owners or data stewards in charge of a strong workflow for approval management. Your central data governance role should now oversee approvals only from a backseat role, and review all data contracts regularly. At this point, you should have a data catalog like [Azure Purview](/azure/purview/) up and running that shows all your ready-for-consumption data products. Improve your data and security enforcement capability by allowing for fine-grained selections and filtering, and consider using techniques like dynamic data masking to prevent your data from being duplicated.
+
+1. In the final stage of your data contract implementation journey, everything should be self-service and fully automated. Automated machine learning should predict data approvals. Security 
 
 1. At the end of your journey, everything will be self-service and fully automated. This includes automated security enforcement and machine learning for predicting data approvals. Secure views, for example, are automatically deployed after approval.
 
-Data contracts are a relatively new approach to data mesh. They're important as they provide transparency over your dependencies and data usage. Start small and focus on technical stability and standardization first. Iterate by using a lessons-learned process. Data governance is essential, but too much will cause overhead. Slowly build up and automate.
+Data contracts are a relatively new yet important addition to data mesh architecture, providing transparency for data usage and dependencies. Focus on technical stability and standardization as you first begin to use data contracts, then use a lessons-learned process as you iterate. Slowly build up and automate your data governance so you don't increase your organization's overhead. 
 
-## References
+For more information about observability and data sharing agreements, see [Cloud monitoring guide: Observability](../../../manage/monitor/observability.md).
 
-For more information about observability and data sharing agreements, see:
-
-- [Cloud monitoring guide: Observability](../../../manage/monitor/observability.md)
-
-## Summary
-
-Another aspect that needs to be part of the data contract documentation is the terms of service and service-level agreement (SLA). A good SLA typically describes the quality of data delivery and interface. This part of the SLA might include uptime, error rates, and availability. It could also include deprecation, a roadmap, and version numbers.
+As part of your data contract documentation you also need terms of service and service-level agreements (SLAs). Use SLAs to outline quality requirements for your data delivery and interfaces, including for uptime, error rates, and availability. SLAs can also include any deprecation, roadmap, and version number requirements you need to define.
 
 ## Next Steps
 
-[Design considerations for self-serve data platforms](self-serve-data-platforms.md)
+- [Design considerations for self-serve data platforms](self-serve-data-platforms.md)
