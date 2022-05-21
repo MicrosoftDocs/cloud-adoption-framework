@@ -3,7 +3,7 @@ title: 'Get started: Document foundational alignment decisions'
 description: Understand and document initial decisions required to drive the cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/15/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -12,14 +12,18 @@ ms.custom: internal
 
 # Get started: Understand and document foundational alignment decisions
 
-The cloud adoption journey can unlock many business, technical, and organizational benefits. Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand.
+The cloud adoption numerous business, technical, and organizational benefits. 
+
+TODO
+
+Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand.
 
 > [!NOTE]
-> Selecting any of the following links might lead you to bounce around the table of contents for the Microsoft Cloud Adoption Framework for Azure, looking for fundamental concepts that you'll use later to help the team implement the associated guidance. Bookmark this page to come back to this checklist often.
+> When you click links throughout this article, looking for fundamental concepts and associated guidance, you'll find that they lead to numerous sections of the Microsoft Cloud Adoption Framework's table of contents. Consider bookmarking this page so you can come back to this checklist as often as you need.
 
 ## Before you begin
 
-As you work through this guide, record our foundational decisions using the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx). The template can help you quickly onboard team members who participate in the cloud adoption lifecycle by clarifying how your cloud environment is configured and why.
+u work through this guide, record our foundational decisions using the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx). The template can help you quickly onboard team members who participate in the cloud adoption lifecycle by clarifying how your cloud environment is configured and why.
 
 If you already have an environment running in Azure, the [Azure governance visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer) can help you accelerate your documentation. Gain insight into policies, Azure role-based access control (Azure RBAC), Azure Blueprints, subscriptions, and more. From the collected data the tool provides visibility on your hierarchy map, creates a tenant summary, and builds granular scope insights about management groups and subscriptions.
 
@@ -147,6 +151,6 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 ## What's next
 
 Build on this set of fundamental concepts through the series of getting started guides in this section of the Cloud Adoption Framework.
-
 > [!div class="nextstepaction"]
 > [Apply fundamental concepts to other getting started guides](./index.md)
+
