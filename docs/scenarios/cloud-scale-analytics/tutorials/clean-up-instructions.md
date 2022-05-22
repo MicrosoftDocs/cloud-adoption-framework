@@ -1,5 +1,5 @@
 ---
-title: Clean-up Instructions
+title: Clean-up instructions
 description: Clean all the resources from Azure subscription deployed during the tutorial. 
 author: andrehass
 ms.author: anhass
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-## Clean Up Instructions
+## Clean-up instructions
 
 As you go through the tutorial, you might run into deployment issues, to start over fresh, please use the steps below to remove the resources created in your subscription.
 
@@ -20,7 +20,6 @@ Also, once all the steps in the tutorial are completed, you can use the  scripts
 
 >[!Warning]
 >Please ensure you selected the correct prefix as a filter. The filter parameter will be used to remove the resource groups created during the Workshop Labs. Removing resource groups with this scripts is a irreversible operation.
-
 
 ```powershell
 

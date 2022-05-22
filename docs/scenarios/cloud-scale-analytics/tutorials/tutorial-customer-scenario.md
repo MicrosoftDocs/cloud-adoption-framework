@@ -1,5 +1,5 @@
 ---
-title: Customer Scenario 
+title: Customer scenario 
 description: Customer scenario
 author: andrehass
 ms.author: anhass
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-### Customer Scenario
+### Customer scenario
 
 **Adatum Corporation** is a large, multinational enterprise. In addition to the centralized business units at their headquarters, they also have subsidiaries across the globe, each with its own business units such as accounting, marketing, sales, support, and operations.
 
@@ -32,7 +32,7 @@ In this reference architecture, we will deploy a Data Management Landing Zone, w
 
 A critical concept for every cloud-scale analytics implementation is having one Data Management Landing Zone. This subscription contains resources that will be shared across all of the landing zones.  This includes shared networking components, like a firewall and private DNS zones.  It also includes resources for data and cloud governance, such as Azure Policies and Azure Purview.
 
-### Data Integrations
+### Data integrations
 
 The landing zone will have a single shared data integration for the ingestion of two data sources. The first data will be related to customers, this includes the customer records and their related records (like addresses, contacts, territory assignments, and contact history). This data will be imported from Adatum's CRM system.
 
@@ -40,13 +40,13 @@ The second data ingestion will be for sales transactions. This includes transact
 
 Note that this shared integration will not transform or enrich the data.  It will only copy the data from the source systems and land it in the analytics platform.  This allows many data products to consume the data in a scalable manner without putting an additional burden on the source system.
 
-### Data Products
+### Data products
 
 In this example, Adatum has one data product.  This product combines raw data from the shared data integration and transforms them into a new dataset. From there, it can be picked up by business users for additional analysis and reporting with tools like Power BI.
 
-:::image type="content" source="../images/adatum-revised.png" alt-text="Adatum Corporation Data Management Landing Zone":::
+:::image type="content" source="../images/adatum-revised.png" alt-text="Diagram of the Adatum Corporation Data Management Landing Zone.":::
 
-<br />
+
 <sub>**Figure 1: Architectural Diagram**  Note that not all Azure services are represented in the diagram.  It has been simplified to accentuate the core concepts of how resources are organized within the architecture.</sub>
 
 ## Rationale
@@ -71,8 +71,8 @@ The customer scenario outlined above can be deployed by referencing the architec
 
 ### Data Management Landing Zone Diagram
 
-:::image type="content" source="../images/adatum-data-management-landing-zone.png" alt-text="Adatum Corporation Data Management Landing Zone":::
+:::image type="content" source="../images/adatum-data-management-landing-zone.png" alt-text="Diagram of the Adatum Corporation Data Management Landing Zone.":::
 
 ### Sales Data Landing Zone
 
-:::image type="content" source="../images/adatum-sales-data-landing-zone-revised.png" alt-text="Adatum Corporation Sales Data Landing Zone":::
+:::image type="content" source="../images/adatum-sales-data-landing-zone-revised.png" alt-text="Diagram of the Adatum Corporation Sales Data Landing Zone.":::

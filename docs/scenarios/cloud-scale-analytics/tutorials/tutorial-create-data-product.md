@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
-## 1 - Deploy Data Product Batch via One Click Deployment
+## Deploy Data Product Batch via One Click Deployment
 
  If you want to experiment with the resources and see what gets deployed as part of Data Product Batch deployment, use the **Deploy to Azure Button** to deploy resources for the Data Product Batch in a Data Landing Zone. The applicable scenarios for Data Product Batch includes Data Product and Data Integration. As Explained earlier, Data Products are another unit of scale inside a Data Landing Zone. In addition to Data Product, this template can be used for Data Integration into the platform.
 
@@ -31,7 +31,7 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
       | Environment | We recommend you choose Development, as this is a tutorial. You could use the same process to deploy a Test or Production environment as well. |
       | Data Product Name | This is a prefix added to all the deployed data product resources to make them unique within the subscription. This can be a max of 10 alphanumeric characters. |
 
-      :::image type="content" source="../images/dataproduct-deployment-1.png" alt-text="Data Product":::
+      :::image type="content" source="../images/dataproduct-deployment-1.png" alt-text="Screenshot showing how to deploy Data Product.":::
 
 1. Click on **Next: General Settings**, and provide the information as instructed below:
 
@@ -44,7 +44,7 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
       | Enable Azure Cosmos DB | Leave this option **unchecked**. |
       | Enable role assignments | This is optional, but you should **Check** this option to add required permissions. |
 
-      :::image type="content" source="../images/dataproduct-general-settings.png" alt-text="General Settings":::
+      :::image type="content" source="../images/dataproduct-general-settings.png" alt-text="Screenshot showing Data Product general settings.":::
 
 1. Next, click on **Next: Connectivity Settings**, and provide the following information:
 
@@ -53,7 +53,7 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
       | Virtual Network | Select the Virtual Network of your Data Landing Zone. |
       | Subnet | Select the "DataProduct001Subnet" Subnet. |
 
-      :::image type="content" source="../images/dataproduct-connectivity-settings.png" alt-text="Connectivity Settings":::
+      :::image type="content" source="../images/dataproduct-connectivity-settings.png" alt-text="Screenshot showing Data Product connectivity settings.":::
 
 1. Under Private DNS Zones enter the following information.
 
@@ -72,12 +72,12 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
       | Private DNS Zone MariaDB Server | select privatelink.mariadb.database.azure.com |
       | Private DNS Zone PostgreSQL Server | select privatelink.postgres.database.azure.com |
 
-      :::image type="content" source="../images/dataproduct-private-dns.png" alt-text="Private DNS":::
+      :::image type="content" source="../images/dataproduct-private-dns.png" alt-text="Screenshot showing Data Product Private D N S.":::
 
 1. Click on **Review + create** to go the last step.
 
 1. When the parameters are validated, the **Create** button will be enabled. Click on it to start the deployment.
 
-   :::image type="content" source="../images/dataproduct-deployment-create.png" alt-text="Create":::
+   :::image type="content" source="../images/dataproduct-deployment-create.png" alt-text="Screenshot showing how to create in Data Product deploy.":::
 
 The deployment will take a few minutes to complete.

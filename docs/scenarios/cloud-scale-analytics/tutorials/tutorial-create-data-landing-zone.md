@@ -7,7 +7,7 @@ ms.date: 03/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank, references_regions
 ---
 
 # Create data landing zone tutorial
@@ -42,7 +42,7 @@ The deployment and code artifacts include the following services:
 - [Databricks](/azure/databricks/)
 - [Event Hub](/azure/event-hubs/)
 
-## Supported Regions
+## Supported regions
 
 For now, we are recommending to select one of the regions mentioned below. The list of regions is limited for now due to the fact that not all services and features are available in all regions. This is mostly related to the fact that we are recommending to use the zone-redundant storage replication option for all your central Data Lakes in the Data Landing Zones. Since zone-redundant storage is not available in all regions, we are limiting the regions in the Deploy to Azure experience. If you are planning to deploy the Data Management Zone and Data Landing Zone to a region that is not listed below, then please change the setting in the corresponding bicep files in this repository. Officially supported regions are:
 
