@@ -236,8 +236,8 @@ Purview will read the service principal key from a Key Vault. We will use the Ke
 
 1. Click on **+ Select Members** and add the account currently logged.
 
-    :::image type="content" source="../images/keyvault-administrator-select-member.png" alt-text="Purview Select Member":::
-    :::image type="content" source="../images/keyvault-administrator-your-account.png" alt-text="Purview Select your account":::
+    :::image type="content" source="../images/key-vault-administrator-select-member.png" alt-text="Purview Select Member":::
+    :::image type="content" source="../images/key-vault-administrator-your-account.png" alt-text="Purview Select your account":::
 
 1. In Select Members, search for the account currently logged, click to add the relevant account, and click on **select**
 
@@ -272,7 +272,7 @@ For the Purview instance to read the secrets stored within the Key Vault, it has
 
 1. On the he same key vault with the name _`[DMLZprefix]`_`-dev-vault001` Click on **Access Control (IAM)**, **Add** and than **Add Role Assignment**.
   
-    :::image type="content" source="../images/keyvault-add-role-assigment.png" alt-text="Key Vault Permissions":::
+    :::image type="content" source="../images/key-vault-add-role-assigment.png" alt-text="Key Vault Permissions":::
 
 1. In Role, search for `Key Vault Secret User`,  Select **Key Vault Secrets User** and click **Next**.
 
@@ -280,15 +280,15 @@ For the Purview instance to read the secrets stored within the Key Vault, it has
 
 1. Click on **+ Select Members**.
   
-    :::image type="content" source="../images/keyvault-user-select-member.png" alt-text="Select Member":::
+    :::image type="content" source="../images/key-vault-user-select-member.png" alt-text="Select Member":::
 
 1. Search for the Purview instance name _`[DMLZprefix]`_`-dev-purview001`, click to add the relevant account and then click on **Select**.
   
-    :::image type="content" source="../images/keyvault-user-purview-managed.png" alt-text="Server Purview Name":::
+    :::image type="content" source="../images/key-vault-user-purview-managed.png" alt-text="Server Purview Name":::
 
 1. To complete the role assignment process click **Review + assign** twice.
   
-    :::image type="content" source="../images/keyvault-user-purview-managed-review-assign.png" alt-text="Review and Assign":::
+    :::image type="content" source="../images/key-vault-user-purview-managed-review-assign.png" alt-text="Review and Assign":::
 
 ### Set up Key Vault Connection in Purview
 
@@ -415,7 +415,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Connect via Integration Runtime| Select the Self Hosted Integration run time deployed as part of the Data Landing Zone.|
     | Credential|Select the Service Principal set up for Purview.|
 
-    :::image type="content" source="../images/Scan-DataLake-add-scan-credential.png" alt-text="Scan ADLS credential":::
+    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Scan ADLS credential":::
 
 1. Click on **Test Connection** to verify the connectivity and permissions are in place, and click on **Continue**.
 
