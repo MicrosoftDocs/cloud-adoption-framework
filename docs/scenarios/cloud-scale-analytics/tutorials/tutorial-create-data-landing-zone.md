@@ -23,7 +23,7 @@ By navigating through the deployment steps, you will deploy the following setup 
 > [!NOTE]
 >Before deploying the resources, we recommend to check registration status of the required resource providers in your subscription. For more information, see [Resource providers for Azure services](/azure/azure-resource-manager/management/resource-providers-and-types).
 
-:::image type="content" source="../images/DataLandingZone.png" alt-text="Data Landing Zone Diagram":::
+:::image type="content" source="../images/data-landing-zone.png" alt-text="Diagram of the Data Landing Zone.":::
 
 The deployment and code artifacts include the following services:
 
@@ -73,7 +73,7 @@ Before we start with the deployment, please make sure that you have the followin
 - A **Data Management Zone** deployed. For more information, check the [Data Management Zone](https://github.com/Azure/data-management-zone) repo.
 - An **Azure subscription**. If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
-    :::image type="content" source="../images/Subscription.png" alt-text="Search Subscription":::
+    :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot showing the search Subscription.":::
 
 - **Permissions to the Azure subscription**:[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) access to the subscription to be able to create a service principal and role assignments for it.
 - For the deployment, please choose one of the **Supported Regions**.
@@ -103,7 +103,7 @@ Before we start with the deployment, please make sure that you have the followin
       | Environment | We recommend you choose Development, as this is a tutorial. You could use the same process to deploy a Test or Production environment as well. |
       | Data Landing Zone prefix | This is a prefix added to all the deployed resource groups and resources to make them unique within the subscription. This can be a max of 10 alphanumeric characters. |
 
-    :::image type="content" source="../images/dlz-1.png" alt-text="Data Landing Zone":::
+    :::image type="content" source="../images/dlz-1.png" alt-text="Screenshot showing the Data Landing Zone.":::
 
 1. Click on **Next: General Settings**. In this page, provide the following information:
 
@@ -115,7 +115,7 @@ Before we start with the deployment, please make sure that you have the followin
       | Deploy self-hosted Integration Runtimes | Choose Yes to deploy self-hosted Integration Runtimes into your Data Landing Zone. |
       | Purview Self-hosted Integration Runtime Authentication Key | Paste the previously captured SHIR authentication key. If you don't have the key, please follow the steps on [Create Purview SHIR](/Lab1/7_create_purview-shir/) to generate and copy it. |
 
-    :::image type="content" source="../images/dlz-creation2.png" alt-text="General Settings":::
+    :::image type="content" source="../images/dlz-creation-2.png" alt-text="Screenshot showing the general settings page.":::
 
 1. Next, click on **Next: Connectivity Settings**. In this page, provide the following information:
 
@@ -123,7 +123,7 @@ Before we start with the deployment, please make sure that you have the followin
       |:-------|:--------------------|
       | Virtual Network Configuration | This is an **optional** step required only if the default Vnet configuration has to be altered. **Don't make any changes to these IP addresses.** |  
 
-    :::image type="content" source="../images/dlz-connectivity1.png" alt-text="Connectivity Settings":::
+    :::image type="content" source="../images/dlz-connectivity-1.png" alt-text="Screenshot showing data landzing zone connectivity Settings.":::
 
 1. Scroll down to the Data Management Landing Zone Virtual Network Configuration section.
 
@@ -135,7 +135,7 @@ Before we start with the deployment, please make sure that you have the followin
       | Azure Firewall Subscription | Select the Firewall subscription. It should be the same subscription used to deploy Data Management Landing Zone. |
       | Azure Firewall | Select the Firewall from the Data Management Landing Zone deployment. i.e. _`[DMLZPrefix]`_`-dev-firewall` |
 
-      :::image type="content" source="../images/dlz-connectivity2.png" alt-text="Connectivity Settings continued":::
+      :::image type="content" source="../images/dlz-connectivity-2.png" alt-text="Screenshot showing data landing zone connectivity settings continued.":::
 
 1. Under Private DNS Zone settings enter the following information.
 
@@ -154,12 +154,12 @@ Before we start with the deployment, please make sure that you have the followin
       | Private DNS Zone Synapse Dev | select privatelink.dev.azuresynapse.net |
       | Private DNS Zone Synapse SQL | select privatelink.sql.azuresynapse.net |
 
-:::image type="content" source="../images/dlz-connectivity3.png" alt-text="Private DNS Zone Settings":::
+:::image type="content" source="../images/dlz-connectivity-3.png" alt-text="Screenshot showing the private D N S Zone Settings.":::
 
 1. Click on **Review + Create**  
 
 1. When the parameters are validated, the **Create** button will be enabled. Click in **Create** to start the deployment.
 
-:::image type="content" source="../images/dlz-deployment-create.png" alt-text="Summary":::
+:::image type="content" source="../images/dlz-deployment-create.png" alt-text="Screenshot showing the data landing zone create summary page.":::
 
 The deployment will take around 25 minutes to complete.

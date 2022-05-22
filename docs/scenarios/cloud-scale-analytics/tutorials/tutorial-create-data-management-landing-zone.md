@@ -23,7 +23,7 @@ The following services are deployed in the Data Management Landing Zone, in the 
 > [!NOTE]
 >Before deploying the resources, we recommend checking the registration status of the required resource providers in your subscription. For more information, see [Resource providers for Azure services](/azure/azure-resource-manager/management/resource-providers-and-types).
 
-:::image type="content" source="../images/DataManagementZone.png" alt-text="Data Management Zone":::
+:::image type="content" source="../images/data-management-zone.png" alt-text="Diagram of the Data Management Zone.":::
 
 The deployment and code artifacts include the following services:
 
@@ -70,7 +70,7 @@ The following pre-requisites are common to all the deployment options.
 
 - **An Azure subscription**: The Data Management Landing Zone will be deployed into a separate azure subscription. Please ensure there is a subscription ready for this.
 
-:::image type="content" source="../images/subscription.png" alt-text="Subscription Search":::
+:::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot showing the subscription search screen.":::
 
 - **Permissions to the Azure subscription**: User Access Administrator or Owner access to the subscription to be able to create a service principal and role assignments for it (next step).
 
@@ -86,15 +86,15 @@ Before beginning with the deployment, we have to check that the necessary resour
 
 1. In the Azure portal, navigate to the subscription
 
-    :::image type="content" source="../images/subscription.png" alt-text="Search Subscription":::
+    :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot showing the search for a subscription screen.":::
 
 1. Select the relevant subscription and click on **Resource Providers** in the left menu.
 
-    :::image type="content" source="../images/dmlz-deployment-3.png" alt-text="Resource Provider":::
+    :::image type="content" source="../images/dmlz-deployment-3.png" alt-text="Screenshot showing the resource provider tab.":::
 
 1. Find Microsoft.Purview by filtering on the name.
 
-    :::image type="content" source="../images/dmlz-deployment-purview-rp.png" alt-text="Purview Resource Provider":::
+    :::image type="content" source="../images/dmlz-deployment-purview-rp.png" alt-text="Screenshot showing how to find Microsoft Purview.":::
 
 1. If the status shows Not Registered, click on the **Register** option on top to register the resource provider.
 
@@ -104,7 +104,7 @@ Before beginning with the deployment, we have to check that the necessary resour
 
 1. Your resource providers list should now look similar to this screenshot below
 
-    :::image type="content" source="../images/dmlz-deployment-4.png" alt-text="Resource Providers List":::
+    :::image type="content" source="../images/dmlz-deployment-4.png" alt-text="Screenshot of the resource Providers List.":::
 
     Once this is done, we can go ahead and deploy the Data Management Landing Zone to this subscription. The following steps guide you through this process.
 
@@ -123,7 +123,7 @@ Before beginning with the deployment, we have to check that the necessary resour
     |Environment|We recommend you choose Development, as this is a tutorial. You could use the same process to deploy a Test or Production environment as well.|
     |Data Management Landing Zone prefix|This is a prefix added to all the deployed resource groups and resources to make them unique within the subscription. This can be a max of 10 alphanumeric characters.|
 
-    :::image type="content" source="../images/dmlz-1.png" alt-text="Data Management Zone Step":::
+    :::image type="content" source="../images/dmlz-1.png" alt-text="Screenshot showing the Data Management Zone Step one.":::
 
 1. Optionally, click on **Next: General Settings**. This is required only if a user other than yourself has to be added as a collection admin in the Purview instance. To add a user, navigate to Azure Active Directory and in the list of users, select the relevant user to find the Object ID. Click on the Copy to Clipboard icon.
 
@@ -161,7 +161,7 @@ Previously, jumpbox VMs had to be hosted with public IPs to enable RDP and SSH s
 
 Today, instead of exposing a VM publicly, customers can rely on Azure Bastion as a more secure alternative. Azure Bastion provides a secure remote connection from the Azure portal to Azure VMs over Transport Layer Security (TLS). Azure Bastion needs to be provisioned to a dedicated subnet (subnet with name `AzureBastionSubnet`) in the Azure Data Landing Zone or Azure Data Management Landing Zone and can then be used to connect to any VM on that virtual network or a peered virtual network directly from the Azure portal. No additional clients or agents need to be installed on any VM. NSGs can again be used to allow RDP and SSH from Azure Bastion only.
 
-:::image type="content" source="../images/AzureBastionNetworkArchitecture.png" alt-text="Azure Bastion Network Architecture":::
+:::image type="content" source="../images/azure-bastion-network-architecture.png" alt-text="Diagram of the Azure Bastion Network Architecture.":::
 
 A few other core security benefits of Azure Bastion are:
 
@@ -177,7 +177,7 @@ More details about Azure bastion can be found [here](/azure/bastion/bastion-over
 
 To simplify the setup for cloud-scale analytics users, we provide a Bicep/ARM template to quickly create this setup inside your Data Management Landing Zone or Data Landing Zone. Our template will create the following setup inside your subscription:
 
-:::image type="content" source="../images/AzureBastionArchitecture.png" alt-text="Azure Bastion Architecture":::
+:::image type="content" source="../images/azure-bastion-architecture.png" alt-text="Azure Bastion Architecture":::
 
 To deploy this yourself, please use the following Deploy to Azure button:
 
@@ -196,7 +196,7 @@ Deploy Azure Bastion Host template in the Data Management Landing Zone deployed 
     |Environment| Select Development|
     | Data Landing Zone Prefix |  Provide the **Data Management Landing Zone prefix** deployed in the previous step. |
 
-    :::image type="content" source="../images/bastionHost-1.png" alt-text="Deploy Bastion Host":::
+    :::image type="content" source="../images/bastion-host-1.png" alt-text="Deploy Bastion Host":::
 
 1. Click Next to go to **General Settings** and provide the following information:
 
@@ -207,7 +207,7 @@ Deploy Azure Bastion Host template in the Data Management Landing Zone deployed 
     | Confirm Password | Confirm the password. |
     | VM SKU | Leave it unchanged. |
 
-    :::image type="content" source="../images/bastionHost-2.png" alt-text="Bastion General Settings":::
+    :::image type="content" source="../images/bastion-host-2.png" alt-text="Bastion General Settings":::
 
 1. Click Next to go to **Connectivity Settings** and provide the following information:
 
@@ -219,11 +219,11 @@ Deploy Azure Bastion Host template in the Data Management Landing Zone deployed 
     | Bastion Subnet CIDR Range | Ensure you are selecting the CIDR range that is within the **Data Management Landing Zone** CIDR range. Change it to **10.0.10.0/24** |
     | Jumpbox Subnet CIDR Range | Ensure you are selecting the CIDR range that is within the **Data Management Landing Zone** CIDR range. Change it to **10.0.11.0/24** |
 
-    :::image type="content" source="../images/bastionHost-3.png" alt-text="Bastion Connectivity settings":::
+    :::image type="content" source="../images/bastion-host-3.png" alt-text="Bastion Connectivity settings":::
 
 1. Click **Review + Create** and then click **Create** on the **Review + create** tab to start the deployment.
 
-    :::image type="content" source="../images/bastionHost-4.png" alt-text="Review + create":::
+    :::image type="content" source="../images/bastion-host-4.png" alt-text="Review + create":::
 
     The deployment will take around 5 minutes to complete.
 
@@ -231,22 +231,22 @@ Deploy Azure Bastion Host template in the Data Management Landing Zone deployed 
 
 After the deployment, you will notice that two additional subnets have been created on the Data Management Landing Zone VNET.
 
-:::image type="content" source="../images/AzureBastionSubnets.png" alt-text="Bastion And Jumpbox Subnets":::
+:::image type="content" source="../images/azure-bastion-subnets.png" alt-text="Bastion And Jumpbox Subnets":::
 
 In addition, you will find a new resource group inside your subscription, named **_`[DLZprefix]`_`-dev-bastion`** which includes the Azure Bastion resource as well as a Virtual Machine:
 
-:::image type="content" source="../images/AzureBastionSubnets.png" alt-text="Bastion Host VM":::
+:::image type="content" source="../images/azure-bastion-subnets.png" alt-text="Bastion Host VM":::
 
 If you want to connect to the VM using Azure Bastion, execute the following steps:
 
 1. Click on the VM (in our case `dmalabs-dev-vm001`) > "Connect" > "Bastion".
 
-    :::image type="content" source="../images/bastionHost-6.png" alt-text="Connect to VM via Bastion":::
+    :::image type="content" source="../images/bastion-host-6.png" alt-text="Connect to VM via Bastion":::
 
 1. Click on the blue button "Use Bastion".
 1. Enter your Credentials and click "Connect".
 
-    :::image type="content" source="../images/bastionHost-7.png" alt-text="User Name and Password":::
+    :::image type="content" source="../images/bastion-host-7.png" alt-text="User Name and Password":::
 
 1. The RDP session opens in a new Tab inside your Browser and you can start connecting to your data services.
 1. Once logged into the VM in a separate browser tab, go to Microsoft Edge and open [Azure Portal](https://portal.azure.com/).
