@@ -7,7 +7,7 @@ ms.date: 04/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Management and monitoring for Azure Arc-enabled Kubernetes
