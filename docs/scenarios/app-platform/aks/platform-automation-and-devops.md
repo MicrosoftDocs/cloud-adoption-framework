@@ -24,7 +24,7 @@ Here are some design considerations for AKS platform automation and DevOps:
 
 - Consider using prefixes and suffixes with well-defined conventions to uniquely identify every deployed resource. These naming conventions avoid conflicts in deploying solutions next to each other, and improve overall team agility and throughput.
 
-- Inventory the workflows to support in engineering, updating, and deploying your solution in normal and Digital Rebar Provision (DRP) regimes. Consider mapping pipelines according to those workflows, maximizing familiarity and productivity.
+- Inventory the workflows to support in engineering, updating, and deploying your solution in normal and Disaster Recovery Plan (DRP) regimes. Consider mapping pipelines according to those workflows, maximizing familiarity and productivity.
 
   Some example scenarios and pipelines to consider are:
   - Deploying, patching, and upgrading clusters
