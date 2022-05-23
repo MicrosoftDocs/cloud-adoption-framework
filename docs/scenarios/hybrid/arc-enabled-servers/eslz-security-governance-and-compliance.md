@@ -7,7 +7,7 @@ ms.date: 06/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Governance, security, and compliance baseline for Azure Arc-enabled servers

@@ -7,7 +7,7 @@ ms.date: 10/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 ---
 
 # Network topology and connectivity for Azure Arc-enabled servers

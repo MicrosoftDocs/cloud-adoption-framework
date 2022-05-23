@@ -7,7 +7,7 @@ ms.date: 04/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 ---
 
 # Network connectivity for Azure Arc-enabled Kubernetes

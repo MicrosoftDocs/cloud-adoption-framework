@@ -7,7 +7,7 @@ ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 ---
 
 # Azure Arc-enabled servers Azure landing zone sandbox

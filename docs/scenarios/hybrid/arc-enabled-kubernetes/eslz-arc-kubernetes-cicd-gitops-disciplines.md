@@ -7,7 +7,7 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes
