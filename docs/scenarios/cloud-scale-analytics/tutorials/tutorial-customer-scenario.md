@@ -75,4 +75,4 @@ The customer scenario outlined above can be deployed by referencing the architec
 
 ### Sales Data Landing Zone 
 
-:::image type="content" source="../images/adatum-sales-data-landing-zone-revised.png" alt-text="Diagram of the Adatum Corporation Sales Data Landing Zone.":::
+:::image type="content" source="../images/adatum-sales-data-landing-zone.png" alt-text="Diagram of the Adatum Corporation Sales Data Landing Zone.":::

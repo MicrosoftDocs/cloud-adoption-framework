@@ -38,9 +38,9 @@ As you deploy the new components, you will have a chance to investigate how Purv
 
 The first step to start this hands-on experience is to create two sample Azure SQL Databases. You will use them to simulate the CRM and ERP data sources for the upcoming steps.
 
-1. Open the Azure Portal. On the top right, click on the highlighted icon below to open the cloud shell.
+1. Open the Azure portal. On the top right, click on the highlighted icon below to open the Cloud Shell.
 
-    :::image type="content" source="../images/cloud-shell.png" alt-text="Azure CLoud Shell":::
+    :::image type="content" source="../images/cloud-shell.png" alt-text="Azure Cloud Shell":::
 
 1. Select **bash** in the Cloud Shell environment and run the script below.
 
@@ -80,10 +80,10 @@ When the scripts finish running, you will have on the Azure SQL Server _`[DPpref
 
 ### Create Service Principal
 
-1. Open the Azure Portal. On the top right, click on the highlighted icon below to open the cloud shell.
-  :::image type="content" source="../images/cloud-shell.png" alt-text="Azure CLoud Shell":::
+1. Open the Azure portal. On the top right, click on the highlighted icon below to open the Cloud Shell.
+  :::image type="content" source="../images/cloud-shell.png" alt-text="Azure Cloud Shell":::
   
-1. Update the command below to replace the **subscription ID** with your own subscriptionID and the **service principal name** created in the step earlier. After updating the values run in the cloud shell **bash**. The service principal name should be unique within the subscription.
+1. Update the command below to replace the **subscription ID** with your own subscriptionID and the **service principal name** created in the step earlier. After updating the values run in the Cloud Shell **bash**. The service principal name should be unique within the subscription.
 
 >[!IMPORTANT]
 >Replace the parameters with a service principal name of your choice and your subscription ID.
@@ -139,11 +139,11 @@ To set this up, please follow the steps below.
 
     :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Storage Account SP Permissions":::
 
-1. Click on **Add+** and than **Add Role Assignment**
+1. Click on **Add+** and then **Add Role Assignment**
 
     :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Storage Account SP Access Control":::
 
-1. In Add Role Assignment , search for Storage Blob Data Reader, select the `Storage Blob Data Reader` role and click on **Next**.
+1. In Add Role Assignment, search for Storage Blob Data Reader, select the `Storage Blob Data Reader` role and click on **Next**.
 
     :::image type="content" source="../images/storage-account-sp-role-assignment.png" alt-text="Storage Account SP Role Assignment":::
 
@@ -170,10 +170,10 @@ To set this up, please follow the steps below.
 
 For this step you will need to connect to SQL Server using the Query Editor. Since all the resources are behind a private endpoint, you will need to log into the Azure Portal using a bastion host Virtual Machine.
 
-Using the Azure Portal, connect to the virtual machine deployed in the _`[DMLZPrefix]`_`-dev-bastion` resource group.
+Using the Azure portal, connect to the virtual machine deployed in the _`[DMLZPrefix]`_`-dev-bastion` resource group.
 If you are unsure on how to connect to the virtual machine using bastion host service, please refer to **Connecting to the VM** in [Deploy Bastion Host and Jumpbox](/lab1/6_deploy_bastion_host/).
 
-To add the service principal as a user within the database, you might need to add yourself as the active directory admin first. Steps 1 to 3 below explain how to do this. The remainder of the steps explain how to give the service principal permissions to the database. Once logged into Portal from the bastion Host Virtual Machine, search for SQL Servers in the Azure Portal.
+To add the service principal as a user within the database, you might need to add yourself as the active directory admin first. Steps 1 to 3 below explain how to do this. The remainder of the steps explain how to give the service principal permissions to the database. Once logged into Portal from the bastion Host Virtual Machine, search for SQL Servers in the Azure portal.
 
 1. Navigate to the SQL Server _`[DPprefix]`_`-dev-sqlserver001` and click on **Active Directory**.
 
@@ -183,7 +183,7 @@ To add the service principal as a user within the database, you might need to ad
 
     :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Search for Account":::
 
-1. On the account is selected, click on **Select** to persist the setting.
+1. Once the account is selected, click on **Select** to persist the setting.
 
      :::image type="content" source="../images/sqldb-selected-account.png" alt-text="Selected Account":::
 
@@ -191,7 +191,7 @@ To add the service principal as a user within the database, you might need to ad
 
      :::image type="content" source="../images/database-query-editor.png" alt-text="Choose Database":::
 
-1. In `AdatumCRM` and click on **Query editor** and than Log with Active Directory Authentication using the button Log in as your user.
+1. In `AdatumCRM` and click on **Query editor** and then Log with Active Directory Authentication using the button Log in as your user.
 
      :::image type="content" source="../images/query-editor.png" alt-text="Log with Active Directory":::
 
@@ -222,11 +222,11 @@ Purview will read the service principal key from a Key Vault. We will use the Ke
 
 ### Adding Permissions to Add Secret into the Key Vault
 
-1. In the Azure Portal, navigate to the key vault service and search for Key Vault named _`[DMLZprefix]`_`-dev-vault001`.
+1. In the Azure portal, navigate to the key vault service and search for Key Vault named _`[DMLZprefix]`_`-dev-vault001`.
 
  :::image type="content" source="../images/key-vault-1.png" alt-text="Access Control Key Vault":::
 
-1. Click on **Access Control (IAM)**, **Add** and than **Add Role Assignment**.
+1. Click on **Access Control (IAM)**, **Add** and then **Add Role Assignment**.
 
     :::image type="content" source="../images/purview-key-vault-perm.png" alt-text="Purview Add Role Assignment":::
 
@@ -247,9 +247,9 @@ Purview will read the service principal key from a Key Vault. We will use the Ke
 
 ### Add Secret to the Key Vault
 
-Complete the following steps logging into Azure Portal from the Bastion Host virtual machine.
+Complete the following steps logging into Azure portal from the Bastion Host virtual machine.
 
-1. On the he same key vault with the name _`[DMLZprefix]`_`-dev-vault001`. Click on **Secrets** and than **Generate/Import** to create a new secret.
+1. On the same key vault with the name _`[DMLZprefix]`_`-dev-vault001`. Click on **Secrets** and then **Generate/Import** to create a new secret.
   
     :::image type="content" source="../images/key-vault-add-secret.png" alt-text="Key Vault Generate Secret":::
 
@@ -270,7 +270,7 @@ Complete the following steps logging into Azure Portal from the Bastion Host vir
 
 For the Purview instance to read the secrets stored within the Key Vault, it has to be given relevant permissions on the Key Vault. We do this by adding the **Purview Managed Identity** to the `Key Vault Secrets Reader` role.
 
-1. On the he same key vault with the name _`[DMLZprefix]`_`-dev-vault001` Click on **Access Control (IAM)**, **Add** and than **Add Role Assignment**.
+1. On the same key vault with the name _`[DMLZprefix]`_`-dev-vault001` Click on **Access Control (IAM)**, **Add** and then **Add Role Assignment**.
   
     :::image type="content" source="../images/key-vault-add-role-assigment.png" alt-text="Key Vault Permissions":::
 
@@ -293,7 +293,7 @@ For the Purview instance to read the secrets stored within the Key Vault, it has
 ### Set up Key Vault Connection in Purview
 
 >[!NOTE]
-For this step, you will need to log into the Azure Portal using a bastion host Virtual Machine.
+For this step, you will need to log into the Azure portal using a bastion host Virtual Machine.
 
 The next step is for us to link Purview with the Key Vault. To do this, follow the steps below
 
@@ -397,7 +397,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Subscription| the subscription hosting the database|
     | Server name|the SQL Server name to register -- _`DPprefix`_-dev-sqlserver001|
   
- :::image type="content" source="../images/purview-sql-server-name.png" alt-text="SQL DB Registration Values":::
+ :::image type="content" source="../images/purview-sql-server-name.png" alt-text="SQL database Registration Values.":::
 
 ## Setting up Scans
 
@@ -405,7 +405,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
 1. Navigate to the Purview data map and select **New Scan** on the data source
   
-    :::image type="content" source="../images/scan-data-lake-1.png" alt-text="Scan ADLS":::
+    :::image type="content" source="../images/scan-data-lake-1.png" alt-text="Scan A D L S.":::
 
 1. Specify the following values in the resulting screen
 
@@ -415,7 +415,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Connect via Integration Runtime| Select the Self Hosted Integration run time deployed as part of the Data Landing Zone.|
     | Credential|Select the Service Principal set up for Purview.|
 
-    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Scan ADLS credential":::
+    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Scan ADLS credential.":::
 
 1. Click on **Test Connection** to verify the connectivity and permissions are in place, and click on **Continue**.
 
@@ -482,7 +482,7 @@ On the following steps you will use the Copy Data tool from Azure Data Factory (
 
 ### Setup Private Endpoints
 
-As the environment is locked to public access, you need to first log into the Azure Portal on your local browser and connect to the bastion host virtual machine to be able to access the required Azure services using private endpoints:
+As the environment is locked to public access, you need to first log into the Azure portal on your local browser and connect to the bastion host virtual machine to be able to access the required Azure services using private endpoints:
 
 1. On the resource group _`[DMLZprefix]`_`-dev-bastion` click on _`[DMLZprefix]`_`-dev-vm001`.
 
@@ -519,9 +519,9 @@ As the environment is locked to public access, you need to first log into the Az
     :::image type="content" source="../images/managed-private-endpoints-sql-server.png" alt-text="Create Private Endpoint to Azure SQL Server":::
 
 >[!NOTE]
->To approve ADF to to access the private endpoints of these services, here are a couple of options:
+>To approve ADF to access the private endpoints of these services, here are a couple of options:
 
-**Option 1**: On each of the services that you request access to, you need to go to the "networking" or to "private endpoint connections" option of that service on the Azure portal to to approve these private endpoint access requests.
+**Option 1**: On each of the services that you request access to, you need to go to the "networking" or to "private endpoint connections" option of that service on the Azure portal to approve these private endpoint access requests.
 
 **Option 2**: Run the scripts below using the Azure Cloud Shell in Bash mode and approve all the required private endpoints at once.
 
