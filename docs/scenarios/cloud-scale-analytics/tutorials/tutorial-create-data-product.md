@@ -19,7 +19,7 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
 
       | Reference implementation   | Description | Deploy to Azure |
       |:---------------------------|:------------|:----------------|
-      | Data Product Batch     | Deploys a Data Workload template for Data Batch Analysis to a resource group inside a Data Landing Zone. Please make sure you deploy a [Data Management Landing Zone](https://github.com/Azure/data-management-zone) and [Data Landing Zone](https://github.com/Azure/data-landing-zone) first. |[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Finfra%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Fdocs%2Freference%2Fportal.dataProduct.json) | [Repository](https://github.com/Azure/data-product-batch) |
+      | Data Product Batch     | Deploys a Data Workload template for Data Batch Analysis to a resource group inside a Data Landing Zone. Please make sure you deploy a [Data Management Landing Zone](https://github.com/Azure/data-management-zone) and [Data Landing Zone](https://github.com/Azure/data-landing-zone) first. |[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Finfra%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Fdocs%2Freference%2Fportal.dataProduct.json) |
 
 1. In the **Data Product** tab, provide the following information:
 
@@ -39,7 +39,7 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
       |:-------|:--------------------|
       | Create Data Processing Service | Select Data Factory from the dropdown menu. |
       | Connect to Purview Account | Select from the dropdown the Azure Purview you created when deploying the Data Management Landing Zone. |
-      | SQL Flavour | Select "SQL Server" from the dropdown menu. |
+      | SQL Flavor | Select "SQL Server" from the dropdown menu. |
       | Password | Enter a strong password for your Azure SQL Server account, and confirm it. |
       | Enable Azure Cosmos DB | Leave this option **unchecked**. |
       | Enable role assignments | This is optional, but you should **Check** this option to add required permissions. |

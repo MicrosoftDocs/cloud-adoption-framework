@@ -168,7 +168,7 @@ To set this up, please follow the steps below.
 
 ### Azure SQL Database Permissions
 
-For this step you will need to connect to SQL Server using the Query Editor. Since all the resources are behind a private endpoint, you will need to log into the Azure Portal using a bastion host Virtual Machine.
+For this step you will need to connect to SQL Server using the Query Editor. Since all the resources are behind a private endpoint, you will need to log into the Azure portal using a bastion host Virtual Machine.
 
 Using the Azure portal, connect to the virtual machine deployed in the _`[DMLZPrefix]`_`-dev-bastion` resource group.
 If you are unsure on how to connect to the virtual machine using bastion host service, please refer to **Connecting to the VM** in [Deploy Bastion Host and Jumpbox](/lab1/6_deploy_bastion_host/).
@@ -191,7 +191,7 @@ To add the service principal as a user within the database, you might need to ad
 
      :::image type="content" source="../images/database-query-editor.png" alt-text="Choose Database":::
 
-1. In `AdatumCRM` and click on **Query editor** and then Log with Active Directory Authentication using the button Log in as your user.
+1. In `AdatumCRM` and click on **Query editor** and then Log with Active Directory Authentication using the button Login as your user.
 
      :::image type="content" source="../images/query-editor.png" alt-text="Log with Active Directory":::
 
@@ -393,7 +393,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
     | Field| Suggested Value(s)  |
     |:-------|:--------------------|
-    | Name|`SQLDatabase` (the name of the database created in "Create Azure SQL Dbs" step)|
+    | Name|`SQLDatabase` (the name of the database created in "Create Azure SQL Db's" step)|
     | Subscription| the subscription hosting the database|
     | Server name|the SQL Server name to register -- _`DPprefix`_-dev-sqlserver001|
   
@@ -614,7 +614,7 @@ When you are done with all approvals, the "Managed private endpoints" pane shoul
 
 1. Follow the same steps as you just did for the Azure SQL Server role assignment. This time, select **"Storage Blob Data Contributor"** instead of selecting the  **"Contributor"** role.
 
-1. After assigning the permissions to all three storage accounts, Data Factory will be able to connect and access these storage accounts to complete upcoming lab steps.
+1. After assigning the permissions to all three storage accounts, Data Factory will be able to connect and access the storage accounts to complete upcoming lab steps.
 
 #### Purview
 
@@ -669,7 +669,7 @@ Follow each step on the Copy Data tool wizard:
 >[!NOTE]
 >If you have any errors connecting or accessing the data in the Azure SQL Databases, or the storage accounts, please review permissions and make sure that the Data Factory has the appropriate credentials and access permissions to any problematic resource.
 
-1. Select these 3 tables:
+1. Select these three tables:
 
 - SalesLT.Address
 - SalesLT.Customer
@@ -701,11 +701,11 @@ When you are done with the wizard, it will show under Pipelines the new pipeline
 
 #### Pipeline
 
-- Rename the pipeline and the Datasets to the names you see on the image below, publish all, then run the Trigger to have the 3 tables copied from SQL DB to ADLS.
+- Rename the pipeline and the Datasets to the names you see on the image below, publish all, then run the Trigger to have the three tables copied from SQL DB to ADLS.
 
     :::image type="content" source="../images/trigger-run-crm.png" alt-text="Screenshot showing how to use the Copy Data Tool SQL Database to A D L S.":::
 
-This process you just finished will create 3 .csv files in the "data\CRM" folder, one for each of the selected tables of database AdatumCRM.
+This process you just finished will create three .csv files in the "data\CRM" folder, one for each of the selected tables of database AdatumCRM.
 
 #### Copy Data tool - AdatumERP
 
@@ -733,7 +733,7 @@ Now lets extract the data from the AdatumERP Azure SQL Database representing the
 
 :::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot showing how to add a header to a file.":::
 
-1. Finish the wizard for the second time, rename the pipeline to CopyPipeline_ERP_to_DevRaw , publish all, then run the trigger on this newly created pipeline, to have the 7 tables you selected copied from SQL DB to ADLS.
+1. Finish the wizard for the second time, rename the pipeline to CopyPipeline_ERP_to_DevRaw, publish all, then run the trigger on this newly created pipeline, to have the seven tables you selected copied from SQL DB to ADLS.
 
 After finishing these steps, there will be ten .csv files in Azure Data Lake storage _`[DLZprefix]`_`devraw`. You can now proceed to the next step to start curating the files in the _`[DLZprefix]`_`devencur` Data Lake.
 

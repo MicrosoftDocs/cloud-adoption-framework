@@ -36,7 +36,7 @@ The deployment and code artifacts include the following services:
 - [Data Factory](/azure/data-factory/)
 - [Self-Hosted Integration Runtime](/azure/data-factory/create-self-hosted-integration-runtime)
 - [Log Analytics](/azure/azure-monitor/learn/quick-create-workspace)
-- [SQL Server](/sql/sql-server/?view=sql-server-ver15)
+- [SQL Server](/sql/sql-server/?view=sql-server-ver15&preserve-view=true)
 - [SQL Database](/azure/azure-sql/database/)
 - [Synapse Workspace](/azure/synapse-analytics/)
 - [Databricks](/azure/databricks/)
