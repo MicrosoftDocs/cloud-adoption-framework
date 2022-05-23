@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
-## Deploy Data Product Batch via One Click Deployment
+# Deploy Data Product Batch via One Click Deployment
 
  If you want to experiment with the resources and see what gets deployed as part of Data Product Batch deployment, use the **Deploy to Azure Button** to deploy resources for the Data Product Batch in a Data Landing Zone. The applicable scenarios for Data Product Batch includes Data Product and Data Integration. As Explained earlier, Data Products are another unit of scale inside a Data Landing Zone. In addition to Data Product, this template can be used for Data Integration into the platform.
 

@@ -660,11 +660,11 @@ Follow each step on the Copy Data tool wizard:
 
 1. Select **Schedule** to create a trigger to run the pipeline every 24 hours.
 
-    :::image type="content" source="../images/create-pipeline.png" alt-text="Create Trigger":::
+    :::image type="content" source="../images/create-pipeline.png" alt-text="Screenshot showing the Create Trigger in C R M.":::
 
 1. Click on **+ New Connection** to create a Linked Service to connect this data factory to the Azure SQL Database AdatumCRM on server _`[DPprefix]`_`-dev-sqlserver001` (source)
 
-    :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Connect to AdatumCRM":::
+    :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot showing how to connect to Adatum C R M.":::
 
 >[!NOTE]
 >If you have any errors connecting or accessing the data in the Azure SQL Databases, or the storage accounts, please review permissions and make sure that the Data Factory has the appropriate credentials and access permissions to any problematic resource.
@@ -675,27 +675,27 @@ Follow each step on the Copy Data tool wizard:
 - SalesLT.Customer
 - SalesLT.CustomerAddress
 
-    :::image type="content" source="../images/adatum-crm-tables.png" alt-text="Select Tables":::
+    :::image type="content" source="../images/adatum-crm-tables.png" alt-text="Screenshot of the select tables screen.":::
 
 1. Create a new Linked Service to access the _`[DLZprefix]`_`devraw` Azure Data Lake Storage Gen2. (destination)
 
-    :::image type="content" source="../images/raw-storage-connection.png" alt-text="Raw Storage Connection":::
+    :::image type="content" source="../images/raw-storage-connection.png" alt-text="Screenshot showing the raw storage connection.":::
 
 1. Browse the folders in the _`[DLZprefix]`_`devraw` storage and select "data" as the destination.
 
-    :::image type="content" source="../images/raw-data-folder.png" alt-text="Raw Storage Destination":::
+    :::image type="content" source="../images/raw-data-folder.png" alt-text="Screenshot showing the destination as raw data.":::
 
 1. Change the "File name suffix" to .csv and leave the other options as default.
 
-    :::image type="content" source="../images/destination-data-source.png" alt-text="CSV file":::
+    :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing the file name suffix field with C S V entered.":::
 
 1. Go to the next screen and select "Add header to file".
 
-    :::image type="content" source="../images/add-header-to-file.png" alt-text="header to file":::
+    :::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot showing how to add a header to a file.":::
 
 1. Finish the wizard with a screen similar to this one:
 
-    :::image type="content" source="../images/copy-datatool-crm-complete.png" alt-text="Copy Data Tool completed":::
+    :::image type="content" source="../images/copy-datatool-crm-complete.png" alt-text="Screenshot showing the copy Data Tool deployment completed.":::
 
 When you are done with the wizard, it will show under Pipelines the new pipeline you just created.
 
@@ -703,7 +703,7 @@ When you are done with the wizard, it will show under Pipelines the new pipeline
 
 - Rename the pipeline and the Datasets to the names you see on the image below, publish all, then run the Trigger to have the 3 tables copied from SQL DB to ADLS.
 
-    :::image type="content" source="../images/trigger-run-crm.png" alt-text="Copy Data Tool SQLDB to ADLS":::
+    :::image type="content" source="../images/trigger-run-crm.png" alt-text="Screenshot showing how to use the Copy Data Tool SQL Database to A D L S.":::
 
 This process you just finished will create 3 .csv files in the "data\CRM" folder, one for each of the selected tables of database AdatumCRM.
 
@@ -719,19 +719,19 @@ Now lets extract the data from the AdatumERP Azure SQL Database representing the
 
 - Linked Service to Azure SQL DB name: AdatumERP.
 
-:::image type="content" source="../images/adatum-erp-connection.png" alt-text="AdatumERP Connection":::
+:::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot of the Adatum E R P Connection.":::
 
 1. Select tables: SalesLT.Product, SalesLT.ProductCategory, SalesLT.ProductDescription, SalesLT.ProductModel, SalesLT.ProductModelProductDescription, SalesLT.SalesOrderDetail, SalesLT.SalesOrderHeader.
 
-:::image type="content" source="../images/adatum-erp-tables.png" alt-text="AdatumERP Tables":::
+:::image type="content" source="../images/adatum-erp-tables.png" alt-text="Screenshot of Adatum E R P Tables.":::
 
 1. Use the already created Linked Service to the `[DLZprefix]devraw` storage account, set the file extension to .csv.
 
-:::image type="content" source="../images/destination-data-source.png" alt-text="Raw storage account":::
+:::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing a raw storage account.":::
 
 1. Select Add header to file.
 
-:::image type="content" source="../images/add-header-to-file.png" alt-text="header to file":::
+:::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot showing how to add a header to a file.":::
 
 1. Finish the wizard for the second time, rename the pipeline to CopyPipeline_ERP_to_DevRaw , publish all, then run the trigger on this newly created pipeline, to have the 7 tables you selected copied from SQL DB to ADLS.
 
@@ -759,7 +759,7 @@ Here are the steps:
 
 1. In the Activities pane, expand the Move and Transform accordion. Drag and drop the Data Flow activity from the pane to the pipeline canvas.
 
-:::image type="content" source="../images/activities.png" alt-text="Activities":::
+:::image type="content" source="../images/activities.png" alt-text="Screenshot showing the activities pane.":::
 
 1. In the Adding Data Flow pop-up, select Create new Data flow and then name your data flow "CRM_to_Customer". Click Finish when done.
 
@@ -770,11 +770,11 @@ Here are the steps:
 
 1. When you are finished selecting all the options in the Data flow "CRM_to_Customer", the pipeline "Pipeline_transform_CRM" will look like this:
 
-:::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Pipeline_transform_CRM":::
+:::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot showing how the Pipeline transform C R M looks.":::
 
 and the Data flow will look like this:
 
-:::image type="content" source="../images/crm-to-customer.png" alt-text="CRM_to_Customer":::
+:::image type="content" source="../images/crm-to-customer.png" alt-text="Screenshot showing how the C R M to Customer data flow looks.":::
 
 These are the settings you need to modify in the Data Flow when manipulating these files:
 

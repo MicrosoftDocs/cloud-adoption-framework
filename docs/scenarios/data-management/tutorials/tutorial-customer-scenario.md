@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-### Customer scenario
+# Customer scenario
 
 **Adatum Corporation** is a large, multinational enterprise. In addition to the centralized business units at their headquarters, they also have subsidiaries across the globe, each with its own business units such as accounting, marketing, sales, support, and operations.
 
@@ -20,7 +20,7 @@ The company's vision is to have a centralized analytics platform, a single sourc
 
 Adatum has decided to implement the cloud-scale analytics architecture pattern in Azure to solve this problem.  The enterprise is confident that the cloud-scale analytics pattern will allow the corporate sales team to migrate their data platform today but still provide enough flexibility to accommodate other business units when they are ready to join the data mesh.
 
-### Current situation
+## Current situation
 
 Adatum's corporate sales group uses traditional ERP and CRM systems to process its sales transactions.  Data from these systems needs to be exported to a separate analytics platform so that stakeholders across the organization can access the data and enrich it for their various projects.
 
@@ -44,7 +44,7 @@ Note that this shared integration will not transform or enrich the data.  It wil
 
 In this example, Adatum has one data product.  This product combines raw data from the shared data integration and transforms them into a new dataset. From there, it can be picked up by business users for additional analysis and reporting with tools like Power BI.
 
-:::image type="content" source="../images/adatum-revised.png" alt-text="Diagram of the Adatum Corporation Data Management Landing Zone.":::
+:::image type="content" source="../images/adatum-revised.png" alt-text="Diagram showing the Adatum Corporation Data Management Landing Zone.":::
 
 
 <sub>**Figure 1: Architectural Diagram**  Note that not all Azure services are represented in the diagram.  It has been simplified to accentuate the core concepts of how resources are organized within the architecture.</sub>
@@ -69,10 +69,10 @@ Scaling is accomplished by adding more landing zones to the architecture.  These
 
 The customer scenario outlined above can be deployed by referencing the architectures below for Adatum Corporation's Data Management Landing Zone and data landing zone.
 
-### Data Management Landing Zone Diagram
+### Data Management Landing Zone
 
 :::image type="content" source="../images/adatum-data-management-landing-zone.png" alt-text="Diagram of the Adatum Corporation Data Management Landing Zone.":::
 
-### Sales Data Landing Zone
+### Sales Data Landing Zone 
 
 :::image type="content" source="../images/adatum-sales-data-landing-zone-revised.png" alt-text="Diagram of the Adatum Corporation Sales Data Landing Zone.":::

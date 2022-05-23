@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-## Clean-up instructions
+# Clean-up instructions
 
 As you go through the tutorial, you might run into deployment issues, to start over fresh, please use the steps below to remove the resources created in your subscription.
 
 Also, once all the steps in the tutorial are completed, you can use the  scripts below to remove all resources that have been created in your subscription.
 
-### Before you run the scripts
+## Before you run the scripts
 
 >[!Warning]
 >Please ensure you selected the correct prefix as a filter. The filter parameter will be used to remove the resource groups created during the Workshop Labs. Removing resource groups with this scripts is a irreversible operation.
