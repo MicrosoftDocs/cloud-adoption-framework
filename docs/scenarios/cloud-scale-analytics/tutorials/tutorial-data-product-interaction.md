@@ -177,7 +177,7 @@ To add the service principal as a user within the database, you might need to ad
 
 1. Navigate to the SQL Server _`[DPprefix]`_`-dev-sqlserver001` and click on **Active Directory**.
 
-    :::image type="content" source="../images/azure-sql-db-ad-admin1.png" alt-text="SQL Server Admin":::
+    :::image type="content" source="../images/azure-sql-admin-1.png" alt-text="SQL Server Admin":::
 
 1. Click on **Set Admin** and search for your own account. Click on the desired account returned by the search to select the account.
 
@@ -185,7 +185,7 @@ To add the service principal as a user within the database, you might need to ad
 
 1. Once the account is selected, click on **Select** to persist the setting.
 
-     :::image type="content" source="../images/sqldb-selected-account.png" alt-text="Selected Account":::
+     :::image type="content" source="../images/sql-database-selected-account.png" alt-text="Selected Account":::
 
 1. Now click on **SQL Databases**, choose the database `AdatumCRM`.
 
@@ -207,7 +207,7 @@ GO
 
 ```
 
-:::image type="content" source="../images/azure-sql-db-add-sp.png" alt-text="Add SQL Database Service Principal":::
+:::image type="content" source="../images/azure-sql-add-sp.png" alt-text="Add SQL Database Service Principal":::
 
 Repeat steps 4 through 6 for the `AdatumERP` database.
 
@@ -303,7 +303,7 @@ The next step is for us to link Purview with the Key Vault. To do this, follow t
   
 1. Within the Purview Studio, click on the **Management** hub > **Credentials** > **Manage Key Vault Connections** > **New** in the dialog
   
-    :::image type="content" source="../images/purview-key-vault-connections.png" alt-text="Manage Key Vault Connections":::
+    :::image type="content" source="../images/purview-key-vault-connection.png" alt-text="Manage Key Vault Connections":::
 
 1. Click on **Manage Key Vault Connections** and then **New** in the dialog
 
@@ -370,7 +370,7 @@ The following steps outline the process to register an ADLS Gen 2 Storage accoun
     | Endpoint|  This should be automatically populated based on the selected storage account|
     | Select a collection | Select the root collection.|  
 
-    :::image type="content" source="../images/purview-register-add-dl-raw.png" alt-text="Register ADLS raw":::
+    :::image type="content" source="../images/purview-register-add-raw.png" alt-text="Register ADLS raw":::
 
 Click **Register** to create the data source.
 
