@@ -20,11 +20,15 @@ Requirements for authentication inside the landing zone should be thoroughly ass
 
 - Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](https://docs.microsoft.com/azure/role-based-access-control/troubleshooting).
 
-    o There's a limit of 4,000 role assignments per subscription.
+     There's a limit of 4,000 role assignments per subscription.
 
-    o There's a limit of 500 role assignments per management group.
+     There's a limit of 500 role assignments per management group.
 
-    o A maximum of 30 Azure AD custom roles can be created in an Azure AD organization.
+     A maximum of 30 Azure AD custom roles can be created in an Azure AD organization.
+
+- Environments deployed in the Classic deployment model should be migrated to the Azure Resource Manager (ARM) model. Understand that virtual machines and virtual networks cannot be migrated from the Classic model to the Resource Manger model and that automated scripts need to be updated to accommodate the new schema. Guidance can be found in this link: [Migrate from classic to Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/deployment-models#migrate-from-classic-to-resource-manager)
+
+- For Azure Classic Subscription Administrator roles, the Account Administrator has the Service Administrator attached by default. Both of these roles together provide the ability to manage the billing for Azure resources as well as the resources themselves. To separate the duties properly, you can transfer the ownership of the Services Administrator to another account. However, since the Service Administrator has the same function as the Owner Azure role, you can consider removing the Service Administrator role and keeping the RBAC as best practice to manage access to Azure resources. For further information, please see [Changing the Service Administrator role](https://docs.microsoft.com/azure/role-based-access-control/classic-administrators#change-the-service-administrator)
 
 ## Managed Identities - design considerations
 
