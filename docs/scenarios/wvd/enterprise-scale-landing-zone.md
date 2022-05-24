@@ -43,18 +43,15 @@ The following diagram shows a conceptual reference architecture that demonstrate
 
 [![Diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
 
-## Deploy Azure Virtual Desktop Landing Zone Accelerator
+## Deploy Azure Virtual Desktop with the Landing Zone Accelerator
 
-The AVD Landing Zone Accelerator includes an open source collection containing Azure Resource Manager plus Bicep and Terraform templates. The collection is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo.
+The AVD Landing Zone Accelerator includes an open source collection containing Azure Resource Manager and Bicep templates to help you set up your AVD environment quickly following best practices. The accelerator will create an AVD environment with infrastructure components like virtual machines, networks, and storage in Azure.
 
-These templates help you deploy infrastructure components like virtual machines, networks, and storage to Azure. To get the templates, see the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo. There, you'll find scenarios that can help get you started setting up your AVD environment quickly. 
+The AVD Accelerator is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo.
+
+This accelerator is to be used as starter kit and you can expand its functionality by developing your own deployments.
 
 Conceptually, this workload should sit in the landing zones management group of an enterprise-scale landing zones deployment and be connected to the hub.
-
-### Custom deployments
-
-The [automate Azure Virtual Desktop deployments in Azure](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) GitHub repository contains code that lets you deploy Azure Virtual Desktop environments in the Azure cloud.
-
 ## Next steps
 
 Review the critical design considerations and recommendations for identity and access management specific to the deployment of Azure Virtual Desktop.
