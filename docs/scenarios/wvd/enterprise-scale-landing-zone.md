@@ -47,7 +47,7 @@ The following diagram shows a conceptual reference architecture that demonstrate
 
 The AVD Landing Zone Accelerator includes an open source collection containing Azure Resource Manager and Bicep templates to help you set up your AVD environment quickly following best practices. The accelerator will create an AVD environment with infrastructure components like virtual machines, networks, and storage in Azure.
 
-The AVD Accelerator is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) repo.
+The AVD Accelerator is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) GitHub repo.
 
 This accelerator is to be used as starter kit and you can expand its functionality by developing your own deployments.
 
