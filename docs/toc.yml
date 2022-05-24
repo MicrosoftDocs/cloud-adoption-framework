@@ -141,7 +141,7 @@ items:
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
     - name: Building your devops practice
-      href: strategy/building-devops-practice.md  
+      href: strategy/building-devops-practice.md
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
@@ -453,6 +453,8 @@ items:
 
       - name: Align
         items:
+        - name: Brownfield considerations
+          href: ready/landing-zone/brownfield-considerations.md
         - name: Refactor landing zones
           href: ready/landing-zone/refactor.md
         - name: Transition to the Azure landing zone conceptual architecture
@@ -1548,7 +1550,7 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-        
+
 
       - name: Monitoring
         items:
