@@ -12,11 +12,7 @@ ms.custom: internal
 
 # Get started: Understand and document foundational alignment decisions
 
-The cloud adoption numerous business, technical, and organizational benefits. 
-
-TODO
-
-Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand.
+Cloud adoption provides numerous business, technical, and organizational benefits. Whatever your organization wants to accomplish along its cloud adoption journey, there are certain initial decisions that every team involved in the journey needs to understand. This article provides a list of steps to help you document design decisions and prepare your organization for its cloud adoption process.
 
 > [!NOTE]
 > The links in this article lead to multiple areas of the Cloud Adoption Framework documentation. Bookmarking this article can make it easier for you to find this checklist again after you explore different articles the checklist recommends.
