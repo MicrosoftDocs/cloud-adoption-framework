@@ -55,7 +55,7 @@ In our example scenario, data loaded from Storage Account A transits a Vnet peer
 
 In this scenario, the data doesn't pass the Connectivity Hub. It stays within the Data Platform that consists of a data management landing zone and one or more data landing zones.
 
-:::image type="content" source="../data-management/images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture" lightbox="../data-management/images/network-options-meshed-network-architecture.png":::
+:::image type="content" source="./images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture" lightbox="./images/network-options-meshed-network-architecture.png":::
 
 *Figure 2: Meshed Network architecture.*
 
@@ -114,7 +114,7 @@ If you need to enforce other network policies within the data platform, use Netw
 
 Hub and spoke network architecture design is the most obvious option, and one that many enterprises have adopted. In it, network transitivity gets set up in the Connectivity Hub to access data in Storage Account A from VM B. Data traverses two Vnet peerings ((2) and (5)) and a network virtual appliance hosted inside the Connectivity Hub ((3) and (4)). Then the data is loaded by the virtual machine (6) and stored back into the Storage Account B (8).
 
-:::image type="content" source="../data-management/images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture" lightbox="../data-management/images/network-options-hub-and-spoke.png":::
+:::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture" lightbox="./images/network-options-hub-and-spoke.png":::
 
 *Figure 3: Hub and spoke architecture.*
 
@@ -131,7 +131,7 @@ Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="ic
 
 ### Service Management in traditional hub and spoke architecture
 
-This network design is well-known and consistent with most organizations' existing network setup. This makes the design easy to explain and implement. You can also use a centralized an Azure-native DNS solution with Private DNS Zones to provide PQDN resolution inside your Azure tenant. Using Private DNS Zones allows you to automate the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
+This network design is well-known and consistent with most organizations' existing network setup. This makes the design easy to explain and implement. You can also use a centralized Azure-native DNS solution with Private DNS Zones to provide FQDN resolution inside your Azure tenant. Using Private DNS Zones allows you to automate the DNS A-record lifecycle through [Azure Policies](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 Another benefit of this design is that traffic is routed through a central network virtual appliance, so network traffic sent from one Spoke to another can be logged and inspected.
 
@@ -176,7 +176,7 @@ Another design option is the projection of Private Endpoints across each and eve
 
 The same applies to Storage Account B, and potentially to other services inside the data landing zones. If we define the number of data landing zones as *n*, then we end up with *n* Private Endpoints for at least all the storage accounts and potentially other services within the data landing zones as well. This leads to an exponential increase in the number of Private Endpoints.
 
-:::image type="content" source="../data-management/images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection" lightbox="../data-management/images/network-options-private-endpoint-projection.png":::
+:::image type="content" source="./images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection" lightbox="./images/network-options-private-endpoint-projection.png":::
 
 *Figure 4: Private Endpoint projection architecture.*
 
@@ -204,9 +204,9 @@ Summary: :::image type="icon" source="./media/minus-icon.png":::
 
 While again similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this network design has the benefit of no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
-With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub.  You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/). On the other hand, the network address space required by your data platform increases due to the exponential increase in required Private Endpoints, which isn't optimal.
+With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub.  You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/azure/cloud-adoption-framework/strategy/monitoring-strategy). On the other hand, the network address space required by your data platform increases due to the exponential increase in required Private Endpoints, which isn't optimal.
 
-The major concerns regarding this network architecture are its previously mentioned DNS challenges. You can't use an Azure native solution in the form of Private DNS Zones, so this architecture requires a third-party solution capable of resolving FQDNS based on the origin/IP-address of the requestor. You also have to develop and maintain tools and workflows to automate Private DNS A-records, which drastically increases management overhead compared to the proposed [Azure Policy driven solution](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
+The major concerns regarding this network architecture are its previously mentioned DNS challenges. You can't use an Azure native solution in the form of Private DNS Zones, so this architecture requires a third-party solution capable of resolving FQDNS based on the origin/IP-address of the requestor. You also have to develop and maintain tools and workflows to automate Private DNS A-records, which drastically increases management overhead compared to the proposed [Azure Policy driven solution](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 You can create a distributed DNS infrastructure using Private DNS zones, but this creates DNS islands, which ultimately cause issues when you try to access private link services hosted in other landing zones within your tenant. Therefore, this design isn't a viable option.
 
@@ -237,7 +237,7 @@ Another network option is to host Private Endpoints in your Connectivity Hub and
 
 Data traverses a single Vnet peering between the Connectivity Hub and data landing zone in order to load a dataset stored in Storage Account A in VM B. Once that dataset is loaded and processed ((3) and (4)), it traverses the same Vnet peering a second time (5) before finally getting stored in Storage Account B through the Private Endpoint connected to the Hub Vnet (6).
 
-:::image type="content" source="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub" lightbox="../data-management/images/network-options-private-endpoints-in-connectivity-hub.png":::
+:::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub" lightbox="./images/network-options-private-endpoints-in-connectivity-hub.png":::
 
 *Figure 5: Private Endpoints in Connectivity Hub architecture.*
 
@@ -256,9 +256,9 @@ Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="i
 
 While similar to the [meshed network architecture's](#meshed-network-architecture-recommended) design, this design has no network virtual appliance acting as a single point of failure or throttling throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the Connectivity Hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
-With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub. You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/infra/Policies/PolicyDefinitions/DiagnosticSettings/).
+With all resources hosted within a single subscription, traffic isn't inspected in the central Connectivity Hub. You can still capture network logs by using Network Security Group Flow logs, and you can consolidate and store other application and service level logs by using service-specific Diagnostic Settings. You can capture all of these logs at scale by using [Azure Policies](/azure/cloud-adoption-framework/strategy/monitoring-strategy).
 
-This design also allows you to create an Azure native DNS solution based on Private DNS Zones, and allows you to automate the DNS A-record lifecycle through [Azure Policies](/infra/Policies/PolicyDefinitions/PrivateDnsZoneGroups/).
+This design also allows you to create an Azure native DNS solution based on Private DNS Zones, and allows you to automate the DNS A-record lifecycle through [Azure Policies](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 

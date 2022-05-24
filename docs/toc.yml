@@ -2,7 +2,7 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About the framework
+  - name: About the Framework
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
@@ -18,7 +18,7 @@ items:
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
-      href: scenarios/aks/index.md
+      href: scenarios/app-platform/index.md
     - name: SAP
       href: scenarios/sap/index.md
     - name: Virtual desktops
@@ -140,6 +140,8 @@ items:
       href: strategy/digital-transformation-timeline.md
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
+    - name: Building your devops practice
+      href: strategy/building-devops-practice.md  
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
@@ -257,6 +259,8 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Design principles
+        href: ready/landing-zone/design-principles.md
       - name: Journey to the target architecture
         href: ready/landing-zone/landing-zone-journey.md
       - name: Design areas
@@ -417,8 +421,6 @@ items:
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
-          - name: Design principles
-            href: ready/enterprise-scale/design-principles.md
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
           - name: Testing approach for enterprise-scale
@@ -1649,21 +1651,6 @@ items:
         href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
-      - name: Securing Power Platform
-        items:
-          - name: Overview
-            href: /power-platform/admin/security/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Security and governance considerations
-            href: /power-platform/admin/governance-considerations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Compliance and data privacy
-            href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Establish DLP policies
-            href: /power-platform/guidance/adoption/dlp-strategy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Enable cross-tenant isolation
-            href: /power-platform/admin/cross-tenant-restrictions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Data protection in connectors
-            href: /connectors/protection?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
     - name: Security considerations
       items:
       - name: Security strategy
