@@ -40,20 +40,11 @@ Operational requirements|<ul> <li>Operational dashboards with native tools such 
 - Are there existing Service Management tools in place that alerts need to be sent to?
 - Which services are considered business critical and need high priority notifications of issues?
 
-### Update Management considerations
-
-- Are there existing Update Management tools used by your organization? Can they be extended to cover the cloud environment or are new tools required?
-- Which teams will be responsible for overseeing Update Management?
-- Are there groups of resources that share similar update schedules?
-- Are there groups of resources that cannot be updated at the same time for business continuity reasons?
-
 ## Inventory and visibility recommendations
 
 - Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where Azure role-based access control (Azure RBAC), data sovereignty requirements, and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Focusing on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 - Export logs to Azure Storage if log retention requirements exceed two years. Use immutable storage with a write-once, read-many policy to make data non-erasable and non-modifiable for a user-specified interval.
 - Use Azure Policy for access control and compliance reporting. Azure Policy lets you enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).
-- Monitor in-guest virtual machine (VM) configuration drift using Azure Policy. Enabling [guest configuration](/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps application team workloads to consume feature capabilities immediately, with little effort.
-- Use [Update Management in Azure Automation](/azure/automation/update-management/overview) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing Update Management configurations through Azure Policy ensures that all VMs are included in the patch management regimen. It also provides application teams with the ability to manage patch deployment for their VMs. It also provides visibility and enforcement capabilities to the central IT team across all VMs.
 - Use Network Watcher to proactively monitor traffic flows through [Network Watcher NSG flow logs v2](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). [Traffic Analytics](/azure/network-watcher/traffic-analytics) analyzes NSG flow logs to gather deep insights about IP traffic within a virtual network and provides critical information for effective management and monitoring. Traffic Analytics provides information such as:
   - Most communicating hosts and application protocols
   - Most conversing host pairs
