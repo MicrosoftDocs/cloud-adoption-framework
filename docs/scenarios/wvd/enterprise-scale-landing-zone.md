@@ -51,7 +51,7 @@ The AVD Accelerator is available in the [`AVD Accelerator`](https://github.com/A
 
 This accelerator is to be used as starter kit and you can expand its functionality by developing your own deployments.
 
-Ideally, this workload should be deployed after an enterprise-scale landing zones deployment and be connected to the hub.
+Ideally, this accelerator should be used to deploy an AVD workload after an Enterprise-Scale landing zone deployment. See [Deploying Enterprise-Scale Architecture in your own environment](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment).
 ## Next steps
 
 Review the critical design considerations and recommendations for identity and access management specific to the deployment of Azure Virtual Desktop.
