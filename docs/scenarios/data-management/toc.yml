@@ -141,6 +141,19 @@ items:
       - name: Getting started checklist
         href: ../cloud-scale-analytics/architectures/data-mesh-checklist.md
 
+  - name: Tutorials
+    items:
+    - name: Customer scenario
+      href: ../cloud-scale-analytics/tutorials/tutorial-customer-scenario.md
+    - name: Create data landing zone
+      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md
+    - name: Create data product
+      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product.md
+    - name: Data product interaction
+      href: ../cloud-scale-analytics/tutorials/tutorial-data-product-interaction.md
+    - name: Clean-up instructions
+      href: ../cloud-scale-analytics/tutorial/clean-up-instructions.md
+
     - name: Reference architectures
       items:
       - name: Overview
