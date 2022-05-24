@@ -61,7 +61,7 @@ Data contracts are often part of metadata-driven ingestion frameworks. You can s
 
 - Defaulting rules on missing data
 
-Data contracts involve large quanitities of technical metadata. To document your data pipelines and data products, you must have a clear description of your data sources, all transformations your data has undergone, and how you ultimately deliver the data.
+Data contracts involve large quantities of technical metadata. To document your data pipelines and data products, you must have a clear description of your data sources, all transformations your data has undergone, and how you ultimately deliver the data.
 
 :::image type="content" source="../media/data-contracts.png" alt-text="Diagram showing data contracts." lightbox="../media/data-contracts.png":::
 
@@ -91,9 +91,9 @@ Apply classifications and conditions like sensitivity labels or filtering condit
 
 The previous section's diagram shows certain elements labeled *data product sidecar*. A data product sidecar is a component or layer for injecting policy execution, like data access controls or data consumption output methods. It's a security abstraction that uses data contracts to handle security enforcement over your domain data. You can create a data product sidecar from your data contract repository as an access control list (ACL) or serverless view, or you can create one using a duplicated dataset that you select and filter for a specific consumer. Either way, the goal is to derive security views from your data contracts in a fully automated manner.
 
-Connect data contract attributes and your documentation. Ensure that you provide sematic context and a relationship to your glossary, so that your consumers can understand how business requirements translate to an actual implementation. If a relationship with business terms is important to your organization, consider implementing policies such as only allowing data contracts to be established after all data product attributes are linked to business term entities. You might also apply this type of policy to contextual changes like relationship or definition adjustments.
+Connect data contract attributes and your documentation. Ensure that you provide semantic context and a relationship to your glossary, so that your consumers can understand how business requirements translate to an actual implementation. If a relationship with business terms is important to your organization, consider implementing policies such as only allowing data contracts to be established after all data product attributes are linked to business term entities. You might also apply this type of policy to contextual changes like relationship or definition adjustments.
 
-## Using data contracts
+## Use data contracts
 
 Start slow when beginning to use data contracts. Don't introduce too many changes at once; data contracts require a cultural shift, and your users need time to become familiar with them and understand the importance of data ownership. You also need to find the sweet spot between too few and too many metadata attributes in your data contracts.
 
@@ -117,6 +117,6 @@ For more information about observability and data sharing agreements, see [Cloud
 
 As part of your data contract documentation you also need terms of service and service-level agreements (SLAs). Use SLAs to outline quality requirements for your data delivery and interfaces, including for uptime, error rates, and availability. SLAs can also include any deprecation, roadmap, and version number requirements you need to define.
 
-## Next Steps
+## Next steps
 
 - [Design considerations for self-serve data platforms](self-serve-data-platforms.md)
