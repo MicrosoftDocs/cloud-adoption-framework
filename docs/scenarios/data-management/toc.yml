@@ -152,7 +152,7 @@ items:
     - name: Data product interaction
       href: ../cloud-scale-analytics/tutorials/tutorial-data-product-interaction.md
     - name: Clean-up instructions
-      href: ../cloud-scale-analytics/tutorial/clean-up-instructions.md
+      href: ../cloud-scale-analytics/tutorials/clean-up-instructions.md
 
     - name: Reference architectures
       items:
