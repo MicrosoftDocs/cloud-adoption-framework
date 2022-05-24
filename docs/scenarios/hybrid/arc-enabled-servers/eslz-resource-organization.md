@@ -7,7 +7,7 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Resource organization for Azure Arc-enabled servers
@@ -26,7 +26,7 @@ Resource tags allow you to add metadata to a resource to quickly locate it and a
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled servers:
 
-[ ![A diagram depicting resource tagging for Azure Arc-enabled servers.](../media/arc-enabled-servers-resource-tagging.png)](../media/arc-enabled-servers-resource-tagging.png#lightbox)
+[ ![A diagram depicting resource tagging for Azure Arc-enabled servers.](./media/arc-enabled-servers-resource-tagging.png)](./media/arc-enabled-servers-resource-tagging.png#lightbox)
 
 ## Next steps
 
