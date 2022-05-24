@@ -20,6 +20,35 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## May 2022
 
+### Unified management and operations with Azure Arc-enabled Kubernetes landing zone accelerator
+
+This release of the Cloud Adoption Framework provides considerations to help you prepare for an enterprise-scale deployment of Azure Arc-enabled Kubernetes.
+
+This scenario focuses on enabling a few targeted outcomes:
+
+- Mature your hybrid practices with Azure Arc-enabled Kubernetes management and operations.
+- Establish appropriate Azure Arc-enabled Kubernetes governance across all on-premises and multicloud assets to move forward with confidence.
+- Minimize technical debt by considering well-architected principles across all Azure Arc-enabled Kubernetes workloads.
+- Automate all three of the above with the codebase for Azure Arc-enabled Kubernetes landing zone accelerator.
+- Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario.
+
+Get started with this scenario using the following links:
+
+| Article | Description |
+|--|--|
+| [Identity and access management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md) | Best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc. |
+| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) | Design considerations when working with Azure Arc-enabled Kubernetes and how to securely connect them to your Enterprise Scale Landing Zone. |
+| [Resource organization](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md) | Best practices for resource consistency and tagging strategy, that includes your hybrid and multicloud resources. |
+| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md) | The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
+| [Management disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md) | Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled Kubernetes on Azure enterprise estate, with centralized management and monitoring at the platform level. |
+| [Automation disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
+| [Extensions management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) | Azure Arc-enabled Kubernetes as being split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. As part of your Enterprise Scale Landing Zone implementation you should keep these two categories in mind as you design your deployment of Azure Arc-enabled Kubernetes. |
+| [CI/CD and GitOps disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) | As a cloud-native construct, Kubernetes requires a cloud-native approach for deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files that are stored in Git repositories. As part of your Enterprise Scale Landing Zone implementation you should plan on how and when GitOps practices using Azure Arc-enabled Kubernetes applies in your organization and who are the people who will be using it.|
+| [Services observability](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Observability is an application characteristic that refers to how well a system’s internal state or status can be understood from its external outputs. As part of your Enterprise Scale Landing Zone implementation you should plan when to implement the Azure Arc-enabled Kubernetes cluster extensions for observability use-cases; Open Service Mesh and Self-hosted API Management gateway. |
+| [Cost governance](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
+| [Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md) | Get started with a fully automated Azure Arc-enabled Kubernetes sandbox deployment. |
+| [Introduction to Azure Arc-enabled Kubernetes landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multicloud architectures. |
+
 ### App Service landing zone accelerator
 
 The new App Service landing zone accelerator provides recommendations and considerations for that can help accelerate adoption of App Service. The architectural approach can be used in greenfield scenarios as design guidelines and in brownfield scenarios as an assessment. The scenario covers both multi-tenanted App Service as well as App Service Environment deployments. The reference implementation covers an architecture using an internal App Service Environment v3 for line of business applications.
