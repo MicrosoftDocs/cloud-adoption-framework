@@ -36,9 +36,9 @@ There are two fundamental categories of Azure landing zones:
 - **Platform landing zones:** Subscriptions deployed to provide centralized services, often operated by a central team, which will be used by various workloads and applications. Platform landing zones represent key services that often benefit from being consolidated for efficiency and ease of operations. Examples include networking, identity, and management services.
 - **Application landing zones:** One or more subscriptions deployed as an environment for an application or workload. Application landing zones are placed under the 'landing zones' management group to ensure policy controls are correctly applied. Application landing zones can be subcategorized as follows:
   
-  - Centrally managed: A central IT team fully operates the landing zone. The team applies controls and platform tools to both the platform and application landing zones.
-  - Technology platforms: With technology platforms such as AKS or AVS, the underlying service is often centrally managed. The applications running on top of the service have delegated responsibilities to application teams. This results in modified controls or access permissions compared to centrally managed landing zones.  
-  - Workload: A platform administration team delegates the entire landing zone to a workload team to fully manage and support the environment. This might include modification of policies and alternative tooling for deploying, securing or monitoring workloads.
+  - **Centrally managed**: A central IT team fully operates the landing zone. The team applies controls and platform tools to both the platform and application landing zones.
+  - **Technology platforms**: With technology platforms such as AKS or AVS, the underlying service is often centrally managed. The applications running on top of the service have delegated responsibilities to application teams. This results in modified controls or access permissions compared to centrally managed landing zones.  
+  - **Workload**: A platform administration team delegates the entire landing zone to a workload team to fully manage and support the environment. This might include modification of policies and alternative tooling for deploying, securing or monitoring workloads.
 
 Whether you're starting on your first production application on Azure or you're operating a complex portfolio of tech platforms and workloads, the Azure landing zone implementation options can be tailored to your needs.
 
