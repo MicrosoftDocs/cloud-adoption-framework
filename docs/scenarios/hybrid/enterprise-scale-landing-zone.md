@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 ---
 
-# Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud
+# Azure Arc landing zone accelerator for hybrid and multicloud
 
 Enterprises are currently building and running applications across various ecosystems on-premises, in multiple public clouds, and on the edge. When you're working in these distributed environments, it's critical that you find a way to ensure compliance and manage servers, applications, and data at scale while you still maintain agility.
 
