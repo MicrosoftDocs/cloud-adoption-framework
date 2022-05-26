@@ -29,7 +29,7 @@ The landing zone accelerator approach provides these assets to support your proj
 - A modular approach that allows you to customize your environment variables.
 - Design guidelines for evaluating critical decisions.
 - The landing zone architecture.
-- A Microsoft-recommended AKS reference implementation based on the [AKS secure baseline](https://github.com/mspnp/aks-secure-baseline).
+- A Microsoft-recommended AKS reference implementation based on the [AKS baseline](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks).
 
 ## Design areas
 
