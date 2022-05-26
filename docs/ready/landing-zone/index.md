@@ -31,7 +31,7 @@ No single solution fits all technical environments. However, a few Azure landing
 
 ## Platform vs. application landing zones
 
-There are two types of Azure landing zones:
+There are two types of landing zones:
 
 - **Platform landing zones:** Subscriptions deployed to provide centralized services, often operated by a central team, which will be used by various workloads and applications. Platform landing zones represent key services that often benefit from being consolidated for efficiency and ease of operations. Examples include networking, identity, and management services.
 - **Application landing zones:** One or more subscriptions deployed as an environment for an application or workload. Application landing zones are placed under the 'landing zones' management group to ensure policy controls are correctly applied. Application landing zones can be subcategorized as follows:
