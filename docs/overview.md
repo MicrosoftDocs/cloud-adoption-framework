@@ -29,7 +29,7 @@ The Cloud Adoption Framework brings together cloud adoption best practices from 
 | <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md): Define business justification and expected adoption outcomes. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md): Align actionable adoption plans to business outcomes. |
 | <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare your cloud environment for planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
 | <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Secure icon](./_images/icons/security.png) | <br> [Secure](./secure/index.md): Improve security over time. |
-| <br> ![Manage icon](./_images/icons/manage.png)     | <br> [Manage](./manage/index.md): Manage operations for cloud and hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern the environment and workloads. |
+| <br> ![Manage icon](./_images/icons/manage.png)     | <br> [Manage](./manage/index.md): Manage operations for cloud and hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern your environment and workloads. |
 | <br> ![Organize icon](./_images/icons/organize.png) | <br> [Organize](./organize/index.md): Align the teams and roles supporting your organization's cloud adoption efforts. |
 
 ## Understand the lifecycle
