@@ -35,7 +35,7 @@ The Cloud Adoption Framework brings together cloud adoption best practices from 
 
 Each methodology above is part of a broad cloud adoption lifecycle. The Cloud Adoption Framework is a full lifecycle framework that supports customers throughout each phase of adoption. The framework uses methodologies as approaches to overcoming common blockers, as shown here:
 
-:::image type="content" source="./_images/caf-overview-new.png" alt-text="Diagram that shows an overview of the Cloud Adoption Framework.":::
+:::image type="content" source="./_images/caf-overview-graphic.png" alt-text="Diagram displaying an overview of the Cloud Adoption Framework.":::
 
 ## Intent
 
