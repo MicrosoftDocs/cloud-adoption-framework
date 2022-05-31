@@ -1,5 +1,5 @@
 ---
-title: Data Product Interaction
+title: Data Product interaction
 description: Interact with Data Product services. Learn how to perform Data orchestration and use Microsoft Purview for Data Governance. 
 author: andrehass
 ms.author: anhass
@@ -40,7 +40,7 @@ The first step to start this hands-on experience is to create two sample Azure S
 
 1. Open the Azure portal. On the top right, click on the highlighted icon below to open the Cloud Shell.
 
-    :::image type="content" source="../images/cloud-shell.png" alt-text="Azure Cloud Shell":::
+    :::image type="content" source="../images/cloud-shell.png" alt-text="Screenshot showing the Cloud Shell icon on the Azure portal.":::
 
 1. Select **bash** in the Cloud Shell environment and run the script below.
 
@@ -48,28 +48,28 @@ The first step to start this hands-on experience is to create two sample Azure S
 
     - Make sure to replace the \<subscription ID\> parameters with your own subscription ID.
 
->[!NOTE]
-The databases will be pre-populated with AdventureWorks sample data, containing the required tables you will use on this tutorial.
+    >[!NOTE]
+    >The databases will be pre-populated with AdventureWorks sample data, containing the required tables you will use on this tutorial.
 
-```Bash
-# Azure SQL Database Setup
-# Create databases AdatumCRM and AdatumERP to simulate Customer's and Sale's data. 
+    ```Bash
+    # Azure SQL Database Setup
+    # Create databases AdatumCRM and AdatumERP to simulate Customer's and Sale's data. 
 
-# Use the subscription id where you deployed the data product.
-az account set --subscription "<subscription ID>"
+    # Use the subscription id where you deployed the data product.
+    az account set --subscription "<subscription ID>"
 
-# Get the resource group for the data product.
-resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, 'dp001')==\`true\`].name")
+    # Get the resource group for the data product.
+    resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, 'dp001')==\`true\`].name")
 
-# Get the existing Azure SQL DB Server name.
-sqlServerName=$(az sql server list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'sqlserver001')==\`true\`].name")
+    # Get the existing Azure SQL DB Server name.
+    sqlServerName=$(az sql server list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'sqlserver001')==\`true\`].name")
 
-# Create the first Azure SQL Database, AdatumCRM to create the Customer's data source.
-az sql db create --resource-group $resourceGroupName --server $sqlServerName --name AdatumCRM --service-objective Basic --sample-name AdventureWorksLT
+    # Create the first Azure SQL Database, AdatumCRM to create the Customer's data source.
+    az sql db create --resource-group $resourceGroupName --server $sqlServerName --name AdatumCRM --service-objective Basic --sample-name AdventureWorksLT
 
-# Create the second Azure SQL Database, AdatumERP to create the Sales data source.
-az sql db create --resource-group $resourceGroupName --server $sqlServerName --name AdatumERP --service-objective Basic --sample-name AdventureWorksLT
-```
+    # Create the second Azure SQL Database, AdatumERP to create the Sales data source.
+    az sql db create --resource-group $resourceGroupName --server $sqlServerName --name AdatumERP --service-objective Basic --sample-name AdventureWorksLT
+    ```
 
 When the scripts finish running, you will have on the Azure SQL Server _`[DPprefix]`_`-dev-sqlserver001` two new Azure SQL Databases: **AdatumCRM** and **AdatumERP**, both on the Basic compute tier. They are located in the same resource group _`[DLZprefix]`_`-dev-dp001` where you deployed the data product.
 
@@ -81,43 +81,43 @@ When the scripts finish running, you will have on the Azure SQL Server _`[DPpref
 ### Create Service Principal
 
 1. Open the Azure portal. On the top right, click on the highlighted icon below to open the Cloud Shell.
-  :::image type="content" source="../images/cloud-shell.png" alt-text="Azure Cloud Shell":::
+  :::image type="content" source="../images/cloud-shell.png" alt-text="Screenshot showing the Cloud Shell icon on the Azure portal.":::
   
 1. Update the command below to replace the **subscription ID** with your own subscriptionID and the **service principal name** created in the step earlier. After updating the values run in the Cloud Shell **bash**. The service principal name should be unique within the subscription.
 
->[!IMPORTANT]
->Replace the parameters with a service principal name of your choice and your subscription ID.
+    >[!IMPORTANT]
+    >Replace the parameters with a service principal name of your choice and your subscription ID.
 
-```bash
-# Replace the parameters with a service principal name of your choice and your subscription ID. 
-spname="<service_principal_name>" 
-subscriptionId="<subscription_id>"
+    ```bash
+    # Replace the parameters with a service principal name of your choice and your subscription ID. 
+    spname="<service_principal_name>" 
+    subscriptionId="<subscription_id>"
 
-# Set the Scope to Subscription
-scope="/subscriptions/$subscriptionId"
+    # Set the Scope to Subscription
+    scope="/subscriptions/$subscriptionId"
 
-# Create the Service Principal 
-az ad sp create-for-rbac \
-  --name $spname \
-  --role "Contributor" \
-  --scope $scope
+    # Create the Service Principal 
+    az ad sp create-for-rbac \
+      --name $spname \
+      --role "Contributor" \
+      --scope $scope
 
-```
+    ```
 
 1. This will generate the following JSON output.
 
->[!NOTE]
->Make a note of this as this will be needed for the subsequent steps.
+    >[!NOTE]
+    >Make a note of this as this will be needed for the subsequent steps.
 
-```JSON
-{
-  "appId": "999xxx1x-9x99-9999-0000-61xxx9x99xx9",
-  "displayName": "purview-serviceprincipal",
-  "name": "999xxx1x-9x99-9999-0000-61xxx9x99xx9",
-  "password": "CJsPsAz8-~sf6_Qj_ecXXxxxXxxXXxxXXXxXX",
-  "tenant": "999xxx1x-9x99-9999-0000-61xxx9x99xx9"
-}
-```
+    ```JSON
+    {
+      "appId": "999xxx1x-9x99-9999-0000-61xxx9x99xx9",
+      "displayName": "purview-serviceprincipal",
+      "name": "999xxx1x-9x99-9999-0000-61xxx9x99xx9",
+      "password": "CJsPsAz8-~sf6_Qj_ecXXxxxXxxXXxxXXXxXX",
+      "tenant": "999xxx1x-9x99-9999-0000-61xxx9x99xx9"
+    }
+    ```
 
 ### Setting up Service Principal Access and Permissions
 
@@ -137,34 +137,34 @@ To set this up, please follow the steps below.
 
 1. In the Azure portal, navigate to the Azure Storage Account instance _`[DLZprefix]`_`devraw`. Click on **Access Control (IAM)** on the left.
 
-    :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Storage Account SP Permissions":::
+    :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Screenshot of the Azure Storage Account S P Permissions page with access control highlighted.":::
 
 1. Click on **Add+** and then **Add Role Assignment**
 
-    :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Storage Account SP Access Control":::
+    :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Screenshot of the Storage Account S P Access Control page that shows how to add a role assignment.":::
 
 1. In Add Role Assignment, search for Storage Blob Data Reader, select the `Storage Blob Data Reader` role and click on **Next**.
 
-    :::image type="content" source="../images/storage-account-sp-role-assignment.png" alt-text="Storage Account SP Role Assignment":::
+    :::image type="content" source="../images/storage-account-sp-role-assignment.png" alt-text="Screenshot showing how to search for Storage Blob Data Reader under add role assignment.":::
 
 1. In the next screen click on **+ Select Members** and search for the Service Principal account you just created.
 
-    :::image type="content" source="../images/storage-account-sp-members-1.png" alt-text="Storage Account SP Members":::
+    :::image type="content" source="../images/storage-account-sp-members-1.png" alt-text="Screenshot of select members screen under add role assignment.":::
 
 1. Search for the service principal name created in previous step, select the service principal.
 
-    :::image type="content" source="../images/add-service-principal.png" alt-text="Search Service Principal Name":::
+    :::image type="content" source="../images/add-service-principal.png" alt-text="Screenshot showing how to search for the Service Principal Name created in previous step.":::
 
 1. Pick the relevant result and click on **Select**.
 
-    :::image type="content" source="../images/select-service-principal.png" alt-text="Select Service Principal Name":::
+    :::image type="content" source="../images/select-service-principal.png" alt-text="Screenshot of the results pane after searching for the Service Principal Name.":::
 
 1. To complete the role assignment process click **Review + assign** twice.
 
-1. Repeat steps 1 through 7 for the remaining storage accounts
+ Repeat steps 1 through 7 for the remaining storage accounts:
 
-- _`[DLZprefix]`_`devencur`
-- _`[DLZprefix]`_`devwork`
+  - _`[DLZprefix]`_`devencur`
+  - _`[DLZprefix]`_`devwork`
 
 ### Azure SQL Database Permissions
 
@@ -177,37 +177,37 @@ To add the service principal as a user within the database, you might need to ad
 
 1. Navigate to the SQL Server _`[DPprefix]`_`-dev-sqlserver001` and click on **Active Directory**.
 
-    :::image type="content" source="../images/azure-sql-admin-1.png" alt-text="SQL Server Admin":::
+    :::image type="content" source="../images/azure-sql-admin-1.png" alt-text="Screenshot of the Azure active directory screen under S Q l server.":::
 
 1. Click on **Set Admin** and search for your own account. Click on the desired account returned by the search to select the account.
 
-    :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Search for Account":::
+    :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Screenshot showing how to search for an Account to make admin.":::
 
 1. Once the account is selected, click on **Select** to persist the setting.
 
-     :::image type="content" source="../images/sql-database-selected-account.png" alt-text="Selected Account":::
+     :::image type="content" source="../images/sql-database-selected-account.png" alt-text="Screenshot of the correct admin account selected.":::
 
 1. Now click on **SQL Databases**, choose the database `AdatumCRM`.
 
-     :::image type="content" source="../images/database-query-editor.png" alt-text="Choose Database":::
+     :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot of the search to find the correct database with Adatum C R M highlighted.":::
 
 1. In `AdatumCRM` and click on **Query editor** and then Log with Active Directory Authentication using the button Login as your user.
 
-     :::image type="content" source="../images/query-editor.png" alt-text="Log with Active Directory":::
+     :::image type="content" source="../images/query-editor.png" alt-text="Screenshot showing how to log in to query editor with Active Directory.":::
 
 1. Once in the query editor, execute the following statements but replacing `<Service Principal>` with the name of the service principal you just created (e.g. purview-sp).
 
-```sql
+    ```sql
 
-CREATE USER [<Service Principal Name>] FROM EXTERNAL PROVIDER
-GO
+    CREATE USER [<Service Principal Name>] FROM EXTERNAL PROVIDER
+    GO
 
-EXEC sp_addrolemember 'db_datareader', [<Service Principal Name>]
-GO
+    EXEC sp_addrolemember 'db_datareader', [<Service Principal Name>]
+    GO
 
-```
+    ```
 
-:::image type="content" source="../images/azure-sql-add-sp.png" alt-text="Add SQL Database Service Principal":::
+    :::image type="content" source="../images/azure-sql-add-sp.png" alt-text="Screenshot showing how to execute statements in query editor.":::
 
 Repeat steps 4 through 6 for the `AdatumERP` database.
 
@@ -224,24 +224,24 @@ Purview will read the service principal key from a Key Vault. We will use the Ke
 
 1. In the Azure portal, navigate to the key vault service and search for Key Vault named _`[DMLZprefix]`_`-dev-vault001`.
 
- :::image type="content" source="../images/key-vault-1.png" alt-text="Access Control Key Vault":::
+     :::image type="content" source="../images/key-vault-1.png" alt-text="Screenshot of the Access Control Key Vault screen.":::
 
 1. Click on **Access Control (IAM)**, **Add** and then **Add Role Assignment**.
 
-    :::image type="content" source="../images/purview-key-vault-perm.png" alt-text="Purview Add Role Assignment":::
+    :::image type="content" source="../images/purview-key-vault-perm.png" alt-text="Screenshot of adding a roll assignment in Purview.":::
 
 1. On the next screen, search for `Key Vault Administrator`, select the role `Key Vault Administrator` and click on **Next**.
   
-    :::image type="content" source="../images/purview-key-vault-administrator.png" alt-text="Search Key Vault Administrator":::
+    :::image type="content" source="../images/purview-key-vault-administrator.png" alt-text="Screenshot showing how to search for the Key Vault Administrator role.":::
 
 1. Click on **+ Select Members** and add the account currently logged.
 
-    :::image type="content" source="../images/key-vault-administrator-select-member.png" alt-text="Purview Select Member":::
-    :::image type="content" source="../images/key-vault-administrator-your-account.png" alt-text="Purview Select your account":::
+    :::image type="content" source="../images/key-vault-administrator-select-member.png" alt-text="Screenshot of the select members button highlighted.":::
+    :::image type="content" source="../images/key-vault-administrator-your-account.png" alt-text="Screenshot of the select member search field.":::
 
 1. In Select Members, search for the account currently logged, click to add the relevant account, and click on **select**
 
-    :::image type="content" source="../images/key-vault-select-user.png" alt-text="Select Key Vault User":::
+    :::image type="content" source="../images/key-vault-select-user.png" alt-text="Screenshot of the select member set to your relevant account.":::
 
 1. To complete the role assignment process click **Review + assign** twice.
 
@@ -251,7 +251,7 @@ Complete the following steps logging into Azure portal from the Bastion Host vir
 
 1. On the same key vault with the name _`[DMLZprefix]`_`-dev-vault001`. Click on **Secrets** and then **Generate/Import** to create a new secret.
   
-    :::image type="content" source="../images/key-vault-add-secret.png" alt-text="Key Vault Generate Secret":::
+    :::image type="content" source="../images/key-vault-add-secret.png" alt-text="Screenshot showing the Key Vault Generate Secret button highlighted.":::
 
 1. Provide the following values and click on **Create**.
 
@@ -261,10 +261,10 @@ Complete the following steps logging into Azure portal from the Bastion Host vir
 | Name | service-principal-secret |
 | Value | Service Principal password you created in the previous steps `CJsPsAz8-~sf6_Qj_ecXXxxxXxxXXxxXXXxXX`|
 
-   :::image type="content" source="../images/key-vault-create-secret.png" alt-text="Key Vault Create Secret":::
+   :::image type="content" source="../images/key-vault-create-secret.png" alt-text="Screenshot of the Key Vault Create Secret screen.":::
 
->[!NOTE]
->This step creates a secret named `service-principal-secret` within the Key Vault with the Service Principal password key. This will be used by Purview to connect to and scan the data sources. If the incorrect password provided, subsequent steps will not work.
+  >[!NOTE]
+  >This step creates a secret named `service-principal-secret` within the Key Vault with the Service Principal password key. This will be used by Purview to connect to and scan the data sources. If the incorrect password provided, subsequent steps will not work.
 
 ### Set up Purview permissions on the Key Vault
 
@@ -272,28 +272,28 @@ For the Purview instance to read the secrets stored within the Key Vault, it has
 
 1. On the same key vault with the name _`[DMLZprefix]`_`-dev-vault001` Click on **Access Control (IAM)**, **Add** and then **Add Role Assignment**.
   
-    :::image type="content" source="../images/key-vault-add-role-assigment.png" alt-text="Key Vault Permissions":::
+    :::image type="content" source="../images/key-vault-add-role-assigment.png" alt-text="Screenshot of the Access Control screen with the add role assignment button highlighted.":::
 
 1. In Role, search for `Key Vault Secret User`,  Select **Key Vault Secrets User** and click **Next**.
 
-    :::image type="content" source="../images/key-vault-secret-user-role.png" alt-text="Search Key Vault Secret User":::
+    :::image type="content" source="../images/key-vault-secret-user-role.png" alt-text="Screenshot of the search for Key Vault Secret User screen.":::
 
 1. Click on **+ Select Members**.
   
-    :::image type="content" source="../images/key-vault-user-select-member.png" alt-text="Select Member":::
+    :::image type="content" source="../images/key-vault-user-select-member.png" alt-text="Screenshot of the add role assignment screen with the select member button highlighted.":::
 
 1. Search for the Purview instance name _`[DMLZprefix]`_`-dev-purview001`, click to add the relevant account and then click on **Select**.
   
-    :::image type="content" source="../images/key-vault-user-purview-managed.png" alt-text="Server Purview Name":::
+    :::image type="content" source="../images/key-vault-user-purview-managed.png" alt-text="Screenshot of the search bar for the Purview instance name.":::
 
 1. To complete the role assignment process click **Review + assign** twice.
   
-    :::image type="content" source="../images/key-vault-user-purview-managed-review-assign.png" alt-text="Review and Assign":::
+    :::image type="content" source="../images/key-vault-user-purview-managed-review-assign.png" alt-text="Screenshot showing how to complete a role assignment.":::
 
 ### Set up Key Vault Connection in Purview
 
 >[!NOTE]
-For this step, you will need to log into the Azure portal using a bastion host Virtual Machine.
+>For this step, you will need to log into the Azure portal using a bastion host Virtual Machine.
 
 The next step is for us to link Purview with the Key Vault. To do this, follow the steps below
 
@@ -397,7 +397,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Subscription| the subscription hosting the database|
     | Server name|the SQL Server name to register -- _`DPprefix`_-dev-sqlserver001|
   
- :::image type="content" source="../images/purview-sql-server-name.png" alt-text="SQL database Registration Values.":::
+     :::image type="content" source="../images/purview-sql-server-name.png" alt-text="SQL database Registration Values.":::
 
 ## Setting up Scans
 
@@ -520,10 +520,10 @@ As the environment is locked to public access, you need to first log into the Az
 
 >[!NOTE]
 >To approve ADF to access the private endpoints of these services, here are a couple of options:
-
-**Option 1**: On each of the services that you request access to, you need to go to the "networking" or to "private endpoint connections" option of that service on the Azure portal to approve these private endpoint access requests.
-
-**Option 2**: Run the scripts below using the Azure Cloud Shell in Bash mode and approve all the required private endpoints at once.
+>
+>**Option 1**: On each of the services that you request access to, you need to go to the "networking" or to "private endpoint connections" option of that service on the Azure portal to approve these private endpoint access requests.
+>
+>**Option 2**: Run the scripts below using the Azure Cloud Shell in Bash mode and approve all the required private endpoints at once.
 
 ```bash
 
@@ -628,7 +628,7 @@ The last step on adding role assignments is to add the **"Purview Data Curator"*
 
 1. Add the managed identity for _`[DLZprefix]`_`-dev-integration-datafactory001` as you see on the image below:
 
-:::image type="content" source="../images/purview-role-assignment.png" alt-text="Purview Role Assignment":::
+    :::image type="content" source="../images/purview-role-assignment.png" alt-text="Purview Role Assignment":::
 
 ### Connect Data Factory to Purview
 
@@ -656,7 +656,7 @@ This process will extract "Customer" data from the AdatumCRM Azure SQL Database 
 
     :::image type="content" source="../images/copy-data-tool.png" alt-text="Copy Data tool":::
 
-Follow each step on the Copy Data tool wizard:
+    Follow each step on the Copy Data tool wizard:
 
 1. Select **Schedule** to create a trigger to run the pipeline every 24 hours.
 
@@ -666,14 +666,14 @@ Follow each step on the Copy Data tool wizard:
 
     :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot showing how to connect to Adatum C R M.":::
 
->[!NOTE]
->If you have any errors connecting or accessing the data in the Azure SQL Databases, or the storage accounts, please review permissions and make sure that the Data Factory has the appropriate credentials and access permissions to any problematic resource.
+    >[!NOTE]
+    >If you have any errors connecting or accessing the data in the Azure SQL Databases, or the storage accounts, please review permissions and make sure that the Data Factory has the appropriate credentials and access permissions to any problematic resource.
 
 1. Select these three tables:
 
-- SalesLT.Address
-- SalesLT.Customer
-- SalesLT.CustomerAddress
+    - SalesLT.Address
+    - SalesLT.Customer
+    - SalesLT.CustomerAddress
 
     :::image type="content" source="../images/adatum-crm-tables.png" alt-text="Screenshot of the select tables screen.":::
 
@@ -713,25 +713,25 @@ Now lets extract the data from the AdatumERP Azure SQL Database representing the
 
 1. Still in ADF Studio, create a new pipeline using the Copy Data Tool again, this time to send the sales data from AdatumERP to the `[DLZprefix]devraw` storage account data folder, the same way you did with the CRM data.
 
-- Follow the same steps as in item 5, this time using Azure SQL Database AdatumERP as the source.
+    - Follow the same steps as in item 5, this time using Azure SQL Database AdatumERP as the source.
 
-- Create the schedule to trigger every hour as well.
+    - Create the schedule to trigger every hour as well.
 
-- Linked Service to Azure SQL DB name: AdatumERP.
+    - Linked Service to Azure SQL DB name: AdatumERP.
 
-:::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot of the Adatum E R P Connection.":::
+    :::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot of the Adatum E R P Connection.":::
 
 1. Select tables: SalesLT.Product, SalesLT.ProductCategory, SalesLT.ProductDescription, SalesLT.ProductModel, SalesLT.ProductModelProductDescription, SalesLT.SalesOrderDetail, SalesLT.SalesOrderHeader.
 
-:::image type="content" source="../images/adatum-erp-tables.png" alt-text="Screenshot of Adatum E R P Tables.":::
+    :::image type="content" source="../images/adatum-erp-tables.png" alt-text="Screenshot of Adatum E R P Tables.":::
 
 1. Use the already created Linked Service to the `[DLZprefix]devraw` storage account, set the file extension to .csv.
 
-:::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing a raw storage account.":::
+    :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing a raw storage account.":::
 
 1. Select Add header to file.
 
-:::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot showing how to add a header to a file.":::
+    :::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot showing how to add a header to a file.":::
 
 1. Finish the wizard for the second time, rename the pipeline to CopyPipeline_ERP_to_DevRaw, publish all, then run the trigger on this newly created pipeline, to have the seven tables you selected copied from SQL DB to ADLS.
 
@@ -753,24 +753,24 @@ Here are the steps:
 
 1. On the home page of Azure Data Factory, select Orchestrate.
 
-:::image type="content" source="../images/select-orchestrate.png" alt-text="Add header to file":::
+    :::image type="content" source="../images/select-orchestrate.png" alt-text="Add header to file":::
 
 1. In the General tab for the pipeline, name it "Pipeline_transform_CRM".
 
 1. In the Activities pane, expand the Move and Transform accordion. Drag and drop the Data Flow activity from the pane to the pipeline canvas.
 
-:::image type="content" source="../images/activities.png" alt-text="Screenshot showing the activities pane.":::
+    :::image type="content" source="../images/activities.png" alt-text="Screenshot showing the activities pane.":::
 
 1. In the Adding Data Flow pop-up, select Create new Data flow and then name your data flow "CRM_to_Customer". Click Finish when done.
 
->[!NOTE]
->In the top bar of the pipeline canvas, slide the Data flow debug slider on. Debug mode allows for interactive testing of transformation logic against a live Spark cluster. Data Flow clusters take 5-7 minutes to warm up and users are recommended to turn on debug first if they plan to do Data Flow development.
+    >[!NOTE]
+    >In the top bar of the pipeline canvas, slide the Data flow debug slider on. Debug mode allows for interactive testing of transformation logic against a live Spark cluster. Data Flow clusters take 5-7 minutes to warm up and users are recommended to turn on debug first if they plan to do Data Flow development.
 
-:::image type="content" source="../images/data-flow-debug.png" alt-text="Open Data Flow":::
+    :::image type="content" source="../images/data-flow-debug.png" alt-text="Open Data Flow":::
 
 1. When you are finished selecting all the options in the Data flow "CRM_to_Customer", the pipeline "Pipeline_transform_CRM" will look like this:
 
-:::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot showing how the Pipeline transform C R M looks.":::
+    :::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot showing how the Pipeline transform C R M looks.":::
 
 and the Data flow will look like this:
 

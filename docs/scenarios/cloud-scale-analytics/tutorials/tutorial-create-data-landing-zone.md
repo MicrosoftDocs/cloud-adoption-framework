@@ -12,8 +12,6 @@ ms.custom: e2e-data-management, think-tank, references_regions
 
 # Create data landing zone tutorial
 
-## Data Landing Zone
-
 A Data Landing Zone is a unit of scale of the Enterprise-Scale Analytics architecture pattern. Data Landing Zones enable regional deployments, clear separation of ownership, chargeback of cost, in-place data sharing within and across Data Landing Zones and many other benefits. In addition, it is possible to scale within Data Landing Zones with cross-functional Data Integration and Data Product teams. The reference design targets a self-service approach for these teams to overcome bottlenecks and the need for a central team for cloud service deployments. The Data Landing Zone reference implementation will create a consistent setup inside a subscription and will deploy storage accounts as well as data processing services like Azure Synapse, Azure Data Factory as well as Azure Databricks.
 
 ## What will be deployed?
@@ -154,12 +152,12 @@ Before we start with the deployment, make sure that you have the following avail
       | Private DNS Zone Synapse Dev | select privatelink.dev.azuresynapse.net |
       | Private DNS Zone Synapse SQL | select privatelink.sql.azuresynapse.net |
 
-:::image type="content" source="../images/dlz-connectivity-3.png" alt-text="Screenshot showing the private D N S Zone Settings.":::
+    :::image type="content" source="../images/dlz-connectivity-3.png" alt-text="Screenshot showing the private D N S Zone Settings.":::
 
 1. Click on **Review + Create**  
 
 1. When the parameters are validated, the **Create** button will be enabled. Click in **Create** to start the deployment.
 
-:::image type="content" source="../images/dlz-deployment-create.png" alt-text="Screenshot showing the data landing zone create summary page.":::
+    :::image type="content" source="../images/dlz-deployment-create.png" alt-text="Screenshot showing the data landing zone create summary page.":::
 
 The deployment will take around 25 minutes to complete.
