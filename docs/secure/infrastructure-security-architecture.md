@@ -4,8 +4,6 @@ description: This is the beginning of the Infrastructure security architecture s
 author: MarkSimos
 ms.author: mas
 ms.date: 03/06/2022
-author: MarkSimos
-ms.author: mas
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -45,7 +43,7 @@ Extend Zero Trust architectural approaches that "never trust and always verify,"
 
 We recommend that your organization follow the high-impact security recommendations of the Azure Security Benchmark (ASB) alongside guidance within Azure landing zones and the Cloud Adoption Framework itself—including it as part of your architectural strategy by reviewing all pertinent [documentation and service-specific baselines](/security/benchmark/azure/overview). ASB controls most applicable to securing infrastructure resources are:
 
-- [Governance and Strategy](https://docs.microsoft.com/en-us/security/benchmark/azure/security-controls-v3-governance-strategy)
+- [Governance and Strategy](/security/benchmark/azure/security-controls-v3-governance-strategy)
 - [Data protection](/security/benchmark/azure/security-controls-v3-data-protection)
 - [Asset Management](/security/benchmark/azure/security-controls-v3-asset-management)
 - [Network Security](/security/benchmark/azure/security-controls-v3-network-security)
