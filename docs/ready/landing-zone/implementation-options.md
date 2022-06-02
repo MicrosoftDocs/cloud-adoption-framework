@@ -59,6 +59,7 @@ Here are some implementation options for landing zones keeping in mind the devel
 | [CAF Terraform modules](terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | [Readme](https://github.com/Azure/caf-terraform-landingzones-platform-starter) |
 | [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. </br>[Design principles](partner-landing-zone.md#design-principles) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
 
+
 ## Next steps
 
 To proceed, choose one of the implementation options shown in the preceding tables. Each option includes a link to deployment instructions and the specific design principles that guide implementation.
