@@ -1,6 +1,9 @@
 ---
+title: Development security architecture
+description: This is the Development security architecture best practices section that describes best practices related to the ideal end state and key components of development security.
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -31,11 +34,11 @@ management, governance, and security processes
 
 Securing code in the cloud needs to be integrated with existing processes to successfully operationalize and sustain it over time. This diagram shows a sample process for how you can integrate and secure development and operations practices into your innovation process.
 
-![](./media/integrated-process-security-development.png)
+![High Security DevSecOps Process](./media/integrated-process-security-development.png)
 
 This example process is suitable for business-critical functions that require the highest level of security rigor (e.g. APIs and applications that process financial transactions or business critical information). We recommend you consider developing simpler streamlined version(s) of this process for different use cases as depicted in this diagram
 
-![](./media/security-processes-business-agility-balance.png)
+![Find the Right Balance](./media/security-processes-business-agility-balance.png)
 
 Your organization should identify the steps involved in your development workflows, people, and technologies involved, to progress from idea to production and ongoing operations. It is critical practice to also identify the process of resolving major and minor changes and bug fixes during the development lifecycle.
 

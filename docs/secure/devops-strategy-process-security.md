@@ -1,6 +1,9 @@
 ---
+title: DevSecOps as continuous improvement strategy
+description: Adopt a DevSecOps strategy that blends elements of DevOps and classic security and operations approaches.
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -15,7 +18,7 @@ Operationalize DevSecOps strategies as the ideal state your organization should 
 
 ## Governance and production releases
 
-![](./media/devsecops-continuous-innovation-security.png)
+![Governance processes](./media/devsecops-continuous-innovation-security.png)
 
 As your organization adopts DevOps continuous improvement strategies (illustrated in the diagram above), ensure first that security and other governance processes are adapted to your approach, so it mitigates security risk but does not decrease the value of rapid release cycles.
 
@@ -55,7 +58,7 @@ A comprehensive DevOps ecosystem of development lifecycle+ native security encom
 
 The diagram highlights how security teams implement continuous improvements across the lifecycle—to both refine an MVP across the various Dev (Business Requirements), Sec (compliance/security/safety), and Ops (quality/performance/support) domains, as well as continuously improve the security process and program itself (developer productivity, operational efficiency, security posture, identity standardization protocols, etc.
 
-![](./media/development-security-operations-continuous-lifecycle-improvement.png)
+![DevSecOps - Sustaining security while you innovate](./media/development-security-operations-continuous-lifecycle-improvement.png)
 
 ## Next steps:
 

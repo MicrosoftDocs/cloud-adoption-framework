@@ -1,6 +1,9 @@
 ---
+title: Infrastructure security implementation, operations, and governance
+description: This is the beginning of the Infrastructure security implementation, operations, and governance section. 
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure

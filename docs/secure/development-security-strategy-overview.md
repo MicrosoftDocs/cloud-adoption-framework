@@ -1,6 +1,9 @@
 ---
+title: Development
+description: Development security is a broad technical area with multiple distinct elements, and these best practices reflect that.
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -15,7 +18,7 @@ Development security is a broad technical area with multiple distinct elements, 
 
 As illustrated in the graphic below, development security requires protecting both the application or code itself, as well as the underlying infrastructure, platform, or device.
 
-![](./media/development-lifecycle-attacker-opportunities.png)
+![Attacker Opportunities](./media/development-lifecycle-attacker-opportunities.png)
 
 Securing the code requires integrating security practices into the development process to ensure that security risks are reduced in both the design and the implementation of the code as they are developed. 
 

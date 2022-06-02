@@ -1,6 +1,9 @@
 ---
+title: Development security implementation and operations
+description: This is the Development security implementation and operations best practices section that describes best practices related to these aspects of development security.
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -19,7 +22,7 @@ Operationalize these processes, policies, and toolsets with the use of repositor
  
 Below is a diagram of DevSecOps architecture with Shift-left strategy—integrating security into developer workflows from the beginning—and across the development lifecycle. Its complex dataflow starts with Azure Active Directory (AD) configured as GitHub identity provider (with multi-factor authentication (MFA) enabled for extra security).
 
-![](./media/devsecops-integrated-shift-left-security-development-workflow.png)
+![DevSecOps architecture with Shift-left strategy—integrating security into developer workflows](./media/devsecops-integrated-shift-left-security-development-workflow.png)
 
 The final part of the DevSecOps flow ends with Microsoft Defender for Cloud's (MDFC) active threat monitoring on the Azure Kubernetes Service, across node-level (VM) and internal threats.
 

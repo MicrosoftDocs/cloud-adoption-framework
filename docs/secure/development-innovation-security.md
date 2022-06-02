@@ -1,6 +1,9 @@
 ---
+title: Innovation security
+description: Different organizations stress rapid innovation to stay competitive, while others remain intolerant of brand damage—even from an otherwise minor test application that could be compromised.
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -35,7 +38,7 @@ Remaining flexible is critical in the continuous assembly of innovation. Some in
 
 ## Integrate security into the development process
 
-![](./media/devops-integrated-security-lifecycle-model.png)
+![Integrating Security into Development](./media/devops-integrated-security-lifecycle-model.png)
 
 As pictured in the diagram above, DevOps adds agility and speed by bringing together (planning + developing) and (testing+ production). This bias toward speed mitigates enterprise risk through rapid updates, as opposed to a deep scan before release. Security’s role during this innovation motion changes from traditional quality gateway to integral process towards lowering risk (seen as incremental increases of the team's knowledge and education, process updates, etc.).
 

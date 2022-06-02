@@ -1,6 +1,9 @@
 ---
+title: Infrastructure and development security best practices
+description: This article describes infrastructure and development security best practices.
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure

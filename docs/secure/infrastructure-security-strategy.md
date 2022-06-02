@@ -1,6 +1,9 @@
 ---
+title: Infrastructure security strategy
+description: This section includes the best practices related to Infrastructure security strategy and how we recommend approaching this problem space.
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -13,7 +16,7 @@ This section includes the best practices related to Infrastructure security stra
 
 This includes security for the common enterprise-wide elements that multiple workloads depend on, as depicted in this diagram:
 
-![](./media/enterprise-infrastructure-security-strategy.png)
+![Infrastructure security](./media/enterprise-infrastructure-security-strategy.png)
 
 We recommend starting with a proven cloud infrastructure security approach and adapting it to your business needs and initial workload deployments. Trying to start with a custom approach can quickly get you stuck in a paralysis-by-analysis loop. 
 

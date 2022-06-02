@@ -1,6 +1,9 @@
 ---
+title: Responsibility assignment and awareness
+description: Define which roles are responsible for which security decisions and advertise this widely throughout the organization and project teams. 
 author: MarkSimos
 ms.author: mas
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
