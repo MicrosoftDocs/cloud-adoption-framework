@@ -3,7 +3,7 @@ title: 'Get started: Document foundational alignment decisions'
 description: Understand and document initial decisions required to drive the cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/19/2020
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
