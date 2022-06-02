@@ -20,7 +20,7 @@ The objective of completing this hands-on experience is for you to become famili
 
 As you deploy the new components, you will have a chance to investigate how Purview glues together service governance to create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage.
 
-## Pre-requisites
+## Prerequisites
 
 - **Permissions to the Azure subscription**: User Access Administrator or Owner access to the subscription for Purview and Synapse configuration, role assignments for services and Service Principals.
 
@@ -261,7 +261,7 @@ Complete the following steps logging into Azure portal from the Bastion Host vir
     | Name | service-principal-secret |
     | Value | Service Principal password you created in the previous steps `CJsPsAz8-~sf6_Qj_ecXXxxxXxxXXxxXXXxXX`|
 
-       :::image type="content" source="../images/key-vault-create-secret.png" alt-text="Screenshot of the Key Vault Create Secret screen.":::
+     :::image type="content" source="../images/key-vault-create-secret.png" alt-text="Screenshot of the Key Vault Create Secret screen.":::
 
       >[!NOTE]
       >This step creates a secret named `service-principal-secret` within the Key Vault with the Service Principal password key. This will be used by Purview to connect to and scan the data sources. If the incorrect password provided, subsequent steps will not work.
@@ -414,25 +414,25 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Connect via Integration Runtime| Select the Self Hosted Integration run time deployed as part of the Data Landing Zone.|
     | Credential|Select the Service Principal set up for Purview.|
 
-    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Scan ADLS credential.":::
+    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Screenshot of the scan A D L S credential form with values entered.":::
 
 1. Click on **Test Connection** to verify the connectivity and permissions are in place, and click on **Continue**.
 
 1. In the Scope your Scan screen, select the entire storage account as the scope for the scan. Click **Continue**.
 
-    :::image type="content" source="../images/scan-data-lake-file-system.png" alt-text="Select Storage File System":::
+    :::image type="content" source="../images/scan-data-lake-file-system.png" alt-text="Screenshot of the scope your scan screen with storage accounts selected.":::
 
 1. In the Select a Scan Rule Set screen, select the **ADLS Gen 2 Scan Rule set**. Click **Continue**.
 
-    :::image type="content" source="../images/scan-data-lake-select-rule-set.png" alt-text="Scan Rule Set":::
+    :::image type="content" source="../images/scan-data-lake-select-rule-set.png" alt-text="Screenshot showing the A D L S scan rule set selection.":::
 
 1. In the Set a Scan Trigger screen, select **Once**. Click **Continue**.
   
-    :::image type="content" source="../images/scan-data-lake-set-trigger.png" alt-text="Scan Trigger":::
+    :::image type="content" source="../images/scan-data-lake-set-trigger.png" alt-text="Screenshot showing the set a scan Trigger screen with once selected.":::
 
 1. In the final screen, review the scan settings and click on **Save and Run**.
 
-    :::image type="content" source="../images/scan-data-lake-review-save.png" alt-text="Save and Run":::
+    :::image type="content" source="../images/scan-data-lake-review-save.png" alt-text="Screenshot showing how to review your scan before saving.":::
 
 1. Repeat steps 1 through 6 for the remaining storage accounts
 
@@ -443,7 +443,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
 1. Click on the **New Scan** icon on the Azure SQL DB data source.
 
-    :::image type="content" source="../images/scan-database.png" alt-text="New Scan SQL DB":::
+    :::image type="content" source="../images/scan-database.png" alt-text="Screenshot showing how to set up a new SQL database scan.":::
 
 1. Provide the following values and click on **Test Connection** to ensure the connectivity and permissions are correct. Click on **Continue**
 
@@ -455,19 +455,19 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Credential|select the Key Vault credential created in Purview.|
     | Lineage extraction |off|
   
-    :::image type="content" source="../images/scan-database-credentials.png" alt-text="SQL DB Values":::
+    :::image type="content" source="../images/scan-database-credentials.png" alt-text="Screenshot of the scan credential form with values entered.":::
 
 1. Select the scope for the scan. You can leave this as is to scan the entire database.
 
-    :::image type="content" source="../images/scan-database-selections.png" alt-text="SQL DB Scope":::
+    :::image type="content" source="../images/scan-database-selections.png" alt-text="Screenshot showing how to set the scope for the scan to the whole database.":::
 
 1. Select **AzureSQLDatabase** as the scan rule set.
   
-    :::image type="content" source="../images/scan-database-ruleset.png" alt-text="SQL DB Rule Set":::
+    :::image type="content" source="../images/scan-database-ruleset.png" alt-text="Screenshot showing the SQL database scan rule set selection.":::
 
 1. Select **Once** for the Scan Trigger and click **Continue**.
   
-    :::image type="content" source="../images/scan-set-trigger.png" alt-text="SQL DB Scan Trigger":::
+    :::image type="content" source="../images/scan-set-trigger.png" alt-text="Screenshot showing the set a scan to run screen with once selected.":::
 
 1. Review the scan parameters and click on **Save and run** to start the scan.
 
@@ -485,32 +485,31 @@ As the environment is locked to public access, you need to first log into the Az
 
 1. On the resource group _`[DMLZprefix]`_`-dev-bastion` click on _`[DMLZprefix]`_`-dev-vm001`.
 
-    :::image type="content" source="../images/bastion-vm.png" alt-text="Bastion VM":::
+    :::image type="content" source="../images/bastion-vm.png" alt-text="Screenshot showing the resource groups for connecting to the bastion host virtual machine.":::
 
 1. Select Connect -> Bastion
 
-    :::image type="content" source="../images/bastion-vm-connect.png" alt-text="Bastion VM Connect":::
+    :::image type="content" source="../images/bastion-vm-connect.png" alt-text="Screenshot showing the connect to bastion selection screen.":::
 
 1. Enter the VM's Username and Password and click **Connect**.
 
-    :::image type="content" source="../images/bastion-vm-connect-password.png" alt-text="Connect Using Bastion":::
+    :::image type="content" source="../images/bastion-vm-connect-password.png" alt-text="Screenshot showing the username and password entry screen.":::
 
 1. On the VM's web browser, open the Azure portal and navigate to the resource group _`[DLZprefix]`_`-dev-shared-integration`, open Azure Data Factory _`[DLZprefix]`_`-dev-integration-datafactory001`
 
-    :::image type="content" source="../images/adf-shared-integration.png" alt-text="ADF Shared Integration":::
+    :::image type="content" source="../images/adf-shared-integration.png" alt-text="Screenshot showing how to navigate to a different resource group to open Azure Data Factory.":::
 
 1. Under the "Getting started" section click on "Open Azure Data Factory Studio" as shown on the image below:
 
-    :::image type="content" source="../images/getting-started-adf-studio.png" alt-text="Data Factory Studio":::
+    :::image type="content" source="../images/getting-started-adf-studio.png" alt-text="Screenshot showing how to open Azure Data Factory Studio.":::
 
 1. On the ADF Studio interface click on the "Manage" icon on the left hand side menu (the fourth icon from the top - the one that looks like a square toolbox with a wrench stamped on it), then click on the "Managed private endpoints" option to create/approve the private endpoints necessary to connect Azure Data Factory to other secured Azure services.
 
     Note that when you approve the requests (more on that later) they will show as "Approved" as on the example you see on the image below for the storage account _`[DLZprefix]`_`devencur`.
 
-    :::image type="content" source="../images/managed-private-endpoints.png" alt-text="Manage Private Endpoints":::
+    :::image type="content" source="../images/managed-private-endpoints.png" alt-text="Screenshot showing how to navigate to the Manage Private Endpoints screen.":::
 
 1. Before approving the private endpoint connections listed above, **click on "+ New" and type "azure sql" to filter the Azure SQL Database connector** you will use to create a new managed private endpoint for SQL Server: _`[DPprefix]`_`-dev-sqlserver001`. This is the server which contains Azure SQL Databases AdatumCRM and AdatumERP that we created on earlier steps.
-
 
 1. **Name the Private Endpoint:** "dataproduct-dev-sqlserver001" as depicted on the image below. **Confirm** that you selected the SQL Server: _`[DPprefix]`_`-dev-sqlserver001`, otherwise you will not be able to connect to it from this Data Factory on upcoming steps.
 
