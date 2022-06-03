@@ -3,7 +3,7 @@ title: Standard enterprise governance guide
 description: Follow a fictional standard enterprise through various stages of governance maturity, as it defines a minimum viable product (MVP) based on best practices.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/05/2019
+ms.date: 06/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -12,11 +12,11 @@ ms.custom: internal
 
 # Standard enterprise governance guide
 
+This governance guide follows the experiences of a fictional company through various stages of its governance maturity. These fictional experiences are based on real customer experiences, while the best practices are based on the constraints and needs of the fictional company.
+
 ## Best practices overview
 
-This governance guide follows the experiences of a fictional company through various stages of their governance maturity. It's based on real customer experiences. The best practices are based on the constraints and needs of the fictional company.
-
-To offer a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
+As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
 > [!IMPORTANT]
 > This MVP is a baseline starting point built on a set of assumptions. Even this minimal set of best practices is based on corporate policies driven by unique business risks and risk tolerances. Read the [longer narrative](./narrative.md) that follows this article to check whether this set of assumptions apply to your situation.
@@ -29,7 +29,7 @@ These best practices serve as a foundation for your organization to quickly and 
 
 The following diagram contains the governance MVP hierarchy for resource organization.
 
-![Diagram of resource organization](../../../_images/govern/resource-organization.png)
+![Diagram of resource organization.](../../../_images/govern/resource-organization.png)
 
 Deploy every application in the appropriate area of your management group, subscription, and resource group hierarchy. During deployment planning, your cloud governance team needs to create the necessary nodes in this hierarchy to empower your cloud adoption teams.
 
@@ -43,9 +43,9 @@ Deploy every application in the appropriate area of your management group, subsc
 
 - Consider [region selection](../../../migrate/azure-best-practices/multiple-regions.md) so you can ensure that networking, monitoring, and auditing are in place for failover/failback and confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services/).
 
-The following diagram shows an example of this pattern in use.
+The following diagram provides an example of this pattern in use.
 
-![Resource organization example for a mid-market company](../../../_images/govern/mid-market-resource-organization.png)
+![Resource organization example for a mid-market company.](../../../_images/govern/mid-market-resource-organization.png)
 
 These patterns provide room for growth without unnecessarily complicating your hierarchy.
 
@@ -81,4 +81,3 @@ Over time, you can use this governance MVP to improve governance practices. As a
 Now that you're familiar with the governance MVP and have some idea of governance improvements to follow, review this article's supporting narrative for additional context.
 > [!div class="nextstepaction"]
 > [Read the supporting narrative](./narrative.md)
-
