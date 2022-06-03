@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Standard enterprise governance guide
 
-This governance guide follows the experiences of a fictional company through various stages of its governance maturity. These fictional experiences are based on real customer experiences, while the best practices are based on the constraints and needs of the fictional company.
+This governance guide follows the experiences of a fictional company through various stages of their governance maturity. The guide is based on real customer experiences, and the suggested best practices are based on the constraints and needs of the fictional company.
 
 ## Best practices overview
 
