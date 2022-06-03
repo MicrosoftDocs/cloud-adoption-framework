@@ -317,7 +317,6 @@ The next step is for us to link Purview with the Key Vault. To do this, follow t
     | Azure Subscription | Select the subscription hosting the key vault|
     | Key Vault Name | Select the key vault _`[DMLZprefix]`_`-dev-vault001`|
 
-
 1. On Confirming granting access, click **Confirm**.
 
 ### Create a Credential in Purview
@@ -789,12 +788,10 @@ And for it's pair, the sink "CustAddress":
 
 >[!NOTE]
 >For the rest of the Data flow configuration, use the information on the table below for each component. Note that CRMAddress and CustAddress are the first two rows. Use them as an example for the other objects.
-
->[!NOTE]
+>
 >There is one item that is not on the table, which is the "RemovePasswords" Select Schema Modifier. As you can see on the picture of the Data flow "CRM_to_Customer" this goes in between "CRMCustomer"
 and "CustCustomer". When you add this Select, go to "Select settings" and remove fields "PasswordHash" and "PasswordSalt".
-
->[!NOTE]
+>
 >"CRMCustomer" brings back a schema with 15 columns from the .crv file, and "CustCustomer" will write only 13 columns after the Select Schema Modifier removes the two password columns.
 
 #### Complete table
@@ -830,5 +827,3 @@ On the table below you will find the objects to create in the "ERP_to_Sales" Dat
 | SalesProductSalesOrderDetail | sink | DevEncur_Sales_ProductSalesOrderDetail | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductSalesOrderDetail.parquet |
 | ERPProductSalesOrderHeader | source | DevRaw_ERP_ProductSalesOrderHeader | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductSalesOrderHeader.csv |
 | SalesProductSalesOrderHeader | sink | DevEncur_Sales_ProductSalesOrderHeader | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductSalesOrderHeader.parquet |
-
-
