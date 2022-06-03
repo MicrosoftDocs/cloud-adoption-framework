@@ -114,7 +114,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - Configure the [Start VM on Connect feature](/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them.
 
-- Deploy scaling solutions for pooled session hosts through [Azure Automation](/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature(preview)](/azure/virtual-desktop/autoscale-scaling-plan)
+- Deploy scaling solutions for pooled session hosts through [Azure Automation](/azure/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature(preview)](/azure/virtual-desktop/autoscale-scaling-plan)
 
 ## Resource consistency
 
