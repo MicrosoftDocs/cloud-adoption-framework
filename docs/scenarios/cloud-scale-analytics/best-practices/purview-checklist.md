@@ -48,7 +48,7 @@ The **Microsoft Purview readiness checklist** provides high-level guidance that 
     |Azure AD administrators     |Manage identity and application registration.        |
     |NetOps administrators     |Prepare the network to support Microsoft Purview connectivity requirements        |
     |SecOps administrators     |Manage Azure key vaults and secrets         |
-    |Microsoft 365 administrators     |Microsoft Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
+    |Microsoft 365 administrators     |Microsoft Purview Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
     |Data source owners     |Mapped to roles in Microsoft Purview         |
 
 - Define whether there's an existing cloud-scale analytics [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Microsoft Purview.
