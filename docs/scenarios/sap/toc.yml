@@ -32,7 +32,7 @@ items:
       items:
       - name: Start small and expand with SAP HANA scale-up on Linux
         href: /azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Enterprise-scale landing zone for SAP
+      - name: SAP on Azure landing zone accelerator 
         href: enterprise-scale-landing-zone.md
   - name: Migrate SAP to Azure
     href: migrate.md
