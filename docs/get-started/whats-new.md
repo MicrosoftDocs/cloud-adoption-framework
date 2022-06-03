@@ -18,6 +18,25 @@ This framework is collaboratively built with customers, partners, and internal M
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## June 2022
+
+### Security best practices for infrastructure and development
+
+Security best practices for infrastructure and development is comprehensive guidance for the full cloud security development lifecycle across strategy, architecture, implementation, operations, and governance. These best practices complement the Microsoft Cloud Adoption Framework for Azure, Microsoft tools, security guides, and technical documentation with a focus on infrastructure and development. They also align with the Azure Security Benchmark recommendations.
+
+Each topic provides top-level basic guidance, followed by recommended tools, materials, and a recommended best practice approach.
+
+| Article | Description |
+|--|--|
+|[Infrastructure and development security best practices](../secure/best-practices/file.md#section-name) |This module includes infrastructure and development security best practices  to help improve the security of your organization's workloads, data, and services on Azure. We present guidance in two sections covering infrastructure security and development security. Both sections cover the full lifecycle of strategy, architecture, implementation, operations, and governance. This guidance supplements Microsoft tools and security guides including the Microsoft Cloud Adoption Framework for Azure, Azure Security Benchmark (ASB), and other supporting technical documentation. |
+| [Infrastructure security best practices](../secure/best-practices/file.md#section-name) |This section outlines the interrelationship of development security's dependency on infrastructure security, with a continuous improvement approach that progresses towards a "north star" end state across security strategy, architecture, implementation, and operations. |
+| [Infrastructure security strategy](../secure/best-practices/file.md#section-name) | This section addresses how to reduce business risk from attacks and build in confidentiality, integrity, and availability assurances into all information systems and data. |
+| [Infrastructure security architecture](../secure/best-practices/file.md#section-name) | This section describes best practices related to the ideal end state and key components of infrastructure security, including Azure landing zones, Zero Trust principles, and additional Azure Security Benchmark security recommendations. |
+| [Infrastructure security implementation, operations, and governance](../secure/best-practices/file.md#section-name) | This section covers strategies across implementation, operations, and governance security, including IaC approaches, native security controls, ALZ accelerators, operational role responsibility assignments, security governance best practices, cloud workload protection, and cloud security posture management.|
+| [Development security strategy](../secure/best-practices/file.md#section-name) | This section outlines best practices related to development security strategy including innovation security, Shift Left strategies, and the technical strategies to protect applications, code, and the underlying infrastructure, platform, or device. |
+| [Development security architecture](../secure/best-practices/file.md#section-name) | This section describes best practices related to the ideal end state and key components of development security, including IaC deployment consistency, and integrated process for security development.
+| [Development security implementation and operations](../secure/best-practices/file.md#section-name) | This section covers implementation and operations aspects of development security, incuding comprehensive repository toolsets, continuous, incremental governance improvements, and DevSecOps controls. |
+
 ## May 2022
 
 ### Unified management and operations with Azure Arc-enabled Kubernetes landing zone accelerator
