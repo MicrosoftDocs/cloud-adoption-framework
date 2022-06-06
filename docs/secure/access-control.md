@@ -83,7 +83,7 @@ The Azure Active Directory policy engine can be extended to other policy enforce
 - **Modern applications:** Applications that use modern authentication protocols.
 - **Legacy applications:** Via Azure AD Application Proxy.
 - **VPN and remote access solutions:** Such as Cisco AnyConnect, Palo Alto Networks, F5, Fortinet, Citrix, and Zscaler.
-- **Documents, email, and other files:** Via Microsoft Information Protection.
+- **Documents, email, and other files:** Via Microsoft Purview Information Protection.
 - **SaaS applications:** For more information, see [Tutorials for integrating SaaS applications with Azure Active Directory](/azure/active-directory/saas-apps/tutorial-list).
 
 ## Data-driven access decisions
