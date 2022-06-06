@@ -48,7 +48,7 @@ In the pure SaaS model, your software is deployed fully only in your Azure subsc
 
 Examples of pure SaaS software include email-as-a-service, Kafka-as-a-service, cloud-data-warehouse-as-a-service, and many [SaaS listings in Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas).
 
-If you're a small SaaS ISV, you might not need to use multiple Azure subscriptions to deploy your resources right away. But as you scale, Azure's subscription limits can affect your ability to scale within a single subscription. Review the [enterprise-scale landing zone design principles](../enterprise-scale/design-principles.md), particularly subscription democratization, and familiarize yourself with the [architectural approaches for multitenancy](/azure/architecture/guide/multitenant/approaches/overview) to plan for your future growth.
+If you're a small SaaS ISV, you might not need to use multiple Azure subscriptions to deploy your resources right away. But as you scale, Azure's subscription limits can affect your ability to scale within a single subscription. Review the [enterprise-scale landing zone design principles](../landing-zone/design-principles.md), particularly subscription democratization, and familiarize yourself with the [architectural approaches for multitenancy](/azure/architecture/guide/multitenant/approaches/overview) to plan for your future growth.
 
 ISVs building pure SaaS solutions should consider the following questions:
 
@@ -71,7 +71,7 @@ Examples of customer-deployed ISV products include the many [virtual machine ima
 
 For some customer-deployed solutions, an organization might provide management of and updates for the solution deployed within their end-customer Azure subscriptions by using [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview). ISVs, Solution Integrators (SIs), and Managed Service Providers (MSPs) all can use this strategy when it meets their particular needs.
 
-Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. Consider the [Azure landing zones guidance](index.md) as you design your product to work with the [Azure landing zones design principles](../enterprise-scale/design-principles.md) your Azure customers adopt.
+Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. Consider the [Azure landing zones guidance](index.md) as you design your product to work with the [Azure landing zones design principles](../landing-zone/design-principles.md) your Azure customers adopt.
 
 It's especially important for you to have a good understanding of the Azure landing zone concepts as you migrate your existing customers' workloads to Azure.
 
@@ -107,7 +107,7 @@ ISVs building dual deployment SaaS solutions should consider the following quest
 
 ## Azure landing zone design principles and implementations
 
-[Azure's landing zone design principles](../enterprise-scale/design-principles.md) recommend aligning with Azure-native platform capabilities such as Log Analytics, Azure Monitor, and Azure Firewall. The landing zone guidance also provides specific [Azure landing zone implementation options](./implementation-options.md).
+[Azure's landing zone design principles](../landing-zone/design-principles.md) recommend aligning with Azure-native platform capabilities such as Log Analytics, Azure Monitor, and Azure Firewall. The landing zone guidance also provides specific [Azure landing zone implementation options](./implementation-options.md).
 
 As an ISV, you might decide to implement your own landing zone environments. You might need to use your own automation to deploy Azure resources across subscriptions. Or you might want to continue using tools you already employ for logging, monitoring, and other platform-layer services.
 

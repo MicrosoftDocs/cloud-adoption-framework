@@ -12,9 +12,7 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. Azure landing zones enable application migration, modernization, and innovation at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
-
-![Diagram that shows a landing zone design.](../enterprise-scale/media/lz-design.png)
+An Azure landing zone is the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. An Azure landing zone enables application migration, modernization, and innovation at enterprise-scale in Azure. This approach considers all platform resources that are required to support the customer's application portfolio and doesn't differentiate between infrastructure as a service or platform as a service.
 
 A landing zone is an environment for hosting your workloads, preprovisioned through code. Watch the following video to learn more.
 
@@ -26,12 +24,23 @@ A landing zone is an environment for hosting your workloads, preprovisioned thro
 
 ## Scalable and modular
 
-No single solution fits all technical environments. A few Azure landing zone implementation options can help you meet the deployment and operations needs of your growing cloud portfolio.
+No single solution fits all technical environments. However, a few Azure landing zone implementation options can help you meet the deployment and operations needs of your growing cloud portfolio.
 
 - **Scalable:** All Azure landing zones support cloud adoption at scale by providing repeatable environments, with consistent configuration and controls, regardless of the workloads or Azure resources deployed to each landing zone instance.
-- **Modular:** All Azure landing zones provide a modular approach to building out your environment, based on a common set of design areas. Each design area can be easily extended to support the distinct needs of various technology platforms like Azure SQL Database, Azure Kubernetes Service, and Azure Virtual Desktop.
+- **Modular:** All Azure landing zones provide an extensible approach to building out your environment, based on a common set of design areas. The extensibility of an Azure landing zone enables an organization to easily scale specific elements of the environment, as requirements evolve.
 
-Whether you're looking to deploy your first production application to Azure or you're operating a complex portfolio of tech platforms and workloads, the Azure landing zone implementation options can be tailored to your needs.
+## Platform vs. application landing zones
+
+There are two fundamental categories of Azure landing zones:
+
+- **Platform landing zones:** Subscriptions deployed to provide centralized services, often operated by a central team, which will be used by various workloads and applications. Platform landing zones represent key services that often benefit from being consolidated for efficiency and ease of operations. Examples include networking, identity, and management services.
+- **Application landing zones:** One or more subscriptions deployed as an environment for an application or workload. Application landing zones are placed under the 'landing zones' management group to ensure policy controls are correctly applied. Application landing zones can be subcategorized as follows:
+  
+  - Centrally managed: A central IT team fully operates the landing zone. The team applies controls and platform tools to both the platform and application landing zones.
+  - Technology platforms: With technology platforms such as AKS or AVS, the underlying service is often centrally managed. The applications running on top of the service have delegated responsibilities to application teams. This results in modified controls or access permissions compared to centrally managed landing zones.  
+  - Workload: A platform administration team delegates the entire landing zone to a workload team to fully manage and support the environment. This might include modification of policies and alternative tooling for deploying, securing or monitoring workloads.
+
+Whether you're starting on your first production application on Azure or you're operating a complex portfolio of tech platforms and workloads, the Azure landing zone implementation options can be tailored to your needs.
 
 ## Azure landing zone conceptual architecture
 
@@ -59,12 +68,9 @@ There are other deployment options available, some that deliver the full archite
 
 ## Next steps
 
-Organizations may be at different stages of their cloud journey when reviewing this guidance. As a result, the actions and recommendations required to progress toward the outcome detailed above may vary. To understand best next actions in relation to where you are in your cloud adoption, review the journey to the target architecture content.
+At the foundation of the architecture is a set of core design principles that serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with deviation.
 
 > [!div class="nextstepaction"]
-> [Journey to the target architecture](./landing-zone-journey.md)
+> [Design principles](./design-principles.md)
 
-When you're choosing the right Azure landing zone implementation option, you should understand the [Azure landing zone design areas](./design-areas.md).
 
-> [!div class="nextstepaction"]
-> [Review design areas](./design-areas.md)

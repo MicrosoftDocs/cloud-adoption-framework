@@ -303,8 +303,9 @@
         "workgroup"
     ],
     "ignoreWords": [
-        "azurecli",
+        "IDPS",
         "azcmagent",
+        "azurecli",
         "azuredeploy",
         "bool",
         "chmod",
@@ -326,6 +327,7 @@
         "ipsec",
         "isnotempty",
         "kube",
+        "kubeconfig",
         "kubectl",
         "linktype",
         "localizationpriority",
@@ -396,8 +398,8 @@
         "OpenBlade\\[.*\\]"
     ],
     "import": [
-        ".\\cspell-docset.json",
-        ".\\cspell-docset-names.json",
-        ".\\cspell-docutune.json"
+        "cspell-docset.json",
+        "cspell-docset-names.json",
+        "cspell-docutune.json"
     ]
 }

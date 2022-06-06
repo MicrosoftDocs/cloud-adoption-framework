@@ -32,7 +32,7 @@ From an Azure Landing Zone point of view, landing zones are individual Azure sub
 
 ## What does policy-driven governance mean, and how does it work?
 
-[Policy-driven governance](./design-principles.md#policy-driven-governance) is one of the key design principles of enterprise-scale architecture.
+[Policy-driven governance](../landing-zone/design-principles.md#policy-driven-governance) is one of the key design principles of enterprise-scale architecture.
 
 Policy-driven governance means using Azure Policy to reduce the time you need for common and repeated operational tasks across your Azure tenant. Use many of the [Azure Policy effects](/azure/governance/policy/concepts/effects), such as `Append`, `Deny`, `DeployIfNotExists`, and `Modify`, to prevent non-compliance by either restricting non-compliant resources (as defined by the policy definition) from being created or updated or by deploying resources or modifying settings of a resource creation or update request to make them compliant. Some effects, such as `Audit`, `Disabled`, and `AuditIfNotExists`, don't prevent or take action; they only audit and report on non-compliance.
 

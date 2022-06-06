@@ -7,7 +7,7 @@ ms.date: 06/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Governance, security, and compliance baseline for Azure Arc-enabled servers
@@ -22,7 +22,7 @@ By the end of this article, you'll understand the critical design areas for secu
 
 The following image displays conceptual reference architecture that demonstrates the security, compliance, and governance design areas for Azure Arc-enabled servers:
 
-[ ![A diagram depicting the enterprise-scale security, governance and compliance for Azure Arc-enabled servers on Azure conceptual reference architecture.](../media/arc-enabled-servers-security-compliance-governance.png)](../media/arc-enabled-servers-security-compliance-governance.png#lightbox)
+[ ![A diagram depicting the enterprise-scale security, governance and compliance for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-security-compliance-governance.png)](./media/arc-enabled-servers-security-compliance-governance.png#lightbox)
 
 ## Design considerations
 
@@ -88,7 +88,7 @@ Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to man
 
 The following image displays conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
-[ ![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](../media/arc-enabled-servers-key-vault-integration.png)](../media/arc-enabled-servers-key-vault-integration.png#lightbox)
+[ ![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](./media/arc-enabled-servers-key-vault-integration.png)](./media/arc-enabled-servers-key-vault-integration.png#lightbox)
 
 > [!TIP]
 > Learn how to use Key Vault managed certificates with Azure Arc-enabled Linux servers in the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx) project.
@@ -114,7 +114,7 @@ Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-ov
 
 The following image displays conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled servers:
 
-[ ![A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture.](../media/arc-enabled-servers-policy.png)](../media/arc-enabled-servers-policy.png#lightbox)
+[ ![A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-policy.png)](./media/arc-enabled-servers-policy.png#lightbox)
 
 ### Log management strategy
 
@@ -124,7 +124,7 @@ Review the best practices in [Designing your Azure Monitor Logs deployment](/azu
 
 ### Threat protection and cloud security posture management
 
-Microsoft Defender for Cloud provides a unified security-management platform segmented as a [cloud security posture management (CSPM)](/cloud-app-security/tutorial-cloud-platform-security) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone, it's important to protect the data and assets hosted in Azure and elsewhere. [Microsoft Defender for servers](/azure/security-center/defender-for-servers-introduction) extend these capabilities to Azure Arc-enabled servers and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide) provides [endpoint detection and response (EDR)](/mem/intune/protect/endpoint-security-edr-policy). To strengthen the security of your hybrid landing zone, consider the following:
+Microsoft Defender for Cloud provides a unified security-management platform segmented as a [cloud security posture management (CSPM)](/cloud-app-security/tutorial-cloud-platform-security) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone, it's important to protect the data and assets hosted in Azure and elsewhere. [Microsoft Defender for servers](/azure/security-center/defender-for-servers-introduction) extend these capabilities to Azure Arc-enabled servers and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) provides [endpoint detection and response (EDR)](/mem/intune/protect/endpoint-security-edr-policy). To strengthen the security of your hybrid landing zone, consider the following:
 
 - Use Azure Arc-enabled servers to onboard hybrid resources in [Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal).
 - Implement an [Azure Policy guest configuration](/azure/azure-arc/servers/learn/tutorial-assign-policy-portal) to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
