@@ -19,7 +19,7 @@ Microsoft has created the [Cloud Adoption Framework](/azure/cloud-adoption-frame
 
 During the process of designing and implementing your organization’s landing zone, use the reference architecture below as a target end-state that captures mature and scaled-out environmental design considerations.
 
-![Build scalable and modular Azure landing zone](./media/enterprise-scale-architecture.png)
+:::image type="content" source="./media/enterprise-scale-architecture.png" alt-text="Enterprise scale architecture" border="false" lightbox="./media/enterprise-scale-architecture.png":::
 
 [Download the Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx)—and adapt the landing zone's design configuration to fit your organization's specific business and technical requirements.
 

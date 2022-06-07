@@ -18,7 +18,7 @@ We recommend following development [security best practices architecture](securi
 
 The governance discipline is key to implementation and ongoing operations as it identifies security-related business risks and provides risk-mitigation guidance to staff responsible for both infrastructure and development. As you develop governance policies and processes, make sure to involve relevant IT a development teams in your planning and review processes.
 
-Operationalize these processes, policies, and toolsets with the use of repository tooling such as GitHub workflow management and contributions to code via PRs. We recommend following security best practices when across all [Azure DevOps tooling](/azure/devops/), [GitHub Actions](https://github.com/marketplace?type=actions), etc.  
+Operationalize these processes, policies, and toolsets with the use of repository tooling such as GitHub workflow management and contributions to code via PRs. We recommend following security best practices when across all [Azure DevOps tooling](/azure/devops/), [GitHub Actions](https://github.com/marketplace?type=actions), etc.
 
  
 Below is a diagram of DevSecOps architecture with Shift-left strategy—integrating security into developer workflows from the beginning—and across the development lifecycle. Its complex dataflow starts with Azure Active Directory (AD) configured as GitHub identity provider (with multi-factor authentication (MFA) enabled for extra security).
