@@ -52,7 +52,7 @@ Together, these toolsets establish broad visibility and insights into your attac
 Additionally, your DevOps processes and procedures should include:
 
 - threat modeling systems and architectures (and specific applications)
-- automated governance controls with Azure policy as code workflows (ARM templates, ~~Azure blueprints~~, ALZ bicep modules, and ALZ Terraform modules) that apply guardrails to audit and enforce standards and policies to technical systems.
+- automated governance controls with Azure policy as code workflows (ARM templates, ALZ bicep modules, and ALZ Terraform modules) that apply guardrails to audit and enforce standards and policies to technical systems.
 
 ## Next steps:
 

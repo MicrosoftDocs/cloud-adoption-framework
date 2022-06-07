@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security implementation, operations, and governance
 
-This is the beginning of the Infrastructure security implementation, operations, and governance section. Advance to [Development security strategy] section.(add file.md#section-name).
+This is the beginning of the Infrastructure security implementation, operations, and governance section. Advance to [Development security strategy](development-security-strategy-overview#development-security-strategy) section.
 
 ## Implementation
 Follow the Cloud Adoption Framework guidance for deploying Azure landing zones and get started with [Use Azure landing zones]() as a starting point to incrementally mature towards the target architecture that is best practice-aligned.

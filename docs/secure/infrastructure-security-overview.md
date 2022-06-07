@@ -14,7 +14,7 @@ ms.custom: internal
 
 ## Overview
 
-[Infrastructure](infrastructure-security-overview.md) and [development](development-security-strategy-overview.md) are each broad technical areas with multiple and distinct conceptual layers and components that integrate together. Infrastructure and development also have a complex interrelationship, which is noted throughout these best practices. 
+[Infrastructure](infrastructure-security-strategy.md) and [development](development-security-strategy-overview.md) are each broad technical areas with multiple and distinct conceptual layers and components that integrate together. Infrastructure and development also have a complex interrelationship, which is noted throughout these best practices. 
 
 It’s critical to understand that application development security relies on infrastructure security. If the underlying infrastructure of an application (e.g. virtual machines) is compromised, the attackers almost always gain control of the application and its data as well. Applications and build process hosting CI/CD, etc. are often hosted on infrastructure operated by the organization (or a SaaS application managed using infrastructure admin personnel and accounts).
 

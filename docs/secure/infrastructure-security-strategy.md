@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security strategy
 
-This section includes the best practices related to Infrastructure security strategy and how we recommend approaching this problem space. Advance to Infrastructure security [architecture] — Infrastructure security [implementation, operations, and governance].(add file.md#section-name).
+This section includes the best practices related to Infrastructure security strategy and how we recommend approaching this problem space. Advance to Infrastructure security [architecture](infrastructure-security-architecture.md) — Infrastructure security [implementation, operations, and governance](infrastructure-security-implementation.md).
 
 This includes security for the common enterprise-wide elements that multiple workloads depend on, as depicted in this diagram:
 

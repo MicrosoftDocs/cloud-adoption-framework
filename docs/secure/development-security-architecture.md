@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Development security architecture
 
-This is the Development security architecture best practices section that describes best practices related to the ideal end state and key components of development security. Advance to [Development security implementation and operations] section.(add file.md#section-name).
+This is the Development security architecture best practices section that describes best practices related to the ideal end state and key components of development security. Advance to [Development security implementation and operations](development-security-implementation-operations.md) section.
 
 Your security architecture for development must integrate both security best practices as well as innovations in DevOps culture, tools, processes, and technology. It must also embrace and integrate with Infrastructure as Code (IaC) to create consistent, repeatable infrastructure deployments. Operationalizing these elements in DevOps requires aligning security best practices and technologies into the processes and workflows that operationalize DevOps architecture. To be effective in this fast-paced approach, maximize automation and integration of security analysis tools, threat modelling processes, security posture management, and other security techniques into CI/CD processes. Ensure you establish clarity for roles and responsibilities for security elements in the process.
 
@@ -36,7 +36,7 @@ Securing code in the cloud needs to be integrated with existing processes to suc
 
 ![High Security DevSecOps Process](./media/integrated-process-security-development.png)
 
-This example process is suitable for business-critical functions that require the highest level of security rigor (e.g. APIs and applications that process financial transactions or business critical information). We recommend you consider developing simpler streamlined version(s) of this process for different use cases as depicted in this diagram
+This example process is suitable for business-critical functions that require the highest level of security rigor (e.g. APIs and applications that process financial transactions or business critical information). We recommend you consider developing simpler streamlined version(s) of this process for different use cases as depicted in this diagram:
 
 ![Find the Right Balance](./media/security-processes-business-agility-balance.png)
 
