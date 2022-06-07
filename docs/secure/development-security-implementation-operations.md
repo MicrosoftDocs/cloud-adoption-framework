@@ -20,7 +20,6 @@ The governance discipline is key to implementation and ongoing operations as it 
 
 Operationalize these processes, policies, and toolsets with the use of repository tooling such as GitHub workflow management and contributions to code via PRs. We recommend following security best practices when across all [Azure DevOps tooling](/azure/devops/), [GitHub Actions](https://github.com/marketplace?type=actions), etc.
 
- 
 Below is a diagram of DevSecOps architecture with Shift-left strategy—integrating security into developer workflows from the beginning—and across the development lifecycle. Its complex dataflow starts with Azure Active Directory (AD) configured as GitHub identity provider (with multi-factor authentication (MFA) enabled for extra security).
 
 ![DevSecOps architecture with Shift-left strategy—integrating security into developer workflows](./media/devsecops-integrated-shift-left-security-development-workflow.png)
