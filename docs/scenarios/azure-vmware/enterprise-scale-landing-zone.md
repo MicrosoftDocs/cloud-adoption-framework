@@ -3,14 +3,14 @@ title: Enterprise-scale for Microsoft Azure VMware Solution
 description: Learn how enterprise-scale can accelerate the adoption of Microsoft Azure VMware Solution.
 author: pgandham
 ms.author: janet
-ms.date: 09/22/2021
+ms.date: 06/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-azure-vmware, think-tank
 ---
 
-# Enterprise-scale for Microsoft Azure VMware Solution
+# Azure VMware Solution landing zone accelerator
 
 Azure VMware Solution landing zone accelerator is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, with a focus on the design principles of enterprise-scale.
 
