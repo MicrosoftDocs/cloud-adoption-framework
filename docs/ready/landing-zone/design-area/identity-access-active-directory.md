@@ -46,7 +46,7 @@ Most Azure environments will use Azure AD for Azure fabric authentication and fo
 
 - Ensure your network design allows resources that require AD DS on Windows Server for local authentication and management can access the appropriate domain controllers. For AD DS on Windows Server, consider shared service environments that offer local authentication and host management in a larger enterprise-wide network context.
 
-- When deploying Azure AD Domain Services or integrating on-premises in Azure, consider locations within [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview) for redundancy.
+- When deploying Azure AD Domain Services or integrating on-premises in Azure, consider locations with [Availability Zones](https://docs.microsoft.com/azure/availability-zones/az-overview) for increased availability.
 
 - Deploy Azure AD Domain Services within the primary region because this service can only be projected into one subscription. Azure Active Directory Domain Service can be expanded to further regions with [replica sets](https://docs.microsoft.com/azure/active-directory-domain-services/concepts-replica-sets).
 
