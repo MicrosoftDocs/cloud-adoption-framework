@@ -285,8 +285,6 @@ items:
             href: ready/landing-zone/design-area/identity-access-active-directory.md
           - name: Platform access
             href: ready/landing-zone/design-area/identity-access-platform-access.md
-          - name: Hosting IaaS services
-            href: ready/landing-zone/design-area/identity-access-iaas-services.md
           - name: Landing zones
             href: ready/landing-zone/design-area/identity-access-landing-zones.md
 
