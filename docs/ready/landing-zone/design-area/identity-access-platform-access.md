@@ -55,4 +55,4 @@ ms.custom: think-tank
 - What is the minimum level of privilege they would require to carry out their responsibilities?
 
 > [!div class="nextstepaction"]
-> [IaaS](identity-access-iaas-services.md)
+> [IaaS](identity-access-landing-zones.md)

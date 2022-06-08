@@ -103,4 +103,4 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
 
 Identity and access management are core features of the Azure landing zone accelerator implementation. The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment.
 
-The implementation also includes options to assign recommended policies to govern identity and domain controllers
+The implementation also includes options to assign recommended policies to govern identity and domain controllers. Additionally, it could create a virtual network and connect to the hub via VNET peering.
