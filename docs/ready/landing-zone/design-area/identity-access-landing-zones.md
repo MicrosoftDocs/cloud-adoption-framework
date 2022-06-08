@@ -20,11 +20,11 @@ Requirements for authentication inside the landing zone should be thoroughly ass
 
 - Limits exist for the number of custom roles and role assignments that you must consider when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](https://docs.microsoft.com/azure/role-based-access-control/troubleshooting).
 
-     There's a limit of 4,000 role assignments per subscription.
+    - There's a limit of 4,000 role assignments per subscription.
 
-     There's a limit of 500 role assignments per management group.
+    - There's a limit of 500 role assignments per management group.
 
-     A maximum of 30 Azure AD custom roles can be created in an Azure AD organization.
+    - A maximum of 30 Azure AD custom roles can be created in an Azure AD organization.
 
 - Environments deployed in the Classic deployment model should be migrated to the Azure Resource Manager (ARM) model. Understand that virtual machines and virtual networks cannot be migrated from the Classic model to the Resource Manger model and that automated scripts need to be updated to accommodate the new schema. Guidance can be found in this link: [Migrate from classic to Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/deployment-models#migrate-from-classic-to-resource-manager)
 
@@ -56,11 +56,11 @@ Requirements for authentication inside the landing zone should be thoroughly ass
 
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 
-    o If authentication originates from outside of Azure, please check the information about any limitation on this link: [Custom controls CA](https://docs.microsoft.com/azure/active-directory/conditional-access/controls)
+    - If authentication originates from outside of Azure, please check the information about any limitation on this link: [Custom controls CA](https://docs.microsoft.com/azure/active-directory/conditional-access/controls)
 
 - Enforce multifactor authentication for any user with rights to the Azure environments. Multifactor authentication enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
 
-    o Consider using service principles for non-interactive resource logins so that MFA and token refreshes will not affect the operation.
+    - Consider using service principles for non-interactive resource logins so that MFA and token refreshes will not affect the operation.
 
 - Don't add users directly to Azure resource scopes. Instead add users to defined roles, which are then assigned to resource scopes. Direct user assignments circumvent centralized management, greatly increasing the management required to prevent unauthorized access to restricted data.
 
@@ -89,11 +89,11 @@ Use custom role definitions within the Azure AD tenant while you consider the fo
 
 - Use Azure [AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can:
 
-     o Be an extension of current tools and processes
+     - Be an extension of current tools and processes
 
-     o Use Azure native tools as outlined
+     - Use Azure native tools as outlined
 
-     o Use both as needed
+     - Use both as needed
 
 - Use Azure AD PIM access reviews to periodically validate resource entitlements. Access reviews are part of many compliance frameworks. As a result, many organizations will already have a process in place to address this requirement.
 

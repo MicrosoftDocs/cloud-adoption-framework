@@ -16,15 +16,15 @@ ms.custom: think-tank
 
 - Centralized versus federated resource ownership:
 
-    -- Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It is a standard practice for any organization that grants or denies access to confidential or critical business resources.
+    - Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It is a standard practice for any organization that grants or denies access to confidential or critical business resources.
 
-    -- Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations:
+    - Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations:
 
-    --- Take advantage of the agile nature of the cloud
+        - Take advantage of the agile nature of the cloud
 
-    --- Prevent the violation of any critical security or governance boundary
+        - Prevent the violation of any critical security or governance boundary
 
-    -- Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
+    - Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
 
 - As part of the guidelines for best practices enabling MFA, you can used a tool called Azure AD Identity Protection to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection).
 
@@ -32,11 +32,11 @@ ms.custom: think-tank
 
 - Centralizing Identity means having only one location in the cloud and the integration of the Directories services, control access, authentication, and applications. It provides better management from the IT team.
 
-    o For centralized Directories the best practice is to have only one Azure AD tenant.
+    - For centralized Directories the best practice is to have only one Azure AD tenant.
 
 - Use Azure AD-only groups for Azure control-plane resources and Azure AD Privileged Identity Management when you grant access to resources.
 
-    o Add on-premises groups to the Azure AD-only group if a group management system is already in place.
+    - Add on-premises groups to the Azure AD-only group if a group management system is already in place.
 
 - By using Azure AD-only groups, you can add both users and groups that are synchronized from on-premises, via Azure AD Connect. You can also add Azure AD-only (also known as cloud only) users and groups to a single Azure AD-only group, including guest users.
 
