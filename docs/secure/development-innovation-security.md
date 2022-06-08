@@ -1,5 +1,5 @@
 ---
-title: Innovation security
+title: Development innovation security
 description: Different organizations stress rapid innovation to stay competitive, while others remain intolerant of brand damage—even from an otherwise minor test application that could be compromised.
 author: MarkSimos
 ms.author: mas
@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Innovation security
+# Development innovation security
 
 ## Balancing innovation speed and security
 Calculating your enterprise risk appetite is variable, and dependent on continuously balancing the level of innovation your organization pursues to meet customer demands and your accountability for security to customers, shareholders, and regulators.
