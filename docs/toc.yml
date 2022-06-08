@@ -1654,33 +1654,33 @@ items:
 
     - name: Infrastructure and Development
       items:
-      - name: Infrastructure and development security best practices
+      - name: Introduction
         href: secure/security-best-practices-introduction.md
       - name: Infrastructure
         items:        
-        - name: Infrastructure
+        - name: Overview
           href: secure/infrastructure-security-overview.md
-        - name: Infrastructure security strategy
+        - name: Strategy
           href: secure/infrastructure-security-strategy.md
-        - name: Infrastructure security architecture
+        - name: Architecture
           href: secure/infrastructure-security-architecture.md
-        - name: Infrastructure security implementation, operations, and governance
+        - name: Implementation
           href: secure/infrastructure-security-implementation.md
         - name: Operations
           href: secure/infrastructure-security-operations-governance.md
       - name: Development
         items:                  
-        - name: Development
+        - name: Development security strategy
           href: secure/development-security-strategy-overview.md
         - name: Innovation security
           href: secure/development-innovation-security.md
-        - name: DevSecOps as continuous improvement strategy
+        - name: Securing DevOps strategy and process
           href: secure/devops-strategy-process-security.md
         - name: Development security architecture
           href: secure/development-security-architecture.md
         - name: Development security implementation and operations
           href: secure/development-security-implementation-operations.md
-          
+
     - name: Security considerations
       items:
       - name: Security strategy
