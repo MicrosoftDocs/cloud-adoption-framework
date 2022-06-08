@@ -34,11 +34,11 @@ Most Azure environments will use Azure AD for Azure fabric authentication and fo
 
 - The following types of privileged operations require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the necessary diligence:
 
-    o Creating service principal objects
+    - Creating service principal objects
 
-    o Registering applications in Azure AD
+    - Registering applications in Azure AD
 
-    o Procuring and handling certificates or wildcard certificates
+    - Procuring and handling certificates or wildcard certificates
 
 - If an organization has a scenario where an application that uses on-premises authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/app-proxy/application-proxy).
 
