@@ -46,4 +46,4 @@ This section examines design considerations and recommendations related to IAM i
 The technological landscape in the enterprise is becoming complex and heterogenous. To manage compliance and security for this environment, IAM lets the right individuals access the right resources at the right time for the right reasons.
 
 > [!div class="nextstepaction"]
-> [Active Directory](identity-access-active-directory.md)
+> [Active Directory](identity-access-active-directory-hybrid-identity.md)

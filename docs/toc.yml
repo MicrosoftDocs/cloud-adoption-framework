@@ -282,7 +282,7 @@ items:
           - name: Overview
             href: ready/landing-zone/design-area/identity-access.md
           - name: Active Directory
-            href: ready/landing-zone/design-area/identity-access-active-directory.md
+            href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
           - name: Platform access
             href: ready/landing-zone/design-area/identity-access-platform-access.md
           - name: Landing zones
