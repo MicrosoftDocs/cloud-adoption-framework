@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 01/13/2022
+ms.date: 06/09/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -12,9 +12,7 @@ ms.custom: internal
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
-Here are the recent changes we've made to the Cloud Adoption Framework.
-
-This framework is collaboratively built with customers, partners, and internal Microsoft teams. We release new and updated content as it becomes available. New releases enable you to test, validate, and refine this guidance along with us.
+We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
@@ -22,38 +20,38 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Unified management and operations with Azure Arc-enabled Kubernetes landing zone accelerator
 
-This release of the Cloud Adoption Framework provides considerations to help you prepare for an enterprise-scale deployment of Azure Arc-enabled Kubernetes.
+This Cloud Adoption Framework release provides considerations that help you prepare for enterprise-scale deployments of Azure Arc-enabled Kubernetes.
 
-This scenario focuses on enabling a few targeted outcomes:
+This scenario enables the following targeted outcomes:
 
-- Mature your hybrid practices with Azure Arc-enabled Kubernetes management and operations.
-- Establish appropriate Azure Arc-enabled Kubernetes governance across all on-premises and multicloud assets to move forward with confidence.
-- Minimize technical debt by considering well-architected principles across all Azure Arc-enabled Kubernetes workloads.
-- Automate all three of the above with the codebase for Azure Arc-enabled Kubernetes landing zone accelerator.
+- Mature your hybrid practices by implementing Azure Arc-enabled Kubernetes management and operations.
+- Establish appropriate Azure Arc-enabled Kubernetes governance across all on-premises and multicloud assets.
+- Minimize technical debt by considering well-architected principles across all your Azure Arc-enabled Kubernetes workloads.
+- Use the codebase for Azure Arc-enabled Kubernetes landing zone accelerator to automate all three of the above.
 - Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario.
 
-Get started with this scenario using the following links:
+Use the following table of article links to get started with this scenario.
 
 | Article | Description |
 |--|--|
-| [Identity and access management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md) | Best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc. |
-| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) | Design considerations when working with Azure Arc-enabled Kubernetes and how to securely connect them to your Enterprise Scale Landing Zone. |
-| [Resource organization](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md) | Best practices for resource consistency and tagging strategy, that includes your hybrid and multicloud resources. |
-| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md) | The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
-| [Management disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md) | Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled Kubernetes on Azure enterprise estate, with centralized management and monitoring at the platform level. |
-| [Automation disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
-| [Extensions management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) | Azure Arc-enabled Kubernetes as being split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. As part of your Enterprise Scale Landing Zone implementation you should keep these two categories in mind as you design your deployment of Azure Arc-enabled Kubernetes. |
-| [CI/CD and GitOps disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) | As a cloud-native construct, Kubernetes requires a cloud-native approach for deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files that are stored in Git repositories. As part of your Enterprise Scale Landing Zone implementation you should plan on how and when GitOps practices using Azure Arc-enabled Kubernetes applies in your organization and who are the people who will be using it.|
-| [Services observability](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Observability is an application characteristic that refers to how well a system’s internal state or status can be understood from its external outputs. As part of your Enterprise Scale Landing Zone implementation you should plan when to implement the Azure Arc-enabled Kubernetes cluster extensions for observability use-cases; Open Service Mesh and Self-hosted API Management gateway. |
-| [Cost governance](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
-| [Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md) | Get started with a fully automated Azure Arc-enabled Kubernetes sandbox deployment. |
-| [Introduction to Azure Arc-enabled Kubernetes landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multicloud architectures. |
+| [Identity and access management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md) |Best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc. |
+| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) |Design considerations when working with Azure Arc-enabled Kubernetes and how to securely connect them to your Enterprise Scale Landing Zone. |
+| [Resource organization](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md) |Best practices for resource consistency and tagging strategy, that includes your hybrid and multicloud resources. |
+| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md) |The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
+| [Management disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md) |Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled Kubernetes on Azure enterprise estate, with centralized management and monitoring at the platform level. |
+| [Automation disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) |Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
+| [Extensions management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) |Azure Arc-enabled Kubernetes as being split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. As part of your Enterprise Scale Landing Zone implementation you should keep these two categories in mind as you design your deployment of Azure Arc-enabled Kubernetes. |
+| [CI/CD and GitOps disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) |As a cloud-native construct, Kubernetes requires a cloud-native approach for deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files that are stored in Git repositories. As part of your Enterprise Scale Landing Zone implementation you should plan on how and when GitOps practices using Azure Arc-enabled Kubernetes applies in your organization and who are the people who will be using it.|
+| [Services observability](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) |Observability is an application characteristic that refers to how well a system’s internal state or status can be understood from its external outputs. As part of your Enterprise Scale Landing Zone implementation you should plan when to implement the Azure Arc-enabled Kubernetes cluster extensions for observability use-cases; Open Service Mesh and Self-hosted API Management gateway. |
+| [Cost governance](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) |Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
+| [Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md) |Get started with a fully automated Azure Arc-enabled Kubernetes sandbox deployment. |
+| [Introduction to Azure Arc-enabled Kubernetes landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) |Learn how to accelerate adoption of hybrid or multicloud architectures. |
 
 ### App Service landing zone accelerator
 
-The new App Service landing zone accelerator provides recommendations and considerations for that can help accelerate adoption of App Service. The architectural approach can be used in greenfield scenarios as design guidelines and in brownfield scenarios as an assessment. The scenario covers both multi-tenanted App Service as well as App Service Environment deployments. The reference implementation covers an architecture using an internal App Service Environment v3 for line of business applications.
+The new App Service landing zone accelerator provides recommendations and considerations that help accelerate your App Service adoption. You can use its architectural approach as a set of design guidelines in greenfield scenarios and as an assessment in brownfield scenarios. This scenario covers both multi-tenanted App Service and App Service Environment deployments. Its reference implementation covers an architecture that uses an internal App Service Environment v3 for line of business applications.
 
-Get started with this landing zone accelerator using the following links:
+Use the following links to get started with this landing zone accelerator: 
 
 - [Identity and access management](../scenarios/app-platform/app-services/identity-and-access-management.md)
 - [Network topology and connectivity](../scenarios/app-platform/app-services/network-topology-and-connectivity.md)
@@ -64,9 +62,9 @@ Get started with this landing zone accelerator using the following links:
 
 ### API Management landing zone accelerator
 
-The API Management landing zone accelerator provides recommendations and considerations that can help accelerate adoption of API Management. The architectural approach can be used in greenfield scenarios as design guidelines and in brownfield scenarios as an assessment. The reference implementation covers an architecture where customers hope to host both internal and external facing APIs on an internal API Management instance with an Application Gateway as the web application firewall in a single region deployment.
+The API Management landing zone accelerator provides recommendations and considerations that help you accelerate your API Management adoption. You can use its architectural approach as design guidelines in greenfield scenarios and as an assessment in brownfield scenarios. Its reference implementation covers an architecture where customers hope to host both internal and external facing APIs on an internal API Management instance with an Application Gateway as the web application firewall in a single region deployment.
 
-Get started with this landing zone accelerator using the following links:
+Use the following links to get started with this landing zone accelerator:
 
 - [Identity and access management](../scenarios/app-platform/api-management/identity-and-access-management.md)
 - [Network topology and connectivity](../scenarios/app-platform/api-management/network-topology-and-connectivity.md)
@@ -77,27 +75,26 @@ Get started with this landing zone accelerator using the following links:
 
 ## April 2022
 
-### Cloud-scale analytics 
+### Cloud-scale analytics
 
-This release provides a considerable update to the Data Management and Analytics scenario. Based on feedback and lessons learned from many customers, we've renamed the scenario "cloud-scale analytics" and updated all the topics in this scenario.  Here's some links to the highlights. 
+This Cloud Adoption Framework release provides a considerable update to the Data Management and Analytics scenario. Based on feedback and lessons from many of our customers, we've renamed this scenario "cloud-scale analytics" and updated all the topics within it.  The following table provides links to the highlights. 
 
 | Article | Description |
 |--|--|
 | [Cloud-scale analytics](../scenarios/cloud-scale-analytics/index.md) | An overview of how this cloud-scale analytics scenario can help your organization build modern data platforms. |
-| [Govern](../scenarios/cloud-scale-analytics/govern.md), [secure](../scenarios/cloud-scale-analytics/secure.md), and [organize](../scenarios/cloud-scale-analytics/organize.md) | Updated guidance about how to govern and secure your analytics estate, and organize your people and teams. |
-| [Managing your analytics estate](../scenarios/cloud-scale-analytics/manage.md) | New guidance helps you learn how DevOps combined with observability is key to providing an agile and scalable platform. |
-| [Architectural guidance](../scenarios/cloud-scale-analytics/architectures/overview-architectures.md) | Review data architectures for cloud-scale analytics.|
-| [Data product](../scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products.md) | New information about cloud-scale analytics data products in Azure. |
-| [Data standardization](../scenarios/cloud-scale-analytics/architectures/data-standardization.md) | Consider your data formats to ensure processing pipeline efficiency and to optimize costs. |
-| [Data mesh](../scenarios/cloud-scale-analytics/architectures/what-is-data-mesh.md) | Learn what data mesh is and get guidance on scaling analytics adoptions beyond a single platform and a single implementation team. |
-| [Data lake zones](../scenarios/cloud-scale-analytics/best-practices/data-lake-zones.md) | New guidance to help you plan your data structure before you land it into a data lake. |
-
+| [Govern](../scenarios/cloud-scale-analytics/govern.md), [secure](../scenarios/cloud-scale-analytics/secure.md), and [organize](../scenarios/cloud-scale-analytics/organize.md) | Updated guidance on how to govern and secure your analytics estate and organize your people and teams. |
+| [Managing your analytics estate](../scenarios/cloud-scale-analytics/manage.md) | New guidance on how DevOps combined with observability is key to providing an agile and scalable platform. |
+| [Architectural guidance](../scenarios/cloud-scale-analytics/architectures/overview-architectures.md) | Data architecture guidance for cloud-scale analytics.|
+| [Data product](../scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products.md) | New information on cloud-scale analytics data products in Azure. |
+| [Data standardization](../scenarios/cloud-scale-analytics/architectures/data-standardization.md) | Guidance on considering data formats to optimize costs and ensure processing pipeline efficiency. |
+| [Data mesh](../scenarios/cloud-scale-analytics/architectures/what-is-data-mesh.md) | Information on data mesh, plus guidance for scaling analytics adoptions beyond a single platform and single implementation team. |
+| [Data lake zones](../scenarios/cloud-scale-analytics/best-practices/data-lake-zones.md) | New guidance on planning data structure before landing the data into a data lake. |
 
 ## March 2022
 
 ### Low-code application platform guidance
 
-This update provides guidance to help you prepare for adoption of low-code development. We've added content that includes best practices for adopting and innovating with Power Platform.
+This update provides guidance to help you prepare for low-code development adoption. We've added content that includes best practices for adopting and innovating with Power Platform. This is the first set of content in our plan to include Power Platform in the Cloud Adoption Framework.
 
 - [Power Platform adoption best practices](/power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Power Apps overview](/powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
@@ -105,17 +102,15 @@ This update provides guidance to help you prepare for adoption of low-code devel
 - [Automate tasks with robotic process automation](/power-automate/desktop-flows/introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Intelligent low-code apps](/ai-builder/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=main)
 
-This is the first set of content in our plan to include Power Platform in the Cloud Adoption Framework.
-
 ### Independent software vendor (ISV) considerations for Azure landing zones
 
-The new [ISV considerations for Azure landing zones](../ready/landing-zone/isv-landing-zone.md) article describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
+The new [ISV considerations for Azure landing zones](../ready/landing-zone/isv-landing-zone.md) article describes how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and the considerations are based on feedback and lessons from many customers.
 
 ## February 2022
 
 ### New videos added to the Cloud Adoption Framework security topics
 
-These videos can help you understand how security plays a part in your cloud adoption journey.
+The following videos can help you understand the role of security in your cloud adoption journey.
 
 | Article | Description of video |
 |--|--|
@@ -133,9 +128,9 @@ These videos can help you understand how security plays a part in your cloud ado
 
 ### Unified management and operations with Azure Arc-enabled servers landing zone accelerator
 
-This release of the Cloud Adoption Framework provides considerations to help you prepare for an enterprise-scale deployment of Azure Arc-enabled servers.
+This Cloud Adoption Framework release provides considerations that help you prepare for an enterprise-scale deployment of Azure Arc-enabled servers.
 
-This scenario focuses on enabling a few targeted outcomes:
+This scenario focuses on enabling the following targeted outcomes:
 
 - Mature your hybrid practices with Azure Arc-enabled servers management and operations.
 - Establish appropriate Azure Arc-enabled servers governance across all on-premises and multicloud assets to move forward with confidence.
@@ -143,7 +138,7 @@ This scenario focuses on enabling a few targeted outcomes:
 - Automate all three of the above with the codebase for Azure Arc-enabled servers landing zone accelerator.
 - Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario.
 
-Get started with this scenario using the following links:
+Use the following links to get started with this scenario.
 
 | Article | Description |
 |--|--|
@@ -175,7 +170,7 @@ Finally, we've added an example alignment scenario to the Align on-ramp: [Scenar
 
 ### Microsoft Azure VMware Solution scenario
 
-This release of the Cloud Adoption Framework provides considerations for [migrating VMware resources from on-premises datacenters to dedicated Azure cloud environments](../scenarios/azure-vmware/index.md).
+This Cloud Adoption Framework release provides considerations that help you [migrate VMware resources from on-premises datacenters to dedicated Azure cloud environments](../scenarios/azure-vmware/index.md).
 
 This scenario focuses on enabling specific, targeted outcomes to:
 
@@ -193,9 +188,9 @@ This scenario focuses on enabling specific, targeted outcomes to:
 
 ### Cloud-scale analytics scenario
 
-This release of the Cloud Adoption Framework provides considerations to help you prepare for [cloud-scale analytics](../scenarios/data-management/index.md).
+This Cloud Adoption Framework release provides considerations that help you prepare for [cloud-scale analytics](../scenarios/data-management/index.md).
 
-This scenario focuses on enabling a few targeted outcomes:
+This scenario focuses on enabling the following targeted outcomes:
 
 - Mature your analytics, AI and machine learning, and IoT capabilities in the cloud.
 - Establish appropriate data governance across all data initiatives to move forward with confidence.
@@ -203,27 +198,27 @@ This scenario focuses on enabling a few targeted outcomes:
 - Automate all three of the above with the codebase for enterprise-scale for analytics.
 - Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario.
 
-Get started with this scenario using the following links:
+Use the following links to get started with this scenario.
 
 | Article | Description |
 |--|--|
 | [Introduction to the cloud-scale analytics](../scenarios/data-management/index.md) | In this article we introduce the principles of the cloud-scale analytics.|
 | [Data governance](../scenarios/data-management/govern.md) | This guidance reviews how data governance ensures data that's used by your business is discoverable, accurate, trusted, and can be protected. |
-| [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, review considerations for cloud-scale analytics that will have an impact on your cloud adoption strategy.
-| [Define a plan](../scenarios/data-management/plan.md) | Establish a clear plan for rationalizing data, skilling people, and tips for ensuring success.
-| [Azure landing zones for cloud-scale analytics](../scenarios/data-management/ready.md) | This guidance provides an overview of the data management landing zone. A data management landing zone is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises.
-| [Govern your data estate](../scenarios/data-management/govern.md) | This article reviews a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology.
-| [Secure your data estate](../scenarios/data-management/secure.md) | Best practices to improve security of your entire data estate.
-| [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the cloud-scale analytics in Azure.
-| [Azure Well-Architected Framework for data workloads](../scenarios/data-management/well-architected-framework.md) | In this article, we review how you can apply principals of the Azure Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.
+| [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, review considerations for cloud-scale analytics that will have an impact on your cloud adoption strategy.|
+| [Define a plan](../scenarios/data-management/plan.md) | Establish a clear plan for rationalizing data, skilling people, and tips for ensuring success.|
+| [Azure landing zones for cloud-scale analytics](../scenarios/data-management/ready.md) | This guidance provides an overview of the data management landing zone. A data management landing zone is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises.|
+| [Govern your data estate](../scenarios/data-management/govern.md) | This article reviews a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology.|
+| [Secure your data estate](../scenarios/data-management/secure.md) | Best practices to improve security of your entire data estate.|
+| [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the cloud-scale analytics in Azure.|
+| [Azure Well-Architected Framework for data workloads](../scenarios/data-management/well-architected-framework.md) | In this article, we review how you can apply principals of the Azure Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.|
 
 ### Strategic Migration Assessment and Readiness Tool (SMART)
 
-We've added an article to help you use the [Strategic Migration Assessment and Readiness Tool (SMART)](../plan/smart-assessment.md). This assessment can help you find out what you need to do to prepare for your Azure migration.
+We've added an article to help you use the [Strategic Migration Assessment and Readiness Tool (SMART)](../plan/smart-assessment.md). This assessment helps you learn what you need to do to prepare for your Azure migration.
 
 ## July 2021
 
-This release of the Cloud Adoption Framework includes updates to the Azure landing zone content in the Ready methodology.
+This Cloud Adoption Framework release includes updates to the Azure landing zone content in the Ready methodology.
 
 - [What is a landing zone?](../ready/landing-zone/index.md) now includes a conceptual architecture and Azure landing zone accelerator, intended to help customers plan their cloud environments and begin best practice implementation quickly and easily.
 - [Journey to the target architecture](../ready/landing-zone/landing-zone-journey.md) includes new content that helps organizations determine which guidance is best suited to their current position on their cloud journey.
@@ -246,7 +241,7 @@ We've added a new retail industry scenario in this release, designed to guide a 
 
 ### Cloud Adoption Framework Secure methodology
 
-This release of the Cloud Adoption Framework introduces the new Secure methodology, which will centralize the theme of security best practices and provide end-to-end guidance for customers looking to adopt Microsoft guidance for their cloud environments. Security concerns have surged to the forefront of many top priorities lists recently, building on feedback requesting a more security-centric view, the [Secure methodology](../secure/index.md) will assist in defining the security aspect of the cloud journey.
+This Cloud Adoption Framework release introduces the new Secure methodology, which centralizes the theme of security best practices and provides end-to-end guidance for customers looking to adopt Microsoft guidance for their cloud environments. Security concerns have recently surged to the forefront of many top priorities lists. Building on feedback requesting a more security-centric view, the [Secure methodology](../secure/index.md) helps you define the security aspect of your cloud journey.
 
 ### Azure Virtual Desktop adoption journey
 
@@ -266,13 +261,13 @@ We've added new content that includes the financial and technical considerations
 
 ### Modern application platform
 
-We expanded and revised the modern application platform content in this release. Commonly, customers need to provide their developers with a consistent application platform. This article series outlines how you can use orchestrated containers to manage pools of workloads in one or more centralized clusters, thus providing that consistent application platform. The articles in this series for [modern application platform](../scenarios/app-platform/index.md) combine technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
+We expanded and revised the modern application platform content in this release. Customers commonly need to provide their developers with a consistent application platform. This article series outlines how you can use orchestrated containers to manage pools of workloads in one or more centralized clusters to provide that consistent platform. The articles in this series for [modern application platform](../scenarios/app-platform/index.md) combine both technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
 
 ## April 2021
 
 ### Cloud service controls
 
-To help you implement cloud governance at a pace that sustains a high level of innovation, and implements the right level of control for your environment, we've added a new article, [Implement cloud service controls](../govern/cloud-service-controls.md). It focuses on a proven process to help governance teams implement granular controls across the Azure platform, while accelerating the development capabilities for cloud adoption teams. The process can be implemented by enterprises of any size, at any stage of their cloud journey. This guidance outlines the different stages of the process, from taking the enterprise requirements for cloud control for security, operations, and cost management, through the stages of development and release of controls.
+To help you implement cloud governance at a pace that sustains a high level of innovation and implements the appropriate level of control for your environment, we've added a new article, [Implement cloud service controls](../govern/cloud-service-controls.md). It focuses on a proven process that helps governance teams implement granular controls across the Azure platform while accelerating cloud adoption team development capabilities. Enterprises of any size can implement the process at any stage of their cloud journey. This guidance outlines the different stages of the process, from taking the enterprise requirements for cloud control for security, operations, and cost management, through the stages of development and release of controls.
 
 ### Azure Storage migration overview
 
