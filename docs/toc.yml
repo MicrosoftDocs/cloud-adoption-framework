@@ -1672,7 +1672,7 @@ items:
         items:                  
         - name: Development security strategy
           href: secure/development-security-strategy-overview.md
-        - name: Innovation security
+        - name: Development innovation security
           href: secure/development-innovation-security.md
         - name: Securing DevOps strategy and process
           href: secure/devops-strategy-process-security.md
