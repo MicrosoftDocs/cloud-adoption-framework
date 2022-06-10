@@ -2,8 +2,8 @@
 title: Azure Identity and Platform Access
 description: Understand how to provide access to Azure Resources.
 author: anlucen
-ms.author: anais.lucena
-ms.date: 04/29/2022
+ms.author: anlucena
+ms.date: 06/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -26,7 +26,7 @@ ms.custom: think-tank
 
     - Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
 
-- As part of the guidelines for best practices enabling MFA, you can used a tool called Azure AD Identity Protection to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection).
+- As part of the guidelines for best practices enabling MFA, you can used a tool called Azure AD Identity Protection to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](/azure/active-directory/identity-protection/overview-identity-protection).
 
 ## Platform access - design recommendations
 
@@ -42,7 +42,7 @@ ms.custom: think-tank
 
 - Groups that are synchronized from on-premises can only be managed and updated from the identity source of truth (on-premises Active Directory). These groups can only contain members from the same identity source, which doesn't provide flexibility like Azure AD-only groups do.
 
-- Integrate Azure AD logs with the platform-central [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
+- Integrate Azure AD logs with the platform-central [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
 
 - If any data sovereignty requirements exist, custom user policies can be deployed to enforce them.
 
