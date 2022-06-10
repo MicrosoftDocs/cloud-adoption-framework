@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Azure Active Directory Design
+# Azure Active Directory and Hybrid Identity Design
 
 A critical design decision that an enterprise organization must make when adopting Azure is whether to extend a current on-premises identity domain into Azure or to create a brand new one.
 
@@ -77,4 +77,4 @@ Most Azure environments will use Azure AD for Azure fabric authentication and fo
 Learn about Identity and Platform Access.
 
 > [!div class="nextstepaction"]
-> [Platform](identity-access-platform-access.md)
+> [Platform Access](identity-access-platform-access.md)
