@@ -2,8 +2,8 @@
 title: Azure Identity Landing Zones
 description: Understand how to implement identity within a landing zone.
 author: anlucen
-ms.author: anais.lucena
-ms.date: 04/29/2022
+ms.author: doalle
+ms.date: 06/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
