@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Azure Active Directory and Hybrid Identity Design
+# Azure Active Directory and Hybrid Identity
 
 A critical design decision that an enterprise organization must make when adopting Azure is whether to extend a current on-premises identity domain into Azure or to create a brand new one.
 
