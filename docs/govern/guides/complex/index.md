@@ -62,7 +62,7 @@ Once you deploy the MVP, you can incorporate additional layers of governance int
 
 ## What does this guidance provide?
 
-Practices and tools from the [Deployment Acceleration discipline](../../deployment-acceleration/index.md) are established in the MVP so you can quickly apply corporate policy. The MVP relies on Azure Blueprints, Azure Policy, and Azure management groups to apply a few basic corporate policies, as defined in the narrative for our example fictional company. You can use Azure Resource Manager templates and Azure policies to apply these corporate policies. establish a small baseline for identity and seciruty.
+Practices and tools from the [Deployment Acceleration discipline](../../deployment-acceleration/index.md) are established in the MVP so you can quickly apply corporate policy. The MVP relies on Azure Blueprints, Azure Policy, and Azure management groups to apply a few basic corporate policies, as defined in the narrative for our example fictional company. You can use Azure Resource Manager templates and Azure policies to apply these corporate policies. establish a small baseline for identity and security.
 
 ![Diagram showing an example of an incremental governance MVP.](../../../_images/govern/governance-mvp.png)
 
