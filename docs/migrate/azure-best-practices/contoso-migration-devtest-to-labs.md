@@ -41,7 +41,7 @@ The development leadership team has outlined what it wants to achieve with this 
 <!-- -->
 
 > [!NOTE]
-> Azure customers with an Enterprise Agreement can also benefit from the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0148p/). To learn more, review the video for [enabling and creating Enterprise Dev/Test subscriptions through the EA portal](https://channel9.msdn.com/blogs/ea.azure.com/enabling-and-creating-ea-devtest-subscriptions-through-the-ea-portal).
+> Azure customers with an Enterprise Agreement can also benefit from the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0148p/). To learn more, review the video for [enabling and creating Enterprise Dev/Test subscriptions through the EA portal](/shows/ea-azure-com/enabling-creating-ea-devtest-subscriptions-through-ea-portal).
 
 ## Migration goals
 
