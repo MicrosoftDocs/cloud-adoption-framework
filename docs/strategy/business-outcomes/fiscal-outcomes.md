@@ -49,7 +49,7 @@ Through its global scale and digital reach the cloud can help businesses increas
 
 ### Profit increases
 
-Often a single effort simultaneously increase revenue and decrease costs. However, when it does, align the outcome statements from one or more of the revenue outcomes with one or more of the cost outcomes to communicate the desired outcome.
+Seldom does a single effort simultaneously increase revenue and decrease costs. However, when it does, align the outcome statements from one or more of the revenue outcomes with one or more of the cost outcomes to communicate the desired outcome.
 
 ## Cost outcomes
 
