@@ -2,8 +2,8 @@
 title: Active Directory and Hybrid Identity Considerations
 description: Understand Active Directory and Hybrid Identity considerations and recommendations
 author: anlucen
-ms.author: anais.lucena
-ms.date: 04/29/2022
+ms.author: doalle
+ms.date: 06/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
