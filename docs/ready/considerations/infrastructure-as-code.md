@@ -125,7 +125,7 @@ There are several options to publish and share Terraform modules:
 
   * Azure native tools such as Azure CLI, ARM Templates, Bicep are fully supported by Microsoft which allow new features to be integrated faster.
 
-  * Non-native tools such as Terraform allows you manage infrastructure as code across multiple cloud provides such as AWS or GCP. The downside is that new Azure features might take some time to be included. Consider using Terraform to deploy Azure landing zones if your organization is multi-cloud and/or your organization is already using and well-versed in Terraform. 
+  * Non-native tools such as Terraform allow you to manage infrastructure as code across multiple cloud provides such as AWS or GCP. The downside is that new Azure features might take some time to be included. Consider using Terraform to deploy Azure landing zones if your organization is multi-cloud and/or your organization is already using and well-versed in Terraform. 
 
 * Consider using Infrastructure as Code modules for resources that are commonly deployed together, modules enable you to break a complex template into smaller set of code. You can ensure that each module is focused on a specific task, and that modules are reusable for multiple deployment and workloads.
 

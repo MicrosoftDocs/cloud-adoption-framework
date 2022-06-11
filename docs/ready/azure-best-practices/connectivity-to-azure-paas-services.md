@@ -1,6 +1,6 @@
 ---
 title: Connectivity to Azure PaaS services
-description: Examine key design considerations and recommendations surrounding connectivity to Azure platform as a service technologies.
+description: Examine key design considerations and recommendations surrounding connectivity to Azure platform as a service technology.
 author: JefferyMitchell
 ms.author: brblanch
 ms.date: 07/01/2021

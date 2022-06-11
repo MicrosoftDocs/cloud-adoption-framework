@@ -52,7 +52,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Do not use Azure's default internet outbound access for any scenario.
 
-  - Use NAT gateway for online landing zones, which are landing zones not connected to the hub VNet, where compute resources require internet outbound access and do no need any of the security features provided by Azure Firewall (standard or premium) or a third-party NVA.
+  - Use NAT gateway for online landing zones, which are landing zones not connected to the hub VNet, where compute resources require internet outbound access and do not need any of the security features provided by Azure Firewall (standard or premium) or a third-party NVA.
 
 - If partner NVAs are required for east/west or south/north traffic protection and filtering:
 

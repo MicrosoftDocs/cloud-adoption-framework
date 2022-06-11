@@ -27,7 +27,7 @@ Development lifecycle strategy explores key design considerations and recommenda
 - Choose a visibility setting that suits the content of your repository.
   - Private repositories require users to be granted access to the repo and signed in to access the services. 
   - Public repositories can be accessed anonymously.
-  - Public and private visibility can be set for [Azure DevOps projects](/azure/devops/organizations/public/make-project-public) and [GitHub repos](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility). 
+  - Public and private visibility can be set for [Azure DevOps Projects](/azure/devops/organizations/public/make-project-public) and [GitHub repos](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility). 
 
 - Consider setting repository permissions to lock down who can contribute to your source code and manage other features. 
   - Repository permissions can be set for [Azure Devops](/azure/devops/repos/git/set-git-repository-permissions) and [GitHub](https://docs.github.com/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization)  
@@ -70,7 +70,7 @@ Development lifecycle strategy explores key design considerations and recommenda
 - Adopting a pull request strategy helps to keep control of the code changes merged into branches. 
   - Define a [merge strategy](/azure/devops/repos/git/merging-with-squash).
   - Pull request should be simple, meaning that the number of files should be minimum. This will help the reviewer to validate commits and changes.
-  - Pull request must have good title and description to help reviewers know what to except when reviewing code.
+  - Pull request must have good title and description to help reviewers know what to expect when reviewing code.
   - Consider using [pull request templates](/azure/devops/repos/git/pull-request-templates).
   - Consider deleting origin branch after pull request is complete. This will help to keep control and have better management of the branches.   
 
@@ -95,7 +95,7 @@ Development lifecycle strategy explores key design considerations and recommenda
 
 **Design considerations**
 
-- Consider implementing [Continuous Integration (CI)](/devops/develop/what-is-continuous-integration#:~:text=Continuous%20Integration%20(CI)%20is%20the,after%20every%20small%20task%20completion). CI is the practice of merging all developer code into a central codebase on a regular schedule, and then automatically perform standard builds and test processes. 
+- Consider implementing [Continuous Integration (CI)](/devops/develop/what-is-continuous-integration#:~:text=Continuous%20Integration%20(CI)%20is%20the,after%20every%20small%20task%20completion). CI is the practice of merging all developer code into a central codebase on a regular schedule, and then automatically performing standard builds and test processes.
 
 - Consider using of CI triggers:  
   - [Azure Repos Git.](/azure/devops/pipelines/repos/azure-repos-git#ci-triggers) Triggers such as branches, path and tags can be configured as triggers to run a CI build.
@@ -107,7 +107,7 @@ Development lifecycle strategy explores key design considerations and recommenda
 
 - Consider including unit test in the application build process. Review the tasks available for [Azure DevOps Pipeline](/azure/devops/pipelines/tasks#test) for testing purposes. 
 
-- Manage connection to Azure by using Azure DevOps service connections or GitHub secrets. Connections should have the right privilege access to azure resources.
+- Manage connection to Azure by using Azure DevOps service connections or GitHub secrets. Connections should have the right privilege access to Azure resources.
 
 - Consider using [Azure Key Vault secrets](/azure/devops/pipelines/release/key-vault-in-own-project) to store and manage sensitive information such as passwords, API keys, certificates.
 
@@ -159,7 +159,7 @@ Development lifecycle strategy explores key design considerations and recommenda
 
 **Design recommendations**
 
-- Adopt the use of undo changes in Git when looking to revert changes to committed files, discard uncommitted changes or reset a brach to a previous state. 
+- Adopt the use of undo changes in Git when looking to revert changes to committed files, discard uncommitted changes or reset a branch to a previous state. 
 
 
 

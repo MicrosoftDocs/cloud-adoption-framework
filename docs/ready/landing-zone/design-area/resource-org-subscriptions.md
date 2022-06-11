@@ -97,7 +97,7 @@ Cost transparency is a critical management challenge faced by every large enterp
 
 - Establish charge back modal for better distribution of cost across organization.
 
-- Implement policy to prevent deploying resources not authorized to deployed in your organization environment.
+- Implement policy to prevent deploying resources not authorized to be deployed in your organization environment.
 
 - Established regular schedule and cadence to review cost and right size resources for workloads.
 

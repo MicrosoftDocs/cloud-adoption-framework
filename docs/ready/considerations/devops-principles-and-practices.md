@@ -103,23 +103,23 @@ Identify what metrics will be used to measure your team's DevOps performance. Us
 Following some examples of metrics that measure DevOps performance to improve business impact:
 
 - Business Outcomes:
-  - Use [Objectives and Key Results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an “output” mindset to an “outcome” mindset. E.g. Amount of workloads that improved their compliance rating over the number of policies deployed to Azure.
-  - Customer or end user satisfaction. E.g. Net Promoter Score (NPS), surveys, interviews.
-  - Business growth. E.g. Increased profitability, increased revenue, acquiring new revenue sources
-  - People metrics. E.g. Employee Net Promoter Score (eNPS), utilization, retention, satisfaction.
-  - Costs. E.g. Reduction in costs.
+  - Use [Objectives and Key Results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an “output” mindset to an “outcome” mindset. E.g., Number of workloads that improved their compliance rating over the number of policies deployed to Azure.
+  - Customer or end user satisfaction. E.g., Net Promoter Score (NPS), surveys, interviews.
+  - Business growth. E.g., Increased profitability, increased revenue, acquiring new revenue sources
+  - People metrics. E.g., Employee Net Promoter Score (eNPS), utilization, retention, satisfaction.
+  - Costs. E.g., Reduction in costs.
 
 - Software delivery performance:
-  - Lead Time for Change. E.g. Time it takes for a bug fix, new feature or any other change to go from idea to deployment to production.
-  - Deployment Frequency. E.g. Deploys per day of a code change to production.
-  - Mean Time to Restore. E.g. Time it takes to restore service in production when an incident occurs.
-  - Change Fail Percentage. E.g. Percentage of changes to production (such as configuration changes) that leads to a failure.
+  - Lead Time for Change. E.g., Time it takes for a bug fix, new feature or any other change to go from idea to deployment to production.
+  - Deployment Frequency. E.g., Deploys per day of a code change to production.
+  - Mean Time to Restore. E.g., Time it takes to restore service in production when an incident occurs.
+  - Change Fail Percentage. E.g., Percentage of changes to production (such as configuration changes) that leads to a failure.
 
 - Quality:
-  - Defect escape rate. E.g. Number of defect identified by the end users.
-  - Unplanned work or rework. E.g. Percentage of time doing unplanned work or rework.
-  - Active bugs. E.g. Number of bugs that are not fixed.
-  - Code Health. E.g. Percentage of code that has not been unit tested.
+  - Defect escape rate. E.g., Number of defects identified by the end users.
+  - Unplanned work or rework. E.g., Percentage of time doing unplanned work or rework.
+  - Active bugs. E.g., Number of bugs that aren't fixed.
+  - Code Health. E.g., Percentage of code that hasn't been unit tested.
 
 ### Define your DevOps technology ecosystem
 
@@ -134,15 +134,15 @@ Use the [DevOps framework](#define-your-devops-framework) that you defined to id
 Some examples of DevOps technologies across different DevOps stages are:
 
 - Planning: Azure Boards, GitHub, Atlassian Jira, Trello
-- Continuous Integration: Azure DevOps Repos, GitHub Repos, Atlassian Bitbucket, SonarQube, Selenium, Cucumber, OWASP ZA, NuGet, npm
-- Continuous Delivery: Azure DevOps Pipelines, GitHub Actions, Bicep, Terraform, Jenkins, Atlassian Bamboo, RedHat Ansible, Chef, Puppet
-- Operations: Azure Monitor, Azure Automation, Microsoft PowerBI, Graphana, Splunk
+- Continuous Integration: Azure Repos, GitHub Repos, Atlassian Bitbucket, SonarQube, Selenium, Cucumber, OWASP ZA, NuGet, npm
+- Continuous Delivery: Azure Pipelines, GitHub Actions, Bicep, Terraform, Jenkins, Atlassian Bamboo, RedHat Ansible, Chef, Puppet
+- Operations: Azure Monitor, Azure Automation, Microsoft Power BI, Graphana, Splunk
 - Collaboration & feedback: Azure DevOps Wikis, GitHub Wikis, GitHub Discussions, Microsoft Teams, Slack, Confluence, Stack Overflow
 
-E.g. of DevOps framework with Azure DevOps toolchain selection:
+E.g., of DevOps framework with Azure DevOps toolchain selection:
 
 ![Example of DevOps framework with Azure DevOps toolchain selection](./media/devops-toolchain-azure-devops.png)
 
-E.g. of DevOps framework with Azure DevOps and GitHub toolchain selection:
+E.g., of DevOps framework with Azure DevOps and GitHub toolchain selection:
 
 ![Example of DevOps framework with Azure DevOps and GitHub toolchain selection](./media/devops-toolchain-github.png)
