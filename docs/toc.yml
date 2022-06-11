@@ -1651,6 +1651,36 @@ items:
         href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
+
+    - name: Infrastructure and Development
+      items:
+      - name: Introduction
+        href: secure/security-best-practices-introduction.md
+      - name: Infrastructure
+        items:        
+        - name: Overview
+          href: secure/infrastructure-security-overview.md
+        - name: Strategy
+          href: secure/infrastructure-security-strategy.md
+        - name: Architecture
+          href: secure/infrastructure-security-architecture.md
+        - name: Implementation
+          href: secure/infrastructure-security-implementation.md
+        - name: Operations
+          href: secure/infrastructure-security-operations-governance.md
+      - name: Development
+        items:                  
+        - name: Development security strategy
+          href: secure/development-security-strategy-overview.md
+        - name: Development innovation security
+          href: secure/development-innovation-security.md
+        - name: Securing DevOps strategy and process
+          href: secure/devops-strategy-process-security.md
+        - name: Development security architecture
+          href: secure/development-security-architecture.md
+        - name: Development security implementation and operations
+          href: secure/development-security-implementation-operations.md
+
     - name: Security considerations
       items:
       - name: Security strategy
