@@ -29,7 +29,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 ## Business continuity design recommendations
 
-- Use MABS to back up the Azure VMware Solution private cloud. For more information, see [Back up VMware vSphere VMs with MABS](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context).
+- Use MABS to back up the Azure VMware Solution private cloud. For more information, see [Back up VMware vSphere VMs with MABS](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context). Familiarize with supported deployment topologies with MABS (e.g. [MARS Agent](https://docs.microsoft.com/azure/backup/backup-architecture#architecture-direct-backup-of-on-premises-windows-server-machines-or-azure-vm-files-or-folders), [DPM](https://docs.microsoft.com/azure/backup/backup-architecture#architecture-back-up-to-dpmmabs), etc.). Each deployment topology has it's own support matrix, constraints and limitations.
 
 - Deploy the Azure Backup Server in the same Azure region as the Azure VMware Solution private cloud. This deployment method reduces traffic costs, eases administration, and keeps the primary/secondary topology. See the [Azure regions decision guide](../../migrate/azure-best-practices/multiple-regions.md) for Azure region deployment best practices.
 
