@@ -10,19 +10,19 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Enterprise-scale support for Azure Virtual Desktop
+# Enterprise-scale support for Microsoft Azure Virtual Desktop
 
-The Azure Virtual Desktop (AVD) Landing Zone Accelerator provides a specific architectural approach and reference implementation for preparing landing zone subscriptions for an enterprise Azure Virtual Desktop (AVD) deployment.
+The Microsoft Azure Virtual Desktop (AVD) Landing Zone Accelerator provides a specific architectural approach and reference implementation for preparing landing zone subscriptions for an enterprise Azure Virtual Desktop (AVD) deployment.
 
 Its reference implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a particular focus on the enterprise-scale design principles. Use this solution after implementing an enterprise-scale landing zone. Review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the enterprise-scale for Azure Virtual Desktop solution.
 
-This AVD solution is open source. You can adapt its templates to create an architecture that meets your specific needs. This article's guidance includes design considerations for building an enterprise ready AVD deployment.
+This Azure Virtual Desktop solution is open source. You can adapt its templates to create an architecture that meets your specific needs. This article's guidance includes design considerations for building an enterprise ready Azure Virtual Desktop deployment.
 
 ## Adopt Azure Virtual Desktop Landing Zone Accelerator
 
 Not everyone adopts Azure Virtual Desktop in the same way; architectures vary between organizations. This landing zone accelerator's technical considerations and design recommendations might result in trade-offs based on your organization's needs.
 
-Some variation is normal. If you follow the core recommendations, your resulting architecture will prepare your organization for sustainable scaling. The AVD Landing Zone Accelerator is modular by design to let you customize environmental variables.
+Some variation is normal. If you follow the core recommendations, your resulting architecture will prepare your organization for sustainable scaling. The Azure Virtual Desktop Landing Zone Accelerator is modular by design to let you customize environmental variables.
 
 ### Design guidelines
 
@@ -45,13 +45,17 @@ The following diagram shows a conceptual reference architecture that demonstrate
 
 ## Deploy Azure Virtual Desktop with the Landing Zone Accelerator
 
-The AVD Landing Zone Accelerator includes an open source collection containing Azure Resource Manager and Bicep templates to help you set up your AVD environment quickly following best practices. The accelerator will create an AVD environment with infrastructure components like virtual machines, networks, and storage in Azure.
+The Azure Virtual Desktop Landing Zone Accelerator includes an open source collection containing Azure Resource Manager and Bicep templates to help you set up your Azure Virtual Desktop environment quickly following best practices. The accelerator will create an Azure Virtual Desktop environment with infrastructure components like virtual machines, networks, and storage in Azure.
 
-The AVD Accelerator is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) GitHub repo.
+The Azure Virtual Desktop Accelerator is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) GitHub repo. This repo contains infrastructure as code that can be deployed using portal user interface or command line
+[`PowerSell or Azure CLI`](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) that can be used to deploy the Azure Virtual Desktop Landing Zone Accelerator:
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-baseline.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-baseline.json)
 
 This accelerator is to be used as starter kit and you can expand its functionality by developing your own deployments.
 
-Ideally, this accelerator should be used to deploy an AVD workload after an Enterprise-Scale landing zone deployment. See [Deploying Enterprise-Scale Architecture in your own environment](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment).
+Ideally, this accelerator should be used to deploy an Azure Virtual Desktop workload after an Enterprise-Scale landing zone deployment. See [Deploying Enterprise-Scale Architecture in your own environment](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment).
+
 ## Next steps
 
 Review the critical design considerations and recommendations for identity and access management specific to the deployment of Azure Virtual Desktop.
