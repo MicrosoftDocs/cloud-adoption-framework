@@ -38,6 +38,8 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - If multiple IP addresses and ranges are used consistently in Azure Firewall rules, it's recommended to use [IP groups](/azure/firewall/ip-groups). IP groups can be reused in Azure Firewall DNAT, network, and application rules for multiple firewalls across regions and subscriptions in Azure.
 
+- If custom [User Defined Route](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#custom-routes) (UDR) is used to manage outbound connectivity to Azure PaaS services, it is recommended to use [Service Tags in UDR](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes). Underlying IP addresses will be updated automatically to include any change and will reduce the overhead of managing Azure prefixes in a route table.
+
 - Create a global Azure Firewall policy to govern security posture across the global network environment and assign it to all Azure Firewall instances. Allow for granular policies to meet requirements of specific regions by delegating incremental firewall policies to local security teams via Azure role-based access control.
 
 - Configure supported partner SaaS security providers within Firewall Manager if your organization wants to use such solutions to help protect outbound connections.
@@ -50,7 +52,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Do not use Azure's default internet outbound access for any scenario.
 
-  - Use NAT gateway for online landing zones, which are landing zones not connected to the hub VNet, where compute resources require internet outbound access and do no need any of the security features provided by Azure Firewall (standard or premium) or a third-party NVA.
+  - Use NAT gateway for online landing zones, which are landing zones not connected to the hub VNet, where compute resources require internet outbound access and do not need any of the security features provided by Azure Firewall (standard or premium) or a third-party NVA.
 
 - If partner NVAs are required for east/west or south/north traffic protection and filtering:
 

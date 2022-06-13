@@ -27,7 +27,12 @@ Subscriptions are a unit of management, billing, and scale within Azure. Subscri
 - Subscriptions serve as a scale unit so component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure you consider subscription resource limits during your workload design sessions.
 
 - Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
-
+- Create separate platform subscriptions for Management (Monitoring), Connectivity and Identity when these are required.
+    - Establish a dedicated management subscription in the Platform management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks
+      - Establish a dedicated identity subscription in the Platform management group to host Windows Server Active Directory domain controllers, when necessary.
+      - Establish a dedicated connectivity subscription in the Platform management group to host an Azure Virtual WAN hub, private Domain Name System (DNS), ExpressRoute circuit, and other networking resources. A dedicated subscription ensures that all foundation network resources are billed together and isolated from other workloads.
+      - Use subscriptions as a democratized unit of management aligned with business needs and priorities.
+- 
 - Use the manual process to limit an Azure AD tenant to only Enterprise Agreement enrollment subscriptions. This process prevents creation of Microsoft Developer Network subscriptions at the root management group scope.
   - For support, reach out via an [Azure Support ticket](https://azure.microsoft.com/support/create-ticket/)
 
@@ -89,6 +94,12 @@ Cost transparency is a critical management challenge faced by every large enterp
 - Use a shutdown schedule for nonproduction workloads to optimize costs.
 
 - Use Azure Advisor to check recommendations for optimizing costs.
+
+- Establish charge back modal for better distribution of cost across organization.
+
+- Implement policy to prevent deploying resources not authorized to be deployed in your organization environment.
+
+- Established regular schedule and cadence to review cost and right size resources for workloads.
 
 ## Subscriptions recommendations
 
