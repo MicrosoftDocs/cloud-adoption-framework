@@ -49,4 +49,4 @@ Platform automation is directly applicable to the outcomes associated with imple
 ## Security considerations
 
 - [Security considerations](../../considerations/security-considerations-overview.md) addresses security and governance considerations that must be taken to account in the DevOps lifecycle of Azure Landing Zones.
-- [Role-based Access Control for DevOps Tools](../../considerations/security-considerations-rbac.md) explains the access control considerations to be considered when addressing Azure Landing Zones lifecycle through DevOps tools.
+- [Role-based Access Control for DevOps Tools](../../considerations/security-considerations-tools.md) explains the access control considerations to be considered when addressing Azure Landing Zones lifecycle through DevOps tools.
