@@ -12,7 +12,7 @@ ms.custom: internal
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
-We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
+We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
