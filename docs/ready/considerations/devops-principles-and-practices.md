@@ -141,8 +141,8 @@ Some examples of DevOps technologies across different DevOps stages are:
 
 E.g., of DevOps framework with Azure DevOps toolchain selection:
 
-![Example of DevOps framework with Azure DevOps toolchain selection](./media/devops-toolchain-azure-devops.png)
+![Diagram of DevOps framework with Azure DevOps toolchain selection.](./media/devops-toolchain-azure-devops.png)
 
 E.g., of DevOps framework with Azure DevOps and GitHub toolchain selection:
 
-![Example of DevOps framework with Azure DevOps and GitHub toolchain selection](./media/devops-toolchain-github.png)
+![Diagram of DevOps framework with Azure DevOps and GitHub toolchain selection.](./media/devops-toolchain-github.png)

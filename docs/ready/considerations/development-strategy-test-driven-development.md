@@ -16,7 +16,7 @@ Test-driven development (TDD) is a common software development and DevOps proces
 
 Cloud-based infrastructure and the underlying source code can use this process to ensure landing zones meet core requirements and are of high quality. This process is especially useful when landing zones are being developed and refactored in a parallel development effort.
 
-![Test-driven development process for Azure Landing Zones](../../_images/ready/test-driven-development-process.png)
+![Diagram of the test-driven development process for Azure Landing Zones.](../../_images/ready/test-driven-development-process.png)
 
 In the cloud, infrastructure is the output of code execution. Well-structured, tested, and verified code produces a viable landing zone. A [landing zone](../landing-zone/index.md) is an environment for hosting your workloads, preprovisioned through code. It includes foundational capabilities using a defined set of cloud services and best practices that set you up for success. This guidance describes an approach that uses test-driven development to fulfill the last part of that definition, while meeting quality, security, operations, and governance requirements.
 
@@ -72,7 +72,7 @@ The above examples are basic samples to help develop a *definition of done* for 
 
 ## Azure tools and features to support landing zone TDD cycles
 
-![Test-driven development tools in Azure](../../_images/ready/azure-tdd-tools.png)
+![Screenshot showing available test-driven development tools in Azure.](../../_images/ready/azure-tdd-tools.png)
 
 *Figure 1: Test-driven development tools in Azure.*
 

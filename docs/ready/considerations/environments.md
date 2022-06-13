@@ -54,7 +54,7 @@ The adoption of multiple environments for Azure Landing Zones deployments is com
 - Replication of management group hierarchy in Canary and Production environment 
 - Sandbox subscriptions 
 
-Independently from the selected scenario, its recommended to:
+Independently from the selected scenario, it's recommended to:
 - adopt at least one environment for performing tests on
 - protect your environments, using separated Service Principal for test and production purposes
 - implement automated checks and approvals to validate and approve changes by a designated user(s) prior to deploying a change to a particular environment

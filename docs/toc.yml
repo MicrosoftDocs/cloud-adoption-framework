@@ -421,9 +421,9 @@ items:
               href: ready/considerations/devops-principles-and-practices.md
             - name: Team topologies
               href: ready/considerations/devops-teams-topologies.md
-          - name: Development Strategy
+          - name: Development strategy
             items:
-            - name: Development Lifecycle
+            - name: Development lifecycle
               href: ready/considerations/development-strategy-development-lifecycle.md
             - name: Infrastructure as Code
               href: ready/considerations/infrastructure-as-code.md
@@ -431,13 +431,13 @@ items:
               href: ready/considerations/environments.md
             - name: Test-driven development for Azure Landing Zones
               href: ready/considerations/development-strategy-test-driven-development.md
-            - name: DevOps Toolchain Considerations
+            - name: DevOps Toolchain considerations
               href: ready/considerations/devops-toolchain.md
-          - name: Security Considerations
+          - name: Security considerations
             items:
             - name: Overview
               href: ready/considerations/security-considerations-overview.md
-            - name: Role-based Access Control for DevOps Tools
+            - name: Role-based access control for DevOps Tools
               href: ready/considerations/security-considerations-rbac.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md

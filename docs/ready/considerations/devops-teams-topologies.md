@@ -20,7 +20,7 @@ IT teams strive to maintain control, while application owners seek to maximize a
 
 According to Conway's law, teams will produce Architectures based on their communication structure, and this principle becomes relevant to achieving this balance between autonomy and control. Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure.
 
-![Diagram of Conway's Law](./media/conways-law.png)
+![Diagram illustrating Conway's Law.](./media/conways-law.png)
 
 From a DevOps perspective, organizations must optimize for responding quickly to customer needs. Teams that own, design, and implement their applications and systems will find their highest level of autonomy in defining architectures that include the following characteristics:
 
@@ -30,7 +30,7 @@ From a DevOps perspective, organizations must optimize for responding quickly to
 
 Conway’s solution to this is to outmaneuver Conway's Law – if organizations follow a particular structure to produce services & products and are looking to optimize, they need to rethink the structure of the organization. Organizations should evolve their team and organizational structure to achieve the desired architecture.
 
-![Diagram of Reverse Conway's Maneuver](./media/reverse-conway-maneuver.png)
+![Diagram of Reverse Conway's Maneuver.](./media/reverse-conway-maneuver.png)
 
 This principle leads us to intentionally design [team topologies](https://teamtopologies.com/) with teams responsible for the end-to-end of the applications, systems, or platforms they own in order to achieve the full discipline of DevOps. A simplified categorization of these teams is:
 
@@ -85,7 +85,7 @@ The following list presents a recommended set of functions for the platform team
 
 ### Define functions for Application workload teams
 
-The following list presents a recommended set of functions for a application teams responsible for application workloads:
+The following list presents a recommended set of functions for an application team responsible for application workloads:
 
 - Create and manage application resources through a DevOps model
 - Database management
@@ -99,7 +99,7 @@ The following list presents a recommended set of functions for a application tea
 
 ### Define functions for Enabling teams
 
-The following list presents a recommended set of functions for a enabling teams responsible for XXXX:
+The following list presents a recommended set of functions for an enabling team responsible for XXXX:
 
 - Define horizontal (cross-function) guidance and capabilities that can help acquire the right expertise across the organization, which ensures alignment with the overall target cloud operating model, such as DevOps.
 - Support, train and coach other teams to acquire the right level of expertise.

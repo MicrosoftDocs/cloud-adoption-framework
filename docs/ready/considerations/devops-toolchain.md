@@ -84,7 +84,7 @@ of a well-integrated solution.
 
 ### Full stack Azure DevOps toolchain
 
-![Full stack Azure DevOps toolchain](./media/devops-toolchain-azure-devops.png)
+![Diagram of a Full stack Azure DevOps toolchain.](./media/devops-toolchain-azure-devops.png)
 
 | DevOps stage | tools |
 | - | - |
@@ -94,7 +94,7 @@ of a well-integrated solution.
 | Collaborations and Feedbacks| [Azure DevOps Wiki](/azure/devops/project/wiki/about-readme-wiki) allows sharing of information with other team's members, it supports collaborative editing of its content and structure. [Azure Boards](/azure/devops/boards/) provide Kanban collaboration and support for comments and discussions in backlog items. Microsoft Teams can be [integrated with Azure DevOps](https://www.azuredevopslabs.com/labs/vstsextend/teams/) to complete the team collaboration experience. |
 ### Azure DevOps and GitHub toolchain
 
-![Azure DevOps and GitHub toolchain](./media/devops-toolchain-github.png)
+![Diagram of a Azure DevOps and GitHub toolchain.](./media/devops-toolchain-github.png)
 
 | DevOps stage | tools |
 | - | - |
