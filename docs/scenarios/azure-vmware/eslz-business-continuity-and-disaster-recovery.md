@@ -33,7 +33,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - Deploy the Azure Backup Server in the same Azure region as the Azure VMware Solution private cloud. This deployment method reduces traffic costs, eases administration, and keeps the primary/secondary topology. See the [Azure regions decision guide](../../migrate/azure-best-practices/multiple-regions.md) for Azure region deployment best practices.
 
-- MABS can be deployed as an Azure infrastructure as a service (IaaS) VM or within the Azure VMware Solution private cloud. It's highly recommended to deploy it outside of the Azure VMware Solution private cloud in an Azure virtual network. This virtual network is connected to the same ExpressRoute to reduce vSAN consumption, as vSAN is a *limited capacity* resource within the Azure VMware Solution private cloud.
+- MABS can be deployed as an Azure infrastructure as a service (IaaS) VM or within the Azure VMware Solution private cloud. It's highly recommended to deploy it outside of the Azure VMware Solution private cloud in an Azure virtual network. This virtual network is connected to the same ExpressRoute to reduce vSAN consumption, as vSAN is a *limited capacity* resource within the Azure VMware Solution private cloud. Consider the *right* Azure IaaS VM SKU appropriate for the [IOPS requirements](https://docs.microsoft.com/azure/virtual-machines/disks-performance) for backup operations.  
 
   :::image type="content" source="../_images/eslz-bcdr-2.png" alt-text="Diagram that shows the MABS backup server deployed as an Azure IaaS VM.":::
 
