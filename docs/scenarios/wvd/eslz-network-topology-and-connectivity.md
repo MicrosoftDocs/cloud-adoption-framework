@@ -41,7 +41,7 @@ The design foundations include:
   - Azure Firewall
   - Encryption for private connectivity
 
-- [**Network virtual appliance (NVA)**](/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
+- [**Network virtual appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
 
 - In [**Forced tunneling**](/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm#:~:text=Forced%20tunneling%20in%20Azure%20is%20configured%20via%20virtual,virtual%20networks%2C%20see%20User-defined%20routes%20and%20IP%20forwarding.) scenario all internet-bound traffic originating on Azure VMs is routed or "forced" to go through an inspection and auditing appliance. Unauthorized internet access can potentially lead to information disclosure or other types of security breaches without the traffic inspection or audit.
 
@@ -143,7 +143,7 @@ To facilitate end user Azure Virtual Desktop client configuration (subscription 
 
 Azure Virtual Desktops use Remote Desktop Protocol (RDP). To know more about RDP, see [Remote Desktop Protocol (RDP) bandwidth requirements](/azure/virtual-desktop/rdp-bandwidth).
 
-The connection latency varies depending on the location of the users and the virtual machines. Azure Virtual Desktop services continuously rolls out to new geographies to improve latency. To minimize the latency perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](/services/virtual-desktop/assessment/) to get round trip time (RTT) sample from clients. You can use this information to place session hosts in the closest region with the lowest RTT to the end users ([interpreting results from estimator tool](/azure/virtual-desktop/connection-latency)).
+The connection latency varies depending on the location of the users and the virtual machines. Azure Virtual Desktop services continuously rolls out to new geographies to improve latency. To minimize the latency perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/) to get round trip time (RTT) sample from clients. You can use this information to place session hosts in the closest region with the lowest RTT to the end users ([interpreting results from estimator tool](/azure/virtual-desktop/connection-latency)).
 
 ### Quality of Service (QoS) with RDP Shortpath
 

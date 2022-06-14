@@ -23,7 +23,7 @@ Learn more about the [network topology and connectivity](/azure/cloud-adoption-f
 - Decide if the network setup requires cross-region connectivity.
 - Decide if [private endpoint connectivity](/azure/api-management/private-endpoint) to the API Management instance is required.
 - Decide how to connect to external (3rd party) workloads.
-- Decide whether [virtual network connection](/azure/api-management/virtual-network-options) is required and the access type for virtual network connection ([external](/azure/api-management/api-management-using-with-vnet) or [internal](/azure/api-management/api-management-using-with-internal-vnet)).
+- Decide whether [virtual network connection](/azure/virtual-network/virtual-networks-overview) is required and the access type for virtual network connection ([external](/azure/api-management/api-management-using-with-vnet) or [internal](/azure/api-management/api-management-using-with-internal-vnet)).
 - Decide whether connectivity to on-premises or multi-cloud environments is required.
 - Decide if [multi-region deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required to service geographically distributed API consumers.
 - Consider using a load balancing solution such as [Application Gateway](/azure/application-gateway/overview) or [Azure Front Door](/azure/frontdoor/front-door-overview).

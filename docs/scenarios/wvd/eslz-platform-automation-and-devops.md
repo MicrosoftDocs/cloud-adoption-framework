@@ -178,7 +178,7 @@ For more information, see the [Azure Compute Gallery service overview](/azure/vi
 - For universal applications installed in your gold image, use the Packer method described earlier in this article.
 - [App-V](/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming applications on a per-user basis.
 - Use [FSLogix application masking](/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
-- Use [MSIX app attach](/azure/virtual-desktop/what-is-app-attach) where possible to dynamically deliver applications to users and reduce the overall size of your gold image. You can also use CI/CD pipelines to automate the process of packaging applications into the MSIX format. To learn more, see the [overview](/msix/desktop/cicd-overview).
+- Use [MSIX app attach](/azure/virtual-desktop/what-is-app-attach) where possible to dynamically deliver applications to users and reduce the overall size of your gold image. You can also use CI/CD pipelines to automate the process of packaging applications into the MSIX format. To learn more, see the [overview](/windows/msix/desktop/cicd-overview).
 
 ### Deploy languages in Azure Virtual Desktop images
 
