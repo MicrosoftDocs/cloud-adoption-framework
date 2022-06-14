@@ -141,3 +141,10 @@ It isn't recommended to host the database management system (DBMS) and applicati
 - For optimal network latency with SAP applications, consider using [Azure proximity placement groups](/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
 
 - Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2391465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
+
+## Design Considerations for RISE implementations 
+
+For Customers running SAP RISE deployments in Azure, integration of SAP Managed environment with their own Azure Ecosystem is paramount. Please follow the link to undersand the best practices and guidance.
+ 
+https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-rise-integration 
+
