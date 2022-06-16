@@ -84,6 +84,8 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 - Use one proximity placement group per SAP SID. Groups don't span across Availability Zones or Azure regions.
 
+- When using Azure proximity placement groups in an availability zones deployment, the two SAP components (central services and application server) should be in the same proximity placement group. The database VMs in the two zones are no longer a part of the proximity placement groups. The proximity placement groups per zone are now scoped with the deployment of the VM running the SAP ASCS/SCS instances. The advantage of this new configuration is that you have more flexibility in resizing VMs or moving to new VM types with either the DBMS layer or the application layer of the SAP system. 
+
 - Azure doesn't currently support combining ASCS and db HA in the same Linux Pacemaker cluster; separate them into individual clusters. However, you can combine up to five [multiple central-services clusters](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid) into a pair of VMs.
 
 - Use a Standard Load Balancer SKU in front of ASCS and DB clusters.
