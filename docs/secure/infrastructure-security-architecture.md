@@ -1,6 +1,6 @@
 ---
 title: Infrastructure security architecture
-description: This is the beginning of the Infrastructure security architecture section that describes best practices related to the ideal end state and key components of infrastructure security.
+description: Learn about the best practices related to the ideal end state and key components of the infrastructure security architecture.
 author: MarkSimos
 ms.author: mas
 ms.date: 03/06/2022
@@ -12,36 +12,39 @@ ms.custom: internal
 
 # Infrastructure security architecture
 
-This is the beginning of the Infrastructure security architecture section that describes best practices related to the ideal end state and key components of infrastructure security. Advance to [Infrastructure security implementation, operations, and governance](infrastructure-security-implementation.md).
+This article is the beginning of the Infrastructure security architecture section that describes best practices related to the ideal end state and key components of infrastructure security. Advance to [Infrastructure security implementation, operations, and governance](infrastructure-security-implementation.md).
 
 ## Build scalable, modular Azure landing zones
-Microsoft has created the [Cloud Adoption Framework](/azure/cloud-adoption-framework/overview) to help customers with a proven starting point for the cloud journey, including the [Secure methodology](/azure/cloud-adoption-framework/secure/). Another critical component of the Framework within the [Ready methodology](/azure/cloud-adoption-framework/ready/), is the concept of an Azure landing zone. Azure landing zones (ALZ) accelerate cloud adoption by providing automated implementation of complete architectures and operating environments, including security elements. Security best practices are integrated within Azure landing zones, so you can quickly and securely migrate your first workloads with baked-in security and governance best practices.
 
-During the process of designing and implementing your organization’s landing zone, use the reference architecture below as a target end-state that captures mature and scaled-out environmental design considerations.
+Microsoft offers the [Cloud Adoption Framework](/azure/cloud-adoption-framework/overview) to provide customers a proven starting point for the cloud journey, including the [Secure methodology](/azure/cloud-adoption-framework/secure/). Another critical component of the Cloud Adoption Framework in the [Ready methodology](/azure/cloud-adoption-framework/ready/) is the *Azure landing zone*, which accelerates cloud adoption by providing automated implementation of complete architectures and operating environments, including security elements. Security best practices are integrated in Azure landing zones. With landing zones, you can quickly and securely migrate your first workloads with baked-in security and governance best practices.
 
-:::image type="content" source="./media/enterprise-scale-architecture.png" alt-text="Enterprise scale architecture" border="false" lightbox="./media/enterprise-scale-architecture.png":::
+While you design and implement your organization's landing zone, use the reference architecture below as a target end-state. It captures mature and scaled-out environmental design considerations.
 
-[Download the Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx)—and adapt the landing zone's design configuration to fit your organization's specific business and technical requirements.
+:::image type="content" source="./media/enterprise-scale-architecture.png" alt-text="Enterprise scale architecture." border="false" lightbox="./media/enterprise-scale-architecture.png":::
 
-We recommend using Azure landing zones where possible in your cloud adoption plans as this simplifies the application of security best practices and provides an architectural starting point. Whether you are deploying a new workload, migrating existing workloads, or improving already-deployed workloads, Azure landing zones can help you quickly follow security and other best practices, all at once or incrementally. 
+[Download the Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) to adapt the landing zone's design configuration to fit your organization's business and technical needs.
 
-> [!NOTE] 
-> Your organization can customize the Azure landing zone architecture to meet your unique business requirements. Read additional [guidance on reference implementation options](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) to help your organization get started quickly. Use configurations that deliver Azure landing zone conceptual architecture and best practices across design areas.
+We recommend using Azure landing zones when possible in your cloud adoption plans. Landing zones provide an architectural starting point. Azure landing zones help you follow security and other best practices whether you deploy a new workload, migrate existing workloads, or improve already-deployed workloads. Using landing zones help you follow best practices whether you implement them all at once or incrementally.
 
-Azure landing zones contain pre-existing code that makes it easier on your organization's IT and security teams. These landing zones offer a repeatable, predictable method to apply a templatized landing zone implementation that includes a deployment approach, [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles), and [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) for security, management, and governance processes—as well as platform automation and DevOps.
+> [!NOTE]
+> Your organization can customize the Azure landing zone architecture to meet your unique business requirements. To help your organization get started quickly, see this [guidance on reference implementation options](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz). Use configurations that deliver Azure landing zone conceptual architecture and best practices across design areas.
+
+Azure landing zones contain code that makes it easier for your organization's IT and security teams. Landing zones offer a repeatable, predictable method to apply a templatized implementation. That implementation includes a deployment approach, [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles), and [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Landing zones support security, management, and governance processes, as well as platform automation and DevOps.
 
 ## Use Zero Trust principles
 
-This approach uses Azure landing zones as a starting model which your organization can adapt to—based on additional ASB best practices and Zero Trust (ZT) principles, already included in the target architecture. Move towards the best practice-aligned target architecture—implementing additional security considerations and Zero Trust principles that incrementally build on and improve your organization's security and governance MVP.
+Your organization can adapt Azure landing zones based on Azure Security Benchmark (ASB) best practices and Zero Trust (ZT) principles, which are included in the target architecture. Move towards the best practice-aligned target architecture, implementing other security considerations and Zero Trust principles that incrementally build on and improve your organization's security and governance MVP.
 
-Extend Zero Trust architectural approaches that "never trust and always verify," integrating an end-to-end strategy across your digital state that encompasses identities, endpoints, network, data, apps, and infrastructure.
+Extend Zero Trust architectural approaches that *never trust and always verify*. Integrate an end-to-end strategy across your digital state that encompasses identities, endpoints, network, data, apps, and infrastructure.
 
 ## Follow Azure Security Benchmark security recommendations
 
 > [!TIP]
-> Azure landing zones assign the ASB policy by default to the top of its hierarchy to ensure all subscriptions and workloads beneath it are monitored for ASB compliance.
+> Azure landing zones assign the ASB policy by default to the top of its hierarchy. This approach ensures that all subscriptions and workloads in the landing zone are monitored for ASB compliance.
 
-We recommend that your organization follow the high-impact security recommendations of the Azure Security Benchmark (ASB) alongside guidance within Azure landing zones and the Cloud Adoption Framework itself—including it as part of your architectural strategy by reviewing all pertinent [documentation and service-specific baselines](/security/benchmark/azure/overview). ASB controls most applicable to securing infrastructure resources are:
+We recommend that your organization follow the high-impact security recommendations of the Azure Security Benchmark. There's also guidance in Azure landing zones and the Cloud Adoption Framework itself. Include ASB recommendations as part of your architectural strategy by reviewing all pertinent [documentation and service-specific baselines](/security/benchmark/azure/overview). 
+
+ASB controls that are most applicable to securing infrastructure resources are:
 
 - [Governance and Strategy](/security/benchmark/azure/security-controls-v3-governance-strategy)
 - [Data protection](/security/benchmark/azure/security-controls-v3-data-protection)
