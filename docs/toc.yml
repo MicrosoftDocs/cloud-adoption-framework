@@ -1664,7 +1664,7 @@ items:
           href: secure/infrastructure-security-strategy.md
         - name: Architecture
           href: secure/infrastructure-security-architecture.md
-        - name: Implementation
+        - name: Security implementation, operations, and governance
           href: secure/infrastructure-security-implementation.md
         - name: Operations
           href: secure/infrastructure-security-operations-governance.md
