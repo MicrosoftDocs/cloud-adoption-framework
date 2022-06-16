@@ -1,6 +1,6 @@
 ---
-title: Infrastructure
-description: It’s critical to understand that application development security relies on infrastructure security. 
+title: Infrastructure overview
+description: Understand how application development security relies on infrastructure security. 
 author: MarkSimos
 ms.author: mas
 ms.date: 06/15/2022
