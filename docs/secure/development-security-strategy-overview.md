@@ -22,7 +22,7 @@ Development security requires protecting the application or code itself, and the
 
 Securing the code requires integrated security practices in the development process. This approach reduces security risks in both the design and the implementation of the code being developed.
 
-Development can take many forms including:
+Development can take many forms, including:
 
 - Application code to run on a server as an application or API.
 - Publishing an API.
