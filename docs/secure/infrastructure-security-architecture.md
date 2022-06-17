@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security architecture
 
-This article describes best practices related to the ideal end state and key components of infrastructure security. Advance to [Infrastructure security implementation, operations, and governance](infrastructure-security-implementation.md).
+This article describes best practices related to the ideal end state and key components of infrastructure security. 
 
 ## Build scalable, modular Azure landing zones
 
@@ -22,7 +22,7 @@ Another critical component of the Cloud Adoption Framework in the [Ready methodo
 
 While you design and implement your organization's landing zone, use the reference architecture below as a target end-state. It captures mature and scaled-out environmental design considerations.
 
-:::image type="content" source="./media/enterprise-scale-architecture.png" alt-text="Enterprise scale architecture." border="false" lightbox="./media/enterprise-scale-architecture.png":::
+:::image type="content" source="./media/enterprise-scale-architecture.png" alt-text="Diagram showing the enterprise scale architecture." border="false" lightbox="./media/enterprise-scale-architecture.png":::
 
 [Download the Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) to adapt the landing zone's design configuration to fit your organization's business and technical needs.
 
