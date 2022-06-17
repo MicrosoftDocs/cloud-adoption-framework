@@ -48,7 +48,7 @@ Remain flexible through continuous assembly of innovation. Adapt security elemen
 
 ## Integrate security into the development process
 
-![Integrating Security into development,](./media/devops-integrated-security-lifecycle-model.png)
+![Diagram showing how to integrate security into development.](./media/devops-integrated-security-lifecycle-model.png)
 
 DevOps increases agility and speed by bringing the planning and development processes and the testing and production processes together. DevOps mitigates enterprise risk by performing rapid updates rather than a deep scan before release. Security's role shifts from traditional quality gateway to integral process towards lowering risk (seen as incremental increases of a team's knowledge and education, process updates, and more).
 
