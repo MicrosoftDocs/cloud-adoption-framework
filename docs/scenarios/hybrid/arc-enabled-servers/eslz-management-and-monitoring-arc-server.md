@@ -48,7 +48,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 ### Azure Monitor configuration
 
 - Use [VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) to analyze the performance of your Azure Arc-enabled Windows and Linux servers. Monitor their processes and dependencies on other resources and external processes.
-- Create [dashboards](/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview), to track the relevant metrics and events across your Azure Arc-enabled servers. Samples of Log Analytics queries and VM insights can be found in this [article](/azure/azure-monitor/vm/vminsights-log-search#performance-records).
+- Create [dashboards](/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview), to track the relevant metrics and events across your Azure Arc-enabled servers. Samples of Log Analytics queries and VM insights can be found in this [article](/azure/azure-monitor/vm/vminsights-log-query#performance-records).
 - Configure the needed [performance counters](/azure/azure-monitor/agents/data-sources-performance-counters) for the Azure Arc-enabled Windows and Linux servers, on the dedicated Log Analytics workspace.
 - Configure the needed [logs](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers, on the dedicated Log Analytics workspace.
 
