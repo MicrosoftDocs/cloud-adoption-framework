@@ -22,7 +22,7 @@ Use repository tooling like GitHub workflow management and PR-based code contrib
 
 The following diagram shows DevSecOps architecture with Shift-left strategy. Security is integrated into developer workflows from the beginning and remains integrated across the entire development lifecycle. This scenario's complex dataflow starts with Azure Active Directory (Azure AD) configured as GitHub identity provider (with multi-factor authentication enabled for extra security).
 
-![DevSecOps architecture with Shift-left strategy integrating security into developer workflows.](./media/devsecops-integrated-shift-left-security-development-workflow.png)
+![Diagram of DevSecOps architecture with Shift-left strategy integrating security into developer workflows.](./media/devsecops-integrated-shift-left-security-development-workflow.png)
 
 The DevSecOps flow ends with Microsoft Defender for Cloud's (MDFC) active threat monitoring on the Azure Kubernetes Service across node-level (VM) and internal threats.
 
