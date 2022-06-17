@@ -1,9 +1,9 @@
 ---
 title: Development security implementation and operations
-description: This is the Development security implementation and operations best practices section that describes best practices related to these aspects of development security.
+description: Learn about best practices for development security implementation and operations.
 author: MarkSimos
 ms.author: mas
-ms.date: 03/06/2022
+ms.date: 06/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -12,29 +12,32 @@ ms.custom: internal
 
 # Development security implementation and operations
 
-This is the Development security implementation and operations best practices section that describes best practices related to these aspects of development security. 
+This article provides best practices for development security implementation and operations.
 
-We recommend following development [security best practices architecture](security-best-practices-introduction.md) in the previous section. Use secure landing zone deployments with repeatable governance and security tools and controls to help your organization quickly achieve a security baseline. The Security Baseline discipline of governance in the Cloud Adoption Framework doesn't replace existing IT teams, processes, and procedures that your organization uses to secure cloud-deployed resources.
+Follow [development security best practices architecture](security-best-practices-introduction.md). Use secure landing zone deployments with repeatable governance and security tools and controls to quickly achieve a security baseline for your organization. The Cloud Adoption Framework's Security Baseline discipline doesn't replace the IT teams, processes, and procedures that your organization currently uses to secure cloud-deployed resources.
 
-The governance discipline is key to implementation and ongoing operations as it identifies security-related business risks and provides risk-mitigation guidance to staff responsible for both infrastructure and development. As you develop governance policies and processes, make sure to involve relevant IT a development teams in your planning and review processes.
+The Security Baseline discipline is key to your implementation and ongoing operations. It identifies security-related business risks and provides risk-mitigation guidance to the staff responsible for your organization's infrastructure and development. As you develop governance policies and processes, make sure you involve all relevant IT development teams in your planning and review processes.
 
-Operationalize these processes, policies, and toolsets with the use of repository tooling such as GitHub workflow management and contributions to code via PRs. We recommend following security best practices when across all [Azure DevOps tooling](/azure/devops/), [GitHub Actions](https://github.com/marketplace?type=actions), etc.
+Use repository tooling like GitHub workflow management and PR-based code contribution to operationalize the processes, policies, and toolsets you develop. Following security best practices across all [Azure DevOps tooling](/azure/devops/) and [GitHub Actions](https://github.com/marketplace?type=actions).
 
-Below is a diagram of DevSecOps architecture with Shift-left strategy—integrating security into developer workflows from the beginning—and across the development lifecycle. Its complex dataflow starts with Azure Active Directory (AD) configured as GitHub identity provider (with multi-factor authentication (MFA) enabled for extra security).
+The following diagram shows DevSecOps architecture with Shift-left strategy. Security is integrated into developer workflows from the beginning and remains integrated across the entire development lifecycle. This scenario's complex dataflow starts with Azure Active Directory (Azure AD) configured as GitHub identity provider (with multi-factor authentication enabled for extra security).
 
-![DevSecOps architecture with Shift-left strategy—integrating security into developer workflows](./media/devsecops-integrated-shift-left-security-development-workflow.png)
+![DevSecOps architecture with Shift-left strategy integrating security into developer workflows.](./media/devsecops-integrated-shift-left-security-development-workflow.png)
 
-The final part of the DevSecOps flow ends with Microsoft Defender for Cloud's (MDFC) active threat monitoring on the Azure Kubernetes Service, across node-level (VM) and internal threats.
+The DevSecOps flow ends with Microsoft Defender for Cloud's (MDFC) active threat monitoring on the Azure Kubernetes Service across node-level (VM) and internal threats.
 
-For more detailed technical guidance on assessing and deploying well-architected workloads, see further guidance that focuses on improving quality at the workload level with the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
+For detailed technical guidance on assessing and deploying well-architected workloads, see [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
-- Implement the processes, policies, and tools in the previous sections to continue operationalizing your security engineering approach—integrated across security development lifecycles (SDL) and operations (OSA) processes.
-- Align your organization's developers in the use of consistent tooling, focusing on the security pillar of the [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment)—applying security principles to your architecture to protect against attacks on your data and systems.
+Implement the processes, policies, and tools from previous sections to continue operationalizing your security engineering approach. Integrate security across security development lifecycles (SDL) and operations (OSA) processes.
+
+Ensure your organization's developers use consistent tooling and focus on the security pillar of the [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment).
 
 ## DevSecOps controls
 
-Read more about how to [integrate security processes and tools](/azure/cloud-adoption-framework/secure/devsecops-controls) into the DevOps development process. Watch this video for further guidance on how to implement secure and rapid innovation for your organization:
+Learn how you to [integrate security processes and tools](/azure/cloud-adoption-framework/secure/devsecops-controls) into your DevOps development process.
+
+The following video contains guidance to help you implement secure and rapid innovation for your organization:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu6q]
 
-Read more about core DevOps security controls in the Azure Security Benchmark on [DevOps Security (Security Control v3)](/security/benchmark/azure/security-controls-v3-devops-security).
+For more information about core DevOps security controls in the Azure Security Benchmark, see [DevOps Security (Security Control v3)](/security/benchmark/azure/security-controls-v3-devops-security).
