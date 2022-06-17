@@ -1,7 +1,7 @@
 ---
 title: Infrastructure security architecture
 description: This is the beginning of the Infrastructure security architecture section that describes best practices related to the ideal end state and key components of infrastructure security.
-author: MarkSimos
+author: mpvenables
 ms.author: mas
 ms.date: 03/06/2022
 ms.topic: conceptual

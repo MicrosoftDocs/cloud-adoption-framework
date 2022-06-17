@@ -1,7 +1,7 @@
 ---
 title: Development security architecture
 description: This is the Development security architecture best practices section that describes best practices related to the ideal end state and key components of development security.
-author: MarkSimos
+author: mpvenables
 ms.author: mas
 ms.date: 03/06/2022
 ms.topic: conceptual

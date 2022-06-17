@@ -1,7 +1,7 @@
 ---
 title: Development
 description: Development security is a broad technical area with multiple distinct elements, and these best practices reflect that.
-author: MarkSimos
+author: mpvenables
 ms.author: mas
 ms.date: 03/06/2022
 ms.topic: conceptual

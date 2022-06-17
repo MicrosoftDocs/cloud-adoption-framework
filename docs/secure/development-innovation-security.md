@@ -1,7 +1,7 @@
 ---
 title: Development innovation security
 description: Different organizations stress rapid innovation to stay competitive, while others remain intolerant of brand damage—even from an otherwise minor test application that could be compromised.
-author: MarkSimos
+author: mpvenables
 ms.author: mas
 ms.date: 03/06/2022
 ms.topic: conceptual

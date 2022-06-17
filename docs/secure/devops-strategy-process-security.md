@@ -1,7 +1,7 @@
 ---
 title: DevSecOps as continuous improvement strategy
 description: Adopt a DevSecOps strategy that blends elements of DevOps and classic security and operations approaches.
-author: MarkSimos
+author: mpvenables
 ms.author: mas
 ms.date: 03/06/2022
 ms.topic: conceptual

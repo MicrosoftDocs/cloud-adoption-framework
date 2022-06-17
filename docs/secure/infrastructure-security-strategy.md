@@ -1,7 +1,7 @@
 ---
 title: Infrastructure security strategy
 description: This section includes the best practices related to Infrastructure security strategy and how we recommend approaching this problem space.
-author: MarkSimos
+author: mpvenables
 ms.author: mas
 ms.date: 03/06/2022
 ms.topic: conceptual
