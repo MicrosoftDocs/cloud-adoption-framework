@@ -1,9 +1,9 @@
 ---
 title: Infrastructure security implementation, operations, and governance
-description: This is the beginning of the Infrastructure security implementation, operations, and governance section. 
+description: Learn about the Infrastructure security implementation, operations, and governance. Cloud Adoption Framework offers guidance for deploying Azure landing zones.
 author: MarkSimos
 ms.author: mas
-ms.date: 03/06/2022
+ms.date: 06/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -12,36 +12,39 @@ ms.custom: internal
 
 # Infrastructure security implementation, operations, and governance
 
-This is the beginning of the Infrastructure security implementation, operations, and governance section. Advance to [Development security strategy](development-security-strategy-overview.md#development-security-strategy) section.
+This article describes infrastructure security implementation, operations, and governance in the Cloud Adoption Framework. Advance to [Development security strategy](development-security-strategy-overview.md#development-security-strategy) section.
 
 ## Implementation
-Follow the Cloud Adoption Framework guidance for deploying Azure landing zones and get started with [Use Azure landing zones]() as a starting point to incrementally mature towards the target architecture that is best practice-aligned.
+
+Follow the Cloud Adoption Framework guidance for deploying Azure landing zones. A landing zone is a starting point to incrementally mature towards the target architecture aligned with best practices. To get started with landing zones, see [What is an Azure landing zone?](../ready/landing-zone/index.md)
 
 > [!NOTE]
-> Your organization might already have an existing environment that needs modification to align to the Azure landing zone target architecture and best practices. Use the [transition from brownfield guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/transition) to understand the decision points and technical approach to refactoring environments to align with the guidance in the Ready methodology.
+> Your organization might already have an environment that needs modification to align to the Azure landing zone target architecture and best practices. To understand the decision points and technical approach to refactoring environments to align with the Ready methodology, see [Transition existing Azure environments](/azure/cloud-adoption-framework/ready/enterprise-scale/transition).
 
-## Infrastructure as code (IaC)
+## Infrastructure as code
 
-Security teams should encourage infrastructure teams to adopt IaC approaches and integrate security controls natively into the process. Automation helps make security easier, more consistent, and more effective. The benefits of this approach include
+Security teams should encourage infrastructure teams to adopt Infrastructure as code (IaC) approaches and integrate security controls natively into the process. Automation helps make security easier, more consistent, and more effective. The benefits of this approach include:
 
-- implementing controls as code—immutable code that is repeatable, auditable, ensures proper security governance, and eliminates the potential for environmental drift during release.
-- deploying faster, more consistently, and at scale—with a unified set of practices and tools to deliver applications and their infrastructure rapidly and reliably.
-- testing applications in production-like environments early in the development cycle.
-- preventing common deployment issues through validation and testing.
+- Implement controls as immutable code that is repeatable, auditable, and ensures proper security governance. This approach eliminates environmental drift during release.
+- Deploy faster, more consistently, and at scale with a unified set of practices and tools to deliver applications and their infrastructure rapidly and reliably.
+- Test applications in production-like environments early in the development cycle.
+- Prevent common deployment issues through validation and testing.
 
-Using Azure Resource Manager (Azure's deployment and management service), Azure landing zones' ARM and [(ALZ) bicep module](https://github.com/Azure/ALZ-Bicep) deployments will require access at the tenant root (/) scope. Confirm RBAC permissions to complete the deployments. Read more about [elevating access to Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin?toc=%252fazure%252factive-directory%252fprivileged-identity-management%252ftoc.json).
+Azure Resource Manager is a deployment and management service. Deployments of Azure Resource Manager and [Azure landing zones bicep module](https://github.com/Azure/ALZ-Bicep) require access at the tenant root (/) scope. Confirm permissions to complete the deployments. For more information, see [Security in the Azure landing zone accelerator](/azure/role-based-access-control/elevate-access-global-admin).
 
 > [!NOTE]
-> The ALZ Terraform module doesn’t always require these permissions. Read this detailed guidance on GitHub.
+> The Azure landing zones Terraform module doesn’t always require these permissions. Read the detailed guidance on GitHub.
 
 ## Azure landing zone accelerators
 
-If your organization decides it doesn't want or simply can't use IaC options, Azure landing zone accelerators deploy ARM templates within a portal experience with pre-provisioned code, with tools and controls to quickly reach a security baseline. Read more about [security tools and controls](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#security-in-the-azure-landing-zone-accelerator) deployed in the Azure landing zone accelerators.
+Your organization might decide not to use IaC options. Azure landing zone accelerators deploy Azure Resource Manager templates within a portal experience with pre-provisioned code, with tools and controls to quickly reach a security baseline. Read more about [security tools and controls](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#security-in-the-azure-landing-zone-accelerator) deployed in the Azure landing zone accelerators.
 
-If your organization is considering IaC deployment options, we recommend deployment the [Azure landing zones (ALZ) bicep module](https://github.com/Azure/ALZ-Bicep) or the [Azure landing zones Terraform module](https://aka.ms/alz/tf). Bicep templates offer the same capabilities as ARM templates—and are automatically converted to an ARM template during deployment. They define the infrastructure your organization wants to deploy through specified parameters, variables, expressions, and modules. You can use the template throughout the development lifecycle to deploy repeatable and consistent infrastructure. Deploy [Azure landing zones (ALZ) bicep modules](https://github.com/Azure/ALZ-Bicep) to deliver and deploy the Azure Landing Zone conceptual architecture in a modular approach.
+If your organization is considering IaC deployment options, we recommend that you deploy the [Azure landing zones bicep module](https://github.com/Azure/ALZ-Bicep) or the [Azure landing zones Terraform module](https://aka.ms/alz/tf).
+
+Bicep templates offer the same capabilities as Azure Resource Manager templates. The templates are converted to Azure Resource Manager templates during deployment. They define the infrastructure that your organization wants to deploy through specified parameters, variables, expressions, and modules. You can use the template throughout the development lifecycle to deploy repeatable and consistent infrastructure. Deploy [Azure landing zones bicep modules](https://github.com/Azure/ALZ-Bicep) to deliver and deploy the Azure Landing Zone conceptual architecture in a modular approach.
 
 Terraform is an open-source IaC software tool. Read about [how to use, configure and extend](https://aka.ms/alz/tf) the Azure landing zones Terraform module with your deployments.
 
-## Next step
+## Next steps
 
 - [Operations](infrastructure-security-operations-governance.md)
