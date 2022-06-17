@@ -16,7 +16,7 @@ This article describes infrastructure security implementation, operations, and g
 
 ## Implementation
 
-Follow the Cloud Adoption Framework guidance for deploying Azure landing zones. Landing zones are a starting point to incrementally mature towards the target architecture aligned with best practices. To get started with landing zones, see [What is an Azure landing zone?](../ready/landing-zone/index.md)
+Follow the Cloud Adoption Framework guidance for deploying Azure landing zones. A landing zone is a starting point to incrementally mature towards the target architecture aligned with best practices. To get started with landing zones, see [What is an Azure landing zone?](../ready/landing-zone/index.md)
 
 > [!NOTE]
 > Your organization might already have an environment that needs modification to align to the Azure landing zone target architecture and best practices. To understand the decision points and technical approach to refactoring environments to align with the Ready methodology, see [Transition existing Azure environments](/azure/cloud-adoption-framework/ready/enterprise-scale/transition).
