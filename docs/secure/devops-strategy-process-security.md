@@ -20,7 +20,7 @@ Approach DevSecOps strategies as an ideal state your organization should continu
 
 The following diagram illustrates an organization's adoption of DevOps continuous improvement strategies.
 
-![Governance processes,](./media/devsecops-continuous-innovation-security.png)
+![Diagram showing the development of governance processes.](./media/devsecops-continuous-innovation-security.png)
 
 As your organization prepares to adopt DevOps strategies, make sure you first adapt security and other governance processes to your approach. This approach mitigates security risk but doesn't decrease the value of rapid release cycles.
 
@@ -73,7 +73,7 @@ A comprehensive DevOps ecosystem of development lifecycle and native security en
 
 The following diagram illustrates an example of DevOps workflows/processes from the initial Idea Incubation phase (invention of new products or services) through to DevOperations (continuous Agile innovation).
 
-![DevSecOps example workflow.](./media/development-security-operations-continuous-lifecycle-improvement.png)
+![Diagram of a Dev Sec Ops example workflow.](./media/development-security-operations-continuous-lifecycle-improvement.png)
 
 The diagram highlights how security teams implement continuous improvements across the lifecycle to both:
 
