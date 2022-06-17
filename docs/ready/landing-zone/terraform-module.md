@@ -122,7 +122,7 @@ The module can also create and link DDoS Protection Standard to Virtual Networks
 
 #### Traditional Azure networking topology (hub and spoke)
 
-The module can optionally deploy one or more hub networks based on the [traditional Azure networking topology (hub and spoke)](../azure-best-practices/traditional-azure-networking-topology).
+The module can optionally deploy one or more hub networks based on the [traditional Azure networking topology (hub and spoke)](../azure-best-practices/traditional-azure-networking-topology.md).
 
 :::image type="content" source="media/terraform-caf-enterprise-scale-connectivity.png" alt-text="A conceptual architecture diagram focusing on the connectivity resources for an Azure landing zone using a traditional Azure networking topology (hub and spoke)." lightbox="media/terraform-caf-enterprise-scale-connectivity.png":::
 
