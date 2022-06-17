@@ -49,7 +49,7 @@ Here are some implementation options for landing zones keeping in mind the devel
 | Enterprise-scale for small enterprises| This reference implementation is meant for organizations that don't have a large IT team and do not require fine grained administration delegation models. | [![Dta-button]][DTA-small-enterprises]</br>[Readme](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) |
 | Enterprise-scale for Azure Government|Reference implementation that can be deployed to Azure Government Cloud. | [![Dta-button]][DTA-AzureGov] </br>[Readme](https://github.com/Azure/Enterprise-Scale#readme)|
 | [CAF enterprise-scale landing zone (Azure China 21Vianet regions)](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#do-it-yourself-deployment-instructions-for-enterprise-scale-using-azure-powershell) | Reference implementation that can be deployed to Azure clouds in China. | [![Dta-button]][DTA-21Vianet] </br> [Deploy](https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md) |
-| [Terraform module for Azure landing zones](terraform-module.md) | Deploys an enterprise-ready platform foundation using Terraform. Use this option when managing your platform using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. This module is officially verified on the Terraform registry. Shared services, network connectivity, and application workloads can be integrated into your deployment or managed independently. |[Readme](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) |
+| [Azure landing zones Terraform module](terraform-module.md) | Deploys an enterprise-ready platform foundation using Terraform. Use this option when managing your platform using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. This module is officially verified on the Terraform registry. Shared services, network connectivity, and application workloads can be integrated into your deployment or managed independently. |[Readme](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) |
 
 ### Customize approach
 
@@ -60,11 +60,9 @@ Here are some implementation options for landing zones keeping in mind the devel
 | [CAF Terraform modules](terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | [Readme](https://github.com/Azure/caf-terraform-landingzones-platform-starter) |
 | [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. </br>[Design principles](partner-landing-zone.md#design-principles) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
 
-
 ## Next steps
 
 To proceed, choose one of the implementation options shown in the preceding tables. Each option includes a link to deployment instructions and the specific design principles that guide implementation.
-
 
 <!-- The following section is used to store references to external images and links to reduce maintenance overhead and enable tooltips -->
 
@@ -72,8 +70,7 @@ To proceed, choose one of the implementation options shown in the preceding tabl
 [/]: # (External image references below)
 [/]: # (*******************************)
 
-[DTA-Button]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Azure landing zone accelerator
-."
+[DTA-Button]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Azure landing zone accelerator."
 
 [/]: # (**************************)
 [/]: # (External link labels below)
@@ -84,7 +81,6 @@ To proceed, choose one of the implementation options shown in the preceding tabl
 [GitHub-Contoso]: https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md
 [GitHub-TreyResearch]: https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md
 [Github-AzureGov]: https://aka.ms/enterprisescale
-
 
 [DTA-WingTip]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
 [DTA-VWAN]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
