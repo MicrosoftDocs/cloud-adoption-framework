@@ -40,4 +40,5 @@ The following video contains guidance to help you implement secure and rapid inn
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu6q]
 
+## Next steps
 For more information about core DevOps security controls in the Azure Security Benchmark, see [DevOps Security (Security Control v3)](/security/benchmark/azure/security-controls-v3-devops-security).
