@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security implementation, operations, and governance
 
-This article describes infrastructure security implementation, operations, and governance in the Cloud Adoption Framework. Advance to [Development security strategy](development-security-strategy-overview.md#development-security-strategy) section.
+This article describes infrastructure security implementation, operations, and governance in the Cloud Adoption Framework.
 
 ## Implementation
 
@@ -33,7 +33,7 @@ Security teams should encourage infrastructure teams to adopt Infrastructure as 
 Azure Resource Manager is a deployment and management service. Deployments of Azure Resource Manager and [Azure landing zones bicep module](https://github.com/Azure/ALZ-Bicep) require access at the tenant root (/) scope. Confirm permissions to complete the deployments. For more information, see [Security in the Azure landing zone accelerator](/azure/role-based-access-control/elevate-access-global-admin).
 
 > [!NOTE]
-> The Azure landing zones Terraform module doesn’t always require these permissions. Read the detailed guidance on GitHub.
+> The Azure landing zones Terraform module doesn’t always require these permissions.
 
 ## Azure landing zone accelerators
 
