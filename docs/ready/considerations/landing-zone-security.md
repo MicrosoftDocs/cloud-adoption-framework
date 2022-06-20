@@ -48,13 +48,13 @@ Business operations have security [risks](../../secure/risk-insights.md). The se
 ### Security Integration
 
 Ensure that security is an organizational concern and not siloed into a single group. [Security integration](../../secure/security-integration.md) provides you with guidance on how to integrate security into everyone's role while minimizing friction with business processes. Specific guidance includes:
-- [Normalizing relations](../../secure/security-integration.md#normalize-relations): Ensure all teams are integrated with security teams and have a shared understanding of security goals. Further, work to find the right level of security controls, ensuring the controls do not outweigh business value.
-- [Integrate with IT and business operations](../../secure/security-integration.md#integrate-with-it-and-business-operations): Balance the implementation of security updates and mapping how all security processes affect current business impact, as well as potential security risk in the future.
+- [Normalizing relations](../../secure/security-integration.md#normalize-relations): Ensure all teams are integrated with security teams and have a shared understanding of security goals. Further, work to find the right level of security controls, ensuring the controls don't outweigh business value.
+- [Integrate with IT and business operations](../../secure/security-integration.md#integrate-with-it-and-business-operations): Balance the implementation of security updates and mapping how all security processes affect current business impact, and potential security risk in the future.
 - [Integrate security teams](../../secure/security-integration.md#integrate-security-teams): Avoid operating in silos by responding to active threats and continuously improving the security posture of the organization by practicing security as a dynamic discipline.
 
 ### Business resilience
 
-While organizations can never have perfect security, there is still the pragmatic approach of [Business resilience](../../secure/business-resilience.md) in investing the full lifecycle of a security risk before, during, and after an incident.
+While organizations can never have perfect security, there's still the pragmatic approach of [Business resilience](../../secure/business-resilience.md) in investing the full lifecycle of a security risk before, during, and after an incident.
 - [Resilience goals](../../secure/business-resilience.md#resilience-goals): Focus on enabling your business to rapidly innovate, limit the impact, and always seek safe ways to adopt technology.
 - [Security resilience and assume breach](../../secure/business-resilience.md#security-resilience-and-assume-breach): Assume breach or compromise to follow the key principle of zero trust and practice pragmatic security behaviors to prevent attacks, limit damage, and have quick recovery from them.
 
@@ -78,7 +78,7 @@ Establish [security operations](../../secure/security-operations.md) by reducing
 
 ### Asset protection
 
-Secure business critical [assets](../../secure/asset-protection.md) which include all physical and virtual items by implementing security controls that are unique to each asset type. Consistently execute preventive and detective protection to meet policies, standards and architecture.
+Secure business critical [assets](../../secure/asset-protection.md), which include all physical and virtual items by implementing security controls that are unique to each asset type. Consistently execute preventive and detective protection to meet policies, standards and architecture.
 - [Get secure](../../secure/asset-protection.md#get-secure): Bring resources up to your organization's latest security standards and policy by applying current controls to brownfield assets and ensuring greenfield assets are set to the most recent standards.
 - [Stay secure](../../secure/asset-protection.md#stay-secure): Practice continuous cloud improvement and plan for upgrading or retiring end-of-life software as business, technology, and security requirements change rapidly.
 - [Get started](../../secure/asset-protection.md#getting-started): Start protecting assets by focusing on well-known cloud resources first and use well-known and proven vendor/industry baselines for your security configuration.
@@ -98,7 +98,7 @@ Perform oversight and monitoring with [security governance](../../secure/securit
 Protect the processes and data of innovation against cyberattacks as new applications are developed with [innovation security](../../secure/innovation-security.md) in mind.
 - [What is DevSecOps?](../../secure/innovation-security.md#what-is-devsecops): Integrated security into the already combined process of development and operations in DevOps to mitigate risks in the innovation process.
 - [Secure by design and shifting left](../../secure/innovation-security.md#secure-by-design-and-shifting-left): Involve security in all stages of the DevOps lifecycle and have teams align with innovation speed, reliability and resilience.
-- [Why DevSecOps?](../../secure/innovation-security.md#why-devsecops): To secure the DevOps process protecting against attackers exploiting weaknesses in all IT infrastructure within your organization which in turn protects your customers.
+- [Why DevSecOps?](../../secure/innovation-security.md#why-devsecops): To secure the DevOps process protecting against attackers exploiting weaknesses in all IT infrastructure within your organization, which in turn protects your customers.
 - [The DevSecOps Journey](../../secure/innovation-security.md#the-devsecops-journey): Use idea incubation and DevOps as a two-phase process like most organizations. Identify the MVP (minimum viable product) requirements, use leadership techniques to resolve teams conflicts, and integrate security in existing processes and tools.
 - [Tips on navigating the journey](../../secure/innovation-security.md#tips-on-navigating-the-journey): As you transform your security, there will be common challenges throughout the journey that will involve education, time, resourcing, and the overall shifting nature of IT operations.
 
