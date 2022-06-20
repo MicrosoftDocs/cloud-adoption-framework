@@ -33,13 +33,17 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - Deploy the Microsoft Azure Backup Server(MABS) in the same Azure region as the Azure VMware Solution private cloud. This deployment method reduces traffic costs, eases administration, and keeps the primary/secondary topology. See the [Azure regions decision guide](../../migrate/azure-best-practices/multiple-regions.md) for Azure region deployment best practices.
 
-- Microsoft Azure Backup Server(MABS) can be deployed as an Azure infrastructure as a service (IaaS) VM or within the Azure VMware Solution private cloud. It's highly recommended to deploy it outside of the Azure VMware Solution private cloud and in a separate Azure virtual network. This virtual network is connected to the same ExpressRoute connected to Azure VMware Solution private cloud. Running MABS server outside of Azure VMware Solution private cloud helps to reduce vSAN consumption, as vSAN is a *limited capacity* resource within the Azure VMware Solution private cloud. Use [Application performance requirements checklist](https://docs.microsoft.com/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at right disk type (HDD, SSD, Ultra, etc.) and capacity. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](https://docs.microsoft.com/azure/virtual-machines/disks-performance) for backup operations.  
+- Microsoft Azure Backup Server(MABS) can be deployed as an Azure infrastructure as a service (IaaS) VM or within the Azure VMware Solution private cloud. It's highly recommended to deploy it outside of the Azure VMware Solution private cloud and in a separate Azure virtual network. This virtual network is connected to the same ExpressRoute connected to Azure VMware Solution private cloud. Running MABS server outside of Azure VMware Solution private cloud helps to reduce vSAN consumption, as vSAN is a *limited capacity* resource within the Azure VMware Solution private cloud.
 
   :::image type="content" source="../_images/eslz-bcdr-2.png" alt-text="Diagram that shows the MABS backup server deployed as an Azure IaaS VM.":::
 
   :::image type="content" source="../_images/eslz-bcdr-3.png" alt-text="Diagram that shows the MABS backup server deployed as an Azure VMware Solution VM.":::
 
 - To restore from a backup for Azure VMware Solution platform components like vCenter Server, NSX-T Manager, or HCX Manager, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+
+- Use [Application performance requirements checklist](https://docs.microsoft.com/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at right disk type (HDD, SSD, Ultra, etc.) and capacity. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](https://docs.microsoft.com/azure/virtual-machines/disks-performance) for backup operations. Use [MABS Capacity Planner](https://www.microsoft.com/download/details.aspx?id=54301) for determining number, storage and IOPS requirements for MABS server.
+
+- Use [Storage Pools](https://docs.microsoft.com/azure/backup/backup-mabs-add-storage) with MABS Server for enhanced disk IOPS/throughput. Use [Tiered Storage](https://techcommunity.microsoft.com/t5/system-center-blog/achieve-faster-backups-using-tiered-storage-with-dpm-and-mabs/ba-p/1596069) on MABS server for enhanced backup operations.
 
 ## Disaster recovery design considerations
 
