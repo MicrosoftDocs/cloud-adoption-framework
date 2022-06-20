@@ -1,6 +1,6 @@
 ---
 title: Infrastructure security architecture
-description: Learn about the best practices related to the ideal end state and key components of the infrastructure security architecture.
+description: Learn about best practices related to the ideal end state and key components of the infrastructure security architecture.
 author: mpvenables
 ms.author: mas
 ms.date: 06/17/2022
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security architecture
 
-This article describes best practices related to the ideal end state and key components of infrastructure security. 
+This article describes best practices related to the ideal end state and key components of infrastructure security.
 
 ## Build scalable, modular Azure landing zones
 
@@ -22,7 +22,7 @@ Another critical component of the Cloud Adoption Framework in the [Ready methodo
 
 While you design and implement your organization's landing zone, use the reference architecture below as a target end-state. It captures mature and scaled-out environmental design considerations.
 
-:::image type="content" source="./media/enterprise-scale-architecture.png" alt-text="Diagram showing the enterprise scale architecture." border="false" lightbox="./media/enterprise-scale-architecture.png":::
+:::image type="content" source="./media/enterprise-scale-architecture.png" alt-text="Diagram showing the Azure landing zone architecture." border="false" lightbox="./media/enterprise-scale-architecture.png":::
 
 [Download the Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) to adapt the landing zone's design configuration to fit your organization's business and technical needs.
 
@@ -35,13 +35,13 @@ Azure landing zones contain code that makes it easier for your organization's IT
 
 ## Use Zero Trust principles
 
-Your organization can adapt Azure landing zones based on Azure Security Benchmark (ASB) best practices and Zero Trust (ZT) principles, which are included in the target architecture. Move towards the best practice-aligned target architecture, implementing other security considerations and Zero Trust principles that incrementally build on and improve your organization's security and governance MVP.
+Your organization can adapt Azure landing zones based on Azure Security Benchmark (ASB) best practices and Zero Trust (ZT) principles, which are included in the target architecture. Move toward the best practice-aligned target architecture, implementing other security considerations and Zero Trust principles that incrementally build on and improve your organization's security and governance MVP.
 
-Extend Zero Trust architectural approaches that *never trust and always verify*. Integrate an end-to-end strategy across your digital state that encompasses identities, endpoints, network, data, apps, and infrastructure.
+Extend Zero Trust architectural approaches that *never trust and always verify*. Integrate an end-to-end strategy across your digital state that encompasses identities, endpoints, network, data, applications, and infrastructure.
 
 ## Follow Azure Security Benchmark security recommendations
 
-We recommend that your organization follow the high-impact security recommendations of the Azure Security Benchmark. There's also guidance in Azure landing zones and the Cloud Adoption Framework itself. Include ASB recommendations as part of your architectural strategy by reviewing all pertinent [documentation and service-specific baselines](/security/benchmark/azure/overview). 
+We recommend that your organization follow the high-impact security recommendations of the Azure Security Benchmark. There's also guidance in Azure landing zones and the Cloud Adoption Framework itself. Include ASB recommendations as part of your architectural strategy by reviewing all pertinent [documentation and service-specific baselines](/security/benchmark/azure/overview).
 
 > [!TIP]
 > Azure landing zones assign the ASB policy by default to the top of its hierarchy. This approach ensures that all subscriptions and workloads in the landing zone are monitored for ASB compliance.

@@ -28,9 +28,9 @@ Development can take many forms, including:
 - Publishing an API.
 - Scripting.
 - Automation, such as these examples:
-  - *Infrastructure deployment*, for instance, automating a Terraform deployment.
-  - *Infrastructure configuration*, such as using an Azure Resource Manager template to deploy an Azure Network Security Group and create security group rules.
-  - *Operational tasks*, like using Azure Functions to run scheduled tasks by running code on pre-defined timed intervals.
+  - **Infrastructure deployment**, for instance, automating a Terraform deployment.
+  - **Infrastructure configuration**, such as using an Azure Resource Manager template to deploy an Azure Network Security Group and create security group rules.
+  - **Operational tasks**, like using Azure Functions to run scheduled tasks by running code on predefined timed intervals.
 - Code to be deployed to firmware.
 - Mobile apps, an aggregation of application-level code with platform services, deployed as a system.
 - Full systems, which include comprised of infrastructure components, operating systems, PaaS services, and code, which are assembled into an executable blueprint deployed to Azure as Infrastructure as Code (IaC).

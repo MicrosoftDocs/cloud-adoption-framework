@@ -20,11 +20,11 @@ The Security Baseline discipline is key to your implementation and ongoing opera
 
 Use repository tooling like GitHub workflow management and PR-based code contribution to operationalize the processes, policies, and toolsets you develop. Following security best practices across all [Azure DevOps tooling](/azure/devops/) and [GitHub Actions](https://github.com/marketplace?type=actions).
 
-The following diagram shows DevSecOps architecture with Shift-left strategy. Security is integrated into developer workflows from the beginning and remains integrated across the entire development lifecycle. This scenario's complex dataflow starts with Azure Active Directory (Azure AD) configured as GitHub identity provider (with multi-factor authentication enabled for extra security).
+The following diagram shows DevSecOps architecture with Shift-left strategy. Security is integrated into developer workflows from the beginning and remains integrated across the entire development lifecycle. This scenario's complex dataflow starts with Azure Active Directory (Azure AD) configured as GitHub identity provider (with multifactor authentication enabled for extra security).
 
 ![Diagram of DevSecOps architecture with Shift-left strategy integrating security into developer workflows.](./media/devsecops-integrated-shift-left-security-development-workflow.png)
 
-The DevSecOps flow ends with Microsoft Defender for Cloud's (MDFC) active threat monitoring on the Azure Kubernetes Service across node-level (VM) and internal threats.
+The DevSecOps flow ends with Microsoft Defender for Cloud's active threat monitoring on the Azure Kubernetes Service across node-level (VM) and internal threats.
 
 For detailed technical guidance on assessing and deploying well-architected workloads, see [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
@@ -38,7 +38,8 @@ Learn how you to [integrate security processes and tools](/azure/cloud-adoption-
 
 The following video contains guidance to help you implement secure and rapid innovation for your organization:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu6q]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RWVu6q>]
 
 ## Next steps
+
 For more information about core DevOps security controls in the Azure Security Benchmark, see [DevOps Security (Security Control v3)](/security/benchmark/azure/security-controls-v3-devops-security).

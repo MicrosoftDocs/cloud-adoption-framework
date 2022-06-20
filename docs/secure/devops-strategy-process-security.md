@@ -14,7 +14,7 @@ ms.custom: internal
 
 Adopt a DevSecOps strategy that blends DevOps with elements of classic security and operations approaches. In the classic waterfall development model, security and other governance mechanisms are built into large longer-term releases. In the DevOps model, smaller, iterative changes are pushed in rapid releases. Rapid iteration enables organizations to meet continuously evolving marketplace expectations.
 
-Approach DevSecOps strategies as an ideal state your organization should continually work towards, not a quick transformation away from its current development practices.
+Approach DevSecOps strategies as an ideal state your organization should continually work toward, not a quick transformation away from its current development practices.
 
 ## Governance and production releases
 
@@ -24,9 +24,9 @@ The following diagram illustrates an organization's adoption of DevOps continuou
 
 As your organization prepares to adopt DevOps strategies, make sure you first adapt security and other governance processes to your approach. This approach mitigates security risk but doesn't decrease the value of rapid release cycles.
 
-Before you put an application into full production, ensure that the minimum viable product (MVP) for production release across Dev, Sec, and Ops domains meets each discipline's requirements. MVPs vary with an organization’s goals, culture, and industry, but they should always balance the needs for rapid release, security/safety, and production performance and reliability.
+Before you put an application into full production, ensure that the minimum viable product (MVP) for production release across Dev, Sec, and Ops domains meets each discipline's requirements. MVPs vary with an organization's goals, culture, and industry, but they should always balance the needs for rapid release, security/safety, and production performance and reliability.
 
-Prioritizing requirements and meeting all needs requires a team effort. Your organization won't benefit from a product that is released too late, doesn’t meet market needs, doesn’t scale or perform well, or compromises sensitive information and customer trust.
+Prioritizing requirements and meeting all needs requires a team effort. Your organization won't benefit from a product that is released too late, doesn't meet market needs, doesn't scale or perform well, or compromises sensitive information and customer trust.
 
 Use the following guidelines to make sure applications and workloads don't provide easy (low cost, low friction) means for attackers to abuse their functionality:
 
@@ -66,10 +66,10 @@ DevOps enables fast and continuous delivery of value to end users by tightly int
 - **Using Software Composition Analysis (SCA) and governance:** Analyze and maintain an inventory of third-party components and create a plan to evaluate reported vulnerabilities. Consider possible vulnerabilities of third-party components in your system security.
 - **Performing threat modeling:** Use a structured approach to quickly identify security vulnerabilities, and use threat modeling to determine and mitigate risk. Your team can effectively choose security features and establish appropriate mitigation strategies while optimizing cost.
 - **Using automation and tools:** Carefully select intelligent automation and tools to help engineers and ensure process consistency. Choose toolsets that are already integrated into engineering processes. Focus on fixing issues, and avoid overloading engineers with processes alien to the engineering ecosystem. Secure DevOps workflow tools are integrated into CI/CD pipelines. Avoid security expertise requirements and avoid high false-positive issue-reporting rates.
-- **Keeping credentials safe:** Scan for credentials and sensitive content in source files during pre-commit to reduce the risk of propagating sensitive information into your team’s CI/CD process. Don't store sensitive keys in code. Consider using a bring-your-own-key (BYOK) solution that generates keys using a hardware security module (HSM).
-- **Using continuous learning and monitoring:** Use advanced analytics to monitor applications, infrastructure, and networks and uncover security and performance issues. Couple CI/CD practices with monitoring tools to gain better visibility into your application health and identify and mitigate risks, reducing exposure to attacks. Monitoring supports a defense-in-depth strategy and can reduce your organization’s mean time to identify (MTTI) and mean time to contain (MTTC) metrics.
+- **Keeping credentials safe:** Scan for credentials and sensitive content in source files during pre-commit to reduce the risk of propagating sensitive information into your team's CI/CD process. Don't store sensitive keys in code. Consider using a bring-your-own-key (BYOK) solution that generates keys using a hardware security module (HSM).
+- **Using continuous learning and monitoring:** Use advanced analytics to monitor applications, infrastructure, and networks and uncover security and performance issues. Couple CI/CD practices with monitoring tools to gain better visibility into your application health and identify and mitigate risks, reducing exposure to attacks. Monitoring supports a defense-in-depth strategy and can reduce your organization's mean time to identify (MTTI) and mean time to contain (MTTC) metrics.
 
-A comprehensive DevOps ecosystem of development lifecycle and native security encompasses strategy, security, architecture, and implementation/operations, along with toolsets to support this ecosystem (such as Azure DevOps). 
+A comprehensive DevOps ecosystem of development lifecycle and native security encompasses strategy, security, architecture, and implementation/operations, along with toolsets to support this ecosystem (such as Azure DevOps).
 
 The following diagram illustrates an example of DevOps workflows/processes from the initial Idea Incubation phase (invention of new products or services) through to DevOperations (continuous Agile innovation).
 

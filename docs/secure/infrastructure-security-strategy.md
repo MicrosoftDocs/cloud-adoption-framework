@@ -14,7 +14,7 @@ ms.custom: internal
 
 This article contains best practices for infrastructure security strategies. It includes security for common enterprise-wide elements that multiple workloads depend on, as shown in the following diagram:
 
-[ ![Diagram of infrastructure security strategies flow.](./media/enterprise-infrastructure-security-strategy.png) ](./media/enterprise-infrastructure-security-strategy.png#lightbox)
+[ ![Diagram of infrastructure security strategies flow](./media/enterprise-infrastructure-security-strategy.png).](./media/enterprise-infrastructure-security-strategy.png#lightbox)
 
 Start with a proven cloud infrastructure security approach and adapt it to your organization's needs and initial workload deployments. Don't try to use a custom approach right away.
 

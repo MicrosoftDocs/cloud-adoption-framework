@@ -43,7 +43,7 @@ Code security in the cloud needs to integrate with existing processes so you suc
 
 The example process shown in this diagram is suitable for business-critical functions that require the highest level of security rigor (for example, APIs and applications that process financial transactions or business critical information).
 
-Consider developing simpler, streamlined version(s) of this process for different use cases, as demonstrated in the following diagram:
+Consider developing simpler, streamlined versions of this process for different use cases, as demonstrated in the following diagram:
 
 ![Diagram of simplified security DevSecOps process.](./media/security-processes-business-agility-balance.png)
 

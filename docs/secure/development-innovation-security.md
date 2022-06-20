@@ -18,9 +18,9 @@ This article provides best practices for development information security.
 
 Each organization's enterprise risk appetite is variable. To calculate it, you have to continuously balance the level of innovation your organization pursues and the accountability your organization owes its customers, shareholders, and regulators.
 
-Some organizations stress rapid innovation to stay competitive. Others are intolerant of brand damage—even from an otherwise minor test application that could be compromised.
+Some organizations stress rapid innovation to stay competitive. Others are intolerant of brand damage - even from an otherwise minor test application that could be compromised.
 
-Balance your organization's security and speed of innovation. You can use the [Azure landing zone policy-driven governance design](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance), which provides guardrails for your organization's platform (and applications deployed on it). For more information, see [adopt policy-driven rails in your resource organization](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance). 
+Balance your organization's security and speed of innovation. You can use the [Azure landing zone policy-driven governance design](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance), which provides guardrails for your organization's platform (and applications deployed on it). For more information, see [Adopt policy-driven rails in your resource organization](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance).
 
 Learn about the [hierarchy of management groups and subscriptions](/azure/governance/management-groups/overview) and how to create [top-level sandbox management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-group-recommendations).
 
@@ -38,7 +38,7 @@ Embrace Shift Left testing as a natural part of your technical ideation and deve
 
 Modify existing DevOps processes so you can implement security and innovation in development practices. This modification can involve adding new elements that fit naturally into a process.
 
-Fine-tune these incremental practices to generate healthy friction among team members. The friction can generate important bugs to fix, and can prompt valuable critical thinking (such as threat modeling that helps you understand an attacker's “user persona”). Generating healthy friction among team members also helps you avoid unhealthy friction, wasted effort, and anti-patterns.
+Fine-tune these incremental practices to generate healthy friction among team members. The friction can generate important bugs to fix, and can prompt valuable critical thinking (such as threat modeling that helps you understand an attacker's "user persona"). Generating healthy friction among team members also helps you avoid unhealthy friction, wasted effort, and antipatterns.
 
 ## Native innovation efficiencies
 
@@ -50,7 +50,7 @@ Remain flexible through continuous assembly of innovation. Adapt security elemen
 
 ![Diagram showing how to integrate security into development.](./media/devops-integrated-security-lifecycle-model.png)
 
-DevOps increases agility and speed by bringing the planning and development processes and the testing and production processes together. DevOps mitigates enterprise risk by performing rapid updates rather than a deep scan before release. Security's role shifts from traditional quality gateway to integral process towards lowering risk (seen as incremental increases of a team's knowledge and education, process updates, and more).
+DevOps increases agility and speed by bringing the planning and development processes and the testing and production processes together. DevOps mitigates enterprise risk by performing rapid updates rather than a deep scan before release. Security's role shifts from traditional quality gateway to integral process toward lowering risk (seen as incremental increases of a team's knowledge and education, process updates, and more).
 
 Shift your organization from a waterfall development cycle to a DevOps lifecycle to enable rapid incremental releases for applications. The DevOps model allows you to rapidly address security concerns and avoid the longer planning and testing cycle of the waterfall model. DevOps also offers many non-security benefits that allow increased responsiveness to customers and internal user requirements in a rapidly evolving marketplace.
 
