@@ -12,22 +12,22 @@ ms.custom: think-tank
 
 # Azure landing zones Terraform module
 
-The [Azure landing zones Terraform module][caf-enterprise-scale] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs-alz-architecture] at scale by using Terraform.
+The [Azure landing zones Terraform module][caf-enterprise-scale] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs_alz_architecture] at scale by using Terraform.
 
 > [!NOTE]
 > This article describes one of two ways to implement landing zones on Azure by using Terraform. For guidance on choosing the right approach, see [this article](deploy-landing-zones-with-terraform.md).
 
 ## Prerequisites
 
-If you're new to Terraform and you want information about installing and using it, see the [Install Terraform][tf-install] tutorial on HashiCorp Learn.
+If you're new to Terraform and you want information about installing and using it, see the [Install Terraform][tf_install] tutorial on HashiCorp Learn.
 
-For information on how to set up the Terraform provider and authenticate with Azure, see the [AzureRM provider guides][azurerm-auth] on the Terraform website. To learn how to set up the provider for deploying across multiple subscriptions, see the [Provider Configuration][wiki_provider_configuration] wiki page.
+For information on how to set up the Terraform provider and authenticate with Azure, see the [AzureRM provider guides][azurerm_auth] on the Terraform website. To learn how to set up the provider for deploying across multiple subscriptions, see the [Provider Configuration][wiki_provider_configuration] wiki page.
 
 ## Importance of using standard modules
 
 Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments.
 
-The Azure landing zones Terraform module is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
+The Azure landing zones Terraform module is published to the official [Terraform Registry][tf_reg_azure] and is verified by HashiCorp.
 
 Deploying the module from the Terraform Registry provides:
 
@@ -54,10 +54,10 @@ You can configure the module to deploy sets of resources that align with the fol
 
 | Resource category | Critical design area |
 | --- | --- |
-| Core resources | [Resource organization][alz-resourceorg]</br>[Security][alz-security]</br> [Governance][alz-governance] |
-| Management resources | [Management and monitoring][alz-management] |
-| Connectivity resources | [Network topology and connectivity][alz-connectivity] |
-| Identity resources | [Identity and access management][alz-identity] |
+| Core resources | [Resource organization][alz_resourceorg]</br>[Security][alz_security]</br> [Governance][alz_governance] |
+| Management resources | [Management and monitoring][alz_management] |
+| Connectivity resources | [Network topology and connectivity][alz_connectivity] |
+| Identity resources | [Identity and access management][alz_identity] |
 
 Packaging these capabilities into a single Terraform module makes it easier to build and enforce consistency across the Azure platform when you're operating at scale.
 
@@ -71,11 +71,11 @@ The following sections outline the resource types and configuration options.
 
 ### Core resources
 
-The core capability of this module deploys the foundations of the [conceptual architecture for Azure landing zones][msdocs-alz-architecture], with a focus on the central [resource organization][alz-resourceorg].
+The core capability of this module deploys the foundations of the [conceptual architecture for Azure landing zones][msdocs_alz_architecture], with a focus on the central [resource organization][alz_resourceorg].
 
 :::image type="content" source="media/terraform-caf-enterprise-scale-overview.png" alt-text="A conceptual architecture diagram focusing on the core resource hierarchy for an Azure landing zone." lightbox="media/terraform-caf-enterprise-scale-overview.png":::
 
-When you're using core resources, the module deploys and manages the following resource types:
+When you enable deployment of core resources (*enabled by default*), the module deploys and manages the following resource types:
 
 | Resource | Azure resource type | Terraform resource type |
 | --- | --- | --- |
@@ -87,18 +87,18 @@ When you're using core resources, the module deploys and manages the following r
 | Role assignments | [`Microsoft.Authorization/roleAssignments`][arm_role_assignment] | [`azurerm_role_assignment`][azurerm_role_assignment] |
 | Role definitions | [`Microsoft.Authorization/roleDefinitions`][arm_role_definition] | [`azurerm_role_definition`][azurerm_role_definition] |
 
-The exact number of resources that the module creates depends on the module configuration. In general, you can expect the module to create up to 180 resources for a default installation, based on the [example later in this article](#simple-example).
+The exact number of resources that the module creates depends on the module configuration. For a [default configuration](#simple-example), you can expect the module to create approximately `180` resources.
 
 > [!TIP]
-> None of these resources are deployed at the subscription scope, but Terraform still requires a subscription to establish an authenticated session with Azure. For more information on authenticating with Azure, see [Azure Provider: Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli) in the Terraform Registry.
+> None of these resources are deployed at the subscription scope, but Terraform still requires a subscription to establish an authenticated session with Azure. For more information on authenticating with Azure, refer to the [Azure Provider: Authenticating to Azure][azurerm_auth] documentation.
 
 ### Management resources
 
-The module provides an option to enable deployment of [management and monitoring][alz-management] resources into the specified subscription, as described on the [Provider Configuration][wiki_provider_configuration] wiki page. The module also ensures that the specified subscription is placed in the right management group.
+The module provides an option to enable deployment of [management and monitoring][alz_management] resources from the [conceptual architecture for Azure landing zones][msdocs_alz_architecture] into the specified subscription, as described on the [Provider Configuration][wiki_provider_configuration] wiki page. The module also ensures that the specified subscription is placed in the right management group.
 
 :::image type="content" source="media/terraform-caf-enterprise-scale-management.png" alt-text="A conceptual architecture diagram focusing on the management resources for an Azure landing zone." lightbox="media/terraform-caf-enterprise-scale-management.png":::
 
-When you enable management resources, the module deploys and manages the following resource types (*depending on configuration*):
+When you enable deployment of management resources, the module deploys and manages the following resource types (*depending on configuration*):
 
 | Resource | Azure resource type | Terraform resource type |
 | --- | --- | --- |
@@ -114,11 +114,11 @@ For more information about how to use this capability, see the [Deploy Managemen
 
 ### Connectivity resources
 
-The module provides an option to enable deployment of [network topology and connectivity][alz-connectivity] resources into the current subscription context. It also ensures that the specified subscription is placed in the right management group.
+The module provides an option to enable deployment of [network topology and connectivity][alz_connectivity] resources from the [conceptual architecture for Azure landing zones][msdocs_alz_architecture] into the current subscription context. It also ensures that the specified subscription is placed in the right management group.
 
-This capability currently enables deployment of hub networks based on both [traditional Azure networking topology (hub and spoke)](#traditional-azure-networking-topology-hub-and-spoke), and [Virtual WAN network topology (Microsoft-managed)](#virtual-wan-network-topology-microsoft-managed).
+This capability enables deployment of multiple hub networks based on any combination of [traditional Azure networking topology (hub and spoke)](#traditional-azure-networking-topology-hub-and-spoke), and [Virtual WAN network topology (Microsoft-managed)](#virtual-wan-network-topology-microsoft-managed).
 
-The module can also create and link DDoS Protection Standard to Virtual Networks, and manage centralized public and private DNS zones.
+The module can also create and link [DDoS Protection](#ddos-protection-plan) Standard to Virtual Networks, and manage centralized public and private [DNS zones](#dns).
 
 #### Traditional Azure networking topology (hub and spoke)
 
@@ -174,14 +174,13 @@ The module can optionally deploy [DDoS Protection Standard][about_ddos_protectio
 > [!NOTE]
 > Due to platform limitations, DDoS Protection plans can only be enabled for traditional virtual networks. Virtual Hub support is not currently available.
 
-<!-- comment added to prevent linting error #MD028-no-blanks-blockquote-->
-
+<!-- markdownlint-disable-next-line no-blanks-blockquote-->
 > [!IMPORTANT]
 > The Azure landing zones guidance recommends enabling DDoS Protection Standard to increase protection of your Azure platform. To prevent unexpected costs in non-production and MVP deployments, this capability is disabled in the Azure landing zones Terraform module due to the cost associated with this resource.
 >
 > For production environments, we strongly recommend enabling this capability.
 
-When you enable deployment of DDoS Protection plan resources, the module deploys and manages the following resource types (*depending on configuration*):
+When you enable deployment of deployment of DDoS Protection plan resources, the module deploys and manages the following resource types (*depending on configuration*):
 
 | Resource | Azure resource type | Terraform resource type |
 | --- | --- | --- |
@@ -193,7 +192,7 @@ When you enable deployment of DDoS Protection plan resources, the module deploys
 The module can optionally deploy [Private DNS zones to support Private Endpoints][about_dns_for_private_endpoint] and link them to hub and/or spoke Virtual Networks.
 User-specified public and private DNS zones can also be deployed and linked as needed.
 
-When you enable deployment of DNS resources, the module deploys and manages the following resource types (*depending on configuration*):
+When you enable deployment of deployment of DNS resources, the module deploys and manages the following resource types (*depending on configuration*):
 
 | Resource | Azure resource type | Terraform resource type |
 | --- | -------------- | ------------------ |
@@ -204,9 +203,9 @@ When you enable deployment of DNS resources, the module deploys and manages the 
 
 ### Identity resources
 
-The module provides an option to configure policies relating to the [identity and access management][alz-identity] landing zone. It also ensures that the specified subscription is placed in the right management group.
+The module provides an option to configure policies relating to the [identity and access management][alz_identity] landing zone. It also ensures that the specified subscription is placed in the right management group.
 
-![Diagram of an enterprise-scale architecture for identity resources in Azure landing zones.](./media/terraform-caf-enterprise-scale-identity.png)
+:::image type="content" source="media/terraform-caf-enterprise-scale-identity.png" alt-text="A conceptual architecture diagram focusing on the identity resources for an Azure landing zone." lightbox="media/terraform-caf-enterprise-scale-identity.png":::
 
 > [!NOTE]
 > This capability doesn't deploy any resources. If you want to update policy settings related to the identity management group, use the `configure_identity_resources` input variable.
@@ -217,7 +216,7 @@ For more information about how to use this capability, see the [Deploy Identity 
 
 Requirements for getting started with the module are documented on the [Getting Started][wiki_getting_started] Wiki page.
 
-To simplify getting started, the module has been published to the [Terraform Registry][tf-reg-azure]. You can reference it directly within your code, as shown in the [simple example](#simple-example) later in this article. Running `terraform init` will automatically download the module and all dependencies.
+To simplify getting started, the module has been published to the [Terraform Registry][tf_reg_azure]. You can reference it directly within your code, as shown in the [simple example](#simple-example) later in this article. Running `terraform init` will automatically download the module and all dependencies.
 
 You can view the latest module and provider dependencies on the [Dependencies][caf-es-dependencies] tab in the Terraform Registry.
 
@@ -314,15 +313,14 @@ Learn how to [deploy the Azure landing zones Terraform module][hcl-deploy-es] th
 [caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "See the Azure landing zones Terraform module on the Terraform Registry."
 [caf-es-dependencies]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=dependencies "See dependencies for the Azure landing zones Terraform module on the Terraform Registry."
 
-[msdocs-alz-architecture]: index.md#azure-landing-zone-conceptual-architecture "Conceptual architecture for Azure landing zones."
+[msdocs_alz_architecture]: index.md#azure-landing-zone-conceptual-architecture "Conceptual architecture for Azure landing zones."
 
-[alz-resourceorg]:  design-area/resource-org.md "Resource organization for Azure landing zones on the Cloud Adoption Framework."
-[alz-security]:     design-area/security.md "Security for Azure landing zones on the Cloud Adoption Framework."
-[alz-governance]:   design-area/governance.md "Governance for Azure landing zones on the Cloud Adoption Framework."
-[alz-management]:   design-area/management.md "Management and monitoring for Azure landing zones on the Cloud Adoption Framework."
-[alz-connectivity]: design-area/network-topology-and-connectivity.md "Network topology and connectivity for Azure landing zones on the Cloud Adoption Framework."
-[alz-identity]:     design-area/identity-access.md "Identity and access management for Azure landing zones on the Cloud Adoption Framework."
-[alz-ref-arch]:     index.md#azure-landing-zone-conceptual-architecture "Enterprise-scale reference architecture."
+[alz_resourceorg]:  design-area/resource-org.md "Resource organization for Azure landing zones on the Cloud Adoption Framework."
+[alz_security]:     design-area/security.md "Security for Azure landing zones on the Cloud Adoption Framework."
+[alz_governance]:   design-area/governance.md "Governance for Azure landing zones on the Cloud Adoption Framework."
+[alz_management]:   design-area/management.md "Management and monitoring for Azure landing zones on the Cloud Adoption Framework."
+[alz_connectivity]: design-area/network-topology-and-connectivity.md "Network topology and connectivity for Azure landing zones on the Cloud Adoption Framework."
+[alz_identity]:     design-area/identity-access.md "Identity and access management for Azure landing zones on the Cloud Adoption Framework."
 
 [gh-es]: https://github.com/Azure/Enterprise-Scale "Azure/Enterprise-Scale GitHub repository."
 [gh-wiki]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki "Module documentation on the GitHub wiki."
@@ -335,9 +333,9 @@ Learn how to [deploy the Azure landing zones Terraform module][hcl-deploy-es] th
 [wiki_module_releases]:               https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Module-Releases "Wiki: Module Releases"
 [wiki_getting_started]:               https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Getting-Started "Wiki: Getting Started"
 
-[tf-reg-azure]: https://registry.terraform.io/modules/Azure "Search Azure modules on the Terraform Registry."
-[tf-install]:   https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started "Install Terraform."
-[azurerm-auth]: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure "Authenticate to Azure when using the AzureRM provider."
+[tf_reg_azure]: https://registry.terraform.io/modules/Azure "Search Azure modules on the Terraform Registry."
+[tf_install]:   https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started "Install Terraform."
+[azurerm_auth]: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure "Authenticate to Azure when using the AzureRM provider."
 
 [about_ddos_protection_standard]: /azure/ddos-protection/ddos-protection-overview
 [about_dns_for_private_endpoint]: /azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
