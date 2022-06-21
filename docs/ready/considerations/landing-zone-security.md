@@ -15,12 +15,6 @@ ms.custom: internal
 When a workload or the landing zones that hosts it require access to any sensitive data or critical systems, it's important to protect the data and assets. Improving landing zone security builds on the [test-driven development approach to landing zones](./test-driven-development.md) by expanding or refactoring the landing zone to account for heightened security requirements.
 
 
-## Test-driven development cycle
-
-Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
-
-![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
-
 ## Secure
 
 When you're ready to make security improvements, know that cloud security is also an incremental process instead of just a static destination. Focus on objectives and key results when envisioning a security end state. Map concepts, frameworks, and standards to the disciplines in the CAF [secure methodology](../../secure/index.md) alongside mapping to roles and responsibilities for human discipline.
