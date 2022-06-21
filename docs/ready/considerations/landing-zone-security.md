@@ -14,17 +14,6 @@ ms.custom: internal
 
 When a workload or the landing zones that hosts it require access to any sensitive data or critical systems, it's important to protect the data and assets. Improving landing zone security builds on the [test-driven development approach to landing zones](./test-driven-development.md) by expanding or refactoring the landing zone to account for heightened security requirements.
 
-## Landing zone security best practices
-
-The following list of reference architectures and best practices provides examples of ways to improve landing zone security:
-
-- [Microsoft Defender for Cloud](/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard a subscription to Defender for Cloud.
-- [Microsoft Sentinel](/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard to Microsoft Sentinel to provide a **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution.
-- [Secure network architecture](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Reference architecture for implementing a perimeter network and secure network architecture.
-- [Identity management and access control](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Series of best practices for implementing identity and access to secure a landing zone in Azure.
-- [Network security practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Provides additional best practices for securing the network.
-- [Operational security](/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) provides best practices for increasing operational security in Azure.
-- The [Security Baseline discipline](../../govern/guides/complex/security-baseline-improvement.md#incremental-improvement-of-best-practices): Example of developing a governance-driven security baseline to enforce security requirements.
 
 ## Test-driven development cycle
 
@@ -110,6 +99,18 @@ Add security to each stage of continuous integration and continuous delivery (CI
 - [Build and test](../../secure/devsecops-controls.md#build-and-test): Use build and release pipelines for automation and standardization for the processes of building and deploying secure code without spending large amounts of time in redeploying or upgrading existing environments.
 - [Go to production and operate](../../secure/devsecops-controls.md#go-to-production-and-operate): Oversee and manage the state of security when the solution is brought to production. Use infrastructure scanning tools and penetration testing practices for enabling teams to find risks and vulnerabilities to address.
 
+
+## Landing zone security best practices
+
+The following list of reference architectures and best practices provides examples of ways to improve landing zone security:
+
+- [Microsoft Defender for Cloud](/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard a subscription to Defender for Cloud.
+- [Microsoft Sentinel](/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard to Microsoft Sentinel to provide a **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution.
+- [Secure network architecture](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Reference architecture for implementing a perimeter network and secure network architecture.
+- [Identity management and access control](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Series of best practices for implementing identity and access to secure a landing zone in Azure.
+- [Network security practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Provides additional best practices for securing the network.
+- [Operational security](/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) provides best practices for increasing operational security in Azure.
+- The [Security Baseline discipline](../../govern/guides/complex/security-baseline-improvement.md#incremental-improvement-of-best-practices): Example of developing a governance-driven security baseline to enforce security requirements.
 
 
 ## Next steps
