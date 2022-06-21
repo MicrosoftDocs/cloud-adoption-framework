@@ -19,7 +19,7 @@ When a workload or the landing zones that hosts it require access to any sensiti
 
 As you're exiting the Ready state, you have the ongoing responsibility to maintain the security of your environment. Cloud security is also an incremental process instead of just a static destination. Focus on objectives and key results when envisioning a security end state. Map concepts, frameworks, and standards to the disciplines in the CAF [secure methodology](../../secure/index.md) alongside mapping to roles and responsibilities for human discipline. The secure methodology provides guidance.
 
-The following lists are the disciplines involved in the secure methodology.
+Below we provide an overview of this guidance with links to the details.
 
 ### Risk insights
 
