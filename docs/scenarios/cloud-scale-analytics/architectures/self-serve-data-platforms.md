@@ -3,7 +3,7 @@ title: Self-serve data platforms
 description: Learn about design considerations for self-serve data platforms
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 04/03/2022
+ms.date: 06/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -21,7 +21,7 @@ Choosing the right level of domain granularity and rules for decoupling using pl
 When you want to build a data mesh with Azure, we recommend you adopt [cloud-scale analytics](../../data-management/index.md). This framework is a deployable reference architecture and comes with open-source templates and best practices. Cloud-scale analytics architecture has two main building blocks that are fundamental for all deployment choices:
 
 - **Data management landing zone:** The foundation of your data architecture. It contains all critical capabilities for data management, like data catalog, data lineage, API catalog, master data management, and so on.
-- **Data management landing zones:** Subscriptions that host your analytics and AI solutions. They include key capabilities for hosting an analytics platform.
+- **Data landing zones:** Subscriptions that host your analytics and AI solutions. They include key capabilities for hosting an analytics platform.
 
 :::image type="content" source="../media/high-level-design-single-data-landing-zone.png" alt-text="A diagram showing an overview of a cloud-scale analytics platform that contains a data management landing zone and a single data landing zone.":::
 
