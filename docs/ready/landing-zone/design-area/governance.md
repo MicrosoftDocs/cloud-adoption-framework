@@ -36,7 +36,7 @@ The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-B
 
 For instance, consider using the [ALZ Default Policy Assignments](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults) Bicep module to get a head start on ensuring compliance for your Azure environments.
 
-For more information on working in brownfield cloud environments, see [Working with existing cloud environments](./../../considerations/landing-zone-existing-environments.md).
+For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
 
 ## Design area overview
 

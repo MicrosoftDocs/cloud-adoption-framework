@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Brownfield landing zone considerations
+# Brownfield environment considerations
 
 A brownfield deployment is simply your existing Microsoft Azure environment. This article summarizes guidance found elsewhere in the Azure Landing Zones documentation.
 

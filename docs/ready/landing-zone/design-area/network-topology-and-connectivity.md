@@ -38,7 +38,7 @@ The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-B
 
 For instance, the [Azure Landing Zones Bicep - Deployment Flow - Hub and Spoke](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlowHS) workflow includes Bicep modules to accelerate Azure virtual network hub-and-spoke architectures.
 
-For more information on working in brownfield cloud environments, see [Working with existing cloud environments](./../../considerations/landing-zone-existing-environments.md).
+For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
 
 ## Design area overview
 
