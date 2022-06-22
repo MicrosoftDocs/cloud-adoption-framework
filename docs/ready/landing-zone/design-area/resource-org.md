@@ -43,6 +43,7 @@ The following assumptions are the basis for workload subscription design pattern
 - If your current environment does use management groups, consider using the guidance in [management groups](resource-org-management-groups.md) when evaluating your implementation.
 - If you have existing subscriptions in your current environment, consider using the guidance in [subscriptions](resource-org-subscriptions.md) to see if you are using them effectively. Subscriptions act as policy and management boundaries and are scale units.
 - If you have existing resources in your current environment, consider using the guidance in [naming and tagging](../../azure-best-practices/naming-and-tagging.md) to influence your tagging strategy and your naming conventions going forward.
+- [Azure Policy](/azure/azure-resource-manager/management/tag-policies) is useful in establishing and enforcing consistency with regard to taxonomic tags.
 
 ## Design area overview
 

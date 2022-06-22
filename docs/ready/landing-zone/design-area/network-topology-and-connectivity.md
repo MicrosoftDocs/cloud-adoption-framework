@@ -3,7 +3,7 @@ title: Overview of network topology and connectivity for Azure
 description: Examine key design considerations and best practices surrounding networking and connectivity.
 author: timwarner-msft
 ms.author: timwarner
-ms.date: 06/21/2022
+ms.date: 06/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -29,7 +29,8 @@ The network topology and connectivity design area is critical for establishing a
 
 **Existing (brownfield) cloud environment:** Consider the following if you are interested in applying proven-practice Azure virtual network (VNet) design principles to existing Azure environments:
 
-- Consider implementing [Azure Virtual Network Manager (Preview)](/azure/virtual-network-manager/overview) for
+- Review our best practices for planning, deploying, and maintaining [Azure VNet hub and spoke topologies](../../azure-best-practices/hub-spoke-network-topology.md)
+- Consider [Azure Virtual Network Manager (Preview)](/azure/virtual-network-manager/overview) to centralize network security group (NSG) security rules across multiple VNets
 - [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) unifies networking, security, and routing to help businesses build hybrid cloud architectures safer and faster
 - Access Azure data services privately with [Azure Private Link](/azure/private-link/private-link-overview). The Private Link service ensures your users and applications communicate with key Azure services by using the Azure backbone network and private IP addresses instead of over the public Internet
 
