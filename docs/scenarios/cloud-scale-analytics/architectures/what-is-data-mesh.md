@@ -63,8 +63,6 @@ Data products are another important component of data mesh. Data products aim to
 
 A successful data product must be:
 
-For this section, it's easier for the readers if you format it something like:
-
 - **Usable:** Your product must have users outside the immediate data domain.
 - **Valuable:** Your product must maintain value over time. If it doesn't have long-term value, it won't succeed.
 - **Feasible:** Your product must be feasible. If you can't actually build it, the product won't be a success. Your product must be feasible from both a data availability and a technical standpoint.
