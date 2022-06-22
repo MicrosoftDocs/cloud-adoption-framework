@@ -116,7 +116,7 @@ For more information about how to use this capability, see the [Deploy Managemen
 
 The module provides an option to enable deployment of [network topology and connectivity][alz-connectivity] resources into the current subscription context. It also ensures that the specified subscription is placed in the right management group.
 
-This capability currently enables deployment of a multiple-region hub-and-spoke network topology. Azure Virtual WAN is on the product roadmap.
+This capability currently enables deployment of a multiple-region hub-and-spoke network topology, as well as deployment and configuration of Virtual WAN resources.
 
 ![Diagram of an enterprise-scale architecture for connectivity resources in Azure landing zones.](./media/terraform-caf-enterprise-scale-connectivity.png)
 
