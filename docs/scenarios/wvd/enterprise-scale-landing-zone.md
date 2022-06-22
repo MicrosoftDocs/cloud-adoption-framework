@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-avd
 
 The Microsoft Azure Virtual Desktop (AVD) Landing Zone Accelerator provides a specific architectural approach and reference implementation for preparing landing zone subscriptions for an enterprise Azure Virtual Desktop (AVD) deployment.
 
-Its reference implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a particular focus on the enterprise-scale design principles. Although this implementation can be deployed in any Azure environment that comply with the [prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started), It is recommended to use this solution after implementing an enterprise-scale landing zone, [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the enterprise-scale for Azure Virtual Desktop solution.
+Its reference implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a particular focus on the enterprise-scale design principles. Although this implementation can be deployed in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started), It is recommended to use this solution after implementing an enterprise-scale landing zone, [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the enterprise-scale for Azure Virtual Desktop solution.
 
 This Azure Virtual Desktop solution is open source. You can adapt its templates to create an architecture that meets your specific needs. This article's guidance includes design considerations for building an enterprise ready Azure Virtual Desktop deployment.
 
@@ -50,7 +50,7 @@ The Azure Virtual Desktop Landing Zone Accelerator includes an open source colle
 The Azure Virtual Desktop Accelerator is available in the [`AVD Accelerator`](https://github.com/Azure/avdaccelerator) GitHub repository. It contains Infrastructure as Code based on [`Common Azure Resource Modules Library or CARML`](https://github.com/Azure/ResourceModules). The Azure Virtual Desktop Landing Zone Accelerator ([`deployment prerequisites`](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started)) can be deployed using  integration into your CD/CI pipeline(s), command line [`PowerSell or Azure CLI`](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) or Azure portal deployments:
 
 **Optional: Custom Image Build:**
-Deploy a custom image based on the latest version of the Azure marketplace image to an Azure Compute Gallery.
+Deploy a custom image based on the latest version of the Azure Marketplace image to an Azure Compute Gallery.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-custom-image.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-custom-image.json)
 
