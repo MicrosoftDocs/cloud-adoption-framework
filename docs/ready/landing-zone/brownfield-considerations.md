@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Brownfield environment considerations
 
-A brownfield deployment is simply your existing Microsoft Azure environment. This article summarizes guidance found elsewhere in the Azure Landing Zones documentation.
+A brownfield deployment is simply your existing Microsoft Azure environment. This article summarizes guidance found elsewhere in the Cloud Adoption Framework Ready documentation.
 
 ## Resource organization
 
@@ -29,7 +29,7 @@ In a brownfield environment, you've already established your Azure environment. 
 Refining your existing Azure environment's [security posture](./design-area/security.md) with regard to authentication, authorization, and accounting is an ongoing, iterative process. Consider implementing the following recommendations:
 
 - Make use of Microsoft's [top 10 Azure security best practices](../../secure/security-top-10.md). This guidance summarizes field-proven guidance from Microsoft cloud solution architects (CSAs) as well as Microsoft Partners.
-- Deploy [Azure AD Connect cloud sync](azure/active-directory/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Azure AD-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Azure Multi-Factor Authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Azure AD Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to further protect these identities
+- Deploy [Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Azure AD-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Azure Multi-Factor Authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Azure AD Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to further protect these identities
 - Consider [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview) to provided secure authentication to your cloud apps and Azure resources.
 - Implement [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels. Also study the [Cloud Adoption Framework access control guidance](../../secure/access-control.md).
 - Make use of the recommendations, alerting, and remediation capabilities of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Your security team can also integrate Microsoft Defender for Cloud into [Microsoft Sentinel](/azure/sentinel/overview) if they need a more robust, centrally managed hybrid- and multi-cloud Security Information Event Management (SIEM)/Security Orchestration and Response (SOAR) solution.
