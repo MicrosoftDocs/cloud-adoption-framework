@@ -53,4 +53,4 @@ Platform automation is directly applicable to the outcomes associated with imple
 
 ## Next steps
 
-[Automation considerations](..\considerations\automation-considerations.md)
+[Automation considerations](../../considerations/automation-considerations.md)
