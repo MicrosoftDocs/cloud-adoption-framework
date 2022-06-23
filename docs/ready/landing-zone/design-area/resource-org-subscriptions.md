@@ -1,6 +1,6 @@
 ---
-title: Resource organization - subscriptions - design area
-description: Overview for the resource organization and subscriptions design area
+title: Subscriptions
+description: Overview of subscription design considerations and recommendations.
 author: DominicAllen
 ms.author: doalle
 ms.date: 06/19/2022
