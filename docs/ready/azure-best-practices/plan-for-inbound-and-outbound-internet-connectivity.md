@@ -57,7 +57,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - For outbound access, don't use Azure's default internet outbound access for any scenario.
 
-- Use a NAT gateway for online landing zones, or landing zones not connected to the hub virtual network. Compute resources that need outbound internet access and don't need the security of Azure Firewall standard or premium, or a third-party NVA, can online landing zones.
+- Use a NAT gateway for online landing zones, or landing zones not connected to the hub virtual network. Compute resources that need outbound internet access and don't need the security of Azure Firewall standard or premium, or a third-party NVA, can use online landing zones.
 
 - If your organization wants to use software-as-a-service (SaaS) security providers to help protect outbound connections, configure supported partners within Firewall Manager.
 
