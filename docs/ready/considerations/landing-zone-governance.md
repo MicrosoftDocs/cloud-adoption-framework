@@ -16,20 +16,24 @@ Landing zone governance is the smallest unit of overall governance. Establishing
 
 ## Landing zone governance best practices
 
-- **Initial landing zone governance:** The article on establishing an [initial governance foundation](../../govern/guides/complex/index.md) can assist with adding initial governance tooling to the first few landing zones. These practices will aid in scaling adoption and governance, along with implementing sound cost management. This approach starts with: resource organization, policy definitions, Azure roles, and blueprint definitions.
+The following list of guides and best practices provide examples of ways to improve landing zone governance:
+
+- [Governance](../../govern/index.md) : The methodology for the cloud adoption framework provides overall guidance for creating governance policies, processes, and disciplines. Steps to improve the overall governance of landing zones include:
+    - [Methodology](../../govern/methodology.md): Understand the pieces of the methodology and how they fit into the design. Evaluate corporate policies and processes and how they will align with the over all governance strategy.
+    - [Benchmark](../../govern/benchmark.md): Use the governance benchmark tool to discover gaps in your organization. Assess the current and future state to establish a plan and take action.
+    - [Initial foundation](../../govern/initial-foundation.md): Establish an initial cloud governance foundation. Establish an initial foundation for all landing zones.
+    - [Improve foundation](../../govern/foundation-improvements.md): Iteratively add governance controls to strengthen all landing zone governance.  
+- [Governance guide for complex enterprises](../../govern/guides/complex/index.md): Establishing an initial governance foundation can assist with adding initial governance tooling to the first few landing zones. These practices will aid in scaling adoption and governance, along with implementing sound cost management. This approach starts with: resource organization, policy definitions, Azure roles, and blueprint definitions.
 - [Naming and tagging standards](../azure-best-practices/naming-and-tagging.md): Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
 - [Track costs across workloads](../azure-best-practices/track-costs.md): Begin tracking costs in your first landing zone. Evaluate how you will apply consistency across multiple workloads and roles.
 - [Scale with multiple subscriptions](../azure-best-practices/scale-subscriptions.md): Evaluate how this landing zone and other landing zones will scale, as multiple subscriptions become a requirement.
 - [Organize subscriptions](../landing-zone/design-area/resource-org.md): Understand how to organize and manage multiple subscriptions.
 
-## Four steps to improve overall governance
+## Test-driven development cycle
 
-The [Govern methodology](../../govern/index.md) provides overall guidance for building out governance policies, processes, and disciplines. We will use the basic structure of that methodology and the following steps from that methodology to improve landing zone governance and governance across all landing zones.
+Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
 
-1. [Understand the methodology](../../govern/methodology.md): Understand the basic methodology to guide end-state governance design.
-2. [Benchmark](../../govern/benchmark.md): Assess both current and future state to establish a vision and take action.
-3. [Initial governance foundation](../../govern/initial-foundation.md): Small, easily implemented set of governance tools to establish an initial foundation for all landing zones.
-4. [Improve the governance foundation](../../govern/foundation-improvements.md): Iteratively add governance controls to strengthen all landing zone governance.
+![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 
 ## Next steps
 
