@@ -1,6 +1,6 @@
 ---
-title: Automation considerations
-description: Describes the different considerations and recommendations when automating deployment of Azure Landing Zone and platform services
+title: Automation
+description: Overview of Azure Landing Zone and platform services automation considerations and recommendations.
 author: MariusStorhaug
 ms.author: mastorha
 ms.date: 06/19/2022
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Automation considerations
+# Automation
 
 In software defined cloud infrastructure, teams use various tools and techniques to provision, configure, and manage the infrastructure. As your teams evolve and grow, they can shift away from using portals and manual efforts and towards using code and automation to provision, configure, and manage infrastructure and services.
 
