@@ -120,7 +120,7 @@ Consider the following recommendations for creating and using subscriptions.
 
 ### Subscription organization and governance recommendations
 
-Consider the follow recommendations for organization and governance:
+Consider the following recommendations for organization and governance:
 
 - Treat subscriptions as a unit of management that's aligned with your business needs and priorities.
 
@@ -167,7 +167,7 @@ Consider the following recommendations for quota and capacity:
 
 ### Subscription tenant transfer restriction recommendations
 
-Consider the following recommendations for tenant transfer restrications:
+Consider the following recommendations for tenant transfer restrictions:
 
 - Configure these settings to help prevent users from transferring Azure subscriptions to or from the Azure AD tenant:
 
