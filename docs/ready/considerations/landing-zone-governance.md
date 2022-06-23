@@ -1,9 +1,9 @@
 ---
 title: Improve landing zone governance
 description: Improve landing zone governance.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/15/2020
+author: asudbring
+ms.author: allensu
+ms.date: 06/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
