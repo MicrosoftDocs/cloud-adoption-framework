@@ -14,7 +14,7 @@ ms.custom: think-tank, csu
 
 This article lists considerations and recommendations for inbound and outbound connectivity between Azure and the public internet.
 
-## Design considerations:**
+## Design considerations
 
 - Azure native network security services such as [Azure Firewall](/azure/firewall/overview), [Azure Web Application Firewall (WAF) on Azure Application Gateway](/azure/web-application-firewall/ag/ag-overview), and [Azure Front Door](/azure/frontdoor/front-door-overview) are fully managed. You don't incur the operational and management costs and complexity of infrastructure deployments at scale.
 
@@ -22,7 +22,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
-## Design recommendations:**
+## Design recommendations
 
 - Use Azure Firewall to govern:
 
