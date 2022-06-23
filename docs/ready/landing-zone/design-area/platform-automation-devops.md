@@ -53,4 +53,4 @@ Platform automation is directly applicable to the outcomes associated with imple
 
 ## Next steps
 
-[Test-driven development for landing zones](test-driven-development.md)
+[Test-driven development for landing zones](..\considerations\test-driven-development.md)
