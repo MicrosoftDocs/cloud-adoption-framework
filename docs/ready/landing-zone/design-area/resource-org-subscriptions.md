@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Subscriptions
+# Subscription considerations and recommendations
 
 Subscriptions are a unit of management, billing, and scale within Azure. Subscriptions play a critical role when you're designing for large-scale Azure adoption. This article helps you capture subscription requirements and design target subscriptions based on critical factors.
 
@@ -29,7 +29,7 @@ Keep the following organization and governance factors in mind:
 
 - Subscriptions serve as boundaries for assigning Azure policies.
 
-  For example, secure workloads such as Payment Card Industry (PCI) workloads typically require other policies to achieve compliance. Instead of using a management group to collate workloads that require PCI compliance, you can achieve the same isolation with a subscription. With this approach, you don't have too many management groups with a few subscriptions.
+  For example, secure workloads, such as Payment Card Industry (PCI) workloads, typically require other policies to achieve compliance. Instead of using a management group to collate workloads that require PCI compliance, you can achieve the same isolation with a subscription. With this approach, you don't have too many management groups with a few subscriptions.
 
   If you need to group together several subscriptions that are of the same workload archetype, create them under a management group.
 
@@ -37,7 +37,7 @@ Keep the following organization and governance factors in mind:
 
 - Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns. Create separate platform subscriptions for management (monitoring), connectivity, and identity when these elements are required.
 
-  - Establish a dedicated management subscription in the Platform management group to support global management capabilities such as [Log Analytics in Azure Monitor](/azure/azure-monitor/logs/log-analytics-overview) workspaces and [Azure Automation](/azure/automation/overview) runbooks.
+  - Establish a dedicated management subscription in the platform management group to support global management capabilities such as [Log Analytics in Azure Monitor](/azure/azure-monitor/logs/log-analytics-overview) workspaces and [Azure Automation](/azure/automation/overview) runbooks.
 
   - Establish a dedicated identity subscription in the platform management group to host Windows Server Active Directory domain controllers, when necessary.
 
@@ -102,13 +102,13 @@ The application team might define a process to allow Azure subscriptions to be t
 
 Cost transparency is a critical management challenge faced by every large enterprise organization. These key aspects are associated with how cost transparency can be achieved across large Azure environments:
 
-- Chargeback models, such as [Azure App Service Environment](/azure/app-service/environment/) and [Azure Kubernetes Service](/azure/aks/), might need to be shared to achieve higher density. Shared platform as a service (PaaS) resources might be affected by Chargeback models.
+- Chargeback models, such as [Azure App Service Environment](/azure/app-service/environment/) and [Azure Kubernetes Service](/azure/aks/), might need to be shared to achieve higher density. Shared platform as a service (PaaS) resources might be affected by chargeback models.
 
 - Use a shutdown schedule for nonproduction workloads to optimize costs.
 
 - Use [Azure Advisor](/azure/advisor/) to check recommendations for optimizing costs.
 
-- Establish charge back modal for better distribution of cost across organization.
+- Establish a chargeback model for better distribution of cost across organization.
 
 - Implement policy to prevent deploying resources not authorized to be deployed in your organization environment.
 
@@ -132,36 +132,36 @@ Consider the follow recommendations for organization and governance:
 
 - Use the following principles when identifying requirements for new subscriptions:
 
-  - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. Large specialized workloads such as high-performance computing, IoT, and SAP should use separate subscriptions to avoid limits.
-  - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, which allows for a clear separation of concerns. Different environments such as development, test, and production are often removed from a management perspective.
-  - **Policy boundary:** Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require other policies to achieve compliance. The other overhead isn't considered if a separate subscription is used. Development environments have more relaxed policy requirements than production environments.
+  - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. Large specialized workloads, such as high-performance computing, IoT, and SAP, should use separate subscriptions to avoid limits.
+  - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, which allows for a clear separation of concerns. Different environments, such as development, test, and production, are often removed from a management perspective.
+  - **Policy boundary:** Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads, such as PCI, typically require other policies to achieve compliance. The other overhead isn't considered if a separate subscription is used. Development environments have more relaxed policy requirements than production environments.
   - **Target network topology:** Virtual networks can't be shared across subscriptions but they can connect with different technologies such as virtual network peering or Azure ExpressRoute. Consider which workloads must communicate with each other when deciding if a new subscription is required.
 
-- Group subscriptions together under management groups, which are aligned with the management group structure and policy requirements. Grouping ensures that subscriptions with the same set of policies and Azure role assignments, come from a management group.
+- Group subscriptions together under management groups, which are aligned with the management group structure and policy requirements. Grouping ensures that subscriptions with the same set of policies and Azure role assignments come from a management group.
 
-- Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
+- Establish a dedicated management subscription in the platform management group to support global management capabilities, such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
 
-- Establish a dedicated identity subscription in the `Platform` management group to host Windows Server Active Directory domain controllers, when necessary.
+- Establish a dedicated identity subscription in the platform management group to host Windows Server Active Directory domain controllers, when necessary.
 
-- Establish a dedicated connectivity subscription in the `Platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. A dedicated subscription ensures that all foundation network resources are billed together and isolated from other workloads.
+- Establish a dedicated connectivity subscription in the platform management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. A dedicated subscription ensures that all foundation network resources are billed together and isolated from other workloads.
 
-- Avoid a rigid subscription model. Opt for a set of flexible criteria to group subscriptions across the organization. The flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. 
+- Avoid a rigid subscription model. Opt for a set of flexible criteria to group subscriptions across the organization. The flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions.
 
   One size doesn't fit all for subscriptions. Something that works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription, while others might require their own subscription.
 
-  For more information, see [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+  For more information, see [Workload landing zones in enterprise-scale architecture](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
 
 ### Subscription quota and capacity recommendations
 
 Consider the following recommendations for quota and capacity:
 
-- Use subscriptions as scale units and scale out resources and subscriptions, as required. Your workload might then use the required resources for scaling out, without hitting subscription limits in the Azure platform.
+- Use subscriptions as scale units. Scale out resources and subscriptions, as required. Your workload might then use the required resources for scaling out without hitting subscription limits in the Azure platform.
 
 - Use reserved instances to manage capacity in some regions. Your workload might then have the required capacity for high demand resources in a specific region.
 
 - Establish a dashboard with custom views to monitor used capacity levels. Set up alerts if capacity is reaching critical levels, 90 percent CPU usage.
 
-- Raise support requests for quota increases under subscription provisioning, for example, total available virtual machine cores within a subscription. You might then ensure that your quota limits are set before your workloads exceed the default limits.
+- Raise support requests for quota increases under subscription provisioning. For example, total available virtual machine cores within a subscription. You might then ensure that your quota limits are set before your workloads exceed the default limits.
 
 - Ensure that your required services and features are available within the chosen deployment regions.
 
@@ -172,13 +172,11 @@ Consider the following recommendations for tenant transfer restrications:
 - Configure these settings to help prevent users from transferring Azure subscriptions to or from the Azure AD tenant:
 
   - **Subscription leaving Azure AD directory** set to `Permit no one`.
-
   - **Subscription entering Azure AD directory** set to `Permit no one`.
 
 - Configure a limited set of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
   - Include members from an Azure PlatformOps (platform operations) team.
-
   - Include break-glass accounts in the list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
 ## Next steps
