@@ -3,7 +3,7 @@ title: DevOps toolchain
 description: Guidance to help you choose a DevOps tooling stack.
 author: elanzel
 ms.author: elanzelm
-ms.date: 06/22/2022
+ms.date: 06/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -53,21 +53,26 @@ The tools a DevOps toolchain includes operate as an integrated unit for planning
 
 ### Continuous Operations
 
-- Continuous Operations is a focus that helps organizations maintain continuity of output between internal systems and customers through the uninterrupted delivery of critical services or functions. The goals of Continuous Operations are:
-  - To reduce or eliminate the need for planned downtimes or interruptions such as scheduled maintenance, capacity optimization and deployment.
-  - To increase overall reliability and resiliency of systems in three aspects, with people, process and tools.
-- Use cloud-native tools to:
-  - [Monitor key metrics](../considerations/devops-principles-and-practices.md#implement-your-desired-devops-metrics) for service performance and availability.
-  - Gain digital experience and customer insights.
-  - [Generate intelligence-driven responses](/azure/azure-monitor/continuous-monitoring) for incidents, system recovery, or scaling. [Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics) and [Application Insights](/azure/application-insights) are the standard method for tracking the health and status of Azure resources. [Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview) also provides centralized monitoring and management for cloud or hybrid solutions.
-  - Automate proactive maintenance and tasks like deployment or system updates. [Azure Automation](/azure/automation/overview) is a cloud-native tool you can use to create event-based automation to diagnose and resolve issues.
+Continuous Operations is a focus that helps organizations maintain continuity of output between internal systems and customers through the uninterrupted delivery of critical services or functions. The goals of Continuous Operations are:
+
+- To reduce or eliminate the need for planned downtimes or interruptions such as scheduled maintenance, capacity optimization and deployment.
+- To increase overall reliability and resiliency of systems in three aspects, with people, process and tools.
+
+Use cloud-native tools to:
+
+- [Monitor key metrics](../considerations/devops-principles-and-practices.md#implement-your-desired-devops-metrics) for service performance and availability.
+- Gain digital experience and customer insights.
+- [Generate intelligence-driven responses](/azure/azure-monitor/continuous-monitoring) for incidents, system recovery, or scaling. 
+  - [Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics) and [Application Insights](/azure/application-insights) are the standard method for tracking the health and status of Azure resources. [Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview) also provides centralized monitoring and management for cloud or hybrid solutions.
+- Automate proactive maintenance and tasks like deployment or system updates. 
+  - [Azure Automation](/azure/automation/overview) is a cloud-native tool you can use to create event-based automation to diagnose and resolve issues.
 
 ### Collaboration and feedback
 
 - Rapid feedback loops are at the heart of the CI/CD process. A CI/CD tool uses feedback to resolve conditions in CI/CD workflow logic and displays information back to users, usually through a dashboard.
 - Support for email notifications and integration with IDEs or communication platforms ensure you can stay informed about what’s happening without having to check a dashboard. Ensure you have the flexibility to configure which alerts you receive, since getting too many alerts transforms them into background noise.
 
-- The tool you choose for the collaboration should support the following collaboration practices:
+- Any tool you choose for the collaboration should support the following collaboration practices:
   - Kanban collaboration
   - Wiki content collaboration
   - ChatOps collaboration
@@ -75,21 +80,28 @@ The tools a DevOps toolchain includes operate as an integrated unit for planning
 
 ## DevOps toolchain recommendations for Azure Landing Zones
 
-- A DevOps toolchain for Azure Landing Zone implementation should consider all the DevOps phases discussed above: planning, CI/CD (including automation capabilities like Infrastructure as code), operations, collaborations and feedback. Review guidance for landing zone deployment and considerations for choosing an implementation option in [Choosing landing zone adoption](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option#deployment-considerations).
+DevOps toolchains for Azure Landing Zone implementation should consider all previously discussed DevOps phases: 
+- Planning 
+- CI/CD (including automation capabilities like Infrastructure as code)
+- Operations
+- Collaborations and feedback
 
-- Regardless of selected methodology (start small and expand or enterprise-scale), there are a few common topologies that enterprises tend to follow as they design their DevOps workflows and toolchains:
-  - **Full stack Azure DevOps toolchain:** For enterprises that are already heavily invested in the Microsoft ecosystem, this topology allows them to take full advantage of the native integrations between Microsoft products and services and streamline key processes.
-  - **Azure DevOps and GitHub toolchain:** This topology allows you to use the strengths of both Azure and GitHub as part of a well-integrated solution.
+Review guidance for landing zone deployment and considerations for choosing an implementation option in [Choosing landing zone adoption](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option#deployment-considerations).
+
+Regardless of selected methodology (start small and expand or enterprise-scale), there are a few common topologies that enterprises tend to follow as they design their DevOps workflows and toolchains.
+
+- **Full stack Azure DevOps toolchain:** For enterprises that are already heavily invested in the Microsoft ecosystem, this topology allows them to take full advantage of the native integrations between Microsoft products and services and streamline key processes.
+- **Azure DevOps and GitHub toolchain:** This topology allows you to use the strengths of both Azure and GitHub as part of a well-integrated solution.
 
 ### Full stack Azure DevOps toolchain
 
-![Diagram of a Full stack Azure DevOps toolchain.](./media/devops-toolchain-azure-devops.png)
+![Diagram of a full stack Azure DevOps toolchain.](./media/devops-toolchain-azure-devops.png)
 
 | DevOps stage | tools |
 | - | - |
 | Planning | [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) provides powerful and flexible planning capabilities to developers and other personas, including hierarchical backlogs, customizable Kanban boards, rich process customization, team dashboards, and custom reporting.|
-| CI/ CD| [Azure Repos](/azure/devops/repos/get-started/what-is-repos) allows you to create private Git repositories, supporting different Git clients, branching strategy and protection. With Azure Repos you can benefit of localized data residency in the cloud to enable compliance with European regulations. [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) allows customers to set up automated pipelines for CI/CD, including advanced test reporting. Azure Pipelines is currently strong in CD because of its support for multi-stage pipelines. Fine-grain permissions, gates, custom checks, and automated test result reporting in Azure Pipelines help you enforce security, compliance, and safe deployment best practices in your organization. They also support parallel steps execution and scalability. [Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts) feed to store packages and to review and validate each package for security purposes. Azure Artifacts provide granular permission control and auditing. [Azure Test Plans](/azure/devops/test/overview) in Azure DevOps provides a browser-based test management solution for exploratory, manual, and user acceptance testing. Users of Azure Test Plans also typically use Azure Boards for planning and project management. You can link user stories and other requirements to test cases, or document bugs found as a result of testing. [Marketplace extensions for DevOps](/azure/devops/marketplace/overview) should be adopted to improve the static code analysis with tools such as Credential scanners, Open Source scanners, Bugs and Vulnerabilities scanners, etc. |
-| Operations | [Azure Dashboards and reporting](/azure/devops/report/dashboards/overview) provide custom reporting to monitor key service performance metrics. [Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics) and [Application Insights](/azure/application-insights) are the standard method of tracking the health and status of Azure resources. [Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview) provides centralized monitoring and management. [Azure Automation](/azure/automation/overview) can be used to create event-based automation to diagnose and resolve issues.  |
+| CI/ CD | [Azure Repos](/azure/devops/repos/get-started/what-is-repos) allows you to create private Git repositories, and it supports different Git clients, branching strategy, and protection. Azure Repos also provides localized data residency in the cloud to enable compliance with European regulations. [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) allows customers to set up automated pipelines for CI/CD, including for advanced test reportin, and provides powerful support for multi-stage pipelines. Fine-grain permissions, gates, custom checks, and automated test result reporting in Azure Pipelines help you enforce security, compliance, and safe deployment best practices in your organization and support parallel steps execution and scalability. [Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts) provides a feed to store packages and to review and validate each package for security purposes, and also provides granular permission control and auditing. [Azure Test Plans](/azure/devops/test/overview) in Azure DevOps provides a browser-based test management solution for exploratory, manual, and user acceptance testing. Users of Azure Test Plans also typically use Azure Boards for planning and project management. You can link user stories and other requirements to test cases and can  document bugs found through testing. Adopt [Marketplace extensions for DevOps](/azure/devops/marketplace/overview) to improve static code analysis with tools like Credential scanners, Open Source scanners, Bugs and Vulnerabilities scanners, and more. |
+| Operations | [Azure Dashboards and reporting](/azure/devops/report/dashboards/overview) provide custom reporting to help you monitor key service performance metrics. [Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics) and [Application Insights](/azure/application-insights) are the standard method of tracking the health and status of Azure resources. [Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview) provides centralized monitoring and management. [Azure Automation](/azure/automation/overview) can be used to create event-based automation to diagnose and resolve issues.  |
 | Collaborations and Feedbacks| [Azure DevOps Wiki](/azure/devops/project/wiki/about-readme-wiki) allows sharing of information with other team's members, it supports collaborative editing of its content and structure. [Azure Boards](/azure/devops/boards/) provide Kanban collaboration and support for comments and discussions in backlog items. Microsoft Teams can be [integrated with Azure DevOps](https://www.azuredevopslabs.com/labs/vstsextend/teams/) to complete the team collaboration experience. |
 
 ### Azure DevOps and GitHub toolchain
