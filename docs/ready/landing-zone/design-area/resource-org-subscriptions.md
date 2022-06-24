@@ -1,16 +1,16 @@
 ---
-title: Subscriptions
-description: Overview of subscription design considerations and recommendations.
+title: Subscription considerations and recommendations
+description: Learn about the critical role that subscriptions play as units of management, billing, and scale in Azure.
 author: DominicAllen
 ms.author: doalle
-ms.date: 06/19/2022
+ms.date: 6/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
 
-# Subscriptions
+# Subscription considerations and recommendations
 
 Subscriptions are a unit of management, billing, and scale within Azure. They play a critical role when you're designing for large-scale Azure adoption. This article can help you capture subscription requirements and design target subscriptions based on critical factors, which are based on:
 
@@ -100,7 +100,7 @@ Cost transparency is a critical management challenge every large enterprise orga
 
 - Use a shutdown schedule for nonproduction workloads to optimize costs.
 
-- Use Azure Advisor to check recommendations for optimizing costs.
+- Use [Azure Advisor](/azure/advisor/) to check recommendations for optimizing costs.
 
 - Establish a charge back model for better distribution of cost across your organization.
 
@@ -161,7 +161,9 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Configure a limited list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
-  - Include Azure PlatformOps (platform operations) team members.
+  - Include members from an Azure PlatformOps (platform operations) team.
+  - Include break-glass accounts in the list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
-  - Include break-glass accounts in your list of exempted users.
-  
+## Next steps
+
+[Adopt policy-driven guardrails](../../enterprise-scale/dine-guidance.md)
