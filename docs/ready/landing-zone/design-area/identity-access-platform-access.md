@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Azure identity services, including Azure Active Directory (Azure AD), manage access to resources in the Azure platform. This article describes design considerations for platform access and workflow access. We offer design recommendations for platform access.
 
-## Platform access - design considerations
+## Design consideration for platform access
 
 You need to decide which resources are manged centrally and which are federated.
 
@@ -26,7 +26,7 @@ Depending on the definition of the centralized or federated resource ownership, 
 
 As part of the guidelines for best practices enabling multifactor authentication, you can use a tool called Azure Active Directory (Azure AD) Identity Protection. This tool can require users to enroll in multifactor authentication from day one with certificate authority (CA) policy. Additionally, the multifactor authentication is used as part of the self-remediation methods for any flagged risky event. For more information, see [License requirements](/azure/active-directory/identity-protection/overview-identity-protection).
 
-## Platform access - design recommendations
+## Design recommendations for platform access
 
 A *centralized identity* uses a single location in the cloud and the integration of the Active Directory Service, control access, authentication, and applications. This approach provides better management from the IT team. For centralized Directory services, the best practice is to have only one Azure AD tenant.
 
@@ -45,7 +45,7 @@ Custom user policies can enforce any data sovereignty requirements for the organ
 
 If identity protection is used as part your identity solution, make sure you exclude the *break-glass* admin account. For more information, see [Manage emergency access accounts in Azure AD](/azure/active-directory/roles/security-emergency-access).
 
-## Workload access - design considerations
+## Design considerations for workload access
 
 For workflow access design, answer the following questions:
 
