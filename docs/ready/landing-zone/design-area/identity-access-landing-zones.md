@@ -1,6 +1,6 @@
 ---
 title: Azure identity for landing zones
-description: Understand considerations for implementing identity within a landing zone.
+description: See considerations and recommendations for implementing identity and access control within an Azure landing zone.
 author: anlucen
 ms.author: doalle
 ms.date: 06/24/2022
