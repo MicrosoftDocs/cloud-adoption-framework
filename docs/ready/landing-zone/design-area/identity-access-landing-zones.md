@@ -51,19 +51,19 @@ Evaluate using managed identities for Azure resources that don't need to use cre
 
 You can migrate Azure Classic environments to the Azure Resource Manager (ARM) deployment model, but you can't migrate virtual machines (VMs) and virtual networks. You must upgrade automated scripts to accommodate the new schema. For more information, see [Migrate from classic to Resource Manager](/azure/azure-resource-manager/management/deployment-models#migrate-from-classic-to-resource-manager).
 
-For Azure Classic subscription administrator roles, the Account Administrator has the Service Administrator attached by default. These roles together provide the ability to manage Azure resource billing, as well as the resources themselves. To separate the duties, you can transfer the ownership of the Service Administrator to another account. However, since the Service Administrator has the same function as the Azure Owner role, it's best practice to remove the Service Administrator role and use role-based access control to manage Azure resource access. For more information, see [Change the Service Administrator](/azure/role-based-access-control/classic-administrators#change-the-service-administrator).
+For Azure Classic subscription administrator roles, the Account Administrator has the Service Administrator attached by default. These roles together allow managing Azure resource billing, as well as the resources themselves. To separate the duties, you can transfer the ownership of the Service Administrator to another account. However, since the Service Administrator has the same function as the Azure Owner role, it's best practice to remove the Service Administrator role and use role-based access control to manage Azure resource access. For more information, see [Change the Service Administrator](/azure/role-based-access-control/classic-administrators#change-the-service-administrator).
 
 ## Design recommendations
 
-- Deploy Azure AD conditional-access policies for users with rights to Azure environments. Conditional access provides another mechanism to help protect a controlled Azure environment from unauthorized access. If you use authentication outside of Azure AD, see [Custom controls (preview)](/azure/active-directory/conditional-access/controls) for information about limitations.
+- Deploy Azure AD [Conditional Access](/azure/active-directory/conditional-access/overview) policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access. If you use authentication outside of Azure AD, see [Custom controls (preview)](/azure/active-directory/conditional-access/controls) for information about limitations.
 
-- Enforce multifactor authentication (MFA) for users with rights to the Azure environments. Many compliance frameworks require MFA enforcement. MFA greatly lowers the risk of credential theft and unauthorized access.
+- Enforce [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require MFA enforcement. MFA greatly lowers the risk of credential theft and unauthorized access.
 
-- Consider using service principals for non-interactive resource sign-ins, so MFA and token refreshes won't affect operations.
+- Consider using [service principals](/azure/active-directory/develop/app-objects-and-service-principals) for non-interactive resource sign-ins, so MFA and token refreshes won't affect operations.
 
 - Use Azure AD managed identities for Azure resources to avoid credential-based authentication. Many security breaches of public cloud resources originate with credential theft embedded in code or other text. Enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
-- Use Microsoft Defender for Cloud for just-in-time access to all infrastructure as a service (IaaS) resources. Defender for Cloud lets you enable network-level protection for ephemeral user access to IaaS virtual machines.
+- Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) for just-in-time access to all infrastructure as a service (IaaS) resources. Defender for Cloud lets you enable network-level protection for ephemeral user access to IaaS virtual machines.
 
 ### Privileged Identity Management (PIM)
 
@@ -96,7 +96,7 @@ If the Azure built-in roles don't meet your organization's specific needs, you c
 | Network management (NetOps) | Platform-wide global connectivity management: Virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others  | `*/read`, `Microsoft.Network/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Support/*` | |
 | Security operations (SecOps) | Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy | `*/read`, `*/register/action`, `Microsoft.KeyVault/locations/deletedVaults/`<br>`  purge/action`, `Microsoft.PolicyInsights/*`, `Microsoft.Authorization/policyAssignments/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyExemptions/*`, `Microsoft.Authorization/policySetDefinitions/*`, `Microsoft.Insights/alertRules/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Security/*`, `Microsoft.Support/*` | |
 | Subscription owner  | Delegated role for subscription owner generated from subscription Owner role  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
-| Application owners (DevOps, AppOps) | Contributor role granted for application/operations team at resource group level  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/`<br>`  purge/action`  |
+| Application owners (DevOps, AppOps) | Contributor role granted for application/operations team at resource group level  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/`<br>`deletedVaults/purge/action`  |
 
 ## Identity and access management in the Azure landing zone accelerator
 
