@@ -1,9 +1,9 @@
 ---
-title: Development Strategy - Environments
-description: Design area guidance for multistage environments in the development strategy
+title: Environments
+description: Design area guidance for multistage environments.
 author: elbatane
 ms.author: elbatane
-ms.date: 03/22/2022
+ms.date: 06/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,54 +12,60 @@ ms.custom: internal
 
 # Environments
 
-## Introduction
+Use the [Continuous Delivery](../considerations/development-strategy-development-lifecycle.md#deployment-strategy) process to quickly and safely delivers new value to production. You can deliver small changes frequently, which reduces the risk of problems.
 
-[Continuous Delivery](../considerations/development-strategy-development-lifecycle.md#deployment-strategy) is the process that delivers new value to production in a safe and quick way. 
-You can deliver frequently, which means the changes are small, reducing the risk of problems but other factors impact the "deployment pain to production": one of them is the adoption of multiple delivery/deployment environments. 
+Other factors affect "deployment pain to production", including your adoption of multiple delivery/deployment environments. A multi-environment approach lets you build, test, and release code with greater speed and frequency to make your deployment as straightforward as possible. You can remove manual overhead and the risk of a manual release, and instead automate development with a multistage process targeting different environments.
 
-The purpose of a multi-environments approach is to build, test, and release code with greater speed and frequency so that deployment is as straightforward as possible.
+A common multi-environment architecture includes four tiers:
 
-As the manual release in production contains an element of risk, the manual overhead is removed and development is automated with a multistage process that targets different environments. A common 4 tier architecture for environments includes development, test, staging, and production. Your product should transition in order from Development (the environment in which changes to the software are developed) through to Production (the environment that users directly interact with). Sometimes a User Acceptance Test (UAT) environment is also introduced to validate end-to-end business flow.
+- Development
+- Test
+- Staging
+- Production
+
+In this architecture, your product transitions in order from Development (the environment where you develop changes to the software) through Production (the environment your users directly interact with). You might also introduce a User Acceptance Test (UAT) environment to validate end-to-end business flow.
 
 | Environment | Description |
 | - | - |
-| Development | The development environment (dev) is the environment in which changes to the software are developed. | 
-| Test | The purpose of the test environment is to allow either automated tests or human testers to exercise the new and changed code. After the developer accepts the new code and configurations through unit testing in the development environment, the items are moved to one or more test environments. |
-| Staging | Staging is an environment for final testing immediately prior to deploying to production. It seeks to mirror the actual production environment as closely as possible. |
-| UAT | The purpose of User Acceptance Testing (UAT) is to allow end-users or clients to perform tests to verify/accept the software system before moving the software application to the production environment. |
-| Production | The production environment (prod) is also known as live as it is the environment which users directly interact with. |
+| Development | Your development environment (dev) is where changes to software are developed. |
+| Test | Your test environment allows either human testers or automated tests to try out new and updated code. Developers must accept new code and configurations through unit testing in your development environment before allowing those items to enter one or more test environments. |
+| Staging | Staging is where you do final testing immediately prior to deploying to production. Each staging environment should mirror an actual production environment as accurately as possible. |
+| UAT | User Acceptance Testing (UAT) allows your end-users or clients to perform tests to verify/accept the software system before a software application can move to your production environment. |
+| Production | Your production environment (prod), sometimes called *live*, is the environment your users directly interact with. |
 
-## Principles and practices design considerations
+## Design considerations
 
-The following considerations can be applied both to Azure Landing Zones and Workloads development: 
+Apply the following considerations to both Azure Landing Zones and Azure Workloads development:
 
-- Having test environments is important for platform developers to test changes before deploying to production. It consequently reduces the risk related to delivery in production.
-- Having environments as similar as possible allows finding environment's related errors in the first phases of the tests. It makes the development and test process faster and more reliable.
-- When there are discrepancies between the configuration of different environments, we get "configuration drift". It is recommended to reduce this kind of inconsistencies that can result in data loss, slower deployments, and cause failures.
-The adoption of Infrastructure as Code (IaC) is recommended to speed up deployments, improve environment consistency and reduce "configuration drift" between environments.
-- Consider the adoption of methods like Canary or Blue-Green Deployments to make new features available only to a limited set of test users in production initially, reducing the time to release into production.
-- The transition of the code from the Development to the Production environment should be controlled by checks on tests' results. These controls can be automated, in this case failing tests should prevent the process from automatically deploying changes to the next environment. 
-- Designated users should review Pull Requests before code deployments to production. Consider using repositories, with opportune [branch strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy) for this.
-- All the developers should be able to access all the environments to avoid silos.
+- Test environments are important because they allow platform developers to test changes before deploying to production, which reduces risk related to delivery in production.
+- Keeping your environments as similar as possible makes it easy to find environment-related errors in the first phases of testing, which increases development and testing speed and reliability.
+- If there are discrepancies in the configuration of your environments, "configuration drift" happens, which can result in data loss, slower deployments, and failures.
+- You can speed up deployments, improve environment consistency, and reduce "configuration drift" between environments by adopting Infrastructure as Code (IaC).
+- Consider adopting methods like Canary or Blue-Green Deployments that make new features available only to a limited set of test users in production and help reduce the time to release into production.
+- Use checks on test results to control the transition of code from development to production. You can automate these controls so that failing tests prevents changes from automatically deploying to the next environment.
+- Have designated users review pull requests before code is deployed to production. Consider using repositories with [branch strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy) to manage the review process.
+- Avoid silos by allowing all developers to access all environments.
 
-## Recommendations for Environments and practices 
+## Workloads
 
-### Workloads
+To learn how to manage environments for Workloads refer to [Enterprise-scale FAQ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
 
-For recommendation about how to manage environments for Workloads refer to [Enterprise-scale FAQ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+## Azure Landing Zones
 
-### Azure Landing Zones
+Adopting multiple environments for an Azure Landing Zone deployment is common when a customer wants to test the effects and results of new Azure Policy Assignments, Azure RBAC role assignments, Azure AD group memberships, Azure resources' creation, and more.
 
-The adoption of multiple environments for Azure Landing Zones deployments is common in scenarios where customers want to test the impact and results of new Azure Policy Assignments, Azure RBAC role assignments, Azure AD group memberships, Azure resources' creation, etc. Two different approaches are described in [Testing approach for enterprise-scale](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach):
-- Replication of management group hierarchy in Canary and Production environment 
-- Sandbox subscriptions 
+[Testing approach for enterprise-scale](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) describes two different adoption approaches:
 
-Independently from the selected scenario, it's recommended to:
-- adopt at least one environment for performing tests on
-- protect your environments, using separated Service Principal for test and production purposes
-- implement automated checks and approvals to validate and approve changes by a designated user(s) prior to deploying a change to a particular environment
+- Replication of management group hierarchy in Canary and Production environment
+- Sandbox subscriptions
+
+Regardless of which approach you follow, you should always:
+- Adopt at least one environment for testing.
+- Use separated Service Principal for test and production purposes to protect your environments.
+- Implement automated checks and approvals to validate and approve changes prior to deploying any change to a particular environment
 
 ## Next steps
-- [Create and Target Environments in Azure DevOps](/azure/devops/pipelines/process/environments)
 
-- [Using environments for deployment in GitHub](https://docs.github.com/en/github-ae@latest/actions/deployment/targeting-different-environments/using-environments-for-deployment)
+- [Create and target an environment](/azure/devops/pipelines/process/environments)
+
+- [Using environments for deployment (GitHub)](https://docs.github.com/en/github-ae@latest/actions/deployment/targeting-different-environments/using-environments-for-deployment)
