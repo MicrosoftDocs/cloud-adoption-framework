@@ -56,7 +56,7 @@ These tools operate as an integrated unit for planning, continuous integration, 
   - to reduce or eliminate the need for planned downtimes or interruptions such as scheduled maintenance, capacity optimization and deployment.
   - to increase overall the reliability and resiliency of the systems in three aspects with people, process and tools.
 - Use cloud-native tools to:
-  - [Monitor key metrics](../considerations/devops-principles-and-practices.md#implement-your-desired-devops-metrics) for service performance and availability.
+  - [Monitor key metrics](../considerations/devops-principles-and-practices.md#implement-desired-devops-metrics) for service performance and availability.
   - Gain digital experience and customer insights.
   - [Generate intelligence-driven responses](/azure/azure-monitor/continuous-monitoring) for incidents, system recovery, or scaling. [Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics) and [Application Insights](/azure/application-insights) are the standard method of tracking the health and status of Azure resources. [Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview) also provides centralized monitoring and management for cloud or hybrid solutions.
   - Automate proactive maintenance and tasks such as deployment or systems updates. [Azure Automation](/azure/automation/overview) is a cloud-native tool that can be used to create event-based automation to diagnose and resolve issues.

@@ -3,7 +3,7 @@ title: DevOps considerations
 description: Design area guidance for DevOps considerations in Azure Landing Zones.
 author: alguadam
 ms.author: alguadam
-ms.date: 06/22/2022
+ms.date: 06/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -35,9 +35,9 @@ The decisions you make when reviewing cloud operating models can influence how y
 
 - Define your [DevOps framework](#define-your-devops-framework), or align it with your organizational's DevOps and cloud adoption strategy. Include the definition of DevOps and the principles and practices your team must follow. Make sure you connect your DevOps strategy to your business strategy.
 
-- Establish [metrics](#implement-your-desired-devops-metrics) that allow your team to improve their DevOps performance. High-performance teams use a hypothesis to test their ideas, measure it to see how the hypothesis works, then make changes as needed. DevOps' final intent is to improve aspects like deployment frequency, mean time to apply a change, or time to restore a degraded service. You must design all these metrics to eventually affect overall business performance.
+- Establish [metrics](#implement-desired-devops-metrics) that allow your team to improve their DevOps performance. High-performance teams use a hypothesis to test their ideas, measure it to see how the hypothesis works, then make changes as needed. DevOps' final intent is to improve aspects like deployment frequency, mean time to apply a change, or time to restore a degraded service. You must design all these metrics to eventually affect overall business performance.
 
-- Determine the [DevOps practices](#define-the-devops-practices-to-adopt-for-your-azure-landing-zones-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
+- Determine the [DevOps practices](#define-devops-practices-for-your-azure-landing-zones-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
 
 - Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogenous DevOps ecosystems increasing the complexity of Azure Landing Zone and/or workload deployments.
 
@@ -96,7 +96,7 @@ Define and align your DevOps implementation journey with your organization's [cl
     - Use tools like [DevOps Self-assessment](https://devopsassessment.net/) to assess the current state of your team's DevOps status.
   - Current team [structure](../../organize/index.md#structure-type), including [roles and responsibilities](../../organize/raci-alignment.md) and owned [cloud functions](../../organize/index.md#understand-required-cloud-functions).
   - What [technical skills](../suggested-skills.md) your team has.
-  - What [cloud operations model](../../operating-model/define.md) your team currently follows.
+  - Which [cloud operations model](../../operating-model/define.md) your team currently follows.
 - Use your organization's cloud adoption plan to define a desired model for your team.
 - Establish an iterative roadmap for implementing the desired model in an iterative and incremental mode that aligns with your organization's [transformation timeline](/azure/cloud-adoption-framework/strategy/digital-transformation-timeline).
 
