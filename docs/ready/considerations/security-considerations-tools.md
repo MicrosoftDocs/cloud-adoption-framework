@@ -25,7 +25,7 @@ We recommend that you integrate with Azure AD to use all its capabilities. Integ
 
 We recommended that you maintain tight control of administrators and service account groups across Azure AD and your DevOps tool. Consider implementing the principle of least privilege across all your role assignments.
 
-For example, your organization might have a Platform or Cloud Excellence team that maintain Azure Resource Manager templates for your Azure Landing Zones. Assign users on that team to a Security Group in Azure AD, assuming that you're using it as your identity provider. Assign roles to that security group in your DevOps tool so those users can do their jobs.
+For example, your organization might have a Platform or Cloud Excellence team that maintains Azure Resource Manager templates for your Azure Landing Zones. Assign users on that team to a Security Group in Azure AD, assuming that you're using it as your identity provider. Assign roles to that security group in your DevOps tool so those users can do their jobs.
 
 For any administrator or highly privileged accounts in Active Directory, we recommend that the credentials aren't synchronized to Azure AD, and vice-versa. This approach reduces the threat of lateral movement. If an administrator in Azure AD is compromised, the attacker won't be able to easily gain access to any cloud assets, such as Azure DevOps. That account can't potentially inject malicious tasks in the CI/CD pipelines. This step is particularly important for any users assigned elevated permissions in your DevOps environment, such as Build or Project/Collection Administrators. For more information, see [Security best practices in Azure Active Directory](/azure/security/fundamentals/identity-management-best-practices).
 
