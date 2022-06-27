@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Azure Active Directory (Azure AD) and hybrid identity
 
-A critical design decision that an enterprise organization must make when adopting Azure is whether to extend a current on-premises identity domain into Azure or to create a new identity domain.
+A critical design decision for enterprise organizations adopting Azure is whether to extend current on-premises identity domains into Azure or to create new identity domains.
 
 Most Azure environments use Azure Active Directory (Azure AD) for Azure fabric authentication. On-premises environments use Active Directory Domain Services (AD DS) local host authentication and group policy management.
 
@@ -22,11 +22,11 @@ When evaluating which type of Active Directory solution to adopt, understand the
 
 ### Design considerations
 
-- Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone. For more information, see [Centralize management operations](/azure/cloud-adoption-framework/manage/centralize-operations).
+- Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone. For more information, see [Centralize management operations](../../../manage/centralize-operations.md).
 
 - Applications that rely on domain services and use older protocols might be able to use [Azure AD Domain Services (Azure AD DS)](/azure/active-directory-domain-services).
 
-- Evaluate your application needs by understanding and documenting the authentication provider that each application uses. Use the reviews to help plan which type of Active Directory your organization should use. For more information, see [Compare Active Directory to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide](/azure/cloud-adoption-framework/decision-guides/identity).
+- Evaluate your application needs by understanding and documenting the authentication provider that each application uses. Use the reviews to help plan the type of Active Directory your organization should use. For more information, see [Compare Active Directory to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide](/azure/cloud-adoption-framework/decision-guides/identity).
 
 - Evaluate scenarios that involve setting up external users, customers, or partners to secure access to resources. Determine whether these scenarios involve [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) or [Azure AD B2C](/azure/active-directory-b2c/overview) configurations. For more information, see [Azure AD External Identities](/azure/active-directory/external-identities/external-identities-overview).
 
@@ -34,7 +34,7 @@ When evaluating which type of Active Directory solution to adopt, understand the
 
 ### Design recommendations
 
-- Use centralized and delegated responsibilities based on role and security requirements to manage resources inside the landing zone. For more information, see [Establish operational management practices in the cloud](/azure/cloud-adoption-framework/manage/best-practices).
+- Use centralized and delegated responsibilities based on role and security requirements to manage resources inside the landing zone. For more information, see [Establish operational management practices in the cloud](../../../manage/best-practices.md).
 
 - The following types of privileged operations require special permissions. Consider which users will be handling such requests, and how to adequately secure and monitor their accounts.
 
