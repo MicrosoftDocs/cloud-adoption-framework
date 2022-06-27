@@ -23,7 +23,7 @@ Consider the following identity and access management solutions for landing zone
 
 ### Managed identities
 
-Evaluate using managed identities for Azure resources that don't need to use credentials.
+- Evaluate using managed identities for Azure resources that don't need to use credentials.
 
 - Decide which tasks and functions your organization should control with managed identities. To check which Azure resources managed identities support, see [Azure services that can use managed identities to access other services](/azure/active-directory/managed-identities-azure-resources/managed-identities-status). For more information, see [Managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
 
@@ -75,20 +75,20 @@ For Azure Classic subscription administrator roles, the Account Administrator ha
 
 ### RBAC recommendations
 
-Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data plane access to resources, if possible. Examples of data plane endpoints are Azure Key Vault, a storage account, or an SQL database.
+- Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data plane access to resources, if possible. Examples of data plane endpoints are Azure Key Vault, a storage account, or an SQL database.
 
-Don't add users directly to Azure resource scopes. Direct user assignments circumvent centralized management, making it more difficult to prevent unauthorized access to restricted data. Instead, add users to defined roles, and assign the roles to resource scopes.
+- Don't add users directly to Azure resource scopes. Direct user assignments circumvent centralized management, making it more difficult to prevent unauthorized access to restricted data. Instead, add users to defined roles, and assign the roles to resource scopes.
 
-Use [Azure AD built-in roles](/azure/role-based-access-control/built-in-roles) to manage the following identity settings:
+- Use [Azure AD built-in roles](/azure/role-based-access-control/built-in-roles) to manage the following identity settings:
 
-| Role | Usage | Note
-|---|---|---|
-| Global Admin | | Don't assign more than five people to this role.
-| Hybrid Environment | Hybrid Identity Administrator | |
-| Authentication | Security Administrator | |
-| Enterprise Application or Application Proxy | Application Administrator | No consent global admin.|
+   | Role | Usage | Note
+   |---|---|---|
+   | Global Admin | | Don't assign more than five people to this role.
+   | Hybrid Environment | Hybrid Identity Administrator | |
+   | Authentication | Security Administrator | |
+   | Enterprise Application or Application Proxy | Application Administrator | No consent global admin.|
 
-If the Azure built-in roles don't meet your organization's specific needs, you can create your own custom roles. Consider the following key role definitions when you create custom roles within the Azure AD tenant. The wildcard \* under `Actions` means the principal assigned to this role can do all actions. The actions under `NotActions` are subtracted from `Actions`.
+- If the Azure built-in roles don't meet your organization's specific needs, you can create your own custom roles. Consider the following key role definitions when you create custom roles within the Azure AD tenant. The wildcard \* under `Actions` means the principal assigned to this role can do all actions. The actions under `NotActions` are subtracted from `Actions`.
 
 | Role | Usage | Actions | NotActions |
 |---|---|---|---|
