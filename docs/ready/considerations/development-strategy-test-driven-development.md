@@ -12,11 +12,11 @@ ms.custom: internal
 
 # Test-driven development for Azure landing zones
 
-Test-driven development (TDD) is a software development and DevOps process that improves the quality of new features and improvements in code-based solutions. TDD creates unit test cases before developing the actual code, and tests the code against the test cases. This is opposed to code being developed first and test cases created later.
+Test-driven development (TDD) is a software development and DevOps process that improves the quality of new features and improvements in code-based solutions. TDD creates unit test cases before developing the actual code, and tests the code against the test cases. This approach is opposed to code being developed first and test cases created later.
 
-A [landing zone](../landing-zone/index.md) is an environment for hosting workloads that is preprovisioned through code. Landing zones include foundational capabilities that use a defined set of cloud services and best practices. This article describes an approach that uses test-driven development to deploy successful landing zones while meeting quality, security, operations, and governance requirements.
+A [landing zone](../landing-zone/index.md) is an environment for hosting workloads that is preprovisioned through code. Landing zones include foundational capabilities that use a defined set of cloud services and best practices. This article describes an approach that uses TDD to deploy successful landing zones while meeting quality, security, operations, and governance requirements.
 
-Cloud-based infrastructure and its underlying source code can use this approach to ensure landing zones are high quality and meet core requirements. Cloud infrastructure is the output of code execution. Well-structured, tested, and verified code produces a viable landing zone. 
+Cloud infrastructure is the output of code execution. Well-structured, tested, and verified code produces a viable landing zone. Cloud-based infrastructure and its underlying source code can use this approach to ensure that landing zones are high quality and meet core requirements.
 
 Use this approach to meet simple feature requests during early development. Later in the cloud adoption lifecycle, you can use this process to meet security, operations, governance, or compliance requirements. The process is especially useful for developing and refactoring landing zones in a parallel development effort.
 
@@ -32,31 +32,33 @@ The following diagram shows the test-driven development cycle for Azure landing 
 
 1. **Expand and refactor the landing zone.** Add or modify source code to fulfill the requested value-add feature and improve the general quality of the code base.
 
-   To meet the goal of test-driven development, the cloud platform team would add code only to meet the requested feature. However, code quality and maintenance is a shared effort. When fulfilling new feature requests, the cloud platform team should try to improve code by removing duplication and clarifying the code. Running tests between new code creation and refactoring of source code is highly recommended.
+   To meet the criteria for test-driven development, the cloud platform team would add code only to meet the requested feature. However, code quality and maintenance are shared efforts. As they fulfill new feature requests, the cloud platform team should try to improve code by removing duplication and clarifying the code. Running tests between new code creation and refactoring of source code is highly recommended.
 
 1. **Deploy the landing zone.** Once the source code fulfills the feature request, deploy the modified landing zone to the cloud provider in a controlled testing or sandbox environment.
 
 1. **Test the landing zone.** Retest the landing zone to validate that the new code meets the acceptance criteria for the requested feature. Once all tests pass, the feature is considered complete and the acceptance criteria are considered met.
 
-A test-driven development cycle or red/green test repeats the preceding basic steps until they meet the full *definition of done*. When all value-added features and acceptance criteria pass their associated tests, the landing zone is ready to support the next wave of the cloud adoption plan.
+The TDD cycle repeats the preceding basic steps until they meet the full *definition of done*. When all value-added features and acceptance criteria pass their associated tests, the landing zone is ready to support the next wave of the cloud adoption plan.
 
-The cycle that makes test-driven development effective is often referred to as a red/green test. In this approach, the cloud platform team starts with a failed test, or red test, based on the definition of done and the defined acceptance criteria. For each feature or acceptance criteria, the cloud platform team completes development tasks until the test passes, or has a green test.
+The cycle that makes TDD effective is often referred to as a *red/green test*. In this approach, the cloud platform team starts with a failed test, or red test, based on the definition of done and the defined acceptance criteria. For each feature or acceptance criteria, the cloud platform team completes development tasks until the test passes, or has a green test.
 
 The goal of TDD is to address better design, not to create a suite of tests. The tests are a valuable artifact for completing the process.
 
 ## Definition of done
 
-Success can be a subjective measure that provides a cloud platform team with little actionable information during landing zone development or refactoring. Lack of clarity can lead to missed expectations and vulnerabilities in a cloud environment. Before refactoring or expanding any landing zone, the cloud platform team should seek clarity regarding the *definition of done* (DoD) for each landing zone.
+Success can be a subjective measure that provides a cloud platform team little actionable information during landing zone development or refactoring. Lack of clarity can lead to missed expectations and vulnerabilities in a cloud environment. Before the cloud platform team refactors or expands any landing zones, they should seek clarity regarding the *definition of done* (DoD) for each landing zone.
 
-DoD is a simple agreement between the cloud platform team and other affected teams that defines the expected value-added features to include in the landing zone development effort. The DoD is often a checklist that's aligned with the short-term cloud adoption plan. In mature processes, the expected checklist each have their own acceptance criteria to provide more clarity. When the value-added features all meet the acceptance criteria, the landing zone is sufficiently configured to enable the success of the current adoption wave or release.
+DoD is a simple agreement between the cloud platform team and other affected teams that defines the expected value-added features to include in the landing zone development effort. The DoD is often a checklist that's aligned with the short-term cloud adoption plan. In mature processes, the expected features each have their own acceptance criteria to provide more clarity. When the value-added features all meet the acceptance criteria, the landing zone is sufficiently configured to enable the success of the current adoption wave or release.
 
 As teams adopt more workloads and cloud features, the DoD and the acceptance criteria become more complex.
 
-### Simple example of a DoD
+### Simple DoD example
 
-For an initial migration effort, DoD might be very simple. The following example is a simple DoD:
+For an initial migration effort, DoD might be overly simple. The following example is a simple DoD:
 
-The initial landing zone will host 10 workloads for initial learning purposes. These workloads aren't critical to the business and have no access to sensitive data. In the future, these workloads will probably release to production, but criticality and sensitivity aren't expected to change. To support these workloads, the cloud adoption team needs the following criteria met:
+The initial landing zone will host 10 workloads for initial learning purposes. These workloads aren't critical to the business and have no access to sensitive data. In the future, these workloads will probably release to production, but the criticality and sensitivity aren't expected to change.
+
+To support these workloads, the cloud adoption team needs to meet the following criteria:
 
 - Network segmentation to align with proposed network design. This environment should be a perimeter network with access to the public internet.
 - Access to compute, storage, and networking resources to host the workloads aligned to the digital estate discovery.
@@ -66,7 +68,7 @@ The initial landing zone will host 10 workloads for initial learning purposes. T
 
 The preceding point isn't a feature or acceptance criterion, but an indicator that more expansions will be required and should be explored with other teams early.
 
-### More examples of definition of done
+### More complex DoD examples
 
 The Govern methodology within the Cloud Adoption Framework provides a narrative journey through the natural maturity of a governance team. Embedded in that journey are several examples of DoD and acceptance criteria, in the form of policy statements.
 
@@ -95,13 +97,15 @@ You can easily integrate the following Azure tools and features into TDD for lan
 
 - [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview) provide primary source code for environments deployed in Azure. Some third-party tools like Terraform provide their own ARM templates to submit to Azure Resource Manager.
 
-- [Azure Quickstart templates](https://azure.microsoft.com/resources/templates) provide source code templates that help accelerate landing zone and workload deployment.
+- [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates) provide source code templates that help accelerate landing zone and workload deployment.
 
 - [Azure Policy](/azure/governance/policy) can provide automated detection, protection, and resolution when deployments deviate from governance policies. Azure Policy also provides the primary mechanism for testing acceptance criteria in your DoD.
 
-  In a TDD cycle, you can create a policy definition to test a single acceptance criteria. You can also add all acceptance criteria to a policy initiative assigned to the entire subscription. This approach provides a mechanism for red tests before you modify the landing zone. Once the landing zone meets the DoD, Azure Policy can enforce the test criteria to avoid code changes that would cause the test to fail in future releases.
+  In a TDD cycle, you can create a policy definition to test a single acceptance criteria. Azure Policy includes [built-in policy definitions](/azure/governance/policy/samples/built-in-policies) that can meet individual acceptance criteria within a DoD. This approach provides a mechanism for red tests before you modify the landing zone.
 
-  Azure Policy includes [built-in policy definitions](/azure/governance/policy/samples/built-in-policies) that can meet individual acceptance criteria within a DoD. Azure Policy also includes [built-in policy initiatives](/azure/governance/policy/samples/built-in-initiatives) that you can use to test and enforce the full DoD for a landing zone. Design and review [Azure Policy as Code workflows](/azure/governance/policy/concepts/policy-as-code) as part of your TDD approach.
+  Azure Policy also includes [built-in policy initiatives](/azure/governance/policy/samples/built-in-initiatives) that you can use to test and enforce the full DoD for a landing zone. You can add all acceptance criteria to a policy initiative assigned to the entire subscription. Once the landing zone meets the DoD, Azure Policy can enforce the test criteria to avoid code changes that would cause the test to fail in future releases.
+
+  Design and review [Azure Policy as Code workflows](/azure/governance/policy/concepts/policy-as-code) as part of your TDD approach.
 
 - [Azure Blueprints](/azure/governance/blueprints) groups policies and other deployment tools into a repeatable package that you can assign to multiple landing zones. Blueprints are useful for multiple adoption efforts that share common DoDs, which you might want to update over time. Azure Blueprints can also help with deployment during subsequent efforts to expand and refactor landing zones.
 
@@ -111,10 +115,10 @@ You can easily integrate the following Azure tools and features into TDD for lan
 
   Resource Graph includes advanced [query samples](/azure/governance/resource-graph/samples/advanced), which you can use to understand how workloads are deployed within a landing zone for advanced testing scenarios.
 
-Depending on your preferred approach, the following tools can also help:
+Depending on your preferred approach, you can also use the following tools:
 
-- [Cloud Adoption Framework for Azure Terraform landing zones](https://github.com/Azure/caf-terraform-landingzones)
-- [Azure Landing Zones using Bicep](https://github.com/Azure/ALZ-Bicep)
+- [Cloud Adoption Framework for Azure Terraform landing zones](https://github.com/Azure/caf-terraform-landingzones).
+- [Azure Landing Zones using Bicep](https://github.com/Azure/ALZ-Bicep).
 - [AzOps](https://github.com/Azure/AzOps), a PowerShell module that pushes resource templates and Bicep files at all Azure scope levels, and pulls and exports Azure resource hierarchies.
 
 ## Next steps
