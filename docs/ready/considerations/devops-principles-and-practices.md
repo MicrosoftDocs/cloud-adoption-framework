@@ -21,7 +21,7 @@ DevOps is the union of people, processes, and technology that provides continuou
 In the context of Azure Landing Zones, DevOps becomes the framework that guides your team (or teams) responsible for your entire Azure Landing Zones lifecycle management in areas such as:
 
 - How to self-organize and define boundaries with other teams to achieve the appropriate balance between autonomy and governance
-- How to continuously evolve Azure Landing Zone architecture design [(Conway's Law)](devops-teams-topologies.md#team-topologies)
+- How to continuously evolve Azure Landing Zone architecture design [(Conway's Law)](devops-teams-topologies.md)
 - How to plan, prioritize and iterate the implementation of the designed Architecture
 - How to implement version control, continuous integration and continuous deployment for Azure Landing Zone code
 - How to operate and respond to incidents for systems and platforms you own
