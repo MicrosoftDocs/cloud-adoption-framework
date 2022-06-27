@@ -1,9 +1,9 @@
 ---
-title: Azure Identity and Platform Access
+title: Azure identity services and platform access
 description: Understand how to provide access to Azure Resources.
 author: anlucen
 ms.author: anlucena
-ms.date: 06/10/2022
+ms.date: 06/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,47 +12,48 @@ ms.custom: think-tank
 
 # Identity for Azure platform resources
 
-## Platform access - design considerations
+Azure identity services, including Azure Active Directory (Azure AD), manage access to resources in the Azure platform. This article describes design considerations for platform access and workflow access. We offer design recommendations for platform access.
 
-- Centralized versus federated resource ownership:
+## Design consideration for platform access
 
-    - Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It is a standard practice for any organization that grants or denies access to confidential or critical business resources.
+You need to decide which resources are manged centrally and which are federated.
 
-    - Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations:
+Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It's a standard practice for any organization that grants or denies access to confidential or critical business resources.
 
-        - Take advantage of the agile nature of the cloud
+Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations take advantage of the agile nature of the cloud and prevent violation of any critical security or governance boundary.
 
-        - Prevent the violation of any critical security or governance boundary
+Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited. Those roles might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. In organizations that need a more centralized approach, you can enrich the NetOps role with more allowed actions. That role might allow creating peering between the hub and the spokes.
 
-    - Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But, in other organizations that need a more centralized approach, enrich the NetOps role with more allowed actions, like creating peering between the hub and the spokes.
+As part of the guidelines for best practices enabling multifactor authentication, you can use a tool called [Azure Active Directory (Azure AD) Identity Protection](/azure/active-directory/identity-protection/). This tool can require users to enroll in multifactor authentication from day one with certificate authority (CA) policy. Additionally, the multifactor authentication is used as part of the self-remediation methods for any flagged risky event. For more information, see [License requirements](/azure/active-directory/identity-protection/overview-identity-protection).
 
-- As part of the guidelines for best practices enabling MFA, you can use a tool called Azure AD Identity Protection to force users to enroll in MFA from day one with CA policy. Additionally, the MFA is used as part of the self-remediation methods for any flagged risky event. Verify the full benefits base on the licenses in this link: [overview-identity-protection#license-requirements](/azure/active-directory/identity-protection/overview-identity-protection).
+## Design recommendations for platform access
 
-## Platform access - design recommendations
+A *centralized identity* uses a single location in the cloud and the integration of the Active Directory Service, control access, authentication, and applications. This approach provides better management from the IT team. For centralized Directory services, the best practice is to have only one Azure AD tenant.
 
-- Centralizing Identity means having only one location in the cloud and the integration of the Directories services, control access, authentication, and applications. It provides better management from the IT team.
+When you grant access to resources, use Azure AD-only groups for Azure control-plane resources and Azure AD Privileged Identity Management. Add on-premises groups to the Azure AD-only group if a group management system is already in place.
 
-    - For centralized Directories the best practice is to have only one Azure AD tenant.
+> [!NOTE]
+> *Azure AD-only* is also known as *cloud only*.
 
-- Use Azure AD-only groups for Azure control-plane resources and Azure AD Privileged Identity Management when you grant access to resources.
+By using Azure AD-only groups, you can add both users and groups that are synchronized from on-premises by using Azure AD Connect. You can also add Azure AD-only users and groups to a single Azure AD-only group, including guest users.
 
-    - Add on-premises groups to the Azure AD-only group if a group management system is already in place.
+Groups that are synchronized from on-premises can only be managed and updated from the identity source of truth, which is the on-premises Active Directory. These groups can only contain members from the same identity source, which doesn't provide flexibility the way that Azure AD-only groups do.
 
-- By using Azure AD-only groups, you can add both users and groups that are synchronized from on-premises, via Azure AD Connect. You can also add Azure AD-only (also known as cloud only) users and groups to a single Azure AD-only group, including guest users.
+Integrate Azure AD logs with the platform-central [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs). This approach allows for a single source of truth around log and monitoring data in Azure. This source gives organizations cloud-native options to meet requirements for log collection and retention.
 
-- Groups that are synchronized from on-premises can only be managed and updated from the identity source of truth (on-premises Active Directory). These groups can only contain members from the same identity source, which doesn't provide flexibility like Azure AD-only groups do.
+Custom user policies can enforce any data sovereignty requirements for the organization.
 
-- Integrate Azure AD logs with the platform-central [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
+If identity protection is used as part your identity solution, make sure you exclude the *break-glass* admin account. For more information, see [Manage emergency access accounts in Azure AD](/azure/active-directory/roles/security-emergency-access).
 
-- If any data sovereignty requirements exist, custom user policies can be deployed to enforce them.
+## Design considerations for workload access
 
-- If Identity protection is used as part your Identity solution, please make sure you exclude Break-glass admin account.
+For workflow access design, answer the following questions:
 
-### Workload access - design considerations
+- Based on your cloud operating model, which teams require access to workloads within the landing zone?
+- What roles or functions do the teams with access carry out?
+- What is the minimum level of privilege the teams need to carry out their responsibilities?
 
-- Based on your cloud operating model, which teams will require access to workloads within the landing zone?
-- What roles or functions will those teams with access carry out? 
-- What is the minimum level of privilege they would require to carry out their responsibilities?
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Landing Zones](identity-access-landing-zones.md)
