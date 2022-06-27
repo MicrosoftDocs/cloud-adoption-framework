@@ -60,7 +60,7 @@ Continuous Operations is a focus that helps organizations maintain continuity of
 
 Use cloud-native tools to:
 
-- [Monitor key metrics](../considerations/devops-principles-and-practices) for service performance and availability.
+- Monitor key metrics for service performance and availability.
 - Gain digital experience and customer insights.
 - [Generate intelligence-driven responses](/azure/azure-monitor/continuous-monitoring) for incidents, system recovery, or scaling. 
   - [Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics) and [Application Insights](/azure/application-insights) are the standard method for tracking the health and status of Azure resources. [Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview) also provides centralized monitoring and management for cloud or hybrid solutions.
