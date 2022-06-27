@@ -32,7 +32,7 @@ The ability to make changes at scale through a prescribed automated process prov
 
 Platform automation is directly applicable to the outcomes associated with implementing a landing zone, and supports the concept of building repeatable, scalable environments.
 
-- [Automation considerations](../../considerations/automation-considerations.md) focuses on tools and techniques that enable the streamlining of automation tasks for Azure Landing Zone development, deployment, provisioning, and operations using automation tools such as Azure DevOps Services or GitHub.
+- [Automation considerations](../../considerations/automation.md) focuses on tools and techniques that enable the streamlining of automation tasks for Azure Landing Zone development, deployment, provisioning, and operations using automation tools such as Azure DevOps Services or GitHub.
 
 ### DevOps
 
@@ -60,4 +60,4 @@ These resources address security considerations in platform automation.
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Automation considerations](../../considerations/automation-considerations.md)
+> [Automation considerations](../../considerations/automation.md)
