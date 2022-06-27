@@ -141,7 +141,7 @@ items:
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
     - name: Building your devops practice
-      href: strategy/building-devops-practice.md  
+      href: strategy/building-devops-practice.md
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
@@ -280,7 +280,7 @@ items:
             href: ready/landing-zone/design-area/azure-ad-define.md
 
         - name: Identity and access management
-          items: 
+          items:
           - name: Overview
             href: ready/landing-zone/design-area/identity-access.md
           - name: Active Directory and Hybrid Identity
@@ -415,8 +415,8 @@ items:
             href: ready/landing-zone/design-area/platform-automation-devops.md
           - name: Platform automation
             items:
-            - name: Automation considerations
-              href: ready/considerations/automation-considerations.md
+            - name: Automation
+              href: ready/considerations/automation.md
           - name: DevOps
             items:
             - name: DevOps considerations
@@ -1579,7 +1579,6 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-        
 
       - name: Monitoring
         items:
