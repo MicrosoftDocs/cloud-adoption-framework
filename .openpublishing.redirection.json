@@ -557,12 +557,12 @@
       },
       {
          "source_path": "docs/ready/considerations/azure-test-driven-development.md",
-         "redirect_url": "/docs/ready/considerations/development-strategy-test-driven-development",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/ready/considerations/test-driven-development.md",
-         "redirect_url": "/docs/ready/considerations/development-strategy-test-driven-development",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development",
          "redirect_document_id": false
       }            
    ]
