@@ -554,6 +554,16 @@
          "source_path": "docs/ready/enterprise-scale/design-principles.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-principles",
          "redirect_document_id": false
-      }          
+      },
+      {
+         "source_path": "docs/ready/considerations/azure-test-driven-development.md",
+         "redirect_url": "/docs/ready/considerations/development-strategy-test-driven-development",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/considerations/test-driven-development.md",
+         "redirect_url": "/docs/ready/considerations/development-strategy-test-driven-development",
+         "redirect_document_id": false
+      }            
    ]
 }
