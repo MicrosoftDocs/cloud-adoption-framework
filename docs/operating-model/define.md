@@ -18,7 +18,7 @@ Cloud operating models are complex, and it's easy to fall into a series of circu
 
 To help you define the cloud operating model for your business, the Cloud Adoption Framework breaks down each aspect of the operating model into methodologies. Each methodology and its actionable exercises are designed to help you define your future state operations.
 
-![Cloud Adoption Framework methodologies](../_images/caf-overview-new.png)
+![Diagram of different Cloud Adoption Framework methodologies.](../_images/caf-overview-new.png)
 
 ### Support for developing your operating model
 
