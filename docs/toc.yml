@@ -920,6 +920,8 @@ items:
         href: modernize/index.md
       - name: Business alignment
         items:
+        - name: Overview
+          href: modernize/business-alignment/index.md
         - name: Envision cloud modernization 
           href: modernize/business-alignment/envision-cloud-modernization.md
         - name: Evaluate modernization options 
@@ -939,7 +941,9 @@ items:
         - name: Testing and architecture
           href: modernize/modernize-disciplines/testing-architecture-modernization.md
       - name: Best practices
-        items: 
+        items:
+        - name: Improve devops practices
+          href: modernize/modernize-best-practices/improve-devops-practices.md 
         - name: Tools to empower adoption in Azure 
           href: modernize/modernize-best-practices/improve-devops-practices.md
         - name: Empower adoption

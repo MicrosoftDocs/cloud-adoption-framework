@@ -3,7 +3,7 @@ title: DevOps practices
 description: Understand how to evaluate your opportunities for growth and align with the modernize methodology.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/20/2022
+ms.date: 06/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -18,15 +18,16 @@ Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption 
 
 When you understand how mature your devops practices are today, you can evaluate things you might want to strengthen as a pre-requisite to Modernization.
 
-As devops modernization processes mature, your investment in improving devops practices grows incrementally. For more information and key modernization links to help you get started with each stage, see the [DevOps maturity model](/azure/cloud-adoption-framework/innovate/considerations/ci-cd).
+As devops modernization processes mature, your investment in improving devops practices grows incrementally. For more information and 
 
 ## Ideal state: Modernize through devops
 
 1. Identify the components to modernize.
 2. Update configuration in your code base to reference the new components.
-3. Test the changes.
-4. Change the resource type and cloud API in your deployment pipeline.
-5. Deploy the modernized solution to the cloud, including configuration for new components.
+3. Update your code base to reflect the best practices for running on any new platform components.
+4. Test the changes.
+5. Change the resource type and cloud API in your deployment pipeline.
+6. Deploy the modernized solution to the cloud, including configuration for new components.
 
 :::image type="content" source="../../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
 
@@ -53,9 +54,9 @@ The following image illustrates that as modernization processes mature, you can 
 You can accelerate this type of digital modernization through the following levels of maturity. Technical guidance to accelerate digital modernization is listed in the table of contents next to this page. Those articles are grouped by maturity model level.
 
 - **Shared solution:** Establish a centralized repository for all aspects of the solution.
-- **Reliable testing:** Validate solution quality and expected changes to drive ensuring measurements.
-- **Solution deployment:** Deploy a solution to allow a team to share changes with customers.
-- **Integrated measurement:** Add learning metrics to the feedback loop for clear analysis by the full team.
+- **Reliable testing:** Validate solution quality and expected changes to drive ensuring measurements. For more information, see [Automated Testing](/azure/architecture/framework/devops/release-engineering-testing).
+- **Solution deployment:** Deploy a solution to allow a team to frequently share changes with customers, making it easier to respond to issues since the team's used to the processes.
+- **Integrated measurement:** Add learning metrics to the feedback loop for clear analysis by the full team. For example, platform metrics give an indication of whether workloads are under- or over-provisioned and application metrics can be shipped to and evaluated at scale in Azure Monitor.  This helps with diagnosing application issues when implemented alongside a strict correlation ID.
 
 ## Toolchain
 

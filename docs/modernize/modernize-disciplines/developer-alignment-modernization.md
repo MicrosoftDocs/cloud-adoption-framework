@@ -3,7 +3,7 @@ title: Developer alignment
 description: Understand why developer alignment is key to successful modernization and adoption of the cloud.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/11/2022
+ms.date: 06/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -19,7 +19,8 @@ While the cloud presents the opportunity to learn new skills, your developers sh
 
 For more information, see the following articles:
 
-- [.NET -> AKS](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes)
+- [.NET -> AKS](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes), [Azure Well-Architected Framework review for AKS](/azure/architecture/framework/services/compute/azure-kubernetes-service/azure-kubernetes-service)
 - [.NET -> App Service](/azure/migrate/tutorial-app-containerization-aspnet-app-service)
 - [Java -> AKS](/azure/migrate/tutorial-app-containerization-java-kubernetes)
 - [Java -> App Service](/azure/migrate/tutorial-app-containerization-java-app-service)
+- [Cloud design patterns](/azure/architecture/patterns/)
