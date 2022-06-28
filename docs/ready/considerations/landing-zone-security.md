@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Improve landing zone security
 
-When a workload or the landing zones that hosts it require access to any sensitive data or critical systems, it's important to protect the data and assets. Improving landing zone security builds on the [test-driven development approach to landing zones](/docs/ready/considerations/test-driven-development) by expanding or refactoring the landing zone to account for heightened security requirements.
+When a workload or the landing zones that hosts it requires access to any sensitive data or critical systems, it's important to protect the data and assets. Improving landing zone security builds on the [test-driven development approach to landing zones](/docs/ready/considerations/test-driven-development) by expanding or refactoring the landing zone to account for heightened security requirements.
 
 ## Landing zone security best practices
 

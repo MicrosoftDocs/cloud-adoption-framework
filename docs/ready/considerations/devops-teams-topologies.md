@@ -99,7 +99,7 @@ The following list provides a recommended set of functions for your application 
 - Cost management (application resources)
 - Network management (application resources)
 
-### Define functions for Enabling teams
+### Define functions for enabling teams
 
 The following list provides a recommended set of functions for an enabling team responsible for assisting your other teams:
 
