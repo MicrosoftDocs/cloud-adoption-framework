@@ -18,7 +18,7 @@ Infrastructure as Code (IaC) is a key DevOps practice that involves the manageme
 - Ability to manage multiple environments
 - Improved understanding of the state of infrastructure
 
-For more information about the benefits of using Infrastructure as Code, see [repeatable infrastructure](/architecture/framework/devops/automation-infrastructure).
+For more information about the benefits of using Infrastructure as Code, see [Repeatable infrastructure](/architecture/framework/devops/automation-infrastructure).
 
 ## Tooling
 
@@ -79,13 +79,13 @@ Modules are independent files, typically containing set of resources meant to be
 
 ### Bicep modules
 
-Bicep allows you to create and call modules. Once modules are created, they can be consumed from any other Bicep template. A high quality Bicep module should define multiple related resources. For example, when you define an Azure Function, you typically deploy a particular app, a hosting plan for that app, and a storage account for that app´s metadata. These components are separately defined, but they form a logical grouping of resources, so you should consider defining them together as a module.
+Bicep allows you to create and call modules. Once modules are created, they can be consumed from any other Bicep template. A high quality Bicep module should define multiple related resources. For example, when you define an Azure function, you typically deploy a particular application, a hosting plan for that application, and a storage account for that application´s metadata. These components are separately defined, but they form a logical grouping of resources, so you should consider defining them together as a module.
 
 Bicep modules commonly use:
 
 - **Parameters** to accept values from a calling module.
 - **Output values** to return results to a calling module.
-- **Resources** to define one or more infrastructure objects for a  module to manage.
+- **Resources** to define one or more infrastructure objects for a module to manage.
 
 #### Publish Bicep modules
 
@@ -98,7 +98,7 @@ You have several options for publishing and sharing Bicep modules.
 
 ### Terraform modules
 
-Terraform allows you to create and call modules. Each terraform configuration has at least one module, known as its *root module*, consisting of resources defined in `.tf` files in your main working directory. Each module can call other modules, which allows you to include child modules in your main configuration file. Modules can also be called multiple times within the same configuration or from different configurations.
+Terraform allows you to create and call modules. Each Terraform configuration has at least one module, known as its *root module*, consisting of resources defined in `.tf` files in your main working directory. Each module can call other modules, which allows you to include child modules in your main configuration file. Modules can also be called multiple times within the same configuration or from different configurations.
 
 Modules are defined with all of the same configuration language concepts. They most commonly use:
 
@@ -130,7 +130,7 @@ You have several options for publishing and sharing Terraform modules:
 
   - Azure native tools like Azure CLI, ARM Templates, and Bicep are fully supported by Microsoft, which allows their new features to be integrated faster.
 
-  - Non-native tools like Terraform allow you to manage infrastructure as code across multiple cloud providers like AWS or GCP. However, new Azure features can take some time to be included in non-native. If your organization is multi-cloud and/or your organization is already using and well-versed in Terraform, consider using Terraform to deploy Azure landing zones.
+  - Non-native tools like Terraform allow you to manage infrastructure as code across multiple cloud providers like AWS or GCP. However, new Azure features can take some time to be included in non-native. If your organization is multicloud or your organization is already using and well-versed in Terraform, consider using Terraform to deploy Azure landing zones.
 
 - Since modules enable you to break complex templates into smaller sets of code, consider using IaC modules for resources that are commonly deployed together. You can ensure each module focuses on a specific task and is reusable for multiple deployments and workloads.
 
@@ -147,9 +147,9 @@ You have several options for publishing and sharing Terraform modules:
   - You want to use only Azure native tools. Your organization might have prior ARM template deployment experience.
 
   - Your organization wants to have immediate support for all preview and GA versions of Azure services.
-  
+
 - Use non-native tools for IaC in the following scenarios:
-  
+
   - Your organization currently uses Terraform to deploy infrastructure to other clouds like AWS or GCP.
 
   - Your organization doesn't need to have immediate support for all preview and GA versions of Azure services.
@@ -158,7 +158,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Publish and use IaC modules from public registries in the following scenarios:
 
-  - You want to use modules for Azure Landing Zone already published to public registries. See [Terraform module for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/terraform-module%3C).
+  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/terraform-module%3C).
 
   - You want to use modules that are maintained, updated, and supported by Microsoft, Terraform, or other module providers.
 
@@ -167,5 +167,5 @@ You have several options for publishing and sharing Terraform modules:
   - You want to create your own modules based on your organizational requirements.
 
   - You want to have full control of all features and maintain, update, and publish new versions of modules.
-  
+
 - Use a CI/CD pipeline to deploy IaC artifacts and ensure the quality of your deployment and Azure environments.

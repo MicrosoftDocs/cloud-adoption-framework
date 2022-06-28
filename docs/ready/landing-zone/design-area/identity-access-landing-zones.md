@@ -33,7 +33,7 @@ Consider the following identity and access management solutions for landing zone
 
 - System-assigned managed identity is part of a solution you can configure to sign in to a VM using Azure AD authentication. For more information, see [Sign in to Windows virtual machine in Azure using Azure Active Directory authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows).
 
-- It's easy to confuse how service principals and managed identities access Azure resources. For an explanation, see [Demystifying Service Principals – Managed Identities](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities).
+- It's easy to confuse how service principals and managed identities access Azure resources. For an explanation, see [Demystifying Service Principals - Managed Identities](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities).
 
 - You can't transfer Azure resources with user-assigned or system-assigned identities to another Azure subscription. You must move the resources manually.
 
@@ -57,9 +57,9 @@ For Azure Classic subscription administrator roles, the Account Administrator ha
 
 - Deploy Azure AD [Conditional Access](/azure/active-directory/conditional-access/overview) policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access. If you use authentication outside of Azure AD, see [Custom controls (preview)](/azure/active-directory/conditional-access/controls) for information about limitations.
 
-- Enforce [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require MFA enforcement. MFA greatly lowers the risk of credential theft and unauthorized access.
+- Enforce [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multifactor authentication enforcement. Multifactor authentication greatly lowers the risk of credential theft and unauthorized access.
 
-- Consider using [service principals](/azure/active-directory/develop/app-objects-and-service-principals) for non-interactive resource sign-ins, so MFA and token refreshes won't affect operations.
+- Consider using [service principals](/azure/active-directory/develop/app-objects-and-service-principals) for non-interactive resource sign-ins, so multifactor authentication and token refreshes won't affect operations.
 
 - Use Azure AD managed identities for Azure resources to avoid credential-based authentication. Many security breaches of public cloud resources originate with credential theft embedded in code or other text. Enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
@@ -75,7 +75,7 @@ For Azure Classic subscription administrator roles, the Account Administrator ha
 
 ### RBAC recommendations
 
-- Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data plane access to resources, if possible. Examples of data plane endpoints are Azure Key Vault, a storage account, or an SQL database.
+- Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data plane access to resources, if possible. Examples of data plane endpoints are Azure Key Vault, a storage account, or an SQL Database.
 
 - Don't add users directly to Azure resource scopes. Direct user assignments circumvent centralized management, making it more difficult to prevent unauthorized access to restricted data. Instead, add users to defined roles, and assign the roles to resource scopes.
 

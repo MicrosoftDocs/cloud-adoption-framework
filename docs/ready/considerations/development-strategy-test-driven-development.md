@@ -84,7 +84,6 @@ The Govern methodology within the Cloud Adoption Framework provides a narrative 
 
 The preceding examples are basic samples to help you develop a DoD for your landing zones. You can get sample policies for each of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md).
 
-
 ## Azure tools and features to support landing zone TDD
 
 The following diagram shows available test-driven development tools in Azure:

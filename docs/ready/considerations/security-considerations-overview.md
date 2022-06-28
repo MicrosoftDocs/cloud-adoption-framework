@@ -28,7 +28,7 @@ After you establish Azure AD as your identity management plane, follow best prac
 
 - Use Azure AD [entitlement management](/azure/active-directory/governance/entitlement-management-overview) to create access packages that allow Azure AD users time-bound access to required resources to complete their tasks.
 
-- You can also use Azure AD [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure#what-can-i-do-with-it) for just-in-time access to promote individuals to Azure DevOps administrator roles for a period of time.
+- You can also use Azure AD [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure#what-can-i-do-with-it) for just-in-time access to promote individuals to Azure DevOps Administrator roles for a period of time.
 
 Manage security in Azure DevOps by using security groups, policies, and settings at the Azure DevOps organization, project, or object level. Consider disabling permission inheritance in Azure DevOps if possible.
 
@@ -71,4 +71,3 @@ Whether you deploy application code or infrastructure as code, implement [DevSec
 Enterprise security tools such as [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) can integrate with DevOps tools. For example, Defender for Cloud can [identify vulnerable container images in your CI/CD workflows](/azure/defender-for-cloud/defender-for-container-registries-cicd). For GitHub Actions and repositories, use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) for code and secret scanning and dependency review.
 
 Periodically review audit events to monitor and react to unexpected usage patterns by administrators and other users. You can [access, filter, and export audit logs](/azure/devops/organizations/audit/azure-devops-auditing) for your Azure DevOps organization. For long-term storage and detailed log querying, [create an audit stream](/azure/devops/organizations/audit/auditing-streaming) to an [Azure Monitor Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) workspace, or to a security information and event management (SIEM) system like [Microsoft Sentinel](/azure/sentinel/overview).
-

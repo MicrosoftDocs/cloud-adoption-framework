@@ -19,7 +19,7 @@ Microsoft keeps the underlying cloud infrastructure secure. You configure securi
 
 Once you decide which Azure Landing Zone templates to deploy, clone them into your own repository. Set up the CI/CD pipelines. For both GitHub and Azure DevOps, there are several authentication methods available, such as personal access tokens (PAT) and integrating with an identity provider, such as Azure Active Directory (Azure AD). For more information, see [Use personal access tokens](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate).
 
-We recommend that you integrate with Azure AD to use all its capabilities. Integration helps streamline your role assignment process and identity lifecycle management. See [Connect your organization to Azure Active Directory](/azure/devops/organizations/accounts/connect-organization-to-azure-ad). If you're using GitHub, consider [integrating GitHub Enterprise with Azure AD](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial).
+We recommend that you integrate with Azure AD to use all its capabilities. Integration helps streamline your role assignment process and identity lifecycle management. For more information, see [Connect your organization to Azure Active Directory](/azure/devops/organizations/accounts/connect-organization-to-azure-ad). If you're using GitHub, consider [integrating GitHub Enterprise with Azure AD](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial).
 
 ## General Design Considerations
 
@@ -31,7 +31,7 @@ For any administrator or highly privileged accounts in Active Directory, we reco
 
 ## Azure DevOps role-based access considerations
 
-Manage security in Azure DevOps with security groups, policies, and settings at the organization/collection, project, or object level. To integrate with an identity provider such as Azure Active Directory, consider creating [conditional access policies to enforce MFA for all users](/azure/devops/organizations/accounts/change-application-access-policies). The policies allow access to your Azure DevOps organization and more granular restrictions around IP address, type of device used for access, and device compliance.
+Manage security in Azure DevOps with security groups, policies, and settings at the organization/collection, project, or object level. To integrate with an identity provider such as Azure Active Directory, consider creating [conditional access policies to enforce multifactor authentication for all users](/azure/devops/organizations/accounts/change-application-access-policies). The policies allow access to your Azure DevOps organization and more granular restrictions around IP address, type of device used for access, and device compliance.
 
 For most team members in your Platform team that manage your Azure Landing Zones, the *Basic* access level and *Contributor* default security group should provide sufficient access. The Contributor security group allows them to edit the Azure Landing Zone templates in your repository and the CI/CD pipelines that validate and deploy them.
 
@@ -54,7 +54,7 @@ For more information, see the following resources:
 ## GitHub Role-based Access Considerations
 
 If your primary DevOps tool is GitHub, you can assign users access to resources by granting them roles at the repository level, team level, or organization level. After you fork the Azure Landing Zones repository and integrate with an identity provider, such as Azure AD, consider creating a team in GitHub. Assign that team *write* access to your new Azure Landing Zone repository.
-For most of your Platform team members, who modify and deploy the Landing Zones, write access should be sufficient. For project managers or scrum managers on the team, you might need to assign them the *maintain* role to that repository.
+For most of your Platform team members, who modify and deploy the Landing Zones, write access should be sufficient. For project managers or Scrum managers on the team, you might need to assign them the *maintain* role to that repository.
 
 We recommend that you manage all of these role assignments through the integrated identity provider. For example, you can synchronize the Platform team for the Azure Landing Zone repository you've created in GitHub with the corresponding Platform team Security Group in Azure Active Directory. Then, as you add or remove members to the Azure AD Security Group, those changes are reflected in your GitHub Enterprise Cloud role assignments.
 

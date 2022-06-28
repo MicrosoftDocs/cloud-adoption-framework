@@ -18,7 +18,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - Azure native network security services such as [Azure Firewall](/azure/firewall/overview), [Azure Web Application Firewall (WAF) on Azure Application Gateway](/azure/web-application-firewall/ag/ag-overview), and [Azure Front Door](/azure/frontdoor/front-door-overview) are fully managed. You don't incur the operational and management costs and complexity of infrastructure deployments at scale.
 
-- If your organization prefers to use non-Azure network virtual appliance (NVAs), or for situations where native services don't satisfy specific requirements, the enterprise-scale architecture is fully compatible with partner NVAs.
+- If your organization prefers to use non-Azure network virtual appliance (NVAs), or for situations where native services don't satisfy specific requirements, the Azure landing zone architecture is fully compatible with partner NVAs.
 
 - Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
@@ -37,11 +37,11 @@ This article lists considerations and recommendations for inbound and outbound c
   - URL filtering.
   - Web categories.
 
-- [Azure Firewall Manager](/azure/firewall-manager/overview) supports both [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) and regular virtual networks. Use Firewall Manager with Virtual WAN to deploy and manage Azure firewalls across virtual WAN hubs or in hub virtual networks.
+- [Azure Firewall Manager](/azure/firewall-manager/overview) supports both [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) and regular virtual networks. Use Firewall Manager with Virtual WAN to deploy and manage Azure firewalls across Virtual WAN hubs or in hub virtual networks.
 
 - If you use multiple IP addresses and ranges consistently in Azure Firewall rules, set up [IP Groups](/azure/firewall/ip-groups) in Azure Firewall. You can use the IP groups in Azure Firewall DNAT, network, and application rules for multiple firewalls across Azure regions and subscriptions.
 
-- If you use a custom [user defined route](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) (UDR) to manage outbound connectivity to Azure platform-as-a-service (PaaS) services, specify a [service tag](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) as the address prefix. Service tags update underlying IP addresses automatically to include changes, and reduce the overhead of managing Azure prefixes in a route table.
+- If you use a custom [user defined route](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) (UDR) to manage outbound connectivity to Azure platform as a service (PaaS) services, specify a [service tag](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) as the address prefix. Service tags update underlying IP addresses automatically to include changes, and reduce the overhead of managing Azure prefixes in a route table.
 
 - Create a global Azure Firewall policy to govern security posture across the global network environment. Assign the policy to all Azure Firewall instances.
 
@@ -63,8 +63,8 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - If you use partner NVAs for east-west or north-south traffic protection and filtering:
 
-  - For virtual WAN network topologies, deploy the NVAs to a separate NVA virtual network. Connect the virtual network to the regional virtual WAN hub and to the landing zones that need access to the NVAs. For more information, see [Scenario: Route traffic through an NVA](/azure/virtual-wan/scenario-route-through-nva).
-  - For non-virtual WAN network topologies, deploy the partner NVAs in the central hub virtual network.
+  - For Virtual WAN network topologies, deploy the NVAs to a separate NVA virtual network. Connect the virtual network to the regional Virtual WAN hub and to the landing zones that need access to the NVAs. For more information, see [Scenario: Route traffic through an NVA](/azure/virtual-wan/scenario-route-through-nva).
+  - For non-Virtual WAN network topologies, deploy the partner NVAs in the central hub virtual network.
 
 - Don't expose VM management ports to the internet. For management tasks:
 

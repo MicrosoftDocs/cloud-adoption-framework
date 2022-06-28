@@ -21,9 +21,9 @@ Development lifecycle strategy provides key design considerations and recommenda
 - Consider adopting a version control system like Git to provide your team with flexibility in code sharing and management.
   - [Git](/azure/devops/repos/git) is the industry-standard version control system. It's a distributed version control system, where your local copy of the code is a complete version of the repository.
 
-- Understand mono-repo vs multi-repo [Repository structure](/learn/modules/structure-your-git-repo/).
+- Understand mono-repo versus multirepo [Repository structure](/learn/modules/structure-your-git-repo/).
   - In mono-repo structures, all source code lives in a single repository.
-  - In multi-repo structures, all projects are organized into separate repositories.  
+  - In multirepo structures, all projects are organized into separate repositories.
 
 - Choose a visibility setting that suits the content of your repository.
   - Public repositories can be accessed anonymously.
@@ -31,7 +31,7 @@ Development lifecycle strategy provides key design considerations and recommenda
   - You can set public and private visibility for [Azure DevOps Projects](/azure/devops/organizations/public/make-project-public) and [GitHub repos](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility).
 
 - Consider setting repository permissions that help you control who can contribute to your source code and manage other features.
-  - You can set repository permissions for [Azure Devops](/azure/devops/repos/git/set-git-repository-permissions) and [GitHub](https://docs.github.com/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization).
+  - You can set repository permissions for [Azure DevOps](/azure/devops/repos/git/set-git-repository-permissions) and [GitHub](https://docs.github.com/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization).
 
 - Consider using [Infrastructure as Code (IaC)](/azure/architecture/framework/devops/automation-infrastructure) resource deployment to Azure. IaC allows you to manage infrastructure in a declarative model, helping to reduce configuration effort, ensure consistency between deployments, and avoid manual environment configuration.
 
@@ -43,7 +43,7 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - Use Git as a version control system.
 
-- Use private repositories when building Azure Landing Zones  
+- Use private repositories when building Azure Landing Zones
 
 - Use public repositories when sharing non-confidential information like automation examples, public documentation, and open-source collaboration material.
 
@@ -56,7 +56,7 @@ Development lifecycle strategy provides key design considerations and recommenda
 - Consider using a [branch strategy](/azure/devops/repos/git/git-branching-guidance) that allows teams to collaborate better and efficiently manage version control.
 
 - Consider using specific [naming conventions](/azure/devops/repos/git/git-branching-guidance#name-your-feature-branches-by-convention) for your branches.
-  
+
 - Consider using [branch permissions](/azure/devops/repos/git/branch-permissions) to control user capabilities.
 
 - Consider using branch policies to help your teams protect important branches of development. Policies that can help enforce code quality and change management standards. Examples of branch policies include:
@@ -97,13 +97,13 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - Consider implementing [Continuous Integration (CI)](/devops/develop/what-is-continuous-integration#:~:text=Continuous%20Integration%20(CI)%20is%20the,after%20every%20small%20task%20completion). CI involves merging all developer code into a central codebase on a regular schedule and automatically executing standard builds and test processes.
 
-- Consider using CI triggers:  
+- Consider using CI triggers:
   - [Azure Repos Git](/azure/devops/pipelines/repos/azure-repos-git#ci-triggers). You can configure branches, paths, and tags as triggers to run a CI build.
   - [GitHub](/azure/devops/pipelines/repos/github#ci-triggers). You can configure branches, paths, and tags triggers to run a CI build.
 
 - Consider including IaC unit tests in your build process to validate syntax.
   - The [ARM Templates test toolkit](/azure/azure-resource-manager/templates/test-toolkit) checks whether a template follows recommended practices.
-  - [Bicep linter](/azure/azure-resource-manager/bicep/linter) checks Bicep files for syntax errors and best practice violations.  
+  - [Bicep linter](/azure/azure-resource-manager/bicep/linter) checks Bicep files for syntax errors and best practice violations.
 
 - Consider including unit tests in your application build process. Review the tasks available for [Azure DevOps Pipeline](/azure/devops/pipelines/tasks#test).
 
@@ -133,7 +133,7 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - Consider using [Continuous Delivery (CD)](/devops/deliver/what-is-continuous-delivery). CD involves building, testing, configuring, and deploying from a build to an environment.
 
-- Consider using [environments](../considerations/environments.md). Environments allow you to target a collection of resources from a delivery job. Examples of common environment names include: 
+- Consider using [environments](../considerations/environments.md). Environments allow you to target a collection of resources from a delivery job. Examples of common environment names include:
   - Dev
   - Test
   - QA

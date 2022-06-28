@@ -25,7 +25,7 @@ The following sections contain considerations to help you plan and create subscr
 
 ### Organization and governance design considerations
 
-- Subscriptions serve as boundaries for Azure policy assignments.
+- Subscriptions serve as boundaries for Azure Policy assignments.
 
   - For example, secure workloads like Payment Card Industry (PCI) workloads typically require other policies in order to achieve compliance. Instead of using a management group to collate workloads that require PCI compliance, you can achieve the same isolation with a subscription, without having too many management groups with a few subscriptions.
 
@@ -124,7 +124,7 @@ The following sections contain recommendations to help you plan and create subsc
 - Reference the following principles as you identify requirements for new subscriptions:
   - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. Large specialized workloads like high-performance computing, IoT, and SAP should use separate subscriptions to avoid running up against these limits.
   - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, allowing a clear separation of concerns. Different environments, such as development, test, and production, are often removed from a management perspective.
-  - **Policy boundary:** Subscriptions serve as a boundary for the Azure policy assignments. For example, secure workloads like PCI typically require other policies in order to achieve compliance. The other overhead doesn't get considered if you use a separate subscription. Development environments have more relaxed policy requirements than production environments.
+  - **Policy boundary:** Subscriptions serve as a boundary for the Azure Policy assignments. For example, secure workloads like PCI typically require other policies in order to achieve compliance. The other overhead doesn't get considered if you use a separate subscription. Development environments have more relaxed policy requirements than production environments.
   - **Target network topology:** You can't share virtual networks across subscriptions, but you can connect them with different technologies like virtual network peering or Azure ExpressRoute. When deciding if you need a new subscription, consider which workloads need to communicate with each other.
 
 - Group subscriptions together under management groups, which are aligned with your management group structure and policy requirements. Grouping subscriptions ensures that subscriptions with the same set of policies and Azure role assignments all come from a management group.
@@ -137,7 +137,7 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Avoid a rigid subscription model. Instead, use a set of flexible criteria to group subscriptions across your organization. This flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions, and what works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription, while others might require their own subscription.
 
-  - For more information, see [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+  - For more information, see [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
 
 ### Quota and capacity recommendations
 

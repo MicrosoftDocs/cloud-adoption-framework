@@ -47,7 +47,7 @@ These resources address development strategy.
 
 - [Development lifecycle](../../considerations/development-strategy-development-lifecycle.md) explores key design considerations and recommendations for the creation of a landing zone by using automation. This resource discusses the repository, branch, automated builds, deployment, and rollback strategy.
 - [Infrastructure as Code](../../considerations/infrastructure-as-code.md) explains the benefits of implementing Azure Landing Zones by using Infrastructure as Code. Learn about considerations around code structure, tools, and technology.
-- [Environments](../../considerations/environments.md) explains the purpose of multi-environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
+- [Environments](../../considerations/environments.md) explains the purpose of multienvironments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
 - [Test-driven development](../../considerations/development-strategy-test-driven-development.md) addresses how to use unit testing to improve the quality of new features and improvements in the Azure Landing Zone code-base.
 
 ### Security considerations

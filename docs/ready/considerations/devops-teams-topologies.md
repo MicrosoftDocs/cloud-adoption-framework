@@ -16,7 +16,7 @@ The distribution of roles, responsibilities, and trust between IT teams and appl
 
 IT teams strive to maintain control. Application owners seek to maximize agility. The balance you ultimately establish between these two goals greatly influences the success of your cloud operating model.
 
-According to Conway's law, teams produce Architectures based on their communication structure. Understanding this principle is critical as you work to achieve the necessary balance between autonomy and control. Any organization that designs a system (defined broadly) will produce a design structure that's a copy of that organization’s communication structure.
+According to Conway's law, teams produce Architectures based on their communication structure. Understanding this principle is critical as you work to achieve the necessary balance between autonomy and control. Any organization that designs a system (defined broadly) will produce a design structure that's a copy of that organization's communication structure.
 
 ![Diagram illustrating Conway's Law.](./media/conways-law.png)
 
@@ -26,7 +26,7 @@ From a DevOps perspective, organizations must optimize for rapid response to cus
 - Deployability
 - Testability
 
-Conway’s solution is to outmaneuver Conway's Law. If your organization follows a particular structure to produce services & products and is looking to optimize, you need to rethink your organizational structure. Evolve your team and organizational structure to achieve your desired architecture.
+Conway's solution is to outmaneuver Conway's Law. If your organization follows a particular structure to produce services and products and is looking to optimize, you need to rethink your organizational structure. Evolve your team and organizational structure to achieve your desired architecture.
 
 ![Diagram of Reverse Conway Maneuver.](./media/reverse-conway-maneuver.png)
 
@@ -46,7 +46,7 @@ The following table provides a simplified categorization of these teams.
 
 - Consider establishing an enabling team that can provide DevOps functions to support applications and platforms that don't have existing DevOps capabilities, or a business case to establish one (for example, legacy applications with minimal development capabilities).
 
-- Don't restrict your application workload teams to central artifacts, since it can hinder their agility. You can use policy-driven governance and Azure role based access control (Azure RBAC) to enforce consistent baseline configurations and ensure that application (business unit) teams are flexible enough to innovate yet still able to draw from a predefined set of templates.
+- Don't restrict your application workload teams to central artifacts, since it can hinder their agility. You can use policy-driven governance and Azure role-based access control (Azure RBAC) to enforce consistent baseline configurations and ensure that application (business unit) teams are flexible enough to innovate yet still able to draw from a predefined set of templates.
 
 - Don't force your application teams to use a central process or provisioning pipeline for the application resource instantiation or management. Existing teams that already rely on a DevOps pipeline for application delivery can still use their current tools. Remember, you can use Azure Policy to maintain guardrails independent of how resources are deployed in Azure and address [security considerations](./security-considerations-overview.md) for your DevOps processes.
 
@@ -87,7 +87,7 @@ The following list provides a recommended set of functions for the platform team
 
 ### Define functions for your application workload teams
 
-The following list provides a recommended set of functions for your application team(s) responsible for application workloads:
+The following list provides a recommended set of functions for your application teams responsible for application workloads:
 
 - Creation and management of application resources through a DevOps model
 - Database management

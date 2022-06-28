@@ -14,9 +14,9 @@ ms.custom: internal
 
 Use the [Continuous Delivery](../considerations/development-strategy-development-lifecycle.md#deployment-strategy) process to quickly and safely delivers new value to production. You can deliver small changes frequently, which reduces the risk of problems.
 
-Other factors affect "deployment pain to production", including your adoption of multiple delivery/deployment environments. A multi-environment approach lets you build, test, and release code with greater speed and frequency to make your deployment as straightforward as possible. You can remove manual overhead and the risk of a manual release, and instead automate development with a multistage process targeting different environments.
+Other factors affect "deployment pain to production", including your adoption of multiple delivery/deployment environments. A multienvironment approach lets you build, test, and release code with greater speed and frequency to make your deployment as straightforward as possible. You can remove manual overhead and the risk of a manual release, and instead automate development with a multistage process targeting different environments.
 
-A common multi-environment architecture includes four tiers:
+A common multienvironment architecture includes four tiers:
 
 - Development
 - Test
@@ -31,7 +31,7 @@ In this architecture, your product transitions in order from Development (the en
 | Test | Your test environment allows either human testers or automated tests to try out new and updated code. Developers must accept new code and configurations through unit testing in your development environment before allowing those items to enter one or more test environments. |
 | Staging | Staging is where you do final testing immediately prior to deploying to production. Each staging environment should mirror an actual production environment as accurately as possible. |
 | UAT | User Acceptance Testing (UAT) allows your end-users or clients to perform tests to verify/accept the software system before a software application can move to your production environment. |
-| Production | Your production environment (prod), sometimes called *live*, is the environment your users directly interact with. |
+| Production | Your production environment (production), sometimes called *live*, is the environment your users directly interact with. |
 
 ## Design considerations
 

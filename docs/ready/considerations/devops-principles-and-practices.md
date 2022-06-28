@@ -39,7 +39,7 @@ The decisions you make when reviewing cloud operating models can influence how y
 
 - Determine the [DevOps practices](#define-devops-practices-for-your-azure-landing-zones-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
 
-- Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogenous DevOps ecosystems increasing the complexity of Azure Landing Zone and/or workload deployments.
+- Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogenous DevOps ecosystems increasing the complexity of Azure Landing Zone or workload deployments.
 
 - Evaluate the effect that your implemented DevOps practices and DevOps tools have on the design of your Azure Landing Zones.
 
@@ -55,7 +55,7 @@ The following sections contain recommendations to help you implement the DevOps 
 
 ### Define your DevOps framework
 
-To establish your DevOps framework, consider using the frameworks that are already available to start with a set of pre-defined proven practices:
+To establish your DevOps framework, consider using the frameworks that are already available to start with a set of predefined proven practices:
 
 - [Microsoft DevOps Resource Center](/devops/what-is-devops) provides a rich set of definitions, practices, and capabilities that you can adapt to Azure Landing Zone lifecycle management, including:
   - [Planning](/devops/plan/planning-efficient-workloads-with-devops)
@@ -102,12 +102,12 @@ Define and align your DevOps implementation journey with your organization's [cl
 
 ### Implement desired DevOps metrics
 
-Identify which metrics you'll use to measure your team's DevOps performance. Use metrics to drive desired habits in your team that connect with [business outcomes](/azure/cloud-adoption-framework/strategy/learning-metrics). Establish metrics to let your team measure impact over activities. Make key metrics visible to all, since transparency promotes trust and drives alignment with organizational objectives.
+Identify which metrics you'll use to measure your team's DevOps performance. Use metrics to drive desired habits in your team that connect with [business outcomes](/azure/cloud-adoption-framework/strategy/learning-metrics). Establish metrics to let your team measure impact over activities. Make key metrics visible to all, since transparency promotes trust and drives alignment with organizational objectives.
 
 Examples of metrics that measure DevOps performance to improve business impact include:
 
 - Business Outcomes:
-  - Use [Objectives and Key Results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an “output” mindset and towards an “outcome” mindset. For example, you might use the number of workloads that improved their compliance rating over the number of policies deployed to Azure.
+  - Use [Objectives and Key Results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an "output" mindset and toward an "outcome" mindset. For example, you might use the number of workloads that improved their compliance rating over the number of policies deployed to Azure.
   - Customer or end user satisfaction. Examples include Net Promoter Score (NPS), surveys, interviews.
   - Business growth. Examples include increased profitability, increased revenue, and new revenue source acquirements.
   - People metrics. Examples include the Employee Net Promoter Score (eNPS), utilization, retention, and satisfaction.
@@ -141,7 +141,7 @@ Examples of DevOps technologies across different DevOps stages include:
 - **Continuous Integration:** Azure Repos, GitHub Repos, Atlassian Bitbucket, SonarQube, Selenium, Cucumber, OWASP ZA, NuGet, npm
 - **Continuous Delivery:** Azure Pipelines, GitHub Actions, Bicep, Terraform, Jenkins, Atlassian Bamboo, RedHat Ansible, Chef, Puppet
 - **Operations:** Azure Monitor, Azure Automation, Microsoft Power BI, Grafana, Splunk
-- **Collaboration & feedback:** Azure DevOps Wikis, GitHub Wikis, GitHub Discussions, Microsoft Teams, Slack, Confluence, Stack Overflow
+- **Collaboration and feedback:** Azure DevOps Wikis, GitHub Wikis, GitHub Discussions, Microsoft Teams, Slack, Confluence, Stack Overflow
 
 The following diagram shows an example DevOps framework with Azure DevOps toolchain selection:
 

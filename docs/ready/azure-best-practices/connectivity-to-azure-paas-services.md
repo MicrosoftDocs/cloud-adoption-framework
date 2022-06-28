@@ -36,7 +36,7 @@ This article provides recommended connectivity approaches for using Azure PaaS s
 
 - Use virtual network injection for supported Azure services to make them available from within your virtual network.
 
-- Azure PaaS services injected into a virtual network still perform management plane operations by using service specific public IP addresses. Connectivity must be guaranteed for the service to operate correctly. Use UDRs and NSGs to lock down this communication within the virtual network. You can use [Service Tags in UDR](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) to reduce the number of necessary routes and to override default routes if used.
+- Azure PaaS services injected into a virtual network still perform management plane operations by using service specific public IP addresses. Connectivity must be guaranteed for the service to operate correctly. Use UDRs and NSGs to lock down this communication within the virtual network. You can use [Service Tags in UDR](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) to reduce the number of necessary routes and to override default routes if used.
 
 - Use Private Link [where available](/azure/private-link/private-link-overview#availability) for shared Azure PaaS services. Private Link is generally available for several services, and is in public preview for other services.
 
