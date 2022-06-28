@@ -35,7 +35,7 @@ The decisions you make when reviewing cloud operating models can influence how y
 
 - Define your [DevOps framework](#define-your-devops-framework), or align it with your organizational's DevOps and cloud adoption strategy. Include the definition of DevOps and the principles and practices your team must follow. Make sure you connect your DevOps strategy to your business strategy.
 
-- Establish [metrics](#implement-desired-devops-metrics) that allow your team to improve their DevOps performance. High-performance teams use a hypothesis to test their ideas, measure it to see how the hypothesis works, then make changes as needed. DevOps' final intent is to improve aspects like deployment frequency, mean time to apply a change, or time to restore a degraded service. You must design all these metrics to eventually effect overall business performance.
+- Establish [metrics](#implement-desired-devops-metrics) that allow your team to improve their DevOps performance. High-performance teams use a hypothesis to test their ideas, measure it to see how the hypothesis works, then make changes as needed. DevOps' final intent is to improve aspects like deployment frequency, mean time to apply a change, or time to restore a degraded service. You must design all these metrics to eventually affect overall business performance.
 
 - Determine the [DevOps practices](#define-devops-practices-for-your-azure-landing-zones-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
 
