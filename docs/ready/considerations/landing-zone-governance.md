@@ -12,28 +12,75 @@ ms.custom: internal
 
 # Improve landing zone governance
 
-Landing zone governance is the smallest unit of overall governance. Establishing a sound governance foundation within your first few landing zones will reduce the amount of refactoring required later in the adoption lifecycle. Improving landing zone governance will integrate cost controls, establish basic tooling to allow for scale, and will make it easier for the cloud governance team to deliver on the five Disciplines of Cloud Governance.
+When a workload or the landing zones that hosts it are deployed and configured, it's important to have overall Governance of the environment.
+
+Adoption of the cloud is a journey, not a destination. When you've reached the Ready state, you have an ongoing responsibility to govern the deployed environment. Focus on objectives and key results when envisioning a governance end state. Map concepts, frameworks, and standards to the disciplines in the CAF [govern methodology](/azure/cloud-adoption-framework/govern/) alongside mapping to roles and responsibilities for human discipline. The govern methodology provides guidance.
+
+The following is an overview of the guidance with links to further details.
+
+## Methodology
+
+Understand the pieces of the methodology and how they fit into the design. Evaluate corporate policies and processes and how they will align with the over all governance strategy. Envision an end state and then grow to that end state. For more information about the govern methodology in the Cloud Adoption Framework, see [Governance in the Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/govern/).
+
+## Benchmark
+
+Assess your transformation journey. The Cloud Adoption Framework provides a governance benchmark tool to help you identify gaps in your organization across six key domains as defined in the framework.
+
+- [Governance benchmark tool](https://cafbaseline.com/): Receive a personalized report that outlines the difference between your current state and business priorities, along with tailored resources to help you get started. Assess your current state and future state to establish a vision for applying the framework.
+
+## Initial cloud governance
+
+It can't be a challenge to have an effective balance between speed and control. Execution of early methodologies within the cloud adoption can conflict between speed and control. The governance guidance within the Cloud Adoption Framework helps provide a balance with an agile approach to adoption.
+
+The following are two examples of a governance foundation, also know as governance MVPs.
+
+- [Standard governance guide](/azure/cloud-adoption-framework/govern/guides/standard/): A guide for most organizations based on the recommended initial two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.
+
+- [Governance guide for complex enterprises](/azure/cloud-adoption-framework/govern/guides/complex/): A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.
+
+## Improve your initial cloud governance foundation
+
+During your cloud adopting plan implementation, risks will emerge from approaches teams want to use to adopt the cloud.
+
+The following is additional guidance that can be used when risks surface during planning conversations.
+
+[Maturity vectors](/azure/cloud-adoption-framework/govern/foundation-improvements#maturity-vectors): Best practices that can be applied to the initial governance foundation to address a risk or need.
+
+## Governance considerations
+
+Changes to business processes or technology platforms introduces risk to the business. Slight changes in the corporate narrative or corporate polices can affect adoption.
+
+The guidance in the following examples can help to develop your corporate policies.
+
+[Business risk](/azure/cloud-adoption-framework/govern/policy-compliance/business-risk): Investigate current cloud adoption plans and data classification to identify risks to the business. Work with the business to balance risk tolerance and mitigation costs.
+
+[Policy and compliance](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition): Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and manage risks. In some industries, third-party compliance affects initial policy creation.
+
+[Processes]()
 
 ## Landing zone governance best practices
 
 The following list of guides and best practices provide examples of ways to improve landing zone governance:
 
 - [Governance](../../govern/index.md) : The methodology for the cloud adoption framework provides overall guidance for creating governance policies, processes, and disciplines. Steps to improve the overall governance of landing zones include:
+    
     - [Methodology](../../govern/methodology.md): Understand the pieces of the methodology and how they fit into the design. Evaluate corporate policies and processes and how they will align with the over all governance strategy.
+    
     - [Benchmark](../../govern/benchmark.md): Use the governance benchmark tool to discover gaps in your organization. Assess the current and future state to establish a plan and take action.
+    
     - [Initial foundation](../../govern/initial-foundation.md): Establish an initial cloud governance foundation. Establish an initial foundation for all landing zones.
+    
     - [Improve foundation](../../govern/foundation-improvements.md): Iteratively add governance controls to strengthen all landing zone governance.  
-- [Governance guide for complex enterprises](../../govern/guides/complex/index.md): Establishing an initial governance foundation can assist with adding initial governance tooling to the first few landing zones. These practices will aid in scaling adoption and governance, along with implementing sound cost management. This approach starts with: resource organization, policy definitions, Azure roles, and blueprint definitions.
+
 - [Naming and tagging standards](../azure-best-practices/naming-and-tagging.md): Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
+
 - [Track costs across workloads](../azure-best-practices/track-costs.md): Begin tracking costs in your first landing zone. Evaluate how you will apply consistency across multiple workloads and roles.
+
 - [Scale with multiple subscriptions](../azure-best-practices/scale-subscriptions.md): Evaluate how this landing zone and other landing zones will scale, as multiple subscriptions become a requirement.
+
 - [Organize subscriptions](../landing-zone/design-area/resource-org.md): Understand how to organize and manage multiple subscriptions.
 
-## Test-driven development cycle
 
-Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
-
-![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 
 ## Next steps
 

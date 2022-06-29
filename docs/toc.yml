@@ -470,8 +470,6 @@ items:
           items:
           - name: Overview
             href: ready/considerations/landing-zone-governance.md
-          - name: Governance guide for complex enterprises
-            href: govern/guides/complex/index.md
           - name: Naming and tagging standards
             href: ready/azure-best-practices/naming-and-tagging.md
           - name: Track costs across workloads
