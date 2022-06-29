@@ -56,21 +56,27 @@ The guidance in the following examples can help to develop your corporate polici
 
 [Policy and compliance](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition): Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and manage risks. In some industries, third-party compliance affects initial policy creation.
 
-[Processes]()
+[Processes](/azure/cloud-adoption-framework/govern/policy-compliance/processes): The pace of adoption and innovation activities will naturally create policy violations. Executing relevant processes will aid in monitoring and enforcing adherence to policies.
+
+## Disciplines of Cloud Governance
+
+There are common governance disciplines that inform policies and align toolchains with any cloud platform. The disciplines guide decisions about the level of automation and enforcement of corporate policy across cloud platforms.
+
+The following is additional guidance on the [Five Disciplines of Cloud Governance](/azure/cloud-adoption-framework/govern/governance-disciplines#disciplines-of-cloud-governance).
+
+- [Cost Management](/azure/cloud-adoption-framework/govern/cost-management/): Cost is a primary concern for cloud adoption. Develop policies for cost control for all cloud platforms.
+
+- [Security Baseline](/azure/cloud-adoption-framework/govern/security-baseline/): Security is a complex subject, unique to each company. Once security requirements are established, cloud governance policies and enforcement apply those requirements across network, data, and asset configurations.
+
+- [Identity Baseline](/azure/cloud-adoption-framework/govern/identity-baseline/): Inconsistencies in the application of identity requirements can increase the risk of breach. The Identity Baseline discipline focuses on ensuring that identity is consistently applied across cloud adoption efforts.
+
+- [Resource Consistency](/azure/cloud-adoption-framework/govern/resource-consistency/): Cloud operations depend on consistent resource configuration. Through governance tooling, resources can be configured consistently to manage risks related to onboarding, drift, discoverability, and recovery.
+
+- [Deployment Acceleration](/azure/cloud-adoption-framework/govern/deployment-acceleration/): Centralization, standardization, and consistency in approaches to deployment and configuration improve governance practices. When provided through cloud-based governance tooling, they create a cloud factor that can accelerate deployment activities.
 
 ## Landing zone governance best practices
 
 The following list of guides and best practices provide examples of ways to improve landing zone governance:
-
-- [Governance](../../govern/index.md) : The methodology for the cloud adoption framework provides overall guidance for creating governance policies, processes, and disciplines. Steps to improve the overall governance of landing zones include:
-    
-    - [Methodology](../../govern/methodology.md): Understand the pieces of the methodology and how they fit into the design. Evaluate corporate policies and processes and how they will align with the over all governance strategy.
-    
-    - [Benchmark](../../govern/benchmark.md): Use the governance benchmark tool to discover gaps in your organization. Assess the current and future state to establish a plan and take action.
-    
-    - [Initial foundation](../../govern/initial-foundation.md): Establish an initial cloud governance foundation. Establish an initial foundation for all landing zones.
-    
-    - [Improve foundation](../../govern/foundation-improvements.md): Iteratively add governance controls to strengthen all landing zone governance.  
 
 - [Naming and tagging standards](../azure-best-practices/naming-and-tagging.md): Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
 
@@ -79,8 +85,6 @@ The following list of guides and best practices provide examples of ways to impr
 - [Scale with multiple subscriptions](../azure-best-practices/scale-subscriptions.md): Evaluate how this landing zone and other landing zones will scale, as multiple subscriptions become a requirement.
 
 - [Organize subscriptions](../landing-zone/design-area/resource-org.md): Understand how to organize and manage multiple subscriptions.
-
-
 
 ## Next steps
 
