@@ -179,7 +179,7 @@ As the cloud adoption team begins their first few migrations, the cloud platform
 **Guidance to support deliverable completion:**
 
 - [Refactor landing zones](../ready/landing-zone/refactor.md)
-- [Test-driven development of landing zones](../ready/considerations/test-driven-development.md)
+- [Test-driven development of landing zones](/docs/ready/considerations/azure-test-driven-development)
 - [Expand landing zone governance](../ready/considerations/landing-zone-governance.md)
 - [Expand landing zone operations](../ready/considerations/landing-zone-operations.md)
 - [Expand landing zone security](../ready/considerations/landing-zone-security.md)
