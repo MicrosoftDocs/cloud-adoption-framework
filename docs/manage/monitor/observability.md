@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 04/08/2021
+ms.date: 06/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -11,9 +11,7 @@ ms.subservice: manage
 
 # Cloud monitoring guide: Observability
 
-This article is intended to help organizations implement a consistent monitoring strategy quicker by ensuring *observability* is established in the Azure landing zone (that is, in every minimum viable product) for each monitoring solution.
-
-As a planner, you develop a monitoring plan for a service and include some monitoring objectives. One desirable objective is for the monitoring consumers to reach a level of comfort or confidence with the solution you are planning for them, as soon as possible. Then you can move on to other objectives, like building reports and custom dashboards.
+This article is intended to help organizations implement a consistent monitoring strategy quicker by ensuring *observability* is established in the [Azure landing zone](../../ready/landing-zone/index.md) (that is, in every minimum viable product) for each monitoring solution. As a planner, you develop a monitoring plan for a service and include some monitoring objectives. One desirable objective is for the monitoring consumers to reach a level of comfort or confidence with the solution you are planning for them, as soon as possible. The other objective is to continuously evaluate the Service Level Objectives (SLOs) and corresponding Service Level Indicators (SLIs), and then striving to optimize them through planning iterations so IT can reach their goals and better meet the needs and expectations of the business.
 
 We call this *adoption*.
 
@@ -39,7 +37,9 @@ This approach also simplifies your plans. In all cases, total visibility means a
 
 ![Three-sided cube example](../../strategy/media/monitoring-strategy/three-sided-cube.png)
 
-Being observant isn't just an IT focus; remember the goal is to ensure end users can consume and business expectations are met. You can't monitor what you don't understand or know, and as a result you won't able to deliver the level of service availability promised to the business. Before the advent of cloud computing, Microsoft emphasized failure mode analysis during application design and development. Failure mode analysis helped developers consider how and when logic or other critical errors could occur in their code. And when it does, expose the condition in a meaningful way to allow the monitoring tool not only detect it and act on it, but also provide developers, operators, or system engineers with useful information to help better understand the applications behavior and make data-driven decisions. Today, the [Cloud Adoption Framework](/azure/architecture/resiliency/failure-mode-analysis) recommends you follow that process as part of the architecture and design phases to build recovery of the Azure services in your design.
+Being observant isn't just an IT focus; remember the goal is to ensure end users can consume and Service Level Objectives (SLOs) are met. You can't monitor what you don't understand or know, and as a result you won't able to deliver the level of service availability promised to the business.
+
+Before the advent of cloud computing, Microsoft emphasized failure mode analysis during application design and development. Failure mode analysis helped developers consider how and when logic or other critical errors could occur in their code. And when it does, expose the condition in a meaningful way to allow the monitoring tool not only detect it and act on it, but also provide developers, operators, or system engineers with useful information to help better understand the applications behavior and make data-driven decisions. Today, the [Cloud Adoption Framework](/azure/architecture/resiliency/failure-mode-analysis) recommends you follow that process as part of the architecture and design phases to build recovery of the Azure services in your design.
 
 Bottom line, it's the observability you want, early, and in your minimum viable product.
 
@@ -57,19 +57,19 @@ This is demonstrated in the following ways:
 
 For architects, diagnostics form the core of their exploitation of more cost effective cloud-native monitoring structures that let IT manage services holistically across the different cloud models.
 
-Architects must, like operators, understand what diagnostic information an IT infrastructure component or application emits. Combining multivariate, dynamical, time-series, eventful, stateful, and telemetric log streams into valuable intelligence depends on the following:
+Architects must, like operators, understand what diagnostic information an infrastructure component or application emits. Combining multivariate, dynamical, time-series, eventful, stateful, and telemetric log streams into valuable intelligence depends on the following:
 
 - The knowledge and experience of the developer or system engineer, who have a deep understanding of the monitoring target.
 
 - Actual support and troubleshooting experience using the data, to find trouble or locate the causes of trouble.
 
-- Review of past incidents to find non-technology reasons, that later can be automated (auto remediation).
+- Review of past incidents to find non-technology reasons, that later can be auto-remediated.
 
 - Guidance in the form of documentation, software, training, or consulting by the software or hardware vendor.
 
-If you are familiar with System Center Operations Manager, Microsoft and its partners provide *management packs.*  Management packs are technology-specific; for example, you import a SQL management pack Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, observability is more or less predefined by the product engineers at Microsoft and dozens of industries. With Operations Manager, you don't need to worry about north-south and east-west dependencies, so that observing the health of SQL is part of the larger IT service with networking, virtualization, and applications included. Owing to a common schema based on the familiar four-part *health model*, Operations Manager is designed for on-premises infrastructure. Infrastructure service architectures tend to be **fixed** in components and architectural patterns, relative to cloud services.
+If you are familiar with System Center Operations Manager, Microsoft and its partners provide *management packs.*  Management packs are technology-specific; for example, you import a SQL management pack Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, observability is more or less predefined by the product engineers at Microsoft and dozens of industries. With Operations Manager, you don't need to worry about north-south and east-west dependencies, so that observing the health of SQL is part of the larger IT service with networking, virtualization, and applications included. Owing to a common schema based on the familiar four-part *health model*, Operations Manager is designed for on-premises infrastructure. Infrastructure service architectures tend to be **fixed** in components and architectural design patterns, relative to cloud services.
 
-In the cloud, you have enormous flexibility in the types of services you can choose. Monitoring includes how they change over time, and they can be dynamic, global, and resilient. As a cloud architect, you are not constrained by fixed, on-premises thinking. Operations Manager can participate, but again, its strength is traditional on-premises infrastructure and applications. In contrast, Azure Monitor's architecture is much more flexible in supporting all three cloud models. To reach your observability goals in Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to visualize the components working together.
+In the cloud, you have enormous flexibility in the types of services to choose from. Monitoring includes how they change over time, and they can be dynamic, global, and resilient. As a cloud architect, you are not constrained by fixed, on-premises thinking. Operations Manager can participate, but again, its strength is traditional on-premises infrastructure and applications. In contrast, Azure Monitor's architecture is much more flexible in supporting all three cloud models. To reach your observability goals with Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to collect, analyze, and act on telemetry.
 
 With Azure Monitor, you can take advantage of existing workbooks that are included in [Insights](/azure/azure-monitor/monitor-reference), which provide similar functionality that a management pack in Operations Manager does. Otherwise, you need to review the Azure documentation for each of the Azure services in order to understand how you can monitor and detect for known failures or symptoms that indicate potential failure.
 
@@ -112,12 +112,12 @@ Before we go into details on observability, we need to highlight several monitor
 
 ## The art of being observant
 
-Observability relies on what is being monitored and how. In Azure, there are multiple sources, and each delivers a different perspective of how something is behaving. Not to mention, Azure includes multiple tools to help analyze the different aspects of this data. Observing the health and performance of Azure services and non-Azure resources is the primary way you'll use Azure Monitor and its features. In Azure, Microsoft has an extensive catalog of services, and virtual machines are not the primary focus. In Azure, we provide the perspective of the *service provider* through different platform logs:
+Observability relies on what is being monitored and how. In Azure, there are multiple sources, and each delivers a different perspective of how something is behaving. Azure includes multiple tools to help analyze the different aspects of this data. Observing the health and performance of Azure services and non-Azure resources is the primary way you'll use Azure Monitor and its features. In Azure, Microsoft has an extensive catalog of services, and virtual machines are not the primary focus. In Azure, we provide the perspective of the *service provider* through different platform logs:
 
-- Service health reported by Azure about service incidents and planned maintenance.
-- The Azure activity log reports subscription-level events across all of the resources deployed in the subscription.
-- Azure Resource Health reports on the current and past health of your resources.
-- Azure Advisor to receive recommended solutions based on best practices to optimize your Azure deployments.
+- [Service health](/azure/service-health/service-health-overview) reported by Azure about service incidents and planned maintenance.
+- The [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log) reports subscription-level events across all of the resources deployed in the subscription.
+- [Azure Resource Health](/azure/service-health/resource-health-overview) reports on the current and past health of your resources.
+- [Azure Advisor](/azure/advisor/advisor-overview) to receive recommended solutions based on best practices to optimize your Azure deployments.
 
 All other perspectives based on metrics and logs, are delivered through the various features of Azure Monitor. Or, depending on the Azure resource, you can view its platform metrics directly from that resource in the portal.
 
