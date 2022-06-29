@@ -44,7 +44,7 @@ During your cloud adopting plan implementation, risks will emerge from approache
 
 The following is additional guidance that can be used when risks surface during planning conversations.
 
-[Maturity vectors](/azure/cloud-adoption-framework/govern/foundation-improvements#maturity-vectors): Best practices that can be applied to the initial governance foundation to address a risk or need.
+- [Maturity vectors](/azure/cloud-adoption-framework/govern/foundation-improvements#maturity-vectors): Best practices that can be applied to the initial governance foundation to address a risk or need.
 
 ## Governance considerations
 
@@ -52,11 +52,11 @@ Changes to business processes or technology platforms introduces risk to the bus
 
 The guidance in the following examples can help to develop your corporate policies.
 
-[Business risk](/azure/cloud-adoption-framework/govern/policy-compliance/business-risk): Investigate current cloud adoption plans and data classification to identify risks to the business. Work with the business to balance risk tolerance and mitigation costs.
+- [Business risk](/azure/cloud-adoption-framework/govern/policy-compliance/business-risk): Investigate current cloud adoption plans and data classification to identify risks to the business. Work with the business to balance risk tolerance and mitigation costs.
 
-[Policy and compliance](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition): Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and manage risks. In some industries, third-party compliance affects initial policy creation.
+- [Policy and compliance](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition): Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and manage risks. In some industries, third-party compliance affects initial policy creation.
 
-[Processes](/azure/cloud-adoption-framework/govern/policy-compliance/processes): The pace of adoption and innovation activities will naturally create policy violations. Executing relevant processes will aid in monitoring and enforcing adherence to policies.
+- [Processes](/azure/cloud-adoption-framework/govern/policy-compliance/processes): The pace of adoption and innovation activities will naturally create policy violations. Executing relevant processes will aid in monitoring and enforcing adherence to policies.
 
 ## Disciplines of Cloud Governance
 
