@@ -141,7 +141,7 @@ items:
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
     - name: Building your devops practice
-      href: strategy/building-devops-practice.md  
+      href: strategy/building-devops-practice.md
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
@@ -280,7 +280,15 @@ items:
             href: ready/landing-zone/design-area/azure-ad-define.md
 
         - name: Identity and access management
-          href: ready/landing-zone/design-area/identity-access.md
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/identity-access.md
+          - name: Active Directory and Hybrid Identity
+            href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
+          - name: Platform access
+            href: ready/landing-zone/design-area/identity-access-platform-access.md
+          - name: Landing zones
+            href: ready/landing-zone/design-area/identity-access-landing-zones.md
 
         - name: Network topology and connectivity
           items:
@@ -405,11 +413,34 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/platform-automation-devops.md
-          - name: Test-driven development (TDD) for landing zones
-            href: ready/considerations/test-driven-development.md
-          - name: Landing zone TDD in Azure
-            href: ready/considerations/azure-test-driven-development.md
-
+          - name: Platform automation
+            items:
+            - name: Automation
+              href: ready/considerations/automation.md
+          - name: DevOps
+            items:
+            - name: DevOps considerations
+              href: ready/considerations/devops-principles-and-practices.md
+            - name: Team topologies
+              href: ready/considerations/devops-teams-topologies.md
+          - name: Development strategy
+            items:
+            - name: Development lifecycle
+              href: ready/considerations/development-strategy-development-lifecycle.md
+            - name: Infrastructure as Code
+              href: ready/considerations/infrastructure-as-code.md
+            - name: Environments
+              href: ready/considerations/environments.md
+            - name: Test-driven development for Azure Landing Zones
+              href: ready/considerations/development-strategy-test-driven-development.md
+            - name: DevOps Toolchain considerations
+              href: ready/considerations/devops-toolchain.md
+          - name: Security considerations
+            items:
+            - name: Overview
+              href: ready/considerations/security-considerations-overview.md
+            - name: Role-based access control for DevOps Tools
+              href: ready/considerations/security-considerations-tools.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
@@ -1548,7 +1579,6 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-        
 
       - name: Monitoring
         items:
