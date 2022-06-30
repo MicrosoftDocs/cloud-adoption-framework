@@ -14,6 +14,12 @@ ms.custom: internal
 
 When a workload or the landing zones that hosts it are deployed and configured, it's important to have overall Governance of the environment.
 
+There are two types of landing zones:
+
+- [Platform](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones): Platform landing zones represent key services that often benefit from being consolidated for efficiency and ease of operations. Examples include networking, identity, and management services.
+
+- [Application](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones): One or more subscriptions deployed as an environment for an application or workload. Application landing zones are placed in management groups like 'corp' or 'online' beneath the 'landing zones' management group to ensure policy controls are correctly applied.
+
 Adoption of the cloud is a journey, not a destination. When you've reached the Ready state, you have an ongoing responsibility to govern the deployed environment. Focus on objectives and key results when envisioning a governance end state. Map concepts, frameworks, and standards to the disciplines in the CAF [govern methodology](/azure/cloud-adoption-framework/govern/) alongside mapping to roles and responsibilities for human discipline. The govern methodology provides guidance.
 
 The following is an overview of the guidance with links to further details.
