@@ -20,6 +20,26 @@ The goal of this article is to take the [monitoring strategy](../../strategy/mon
 > [!NOTE]
 > In this article, a *monitoring solution* is the unit of production doing the monitoring of a service in the cloud, and a *monitoring target* is the service or thing that is being monitored. A solution encompasses all aspects of monitoring: the tool, the monitoring data, alerts, type of response, recovery actions, type of visualization, role-based access, and so on.
 
+## Terminology
+
+Before we go into details on observability, we need to highlight several monitoring-related terms we'll be using:
+
+* [Observability](https://en.wikipedia.org/wiki/Observability) is a property of a system, stemming from system control theory. It's a measure of how well the internal states of a system can be inferred from its system *external* outputs, along with [controllability](https://en.wikipedia.org/wiki/Controllability), another property of a system. In modern service management terms, refer to the [Microsoft Operations Framework (MOF)](/previous-versions/tn-archive/cc506049(v=technet.10)) **Service Monitoring and Control**," and the Information Technology Infrastructure Library (ITIL) v3 **monitor and control loop**.
+
+- **Asset:** Digital assets such as content in file shares, hardware, and software assets that are also called *targets*.
+
+- **Focus:** Your scope in pursuit of objectives: narrow, broad, a single component, component class, component grouping, service.
+
+- **Aspect:** Perspectives from stakeholders, such as the users, the business, and the service owner.
+
+- **Coverage:** An indicator of visibility and a goal; to ensure all relevant assets are included in the monitoring scope.
+
+- **Manageability:** The extent that a digital asset can be controlled, self-heals, related to change risk and action groups that diagnose or auto remediate.
+
+- **Data source:** The primary location monitoring data comes from, such as an Azure Storage account, Azure Active Directory, or custom sources.
+
+- **Frequency:** Continuous vs. occasional monitoring.
+
 ## Why observability is important
 
 Simply, its observability *first* that drives the monitoring consumer to understand what is considered or perceived as *normal* operation of a service. In other words, you seek *total visibility*, a key monitoring principle, as soon as possible. Once initial observability is achieved, then you build upon that initial level of visibility to develop actionable alerts, create useful dashboards, and evaluate AIOps solutions. This allows you time to get comfortable with the underlying metric and log monitoring data.
@@ -87,28 +107,9 @@ The following figure shows the Observe discipline on the left, and later in this
 
 **Response** is the organization's ability to quickly ascertain *significance* of observed monitoring data (detected events, telemetric patterns, correlated information, and so on) such that for negative events it can rapidly restore or remediate. For positive events or informational events, it can help to maintain service agreements, improve reliability, and reduce support costs. Events dynamically occur in the system or service, where monitoring solutions provide alerting, control loop automation, and raise incidents, problems, or changes in an external IT service management (ITSM) system. Realize that many events can't or shouldn't be automatically remediated.
 
-**Utility:** In this sense, observability (and response) is about the operational use or utility of the monitoring solution. Azure Monitor provides Microsoft's perspective of our service resources, and gives you similar capabilities as an on-premises monitoring system. A monitoring solution needs visualizations, such as dashboards and workbooks, with role-based access.
+**Utility:** In this sense, observability (and response) is about the operational use or value of the monitoring service. Azure Monitor provides Microsoft's perspective of our service resources, and delivers similar capabilities as an on-premises monitoring system.
 
 **Responsibility:** Both the service consumer and service provider share in the need to learn and improve based on hard data. As such, you need to understand the cloud provider's responsibility vs. the customer/consumer's responsibility. For each Azure resource, you get perspectives based on logs or metrics, this data can be represented in resource-specific dashboards or custom visualizations based on your requirements, and shared with the necessary personas in the organization.
-
-> [!NOTE]
-> [Observability](https://en.wikipedia.org/wiki/Observability) is a property of a system, stemming from system control theory. It's a measure of how well the internal states of a system can be inferred from its system *external* outputs, along with [controllability](https://en.wikipedia.org/wiki/Controllability), another property of a system. In addition, a *dynamical system* also that over time, a state observer measures or estimates the health state of the system. But in modern service management terms, refer to the [Microsoft Operations Framework (MOF)](/previous-versions/tn-archive/cc506049(v=technet.10)) **Service Monitoring and Control**," and the Information Technology Infrastructure Library (ITIL) v3 **monitor and control loop**.
-
-Before we go into details on observability, we need to highlight several monitoring-related terms we'll be using:
-
-- **Asset:** Digital assets such as content in file shares, hardware, and software assets that are also called *targets*.
-
-- **Focus:** Your scope in pursuit of objectives: narrow, broad, a single component, component class, component grouping, service.
-
-- **Aspect:** Perspectives from stakeholders, such as the users, the business, and the service owner.
-
-- **Coverage:** An indicator of visibility and a goal; to ensure all relevant assets are included in the monitoring scope.
-
-- **Manageability:** The extent that a digital asset can be controlled, self-heals, related to change risk and action groups that diagnose or auto remediate.
-
-- **Data source:** The primary location monitoring data comes from, such as an Azure Storage account, Azure Active Directory, or custom sources.
-
-- **Frequency:** Continuous vs. occasional monitoring.
 
 ## The art of being observant
 
