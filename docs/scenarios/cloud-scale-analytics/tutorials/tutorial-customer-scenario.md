@@ -71,8 +71,8 @@ The customer scenario outlined above can be deployed by referencing the architec
 
 ### Data Management Landing Zone
 
-:::image type="content" source="../images/adatum-data-management-landing-zone.png" alt-text="Diagram of the Adatum Corporation Data Management Landing Zone.":::
+:::image type="content" source="../images/adatum-data-management-landing-zone.png" alt-text="Diagram of the Adatum Corporation Data Management Landing Zone." lightbox="../images/adatum-data-management-landing-zone.png":::
 
 ### Sales Data Landing Zone 
 
-:::image type="content" source="../images/adatum-sales-data-landing-zone.png" alt-text="Diagram of the Adatum Corporation Sales Data Landing Zone.":::
+:::image type="content" source="../images/adatum-sales-data-landing-zone.png" alt-text="Diagram of the Adatum Corporation Sales Data Landing Zone." lightbox="../images/adatum-sales-data-landing-zone.png":::

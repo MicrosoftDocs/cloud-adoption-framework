@@ -72,7 +72,7 @@ To deploy the Data Product Batch using the One Click method, follow these steps 
       | Private DNS Zone MariaDB Server | select privatelink.mariadb.database.azure.com |
       | Private DNS Zone PostgreSQL Server | select privatelink.postgres.database.azure.com |
 
-      :::image type="content" source="../images/dataproduct-private-dns.png" alt-text="Screenshot showing Data Product Private D N S.":::
+      :::image type="content" source="../images/dataproduct-private-dns.png" alt-text="Screenshot showing Data Product Private DNS.":::
 
 1. Click on **Review + create** to go the last step.
 

@@ -152,7 +152,7 @@ Before we start with the deployment, make sure that you have the following avail
       | Private DNS Zone Synapse Dev | select privatelink.dev.azuresynapse.net |
       | Private DNS Zone Synapse SQL | select privatelink.sql.azuresynapse.net |
 
-    :::image type="content" source="../images/dlz-connectivity-3.png" alt-text="Screenshot showing the private D N S Zone Settings.":::
+    :::image type="content" source="../images/dlz-connectivity-3.png" alt-text="Screenshot showing the private DNS Zone Settings.":::
 
 1. Click on **Review + Create**  
 

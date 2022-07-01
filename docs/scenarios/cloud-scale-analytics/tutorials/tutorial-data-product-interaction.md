@@ -137,11 +137,11 @@ To set this up, please follow the steps below.
 
 1. In the Azure portal, navigate to the Azure Storage Account instance _`[DLZprefix]`_`devraw`. Click on **Access Control (IAM)** on the left.
 
-    :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Screenshot of the Azure Storage Account S P Permissions page with access control highlighted.":::
+    :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Screenshot of the Azure Storage Account SP Permissions page with access control highlighted.":::
 
 1. Click on **Add+** and then **Add Role Assignment**
 
-    :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Screenshot of the Storage Account S P Access Control page that shows how to add a role assignment.":::
+    :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Screenshot of the Storage Account SP Access Control page that shows how to add a role assignment.":::
 
 1. In Add Role Assignment, search for Storage Blob Data Reader, select the `Storage Blob Data Reader` role and click on **Next**.
 
@@ -177,7 +177,7 @@ To add the service principal as a user within the database, you might need to ad
 
 1. Navigate to the SQL Server _`[DPprefix]`_`-dev-sqlserver001` and click on **Active Directory**.
 
-    :::image type="content" source="../images/azure-sql-admin-1.png" alt-text="Screenshot of the Azure active directory screen under S Q l server.":::
+    :::image type="content" source="../images/azure-sql-admin-1.png" alt-text="Screenshot of the Azure active directory screen under SQl server.":::
 
 1. Click on **Set Admin** and search for your own account. Click on the desired account returned by the search to select the account.
 
@@ -189,7 +189,7 @@ To add the service principal as a user within the database, you might need to ad
 
 1. Now click on **SQL Databases**, choose the database `AdatumCRM`.
 
-     :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot of the search to find the correct database with Adatum C R M highlighted.":::
+     :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot of the search to find the correct database with Adatum CRM highlighted.":::
 
 1. In `AdatumCRM` and click on **Query editor** and then Log with Active Directory Authentication using the button Login as your user.
 
@@ -368,9 +368,9 @@ The following steps outline the process to register an ADLS Gen 2 Storage accoun
     | Endpoint|  This should be automatically populated based on the selected storage account|
     | Select a collection | Select the root collection.|  
 
-    :::image type="content" source="../images/purview-register-add-raw.png" alt-text="Screenshot of the Register A D L S form with values highlighted.":::
+    :::image type="content" source="../images/purview-register-add-raw.png" alt-text="Screenshot of the Register ADLS form with values highlighted.":::
 
-Click **Register** to create the data source.
+1. Click **Register** to create the data source.
 
 Repeat steps 1 through 3 for the remaining storage accounts
 
@@ -385,7 +385,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
 1. Select **SQL Database** and click on **Continue**
   
-    :::image type="content" source="../images/register-sql-db.png" alt-text="Screenshot showing the Azure S Q L Database registration source.":::
+    :::image type="content" source="../images/register-sql-db.png" alt-text="Screenshot showing the Azure SQL Database registration source.":::
 
 1. On the next screen, provide the following values and click on **Register**
 
@@ -395,7 +395,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Subscription| the subscription hosting the database|
     | Server name|the SQL Server name to register -- _`DPprefix`_-dev-sqlserver001|
   
-     :::image type="content" source="../images/purview-sql-server-name.png" alt-text="Screenshot of the Register S Q L D B form with values highlighted.":::
+     :::image type="content" source="../images/purview-sql-server-name.png" alt-text="Screenshot of the Register SQL database form with values highlighted.":::
 
 ## Setting up Scans
 
@@ -403,7 +403,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
 1. Navigate to the Purview data map and select **New Scan** on the data source
   
-    :::image type="content" source="../images/scan-data-lake-1.png" alt-text="Screenshot showing how to set up a new A D L S scan.":::
+    :::image type="content" source="../images/scan-data-lake-1.png" alt-text="Screenshot showing how to set up a new ADLS scan.":::
 
 1. Specify the following values in the resulting screen
 
@@ -413,7 +413,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
     | Connect via Integration Runtime| Select the Self Hosted Integration run time deployed as part of the Data Landing Zone.|
     | Credential|Select the Service Principal set up for Purview.|
 
-    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Screenshot of the scan A D L S credential form with values entered.":::
+    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Screenshot of the scan ADLS credential form with values entered.":::
 
 1. Click on **Test Connection** to verify the connectivity and permissions are in place, and click on **Continue**.
 
@@ -423,7 +423,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
 1. In the Select a Scan Rule Set screen, select the **ADLS Gen 2 Scan Rule set**. Click **Continue**.
 
-    :::image type="content" source="../images/scan-data-lake-select-rule-set.png" alt-text="Screenshot showing the A D L S scan rule set selection.":::
+    :::image type="content" source="../images/scan-data-lake-select-rule-set.png" alt-text="Screenshot showing the ADLS scan rule set selection.":::
 
 1. In the Set a Scan Trigger screen, select **Once**. Click **Continue**.
   
@@ -433,7 +433,7 @@ Repeat steps 1 through 3 for the remaining storage accounts
 
     :::image type="content" source="../images/scan-data-lake-review-save.png" alt-text="Screenshot showing how to review your scan before saving.":::
 
-1. Repeat steps 1 through 6 for the remaining storage accounts
+Repeat steps 1 through 6 for the remaining storage accounts
 
 - _`[DMLZprefix]`_`devencur`
 - _`[DMLZprefix]`_`devwork`
@@ -562,7 +562,7 @@ done
 
 Here is an example of how this storage account _`[DLZprefix]`_`devraw` manages private endpoint access requests. Click on "Networking", and then on the "Private endpoint connections" tab as highlighted in red on the image below:
 
-:::image type="content" source="../images/private-endpoint-connections.png" alt-text="Screenshow showing how to navigate to the Private Endpoint Connections page.":::
+:::image type="content" source="../images/private-endpoint-connections.png" alt-text="Screenshot showing how to navigate to the Private Endpoint Connections page.":::
 
 And here is an example of how to approve a private endpoint access request by clicking in "Private endpoint connections". The interface is slightly different, but you also have the option to first select the request in "Pending" state and click on "Approve" as depicted on the image below for the Azure SQL Server _`[DLZprefix]`_`-dev-sqlserver001`:
 
@@ -588,7 +588,7 @@ When you are done with all approvals, the "Managed private endpoints" pane shoul
 
 1. Click **"Access Control (IAM)"**, then Click on the **"+ Add" button** circled in red as depicted on the image below, and then select **"Add role assignment"** from the dropdown menu.
 
-    :::image type="content" source="../images/add-role-to-sql-server.png" alt-text="Screenshow showing how to get to the add role assignment page in Azure SQL Server.":::
+    :::image type="content" source="../images/add-role-to-sql-server.png" alt-text="Screenshot showing how to get to the add role assignment page in Azure SQL Server.":::
 
 1. Select **"Contributor"** and click **Next**.
 
@@ -656,11 +656,11 @@ This process will extract "Customer" data from the AdatumCRM Azure SQL Database 
 
 1. Select **Schedule** to create a trigger to run the pipeline every 24 hours.
 
-    :::image type="content" source="../images/create-pipeline.png" alt-text="Screenshot showing how to schedule a Trigger to run periodically in C R M.":::
+    :::image type="content" source="../images/create-pipeline.png" alt-text="Screenshot showing how to schedule a Trigger to run periodically in CRM.":::
 
 1. Click on **+ New Connection** to create a Linked Service to connect this data factory to the Azure SQL Database AdatumCRM on server _`[DPprefix]`_`-dev-sqlserver001` (source)
 
-    :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot showing how to connect to Adatum C R M.":::
+    :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot showing how to connect to Adatum CRM.":::
 
     >[!NOTE]
     >If you have any errors connecting or accessing the data in the Azure SQL Databases, or the storage accounts, please review permissions and make sure that the Data Factory has the appropriate credentials and access permissions to any problematic resource.
@@ -683,7 +683,7 @@ This process will extract "Customer" data from the AdatumCRM Azure SQL Database 
 
 1. Change the "File name suffix" to .csv and leave the other options as default.
 
-    :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing the file name suffix field with C S V entered.":::
+    :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing the file name suffix field with CSV entered.":::
 
 1. Go to the next screen and select "Add header to file".
 
@@ -699,7 +699,7 @@ When you are done with the wizard, it will show under Pipelines the new pipeline
 
 - Rename the pipeline and the Datasets to the names you see on the image below, publish all, then run the Trigger to have the three tables copied from SQL DB to ADLS.
 
-    :::image type="content" source="../images/trigger-run-crm.png" alt-text="Screenshot showing how to use the trigger tool to copy data from the S Q L Database to A D L S.":::
+    :::image type="content" source="../images/trigger-run-crm.png" alt-text="Screenshot showing how to use the trigger tool to copy data from the SQL Database to ADLS.":::
 
 This process you just finished will create three .csv files in the "data\CRM" folder, one for each of the selected tables of database AdatumCRM.
 
@@ -715,15 +715,15 @@ Now lets extract the data from the AdatumERP Azure SQL Database representing the
 
     - Linked Service to Azure SQL DB name: AdatumERP.
 
-    :::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot of the Adatum E R P Connection form completed.":::
+    :::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot of the Adatum ERP Connection form completed.":::
 
 1. Select tables: SalesLT.Product, SalesLT.ProductCategory, SalesLT.ProductDescription, SalesLT.ProductModel, SalesLT.ProductModelProductDescription, SalesLT.SalesOrderDetail, SalesLT.SalesOrderHeader.
 
-    :::image type="content" source="../images/adatum-erp-tables.png" alt-text="Screenshot of Adatum E R P Table options.":::
+    :::image type="content" source="../images/adatum-erp-tables.png" alt-text="Screenshot of Adatum ERP Table options.":::
 
 1. Use the already created Linked Service to the `[DLZprefix]devraw` storage account, set the file extension to .csv.
 
-    :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing a raw storage account with the file extension set to c s v.":::
+    :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot showing a raw storage account with the file extension set to csv.":::
 
 1. Select Add header to file.
 
@@ -766,11 +766,11 @@ Here are the steps:
 
 1. When you are finished selecting all the options in the Data flow "CRM_to_Customer", the pipeline "Pipeline_transform_CRM" will look like this:
 
-    :::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot showing how the Pipeline transform C R M looks.":::
+    :::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot showing how the Pipeline transform CRM looks.":::
 
     and the Data flow will look like this:
 
-    :::image type="content" source="../images/crm-to-customer.png" alt-text="Screenshot showing how the C R M to Customer data flow looks.":::
+    :::image type="content" source="../images/crm-to-customer.png" alt-text="Screenshot showing how the CRM to Customer data flow looks.":::
 
 These are the settings you need to modify in the Data Flow when manipulating these files:
 
