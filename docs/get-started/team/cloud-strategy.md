@@ -62,7 +62,7 @@ The cloud strategy team serves as a recurring alignment point between business l
 - Document and share your reasoning from step 1 to identify stakeholders who will benefit from regular involvement and will be able to help drive the strategy.
 - For ideas about who might be a good fit, see [Cloud strategy functions](../../organize/cloud-strategy.md).
 - To validate the alignment and bandwidth from each potential participant, review the [minimum scope](../../organize/cloud-strategy.md#minimum-scope) and [deliverable](../../organize/cloud-strategy.md#deliverable) for this capability.
-- To establish the right RACI chart based on you current team structures, review the various [RACI configuration examples](../../organize/raci-alignment.md#strategic-alignment), or select one of the example tabs at the bottom of the RACI template.
+- To establish the right RACI chart based on your current team structures, review the various [RACI configuration examples](../../organize/raci-alignment.md#strategic-alignment), or select one of the example tabs at the bottom of the RACI template.
 - Document the results in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Accountable person or team:**
