@@ -26,8 +26,6 @@ The steps in this article can help the strategy team lead the organizational cha
 
 Operational excellence across the enterprise and portfolio starts with peer processes of strategy and planning to align and report on organizational change management expectations. The following steps help technical teams deliver the disciplines required to achieve operational excellence.
 
-![Get started with operational excellence](../_images/get-started/operational-excellence-map.png)
-
 ## Step 1: Define a strategy to guide digital transformation and operational excellence expectations
 
 A clear business strategy is the foundation for any digital transformation and operational excellence effort. IT can reduce costs and streamline IT processes. Without a clear strategy, it's difficult to understand how those changes might affect the business outcomes identified in the broader transformation effort.
