@@ -1691,22 +1691,22 @@ items:
             href: secure/infrastructure-security-implementation.md
           - name: Operations
             href: secure/infrastructure-security-operations-governance.md
-      - name: Development Security
-        items:
-         - name: Strategy
-           href: secure/development-security-strategy-overview.md
-         - name: Innovation security
-           href: secure/development-innovation-security.md
-         - name: Securing DevOps strategy and process
-           href: secure/devops-strategy-process-security.md
-         - name: Securing CI/CD pipelines with DevOps
-           href: secure/best-practices/secure-devops.md
-         - name: Secure DevOps governance
-           href: secure/best-practices/end-to-end-governance.md
-         - name: Architecture
-           href: secure/development-security-architecture.md
-         - name: Implementation and operations
-           href: secure/development-security-implementation-operations.md
+        - name: Development Security
+          items:
+          - name: Strategy
+            href: secure/development-security-strategy-overview.md
+          - name: Innovation security
+            href: secure/development-innovation-security.md
+          - name: Securing DevOps strategy and process
+            href: secure/devops-strategy-process-security.md
+          - name: Securing CI/CD pipelines with DevOps
+            href: secure/best-practices/secure-devops.md
+          - name: Secure DevOps governance
+            href: secure/best-practices/end-to-end-governance.md
+          - name: Architecture
+            href: secure/development-security-architecture.md
+          - name: Implementation and operations
+            href: secure/development-security-implementation-operations.md
       - name: Toolchain
         href: secure/best-practices/toolchain.md
 
