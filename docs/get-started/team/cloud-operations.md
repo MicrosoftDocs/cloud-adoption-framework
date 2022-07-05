@@ -135,7 +135,7 @@ By continually making operational improvements, the team can:
 - Improve platform operations.
 - Implement workload-specific operations.
 
-As additional workloads are transitioned to cloud operations, the need for operations improvements become clearer.
+As additional workloads are transitioned to cloud operations, the need for operations improvements becomes clearer.
 
 **Deliverables:**
 
