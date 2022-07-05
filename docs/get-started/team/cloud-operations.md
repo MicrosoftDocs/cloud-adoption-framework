@@ -14,8 +14,6 @@ ms.custom: internal
 
 An operations team focuses on monitoring, repairing, and remediating issues related to traditional IT operations and assets. In the cloud, many of the capital costs and operations activities are transferred to the cloud provider, giving IT operations the opportunity to improve and provide significant additional value.
 
-![Get started building a cloud operations team](../../_images/get-started/operations-team-map.png)
-
 ## Step 1: Determine whether a cloud operations team is needed
 
 Before you can release any workloads into production, an agreement must be reached on the accountability for delivery of [cloud operations functions](../../organize/cloud-operations.md). For some portfolios, operational responsibilities might belong to the DevOps and cloud adoption teams. In other cases, a managed service provider with cloud operations experience might assume ongoing operational duties.

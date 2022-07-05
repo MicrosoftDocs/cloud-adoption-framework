@@ -18,8 +18,6 @@ The first step in the journey is to decide whether you need a strategy team, or 
 
 Whichever approach you choose, you'll want to create a cloud strategy team that defines motivations and business outcomes, and that validates and maintains alignment between business priorities and cloud adoption efforts. When the business outcomes affect business functions, the strategy team should include business leaders from across the organization. The goal of the cloud strategy team is to produce tangible business results that are enabled by cloud technologies. Overall, this team ensures that cloud adoption efforts progress in alignment with business outcomes. Whenever possible, business outcomes and the cloud strategy team's efforts should both be defined early in the process.
 
-![Get started building a cloud strategy team](../../_images/get-started/strategy-team-map.png)
-
 > [!NOTE]
 > This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
 
