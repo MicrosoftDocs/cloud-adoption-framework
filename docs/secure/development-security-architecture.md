@@ -12,9 +12,9 @@ ms.custom: internal
 
 # Development security architecture
 
-This article provides development security architecture best practices to help you achieve the ideal end state and key components of development security.
+This article describes steps to help you achieve the ideal end state for development security.
 
-Your development security architecture needs to integrate:
+Your development security architecture should integrate these key components:
 
 - security best practices
 - innovations in DevOps culture, tools, processes, and technology

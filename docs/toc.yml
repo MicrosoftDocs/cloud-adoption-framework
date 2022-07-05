@@ -1693,7 +1693,7 @@ items:
             href: secure/development-innovation-security.md
           - name: Securing DevOps strategy and process
             href: secure/devops-strategy-process-security.md
-          - name: Securing CI/CD pipelines with DevOps
+          - name: Securing DevOps CI/CD pipelines
             href: secure/best-practices/secure-devops.md
           - name: Secure DevOps governance
             href: secure/best-practices/end-to-end-governance.md
@@ -1718,7 +1718,7 @@ items:
         href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Security documentation
         href: /security/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Azure Security Benchmarks
+      - name: Azure Security Benchmark
         href: /security/benchmark/azure/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
   - name: Organize

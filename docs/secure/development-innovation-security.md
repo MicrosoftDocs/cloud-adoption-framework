@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Development innovation security
 
-This article discusses development information security.
+This article describes development innovation security.
 
 ## Balance innovation and accountability
 

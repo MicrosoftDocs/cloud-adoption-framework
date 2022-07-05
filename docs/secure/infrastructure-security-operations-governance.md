@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure operations and governance
 
-This article describes infrastructure security operations governance.
+This article describes operations governance for infrastructure security.
 
 ## Responsibility assignment and awareness
 

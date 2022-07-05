@@ -30,4 +30,4 @@ The Cloud Adoption Framework's strategy approach also includes considerations th
 > [Infrastructure security architecture](infrastructure-security-architecture.md)
 
 > [!div class="nextstepaction"]
-> [Infrastructure security implementation, operations, and governance](infrastructure-security-implementation.md)
+> [Infrastructure security implementation](infrastructure-security-implementation.md)

@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Development security implementation and operations
 
-This article discusses security implementation and operations.
+This article describes implementation and operations for development security.
 
 Follow [development security best practices architecture](security-best-practices-introduction.md). Use secure landing zone deployments with repeatable governance and security tools and controls to quickly achieve a security baseline for your organization. The Cloud Adoption Framework's Security Baseline discipline doesn't replace the IT teams, processes, and procedures that your organization currently uses to secure cloud-deployed resources.
 

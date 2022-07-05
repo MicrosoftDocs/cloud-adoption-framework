@@ -12,9 +12,11 @@ ms.custom: internal
 
 # End-to-end governance from DevOps to Azure
 
+This article describes how to carefully manage and implement sound governance practices for your team, such as role-based access control permissions.
+
 It's not sufficient to plan and implement an [Azure role-based access control (RBAC) model](../../ready/considerations/roles.md) for Azure Resource Manager templates (ARM templates), which restricts access via Azure portal and Azure CLI.
 
-If this model isn't mirrored for DevOps automation, your organization might leave a **security back-door** open. Consider an example where a developer doesn't have access via ARM templates, but still has sufficient permissions to change application code or infrastructure as code and trigger an automation workflow. The developer, indirectly via DevOps, can access and make destructive changes to your ARM templates.
+If this model isn't mirrored for DevOps automation, your organization might leave a security back-door open. Consider an example where a developer doesn't have access via ARM templates, but still has sufficient permissions to change application code or infrastructure as code and trigger an automation workflow. The developer, indirectly via DevOps, can access and make destructive changes to your ARM templates.
 
 This article explains best practices to help plan for and avoid a scenario where destructive changes can occur.
 

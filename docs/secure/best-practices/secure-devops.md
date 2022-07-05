@@ -1,5 +1,5 @@
 ---
-title: Secure DevOps
+title: Securing the pipeline and CI/CD workflow
 description: Learn how to secure DevOps, the pipeline, and CI/CD workflow.
 author: julie-ng
 ms.author: julng
@@ -10,7 +10,9 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Secure the pipeline and CI/CD workflow
+# Securing the pipeline and CI/CD workflow
+
+This article describes how to secure your CI/CD pipelines and workflow.
 
 Automation and the agile methodology enables teams to deliver faster, but also adds complexity to security because the workflow extends to the developer teams themselves.
 

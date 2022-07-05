@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security implementation
 
-This article describes infrastructure security implementation, operations, and governance in the Cloud Adoption Framework.
+This article describes infrastructure security implementation, operations, and governance for infrastructure security.
 
 ## Implementation
 
