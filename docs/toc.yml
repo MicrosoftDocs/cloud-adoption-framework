@@ -1669,47 +1669,46 @@ items:
 
     - name: Best practices
       items:
-      - name: Securing DevOps
-        href: secure/best-practices/secure-devops.md
-      - name: Secure DevOps governance
-        href: secure/best-practices/end-to-end-governance.md
       - name: Azure Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing secrets
         href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Network security
-        href: /security/compass/network-security-containment
+        href: /security/compass/network-security-containment      
+      - name: Infrastructure and Development security
+        items:
+        - name: Introduction
+          href: secure/security-best-practices-introduction.md
+        - name: Infrastructure security
+          items:
+          - name: Overview
+            href: secure/infrastructure-security-overview.md
+          - name: Strategy
+            href: secure/infrastructure-security-strategy.md
+          - name: Architecture
+            href: secure/infrastructure-security-architecture.md
+          - name: Implementation, operations, and governance
+            href: secure/infrastructure-security-implementation.md
+          - name: Operations
+            href: secure/infrastructure-security-operations-governance.md
+      - name: Development Security
+        items:
+         - name: Strategy
+           href: secure/development-security-strategy-overview.md
+         - name: Innovation security
+           href: secure/development-innovation-security.md
+         - name: Securing DevOps strategy and process
+           href: secure/devops-strategy-process-security.md
+         - name: Securing CI/CD pipelines with DevOps
+           href: secure/best-practices/secure-devops.md
+         - name: Secure DevOps governance
+           href: secure/best-practices/end-to-end-governance.md
+         - name: Architecture
+           href: secure/development-security-architecture.md
+         - name: Implementation and operations
+           href: secure/development-security-implementation-operations.md
       - name: Toolchain
         href: secure/best-practices/toolchain.md
-
-    - name: Infrastructure and Development
-      items:
-      - name: Introduction
-        href: secure/security-best-practices-introduction.md
-      - name: Infrastructure
-        items:        
-        - name: Overview
-          href: secure/infrastructure-security-overview.md
-        - name: Strategy
-          href: secure/infrastructure-security-strategy.md
-        - name: Security architecture
-          href: secure/infrastructure-security-architecture.md
-        - name: Security implementation, operations, and governance
-          href: secure/infrastructure-security-implementation.md
-        - name: Operations
-          href: secure/infrastructure-security-operations-governance.md
-      - name: Development
-        items:                  
-        - name: Development security strategy
-          href: secure/development-security-strategy-overview.md
-        - name: Development innovation security
-          href: secure/development-innovation-security.md
-        - name: Securing DevOps strategy and process
-          href: secure/devops-strategy-process-security.md
-        - name: Development security architecture
-          href: secure/development-security-architecture.md
-        - name: Development security implementation and operations
-          href: secure/development-security-implementation-operations.md
 
     - name: Security considerations
       items:
