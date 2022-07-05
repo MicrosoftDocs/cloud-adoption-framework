@@ -1,6 +1,6 @@
 ---
-title: Improve landing zone operations
-description: Improve landing zone operations using the Manage methodology from the Microsoft Cloud Adoption Framework.
+title: Improve Azure landing zone operations
+description: Improve Azure landing zone operations using the Manage methodology from the Microsoft Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/05/2022
@@ -12,43 +12,42 @@ ms.custom: internal
 
 # Improve landing zone operations
 
-When you're done with the Ready state, you have an ongoing responsibility to manage the cloud environment you've deployed. Establishing a management baseline and improving landing zone operations as you scale will help you meet growing operational excellence, reliability, and performance requirements.
+When you've achieved the [Ready](../index.md) state and implemented [Azure landing zones](../landing-zone/index.md), you still have an ongoing responsibility to manage your cloud environment in the most efficient way possible. This article provides guidance on improving landing zone operations as you scale, helping you meet growing operational excellence, reliability, and performance requirements.
 
 ## The Manage methodology
 
-The [Manage methodology](../../manage/index.md) of the Cloud Adoption Framework provides guidance for establishing tooling for a management baseline and building operations management capacity across landing zones. It also outlines ways to extend the baseline and build additional resiliency. We'll use the basic structure of the [Azure Management Guide](../../manage/azure-management-guide/index.md) and the following steps from the Manage methodology to improve operations across landing zones.
+The [Manage methodology](../../manage/index.md) of the Cloud Adoption Framework provides guidance for establishing tooling for a management baseline and building operations management capacity across landing zones. It also outlines ways to extend your management baseline and build additional resiliency. We'll use the basic structure of the [Azure Management Guide](../../manage/azure-management-guide/index.md) to improve operations across landing zones.
 
 :::image type="content" source="../../_images/manage/caf-manage.png" alt-text="Screenshot showing the Manage methodology of the Cloud Adoption Framework." border="false":::
 *Figure 1: The Manage methodology of the Cloud Adoption Framework.*
 
-1. [Establish a management baseline](#1-establish-a-management-baseline): A management baseline establishes the foundation for operations management.
-2. [Create business alignment](#2-create-business-alignment): Understanding the criticality and impact of each workload within a landing zone will establish a "definition of done" for ongoing management improvements. Defining business commitments will also identify the reliability, performance, and operational requirements of each workload.
-3. [Enhance the management baseline](#3-enhance-the-management-baseline): Identify the workloads that require improving landing zone operations beyond the initial baseline, if any.
-4. [Apply advanced operations and design principles](#4-apply-advanced-operations-and-design-principles): Review the design and operations of specific workloads, platforms, or full landing zones to meet deeper requirements.
+## Prerequisite: Establish a management baseline
 
-## 1. Establish a management baseline
+A management baseline establishes the foundation for operations management. It represents the minimum set of tools and processes that should be applied to every asset in a cloud environment. For high-level information, see [Cloud management disciplines](../../manage/considerations/discipline.md) and [Overview of Azure server management services](../../manage/azure-server-management/index.md). The disciplines and guidance can be applied to any landing zone to improve initial operations.
 
-A management baseline represents the minimum set of tools and processes that should be applied to every asset in a cloud environment. The disciplines and guidance can be applied to any landing zone to improve initial operations. For more information, see [Cloud management disciplines](../../manage/considerations/discipline.md) and [Overview of Azure server management services](../../manage/azure-server-management/index.md).
+An effective management baseline encompasses three areas:
 
-### Inventory and visibility
+### 1. Inventory and visibility
 
-Inventory and visibility is the first of three disciplines required to establish a cloud management baseline. This discipline comes first because collecting proper operational data is vital when making decisions about operations. Cloud management teams must understand what is managed and how well those assets are operated. See [Inventory and visibility in Azure](../../manage/azure-management-guide/inventory.md) and [Inventory and visibility in cloud management](../../manage/considerations/inventory.md).
+This discipline comes first because collecting proper operational data is vital when making decisions about operations. Cloud management teams must understand what is managed and how well those assets are operated. See [Inventory and visibility in Azure](../../manage/azure-management-guide/inventory.md) and [Inventory and visibility in cloud management](../../manage/considerations/inventory.md).
 
-### Operational compliance
+### 2. Operational compliance
 
-Operational compliance is the second discipline in any cloud management baseline. Improving operational compliance reduces the likelihood of an outage related to configuration drift or vulnerabilities related to systems being improperly patched. See [Operational compliance in Azure](../../manage/azure-management-guide/operational-compliance.md) and [Operational compliance in cloud management](../../manage/considerations/operational-compliance.md).
+Improving operational compliance reduces the likelihood of an outage related to configuration drift or vulnerabilities related to systems being improperly patched. See [Operational compliance in Azure](../../manage/azure-management-guide/operational-compliance.md) and [Operational compliance in cloud management](../../manage/considerations/operational-compliance.md).
 
-### Protect and recover
+### 3. Protect and recover
 
-Protect and recover is the third and final discipline in any cloud-management baseline, aiming to reduce the duration and impact of outages that can't be prevented. See [Protect and recover in Azure](../../manage/azure-management-guide/protect-recover.md) and [Protect and recover in cloud management](../../manage/considerations/protect.md).
+Protect and recover is the final discipline in any cloud-management baseline, aiming to reduce the duration and impact of outages that can't be prevented. See [Protect and recover in Azure](../../manage/azure-management-guide/protect-recover.md) and [Protect and recover in cloud management](../../manage/considerations/protect.md).
 
-## 2. Create business alignment
+## Create business alignment
+
+Once you've established a management baseline, you need to understand the criticality and impact of each workload within a landing zone in order to drive ongoing management improvements.
 
 When an organization moves to the cloud, management and operations naturally shift a bit. This creates an opportunity to develop tighter business alignment by defining criticality, understanding business impact, and defining business commitments. See [Create business alignment in cloud management](../../manage/considerations/business-alignment.md).
 
 ### Define criticality
 
-Across every business, there are a small number of workloads that are too important to fail, while other workloads can go months at a time without being used. Understanding the criticality of each workload in the IT portfolio is the first step toward establishing mutual commitments to cloud management. See [Business criticality in cloud management](../../manage/considerations/criticality.md).
+Most businesses have a small number of workloads that are too important to fail, while other workloads can go months at a time without being used. Understanding the criticality of each workload in the IT portfolio is the first step toward establishing mutual commitments to cloud management. See [Business criticality in cloud management](../../manage/considerations/criticality.md).
 
 ### Understand business impact
 
@@ -58,13 +57,13 @@ In order to manage investments wisely, it's important to understand the impact o
 
 Defining business commitments is an exercise in balancing priorities. The objective is to align the proper level of operational management at an acceptable operating cost. See [Business commitment in cloud management](../../manage/considerations/commitment.md).
 
-## 3. Enhance the management baseline
+## Enhance the management baseline
 
-Some workloads might require enhancements to the baseline that aren't necessarily specific to a single platform or workload. Although these enhancements aren't cost effective for every workload, there should be common processes, tools, and solutions for any workload that can justify the cost of the extra management support. See [Enhanced management baseline in Azure](../../manage/azure-management-guide/enhanced-baseline.md).
+Identify the workloads that require improving landing zone operations beyond the initial baseline. Some workloads might require enhancements to the baseline that aren't necessarily specific to a single platform or workload. Although these enhancements aren't cost effective for every workload, you should establish common processes, tools, and solutions for any workload that can justify the cost of the extra management support. See [Enhanced management baseline in Azure](../../manage/azure-management-guide/enhanced-baseline.md).
 
-## 4. Apply advanced operations and design principles
+## Apply advanced operations and design principles
 
-In some cases, aspects of workload and platform operations might require changes to design and architecture principles. The two primary areas of management specialization are **platform specialization** and **workload specialization**. See [Apply design principles and advanced operations](../../manage/design-principles.md).
+Review the design and operations of specific workloads, platforms, or full landing zones to meet deeper requirements. In some cases, aspects of workload and platform operations might require changes to design and architecture principles. The two primary areas of management specialization are **platform specialization** and **workload specialization**. See [Apply design principles and advanced operations](../../manage/design-principles.md).
 
 ### Platform specialization
 
