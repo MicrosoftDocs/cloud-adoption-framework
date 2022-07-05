@@ -131,4 +131,4 @@ To learn more, see:
 Now that you understand how to secure DevOps, learn more about end-to-end governance from DevOps to Azure.
 
 > [!div class="nextstepaction"]
-> [Secure DevOps governance](./end-to-end-governance.md)
+> [End-to-end governance from DevOps to Azure](./end-to-end-governance.md)
