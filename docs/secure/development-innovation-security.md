@@ -1,5 +1,5 @@
 ---
-title: Innovation security
+title: Development innovation security
 description: Learn about best practices for development information security.
 author: mpvenables
 ms.author: mas
@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Innovation security
+# Development innovation security
 
 This article discusses development information security.
 

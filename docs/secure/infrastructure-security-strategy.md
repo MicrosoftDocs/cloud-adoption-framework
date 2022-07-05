@@ -24,7 +24,7 @@ Align your initial MVP and incremental progress priorities with established best
 
 The Cloud Adoption Framework's strategy approach also includes considerations that help you modernize strategies, architectures, and technology end-to-end on your organization's cloud adoption path. For more information, see [Defining security strategies](/azure/cloud-adoption-framework/strategy/define-security-strategy).
 
-Next steps:
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Infrastructure security architecture](infrastructure-security-architecture.md)
