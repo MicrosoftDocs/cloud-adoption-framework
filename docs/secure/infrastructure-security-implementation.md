@@ -48,4 +48,4 @@ Terraform is an open-source IaC software tool. Read about [how to use, configure
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Operations](infrastructure-security-operations-governance.md)
+> [Infrastructure operations and governance](infrastructure-security-operations-governance.md)
