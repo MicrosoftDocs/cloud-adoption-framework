@@ -14,19 +14,13 @@ ms.custom: internal
 
 When a workload or the landing zones that hosts it are deployed and configured, it's important to have overall Governance of the environment.
 
-There are two types of landing zones:
+As you're exiting the Ready state, you will have established a governance baseline for your current cloud estate. As your cloud estate evolves over time, you will have to evolve your cloud governance policies and processes. Governance is an iterative process. The govern methodology provides guidance.
 
-- [Platform](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones): Platform landing zones represent key services that often benefit from being consolidated for efficiency and ease of operations. Examples include networking, identity, and management services.
-
-- [Application](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones): One or more subscriptions deployed as an environment for an application or workload. Application landing zones are placed in management groups like 'corp' or 'online' beneath the 'landing zones' management group to ensure policy controls are correctly applied.
-
-Adoption of the cloud is a journey, not a destination. When you've reached the Ready state, you have an ongoing responsibility to govern the deployed environment. Focus on objectives and key results when envisioning a governance end state. Map concepts, frameworks, and standards to the disciplines in the CAF [govern methodology](/azure/cloud-adoption-framework/govern/) alongside mapping to roles and responsibilities for human discipline. The govern methodology provides guidance.
-
-The following is an overview of the guidance with links to further details.
+Below we provide an overview of this guidance with links to the details.
 
 ## Methodology
 
-Understand the pieces of the methodology and how they fit into the design. Evaluate corporate policies and processes and how they will align with the over all governance strategy. Envision an end state and then grow to that end state. For more information about the govern methodology in the Cloud Adoption Framework, see [Governance in the Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/govern/).
+Understand the pieces of the methodology and how they fit into the design as an ongoing exercise. Evaluate corporate policies and processes and how they will align with the over all governance strategy of your existing deployment. For more information about the govern methodology in the Cloud Adoption Framework, see [Governance in the Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/govern/).
 
 ## Benchmark
 
@@ -34,27 +28,17 @@ Assess your transformation journey. The Cloud Adoption Framework provides a gove
 
 - [Governance benchmark tool](https://cafbaseline.com/): Receive a personalized report that outlines the difference between your current state and business priorities, along with tailored resources to help you get started. Assess your current state and future state to establish a vision for applying the framework.
 
-## Initial cloud governance
-
-It can't be a challenge to have an effective balance between speed and control. Execution of early methodologies within the cloud adoption can conflict between speed and control. The governance guidance within the Cloud Adoption Framework helps provide a balance with an agile approach to adoption.
-
-The following are two examples of a governance foundation, also know as governance MVPs.
-
-- [Standard governance guide](/azure/cloud-adoption-framework/govern/guides/standard/): A guide for most organizations based on the recommended initial two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.
-
-- [Governance guide for complex enterprises](/azure/cloud-adoption-framework/govern/guides/complex/): A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.
-
 ## Improve your initial cloud governance foundation
 
 During your cloud adopting plan implementation, risks will emerge from approaches teams want to use to adopt the cloud.
 
-The following is additional guidance that can be used when risks surface during planning conversations.
+The following is additional guidance that can be used when risks surface during your ongoing cloud adoption and implementation:
 
 - [Maturity vectors](/azure/cloud-adoption-framework/govern/foundation-improvements#maturity-vectors): Best practices that can be applied to the initial governance foundation to address a risk or need.
 
 ## Governance considerations
 
-Changes to business processes or technology platforms introduces risk to the business. Slight changes in the corporate narrative or corporate polices can affect adoption.
+Changes to business processes or technology platforms introduces risk to the business. Slight changes in the corporate narrative or corporate polices can affect continued adoption of the cloud platform.
 
 The guidance in the following examples can help to develop your corporate policies.
 
