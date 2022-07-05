@@ -1,5 +1,5 @@
 ---
-title: DevSecOps as continuous improvement strategy
+title: Securing DevOps strategy and process
 description: Adopt a DevSecOps strategy that blends elements of DevOps and classic security and operations approaches.
 author: mpvenables
 ms.author: mas
@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# DevSecOps as continuous improvement strategy
+# Securing DevOps strategy and process
 
 Adopt a DevSecOps strategy that blends DevOps with elements of classic security and operations approaches. In the classic waterfall development model, security and other governance mechanisms are built into large longer-term releases. In the DevOps model, smaller, iterative changes are pushed in rapid releases. Rapid iteration enables organizations to meet continuously evolving marketplace expectations.
 
@@ -82,4 +82,5 @@ The diagram highlights how security teams implement continuous improvements acro
 
 ## Next steps
 
-- [Development security architecture](development-security-architecture.md)
+> [!div class="nextstepaction"]
+> [Development security architecture](development-security-architecture.md)

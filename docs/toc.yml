@@ -1669,7 +1669,7 @@ items:
 
     - name: Best practices
       items:  
-      - name: Infrastructure and Development security
+      - name: Infrastructure and development security
         items:
         - name: Introduction
           href: secure/security-best-practices-introduction.md
@@ -1681,11 +1681,11 @@ items:
             href: secure/infrastructure-security-strategy.md
           - name: Architecture
             href: secure/infrastructure-security-architecture.md
-          - name: Implementation, operations, and governance
+          - name: Implementation and operations
             href: secure/infrastructure-security-implementation.md
-          - name: Operations
+          - name: Operations governance
             href: secure/infrastructure-security-operations-governance.md
-        - name: Development Security
+        - name: Development security
           items:
           - name: Strategy
             href: secure/development-security-strategy-overview.md
@@ -1714,11 +1714,11 @@ items:
         href: get-started/security.md
       - name: Azure security top 10
         href: secure/security-top-10.md
-      - name: Microsoft cybersecurity reference architectures
+      - name: Microsoft Cybersecurity Reference Architectures
         href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Security documentation
         href: /security/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Azure security benchmarks
+      - name: Azure Security Benchmarks
         href: /security/benchmark/azure/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
   - name: Organize

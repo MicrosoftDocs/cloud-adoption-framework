@@ -1,5 +1,5 @@
 ---
-title: Infrastructure security implementation, operations, and governance
+title: Infrastructure security implementation
 description: Learn about the Infrastructure security implementation, operations, and governance. Cloud Adoption Framework offers guidance for deploying Azure landing zones.
 author: mpvenables
 ms.author: mas
@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Infrastructure security implementation, operations, and governance
+# Infrastructure security implementation
 
 This article describes infrastructure security implementation, operations, and governance in the Cloud Adoption Framework.
 

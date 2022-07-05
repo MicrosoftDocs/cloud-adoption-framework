@@ -1,5 +1,5 @@
 ---
-title: Development innovation security
+title: Innovation security
 description: Learn about best practices for development information security.
 author: mpvenables
 ms.author: mas
@@ -10,9 +10,9 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Development innovation security
+# Innovation security
 
-This article provides best practices for development information security.
+This article discusses development information security.
 
 ## Balance innovation and accountability
 
@@ -62,4 +62,5 @@ Incorporate governance, risk, and compliance considerations into your strategy s
 
 ## Next steps
 
-- [DevSecOps as continuous improvement strategy](devops-strategy-process-security.md)
+> [!div class="nextstepaction"]
+> [Securing DevOps strategy and process](devops-strategy-process-security.md)

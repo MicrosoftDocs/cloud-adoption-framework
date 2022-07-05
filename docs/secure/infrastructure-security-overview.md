@@ -18,8 +18,13 @@ Application development security relies on infrastructure security. If an applic
 
 As with all technology disciplines, take a "continuous improvement" approach. Start out with quick wins and continue with incremental progress toward a "north star"-a specified end state across your security strategy, architecture, implementation, and operations.
 
-Next steps:
+## Next steps
 
-- [Strategy](infrastructure-security-strategy.md)
-- [Architecture](infrastructure-security-architecture.md)
-- [Implementation](infrastructure-security-implementation.md)
+> [!div class="nextstepaction"]
+> [Infrastructure security strategy](infrastructure-security-strategy.md)
+
+> [!div class="nextstepaction"]
+> [Infrastructure security architecture](infrastructure-security-architecture.md)
+
+> [!div class="nextstepaction"]
+> [Infrastructure security implementation](infrastructure-security-implementation.md)
