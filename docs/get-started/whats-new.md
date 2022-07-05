@@ -16,6 +16,27 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## June 2022
+
+### Security best practices for infrastructure and development
+
+Security best practices for infrastructure and development are a comprehensive guidance set for the full cloud security development lifecycle across strategy, architecture, implementation, operations, and governance. These best practices complement the Microsoft Cloud Adoption Framework for Azure, Microsoft tools, security guides, and technical documentation with a focus on infrastructure and development. They also align with the Azure Security Benchmark recommendations.
+
+Each topic provides top-level guidance, followed by recommended tools, materials, and a recommended best practice approach.
+
+| Article | Description |
+|--|--|
+|[Introduction](../secure/security-best-practices-introduction.md) |An introduction to infrastructure security and development security that covers the full lifecycle of strategy, architecture, implementation, operations, and governance.|
+| [Infrastructure security best practices overview](../secure/infrastructure-security-overview.md) |An outline of the interrelationship of development security's dependency on infrastructure security, with a continuous improvement approach that progresses towards a "north star" end-state across security strategy, architecture, implementation, and operations. |
+| [Infrastructure security strategy](../secure/infrastructure-security-strategy.md) | Define a security strategy that reduces business risk from attacks. Take incremental steps to build confidentiality, integrity, and availability assurances into all information systems and data. |
+| [Infrastructure security architecture](../secure/infrastructure-security-architecture.md) | Best practices related to the ideal end state and key components of infrastructure security, including Azure landing zones, Zero Trust principles, and additional Azure Security Benchmark security recommendations. |
+| [Infrastructure security implementation](../secure/infrastructure-security-implementation.md) and [security operations and governance](../secure/infrastructure-security-operations-governance.md) | Learn about implementation, operations, and governance security, including IaC approaches, native security controls, ALZ accelerators, operational role responsibility assignments, security governance best practices, cloud workload protection, and cloud security posture management.|
+| [Development security strategy](../secure/development-security-strategy-overview.md) | Best practices related to development security strategy including innovation security, Shift Left strategies, and the technical strategies to protect applications, code, and the underlying infrastructure, platform, or device. |
+| [Development innovation security](../secure/development-innovation-security.md) | Develop an innovation security strategy that enables your organization to balance the protection of innovation data and processes with incremental and continuous improvements in the development lifecycle. Define an innovation minimum viable product (MVP) across development, security, and operations—integrating Shift Left security thinking within your DevOps lifecycle from the beginning. |
+| [Securing DevOps strategy and process](../secure/devops-strategy-process-security.md) | Learn how to move towards a DevSecOps strategy end-state, balancing smaller, iterative improvements with innovation and the development lifecycle. Push rapid releases with elements of classic security and operations. Ensure your minimum viable product (MVP) balances the need for rapid releases—natively embedding guardrails across security, governance, and compliance—while balancing production, performance, and reliability. |
+| [Development security architecture](../secure/development-security-architecture.md) | Best practices related to the ideal end state and key components of development security, including IaC deployment consistency, and integrated process for security development.
+| [Development security implementation and operations](../secure/development-security-implementation-operations.md) | Learn about the  implementation and operations aspects of development security, including comprehensive repository toolsets, continuous, incremental governance improvements, and DevSecOps controls. |
+
 ## May 2022
 
 ### Unified management and operations with Azure Arc-enabled Kubernetes landing zone accelerator
