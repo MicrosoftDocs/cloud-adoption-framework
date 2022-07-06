@@ -57,16 +57,16 @@ Any robust cloud deployment requires a well-considered network that takes into a
 
 - Many platform as a service (PaaS) services in Azure support [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) or [Azure Private Link](/azure/private-link/private-link-overview). Both these solutions might significantly influence how you design your network as you consider regional resiliency, migration, and governance.
 
-- Many PaaS services rely on their own regional resiliency solutions. For example, in deployments for Azure SQL Database and Azure Cosmos DB, you can easily replicate to additional regions. Some Azure services, like Azure DNS, don't have regional dependencies. As you consider which services you'll use in your cloud adoption process, make sure that you clearly understand the failover capabilities and recovery steps that might be required for each Azure service you use.
+- Many PaaS services rely on their own regional resiliency solutions. For example, in deployments for Azure SQL Database and Azure Cosmos DB, you can easily replicate to more regions. Some Azure services, like Azure DNS, don't have regional dependencies. As you consider which services you'll use in your cloud adoption process, make sure that you clearly understand the failover capabilities and recovery steps that might be required for each Azure service you use.
 
-- In addition to deploying to multiple regions to support disaster recovery, many organizations choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, additional fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running active-active in multiple regions.
+- In addition to deploying to multiple regions to support disaster recovery, many organizations choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running active-active in multiple regions.
 
 > [!WARNING]
 > Azure regions are highly available constructs. Azure service-level agreements are applied to the services running in specific regions. You should never deploy with a single-region dependency on mission-critical applications. Always plan for regional failure, and practice recovery and mitigation steps.
 
-## Document complexity
+## Document your scenario complexity
 
-After you consider network topology, determine whether additional documentation and process alignment is required. The following approach can help you assess potential challenges and establish a general course of action:
+After you consider network topology, determine whether more documentation and process alignment is required. The following approach can help you assess potential challenges and establish a general course of action:
 
 - Consider a more robust readiness and governance implementation.
 - Inventory the affected geographies. Compile a list of the regions and countries that are affected.
@@ -75,9 +75,7 @@ After you consider network topology, determine whether additional documentation 
 - Document datacenters and assets. Are there assets in the identified country that might be included in the migration effort?
 - Document regional SKU availability and failover requirements.
 
-Align changes throughout the migration process to address the initial inventory.
-
-The following table can help you document your findings:
+Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings:
 
 | Region        | Country     | Local employees | Local external users   | Local datacenters or assets | Data sovereignty requirements |
 |---------------|-------------|-----------------|------------------------|-----------------------------|-------------------------------|
@@ -86,11 +84,11 @@ The following table can help you document your findings:
 | Europe        | Germany     | Yes             | Partners and customers | No - network only           | Yes                           |
 | Asia Pacific  | South Korea | Yes             | Partners               | Yes                         | No                            |
 
-## Relevance of data sovereignty
+## Know data sovereignty requirements
 
-Around the world, government organizations have begun to establish data sovereignty requirements, like in General Data Protection Regulation (GDPR). These types of compliance requirements often require localization in a specific region, or even in a specific country, to protect the region's or country's citizens. In some cases, data that pertains to customers, employees, or partners must be stored on a cloud platform in the same region as the user.
+Around the world, government organizations have begun to establish data sovereignty and data privacy regulations. These types of compliance requirements often require localization in a specific region, or even in a specific country, to protect the region's or country's citizens. In some cases, data that pertains to customers, employees, or partners must be stored on a cloud platform in the same region as the user.
 
-Addressing this challenge has been a significant motivation for cloud migrations for organizations that operate on a global scale. To maintain compliance requirements, some organizations have chosen to deploy duplicate IT assets to cloud providers in the region. In the preceding table, Germany is a good example of this scenario. The example includes customers, partners, and employees, but not current IT assents in Germany. This organization might choose to deploy some assets to a datacenter within the GDPR area, potentially using the German Azure datacenters. An understanding of the data affected by GDPR would help the cloud adoption team understand the best migration approach in this case.
+Addressing this challenge has been a significant motivation for cloud migrations for organizations that operate on a global scale. To maintain data sovereignty compliance, some organizations have chosen to deploy duplicate IT assets to cloud providers in the region. In the preceding table, the Germany scenario is a good example. The scenario includes customers, partners, and employees, but not current IT assents in Germany. This organization might choose to deploy some assets to a datacenter within a data sovereignty regulation area, potentially using the German Azure datacenters. An understanding of the data that's affected by regional data sovereignty regulations would help the cloud adoption team understand the best migration approach for the organization.
 
 ### Why is the location of users relevant?
 
@@ -106,7 +104,7 @@ The location of existing datacenters might affect a migration strategy. Consider
 
 **Architecture decisions**: Determining the target region is one of the first steps in migration strategy design. This determination often is influenced by the location of existing assets. Also, the availability of cloud services and the unit cost of those services might vary between regions. Understanding where current and future assets are located affects architecture decisions, and it might influence budget estimates.
 
-**Datacenter dependencies**: The data in the table in [Document complexity](#document-complexity) shows that you'll likely need to plan for dependencies between various global datacenters. The dependencies might not be documented or understood clearly in many organizations that operate on this scale. Your organization's approach to evaluating user profiles helps you identify some of these dependencies in your organization. Your team also should explore more assessment steps that can help mitigate the risks and complexities that arise from dependencies.
+**Datacenter dependencies**: The example scenarios in the table in [Document complexity](#document-complexity) show that you'll likely need to plan for dependencies between various global datacenters. The dependencies might not be documented or understood clearly in many organizations that operate on this scale. Your organization's approach to evaluating user profiles helps you identify some of these dependencies in your organization. Your team also should explore more assessment steps that can help mitigate the risks and complexities that arise from dependencies.
 
 ## Implement a general approach
 
@@ -119,9 +117,9 @@ The following approach uses a data-driven model to address global migration comp
 
 When the team is comfortable with the baseline approach and readiness is aligned, consider a few data-driven prerequisites:
 
-- **Complete general discovery**: Complete the table in [Document complexity](#document-complexity) to evaluate documentation needs.
+- **Complete general discovery**: Complete the table in [Document complexity](#document-complexity) to evaluate the complexity of your cloud adoption strategy.
 - **Perform a user profile analysis on each affected country**: It's important to understand general user routing early in the migration process. Changing global lease lines and adding connections like ExpressRoute to a cloud datacenter can require months of networking delays. Address user routing as early in the process as possible.
-- **Complete an initial digital estate rationalization**: When complexity is introduced in a migration strategy, you should complete an initial digital estate rationalization. For more information, see [What is a digital estate?](../../digital-estate/index.md).
+- **Complete an initial digital estate rationalization**: When complexity is introduced in a migration strategy, you should complete an initial digital estate rationalization. For more information, see [What is a digital estate?](../../digital-estate/index.md)
 - **Use tagging for digital estate requirements**: Establish tagging policies to identify any workload that's affected by data sovereignty requirements. Required tags should begin in digital estate rationalization and carry through to migrated assets.
 - **Evaluate a hub-spoke model**: Distributed systems often share common dependencies. Often, you can address shared dependencies by implementing a hub-spoke model. Although implementing a hub-spoke model is out of scope for the migration process, flag the model for consideration during future iterations of the [ready processes](../../ready/index.md).
 - **Prioritize the migration backlog**: When network changes are required to support production deployment of a workload that supports multiple regions, the cloud strategy team should track and manage escalations that result from the network changes. The higher level of executive support helps accelerate the change by freeing the strategy team to reprioritize the backlog and ensure that global workloads aren't blocked by network changes. Prioritize global workloads only when network changes are finished.
@@ -156,7 +154,7 @@ When you migrate an application that must be deployed to multiple regions, the c
 
 **Azure Site Recovery vault design**: Azure Site Recovery is the suggested tool for cloud-native replication and synchronization of digital assets to Azure. Site Recovery replicates data about the asset to a Site Recovery vault, which is bound to a specific subscription in a specific region and Azure datacenter. When you're replicating assets to a second region, you might also need a second Site Recovery vault.
 
-**Configuration and process server design**: Site Recovery works with a local instance of a configuration and process server, which is bound to a single Site Recovery vault. This configuration means that you might need to install a second instance of these servers in the source datacenter to facilitate replication.
+**Configuration and process server design**: Site Recovery works with a local instance of a configuration and process server, which is bound to a single Site Recovery vault. The configuration means that you might need to install a second instance of these servers in the source datacenter to facilitate replication.
 
 **Network bandwidth design**: During replication and ongoing synchronization, you move binary data over the network, from the source datacenter to the Site Recovery vault in the target Azure datacenter. The process of replication and synchronization consumes bandwidth. Duplicating the workload to a second region doubles the amount of bandwidth that's consumed. If bandwidth is limited or if a workload involves substantial configuration or data drift, replicating data to a second region might interfere with the time it takes to complete the migration. More importantly, these constraints might affect the experience of users or applications that still depend on the bandwidth that was available in the source datacenter.
 
@@ -169,16 +167,16 @@ When you migrate an application that must be deployed to multiple regions, the c
 
 ## Optimize and promote process changes
 
-As you address global complexity during optimization and promotion, you might require identical efforts in each of the additional regions. When a single deployment is acceptable, you might still need to replicate business testing and business change plans.
+As you address global complexity during optimization and promotion, you might require identical efforts in each of the other regions. When a single deployment is acceptable, you might still need to replicate business testing and business change plans.
 
 ### Suggested action during the optimize and promote process
 
-**Pretest optimization**: Initial automation testing can identify potential optimization opportunities, as with any migration effort. For global workloads, test the workload in each region independently. Minor configuration changes in the network or in the target Azure datacenter might affect performance.
+**Pretest optimization**: Initial automation testing can identify potential optimization opportunities, as with any migration effort. For global workloads, independently test the workload in each region. Minor configuration changes in your network or in the Azure datacenter you choose might affect performance.
 
-**Business change plans**: For any complex migration scenario, create a business change plan. Using a business change plan helps ensure clear communication regarding any changes to business processes, user experiences, and the timing of efforts required to integrate the changes. In a global migration effort, the plan should include considerations for users in each affected geography.
+**Business change plans**: For any complex migration scenario, create a business change plan. Using a business change plan helps ensure clear communication about any changes to business processes and user experiences, and about the timing of efforts required to integrate the changes. In a global migration effort, the plan should include considerations for users in each affected geography.
 
-**Business testing**: In conjunction with the business change plan, business testing might be required in each region. Business testing in each region helps ensure adequate performance and adherence to the modified networking routing patterns.
+**Business testing**: In addition to a business change plan, business testing might be required in each region. Business testing in each region helps ensure adequate performance and adherence to modified network routing patterns.
 
-**Promotion flights**: Often, promotion happens as a single activity, and production traffic is rerouted to the migrated workloads. In a global release effort, you should deliver promotion in *flights*, which are predefined collections of users. Using promotion flights gives the cloud strategy team and the cloud adoption team an opportunity to observe performance and improve support of users in each region. Promotion flights often are controlled at the networking level by changing the routing of specific IP ranges from the source workload assets to the newly migrated assets. After a specified collection of users have been migrated, the next group can be rerouted.
+**Promotion flights**: Often, promotion happens as a single activity, and production traffic is immediately rerouted to the migrated workloads. In a global release effort, you should deliver promotion in *flights*, which are predefined collections of users. Using promotion flights gives the cloud strategy team and the cloud adoption team an opportunity to observe performance and improve support for users in each region. Promotion flights often are controlled at the networking level by changing the routing of specific IP ranges from the source workload assets to the newly migrated assets. After a specified collection of users are migrated, the next group can be rerouted.
 
-**Flight optimization**: One of the benefits of using promotion flights is that you have deeper observations and an opportunity to optimize the deployed assets. After a brief period of production usage by the first flight, refining the migrated assets is suggested when IT operation procedures support it.
+**Flight optimization**: One of the benefits of using promotion flights is that you have deeper observations and an opportunity to optimize the deployed assets. After the first flight successfully uses production for a brief time, you can refine the migrated assets when IT operation procedures support it.
