@@ -17,7 +17,7 @@ As you go through the tutorial, you might run into deployment issues. To start o
 You can also use the scripts to remove all resources you created in your subscription when you finish all steps in the tutorial.
 
 > [!WARNING]
-> The `filter` parameter is used to remove resource groups that were created during the Workshop Labs. Removing resource groups by using these scripts is an action that can't be reversed. Be sure you selected the correct prefix as a filter.
+> The filter parameter is used to remove resource groups that were created during the Workshop Labs. Removing resource groups by using these scripts is an action that can't be reversed. Be sure you selected the correct prefix as a filter.
 
 ## Use PowerShell for single-resource group cleanup
 
@@ -113,13 +113,13 @@ Foreach ($factory in $factories) {
     }
 }
 
-# Blocking resources are deleted, so you can delete the resource groups listed earlier.
+# Blocking resources are deleted, so you can delete the resource groups that were listed earlier.
 Foreach ($group in $groups) {
     Write-Host -ForegroundColor red "Deleting $($group.name)"
     az group delete --name $group.name --yes --no-wait
 }
 
-# Check for the resource groups to verify they were deleted.
+# Check for the resource groups to verify that they were deleted.
 $allGroups = az group list | ConvertFrom-Json
 $allGroups | Where-Object { $groups.name -contains $_.name } | Select-Object name, @{Name="State"; Expression={$_.properties.provisioningState }}
 ```
