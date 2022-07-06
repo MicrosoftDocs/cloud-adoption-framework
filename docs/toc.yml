@@ -2,7 +2,7 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About the framework
+  - name: About the Framework
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
@@ -18,7 +18,7 @@ items:
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
-      href: scenarios/aks/index.md
+      href: scenarios/app-platform/index.md
     - name: SAP
       href: scenarios/sap/index.md
     - name: Virtual desktops
@@ -140,6 +140,8 @@ items:
       href: strategy/digital-transformation-timeline.md
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
+    - name: Building your devops practice
+      href: strategy/building-devops-practice.md
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
@@ -278,7 +280,15 @@ items:
             href: ready/landing-zone/design-area/azure-ad-define.md
 
         - name: Identity and access management
-          href: ready/landing-zone/design-area/identity-access.md
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/identity-access.md
+          - name: Active Directory and Hybrid Identity
+            href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
+          - name: Platform access
+            href: ready/landing-zone/design-area/identity-access-platform-access.md
+          - name: Landing zones
+            href: ready/landing-zone/design-area/identity-access-landing-zones.md
 
         - name: Network topology and connectivity
           items:
@@ -403,11 +413,34 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/platform-automation-devops.md
-          - name: Test-driven development (TDD) for landing zones
-            href: ready/considerations/test-driven-development.md
-          - name: Landing zone TDD in Azure
-            href: ready/considerations/azure-test-driven-development.md
-
+          - name: Platform automation
+            items:
+            - name: Automation
+              href: ready/considerations/automation.md
+          - name: DevOps
+            items:
+            - name: DevOps considerations
+              href: ready/considerations/devops-principles-and-practices.md
+            - name: Team topologies
+              href: ready/considerations/devops-teams-topologies.md
+          - name: Development strategy
+            items:
+            - name: Development lifecycle
+              href: ready/considerations/development-strategy-development-lifecycle.md
+            - name: Infrastructure as Code
+              href: ready/considerations/infrastructure-as-code.md
+            - name: Environments
+              href: ready/considerations/environments.md
+            - name: Test-driven development for Azure Landing Zones
+              href: ready/considerations/development-strategy-test-driven-development.md
+            - name: DevOps Toolchain considerations
+              href: ready/considerations/devops-toolchain.md
+          - name: Security considerations
+            items:
+            - name: Overview
+              href: ready/considerations/security-considerations-overview.md
+            - name: Role-based access control for DevOps Tools
+              href: ready/considerations/security-considerations-tools.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
@@ -1546,7 +1579,6 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-        
 
       - name: Monitoring
         items:
@@ -1649,20 +1681,35 @@ items:
         href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
-      - name: Securing Power Platform
-        items:
-          - name: Overview
-            href: /power-platform/admin/security/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Security and governance considerations
-            href: /power-platform/admin/governance-considerations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Compliance and data privacy
-            href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Establish DLP policies
-            href: /power-platform/guidance/adoption/dlp-strategy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Enable cross-tenant isolation
-            href: /power-platform/admin/cross-tenant-restrictions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Data protection in connectors
-            href: /connectors/protection?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+    - name: Infrastructure and Development
+      items:
+      - name: Introduction
+        href: secure/security-best-practices-introduction.md
+      - name: Infrastructure
+        items:        
+        - name: Overview
+          href: secure/infrastructure-security-overview.md
+        - name: Strategy
+          href: secure/infrastructure-security-strategy.md
+        - name: Security architecture
+          href: secure/infrastructure-security-architecture.md
+        - name: Security implementation, operations, and governance
+          href: secure/infrastructure-security-implementation.md
+        - name: Operations
+          href: secure/infrastructure-security-operations-governance.md
+      - name: Development
+        items:                  
+        - name: Development security strategy
+          href: secure/development-security-strategy-overview.md
+        - name: Development innovation security
+          href: secure/development-innovation-security.md
+        - name: Securing DevOps strategy and process
+          href: secure/devops-strategy-process-security.md
+        - name: Development security architecture
+          href: secure/development-security-architecture.md
+        - name: Development security implementation and operations
+          href: secure/development-security-implementation-operations.md
 
     - name: Security considerations
       items:

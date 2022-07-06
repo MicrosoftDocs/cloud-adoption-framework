@@ -49,11 +49,11 @@ Data domains are the foundation of data mesh. The concept of data domains comes 
 
 There are three aspects to data domains:
 
-- Your chosen boundaries render themselves to long term ownership. They exist over a long period of time and have identified owners.
+* Your chosen boundaries render themselves to long term ownership. They exist over a long period of time and have identified owners.
 
-- Domains should match reality, not just theoretical concepts.
+* Domains should match reality, not just theoretical concepts.
 
-- Your domains need to have atomic integrity. If areas have no relationship with each other, don't combine them in a domain together.
+* Your domains need to have atomic integrity. If areas have no relationship with each other, don't combine them in a domain together.
 
 For more information about data domains and how you should define them, see [What are data domains?](data-domains.md).
 
@@ -63,11 +63,9 @@ Data products are another important component of data mesh. Data products aim to
 
 A successful data product must be:
 
-For this section, it's easier for the readers if you format it something like:
-
-- **Usable:** Your product must have users outside the immediate data domain.
-- **Valuable:** Your product must maintain value over time. If it doesn't have long-term value, it won't succeed.
-- **Feasible:** Your product must be feasible. If you can't actually build it, the product won't be a success. Your product must be feasible from both a data availability and a technical standpoint.
+* **Usable:** Your product must have users outside the immediate data domain.
+* **Valuable:** Your product must maintain value over time. If it doesn't have long-term value, it won't succeed.
+* **Feasible:** Your product must be feasible. If you can't actually build it, the product won't be a success. Your product must be feasible from both a data availability and a technical standpoint.
 
 The code assets of a data product include code that generates it and code that delivers it. It also includes pipelines used to create the product and the product's final report.
 

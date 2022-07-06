@@ -40,6 +40,8 @@ Data landing zone architecture illustrates the layers, their resource groups, an
  > [!TIP]
 > Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../../cloud-scale-analytics/architectures/scale-architectures.md).
 
+Use this architecture as a starting point. Download the [Visio file](https://www.microsoft.com/download/details.aspx?id=104215) and modify it to fit your specific business and technical requirements when planning your data landing zone implementation.
+
 ## Core services layer
 
 The core services layer includes all services required to enable your data landing zone within the context of cloud-scale analytics. The following table lists the resource groups that provide the standard suite of available services in every data landing zone you deploy.
