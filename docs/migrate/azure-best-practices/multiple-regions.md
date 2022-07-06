@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Azure regions decision guide
 
-When you design and create your Azure services cloud migration, you can choose from many regions around the world. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics that make choosing the correct region for your Azure resources essential. Considerations include available services, capacity, constraints, and sovereignty:
+When you design your strategy to migrate to Azure, you can choose from many Azure regions around the world. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics that make choosing the correct region for your Azure resources essential. Considerations include available services, capacity, constraints, and sovereignty:
 
 - **Available services**: The Azure services you can deploy in each region differ depending on various factors. Select a region for the service you need for your workload. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 - **Capacity**: Each region has a maximum capacity. A region's maximum capacity might affect what types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a large-scale datacenter migration to Azure, you might want to consult with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale you need.
