@@ -20,8 +20,6 @@ Centralized operations management is the most common approach to consistent perf
 
 The first step in this guide helps the operations team get started. The subsequent steps help the entire enterprise get started on a shared journey toward enterprise performance across the portfolio of workloads.
 
-![Get started with enterprise performance management](../_images/get-started/performance-map.png)
-
 ## Step 1: Establish operations management requirements
 
 The operations management baseline, outlined in the Microsoft Cloud Adoption Framework for Azure, provides a set of controls and cloud-native operations tools to ensure consistent operations. Expanding that baseline with automation tooling provides performance monitoring and automation to meet consistent performance requirements across the portfolio.
