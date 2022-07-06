@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 06/28/2022
+ms.date: 07/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -11,7 +11,7 @@ ms.subservice: manage
 
 # Cloud monitoring guide: Observability
 
-This article is intended to help organizations implement a consistent monitoring strategy quicker by ensuring *observability* is established in the [Azure landing zone](../../ready/landing-zone/index.md) (that is, in every minimum viable product) for each monitoring solution. As a planner, you develop a monitoring plan for a service and include some monitoring objectives. One desirable objective is for the monitoring consumers to reach a level of comfort or confidence with the solution you're planning for them, as soon as possible. The other objective is to continuously evaluate the Service Level Objectives (SLOs) and corresponding Service Level Indicators (SLIs) for that service, and strive to optimize through planning iterations. This is necessary so IT can reach SLO targets, make the service more reliable cost-effectively, and better meet the needs and expectations of the business.
+This article is intended to help organizations implement a consistent monitoring strategy quicker by ensuring *observability* is established in the [Azure landing zone](../../ready/landing-zone/index.md) (that is, in every minimum viable product) for each monitoring solution. As a planner, you develop a monitoring plan for a service and include some monitoring objectives. One desirable objective is for the monitoring consumers within the IT organization to reach a level of comfort or confidence with the solution you're planning for them, as soon as possible. The other objective is to continuously evaluate the Service Level Objectives (SLOs) and corresponding Service Level Indicators (SLIs) for that service, and strive to optimize through planning iterations. This is necessary so IT can reach SLO targets, make the service more reliable cost-effectively, and better meet the needs and expectations of the business.
 
 We call this *adoption*.
 
@@ -122,7 +122,7 @@ Observability relies on what is being monitored and how. In Azure, there are mul
 
 All other perspectives based on metrics and logs, are delivered through the various features of Azure Monitor. Or, depending on the Azure resource, you can view its platform metrics directly from that resource in the portal.
 
-Observability is a term meant to set the expectation that Azure Monitor gives you total visibility of the health, performance, and other aspects of Azure services in depth and breadth. But, there are other activities or focus than service and component monitoring. Being observant shouldn't be considered something that only certain personas perform on an as-needed basis, as required by their role or function, or in support of a process. It's similar to astronomy. Observation isn't once and done, rather you'll want to monitor objects in space occasionally, over set time intervals or continuously. Some objects, such as black holes are difficult to observe. The kind of monitoring needed depends on the consumer. For example, amateur astronomers observe occasionally, while astrophysicists value the long-term measurement and continuous monitoring of radio emissions.
+Observability is a term meant to set the expectation that Azure Monitor gives you total visibility of the health, performance, and other aspects of Azure services in depth and breadth. But, there are other activities or focus than service and component monitoring. Being observant shouldn't be considered something that only certain roles perform on an as-needed basis, as required by their role or function, or in support of a process. It's similar to astronomy. Observation isn't once and done, rather you'll want to monitor objects in space occasionally, over set time intervals or continuously. Some objects, such as black holes are difficult to observe. The kind of monitoring needed depends on the consumer. For example, amateur astronomers observe occasionally, while astrophysicists value the long-term measurement and continuous monitoring of radio emissions.
 
 With proper planning, you can create a medium to complex service in Azure in a few hours, versus weeks or longer on-premises. If you did, you'd arrange a combination of more than a dozen Azure resources (service components) across regions. You'll govern and manage these resources using Azure Resource Manager and from using resource group monitoring in Azure, you'll get a picture of the service. Once in production, the service is dynamic, scalable, and flexible. Consumption starts to ramp up and scale out. Capacity responds to demand. Events will occur, and service consumers can observe monitoring data, look at trends, and establish their significance.
 
