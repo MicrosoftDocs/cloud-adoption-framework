@@ -35,7 +35,7 @@ Control Mapping process steps:
 4. Perform Platform level Assessment
 5. Implement guardrails with policy initiatives using ALZ or native tools
 
-1. Identify the controls required
+1.Identify the controls required
 Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found here
 
 A sample of formalized controls list:
