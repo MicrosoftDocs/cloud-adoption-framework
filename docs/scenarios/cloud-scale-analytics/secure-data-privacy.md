@@ -157,7 +157,7 @@ As new data products are deployed, part of the DevOps process would need to run 
 
 ## Restricted data
 
-Along with implementing options for confidential or restricted data, we also recommend you host highly confidential data in a dedicated data landing zone and data landing management zone.
+Along with implementing options for confidential or restricted data, we also recommend you host highly confidential data in a **dedicated** data landing zone and data management landing zone.
 
 It allows specific requirements like just-in-time access, customer-managed keys for encryption, and inbound or outbound restrictions applied to the landing zone. The guidance has evaluated putting data of this type into the same data landing zone but different storage accounts. However, it can make the solution complicated on the networking layer, for example, with network security groups and others.
 
