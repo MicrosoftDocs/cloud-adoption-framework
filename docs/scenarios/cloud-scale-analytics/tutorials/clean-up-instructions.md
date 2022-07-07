@@ -27,13 +27,13 @@ You can also use the scripts to remove all resources you created in your subscri
 $prefix = '<your prefix>'
 $subscriptionId = '<subscription ID>'
 
-# Set subscription
+# Set the subscription.
 Set-AzContext -SubscriptionId $subscriptionId
 
 # Lists all resource groups that will be removed.
 Get-AzResourceGroup | ? ResourceGroupName -match $prefix | Select-Object ResourceGroupName
 
-# Removes the resource groups shown in the previous command.
+# Removes the resource groups shown in the preceding command.
 Get-AzResourceGroup | ? ResourceGroupName -match $prefix | Remove-AzResourceGroup -AsJob -Force
 ```
 
@@ -45,7 +45,7 @@ Get-AzResourceGroup | ? ResourceGroupName -match $prefix | Remove-AzResourceGrou
 prefix='<prefix>'  
 subscription='<subscription ID>'
 
-# Set subscription.
+# Set the subscription.
 az account set --subscription $subscription
 
 # Visual review to ensure the resource groups match the specified prefix.
@@ -119,7 +119,7 @@ Foreach ($group in $groups) {
     az group delete --name $group.name --yes --no-wait
 }
 
-# Check for the resource groups to verify that they were deleted.
+# Check for the resource groups to verify they were deleted.
 $allGroups = az group list | ConvertFrom-Json
 $allGroups | Where-Object { $groups.name -contains $_.name } | Select-Object name, @{Name="State"; Expression={$_.properties.provisioningState }}
 ```
