@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Development security architecture
 
-This article describes steps to help you achieve the ideal end state for development security.
+This article describes steps to help you achieve an ideal end state for development security in your organization.
 
 Your development security architecture should integrate these key components:
 

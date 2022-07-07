@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Development innovation security
 
-This article describes development innovation security.
+This article describes how to balance innovation speed and accountability in your organization within the context of development security.
 
 ## Balance innovation and accountability
 

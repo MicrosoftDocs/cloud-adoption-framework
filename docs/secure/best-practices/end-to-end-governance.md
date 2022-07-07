@@ -18,8 +18,6 @@ It's not sufficient to plan and implement an [Azure role-based access control (R
 
 If this model isn't mirrored for DevOps automation, your organization might leave a security back-door open. Consider an example where a developer doesn't have access via ARM templates, but still has sufficient permissions to change application code or infrastructure as code and trigger an automation workflow. The developer, indirectly via DevOps, can access and make destructive changes to your ARM templates.
 
-This article explains best practices to help plan for and avoid a scenario where destructive changes can occur.
-
 ## Single identity management plane with Azure AD groups
 
 The first step is to integrate Azure Active Directory to use [single sign-on per identity management best practice](/azure/security/fundamentals/identity-management-best-practices#enable-single-sign-on).

@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Securing DevOps strategy and process
 
-This article describes how to secure your DevOps strategy and process within development security.
+This article describes how to secure DevOps strategy and process for your organization in the context of development security.
 
 Adopt a DevSecOps strategy that blends DevOps with elements of classic security and operations approaches. In the classic waterfall development model, security and other governance mechanisms are built into large longer-term releases. In the DevOps model, smaller, iterative changes are pushed in rapid releases. Rapid iteration enables organizations to meet continuously evolving marketplace expectations.
 

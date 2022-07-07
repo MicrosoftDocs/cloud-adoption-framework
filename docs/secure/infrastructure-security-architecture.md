@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security architecture
 
-This article describes the ideal end state and key components of infrastructure security.
+This article describes an ideal end state for infrastructure security in your organization.
 
 ## Build scalable, modular Azure landing zones
 

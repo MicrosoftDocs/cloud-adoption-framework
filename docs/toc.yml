@@ -1683,7 +1683,7 @@ items:
             href: secure/infrastructure-security-architecture.md
           - name: Implementation and operations
             href: secure/infrastructure-security-implementation.md
-          - name: Operations governance
+          - name: Operations and governance
             href: secure/infrastructure-security-operations-governance.md
         - name: Development security
           items:

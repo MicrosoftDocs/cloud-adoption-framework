@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security strategy
 
-This article describes security for common enterprise-wide elements that multiple workloads depend on, as shown in the following diagram:
+This article describes security for enterprise-wide elements that multiple workloads depend on, as shown in the following diagram:
 
 [ ![Diagram of infrastructure security strategies flow](./media/enterprise-infrastructure-security-strategy.png).](./media/enterprise-infrastructure-security-strategy.png#lightbox)
 

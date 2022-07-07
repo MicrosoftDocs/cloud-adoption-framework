@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security implementation
 
-This article describes infrastructure security implementation, operations, and governance for infrastructure security.
+This article describes implementation, operations, and governance for your organization in the context of infrastructure security.
 
 ## Implementation
 
