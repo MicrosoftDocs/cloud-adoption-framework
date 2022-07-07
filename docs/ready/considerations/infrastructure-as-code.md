@@ -18,7 +18,7 @@ Infrastructure as Code (IaC) is a key DevOps practice that involves the manageme
 - Ability to manage multiple environments
 - Improved understanding of the state of infrastructure
 
-For more information about the benefits of using Infrastructure as Code, see [Repeatable infrastructure](/azure/architecture/framework/devops/automation-infrastructure).
+For more information about the benefits of using Infrastructure as Code, see [Repeatable infrastructure](/architecture/framework/devops/automation-infrastructure).
 
 ## Tooling
 
@@ -124,7 +124,7 @@ You have several options for publishing and sharing Terraform modules:
 
   - If taking a declarative approach, specify your desired outcome rather than how you want it done.
 
-- Consider deployment scopes. Have a good understanding of [Azure management levels and hierarchy](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources). Each IaC deployment must know the scope at which Azure resources are deployed.
+- Consider deployment scopes. Have a good understanding of [Azure management levels and hierarchy](/cloud-adoption-framework/ready/azure-setup-guide/organize-resources). Each IaC deployment must know the scope at which Azure resources are deployed.
 
 - Determine whether you should use an Azure native or Azure non-native IaC tool. Some points to consider:
 
@@ -158,7 +158,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Publish and use IaC modules from public registries in the following scenarios:
 
-  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/terraform-module).
+  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/terraform-module%3C).
 
   - You want to use modules that are maintained, updated, and supported by Microsoft, Terraform, or other module providers.
 
