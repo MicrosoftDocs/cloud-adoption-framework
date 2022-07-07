@@ -4,7 +4,7 @@ description: This document is an End-to-End guidance for Security Control Mappin
 author: Tshah2808
 ms.author: tanshah
 ms.date: 07/06/2022
-ms.topic: security-compliance
+ms.topic: security-control-mapping
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
@@ -44,7 +44,7 @@ A sample of formalized controls list:
 **2.Map the controls to ASB and create set of custom controls:**
 
 For each control you have captured use appropriate control titles, domain categories, and guidance/description to identify related ASB controls which are a match appropriately. Align the intent of each control as close as possible and note the deviance or gaps in the spreadsheet.
-You can also use common frameworks that are mapped to both your organization’s and ASB where they exist. For example, if both yours and ASB controls are already mapped to NIST 800-53 r4 or CIS 7.1 you could join the data sets together on that pivot. (Intermediate common frameworks can be found in the ASB resources section: <https://docs.microsoft.com/security/benchmark/azure/v2-cis-benchmark>)
+You can also use common frameworks that are mapped to both your organization’s and ASB where they exist. For example, if both yours and ASB controls are already mapped to NIST 800-53 r4 or CIS 7.1 you could join the data sets together on that pivot. Intermediate common frameworks can be found in the ASB resources section: (<https://docs.microsoft.com/security/benchmark/azure/2-cis-benchmark>)
 
 Single Control Mapping Example:
 Your Org's Control Objectives
@@ -77,7 +77,7 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
         4.Needed mitigating controls (if any)
         5.What Azure Policy can enforce/monitor the control
 
-    •Where there are gaps in monitoring or enforcement for the service and control:
+    •Where there are gaps in monitoring or enforcement for the service and control
         1.report to the ASB team to drive gaps closed (content, monitoring, or enforcement)
 
     •For any areas that do not meet the your requirements, please notate the risk involved if you choose to exempt that requirement, the impact, and if it is acceptable to approve or if you are blocked due to the gap.
@@ -106,9 +106,9 @@ After the approval from your internal Security/Audit team that the platform and 
 **Flow:**
 
     1.Summarize the Policies that were identified as required as an output of the platform assessment and service assessments
-     2.Develop any needed custom policy definitions to support mitigating controls/gaps
-     3.Create custom policy initiative
-     4.Assign the policy initiative with ALZ tooling
+    2.Develop any needed custom policy definitions to support mitigating controls/gaps
+    3.Create custom policy initiative
+    4.Assign the policy initiative with ALZ tooling
 
 **Inputs:**
 
@@ -125,18 +125,21 @@ This article describes the process of identifying, mapping, and implementing reg
 
 **ALZ Implementation Policy Guidance:**
 
-Depending on the customer’s control objectives, you may need to create custom policies, policy initiatives and policies assignments.
+Depending on the customer’s control objectives, you might need to create custom policies, policy initiatives and policies assignments.
 
 Please reference the guidance below for each ALZ implementation option.
-ALZ Accelerator using the Azure Portal <https://aka.ms/caf/ready/accelerator>
+ALZ Accelerator using the Azure Portal (<https://aka.ms/caf/ready/accelerator>)
 When using the ALZ Accelerator Azure Portal based experience, please refer to the following articles.
-Adding Customer Azure Policy Definitions and initiatives:
-Create custom security policies in Microsoft Defender for Cloud <https://docs.microsoft.com/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal>
-Tutorial: Create a custom policy definition - Azure Policy | Microsoft Docs
-Assigning Azure Policy or Policy initiatives:
-<https://docs.microsoft.com/azure/governance/policy/assign-policy-portal>
+Adding Azure Policy Definitions and initiatives:
 
-**ALZ ARM with AzOps Accelerator:** <https://aka.ms/alz/arm> and <https://github.com/azure/azops-accelerator>
+Create custom security policies in Microsoft Defender for Cloud (<https://docs.microsoft.com/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal>)
+
+Tutorial: Create a custom policy definition (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>)
+
+Assigning Azure Policy or Policy initiatives:
+(<https://docs.microsoft.com/azure/governance/policy/assign-policy-portal>)
+
+**ALZ ARM with AzOps Accelerator:** (<https://aka.ms/alz/arm>) and (<https://github.com/azure/azops-accelerator>)
 
 When using the ALZ ARM templates implementation with AzOps, please refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
 Adding Custom Azure Policy Definitions and Initiatives:
@@ -155,7 +158,7 @@ Assigning a built-in Azure Policy:
 Adding Custom Policy Definitions/Initiatives and assigning:
 [Examples] Expand built in archetype definitions <https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Expand-Built-in-Archetype-Definitions>
 
-**ALZ-Bicep**
+## ALZ-Bicep
 
 When using the ALZ-Bicep implementation please refer to the article “How does ALZ-Bicep implement Azure Policy” to learn how to create your own policy definitions and assignments.
 Adding Custom Azure Policy Definitions and Initiatives:
@@ -167,7 +170,7 @@ Implementing custom policy definitions, initiatives and assignments when not usi
 
 ## If you are following the ALZ guidance but not using any of the ALZ implementations, you might need to create custom policies, policy initiatives and policies assignments
 
-**Azure Portal**
+## Azure Portal
 
 When using the Azure Portal, please refer to the following articles.
 Adding Customer Azure Policy Definitions and initiatives:
@@ -178,11 +181,12 @@ Tutorial:<https://docs.microsoft.com/azure/governance/policy/tutorials/create-an
 Assigning Azure Policy or Policy initiatives:
 <https://docs.microsoft.com/azure/governance/policy/assign-policy-portal>
 
-**ARM**
+## ARM
+
 When using the ARM templates, please refer to the following articles.
 Adding Custom Azure Policy Definitions and initiatives:
 Tutorial: <https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>
-Tutorial: <https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>
+Tutorial:<https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>
 <https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=json>
 <https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json>
 
@@ -190,7 +194,8 @@ Assigning Azure Policy or Policy initiatives:
 Quickstart: <https://docs.microsoft.com/azure/governance/policy/assign-policy-template>
 <https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=json>
 
-**Terraform**
+## Terraform
+
 When using Terraform, please refer to the following articles.
 Adding Custom Azure Policy Definitions and initiatives:
 <https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_definition>
@@ -202,15 +207,15 @@ Adding Custom Azure Policy Definitions and initiatives:
 Assigning Azure Policy or Policy initiatives:
 <https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>
 
-**Bicep**
+## Bicep
+
 When using the Bicep templates, please refer to the following articles.
 Adding Custom Azure Policy Definitions and initiatives:
 <https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep>
 
 <https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep>
 
-**Assigning Azure Policy or Policy initiatives:**
-
+Assigning Azure Policy or Policy initiatives
 <https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=bicep>
 
 <https://docs.microsoft.com/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell>
