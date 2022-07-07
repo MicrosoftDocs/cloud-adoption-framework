@@ -16,10 +16,15 @@ ms.custom: internal
 
 Application development security relies on infrastructure security. If an application's underlying infrastructure (such as virtual machines) is compromised, attackers who gain control of the infrastructure can almost always gain control of the application and its data as well. Applications and build processes that host CI/CD, and so on. are often hosted on infrastructure operated by an organization (or a SaaS application managed through infrastructure admin personnel and accounts).
 
-As with all technology disciplines, take a "continuous improvement" approach. Start out with quick wins and continue with incremental progress toward a "north star"-a specified end state across your security strategy, architecture, implementation, and operations.
+As with all technology disciplines, take a "continuous improvement" approach. Start out with quick wins and continue with incremental progress toward a "north star"—a specified end state across your security strategy, architecture, implementation, and operations.
 
-Next steps:
+## Next steps
 
-- [Strategy](infrastructure-security-strategy.md)
-- [Architecture](infrastructure-security-architecture.md)
-- [Implementation](infrastructure-security-implementation.md)
+> [!div class="nextstepaction"]
+> [Infrastructure security strategy](infrastructure-security-strategy.md)
+
+> [!div class="nextstepaction"]
+> [Infrastructure security architecture](infrastructure-security-architecture.md)
+
+> [!div class="nextstepaction"]
+> [Infrastructure security implementation](infrastructure-security-implementation.md)
