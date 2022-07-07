@@ -94,7 +94,7 @@ Before executing the Terraform plan, you must set and then export the environmen
 
 1. Retrieve your Azure subscription ID and tenant ID using the `az account list` command.
 
-2. The Terraform plan creates resources in both Microsoft Azure and Google Cloud Platform. It then executes a script on a GCP virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your GCP and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
+2. The Terraform plan creates resources in both Microsoft Azure and Google Cloud Platform. It then executes a script on a GCP virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your GCP and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
     - `TF_VAR_subscription_id` = your Azure subscription ID
     - `TF_VAR_client_id` = your Azure service principal application ID
@@ -105,7 +105,7 @@ Before executing the Terraform plan, you must set and then export the environmen
 
 3. From CLI, navigate to the `azure_arc_servers_jumpstart/gcp/windows/terraform` directory of the cloned repo.
 
-4. Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
+4. Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
 
     ```console
     source ./scripts/vars.sh

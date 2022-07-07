@@ -37,7 +37,7 @@ To better align with the methodologies of the Cloud Adoption Framework, the prin
 
 ## Next steps
 
-Before refactoring your first landing zone, it is important to understand [test-driven development of landing zones](/docs/ready/considerations/test-driven-development).
+Before refactoring your first landing zone, it is important to understand [test-driven development of landing zones](https://github.com/MicrosoftDocs/cloud-adoption-framework/blob/main/docs/ready/considerations/test-driven-development.md).
 
 > [!div class="nextstepaction"]
-> [Test-driven development of landing zones](/docs/ready/considerations/test-driven-development)
+> [Test-driven development of landing zones](https://github.com/MicrosoftDocs/cloud-adoption-framework/blob/main/docs/ready/considerations/test-driven-development.md)
