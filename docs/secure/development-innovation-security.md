@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Development innovation security
 
-This article provides best practices for development information security.
+This article describes how to balance innovation speed and accountability in your organization within the context of development security.
 
 ## Balance innovation and accountability
 
@@ -62,4 +62,5 @@ Incorporate governance, risk, and compliance considerations into your strategy s
 
 ## Next steps
 
-- [DevSecOps as continuous improvement strategy](devops-strategy-process-security.md)
+> [!div class="nextstepaction"]
+> [Securing DevOps strategy and process](devops-strategy-process-security.md)

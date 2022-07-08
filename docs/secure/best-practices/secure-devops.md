@@ -1,5 +1,5 @@
 ---
-title: Secure DevOps
+title: Securing the pipeline and CI/CD workflow
 description: Learn how to secure DevOps, the pipeline, and CI/CD workflow.
 author: julie-ng
 ms.author: julng
@@ -10,9 +10,11 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Secure the pipeline and CI/CD workflow
+# Securing the pipeline and CI/CD workflow
 
-Automation and the agile methodology enables teams to deliver faster, but also adds complexity to security because the workflow extends to the developer teams themselves.
+This article describes how to secure your CI/CD pipelines and workflow.
+
+Automation and the Agile methodology enable teams to deliver faster, but also add complexity to security because the workflow extends to the developer teams themselves.
 
 The following diagram illustrates a baseline CI/CD workflow. The red configuration icon :::image type="icon" source="../media/devsecops-iconmonstr-gear-10.svg"::: indicates security permissions which must be configured by the customer. This follows the [shared responsibility model](/azure/security/fundamentals/shared-responsibility), where Azure and other vendors provide permissions, which must be configured by the customer according to their governance model and business requirements.
 
