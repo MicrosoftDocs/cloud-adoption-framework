@@ -135,24 +135,23 @@ Adding Azure Policy Definitions and initiatives:
 
 Create custom security policies in Microsoft Defender for Cloud (<https://docs.microsoft.com/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal>)
 
-Tutorial: Create a custom policy definition (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>)
+Tutorial: [Create a custom policy definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
 
-Assigning Azure Policy or Policy initiatives:
-(<https://docs.microsoft.com/azure/governance/policy/assign-policy-portal>)
+[Assigning Azure Policy or Policy initiatives](/azure/governance/policy/assign-policy-portal)
 
-**ALZ ARM with AzOps Accelerator:** (<https://aka.ms/alz/arm>) and (<https://github.com/azure/azops-accelerator>)
+**ALZ ARM with AzOps Accelerator:**
+[ARM](/aka.ms/alz/arm) and [AzOps](/azure/azops-accelerator>)
 
 When using the ALZ ARM templates implementation with AzOps, please refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
-Adding Custom Azure Policy Definitions and Initiatives:
-(<https://aka.ms/alz/wiki/azops>)
-Assigning Azure Policy:
-(<https://aka.ms/alz/wiki/azops>)
+[Adding Custom Azure Policy Definitions and Initiatives](/aka.ms/alz/wiki/azops)
+[Assigning Azure Policy](/aka.ms/alz/wiki/azops)
 
-**ALZ Terraform module ‘caf-enterprise-scale’:** (<https://aka.ms/alz/tf/wiki>)
+**ALZ Terraform module ‘caf-enterprise-scale’:** (/aka.ms/alz/tf/wiki)
 
 When using the ALZ Terraform module caf-enterprise-scale, refer to the repository wiki for guidance on how to manage additional policy definitions and assignments.
-Adding Custom Azure Policy Definitions/Initiatives and assigning:
-(<https://aka.ms/alz/terraform/custompolicy>)
+[Adding Custom Azure Policy Definitions,Initiatives and assigning]
+(/Azure/terraform-azurerm-caf-enterprise-scale/wiki/
+[Examples]-Create-Custom-Policies-Policy-Sets-and-Assignments)
 Assigning a built-in Azure Policy:
 (<https://aka.ms/alz/terraform/assignpolicy>)
 
