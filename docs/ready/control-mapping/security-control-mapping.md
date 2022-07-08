@@ -18,8 +18,6 @@ There are many ASB Regulatory compliance built-in initiatives already available.
 
 > [!NOTE]
 > The control mappings between ASB and industry benchmarks (such as CIS, NIST, and PCI) only indicate that a specific Azure feature(s) can be used to fully or partially address a control requirement defined in these industry benchmarks. You should be aware that such implementation does not necessarily translate to the full compliance of the corresponding control(s) in these industry benchmarks.
-> [!TIP]
-> You should review the guidance in Tailor the Azure landing zone architecture for details on how to tailor the Azure Landing Zone architecture to support your control mapping requirements.
 
 The process flow of control mapping:
 
@@ -32,6 +30,9 @@ The process flow of control mapping:
 3. Identify the controls not mapped with ASB and respective policies
 4. Perform Platform level Assessment
 5. Implement guardrails with policy initiatives using ALZ or native tools
+
+> [!TIP]
+> You should review the guidance in Tailor the Azure landing zone architecture for details on how to tailor the Azure Landing Zone architecture to support your control mapping requirements.
 
 **1.Identify the controls required:**
 
@@ -64,7 +65,7 @@ Any controls that might not map directly to ASB should be marked as needing miti
 
 Once you have your controls & objectives clearly mapped to ASB and have gathered the supporting information on responsibility, guidance, and monitoring, the IT security office or supporting organization must review all provided information in an official platform assessment. This platform assessment will determine if the Azure Security Benchmark meets the minimum threshold for usage and if it can meet all security and compliance requirements imposed by the regulations. If there are gaps identified, you can still use Azure and ASB but might need to develop mitigating controls until these gaps are closed and the benchmark can release updates to address them. In addition, you can map the custom controls by creating a policy definition and optionally adding to an initiative.
 
-## Flow
+**Checklist:**
 
 1.Security team has approved the Azure Platform for usage
 2.You will need to join an individual ASB Service Baseline excel to the previously completed (platform level) ASB control mappings.
@@ -86,13 +87,13 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
     •Either the service meets all requirements, or that the risk is acceptable and is placed on an allow list to be used after guardrails are in place
     •OR the service gaps are too large / risk is too big and service is placed on a deny list - it cannot be used until gaps are closed by Microsoft
 
-## Inputs
+**Inputs:**
 
     •Service Assessment Template (Excel)
     •Control Objectives to ASB Mapping
     •Target service
 
-## Outputs
+**Outputs:**
 
 •Completed Service Assessment (Excel)
     •Mitigating controls
@@ -103,7 +104,7 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
 
 After the approval from your internal Security/Audit team that the platform and core services meet their needs, you need to implement the agreed upon appropriate monitoring and guardrails. During the mapping and assessment process, if there were mitigating controls that extend beyond ASB, built-in controls or Azure Policy will need to be implemented using policy definitions and optionally added to initiatives.
 
-**Flow:**
+**Checklist:**
 
     1.Summarize the Policies that were identified as required as an output of the platform assessment and service assessments
     2.Develop any needed custom policy definitions to support mitigating controls/gaps
@@ -143,17 +144,17 @@ Assigning Azure Policy or Policy initiatives:
 
 When using the ALZ ARM templates implementation with AzOps, please refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
 Adding Custom Azure Policy Definitions and Initiatives:
-<https://aka.ms/alz/wiki/azops>
+(<https://aka.ms/alz/wiki/azops>)
 Assigning Azure Policy:
-<https://aka.ms/alz/wiki/azops>
+(<https://aka.ms/alz/wiki/azops>)
 
-**ALZ Terraform module ‘caf-enterprise-scale’:** <https://aka.ms/alz/tf/wiki>
+**ALZ Terraform module ‘caf-enterprise-scale’:** (<https://aka.ms/alz/tf/wiki>)
 
 When using the ALZ Terraform module caf-enterprise-scale, refer to the repository wiki for guidance on how to manage additional policy definitions and assignments.
 Adding Custom Azure Policy Definitions/Initiatives and assigning:
-<https://aka.ms/alz/terraform/custompolicy>
+(<https://aka.ms/alz/terraform/custompolicy>)
 Assigning a built-in Azure Policy:
-<https://aka.ms/alz/terraform/assignpolicy>
+(<https://aka.ms/alz/terraform/assignpolicy>)
 
 Adding Custom Policy Definitions/Initiatives and assigning:
 [Examples] Expand built in archetype definitions <https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Expand-Built-in-Archetype-Definitions>
@@ -162,9 +163,9 @@ Adding Custom Policy Definitions/Initiatives and assigning:
 
 When using the ALZ-Bicep implementation please refer to the article “How does ALZ-Bicep implement Azure Policy” to learn how to create your own policy definitions and assignments.
 Adding Custom Azure Policy Definitions and Initiatives:
-<https://aka.ms/alz/bicep/custompolicy>
+(<https://aka.ms/alz/bicep/custompolicy>)
 Assigning Azure Policies:
-<https://aka.ms/alz/bicep/assignpolicy>
+(<https://aka.ms/alz/bicep/assignpolicy>)
 
 Implementing custom policy definitions, initiatives and assignments when not using one of the ALZ implementations
 
@@ -174,51 +175,51 @@ Implementing custom policy definitions, initiatives and assignments when not usi
 
 When using the Azure Portal, please refer to the following articles.
 Adding Customer Azure Policy Definitions and initiatives:
-<https://docs.microsoft.com/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal>
-Tutorial: <https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>
-Tutorial:<https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>
+(<https://docs.microsoft.com/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal>)
+Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>)
+Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>)
 
 Assigning Azure Policy or Policy initiatives:
-<https://docs.microsoft.com/azure/governance/policy/assign-policy-portal>
+(<https://docs.microsoft.com/azure/governance/policy/assign-policy-portal>)
 
 ## ARM
 
 When using the ARM templates, please refer to the following articles.
 Adding Custom Azure Policy Definitions and initiatives:
-Tutorial: <https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>
-Tutorial:<https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>
-<https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=json>
-<https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json>
+Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>)
+Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>)
+(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=json>)
+(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json>)
 
 Assigning Azure Policy or Policy initiatives:
-Quickstart: <https://docs.microsoft.com/azure/governance/policy/assign-policy-template>
-<https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=json>
+Quickstart: (<https://docs.microsoft.com/azure/governance/policy/assign-policy-template>)
+(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=json>)
 
 ## Terraform
 
 When using Terraform, please refer to the following articles.
 Adding Custom Azure Policy Definitions and initiatives:
-<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_definition>
+(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_definition>)
 
-<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_set_definition>
+(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_set_definition>)
 
-<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>
+(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>)
 
 Assigning Azure Policy or Policy initiatives:
-<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>
+(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>)
 
 ## Bicep
 
 When using the Bicep templates, please refer to the following articles.
 Adding Custom Azure Policy Definitions and initiatives:
-<https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep>
+(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep>)
 
-<https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep>
+(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep>)
 
 Assigning Azure Policy or Policy initiatives
-<https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=bicep>
+(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=bicep>)
 
-<https://docs.microsoft.com/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell>
+(<https://docs.microsoft.com/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell>)
 
 **Additional Guidance using MDC (Microsoft Defender for Cloud):**
 
