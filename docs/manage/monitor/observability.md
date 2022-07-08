@@ -18,7 +18,7 @@ We call this *adoption*.
 The goal of this article is to take the [monitoring strategy](../../strategy/monitoring-strategy.md) recommendations, and create a monitoring plan to support the goal of modernizing and evolving your organizations IT operations strategy. The second goal is to drive operational maturity by being observant and constantly iterating to improve how you monitor those services.
 
 > [!NOTE]
-> In this article, a *monitoring solution* is the unit of production doing the monitoring of a service in the cloud, and a *monitoring target* is the service or thing that is being monitored. A solution encompasses all aspects of monitoring: the tool, the monitoring data, alerts, type of response, recovery actions, type of visualization, role-based access, and so on.
+> In this article, a *monitoring solution* is the unit of production doing the monitoring of a service in the cloud, and a *monitoring target* is the service or thing that is being monitored. A monitoring solution encompasses all aspects of monitoring: the tool, the monitoring data, alerts, type of response, recovery actions, type of visualization, role-based access, and so on.
 
 ## Terminology
 
