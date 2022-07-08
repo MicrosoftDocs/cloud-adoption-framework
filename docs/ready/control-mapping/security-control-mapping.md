@@ -153,10 +153,10 @@ When using the ALZ Terraform module caf-enterprise-scale, refer to the repositor
 (/Azure/terraform-azurerm-caf-enterprise-scale/wiki/
 [Examples]-Create-Custom-Policies-Policy-Sets-and-Assignments)
 Assigning a built-in Azure Policy:
-(<https://aka.ms/alz/terraform/assignpolicy>)
+(/aka.ms/alz/terraform/assignpolicy)
 
 Adding Custom Policy Definitions/Initiatives and assigning:
-[Examples] Expand built in archetype definitions <https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Expand-Built-in-Archetype-Definitions>
+[Examples] Expand built in archetype definitions (/github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Expand-Built-in-Archetype-Definitions>
 
 ## ALZ-Bicep
 
