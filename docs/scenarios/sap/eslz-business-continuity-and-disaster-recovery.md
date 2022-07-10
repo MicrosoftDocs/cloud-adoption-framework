@@ -15,7 +15,7 @@ ms.custom: think-tank, e2e-sap
 
 # Business continuity and disaster recovery (BCDR) for an SAP migration
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
 
 ## Scenario and scope
 
@@ -83,6 +83,8 @@ One advantage of deploying your HA architecture across different Availability Zo
 - When using Azure proximity placement groups in an availability set deployment, all the three SAP components (central services, application server, and database) should be in the same proximity placement group.
 
 - Use one proximity placement group per SAP SID. Groups don't span across Availability Zones or Azure regions.
+
+- When using Azure proximity placement groups in an availability zones deployment, the two SAP components (central services and application server) should be in the same proximity placement group. The database VMs in the two zones are no longer a part of the proximity placement groups. The proximity placement groups per zone are now scoped with the deployment of the VM running the SAP ASCS/SCS instances. The advantage of this new configuration is that you have more flexibility in resizing VMs or moving to new VM types with either the DBMS layer or the application layer of the SAP system. 
 
 - Azure doesn't currently support combining ASCS and db HA in the same Linux Pacemaker cluster; separate them into individual clusters. However, you can combine up to five [multiple central-services clusters](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid) into a pair of VMs.
 

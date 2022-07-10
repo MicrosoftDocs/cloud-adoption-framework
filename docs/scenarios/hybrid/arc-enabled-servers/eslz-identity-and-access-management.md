@@ -7,7 +7,7 @@ ms.date: 11/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Identity and access management for Azure Arc-enabled servers
@@ -38,7 +38,7 @@ Also consider the sensitive data that is sent to the Azure Monitor Log Analytics
 
 The following diagram shows a reference architecture that demonstrates the roles, permissions, and flow of actions for Azure Arc-enabled servers:
 
-[ ![Diagram that shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers.](../media/arc-enabled-servers-iam.png)](../media/arc-enabled-servers-iam.png#lightbox)
+[ ![Diagram that shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)
 
 ## Design considerations
 
