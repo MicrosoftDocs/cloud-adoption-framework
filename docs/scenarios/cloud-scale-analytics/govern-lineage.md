@@ -32,7 +32,7 @@ In addition to this native lineage reporting, Azure Purview also allows custom l
 One of Azure Purview's platform features is its ability to show the lineage between datasets created by data processes. Systems like Data Factory, Data Share, and Power BI capture the lineage of data as it moves. You can also get custom lineage reporting via Atlas hooks and REST API.
 
 > [!TIP]
-> For more information on supported systems and best practices, see the [Azure Purview Data Catalog lineage user guide](/azure/purview/catalog-lineage-user-guide).
+> For more information on supported systems and best practices, see the [Microsoft Purview Data Catalog lineage user guide](/azure/purview/catalog-lineage-user-guide).
 
 ## Next steps
 

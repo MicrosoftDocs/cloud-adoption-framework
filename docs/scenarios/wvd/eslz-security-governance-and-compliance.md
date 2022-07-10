@@ -96,7 +96,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest through platform-managed encryption keys.
   - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
 
-- Deploy an information protection solution like [Microsoft Information Protection](/microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or a third party solution, which makes sure sensitive information gets stored, processed, and transmitted securely by your organization's technology systems.
+- Deploy an information protection solution like [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or a third party solution, which makes sure sensitive information gets stored, processed, and transmitted securely by your organization's technology systems.
 
 - Use the [Security Policy Advisor for Microsoft 365 Apps for enterprise](/deployoffice/admincenter/overview-office-cloud-policy-service) to improve Office deployment security. This tool identifies policies you can apply to your deployment for more security, and also recommends policies based on their effects on your security and productivity.
 
@@ -114,7 +114,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - Configure the [Start VM on Connect feature](/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them.
 
-- Deploy scaling solutions for pooled session hosts through [Azure Automation](/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature(preview)](/azure/virtual-desktop/autoscale-scaling-plan)
+- Deploy scaling solutions for pooled session hosts through [Azure Automation](/azure/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature(preview)](/azure/virtual-desktop/autoscale-scaling-plan)
 
 ## Resource consistency
 

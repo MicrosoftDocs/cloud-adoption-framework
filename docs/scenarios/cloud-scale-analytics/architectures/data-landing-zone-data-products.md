@@ -133,15 +133,15 @@ The Data Product Analytics template contains all templates for deploying a data 
 
 The deployment and code artifacts include the following services:
 
-- [Machine Learning](/services/machine-learning/)
+- [Machine Learning](/azure/machine-learning/)
 - [Key Vault](/azure/key-vault/general)
 - [Application Insights](/azure/azure-monitor/app/app-insights-overview)
-- [Storage](/services/storage/)
-- [Container Registry](/services/container-registry/)
-- [Cognitive Services](/services/cognitive-services/) (optional)
+- [Storage](/azure/storage/)
+- [Container Registry](/azure/container-registry/)
+- [Cognitive Services](/azure/cognitive-services/) (optional)
 - [Data Factory](/azure/data-factory/) (select between Data Factory and Synapse)
 - [Synapse Workspace](/azure/synapse-analytics/) (select between Data Factory and Synapse)
-- [Azure Search](/services/search/) (optional)
+- [Azure Search](/azure/search/) (optional)
 - [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
 - [BigData Pool](/sql/big-data-cluster/concept-data-pool) (optional)
 
