@@ -12,13 +12,13 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Enterprise-scale for Microsoft Azure VMware Solution
 
-Enterprise-scale for Azure VMware Solution is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, with a focus on the design principles of enterprise-scale.
+Azure VMware Solution landing zone accelerator is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, with a focus on the design principles of enterprise-scale.
 
 The following guidance provides design considerations for implementing a scalable Azure VMware Solution in your landing zone. The design decisions your organization makes, based on this guidance, lays the groundwork for scalability.
 
 Customers adopt Azure VMware Solution in various ways. You can adopt the enterprise-scale for your Azure VMware Solution set to produce an architecture that fits your needs and puts your organization on a path to sustainable scale.
 
-Enterprise-scale for Azure VMware Solution provides these assets to support your project:
+Azure VMware Solution landing zone accelerator provides these assets to support your project:
 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
@@ -49,7 +49,7 @@ The following articles provide guidelines for creating your landing zone:
 
 The following architecture diagram is an example that shows design areas and best practices.
 
-[![Enterprise-scale for Azure VMware Solution architecture](./media/azure-vmware-eslz-architecture.png)](./media/azure-vmware-eslz-architecture.png#lightbox)
+[![Azure VMware Solution landing zone accelerator architecture](./media/azure-vmware-eslz-architecture.png)](./media/azure-vmware-eslz-architecture.png#lightbox)
 
 ## Next steps
 

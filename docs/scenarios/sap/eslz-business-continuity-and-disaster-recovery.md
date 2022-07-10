@@ -15,7 +15,7 @@ ms.custom: think-tank, e2e-sap
 
 # Business continuity and disaster recovery (BCDR) for an SAP migration
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
 
 ## Scenario and scope
 

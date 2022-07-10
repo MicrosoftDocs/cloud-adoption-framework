@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # Network topology and connectivity for an SAP migration
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
 
 ## Plan for IP addressing
 
@@ -22,11 +22,11 @@ It's vital to plan for IP addressing in Azure to ensure that:
 - The virtual network (VNet) contains the right address space.
 - Proper planning for subnet configuration happens in advance.
 
-The following architecture diagram shows networking considerations in enterprise-scale for SAP on Azure:
+The following architecture diagram shows networking considerations in SAP on Azure landing zone accelerator:
 
- ![A diagram of networking considerations in Enterprise-scale for SAP on Azure.](./media/ntc-architecture.png#lightbox)
+ ![A diagram of networking considerations in SAP on Azure landing zone accelerator.](./media/ntc-architecture.png#lightbox)
 
-*Figure 1: A diagram of networking considerations in Enterprise-scale for SAP on Azure.*
+*Figure 1: A diagram of networking considerations in SAP on Azure landing zone accelerator.*
 
 **Design considerations for SAP implementation:**
 
@@ -38,7 +38,7 @@ Delegated subnets are required for implementing Azure NetApp Files, which is pop
 
 ## Configure DNS and name resolution for on-premises and Azure resources
 
-Domain Name System (DNS) is a critical design topic in the overall enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
+Domain Name System (DNS) is a critical design topic in the overall Azure landing zone architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
 
 **Design recommendations for SAP implementation:**
 
