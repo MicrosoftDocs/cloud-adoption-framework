@@ -54,7 +54,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr-` |
 | Network Watcher | `Microsoft.Network/networkWatchers` | `nw-` |
-| Private Link | `"Microsoft.Network/privateLinkServices` | `pl-` |
+| Private Link | `Microsoft.Network/privateLinkServices` | `pl-` |
 | Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-`|
 | Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre-`|
 | Route filter | `Microsoft.Network/routeFilters` | `rf-` |
@@ -212,6 +212,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr-` |
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms-` |
 | Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv-` |
+| Recovery Services vault backup policy | `Microsoft.RecoveryServices/vaults/backupPolicies` | `rsvbp-` |
+| Backup vault | `Microsoft.DataProtection/BackupVaults` | `bv-` |
 
 ## Deprecated product names
 
