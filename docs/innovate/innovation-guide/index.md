@@ -7,7 +7,6 @@ ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-edit, AQC, sep-caf-innovate
 keywords: Innovative solutions, cloud adoption framework, innovation solutions
 ---

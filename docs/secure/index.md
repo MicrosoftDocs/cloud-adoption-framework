@@ -24,6 +24,10 @@ The Secure methodology provides a vision of the complete end state to guide the 
 
 The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
 
+Watch the following video to learn more about the Secure methodology and how it helps guide continuing security improvements over time.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVBXs]
+
 ## Mapping to concepts, frameworks, and standards
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which make it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. Here is a quick summary of how the disciplines in the CAF Secure methodology relate to other security concepts and guidance:
@@ -102,5 +106,5 @@ The Secure methodology is part of a comprehensive set of security guidance that 
 
 - [Azure Well-Architected Framework](/azure/architecture/framework/security/overview): Guidance on securing your workloads on Azure.
 - [Azure security benchmarks](/security/benchmark/azure/): Prescriptive best practices and controls for Azure security.
-- [Enterprise-scale landing zone](../ready/enterprise-scale/security-governance-and-compliance.md): Azure reference architecture and implementation with integrated security.
+- [Enterprise-scale landing zone](../ready/landing-zone/design-area/governance.md): Azure reference architecture and implementation with integrated security.
 - [Top 10 security best practices for Azure](./security-top-10.md): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.

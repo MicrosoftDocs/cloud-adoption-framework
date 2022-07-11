@@ -1,7 +1,7 @@
 ---
 title: Cloud organizational antipatterns
 description: Avoid cloud adoption antipatterns that can emerge because of organizational issues like misaligned IT departments, partnerships, and engineering assignments.
-author: sarahwendel
+author: lpassig
 ms.author: brblanch
 ms.date: 02/19/2021
 ms.topic: conceptual

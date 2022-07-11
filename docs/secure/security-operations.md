@@ -20,6 +20,10 @@ Rapid response and recovery protect your organization by damaging the adversary'
 
 Security operations (SecOps) is sometimes referred to or structured as a security operations center (SOC). [Security posture management](./security-governance.md#security-posture-management) of the operational environment is a function of governance discipline. Security of the DevOps process is part of the [innovation security](./innovation-security.md) discipline.
 
+Watch the following video to learn more about SecOps and its critical role in reducing risk for your organization. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVECU]
+
 ## People and process
 
 Security operations can be highly technical, but more importantly, it's a human discipline. People are the most valuable asset in security operations. Their experience, skill, insight, creativity, and resourcefulness are what make the discipline effective.

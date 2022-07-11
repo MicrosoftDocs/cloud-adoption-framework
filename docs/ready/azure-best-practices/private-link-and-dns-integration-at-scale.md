@@ -309,7 +309,7 @@ If an application owner deletes the private endpoint, the corresponding records 
 [link-3]: /azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
 [link-4]: /azure/private-link/private-endpoint-dns
 [link-5]: /azure/governance/policy/tutorials/create-custom-policy-definition
-[link-6]: /azure/templates/microsoft.network/2020-05-01/privateendpoints/privatednszonegroups
+[link-6]: /azure/templates/microsoft.network/privateendpoints/privatednszonegroups
 [link-7]: /azure/governance/policy/assign-policy-portal
 [link-8]: /azure/dns/dns-protect-private-zones-recordsets
 [link-9]: /azure/governance/policy/how-to/remediate-resources

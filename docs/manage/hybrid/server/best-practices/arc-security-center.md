@@ -1,6 +1,6 @@
 ---
-title: Connect Azure Arc-enabled servers to Azure Security Center
-description: Learn how to onboard an Azure Arc-enabled server to Azure Security Center.
+title: Connect Azure Arc-enabled servers to Microsoft Defender for Cloud
+description: Learn how to onboard an Azure Arc-enabled server to Microsoft Defender for Cloud.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/15/2020
@@ -81,11 +81,11 @@ In the following procedures, you enable and configure Microsoft Defender for Clo
 
 ## Onboard Microsoft Defender for Cloud
 
-1. Data collected by Microsoft Defender for Cloud is stored in a Log Analytics workspace. You can either use the default one created by Defender for Cloud or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
+1. Data collected by Microsoft Defender for Cloud is stored in a Log Analytics workspace. You can either use the default one created by Defender for Cloud or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/defender/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
 
    ![A screenshot of an ARM template.](./media/arc-security-center/arm-template.png)
 
-2. To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/securitycenter/arm) and run the following command:
+2. To deploy the ARM template, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/defender/arm) and run the following command:
 
    ```console
    az deployment group create --resource-group <Name of the Azure resource group> \

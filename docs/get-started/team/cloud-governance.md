@@ -14,8 +14,6 @@ ms.custom: internal
 
 A cloud governance team ensures that cloud-adoption risks and risk tolerance are properly evaluated and managed. The team identifies risks that can't be tolerated by the business, and it converts risks into governing corporate policies.
 
-![Get started building a cloud governance team](../../_images/get-started/governance-team-map.png)
-
 ## Step 1: Determine whether a cloud governance team is needed
 
 The official guidance in the Cloud Adoption Framework is to always create a cloud governance team. At first, the team might be very small. Regardless of its size, its role is important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with [cloud governance functions](../../organize/cloud-governance.md).
