@@ -32,7 +32,7 @@ From an enterprise-scale point of view, landing zones are individual Azure subsc
 
 ## What does policy-driven governance mean, and how does it work?
 
-[Policy-driven governance](./design-principles.md#policy-driven-governance) is one of the key design principles of enterprise-scale architecture.
+[Policy-driven governance](../landing-zone/design-principles.md#policy-driven-governance) is one of the key design principles of enterprise-scale architecture.
 
 Policy-driven governance means using Azure Policy to reduce the time you need for common and repeated operational tasks across your Azure tenant. Use many of the [Azure Policy effects](/azure/governance/policy/concepts/effects), such as `Append`, `Deny`, `DeployIfNotExists`, and `Modify`, to prevent non-compliance by either restricting non-compliant resources (as defined by the policy definition) from being created or updated or by deploying resources or modifying settings of a resource creation or update request to make them compliant. Some effects, such as `Audit`, `Disabled`, and `AuditIfNotExists`, don't prevent or take action; they only audit and report on non-compliance.
 
@@ -48,7 +48,7 @@ Some examples of policy-driven governance are:
 
 We have a dedicated page that walks through the various phases and options you have to either "disable" DINE policies or use our 3 phase approach to adopt them over time within your environment.
 
-See the guidance [Adopting policy driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
+See the guidance [Adopting policy driven guardrails](./dine-guidance.md)
 
 ## Should we use Azure Policy to deploy workloads?
 
@@ -77,7 +77,7 @@ We suggest working with each application or service workload team (landing zone 
 
 ### What about our management group hierarchy?
 
-With enterprise-scale architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in enterprise-scale architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](./management-group-and-subscription-organization.md).
+With enterprise-scale architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in enterprise-scale architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](../landing-zone/design-area/resource-org.md).
 
 *Archetype-aligned* means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services). However, all environments ("dev/test/production"), whether split across separate subscriptions or in a single subscription, are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
 
@@ -101,7 +101,7 @@ A common challenge to this approach is that you might need some policies to appl
   > Tags can be changed by users with appropriate Azure RBAC permissions, so for security focused policies, we don't advise using tags in policies. Users might change the tags on a resource and potentially bypass or apply another policy definition to the resources.
 
 - Apply policies at a subscription level as required, ideally during the subscription creation process (as mentioned earlier).
-- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](./platform-automation-and-devops.md#define-central-and-federated-responsibilities).)
+- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](../landing-zone/design-area/platform-automation-devops.md).)
 - Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
 
 #### Example of an optimal management group hierarchy aligned to enterprise-scale architecture
@@ -147,7 +147,7 @@ You might want to expand into or use more Azure regions once you've completed th
 | Management groups | No action necessary. Management groups aren't tied to a region. |
 | Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments must be updated to allow resource deployments to the new region you want to enable. |
 | Role-based access control | No action necessary. Azure RBAC isn't tied to a region. |
-| Logging | No action necessary. Keep sending and storing logs in the central Log Analytics Workspace in the Management subscription. See the recommendations in the enterprise-scale critical design area for [Management and monitoring](./management-and-monitoring.md). |
+| Logging | No action necessary. Keep sending and storing logs in the central Log Analytics Workspace in the Management subscription. See the recommendations in the enterprise-scale critical design area for [Management and monitoring](../landing-zone/design-area/management.md). |
 | Networking | If you deployed a networking topology, [Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or [traditional hub and spoke](../azure-best-practices/traditional-azure-networking-topology.md), expand the networking to the new Azure region. Create another networking hub by deploying the required networking resources into the existing Connectivity subscription in the new Azure region. From a DNS perspective, you might also want to deploy forwarders, if used, into the new Azure region. Use forwarders for spoke VNETs in the new region for resolution. Remember that Azure DNS Zones are global resources and not tied to a single Azure region, so nothing needs to be done to them. |
 | Identity | If you deployed Active Directory Domain Services or Azure Active Directory Domain Services into your Identity subscription/spoke, expand the service into the new Azure region. |
 

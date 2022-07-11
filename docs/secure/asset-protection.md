@@ -27,6 +27,10 @@ Threat actors are persistent and seek out vulnerabilities that result from gaps 
 
 ![Diagram presents an overview of asset protection and asset control, with sections for get secure and stay secure.](./media/asset-protection.png)
 
+Watch the following video to learn about the history of asset protection and how to keep both old and new assets secure. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu73]
+
 ## Get secure
 
 Get secure focuses on bringing resources up to meet your organization's current security standards, policy, and architecture. There are two types of activities:

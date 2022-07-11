@@ -66,7 +66,7 @@ Central IT organizations tend to deliver these tasks as part of the operations b
 The following guides provide best practices for implementing management capabilities for Azure Virtual Desktop environments:
 
 - [Use Azure Monitor for Azure Virtual Desktop](/azure/virtual-desktop/azure-monitor)
-- [Use Azure Advisor for Azure Virtual Desktop](/azure/virtual-desktop/azure-advisor)
+- [Use Azure Advisor for Azure Virtual Desktop](/azure/advisor/advisor-overview)
 - [Configure automatic updates for Azure Virtual Desktop](/azure/virtual-desktop/configure-automatic-updates)
 
 ### Protect and recover

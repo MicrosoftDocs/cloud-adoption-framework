@@ -7,7 +7,6 @@ ms.date: 04/09/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-new, AQC, setup
 ---
 
@@ -29,7 +28,7 @@ The following resources can help you stay current with Azure:
 
 For deeper content that helps you stay current with Azure topics, review these resources:
 
-- [Azure Friday](https://channel9.msdn.com/shows/Azure-Friday): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights. Subscribe via the [Azure Friday RSS feed](https://s.ch9.ms/Shows/Azure-Friday/feed).
+- [Azure Friday](/shows/azure-friday/): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights.
 - [`Azure Charts`](https://azurecharts.com): This visualization shows all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes. \*
 - [`AzAdvertizer`](https://www.azadvertizer.net): Release and change tracking on Azure governance capabilities such as Azure Policy, policy initiatives, policy aliases and Azure role-based access control (Azure RBAC). \*
 - [`Azure Weekly`](https://azureweekly.info)*
