@@ -20,8 +20,6 @@ A smaller team might move between projects to accomplish specific goals. For exa
 
 As cloud adoption expands, customers benefit from a team that's dedicated to the [cloud platform function](../../organize/cloud-platform.md). That team uses automated deployment and code reuse to accelerate successful adoption. People focused on a cloud platform function can implement infrastructure, application patterns, governance, and other supporting assets to drive further efficiencies and consistency, and to instill cloud principles in your organization. Small organizations and small adoption teams don't have the luxury of a dedicated cloud platform team. We recommend that you establish an automation capability in your adoption team to begin building this important cloud muscle.
 
-![Get started building a cloud adoption team](../../_images/get-started/adoption-team-map.png)
-
 ## Step 1: Determine the type of adoption team you need
 
 Cloud adoption teams tend to perform one or more of the following types of adoption:

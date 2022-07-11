@@ -18,10 +18,6 @@ This getting started guide outlines the key steps that will mitigate or avoid th
 
 The steps in this guide are intended for all roles that support security assurances for cloud environments and landing zones. Tasks include immediate risk mitigation priorities, guidance on building a modern security strategy, operationalizing the approach, and executing on that strategy.
 
-This guide includes elements from across the Microsoft Cloud Adoption Framework for Azure:
-
-![Get started with enterprise security](../_images/get-started/security-map.png)
-
 Adhering to the steps in this guide will help you integrate security at critical points in the process. The goal is to avoid obstacles in cloud adoption and reduce unnecessary business or operational disruption.
 
 Microsoft has built capabilities and resources to help accelerate your implementation of this security guidance on Microsoft Azure. You'll see these resources referenced throughout this guide. They're designed to help you establish, monitor, and enforce security, and they're frequently updated and reviewed.

@@ -3,7 +3,7 @@ title: Enterprise-scale BCDR for Azure VMware Solution
 description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery (BCDR) of Azure VMware Solution.
 author: mhenry
 ms.author: janet
-ms.date: 09/16/2021
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,24 +12,24 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Business continuity and disaster recovery (BCDR) for Azure VMware Solution enterprise-scale scenario
 
-[Azure VMware Solution](/azure/azure-vmware/) provides one or more [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain vSphere clusters. These clusters are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere, and NSX-T are all provided as part of the private cloud solution. To learn about the SLA for Azure VMware Solution, see [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). You'll still want to consider other BCDR factors.
+[Azure VMware Solution](/azure/azure-vmware/) provides one or more [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain VMware vSphere clusters. These clusters are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can run in one private cloud. vCenter Server, vSAN, ESXi, and NSX-T Data Center are all provided as part of the private cloud solution. To learn about the SLA for Azure VMware Solution, see [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). You'll still want to consider other BCDR factors.
 
 :::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a BCDR flow chart." border="false" Lightbox="../_images/eslz-bcdr-1.png":::
 
 ## Business continuity design considerations
 
-- Choose a validated backup solution for the VMware virtual machines (VMs), such as [Microsoft Azure Backup Server (MABS)](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context) or from our [backup partners](/azure/azure-vmware/ecosystem-back-up-vms).
+- Choose a validated backup solution for the VMware vSphere virtual machines (VMs), such as [Microsoft Azure Backup Server (MABS)](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context) or from our [backup partners](/azure/azure-vmware/ecosystem-back-up-vms).
 
   > [!NOTE]
-  > vCenter and NSX-T configurations for private clouds are on an hourly backup schedule. Backups are kept for three days.
+  > vCenter Server and NSX-T Data Center configurations for private clouds are on an hourly backup schedule. Backups are kept for three days.
 
-- VMware vSAN storage policies on Azure VMware Solution are implemented with storage availability in mind. When the cluster has between three and five hosts, the number of host failures to tolerate without loss of data equals one. When the cluster has between 6 and 16 hosts, the number of host failures to tolerate before data loss can occur equals two. VMware vSAN storage policies can be applied on a per-VM basis. While these policies are the default, you can amend the policy used for VMware VMs to suit custom requirements. For more information, see [Azure VMware Solution storage concepts](/azure/azure-vmware/concepts-storage).
+- VMware vSAN storage policies on Azure VMware Solution are implemented with storage availability in mind. When the cluster has between three and five hosts, the number of host failures to tolerate without loss of data equals one. When the cluster has between 6 and 16 hosts, the number of host failures to tolerate before data loss can occur equals two. VMware vSAN storage policies can be applied on a per-VM basis. While these policies are the default, you can amend the policy used for VMware vSphere VMs to suit custom requirements. For more information, see [Azure VMware Solution storage concepts](/azure/azure-vmware/concepts-storage).
 - VMware High Availability (HA) is enabled by default on Azure VMware Solution. The HA admittance policy ensures a reservation of the compute and memory capacity of a single node. This reservation ensures sufficient reserve capacity to restart workloads in another node in an Azure VMware Solution cluster.
 - Currently, MABS doesn't support restoring backups to a secondary Azure VMware Solution private cloud. See the [disaster recovery section](./eslz-business-continuity-and-disaster-recovery.md#disaster-recovery-design-considerations) when cross Azure VMware Solution recovery is required.
 
 ## Business continuity design recommendations
 
-- Use MABS to back up the Azure VMware Solution private cloud. For more information, see [Back up VMware VMs with MABS](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context).
+- Use MABS to back up the Azure VMware Solution private cloud. For more information, see [Back up VMware vSphere VMs with MABS](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context).
 
 - Deploy the Azure Backup Server in the same Azure region as the Azure VMware Solution private cloud. This deployment method reduces traffic costs, eases administration, and keeps the primary/secondary topology. See the [Azure regions decision guide](../../migrate/azure-best-practices/multiple-regions.md) for Azure region deployment best practices.
 
@@ -39,7 +39,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
   :::image type="content" source="../_images/eslz-bcdr-3.png" alt-text="Diagram that shows the MABS backup server deployed as an Azure VMware Solution VM.":::
 
-- To restore from a backup for Azure VMware Solution platform components like vCenter, NSX Manager, or HCX Manager, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+- To restore from a backup for Azure VMware Solution platform components like vCenter Server, NSX-T Manager, or HCX Manager, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 ## Disaster recovery design considerations
 
@@ -47,7 +47,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - Make a decision as to what the target disaster recovery site for the Azure VMware Solution private cloud will be. This site influences which disaster recovery tooling is suitable to the environment.
 
-- Migration from third-party locations into Azure VMware Solution has support through Site Recovery Manager through scale.
+- Migration from third-party locations into Azure VMware Solution has support through VMware Site Recovery Manager through scale.
 
 - You can use VMware Site Recovery Manager to provide disaster recovery for your Azure VMware Solution private cloud to a secondary Azure VMware Solution private cloud.
 
@@ -59,15 +59,15 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - When planning the workloads to start after Azure Site Recovery failover, include the correct startup order for workloads in the recovery plan.
 
-- Partner solutions like JetStream Software and [HCX](/azure/azure-vmware/deploy-disaster-recovery-using-vmware-hcx) also support disaster recovery scenarios for Azure VMware Solution.
+- Partner solutions like JetStream Software and [VMware HCX](/azure/azure-vmware/deploy-disaster-recovery-using-vmware-hcx) also support disaster recovery scenarios for Azure VMware Solution.
 
-- Analyze and decide which set or subset of Azure VMware Solution workloads require protection if there's a disaster recovery event. Consider protecting only those workloads critical to business operations to control the costs associated with the disaster recovery implementation.
+- Analyze and decide which set or subset of Azure VMware Solution workloads require protection if there's a disaster recovery event. Consider protecting only those workloads critical to business operations (usually defined in the customer Business Continuity Plan with well defined SLAs) to control the costs associated with the disaster recovery implementation.
 
 - Set up functional domain roles, like Active Directory domain controllers, in the secondary environment.
 
 - To enable disaster recovery between Azure VMware Solution private clouds in distinct Azure regions, you need to enable ExpressRoute Global Reach between both back-end ExpressRoute circuits. These circuits create primary to secondary private cloud connectivity when required for solutions like VMware SRM and VMware HCX for disaster recovery.
 
-- When working with disaster recovery, you can use the same IP address spaces from the primary Azure region in the secondary Azure region. However, it requires engineering more overhead incorporation into the solution foundation.
+- When working with disaster recovery, you can use the same IP address spaces from the primary Azure region in the secondary Azure region. However, it requires additional design and engineering work to incorporate into the solution foundation.
 
   - **Retain the same IP addresses:** You can use the same IP addresses on the recovered VM as the ones allocated to the Azure VMware Solution VMs. For this method, create isolated VLANs or segments in the secondary site and ensure none of these isolated VLANs or segments is connected to the environment. Modify your disaster recovery routes to reflect that the subnet has moved to the secondary site and new IP address locations. While this method works, it also creates engineering overhead when aiming for minimal interaction.
 
