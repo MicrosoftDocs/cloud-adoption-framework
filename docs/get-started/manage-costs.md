@@ -18,8 +18,6 @@ However, enterprise cost optimization involves many other roles and functions to
 
 Governance is the cornerstone of cost optimization within any large enterprise. The following section outlines cost optimization guidance within the context of governance. The subsequent steps help each team take actions that target its role in cost optimization. Together, these steps will help your organization get started on a journey toward cost optimization.
 
-![Get started with cost optimization](../_images/get-started/cost-map.png)
-
 ## Step 1: Optimize enterprise costs
 
 The cloud governance team is well prepared to evaluate and act on overspending or unplanned spending through a combination of monitoring performance, reducing resource sizing, and safely terminating unused resources. Enterprise cost optimization starts with a shared team understanding of the tools, processes, and dependencies required to wisely act on cost concerns at an environment level.
