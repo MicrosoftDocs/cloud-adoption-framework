@@ -3,7 +3,7 @@ title: Modernization commitment
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/20/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -32,7 +32,7 @@ If you haven't analyzed your assets to determine the best way to modernize each 
 
 ## Modernization effort
 
-This section of the Cloud Adoption Framework teaches readers how to maximize the return from each phase required to modernize. The actions required to migrate workloads generally fall into three phases for each workload:
+Maximize your return from each phase required to modernize. The actions required to migrate workloads generally fall into three phases for each workload:
 
 - **Assess workloads:** Assess each batch of workloads(epics) to evaluate cost, architecture, and deployment tooling.
 - **Deploy workloads:** Replicate functionality in the cloud using IaaS, PaaS, cloud-native, or other modernization solutions.
@@ -72,7 +72,7 @@ Align your motivations with workloads.
 
 ## Modernization disciplines
 
-Align your motivations with the Modernization disciplines.
+Align your motivations with the [Modernization disciplines](../modernize-disciplines/index.md).
 
 :::image type="content" source="../../_images/modernize/align-motivations-disciplines.png" alt-text="...":::
 

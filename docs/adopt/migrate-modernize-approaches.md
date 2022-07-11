@@ -3,7 +3,7 @@ title: Approaches to cloud migration and modernization
 description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/18/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -12,13 +12,13 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # Approaches to cloud migration and modernization
 
-Where should you start in your three-horizon cloud adoption plan? Should you migrate or modernize first?
+As part of your cloud adoption journey, you can choose your approach for migration and modernization. Is there an advantage to doing one before the other? What's best for your business? You can take one of the following three approaches to cloud migration and modernization:
 
-Depending on your overall strategy and needs, you might migrate first and modernize later, or vice versa. You could even modernize in parallel to migration. If you decide to modernize in parallel to migration, you'd want to modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/business-alignment/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
+- Migrate first and modernize later
+- Modernize first and migrate later
+- Modernize in parallel to migration. If you decide to modernize in parallel to migration, you should modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/business-alignment/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
 
 :::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
-
-Deciding whether to modernize or migrate first comes down to *what benefits you want*.
 
 ## Migrate first, modernize later approach
 
@@ -44,7 +44,7 @@ Modernize first if you immediately want the following benefits for your organiza
 
 ## Application portfolio migration and modernization approach
 
-Most companies want a combination of control and productivity, based on the set of workloads they're assessing. So, we tend to see a mixed approach to the horizons. In this section we focus less on the horizon separation and sequence, and more on the breakdown of quantity and value of your workloads.
+Most companies want a combination of control and productivity, based on the set of workloads they're assessing. So, we tend to see a mixed approach. In this section we focus less on the horizon separation and sequence, and more on the breakdown of quantity and value of your workloads.
 
 The following image shows an example of how a customer could break down their application portfolio into migrate and modernization approaches, so they can approach it at a deeper level. The percentages are examples only.
 
