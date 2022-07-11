@@ -24,6 +24,10 @@ Developing new capabilities and applications requires successfully meeting three
 
 Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change. For more information, see the [leadership imperative: blend the cultures](/#the-leadership-imperative-blend-the-cultures).
 
+Watch the following video to learn more about the DevSecOps method for secure and rapid innovation. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu6q]
+
 ## What is DevSecOps?
 
 Technology innovation is frequently developed in the context of a rapid lean and agile development approach that combines development and operations together into a *DevOps* process. We've learned that integrating security into that process is critical to mitigate risks to the innovation process, the organization's growth, and the existing assets in organization. Integrating security into the process creates a *DevSecOps* process.

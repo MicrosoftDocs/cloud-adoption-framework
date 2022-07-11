@@ -11,11 +11,9 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: ai applications, what are ai applications, speech recognition apis, computer vision apis, decision logic apis
 ---
 
-<!-- docutune:ignore "computer vision APIs" -->
-
 # What are AI applications?
 
-AI applications are things like speech recognition APIs, computer vision APIs, decision logic APIs, and other kinds of intelligent systems that mimic human reason. These are essential functions of many software products in the market today, since AI applications can communicate with end users in a more natural manner and make for a better user experience. Azure can help you and your team save time by being able to roll out AI applications anywhere.
+AI applications provide speech recognition, vision, decision logic, and other intelligent functionality that mimics human reason. These are essential functions of many software products in the market today, since AI applications can communicate with end users in a more natural manner and make for a better user experience. Azure can help you and your team save time by being able to roll out AI applications anywhere.
 
 In Azure, you can build intelligent applications faster by using the tools and technologies of your choice and built-in AI.
 
@@ -36,8 +34,8 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 | [Computer Vision](/azure/cognitive-services/computer-vision/) | Computer Vision APIs provides you with access to advanced algorithms for processing images and returning information. |
 | [Custom Vision](/azure/cognitive-services/custom-vision-service/overview) | Custom Vision allows you to build custom image classifiers. |
 | [Face](/azure/cognitive-services/face/) | The Face service provides access to advanced face algorithms that detect and recognize facial attributes. |
-| [Form Recognizer](/azure/cognitive-services/form-recognizer/) (preview) | Form Recognizer identifies and extracts key-value pairs and table data from form documents. It then outputs structured data, which includes the relationships, in the original file. |
-| [Video Indexer](/azure/media-services/video-indexer/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
+| [Form Recognizer](/azure/applied-ai-services/form-recognizer/) (preview) | Form Recognizer identifies and extracts key-value pairs and table data from form documents. It then outputs structured data, which includes the relationships, in the original file. |
+| [Video Indexer](/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
 
 ### Speech recognition APIs
 
@@ -52,7 +50,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 
 | Service name | Service description |
 |--|--|
-| [Language Understanding (LUIS)](/azure/cognitive-services/luis/) | The Language Understanding service (LUIS) allows your application to understand what a person wants in their own words. |
+| [Language Understanding (LUIS)](/azure/cognitive-services/luis/) | The Language Understanding Intelligent Service (LUIS) allows your application to understand what a person wants in their own words. |
 | [QnA Maker](/azure/cognitive-services/qnamaker/) | QnA Maker allows you to build a question-and-answer service from your semistructured content. |
 | [Text Analytics](/azure/cognitive-services/text-analytics/) | Text Analytics provides natural language processing over raw text for sentiment analysis, key phrase extraction, and language detection. |
 | [Translator](/azure/cognitive-services/translator/) | Translator provides machine-based text translation in near real time. |
@@ -77,13 +75,11 @@ Cognitive Services provides a layered security model, which includes [authentica
 
 Cognitive Services provides containers for deployment in the cloud or on-premises. Learn more about [Cognitive Services containers](/azure/cognitive-services/cognitive-services-container-support).
 
-<!-- docutune:casing "HIPAA BAA" "CSA STAR" -->
-
 ### Certifications and compliance
 
 Cognitive Services has been awarded certifications such as CSA STAR certification, FedRAMP Moderate, and HIPAA BAA.
 
-You can [download](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) certifications for your own audits and security reviews.
+You can [download](/samples/browse/?redirectedfrom=TechNet-Gallery) certifications for your own audits and security reviews.
 
 To understand privacy and data management, go to the [Microsoft Trust Center](https://servicetrust.microsoft.com/).
 

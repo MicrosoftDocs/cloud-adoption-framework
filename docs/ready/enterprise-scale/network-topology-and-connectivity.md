@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Network topology and connectivity overview in Azure
 
 The following series of articles examines key design considerations and best practices for Azure networking and connectivity.
@@ -56,7 +53,7 @@ To extend the previous article, [Limit cross-tenant Private Endpoint connections
 
 ## Plan for application delivery
 
-[Plan for application delivery](../azure-best-practices/plan-for-app-delivery.md) explores key recommendations to deliver internal- and external-facing applications in a secure, scalable, and highly available way.
+[Plan for application delivery](../azure-best-practices/plan-for-app-delivery.md) explores key recommendations to deliver both internal and externally facing applications in a secure, scalable, and highly available way.
 
 ## Plan for landing zone network segmentation
 
@@ -80,4 +77,3 @@ This overview summarized articles about key networking topology and connectivity
 
 > [!div class="nextstepaction"]
 > [Plan for IP addressing](../azure-best-practices/plan-for-ip-addressing.md)
-

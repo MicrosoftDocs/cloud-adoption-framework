@@ -40,9 +40,9 @@ During the readiness phase, technical staff have to create a migration landing z
 
 During the readiness phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
-- [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
-- [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
+- [`Foundations for Cloud Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [`Microsoft Azure Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
+- [`Designing Migrations for Microsoft Azure`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
 ## Deeper skills exploration
 

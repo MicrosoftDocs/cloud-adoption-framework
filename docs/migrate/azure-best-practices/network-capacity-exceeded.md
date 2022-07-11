@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore HDFS databox VHDX -->
-
 # Best practices when data requirements exceed network capacity during a migration effort
 
 In a cloud migration, you replicate and synchronize assets over the network between the existing datacenter and the cloud. It's not uncommon for the existing data size requirements of various workloads to exceed network capacity. In such a scenario, the process of migration can be radically slowed, or in some cases, stopped entirely. The following guidance expands the scope of the [Azure migration guide](../azure-migration-guide/index.md) to provide a solution that works around network limitations.
@@ -24,7 +22,7 @@ Most of the effort required in this scope expansion occurs during the prerequisi
 
 **Validate network capacity risks:** [Digital estate rationalization](../../digital-estate/rationalize.md) is a highly recommended prerequisite, especially if there are concerns of overburdening the available network capacity. During digital estate rationalization, you collect an [inventory of digital assets](../../digital-estate/inventory.md). That inventory should include existing storage requirements across the digital estate.
 
-As outlined in [Replication risks: physics of replication](../migration-considerations/migrate/replicate.md#replication-risks---physics-of-replication), you can use that inventory to estimate total migration data size, which can be compared to total available migration bandwidth. If that comparison doesn't align with the required time to business change, then this article can help accelerate migration velocity reducing the time required to migrate the datacenter.
+As outlined in [Replication risks: Physics of replication](../migration-considerations/migrate/replicate.md#replication-risks---physics-of-replication), you can use that inventory to estimate total migration data size, which can be compared to total available migration bandwidth. If that comparison doesn't align with the required time to business change, then this article can help accelerate migration velocity reducing the time required to migrate the datacenter.
 
 **Offline transfer of independent data stores:** The following diagram shows examples of both online and offline data transfers with Azure Data Box. You can use these approaches to ship large volumes of data to the cloud, prior to workload migration. In an offline data transfer, you copy source data to Azure Data Box, which is then physically shipped to Microsoft for transfer into an Azure Storage account as a file or a blob. Prior to other migration efforts, you can use this process to ship data that isn't directly tied to a specific workload. Doing this reduces the amount of data that needs to be shipped over the network and supports completing a migration within network constraints.
 

@@ -53,7 +53,7 @@ To learn more about how to design your bot, see [Principles of bot design](/azur
 
 ### Build
 
-Your bot is a web service that implements a conversational interface and communicates with the Bot Framework Service to send and receive messages and events. The Bot Framework Service is one of the components of Azure Bot Service and Bot Framework. You can create bots in any number of environments and languages. You can start your bot development in the [Azure portal](/azure/bot-service/abs-quickstart) or use [C#, JavaScript, or Python](/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart) templates for local development. You also have access to a variety of [samples](https://github.com/microsoft/botbuilder-samples) that showcase many of the capabilities available through the SDK. These samples are great for developers who want a more feature-rich starting point.
+Your bot is a web service that implements a conversational interface and communicates with the Bot Framework Service to send and receive messages and events. The Bot Framework Service is one of the components of Azure Bot Service and Bot Framework. You can create bots in any number of environments and languages. You can start your bot development in the [Azure portal](/azure/bot-service/abs-quickstart) or use [C#, JavaScript, or Python](/azure/bot-service/bot-service-quickstart-create-bot) templates for local development. You also have access to a variety of [samples](https://github.com/microsoft/botbuilder-samples) that showcase many of the capabilities available through the SDK. These samples are great for developers who want a more feature-rich starting point.
 
 As part of the Azure Bot Service and Bot Framework, we offer additional components you can use to extend the functionality of your bot. With the Azure Bot Service and Bot Framework, you can build a bot with confidence and speed.
 
@@ -91,9 +91,9 @@ Use the data collected in the Azure portal to identify opportunities to improve 
 
 There are common patterns used for implementation of a conversational AI application:
 
-- **Knowledge base:** A knowledge bot can be designed to provide information about virtually any subject. For example, one knowledge bot might answer questions about events such as "What bot events are there at this conference?" or "When is the next reggae show?" Another bot might answer IT-related questions such as "How do I update my operating system?" Yet another bot might answer questions about contacts such as "Who is John Doe?" or "What is Jane Doe's email address?"
+- **Knowledge bots:** A knowledge bot can be designed to provide information about virtually any subject. For example, one knowledge bot might answer questions about events such as "What bot events are there at this conference?" or "When is the next reggae show?" Another bot might answer IT-related questions such as "How do I update my operating system?" Yet another bot might answer questions about contacts such as "Who is John Doe?" or "What is Jane Doe's email address?"
 
-   For information on the design elements for knowledge bots, see [Design knowledge bots](/azure/bot-service/bot-service-design-pattern-knowledge-base).
+  For information on the design elements for knowledge bots, see [Design knowledge bots](/azure/bot-service/bot-service-design-pattern-knowledge-base).
 
 - **Hand off to a human:** No matter how much AI a bot possesses, there might still be times when it needs to hand off the conversation to a human being. In such cases, the bot should recognize when it needs to hand off and provide the user with a smooth transition.
 
@@ -110,6 +110,6 @@ There are common patterns used for implementation of a conversational AI applica
 ## Next steps
 
 - Review machine learning white papers and e-books about [Azure Bot Service](https://azure.microsoft.com/resources/whitepapers/search/?service=bot-service).
-- Review [AI + Machine Learning architectures](/azure/architecture/browse/).
+- Review [AI + machine learning architectures](/azure/architecture/browse/?azure_categories=ai-machine-learning).
 - [Building intelligent applications with cognitive APIs (e-book)](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/).
 - [FAQ chatbot architecture](https://azure.microsoft.com/resources/faq-chatbot-architecture/).

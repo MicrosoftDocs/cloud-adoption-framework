@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc smarthotel SHWEB SHWCF -->
-
 # Migrate an application to Azure App Service and SQL Database
 
 This article demonstrates how the fictional company Contoso refactors a two-tier Windows .NET application that's running on VMware VMs as part of a migration to Azure. The Contoso team migrates the application front-end virtual machine (VM) to an Azure App Service web app and the application database to Azure SQL Database.
@@ -46,9 +44,9 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 ### Current application
 
 - The SmartHotel360 on-premises application is tiered across two VMs, `WEBVM` and `SQLVM`.
-- The VMs are located on VMware ESXi host contosohost1.contoso.com version 6.5.
+- The VMs are located on VMware ESXi host `contosohost1.contoso.com` version 6.5.
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), which runs on a VM.
-- Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (contosodc1).
+- Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
 ### Proposed solution
@@ -89,9 +87,9 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 | [Azure App Service Migration Assistant](/learn/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
 | [Data Migration Assistant](/sql/dma/dma-overview) | Contoso will use Data Migration Assistant to assess and detect compatibility issues that might affect database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets, and it recommends performance and reliability improvements. | It's a downloadable tool, free of charge. |
 | [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
-| [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | An intelligent, fully managed relational cloud database service. | Cost is based on features, throughput, and size. [Learn more](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/). |
+| [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | An intelligent, fully managed relational cloud database service. | Cost is based on features, throughput, and size. [Learn more](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/). |
 | [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
-| [Azure DevOps](/azure/azure-portal/tutorial-azureportal-devops) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for application development. The pipeline starts with a Git repository for managing application code, a build system for producing packages and other build artifacts, and a release management system to deploy changes in dev, test, and production environments. |
+| [Azure Pipelines](/azure/devops/pipelines/create-first-pipeline) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for application development. The pipeline starts with a Git repository for managing application code, a build system for producing packages and other build artifacts, and a release management system to deploy changes in dev, test, and production environments. |
 
 ## Prerequisites
 
@@ -117,7 +115,7 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure learning path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. The admins perform these actions:
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET applications to Azure learning path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. The admins perform these actions:
 
 - They use the Azure [App Service migration assessment](https://azure.microsoft.com/services/app-service/migration-assistant/) tool to evaluate any dependencies between their web apps and to determine whether there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 
@@ -224,7 +222,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
     ![Screenshot of the **New pipeline** link in Azure DevOps.](./media/contoso-migration-refactor-web-app-sql/pipeline1.png)
 
-1. They select **Azure Repos Git** and, in the **Repository** drop-down list, they select the relevant repo.
+1. They select **Azure Repos Git** and, in the **Repository** dropdown list, they select the relevant repo.
 
     ![Screenshot of the **Azure Repos Git** button and the selected repository.](./media/contoso-migration-refactor-web-app-sql/pipeline2.png)
 
@@ -238,7 +236,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They select the build number to watch the process. After it's finished, the admins can see the process feedback, and they select **Artifacts** to review the build results.
 
-    ![Screenshot of the build page and the Artifacts link for reviewing the build results.](./media/contoso-migration-refactor-web-app-sql/pipeline5.png)
+    ![Screenshot of the build page and the **Artifacts** link for reviewing the build results.](./media/contoso-migration-refactor-web-app-sql/pipeline5.png)
 
     The **Artifacts explorer** pane opens, and the **drop** folder displays the build results.
 
@@ -277,7 +275,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They set the continuous deployment trigger to **Enabled**.
 
-    ![Screenshot showing the continuous deployment trigger set to Enabled.](./media/contoso-migration-refactor-web-app-sql/pipeline14.png)
+    ![Screenshot showing the continuous deployment trigger set to **Enabled**.](./media/contoso-migration-refactor-web-app-sql/pipeline14.png)
 
 1. The admins go back to the stage **1 job, 1 task** and then select **Deploy Azure App Service**.
 
@@ -293,15 +291,15 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They repeat the process to publish the `SmartHotel.Registration.Web.zip` file to the correct web app, and then select **Save**.
 
-    ![Screenshot of the **Select a file or folder** pane for selecting the WEB file.](./media/contoso-migration-refactor-web-app-sql/pipeline18.png)
+    ![Screenshot of the **Select a file or folder** pane for selecting the **Web** file.](./media/contoso-migration-refactor-web-app-sql/pipeline18.png)
 
     The release pipeline is displayed, as shown here:
 
      ![Screenshot of the release pipeline summary.](./media/contoso-migration-refactor-web-app-sql/pipeline19.png)
 
-1. They go back to **Build**, select **Triggers**, and then select the **Enable continuous integration** check box. This action enables the pipeline so that when changes are committed to the code, the full build and release occur.
+1. They go back to **Build**, select **Triggers**, and then select the **Enable continuous integration** checkbox. This action enables the pipeline so that when changes are committed to the code, the full build and release occur.
 
-    ![Screenshot highlighting the **Enable continuous integration** check box.](./media/contoso-migration-refactor-web-app-sql/pipeline20.png)
+    ![Screenshot highlighting the **Enable continuous integration** checkbox.](./media/contoso-migration-refactor-web-app-sql/pipeline20.png)
 
 1. They select **Save & Queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
 
@@ -309,7 +307,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. Contoso admins can follow the build and release pipeline process from Azure DevOps. After the build finishes, the release starts.
 
-    ![Screenshot of the progress of the build and release apps.](./media/contoso-migration-refactor-web-app-sql/pipeline22.png)
+    ![Screenshot of the progress of build and release.](./media/contoso-migration-refactor-web-app-sql/pipeline22.png)
 
 1. After the pipeline finishes, both sites have been deployed, and the application is up and running online.
 

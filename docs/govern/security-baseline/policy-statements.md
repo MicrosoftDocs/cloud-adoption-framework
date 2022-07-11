@@ -74,7 +74,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Governance tooling must audit and enforce network configuration requirements defined by the security baseline team.
 
-**Potential design option:** In Azure, network activity can be monitored using [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and [Azure Security Center](/azure/security-center/security-center-network-recommendations) can help identify security vulnerabilities. Azure Policy allows you to restrict network resources and resource configuration policy according to limits defined by the security team.
+**Potential design option:** In Azure, network activity can be monitored using [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and [Microsoft Defender for Cloud](/azure/security-center/security-center-network-recommendations) can help identify security vulnerabilities. Azure Policy allows you to restrict network resources and resource configuration policy according to limits defined by the security team.
 
 ## Security review
 
@@ -82,7 +82,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
 
-**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Azure Security Center](/azure/security-center/security-center-introduction) to gain actionable insights on emerging threats specific to your deployments.
+**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) to gain actionable insights on emerging threats specific to your deployments.
 
 ## Next steps
 

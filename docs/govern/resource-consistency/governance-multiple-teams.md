@@ -104,7 +104,7 @@ In both examples, there is a subscription Service Administrator that is assigned
 At this point, each of the workload owners is isolated in their own resource group. None of the workload owners or their team members have management access to the resources in any other resource group.
 
 ![A diagram showing a subscription with resource groups A and B.](../../_images/govern/design/governance-2-10.png)
-*Figure 4: a subscription with two workload owners isolated with their own resource group.*
+*Figure 4: A subscription with two workload owners isolated with their own resource group.*
 
 This model is a least-privilege model. Each user is assigned the correct permission at the correct resource management scope.
 
@@ -153,7 +153,7 @@ Recall from the requirements that you have an individual in the organization who
 
 Once the subscription has been created, the **Azure account owner** can add the **subscription owner** account to the subscription with the **owner** role:
 
-![An Azure account owner adds the subscription owner user account to the subscription with the Owner role.](../../_images/govern/design/governance-3-0c.png).
+![An Azure account owner adds the subscription owner user account to the subscription with the Owner role.](../../_images/govern/design/governance-3-0c.png)
 *Figure 7: The Azure account owner adds the subscription owner user account to the subscription with the owner role.*
 
 The **subscription owner** account can now create **resource groups** and delegate resource access management.
@@ -264,7 +264,7 @@ Follow these steps:
 6. Create an approval process for **workload owners** to request the creation of resource groups. The approval process can be implemented in many ways, such as over email, or you can using a process management tool such as [SharePoint workflows](https://support.office.com/article/introduction-to-sharepoint-workflow-07982276-54e8-4e17-8699-5056eff4d9e3). The approval process can follow these steps:
     - The **workload owner** prepares a bill of materials for required Azure resources in either the **development** environment, **production** environment, or both, and submits it to the **subscription owner**.
     - The **subscription owner** reviews the bill of materials and validates the requested resources to ensure that the requested resources are appropriate for their planned use, such as checking that the requested [virtual machine sizes](/azure/virtual-machines/sizes) are correct.
-    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](../../ready/azure-best-practices/naming-and-tagging.md), [adds the **workload owner**](/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**Contributor** role](/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
+    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](../../ready/azure-best-practices/naming-and-tagging.md), [adds the **workload owner**](/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**contributor** role](/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
 7. Create an approval process for workload owners to request a virtual network peering connection from the shared infrastructure owner. As with the previous step, this approval process can be implemented using email or a process management tool.
 
 Now that you've implemented your governance model, you can deploy your shared infrastructure services.

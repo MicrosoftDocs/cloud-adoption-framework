@@ -14,7 +14,7 @@ ms.custom: internal
 
 As discussed in the [business outcomes overview](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on the timeliest business measure: business agility. Understanding your company's market position and competitive landscape can help you articulate the business outcomes that are the target of the business's transformation journey.
 
-Traditionally, chief investment officers and IT teams were considered a source of stability in core mission-critical processes. This is still true. Few businesses can function well when their IT platform is unstable. However, in today's business world, much more is expected. IT can expand beyond a simple cost center by partnering with the business to provide market advantages. Many chief investment officers and executives assume that stability is simply a baseline for IT. For these leaders, business agility is the measure of IT's contribution to the business.
+Traditionally, chief information officers and IT teams were considered a source of stability in core mission-critical processes. This is still true. Few businesses can function well when their IT platform is unstable. However, in today's business world, much more is expected. IT can expand beyond a simple cost center by partnering with the business to provide market advantages. Many chief information officers and executives assume that stability is simply a baseline for IT. For these leaders, business agility is the measure of IT's contribution to the business.
 
 The [Academy of Motion Picture Arts and Sciences](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure) migrated its legacy web applications to the cloud, delivering new streaming applications to members in a rich, responsive, and cross-platform experience.
 
@@ -32,13 +32,9 @@ During cloud-enabled innovation efforts, time to market is a key measure of IT's
 
 - **Example 2:** A logistics company has discovered an untapped segment of the market, but it needs a new version of their flagship application to capture this market share. Their larger competitor has made the same discovery. Through the execution of a cloud-enabled application innovation effort, the company embraces customer obsession and a DevOps-driven development approach to beat their slower, legacy competitor by *x* months. This jump on market entrance secured the customer base.
 
-<!-- docutune:ignore "Jamey Shiels" "Vice President of Digital Experience" "Aurora Health Care" -->
-
 ### Aurora Health Care
 
 Healthcare system transforms online services into a friendly digital experience. To transform its digital services, Aurora Health Care migrated its websites to the Microsoft Azure platform and adopted a strategy of continuous innovation.
-
-<!-- cSpell:ignore Jamey Shiels -->
 
 > "As a team, we're focused on high-quality solutions and speed. Choosing Azure was a very transformative decision for us."
 >

@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use a Terraform plan to deploy a VMware Windows virtual machine and connect it to Azure Arc
 
-This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy a Windows Server, VMware vSphere virtual machine and connect it as an Azure Arc enabled server resource.
+This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy a Windows Server, VMware vSphere virtual machine and connect it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -79,17 +79,17 @@ Before executing the Terraform plan, you must set the environment variables whic
 
 2. The Terraform plan creates resources in both Microsoft Azure and VMware vSphere. It then executes a script on the virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your VMware vSphere and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/winsrv/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-    - `TF_VAR_subscription_id` = Your Azure subscription ID
-    - `TF_VAR_client_id` = Your Azure service principal name
-    - `TF_VAR_client_secret` = Your Azure service principal password
-    - `TF_VAR_tenant_id` = Your Azure tenant ID
+    - `TF_VAR_subscription_id` = your Azure subscription ID
+    - `TF_VAR_client_id` = your Azure service principal name
+    - `TF_VAR_client_secret` = your Azure service principal password
+    - `TF_VAR_tenant_id` = your Azure tenant ID
     - `TF_VAR_resourceGroup` = Azure resource group name
-    - `TF_VAR_location` = Azure Region
-    - `TF_VAR_vsphere_user` = vCenter Admin Username
-    - `TF_VAR_vsphere_password` = vCenter Admin Password
-    - `TF_VAR_vsphere_server` = vCenter server FQDN/IP
-    - `TF_VAR_admin_user` = OS Admin Username
-    - `TF_VAR_admin_password` = OS Admin Password
+    - `TF_VAR_location` = Azure region
+    - `TF_VAR_vsphere_user` = vCenter admin username
+    - `TF_VAR_vsphere_password` = vCenter admin password
+    - `TF_VAR_vsphere_server` = vCenter Server FQDN/IP
+    - `TF_VAR_admin_user` = OS admin username
+    - `TF_VAR_admin_password` = OS admin password
 
 3. From CLI, navigate to the `azure_arc_servers_jumpstart/vmware/winsrv/terraform` directory of the cloned repo.
 
@@ -113,15 +113,15 @@ Before executing the Terraform plan, you must set the environment variables whic
 
     ![A screenshot of a new VMware vSphere Windows Server virtual machine.](./media/vmware-terraform-windows/new-vm.png)
 
-    ![A screenshot of an Azure Arc enabled server in an Azure resource group.](./media/vmware-terraform-windows/server-1.png)
+    ![A screenshot of an Azure Arc-enabled server in an Azure resource group.](./media/vmware-terraform-windows/server-1.png)
 
-    ![Another screenshot of an Azure Arc enabled server in an Azure resource group.](./media/vmware-terraform-windows/server-2.png)
+    ![Another screenshot of an Azure Arc-enabled server in an Azure resource group.](./media/vmware-terraform-windows/server-2.png)
 
 ## Delete the deployment
 
 - The most straightforward way is to delete the Azure Arc resource via the Azure portal, just select the resource and delete it. In addition, delete the VMware vSphere VM.
 
-    ![A screenshot of an Azure Arc enabled server being deleted.](./media/vmware-terraform-windows/delete-server.png)
+    ![A screenshot of an Azure Arc-enabled server being deleted.](./media/vmware-terraform-windows/delete-server.png)
 
 - If you delete the instance manually, then you should also delete `install_arc_agent.ps1`, which is created by the Terraform plan.
 

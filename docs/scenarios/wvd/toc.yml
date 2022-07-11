@@ -2,7 +2,7 @@ items:
   - name: Desktop virtualization - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
-    
+
   - name: Strategic impact
     href: strategy.md
 
@@ -16,13 +16,13 @@ items:
     - name: Design areas
       items:
       - name: Enterprise enrollment
-        href: design-area-enterprise-enrollment.md
+        href: eslz-enterprise-enrollment.md
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
       - name: Resource organization
-        href: design-area-resource-organization.md
+        href: eslz-resource-organization.md
       - name: Governance disciplines
         href: eslz-security-governance-and-compliance.md
       - name: Management baseline

@@ -35,7 +35,7 @@ Working closely with business partners, the Contoso IT team defines the business
 
 With its business drivers in mind, Contoso has pinned down a few goals for this migration:
 
-- Continue managing its existing environments with VMware tools that are familiar to its teams, while modernizing the applications with native Azure services.
+- Continue managing its existing environments with VMware Tools that are familiar to its teams, while modernizing the applications with native Azure services.
 - Seamlessly move Contoso VMware-based workloads from its datacenter to Azure, and integrate the VMware environment with Azure.
 - After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it was on-premises.
 
@@ -185,11 +185,11 @@ To move VMware VMs to Azure using HCX, the Contoso team will need to follow thes
 - Install and configure VMware HCX.
 - Perform migrations to Azure by using HCX.
 
-For more information, see [Install HCX for Azure VMware Solution](/azure/azure-vmware/tutorial-deploy-vmware-hcx).
+For more information, see [Install HCX for Azure VMware Solution](/azure/azure-vmware/configure-vmware-hcx).
 
 #### Install and configure VMware HCX for the public cloud
 
-[VMware HCX](https://cloud.vmware.com/vmware-hcx) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but it can be upgraded to HCX Enterprise as additional features and functionality are required.
+[VMware HCX](https://www.vmware.com/products/hcx.html) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but it can be upgraded to HCX Enterprise as additional features and functionality are required.
 
 Azure VMware Solution automates the cloud manager component of HCX in Azure VMware Solution. It provides the customer activation keys and download link to the connector HCX appliance that must be configured on the on-premises side and in a customer's vCenter domain. These elements are then paired with the Azure VMware Solution cloud appliance, so that customers can take advantage of services such as migration and Layer 2 stretch.
 
@@ -197,7 +197,7 @@ Azure VMware Solution automates the cloud manager component of HCX in Azure VMwa
 
    ![Screenshot of the **Deploy OVF Template** window.](./media/contoso-migration-vmware-to-azure/configure-template.png)
 
-   To install and configure HCX for your Azure VMware Solution private cloud, see [Install HCX for Azure VMware Solution](/azure/azure-vmware/tutorial-deploy-vmware-hcx).
+   To install and configure HCX for your Azure VMware Solution private cloud, see [Install HCX for Azure VMware Solution](/azure/azure-vmware/configure-vmware-hcx).
 
 - As the team is configuring HCX, it has chosen to enable migration and other options, including disaster recovery.
 

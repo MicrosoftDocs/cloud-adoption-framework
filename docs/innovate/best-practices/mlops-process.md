@@ -77,7 +77,7 @@ The Team Data Science Process (TDSP) provides a lifecycle to structure the devel
 - Modeling
 - Deployment
 
-The goals, tasks, and documentation artifacts for each stage of the TDSP lifecycle are described in the [Team Data Science Process lifecycle](/azure/machine-learning/team-data-science-process/lifecycle).
+The goals, tasks, and documentation artifacts for each stage of the TDSP lifecycle are described in the [Team Data Science Process lifecycle](/azure/architecture/data-science-process/lifecycle).
 
 ## The roles and activities within machine learning operations
 

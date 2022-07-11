@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use a Terraform plan to deploy a Google Cloud Platform Windows instance and connect it to Azure Arc
 
-This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy a Windows Server GCP instance and connect it as an Azure Arc enabled server resource.
+This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy a Windows Server Google Cloud Platform (GCP) instance and connect it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
 3. [Install Terraform >= 0.12](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
-4. **Google Cloud account with billing enabled:** [Create a free trial account](https://cloud.google.com/free). To create Windows Server virtual machines, you must upgraded your account to enable billing. Select **Billing** from the menu and then select **Upgrade** at the lower right.
+4. **Google Cloud Platform account with billing enabled:** [Create a free trial account](https://cloud.google.com/free). To create Windows Server virtual machines, you must upgraded your account to enable billing. Select **Billing** from the menu and then select **Upgrade** at the lower right.
 
     ![First screenshot showing how to enable billing on a GCP account.](./media/gcp-windows/billing-1.png)
 
@@ -78,13 +78,13 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
     ![Second screenshot of the **New Project** page in the GCP console.](./media/gcp-windows/new-project-2.png)
 
-2. Once the new project is created and selected in the dropdown at the top of the page, you must enable compute engine API access for the project. Click on **+ Enable APIs and Services** and search for *compute engine*. Then select **Enable** to enable API access.
+2. Once the new project is created and selected in the dropdown list at the top of the page, you must enable compute engine API access for the project. Click on **+ Enable APIs and Services** and search for *compute engine*. Then select **Enable** to enable API access.
 
     ![First screenshot of **Compute Engine API** in the GCP console.](./media/gcp-windows/comp-eng-api-1.png)
 
     ![Second screenshot of **Compute Engine API** in the GCP console.](./media/gcp-windows/comp-eng-api-2.png)
 
-3. Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select **New Service Account** from the dropdown, give it a name, select project then owner as the role, JSON as the key type, and select **Create**. This downloads a JSON file with all the credentials needed for Terraform to manage the resources. Copy the downloaded JSON file to the `azure_arc_servers_jumpstart/gcp/windows/terraform` directory.
+3. Next, set up a service account key, which Terraform will use to create and manage resources in your GCP project. Go to the [create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey). Select **New Service Account** from the dropdown list, give it a name, select project then owner as the role, JSON as the key type, and select **Create**. This downloads a JSON file with all the credentials needed for Terraform to manage the resources. Copy the downloaded JSON file to the `azure_arc_servers_jumpstart/gcp/windows/terraform` directory.
 
     ![A screenshot of how to create a service account in the GCP console.](./media/gcp-windows/svc-account.png)
 
@@ -115,13 +115,13 @@ Before executing the Terraform plan, you must set and then export the environmen
 
     ![A screenshot of the `terraform init` command.](./media/gcp-windows/terraform-init.png)
 
-6. Next, run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion of the Terraform script, you will have deployed a GCP Windows Server 2019 VM and initiated a script to download the Azure Arc agent to the VM and connect the VM as a new Azure Arc enabled server inside a new Azure resource group. It will take a few minutes for the agent to finish provisioning so grab a coffee.
+6. Next, run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion of the Terraform script, you will have deployed a GCP Windows Server 2019 VM and initiated a script to download the Azure Arc agent to the VM and connect the VM as a new Azure Arc-enabled server inside a new Azure resource group. It will take a few minutes for the agent to finish provisioning, so grab a cup of coffee.
 
     ![A screenshot of the `terraform apply` command.](./media/gcp-windows/terraform-apply.png)
 
 7. After a few minutes, you should be able to open the Azure portal and navigate to the `arc-gcp-demo` resource group. The Windows Server virtual machine created in GCP will be visible as a resource.
 
-    ![A screenshot of an Azure Arc enabled server in the Azure portal.](./media/gcp-windows/server.png)
+    ![A screenshot of an Azure Arc-enabled server in the Azure portal.](./media/gcp-windows/server.png)
 
 ## Semi-automated deployment (optional)
 
@@ -141,11 +141,11 @@ If you want to demo/control the actual registration process, do the following:
 
     ![A screenshot of a server in the GCP console.](./media/gcp-windows/gcp-server.png)
 
-    ![A screenshot showing how to reset a password for a Windows server in the GCP console.](./media/gcp-windows/reset-password.png)
+    ![A screenshot showing how to reset a password for a Windows Server in the GCP console.](./media/gcp-windows/reset-password.png)
 
 4. Create a user and password for the VM by selecting **Set Password** and specifying a user name.
 
-    ![A screenshot showing how to set a username and password for a Windows server in the GCP console.](./media/gcp-windows/name-password.png)
+    ![A screenshot showing how to set a username and password for a Windows Server in the GCP console.](./media/gcp-windows/name-password.png)
 
 5. RDP into the VM by selecting the RDP button from the VM page in the GCP console, and sign in with the username and password you just created.
 
@@ -153,7 +153,7 @@ If you want to demo/control the actual registration process, do the following:
 
 6. Once logged in, open PowerShell ISE **as Administrator**. Make sure you are running the x64 version of PowerShell ISE and not the x86 version. Once opened, select **File > New** to create an empty `.ps1` file. Then paste in the entire contents of `./scripts/install_arc_agent.ps1`. Click the play button to execute the script. When complete, you should see the output showing successful onboarding of the machine.
 
-    ![Screenshot showing the Windows Powershell Integrated Scripting Environment with an Azure Arc agent connection script.](./media/gcp-windows/ise-script.png)
+    ![Screenshot showing the Windows PowerShell integrated scripting environment with an Azure Arc agent connection script.](./media/gcp-windows/ise-script.png)
 
 ## Delete the deployment
 

@@ -18,7 +18,7 @@ During the readiness phase of a migration journey, the objective is to prepare f
 
 Depending on the motivations and business outcomes associated with a cloud adoption effort, leaders might be required to establish new organizational structures or virtual teams to facilitate various functions. The following articles help to develop the skills that are necessary to structure those teams in accordance with desired outcomes:
 
-- [Initial organization alignment](./index.md): Overview of organizational alignment and various team structures to facilitate specific goals.
+- [Initial organization alignment](../organize/index.md): Overview of organizational alignment and various team structures to facilitate specific goals.
 - [Break down silos and fiefdoms](../organize/fiefdoms-silos.md): Understand two common organizational antipatterns and ways to guide the team to productive collaboration.
 
 ## Environmental (technical) readiness learning paths
@@ -38,9 +38,9 @@ During the readiness phase, technical staff are called upon to create a migratio
 
 During the readiness phase, architects are called upon to architect solutions that span all Azure environments. The following skill-building resources can prepare architects for these tasks:
 
-- [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
-- [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
+- [`Foundations for Cloud Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [`Microsoft Azure Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
+- [`Designing Migrations for Microsoft Azure`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
 ## Deeper skills exploration
 

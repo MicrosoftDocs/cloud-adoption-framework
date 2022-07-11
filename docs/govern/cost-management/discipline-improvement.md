@@ -40,7 +40,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 - Validate learning metrics that you use to report on the successful allocation of funding.
 - Understand the desired cloud accounting model that affects how cloud costs should be accounted for.
 - Become familiar with the digital estate plan and validate accurate costing expectations.
-- Evaluate buying options to determine whether it's better to "pay as you go" or to make a precommitment by purchasing an Enterprise Agreement.
+- Evaluate buying options to determine whether it's better to pay as you go or to make a precommitment by purchasing an Enterprise Agreement.
 - Align business goals with planned budgets and adjust budgetary plans as necessary.
 - Develop a goals and budget reporting mechanism to notify technical and business stakeholders at the end of each cost cycle.
 

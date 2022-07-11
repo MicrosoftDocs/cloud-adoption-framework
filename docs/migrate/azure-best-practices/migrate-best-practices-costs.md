@@ -71,9 +71,9 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 | Type | Details | Usage |
 | --- | --- | --- |
-| **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small- to medium-sized databases, and low- to medium-volume traffic web servers. |
+| **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small-to-midsize databases, and low-to-medium-volume traffic web servers. |
 | **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, and application servers. |
-| **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium- to large-size cache, and in-memory analytics. |
+| **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium-to large-size cache, and in-memory analytics. |
 | **Storage optimized** | High disk throughput and I/O. | Good for big data, and SQL and NoSQL databases. |
 | **GPU optimized** | Specialized VMs. Single or multiple GPUs. | Heavy graphics and video editing. |
 | **High performance** | Fastest and most powerful CPU. VMs with optional high-throughput network interfaces (RDMA). | Critical high-performance applications. |
@@ -104,8 +104,8 @@ Azure provides different types of storage data.
 | --- | --- | --- |
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. <br><br> | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares and to provide multiple access/connections to file data. |
-| **Disks** | Based on page blobs. <br><br> Disk type: standard (HDD or SSD) or premium (SSD). <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
-| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queueing. |
+| **Disks** | Based on page blobs. <br><br> Disk type: Standard HDD/SSD or Premium SSD. <br><br> Disk management: Unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
+| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queuing. |
 | **Tables** | Store tables. | This data type is part of Azure Cosmos DB Table API. |
 
 ### Access tiers
@@ -124,7 +124,7 @@ Azure provides different types of storage accounts and performance tiers.
 
 | Account type | Details | Usage |
 | --- | --- | --- |
-| **General-purpose v2 standard** | Supports blobs (block, page, and append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. Zone-redundant storage (ZRS) is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD- or SSD-based. |
+| **General-purpose v2 standard** | Supports blobs (block, page, and append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. Zone-redundant storage (ZRS) is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD-based or SSD-based. |
 | **General-purpose v2 premium** | Supports Blob Storage data (page blobs). Supports hot, cool, and archive access tiers. ZRS is supported. <br><br> Stored on SSD. | Microsoft recommends using for all VMs. |
 | **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS. | Use if applications need the Azure classic deployment model. |
 | **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table, or disk storage services). Provides the same durability, availability, scalability and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
@@ -142,10 +142,10 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 **Learn more:**
 
-- Review [Azure Storage pricing](https://azure.microsoft.com/pricing/details/storage/).
+- Review [Azure Storage products and pricing](https://azure.microsoft.com/product-categories/storage/).
 - Learn about [Azure Import/Export](/azure/import-export/storage-import-export-service).
 - Compare [blobs, files, and disk storage data types](/azure/storage/common/storage-introduction).
-- Learn more about [access tiers](/azure/storage/blobs/storage-blob-storage-tiers).
+- Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
 - Review [different types of storage accounts](/azure/storage/common/storage-account-overview).
 - Learn about [Azure Storage redundancy](/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
 - Learn more about [Azure Files](/azure/storage/files/storage-files-introduction).
@@ -214,7 +214,7 @@ With Azure Cost Management + Billing, you can:
   - You can choose to have email notifications sent when your budget thresholds are reached.
   - You can export costs management data to Azure Storage to analyze it.
 
-  ![Screenshot of an Azure Cost Management budget.](./media/migrate-best-practices-costs/budget.png)
+  ![Screenshot of an Azure Cost Management + Billing budget.](./media/migrate-best-practices-costs/budget.png)
   *Figure 4: An Azure Cost Management + Billing budget.*
 
 - Perform a cost analysis to explore and analyze your organizational costs, to understand how costs are accrued, and identify spending trends.
@@ -222,7 +222,7 @@ With Azure Cost Management + Billing, you can:
   - You can view cost analysis data for various scopes, including by department, account, subscription, or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-  ![Screenshot of Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
+  ![Screenshot of Azure Cost Management + Billing analysis](./media/migrate-best-practices-costs/analysis.png)
   *Figure 5: Azure Cost Management + Billing analysis.*
 
 - Get Azure Advisor recommendations that show you how you can optimize and improve efficiency.
@@ -231,7 +231,7 @@ With Azure Cost Management + Billing, you can:
 
 - Read the [Azure Cost Management + Billing overview](/azure/cost-management-billing/cost-management-billing-overview).
 - Learn to [optimize your cloud investment with Azure Cost Management + Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).
-- Learn about [Azure Cost Management + Billing reports](/azure/cost-management-billing/cloudyn/use-reports).
+- Learn to [explore and analyze costs with cost analysis](/previous-versions/azure/cost-management-billing/cloudyn/use-reports).
 - Get a [tutorial on optimizing costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations).
 - Review the [Azure Consumption APIs](/rest/api/consumption/budgets).
 
@@ -287,7 +287,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 **Learn more:**
 
-- Learn more about [access tiers](/azure/storage/blobs/storage-blob-storage-tiers).
+- Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
 - Read the [StorSimple overview](/azure/azure-monitor/overview).
 - Review [StorSimple pricing](https://azure.microsoft.com/pricing/details/storsimple/).
 

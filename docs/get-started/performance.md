@@ -20,8 +20,6 @@ Centralized operations management is the most common approach to consistent perf
 
 The first step in this guide helps the operations team get started. The subsequent steps help the entire enterprise get started on a shared journey toward enterprise performance across the portfolio of workloads.
 
-![Get started with enterprise performance management](../_images/get-started/performance-map.png)
-
 ## Step 1: Establish operations management requirements
 
 The operations management baseline, outlined in the Microsoft Cloud Adoption Framework for Azure, provides a set of controls and cloud-native operations tools to ensure consistent operations. Expanding that baseline with automation tooling provides performance monitoring and automation to meet consistent performance requirements across the portfolio.
@@ -58,7 +56,7 @@ As the management baseline is improved, it's important to ensure that those impr
 
 **Guidance to support deliverable completion:**
 
-- Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for "criticality."
+- Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for `criticality`.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 - If you're new to the Cost Management discipline, consider following the [article about Cost Management discipline improvements](../govern/guides/complex/cost-management-improvement.md), with a focus on the [Implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices) section.
 
@@ -119,7 +117,7 @@ Understanding the plan also invites the cloud operations team into the developme
 
 The Ready methodology of the Cloud Adoption Framework focuses heavily on the development of landing zones to host workloads in the cloud. During landing zone implementation, various decisions can affect operations.
 
-Consult the cloud operations team to help review the landing zone for operations improvements. Also consult the cloud governance team to understand "resource consistency" policies and design guidance, which can affect the landing zone design.
+Consult the cloud operations team to help review the landing zone for operations improvements. Also consult the cloud governance team to understand Resource Consistency policies and design guidance, which can affect the landing zone design.
 
 **Deliverables:**
 

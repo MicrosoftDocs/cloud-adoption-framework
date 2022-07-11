@@ -31,7 +31,7 @@ When planning your access control strategy, use a least-privilege access model t
 ![Suggested pattern for using Azure RBAC](../../_images/azure-best-practices/rbac-least-privilege.png)
 
 > [!NOTE]
-> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, use [management groups](/azure/governance/management-groups) for enterprise-wide access control and [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](/azure/active-directory/fundamentals/active-directory-manage-groups).
+> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, use [management groups](/azure/governance/management-groups/) for enterprise-wide access control and [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](/azure/active-directory/fundamentals/active-directory-manage-groups).
 
 ## Use Azure built-in roles
 

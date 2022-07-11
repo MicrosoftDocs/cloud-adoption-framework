@@ -13,7 +13,7 @@ keywords: Innovative applications, citizen developers, application development
 
 # Application development for innovative applications
 
-As discussed in [Democratize data with digital invention](data.md), data fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
+As discussed in [Democratize data with digital invention](./data.md), data fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
 
 In some cases, data alone is enough to drive change and meet customer needs. More commonly though, solutions to customer needs require applications to shape the data and create an experience. Innovative applications engage and interact with the user, providing information and guidance. This article summarizes several principles that can help you find the right application development solution, based on the hypotheses to be validated.
 
@@ -36,7 +36,7 @@ Citizen developers are users who create new business applications using developm
 
 ## Intelligent experiences
 
-Intelligent experiences combine the speed and scale of modern web applications with the intelligence of Cognitive Services and bots. Individually, these technologies might be sufficient to meet your customers' needs. When properly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain application development costs.
+Intelligent experiences combine the speed and scale of modern web applications with the intelligence of cognitive services and bots. Individually, these technologies might be sufficient to meet your customers' needs. When properly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain application development costs.
 
 ### Modern web apps
 

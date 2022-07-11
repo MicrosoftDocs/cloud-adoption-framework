@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore BACPAC FILESTREAM -->
-
 # Migrate SQL Server databases to Azure
 
 This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises SQL Server databases to Azure.
@@ -28,7 +26,7 @@ The IT leadership team has worked closely with business partners to understand t
 
 - **Optimize compute resources:** Contoso has deployed a large on-premises server infrastructure. They have several SQL Server instances that consume but do not really use the underlying CPU, memory and disk allocated in efficient ways.
 
-- **Increase efficiency:** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements. Database administration should be reduced and/or minimized after the migration.
+- **Increase efficiency:** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements. Database administration should be reduced or minimized after the migration.
 
 - **Increase agility:** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. It mustn't get in the way, or become a business blocker.
 
@@ -137,7 +135,7 @@ With the database information now loaded into Azure Migrate, Contoso has identif
 When DMA was not able to be executed on a data source, the following guidelines were followed on the database migrations.
 
 > [!NOTE]
-> Contoso discovered various open-source databases during the assessment phase. Separately, they followed the guidance in [migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
+> Contoso discovered various open-source databases during the assessment phase. Separately, they followed the guidance in [Migrate open-source databases to Azure](./contoso-migration-oss-db-to-azure.md) for their migration planning.
 
 <!-- docutune:casing "custom .NET" -->
 
@@ -171,7 +169,7 @@ For the production migration, Contoso identified the time frames for all databas
 
 Based on their documented test procedures, they execute each migration via scripting as much as possible, limiting any manual tasks to minimize errors.
 
-If any migrations fail during the window, they're rolled back and re-scheduled in the next migration window.
+If any migrations fail during the window, they're rolled back and rescheduled in the next migration window.
 
 ### Clean up after migration
 

@@ -7,7 +7,6 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
@@ -68,7 +67,7 @@ See the [Azure Monitor Application Insights hub](/azure/azure-monitor/azure-moni
 1. In the Azure portal, search for **Application Insights**.
 1. Choose one of the Application Insights resources from the list.
 
-Application Insights contains different kinds of options for monitoring performance, availability, usage, and dependencies. Each of these views of the application data provides clarity into the continuous-improvement feedback loop.
+Application Insights contains different kinds of options for monitoring performance, availability, usage, and dependencies. These views of the application data add clarity to the continuous-improvement feedback loop.
 
 ::: zone target="chromeless"
 

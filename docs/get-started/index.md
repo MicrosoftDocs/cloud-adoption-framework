@@ -30,7 +30,7 @@ Each of the following links takes you to questions that are typically asked when
 Your organization's cloud adoption effort should support long-term strategic goals for your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, preparing for Kubernetes and container integration into your cloud strategy, or designing a cloud adoption journey for a retail business, we have updated guidance for these scenarios and more.
 
 - [Hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md)
-- [Modern application platform scenario](../scenarios/aks/index.md)
+- [Modern application platform scenario](../scenarios/app-platform/index.md)
 - [SAP adoption scenario](../scenarios/sap/index.md)
 - [Desktop virtualization](../scenarios/wvd/index.md)
 - [Cloud adoption for the retail industry](../industry/retail/index.md)
@@ -46,8 +46,8 @@ Your company's cloud adoption journey is guided with foundational decisions that
 - [Get started aligning foundation decisions](./cloud-concepts.md)
 - [How does Azure work](./what-is-azure.md)
 - [Fundamental concepts](../ready/considerations/fundamental-concepts.md)
-- [Portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md)
-- [Azure hierarchy support](../reference/fundamental-concepts/hierarchy-azure-tools.md)
+- [Portfolio hierarchy](../resources/fundamental-concepts/hosting-hierarchy.md)
+- [Azure hierarchy support](../resources/fundamental-concepts/hierarchy-azure-tools.md)
 
 ## Accelerate adoption
 

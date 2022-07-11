@@ -12,7 +12,7 @@ ms.custom: internal
 
 # IT management and operations in the cloud
 
-As a business moves to a cloud-based model, the importance of proper management and operations can't be overstated. Unfortunately, few organizations are prepared for the IT management shift that's required for success in building a cloud-first operating model. This section of the Cloud Adoption Framework outlines the operating model, processes, and tooling that have proven successful in the cloud. Each of these areas represents a minor but fundamental change in the way the business should view IT operations and management as it begins to adopt the cloud.
+As a business moves to a cloud-based model, the importance of proper management and operations can't be overstated. Unfortunately, few organizations are prepared for the IT management shift that's required for success in building a cloud-first operating model. This section of the Cloud Adoption Framework outlines the operating model, processes, and tooling that have proven successful in the cloud. These areas represent a minor but fundamental change in the way the business should view IT operations and management as it begins to adopt the cloud.
 
 ## Brief history of IT management
 

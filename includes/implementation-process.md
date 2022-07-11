@@ -10,7 +10,7 @@ The following decisions come from teams outside of the cloud governance team. Th
 Identity Baseline is the fundamental starting point for all governance. Before attempting to apply governance, identity must be established. The established identity strategy will then be enforced by the governance solutions.
 In this governance guide, the Identity Management team implements the [Directory Synchronization](~/decision-guides/identity/index.md#directory-synchronization) pattern:
 
-- RBAC will be provided by Azure Active Directory (Azure AD), using the directory synchronization or "Same Sign-On" that was implemented during company's migration to Microsoft 365. For implementation guidance, see [Reference Architecture for Azure AD Integration](/azure/architecture/reference-architectures/identity/azure-ad).
+- RBAC will be provided by Azure Active Directory (Azure AD), using the directory synchronization or "same sign-on" that was implemented during company's migration to Microsoft 365. For implementation guidance, see [Reference Architecture for Azure AD Integration](/azure/architecture/reference-architectures/identity/azure-ad).
 - The Azure AD tenant will also govern authentication and access for assets deployed to Azure.
 
 In the governance MVP, the governance team will enforce application of the replicated tenant through subscription governance tooling, discussed later in this article. In future iterations, the governance team could also enforce rich tooling in Azure AD to extend this capability.

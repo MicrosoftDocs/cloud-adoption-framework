@@ -49,8 +49,7 @@ The following data migration type table shows source and target pairs to review 
 | SQL Server | Azure SQL Database | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-sql-server-to-azure-sql) |
 | SQL Server | Azure SQL Managed Instance | Database Migration Service | Offline | [Tutorial](/azure/dms/tutorial-sql-server-to-managed-instance) |
 | SQL Server | Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-sql-server-managed-instance-online) |
-| RDS SQL Server | Azure SQL Database or Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online) |
-| MySQL | Azure Database for MySQL | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-mysql-azure-mysql-online) |
+| MySQL | Azure Database for MySQL | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-mysql-azure-mysql-offline-portal) |
 | PostgreSQL | Azure Database for PostgreSQL | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-postgresql-azure-postgresql-online) |
 | MongoDB | Azure Cosmos DB API for MongoDB | Database Migration Service | Offline | [Tutorial](/azure/dms/tutorial-mongodb-cosmos-db) |
 | MongoDB | Azure Cosmos DB API for MongoDB | Database Migration Service | Online | [Tutorial](/azure/dms/tutorial-mongodb-cosmos-db-online) |
