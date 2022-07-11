@@ -2,7 +2,7 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About the framework
+  - name: About the Framework
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
@@ -13,12 +13,12 @@ items:
       href: scenarios/overview.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
-    - name: Data management and analytics
+    - name: Cloud-scale analytics
       href: scenarios/data-management/index.md
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
-      href: scenarios/aks/index.md
+      href: scenarios/app-platform/index.md
     - name: SAP
       href: scenarios/sap/index.md
     - name: Virtual desktops
@@ -91,7 +91,7 @@ items:
     - name: Overview
       href: strategy/index.md
     - name: Assess cloud adoption strategy
-      href: strategy/cloud-adoption-strategy-evaluator.md      
+      href: strategy/cloud-adoption-strategy-evaluator.md
     - name: Motivations
       href: strategy/motivations.md
     - name: Business outcomes
@@ -106,7 +106,7 @@ items:
         href: strategy/business-outcomes/fiscal-outcomes.md
       - name: Agility outcomes
         href: strategy/business-outcomes/agility-outcomes.md
-      - name: Global Reach outcomes
+      - name: Global reach outcomes
         href: strategy/business-outcomes/reach-outcomes.md
       - name: Customer engagement outcomes
         href: strategy/business-outcomes/engagement-outcomes.md
@@ -140,6 +140,8 @@ items:
       href: strategy/digital-transformation-timeline.md
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
+    - name: Building your devops practice
+      href: strategy/building-devops-practice.md
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
@@ -257,6 +259,8 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Design principles
+        href: ready/landing-zone/design-principles.md
       - name: Journey to the target architecture
         href: ready/landing-zone/landing-zone-journey.md
       - name: Design areas
@@ -276,7 +280,15 @@ items:
             href: ready/landing-zone/design-area/azure-ad-define.md
 
         - name: Identity and access management
-          href: ready/landing-zone/design-area/identity-access.md
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/identity-access.md
+          - name: Active Directory and Hybrid Identity
+            href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
+          - name: Platform access
+            href: ready/landing-zone/design-area/identity-access-platform-access.md
+          - name: Landing zones
+            href: ready/landing-zone/design-area/identity-access-landing-zones.md
 
         - name: Network topology and connectivity
           items:
@@ -322,6 +334,8 @@ items:
                 href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
               - name: DNS for on-premises and Azure resources
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
+              - name: Plan for virtual machine remote access
+                href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
 
         - name: Resource organization
           items:
@@ -399,28 +413,49 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/platform-automation-devops.md
-          - name: Test-driven development (TDD) for landing zones
-            href: ready/considerations/test-driven-development.md
-          - name: Landing zone TDD in Azure
-            href: ready/considerations/azure-test-driven-development.md
-
+          - name: Platform automation
+            items:
+            - name: Automation
+              href: ready/considerations/automation.md
+          - name: DevOps
+            items:
+            - name: DevOps considerations
+              href: ready/considerations/devops-principles-and-practices.md
+            - name: Team topologies
+              href: ready/considerations/devops-teams-topologies.md
+          - name: Development strategy
+            items:
+            - name: Development lifecycle
+              href: ready/considerations/development-strategy-development-lifecycle.md
+            - name: Infrastructure as Code
+              href: ready/considerations/infrastructure-as-code.md
+            - name: Environments
+              href: ready/considerations/environments.md
+            - name: Test-driven development for Azure Landing Zones
+              href: ready/considerations/development-strategy-test-driven-development.md
+            - name: DevOps Toolchain considerations
+              href: ready/considerations/devops-toolchain.md
+          - name: Security considerations
+            items:
+            - name: Overview
+              href: ready/considerations/security-considerations-overview.md
+            - name: Role-based access control for DevOps Tools
+              href: ready/considerations/security-considerations-tools.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
         - name: Choose a landing zone option
           href: ready/landing-zone/choose-landing-zone-option.md
+        - name: Tailoring the Azure landing zones architecture
+          href: ready/landing-zone/tailoring-alz.md
         - name: Start with enterprise scale
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
-          - name: Design principles
-            href: ready/enterprise-scale/design-principles.md
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
           - name: Testing approach for enterprise-scale
             href: ready/enterprise-scale/testing-approach.md
-          - name: Terraform module for CAF enterprise-scale
-            href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
           - name: Scenario-specific enterprise-scale landing zones
             href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
           - name: Enterprise-scale FAQ
@@ -432,7 +467,14 @@ items:
             href: ready/landing-zone/migrate-landing-zone.md
           - name: CAF Foundation blueprint
             href: ready/landing-zone/foundation-blueprint.md
-          - name: Terraform landing zones
+
+        - name: Deploy Azure landing zones with Terraform
+          items:
+          - name: Overview
+            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
+          - name: Azure landing zones Terraform module
+            href: ready/landing-zone/terraform-module.md
+          - name: CAF Terraform landing zones
             href: ready/landing-zone/terraform-landing-zone.md
 
         - name: ISV considerations for landing zones
@@ -822,7 +864,8 @@ items:
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
-
+        - name: Adopt low-code application platform
+          href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Migrate antipatterns
         href: antipatterns/migrate-antipatterns.md
 
@@ -1007,20 +1050,40 @@ items:
           items:
           - name: Overview
             href: innovate/best-practices/apps.md
-          - name: Citizen developers
+          - name: Low-code application platform
             items:
             - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Creating applications in Power Apps
               href: /powerapps/maker/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Create your first workflow with Power Automate
+            - name: Power Apps patterns
+              items:
+                - name: Patterns overview
+                  href: /powerapps/guidance/patterns/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Approval pattern
+                  href: /powerapps/guidance/patterns/approval-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Asset management/resource booking pattern
+                  href: /powerapps/guidance/patterns/asset-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Calculation/transformation pattern
+                  href: /powerapps/guidance/patterns/calculator-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Communication/announcement pattern
+                  href: /powerapps/guidance/patterns/communication-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Inspection/audit pattern
+                  href: /powerapps/guidance/patterns/inspection-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: Project management pattern
+                  href: /powerapps/guidance/patterns/project-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+                - name: More patterns
+                  href: /powerapps/guidance/patterns/more-patterns?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Plan a Power Apps project
+              href: /powerapps/guidance/planning/introduction
+            - name: Real-world architecture examples
+              href: /power-platform/guidance/architecture/real-world-examples/overview
+            - name: Create a workflow with Power Automate
               href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Using AI Builder
-              href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Compliance and data privacy for citizen developer solutions
-              href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Data loss prevention policies for citizen developer solutions
-              href: /power-platform/admin/wp-data-loss-prevention?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Automate tasks with robotic process automation (RPA)
+              href: /power-automate/desktop-flows/introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Plan a Power Automate project
+              href: /power-automate/guidance/planning/introduction
           - name: Intelligent experiences
             items:
             - name: Modern web apps
@@ -1049,14 +1112,18 @@ items:
                 href: /azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Visual search from an image
                 href: /azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Chatbots
-              items:
-              - name: Create and deploy a basic bot
-                href: /azure/bot-service/bot-service-quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: "Learning path: Create bots with the Azure Bot Service"
-                href: /learn/paths/create-conversational-ai-solutions/
-              - name: Azure bot samples on GitHub
-                href: https://github.com/Microsoft/botframework-sdk
+              - name: Intelligent low-code apps
+                href: /ai-builder/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Chatbots
+                items:
+                - name: Choose the right chatbot solution
+                  href: /azure/bot-service/bot-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create a bot with Composer
+                  href: /composer/quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create and deploy a Power Virtual Agents bot
+                  href: /power-virtual-agents/fundamentals-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+                - name: Create a bot with Bot Framework SDK
+                  href: /azure/bot-service/bot-service-quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Cloud-native applications
             items:
             - name: Microservices architecture
@@ -1103,9 +1170,8 @@ items:
             - name: Get started with a shared repository via GitHub
               href: https://guides.github.com/introduction/git-handbook/
             - name: Get started with a shared backlog
-              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
             - name: Synchronize Power Apps with Azure DevOps
-              href: /power-platform/alm/devops-build-tools?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+              href: /power-platform/alm/devops-build-tools?&preserve-view=true&toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Feedback loops
             items:
             - name: Manage feedback with Azure DevOps
@@ -1119,7 +1185,7 @@ items:
           - name: Reliable testing
             items:
             - name: Manage and track test plans
-              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/test/track-test-status?&preserve-view=true&bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
           - name: Solution deployment
             items:
             - name: Continuous deployment with Azure Pipelines and GitHub
@@ -1522,6 +1588,8 @@ items:
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
           href: manage/monitor/observability.md
+        - name: Service Level Objectives
+          href: manage/monitor/service-level-objectives.md
         - name: Data collection
           href: manage/monitor/data-collection.md
         - name: Response
@@ -1544,6 +1612,7 @@ items:
           href: /azure/architecture/resiliency/recovery-loss-azure-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Recover from data corruption or accidental deletion
           href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
     - name: Management considerations
       items:
       - name: Overview
@@ -1599,17 +1668,39 @@ items:
         href: secure/devsecops-controls.md
 
     - name: Best practices
-      items:
-      - name: Securing DevOps
-        href: secure/best-practices/secure-devops.md
-      - name: Secure DevOps governance
-        href: secure/best-practices/end-to-end-governance.md
-      - name: Azure Virtual Desktop
-        href: scenarios/wvd/eslz-security-governance-and-compliance.md
-      - name: Managing secrets
-        href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Network security
-        href: /security/compass/network-security-containment
+      items:  
+      - name: Infrastructure and development security
+        items:
+        - name: Introduction
+          href: secure/security-best-practices-introduction.md
+        - name: Infrastructure security
+          items:
+          - name: Overview
+            href: secure/infrastructure-security-overview.md
+          - name: Strategy
+            href: secure/infrastructure-security-strategy.md
+          - name: Architecture
+            href: secure/infrastructure-security-architecture.md
+          - name: Implementation and operations
+            href: secure/infrastructure-security-implementation.md
+          - name: Operations and governance
+            href: secure/infrastructure-security-operations-governance.md
+        - name: Development security
+          items:
+          - name: Strategy
+            href: secure/development-security-strategy-overview.md
+          - name: Innovation security
+            href: secure/development-innovation-security.md
+          - name: Securing DevOps strategy and process
+            href: secure/devops-strategy-process-security.md
+          - name: Securing DevOps CI/CD pipelines
+            href: secure/best-practices/secure-devops.md
+          - name: Secure DevOps governance
+            href: secure/best-practices/end-to-end-governance.md
+          - name: Architecture
+            href: secure/development-security-architecture.md
+          - name: Implementation and operations
+            href: secure/development-security-implementation-operations.md
       - name: Toolchain
         href: secure/best-practices/toolchain.md
 
@@ -1623,11 +1714,11 @@ items:
         href: get-started/security.md
       - name: Azure security top 10
         href: secure/security-top-10.md
-      - name: Microsoft cybersecurity reference architectures
+      - name: Microsoft Cybersecurity Reference Architectures
         href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Security documentation
         href: /security/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Azure security benchmarks
+      - name: Azure Security Benchmark
         href: /security/benchmark/azure/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
   - name: Organize

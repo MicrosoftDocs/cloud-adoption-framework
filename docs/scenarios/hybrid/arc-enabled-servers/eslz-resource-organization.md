@@ -7,7 +7,7 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Resource organization for Azure Arc-enabled servers
@@ -26,7 +26,7 @@ Resource tags allow you to add metadata to a resource to quickly locate it and a
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled servers:
 
-[ ![A diagram depicting resource tagging for Azure Arc-enabled servers.](../media/arc-enabled-servers-resource-tagging.png)](../media/arc-enabled-servers-resource-tagging.png#lightbox)
+[ ![A diagram depicting resource tagging for Azure Arc-enabled servers.](./media/arc-enabled-servers-resource-tagging.png)](./media/arc-enabled-servers-resource-tagging.png#lightbox)
 
 ## Next steps
 
@@ -36,5 +36,5 @@ For more guidance for your hybrid cloud adoption journey, review the following a
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
-- Learn how to apply [resource tags](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_inventory_tagging/#apply-inventory-tagging-to-azure-arc-enabled-servers) for Azure Arc-enabled servers
+- Learn how to apply [resource tags](../../../manage/hybrid/server/best-practices/arc-inventory-tagging.md) for Azure Arc-enabled servers
 - To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
