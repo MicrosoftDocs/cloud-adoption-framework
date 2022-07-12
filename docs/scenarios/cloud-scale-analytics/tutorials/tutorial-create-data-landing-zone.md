@@ -113,7 +113,7 @@ Before you begin setting up your deployment, make sure that you have these prere
     | --- | --- |
     | **Password**  | Enter a new password to create the required administrator password for Azure Synapse workspaces, Azure SQL servers, and potentially for self-hosted integration runtimes that are hosted on a virtual machine scale set. |
     | **Confirm Password** | Confirm the password. |
-    | **Connect to Purview Account** | In the dropdown, select the Azure Purview account you want to use to to connect Azure Synapse and Azure Data Factory. |
+    | **Connect to Purview Account** | In the dropdown, select the Azure Purview account you want to use to connect Azure Synapse and Azure Data Factory. |
     | **Deploy Self-hosted Integration Runtimes** | Select **Yes** to deploy self-hosted integration runtimes in your data landing zone. |
     | **Purview Self-hosted Integration Runtime Authentication Key** | If you have a self-hosted integration runtime authentication key, enter or paste the key. If you don't have a key, complete the steps to [create a self-hosted integration runtime for Azure Purview](/Lab1/7_create_purview-shir/). Copy the key, and then paste the key here. |
 
