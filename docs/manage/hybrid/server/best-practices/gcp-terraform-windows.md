@@ -30,7 +30,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
 3. [Install Terraform >= 0.12](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
-4. **Google Cloud Platform account with billing enabled:** [Create a free trial account](https://cloud.google.com/free). To create Windows Server virtual machines, you must upgraded your account to enable billing. Select **Billing** from the menu and then select **Upgrade** at the lower right.
+4. **Google Cloud Platform account with billing enabled:** [Create a free trial account](https://cloud.google.com/free). To create Windows Server virtual machines, you must upgrade your account to enable billing. Select **Billing** from the menu and then select **Upgrade** at the lower right.
 
     ![First screenshot showing how to enable billing on a GCP account.](./media/gcp-windows/billing-1.png)
 
