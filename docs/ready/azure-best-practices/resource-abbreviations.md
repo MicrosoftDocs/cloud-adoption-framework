@@ -66,7 +66,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-`|
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-`|
-| VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng-`|
+| VPN Gateway | `Microsoft.Network/vpnGateways` | `vpng-`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn-` |
 | VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst-` |
 | Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
