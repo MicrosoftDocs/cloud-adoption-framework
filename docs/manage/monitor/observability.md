@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 07/06/2022
+ms.date: 07/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -137,8 +137,8 @@ As a monitoring service provider, your job is to facilitate monitoring solutions
 Your value stream needs to consider service observability much earlier and in the following ways:
 
 - It monitors in sufficient depth and breadth.
-- It provides coverage across the health model (availability, capacity/performance, security, conformance).
-- It monitors utility also, what the service does, including the end-user experience.
+- It provides coverage across the health model (availability, capacity/performance, security, compliance).
+- It monitors utility, meaning does functionality delivered by the service meet agreed-upon requirements, including the end-user experience.
 
 In the monitoring strategy, we recommend establishing a monitoring plan that starts with what is minimally viable or most important to monitor and observe. This can be based on recommendations from Microsoft, other reputable sources, and your internal developers or system engineers depending on the resource or system. Establish initial visibility of the *consumption*, *performance*, *security*, and *availability* of the resources in your Azure resource groups and your Azure Active Directory tenant. Through observation, you learn how to interpret the data, and learn what's significant in order to fine-tune and optimize how the service is monitored. Value is achieved when incremental, and there's a co-creation of value here in that the consumers are working with the monitoring team (or in some cases the service provider) on co-creation of value.
 
@@ -174,7 +174,7 @@ Again, cloud service monitoring is much more flexible and dynamical with faster 
 
 You create a monitoring plan to describe the goals and objectives, requirements, and other important details. Then work to solicit an agreement between all of the relevant stakeholders in the organization. A monitoring plan should explain how to develop and operate one or more monitoring solutions. Begin develop your monitoring plans early during the strategy and planning phases of the project.
 
-While creating the plan, it's important to keep in mind the five disciplines of modern monitoring: observe, measure, respond, and learn, and improve.
+While creating the plan, it's important to keep in mind the five disciplines of modern monitoring: observe, measure, respond, learn, and improve.
 
 The following provides a recommended outline and are considered to be the primary considerations for an individual plan for services or when standardizing cloud service features such as Azure resource types or Microsoft 365 services. The essence of the plan is to define the line of visibility between service provider (who will field solutions) and consumers (who will operate or derive value).
 
