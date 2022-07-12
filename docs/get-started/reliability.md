@@ -25,8 +25,6 @@ Operations management and governance are equal partners in enterprise reliabilit
 
 The first two steps in this article help both teams get started. They're listed sequentially, but you can perform them in parallel. The subsequent steps help you get the entire enterprise started on a shared journey toward more reliable solutions throughout the enterprise.
 
-![Get started with enterprise reliability](../_images/get-started/reliability-map.png)
-
 ## Step 1: Establish operations management requirements
 
 Not all workloads are created equal. In any environment, there are workloads that have a direct and constant impact on the business. There are also supporting business processes and workloads that have a smaller impact on the overall business. In this step, the cloud operations team identifies and implements initial requirements to support the overall IT portfolio.

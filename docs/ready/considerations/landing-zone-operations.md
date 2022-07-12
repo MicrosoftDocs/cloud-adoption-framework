@@ -42,7 +42,7 @@ The [Manage methodology](../../manage/index.md) provides overall guidance for bu
 
 ## Test-driven development cycle
 
-Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
+Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development) and [test-driven development in Azure](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development).
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 *Figure 2: The test-driven development process for cloud landing zones.*

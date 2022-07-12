@@ -12,18 +12,14 @@ ms.custom: internal
 
 # Get started: Accelerate migration
 
-Proper alignment of business and IT stakeholders helps to overcome migration roadblocks and accelerate migration efforts. This article provides recommended steps for:
+Proper alignment of business and IT stakeholders helps overcome migration roadblocks and accelerate migration efforts. This article provides recommended steps for:
 
 - Stakeholder alignment
 - Migration planning
 - Deploying a landing zone
 - Migrating your first 10 workloads
 
-It also helps you implement proper governance and management processes.
-
-Use this guide to streamline the processes and materials required for aligning an overall migration effort. The guide uses the methodologies of the Cloud Adoption Framework that are highlighted in this illustration.
-
-![Get started with migration in Azure](../_images/get-started/migration-map.png)
+This article also helps you implement proper governance and management processes. Use this guide to streamline the processes and materials required to align an overall migration effort.
 
 If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). Use it to identify the guidance that best aligns to your current needs.
 
