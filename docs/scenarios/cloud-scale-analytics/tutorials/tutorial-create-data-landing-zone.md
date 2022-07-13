@@ -73,7 +73,7 @@ Before you begin setting up your deployment, make sure that you meet these prere
 
 - **Permissions for the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the subscription to be able to create a service principal and role assignments for the service principal.
 
-- **Deploy a data management zone**. Before you begin, make sure you successfully deploy a [data management zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management zone](https://github.com/Azure/data-management-zone) GitHub repository.
+- **Deploy a data management landing zone**. Before you begin, make sure you successfully deploy a [data management landing zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management landing zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
 
 ## One-click deployment
 
@@ -131,7 +131,7 @@ Before you begin setting up your deployment, make sure that you meet these prere
       | Setting | Action |
       | --- | --- |
       | **DNS A-Records are deployed through Azure Policy** | Select **No**. |
-      | **Subscription with Private DNS Zones** | Select the Azure subscription you used to deploy the data management landing zone. |
+      | **Subscription with Private DNS Zones** | Select the Azure subscription you use to deploy the data management landing zone. |
       | **Private DNS Zone Key Vault** | Select **privatelink.vaultcore.azure.net**. |
       | **Private DNS Zone DataFactory** | Select **privatelink.datafactory.azure.net**. |
       | **Private DNS Zone DataFactory Portal** | Select **privatelink.adf.azure.net**. |
@@ -143,12 +143,12 @@ Before you begin setting up your deployment, make sure that you meet these prere
       | **Private DNS Zone Synapse Dev** | Select **privatelink.dev.azuresynapse.net**. |
       | **Private DNS Zone Synapse SQL** | Select **privatelink.sql.azuresynapse.net**. |
 
-       :::image type="content" source="../images/data-landing-zone-connectivity-private-dns.png" alt-text="Screenshot that shows data landing zone connectivity settings for Private DNS zones.":::
+       :::image type="content" source="../images/data-landing-zone-connectivity-private-dns.png" alt-text="Screenshot that shows data landing zone connectivity settings for Azure Private DNS zones.":::
 
    Select **Review + create**.  
 
 1. When the parameters are validated, select **Create** to start the deployment.
 
-   :::image type="content" source="../images/data-landing-zone-create.png" alt-text="Screenshot shows the data landing zone parameter validation and Create page.":::
+   :::image type="content" source="../images/data-landing-zone-create.png" alt-text="Screenshot shows the data landing zone parameter validation and Create pane.":::
 
    Deployment takes approximately 25 minutes to complete.
