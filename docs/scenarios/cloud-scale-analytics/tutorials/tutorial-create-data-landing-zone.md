@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Create a data landing zone
+title: Create a data landing zone
 description: Learn how to create a data landing zone.
 author: andrehass
 ms.author: anhass
@@ -39,7 +39,7 @@ A data landing zone deployment uses these Azure services and resources:
 
 ## Supported regions
 
-Not all services and features are available in all Azure regions. For this tutorial, we recommend that you use the zone-redundant storage replication option for all the central data lakes in your data landing zone. Because zone-redundant storage isn't available in all regions, we limit the regions that are available in the deployment template. If you plan to deploy to a region that's not listed here, change the setting in the corresponding Bicep files in this repository.
+Not all services and features are available in all Azure regions. For this tutorial, we recommend that you use the zone-redundant storage replication option for all the central data lakes in your data landing zone. Because zone-redundant storage isn't available in all regions, we limit the regions that are available in the deployment template. If you plan to deploy to a region that's not listed here, change the setting in the corresponding [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) files when you use the template to create a deployment in the Azure portal.
 
 For this tutorial, select one of the Azure regions in the following list:
 
@@ -73,9 +73,7 @@ Before you begin setting up your deployment, make sure that you meet these prere
 
 - **Permissions for the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the subscription to be able to create a service principal and role assignments for the service principal.
 
-- **Deploy a data management zone**. Before you begin, make sure you successfully deploy a [data management zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed in the data management zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deploying the data landing zone templates fails.
-
-   For more information, see the [data management zone](https://github.com/Azure/data-management-zone) GitHub repository.
+- **Deploy a data management zone**. Before you begin, make sure you successfully deploy a [data management zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management zone](https://github.com/Azure/data-management-zone) GitHub repository.
 
 ## One-click deployment
 
@@ -85,7 +83,7 @@ Before you begin setting up your deployment, make sure that you meet these prere
 
     [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-landing-zone%2Fmain%2Finfra%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-landing-zone%2Fmain%2Fdocs%2Freference%2Fportal.dataLandingZone.json)
 
-   The **Cloud-scale Analytics Scenario - Data Landing Zone** customized deployment template opens in the Azure portal.
+   Then, the **Cloud-scale Analytics Scenario - Data Landing Zone** customized deployment template opens in the Azure portal.
 
 1. In **Data landing zone**, select or enter the following information:
 
@@ -98,13 +96,13 @@ Before you begin setting up your deployment, make sure that you meet these prere
 
     :::image type="content" source="../images/data-landing-zone-tab.png" alt-text="Screenshot that shows information to provide on the Data landing zone tab.":::
 
-1. Select **Next : General Settings**.
+   Select **Next : General Settings**.
 
 1. In **General Settings**, select or enter the following information:
 
     | Setting | Action |
     | --- | --- |
-    | **Password**  | Enter a new password to create the required administrator password for Azure Synapse workspaces, Azure SQL servers, and potentially for self-hosted integration runtimes that are hosted on a virtual machine scale set. |
+    | **Password**  | Enter a new password to create the required administrator password for Synapse workspaces, Azure SQL servers, and potentially for self-hosted integration runtimes that are hosted on a virtual machine scale set. |
     | **Confirm Password** | Reenter the password to confirm it. |
     | **Connect to Purview Account** | In the dropdown, select the Azure Purview account you want to use to connect Azure Synapse Analytics and Azure Data Factory. |
     | **Deploy Self-hosted Integration Runtimes** | Select **Yes**. |
@@ -112,17 +110,17 @@ Before you begin setting up your deployment, make sure that you meet these prere
 
     :::image type="content" source="../images/data-landing-zone-general-settings.png" alt-text="Screenshot that shows information to provide on the General settings tab.":::
 
-1. Select **Next : Connectivity Settings**.
+   Select **Next : Connectivity Settings**.
 
-1. In **Connectivity Settings**, complete the following steps:
+1. In **Connectivity Settings**, complete these steps:
 
    1. In the **Data Management Landing Zone Virtual Network Configuration** section, select or enter the following information:
 
       | Setting | Action |
       | --- | --- |
-      | **Data Management Landing Zone Subscription** | Select the Azure subscription you used for the data landing zone deployment.
+      | **Data Management Landing Zone Subscription** | Select the Azure subscription you use for the data landing zone deployment.
       | **Data Management Landing Zone Virtual Network** | Select your data management landing zone virtual network to peer it with your data landing zone. |
-      | **Existing Firewall** | Use the default **Azure Firewall**. |
+      | **Existing Firewall** | Leave the default, **Azure Firewall**. |
       | **Azure Firewall Subscription** | Select the Azure subscription that has an Azure Firewall deployment. It should be the same subscription you use to deploy the data management landing zone. |
       | **Azure Firewall** | Select the Azure Firewall from the data management landing zone deployment. An example value is `DMAPrefix-dev-firewall`. |
 
@@ -145,11 +143,11 @@ Before you begin setting up your deployment, make sure that you meet these prere
       | **Private DNS Zone Synapse Dev** | Select **privatelink.dev.azuresynapse.net**. |
       | **Private DNS Zone Synapse SQL** | Select **privatelink.sql.azuresynapse.net**. |
 
-    :::image type="content" source="../images/data-landing-zone-connectivity-private-dns.png" alt-text="Screenshot that shows data landing zone connectivity settings for Private DNS zones.":::
+       :::image type="content" source="../images/data-landing-zone-connectivity-private-dns.png" alt-text="Screenshot that shows data landing zone connectivity settings for Private DNS zones.":::
 
-1. Select **Review + create**.  
+   Select **Review + create**.  
 
-1. After the parameters are validated, select **Create** to start the deployment.
+1. When the parameters are validated, select **Create** to start the deployment.
 
    :::image type="content" source="../images/data-landing-zone-create.png" alt-text="Screenshot shows the data landing zone parameter validation and Create page.":::
 
