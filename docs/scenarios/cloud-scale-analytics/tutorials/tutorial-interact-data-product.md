@@ -1,6 +1,6 @@
 ---
-title: Interact with data product services
-description: Learn how to interact with data product services, including how to perform data orchestration and how to use Microsoft Purview for data governance. 
+title: Interact with a data product batch
+description: Learn how to interact with a data product batch, including how to perform data orchestration and how to use Microsoft Purview for data governance. 
 author: andrehass
 ms.author: anhass
 ms.date: 07/13/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Interact with data product services
+# Interact with a data product batch
 
 In this tutorial, learn how to interact with data product services that are already deployed. In the tutorial, you use Azure Data Factory for data integration and orchestration. Then, you use Microsoft Purview to discover, manage, and govern data assets.
 

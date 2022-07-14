@@ -168,9 +168,9 @@ items:
       href: ../cloud-scale-analytics/tutorials/tutorial-customer-scenario.md
     - name: Create a data landing zone
       href: ../cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md
-    - name: Create a data product
+    - name: Create a data product batch
       href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product.md
-    - name: Interact with data products
+    - name: Interact with a data product batch
       href: ../cloud-scale-analytics/tutorials/tutorial-interact-data-product.md
     - name: Cleanup instructions
       href: ../cloud-scale-analytics/tutorials/cleanup-instructions.md

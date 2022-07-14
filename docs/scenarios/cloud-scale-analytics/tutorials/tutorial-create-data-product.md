@@ -1,5 +1,5 @@
 ---
-title: Create a data product tutorial
+title: Create a data product batch tutorial
 description: Learn how to experiment with resources to deploy a data product batch using the one-click method in a data landing zone.
 author: andrehass
 ms.author: anhass
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Create a data product
+# Create a data product batch
 
 If you want to experiment with the resources and see what's deployed as part of data product batch deployment, you can with the **Deploy to Azure** button. This feature deploys resources for the data product batch in a data landing zone. The applicable scenarios for data product batch include data product and data integration. As described in previous articles, data products are another unit of scale inside a data landing zone. You can use this template for a data product and data integration into the platform.
 
