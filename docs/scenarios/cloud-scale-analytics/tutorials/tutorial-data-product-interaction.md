@@ -108,9 +108,9 @@ When the scripts finish running, you will have on the Azure SQL Server `<DP-pref
     ```json
     {
       "appId": "example-app-id",
-      "displayName": "purview-serviceprincipal",
-      "name": "example-name",
-      "password": "example-password",
+      "displayName": "purview-service-principal",
+      "name": "example-service-principal-name",
+      "password": "example-service-principal-password",
       "tenant": "example-tenant"
     }
     ```
@@ -120,7 +120,7 @@ When the scripts finish running, you will have on the Azure SQL Server `<DP-pref
 From the JSON output generated in the preceding step, get the following values:
 
 - service principal ID (`appId`)
-- service principal Key (`password`)
+- service principal key (`password`)
 
 The service principal must have the following permissions:
 
@@ -131,79 +131,78 @@ To set up the service principal with the required role and permissions, complete
 
 #### Azure Storage account permissions
 
-1. In the Azure portal, go to the `<DLZ-prefix>devraw` Azure Storage account instance. Select **Access Control (IAM)** on the left.
+1. In the Azure portal, go to the `<DLZ-prefix>devraw` Azure Storage account. In the resource menu, select **Access Control (IAM)**.
 
-    :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Screenshot of the Azure Storage Account SP Permissions page with access control highlighted.":::
+    :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Screenshot of the Storage account service principal permissions pane, with Access Control highlighted.":::
 
-1. Select **Add+** and then **Add Role Assignment**
+1. Select **Add** > **Add role assignment**.
 
-    :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Screenshot of the Storage Account SP Access Control page that shows how to add a role assignment.":::
+    :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Screenshot of the Storage account service principal Access Control pane that shows how to add a role assignment.":::
 
-1. In Add Role Assignment, search for Storage Blob Data Reader, select the `Storage Blob Data Reader` role and select **Next**.
+1. In **Add role assignment**, search for and select **Storage Blob Data Reader**. Then, select **Next**.
 
-    :::image type="content" source="../images/storage-account-sp-role-assignment.png" alt-text="Screenshot that shows how to search for Storage Blob Data Reader under add role assignment.":::
+    :::image type="content" source="../images/storage-account-sp-role-assignment.png" alt-text="Screenshot that shows how to search for Storage Blob Data Reader under Add role assignment.":::
 
-1. In the next screen select **Select Members** and search for the service principal account you just created.
+1. In **Members**, choose **Select Members** and search for the service principal account you created.
 
     :::image type="content" source="../images/storage-account-sp-members-1.png" alt-text="Screenshot of select members screen under add role assignment.":::
 
-1. Search for the service principal name created in previous step, select the service principal.
+1. Search for and select the service principal name you created earlier.
 
     :::image type="content" source="../images/add-service-principal.png" alt-text="Screenshot that shows how to search for the service principal Name created in previous step.":::
 
-1. Pick the relevant result and select **Select**.
+1. Choose **Select**.
 
     :::image type="content" source="../images/select-service-principal.png" alt-text="Screenshot of the results pane after searching for the service principal Name.":::
 
-1. To complete the role assignment process select **Review + assign** twice.
+1. To complete the role assignment, select **Review + assign** twice.
 
- Repeat steps 1 through 7 for the remaining storage accounts:
+    Repeat the steps in this section for the remaining storage accounts:
 
-  - `<DLZ-prefix>devencur`
-  - `<DLZ-prefix>devwork`
+    - `<DLZ-prefix>devencur`
+    - `<DLZ-prefix>devwork`
 
-### Azure SQL Database permissions
+### Azure SQL database permissions
 
-For this step you will need to connect to SQL Server using the Query Editor. Since all the resources are behind a private endpoint, you will need to log into the Azure portal using a bastion host Virtual Machine.
+To set Azure SQL database permissions, you connect to SQL Server by using the query editor. Because all the resources are behind a private endpoint, you must first sign in to the Azure portal by using an Azure Bastion host virtual machine.
 
-Using the Azure portal, connect to the virtual machine deployed in the _`[DMLZPrefix]`_`-dev-bastion` resource group.
-If you are unsure on how to connect to the virtual machine using bastion host service, please refer to **Connecting to the VM** in [Deploy Bastion Host and Jumpbox](/lab1/6_deploy_bastion_host/).
+In the Azure portal, connect to the virtual machine that's deployed in the `<DMLZ-prefix>-dev-bastion` resource group. If you're not sure how to connect to the virtual machine by using the Bastion host service, see [Connect to a VM](/azure/bastion/tutorial-create-host-portal#connect).
 
-To add the service principal as a user within the database, you might need to add yourself as the active directory admin first. Steps 1 to 3 below explain how to do this. The remainder of the steps explain how to give the service principal permissions to the database. Once logged into Portal from the bastion Host Virtual Machine, search for SQL Servers in the Azure portal.
+To add the service principal as a user within the database, you might first need to add yourself as the Azure Active Directory admin. Steps 1 to 3 explain how to do this. The remainder of the steps explain how to give the service principal permissions to the database. When you are signed in to the portal from the Bastion host virtual machine, search for SQL servers in the Azure portal.
 
-1. Navigate to the SQL Server `<DP-prefix>-dev-sqlserver001` and select **Active Directory**.
+1. Go to the `<DP-prefix>-dev-sqlserver001` Azure SQL server and select **Active Directory**.
 
     :::image type="content" source="../images/azure-sql-admin-1.png" alt-text="Screenshot of the Azure active directory screen under SQl server.":::
 
-1. Select **Set Admin** and search for your own account. Select the desired account returned by the search to select the account.
+1. Select **Set Admin**. Search for and select your own account.
 
     :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Screenshot that shows how to search for an Account to make admin.":::
 
-1. Once the account is selected, select **Select** to persist the setting.
+1. Choose **Select** to persist the setting.
 
      :::image type="content" source="../images/sql-database-selected-account.png" alt-text="Screenshot of the correct admin account selected.":::
 
-1. Now select **SQL Databases**, choose the database `AdatumCRM`.
+1. Select **SQL Databases**, and then select the `AdatumCRM` database.
 
      :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot of the search to find the correct database with Adatum CRM highlighted.":::
 
-1. In `AdatumCRM` and select **Query editor** and then Log with Active Directory Authentication using the button Login as your user.
+1. In **AdatumCRM**, select **Query editor**. Under **Active Directory authentication**, select the **Continue as** button to sign in.
 
      :::image type="content" source="../images/query-editor.png" alt-text="Screenshot that shows how to log in to query editor with Active Directory.":::
 
-1. Once in the query editor, execute the following statements but replacing `<service principal>` with the name of the service principal you just created (e.g. purview-sp).
+1. In the query editor, revise the following statements to replace `<service principal name>` with the name of the service principal you created (for example, `purview-service-principal`). Then, run the statements.
 
     ```sql
 
-    CREATE USER [<service principal Name>] FROM EXTERNAL PROVIDER
+    CREATE USER [<service principal name>] FROM EXTERNAL PROVIDER
     GO
 
-    EXEC sp_addrolemember 'db_datareader', [<service principal Name>]
+    EXEC sp_addrolemember 'db_datareader', [<service principal name>]
     GO
 
     ```
 
-    :::image type="content" source="../images/azure-sql-add-sp.png" alt-text="Screenshot that shows how to execute statements in query editor.":::
+    :::image type="content" source="../images/azure-sql-add-sp.png" alt-text="Screenshot that shows how to execute statements in the query editor.":::
 
 Repeat steps 4 through 6 for the `AdatumERP` database.
 
@@ -243,19 +242,19 @@ Purview will read the service principal key from a key vault. We will use the Ke
 
 ### Add a secret to the key vault
 
-Complete the following steps logging into Azure portal from the Bastion Host virtual machine.
+Complete the following steps to sign in to the Azure portal from the Bastion Host virtual machine.
 
-1. On the same key vault with the name `<DMLZ-prefix>-dev-vault001`. Select **Secrets** and then **Generate/Import** to create a new secret.
+1. In the `<DMLZ-prefix>-dev-vault001` key vault, select **Secrets** > **Generate/Import** to create a new secret.
   
     :::image type="content" source="../images/key-vault-add-secret.png" alt-text="Screenshot that shows the Key Vault Generate Secret button highlighted.":::
 
-1. Provide the following values and select **Create**.
+1. Enter or select the following values, and then select **Create**:
 
-    | Field| Suggested Value(s)  |
-    |:-------|:--------------------|
-    | Upload options | Manual |
-    | Name | service-principal-secret |
-    | Value | service principal password you created in the previous steps `CJsPsAz8-~sf6_Qj_ecXXxxxXxxXXxxXXXxXX`|
+    | Field | Suggested value |
+    | --- | --- |
+    | **Upload options** | **Manual** |
+    | **Name** | **service-principal-secret** |
+    | **Value** | The service principal password you created in the previous steps `CJsPsAz8-~sf6_Qj_ecXXxxxXxxXXxxXXXxXX`|
 
      :::image type="content" source="../images/key-vault-create-secret.png" alt-text="Screenshot of the Key Vault Create Secret screen.":::
 
@@ -270,7 +269,7 @@ For the Purview instance to read the secrets stored within the key vault, it has
   
     :::image type="content" source="../images/key-vault-add-role-assignment.png" alt-text="Screenshot of the Access Control screen with the add role assignment button highlighted.":::
 
-1. In **Role**, search for **Key Vault Secret User**. Select **Key Vault Secrets User**, and then select **Next**.
+1. In **Role**, search for and select **Key Vault Secrets User**. Select **Next**.
 
     :::image type="content" source="../images/key-vault-secret-user-role.png" alt-text="Screenshot of the search for Key Vault Secret User screen.":::
 
@@ -346,11 +345,11 @@ At this point, Purview has visibility of the service principal. We can now proce
 
 The following steps outline the process to register an ADLS Gen 2 Storage account.
 
-1. In the Purview interface, select the **Data Map** option and then **Register**
+1. In the Purview interface, select the **Data Map** option, and then select **Register**.
   
     :::image type="content" source="../images/data-map-register.png" alt-text="Screenshot that shows the data map button highlighted in Purview.":::
 
-1. Select **ADLS Gen 2** and select **Continue**
+1. Select **ADLS Gen 2**, and then select **Continue**.
 
     :::image type="content" source="../images/register-adls.png" alt-text="Screenshot that shows the Azure Data Lake Storage Gen 2 registration source.":::
 
@@ -373,7 +372,7 @@ Repeat steps 1 through 3 for the remaining storage accounts:
 - `<DMLZ-prefix>devencur`
 - `<DMLZ-prefix>devwork`
 
-### Register Azure SQL DB as a Data Source
+### Register the Azure SQL database as a data source
 
 1. In the Purview interface, select the **Data Map** option and then **Register**
 
@@ -393,9 +392,9 @@ Repeat steps 1 through 3 for the remaining storage accounts:
   
      :::image type="content" source="../images/purview-sql-server-name.png" alt-text="Screenshot of the Register SQL database form with values highlighted.":::
 
-## Setting up Scans
+## Set up scans
 
-### Scan the ADLS Gen 2 Data Source
+### Scan the Azure Data Lake Service Gen 2 data source
 
 1. Navigate to the Purview data map and select **New Scan** on the data source
   
@@ -403,11 +402,11 @@ Repeat steps 1 through 3 for the remaining storage accounts:
 
 1. Specify the following values in the resulting screen
 
-    | Field| Suggested Value(s)  |
+    | Field | Suggested Value(s)  |
     |:-------|:--------------------|
-    | Scan Name |`Scan_``<DLZ-prefix>devraw`|
-    | Connect via Integration Runtime| Select the Self Hosted Integration run time deployed as part of the data landing zone.|
-    | Credential|Select the service principal set up for Purview.|
+    | Scan Name | `Scan_<DLZ-prefix>devraw` |
+    | Connect via Integration Runtime | Select the Self Hosted Integration run time deployed as part of the data landing zone. |
+    | Credential | Select the service principal set up for Purview. |
 
     :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Screenshot of the scan ADLS credential form with values entered.":::
 
@@ -626,7 +625,7 @@ The last step on adding role assignments is to add the **"Purview Data Curator"*
 
 The permissions are set, Purview can now see the Data Factory, and the next step now is to have `<DMLZ-prefix>-dev-purview001` connecting to `<DLZ-prefix>-dev-integration-datafactory001`.
 
-1. Open **Purview Studio**, select **Management**, select **Data Factory**, and create a Data Factory connection by selecting on **New**. Select Data Factory _`[DLZprefix`_`-dev-integration-datafactory001` and select ok.
+1. Open **Purview Studio**, select **Management**, select **Data Factory**, and create a Data Factory connection by selecting on **New**. Select Data Factory `<DLZ-prefix>-dev-integration-datafactory001` and select ok.
 
 1. Here is how the setting should look like while selecting the new connection:
   
