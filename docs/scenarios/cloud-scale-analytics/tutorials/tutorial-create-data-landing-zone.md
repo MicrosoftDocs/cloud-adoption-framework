@@ -1,9 +1,9 @@
 ---
-title: Create a data landing zone
+title: Create a data landing zone tutorial
 description: Learn how to create a data landing zone.
 author: andrehass
 ms.author: anhass
-ms.date: 07/13/2022
+ms.date: 07/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

@@ -3,7 +3,7 @@ title: Cleanup instructions
 description: Clean up all the resources that were deployed in an Azure subscription during the tutorial. 
 author: andrehass
 ms.author: anhass
-ms.date: 07/06/2022
+ms.date: 07/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

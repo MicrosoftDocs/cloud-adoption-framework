@@ -1,9 +1,9 @@
 ---
-title: Customer scenario 
+title: Customer scenario tutorial
 description: This customer scenario shows how Azure cloud-scale analytics provides a scalable, repeatable framework that meets an organization's unique needs for building modern data platforms.
 author: andrehass
 ms.author: anhass
-ms.date: 07/08/2022
+ms.date: 07/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Customer scenario
 
-**Adatum Corporation** is a large, multinational enterprise. In addition to the centralized business units at their headquarters, they also have subsidiaries across the globe. And each subsidiary has its own business units, such as accounting, marketing, sales, support, and operations.
+Adatum Corporation is a large, multinational enterprise. In addition to the centralized business units at their headquarters, they also have subsidiaries across the globe. And each subsidiary has its own business units, such as accounting, marketing, sales, support, and operations.
 
 All of these disparate groups produce their own data. Many of the business units have embedded analytics teams. The central IT organization provided most of the data platform that's in use, but a few business units have gone rogue and implemented their own solutions. The data platform is made up of various cloud services and on-premises solutions.
 
@@ -47,13 +47,13 @@ In this example, Adatum has one data product. This product combines raw data fro
 
 :::image type="content" source="../images/adatum-revised.png" alt-text="Diagram showing the Adatum Corporation data management landing zone.":::
 
-<sub>**Figure 1: Architectural diagram** Not all Azure services are represented in this diagram. The diagram was simplified to highlight core concepts for how resources are organized within the architecture.</sub>
+*Figure 1: Architectural diagram* Not all Azure services are represented in this diagram. The diagram was simplified to highlight core concepts for how resources are organized within the architecture.
 
 ## Rationale
 
 The following section describes the rationale for key decisions that enterprises make in their Azure cloud-scale analytics implementation.
 
-### Why not put *sales transactions* and *customers* in their own data landing zones?
+### Why not put sales transactions and customers in their own data landing zones?
 
 One of the first decisions to make about your Azure cloud-scale analytics implementation is how to divide the entire data estate into landing zones. Data solutions that frequently communicate with one another are strong candidates for inclusion in the same landing zone. Grouping data solutions helps enterprises reduce the costs associated with moving data across peered virtual networks. In this example, sales transaction data is frequently linked to customer data. So, it makes sense to store these related data integrations in the same data landing zone.
 
@@ -71,10 +71,10 @@ You can scale by adding more landing zones to the architecture over time. These 
 
 You can deploy the customer scenario outlined previously by referencing the following architectures for Adatum Corporation's data management landing zone and sales data landing zone.
 
-### Data management landing zone
+### Deploy the data management landing zone
 
 :::image type="content" source="../images/adatum-data-management-landing-zone.png" alt-text="Diagram of the Adatum Corporation data management landing zone." lightbox="../images/adatum-data-management-landing-zone.png":::
 
-### Sales data landing zone 
+### Deploy the sales data landing zone
 
 :::image type="content" source="../images/adatum-sales-data-landing-zone.png" alt-text="Diagram of the Adatum Corporation sales data landing zone." lightbox="../images/adatum-sales-data-landing-zone.png":::

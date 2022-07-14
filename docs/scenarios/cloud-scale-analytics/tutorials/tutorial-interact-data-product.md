@@ -222,7 +222,7 @@ Purview will read the service principal key from a key vault. You use the Key Va
 
 1. In the Azure portal, go to the Azure Key Vault service. Search for the `<DMLZ-prefix>-dev-vault001` key vault.
 
-     :::image type="content" source="../images/key-vault-1.png" alt-text="Screenshot of the Access Control Key Vault pane.":::
+     :::image type="content" source="../images/key-vault-search.png" alt-text="Screenshot of the Access Control Key Vault pane.":::
 
 1. Select **Access Control (IAM)**, **Add** and then **Add Role Assignment**.
 
@@ -493,11 +493,11 @@ To set up private endpoints for the required resources:
 
 1. In the virtual machine's web browser, go to the Azure portal. Go to the `<DLZ-prefix>-dev-shared-integration` resource group and open the `<DLZ-prefix>-dev-integration-datafactory001` data factory.
 
-    :::image type="content" source="../images/adf-shared-integration.png" alt-text="Screenshot that shows how to go to a different resource group to open Azure Data Factory.":::
+    :::image type="content" source="../images/data-factory-shared-integration.png" alt-text="Screenshot that shows how to go to a different resource group to open Azure Data Factory.":::
 
 1. Under **Getting started**, select **Open Azure Data Factory Studio**.
 
-    :::image type="content" source="../images/getting-started-adf-studio.png" alt-text="Screenshot that shows how to open Azure Data Factory Studio.":::
+    :::image type="content" source="../images/data-factory-studio-open.png" alt-text="Screenshot that shows how to open Azure Data Factory Studio.":::
 
 1. In the Data Factory Studio menu, select the **Manage** icon (the icon looks like a square toolbox with a wrench stamped on it). In the resource menu, select **Managed private endpoints** to create the private endpoints that are required to connect Data Factory to other secured Azure services.
 
@@ -507,7 +507,7 @@ To set up private endpoints for the required resources:
 
 1. Before you approve the private endpoint connections, select **New**. Enter **azure sql** to find the Azure SQL Database connector you use to create a new managed private endpoint for the `<DP-prefix>-dev-sqlserver001` Azure SQL server. The server contains the `AdatumCRM` and `AdatumERP` databases you created earlier.
 
-1. In **New managed private endpoint (Azure SQL Database)**, for **Name**, enter **dataproduct-dev-sqlserver001**. Enter the Azure subscription you used to create the resources. For **Server name**, select `<DP-prefix>-dev-sqlserver001` so that you can connect to it from this data factory in the next sections.
+1. In **New managed private endpoint (Azure SQL Database)**, for **Name**, enter **data-product-dev-sqlserver001**. Enter the Azure subscription you used to create the resources. For **Server name**, select `<DP-prefix>-dev-sqlserver001` so that you can connect to it from this data factory in the next sections.
 
     :::image type="content" source="../images/managed-private-endpoints-sql-server.png" alt-text="Screenshot that shows how to name the new Private Endpoint.":::
 
@@ -634,7 +634,7 @@ The permissions are set, and Purview can now see the data factory. The next step
 
 1. In the **New Data Factory connections** pane, enter your Azure subscription and select the `<DLZ-prefix>-dev-integration-datafactory001` data factory. Select **OK**.
 
-    :::image type="content" source="../images/connect-purview-to-data-factory.png" alt-text="Screenshot of what the Purview studio pane looks like while selecting a new connection.":::
+    :::image type="content" source="../images/connect-purview-data-factory.png" alt-text="Screenshot of what the Purview studio pane looks like while selecting a new connection.":::
 
 1. In the `<DLZ-prefix>-dev-integration-datafactory001` Data Factory Studio instance, under **Manage** > **Azure Purview**, refresh **Azure Purview account**. 
 
