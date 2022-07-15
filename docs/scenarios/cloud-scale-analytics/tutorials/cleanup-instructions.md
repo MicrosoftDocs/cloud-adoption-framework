@@ -1,9 +1,9 @@
 ---
 title: Cleanup instructions
-description: Clean up all the resources that were deployed in an Azure subscription during the tutorial. 
-author: andrehass
-ms.author: anhass
-ms.date: 07/06/2022
+description: Clean up all the resources that were deployed in an Azure subscription during the tutorials. 
+author: mboswell
+ms.author: mboswell
+ms.date: 07/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,12 +12,16 @@ ms.custom: e2e-data-management, think-tank
 
 # Cleanup instructions
 
-As you go through the tutorial, you might run into deployment issues. To start over fresh, use the following scripts to remove the resources you created in your Azure subscription.
+As you go through the tutorials, you might run into deployment issues. To start over, use the following scripts to remove tutorial resources you created in your Azure subscription.
 
-You can also use the scripts to remove all resources you created in your subscription when you finish all steps in the tutorial.
+You also can use the scripts to remove all tutorial resources you created in your subscription when you've finished all steps in the tutorials.
 
 > [!WARNING]
-> The filter parameter is used to remove resource groups that were created during the Workshop Labs. Removing resource groups by using these scripts is an action that can't be reversed. Be sure you selected the correct prefix as a filter.
+> In the following scripts, a filter identifies and removes resource groups you created in the tutorials. Removing resource groups by using these scripts is *an action that can't be reversed*. Be sure you enter the correct prefix in the scripts. For example, in the tutorials, these placeholders are used to refer to the tutorial resources you deploy:
+>
+> - `<DMLZ-prefix>` refers to the prefix you entered when you created your *data management landing zone* deployment.
+> - `<DLZ-prefix>` refers to the prefix you entered when you created your *data landing zone* deployment.
+> - `<DP-prefix>` refers to the prefix you entered when you created your *data product* deployment.
 
 ## Use PowerShell for single-resource group cleanup
 
@@ -30,14 +34,14 @@ $subscriptionId = '<subscription ID>'
 # Set the subscription.
 Set-AzContext -SubscriptionId $subscriptionId
 
-# Lists all resource groups that will be removed.
+# List all resource groups that will be removed.
 Get-AzResourceGroup | ? ResourceGroupName -match $prefix | Select-Object ResourceGroupName
 
-# Removes the resource groups shown in the preceding command.
+# Remove the resource groups shown in the preceding command.
 Get-AzResourceGroup | ? ResourceGroupName -match $prefix | Remove-AzResourceGroup -AsJob -Force
 ```
 
-## Use bash in the Azure CLI for single-resource group cleanup
+## Use Bash in the Azure CLI for single-resource group cleanup
 
 ```bash
 # Clean up resources for Azure Cloud Shell, macOS, and Linux.
@@ -48,7 +52,7 @@ subscription='<subscription ID>'
 # Set the subscription.
 az account set --subscription $subscription
 
-# Visual review to ensure the resource groups match the specified prefix.
+# Review the query to ensure the resource groups match the specified prefix.
 az group list -o tsv  --query "[?contains(@.name, '$prefix')==\`true\`].name"
 
 # Delete resource groups that match the prefix.
@@ -66,7 +70,7 @@ done
 # Make sure you're in the correct subscription.
 az account show
 
-# If you need to change subscriptions, run this command.
+# Change the subscription, if needed.
 az account set -s "<the correct subscription ID>"
 
 # Define the wildcard expression to use to filter your cloud-scale analytics resource groups.
@@ -113,7 +117,7 @@ Foreach ($factory in $factories) {
     }
 }
 
-# Blocking resources are deleted, so you can delete the resource groups that were listed earlier.
+# Delete the identified resource groups.
 Foreach ($group in $groups) {
     Write-Host -ForegroundColor red "Deleting $($group.name)"
     az group delete --name $group.name --yes --no-wait

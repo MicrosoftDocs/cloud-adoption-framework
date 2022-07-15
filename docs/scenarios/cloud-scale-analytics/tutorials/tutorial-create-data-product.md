@@ -1,66 +1,72 @@
 ---
-title: Create data product tutorial
-description: Learn how to experiment with resources to deploy a data product batch using the one-click method in a data landing zone.
-author: andrehass
-ms.author: anhass
-ms.date: 07/12/2022
+title: Create a data product batch tutorial
+description: Learn how to deploy a data product batch by using one-click deployment in the Azure portal.
+author: mboswell
+ms.author: mboswell
+ms.date: 07/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
-# Create data product
 
- If you want to experiment with the resources and see what's deployed as part of data product batch deployment, you can with the **Deploy to Azure** button. This feature deploys resources for the data product batch in a data landing zone. The applicable scenarios for data product batch include data product and data integration. As described in previous articles, data products are another unit of scale inside a data landing zone. You can use this template for a data product and data integration into the platform.
+# Create a data product batch
 
-To deploy the data product batch using the one-click method, follow these steps:
+You can experiment with resources and see what's created in a data product batch deployment by using a one-click deployment in the Azure portal. The Deploy to Azure feature is a customized deployment template that deploys resources for the data product batch in a data landing zone. The applicable scenarios for a data product batch include working with data products and data integration. As described in other tutorials, data products are a unit of scale in a data landing zone. You can use the template that's described in this tutorial to deploy a data product batch and add data integration to the platform.
 
-1. Select the **Deploy to Azure** button. A new page opens in the Azure portal as shown in the following table:
+## Set up the data product batch deployment
 
-      | Reference implementation   | Description | Deploy to Azure |
-      |:---------------------------|:------------|:----------------|
-      | Data product batch     | Deploys a data workload template for data batch analysis to a resource group inside a data landing zone. Be sure you deploy a [data management landing zone](https://github.com/Azure/data-management-zone) and [data landing zone](https://github.com/Azure/data-landing-zone) first. |[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Finfra%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Fdocs%2Freference%2Fportal.dataProduct.json) |
+You can use a one-click customized deployment template to deploy a data product batch in your Azure subscription. The deployment template deploys all the required resources.
 
-1. In the **Data Product** tab, provide the following information:
+1. To deploy a data product batch, select the **Deploy to Azure** button:
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | **Subscription** | Select the subscription to deploy the data product to. If you have access to multiple subscriptions, be sure to choose the correct one. |
-      | **Resource Group** | Type *dev-dp001* in the field and select the resource group that has the DLZ prefix you created earlier, plus the *-dev-dp001* suffix. |  
-      | **Location**| Select the location. If there are no organizational policies influencing the location, it's a good idea to pick a region that's physically close to you. Verify that the region is supported for Enterprise Scale Analytics. A list of supported regions is available in the [data management landing zone overview](/lab1/0_data_management_landing_zone_overview/). Navigate to **Supported Regions**. |
-      | **Environment** | We recommend you choose **Development**, for this tutorial. You could use the same process to deploy a test or production environment as well. |
-      | **Data Product Prefix** | A prefix added to all the deployed data product resources to make them unique within the subscription. This prefix can be a max of 10 alphanumeric characters. |
+    [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Finfra%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-product-batch%2Fmain%2Fdocs%2Freference%2Fportal.dataProduct.json)
 
-      :::image type="content" source="../images/dataproduct-deployment-1.png" alt-text="Screenshot showing how to deploy Data Product.":::
+   The **Cloud-scale Analytics Scenario - Data Product Batch** customized deployment template opens in the Azure portal.
 
-1. Select **Next: General Settings**, and provide the following information:
+1. In **Data Product**, select or enter the following information:
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | **Create Data Processing Service** | Select **Data Factory** from the dropdown menu. |
-      | **Connect to Purview Account** | Select the Microsoft Purview you created when deploying the data management landing zone. |
+    | Setting | Action |
+    | --- | --- |
+    | **Subscription** | Select the subscription to use to deploy the data product batch. If you have access to multiple subscriptions, be sure to choose the correct one. |
+    | **Resource Group** | Enter *dev-dp001* and select the resource group that has the DLZ prefix you created earlier, plus the *-dev-dp001* suffix. Example: *\<DLZ-prefix\>dev-dp001* |  
+    | **Location**| In the dropdown, select one of the Azure regions that are supported for this scenario. If no organizational policies influence the region you choose, it's a good idea to choose a region that's physically close to you. For more information, see [Supported regions](tutorial-create-data-landing-zone.md#supported-regions). |
+    | **Environment** | For this tutorial, select **Development**. |
+    | **Data Product Prefix** | Enter a unique string that's a maximum of 10 alphanumeric characters. The string is a unique prefix that's added to all resource groups and resources in the deployment. |
+
+    :::image type="content" source="../images/data-product-deployment-tab.png" alt-text="Screenshot that shows settings to create a data product batch deployment.":::
+
+   Select **Next : General Settings**.
+
+1. In **General Settings**, select or enter the following information:
+
+      | Setting | Action |
+      | --- | --- |
+      | **Create Data Processing Service** | Select **Data Factory**. |
+      | **Connect to Purview Account** | Select the Microsoft Purview instance you created when you deployed your data management landing zone. |
       | **SQL Flavor** | Select **SQL Server**. |
-      | **Password** | Enter a strong password for your Azure SQL Server account, and confirm it. |
-      | **Enable Azure Cosmos DB** | Leave this option *unchecked*. |
-      | **Enable role assignments** | This setting is optional, but you should *check* it to add required permissions. |
+      | **Password** | Enter a strong password for your Azure SQL server, and then reenter the password to confirm it. |
+      | **Enable Azure Cosmos DB** | Leave this option *cleared*. |
+      | **Enable role assignments** | This setting is optional, but we recommend that you *select* it to add required permissions. |
 
-      :::image type="content" source="../images/dataproduct-general-settings.png" alt-text="Screenshot showing data product general settings.":::
+      :::image type="content" source="../images/data-product-general-settings.png" alt-text="Screenshot that shows the general settings in a data product batch deployment.":::
 
-1. Next, select **Next: Connectivity Settings**, and provide the following information:
+   Select **Next : Connectivity Settings**.
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | **Virtual Network** | Select the virtual network of your data landing zone. |
-      | **Subnet** | Select the *DataProduct001Subnet* subnet. |
+1. In **Connectivity Settings**, complete these steps:
 
-      :::image type="content" source="../images/dataproduct-connectivity-settings.png" alt-text="Screenshot showing data product connectivity settings.":::
+    1. For **Virtual Network**, select the virtual network in your data landing zone.
 
-1. Under **Private DNS Zones**, enter the following information.
+    1. For **Subnet**, select the *DataProduct001Subnet* subnet.
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | **DNS A-Records are deployed through Azure Policy** | Choose **No**. |
-      | **Subscription with Private DNS Zones** | Select the subscription used to deploy the data landing zone. |
+      :::image type="content" source="../images/data-product-connectivity-settings.png" alt-text="Screenshot that shows the connectivity settings in a data product batch deployment.":::
+
+   1. Under **Private DNS Zones**, select or enter the following information:
+
+      | Setting | Action |
+      | --- | --- |
+      | **DNS A-Records are deployed through Azure Policy** | Select **No**. |
+      | **Subscription with Private DNS Zones** | Select the subscription you used to deploy the data landing zone. |
       | **Private DNS Zone Key Vault** | Select **privatelink.vaultcore.azure.net**. |
       | **Private DNS Zone Synapse Dev** | Select **privatelink.dev.azuresynapse.net**. |
       | **Private DNS Zone Synapse SQL** | Select **privatelink.sql.azuresynapse.net**. |
@@ -72,12 +78,12 @@ To deploy the data product batch using the one-click method, follow these steps:
       | **Private DNS Zone MariaDB Server** | Select **privatelink.mariadb.database.azure.com**. |
       | **Private DNS Zone PostgreSQL Server** | Select **privatelink.postgres.database.azure.com**. |
 
-      :::image type="content" source="../images/dataproduct-private-dns.png" alt-text="Screenshot showing Data Product Private DNS.":::
+      :::image type="content" source="../images/data-product-private-dns.png" alt-text="Screenshot that shows the Private DNS zones settings in a data product batch deployment.":::
 
-1. Select **Review + create** to go the last step.
+1. Select **Review + create**.
 
-1. When the parameters validate, the **Create** button enables. Select the button to start the deployment.
+1. When the parameters are validated, select **Create** to start the deployment.
 
-   :::image type="content" source="../images/dataproduct-deployment-create.png" alt-text="Screenshot showing how to create in Data Product deploy.":::
+   :::image type="content" source="../images/data-product-deployment-create.png" alt-text="Screenshot that shows the Create step in a data product batch deployment.":::
 
-The deployment can take a few minutes to complete.
+   The deployment might take a few minutes to finish.
