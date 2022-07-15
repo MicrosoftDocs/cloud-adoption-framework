@@ -380,7 +380,7 @@ Repeat these steps for the following storage accounts:
 
 ### Register the SQL Database instance as a data source
 
-1. In Purview Studio, select the **Data Map**icon > **Sources** > **Register**.
+1. In Purview Studio, select the **Data Map** icon > **Sources** > **Register**.
 
     :::image type="content" source="../images/data-map-register.png" alt-text="Screenshot that shows the data map button highlighted in the Purview interface.":::
 
@@ -513,7 +513,7 @@ To set up private endpoints for the required resources:
 
     :::image type="content" source="../images/managed-private-endpoints.png" alt-text="Screenshot that shows how to go to the Manage Private Endpoints pane.":::
 
-1. Before you approve the private endpoint connections, select **New**. Enter *azure sql* to find the Azure SQL Database connector you use to create a new managed private endpoint for the `<DP-prefix>-dev-sqlserver001` Azure SQL server. The server contains the `AdatumCRM` and `AdatumERP` databases you created earlier.
+1. Before you approve the private endpoint connections, select **New**. Enter *Azure SQL* to find the Azure SQL Database connector you use to create a new managed private endpoint for the `<DP-prefix>-dev-sqlserver001` Azure SQL server. The server contains the `AdatumCRM` and `AdatumERP` databases you created earlier.
 
 1. In **New managed private endpoint (Azure SQL Database)**, for **Name**, enter *data-product-dev-sqlserver001*. Enter the Azure subscription you used to create the resources. For **Server name**, select `<DP-prefix>-dev-sqlserver001` so that you can connect to it from this data factory in the next sections.
 
@@ -701,7 +701,7 @@ This process extracts customer data from the `AdatumCRM` SQL Database instance a
 
 1. When you finish the wizard, the **Deployment complete** pane looks similar to this example:
 
-    :::image type="content" source="../images/copy-data-tool-crm-complete.png" alt-text="Screenshot that shows the copy Data Tool deployment completed.":::
+    :::image type="content" source="../images/copy-data-tool-crm-complete.png" alt-text="Screenshot that shows the Copy Data tool deployment completed.":::
 
 The new pipeline is listed in **Pipelines**.
 
@@ -786,7 +786,7 @@ Create a data flow that gets the CSV files in the *Data\CRM* folder in `<DLZ-pre
 
 1. When you're finished selecting the options in the `CRM_to_Customer` data flow, the `Pipeline_transform_CRM` pipeline looks like this example:
 
-    :::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot that shows how the Pipeline transform CRM looks.":::
+    :::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot that shows the pipeline transform CRM.":::
 
     The data flow looks like this example:
 
@@ -809,11 +809,11 @@ For the paired `CustAddress` sink:
 > [!NOTE]
 > For the remainder of the data flow configuration, use the information in the following tables for each component. Note that `CRMAddress` and `CustAddress` are the first two rows. Use them as an example for the other objects.
 >
-> An item that isn't in either of the following tables, the **RemovePasswords** Select Schema Modifier. As you can see on the Screenshot that shows the `CRM_to_Customer` data flow, this item goes between `CRMCustomer` and `CustCustomer`. When you add this Select Schema Modifier, go to **Select settings** and remove **PasswordHash** and **PasswordSalt**.
+> An item that isn't in either of the following tables is the `RemovePasswords` schema modifier. As you can see in the screenshot that shows the `CRM_to_Customer` data flow, this item goes between `CRMCustomer` and `CustCustomer`. To you add this schema modifier, go to **Select settings** and remove **PasswordHash** and **PasswordSalt**.
 >
-> `CRMCustomer` returns a 15-column schema from the .crv file. `CustCustomer` writes only 13 columns after the Select Schema Modifier removes the two password columns.
+> `CRMCustomer` returns a 15-column schema from the .crv file. `CustCustomer` writes only 13 columns after the schema modifier removes the two password columns.
 
-#### Complete table
+#### The complete table
 
 | Name | Object type | Dataset name | Data store | Format type | Linked service | File or folder |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -824,7 +824,7 @@ For the paired `CustAddress` sink:
 | `CRMCustomerAddress` | source | `DevRaw_CRM_CustomerAddress` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\CRM\SalesLTCustomerAddress.csv* |
 | `CustCustomerAddress` | sink | `DevEncur_Cust_CustomerAddress` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\CustomerAddress.parquet* |
 
-### ERP to Sales
+### The ERP to Sales table
 
 Now, repeat similar steps to create a `Pipeline_transform_ERP` pipeline, create an `ERP_to_Sales` data flow to transform the *.csv* files in the *Data\ERP* folder in `<DLZ-prefix>devraw`, and copy the transformed files to the *Data\Sales* folder in `<DLZ-prefix>devencur`.
 
