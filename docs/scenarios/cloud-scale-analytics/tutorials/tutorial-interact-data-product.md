@@ -1,9 +1,9 @@
 ---
 title: Interact with a data product batch
 description: Learn how to interact with a data product batch, including how to perform data orchestration and how to use Microsoft Purview for data governance. 
-author: andrehass
-ms.author: anhass
-ms.date: 07/13/2022
+author: mboswell
+ms.author: mboswell
+ms.date: 07/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -134,29 +134,29 @@ To set up the service principal with the required role and permissions, complete
 
 #### Azure Storage account permissions
 
-1. In the Azure portal, go to the `<DLZ-prefix>devraw` Azure Storage account. In the resource menu, select **Access Control (IAM)**.
+1. In the Azure portal, go to the `<DLZ-prefix>devraw` Azure Storage account. In the resource menu, select **Access control (IAM)**.
 
-    :::image type="content" source="../images/storage-account-sp-permissions.png" alt-text="Screenshot of the Storage account service principal permissions pane, with Access Control highlighted.":::
+    :::image type="content" source="../images/storage-service-principal-permissions.png" alt-text="Screenshot that shows the storage account service principal permissions pane, with Access Control highlighted.":::
 
 1. Select **Add** > **Add role assignment**.
 
-    :::image type="content" source="../images/storage-account-sp-access-control.png" alt-text="Screenshot of the Storage account service principal Access Control pane that shows how to add a role assignment.":::
+    :::image type="content" source="../images/storage-service-principal-access-control.png" alt-text="Screenshot that shows the storage account service principal Access Control pane that shows how to add a role assignment.":::
 
 1. In **Add role assignment**, search for and select **Storage Blob Data Reader**. Then, select **Next**.
 
-    :::image type="content" source="../images/storage-account-sp-role-assignment.png" alt-text="Screenshot that shows how to search for Storage Blob Data Reader under Add role assignment.":::
+    :::image type="content" source="../images/storage-service-principal-role-assignment.png" alt-text="Screenshot that shows how to search for Storage Blob Data Reader under Add role assignment.":::
 
 1. In **Members**, choose **Select Members** and search for the service principal account you created.
 
-    :::image type="content" source="../images/storage-account-sp-members-1.png" alt-text="Screenshot of select members pane under add role assignment.":::
+    :::image type="content" source="../images/storage-service-principal-members.png" alt-text="Screenshot that shows select members pane under add role assignment.":::
 
 1. Search for and select the service principal name you created earlier.
 
-    :::image type="content" source="../images/add-service-principal.png" alt-text="Screenshot that shows how to search for the service principal Name created in previous step.":::
+    :::image type="content" source="../images/add-service-principal.png" alt-text="Screenshot that shows how to search for a service principal name.":::
 
 1. Choose **Select**.
 
-    :::image type="content" source="../images/select-service-principal.png" alt-text="Screenshot of the results pane after searching for the service principal Name.":::
+    :::image type="content" source="../images/select-service-principal.png" alt-text="Screenshot that shows the results pane after searching for a service principal name.":::
 
 1. To complete the role assignment, select **Review + assign** twice.
 
@@ -175,23 +175,23 @@ To add the service principal as a user in the database, you might first need to 
 
 1. Go to the `<DP-prefix>-dev-sqlserver001` Azure SQL server and select **Active Directory**.
 
-    :::image type="content" source="../images/azure-sql-admin-1.png" alt-text="Screenshot of the Azure active directory pane under SQL server.":::
+    :::image type="content" source="../images/azure-sql-admin-active-directory.png" alt-text="Screenshot that shows the Azure Active Directory pane under the Azure SQL server.":::
 
 1. Select **Set Admin**. Search for and select your own account.
 
-    :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Screenshot that shows how to search for an Account to make admin.":::
+    :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Screenshot that shows how to search for an account to make a user an admin.":::
 
 1. Choose **Select** to persist the setting.
 
-     :::image type="content" source="../images/sql-database-selected-account.png" alt-text="Screenshot of the correct admin account selected.":::
+     :::image type="content" source="../images/sql-database-selected-account.png" alt-text="Screenshot that shows the correct admin account selected.":::
 
 1. Select **SQL Databases**, and then select the `AdatumCRM` database.
 
-     :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot of the search to find the correct database with Adatum CRM highlighted.":::
+     :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot that shows the search to find the correct database, with Adatum CRM highlighted.":::
 
 1. In **AdatumCRM**, select **Query editor**. Under **Active Directory authentication**, select the **Continue as** button to sign in.
 
-     :::image type="content" source="../images/query-editor.png" alt-text="Screenshot that shows how to sign in to query editor with Active Directory.":::
+     :::image type="content" source="../images/query-editor.png" alt-text="Screenshot that shows how to sign in to the query editor by using Active Directory authentication.":::
 
 1. In the query editor, revise the following statements to replace `<service principal name>` with the name of the service principal you created (for example, `purview-service-principal`). Then, run the statements.
 
@@ -222,11 +222,11 @@ Purview will read the service principal key from a key vault. You use the Key Va
 
 1. In the Azure portal, go to the Azure Key Vault service. Search for the `<DMLZ-prefix>-dev-vault001` key vault.
 
-     :::image type="content" source="../images/key-vault-search.png" alt-text="Screenshot of the Access Control Key Vault pane.":::
+     :::image type="content" source="../images/key-vault-search.png" alt-text="Screenshot that shows the Access Control Key Vault pane.":::
 
 1. Select **Access Control (IAM)**, **Add** and then **Add Role Assignment**.
 
-    :::image type="content" source="../images/purview-key-vault-perm.png" alt-text="Screenshot of adding a role assignment in Purview.":::
+    :::image type="content" source="../images/purview-key-vault-perm.png" alt-text="Screenshot that shows adding a role assignment in Purview.":::
 
 1. In the next screen, search for `Key Vault Administrator`, select the role `Key Vault Administrator` and select **Next**.
   
@@ -234,12 +234,12 @@ Purview will read the service principal key from a key vault. You use the Key Va
 
 1. Choose **Select Members** and add the account that's currently signed in.
 
-    :::image type="content" source="../images/key-vault-administrator-select-member.png" alt-text="Screenshot of the Select members button highlighted.":::
-    :::image type="content" source="../images/key-vault-administrator-your-account.png" alt-text="Screenshot of the select member search field.":::
+    :::image type="content" source="../images/key-vault-administrator-select-member.png" alt-text="Screenshot that shows the Select members button highlighted.":::
+    :::image type="content" source="../images/key-vault-administrator-your-account.png" alt-text="Screenshot that shows the select member search box.":::
 
 1. In **Select Members**, search for the account that's currently signed in. Select the account, and then choose **Select**.
 
-    :::image type="content" source="../images/key-vault-select-user.png" alt-text="Screenshot of the select member set to your relevant account.":::
+    :::image type="content" source="../images/key-vault-select-user.png" alt-text="Screenshot that shows the select member set to your relevant account.":::
 
 1. To complete the role assignment process, select **Review + assign** twice.
 
@@ -251,40 +251,42 @@ Complete the following steps to sign in to the Azure portal from the Bastion Hos
   
     :::image type="content" source="../images/key-vault-add-secret.png" alt-text="Screenshot that shows the Key Vault Generate Secret button highlighted.":::
 
-1. Enter or select the following values, and then select **Create**:
+1. In **Create a secret**, select or enter the following values:
 
-    | Field | Suggested value |
+    | Setting | Action |
     | --- | --- |
-    | **Upload options** | **Manual** |
-    | **Name** | **service-principal-secret** |
-    | **Value** | The service principal password you created in the previous steps `CJsPsAz8-~sf6_Qj_ecXXxxxXxxXXxxXXXxXX`|
+    | **Upload options** | Select **Manual**. |
+    | **Name** | Enter *service-principal-secret*. |
+    | **Value** | Enter the service principal password you created earlier. |
 
-     :::image type="content" source="../images/key-vault-create-secret.png" alt-text="Screenshot of the Key Vault Create Secret pane.":::
+     :::image type="content" source="../images/key-vault-create-secret.png" alt-text="Screenshot that shows the key vault Create a secret pane.":::
 
       > [!NOTE]
-      >This step creates a secret named `service-principal-secret` within the key vault with the service principal password key. This will be used by Purview to connect to and scan the data sources. If the incorrect password provided, subsequent steps will not work.
+      >This step creates a secret named `service-principal-secret` in the key vault with the service principal password key. Purview uses the secret to connect to and scan the data sources. If the incorrect password provided, subsequent steps will not work.
+
+1. Select **Create**.
 
 ### Set up Purview permissions in the key vault
 
 For the Purview instance to read the secrets stored in the key vault, you must give Purview the relevant permissions in the key vault. To set the permissions, you add the Purview Managed Identity to the key vault Secrets Reader role.
 
-1. In the `<DMLZ-prefix>-dev-vault001` key vault, in the resource menu, select **Access Control (IAM)**.
+1. In the `<DMLZ-prefix>-dev-vault001` key vault, in the resource menu, select **Access control (IAM)**.
 
 1. In **Access Control (IAM)**, select **Add** > **Add Role Assignment**.
   
-    :::image type="content" source="../images/key-vault-add-role-assignment.png" alt-text="Screenshot of the Access Control pane with the add role assignment button highlighted.":::
+    :::image type="content" source="../images/key-vault-add-role-assignment.png" alt-text="Screenshot that shows the Access Control pane, with the add role assignment button highlighted.":::
 
 1. In **Role**, search for and select **Key Vault Secrets User**. Select **Next**.
 
-    :::image type="content" source="../images/key-vault-secret-user-role.png" alt-text="Screenshot of the search for Key Vault Secret User pane.":::
+    :::image type="content" source="../images/key-vault-secret-user-role.png" alt-text="Screenshot that shows the search for Key Vault Secret User pane.":::
 
 1. Choose **Select Members**.
   
-    :::image type="content" source="../images/key-vault-user-select-member.png" alt-text="Screenshot of the add role assignment pane with the select member button highlighted.":::
+    :::image type="content" source="../images/key-vault-user-select-member.png" alt-text="Screenshot that shows the add role assignment pane with the select member button highlighted.":::
 
 1. Search for the `<DMLZ-prefix>-dev-purview001` Purview instance. Select it to add the relevant account, and then choose **Select**.
   
-    :::image type="content" source="../images/key-vault-user-purview-managed.png" alt-text="Screenshot of the search bar for the Purview instance name.":::
+    :::image type="content" source="../images/key-vault-user-purview-managed.png" alt-text="Screenshot that shows the search box for the Purview instance name.":::
 
 1. To complete the role assignment process, select **Review + assign** twice.
   
@@ -294,48 +296,52 @@ For the Purview instance to read the secrets stored in the key vault, you must g
 
 To set up a key vault connection to Purview, you must sign in to the Azure portal by using an Azure Bastion host virtual machine.
 
-1. In the Azure portal, go to the `<DMLZ-prefix>-dev-purview001` Purview account. In the Open Microsoft Purview Governance Portal, select **Open**.
+1. In the Azure portal, go to the `<DMLZ-prefix>-dev-purview001` Purview account. In **Open Microsoft Purview Governance Portal**, select **Open**.
 
-    :::image type="content" source="../images/microsoft-purview-studio.png" alt-text="Screenshot of the Microsoft Purview account overview.":::
+    :::image type="content" source="../images/microsoft-purview-studio.png" alt-text="Screenshot that shows the Microsoft Purview account overview.":::
   
-1. In Purview Studio, select the **Management** hub > **Credentials** > **Manage Key Vault Connections** > **New**.
+1. In Purview Studio, select **Management** > **Credentials** > **Manage Key Vault connections** > **New**.
   
-    :::image type="content" source="../images/purview-key-vault-connection.png" alt-text="Screenshot that shows the new Key Vault Connections form.":::
+    :::image type="content" source="../images/purview-key-vault-connection.png" alt-text="Screenshot that shows the new Key Vault Connections pane.":::
 
-1. Select **Manage Key Vault Connections**, and then select **New**.
+1. In the command bar, select **Manage Key Vault connections**, and then select **New**.
 
-    :::image type="content" source="../images/key-vault-purview-connection.png" alt-text="Screenshot of the Manage Key Vault Connections button.":::
+    :::image type="content" source="../images/key-vault-purview-connection.png" alt-text="Screenshot that shows the Manage Key Vault Connections button.":::
 
-1. Create the new connection by using the following values, and then select **Create**.
+1. In **New key vault connection**, select or enter the following information:
 
-    | Field | Action |
+    | Setting | Action |
     | --- | --- |
-    | **Name** | Enter `<DMLZ-prefix>-dev-vault001`. |
+    | **Name** | Enter *\<DMLZ-prefix\>-dev-vault001*. |
     | **Azure Subscription** | Select the subscription that hosts the key vault. |
-    | **Key Vault Name** | Select the `<DMLZ-prefix>-dev-vault001` key vault. |
+    | **Key Vault Name** | Select the **\<DMLZ-prefix\>-dev-vault001** key vault. |
 
-1. In Confirming granting access, select **Confirm**.
+1. Select **Create**.
+
+1. In **Confirm granting access**, select **Confirm**.
 
 ### Create a Credential in Purview
 
-The final step is to create a credential within Purview pointing to the secret we created earlier in the key vault for the service principal:
+The final step is to create a credential in Purview that points to the secret you created in the key vault for the service principal:
 
 1. Select **Management** > **Credentials** > **New**.
 
     :::image type="content" source="../images/purview-add-credentials.png" alt-text="Screenshot that shows the new Purview Credentials pane.":::
 
-1. In the dialog, provide the following values and select **Create**.
+1. In **New credential**, select or enter the following information:
 
-    | Field | Action |
+    | Setting | Action |
     | --- | --- |
-    | **Name** | Enter `purviewServicePrincipal`. |
-    | **Authentication Method** | Select **Service principal** |
+    | **Name** | Enter *purviewServicePrincipal*. |
+    | **Authentication Method** | Select **Service principal**. |
     | **Tenant ID** | The value is automatically populated. |
-    | **Service principal ID** | Enter the application (Client ID/App ID) of the service principal. |
-    | **Key Vault Connection** | Select the Key Vault Connection created in the preceding section. |
-    | **Secret Name** | Enter the name of the secret in the key vault (`service-principal-secret`). |  
+    | **Service principal ID** | Enter the application ID or client ID of the service principal. |
+    | **Key Vault Connection** | Select the key vault connection you created in the preceding section. |
+    | **Secret Name** | Enter the name of the secret in the key vault (*service-principal-secret*). |  
 
-    :::image type="content" source="../images/purview-credential-values.png" alt-text="Screenshot that shows the new credentials form with values highlighted.":::
+    :::image type="content" source="../images/purview-credential-values.png" alt-text="Screenshot that shows the new credentials form, with values highlighted.":::
+
+1. Select **Create**.
 
 ## Register data sources
 
@@ -353,121 +359,123 @@ The following steps outline the process to register an Azure Data Lake Storage G
 
     :::image type="content" source="../images/register-adls.png" alt-text="Screenshot that shows the Azure Data Lake Storage Gen2 registration source.":::
 
-1. Fill in the values for all the fields
+1. In **Register sources (Azure Data Lake Storage Gen2)**, select or enter the following information:
 
-    | Field | Action |
+    | Setting | Action |
     | --- | --- |
-    | **Name** | Enter `<DLZ-prefix>dldevraw` (or another suitable name). |
-    | **Azure Subscription** | Select the subscription that hosts the storage account. |
-    | **Storage account Name** | Select the relevant storage account. |
+    | **Name** | Enter *\<DLZ-prefix\>dldevraw*. |
+    | **Azure subscription** | Select the subscription that hosts the storage account. |
+    | **Storage account name** | Select the relevant storage account. |
     | **Endpoint** |  The value is automatically populated based on the selected storage account. |
     | **Select a collection** | Select the root collection. |  
 
-    :::image type="content" source="../images/purview-register-add-raw.png" alt-text="Screenshot of the Register ADLS form with values highlighted.":::
+    :::image type="content" source="../images/purview-register-add-raw.png" alt-text="Screenshot that shows the Register Azure Data Lake Storage Gen2 pane, with values highlighted.":::
 
 1. Select **Register** to create the data source.
 
-Repeat steps 1 through 3 for the remaining storage accounts:
+Repeat these steps for the following storage accounts:
 
 - `<DMLZ-prefix>devencur`
 - `<DMLZ-prefix>devwork`
 
 ### Register the SQL Database instance as a data source
 
-1. In the Purview interface, select the **Data Map** option and then **Register**
+1. In Purview Studio, select the **Data Map**icon > **Sources** > **Register**.
 
     :::image type="content" source="../images/data-map-register.png" alt-text="Screenshot that shows the data map button highlighted in the Purview interface.":::
 
-1. Select **SQL Database** and select **Continue**
+1. In **Register sources**, select **Azure SQL Database**, and then select **Continue**.
   
-    :::image type="content" source="../images/register-sql-db.png" alt-text="Screenshot that shows the SQL Database registration source.":::
+    :::image type="content" source="../images/register-sql-db.png" alt-text="Screenshot that shows the Azure SQL Database registration source.":::
 
-1. In the next screen, provide the following values and select **Register**
+1. In **Register sources (Azure SQL Database)**, select or enter the following information:
 
-    | Field | Action |
+    | Setting | Action |
     | --- | --- |
-    | **Name** | Enter `SQLDatabase` (the name of the database created in *Create Azure SQL Database instances*) |
-    | **Subscription** | The subscription that hosts the database. |
-    | **Server name** | The Azure SQL server name to register, `<DP-prefix>-dev-sqlserver001` |
+    | **Name** | Enter *SQLDatabase* (the name of the database created in *Create Azure SQL Database instances*). |
+    | **Subscription** | Select the subscription that hosts the database. |
+    | **Server name** | Enter *\<DP-prefix\>-dev-sqlserver001*. |
   
-     :::image type="content" source="../images/purview-sql-server-name.png" alt-text="Screenshot of the Register SQL database form with values highlighted.":::
+     :::image type="content" source="../images/purview-sql-server-name.png" alt-text="Screenshot that shows the Register SQL database form, with values highlighted.":::
+
+1. Select **Register**.
 
 ## Set up scans
 
 ### Scan the Data Lake Storage Gen2 data source
 
-1. Go to the Purview data map. Select **New Scan** on the data source.
+1. In Purview Studio, go to the data map. On the data source, select the **New scan** icon.
   
-    :::image type="content" source="../images/scan-data-lake-1.png" alt-text="Screenshot that shows how to set up a new Data Lake Storage Gen2 scan.":::
+    :::image type="content" source="../images/data-lake-new-scan.png" alt-text="Screenshot that shows how to set up a new Data Lake Storage Gen2 scan.":::
 
-1. Specify the following values in the resulting screen:
+1. In the new scan pane, select or enter the following information:
 
-    | Field | Action |
+    | Setting | Action |
     | --- | --- |
-    | **Scan Name** | Enter `Scan_<DLZ-prefix>devraw`. |
-    | **Connect via Integration Runtime** | Select the self-hosted integration runtime that was deployed with the data landing zone. |
+    | **Scan Name** | Enter *Scan_\<DLZ-prefix\>devraw*. |
+    | **Connect via integration runtime** | Select the self-hosted integration runtime that was deployed with the data landing zone. |
     | **Credential** | Select the service principal set up for Purview. |
 
-    :::image type="content" source="../images/datalake-add-scan-credential.png" alt-text="Screenshot of the scan Data Lake Storage Gen2 credential form with values entered.":::
+    :::image type="content" source="../images/data-lake-add-scan-credential.png" alt-text="Screenshot that shows the scan Data Lake Storage Gen2 credential form with values entered.":::
 
-1. Select **Test Connection** to verify the connectivity and permissions are in place, and select **Continue**.
+1. Select **Test Connection** to verify the connectivity and that permissions are in place. Select **Continue**.
 
-1. In the Scope your Scan pane, select the entire storage account as the scope for the scan. Select **Continue**.
+1. In **Scope your scan**, select the entire storage account as the scope for the scan, and then select **Continue**.
 
-    :::image type="content" source="../images/scan-data-lake-file-system.png" alt-text="Screenshot of the scope your scan pane with storage accounts selected.":::
+    :::image type="content" source="../images/scan-data-lake-file-system.png" alt-text="Screenshot that shows the Scope your scan pane with storage accounts selected.":::
 
-1. In the Select a Scan Rule Set pane, select the **ADLS Gen 2 Scan Rule set**. Select **Continue**.
+1. In **Select a scan rule set**, select **AdlsGen2**, and then select **Continue**.
 
     :::image type="content" source="../images/scan-data-lake-select-rule-set.png" alt-text="Screenshot that shows the Data Lake Storage Gen2 scan rule set selection.":::
 
-1. In the Set a Scan Trigger pane, select **Once**. Select **Continue**.
+1. In **Set a scan trigger**, select **Once**, and then select **Continue**.
   
-    :::image type="content" source="../images/scan-data-lake-set-trigger.png" alt-text="Screenshot that shows the set a scan Trigger pane with once selected.":::
+    :::image type="content" source="../images/scan-data-lake-set-trigger.png" alt-text="Screenshot that shows the set a scan Trigger pane, with Once selected.":::
 
-1. In the final pane, review the scan settings and select **Save and Run**.
+1. In **Review your scan**, review the scan settings. Select **Save and Run** to start the scan.
 
-    :::image type="content" source="../images/scan-data-lake-review-save.png" alt-text="Screenshot that shows how to review your scan before saving.":::
+    :::image type="content" source="../images/scan-data-lake-review-save.png" alt-text="Screenshot that shows reviewing your scan before you save and run it.":::
 
-Repeat steps 1 through 6 for the remaining storage accounts:
+Repeat these steps for the following storage accounts:
 
 - `<DMLZ-prefix>devencur`
 - `<DMLZ-prefix>devwork`
 
-### Scan the SQL DB Data Source
+### Scan the SQL Database data source
 
-1. Select the **New Scan** icon on the Azure SQL DB data source.
+1. In the Azure SQL Database data source, select **New Scan**.
 
-    :::image type="content" source="../images/scan-database.png" alt-text="Screenshot that shows how to set up a new SQL database scan.":::
+    :::image type="content" source="../images/scan-database.png" alt-text="Screenshot that shows how to create a new SQL Database scan.":::
 
 1. Provide the following values and select **Test Connection** to ensure the connectivity and permissions are correct. Select **Continue**
 
-    | Field | Action |
+    | Setting | Action |
     | --- | --- |
-    | **Name** | Enter `Scan_Database001`. |
-    | **Connect via:** | Select **Purview-SHIR**. |
+    | **Name** | Enter *Scan_Database001*. |
+    | **Connect via integration runtime** | Select **Purview-SHIR**. |
     | **Database name**| Select the database name. |
     | **Credential** | Select the key vault credential you created in Purview. |
-    | **Lineage extraction** | off |
+    | **Lineage extraction (preview)** | Select **Off**. |
   
-    :::image type="content" source="../images/scan-database-credentials.png" alt-text="Screenshot of the scan credential form with values entered.":::
+    :::image type="content" source="../images/scan-database-credentials.png" alt-text="Screenshot that shows the scan credential form, with values entered.":::
 
 1. Select the scope for the scan. To scan the entire database, use the default value.
 
     :::image type="content" source="../images/scan-database-selections.png" alt-text="Screenshot that shows how to set the scope for the scan to the whole database.":::
 
-1. Select **AzureSQLDatabase** as the scan rule set.
+1. In **Select a scan rule set**, select **AzureSqlDatabase**, and then select **Continue**.
   
     :::image type="content" source="../images/scan-database-ruleset.png" alt-text="Screenshot that shows the SQL database scan rule set selection.":::
 
-1. Select **Once** for the Scan Trigger and select **Continue**.
+1. In **Set a scan trigger**, select **Once**, and then select **Continue**.
   
     :::image type="content" source="../images/scan-set-trigger.png" alt-text="Screenshot that shows the set a scan to run pane with once selected.":::
 
-1. Review the scan parameters and select **Save and run** to start the scan.
+1. In **Review your scan**, review the scan settings. Select **Save and Run** to start the scan.
 
-Repeat steps 1 through 6 for the `AdatumERP` database.
+Repeat these steps for the `AdatumERP` database.
 
-Purview is now set up for data governance of registered data sources.
+Purview is now set up for data governance for the registered data sources.
 
 ## Copy SQL Database data to Data Lake Storage Gen2
 
@@ -505,11 +513,11 @@ To set up private endpoints for the required resources:
 
     :::image type="content" source="../images/managed-private-endpoints.png" alt-text="Screenshot that shows how to go to the Manage Private Endpoints pane.":::
 
-1. Before you approve the private endpoint connections, select **New**. Enter **azure sql** to find the Azure SQL Database connector you use to create a new managed private endpoint for the `<DP-prefix>-dev-sqlserver001` Azure SQL server. The server contains the `AdatumCRM` and `AdatumERP` databases you created earlier.
+1. Before you approve the private endpoint connections, select **New**. Enter *azure sql* to find the Azure SQL Database connector you use to create a new managed private endpoint for the `<DP-prefix>-dev-sqlserver001` Azure SQL server. The server contains the `AdatumCRM` and `AdatumERP` databases you created earlier.
 
-1. In **New managed private endpoint (Azure SQL Database)**, for **Name**, enter **data-product-dev-sqlserver001**. Enter the Azure subscription you used to create the resources. For **Server name**, select `<DP-prefix>-dev-sqlserver001` so that you can connect to it from this data factory in the next sections.
+1. In **New managed private endpoint (Azure SQL Database)**, for **Name**, enter *data-product-dev-sqlserver001*. Enter the Azure subscription you used to create the resources. For **Server name**, select `<DP-prefix>-dev-sqlserver001` so that you can connect to it from this data factory in the next sections.
 
-    :::image type="content" source="../images/managed-private-endpoints-sql-server.png" alt-text="Screenshot that shows how to name the new Private Endpoint.":::
+    :::image type="content" source="../images/managed-private-endpoints-sql-server.png" alt-text="Screenshot that shows how to name the new private endpoint.":::
 
 ### Approve private endpoint access requests
 
@@ -536,7 +544,7 @@ storageAcctName=$(az storage account list -g $resourceGroupName -o tsv  --query 
 endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $storageAcctName --type Microsoft.Storage/storageAccounts -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
 az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $storageAcctName --type Microsoft.Storage/storageAccounts --description "Approved"
 
-# SQL database managed private endpoint approval 
+# SQL Database managed private endpoint approval 
 resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-dp001')==\`true\`].name")
 sqlServerName=$(az sql server list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'sqlserver001')==\`true\`].name")
 endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $sqlServerName --type Microsoft.Sql/servers -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
@@ -596,7 +604,7 @@ When you finish approving private endpoint access requests, add the appropriate 
 
 1. On the **Members** tab, for **Assign access to**, select **Managed Identity**. For **Members**, choose **Select Members**.
 
-    :::image type="content" source="../images/add-role-to-managed-identities.png" alt-text="Screenshot of the select Managed Identity Members pane.":::
+    :::image type="content" source="../images/add-role-to-managed-identities.png" alt-text="Screenshot that shows the select Managed Identity Members pane.":::
 
 1. In the **Select managed identities** pane, select your subscription. For **Managed identity**, select **Data Factory (V2)** to see available data factories. In the list of data factories, select **Azure Data Factory \<DLZ-prefix\>-dev-integration-datafactory001**. Choose **Select**.
 
@@ -624,7 +632,7 @@ The final step to add role assignments is to add the **Purview Data Curator** ro
 
 1. Add the managed identity for `<DLZ-prefix>-dev-integration-datafactory001` as shown in the following screenshot:
 
-    :::image type="content" source="../images/purview-role-assignment.png" alt-text="Screenshot of how to add data curators to your Purview role assignment.":::
+    :::image type="content" source="../images/purview-role-assignment.png" alt-text="Screenshot that shows how to add data curators to your Purview role assignment.":::
 
 ### Connect Data Factory to Purview
 
@@ -634,13 +642,13 @@ The permissions are set, and Purview can now see the data factory. The next step
 
 1. In the **New Data Factory connections** pane, enter your Azure subscription and select the `<DLZ-prefix>-dev-integration-datafactory001` data factory. Select **OK**.
 
-    :::image type="content" source="../images/connect-purview-data-factory.png" alt-text="Screenshot of what the Purview studio pane looks like while selecting a new connection.":::
+    :::image type="content" source="../images/connect-purview-data-factory.png" alt-text="Screenshot that shows what the Purview studio pane looks like while selecting a new connection.":::
 
 1. In the `<DLZ-prefix>-dev-integration-datafactory001` Data Factory Studio instance, under **Manage** > **Azure Purview**, refresh **Azure Purview account**. 
 
    **Data Lineage - Pipeline** now shows the green Connected icon.
 
-    :::image type="content" source="../images/data-factory-purview-connection.png" alt-text="Screenshot of the Azure Data Factory Purview account pane with the data lineage pipeline connected.":::
+    :::image type="content" source="../images/data-factory-purview-connection.png" alt-text="Screenshot that shows the Azure Data Factory Purview account pane with the data lineage pipeline connected.":::
 
 ### Create an ETL pipeline
 
@@ -652,7 +660,7 @@ This process extracts customer data from the `AdatumCRM` SQL Database instance a
 
 1. In Data Factory Studio, under **Author** > **Factory Resources**, select the plus sign (+) and select **Copy Data tool**.
 
-    :::image type="content" source="../images/copy-data-tool.png" alt-text="Screenshot of the Copy Data tool under factory resources.":::
+    :::image type="content" source="../images/copy-data-tool.png" alt-text="Screenshot that shows the Copy Data tool under factory resources.":::
 
     Complete each step in the Copy Data tool wizard:
 
@@ -673,7 +681,7 @@ This process extracts customer data from the `AdatumCRM` SQL Database instance a
     - `SalesLT.Customer`
     - `SalesLT.CustomerAddress`
 
-    :::image type="content" source="../images/adatum-crm-tables.png" alt-text="Screenshot of the select tables pane with tables highlighted.":::
+    :::image type="content" source="../images/adatum-crm-tables.png" alt-text="Screenshot that shows the select tables pane with tables highlighted.":::
 
 1. Create a new linked service to access the `<DLZ-prefix>devraw` Azure Data Lake Storage Gen2 storage (destination).
 
@@ -723,7 +731,7 @@ Next, extract the data from the `AdatumERP` database. The data represents sales 
 
     1. Create a linked service to the `AdatumERP` SQL Database instance.
 
-    :::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot of the Adatum ERP Connection form completed.":::
+    :::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot that shows the Adatum ERP Connection form completed.":::
 
 1. Select these seven tables:
 
@@ -735,7 +743,7 @@ Next, extract the data from the `AdatumERP` database. The data represents sales 
    - `SalesLT.SalesOrderDetail`
    - `SalesLT.SalesOrderHeader`
 
-    :::image type="content" source="../images/adatum-erp-tables.png" alt-text="Screenshot of Adatum ERP Table options.":::
+    :::image type="content" source="../images/adatum-erp-tables.png" alt-text="Screenshot that shows Adatum ERP Table options.":::
 
 1. Use the existing linked service to the `<DLZ-prefix>devraw` storage account and set the file extension to *.csv*.
 
@@ -774,7 +782,7 @@ Create a data flow that gets the CSV files in the *Data\CRM* folder in `<DLZ-pre
     > [!NOTE]
     > In the command bar of the pipeline canvas, turn on **Data flow debug**. In debug mode, you can do interactive testing of the transformation logic against a live Apache Spark cluster. Data flow clusters take 5 to 7 minutes to warm up. We recommend that you turn on debugging before you begin data flow development.
 
-    :::image type="content" source="../images/data-flow-debug.png" alt-text="Screenshot of the Open Data Flow button.":::
+    :::image type="content" source="../images/data-flow-debug.png" alt-text="Screenshot that shows the Open Data Flow button.":::
 
 1. When you're finished selecting the options in the `CRM_to_Customer` data flow, the `Pipeline_transform_CRM` pipeline looks like this example:
 
@@ -801,7 +809,7 @@ For the paired `CustAddress` sink:
 > [!NOTE]
 > For the remainder of the data flow configuration, use the information in the following tables for each component. Note that `CRMAddress` and `CustAddress` are the first two rows. Use them as an example for the other objects.
 >
-> An item that isn't in either of the following tables, the **RemovePasswords** Select Schema Modifier. As you can see on the screenshot of the `CRM_to_Customer` data flow, this item goes between `CRMCustomer` and `CustCustomer`. When you add this Select Schema Modifier, go to **Select settings** and remove **PasswordHash** and **PasswordSalt**.
+> An item that isn't in either of the following tables, the **RemovePasswords** Select Schema Modifier. As you can see on the Screenshot that shows the `CRM_to_Customer` data flow, this item goes between `CRMCustomer` and `CustCustomer`. When you add this Select Schema Modifier, go to **Select settings** and remove **PasswordHash** and **PasswordSalt**.
 >
 > `CRMCustomer` returns a 15-column schema from the .crv file. `CustCustomer` writes only 13 columns after the Select Schema Modifier removes the two password columns.
 
@@ -809,12 +817,12 @@ For the paired `CustAddress` sink:
 
 | Name | Object type | Dataset name | Data store | Format type | Linked service | File or folder |
 | --- | --- | --- | --- | --- | --- | --- |
-| `CRMAddress` | source | DevRaw_CRM_Address | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\CRM\SalesLTAddress.csv |
-| `CustAddress` | sink | DevEncur_Cust_Address | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Customer\Address.parquet |
-| `CRMCustomer` | source | DevRaw_CRM_Customer | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\CRM\SalesLTCustomer.csv |
-| `CustCustomer` | sink | DevEncur_Cust_Customer | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Customer\Customer.parquet |
-| `CRMCustomerAddress` | source | DevRaw_CRM_CustomerAddress | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\CRM\SalesLTCustomerAddress.csv |
-| `CustCustomerAddress` | sink | DevEncur_Cust_CustomerAddress | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Customer\CustomerAddress.parquet |
+| `CRMAddress` | source | `DevRaw_CRM_Address` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\CRM\SalesLTAddress.csv* |
+| `CustAddress` | sink | `DevEncur_Cust_Address` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\Address.parquet* |
+| `CRMCustomer` | source | `DevRaw_CRM_Customer` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\CRM\SalesLTCustomer.csv* |
+| `CustCustomer` | sink | `DevEncur_Cust_Customer` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\Customer.parquet* |
+| `CRMCustomerAddress` | source | `DevRaw_CRM_CustomerAddress` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\CRM\SalesLTCustomerAddress.csv* |
+| `CustCustomerAddress` | sink | `DevEncur_Cust_CustomerAddress` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\CustomerAddress.parquet* |
 
 ### ERP to Sales
 
@@ -824,17 +832,17 @@ In the following table, you'll find the objects to create in the `ERP_to_Sales` 
 
 | Name | Object type | Dataset name | Data store | Format type | Linked service | File or folder |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ERPProduct` | source | DevRaw_ERP_Product | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProduct.csv |
-| `SalesProduct` | sink | DevEncur_Sales_Product | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\Product.parquet |
-| `ERPProductCategory` | source | DevRaw_ERP_ProductCategory | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductCategory.csv |
-| `SalesProductCategory` | sink | DevEncur_Sales_ProductCategory | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductCategory.parquet |
-| `ERPProductDescription` | source | DevRaw_ERP_ProductDescription | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductDescription.csv |
-| `SalesProductDescription` | sink | DevEncur_Sales_ProductDescription | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductDescription.parquet |
-| `ERPProductModel` | source | DevRaw_ERP_ProductModel | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductModel.csv |
-| `SalesProductModel` | sink | DevEncur_Sales_ProductModel | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductModel.parquet |
-| `ERPProductModelProductDescription` | source | DevRaw_ERP_ProductModelProductDescription | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductModelProductDescription.csv |
-| `SalesProductModelProductDescription` | sink | DevEncur_Sales_ProductModelProductDescription | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductModelProductDescription.parquet |
-| `ERPProductSalesOrderDetail` | source | DevRaw_ERP_ProductSalesOrderDetail | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductSalesOrderDetail.csv |
-| `SalesProductSalesOrderDetail` | sink | DevEncur_Sales_ProductSalesOrderDetail | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductSalesOrderDetail.parquet |
-| `ERPProductSalesOrderHeader` | source | DevRaw_ERP_ProductSalesOrderHeader | Azure Data Lake Storage Gen2 | DelimitedText | devraw | Data\ERP\SalesLTProductSalesOrderHeader.csv |
-| `SalesProductSalesOrderHeader` | sink | DevEncur_Sales_ProductSalesOrderHeader | Azure Data Lake Storage Gen2 | Parquet | devencur | Data\Sales\ProductSalesOrderHeader.parquet |
+| `ERPProduct` | source | `DevRaw_ERP_Product` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProduct.csv* |
+| `SalesProduct` | sink | `DevEncur_Sales_Product` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\Product.parquet* |
+| `ERPProductCategory` | source | `DevRaw_ERP_ProductCategory` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProductCategory.csv* |
+| `SalesProductCategory` | sink | `DevEncur_Sales_ProductCategory` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductCategory.parquet* |
+| `ERPProductDescription` | source | `DevRaw_ERP_ProductDescription` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProductDescription.csv* |
+| `SalesProductDescription` | sink | `DevEncur_Sales_ProductDescription` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductDescription.parquet* |
+| `ERPProductModel` | source | `DevRaw_ERP_ProductModel` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProductModel.csv* |
+| `SalesProductModel` | sink | `DevEncur_Sales_ProductModel` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductModel.parquet* |
+| `ERPProductModelProductDescription` | source | `DevRaw_ERP_ProductModelProductDescription` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProductModelProductDescription.csv* |
+| `SalesProductModelProductDescription` | sink | `DevEncur_Sales_ProductModelProductDescription` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductModelProductDescription.parquet* |
+| `ERPProductSalesOrderDetail` | source | `DevRaw_ERP_ProductSalesOrderDetail` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProductSalesOrderDetail.csv* |
+| `SalesProductSalesOrderDetail` | sink | `DevEncur_Sales_ProductSalesOrderDetail` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderDetail.parquet* |
+| `ERPProductSalesOrderHeader` | source | `DevRaw_ERP_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProductSalesOrderHeader.csv* |
+| `SalesProductSalesOrderHeader` | sink | `DevEncur_Sales_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderHeader.parquet* |
