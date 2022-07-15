@@ -137,15 +137,15 @@ To set up the service principal with the required role and permissions, complete
 
 1. In the Azure portal, go to the `<DLZ-prefix>devraw` Azure Storage account. In the resource menu, select **Access Control (IAM)**.
 
-    :::image type="content" source="../images/storage-service-principal-permissions.png" alt-text="Screenshot that shows the storage account service principal permissions pane, with Access Control highlighted.":::
+   :::image type="content" source="../images/storage-service-principal-permissions.png" alt-text="Screenshot that shows the storage account service principal permissions pane, with Access Control highlighted.":::
 
 1. Select **Add** > **Add role assignment**.
 
-    :::image type="content" source="../images/storage-service-principal-access-control.png" alt-text="Screenshot that shows the storage account service principal Access Control pane that shows how to add a role assignment.":::
+   :::image type="content" source="../images/storage-service-principal-access-control.png" alt-text="Screenshot that shows the storage account service principal Access Control pane that shows how to add a role assignment.":::
 
 1. In **Add role assignment**, on the **Role** tab, search for and select **Storage Blob Reader**. Then, select **Next**.
 
-    :::image type="content" source="../images/storage-service-principal-role-assignment.png" alt-text="Screenshot that shows how to search for Storage Blob Data Reader under Add role assignment.":::
+   :::image type="content" source="../images/storage-service-principal-role-assignment.png" alt-text="Screenshot that shows how to search for Storage Blob Data Reader under Add role assignment.":::
 
 1. In **Members**, choose **Select members**.
 
@@ -172,43 +172,39 @@ To set SQL Database permissions, you connect to the Azure SQL virtual machine by
 
 In the Azure portal, connect to the virtual machine that's deployed in the `<DMLZ-prefix>-dev-bastion` resource group. If you're not sure how to connect to the virtual machine by using the Bastion host service, see [Connect to a VM](/azure/bastion/tutorial-create-host-portal#connect).
 
-To add the service principal as a user in the database, you might first need to add yourself as the Azure Active Directory admin. In steps 1 to 3, you add yourself as the Azure Active Directory admin. In steps 4 to 6, you give the service principal permissions to a database. When you're signed in to the portal from the Bastion host virtual machine, search for Azure SQL virtual machines in the Azure portal.
+To add the service principal as a user in the database, you might first need to add yourself as the Azure Active Directory admin. In steps 1 and 2, you add yourself as the Azure Active Directory admin. In steps 3 to 5, you give the service principal permissions to a database. When you're signed in to the portal from the Bastion host virtual machine, search for Azure SQL virtual machines in the Azure portal.
 
 1. Go to the `<DP-prefix>-dev-sqlserver001` Azure SQL virtual machine. In the resource menu under **Settings**, select **Azure Active Directory**.
 
-    :::image type="content" source="../images/azure-sql-admin-active-directory.png" alt-text="Screenshot that shows the Azure Active Directory pane in Azure SQL server.":::
+   :::image type="content" source="../images/azure-sql-admin-active-directory.png" alt-text="Screenshot that shows the Azure Active Directory pane in Azure SQL server.":::
 
-1. In the command bar, select **Set admin**. Search for and select your own account.
+1. In the command bar, select **Set admin**. Search for and select your own account. Choose **Select**.
 
-    :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Screenshot that shows how to search for an account to make a user an admin.":::
-
-1. Choose **Select**.
-
-     :::image type="content" source="../images/sql-database-selected-account.png" alt-text="Screenshot that shows the correct admin account selected.":::
+   :::image type="content" source="../images/set-sql-server-admin.png" alt-text="Screenshot that shows how to search for an account to make a user an admin.":::
 
 1. In the resource menu, select **SQL databases**, and then select the `AdatumCRM` database.
 
-     :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot that shows a search for the correct database, with AdatumCRM highlighted.":::
+   :::image type="content" source="../images/database-query-editor.png" alt-text="Screenshot that shows a search for the correct database, with AdatumCRM highlighted.":::
 
 1. In the **AdatumCRM** resource menu, select **Query editor (preview)**. Under **Active Directory authentication**, select the **Continue as** button to sign in.
 
-     :::image type="content" source="../images/query-editor.png" alt-text="Screenshot that shows how to sign in to the query editor by using Active Directory authentication.":::
+   :::image type="content" source="../images/query-editor.png" alt-text="Screenshot that shows how to sign in to the query editor by using Active Directory authentication.":::
 
 1. In the query editor, revise the following statements to replace `<service principal name>` with the name of the service principal you created (for example, `purview-service-principal`). Then, run the statements.
 
-    ```sql
+   ```sql
 
-    CREATE USER [<service principal name>] FROM EXTERNAL PROVIDER
-    GO
+   CREATE USER [<service principal name>] FROM EXTERNAL PROVIDER
+   GO
 
-    EXEC sp_addrolemember 'db_datareader', [<service principal name>]
-    GO
+   EXEC sp_addrolemember 'db_datareader', [<service principal name>]
+   GO
 
-    ```
+   ```
 
-    :::image type="content" source="../images/azure-sql-add-service-principal.png" alt-text="Screenshot that shows how to execute statements in the query editor.":::
+   :::image type="content" source="../images/azure-sql-add-service-principal.png" alt-text="Screenshot that shows how to execute statements in the query editor.":::
 
-Repeat steps 4 to 6 for the `AdatumERP` database.
+Repeat steps 3 to 5 for the `AdatumERP` database.
 
 ### Set up the key vault
 
@@ -661,48 +657,48 @@ This process extracts customer data from the `AdatumCRM` SQL Database instance a
 
 1. In Data Factory Studio, select the **Author** icon, and then select **Factory Resources**. Select the plus sign (+) and select **Copy Data tool**.
 
-    :::image type="content" source="../images/copy-data-tool.png" alt-text="Screenshot that shows the Copy Data tool under factory resources.":::
+   :::image type="content" source="../images/copy-data-tool.png" alt-text="Screenshot that shows the Copy Data tool under factory resources.":::
 
-    Complete each step in the Copy Data tool wizard:
+   Complete each step in the Copy Data tool wizard:
 
    1. To create a trigger to run the pipeline every 24 hours, select **Schedule**.
 
-    :::image type="content" source="../images/create-pipeline.png" alt-text="Screenshot that shows how to schedule a Trigger to run periodically in CRM.":::
+      :::image type="content" source="../images/create-pipeline.png" alt-text="Screenshot that shows how to schedule a Trigger to run periodically in CRM.":::
 
    1. To create a linked service to connect this data factory to the `AdatumCRM` SQL Database instance on the `<DP-prefix>-dev-sqlserver001` server (source), select **New Connection**.
 
-    :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot that shows how to connect to Adatum CRM.":::
+      :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot that shows how to connect to Adatum CRM.":::
 
-    > [!NOTE]
-    > If you experience errors connecting to or accessing the data in the SQL Database instances or the storage accounts, review your permissions in the Azure subscription. Make sure that the data factory has the required credentials and access permissions to any problematic resource.
+      > [!NOTE]
+      > If you experience errors connecting to or accessing the data in the SQL Database instances or the storage accounts, review your permissions in the Azure subscription. Make sure that the data factory has the required credentials and access permissions to any problematic resource.
 
    1. Select these three tables:
 
-       - `SalesLT.Address`
-       - `SalesLT.Customer`
-       - `SalesLT.CustomerAddress`
+      - `SalesLT.Address`
+      - `SalesLT.Customer`
+      - `SalesLT.CustomerAddress`
 
-   :::image type="content" source="../images/adatum-crm-tables.png" alt-text="Screenshot that shows the select tables pane with tables highlighted.":::
+      :::image type="content" source="../images/adatum-crm-tables.png" alt-text="Screenshot that shows the select tables pane with tables highlighted.":::
 
    1. Create a new linked service to access the `<DLZ-prefix>devraw` Azure Data Lake Storage Gen2 storage (destination).
 
-    :::image type="content" source="../images/raw-storage-connection.png" alt-text="Screenshot that shows the raw storage connection.":::
+      :::image type="content" source="../images/raw-storage-connection.png" alt-text="Screenshot that shows the raw storage connection.":::
 
    1. Browse the folders in the `<DLZ-prefix>devraw` storage and select *Data* as the destination.
 
-    :::image type="content" source="../images/raw-data-folder.png" alt-text="Screenshot that shows the destination as raw data.":::
+      :::image type="content" source="../images/raw-data-folder.png" alt-text="Screenshot that shows the destination as raw data.":::
 
    1. Change the file name suffix to *.csv* and use the other default options.
 
-    :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot that shows the file name suffix field with CSV entered.":::
+      :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot that shows the file name suffix field with CSV entered.":::
 
    1. Go to the next pane and select **Add header to file**.
 
-    :::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot that shows how to add a header to a file.":::
+      :::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot that shows how to add a header to a file.":::
 
    1. When you finish the wizard, the **Deployment complete** pane looks similar to this example:
 
-    :::image type="content" source="../images/copy-data-tool-crm-complete.png" alt-text="Screenshot that shows the Copy Data tool deployment completed.":::
+      :::image type="content" source="../images/copy-data-tool-crm-complete.png" alt-text="Screenshot that shows the Copy Data tool deployment completed.":::
 
 The new pipeline is listed in **Pipelines**.
 
