@@ -40,16 +40,16 @@ You can use a one-click customized deployment template to deploy a data product 
 
 1. In **General Settings**, select or enter the following information:
 
-      | Setting | Action |
-      | --- | --- |
-      | **Create Data Processing Service** | Select **Data Factory**. |
-      | **Connect to Purview Account** | Select the Microsoft Purview instance you created when you deployed your data management landing zone. |
-      | **SQL Flavor** | Select **SQL Server**. |
-      | **Password** | Enter a strong password for your Azure SQL server, and then reenter the password to confirm it. |
-      | **Enable Azure Cosmos DB** | Leave this option *cleared*. |
-      | **Enable role assignments** | This setting is optional, but we recommend that you *select* it to add required permissions. |
+   | Setting | Action |
+   | --- | --- |
+   | **Create Data Processing Service** | Select **Data Factory**. |
+   | **Connect to Purview Account** | Select the Microsoft Purview instance you created when you deployed your data management landing zone. |
+   | **SQL Flavor** | Select **SQL Server**. |
+   | **Password** | Enter a strong password for your Azure SQL server, and then reenter the password to confirm it. |
+   | **Enable Azure Cosmos DB** | Leave this option *cleared*. |
+   | **Enable role assignments** | This setting is optional, but we recommend that you *select* it to add required permissions. |
 
-      :::image type="content" source="../images/data-product-general-settings.png" alt-text="Screenshot that shows the general settings in a data product batch deployment.":::
+   :::image type="content" source="../images/data-product-general-settings.png" alt-text="Screenshot that shows the general settings in a data product batch deployment.":::
 
    Select **Next : Connectivity Settings**.
 
@@ -59,26 +59,26 @@ You can use a one-click customized deployment template to deploy a data product 
 
     1. For **Subnet**, select the *DataProduct001Subnet* subnet.
 
-      :::image type="content" source="../images/data-product-connectivity-settings.png" alt-text="Screenshot that shows the connectivity settings in a data product batch deployment.":::
+       :::image type="content" source="../images/data-product-connectivity-settings.png" alt-text="Screenshot that shows the connectivity settings in a data product batch deployment.":::
 
-   1. Under **Private DNS Zones**, select or enter the following information:
+    1. Under **Private DNS Zones**, select or enter the following information:
 
-      | Setting | Action |
-      | --- | --- |
-      | **DNS A-Records are deployed through Azure Policy** | Select **No**. |
-      | **Subscription with Private DNS Zones** | Select the subscription you used to deploy the data landing zone. |
-      | **Private DNS Zone Key Vault** | Select **privatelink.vaultcore.azure.net**. |
-      | **Private DNS Zone Synapse Dev** | Select **privatelink.dev.azuresynapse.net**. |
-      | **Private DNS Zone Synapse SQL** | Select **privatelink.sql.azuresynapse.net**. |
-      | **Private DNS Zone DataFactory** | Select **privatelink.datafactory.azure.net**. |
-      | **Private DNS Zone DataFactory Portal** | Select **privatelink.adf.azure.net**. |
-      | **Private DNS Zone Cosmos SQL**  | Select **privatelink.documents.azure.com**. |
-      | **Private DNS Zone SQL Server** | Select **privatelink.database.windows.net**. |
-      | **Private DNS Zone MySQL Server** | Select **privatelink.mysql.database.azure.com**. |
-      | **Private DNS Zone MariaDB Server** | Select **privatelink.mariadb.database.azure.com**. |
-      | **Private DNS Zone PostgreSQL Server** | Select **privatelink.postgres.database.azure.com**. |
+       | Setting | Action |
+       | --- | --- |
+       | **DNS A-Records are deployed through Azure Policy** | Select **No**. |
+       | **Subscription with Private DNS Zones** | Select the subscription you used to deploy the data landing zone. |
+       | **Private DNS Zone Key Vault** | Select **privatelink.vaultcore.azure.net**. |
+       | **Private DNS Zone Synapse Dev** | Select **privatelink.dev.azuresynapse.net**. |
+       | **Private DNS Zone Synapse SQL** | Select **privatelink.sql.azuresynapse.net**. |
+       | **Private DNS Zone DataFactory** | Select **privatelink.datafactory.azure.net**. |
+       | **Private DNS Zone DataFactory Portal** | Select **privatelink.adf.azure.net**. |
+       | **Private DNS Zone Cosmos SQL**  | Select **privatelink.documents.azure.com**. |
+       | **Private DNS Zone SQL Server** | Select **privatelink.database.windows.net**. |
+       | **Private DNS Zone MySQL Server** | Select **privatelink.mysql.database.azure.com**. |
+       | **Private DNS Zone MariaDB Server** | Select **privatelink.mariadb.database.azure.com**. |
+       | **Private DNS Zone PostgreSQL Server** | Select **privatelink.postgres.database.azure.com**. |
 
-      :::image type="content" source="../images/data-product-private-dns.png" alt-text="Screenshot that shows the Private DNS zones settings in a data product batch deployment.":::
+       :::image type="content" source="../images/data-product-private-dns.png" alt-text="Screenshot that shows the Private DNS zones settings in a data product batch deployment.":::
 
 1. Select **Review + create**.
 
@@ -86,4 +86,4 @@ You can use a one-click customized deployment template to deploy a data product 
 
    :::image type="content" source="../images/data-product-deployment-create.png" alt-text="Screenshot that shows the Create step in a data product batch deployment.":::
 
-   The deployment might take a few minutes to finish.
+The deployment might take a few minutes to finish.
