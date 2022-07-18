@@ -1,18 +1,27 @@
 ---
-title: Create a data product batch tutorial
+title: Tutorial - Create a data product batch
 description: Learn how to deploy a data product batch by using one-click deployment in the Azure portal.
-author: mboswell
-ms.author: mboswell
-ms.date: 07/15/2022
-ms.topic: conceptual
+author: hamoodaleem
+ms.author: abdale
+ms.date: 07/18/2022
+ms.topic: tutorial
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Create a data product batch
+# Tutorial: Create a data product batch
 
-You can experiment with resources and see what's created in a data product batch deployment by using a one-click deployment in the Azure portal. The Deploy to Azure feature is a customized deployment template that deploys resources for the data product batch in a data landing zone. The applicable scenarios for a data product batch include working with data products and data integration. As described in other tutorials, data products are a unit of scale in a data landing zone. You can use the template that's described in this tutorial to deploy a data product batch and add data integration to the platform.
+In this tutorial, experiment with Azure resources and see what's created in a one-click data product batch deployment in the Azure portal. Learn how to:
+
+> [!div class="checklist"]
+>
+> - Use the Deploy to Azure option
+> - Select settings and options for your deployment
+> - Validate deployment parameters
+> - Create the deployment
+
+The Deploy to Azure feature is a customized deployment template that deploys resources for the data product batch in a data landing zone. The applicable scenarios for a data product batch include working with data products and data integration. As described in other tutorials, data products are a unit of scale in a data landing zone. You can use the template that's described in this tutorial to deploy a data product batch and add data integration to the platform.
 
 ## Set up the data product batch deployment
 
@@ -87,3 +96,8 @@ You can use a one-click customized deployment template to deploy a data product 
    :::image type="content" source="../images/data-product-deployment-create.png" alt-text="Screenshot that shows the Create step in a data product batch deployment.":::
 
 The deployment might take a few minutes to finish.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Set up a data product batch](tutorial-set-up-data-product-batch.md)

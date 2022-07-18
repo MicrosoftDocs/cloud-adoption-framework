@@ -1,34 +1,41 @@
 ---
-title: Interact with a data product batch
-description: Learn how to interact with a data product batch, including how to perform data orchestration and how to use Microsoft Purview for data governance. 
-author: mboswell
-ms.author: mboswell
-ms.date: 07/15/2022
-ms.topic: conceptual
+title: Tutorial - Set up a data product batch
+description: Learn how to set up a data product batch for data integration, data orchestration, and data governance. 
+author: hamoodaleem
+ms.author: abdale
+ms.date: 07/18/2022
+ms.topic: tutorial
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Interact with a data product batch
+# Tutorial: Set up a data product batch
 
-In this tutorial, learn how to interact with data product services that are already deployed. In the tutorial, you use Azure Data Factory for data integration and orchestration. You use Microsoft Purview to discover, manage, and govern data assets.
+In this tutorial, learn how to set up data product services that are already deployed. Use Azure Data Factory to integrate and orchestrate your data, and use Microsoft Purview to discover, manage, and govern data assets.
 
-The objective of completing this hands-on experience is for you to become familiar with the services deployed in the sample data product resource group `<DMLZ-prefix>-dev-dp001`. You'll experience how these products interface with each other and the security measures in place.
+Learn how to:
 
-As you deploy the new components, you'll have a chance to investigate how Purview connects service governance to create a holistic, up-to-date map of your data landscape, with automated data discovery, sensitive data classification, and end-to-end data lineage.
+> [!div class="checklist"]
+>
+> - Create and deploy required resources
+> - Assign roles and access permissions
+> - Connect resources for data integration
+
+This tutorial helps you become familiar with the services that are deployed in the `<DMLZ-prefix>-dev-dp001` sample data product resource group. Experience how the Azure services interface with each other and what security measures are in place.
+
+As you deploy the new components, you'll have a chance to investigate how Purview connects service governance to create a holistic, up-to-date map of your data landscape. The result is automated data discovery, sensitive data classification, and end-to-end data lineage.
 
 ## Prerequisites
 
 - **Azure subscription**. If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
-- **Permissions to the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) role in the Azure subscription to set up Purview and Azure Synapse Analytics for the deployment. You'll set more role assignments for services and service principals in the tutorial.
+- **Permissions to the Azure subscription**. To set up Purview and Azure Synapse Analytics for the deployment, you must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or [Owner](/azure/role-based-access-control/built-in-roles#owner) role in the Azure subscription. You'll set more role assignments for services and service principals in the tutorial.
 
-- **Data management landing zone** successfully deployed. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
-
-- **Data landing zone** successfully deployed. For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
-
-- **Data product batch** successfully deployed. For more information, see the [data product batch](https://github.com/Azure/data-product-batch) GitHub repository.
+- **Deployed resources**. To complete the tutorial, these resources must already be deployed in your Azure subscription:
+  - *Data management landing zone*. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
+  - *Data landing zone*. For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
+  - *Data product batch*. For more information, see the [data product batch](https://github.com/Azure/data-product-batch) GitHub repository.
 
 - **Microsoft Purview account**. The account is created as part of your data management landing zone deployment.
 
@@ -39,7 +46,7 @@ As you deploy the new components, you'll have a chance to investigate how Purvie
 >
 > - `<DMLZ-prefix>` refers to the prefix you entered when you created your *data management landing zone* deployment.
 > - `<DLZ-prefix>` refers to the prefix you entered when you created your *data landing zone* deployment.
-> - `<DP-prefix>` refers to the prefix you entered when you created your *data product* deployment.
+> - `<DP-prefix>` refers to the prefix you entered when you created your *data product batch* deployment.
 
 ### Create Azure SQL Database instances
 
@@ -128,7 +135,7 @@ From the JSON output generated in the preceding step, get the following returned
 
 The service principal must have the following permissions:
 
-- Storage Blob Reader role on the storage accounts.
+- Storage Blob Data Reader role on the storage accounts.
 - Data Reader permissions on the SQL Database instances.
 
 To set up the service principal with the required role and permissions, complete the following steps.
@@ -143,19 +150,19 @@ To set up the service principal with the required role and permissions, complete
 
    :::image type="content" source="../images/storage-service-principal-access-control.png" alt-text="Screenshot that shows the storage account service principal Access Control pane that shows how to add a role assignment.":::
 
-1. In **Add role assignment**, on the **Role** tab, search for and select **Storage Blob Reader**. Then, select **Next**.
+1. In **Add role assignment**, on the **Role** tab, search for and select **Storage Blob Data Reader**. Then, select **Next**.
 
-   :::image type="content" source="../images/storage-service-principal-role-assignment.png" alt-text="Screenshot that shows how to search for Storage Blob Data Reader under Add role assignment.":::
+   :::image type="content" source="../images/storage-service-principal-role-assignment.png" alt-text="Screenshot that shows searching for Storage Blob Data Reader under Add role assignment.":::
 
 1. In **Members**, choose **Select members**.
 
     :::image type="content" source="../images/storage-service-principal-members.png" alt-text="Screenshot that shows select members pane under add role assignment.":::
 
-1. In **Select members**, search for and select the name of the service principal you created.
+1. In **Select members**, search for the name of the service principal you created.
 
     :::image type="content" source="../images/add-service-principal.png" alt-text="Screenshot that shows how to search for a service principal name.":::
 
-1. Choose **Select**.
+1. In the search results, select the service principal, and then choose **Select**.
 
     :::image type="content" source="../images/select-service-principal.png" alt-text="Screenshot that shows the results pane after searching for a service principal name.":::
 
@@ -354,7 +361,7 @@ The following steps outline the process to register an Azure Data Lake Storage G
 
 1. In **Register sources**, select **Azure Data Lake Storage Gen2**, and then select **Continue**.
 
-    :::image type="content" source="../images/register-adls.png" alt-text="Screenshot that shows the Azure Data Lake Storage Gen2 registration source.":::
+    :::image type="content" source="../images/register-data-lake.png" alt-text="Screenshot that shows the Azure Data Lake Storage Gen2 registration source.":::
 
 1. In **Register sources (Azure Data Lake Storage Gen2)**, select or enter the following information:
 
@@ -464,7 +471,7 @@ Repeat these steps for the following storage accounts:
 
 1. In **Select a scan rule set**, select **AzureSqlDatabase**, and then select **Continue**.
   
-    :::image type="content" source="../images/scan-database-ruleset.png" alt-text="Screenshot that shows the SQL database scan rule set selection.":::
+    :::image type="content" source="../images/scan-database-rule-set.png" alt-text="Screenshot that shows the SQL database scan rule set selection.":::
 
 1. In **Set a scan trigger**, select **Once**, and then select **Continue**.
   
@@ -579,7 +586,7 @@ After you approve the access request in each required service, it might take a f
 
 When you're finished approving all access requests for the required services, in **Managed private endpoints**, the **Approval state** value for all the services is **Approved**:
 
-:::image type="content" source="../images/managed-private-endpoints-complete.png" alt-text="Screenshot that shows Private Endpoint SQL Connections as Approved.":::
+:::image type="content" source="../images/managed-private-endpoints-complete.png" alt-text="Screenshot that shows the private endpoint SQL connections as Approved.":::
 
 ### Role assignments
 
@@ -589,13 +596,11 @@ When you finish approving private endpoint access requests, add the appropriate 
 - Storage accounts `<DLZ-prefix>devraw`, `<DLZ-prefix>devencur`, and `<DLZ-prefix>devwork`
 - Purview account `<DMLZ-prefix>-dev-purview001`
 
-#### Azure SQL server
+#### Azure SQL virtual machine
 
 1. To add role assignments, begin with the Azure SQL virtual machine. In the `<DMLZ-prefix>-dev-dp001` resource group, go to `<DP-prefix>-dev-sqlserver001`.  
 
-1. In the resource menu, select **Access control (IAM)**. In the command bar, select **Add**. In the dropdown, select **Add role assignment**.
-
-    :::image type="content" source="../images/add-role-to-sql-server.png" alt-text="Screenshot that shows how to get to the add role assignment pane in the Azure SQL server.":::
+1. In the resource menu, select **Access control (IAM)**. In the command bar, select **Add** > **Add role assignment**.
 
 1. On the **Role** tab, select **Contributor**, and then select **Next**.
 
@@ -605,11 +610,11 @@ When you finish approving private endpoint access requests, add the appropriate 
 
     :::image type="content" source="../images/add-role-to-managed-identities.png" alt-text="Screenshot that shows the select Managed Identity Members pane.":::
 
-1. In **Select managed identities**, select your Azure subscription. For **Managed identity**, select **Data Factory (V2)** to see available data factories. In the list of data factories, select **Azure Data Factory \<DLZ-prefix\>-dev-integration-datafactory001**. Choose **Select**.
-
-1. Select **Review + Assign** twice to complete the process.
+1. In **Select managed identities**, select your Azure subscription. For **Managed identity**, select **Data Factory (V2)** to see available data factories. In the list of data factories, select **Azure Data Factory \<DLZ-prefix\>-dev-integration-datafactory001**. Choose **Select**. 
 
     :::image type="content" source="../images/add-role-to-sql-server-review-assign.png" alt-text="Screenshot that shows the role assignment completion pane.":::
+
+1. Select **Review + Assign** twice to complete the process.
 
 #### Storage accounts
 
@@ -663,11 +668,11 @@ This process extracts customer data from the `AdatumCRM` SQL Database instance a
 
    1. To create a trigger to run the pipeline every 24 hours, select **Schedule**.
 
-      :::image type="content" source="../images/create-pipeline.png" alt-text="Screenshot that shows how to schedule a Trigger to run periodically in CRM.":::
+      :::image type="content" source="../images/create-pipeline.png" alt-text="Screenshot that shows how to schedule a Trigger to run periodically in CRM." lightbox="../images/create-pipeline.png":::
 
    1. To create a linked service to connect this data factory to the `AdatumCRM` SQL Database instance on the `<DP-prefix>-dev-sqlserver001` server (source), select **New Connection**.
 
-      :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot that shows how to connect to Adatum CRM.":::
+      :::image type="content" source="../images/adatum-crm-connection.png" alt-text="Screenshot that shows connecting to the AdatumCRM database." lightbox="../images/adatum-crm-connection.png":::
 
       > [!NOTE]
       > If you experience errors connecting to or accessing the data in the SQL Database instances or the storage accounts, review your permissions in the Azure subscription. Make sure that the data factory has the required credentials and access permissions to any problematic resource.
@@ -682,11 +687,11 @@ This process extracts customer data from the `AdatumCRM` SQL Database instance a
 
    1. Create a new linked service to access the `<DLZ-prefix>devraw` Azure Data Lake Storage Gen2 storage (destination).
 
-      :::image type="content" source="../images/raw-storage-connection.png" alt-text="Screenshot that shows the raw storage connection.":::
+      :::image type="content" source="../images/raw-storage-connection.png" alt-text="Screenshot that shows the raw storage connection." lightbox="../images/raw-storage-connection.png":::
 
    1. Browse the folders in the `<DLZ-prefix>devraw` storage and select *Data* as the destination.
 
-      :::image type="content" source="../images/raw-data-folder.png" alt-text="Screenshot that shows the destination as raw data.":::
+      :::image type="content" source="../images/raw-data-folder.png" alt-text="Screenshot that shows the destination as raw data." lightbox="../images/raw-data-folder.png":::
 
    1. Change the file name suffix to *.csv* and use the other default options.
 
@@ -726,7 +731,7 @@ Next, extract the data from the `AdatumERP` database. The data represents sales 
 
    1. Create a linked service to the `AdatumERP` SQL Database instance.
 
-       :::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot that shows the Adatum ERP connection pane completed.":::
+       :::image type="content" source="../images/adatum-erp-connection.png" alt-text="Screenshot that shows the Adatum ERP connection pane completed." lightbox="../images/adatum-erp-connection.png":::
 
    1. Select these seven tables:
 
@@ -742,21 +747,21 @@ Next, extract the data from the `AdatumERP` database. The data represents sales 
 
    1. Use the existing linked service to the `<DLZ-prefix>devraw` storage account and set the file extension to *.csv*.
 
-       :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot that shows a raw storage account with the file extension set to csv.":::
+       :::image type="content" source="../images/destination-data-source.png" alt-text="Screenshot that shows a raw storage account with the file extension set to CSV.":::
 
    1. Select **Add header to file**.
 
-      :::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot that shows how to add a header to a file under file format settings.":::
+      :::image type="content" source="../images/add-header-to-file.png" alt-text="Screenshot that shows adding a header to a file under File format settings.":::
 
-   1. Finish the wizard for the second time, rename the pipeline `CopyPipeline_ERP_to_DevRaw`, and in the command bar, select **Publish all**. Then run the trigger on this newly created pipeline to copy the seven tables you selected from SQL Database to Data Lake Storage Gen2.
+   1. Complete the wizard again and rename the pipeline `CopyPipeline_ERP_to_DevRaw`. Then, in the command bar, select **Publish all**. Finally, run the trigger on this newly created pipeline to copy the seven selected tables from SQL Database to Data Lake Storage Gen2.
 
-When you finish these steps, 10 CSV files are in the `<DLZ-prefix>devraw` Data Lake Storage Gen2 storage. Proceed to the next section to curate the files in the `<DLZ-prefix>devencur` Data Lake Storage Gen2 storage.
+When you finish these steps, 10 CSV files are in the `<DLZ-prefix>devraw` Data Lake Storage Gen2 storage. In the next section, you curate the files in the `<DLZ-prefix>devencur` Data Lake Storage Gen2 storage.
 
 ## Curate data in Data Lake Storage Gen2
 
 When you finish creating the 10 CSV files in the raw `<DLZ-prefix>devraw` Data Lake Storage Gen2 storage, transform these files as needed as you copy them to the curated `<DLZ-prefix>devencur` Data Lake Storage Gen2 storage.
 
-Continue using Azure Data Factory to create these new pipelines to orchestrate the data movement.
+Continue using Azure Data Factory to create these new pipelines to orchestrate data movement.
 
 ### Curate CRM to customer data
 
@@ -764,53 +769,50 @@ Create a data flow that gets the CSV files in the *Data\CRM* folder in `<DLZ-pre
 
 1. In Azure Data Factory, go to the data factory and select **Orchestrate**.
 
-    :::image type="content" source="../images/select-orchestrate.png" alt-text="Screenshot that shows the orchestrate button on the Azure Data Factory home page.":::
+    :::image type="content" source="../images/select-orchestrate.png" alt-text="Screenshot that shows the Orchestrate button in Azure Data Factory.":::
 
 1. In **General**, name the pipeline `Pipeline_transform_CRM`.
 
 1. In the **Activities** pane, expand **Move and Transform**. Drag the data flow activity and drop it in the pipeline canvas.
 
-    :::image type="content" source="../images/activities.png" alt-text="Screenshot that shows the activities pane with move and transform highlighted.":::
+    :::image type="content" source="../images/activities.png" alt-text="Screenshot that shows the Activities pane and Move and transform highlighted.":::
 
 1. In **Adding Data Flow**, select **Create new data flow** and name the data flow `CRM_to_Customer`. Select **Finish**.
 
     > [!NOTE]
-    > In the command bar of the pipeline canvas, turn on **Data flow debug**. In debug mode, you can do interactive testing of the transformation logic against a live Apache Spark cluster. Data flow clusters take 5 to 7 minutes to warm up. We recommend that you turn on debugging before you begin data flow development.
+    > In the command bar of the pipeline canvas, turn on **Data flow debug**. In debug mode, you can interactively test the transformation logic against a live Apache Spark cluster. Data flow clusters take 5 to 7 minutes to warm up. We recommend that you turn on debugging before you begin data flow development.
 
     :::image type="content" source="../images/data-flow-debug.png" alt-text="Screenshot that shows the Open Data Flow button.":::
 
-1. When you're finished selecting the options in the `CRM_to_Customer` data flow, the `Pipeline_transform_CRM` pipeline looks like this example:
+   When you're finished selecting the options in the `CRM_to_Customer` data flow, the `Pipeline_transform_CRM` pipeline looks similar to this example:
 
-    :::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot that shows the pipeline transform CRM.":::
+   :::image type="content" source="../images/pipelines-transform-crm.png" alt-text="Screenshot that shows the pipeline transform CRM.":::
 
-    The data flow looks like this example:
+   The data flow looks like this example:
 
-    :::image type="content" source="../images/crm-to-customer.png" alt-text="Screenshot that shows how the CRM to Customer data flow looks.":::
+   :::image type="content" source="../images/crm-to-customer.png" alt-text="Screenshot that shows the CRM to Customer data flow.":::
 
-Modify these settings in the data flow for the indicated files:
+1. Next, modify these settings in the data flow for the `CRMAddress` source:
 
-For the `CRMAddress` source:
+   1. Create a new dataset from Data Lake Storage Gen2. Use the **DelimitedText** format. Name the dataset `DevRaw_CRM_Address`.
 
-1. Create a new dataset from Data Lake Storage Gen2 in the **DelimitedText** format. Name the dataset `DevRaw_CRM_Address`.
+   1. Connect the linked service to `<DLZ-prefix>devraw`.
 
-1. Connect the linked service to `<DLZ-prefix>devraw`.
+   1. Select the *Data\CRM\SalesLTAddress.csv* file as the source.
 
-1. Select the *Data\CRM\SalesLTAddress.csv* file as the source.
+1. Modify these settings in the data flow for the for the paired `CustAddress` sink:
 
-For the paired `CustAddress` sink:
+   1. Create a new dataset named `DevEncur_Cust_Address`.
 
-1. Create a new dataset named `DevEncur_Cust_Address`.
+   1. Select the *Data\Customer* folder in `<DLZ-prefix>devencur` as the sink.
 
-1. Select the *Data\Customer* folder in `<DLZ-prefix>devencur` as the sink.
+   1. Under **Settings\Output to single file**, convert the file to *Address.parquet*.
 
-1. Convert the file to *Address.parquet* (under **Settings\Output to single file**).
+For the remainder of the data flow configuration, use the information in the following tables for each component. Note that `CRMAddress` and `CustAddress` are the first two rows. Use them as examples for the other objects.
 
-> [!NOTE]
-> For the remainder of the data flow configuration, use the information in the following tables for each component. Note that `CRMAddress` and `CustAddress` are the first two rows. Use them as an example for the other objects.
->
-> An item that isn't in either of the following tables is the `RemovePasswords` schema modifier. As you can see in the screenshot that shows the `CRM_to_Customer` data flow, this item goes between `CRMCustomer` and `CustCustomer`. To add this schema modifier, go to **Select settings** and remove **PasswordHash** and **PasswordSalt**.
->
-> `CRMCustomer` returns a 15-column schema from the .crv file. `CustCustomer` writes only 13 columns after the schema modifier removes the two password columns.
+An item that isn't in either of the following tables is the `RemovePasswords` schema modifier. The preceding screenshot shows that this item goes between `CRMCustomer` and `CustCustomer`. To add this schema modifier, go to **Select settings** and remove **PasswordHash** and **PasswordSalt**.
+
+`CRMCustomer` returns a 15-column schema from the .crv file. `CustCustomer` writes only 13 columns after the schema modifier removes the two password columns.
 
 #### The complete table
 
@@ -845,3 +847,7 @@ In the following table, you'll find the objects to create in the `ERP_to_Sales` 
 | `SalesProductSalesOrderDetail` | sink | `DevEncur_Sales_ProductSalesOrderDetail` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderDetail.parquet* |
 | `ERPProductSalesOrderHeader` | source | `DevRaw_ERP_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | *Data\ERP\SalesLTProductSalesOrderHeader.csv* |
 | `SalesProductSalesOrderHeader` | sink | `DevEncur_Sales_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderHeader.parquet* |
+
+## Next steps
+
+- Use scripts to [clean up resources](cleanup-instructions.md) you created in the tutorials.

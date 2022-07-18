@@ -1,18 +1,18 @@
 ---
-title: Cleanup instructions
-description: Clean up all the resources that were deployed in an Azure subscription during the tutorials. 
-author: mboswell
-ms.author: mboswell
-ms.date: 07/15/2022
-ms.topic: conceptual
+title: Tutorial - Cleanup instructions
+description: Clean up all the resources that were deployed in an Azure subscription during the cloud-scale analytics tutorials. 
+author: hamoodaleem
+ms.author: abdale
+ms.date: 07/18/2022
+ms.topic: tutorial
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Cleanup instructions
+# Tutorial: Cleanup instructions
 
-As you go through the tutorials, you might run into deployment issues. To start over, use the following scripts to remove tutorial resources you created in your Azure subscription.
+As you go through the cloud-scale analytics tutorials, you might run into deployment issues. To start over, use the following scripts to remove tutorial resources you created in your Azure subscription.
 
 You also can use the scripts to remove all tutorial resources you created in your subscription when you've finished all steps in the tutorials.
 
@@ -127,3 +127,8 @@ Foreach ($group in $groups) {
 $allGroups = az group list | ConvertFrom-Json
 $allGroups | Where-Object { $groups.name -contains $_.name } | Select-Object name, @{Name="State"; Expression={$_.properties.provisioningState }}
 ```
+
+## Next steps
+
+- Review the [cloud-scale analytics architectures](../architectures/overview-architectures.md)
+- Learn more about the [deployments templates](../architectures/deployment-templates.md) you used in the cloud-scale analytics tutorials.

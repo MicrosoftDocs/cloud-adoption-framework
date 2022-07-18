@@ -1,16 +1,16 @@
 ---
-title: Create a data landing zone tutorial
+title: Tutorial - Create a data landing zone
 description: Learn how to create a data landing zone by using one-click deployment in the Azure portal.
-author: mboswell
-ms.author: mboswell
-ms.date: 07/15/2022
-ms.topic: conceptual
+author: hamoodaleem
+ms.author: abdale
+ms.date: 07/18/2022
+ms.topic: tutorial
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank, references_regions
 ---
 
-# Create a data landing zone
+# Tutorial: Create a data landing zone
 
 A data landing zone is a unit of scale in the enterprise-scale analytics architecture pattern. The benefits of using a data landing zone include regional deployments, clear separation of ownership, cost chargeback, and in-place data sharing within and across zones. You also can scale within a data landing zone by using cross-functional data integration and data product teams. The reference design offers a self-service approach for data product teams to overcome bottlenecks and the need for a central team for cloud service deployments. The data landing zone reference implementation creates a consistent setup inside an Azure subscription. It deploys storage accounts and data processing services like Azure Synapse Analytics, Azure Data Factory, and Azure Databricks.
 
@@ -151,4 +151,9 @@ You can use a one-click customized deployment template to deploy the data landin
 
    :::image type="content" source="../images/data-landing-zone-create.png" alt-text="Screenshot shows the data landing zone parameter validation and the Create pane.":::
 
-   Deployment takes approximately 25 minutes to complete.
+Deployment takes approximately 25 minutes to complete.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Create a data product batch](tutorial-create-data-product-batch.md)
