@@ -29,14 +29,12 @@ Before you begin setting up your deployment, make sure you meet these prerequisi
 
 - **Azure subscription.** If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
-   :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot that shows how to search for Azure subscriptions.":::
-
 - **Permissions for the Azure subscription.** You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the subscription to create a service principal and role assignments for the service principal.
 
 - **Deployed resources.** To complete the tutorial, these resources must already be deployed in your Azure subscription:
 
-  - **Data management landing zone.** For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
-  - **Data landing zone.** For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
+  - *Data management landing zone.* For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
+  - *Data landing zone.* For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
 
 ## Set up the data product batch deployment
 
@@ -110,7 +108,7 @@ You can use a one-click customized deployment template to deploy a data product 
 
    :::image type="content" source="../images/data-product-deployment-create.png" alt-text="Screenshot that shows the Create step in a data product batch deployment.":::
 
-The deployment might take a few minutes to finish.
+Deployment might take a few minutes to finish.
 
 ## Next steps
 

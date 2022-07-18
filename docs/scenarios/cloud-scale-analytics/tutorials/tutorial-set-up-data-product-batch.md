@@ -36,9 +36,9 @@ Before you begin setting up your data product batch, make sure you meet these pr
 
 - **Deployed resources.** To complete the tutorial, these resources must already be deployed in your Azure subscription:
 
-  - **Data management landing zone.** For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
-  - **Data landing zone.** For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
-  - **Data product batch.** For more information, see the [data product batch](https://github.com/Azure/data-product-batch) GitHub repository.
+  - *Data management landing zone.* For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
+  - *Data landing zone.* For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
+  - *Data product batch.* For more information, see the [data product batch](https://github.com/Azure/data-product-batch) GitHub repository.
 
 - **Microsoft Purview account.** The account is created as part of your data management landing zone deployment.
 
@@ -92,8 +92,6 @@ Next, complete the steps to set up Purview to catalog the data product batch. Yo
 ### Create a service principal
 
 1. In the [Azure portal](https://portal.azure.com/), in the portal global controls, select the **Cloud Shell** icon to open an Azure Cloud Shell terminal. Select **Bash** for the terminal type.
-
-    :::image type="content" source="../images/cloud-shell.png" alt-text="Screenshot that shows the Cloud Shell icon in the Azure portal.":::
 
 1. Revise the following script:
 
@@ -409,6 +407,8 @@ Repeat these steps for the following storage accounts:
 
 ## Set up scans
 
+Next, set up scans for the data sources.
+
 ### Scan the Data Lake Storage Gen2 data source
 
 1. In Purview Studio, go to the data map. On the data source, select the **New scan** icon.
@@ -498,7 +498,7 @@ To set up private endpoints for the required resources:
 
 1. In the `<DMLZ-prefix>-dev-bastion` resource group, select `<DMLZ-prefix>-dev-vm001`.
 
-    :::image type="content" source="../images/bastion-vm.png" alt-text="Screenshot that shows the resource groups for connecting to the bastion host virtual machine.":::
+    :::image type="content" source="../images/bastion-vm.png" alt-text="Screenshot that shows the resource groups for connecting to the bastion host virtual machine." lightbox="../images/bastion-vm.png":::
 
 1. In the command bar, select **Connect** and select **Bastion**.
 
@@ -510,7 +510,7 @@ To set up private endpoints for the required resources:
 
 1. In the virtual machine's web browser, go to the Azure portal. Go to the `<DLZ-prefix>-dev-shared-integration` resource group and open the `<DLZ-prefix>-dev-integration-datafactory001` data factory.
 
-    :::image type="content" source="../images/data-factory-shared-integration.png" alt-text="Screenshot that shows how to go to a different resource group to open Azure Data Factory.":::
+    :::image type="content" source="../images/data-factory-shared-integration.png" alt-text="Screenshot that shows how to go to a different resource group to open Azure Data Factory." lightbox="../images/data-factory-shared-integration.png":::
 
 1. Under **Getting started**, in **Open Azure Data Factory Studio**, select **Open**.
 
@@ -520,7 +520,7 @@ To set up private endpoints for the required resources:
 
     Approving access requests for the private endpoints is discussed in a later section. After you approve private endpoint access requests, their approval status is **Approved**, as in the following example of the `<DLZ-prefix>devencur` storage account.
 
-    :::image type="content" source="../images/managed-private-endpoints.png" alt-text="Screenshot that shows how to go to the Manage Private Endpoints pane.":::
+    :::image type="content" source="../images/managed-private-endpoints.png" alt-text="Screenshot that shows how to go to the Manage Private Endpoints pane." lightbox="../images/managed-private-endpoints.png":::
 
 1. Before you approve the private endpoint connections, select **New**. Enter *Azure SQL* to find the Azure SQL Database connector you use to create a new managed private endpoint for the `<DP-prefix>-dev-sqlserver001` Azure SQL virtual machine. The virtual machine contains the `AdatumCRM` and `AdatumERP` databases you created earlier.
 
@@ -536,54 +536,54 @@ To give Data Factory access to the private endpoints for the required services, 
 
 - **Option 2:** Run the following scripts in Azure Cloud Shell in Bash mode to approve all access requests to the required private endpoints at once.
 
-```bash
-
-# Storage managed private endpoint approval
-
-# devencur
-resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-storage')==\`true\`].name")
-storageAcctName=$(az storage account list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'devencur')==\`true\`].name")
-endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $storageAcctName --type Microsoft.Storage/storageAccounts -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
-
-az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $storageAcctName --type Microsoft.Storage/storageAccounts --description "Approved"
-
-# devraw
-resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-storage')==\`true\`].name")
-storageAcctName=$(az storage account list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'devraw')==\`true\`].name")
-endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $storageAcctName --type Microsoft.Storage/storageAccounts -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
-az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $storageAcctName --type Microsoft.Storage/storageAccounts --description "Approved"
-
-# SQL Database managed private endpoint approval
-resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-dp001')==\`true\`].name")
-sqlServerName=$(az sql server list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'sqlserver001')==\`true\`].name")
-endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $sqlServerName --type Microsoft.Sql/servers -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
-az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $sqlServerName --type Microsoft.Storage/storageAccounts --description "Approved"
-
-# Key Vault private endpoint approval
-resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-metadata')==\`true\`].name")
-keyVaultName=$(az keyvault list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'dev-vault001')==\`true\`].name")
-endPointConnectionID=$(az network private-endpoint-connection list -g $resourceGroupName -n $keyVaultName --type Microsoft.Keyvault/vaults -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].id")
-az network private-endpoint-connection approve -g $resourceGroupName --id $endPointConnectionID --resource-name $keyVaultName --type Microsoft.Keyvault/vaults --description "Approved"
-
-# Purview private endpoint approval
-resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, 'dev-governance')==\`true\`].name")
-purviewAcctName=$(az purview account list -g $resourceGroupName -o tsv  --query "[?contains(@.name, '-dev-purview001')==\`true\`].name")
-for epn in $(az network private-endpoint-connection list -g $resourceGroupName -n $purviewAcctName --type Microsoft.Purview/accounts -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
-do
-    az network private-endpoint-connection approve -g $resourceGroupName -n $epn --resource-name $purviewAcctName --type Microsoft.Purview/accounts --description "Approved"
-done
-
-```
+    ```bash
+    
+    # Storage managed private endpoint approval
+    
+    # devencur
+    resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-storage')==\`true\`].name")
+    storageAcctName=$(az storage account list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'devencur')==\`true\`].name")
+    endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $storageAcctName --type Microsoft.Storage/storageAccounts -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
+    
+    az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $storageAcctName --type Microsoft.Storage/storageAccounts --description "Approved"
+    
+    # devraw
+    resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-storage')==\`true\`].name")
+    storageAcctName=$(az storage account list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'devraw')==\`true\`].name")
+    endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $storageAcctName --type Microsoft.Storage/storageAccounts -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
+    az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $storageAcctName --type Microsoft.Storage/storageAccounts --description "Approved"
+    
+    # SQL Database managed private endpoint approval
+    resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-dp001')==\`true\`].name")
+    sqlServerName=$(az sql server list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'sqlserver001')==\`true\`].name")
+    endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $sqlServerName --type Microsoft.Sql/servers -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
+    az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $sqlServerName --type Microsoft.Storage/storageAccounts --description "Approved"
+    
+    # Key Vault private endpoint approval
+    resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-metadata')==\`true\`].name")
+    keyVaultName=$(az keyvault list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'dev-vault001')==\`true\`].name")
+    endPointConnectionID=$(az network private-endpoint-connection list -g $resourceGroupName -n $keyVaultName --type Microsoft.Keyvault/vaults -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].id")
+    az network private-endpoint-connection approve -g $resourceGroupName --id $endPointConnectionID --resource-name $keyVaultName --type Microsoft.Keyvault/vaults --description "Approved"
+    
+    # Purview private endpoint approval
+    resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, 'dev-governance')==\`true\`].name")
+    purviewAcctName=$(az purview account list -g $resourceGroupName -o tsv  --query "[?contains(@.name, '-dev-purview001')==\`true\`].name")
+    for epn in $(az network private-endpoint-connection list -g $resourceGroupName -n $purviewAcctName --type Microsoft.Purview/accounts -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
+    do
+        az network private-endpoint-connection approve -g $resourceGroupName -n $epn --resource-name $purviewAcctName --type Microsoft.Purview/accounts --description "Approved"
+    done
+    
+    ```
 
 The following example shows how the `<DLZ-prefix>devraw` storage account manages private endpoint access requests. In the resource menu for the storage account, select **Networking**. In the command bar, select **Private endpoint connections**.
 
-:::image type="content" source="../images/private-endpoint-connections.png" alt-text="Screenshot that shows how to go to the Private endpoint connections pane.":::
+:::image type="content" source="../images/private-endpoint-connections.png" alt-text="Screenshot that shows how to go to the Private endpoint connections pane." lightbox="../images/private-endpoint-connections.png":::
 
 For some Azure resources, you select **Private endpoint connections** in the resource menu. An example for the Azure SQL server is shown in the following screenshot.
 
 To approve a private endpoint access request, in **Private endpoint connections**, select the pending access request, and then select **Approve**:
 
-:::image type="content" source="../images/private-endpoint-connections-sql.png" alt-text="Screenshot that shows to approve a private endpoint access request.":::
+:::image type="content" source="../images/private-endpoint-connections-sql.png" alt-text="Screenshot that shows to approve a private endpoint access request." lightbox="../images/private-endpoint-connections-sql.png":::
 
 After you approve the access request in each required service, it might take a few minutes for the request to show as **Approved** in **Managed private endpoints** in Data Factory Studio. Even if you select **Refresh** in the command bar, the approval state might be stale for a few minutes.
 
@@ -647,7 +647,7 @@ The permissions are set, and Purview can now see the data factory. The next step
 
 1. In the **New Data Factory connections** pane, enter your Azure subscription and select the `<DLZ-prefix>-dev-integration-datafactory001` data factory. Select **OK**.
 
-    :::image type="content" source="../images/connect-purview-data-factory.png" alt-text="Screenshot that shows what the Purview Studio pane looks like while selecting a new connection.":::
+    :::image type="content" source="../images/connect-purview-data-factory.png" alt-text="Screenshot that shows what the Purview Studio pane looks like while selecting a new connection." lightbox="../images/connect-purview-data-factory.png":::
 
 1. In the `<DLZ-prefix>-dev-integration-datafactory001` Data Factory Studio instance, under **Manage** > **Azure Purview**, refresh **Azure Purview account**.
 
@@ -853,4 +853,5 @@ In the following table, you'll find the objects to create in the `ERP_to_Sales` 
 
 ## Next steps
 
-- Use scripts to [clean up resources](cleanup-instructions.md) you created in the tutorials.
+> [!div class="nextstepaction"]
+> [Clean up resources](cleanup-instructions.md)

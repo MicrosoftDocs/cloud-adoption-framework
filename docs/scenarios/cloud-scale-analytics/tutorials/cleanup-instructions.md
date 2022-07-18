@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Cleanup instructions
+title: Tutorial - Clean up resources
 description: Clean up all the resources that were deployed in an Azure subscription during the cloud-scale analytics tutorials.
 author: abdale
 ms.author: hamoodaleem
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Tutorial: Cleanup instructions
+# Tutorial: Clean up resources
 
 As you go through the cloud-scale analytics tutorials, you might run into deployment issues. To start over, use the following scripts to remove tutorial resources you created in your Azure subscription.
 
@@ -130,5 +130,5 @@ $allGroups | Where-Object { $groups.name -contains $_.name } | Select-Object nam
 
 ## Next steps
 
-- Review the [cloud-scale analytics architectures](../architectures/overview-architectures.md)
+- Review the [cloud-scale analytics architectures](../architectures/overview-architectures.md).
 - Learn more about the [deployments templates](../architectures/deployment-templates.md) you used in the cloud-scale analytics tutorials.

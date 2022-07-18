@@ -78,9 +78,7 @@ Before you begin setting up your deployment, make sure that you meet these prere
 
 - **Azure subscription.** If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
-   :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot that shows how to search for Azure subscriptions.":::
-
-- **Permissions for the Azure subscription.** You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner).
+- **Permissions for the Azure subscription.** You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner) role.
 
 - **Deploy a data management landing zone.** Before you begin, make sure you successfully deploy a [data management landing zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management landing zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
 
