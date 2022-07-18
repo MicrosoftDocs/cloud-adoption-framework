@@ -172,7 +172,7 @@ items:
       href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md
     - name: Set up a data product batch
       href: ../cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md
-    - name: Cleanup instructions
+    - name: Clean up resources
       href: ../cloud-scale-analytics/tutorials/cleanup-instructions.md
 
   - name: Best practices
