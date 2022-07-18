@@ -1,8 +1,8 @@
 ---
 title: Tutorial - Cleanup instructions
 description: Clean up all the resources that were deployed in an Azure subscription during the cloud-scale analytics tutorials. 
-author: hamoodaleem
-ms.author: abdale
+author: abdale
+ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
 ms.service: cloud-adoption-framework

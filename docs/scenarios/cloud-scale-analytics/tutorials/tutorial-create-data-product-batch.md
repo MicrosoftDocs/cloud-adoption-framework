@@ -1,8 +1,8 @@
 ---
 title: Tutorial - Create a data product batch
 description: Learn how to deploy a data product batch by using one-click deployment in the Azure portal.
-author: hamoodaleem
-ms.author: abdale
+author: abdale
+ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
 ms.service: cloud-adoption-framework
@@ -22,6 +22,21 @@ In this tutorial, experiment with Azure resources and see what's created in a on
 > - Create the deployment
 
 The Deploy to Azure feature is a customized deployment template that deploys resources for the data product batch in a data landing zone. The applicable scenarios for a data product batch include working with data products and data integration. As described in other tutorials, data products are a unit of scale in a data landing zone. You can use the template that's described in this tutorial to deploy a data product batch and add data integration to the platform.
+
+## Prerequisites
+
+Before you begin setting up your deployment, make sure you meet these prerequisites:
+
+- **Azure subscription**. If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
+
+   :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot that shows how to search for Azure subscriptions.":::
+
+- **Permissions for the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the subscription to create a service principal and role assignments for the service principal.
+
+- **Deployed resources**. To complete the tutorial, these resources must already be deployed in your Azure subscription:
+
+  - *Data management landing zone*. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
+  - *Data landing zone*. For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
 
 ## Set up the data product batch deployment
 

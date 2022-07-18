@@ -1,8 +1,8 @@
 ---
 title: Tutorial - Create a data landing zone
 description: Learn how to create a data landing zone by using one-click deployment in the Azure portal.
-author: hamoodaleem
-ms.author: abdale
+author: abdale
+ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
 ms.service: cloud-adoption-framework
@@ -11,6 +11,15 @@ ms.custom: e2e-data-management, think-tank, references_regions
 ---
 
 # Tutorial: Create a data landing zone
+
+In this tutorial, learn how to create a data landing zone by using the Deploy to Azure option in the Azure portal. Learn how to:
+
+> [!div class="checklist"]
+>
+> - Use the Deploy to Azure option
+> - Select settings and options for your deployment
+> - Validate deployment parameters
+> - Create the deployment
 
 A data landing zone is a unit of scale in the enterprise-scale analytics architecture pattern. The benefits of using a data landing zone include regional deployments, clear separation of ownership, cost chargeback, and in-place data sharing within and across zones. You also can scale within a data landing zone by using cross-functional data integration and data product teams. The reference design offers a self-service approach for data product teams to overcome bottlenecks and the need for a central team for cloud service deployments. The data landing zone reference implementation creates a consistent setup inside an Azure subscription. It deploys storage accounts and data processing services like Azure Synapse Analytics, Azure Data Factory, and Azure Databricks.
 
@@ -71,7 +80,7 @@ Before you begin setting up your deployment, make sure that you meet these prere
 
    :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot that shows how to search for Azure subscriptions.":::
 
-- **Permissions for the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the subscription to create a service principal and role assignments for the service principal.
+- **Permissions for the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner).
 
 - **Deploy a data management landing zone**. Before you begin, make sure you successfully deploy a [data management landing zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management landing zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
 

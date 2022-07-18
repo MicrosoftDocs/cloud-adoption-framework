@@ -1,8 +1,8 @@
 ---
 title: Tutorial - Set up a data product batch
 description: Learn how to set up a data product batch for data integration, data orchestration, and data governance. 
-author: hamoodaleem
-ms.author: abdale
+author: abdale
+ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
 ms.service: cloud-adoption-framework
@@ -28,11 +28,14 @@ As you deploy the new components, you'll have a chance to investigate how Purvie
 
 ## Prerequisites
 
+Before you begin setting up your data product batch, make sure you meet these prerequisites:
+
 - **Azure subscription**. If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
-- **Permissions to the Azure subscription**. To set up Purview and Azure Synapse Analytics for the deployment, you must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or [Owner](/azure/role-based-access-control/built-in-roles#owner) role in the Azure subscription. You'll set more role assignments for services and service principals in the tutorial.
+- **Permissions to the Azure subscription**. To set up Purview and Azure Synapse Analytics for the deployment, you must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner) role in the Azure subscription. You'll set more role assignments for services and service principals in the tutorial.
 
 - **Deployed resources**. To complete the tutorial, these resources must already be deployed in your Azure subscription:
+
   - *Data management landing zone*. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
   - *Data landing zone*. For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
   - *Data product batch*. For more information, see the [data product batch](https://github.com/Azure/data-product-batch) GitHub repository.
@@ -800,7 +803,7 @@ Create a data flow that gets the CSV files in the *Data\CRM* folder in `<DLZ-pre
 
    1. Select the *Data\CRM\SalesLTAddress.csv* file as the source.
 
-1. Modify these settings in the data flow for the for the paired `CustAddress` sink:
+1. Modify these settings in the data flow for the paired `CustAddress` sink:
 
    1. Create a new dataset named `DevEncur_Cust_Address`.
 

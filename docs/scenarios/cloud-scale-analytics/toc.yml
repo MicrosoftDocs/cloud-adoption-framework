@@ -164,7 +164,7 @@ items:
 
   - name: Tutorials
     items:
-    - name: Evaluate data requirements
+    - name: Evaluate an enterprise data scenario
       href: ../cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md
     - name: Create a data landing zone
       href: ../cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md

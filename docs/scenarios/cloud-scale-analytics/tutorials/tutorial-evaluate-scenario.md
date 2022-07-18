@@ -1,8 +1,8 @@
 ---
-title: Tutorial - Evaluate data requirements
+title: Tutorial - Evaluate an enterprise data scenario
 description: Learn how to evaluate the data requirements for an example enterprise scenario. Learn how Azure cloud-scale analytics provides a scalable, repeatable framework that meets an organization's unique needs for building a modern data platform.
-author: hamoodaleem
-ms.author: abdale
+author: abdale
+ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
 ms.service: cloud-adoption-framework
@@ -10,25 +10,26 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Tutorial: Evaluate data requirements
+# Tutorial: Evaluate an enterprise data scenario
 
-In this tutorial, look a the data needs and challenges of an example enterprise scenario. Learn how Azure cloud-scale analytics provides a scalable, repeatable framework that meets an organization's unique needs for building a modern data platform.
+In this tutorial, look at the data needs and challenges of an example enterprise scenario. Learn how Azure cloud-scale analytics provides a scalable, repeatable framework that meets an organization's unique needs for building a modern data platform.
 
-Learn how to:
+Discover the key components of evaluating an enterprise data scenario:
 
 > [!div class="checklist"]
 >
-> - Evaluate the scenario
-> - Evaluate the data needs
+> - Understand the scenario
+> - Know the data needs
 > - Define the architectural solution
-> - Evaluate the solution rationale
+> - Test the solution rationale
 > - Plan for future growth
+> - Deploy resources
 
-## Evaluate the scenario
+## Understand the scenario
 
 Adatum Corporation is a large, multinational enterprise. Adatum has centralized business units at its headquarters and subsidiaries around the globe.
 
-Each Adatum subsidiary has its own business units, including accounting, marketing, sales, support, and operations. Each of these disparate groups produce their own data. Many of the Adatum business units have embedded analytics teams.
+Each Adatum subsidiary has its own business units, including accounting, marketing, sales, support, and operations. Each of these disparate groups produces its own data. Many of the Adatum business units have embedded analytics teams.
 
 The Adatum central IT organization initially provided the data platform that Adatum and its subsidiaries use. Over time, some business units have implemented their own solutions to meet business needs. Now, the enterprise data platform is a combination of various cloud services and on-premises solutions.
 
@@ -36,7 +37,7 @@ The company's vision is to have a centralized analytics platform. Adatum wants a
 
 Adatum has decided to implement the Azure cloud-scale analytics architecture pattern to solve its data problem. The enterprise is confident that the Azure cloud-scale analytics pattern will support the corporate sales team in migrating its data platform. The pattern also provides enough flexibility to accommodate other business units when they're ready to join the data mesh.
 
-## Evaluate the data needs
+## Know the data needs
 
 The Adatum corporate sales group uses traditional enterprise resource planning (ERP) and customer relationship management (CRM) systems to process its sales transactions. Data from these systems must be exported to a separate analytics platform so that stakeholders throughout the organization can access the data and enrich it for their various projects.
 
@@ -85,7 +86,7 @@ In this example, the corporate sales team is the first to move to the new cloud-
 
 You can scale by adding more landing zones to the architecture over time. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This mesh pattern supports sharing datasets and resources across zones. When you split datasets into different zones, workloads are spread across Azure subscriptions and resources. Enterprises can then avoid reaching the limits of the Azure services and continue to grow their data estates.
 
-## Deployment guidelines
+## Deploy resources
 
 You can deploy this customer scenario by referencing the following architectures for the Adatum Corporation data management landing zone and sales data landing zone.
 
