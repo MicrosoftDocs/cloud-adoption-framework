@@ -18,8 +18,6 @@ The first step in the journey is to decide whether you need a strategy team, or 
 
 Whichever approach you choose, you'll want to create a cloud strategy team that defines motivations and business outcomes, and that validates and maintains alignment between business priorities and cloud adoption efforts. When the business outcomes affect business functions, the strategy team should include business leaders from across the organization. The goal of the cloud strategy team is to produce tangible business results that are enabled by cloud technologies. Overall, this team ensures that cloud adoption efforts progress in alignment with business outcomes. Whenever possible, business outcomes and the cloud strategy team's efforts should both be defined early in the process.
 
-![Get started building a cloud strategy team](../../_images/get-started/strategy-team-map.png)
-
 > [!NOTE]
 > This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
 
@@ -64,7 +62,7 @@ The cloud strategy team serves as a recurring alignment point between business l
 - Document and share your reasoning from step 1 to identify stakeholders who will benefit from regular involvement and will be able to help drive the strategy.
 - For ideas about who might be a good fit, see [Cloud strategy functions](../../organize/cloud-strategy.md).
 - To validate the alignment and bandwidth from each potential participant, review the [minimum scope](../../organize/cloud-strategy.md#minimum-scope) and [deliverable](../../organize/cloud-strategy.md#deliverable) for this capability.
-- To establish the right RACI chart based on you current team structures, review the various [RACI configuration examples](../../organize/raci-alignment.md#strategic-alignment), or select one of the example tabs at the bottom of the RACI template.
+- To establish the right RACI chart based on your current team structures, review the various [RACI configuration examples](../../organize/raci-alignment.md#strategic-alignment), or select one of the example tabs at the bottom of the RACI template.
 - Document the results in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Accountable person or team:**
