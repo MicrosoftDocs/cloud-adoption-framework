@@ -76,7 +76,7 @@ The following sections describe the rationale for key decisions that enterprises
 
 One of the first decisions to make about your Azure cloud-scale analytics implementation is how to divide the entire data estate into landing zones. Data solutions that frequently communicate with one another are strong candidates for inclusion in the same landing zone. Grouping data solutions helps enterprises reduce the costs associated with moving data across peered virtual networks. In this example, sales transaction data is frequently linked to customer data. So, it makes sense to store these related data integrations in the same data landing zone.
 
-Another consideration for landing zones is how the teams responsible for the data are aligned within the organization.  
+Another consideration for landing zones is how the teams responsible for the data are aligned within the organization.
 
 ### Why move only the sales team to the new data platform?
 

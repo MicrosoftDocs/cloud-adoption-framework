@@ -27,16 +27,16 @@ The Deploy to Azure feature is a customized deployment template that deploys res
 
 Before you begin setting up your deployment, make sure you meet these prerequisites:
 
-- **Azure subscription**. If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
+- **Azure subscription.** If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
    :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot that shows how to search for Azure subscriptions.":::
 
-- **Permissions for the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the subscription to create a service principal and role assignments for the service principal.
+- **Permissions for the Azure subscription.** You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the subscription to create a service principal and role assignments for the service principal.
 
-- **Deployed resources**. To complete the tutorial, these resources must already be deployed in your Azure subscription:
+- **Deployed resources.** To complete the tutorial, these resources must already be deployed in your Azure subscription:
 
-  - *Data management landing zone*. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
-  - *Data landing zone*. For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
+  - **Data management landing zone.** For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
+  - **Data landing zone.** For more information, see the [data landing zone](https://github.com/Azure/data-landing-zone) GitHub repository.
 
 ## Set up the data product batch deployment
 
@@ -52,8 +52,8 @@ You can use a one-click customized deployment template to deploy a data product 
 
     | Setting | Action |
     | --- | --- |
-    | **Subscription** | Select the subscription to use to deploy the data product batch. If you have access to multiple subscriptions, be sure to choose the correct one. |
-    | **Resource Group** | Enter *dev-dp001* and select the resource group that has the DLZ prefix you created earlier, plus the *-dev-dp001* suffix. Example: *\<DLZ-prefix\>dev-dp001* |  
+    | **Subscription** | Select the subscription to use to deploy the data product batch. If you have access to multiple subscriptions, be sure to choose the correct one. |
+    | **Resource Group** | Enter *dev-dp001* and select the resource group that has the DLZ prefix you created earlier, plus the *-dev-dp001* suffix. Example: *\<DLZ-prefix\>dev-dp001* |
     | **Location**| In the dropdown, select one of the Azure regions that are supported for this scenario. If no organizational policies influence the region you choose, it's a good idea to choose a region that's physically close to you. For more information, see [Supported regions](tutorial-create-data-landing-zone.md#supported-regions). |
     | **Environment** | For this tutorial, select **Development**. |
     | **Data Product Prefix** | Enter a unique string that's a maximum of 10 alphanumeric characters. The string is a unique prefix that's added to all resource groups and resources in the deployment. |
@@ -91,13 +91,13 @@ You can use a one-click customized deployment template to deploy a data product 
        | --- | --- |
        | **DNS A-Records are deployed through Azure Policy** | Select **No**. |
        | **Subscription with Private DNS Zones** | Select the subscription you used to deploy the data landing zone. |
-       | **Private DNS Zone Key Vault** | Select **privatelink.vaultcore.azure.net**. |
-       | **Private DNS Zone Synapse Dev** | Select **privatelink.dev.azuresynapse.net**. |
-       | **Private DNS Zone Synapse SQL** | Select **privatelink.sql.azuresynapse.net**. |
-       | **Private DNS Zone DataFactory** | Select **privatelink.datafactory.azure.net**. |
-       | **Private DNS Zone DataFactory Portal** | Select **privatelink.adf.azure.net**. |
+       | **Private DNS Zone Key Vault** | Select `privatelink.vaultcore.azure.net`. |
+       | **Private DNS Zone Synapse Dev** | Select `privatelink.dev.azuresynapse.net`. |
+       | **Private DNS Zone Synapse SQL** | Select `privatelink.sql.azuresynapse.net`. |
+       | **Private DNS Zone DataFactory** | Select `privatelink.datafactory.azure.net`. |
+       | **Private DNS Zone DataFactory Portal** | Select `privatelink.adf.azure.net`. |
        | **Private DNS Zone Cosmos SQL**  | Select **privatelink.documents.azure.com**. |
-       | **Private DNS Zone SQL Server** | Select **privatelink.database.windows.net**. |
+       | **Private DNS Zone SQL Server** | Select `privatelink.database.windows.net`. |
        | **Private DNS Zone MySQL Server** | Select **privatelink.mysql.database.azure.com**. |
        | **Private DNS Zone MariaDB Server** | Select **privatelink.mariadb.database.azure.com**. |
        | **Private DNS Zone PostgreSQL Server** | Select **privatelink.postgres.database.azure.com**. |

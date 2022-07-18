@@ -76,13 +76,13 @@ For this tutorial, select one of the Azure regions in the following list:
 
 Before you begin setting up your deployment, make sure that you meet these prerequisites:
 
-- **Azure subscription**. If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
+- **Azure subscription.** If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
    :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot that shows how to search for Azure subscriptions.":::
 
-- **Permissions for the Azure subscription**. You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner).
+- **Permissions for the Azure subscription.** You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner).
 
-- **Deploy a data management landing zone**. Before you begin, make sure you successfully deploy a [data management landing zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management landing zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
+- **Deploy a data management landing zone.** Before you begin, make sure you successfully deploy a [data management landing zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management landing zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
 
 ## Set up the data landing zone deployment
 
@@ -98,7 +98,7 @@ You can use a one-click customized deployment template to deploy the data landin
 
     | Setting | Action |
     | --- | --- |
-    | **Subscription** | Select the Azure subscription to use  for the data landing zone deployment. |
+    | **Subscription** | Select the Azure subscription to use for the data landing zone deployment. |
     | **Location** | In the dropdown, select one of the Azure regions that are supported for this scenario. If no organizational policies influence the region you choose, it's a good idea to choose a region that's physically close to you. For more information, see [Supported regions](#supported-regions). |
     | **Environment** | For this tutorial, select **Development**. |
     | **Data landing zone prefix** | Enter a unique string that's a maximum of 10 alphanumeric characters. The string is a unique prefix that's added to all resource groups and resources in the deployment. |
@@ -141,20 +141,20 @@ You can use a one-click customized deployment template to deploy the data landin
       | --- | --- |
       | **DNS A-Records are deployed through Azure Policy** | Select **No**. |
       | **Subscription with Private DNS Zones** | Select the Azure subscription you use to deploy the data management landing zone. |
-      | **Private DNS Zone Key Vault** | Select **privatelink.vaultcore.azure.net**. |
-      | **Private DNS Zone DataFactory** | Select **privatelink.datafactory.azure.net**. |
-      | **Private DNS Zone DataFactory Portal** | Select **privatelink.adf.azure.net**. |
-      | **Private DNS Zone Blob Storage** | Select **privatelink.blob.core.windows.net**. |
-      | **Private DNS Zone DFS Storage** | Select **privatelink.dfs.core.windows.net**. |
-      | **Private DNS Zone SQL Server** | Select **privatelink.database.windows.net**. |
+      | **Private DNS Zone Key Vault** | Select `privatelink.vaultcore.azure.net`. |
+      | **Private DNS Zone DataFactory** | Select `privatelink.datafactory.azure.net`. |
+      | **Private DNS Zone DataFactory Portal** | Select `privatelink.adf.azure.net`. |
+      | **Private DNS Zone Blob Storage** | Select `privatelink.blob.core.windows.net`. |
+      | **Private DNS Zone DFS Storage** | Select `privatelink.dfs.core.windows.net`. |
+      | **Private DNS Zone SQL Server** | Select `privatelink.database.windows.net`. |
       | **Private DNS Zone MySQL Server** | Select **privatelink.mysql.database.azure.com**. |
-      | **Private DNS Zone EventHub Namespace** | Select **privatelink.servicebus.windows.net**. |
-      | **Private DNS Zone Synapse Dev** | Select **privatelink.dev.azuresynapse.net**. |
-      | **Private DNS Zone Synapse SQL** | Select **privatelink.sql.azuresynapse.net**. |
+      | **Private DNS Zone EventHub Namespace** | Select `privatelink.servicebus.windows.net`. |
+      | **Private DNS Zone Synapse Dev** | Select `privatelink.dev.azuresynapse.net`. |
+      | **Private DNS Zone Synapse SQL** | Select `privatelink.sql.azuresynapse.net`. |
 
        :::image type="content" source="../images/data-landing-zone-connectivity-private-dns.png" alt-text="Screenshot that shows data landing zone connectivity settings for Azure Private DNS zones.":::
 
-   Select **Review + create**.  
+   Select **Review + create**.
 
 1. When the parameters are validated, select **Create** to start the deployment.
 

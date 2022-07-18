@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Cleanup instructions
-description: Clean up all the resources that were deployed in an Azure subscription during the cloud-scale analytics tutorials. 
+description: Clean up all the resources that were deployed in an Azure subscription during the cloud-scale analytics tutorials.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 07/18/2022
@@ -56,9 +56,9 @@ az account set --subscription $subscription
 az group list -o tsv  --query "[?contains(@.name, '$prefix')==\`true\`].name"
 
 # Delete resource groups that match the prefix.
-for rg in $(az group list -o tsv --query "[?contains(@.name, '$prefix')==\`true\`].name"); 
-do 
-    az group delete --name $rg -y --no-wait; 
+for rg in $(az group list -o tsv --query "[?contains(@.name, '$prefix')==\`true\`].name");
+do
+    az group delete --name $rg -y --no-wait;
 done
 ```
 
