@@ -32,3 +32,8 @@ You can implement ASB security controls to individual service baselines througho
 - [Governance and Strategy (GS)](/security/benchmark/azure/security-controls-v3-governance-strategy)
 
 For each topic, we provide top-level basic guidance along with a list and description of tools, materials, and approaches you can use in your organizations implementation process.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Infrastructure security overview](infrastructure-security-overview.md)

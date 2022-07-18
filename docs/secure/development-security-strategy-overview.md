@@ -45,4 +45,5 @@ Another part of a successful development security strategy is to meet the develo
 
 ## Next steps
 
-- [Innovation security](development-innovation-security.md)
+> [!div class="nextstepaction"]
+> [Development innovation security](development-innovation-security.md)
