@@ -20,7 +20,7 @@ Below we provide an overview of this guidance with links to the details.
 
 ## Methodology
 
-Understand the pieces of the methodology and how they fit into the design as an ongoing exercise. Evaluate corporate policies and processes and how they will align with the over all governance strategy of your existing deployment. For more information about the govern methodology in the Cloud Adoption Framework, see [Governance in the Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/govern/).
+Understand the pieces of the methodology and how they fit into the design as an ongoing exercise. Evaluate corporate policies and processes and how they will align with the overall governance strategy of your existing deployment. For more information about the govern methodology in the Cloud Adoption Framework, see [Governance in the Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/govern/).
 
 ## Benchmark
 
@@ -38,7 +38,7 @@ The following is additional guidance that can be used when risks surface during 
 
 ## Governance considerations
 
-Changes to business processes or technology platforms introduces risk to the business. Slight changes in the corporate narrative or corporate polices can affect continued adoption of the cloud platform.
+Changes to business processes or technology platforms introduce risk to the business. Slight changes in the corporate narrative or corporate policies can affect continued adoption of the cloud platform.
 
 The guidance in the following examples can help to develop your corporate policies.
 
