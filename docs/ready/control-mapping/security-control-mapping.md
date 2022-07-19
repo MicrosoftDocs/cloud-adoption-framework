@@ -197,28 +197,23 @@ Quickstart: (<https://docs.microsoft.com/azure/governance/policy/assign-policy-t
 ## Terraform
 
 When using Terraform, please refer to the following articles.
-Adding Custom Azure Policy Definitions and initiatives:
-(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_definition>)
 
-(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_set_definition>)
+[Adding Custom Azure Policy Definitions and Initiatives](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_definition>)
 
-(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>)
-
-Assigning Azure Policy or Policy initiatives:
-(<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>)
+[Assigning Azure Policy or Policy initiatives](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment>)
 
 ## Bicep
 
 When using the Bicep templates, please refer to the following articles.
-Adding Custom Azure Policy Definitions and initiatives:
-(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep>)
 
-(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep>)
+[Adding Custom Azure Policy Definitions and initiatives](/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep)
+
+[AND] (/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
 
 Assigning Azure Policy or Policy initiatives
-(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=bicep>)
+(/azure/templates/microsoft.authorization/policyassignments?tabs=bicep)
 
-(<https://docs.microsoft.com/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell>)
+(/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell)
 
 **Additional Guidance using MDC (Microsoft Defender for Cloud):**
 
