@@ -69,7 +69,7 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
 
 1.Security team has approved the Azure Platform for usage
 2.You will need to join an individual ASB Service Baseline excel to the previously completed (platform level) ASB control mappings.
-    •Add in columns to accommodate the assessment like: Coverage, Enforcement, Effects allowed
+    -Add in columns to accommodate the assessment like: Coverage, Enforcement, Effects allowed
 3.Perform a line-by-line analysis of the resulting service baseline assessment template
     •For each control objective indicate:
         1.If it can be met by the service or a risk
@@ -78,27 +78,27 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
         4.Needed mitigating controls (if any)
         5.What Azure Policy can enforce/monitor the control
 
-    •Where there are gaps in monitoring or enforcement for the service and control
+    -Where there are gaps in monitoring or enforcement for the service and control
         1.report to the ASB team to drive gaps closed (content, monitoring, or enforcement)
 
-    •For any areas that do not meet the your requirements, please notate the risk involved if you choose to exempt that requirement, the impact, and if it is acceptable to approve or if you are blocked due to the gap.
+    -For any areas that do not meet the your requirements, please notate the risk involved if you choose to exempt that requirement, the impact, and if it is acceptable to approve or if you are blocked due to the gap.
 
 4.Service status is determined:
-    •Either the service meets all requirements, or that the risk is acceptable and is placed on an allow list to be used after guardrails are in place
-    •OR the service gaps are too large / risk is too big and service is placed on a deny list - it cannot be used until gaps are closed by Microsoft
+    -Either the service meets all requirements, or that the risk is acceptable and is placed on an allow list to be used after guardrails are in place
+    -OR the service gaps are too large / risk is too big and service is placed on a deny list - it cannot be used until gaps are closed by Microsoft
 
 **Inputs:**
 
-    •Service Assessment Template (Excel)
-    •Control Objectives to ASB Mapping
-    •Target service
+    -Service Assessment Template (Excel)
+    -Control Objectives to ASB Mapping
+    -Target service
 
 **Outputs:**
 
 •Completed Service Assessment (Excel)
-    •Mitigating controls
-    •Gaps
-    •Approval/Non-Approval for service usage.
+    -Mitigating controls
+    -Gaps
+    -Approval/Non-Approval for service usage.
 
 **5.Implement Guardrails (policy initiative) using Azure Landing Zone or native tools:**
 
@@ -133,7 +133,7 @@ ALZ Accelerator using the Azure Portal (<https://aka.ms/caf/ready/accelerator>)
 When using the ALZ Accelerator Azure Portal based experience, please refer to the following articles.
 Adding Azure Policy Definitions and initiatives:
 
-Create custom security policies in Microsoft Defender for Cloud (<https://docs.microsoft.com/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal>)
+Create custom security policies in Microsoft Defender for Cloud (/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
 
 Tutorial: [Create a custom policy definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
 
@@ -174,25 +174,25 @@ Implementing custom policy definitions, initiatives and assignments when not usi
 
 When using the Azure Portal, please refer to the following articles.
 Adding Customer Azure Policy Definitions and initiatives:
-(<https://docs.microsoft.com/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal>)
-Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>)
-Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>)
+(/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
+Tutorial: (/azure/governance/policy/tutorials/create-custom-policy-definition)
+Tutorial: (/azure/governance/policy/tutorials/create-and-manage)
 
 Assigning Azure Policy or Policy initiatives:
-(<https://docs.microsoft.com/azure/governance/policy/assign-policy-portal>)
+(/azure/governance/policy/assign-policy-portal)
 
 ## ARM
 
 When using the ARM templates, please refer to the following articles.
 Adding Custom Azure Policy Definitions and initiatives:
-Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition>)
-Tutorial: (<https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage>)
-(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policydefinitions?tabs=json>)
-(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json>)
+Tutorial: (/azure/governance/policy/tutorials/create-custom-policy-definition)
+Tutorial: (/azure/governance/policy/tutorials/create-and-manage)
+(/azure/templates/microsoft.authorization/policydefinitions?tabs=json)
+(/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json)
 
 Assigning Azure Policy or Policy initiatives:
-Quickstart: (<https://docs.microsoft.com/azure/governance/policy/assign-policy-template>)
-(<https://docs.microsoft.com/azure/templates/microsoft.authorization/policyassignments?tabs=json>)
+Quickstart: (/azure/governance/policy/assign-policy-template)
+(/azure/templates/microsoft.authorization/policyassignments?tabs=json)
 
 ## Terraform
 
