@@ -498,9 +498,19 @@ items:
         - name: Improve landing zone operations
           href: ready/considerations/landing-zone-operations.md
         - name: Improve landing zone governance
-          href: ready/considerations/landing-zone-governance.md
-        - name: Improve landing zone security
           items:
+          - name: Overview
+            href: ready/considerations/landing-zone-governance.md
+          - name: Naming and tagging standards
+            href: ready/azure-best-practices/naming-and-tagging.md
+          - name: Track costs across workloads
+            href: ready/azure-best-practices/track-costs.md
+          - name: Scale with multiple subscriptions
+            href: ready/azure-best-practices/scale-subscriptions.md
+          - name: Organize subscriptions
+            href: ready/landing-zone/design-area/resource-org.md
+        - name: Improve landing zone security
+          items: 
           - name: Overview
             href: ready/considerations/landing-zone-security.md
           - name: Onboard a subscription to Microsoft Defender for Cloud
