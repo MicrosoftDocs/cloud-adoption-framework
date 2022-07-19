@@ -72,7 +72,7 @@ Secure business critical [assets](../../secure/asset-protection.md), which inclu
 
 Perform oversight and monitoring with [security governance](../../secure/security-governance.md) for sustaining and improving security posture over time by using business goals and risk to determine the best direction for security.
 - [Compliance and reporting](../../secure/security-governance.md#compliance-and-reporting): Have both external and internal security policies meet mandatory requirements in a given industry.
-- [Architecture and standards](../../secure/security-governance.md#architecture-and-standards): Create a unified view across your enterprise estate as most enterprises are a hybrid environment that includes both on-premise and cloud resources.
+- [Architecture and standards](../../secure/security-governance.md#architecture-and-standards): Create a unified view across your enterprise estate as most enterprises are a hybrid environment that includes both on-premises and cloud resources.
 - [Security posture management](../../secure/security-governance.md#security-posture-management): Plan for governance to monitor security standards, provide guidance, and improve processes. Maintain agility by driven governance through policy and continuous improvement.
 - [Governance and protection disciplines](../../secure/security-governance.md#governance-and-protection-disciplines): Apply security controls and provide feedback to identify the best solutions.
 - [Governance and security operations](../../secure/security-governance.md#governance-and-security-operations): Ensure that lessons learned from incidents are integrated into security operations and governance.
