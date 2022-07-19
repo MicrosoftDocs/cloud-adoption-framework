@@ -29,7 +29,7 @@ Business operations have security [risks](../../secure/risk-insights.md). The se
 - [Align your security risk management](../../secure/risk-insights.md#align-your-security-risk-management):  Invest in bridging cybersecurity and organizational leadership to explain security threats using business-friendly terminology, actively listening and communicating to all people across the business.
 - [Understanding cybersecurity risk](../../secure/risk-insights.md#understanding-cybersecurity-risk): Comprehend the motivations and behavior patterns of human attackers for stealing money, information, or technology and identifying potential impact of different types of attacks.
 
-### Security Integration
+### Security integration
 
 Ensure that security is an organizational concern and not siloed into a single group. [Security integration](../../secure/security-integration.md) provides you with guidance on how to integrate security into everyone's role while minimizing friction with business processes. Specific guidance includes:
 - [Normalizing relations](../../secure/security-integration.md#normalize-relations): Ensure all teams are integrated with security teams and have a shared understanding of security goals. Further, work to find the right level of security controls, ensuring the controls don't outweigh business value.
