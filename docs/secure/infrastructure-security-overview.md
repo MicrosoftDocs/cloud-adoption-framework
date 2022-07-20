@@ -1,5 +1,5 @@
 ---
-title: Infrastructure overview
+title: Infrastructure security overview
 description: Understand how application development security relies on infrastructure security.
 author: mpvenables
 ms.author: mas
@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Infrastructure overview
+# Infrastructure security overview
 
 [Infrastructure](infrastructure-security-strategy.md) and [development](development-security-strategy-overview.md) are broad technical areas. Each has numerous distinct conceptual layers and components that integrate together. The provided best practices also take into account the complex relationship between infrastructure and development.
 
@@ -20,11 +20,6 @@ As with all technology disciplines, take a "continuous improvement" approach. St
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Infrastructure security strategy](infrastructure-security-strategy.md)
-
-> [!div class="nextstepaction"]
-> [Infrastructure security architecture](infrastructure-security-architecture.md)
-
-> [!div class="nextstepaction"]
-> [Infrastructure security implementation](infrastructure-security-implementation.md)
+- [Infrastructure security strategy](infrastructure-security-strategy.md)
+- [Infrastructure security architecture](infrastructure-security-architecture.md)
+- [Infrastructure security implementation](infrastructure-security-implementation.md)

@@ -1691,7 +1691,7 @@ items:
             href: secure/infrastructure-security-strategy.md
           - name: Architecture
             href: secure/infrastructure-security-architecture.md
-          - name: Implementation and operations
+          - name: Implementation
             href: secure/infrastructure-security-implementation.md
           - name: Operations and governance
             href: secure/infrastructure-security-operations-governance.md
@@ -1709,7 +1709,7 @@ items:
             href: secure/best-practices/end-to-end-governance.md
           - name: Architecture
             href: secure/development-security-architecture.md
-          - name: Implementation and operations
+          - name: Implementation
             href: secure/development-security-implementation-operations.md
       - name: Toolchain
         href: secure/best-practices/toolchain.md

@@ -57,5 +57,4 @@ ASB controls that are most applicable to securing infrastructure resources are:
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Infrastructure security implementation](infrastructure-security-implementation.md)
+- [Infrastructure security implementation and operations](infrastructure-security-operations-governance.md)
