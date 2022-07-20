@@ -28,9 +28,9 @@ For more information, see [Common Data Model](/common-data-model/)
 
 ## Synapse industry data models
 
-You can use Synapse industry data models as predefined templates for your Azure Synapse Analytics environment's lake database. Each model is a set of business and technical data definitions, pre-designed to meet the needs of a particular industry.
+You can use Synapse industry database templates as predefined templates for your Azure Synapse Analytics environment's lake database. Each model is a set of business and technical data definitions, pre-designed to meet the needs of a particular industry.
 
-Lake databases provide a query and processing interface for the data product files stored in your Azure Data Lake. For more information, see [Lake Database Templates](/azure/synapse-analytics/database-designer/overview-database-templates).
+Databases templates provide a query and processing interface for the data product files stored in your Azure Data Lake. For more information, see [What is Azure Database Templates](/azure/synapse-analytics/database-designer/overview-database-templates).
 
 ## Next steps
 
