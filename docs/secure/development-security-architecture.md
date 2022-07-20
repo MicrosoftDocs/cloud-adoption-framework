@@ -51,5 +51,4 @@ Identify the steps involved in your organization's development workflows, people
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Development security implementation and operations](development-security-implementation-operations.md)
+- [Development security implementation and operations](development-security-implementation-operations.md)

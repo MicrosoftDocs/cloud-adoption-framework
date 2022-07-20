@@ -62,8 +62,5 @@ Your processes and procedures should also include:
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Development security strategy](development-security-strategy-overview.md)
-
-> [!div class="nextstepaction"]
-> [Infrastructure security operations](security-operations.md)
+- [Development security strategy](development-security-strategy-overview.md)
+- [Infrastructure security operations](security-operations.md)
