@@ -87,7 +87,7 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
     - Either the service meets all requirements, or that the risk is acceptable and is placed on an allow list to be used after guardrails are in place
     - OR the service gaps are too large / risk is too big and service is placed on a deny list - it cannot be used until gaps are closed by Microsoft
 
-##### Inputs -platform level
+##### Inputs - platform level
 
 - Service Assessment Template (Excel)
 - Control Objectives to ASB Mapping
@@ -96,9 +96,9 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
 ##### Outputs - platform level
 
 - Completed Service Assessment (Excel)
-  - Mitigating controls
-  - Gaps
-  - Approval/Non-Approval for service usage.
+- Mitigating controls
+- Gaps
+- Approval/Non-Approval for service usage.
 
 After the approval from your internal Security/Audit team that the platform and core services meet their needs, you need to implement the agreed upon appropriate monitoring and guardrails. During the mapping and assessment process, if there were mitigating controls that extend beyond ASB, built-in controls or Azure Policy will need to be implemented using policy definitions and optionally added to initiatives.
 
@@ -212,7 +212,7 @@ When using the Bicep templates, please refer to the following articles.
 
 [Adding Custom Azure Policy Definitions and initiatives](/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep)
 
-[AND](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
+(/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
 
 Assigning Azure Policy or Policy initiatives
 (/azure/templates/microsoft.authorization/policyassignments?tabs=bicep)
@@ -241,4 +241,14 @@ Our control objectives aren’t covered by the ASB controls, how can I unblock t
 
 ## Resources
 
-:::image type="content" source="./media/resource-table.png" alt-text="Resources  - Table" lightbox="./media/resource-table.png":::
+[Service Trust Portal](https://servicetrust.microsoft.com/)
+
+[Cloud Security Alliance](/compliance/regulatory/offering-csa-star-attestation)
+
+[Datacenter Security Overview](/compliance/assurance/assurance-datacenter-security)
+
+[Financial Services Overview](https://servicetrust.microsoft.com/viewpage/financialservicesoverview)
+
+[Financial Institution Risk Assessment Overview](https://servicetrust.microsoft.com/ViewPage/RiskAssessmentOverview)
+
+[Service Level Agreement](/support/legal/sla/)
