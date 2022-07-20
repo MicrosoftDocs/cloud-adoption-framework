@@ -2,8 +2,8 @@
 title: Modernization commitment
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/11/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -17,7 +17,7 @@ Minimum: 1 article		Maximum: 4 articles-->
 
 # Modernization commitment
 
-Commitment to a modernization plan can only occur once you've found a balance between your modernization effort and modernization impact. When you outline the efforts required and their respective impact on your business, it delivers your case for modernization and helps you gain commitment from stakeholders.
+Commitment to a modernization plan can only occur once you've found a balance between your modernization effort and modernization impact. When you outline the efforts required and their respective impact on your business, it delivers your case for modernization, and helps you gain commitment from stakeholders.
 
 Explore the following questions to help you move toward commitment:
 
@@ -28,7 +28,7 @@ Explore the following questions to help you move toward commitment:
 - How do we prioritize those commitments?
 - What comes first, second, and third?
 
-If you haven't analyzed your assets to determine the best way to modernize each asset, do so now with  [Cloud rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization) and then you can [evaluate your modernization options](evaluate-modernization-options.md).
+If you haven't analyzed your assets to determine the best way to modernize each asset, do so now with  [Cloud rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization), and then you can [evaluate your modernization options](evaluate-modernization-options.md).
 
 ## Modernization effort
 
@@ -40,9 +40,14 @@ Maximize your return from each phase required to modernize. The actions required
 
 :::image type="content" source="../../_images/modernize/modernize-methodology-graphic.png" alt-text="Diagram showing the Cloud Adoption Framework modernization efforts required.":::
 
-Evaluate the efforts that are required for establishing epics, creating user stories and tasks, determining iterations, and aligning your priorities.
+Evaluate the effort required for the following tasks:
 
-|Effort  |Description | Example |
+- Establish epics
+- Create user stories and tasks
+- Determine iterations
+- Align your priorities
+
+|Effort  |Description | Example effort |
 |---------|---------|
 |Epics    |Capture business value and overall transformation and record the overall wave of things to modernize, grouped around a common set of modernization behaviors. What do you need to do per workload as you go through modernization to a common foundation set of technology?   | Enabling hybrid work, Faster time to market, Cost-optimizing applications, Application innovation, and Centralizing data. Critical to the epic are setting up the Landing Zone Accelerator and using the Azure Migrate tool, Cost optimizing app, and Well Architected Review.
 |User stories     | Capture each workload to track progress toward completion.     |Four workloads could roll up to one epic for application innovation. More user stories for iteration 0, testing modernized workloads, and identifying workloads for post modernization WAF review. |
@@ -50,9 +55,7 @@ Evaluate the efforts that are required for establishing epics, creating user sto
 
 ## Timeline
 
-Experience and complexity both have significant impact on timelines and migration velocity.
-
-In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as [SAP](https://azure.microsoft.com/solutions/sap/azure-solutions/), might take several two-week iterations to complete all three phases of migration effort for a single workload.
+Experience and complexity both have significant impact on timelines and migration velocity. In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as [SAP](https://azure.microsoft.com/solutions/sap/azure-solutions/), might take several two-week iterations to complete all three phases of migration effort for a single workload.
 
 ## Assess workloads
 
@@ -84,7 +87,7 @@ There are generally the following three groups from which it's important to get 
 - Technical lead
 - Technical team - usually your business leads or an individual person, technical teams, or a group of people, which could include a partner
 
-Make sure they're named, identified, and have agreed to the backlog of commitments. If they're not committed, you'll want a [Well Architected Framework](/azure/architecture/framework/) review and then evaluate afterward to see if you can proceed with modernization.
+Make sure they're named, identified, and have agreed to the backlog of commitments. If they're not committed, you'll want a [Well Architected Framework](/azure/architecture/framework/) review, and then evaluate afterward to see if you can proceed with modernization.
 
 If you're starting your cloud adoption journey with the Migrate horizon, you might need to run a migration analysis. For more information, see [Assess on-premises workloads for Azure migration](/azure/cloud-adoption-framework/plan/contoso-migration-assessment).
 

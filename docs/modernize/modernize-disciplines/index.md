@@ -2,8 +2,8 @@
 title: Modernization disciplines
 description: Build the skills required to execute repeatable processes, which accelerate modernization of multiple applications.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/19/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Modernization disciplines
 
-The modernization disciplines include building skills required to execute repeatable processes, which will accelerate modernization of multiple applications. Technical decision makers, architects, and engineers will move your company closer to a digital native state.
+The modernization disciplines include building skills required to execute repeatable processes, which accelerate modernization of multiple applications. Technical decision makers, architects, and engineers will move your company closer to a digital native state.
 
 :::image type="content" source="../../_images/modernize/modernize-business-alignment.png" alt-text="Graphic showing three steps toward business alignment for modernize, envision, evaluate, and commit.":::
 

@@ -1,9 +1,9 @@
 ---
 title: Modernization scenarios
-description: Review scenarios of cloud adoption-related modernizations and how they provided business value.
+description: View scenarios of cloud adoption-related modernizations and how they provided business value.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/11/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize

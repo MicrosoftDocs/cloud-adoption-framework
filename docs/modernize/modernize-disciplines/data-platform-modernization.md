@@ -2,8 +2,8 @@
 title: Data platform modernization
 description: Understand and evaluate options for maturing your underlying data platforms for modernization.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/20/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -12,7 +12,7 @@ keywords: collect data, migrate data, data migration, data modernization
 ---
 # Data platform modernization
 
-Companies often have different kinds of existing data that they can [democratize](../../innovate/considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data modernization and data migration to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your modernization by using the [Modernize methodology](index.md).
+Companies often have different kinds of existing data that they can [democratize](../../innovate/considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data modernization, and data migration to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your modernization by using the [Modernize methodology](index.md).
 
 This article outlines a series of data platform modernization approaches that align with the Modernize methodology. You can best align these approaches to the standard [database migration toolchain](/data-migration/).
 

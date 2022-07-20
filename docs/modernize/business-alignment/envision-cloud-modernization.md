@@ -2,8 +2,8 @@
 title: Envision cloud modernization
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/20/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -73,7 +73,7 @@ When you align groups of workloads to your motivations, you have something to tr
 
 ## Next steps
 
-Once you've mapped your motivations to workloads, you'll need to determine your approach.
+Once you've mapped your motivations to workloads, determine your approach.
 
 > [!div class="nextstepaction"]
 > [Migration and modernization approaches](../../adopt/migrate-modernize-approaches.md)

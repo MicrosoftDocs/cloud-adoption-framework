@@ -2,8 +2,8 @@
 title: Establish adoption horizons
 description: Use the Cloud Adoption Framework for Azure to understand the adoption horizons necessary to identify and prioritize, based on your adoption goals.
 author: BrianBlanchard
-ms.author: chcomley
-ms.date: 07/20/2022
+ms.author: brblanch
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -31,11 +31,11 @@ Cloud [migration](../migrate/index.md) is the process of moving applications, in
 
 ## Modernize
 
-Cloud [modernization](../modernize/index.md) is the process of updating existing (sometimes legacy) applications for newer computing approaches, including newer application frameworks and use of cloud-native technologies. Modernization can be achieved using PaaS, Containers, Low code apps, and Database-as-a-Service architectures. Key benefits include innovation, agility, developer velocity, and cost optimization.
+Cloud [modernization](../modernize/index.md) is the process of updating existing (sometimes legacy) applications for newer computing approaches, including newer application frameworks and use of cloud-native technologies. This can be done using PaaS, Containers, Low code apps, and Database-as-a-Service architectures. Key benefits include app innovation, agility, developer velocity, and cost optimization.
 
 ## Innovate
 
-Cloud [Innovation](../innovate/index.md) is the process of developing and applying ideas that improve the way things are done or what can be achieved. With focus on understanding your customer needs, you can rapidly invent and build inventions that shape how your customers interact with your products.
+[Innovation](../innovate/index.md) is the process of developing and applying ideas that improve the way things are done or what can be achieved. With focus on understanding your customer needs, you can rapidly invent and build inventions that shape how your customers interact with your products.
 
 ## Align horizons
 
