@@ -16,7 +16,8 @@ You can achieve operational excellence when you design Azure VMware Solution wit
 
 As you plan out your management and monitoring environment for Azure VMware Solution, it's critical to understand the [Azure VMware Solution shared responsibility matrix](/scenarios/azure-vmware/manage), which shows what components Microsoft is responsible for and what components you are responsible for managing and monitoring.  Microsoft abstracts much of the ongoing maintenance, security, and management, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
 
-IMPORTANT:  In order to support the Azure VMware Solution, it's extremely important to follow the recommendations below to configure service health alerting.
+> [!IMPORTANT]
+> To support the Azure VMware Solution, it's extremely important to implement the following recommendations to configure service health alerting.
 
 ## Platform management and monitoring
 
@@ -35,7 +36,7 @@ Review the following considerations for platform management and monitoring of Az
 
 - Consider continuing to use VMware solutions like vRealize Operations Manager and vRealize Network Insights to provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T distributed firewall.
 - Metrics available in vRealize Operations are documented in [VMware's vRealize Operations documentation](https://docs.vmware.com/en/vRealize-Operations/8.6/com.vmware.vcom.metrics.doc/GUID-C272EDE0-49E0-44D6-B47F-C32723AC9246.html).
-- *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution . Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported.  SNMP Traps are not supported.
+- *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution. Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported.  SNMP Traps are not supported.
 - While Microsoft monitors the health of vSAN, it is possible to utilize vCenter to query and monitor the performance of vSAN.  Performance metrics can be viewed from a VM or backend perspective, showing average latency, IOPS, throughput, and outstanding IO through vCenter.
 - vCenter logs can be sent to Storage Accounts or Event Hubs using the Diagnostic Settings within the Private Cloud resource in Azure.  This is not directly configurable within vCenter, only via the Private Cloud resource in Azure - this is documented in detail within the [configuring VMware syslog documentation](/azure/azure-vmware/configure-vmware-syslogs).  This is raw syslog, so consider retention and downstream processing before enabling.
 - In-guest memory collection isn't supported by vRealize Operations using VMware tools. Active and consumed memory use will continue to work.
