@@ -11,6 +11,7 @@ ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 <!--This article was called out as a dependency needed for the "envision" content of the modernize methodology documentation. Alternative proposed filename was "establishing-cloud-horizons", but naming index.md for now since it's serving as the overview for "adopt", at least for the time being.*-->
+
 # Establish adoption horizons
 
 The methodologies required for cloud adoption generally fall into three horizons: [Migrate](../migrate/index.md), [Modernize](../modernize/index.md), and [Innovate](../innovate/index.md). It's important to identify and prioritize which horizon sequence best fits across your cloud adoption plan, based on your adoption goals.

@@ -3,7 +3,7 @@ title: Envision cloud modernization
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: chcomley
-ms.date: 07/20/2022
+ms.date: 07/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -20,7 +20,7 @@ Every cloud adoption plan contains three horizons: [Migrate](../../get-started/m
 
 The following steps help you envision your modernization strategy and end state, based on your strategic objectives.
 
-## Step 1: Understand your corporate & strategic motivations for modernization
+## 1. Understand your corporate & strategic motivations for modernization
 
 Some of the common modernization triggers include the need to deliver applications and features faster, urgent capacity needs, or a software or hardware refresh.
 
@@ -39,13 +39,13 @@ There are many other motivations that you might be considering when you go to th
 
 When you know *why* you're moving to the cloud, you can make better technical decisions.
 
-## Step 2: Flag workloads, which could better deliver on those motivations if they were to be modernized
+## 2. Flag workloads, which could better deliver on those motivations if they were to be modernized
 
 Modernization of your workloads can help you achieve the [common modernization motivations](../../strategy/business-outcomes/data-innovations.md#data-innovations).
 
 It's critical that you understand the limitations of your current state workloads and the best paths toward modernization. This understanding helps you set realistic expectations. *What are you moving?* We don't modernize assets, we modernize workloads, so conceptually reorganize your infrastructure, data stores, and apps into workloads. Then, you can start aligning or grouping workloads based on how they impact the strategy.
 
-<!--link to breaking down adopt flow-->
+For more information about approaches to migration and modernization, see 
 
 If you've already done a migration and followed the "plan" best practices, you've likely done this exercise. If not (if you're starting with a modernization action), do the following tasks:
 
@@ -55,7 +55,7 @@ If you've already done a migration and followed the "plan" best practices, you'v
 - [Review migration and modernization approaches](../../adopt/migrate-modernize-approaches.md) to understand the three adoption horizons and how to prioritize.
 - Review the adoption horizons, [Migrate](./../../migrate/index.md), [Modernize](index.md), and [Innovate](../../innovate/index.md) to help you prioritize your goals.
 
-## Step 3: Define & track *clusters* of workloads based on the motivation
+## 3. Define & track *clusters* of workloads based on the motivation
 
 In any existing datacenter, you have lots of information from different data sources and many applications. When you move to the cloud and approach modernization, you need to rethink about your datacenter from a context of workloads. We aren't modernizing or rearchitecting individual workloads, we're applying tactics that scale to a cluster of workloads, to change them all in similar ways.
 
@@ -76,4 +76,4 @@ When you align groups of workloads to your motivations, you have something to tr
 Once you've mapped your motivations to workloads, determine your approach.
 
 > [!div class="nextstepaction"]
-> [Migration and modernization approaches](../../adopt/migrate-modernize-approaches.md)
+> [Approaches to cloud migration and modernization](../../adopt/migrate-modernize-approaches.md).
