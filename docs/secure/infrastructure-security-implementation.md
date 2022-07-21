@@ -1,6 +1,6 @@
 ---
-title: Infrastructure security implementation and operations
-description: Learn about implementation and operations for your organization in the context of infrastructure security.
+title: Infrastructure security implementation
+description: Learn about implementation for your organization in the context of infrastructure security.
 author: mpvenables
 ms.author: mas
 ms.date: 06/17/2022
@@ -10,9 +10,9 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Infrastructure security implementation and operations
+# Infrastructure security implementation
 
-This article describes implementation and operations for your organization in the context of infrastructure security.
+This article describes implementation for your organization in the context of infrastructure security.
 
 ## Implementation
 

@@ -35,5 +35,4 @@ For each topic, we provide top-level basic guidance along with a list and descri
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Infrastructure security overview](infrastructure-security-overview.md)
+- [Infrastructure security overview](infrastructure-security-overview.md)
