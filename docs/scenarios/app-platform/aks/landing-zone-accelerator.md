@@ -39,7 +39,7 @@ These articles provide guidelines for creating your landing zone based on the de
 - [Network topology and connectivity](./network-topology-and-connectivity.md)
 - [Resource organization](./resource-organization.md)
 - [Security](./security.md)
-- [Management](./management.md)
+- [Management & BCDR](./management.md)
 - [Platform automation and DevOps](./platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
