@@ -84,4 +84,5 @@ The diagram highlights how security teams implement continuous improvements acro
 
 ## Next steps
 
-- [Secure the pipeline and CI/CD workflow](./best-practices/secure-devops.md)
+> [!div class="nextstepaction"]
+> [Securing the pipeline and CI/CD workflow](./best-practices/secure-devops.md)

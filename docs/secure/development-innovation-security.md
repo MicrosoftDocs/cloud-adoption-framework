@@ -62,4 +62,5 @@ Incorporate governance, risk, and compliance considerations into your strategy s
 
 ## Next steps
 
-- [Securing DevOps strategy and process](devops-strategy-process-security.md)
+> [!div class="nextstepaction"]
+> [Securing DevOps strategy and process](devops-strategy-process-security.md)

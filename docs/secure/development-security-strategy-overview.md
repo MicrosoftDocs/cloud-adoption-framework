@@ -16,7 +16,7 @@ Development security is a broad technical area with multiple distinct elements. 
 
 Development security requires protecting the application or code itself, and the underlying infrastructure, platform, or device.
 
-:::image type="content" source="media/development-lifecycle-attacker-opportunities.png" border="false" alt-text="Diagram shows attacker opportunities, including IT infrastructure attacks." lightbox="media/development-lifecycle-attacker-opportunities.png":::
+:::image type="content" source=`media/development-lifecycle-attacker-opportunities.png` border="false" alt-text="Diagram shows attacker opportunities, including IT infrastructure attacks." lightbox=`media/development-lifecycle-attacker-opportunities.png`:::
 
 ## Integrated security practices
 
@@ -45,4 +45,5 @@ Another part of a successful development security strategy is to meet the develo
 
 ## Next steps
 
-- [Development innovation security](development-innovation-security.md)
+> [!div class="nextstepaction"]
+> [Development innovation security](development-innovation-security.md)

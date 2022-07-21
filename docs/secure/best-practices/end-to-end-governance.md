@@ -72,4 +72,5 @@ To learn more about governance design and permissions, see:
 
 Now that you understand the need to secure ARM templates and DevOps workflows, learn how to manage secrets in a secure way.
 
-- [Development security architecture](../development-security-architecture.md)
+> [!div class="nextstepaction"]
+> [Development security architecture](../development-security-architecture.md)
