@@ -32,7 +32,7 @@ The process flow of control mapping:
 5. Implement guardrails with policy initiatives using ALZ or native tools
 
 > [!TIP]
-> You should review the guidance in Tailor the Azure landing zone architecture for details on how to tailor the Azure Landing Zone architecture to support your control mapping requirements.
+> You should review the guidance in [Tailor the Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) for details on how to tailor the Azure Landing Zone architecture to support your control mapping requirements.
 
 ### 1.Identify the controls required
 
@@ -45,7 +45,7 @@ A sample of formalized controls list:
 ### 2.Map the controls to ASB and create set of custom controls
 
 For each control you have captured use appropriate control titles, domain categories, and guidance/description to identify related ASB controls which are a match appropriately. Align the intent of each control as close as possible and note the deviance or gaps in the spreadsheet.
-You can also use common frameworks that are mapped to both your organization’s and ASB where they exist. For example, if both yours and ASB controls are already mapped to NIST 800-53 r4 or CIS 7.1 you could join the data sets together on that pivot. Intermediate common frameworks can be found in the ASB resources section: (/security/benchmark/azure/2-cis-benchmark)
+You can also use common frameworks that are mapped to both your organization’s and ASB where they exist. For example, if both yours and ASB controls are already mapped to NIST 800-53 r4 or CIS 7.1 you could join the data sets together on that pivot. Intermediate common frameworks can be found in the [ASB resources section](/security/benchmark/azure/2-cis-benchmark)
 
 Single Control Mapping Example:
 Your Org's Control Objectives
@@ -54,7 +54,7 @@ Your Org's Control Objectives
 
 Above table: shows one of the unique control objectives with key words highlighted
 
-We can look at the existing categorization of a given control: ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement application firewalls and to harden and patch their applications to ‘corporate guidelines’. Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. To quickly search a given version of the Azure Security Benchmark we provide Excel download files of each release that can be quickly searched by control ID or part of the description verbiage.
+We can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement application firewalls and to harden and patch their applications. Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. To quickly search a given version of the Azure Security Benchmark we provide Excel download files of each release that can be quickly searched by control ID or part of the description verbiage.
 In this step the process identifies and maps controls that are covered under ASB.
 
 ### 3.Identify the controls not mapped with ASB and respective policies
@@ -120,9 +120,7 @@ After the approval from your internal Security/Audit team that the platform and 
 ### 5.Implement Guardrails (policy initiative) using Azure Landing Zone or native tools
 
 > [!TIP]
-> As part of the Azure Landing Zone Accelerators (Portal, Bicep & Terraform), by default, we assign the ASB policy initiative to Intermediate Root Management Group (‘Contoso’ for example).
-
-This article describes the process of identifying, mapping, and implementing regulatory compliance related controls as part of Azure Landing Zone (ALZ) deployment.ALZ deployment covers policies that are aligned with ASB for platform level security controls.
+> As part of the Azure Landing Zone Accelerators (Portal, Bicep & Terraform), by default, we assign the ASB policy initiative to Intermediate Root Management Group (‘Contoso’ for example). This article describes the process of identifying, mapping, and implementing regulatory compliance related controls as part of Azure Landing Zone (ALZ) deployment.ALZ deployment covers policies that are aligned with ASB for platform level security controls.
 
 #### ALZ Implementation Policy Guidance
 
