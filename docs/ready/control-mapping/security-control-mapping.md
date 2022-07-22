@@ -36,7 +36,7 @@ The process flow of control mapping:
 
 ### 1.Identify the controls required
 
-Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found here
+Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found [Here](https://github.com/tshah2808/cloud-adoption-framework-pr/tree/collab-control-mapping/docs/ready/control-mapping/templates)
 
 A sample of formalized controls list:
 
@@ -54,7 +54,7 @@ Your Org's Control Objectives
 
 Above table: shows one of the unique control objectives with key words highlighted
 
-We can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement application firewalls and to harden and patch their applications. Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. To quickly search a given version of the Azure Security Benchmark we provide Excel download files of each release that can be quickly searched by control ID or part of the description verbiage.
+We can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement application firewalls and to harden and patch their applications. Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. To quickly search a given version of the Azure Security Benchmark we provide [Excel download files](/security/benchmark/azure/overview#download) of each release that can be quickly searched by control ID or part of the description verbiage.
 In this step the process identifies and maps controls that are covered under ASB.
 
 ### 3.Identify the controls not mapped with ASB and respective policies
