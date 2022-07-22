@@ -48,4 +48,4 @@ For more information about core DevOps security controls in the Azure Security B
 > [Infrastructure and development security best practices overview](security-best-practices-introduction.md)
 
 > [!div class="nextstepaction"]
-> [Security considerations](../strategy/define-security-strategy.md)
+> [Define a security strategy](../strategy/define-security-strategy.md)
