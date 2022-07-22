@@ -55,12 +55,13 @@ Your Org's Control Objectives
 
 Above table: shows one of the unique control objectives with key words highlighted
 
-In this example, we can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. To quickly search a given version of the Azure Security Benchmark we provide [Excel download files](/security/benchmark/azure/overview#download) of each release that can be quickly searched by control ID or part of the description verbiage.
+In this example, we can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. 
+To quickly search a given version of the Azure Security Benchmark we provide [Excel download files](/security/benchmark/azure/overview#download) of each release that can be quickly searched by control ID or part of the description verbiage.
 In this step the process identifies and maps controls that are covered under ASB.
 
 ### 3.Identify the controls not mapped with ASB and respective policies
 
-Any controls that might not map directly to ASB should be marked as needing mitigating automation, and a custom policy or automation script should be developed in the guardrail implementation process.
+Any identified controls that might not map directly to ASB should be marked as needing mitigating automation, and a custom policy or automation script should be developed in the guardrail implementation process.
 
 ### 4.Perform platform and Service level Assessment
 
@@ -129,7 +130,9 @@ Depending on the customer’s control objectives, you might need to create custo
 
 Please reference the guidance below for each ALZ implementation option.
 [ALZ Accelerator using the Azure Portal](https://aka.ms/caf/ready/accelerator)
+
 When using the ALZ Accelerator Azure Portal based experience, please refer to the following articles.
+
 Adding Azure Policy Definitions and initiatives:
 
 [Create custom security policies in Microsoft Defender for Cloud](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
@@ -143,6 +146,7 @@ Tutorial: [Create a custom policy definition](/azure/governance/policy/tutorials
 [ARM](/aka.ms/alz/arm) and [AzOps](/azure/azops-accelerator>)
 
 When using the ALZ ARM templates implementation with AzOps, please refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
+
 [Adding Custom Azure Policy Definitions and Initiatives](/aka.ms/alz/wiki/azops)
 [Assigning Azure Policy](/aka.ms/alz/wiki/azops)
 
@@ -151,6 +155,7 @@ When using the ALZ ARM templates implementation with AzOps, please refer to the 
 [caf-enterprise-scale](/aka.ms/alz/tf/wiki)
 
 When using the ALZ Terraform module caf-enterprise-scale, refer to the repository wiki for guidance on how to manage additional policy definitions and assignments.
+
 [Adding Custom Azure Policy Definitions,Initiatives and assigning](https://aka.ms/alz/terraform/custompolicy)
 
 [Assigning a built-in Azure Policy](https://aka.ms/alz/terraform/assignpolicy)
@@ -162,6 +167,7 @@ Adding Custom Policy Definitions/Initiatives and assigning:
 ## ALZ-Bicep
 
 When using the ALZ-Bicep implementation please refer to the article “How does ALZ-Bicep implement Azure Policy” to learn how to create your own policy definitions and assignments.
+
 [Adding Custom Azure Policy Definitions and Initiatives](https://aka.ms/alz/bicep/custompolicy)
 
 [Assigning Azure Policies](https://aka.ms/alz/bicep/assignpolicy)
@@ -174,28 +180,31 @@ Implementing custom policy definitions, initiatives and assignments when not usi
 
 When using the Azure Portal, please refer to the following articles.
 Adding Customer Azure Policy Definitions and initiatives:
-(/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
-Tutorial: (/azure/governance/policy/tutorials/create-custom-policy-definition)
-Tutorial: (/azure/governance/policy/tutorials/create-and-manage)
 
-Assigning Azure Policy or Policy initiatives:
-(/azure/governance/policy/assign-policy-portal)
+[create custom security policies in MDC](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
+
+[Tutorial](/azure/governance/policy/tutorials/create-custom-policy-definition)
+[Tutorial](/azure/governance/policy/tutorials/create-and-manage)
+
+[Assigning Azure Policy or Policy initiatives](/azure/governance/policy/assign-policy-portal)
 
 ## ARM
 
 When using the ARM templates, please refer to the following articles.
+
 Adding Custom Azure Policy Definitions and initiatives:
+
 [Tutorial](/azure/governance/policy/tutorials/create-custom-policy-definition)
 [Tutorial](/azure/governance/policy/tutorials/create-and-manage)
 
-(/azure/templates/microsoft.authorization/policydefinitions?tabs=json)
+[Bicep & ARM Policy Definition template reference](/azure/templates/microsoft.authorization/policydefinitions?tabs=json)
 
-(/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json)
+[Bicep & ARM Policyset template reference](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json)
 
 Assigning Azure Policy or Policy initiatives:
 
 [Quickstart](/azure/governance/policy/assign-policy-template)
-(/azure/templates/microsoft.authorization/policyassignments?tabs=json)
+[Policy Assignment](/azure/templates/microsoft.authorization/policyassignments?tabs=json)
 
 ## Terraform
 
@@ -203,7 +212,11 @@ When using Terraform, please refer to the following articles.
 
 [Adding Custom Azure Policy Definitions and Initiatives](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_definition)
 
-[Assigning Azure Policy or Policy initiatives](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment)
+[Adding Azure Policy set Definition](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment)
+
+[Assigning management group policy](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment)
+
+[Assigning Azure Policy or Policy Initiative](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment)
 
 ## Bicep
 
@@ -211,12 +224,15 @@ When using the Bicep templates, please refer to the following articles.
 
 [Adding Custom Azure Policy Definitions and initiatives](/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep)
 
-(/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
+[Policy set Definition](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
 
-Assigning Azure Policy or Policy initiatives
-(/azure/templates/microsoft.authorization/policyassignments?tabs=bicep)
+[Assigning Azure group Policy](/azure/templates/microsoft.authorization/policyassignments?tabs=bicep)
 
-(/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell)
+Assigning Azure Policy or Initiatives:
+
+[Bicep & ARM template](/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell)
+
+[Quickstart](/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell)
 
 ## Additional Guidance using MDC (Microsoft Defender for Cloud)
 
