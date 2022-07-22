@@ -3,7 +3,7 @@ title: Commit to modernization
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: BrianBlanchard
 ms.author: chcomley
-ms.date: 07/20/2022
+ms.date: 07/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -28,7 +28,8 @@ Explore the following questions to help you move toward commitment:
 - How do we prioritize those commitments?
 - What comes first, second, and third?
 
-If you haven't analyzed your assets to determine the best way to modernize each asset, do so now with  [Cloud rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization), and then you can [evaluate your modernization options](evaluate-modernization-options.md).
+If you haven't analyzed your assets to determine the best way to modernize each asset, do so now with  [Cloud rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization).
+If you haven't already, we recommend you see [Envision your modernization](envision-cloud-modernization.md) and [Evaluate your options](evaluate-modernization-options.md) before you continue.
 
 ## 1. Determine effort
 
@@ -40,7 +41,7 @@ Maximize your return from each of the following three phases required for migrat
 
 :::image type="content" source="../../_images/modernize/modernize-methodology-graphic.png" alt-text="Diagram showing the Cloud Adoption Framework modernization efforts required.":::
 
-Evaluate the effort required for the following tasks:
+Remember more of your behind-the-scenes efforts:
 
 - Establish work items and tasks
 - Determine iterations
@@ -70,7 +71,7 @@ Workloads that have undergone any significant architectural change go back throu
 
 4. Create your work items.
 
-   The following example shows an outline of the efforts required for a modernization plan. The efforts are broken down into epics, user stories, and tasks using Azure DevOps. There are many other ways to track your work.
+   The following illustration shows an outline of the efforts required for a modernization plan. The efforts are broken down into epics, user stories, and tasks, using Azure DevOps as an example.
 
    :::image type="content" source="../../_images/modernize/commitment-to-modernization-plan.png" alt-text="Graphic showing modernization plan commitment flow.":::
 
