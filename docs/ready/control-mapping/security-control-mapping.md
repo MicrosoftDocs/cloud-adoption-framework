@@ -11,10 +11,11 @@ ms.subservice: ready
 
 # Security Control Mapping with Azure Landing Zone
 
-Many organizations are required to comply with certain industry regulations before adopting and onboarding the Azure cloud services. These compliance regulations are identified by compliance domain and controls respectively. For example, Access Control is a compliance domain and CMMC L3 AC 1.001 is a control ID.
-The best practice recommendation is to map the required compliance controls to Azure Security Benchmark (ASB) and create custom set of the controls that are not covered by ASB. Mapping the required controls to ASB can greatly expedite secure Azure onboarding experience.
-ASB provides a canonical set of cloud-centric technical security controls based on widely used compliance control framework such as NIST, CIS, PCI.
-There are many ASB Regulatory compliance built-in initiatives already available. If you are interested in a specific Compliance Domain, please reference  Regulatory Compliance Built-in initiatives
+Many organizations are required to comply with certain industry/regional regulations before adopting and onboarding the Azure cloud services. These compliance regulations are identified by compliance domain and controls respectively. For example, **CMMC L3 AC 1.001** where AC is Access Control domain and 1.001 is a control ID in Cybersecurity Maturity Model Certification (CMMC) framework. The best practice recommendation is to map the required compliance controls to Azure Security Benchmark (ASB) and create custom set of the controls that are not covered by ASB.
+
+Mapping the required controls to ASB can greatly expedite secure Azure onboarding experience. ASB provides a canonical set of cloud-centric technical security controls based on widely used compliance control framework such as NIST, CIS, PCI.
+There are many ASB Regulatory compliance built-in initiatives already available. If you are interested in a specific Compliance Domain, please reference:
+ [Regulatory Compliance Built-in initiatives](/azure/governance/policy/samples/azure-security-benchmark)
 
 > [!NOTE]
 > The control mappings between ASB and industry benchmarks (such as CIS, NIST, and PCI) only indicate that a specific Azure feature(s) can be used to fully or partially address a control requirement defined in these industry benchmarks. You should be aware that such implementation does not necessarily translate to the full compliance of the corresponding control(s) in these industry benchmarks.
@@ -54,7 +55,7 @@ Your Org's Control Objectives
 
 Above table: shows one of the unique control objectives with key words highlighted
 
-We can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement application firewalls and to harden and patch their applications. Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. To quickly search a given version of the Azure Security Benchmark we provide [Excel download files](/security/benchmark/azure/overview#download) of each release that can be quickly searched by control ID or part of the description verbiage.
+In this example, we can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. To quickly search a given version of the Azure Security Benchmark we provide [Excel download files](/security/benchmark/azure/overview#download) of each release that can be quickly searched by control ID or part of the description verbiage.
 In this step the process identifies and maps controls that are covered under ASB.
 
 ### 3.Identify the controls not mapped with ASB and respective policies
