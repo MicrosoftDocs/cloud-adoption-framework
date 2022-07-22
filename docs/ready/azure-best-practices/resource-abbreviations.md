@@ -37,36 +37,36 @@ This list provides recommended abbreviations for various Azure resource types to
 | Bastion | `Microsoft.Network/bastionHosts` | `bas-` |
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp-` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne-` |
-| Connections | `Microsoft.Network/connections`| `con-` |
+| Connections | `Microsoft.Network/connections` | `con-` |
 | DNS | `Microsoft.Network/dnsZones` | `dnsz-` |
 | DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp-` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
 | Front Door instance | `Microsoft.Network/frontDoors` | `fd-` |
-| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
-| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-`|
-| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-`|
-| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule-`|
+| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-` |
+| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-` |
+| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-` |
+| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule-` |
 | Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw-` |
 | NAT gateway | Microsoft.Network/natGateways | `ng-` |
-| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-`|
+| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-` |
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr-` |
 | Network Watcher | `Microsoft.Network/networkWatchers` | `nw-` |
 | Private Link | `Microsoft.Network/privateLinkServices` | `pl-` |
-| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-`|
-| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre-`|
+| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-` |
+| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre-` |
 | Route filter | `Microsoft.Network/routeFilters` | `rf-` |
 | Route table | `Microsoft.Network/routeTables` | `rt-` |
 | Service endpoint | `Microsoft.serviceEndPointPolicies` | `se-` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf-` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr-` |
-| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet-`|
-| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-`|
-| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
-| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-`|
-| VPN Gateway | `Microsoft.Network/vpnGateways` | `vpng-`|
+| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet-` |
+| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-` |
+| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-` |
+| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-` |
+| VPN Gateway | `Microsoft.Network/vpnGateways` | `vpng-` |
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn-` |
 | VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst-` |
 | Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
