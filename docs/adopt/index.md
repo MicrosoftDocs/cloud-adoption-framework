@@ -17,7 +17,7 @@ Your cloud adoption plan will involve one or more horizons. Each horizon maps to
 
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
 
-## [Horizon 1: Migrate](../migrate/index.md)
+## Horizon 1: Migrate
 
 The goal of the migrate horizon is to move on-site workloads to the cloud.
 
@@ -25,7 +25,10 @@ The goal of the migrate horizon is to move on-site workloads to the cloud.
 - *Solutions:* Trade your on-site capital expense for a pay-as-you-go model and adopt IaaS solutions.
 - *Key Benefits:* Cost, security, and availability.
 
-## [Horizon 2: Modernize](../modernize/index.md)
+> [!div class="nextstepaction"]
+> [Horizon 1: Migrate](../migrate/index.md)
+
+## Horizon 2: Modernize
 
 The goal of the modernize horizon is to enhance business processes at scale.
 
@@ -33,7 +36,10 @@ The goal of the modernize horizon is to enhance business processes at scale.
 - *Solutions:* Adopt platform-as-a-service (PaaS) solutions across workload clusters.
 - *Key Benefits:* Security, performance, and cost.
 
-## [Horizon 3: Innovate](../innovate/index.md)
+> [!div class="nextstepaction"]
+> [Horizon 2: Modernize](../modernize/index.md)
+
+## Horizon 3: Innovate
 
 The goal of the innovate horizon is to apply customer-focused solutions to transform business outcomes.
 
@@ -41,19 +47,12 @@ The goal of the innovate horizon is to apply customer-focused solutions to trans
 - *Solutions:* Use data and applications to empower adoption and build predictive tools.
 - *Key Benefits:* Architecture, performance, and flexibility.
 
+> [!div class="nextstepaction"]
+> [Horizon 3: Innovate](../innovate/index.md)
+
 ## Next steps
 
 > [!div class="checklist"]
 >
 > - Assess your goals
 > - Select your horizon
-
-
-> [!div class="nextstepaction"]
-> [Horizon 1: Migrate](../migrate/index.md)
-
-> [!div class="nextstepaction"]
-> [Horizon 2: Modernize](../modernize/index.md)
-
-> [!div class="nextstepaction"]
-> [Horizon 3: Innovate](../innovate/index.md)
