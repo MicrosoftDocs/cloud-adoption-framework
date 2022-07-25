@@ -26,7 +26,7 @@ The goal of the migrate horizon is to move on-site workloads to the cloud.
 - *Key Benefits:* Cost, security, and availability.
 
 > [!IMPORTANT]
-> You might want to modernize before you migrate. See next steps below for guidance.
+> You might want to modernize while you migrate. See next steps below for guidance.
 
 ## Horizon 2: Modernize
 

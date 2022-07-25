@@ -12,43 +12,49 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # Approaches to cloud migration and modernization
 
-As part of your cloud adoption journey, you can choose your approach for migration and modernization. Is there an advantage to doing one before the other? What's best for your business? You can take one of the following three approaches to cloud migration and modernization:
-
-- Migrate first and modernize later
-- Modernize first and migrate later
-- Modernize in parallel to migration. If you decide to modernize in parallel to migration, you should modernize with a separate team that's not involved in migration. It's important to keep those horizons separated. You'll also want to separate your clusters of workloads. For more information about workload clusters, see [Envision cloud modernization](../modernize/business-alignment/envision-cloud-modernization.md#step-3-define--track-clusters-of-workloads-based-on-the-motivation).
+You can adopt the cloud in two ways. **??What horizon is building new apps??** (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies. You have options if you want to adapt existing applications. You can migrate to IaaS, modernize with PaaS, replace with SaaS, or stay on-prem with a hybrid cloud.
 
 :::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
+For most organizations, the best clouds adoption choices are to migrate and modernize existing applications. However, it is not necessary that you migrate before modernizing. Here we will discuss the benefits of migrating first and modernizing first.
+
 ## Migrate first, modernize later approach
 
-There are distinct motivations, reasons, and outcomes for migrating first. For instance, if you're trying to get out of a data center now, you might want to migrate first and change things later. If you're more focused on control, you might choose to lift-and-shift, go straight to Iaas, do some resizing, and migrate workloads.
+This approach is often called rehosting or "lift-and-shift." Here, you move an existing application to the cloud as-is. This allows you to quickly benefit from the cloud. 
 
-Migrate first if you immediately want the following benefits for your organization:
+### 1. Migration Priorities
 
-- Reduce your data center footprint fast
-- Save immediately in costs
-- Have immediate compatibility with IaaS VMs
-- Test your migration to ensure cloud-readiness
+Migrate before modernizing if you want immediate:
 
-## Modernize first, migrate later approach
+- **Sustainability:** The lift-and-shift approach is the fastest way to reduce your data center footprint.
+- **Savings:** Using IaaS solutions will let you trade capital expense with operational expense. Pay as you go and only pay for what you use.
+- **IaaS Solutions:** IaaS VM provide immediate compatibility with existing on-prem applications. Migrate your workloads to Azure Virtual Machines and modernize while in the cloud.
+- **Cloud-Readiness Test:** Test your migration to ensure your organization has the people and processes in place to adopt the cloud. Migrating a minimum viable product is a great approach to test the cloud-readiness of your organization.  
 
-If your main goal is to get a handful of apps faster time-to-market in the cloud, you might want to modernize first.
+### 2. Migration Order
 
-Modernize first if you immediately want the following benefits for your organization:
+:::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach-v2.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
-- Faster time to market for applications
-- Increased app innovation
-- Enhanced productivity
-- Great app dev velocity
+
+
+## Modernize during the move
+
+This is approach is often called replatforming. Here, you will modernize aspects of an application during the migration process. Modernize during the move if you want:
+
+- **Faster time-to-market:** Use existing PaaS technologies to speed up deployment.
+- **Increased Innovation:** PaaS allows developers to focus on business logic and critical data plays.
+- **Enhanced Productivity:** Adopting PaaS narrowing the skills required to push apps to market and increases the productivity of development, security, and operations.
+- **Better Velocity:** Switching to managed services will limit the items developers need to focus on and will increase their sprint productivity.
+
+***Examples:***
+
+- Migrate your SQL database to a managed database solution such as Azure SQL Database.
+- Move your on-prem directory services to Azure Active Directory Domain Services.
 
 ## Application portfolio migration and modernization approach
 
-Most companies want a combination of control and productivity, based on the set of workloads they're assessing. So, we tend to see a mixed approach. In this section we focus less on the horizon separation and sequence, and more on the breakdown of quantity and value of your workloads.
 
-The following image shows an example of how a customer could break down their application portfolio into migrate and modernization approaches, so they can approach it at a deeper level. The percentages are examples only.
 
-:::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
 ### Migration
 
