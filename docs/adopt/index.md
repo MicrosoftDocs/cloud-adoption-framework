@@ -1,9 +1,9 @@
 ---
 title: Establishing cloud adoption horizons
 description: Use the Cloud Adoption Framework for Azure to understand the adoption horizons necessary to identify and prioritize, based on your adoption goals.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 06/28/2022
+author: StephenSumner
+ms.author: ssumner
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
