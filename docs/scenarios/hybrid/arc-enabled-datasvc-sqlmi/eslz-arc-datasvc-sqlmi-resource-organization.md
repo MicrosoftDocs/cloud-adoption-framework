@@ -1,4 +1,16 @@
-# Resource organization for Azure Arc-enabled Data Services SQL Managed Instance
+---
+title: Resource organization for Azure Arc-enabled SQL Managed Instance
+description: Learn how to organize resources when working with Azure Arc-enabled SQL Managed Instance.
+author: tibalabu
+ms.author: tibalabu
+ms.date: 07/25/2022
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenario
+ms.custom: e2e-hybrid
+---
+
+# Resource organization for Azure Arc-enabled SQL Managed Instance
 
 Resource organization decisions are a foundation for all compliance-related design areas and involves preparing your environment and setting up your resources so you can efficiently secure, manage, and track costs related to your workloads
 
@@ -8,7 +20,7 @@ It is important to know how to use consistent resource grouping, defined naming 
 
 ## Resource consistency and organization
 
-It's important to define a structure on how resources will be projected to Azure management scopes  (management groups, subscriptions, and resource groups) and this should be done before onboarding any Azure Arc-enabled SQL Managed Instance onto Azure Arc. Review the Cloud Adoption Framework recommendations on how to [organize resources](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy). 
+It's important to define a structure on how resources will be projected to Azure management scopes  (management groups, subscriptions, and resource groups) and this should be done before onboarding any Azure Arc-enabled SQL Managed Instance onto Azure Arc. Review the Cloud Adoption Framework recommendations on how to [organize resources](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy).
 
 Also you can review the [resource organization design](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org) area of the Azure landing zones to assess the impact of Azure Arc-enabled SQL Managed Instance on your overall resource organization model.
 
@@ -22,9 +34,8 @@ You can apply a tag either during Azure Arc-enabled SQL Managed Instance onboard
 
 After onboarding the Azure Arc-enabled SQL Managed Instance to resource groups and added tags, you can use [Resource Graph](https://docs.microsoft.com/en-us/azure/governance/resource-graph/overview) queries, view groupings based on resource groups, or organize and inventory your resources using tags.
 
-# diagram
-
 ## Next steps
+
 For more information about your hybrid and multicloud cloud journey, see the following articles:
 
 - [Plan an Azure Arc-enable data services deployment](https://docs.microsoft.com/en-us/azure/azure-arc/data/plan-azure-arc-data-services)
