@@ -26,7 +26,7 @@ The goal of the migrate horizon is to move on-site workloads to the cloud.
 - *Key Benefits:* Cost, security, and availability.
 
 > [!IMPORTANT]
-> You might want to modernize while you migrate. See next steps below for guidance.
+> You might want to modernize while you migrate. See next steps for guidance.
 
 ## Horizon 2: Modernize
 
@@ -37,7 +37,7 @@ The goal of the modernize horizon is to enhance business processes at scale.
 - *Key Benefits:* Security, performance, and cost.
 
 > [!IMPORTANT]
-> You might want to migrate before you modernize. See next steps below for guidance.
+> You might want to migrate before you modernize. See next steps for guidance.
 
 ## Horizon 3: Innovate
 
@@ -49,4 +49,4 @@ The goal of the innovate horizon is to apply customer-focused solutions to trans
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Migrate or Modernize First](../adopt/migrate-modernize-approaches.md)
+> [Migrate or Modernize First?](../adopt/migrate-modernize-approaches.md)
