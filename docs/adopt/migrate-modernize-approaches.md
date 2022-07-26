@@ -20,7 +20,7 @@ For most organizations, the best clouds adoption choices are to migrate and mode
 
 ## Migrate first, modernize later approach
 
-This approach is often called rehosting or "lift-and-shift." Here, you move an existing application to the cloud as-is. This allows you to quickly benefit from the cloud. 
+This approach is often called rehosting or "lift-and-shift." Here, you move an existing application to the cloud as-is. This allows you to quickly benefit from the cloud.
 
 ### 1. Migration Priorities
 
