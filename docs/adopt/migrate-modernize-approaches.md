@@ -3,7 +3,7 @@ title: Cloud migration and modernization
 description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
 author: StephenSumner
 ms.author: ssumner
-ms.date: 07/26/2022
+ms.date: 07/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
