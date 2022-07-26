@@ -1,104 +1,104 @@
 ---
-title: Approaches to cloud migration and modernization
+title: Cloud migration and modernization
 description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/11/2022
+author: StephenSumner
+ms.author: ssumner
+ms.date: 07/26/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
 ms.custom: internal, seo-caf-adopt
 keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
-# Approaches to cloud migration and modernization
+# Cloud migration and modernization
 
-You can adopt the cloud in two ways. **??What horizon is building new apps??** (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies. You have options if you want to adapt existing applications. You can migrate to IaaS, modernize with PaaS, replace with SaaS, or stay on-prem with a hybrid cloud.
+You can adopt the cloud in two ways. **??What horizon is building new apps??** (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies.
 
 :::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
-For most organizations, the best clouds adoption choices are to migrate and modernize existing applications. However, it is not necessary that you migrate before modernizing. Here we will discuss the benefits of migrating first and modernizing first.
+**New Apps:** Developers often adopt event-driven ("serverless") technologies when building cloud-native applications. These decisions help reduce cost and sustainment efforts.
 
-## Migrate first, modernize later approach
+**Existing Apps:** You have options if you want to adapt existing applications. You can migrate to IaaS, modernize with PaaS and containers, replace with SaaS, or stay on-premises with a hybrid cloud.
 
-This approach is often called rehosting or "lift-and-shift." Here, you move an existing application to the cloud as-is. This allows you to quickly benefit from the cloud.
+For most organizations, the cloud adoption plan involves migrating and modernizing existing applications. However, the question is when to modernize these applications. The timing depends on your business goals. We recommended two approaches: rehost and replatform.
 
-### 1. Migration Priorities
+## Rehost - migrate first, modernize later
 
-Migrate before modernizing if you want immediate:
+This approach is often called rehosting or "lift-and-shift." Here, you move an existing application to the cloud as-is. This approach allows you to quickly benefit from the cloud.
 
-- **Sustainability:** The lift-and-shift approach is the fastest way to reduce your data center footprint.
-- **Savings:** Using IaaS solutions will let you trade capital expense with operational expense. Pay as you go and only pay for what you use.
-- **IaaS Solutions:** IaaS VM provide immediate compatibility with existing on-prem applications. Migrate your workloads to Azure Virtual Machines and modernize while in the cloud.
-- **Cloud-Readiness Test:** Test your migration to ensure your organization has the people and processes in place to adopt the cloud. Migrating a minimum viable product is a great approach to test the cloud-readiness of your organization.  
+**Rehosting Priorities:** Migrate before modernizing if you want immediate:
 
-### 2. Migration Order
+- *Sustainability:* The lift-and-shift approach is the fastest way to reduce your data center footprint.
+- *Savings:* Using IaaS solutions will let you trade capital expense with operational expense. Pay as you go and only pay for what you use.
+- *IaaS Solutions:* IaaS virtual machines (VMs) provide immediate compatibility with existing on-premises applications. Migrate your workloads to Azure Virtual Machines and modernize while in the cloud.
+- *Cloud-Readiness Test:* Test your migration to ensure your organization has the people and processes in place to adopt the cloud. Migrating a minimum viable product is a great approach to test the cloud-readiness of your organization.  
+
+## Replatform - modernize during the move
+
+This approach is often called replatforming. Here, you'll modernize aspects of an application during the migration process.
+
+**Replatforming Priorities:** Modernize during the move if you want:
+
+- *Faster time-to-market:* Use existing PaaS technologies to speed up deployment.
+- *Increased Innovation:* PaaS allows developers to focus on business logic and critical data plays.
+- *Enhanced Productivity:* Adopting PaaS narrowing the skills required to push apps to market and increases the productivity of development, security, and operations.
+- *Better Velocity:* Switching to managed services will limit the items developers need to focus on and will increase their sprint productivity.
+
+## How to move existing applications
+
+The decision to rehost or replatform existing applications must factor in whether control or productivity is more important. Remaining on-premises and building a hybrid environment offers the most control. Converting to SaaS and low-code solutions or replacing applications altogether offers the most productivity. Most organizations adopt a balance of both control and productivity (*see figure*).
 
 :::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach-v2.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
+The figure represents what businesses do with their existing application portfolio. A typical business will:
+
+- Retire 35% of existing applications
+- Replace 15% of existing applications
+- Replatform and Rehost 50% of existing applications
+
+### Retire (35%)
+
+Your business has applications and environments it doesn't need. As part of your cloud adoption plan, you'll take an inventory of your application portfolio. You'll find IT assets that you don't need or aren't worth keeping. Shrinking your application portfolio allows your business to focus on business-critical workloads.
+
+### Replace (15%)
+
+Replacing critical workloads with SaaS and low-code solutions provides the most productivity for applications you need to keep. You can move "from" management-heavy technologies "to" cloud solutions that improve productivity (*see table for examples*).
+
+| From<span title="Replace">&nbsp;</span> | To<span title="To">&nbsp;</span> |<span></span>|
+|-|-|-|
+|Custom line of <br>business (LOB)<br>apps| [Power Apps](https://docs.microsoft.com/power-apps/powerapps-overview) | :::image type="icon" source="../_images/adopt/powerapps.svg":::
+|DevOps tools|[GitHub](https://docs.microsoft.com//learn/modules/introduction-to-github/)|:::image type="icon" source="../_images/adopt/github-icon.svg":::
+|Relationship <br>Management|[Dynamics](https://docs.microsoft.com/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
+|Industry <br>verticals|[3rd-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
+|
+
+#### Rehost and Replatform (50%)
+
+**1. First to move (35%):**  Pick easy wins for the first workloads to move. Test your cloud adoption plan on manageable applications before tackling the most complex or business critical workloads. Document your successes, revise your migration strategy, and extract lessons-learned. You'll apply these insights to your more complicated migrations. [Use Azure Migrate to plan your migration](../../../azure-docs-pr/articles/migrate/migrate-services-overview.md)
+
+Some examples of workloads you could include in your first move are:
+
+- *Basic web apps:* Rehost most your web applications. Allow more planning for applications that are highly regulated, business-critical, or transaction intensive (OLTP workloads).
+- *Advanced portals:* Replatform your portals with [Power Apps portals](https://docs.microsoft.com/power-apps/maker/portals/).
+- *New solutions:* Build new applications in the cloud with IaaS and PaaS solutions rather than rehost or replatform. The replace strategy uses SaaS and low-code tools instead of IaaS and PaaS.
+- *Modernized solutions:* Replatform your workloads with PaaS technologies during the move. For example, you can move from a SQL database to the fully managed Azure SQL Database service.
+
+**2. Next to move (10%):** Use the lessons-learned from your first move to tackle more challenging workloads. The challenge can be technical or simply the importance of the workload. Joining the [migration and modernization program](https://azure.microsoft.com/migration/) offers self-guided support and expert-guided deployments. Some of the more challenging workloads to move are:
+
+- *High Business Impact:* Workloads that drive revenue.
+- *High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:* Workloads that record business transactions.
+- *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and General Data Protection Regulation (GDPR)](/../cloud-adoption-framework-pr/docs/govern/policy-compliance/regulatory-compliance.md). Use [Azure Policy](../../../azure-docs-pr/articles/governance/policy/overview.md) to ensure compliance with these standards.
 
 
-## Modernize during the move
+**3. Hard or costly to move (5%):** Move the most difficult and costly workloads last. These systems need more thought to move efficiently. Consider using [FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack/?v=18.03#overview) to get customized guidance from Azure engineers.
 
-This is approach is often called replatforming. Here, you will modernize aspects of an application during the migration process. Modernize during the move if you want:
-
-- **Faster time-to-market:** Use existing PaaS technologies to speed up deployment.
-- **Increased Innovation:** PaaS allows developers to focus on business logic and critical data plays.
-- **Enhanced Productivity:** Adopting PaaS narrowing the skills required to push apps to market and increases the productivity of development, security, and operations.
-- **Better Velocity:** Switching to managed services will limit the items developers need to focus on and will increase their sprint productivity.
-
-***Examples:***
-
-- Migrate your SQL database to a managed database solution such as Azure SQL Database.
-- Move your on-prem directory services to Azure Active Directory Domain Services.
-
-## Application portfolio migration and modernization approach
-
-
-
-
-### Migration
-
-#### First to move
-
-Most things in an environment can be moved and perhaps modernized without a significant modernization effort. Your first items to move could include:
-
-- Basic web apps
-- Advanced portals
-- New solutions
-- Any modernized solutions
-
-#### Next to move
-
-Usually, what we see when we migrate next are things like high input and output transactional processing systems or regulatory and high business impact systems. Those items tend to be more difficult to do any kind of modernization on and migrations are a forced option many times.
-
-#### Hard or costly to move
-
-There's always the following group of items that's hard to move:
-
-- HVA systems
-- PKI systems
-- Legacy source control
-- Workloads that can't be modernized
-- Workloads that require deep architectural change
-
-> [!IMPORTANT]
-> If you have *workloads that require deep architectural change*, you need to *rearchitect* rather than modernize. In this case, use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/). Also, shifting pieces of LoB apps to PowerApps, and so on, is part of [innovation](../innovate/index.md), rather than modernization.
-
-You might have a small percentage of things that you take from a custom line of business app over to power apps. This task is outside of modernization and can be handled in the [innovation](../innovate/index.md) space.
-
-### Modernization
-
-Developers tend to build new apps cloud-natively using Serverless or PaaS technologies. Modernizing your existing apps employs using containers or Serverless to maximize cloud benefits, or [lift and shift](/virtualization/windowscontainers/quick-start/lift-shift-to-containers) into IaaS to take advantage of OPEX and cloud scale.
-
-For apps that aren't custom built, many businesses choose to retire and replace them using SaaS or low code apps.
-
-Some apps need to stay on premises due to regulatory or data sovereignty requirements or latency issues. It’s important to enable these apps to be cloud-connected.
-
-No matter where your applications run, in multicloud, on-premises, or at the edge, it's important to enable consistent identity, security, management, and compliance across distributed environments.
-
-Usually about 35% of any on premises environment gets retired, rightsized, or eliminated during the cloud motion, although this percentage is a rough estimate.
+- *High Value Asset (HVA):* Disruption or corruption of this workload would disrupt all business operations.
+- *Public Key Infrastructure (PKI) systems:* Workloads that manage x509 digital certificates and provide network encryption and authentication.
+- *Legacy source control:* Source control systems that aren't easily replaced with GitHub.
+- *Can't be modernized:* Legacy or proprietary technology that can't be modernized.
+- *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](../../../well-architected-pr/well-architected/index.md) rather than the CAF modernize horizon.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Evaluate your modernization options](../modernize/business-alignment/evaluate-modernization-options.md)
+> [Migrate](../migrate/index.md)

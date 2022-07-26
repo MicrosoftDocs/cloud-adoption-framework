@@ -1,5 +1,5 @@
 ---
-title: Establishing cloud adoption horizons
+title: Cloud adoption
 description: Use the Cloud Adoption Framework for Azure to understand the adoption horizons necessary to identify and prioritize, based on your adoption goals.
 author: StephenSumner
 ms.author: ssumner
@@ -11,9 +11,9 @@ ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 <!--This article was called out as a dependency needed for the "envision" content of the modernize methodology documentation. Alternative proposed filename was "establishing-cloud-horizons", but naming index.md for now since it's serving as the overview for "adopt", at least for the time being.*-->
-# Establishing cloud adoption horizons
+# Cloud adoption
 
-Your cloud adoption plan will involve one or more horizons. Each horizon maps to different goals (*see figure*). Your business objectives will determine what horizon(s) to pursue and when.  You're likely going to visit all three horizons during your cloud adoption journey. Your cloud adoption plan can unfold in any order and doesn't need to follow the sequence. But make sure to tackle just one horizon at a time. Based on your goals, you can determine which sequence works best for you.
+Your cloud adoption plan will involve one or more horizons. Each horizon maps to different goals (*see figure*). Your business objectives will determine what horizon(s) to pursue and when. Your cloud adoption plan can unfold in any order and doesn't need to follow the sequence. You're likely going to visit all three horizons during your cloud adoption journey. But make sure to tackle just one horizon at a time. Based on your goals, you'll determine which sequence works best for you.
 
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
 
@@ -45,7 +45,7 @@ The goal of the innovate horizon is to apply customer-focused solutions to trans
 
 - *Goals:* Reposition your business, reposition technical solutions, and find innovative data plays.
 - *Solutions:* Use data and applications to empower adoption and build predictive tools.
-- *Key Benefits:* Architecture, performance, and flexibility.
+- *Key Benefits:* Architecture, performance, and adaptability.
 
 ## Next steps
 > [!div class="nextstepaction"]
