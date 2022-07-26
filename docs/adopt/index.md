@@ -48,5 +48,6 @@ The goal of the innovate horizon is to apply customer-focused solutions to trans
 - *Key Benefits:* Architecture, performance, and adaptability.
 
 ## Next steps
+
 > [!div class="nextstepaction"]
 > [Migrate or Modernize First?](../adopt/migrate-modernize-approaches.md)
