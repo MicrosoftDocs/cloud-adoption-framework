@@ -74,12 +74,12 @@ Replacing critical workloads with SaaS and low-code solutions provides the most 
 
 #### Rehost and Replatform (50%)
 
-**1. First to move (35%):**  Pick easy wins for the first workloads to move. Test your cloud adoption plan on manageable applications before tackling the most complex or business critical workloads. Document your successes, revise your migration strategy, and extract lessons-learned. You'll apply these insights to your more complicated migrations. [Use Azure Migrate to plan your migration](../../../azure-docs-pr/articles/migrate/migrate-services-overview.md)
+**1. First to move (35%):**  Pick easy wins for the first workloads to move. Test your cloud adoption plan on manageable applications before tackling the most complex or business critical workloads. Document your successes, revise your migration strategy, and extract lessons-learned. You'll apply these insights to your more complicated migrations. [Use Azure Migrate to plan your migration](/azure-docs-pr/articles/migrate/migrate-services-overview.md)
 
 Some examples of workloads you could include in your first move are:
 
 - *Basic web apps:* Rehost most your web applications. Allow more planning for applications that are highly regulated, business-critical, or transaction intensive (OLTP workloads).
-- *Advanced portals:* Replatform your portals with [Power Apps portals](https://docs.microsoft.com/power-apps/maker/portals/).
+- *Advanced portals:* Replatform your portals with [Power Apps portals](/powerapps-docs/powerapps-docs/maker/portals/overview.md).
 - *New solutions:* Build new applications in the cloud with IaaS and PaaS solutions rather than rehost or replatform. The replace strategy uses SaaS and low-code tools instead of IaaS and PaaS.
 - *Modernized solutions:* Replatform your workloads with PaaS technologies during the move. For example, you can move from a SQL database to the fully managed Azure SQL Database service.
 
@@ -87,8 +87,7 @@ Some examples of workloads you could include in your first move are:
 
 - *High Business Impact:* Workloads that drive revenue.
 - *High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:* Workloads that record business transactions.
-- *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and General Data Protection Regulation (GDPR)](/../cloud-adoption-framework-pr/docs/govern/policy-compliance/regulatory-compliance.md). Use [Azure Policy](../../../azure-docs-pr/articles/governance/policy/overview.md) to ensure compliance with these standards.
-
+- *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and General Data Protection Regulation (GDPR)](/../cloud-adoption-framework-pr/docs/govern/policy-compliance/regulatory-compliance.md). Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance.md) to ensure compliance with these standards.
 
 **3. Hard or costly to move (5%):** Move the most difficult and costly workloads last. These systems need more thought to move efficiently. Consider using [FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack/?v=18.03#overview) to get customized guidance from Azure engineers.
 
@@ -96,7 +95,7 @@ Some examples of workloads you could include in your first move are:
 - *Public Key Infrastructure (PKI) systems:* Workloads that manage x509 digital certificates and provide network encryption and authentication.
 - *Legacy source control:* Source control systems that aren't easily replaced with GitHub.
 - *Can't be modernized:* Legacy or proprietary technology that can't be modernized.
-- *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](../../../well-architected-pr/well-architected/index.md) rather than the CAF modernize horizon.
+- *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/well-architected-pr/well-architected/index.md) rather than the CAF modernize horizon.
 
 ## Next steps
 
