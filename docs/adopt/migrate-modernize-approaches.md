@@ -14,16 +14,7 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 You can adopt the cloud in two ways. (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies.
 
-- [Approaches to cloud migration and modernization](#approaches-to-cloud-migration-and-modernization)
-  - [Migrate first, modernize later](#migrate-first-modernize-later)
-  - [Modernize first, migrate later](#modernize-first-migrate-later)
-  - [Migrate and modernize in parallel](#migrate-and-modernize-in-parallel)
-    - [Migrate](#migrate)
-      - [First to move](#first-to-move)
-      - [Next to move](#next-to-move)
-      - [Hard or costly to move](#hard-or-costly-to-move)
-    - [Modernize](#modernize)
-  - [Next steps](#next-steps)
+:::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
 **New Apps:** Developers often adopt event-driven ("serverless") technologies when building cloud-native applications. These decisions help reduce cost and sustainment efforts.
 
