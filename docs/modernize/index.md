@@ -13,7 +13,9 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-The modernize horizon is where you enhance your business processes at scale. Modernizing can happen after migrations or during the migration. 
+The modernize horizon is where you enhance your business processes at scale. Modernizing can happen after you migrate a workload or during the migration. For help making that decision, see [cloud migration and modernization](/docs/adopt/migrate-modernize-approaches.md). Modernization requires people and process to integrate. 
+
+Business and technical leads need to collaborate on the modernization plan. Business leads need to align the business with modernization efforts. Technical leads need to create teams that work with current modernization disciplines.
 
 
 :::image type="content" source="../_images/modernize/modernize-methodology-graphic.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
@@ -23,9 +25,7 @@ To further understand the modernization methodology, begin with the following ar
 - Decision makers: [Business alignment](business-alignment/index.md)
 - Technical readers: [Modernization disciplines](modernize-disciplines/index.md)
 
-
 When your cloud adoption journey includes modernization, you'll be repackaging, redesigning, and rebuilding your apps and data. Modernization helps you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
-
 
 ## Repackage apps and databases for speed and productivity
 
