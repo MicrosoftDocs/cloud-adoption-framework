@@ -1,9 +1,9 @@
 ---
 title: Application platform modernization
-description: Learn how to evaluate your options for adopting modern application platforms during cloud adoption-related modernization.
+description: Learn to adopt and deploy modern application platforms during cloud adoption-related modernization.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/20/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -20,13 +20,11 @@ This should fit into one net new article.
 
 Increasingly, we're seeing customers who value the idea of innovating at a faster pace. They're using cloud-native architectures with loosely coupled microservices, managed databases, AI, DevOps support, and built-in monitoring to detect failures and problems before they happen.
 
-## Use of this article
-
-This article outlines how to evaluate your options for adopting modern application platforms during cloud adoption-related modernization.
+This article outlines adoption and deployment methods for modern application platforms during cloud adoption-related modernization.
 
 ## Adopt modern application platform
 
-Adopting a modern application platform with Azure means that your apps run anywhere with limitless scale, intelligence, insights, and machine learning. *What percentage of your applications currently leverage a microservices architecture?* *Are there specific compliance or country-specific data requirements?* *Do your apps handle any sensitive personally identifiable information?*
+Adopting a modern application platform with Azure means that your apps run anywhere with limitless scale, intelligence, insights, and machine learning. *What percentage of your applications currently use a microservices architecture?* *Are there specific compliance or country-specific data requirements?* *Do your apps handle any sensitive content?*
 
 :::image type="content" source="../../_images/modernize/future-state-vision.png" alt-text="Diagram showing intelligent cloud-native applications as future state vision.":::
 
@@ -44,7 +42,7 @@ For more information, see the following articles:
 
 ## Deploy modern application platform
 
-While lift and shift to IaaS is a viable path to the cloud for many applications, this route won't unlock all possible cloud benefits. If you're looking to get the most from the cloud and tap into advanced capabilities like improved resiliency, global scale, or maximum agility, cloud native applications are built from the ground up and optimized for cloud scale and performance. They’re based on microservices architectures and they use Azure Managed Services, taking advantage of continuous delivery to achieve reliability and faster time to market.
+While lift and shift to IaaS is a viable path to the cloud for many applications, this route won't unlock all possible cloud benefits. If you're looking to get the most from the cloud and tap into advanced capabilities like improved resiliency, global scale, or maximum agility, cloud native applications get built from the ground up and optimized for cloud scale and performance. They’re based on microservices architectures and they use Azure Managed Services, taking advantage of continuous delivery to achieve reliability and faster time to market.
 
 :::image type="content" source="../../_images/modernize/app-platform-infrastructure-abstraction.png" alt-text="Graphic showing infrastructure abstraction as an app platform modernization option.":::
 
@@ -107,38 +105,45 @@ Microservices architecture means breaking large software projects into smaller, 
 
 :::image type="content" source="../../_images/modernize/rearchitect-with-microservices.png" alt-text="Graphic showing monolithic versus microservices.":::
 
-When you use microservices:
+Benefits of using microservices:
 
 - Each service is independent, so you can develop a new project on its own schedule.
 - You can use any language or stack that best fits current requirements.
 - Scaling up is easier than with VMs or containers, as it only requires deploying more services as needed.
 - Application maintenance is easier. Developers work on individual services, so the code base the developer works with is smaller, easier to manage, and easier to understand.
 - Microservices-based applications are more resilient and stable. If one or more services fail, the application continues to work.
-- Individual service instances can be upgraded, changed or taken down without negative impact to the entire application.
+- Individual service instances can be upgraded, changed, or taken down without negative results to the entire application.
+
+Potential drawbacks of using microservices:
+
+- Increased complexity.
+- Need for good dependency management to keep track of independent services that work together as a product.
+- Need for dependency/API testing to ensure compatibility with other services (where required).
+- When services interact with each other, it's important to use [cloud architecture best practices](/azure/architecture/best-practices/index-best-practices) to avoid creating a distributed monolith.
 
 ### Serverless application platform components
 
-At the center of the Serverless platform, are our compute offerings: Azure Functions and Azure Logic Apps. Azure Functions is an event-based Serverless compute experience that helps you accelerate your development. Logic Apps is a powerful orchestration tool. It enables building a Serverless app in minutes by orchestrating multiple functions using a visual workflow tool.
+At the center of the Serverless platform, are our compute offerings: Azure Functions and Azure Logic Apps. Azure Functions is an event-based Serverless compute experience that helps you accelerate your development. Logic Apps is a powerful orchestration tool, which enables building a Serverless app in minutes by orchestrating multiple functions using a visual workflow tool.
 
 :::image type="content" source="../../_images/modernize/serverless-application-platform-components.png" alt-text="Graphic showing serverless app plat components.":::
 
-Let's say you have your apps up and running using Serverless. Congratulations! Next, collect intelligence from different apps across platforms to action on. The following essential components are core to building Serverless applications:
+Once you have your apps up and running using Serverless, then you can collect intelligence from different apps across platforms to action on. The following essential components are core to building Serverless applications:
 
-- **Data/Storage:** Functions has triggers and bindings with Azure document DB and Azure Blob storage.
+- **Data/Storage:** Azure Functions has triggers and bindings with Azure document DB and Azure Blob storage.
 - **Triggers:** Event responses used to trigger your custom code. They allow you to respond to events across the Azure platform or on premise.
 - **Bindings:** Represent the necessary metadata used to connect your code to the desired trigger or associated input or output data.
 - **Messaging:** Queues and topics using Azure Service Bus and Azure Event Hubs.
 - **Integration:** Includes core LOB apps and SaaS apps integration via Azure Logic Apps.
 - **Intelligence on data and sentiment:** Predictive analysis using Cognitive services and Machine learning.
-- **Conversation as a service:** Equip developers to build apps that offer an end-to-end experience for their users. Azure Bot Service offers a Serverless interactive bot experience.
+- **Conversation as a service:** Equips developers to build apps that offer an end-to-end experience for their users. Azure Bot Service offers a Serverless interactive bot experience.
 
-Developers are spending more time writing code, which allows them to add huge business impact with Serverless. Microsoft offers numerous development tools, such as IDE Support for Visual Studio in Azure Functions and Logic Apps, which enable local development and visual debugging capability, all with your tools of choice.
+Developers are spending more time writing code, which allows them to add huge business results with Serverless. Microsoft offers numerous development tools, such as IDE Support for Visual Studio in Azure Functions and Logic Apps, which enable local development and visual debugging capability, all with your tools of choice.
 
 #### Use cases for Serverless
 
 We've highlighted the following top scenarios and use cases for Serverless:
 
-- **Real-time Stream analytics:** Uses Functions to feed real-time streams of data from application tracking into structured data and store it in SQL online.
-- **SaaS event processing:** Uses Functions and Logic Apps to analyze data from an excel file in OneDrive and perform validation, filtration, sorting, and convert data into consumable business charts.
-- **Web app architecture:** Used often in creating targeted marketing collateral. When you select on a webpage, it triggers a webhook that uses a function to create an ad that matches your customer profile and displays a completed webpage.
-- **Real-time bot messaging:** When you send a message to a chatbot, Functions calls Cortana analytics to generate appropriate answers and sends a response back.
+- **Real-time Stream analytics:** Uses Azure Functions to feed real-time streams of data from application tracking into structured data and store it in SQL online.
+- **SaaS event processing:** Uses Azure Functions and Logic Apps to analyze data from an excel file in OneDrive. Then performs validation, filtration, sorting, and conversion of data into consumable business charts.
+- **Web app architecture:** Uses a function to create an ad that matches your customer profile and displays a completed webpage. After you select on a webpage, a webhook gets triggered. Used often in creating targeted marketing collateral.
+- **Real-time bot messaging:** Uses Azure Functions and calls Cortana analytics to generate appropriate answers and sends a response back, when you send a message to a chatbot.

@@ -15,16 +15,16 @@ keywords: evaluate, technical, financial indicators, workloads, modernize, cloud
 
 We previously discussed [modernization motivations](envision-cloud-modernization.md) and mapping different workload categories to those motivations. To establish realistic expectations for modernizing your workloads during cloud adoption, evaluate the resources and dependencies of your current state. Based on your evaluations, we provide an appropriate path toward modernization.
 
-## Modernization economics
+## 1. Identify your motivations
 
-Some top motivators for modernization include generating new income (operating income and margin), getting more usage of new technology, and creating market differentiators. See the following benefits of modernization in your operating margin, infrastructure, applications, and data.
+Some top motivators for modernization include generating new income (operating income and margin), getting more usage of new technology, and creating market differentiators. See the following motivations for modernization in your operating margin, infrastructure, applications, and data.
 
 - **Operating margin:** Automate ongoing administrative work, like patching, networking, and firewall configuration with the SaaS or PaaS services. With today's technology and market differentiators and to justify any kind of modernization effort, you want to see some operating income rather than just operating margin.
 - **Infrastructure:** Focus on making innovative services and applications available to the company and spend less time managing core infrastructure like server patching, networking setup, firewall configuration, and many other server-related tasks now included with Azure PaaS.
 - **Applications:** Get your websites up and running within minutes. You can improved app delivery time by 50% and there's no waiting for servers.
 - **Data:** Advance your data analysis in the cloud. You can get away from managing core infrastructure and instead focus on making innovative services available to the company. By using sophisticated data analysis, you can make a personal connection with your customers that stands out in the vast sea of information that washes over us daily.
 
-## 1. Evaluate existing resources
+## 2. Evaluate existing resources
 
 Explore the following questions with your organization to discover the **technical indicators** and resulting paths toward a modernization effort.
 
@@ -35,7 +35,7 @@ Explore the following questions with your organization to discover the **technic
   - **Hybrid workers:** We recommend [Migration only](../../get-started/migrate.md)
   - **Hybrid or portable workloads:** We recommend [Modernizing your application platforms](../modernize-disciplines/application-platform-modernization.md)
 
-## 2. Evaluate financial indicators
+## 3. Evaluate financial indicators
 
 Explore the following questions with your organization, to discover and weigh the **financial indicators** and resulting path toward a modernization effort.
 
@@ -49,8 +49,6 @@ Explore the following questions with your organization, to discover and weigh th
 ## Complex evaluations
 
 If you notice that your modernization efforts require some significant shifts in your data layer, application platform, and so on, it's a sign of a complex change, which needs further analysis. If you're unsure of what your financial break even point would be, or whether your workloads could be hybrid and portable, we can help. To assess your workloads using the tenets found in the Microsoft Azure Well-Architected Framework, do the [Microsoft Azure Well-Architected Review](/assessments/?mode=pre-assessment&session=local).
-
-For more information about efforts and scenarios for modernization, see [Modernization examples](../index.md#modernization-examples).
 
 ## Next steps
 
