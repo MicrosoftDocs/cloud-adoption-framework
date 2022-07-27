@@ -15,11 +15,12 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 Your cloud adoption plan will take you down several paths or "horizons." Organizations follow three primary horizons: migrate, modernize, and innovate. The horizon you choose and when will depend your business goals (*see figure*). These horizons don't need to be followed in a sequence. We provide guidance to help you choose which horizon is best suited to your current needs. Most cloud adoption plans visit all three horizons. Your business goals will determine the best order.
 
-You can find details on each horizon in the Adopt articles that follow. Below, you can find a brief overview of the horizon.
-
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
 
-## Horizon 1: Migrate
+## Overview of Adopt
+You can jump to the guidance for each horizon using the buttons below. Below, you can find a brief overview of the horizon.
+
+### Horizon 1: Migrate
 
 The migrate horizon focuses on moving workloads to the cloud.
 
@@ -28,12 +29,9 @@ The migrate horizon focuses on moving workloads to the cloud.
 - *Key Benefits:* Cost, security, and availability.
 
 > [!IMPORTANT]
-> You can modernize while you migrate. See next steps for guidance.
+> You can modernize while you migrate. See next steps.
 
-> [!div class="nextstepaction"]
-> [Jump to the Migrate guidance](../migrate/index.md)
-
-## Horizon 2: Modernize
+### Horizon 2: Modernize
 
 The modernize horizon focuses on enhancing business processes at scale.
 
@@ -41,10 +39,7 @@ The modernize horizon focuses on enhancing business processes at scale.
 - *Solutions:* Adopt platform-as-a-service (PaaS) solutions across workload clusters.
 - *Key Benefits:* Security, performance, and cost.
 
-> [!div class="nextstepaction"]
-> [Jump to the Modernize guidance](../modernize/index.md)
-
-## Horizon 3: Innovate
+### Horizon 3: Innovate
 
 The innovate horizon focuses on applying customer-focused solutions that transform business outcomes.
 
@@ -52,10 +47,7 @@ The innovate horizon focuses on applying customer-focused solutions that transfo
 - *Solutions:* Use data and applications to empower adoption and build predictive tools.
 - *Key Benefits:* Predictive analytics, performance, and adaptability.
 
-> [!div class="nextstepaction"]
-> [Jump to the Innovate guidance](../innovate/index.md)
-
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Migrate or Modernize First?](../adopt/migrate-modernize-approaches.md)
+> [Migrate or Modernize?](../adopt/migrate-modernize-approaches.md)
