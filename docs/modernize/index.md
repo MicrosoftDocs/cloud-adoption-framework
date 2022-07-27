@@ -10,22 +10,8 @@ ms.subservice: modernize
 ms.custom: internal, seo-caf-modernize
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
-# Modernize your apps and data
-
-When your cloud adoption journey includes modernization, you'll be repackaging, redesigning, and rebuilding your apps and data. Modernization helps you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
-
-The following exercises help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
-
-| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
-|--|--|
-| <br> :::image type="icon" source="../_images/icons/1.png"::: | [Align your modernization efforts to business needs.](business-alignment/index.md) |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | [Build skills and adopt repeatable processes for modernizing waves of workloads.](modernize-disciplines/index.md) |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | Consult the [Modernization Scenarios](modernize-scenarios/modernization-scenarios.md) to find examples of repeatable processes based on the technologies you're modernizing. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | Review [best practices](modernize-best-practices/improve-devops-practices.md) to find new ways to improve your processes and accelerate modernization. |
-
-## Methodology overview
-
-This methodology is designed to help you modernize a portfolio of applications at scale using repeatable processes. For modernization of individual workloads and deeper review of architectural decisions, consult W Architecture Framework (WAF).
+# Modernize in the cloud
+The modernize horizon is where you enhance your business processes at scale. 
 
 :::image type="content" source="../_images/modernize/modernize-methodology-graphic.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
@@ -33,6 +19,10 @@ To further understand the modernization methodology, begin with the following ar
 
 - Decision makers: [Business alignment](business-alignment/index.md)
 - Technical readers: [Modernization disciplines](modernize-disciplines/index.md)
+
+
+When your cloud adoption journey includes modernization, you'll be repackaging, redesigning, and rebuilding your apps and data. Modernization helps you achieve benefits like boosting app innovation, increasing agility, and accelerating developer velocity.
+
 
 ## Repackage apps and databases for speed and productivity
 
@@ -57,6 +47,16 @@ Modify or extend your apps to further scale and optimize for cloud architectures
 - [Modernize Linux web apps by using Azure App Service and Azure Database for MySQL](../migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md).
 - [Modernize on-premises .NET or Java apps by containerizing them with Azure Kubernetes Service (AKS)](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes)
 - [Modernize dev/test environments to Azure DevTest Labs](../migrate/azure-best-practices/contoso-migration-devtest-to-labs.md).
+
+
+The following exercises help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
+
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|
+| <br> :::image type="icon" source="../_images/icons/1.png"::: | [Align your modernization efforts to business needs.](business-alignment/index.md) |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | [Build skills and adopt repeatable processes for modernizing waves of workloads.](modernize-disciplines/index.md) |
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | Consult the [Modernization Scenarios](modernize-scenarios/modernization-scenarios.md) to find examples of repeatable processes based on the technologies you're modernizing. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | Review [best practices](modernize-best-practices/improve-devops-practices.md) to find new ways to improve your processes and accelerate modernization. |
 
 ## Next steps
 
