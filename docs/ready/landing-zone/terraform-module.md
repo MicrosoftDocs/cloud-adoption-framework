@@ -63,7 +63,7 @@ Packaging these capabilities into a single Terraform module makes it easier to b
 
 These resources align with the [Azure landing zones conceptual architecture](index.md#azure-landing-zone-conceptual-architecture):
 
-:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.png":::
+:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="Diagram of the Azure landing zone conceptual architecture." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.png":::
 
 You can deploy these resources, by capability, across multiple subscriptions by using the [Provider Configuration][wiki_provider_configuration] on the module block.
 
@@ -73,7 +73,7 @@ The following sections outline the resource types and configuration options.
 
 The core capability of this module deploys the foundations of the [conceptual architecture for Azure landing zones][msdocs_alz_architecture], with a focus on the central [resource organization][alz_resourceorg].
 
-:::image type="content" source="media/terraform-caf-enterprise-scale-overview.png" alt-text="A conceptual architecture diagram focusing on the core resource hierarchy for an Azure landing zone." lightbox="media/terraform-caf-enterprise-scale-overview.png":::
+:::image type="content" source="media/terraform-caf-enterprise-scale-overview.png" alt-text="Diagram of the Azure landing zone conceptual architecture, focusing on the core resource hierarchy." lightbox="media/terraform-caf-enterprise-scale-overview.png":::
 
 When you enable deployment of core resources (*enabled by default*), the module deploys and manages the following resource types:
 
@@ -96,7 +96,7 @@ The exact number of resources that the module creates depends on the module conf
 
 The module provides an option to enable deployment of [management and monitoring][alz_management] resources from the [conceptual architecture for Azure landing zones][msdocs_alz_architecture] into the specified subscription, as described on the [Provider Configuration][wiki_provider_configuration] wiki page. The module also ensures that the specified subscription is placed in the right management group.
 
-:::image type="content" source="media/terraform-caf-enterprise-scale-management.png" alt-text="A conceptual architecture diagram focusing on the management resources for an Azure landing zone." lightbox="media/terraform-caf-enterprise-scale-management.png":::
+:::image type="content" source="media/terraform-caf-enterprise-scale-management.png" alt-text="Diagram of the Azure landing zone conceptual architecture, focusing on the management resources." lightbox="media/terraform-caf-enterprise-scale-management.png":::
 
 When you enable deployment of management resources, the module deploys and manages the following resource types (*depending on configuration*):
 
@@ -124,7 +124,7 @@ The module can also create and link [DDoS Protection](#ddos-protection-plan) Sta
 
 The module can optionally deploy one or more hub networks based on the [traditional Azure networking topology (hub and spoke)](../azure-best-practices/traditional-azure-networking-topology.md).
 
-:::image type="content" source="media/terraform-caf-enterprise-scale-connectivity.png" alt-text="A conceptual architecture diagram focusing on the connectivity resources for an Azure landing zone using a traditional Azure networking topology (hub and spoke)." lightbox="media/terraform-caf-enterprise-scale-connectivity.png":::
+:::image type="content" source="media/terraform-caf-enterprise-scale-connectivity.png" alt-text="Diagram of the Azure landing zone conceptual architecture, focusing on the connectivity resources using a traditional Azure networking topology (hub and spoke)." lightbox="media/terraform-caf-enterprise-scale-connectivity.png":::
 
 > [!NOTE]
 > The module currently configures only the networking hub and dependent resources for the connectivity subscription. Although there's an option to enable outbound virtual network peering from hub to spoke, users still need to initiate peering from spoke to hub. This is due to limitations in how the AzureRM provider targets a specific subscription for deployment.
@@ -147,7 +147,7 @@ For more information about how to use this capability, see the [Deploy Connectiv
 
 The module can optionally deploy one or more hub networks based on the [Virtual WAN network topology (Microsoft-managed)](../azure-best-practices/virtual-wan-network-topology.md).
 
-:::image type="content" source="media/terraform-caf-enterprise-scale-virtual-wan.png" alt-text="A conceptual architecture diagram focusing on the connectivity resources for an Azure landing zone using a Virtual WAN network topology (Microsoft-managed)." lightbox="media/terraform-caf-enterprise-scale-virtual-wan.png":::
+:::image type="content" source="media/terraform-caf-enterprise-scale-virtual-wan.png" alt-text="Diagram of the Azure landing zone conceptual architecture, focusing on the connectivity resources using a Virtual WAN network topology (Microsoft-managed)." lightbox="media/terraform-caf-enterprise-scale-virtual-wan.png":::
 
 > [!NOTE]
 > Due to the different capabilities of Virtual WAN network resources over traditional, peering for Virtual WAN spokes is bi-directional when using this capability.
@@ -205,7 +205,7 @@ When you enable deployment of deployment of DNS resources, the module deploys an
 
 The module provides an option to configure policies relating to the [identity and access management][alz_identity] landing zone. It also ensures that the specified subscription is placed in the right management group.
 
-:::image type="content" source="media/terraform-caf-enterprise-scale-identity.png" alt-text="A conceptual architecture diagram focusing on the identity resources for an Azure landing zone." lightbox="media/terraform-caf-enterprise-scale-identity.png":::
+:::image type="content" source="media/terraform-caf-enterprise-scale-identity.png" alt-text="Diagram of the Azure landing zone conceptual architecture, focusing on the identity resources." lightbox="media/terraform-caf-enterprise-scale-identity.png":::
 
 > [!NOTE]
 > This capability doesn't deploy any resources. If you want to update policy settings related to the identity management group, use the `configure_identity_resources` input variable.
