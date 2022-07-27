@@ -27,7 +27,7 @@ Your organization or enterprise needs to design suitable security settings to me
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
   - Decide what permissions are needed for the application teams to deploy into the cluster.
-- Decide how you want to store secrets and sensitive information in your cluster. This could be stored as base64 encoded Kubernetes secrets or using a Secret Store Provider such as [Azure Keyvault Provider for Secret Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/).
+- Decide how you want to store secrets and sensitive information in your cluster. Secrets and sensitive information could be stored as base64 encoded Kubernetes secrets or using a Secret Store Provider such as [Azure Keyvault Provider for Secret Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/).
 
 ## Design recommendations
 

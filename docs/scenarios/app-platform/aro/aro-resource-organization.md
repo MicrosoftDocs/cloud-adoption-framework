@@ -16,7 +16,7 @@ Resource organization consideration is mostly managed by the platform foundation
 
 The overall subscription and resource group design determined by generic Azure landing zone recommendations, will play a fundamental role in how the ARO resource organization is managed. As described in [Management group and subscription organization](../../ready/landing-zone/design-area/resource-org.md), management groups and subscriptions are used to assign policies to the resources underneath them, and subscriptions are the management boundary for governance and isolation of resources.
 
-For example, if you have public and private applications, separate them into different subscriptions, named `Corp` and `Online`, and assign different policies to each subscription. The `Corp` subscriptions have policies that prevent the creation of public IP addresses. The `Online` subscriptions allow internet connectivity. For more information about which policies are applied at which level in an Azure landing zone design, including ARO-specific policies, see [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+For example, if you have public and private applications, separate them into different subscriptions, named `Corp` and `Online`, and assign different policies to each subscription. The `Corp` subscriptions have policies that prevent the creation of public IP addresses. The `Online` subscriptions allow internet connectivity. For more information about which policies are applied at the different levels of an Azure landing zone design, including ARO-specific policies, see [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
 
 ## Design considerations
 
@@ -49,7 +49,7 @@ For example, if you have public and private applications, separate them into dif
   - Implement Internal OpenShift Registry, taking into consideration the following:
     - Configuration of the built-in [OpenShift Container Registry](https://docs.microsoft.com/en-us/azure/openshift/built-in-container-registry).
     - Use of [Red Hat Quay Registry](https://access.redhat.com/documentation/en-us/red_hat_quay/3.7) for enterprise-quality container registry.
-  - Implement [Azure Containter Registry](https://docs.microsoft.com/en-us/azure/openshift/howto-use-acr-with-aro), taking into consideration the following:  
+  - Implement [Azure Container Registry](https://docs.microsoft.com/en-us/azure/openshift/howto-use-acr-with-aro), taking into consideration the following:  
     - [Container registry best practices](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-best-practices).
     - Use of [Quarantine pattern](https://github.com/AzureCR/QuarantinePattern-Spec) to assure the registry only contains images that have been vulnerability scanned.
   - or, Third Party Container Registry.
