@@ -11,7 +11,8 @@ ms.custom: internal, seo-caf-modernize
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
 # Modernize in the cloud
-The modernize horizon is where you enhance your business processes at scale. 
+
+The modernize horizon is where you enhance your business processes at scale. Modernizing can happen after migrations or during the migration. 
 
 :::image type="content" source="../_images/modernize/modernize-methodology-graphic.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
