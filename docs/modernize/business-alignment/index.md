@@ -2,8 +2,8 @@
 title: Business alignment for modernization
 description: Find articles to help you align your business and make a commitment toward your modernization effort.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/19/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
@@ -16,7 +16,12 @@ Business alignment is a process you can use to ensure that your systems and elem
 
 :::image type="content" source="../../_images/modernize/modernize-business-alignment.png" alt-text="Graphic showing three steps toward business alignment for modernize, envision, evaluate, and commit.":::
 
-Achieving business alignment for modernization requires mapping your workloads to your motivations, evaluating your current state and options, achieving balance between your modernization effort and modernization impact, and then committing to a plan.
+Achieving business alignment for modernization requires the following efforts:
+
+- Map your workloads to your motivations
+- Evaluate your current state and options
+- Achieve balance between your modernization effort and modernization impact
+- Commit to a plan
 
 ## Get started
 

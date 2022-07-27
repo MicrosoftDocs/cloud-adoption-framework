@@ -942,8 +942,6 @@ items:
           href: modernize/modernize-disciplines/testing-architecture-modernization.md
       - name: Best practices
         items:
-        - name: Improve devops practices
-          href: modernize/modernize-best-practices/improve-devops-practices.md 
         - name: Tools to empower adoption in Azure 
           href: modernize/modernize-best-practices/improve-devops-practices.md
         - name: Empower adoption

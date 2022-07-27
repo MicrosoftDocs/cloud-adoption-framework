@@ -2,16 +2,18 @@
 title: Modernize your apps and data
 description: Learn how cloud adoption-related modernization can provide business value by unlocking new technical skills and expanded business capabilities.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/19/2022
+ms.author: chcomley
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ms.custom: internal, seo-caf-modernize
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
+
 # Modernize in the cloud
 The modernize horizon is where you enhance your business processes at scale. 
+
 
 :::image type="content" source="../_images/modernize/modernize-methodology-graphic.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
@@ -34,11 +36,12 @@ Redesign apps and databases when you want to modify and extend app functionality
 
 ## Rebuild with cloud-native technologies to accelerate developer velocity
 
-Consider rebuilding if your existing apps have limited functionality or lifespan. Re-create your apps using Azure cloud solutions.
+Consider rebuilding if your existing apps have limited functionality or lifespan. Re-create your apps using Azure cloud solutions. For more information, see [Build a digital transformation timeline](../strategy/digital-transformation-timeline.md).
 
 Modernization is a continuous process that involves significant organizational change management spanning people, process, and technology. Taking a holistic approach helps you navigate the journey successfully and helps ensure that your organization realizes new benefits—including efficiency, agility, and scale, after your workloads are running in the cloud.
 
 ## Modernization examples
+
 
 Modify or extend your apps to further scale and optimize for cloud architectures. Take advantage of Azure platform and service capabilities such as built-in security, patching, high availability, and auto-scaling. Typical projects include the following examples:
 
@@ -61,3 +64,4 @@ The following exercises help establish the iterative processes to assess, migrat
 ## Next steps
 
 The previously outlined steps can help you modernize at any stage of your cloud adoption journey. Modernizing apps and databases helps you get the most out of Azure capabilities including built-in security, patching, high availability, and auto-scaling.
+

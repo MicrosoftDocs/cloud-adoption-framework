@@ -12,9 +12,18 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # Cloud migration and modernization
 
-You can adopt the cloud in two ways. **??What horizon is building new apps??** (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies.
+You can adopt the cloud in two ways. (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies.
 
-:::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
+- [Approaches to cloud migration and modernization](#approaches-to-cloud-migration-and-modernization)
+  - [Migrate first, modernize later](#migrate-first-modernize-later)
+  - [Modernize first, migrate later](#modernize-first-migrate-later)
+  - [Migrate and modernize in parallel](#migrate-and-modernize-in-parallel)
+    - [Migrate](#migrate)
+      - [First to move](#first-to-move)
+      - [Next to move](#next-to-move)
+      - [Hard or costly to move](#hard-or-costly-to-move)
+    - [Modernize](#modernize)
+  - [Next steps](#next-steps)
 
 **New Apps:** Developers often adopt event-driven ("serverless") technologies when building cloud-native applications. These decisions help reduce cost and sustainment efforts.
 
@@ -44,9 +53,11 @@ This approach is often called replatforming. Here, you'll modernize aspects of a
 - *Enhanced Productivity:* Adopting PaaS narrowing the skills required to push apps to market and increases the productivity of development, security, and operations.
 - *Better Velocity:* Switching to managed services will limit the items developers need to focus on and will increase their sprint productivity.
 
+
 ## How to move existing applications
 
 The decision to rehost or replatform existing applications must factor in whether control or productivity is more important. Remaining on-premises and building a hybrid environment offers the most control. Converting to SaaS and low-code solutions or replacing applications altogether offers the most productivity. Most organizations adopt a balance of both control and productivity (*see figure*).
+
 
 :::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach-v2.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
@@ -58,9 +69,12 @@ The figure represents what businesses do with their existing application portfol
 
 ### Retire (35%)
 
+
 Your business has applications and environments it doesn't need. As part of your cloud adoption plan, you'll take an inventory of your application portfolio. You'll find IT assets that you don't need or aren't worth keeping. Shrinking your application portfolio allows your business to focus on business-critical workloads.
 
+
 ### Replace (15%)
+
 
 Replacing critical workloads with SaaS and low-code solutions provides the most productivity for applications you need to keep. You can move "from" management-heavy technologies "to" cloud solutions that improve productivity (*see table for examples*).
 
@@ -77,6 +91,7 @@ Replacing critical workloads with SaaS and low-code solutions provides the most 
 **1. First to move (35%):**  Pick easy wins for the first workloads to move. Test your cloud adoption plan on manageable applications before tackling the most complex or business critical workloads. Document your successes, revise your migration strategy, and extract lessons-learned. You'll apply these insights to your more complicated migrations. [Use Azure Migrate to plan your migration](/azure-docs-pr/articles/migrate/migrate-services-overview.md)
 
 Some examples of workloads you could include in your first move are:
+
 
 - *Basic web apps:* Rehost most your web applications. Allow more planning for applications that are highly regulated, business-critical, or transaction intensive (OLTP workloads).
 - *Advanced portals:* Replatform your portals with [Power Apps portals](/powerapps-docs/powerapps-docs/maker/portals/overview.md).
@@ -96,6 +111,7 @@ Some examples of workloads you could include in your first move are:
 - *Legacy source control:* Source control systems that aren't easily replaced with GitHub.
 - *Can't be modernized:* Legacy or proprietary technology that can't be modernized.
 - *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/well-architected-pr/well-architected/index.md) rather than the CAF modernize horizon.
+
 
 ## Next steps
 
