@@ -1,8 +1,8 @@
 ---
 title: Platform Automation and DevOps for Azure Red Hat OpenShift (ARO)
 description: Learn more about design recommendations and considerations for Azure Red Hat OpenShift (ARO) platform automation and DevOps.
-author: BrianBlanchard
-ms.author: brblanch
+author: dmossberg
+ms.author: daniem
 ms.date: 08/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

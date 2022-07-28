@@ -1,8 +1,8 @@
 ---
 title: Network topology and connectivity for Azure Red Hat OpenShift (ARO)
 description: Learn how to improve the network topology and connectivity of the Azure Red Hat OpenShift (ARO).
-author: Victor Santana
-ms.author: Welasco
+author: Welasco
+ms.author: vsantana
 ms.date: 06/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
