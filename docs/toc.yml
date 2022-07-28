@@ -922,11 +922,11 @@ items:
         items:
         - name: Overview
           href: modernize/business-alignment/index.md
-        - name: Envision cloud modernization 
+        - name: Envision 
           href: modernize/business-alignment/envision-cloud-modernization.md
-        - name: Evaluate modernization options 
+        - name: Evaluate
           href: modernize/business-alignment/evaluate-modernization-options.md
-        - name: Commit to modernization plan 
+        - name: Commit
           href: modernize/business-alignment/commit-to-modernization-plan.md      
       - name: Modernization disciplines
         items:
@@ -938,7 +938,7 @@ items:
           href: modernize/modernize-disciplines/application-platform-modernization.md
         - name: Developer alignment
           href: modernize/modernize-disciplines/developer-alignment-modernization.md
-        - name: Testing and architecture
+        - name: Testing & architecture
           href: modernize/modernize-disciplines/testing-architecture-modernization.md
     - name: Innovate
       items:

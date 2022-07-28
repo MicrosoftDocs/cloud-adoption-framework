@@ -6,15 +6,13 @@ ms.author: chcomley
 ms.date: 07/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: modernize
+ms.subservice:
 ms.custom: internal, seo-caf-modernize
 keywords: envision, motivations, approach, modernization, cloud adoption framework
 ---
 # Envision cloud modernization
 
-Envisioning modernization starts with understanding your cloud adoption motivations and how they relate to the workloads that you'll modernize. These motivations help you envision and establish your approach to the [modernization horizons](../../adopt/index.md).
-
-Every cloud adoption plan contains three horizons: [Migrate](../../get-started/migrate.md), [Modernize](index.md), and [Innovate](../../get-started/innovate.md). These horizons align to your modernization strategy. How do you determine whether to modernize or migrate first? We explore these options in [Migration and modernization approaches](../../adopt/migrate-modernize-approaches.md).
+Envisioning modernization starts with understanding your cloud adoption motivations. We call these your "modernization triggers." These modernization triggers are your business goals. In this business alignment process, you'll (1) identify your modernization triggers, (2) identify workloads, and (3) algin workload clusters with modernization triggers.
 
 The following steps help you envision your modernization strategy and end state, based on your strategic objectives.
 
@@ -34,7 +32,7 @@ The following steps help you envision your modernization strategy and end state,
 
 Knowing *why* you are modernizing will determine *what* to modernize.
 
-## Step 2: Identify Workloads
+## Step 2: Identify workloads
 
 A [workload](../../plan/workloads.md) is a collection of IT assets that support a business process. You can separate IT assets into three categories: infrastructure, applications, and data. You can stop thinking about maintaining IT assets as you would in existing data center(s) (*see figure*)
 
@@ -46,7 +44,7 @@ A [workload](../../plan/workloads.md) is a collection of IT assets that support 
 
  Applying modernizations to clusters of workloads will create the greatest business impact. Avoid rearchitecting individual workloads until you have modernized workload clusters. Follow the [Well-Architected Framework](/well-architected-pr/well-architected/index.md) when rearchitecting individual workloads.
 
-## Step 3: Define & track *clusters* of workloads based on the motivation
+## Step 3: Identify workload clusters that align with your modernization triggers
 
 When you align groups of workloads to your motivations, you have something to track and work against.
 
