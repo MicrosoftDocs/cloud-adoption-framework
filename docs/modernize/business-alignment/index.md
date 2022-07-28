@@ -1,18 +1,18 @@
 ---
 title: Business alignment for modernization
 description: Find articles to help you align your business and make a commitment toward your modernization effort.
-author: BrianBlanchard
-ms.author: chcomley
-ms.date: 07/20/2022
+author: StephenSumner
+ms.author: ssumner
+ms.date: 07/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: modernize
+ms.subservice:
 ms.custom: internal
 ---
 
-# Business alignment for modernization
+# Business alignment for cloud modernization
 
-Business alignment is a process you can use to ensure that your systems and elements work together to support your goals for modernization. Business and technical decision makers establish a plan for modernizing applications at scale in a repeatable process, based on business impact criteria.
+Business alignment is the first step in the modernize horizon. It is the process of prioritizing business goals, identifying the business processes that support those goals, and enhancing the technology used in those processes
 
 :::image type="content" source="../../_images/modernize/modernize-business-alignment.png" alt-text="Graphic showing three steps toward business alignment for modernize, envision, evaluate, and commit.":::
 

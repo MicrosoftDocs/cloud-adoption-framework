@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 07/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: adopt
+ms.subservice: 
 ms.custom: internal, seo-caf-adopt
 keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
@@ -41,16 +41,16 @@ This approach is often called replatforming. Here, you'll modernize aspects of a
 
 - *Faster time-to-market:* Use existing PaaS technologies to speed up deployment.
 - *Increased Innovation:* PaaS allows developers to focus on business logic and critical data plays.
-- *Enhanced Productivity:* Adopting PaaS narrowing the skills required to push apps to market and increases the productivity of development, security, and operations.
-- *Better Velocity:* Switching to managed services will limit the items developers need to focus on and will increase their sprint productivity.
+- *Enhanced Productivity:* Adopting PaaS narrows the skills required to push apps to market and increases the productivity of development, security, and operations.
+- *Better Velocity:* Switching to managed services will limit the items developers need to focus on and will increase their sprint velocity.
 
 ## How to move existing applications
 
-The decision to rehost or replatform existing applications must factor in whether control or productivity is more important. Remaining on-premises and building a hybrid environment offers the most control. Converting to SaaS and low-code solutions or replacing applications altogether offers the most productivity. Most organizations adopt a balance of both control and productivity (*see figure*).
+The decision to rehost or replatform existing applications must factor in whether control or productivity is more important (*see figure*). Remaining on-premises and building a hybrid environment offers the most control while converting to SaaS and low-code solutions or replacing applications altogether offers the most productivity. Most organizations adopt a balance of both control and productivity.
 
 :::image type="content" source="../_images/adopt/portfolio-migration-modernization-approach-v2.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
-The figure represents what businesses do with their existing application portfolio. A typical business will:
+The figure represents what a typical business does with their existing application portfolio:
 
 - Retire 35% of existing applications
 - Replace 15% of existing applications
@@ -66,7 +66,7 @@ Replacing critical workloads with SaaS and low-code solutions provides the most 
 
 | From<span title="Replace">&nbsp;</span> | To<span title="To">&nbsp;</span> |<span></span>|
 |-|-|-|
-|Custom line of <br>business (LOB)<br>apps| [Power Apps](/power-apps/powerapps-overview) | :::image type="icon" source="../_images/adopt/powerapps.svg":::
+|Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)| :::image type="icon" source="../_images/adopt/powerapps.svg":::
 |DevOps tools|[GitHub](/learn/modules/introduction-to-github/)|:::image type="icon" source="../_images/adopt/github-icon.svg":::
 |Relationship <br>Management|[Dynamics](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
 |Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::

@@ -7,7 +7,7 @@ ms.date: 07/26/2022
 
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: adopt
+ms.subservice:
 ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
@@ -19,6 +19,7 @@ Your cloud adoption plan will take you down several paths or "horizons." Organiz
 :::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
 
 ## Overview of Adopt
+
 You can jump to the guidance for each horizon using the buttons below. Below, you can find a brief overview of the horizon.
 
 ### Horizon 1: Migrate
