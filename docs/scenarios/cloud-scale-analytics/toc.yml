@@ -164,16 +164,16 @@ items:
 
   - name: Tutorials
     items:
-    - name: Customer scenario
-      href: ../cloud-scale-analytics/tutorials/tutorial-customer-scenario.md
-    - name: Create data landing zone
+    - name: Evaluate an enterprise data scenario
+      href: ../cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md
+    - name: Create a data landing zone
       href: ../cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md
-    - name: Create data product
-      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product.md
-    - name: Data product interaction
-      href: ../cloud-scale-analytics/tutorials/tutorial-data-product-interaction.md
-    - name: Clean-up instructions
-      href: ../cloud-scale-analytics/tutorials/clean-up-instructions.md
+    - name: Create a data product batch
+      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md
+    - name: Set up a data product batch
+      href: ../cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md
+    - name: Clean up resources
+      href: ../cloud-scale-analytics/tutorials/cleanup-instructions.md
 
   - name: Best practices
     items:

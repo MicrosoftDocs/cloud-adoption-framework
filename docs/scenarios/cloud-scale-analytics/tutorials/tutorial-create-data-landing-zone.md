@@ -1,163 +1,166 @@
 ---
-title: Create data landing zone tutorial
-description: Learn about create data landing zone tutorial
-author: andrehass
-ms.author: anhass
-ms.date: 03/16/2022
-ms.topic: conceptual
+title: Tutorial - Create a data landing zone
+description: Learn how to create a data landing zone by using one-click deployment in the Azure portal.
+author: abdale
+ms.author: hamoodaleem
+ms.date: 07/18/2022
+ms.topic: tutorial
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank, references_regions
 ---
 
-# Create data landing zone tutorial
+# Tutorial: Create a data landing zone
 
-A Data Landing Zone is a unit of scale of the Enterprise-Scale Analytics architecture pattern. Data Landing Zones enable regional deployments, clear separation of ownership, chargeback of cost, in-place data sharing within and across Data Landing Zones and many other benefits. In addition, it is possible to scale within Data Landing Zones with cross-functional Data Integration and Data Product teams. The reference design targets a self-service approach for these teams to overcome bottlenecks and the need for a central team for cloud service deployments. The Data Landing Zone reference implementation will create a consistent setup inside a subscription and will deploy storage accounts as well as data processing services like Azure Synapse, Azure Data Factory as well as Azure Databricks.
+In this tutorial, learn how to create a data landing zone by using the Deploy to Azure option in the Azure portal. Learn how to:
 
-## What will be deployed?
+> [!div class="checklist"]
+>
+> - Use the Deploy to Azure option
+> - Select settings and options for your deployment
+> - Validate deployment parameters
+> - Create the deployment
 
-By navigating through the deployment steps, you will deploy the following setup in a subscription:
+A data landing zone is a unit of scale in the enterprise-scale analytics architecture pattern. The benefits of using a data landing zone include regional deployments, clear separation of ownership, cost chargeback, and in-place data sharing within and across zones. You also can scale within a data landing zone by using cross-functional data integration and data product teams. The reference design offers a self-service approach for data product teams to overcome bottlenecks and the need for a central team for cloud service deployments. The data landing zone reference implementation creates a consistent setup inside an Azure subscription. It deploys storage accounts and data processing services like Azure Synapse Analytics, Azure Data Factory, and Azure Databricks.
+
+## What's deployed?
+
+When you complete the deployment steps described in this tutorial, you deploy a setup in your Azure subscription like the one shown in the following diagram:
+
+:::image type="content" source="../images/data-landing-zone.png" border="false" alt-text="Diagram of a data landing zone setup.":::
 
 > [!NOTE]
->Before deploying the resources, we recommend to check registration status of the required resource providers in your subscription. For more information, see [Resource providers for Azure services](/azure/azure-resource-manager/management/resource-providers-and-types).
+> Before you deploy the resources described in this tutorial, check the registration status of the required resource providers for your Azure subscription. For more information, see [Resource providers for Azure services](/azure/azure-resource-manager/management/resource-providers-and-types).
 
-:::image type="content" source="../images/data-landing-zone.png" alt-text="Diagram of the Data Landing Zone.":::
+A data landing zone deployment uses these Azure services and resources:
 
-The deployment and code artifacts include the following services:
-
-- [Virtual Network](/azure/virtual-network/virtual-networks-overview)
-- [Network Security Groups](/azure/virtual-network/network-security-groups-overview)
-- [Route Tables](/azure/virtual-network/virtual-networks-udr-overview)
-- [Key Vault](/azure/key-vault/general)
-- [Storage Account](/azure/storage/common/storage-account-overview)
-- [Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
-- [Data Factory](/azure/data-factory/)
-- [Self-Hosted Integration Runtime](/azure/data-factory/create-self-hosted-integration-runtime)
-- [Log Analytics](/azure/azure-monitor/learn/quick-create-workspace)
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview), including [network security groups](/azure/virtual-network/network-security-groups-overview) and [route tables](/azure/virtual-network/virtual-networks-udr-overview)
+- [Azure Key Vault](/azure/key-vault/general)
+- [Azure Storage Account](/azure/storage/common/storage-account-overview)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
+- [Self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime) (in [Azure Data Factory](/azure/data-factory/))
+- [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) (in [Azure Monitor](/azure/azure-monitor/))
 - [SQL Server](/sql/sql-server/?view=sql-server-ver15&preserve-view=true)
-- [SQL Database](/azure/azure-sql/database/)
-- [Synapse Workspace](/azure/synapse-analytics/)
-- [Databricks](/azure/databricks/)
-- [Event Hubs](/azure/event-hubs/)
+- [Azure SQL Database](/azure/azure-sql/database/)
+- [Synapse workspace](/azure/synapse-analytics/quickstart-create-workspace) (in [Azure Synapse Analytics](/azure/synapse-analytics/))
+- [Azure Databricks](/azure/databricks/)
+- [Azure Event Hubs](/azure/event-hubs/)
 
 ## Supported regions
 
-For now, we're recommending to select one of the regions mentioned below. The list of regions is limited for now due to the fact that not all services and features are available in all regions. This is mostly related to the fact that we're recommending to use the zone-redundant storage replication option for all your central Data Lakes in the Data Landing Zones. Since zone-redundant storage is not available in all regions, we're limiting the regions in the Deploy to Azure experience. If you are planning to deploy the Data Management Zone and Data Landing Zone to a region that is not listed below, then change the setting in the corresponding bicep files in this repository. Officially supported regions are:
+Not all services and features are available in all Azure regions. For this tutorial, we recommend that you use the zone-redundant storage replication option for all the central data lakes in your data landing zone. Because zone-redundant storage isn't available in all regions, we limit the regions that are available in the deployment template. If you plan to deploy to a region that's not listed here, change the setting in the corresponding [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) files when you use the template to create a deployment in the Azure portal.
+
+For this tutorial, select one of the Azure regions in the following list:
 
 - (Africa) South Africa North
-- (Asia Pacific) Southeast Asia
 - (Asia Pacific) Australia East
+- (Asia Pacific) Central India
 - (Asia Pacific) Japan East
+- (Asia Pacific) South India
+- (Asia Pacific) Southeast Asia
 - (Canada) Canada Central
-- (Europe) North Europe
-- (Europe) West Europe
 - (Europe) France Central
 - (Europe) Germany West Central
+- (Europe) North Europe
 - (Europe) UK South
+- (Europe) West Europe
 - (South America) Brazil South
 - (US) Central US
 - (US) East US
 - (US) East US 2
 - (US) South Central US
+- (US) West Central 2
 - (US) West US 2
 
 ## Prerequisites
 
-> [!NOTE]
-> Make sure you have successfully deployed a [Data Management Landing Zone]. The Data Landing Zone relies on the Private DNS Zones that are deployed in the Data Management Template. If you have Private DNS Zones deployed elsewhere, you can also point to these. If you do not have the Private DNS Zones deployed for the respective services, Data Landing Zone templates deployment will fail.
+Before you begin setting up your deployment, make sure that you meet these prerequisites:
 
-Before we start with the deployment, make sure that you have the following available:
+- **Azure subscription.** If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
 
-- A **Data Management Zone** deployed. For more information, check the [Data Management Zone](https://github.com/Azure/data-management-zone) repo.
-- An **Azure subscription**. If you don't have an Azure subscription, [create your Azure free account today](https://azure.microsoft.com/free/).
+- **Permissions for the Azure subscription.** You must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) role or the [Owner](/azure/role-based-access-control/built-in-roles#owner) role.
 
-    :::image type="content" source="../images/marketplace-subscription.png" alt-text="Screenshot showing the search Subscription.":::
+- **Deploy a data management landing zone.** Before you begin, make sure you successfully deploy a [data management landing zone](https://github.com/Azure/data-management-zone). The data landing zone relies on Azure Private DNS zones that are deployed when you use the data management landing zone template. If you already have Azure Private DNS zones deployed, you can point to those zones. If you don't have Azure Private DNS zones deployed for the respective Azure services, deployment by using the data landing zone template fails. For more information, see the [data management landing zone](https://github.com/Azure/data-management-zone) GitHub repository.
 
-- **Permissions to the Azure subscription**:[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) access to the subscription to be able to create a service principal and role assignments for it.
-- For the deployment, choose one of the **Supported Regions**.
+## Set up the data landing zone deployment
 
-## One Click Deployment
+You can use a one-click customized deployment template to deploy the data landing zone in your Azure subscription. The deployment template deploys all the required resources.
 
-1. Deploy Data Landing Zone
+1. To deploy a data landing zone, select the **Deploy to Azure** button:
 
-      This is a UI based deployment option that lets you deploy the Data Landing Zone into your Azure subscription.
+    [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-landing-zone%2Fmain%2Finfra%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-landing-zone%2Fmain%2Fdocs%2Freference%2Fportal.dataLandingZone.json)
 
-      This will deploy all the resources of Data Landing Zone explained earlier in quickest and simplistic possible way.
+   The **Cloud-scale Analytics Scenario - Data Landing Zone** customized deployment template opens in the Azure portal.
 
-      To use the Deploy to Azure Button, click on the button below:
+1. In **Data Landing Zone**, select or enter the following information:
 
-      | Reference implementation   | Description | Deploy to Azure |
-      |:---------------------------|:------------|:----------------|
-      | Data Landing Zone          | Deploys a single Data Landing Zone to a subscription. Deploy a [Data Management Landing Zone](https://github.com/Azure/data-management-zone) first. |[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-landing-zone%2Fmain%2Finfra%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-landing-zone%2Fmain%2Fdocs%2Freference%2Fportal.dataLandingZone.json) |
+    | Setting | Action |
+    | --- | --- |
+    | **Subscription** | Select the Azure subscription to use for the data landing zone deployment. |
+    | **Location** | In the dropdown, select one of the Azure regions that are supported for this scenario. If no organizational policies influence the region you choose, it's a good idea to choose a region that's physically close to you. For more information, see [Supported regions](#supported-regions). |
+    | **Environment** | For this tutorial, select **Development**. |
+    | **Data landing zone prefix** | Enter a unique string that's a maximum of 10 alphanumeric characters. The string is a unique prefix that's added to all resource groups and resources in the deployment. |
 
-      This opens up a new page in the Azure portal.
+    :::image type="content" source="../images/data-landing-zone-tab.png" alt-text="Screenshot that shows information to provide on the Data landing zone tab.":::
 
-1. In this page, provide the following information:
+   Select **Next : General Settings**.
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | Subscription | Select the subscription to deploy the Data Landing Zone to. If you have access to multiple subscriptions, choose the correct one. |
-      |Location | Select from the dropdown. If there are no organizational policies influencing the location, it is a good idea to pick a region that is physically close to you. Verify that this region is supported for Enterprise Scale Analytics. A list of supported regions are available [here](#supported-regions) |
-      | Environment | We recommend you choose Development, as this is a tutorial. You could use the same process to deploy a Test or Production environment as well. |
-      | Data Landing Zone prefix | This is a prefix added to all the deployed resource groups and resources to make them unique within the subscription. This can be a max of 10 alphanumeric characters. |
+1. In **General Settings**, select or enter the following information:
 
-    :::image type="content" source="../images/dlz-1.png" alt-text="Screenshot showing the Data Landing Zone.":::
+    | Setting | Action |
+    | --- | --- |
+    | **Password**  | Enter a new password to create the required administrator password for Synapse workspaces, Azure SQL servers, and potentially for self-hosted integration runtimes that are hosted on a virtual machine scale set. |
+    | **Confirm Password** | Reenter the password to confirm it. |
+    | **Connect to Purview Account** | In the dropdown, select the Azure Purview account you want to use to connect Azure Synapse Analytics and Azure Data Factory. |
+    | **Deploy Self-hosted Integration Runtimes** | Select **Yes**. |
+    | **Purview Self-hosted Integration Runtime Authentication Key** | If you have a self-hosted integration runtime authentication key, enter or paste the key. If you don't have a key, complete the steps to [create a self-hosted integration runtime for Azure Purview](/azure/purview/manage-integration-runtimes#create-a-self-hosted-integration-runtime). Copy the key, and then paste the key here. |
 
-1. Click on **Next: General Settings**. In this page, provide the following information:
+    :::image type="content" source="../images/data-landing-zone-general-settings.png" alt-text="Screenshot that shows information to provide on the General settings tab.":::
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | Password  | This is required to set an administrator password for the Synapse workspaces, SQL Servers and potentially self-hosted Integration Runtimes hosted on Virtual Machine Scale Set. |
-      | Confirm Password  | Confirm the previously entered password. |
-      | Connect to Purview Account | Select the Purview account from the dropdown to which you want to connect Synapse and Data Factory. |
-      | Deploy self-hosted Integration Runtimes | Choose Yes to deploy self-hosted Integration Runtimes into your Data Landing Zone. |
-      | Purview Self-hosted Integration Runtime Authentication Key | Paste the previously captured SHIR authentication key. If you don't have the key, follow the steps on [Create Purview SHIR](/Lab1/7_create_purview-shir/) to generate and copy it. |
+   Select **Next : Connectivity Settings**.
 
-    :::image type="content" source="../images/dlz-creation-2.png" alt-text="Screenshot showing the general settings page.":::
+1. In **Connectivity Settings**, complete these steps:
 
-1. Next, click on **Next: Connectivity Settings**. In this page, provide the following information:
+   1. In the **Data Management Landing Zone Virtual Network Configuration** section, select or enter the following information:
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | Virtual Network Configuration | This is an **optional** step required only if the default Vnet configuration has to be altered. **Don't make any changes to these IP addresses.** |  
+      | Setting | Action |
+      | --- | --- |
+      | **Data Management Landing Zone Subscription** | Select the Azure subscription you use for the data landing zone deployment.
+      | **Data Management Landing Zone Virtual Network** | Select your data management landing zone virtual network to peer it with your data landing zone. |
+      | **Existing Firewall** | Leave the default, **Azure Firewall**. |
+      | **Azure Firewall Subscription** | Select the Azure subscription that has an Azure Firewall deployment. It should be the same subscription you use to deploy the data management landing zone. |
+      | **Azure Firewall** | Select the Azure Firewall from the data management landing zone deployment. An example value is `<DLZ-prefix>-dev-firewall`. |
 
-    :::image type="content" source="../images/dlz-connectivity-1.png" alt-text="Screenshot showing data landing zone connectivity Settings.":::
+      :::image type="content" source="../images/data-landing-zone-connectivity-virtual-network.png" alt-text="Screenshot that shows data landing zone connectivity settings for virtual networks.":::
 
-1. Scroll down to the Data Management Landing Zone Virtual Network Configuration section.
+   1. Under **Private DNS Zone**, select or enter the following information:
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | Data Management Landing Zone Subscription | Choose the appropriate subscription to deploy Data Landing Zone. |
-      | Data Management Landing Zone Virtual Network | Select the Vnet of your **Data Management Landing Zone** to peer it with your Data Landing Zone. |
-      | Existing Firewall | Select the existing Azure Firewall. |
-      | Azure Firewall Subscription | Select the Firewall subscription. It should be the same subscription used to deploy Data Management Landing Zone. |
-      | Azure Firewall | Select the Firewall from the Data Management Landing Zone deployment. i.e. _`[DMLZPrefix]`_`-dev-firewall` |
+      | Setting | Action |
+      | --- | --- |
+      | **DNS A-Records are deployed through Azure Policy** | Select **No**. |
+      | **Subscription with Private DNS Zones** | Select the Azure subscription you use to deploy the data management landing zone. |
+      | **Private DNS Zone Key Vault** | Select `privatelink.vaultcore.azure.net`. |
+      | **Private DNS Zone DataFactory** | Select `privatelink.datafactory.azure.net`. |
+      | **Private DNS Zone DataFactory Portal** | Select `privatelink.adf.azure.net`. |
+      | **Private DNS Zone Blob Storage** | Select `privatelink.blob.core.windows.net`. |
+      | **Private DNS Zone DFS Storage** | Select `privatelink.dfs.core.windows.net`. |
+      | **Private DNS Zone SQL Server** | Select `privatelink.database.windows.net`. |
+      | **Private DNS Zone MySQL Server** | Select **privatelink.mysql.database.azure.com**. |
+      | **Private DNS Zone EventHub Namespace** | Select `privatelink.servicebus.windows.net`. |
+      | **Private DNS Zone Synapse Dev** | Select `privatelink.dev.azuresynapse.net`. |
+      | **Private DNS Zone Synapse SQL** | Select `privatelink.sql.azuresynapse.net`. |
 
-      :::image type="content" source="../images/dlz-connectivity-2.png" alt-text="Screenshot showing data landing zone connectivity settings continued.":::
+       :::image type="content" source="../images/data-landing-zone-connectivity-private-dns.png" alt-text="Screenshot that shows data landing zone connectivity settings for Azure Private DNS zones.":::
 
-1. Under Private DNS Zone settings enter the following information.
+   Select **Review + create**.
 
-      | Setting| Suggested Value(s)  |
-      |:-------|:--------------------|
-      | DNS A-Records are deployed through Azure Policy | Choose **No** |
-      | Subscription with Private DNS Zones | Select the subscription used to deploy Data Management Landing Zone. |
-      | Private DNS Zone Key Vault | select privatelink.vaultcore.azure.net |
-      | Private DNS Zone DataFactory | select privatelink.datafactory.azure.net |
-      | Private DNS Zone DataFactory Portal | select privatelink.adf.azure.net |
-      | Private DNS Zone Blob Storage | select privatelink.blob.core.windows.net |
-      | Private DNS Zone DFS Storage | select privatelink.dfs.core.windows.net |
-      | Private DNS Zone SQL Server | select privatelink.database.windows.net |
-      | Private DNS Zone MySQL Server | select privatelink.mysql.database.azure.com |
-      | Private DNS Zone EventHub Namespace | select privatelink.servicebus.windows.net |
-      | Private DNS Zone Synapse Dev | select privatelink.dev.azuresynapse.net |
-      | Private DNS Zone Synapse SQL | select privatelink.sql.azuresynapse.net |
+1. When the parameters are validated, select **Create** to start the deployment.
 
-    :::image type="content" source="../images/dlz-connectivity-3.png" alt-text="Screenshot showing the private DNS Zone Settings.":::
+   :::image type="content" source="../images/data-landing-zone-create.png" alt-text="Screenshot shows the data landing zone parameter validation and the Create pane.":::
 
-1. Click on **Review + Create**  
+Deployment takes approximately 25 minutes to complete.
 
-1. When the parameters are validated, the **Create** button will be enabled. Click in **Create** to start the deployment.
+## Next steps
 
-    :::image type="content" source="../images/dlz-deployment-create.png" alt-text="Screenshot showing the data landing zone create summary page.":::
-
-The deployment will take around 25 minutes to complete.
+> [!div class="nextstepaction"]
+> [Create a data product batch](tutorial-create-data-product-batch.md)
