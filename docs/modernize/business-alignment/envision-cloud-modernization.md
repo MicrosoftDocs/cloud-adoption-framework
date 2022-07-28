@@ -24,7 +24,7 @@ The following steps help you envision your modernization strategy and end state,
 
  The reasons you want to modernize are your "modernization triggers." These are motivations behind your [technical](evaluate-modernization-options.md#technical-indicators) [investments](evaluate-modernization-options.md#financial-indicators). Modernization triggers are unique to your business, but commonalities exist across businesses and industries:
 
-# We need to align the following link to this page. The graphics don't line up. [motivations for cloud adoption](../../strategy/motivations.md).
+**We need to align the following link to this page. The graphics don't line up. [motivations for cloud adoption](../../strategy/motivations.md).**
 
 - **Enabling hybrid work:** Make applications accessible and secure for remote productivity.
 - **Faster time to market:** Increase deployment speed to see a faster return-on-investment.
@@ -42,21 +42,9 @@ A [workload](../../plan/workloads.md) is a collection of IT assets that support 
 
  Instead, you should focus on workloads. Prioritize the business processes that will have the most impact on your business. Then, identify the workloads that support these processes. These are the high-priority processes that you will want to target. Once you identify these high-priority workloads, you will want to group them into clusters (*see figure*).
 
-
 :::image type="content" source="../../_images/modernize/workload-clusters.png" alt-text="Graphic showing workload clusters.":::
 
- Applying modernizations to clusters of workloads will create the greatest business impact. Avoid rearchitecting individual workloads until you have modernized workload clusters. Rearchitecting individual workloads applies the[Well-Architected Framework](../../../../well-architected-pr/well-architected/index.md).
-
-For more information about approaches to migration and modernization, see 
-
-If you've already done a migration and followed the "plan" best practices, you've likely done this exercise. If not (if you're starting with a modernization action), do the following tasks:
-
-- See [Cloud rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization) to understand what cloud rationalization is. You'll also learn how to conceptually break down your environment, make sense of dependencies and cross references, and so on.
-- [Perform a digital estate assessment](../../plan/contoso-migration-assessment.md) to help map assets to workloads.
-- [Assess workloads and refine plans](../../migrate/azure-migration-guide/assess.md).
-- [Review migration and modernization approaches](../../adopt/migrate-modernize-approaches.md) to understand the three adoption horizons and how to prioritize.
-- Review the adoption horizons, [Migrate](./../../migrate/index.md), [Modernize](index.md), and [Innovate](../../innovate/index.md) to help you prioritize your goals.
-
+ Applying modernizations to clusters of workloads will create the greatest business impact. Avoid rearchitecting individual workloads until you have modernized workload clusters. Follow the [Well-Architected Framework](/well-architected-pr/well-architected/index.md) when rearchitecting individual workloads.
 
 ## Step 3: Define & track *clusters* of workloads based on the motivation
 
