@@ -15,13 +15,13 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 The modernize horizon is where you enhance your business processes at scale. Modernizing can happen after you migrate a workload or during the migration. [We have guidance to help you decide](/docs/adopt/migrate-modernize-approaches.md).
 
-Modernization is a two-prong approach that requires business alignment and modernization disciplines (*see figure*). 
+Modernization is a two-prong approach that involves aligning modernization efforts to business goals and enabling your organization to work with current modernization disciplines (*see figure*).
 
 :::image type="content" source="../_images/modernize/modernize-methodology-graphic.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
-Decision makers identify business goals and commit to the modernization investment. Technical teams need to use current modernization disciplines to execute the modernization plan successfully.
+Success in the modernize horizon will require close collaboration between business and technical leads. Together, these two groups must identify the IT assets and business processes that need rework to meet certain goals.
 
-This series of articles will walk you through each aspect of the modernize horizon.
+This series of articles will walk you through each aspect of the modernize horizon. We will start with business alignment and move to modernization disciplines.
 
 ## Next steps
 
