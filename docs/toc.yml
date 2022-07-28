@@ -491,9 +491,9 @@ items:
 
   - name: Adopt
     items:
-    - name: Establish adoption horizons 
+    - name: Overview
       href: adopt/index.md
-    - name: Approaches 
+    - name: Cloud migration and modernization 
       href: adopt/migrate-modernize-approaches.md
     - name: Migrate
       items:
