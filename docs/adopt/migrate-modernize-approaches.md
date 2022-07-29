@@ -1,7 +1,7 @@
 ---
 title: Cloud migration and modernization
 description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
-author: StephenSumner
+author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/27/2022
 ms.topic: conceptual
@@ -14,7 +14,7 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 You can adopt the cloud in two ways. (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies.
 
-:::image type="content" source="../_images/adopt/migration-modernization-approaches.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
+:::image type="content" source="../_images/adopt/adoption-strategies-2.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
 **New Apps:** Developers often adopt event-driven ("serverless") technologies when building cloud-native applications. These decisions help reduce cost and sustainment efforts. **Is this right?**
 

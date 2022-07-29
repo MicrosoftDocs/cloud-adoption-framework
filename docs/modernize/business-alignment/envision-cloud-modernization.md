@@ -12,47 +12,49 @@ keywords: envision, motivations, approach, modernization, cloud adoption framewo
 ---
 # Envision cloud modernization
 
-Envisioning modernization starts with understanding your cloud adoption motivations. We call these your "modernization triggers." These modernization triggers are your business goals. In this business alignment process, you'll (1) identify your modernization triggers, (2) identify workloads, and (3) algin workload clusters with modernization triggers.
+Envisioning modernization starts with understanding your cloud adoption motivations. These modernization motivations are your business goals. Your motivations will determine what you should modernize. Follow these steps to identify your motivations and the workloads you should modernize.
 
-The following steps help you envision your modernization strategy and end state, based on your strategic objectives.
+## Step 1: Identify modernization motivations
 
-## Step 1: Identify modernization triggers
+ Modernization motivations are the reasons you want to modernize. They drive revenue, improve productivity, and increase margins. Your motivations will be unique to your business goals. But commonalities exist across businesses and industries (*see figure*).
 
-:::image type="content" source="../../_images/modernize/modernization-triggers.png" alt-text="Image showing triggers for modernization.":::
+:::image type="content" source="../../_images/modernize/modernization-motivations.png" alt-text="Image showing triggers for modernization.":::
 
- The reasons you want to modernize are your "modernization triggers." These are motivations behind your [technical](evaluate-modernization-options.md#technical-indicators) [investments](evaluate-modernization-options.md#financial-indicators). Modernization triggers are unique to your business, but commonalities exist across businesses and industries:
+**Explaining Motivations:** Here are a some of the most common modernization triggers across industries:
 
-**We need to align the following link to this page. The graphics don't line up. [motivations for cloud adoption](../../strategy/motivations.md).**
-
-- **Enabling hybrid work:** Make applications accessible and secure for remote productivity.
-- **Faster time to market:** Increase deployment speed to see a faster return-on-investment.
-- **Cost-optimizing applications:** Gain operational efficiencies to drive down the cost of ownership.
-- **Application innovation:** Adopt new technologies and architectures to enable rapid innovation.
-- **Centralize data:** Store application data in a centralized repository to enhance security, reduce redundancy, and drive transparency.
+- *Enabling hybrid work:* Make applications accessible and secure for remote productivity.
+- *Faster time to market:* Increase deployment speed to see a faster return-on-investment.
+- *Cost-optimizing applications:* Gain operational efficiencies to drive down the cost of ownership.
+- *Application innovation:* Adopt new technologies and architectures to enable rapid innovation.
+- *Centralize data:* Store application data in a centralized repository to enhance security, reduce redundancy, and drive transparency.
 
 Knowing *why* you are modernizing will determine *what* to modernize.
 
 ## Step 2: Identify workloads
 
-A [workload](../../plan/workloads.md) is a collection of IT assets that support a business process. You can separate IT assets into three categories: infrastructure, applications, and data. You can stop thinking about maintaining IT assets as you would in existing data center(s) (*see figure*)
+The cloud frees you to focus on workloads. After assessing your motivation triggers, start identifying your workloads. A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support an aspect of your business. In a data center, IT assets are logically separate (*see figure*).
 
-:::image type="content" source="../../_images/modernize/existing-datacenters.png" alt-text="Graphic showing existing data center.":::
+:::image type="content" source="../../_images/modernize/existing-datacenters.png" alt-text="Graphic showing existing data center." :::
 
- Instead, you should focus on workloads. Prioritize the business processes that will have the most impact on your business. Then, identify the workloads that support these processes. These are the high-priority processes that you will want to target. Once you identify these high-priority workloads, you will want to group them into clusters (*see figure*).
+**How to idenitfy workloads:** List your primary business functions. Then, list the IT assets that support those functions. Those supporting IT assets are your workloads (*see table for examples*).
 
-:::image type="content" source="../../_images/modernize/workload-clusters.png" alt-text="Graphic showing workload clusters.":::
+| <br>Business Function<span title="Business Function">&nbsp;</span> | <br>Supporting IT Assets<span title="Supporting IT Assets">&nbsp;</span> |
+|--|--|
+|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|
+|Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server
+|
 
- Applying modernizations to clusters of workloads will create the greatest business impact. Avoid rearchitecting individual workloads until you have modernized workload clusters. Follow the [Well-Architected Framework](/well-architected-pr/well-architected/index.md) when rearchitecting individual workloads.
+## Step 3: Align workloads and modernization motivations
+Return to your motivations in step 1 and apply them to your workload list (*see table*). This will help you prioritize your modernization efforts. 
 
-## Step 3: Align workloads and modernization triggers
-
-When you align groups of workloads to your motivations, you have something to track and work against.
-
-:::image type="content" source="../../_images/modernize/align-workload-motivations.png" alt-text="Image showing alignment of workload clusters with motivations.":::
-
+|<br>Business Function<span title="Business Function">&nbsp;</span> | <br>Supporting IT Assets<span title="Supporting IT Assets">&nbsp;</span> | <br>Motivation<span title="Motivation">&nbsp;</span> |
+|--|--|--|
+|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Cost-optimization<br>App innovation<br>Data Centralization
+|Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Faster time to market<br>Data Centralization
+|
 ## Next steps
 
 Once you've mapped your motivations to workloads, determine your approach.
 
 > [!div class="nextstepaction"]
-> [Approaches to cloud migration and modernization](../../adopt/migrate-modernize-approaches.md).
+> [Evaluate](../../modernize/business-alignment/evaluate-modernization-options.md.md).
