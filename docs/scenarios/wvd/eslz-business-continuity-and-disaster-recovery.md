@@ -56,10 +56,7 @@ For host pool VM resiliency:
      > [!NOTE]
      > The maximum number of VMs inside an **Availability Set** is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-- Using [Availability Zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should take into account enough extra compute capacity to ensure Azure Virtual Desktop continues to operate even if a single zone is lost.
-
-     > [!NOTE]
-     > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure portal.
+- Using [Availability Zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters when using a custom Azure Resoure Manager template. VMs are still inside the same region, and have higher resiliency and higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should take into account enough extra compute capacity to ensure Azure Virtual Desktop continues to operate even if a single zone is lost. The Azure Virtual Desktop Host Pool blade in the Azure Portal supports deployment into a specific Availability Zone. To distribute VMs in a host pool across availability zones, you can execute the host pool deployment initially into one zone and add later VMs into additional zones. Distribution of VMs in a host pool in different availaiblity zones is beneficial for *pooled* (shared) host pools. A *personal* (dedicated) host pool assigns a VM to a specific user and sticks to that, even if not available.
 
 Before approaching BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with a different disaster recovery approaches and capabilities.
 
