@@ -34,11 +34,11 @@ Your organization or enterprise needs to design suitable security settings to me
 - **Cluster identities**
   - Create a Service Principal and define custom Azure RBAC roles for your ARO landing zone to simplify the management of required permissions for the ARO Cluster Service Principal.
 - **Cluster access**
-  - Configure [Azure AD integration](https://docs.microsoft.com/en-us/azure/openshift/configure-azure-ad-cli) to use Azure AD for authentication of users to your ARO cluster.
+  - Configure [Azure AD integration](/azure/openshift/configure-azure-ad-cli) to use Azure AD for authentication of users to your ARO cluster.
   - Define OpenShift projects for restricting RBAC privilege and creating isolation between workloads in your cluster.
   - Define required RBAC roles in OpenShift that are scoped to either a local project scope or cluster scope.
   - Use Azure RedHat OpenShift to create role bindings that are tied to Azure AD groups for site reliability engineering (SRE), SecOps, and developer access.
   - Use Azure RedHat OpenShift with Azure AD to [limit privileges](/azure/aks/azure-ad-rbac) and minimize granting administrator privileges to protect configuration and secrets access.
-  - Full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../ready/landing-zone/design-area/identity-access.md).
+  - Full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../ready/landing-zone/design-area/identity-access.md).
 - **Cluster workloads**
   - For applications requiring access to sensitive information, use a Service Principal and [Azure Keyvault Provider for Secret Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/) to mount secrets stored in Azure Keyvault to your pods.
