@@ -191,6 +191,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Service Bus | `Microsoft.ServiceBus/namespaces` | `sb-` |
 | Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq-` |
 | Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt-` |
+| API Connection | `Microsoft.Web/connections` | `apic-` |
 
 ## Management and governance
 
