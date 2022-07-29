@@ -1,7 +1,7 @@
 ---
 title: Adopt the cloud
 description: Use the Cloud Adoption Framework for Azure to understand the adoption horizons necessary to identify and prioritize, based on your adoption goals.
-author: StephenSumner
+author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/26/2022
 
@@ -16,7 +16,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 Your cloud adoption plan will take you down several paths or "horizons." Organizations follow three primary horizons: migrate, modernize, and innovate. The horizon you choose and when will depend your business goals (*see figure*). These horizons don't need to be followed in a sequence. We provide guidance to help you choose which horizon is best suited to your current needs. Most cloud adoption plans visit all three horizons. Your business goals will determine the best order.
 
-:::image type="content" source="../_images/adopt/cloud-adoption-horizons.png" alt-text="img":::
+:::image type="content" source="../_images/adopt/cloud-adoption-plan.png" alt-text="img":::
 
 ## Overview of Adopt
 

@@ -1,7 +1,7 @@
 ---
 title: Business alignment for modernization
 description: Find articles to help you align your business and make a commitment toward your modernization effort.
-author: StephenSumner
+author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/28/2022
 ms.topic: conceptual

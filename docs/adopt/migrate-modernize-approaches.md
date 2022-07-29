@@ -1,5 +1,5 @@
 ---
-title: Cloud migration and modernization
+title: How to adopt the cloud
 description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
 author: stephen-sumner
 ms.author: ssumner
@@ -10,15 +10,15 @@ ms.subservice:
 ms.custom: internal, seo-caf-adopt
 keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
-# Cloud migration and modernization
+# How to adopt the cloud
 
-You can adopt the cloud in two ways. (1) You can build new, cloud-native applications or (2) adapt existing applications to use cloud technologies.
+You can adopt the cloud in two ways. (1) You can build new applications with cloud-native technologies. (2) You can modify existing applications to use cloud technologies.
 
 :::image type="content" source="../_images/adopt/adoption-strategies-2.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
-**New Apps:** Developers often adopt event-driven ("serverless") technologies when building cloud-native applications. These decisions help reduce cost and sustainment efforts. **Is this right?**
+**New Apps:** Cloud-native applications can freely integrate cloud technologies that enable them to meet current and future business demands through scaling and performance optimization.
 
-**Existing Apps:** You have options if you want to adapt existing applications. You can migrate to IaaS, modernize with PaaS and containers, replace with SaaS, or stay on-premises with a hybrid cloud. **Should we change the graphic?**
+**Existing Apps:** You have options if you choose to modify existing applications. You can migrate to IaaS, modernize with PaaS and containers, replace with SaaS, or stay on-premises with a hybrid cloud.
 
 For most organizations, the cloud adoption plan involves migrating and modernizing existing applications. However, the question is when to modernize these applications. The timing depends on your business goals. We recommended two approaches: rehost and replatform.
 
