@@ -1,8 +1,8 @@
 ---
 title: Envision cloud modernization
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
-author: BrianBlanchard
-ms.author: chcomley
+author: stephen-sumner
+ms.author: ssumner
 ms.date: 07/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -16,7 +16,7 @@ Envisioning modernization starts with understanding your cloud adoption motivati
 
 The following steps help you envision your modernization strategy and end state, based on your strategic objectives.
 
-## Step 1: Identify Modernization Triggers
+## Step 1: Identify modernization triggers
 
 :::image type="content" source="../../_images/modernize/modernization-triggers.png" alt-text="Image showing triggers for modernization.":::
 
@@ -44,7 +44,7 @@ A [workload](../../plan/workloads.md) is a collection of IT assets that support 
 
  Applying modernizations to clusters of workloads will create the greatest business impact. Avoid rearchitecting individual workloads until you have modernized workload clusters. Follow the [Well-Architected Framework](/well-architected-pr/well-architected/index.md) when rearchitecting individual workloads.
 
-## Step 3: Identify workload clusters that align with your modernization triggers
+## Step 3: Align workloads and modernization triggers
 
 When you align groups of workloads to your motivations, you have something to track and work against.
 

@@ -1,12 +1,12 @@
 ---
 title: Commit to modernization
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
-author: BrianBlanchard
-ms.author: chcomley
+author: stephen-sumner
+ms.author: ssumner
 ms.date: 07/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: modernize
+ms.subservice:
 ms.custom: internal, seo-caf-modernize
 keywords: effort, impact, balance, modern, cloud modernization, cloud adoption framework
 ---
