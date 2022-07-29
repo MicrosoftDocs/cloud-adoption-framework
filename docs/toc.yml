@@ -493,7 +493,7 @@ items:
     items:
     - name: Overview
       href: adopt/index.md
-    - name: Process 
+    - name: How to adopt the cloud 
       href: adopt/migrate-modernize-approaches.md
     - name: Migrate
       items:
