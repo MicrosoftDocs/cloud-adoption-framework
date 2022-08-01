@@ -20,7 +20,7 @@ This solution is open source. You can adapt the templates to create an architect
 
 ARO landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. Having the platform foundation isn't mandatory when implementing ARO landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
-- [Implement Cloud Adoption Framework Azure landing zone](../../ready/landing-zone)
+- [Implement Cloud Adoption Framework Azure landing zone](../../ready/landing-zone/index.md)
 
 ## What the ARO landing zone accelerator provides
 

@@ -52,7 +52,7 @@ Consider the following factors:
 - Scale pods to meet demand using [Horizontal Pod Autoscaler](https://docs.openshift.com/container-platform/4.10/nodes/pods/nodes-pods-autoscaling.html)
 - Use an alerting system to provide notifications when things need direct action. Container Insights [Metric alerts](/azure/azure-monitor/containers/container-insights-metric-alerts) or in-built [Alerting UI](https://docs.openshift.com/container-platform/4.10/monitoring/managing-alerts.html)
 
-# Business continuity and disaster recovery considerations for ARO
+## Business continuity and disaster recovery considerations for ARO
 
 Your organization needs to design suitable Azure Red Hat OpenShift (ARO) platform-level capabilities to meet its specific requirements. These application services have requirements related to recovery time objective (RTO) and recovery point objective (RPO). There are multiple considerations to address for ARO disaster recovery. Your first step is to define a service-level agreement (SLA) for your infrastructure and application. Learn about the [SLA for Azure Red Hat OpenShift (ARO)]([https://azure.microsoft.com/support/legal/sla/kubernetes-service](https://azure.microsoft.com/en-us/support/legal/sla/openshift/v1_0/)). See the **SLA details** section for information about monthly uptime calculations.
 
