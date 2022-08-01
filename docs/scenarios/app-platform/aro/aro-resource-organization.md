@@ -47,9 +47,9 @@ For example, if you have public and private applications, separate them into dif
 - Decide which Container Registry to use:
 
   - Implement Internal OpenShift Registry, taking into consideration the following:
-    - Configuration of the built-in [OpenShift Container Registry](https://docs.microsoft.com/en-us/azure/openshift/built-in-container-registry).
-    - Use of [Red Hat Quay Registry](https://access.redhat.com/documentation/en-us/red_hat_quay/3.7) for enterprise-quality container registry.
-  - Implement [Azure Container Registry](https://docs.microsoft.com/en-us/azure/openshift/howto-use-acr-with-aro), taking into consideration the following:  
+    - Configuration of the built-in [OpenShift Container Registry](https://docs.microsoft.com/azure/openshift/built-in-container-registry).
+    - Use of [Red Hat Quay Registry](https://access.redhat.com/documentation/red_hat_quay/3.7) for enterprise-quality container registry.
+  - Implement [Azure Container Registry](https://docs.microsoft.com/azure/openshift/howto-use-acr-with-aro), taking into consideration the following:  
     - [Container registry best practices](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-best-practices).
     - Use of [Quarantine pattern](https://github.com/AzureCR/QuarantinePattern-Spec) to assure the registry only contains images that have been vulnerability scanned.
   - or, Third Party Container Registry.

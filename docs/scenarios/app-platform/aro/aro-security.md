@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aro
 ---
 
-## Security for the ARO landing zone accelerator
+# Security for the ARO landing zone accelerator
 
 This article provides design considerations and recommendations for security when using the ARO landing zone accelerator.
 

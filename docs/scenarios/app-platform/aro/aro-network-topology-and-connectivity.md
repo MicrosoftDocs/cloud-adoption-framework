@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aro
 
 # Network topology and connectivity considerations for ARO
 
-<!-- docutune:casing "Basic and Standard" -->
+This article provides design considerations and recommendations for network topology and connectivity when using the ARO landing zone accelerator.
 
 ## Design considerations
 
