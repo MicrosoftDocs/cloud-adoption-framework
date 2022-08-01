@@ -519,7 +519,7 @@ items:
     - name: Security Control Mapping
       items:
       - name: What is Control Mapping?
-        href: ready/control-mapping/security-control-mapping.md
+        href: ready/design area/security/control-mapping/security-control-mapping.md
 
     - name: Skills relevant to ready and landing zones
       href: ready/suggested-skills.md
