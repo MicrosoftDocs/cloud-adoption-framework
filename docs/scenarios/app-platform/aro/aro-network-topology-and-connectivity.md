@@ -36,7 +36,7 @@ This article provides design considerations and recommendations for network topo
   - For additional information on DNS, see [Azure Private Endpoint DNS configuration](/azure/private-link/private-endpoint-dns).
 - Outbound (egress) network traffic can be sent through an Azure Firewall or network virtual appliance cluster.
   - By default, ARO clusters have unrestricted egress internet access.
-  - ARO can be deployed with restricted egress traffic by adding a User Defined Routing with a 0.0.0.0/0 route to an Azure Firewal or network virtual appliance. ARO has an [Egress lockdown](/azure/openshift/concepts-egress-lockdown) functionality that ensures access even if the outbound (egress) traffic is restricted by a firewall appliance or other means.
+  - ARO can be deployed with restricted egress traffic by adding a User Defined Routing with a 0.0.0.0/0 route to an Azure Firewall or network virtual appliance. ARO has an [Egress lockdown](/azure/openshift/concepts-egress-lockdown) functionality that ensures access even if the outbound (egress) traffic is restricted by a firewall appliance or other means.
   - There are two deployment models for ARO with [private API server endpoint and a private ingress controller](/azure/openshift/howto-create-private-cluster-4x) or [public API server endpoint and public ingress controller](/azure/openshift/tutorial-create-cluster).
   - If using unrestricted egress access, you must carefully manage outbound ports, since you might use up the available outbound ports. For more information see [Use Source Network Address Translation (SNAT) for outbound connections](/azure/load-balancer/load-balancer-outbound-connections).
 - By default, all pods in an ARO cluster can send and receive traffic without limitations. All pods in a project are accessible from other pods and network endpoints. To isolate one or more pods in a project, you can create NetworkPolicy objects in that project to indicate the allowed incoming connections. OpenShift SDN supports using [network policy](https://docs.openshift.com/container-platform/latest/networking/network_policy/about-network-policy.html) in its default network isolation mode.
@@ -49,14 +49,14 @@ ARO API cluster IP visibility can be either public or private. [Private clusters
 
 Following enterprise-scale proven practices, DNS resolution for Azure workloads is offered by centralized DNS servers deployed in the connectivity subscription, either in a hub virtual network or in a shared services virtual network connected to an Azure Virtual WAN. These servers will conditionally resolve Azure-specific and public names using Azure DNS (IP address 168.63.129.16), and private names using corporate DNS servers. This connectivity model is a common practice and is important to allow private access to other Azure resources when using Private Endpoints.
 
-![Diagram showing a network for a private cluster.](./media/aro_landing_zone_Architecture.png)
+![Diagram showing a network for a private cluster.](./media/aro-landing-zone-architecture.png)
 
 ### Traffic from application users to the cluster
 
 Incoming (ingress) controllers can be used to expose applications running in the ARO clusters.
 
 - [Ingress controllers](https://docs.openshift.com/container-platform/latest/networking/ingress-operator.html) provide application-level routing at the cost of a slight complexity increase.
-- ARO creates a generic DNS entry that simplify access to exposed applications in the cluster like *.apps.<ClusterID>.<Region>.aroapp.io. It's useful for Private cluster to route traffic for the application.
+- ARO creates a generic DNS entry that simplify access to exposed applications in the cluster like *.apps.ClusterID.Region.aroapp.io. It's useful for Private cluster to route traffic for the application.
 - ARO offers a built in [Ingress Controller and routes](https://docs.openshift.com/container-platform/latest/networking/configuring_ingress_cluster_traffic/configuring-ingress-cluster-traffic-ingress-controller.html).
 - ARO Ingress can be used with [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door).
 - The configuration should be aligned with the egress filtering design to avoid asymmetric routing. UDRs can cause asymmetric routing (potentially), but not necessarily.

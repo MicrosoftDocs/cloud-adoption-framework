@@ -413,9 +413,7 @@ items:
         href: scenarios\app-platform\aro\aro-resource-organization.md
       - name: Security for ARO
         href: scenarios\app-platform\aro\aro-security.md
-
-    
-    name: Azure Functions
+    - name: Azure Functions
       items:
       - name: Azure Functions
         href: /azure/azure-functions/functions-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json

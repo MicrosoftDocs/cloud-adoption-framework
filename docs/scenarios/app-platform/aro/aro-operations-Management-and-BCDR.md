@@ -54,7 +54,7 @@ Consider the following factors:
 
 ## Business continuity and disaster recovery considerations for ARO
 
-Your organization needs to design suitable Azure Red Hat OpenShift (ARO) platform-level capabilities to meet its specific requirements. These application services have requirements related to recovery time objective (RTO) and recovery point objective (RPO). There are multiple considerations to address for ARO disaster recovery. Your first step is to define a service-level agreement (SLA) for your infrastructure and application. Learn about the [SLA for Azure Red Hat OpenShift (ARO)]([https://azure.microsoft.com/support/legal/sla/kubernetes-service](https://azure.microsoft.com/en-us/support/legal/sla/openshift/v1_0/)). See the **SLA details** section for information about monthly uptime calculations.
+Your organization needs to design suitable Azure Red Hat OpenShift (ARO) platform-level capabilities to meet its specific requirements. These application services have requirements related to recovery time objective (RTO) and recovery point objective (RPO). There are multiple considerations to address for ARO disaster recovery. Your first step is to define a service-level agreement (SLA) for your infrastructure and application. Learn about the [SLA for Azure Red Hat OpenShift (ARO)](https://azure.microsoft.com/support/legal/sla/openshift/v1_0/). See the **SLA details** section for information about monthly uptime calculations.
 
 ## Design considerations for BCDR
 
