@@ -18,6 +18,8 @@ items:
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
+      - name: Storage principles
+        href: eslz-storage-disciplines.md
       - name: Resource organization
         href: eslz-resource-organization.md
       - name: Governance disciplines

@@ -144,7 +144,7 @@ It isn't recommended to host the database management system (DBMS) and applicati
 
 ## Design Considerations for RISE implementations 
 
-When running SAP RISE deployments in Azure, integration of SAP managed environment with your own Azure ecosystem is paramount. To undersand the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
+When running SAP RISE deployments in Azure, integration of SAP managed environment with your own Azure ecosystem is paramount. To understand the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
  
 
 
