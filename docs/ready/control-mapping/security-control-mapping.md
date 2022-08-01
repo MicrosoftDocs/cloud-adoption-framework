@@ -179,7 +179,7 @@ Implementing custom policy definitions, initiatives and assignments when not usi
 ## Azure Portal
 
 When using the Azure Portal, please refer to the following articles.
-Adding Customer Azure Policy Definitions and initiatives:
+Adding Customer Azure Policy Definitions and initiatives
 
 [create custom security policies in MDC](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
 
