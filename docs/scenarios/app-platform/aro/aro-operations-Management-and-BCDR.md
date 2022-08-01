@@ -37,7 +37,7 @@ Consider the following factors:
 
 - ARO has a rich operator ecosystem and should be used for performing and automating operational activities with efficiency and accuracy.
 - Add health probes to your pods to monitor application health. Make sure pods contain livenessProbe, readinessProbe. Use Startup probes to determine the point at which the application has started up.
-- Use VM sizes large enough to contain multiple container instances so you get the benefits of increased density, but not so big that your cluster can't handle the workload of a failing node. 
+- Use VM sizes large enough to contain multiple container instances so you get the benefits of increased density, but not so big that your cluster can't handle the workload of a failing node.
 - Regulate cluster functions using [admission plug-ins](https://docs.openshift.com/container-platform/4.10/architecture/admission-plug-ins.html). They're commonly used to enforce security policy, resource limitations or configuration requirements.
 - Use pod requests and limits to manage the compute resources within a cluster. Pod requests and limits inform the Kubernetes scheduler, which compute resources to assign to a pod. Restrict resource consumption in a project using [Limit Ranges](https://docs.openshift.com/container-platform/4.10/nodes/clusters/nodes-cluster-limit-ranges.html)
 - Optimize the CPU and memory request values and maximize the efficiency of the cluster resources using [Vertical Pod Autoscaler](https://docs.openshift.com/container-platform/4.10/nodes/pods/nodes-pods-vertical-autoscaler.html) 
@@ -76,7 +76,7 @@ Consider the following factors:
   - Always keep your cluster up to date. Check for [cluster upgrades](/azure/openshift/howto-upgrade#check-for-azure-red-hat-openshift-cluster-upgrades)
   - Be aware of the release and deprecation process.
   - Control upgrades through schedules
-  - Review the need for [canary rollout](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html-single/updating_clusters/index#update-using-custom-machine-config-pools-canary_updating-cluster-within-minor) update for citicial workloads
+  - Review the need for [canary rollout](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html-single/updating_clusters/index#update-using-custom-machine-config-pools-canary_updating-cluster-within-minor) update for critical workloads
 - Network connectivity if a failover occurs.
   - If you need to distribute traffic across regions, consider using [Azure Front Door](/azure/frontdoor/front-door-overview).
 - Planned and unplanned failovers.

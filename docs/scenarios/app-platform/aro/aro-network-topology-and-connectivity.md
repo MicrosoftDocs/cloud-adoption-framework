@@ -21,7 +21,7 @@ This article provides design considerations and recommendations for network topo
   - The worker subnet is used to deploy the cluster's worker nodes.
   - Worker subnet and master subnet should be minimum /27.
   - Worker subnet and master subnet cannot be changed after cluster deployment.
-  - The master and worker subnets must not have a NSG associated. A NSG will be created and managed by ARO cluster.
+  - The master and worker subnets must not have an NSG associated. An NSG will be created and managed by ARO cluster.
   - Worker subnet and master subnet cannot overlap with on-premises networks or any other Azure Network.
 
   -
@@ -45,7 +45,7 @@ This article provides design considerations and recommendations for network topo
 
 ### Private clusters
 
-ARO API cluster IP visibility can be either public or private. [Private clusters](/azure/openshift/howto-create-private-cluster-4x) expose the ARO API over a private IP address, but not over a public one. The ARO API shouldn't be accessed through its IP address, [but instead through its fully qualified domain name (FQDN)](/azure/openshift/tutorial-connect-cluster). The resolution from the ARO API FQDN to its IP address will handled by Azure DNS.
+ARO API cluster IP visibility can be either public or private. [Private clusters](/azure/openshift/howto-create-private-cluster-4x) expose the ARO API over a private IP address, but not over a public one. The ARO API shouldn't be accessed through its IP address, [but instead through its fully qualified domain name (FQDN)](/azure/openshift/tutorial-connect-cluster). The resolution from the ARO API FQDN to its IP address will be handled by Azure DNS.
 
 Following enterprise-scale proven practices, DNS resolution for Azure workloads is offered by centralized DNS servers deployed in the connectivity subscription, either in a hub virtual network or in a shared services virtual network connected to an Azure Virtual WAN. These servers will conditionally resolve Azure-specific and public names using Azure DNS (IP address 168.63.129.16), and private names using corporate DNS servers. This connectivity model is a common practice and is important to allow private access to other Azure resources when using Private Endpoints.
 
@@ -56,8 +56,8 @@ Following enterprise-scale proven practices, DNS resolution for Azure workloads 
 Incoming (ingress) controllers can be used to expose applications running in the ARO clusters.
 
 - [Ingress controllers](https://docs.openshift.com/container-platform/latest/networking/ingress-operator.html) provide application-level routing at the cost of a slight complexity increase.
-- ARO creates a generic DNS entry that simplify access to exposed applications in the cluster like *.apps.ClusterID.Region.aroapp.io. It's useful for Private cluster to route traffic for the application.
-- ARO offers a built in [Ingress Controller and routes](https://docs.openshift.com/container-platform/latest/networking/configuring_ingress_cluster_traffic/configuring-ingress-cluster-traffic-ingress-controller.html).
+- ARO creates a generic DNS entry that simplifies access to exposed applications in the cluster like *.apps.`<ClusterID>`.`<Region>`.aroapp.io. It's useful for Private cluster to route traffic for the application.
+- ARO offers a built-in [Ingress Controller and routes](https://docs.openshift.com/container-platform/latest/networking/configuring_ingress_cluster_traffic/configuring-ingress-cluster-traffic-ingress-controller.html).
 - ARO Ingress can be used with [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door).
 - The configuration should be aligned with the egress filtering design to avoid asymmetric routing. UDRs can cause asymmetric routing (potentially), but not necessarily.
 - If [TLS termination](https://docs.openshift.com/container-platform/latest/networking/ingress-operator.html) is required, management of TLS certificates must be considered.
@@ -79,7 +79,7 @@ For non-web application accessing ARO Private the following flow applies:
 
 The pods running inside of the ARO cluster might need to access backend services such as Azure Storage, Azure Key Vault, Azure SQL databases, or Azure Cosmos DB NoSQL databases. [Virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) and [Private Link](/azure/private-link/private-link-overview) can be used to secure connectivity to these Azure managed services.
 
-If you are using Azure private endpoints for backend traffic, DNS resolution for the Azure services can be performed using Azure Private DNS zones. Since the DNS resolvers for the whole environment are in the hub virtual network (or the shared services virtual network if using the Virtual WAN connectivity model), these private zones should be created in the connectivity subscription. To create the A-record required to resolve the FQDN of the private service, you can associate the private DNS zone (in the connectivity subscription) with the private endpoint (in the application subscription). This operation requires certain privileges in those subscriptions.
+If you're using Azure private endpoints for backend traffic, DNS resolution for the Azure services can be performed using Azure Private DNS zones. Since the DNS resolvers for the whole environment are in the hub virtual network (or the shared services virtual network if using the Virtual WAN connectivity model), these private zones should be created in the connectivity subscription. To create the A-record required to resolve the FQDN of the private service, you can associate the private DNS zone (in the connectivity subscription) with the private endpoint (in the application subscription). This operation requires certain privileges in those subscriptions.
 
 It's possible to create the A-records manually, but associating the private DNS zone with the private endpoint results in a setup less prone to misconfigurations.
 
@@ -98,6 +98,6 @@ Traffic between the ARO pods and the private endpoints per default will not go t
 - Use Private Link to secure network connections and use private IP-based connectivity to other managed Azure services used that support Private Link, such as Azure Storage, Azure Container Registry, Azure SQL Database, and Azure Key Vault.
 - Use an ingress controller to provide advanced HTTP routing and security, and to offer a single endpoint for applications.
 - All web applications configured to use an ingress should use TLS encryption and not allow access over unencrypted HTTP.
-- Use [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door) with [WAF](/azure/frontdoor/web-application-firewall) to secure publish ARO applications to internet.
+- Use [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door) with [WAF](/azure/frontdoor/web-application-firewall) to securely publish ARO applications to the internet.
 - If your security policy mandates inspecting all outbound internet traffic generated in the ARO cluster, secure egress network traffic using Azure Firewall or a third-party network virtual appliance (NVA) deployed in the managed hub virtual network. For more information, see [Control egress traffic ARO cluster](/azure/openshift/howto-restrict-egress).
 - Use the Standard tier rather than the Basic tier of Azure Load Balancer for non-Web applications.

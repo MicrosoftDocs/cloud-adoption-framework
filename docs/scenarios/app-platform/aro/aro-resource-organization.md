@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-ARO
 
 Resource organization consideration is mostly managed by the platform foundation, however here are some of the ways the platform foundation may affect ARO landing zone accelerator.
 
-The overall subscription and resource group design determined by generic Azure landing zone recommendations, will play a fundamental role in how the ARO resource organization is managed. As described in [Management group and subscription organization](ready\landing-zone\design-area\resource-org.md), management groups and subscriptions are used to assign policies to the resources underneath them, and subscriptions are the management boundary for governance and isolation of resources.
+The overall subscription and resource group design determined by generic Azure landing zone recommendations, will play a fundamental role in how the ARO resource organization is managed. As described in [Management group and subscription organization](../../../ready/landing-zone/design-area/resource-org.md), management groups and subscriptions are used to assign policies to the resources underneath them, and subscriptions are the management boundary for governance and isolation of resources.
 
 For example, if you have public and private applications, separate them into different subscriptions, named `Corp` and `Online`, and assign different policies to each subscription. The `Corp` subscriptions have policies that prevent the creation of public IP addresses. The `Online` subscriptions allow internet connectivity. For more information about which policies are applied at the different levels of an Azure landing zone design, including ARO-specific policies, see [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
 
@@ -69,7 +69,7 @@ For example, if you have public and private applications, separate them into dif
 
 ## Design recommendations
 
-- Define a [naming and tagging standard](docs/ready/azure-best-practices/naming-and-tagging) to be applied to all container resources deployed to Azure. At a minimum, it should include:
+- Define a [naming and tagging standard](../../../ready/azure-best-practices/naming-and-tagging.md) to be applied to all container resources deployed to Azure. At a minimum, it should include:
   - **Workload names:** Identify the workload or workloads supported by each cluster.
     - **Cluster resources:** Identify the elevation of cluster resource alignment from the preceding considerations.
     - **Host operator:** Identify which team is responsible for operations of the host.

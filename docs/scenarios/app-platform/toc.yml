@@ -400,19 +400,19 @@ items:
       - name: Delete an ARO cluster
         href: /azure/openshift/tutorial-delete-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
       - name: Identity and access management considerations for ARO
-        href: scenarios\app-platform\aro\aro-identity-and-access-management.md
+        href: \aro\aro-identity-and-access-management.md
       - name: ARO landing zone accelerator
-        href: scenarios\app-platform\aro\aro-landing-zone-accelerator.md
+        href: \aro\aro-landing-zone-accelerator.md
       - name: Network topology and connectivity for ARO
-        href: scenarios\app-platform\aro\aro-network-topology-and-connectivity.md
+        href: \aro\aro-network-topology-and-connectivity.md
       - name: Operations and BCDR for ARO
-        href: scenarios\app-platform\aro\aro-operations-management-and-bcdr.md
+        href: \aro\aro-operations-management-and-bcdr.md
       - name: Platform Automation and DevOps for ARO
-        href: scenarios\app-platform\aro\aro-platform-automation-devops.md
+        href: \aro\aro-platform-automation-devops.md
       - name: Resource organization considerations for ARO
-        href: scenarios\app-platform\aro\aro-resource-organization.md
+        href: \aro\aro-resource-organization.md
       - name: Security for ARO
-        href: scenarios\app-platform\aro\aro-security.md
+        href: \aro\aro-security.md
     - name: Azure Functions
       items:
       - name: Azure Functions
