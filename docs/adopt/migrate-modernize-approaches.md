@@ -12,11 +12,11 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # How to adopt the cloud
 
-You can adopt the cloud in two ways. (1) You can build new applications with cloud-native technologies. (2) You can modify existing applications to use cloud technologies.
+Adopting the cloud gives you options to improve your business. You can build new applications or modernize existing applications.
 
 :::image type="content" source="../_images/adopt/adoption-strategies-2.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
-**New Apps:** Cloud-native applications can freely integrate cloud technologies that enable them to meet current and future business demands through scaling and performance optimization.
+**New Apps:** When building cloud-native applications, you can freely integrate cloud technologies that enable them to meet current and future business demands through scaling and performance optimization.
 
 **Existing Apps:** You have options if you choose to modify existing applications. You can migrate to IaaS, modernize with PaaS and containers, replace with SaaS, or stay on-premises with a hybrid cloud.
 

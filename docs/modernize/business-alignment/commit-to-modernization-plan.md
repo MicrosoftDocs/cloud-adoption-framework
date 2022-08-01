@@ -1,5 +1,5 @@
 ---
-title: Commit to the cloud modernization
+title: Commit to cloud modernization
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
@@ -15,7 +15,7 @@ Primary Deliverable: CAF/Modernize/Commit-to-modernization-plan.md
 Effort, Impact, Commitment
 Minimum: 1 article		Maximum: 4 articles-->
 
-# Commit to the cloud modernization
+# Commit to cloud modernization
 
 You can commit to a modernization plan once you've found a balance between effort and impact. When you outline the efforts required and their respective impact on your business, it delivers your case for modernization, and helps you gain commitment from stakeholders.
 

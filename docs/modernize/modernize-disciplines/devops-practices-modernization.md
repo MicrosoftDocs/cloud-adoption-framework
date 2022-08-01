@@ -14,11 +14,9 @@ ms.custom: internal
 Dependencies: cross linking​
 Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.-->
 
-# DevOps practices
+# Modernize with DevOps Practices
 
-When you understand how mature your devops practices are today, you can evaluate things that you could strengthen as a pre-requisite to Modernization.
-
-As devops modernization processes mature, your investment in improving devops practices grows incrementally. 
+DevOps
 
 > [!TIP]
 > In the cloud, the traditional developer and operations roles have shifted and therefore developers are often expected to own quite a bit more of the operations of a given workload. For more information, see [Compare common cloud operating models](/azure/cloud-adoption-framework/operating-model/compare.md).

@@ -14,34 +14,32 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 <!--This article was called out as a dependency needed for the "envision" content of the modernize methodology documentation. Alternative proposed filename was "establishing-cloud-horizons", but naming index.md for now since it's serving as the overview for "adopt", at least for the time being.*-->
 # Adopt the cloud
 
-Your cloud adoption plan will take you down several paths or "horizons." Organizations follow three primary horizons: migrate, modernize, and innovate. The horizon you choose and when will depend your business goals (*see figure*). These horizons don't need to be followed in a sequence. We provide guidance to help you choose which horizon is best suited to your current needs. Most cloud adoption plans visit all three horizons. Your business goals will determine the best order.
+There are three paths to cloud adoption: migrate, modernize, or innovate. The path you choose and when depends your business goals (*see figure*). We provide guidance in this methodology to help you decide the best path for your needs. Most cloud adoption plans visit all three paths at some point. Your business goals will determine your specific cloud adoption plan.
 
-:::image type="content" source="../_images/adopt/cloud-adoption-plan.png" alt-text="img":::
+:::image type="content" source="../_images/adopt/cloud-adoption-plan.png" alt-text="Image showing three cloud adoption paths":::
 
-## Overview of Adopt
+## Migrate
 
-You can jump to the guidance for each horizon using the buttons below. Below, you can find a brief overview of the horizon.
+Migration is moving workloads to the cloud. There are many different forms of migration. But in this context, migration refers to simple rehosting or "lift-and-shift." You are trading on-premises infrastructure for cloud infrastructure-as-a-service (IaaS) solutions.
 
-### Horizon 1: Migrate
-
-The migrate horizon focuses on moving workloads to the cloud.
-
-- *Goals:* Exit the data center business, adopt infrastructure-as-a-service (IaaS), and improve operations.
+- *Example:* Migrate application from on-premises to IaaS solutions in the cloud.
+- *Goals:* Exit the data center, enhance security, improve operations.
 - *Solutions:* Trade your on-site capital expense for a pay-as-you-go model and adopt IaaS solutions.
-- *Key Benefits:* Cost, security, and availability.
+- *Key Benefits:* Cost, security, availability, visibility, performance.
 
 > [!IMPORTANT]
 > You can modernize while you migrate. See next steps.
 
-### Horizon 2: Modernize
+## Modernize
 
-The modernize horizon focuses on enhancing business processes at scale.
+Modernization is the process of adopting the benefits of the cloud. The most common form of modernization is moving from on-premises or IaaS models to PaaS and SaaS solutions. The focus is enhancing business processes at scale.
 
+- *Examples*: Move SQL database to Azure SQL database. Move a containerized application to Azure Kubernetes Service.
 - *Goals:* Reduce technical debt, modernize applications, and modernize data platforms
 - *Solutions:* Adopt platform-as-a-service (PaaS) solutions across workload clusters.
-- *Key Benefits:* Security, performance, and cost.
+- *Key Benefits:* Cost, security, availability, visibility, performance, and operations.
 
-### Horizon 3: Innovate
+## Innovate
 
 The innovate horizon focuses on applying customer-focused solutions that transform business outcomes.
 
