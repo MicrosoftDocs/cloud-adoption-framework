@@ -58,7 +58,7 @@ Whenever possible, define the business outcomes and cloud strategy early in the 
 - [Incremental rationalization](../digital-estate/rationalize.md): An agile approach to rationalization that properly aligns late-bound technical decisions.
 - [The five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
-## Deliverables
+## Deliverable
 
 The cloud strategy team drives critical prioritization and discovery efforts during cloud adoption. They might also change business processes, operations, customer interactions, or even product development. The primary focus of the cloud strategy team is to validate and maintain alignment between business priorities and cloud adoption efforts. Secondarily, this team focuses on change management across the adoption efforts. Ideally, the cloud strategy team delivers on the following tasks and allocates sufficient time for planning.
 
