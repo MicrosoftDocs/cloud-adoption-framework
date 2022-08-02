@@ -3,7 +3,7 @@ title: DevSecOps controls
 description: Learn about DevSecOps controls and how to integrate security processes and tools into the DevOps development cycle.
 author: texnokot
 ms.author: brblanch
-ms.date: 07/29/2022
+ms.date: 08/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
@@ -161,7 +161,7 @@ The tools and techniques in this guidance offer a holistic security model for or
 
 ### Feedback loops
 
-![Continuous security model](./media/continuous-security.png)
+:::image type="content" source="./media/continuous-security.png" alt-text="Screenshot showing the Continuous security model." lightbox="./media/continuous-security.png":::
 
 All these techniques and tools empower teams to find and flag risks and vulnerabilities that require investigation and potential resolution. Operations teams who receive an alert, or discover a potential issue when they investigate a support ticket, need a route back to the development team to flag items for review. A smooth, collaborative, feedback loop is vital to address issues quickly and minimize the risk of a vulnerability as much as possible. 
 
