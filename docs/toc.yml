@@ -1154,9 +1154,9 @@ items:
                 href: /azure/openshift/tutorial-create-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure Red Hat OpenShift
               items:
-              - name: ARO Landing zone accelerator
+              - name: Landing zone accelerator
                 href: scenarios\app-platform\aro\aro-landing-zone-accelerator.md
-              - name: ARO identity and access management
+              - name: Identity and access management
                 href: scenarios\app-platform\aro\aro-identity-and-access-management.md
               - name: Network topology and connectivity
                 href: scenarios\app-platform\aro\aro-network-topology-and-connectivity.md

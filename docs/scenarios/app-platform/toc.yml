@@ -404,21 +404,21 @@ items:
         - name: Azure Functions
           href: /azure/azure-functions/functions-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
         - name: Create your first function in Visual Studio Code
-        - name: C#
-          href: /azure/azure-functions/create-first-function-vs-code-csharp?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-        - name: Java
-          href: /azure/azure-functions/create-first-function-vs-code-java?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-        - name: JavaScript
-          href: /azure/azure-functions/create-first-function-vs-code-node?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-        - name: PowerShell
-          href: /azure/azure-functions/create-first-function-vs-code-powershell?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-        - name: Python
-          href: /azure/azure-functions/create-first-function-vs-code-python?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-        - name: TypeScript
-          href: /azure/azure-functions/create-first-function-vs-code-typescript?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-        - name: Other (Go/Rust)
-          href: /azure/azure-functions/create-first-function-vs-code-other?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-  
+          items:
+          - name: C#
+            href: /azure/azure-functions/create-first-function-vs-code-csharp?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
+          - name: Java
+            href: /azure/azure-functions/create-first-function-vs-code-java?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
+          - name: JavaScript
+            href: /azure/azure-functions/create-first-function-vs-code-node?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
+          - name: PowerShell
+            href: /azure/azure-functions/create-first-function-vs-code-powershell?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
+          - name: Python
+            href: /azure/azure-functions/create-first-function-vs-code-python?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
+          - name: TypeScript
+            href: /azure/azure-functions/create-first-function-vs-code-typescript?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
+          - name: Other (Go/Rust)
+            href: /azure/azure-functions/create-first-function-vs-code-other?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
   - name: Build skills on Learn
     items:
     - name: Introduction to Kubernetes on Azure
