@@ -39,7 +39,7 @@ These articles provide guidelines for creating your landing zone based on the de
 - [Network topology and connectivity](./aro-network-topology-and-connectivity.md)
 - [Resource organization](./aro-resource-organization.md)
 - [Security](./aro-security.md)
-- [Operations management and BCDR](./aro-operations-management-and-bcdr.md)
+- [Operations management and BCDR](./operations-bcdr-for-aro.md)
 - [Deployment options](./aro-platform-automation-devops.md)
 
 ## Reference architecture

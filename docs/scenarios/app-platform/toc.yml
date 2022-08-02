@@ -410,15 +410,14 @@ items:
       - name: Security
         href: \aro\aro-security.md
       - name: Operations management
-        href: \aro\aro-operations-management-and-bcdr.md
+        href: \aro\operations-bcdr-for-aro.md
       - name: Platform automation 
         href: \aro\aro-platform-automation-devops.md
     - name: Azure Functions
       items:
-      - name: Azure Functions
-        href: /azure/azure-functions/functions-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-      - name: Create your first function in Visual Studio Code
-        items:
+        - name: Azure Functions
+          href: /azure/azure-functions/functions-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
+        - name: Create your first function in Visual Studio Code
         - name: C#
           href: /azure/azure-functions/create-first-function-vs-code-csharp?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
         - name: Java
@@ -433,7 +432,7 @@ items:
           href: /azure/azure-functions/create-first-function-vs-code-typescript?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
         - name: Other (Go/Rust)
           href: /azure/azure-functions/create-first-function-vs-code-other?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-
+  
   - name: Build skills on Learn
     items:
     - name: Introduction to Kubernetes on Azure
