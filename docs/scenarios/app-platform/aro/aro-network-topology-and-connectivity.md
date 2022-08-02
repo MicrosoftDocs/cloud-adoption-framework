@@ -63,17 +63,17 @@ Incoming (ingress) controllers can be used to expose applications running in the
 - If [TLS termination](https://docs.openshift.com/container-platform/latest/networking/ingress-operator.html) is required, management of TLS certificates must be considered.
 
 > [!IMPORTANT]
-> When you use Azure Firewall to restrict egress traffic and create a user-defined route (UDR) to force all egress traffic, make sure you create an appropriate DNAT rule in Firewall to correctly allow ingress traffic. Using Azure Firewall with a UDR breaks the ingress setup due to asymmetric routing. (The issue occurs if the ARO subnet has a default route that goes to the firewall's private IP address, but you're using a public load balancer - ingress or Kubernetes service of type: LoadBalancer). In this case, the incoming load balancer traffic is received via its public IP address, but the return path goes through the firewall's private IP address. Because the firewall is stateful, it drops the returning packet because the firewall isn't aware of an established session. To learn how to integrate Azure Firewall with your ingress or service load balancer, see [Integrate Azure Firewall with Azure Standard Load Balancer](/azure/firewall/integrate-lb).
+> When you use Azure Firewall to restrict egress traffic and create a user-defined route (UDR) to force all egress traffic, make sure you create an appropriate DNAT rule in Firewall to correctly allow ingress traffic. Using Azure Firewall with a UDR breaks the ingress setup due to asymmetric routing. (The issue occurs if the ARO subnet has a default route that goes to the firewall's private IP address, but you're using a public load balancer - ingress or Kubernetes service of type: Load Balancer). In this case, the incoming load balancer traffic is received via its public IP address, but the return path goes through the firewall's private IP address. Because the firewall is stateful, it drops the returning packet because the firewall isn't aware of an established session. To learn how to integrate Azure Firewall with your ingress or service load balancer, see [Integrate Azure Firewall with Azure Standard Load Balancer](/azure/firewall/integrate-lb).
 
 The following flow applies when using [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door) in conjunction with ARO Private Cluster and Ingress Controller:
 
 1. Clients from the public internet resolve the DNS name for the application pointing to [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door).
-2. Azure Front Door will use a Private Link Service to access the Private IP of Azure Internal Network Loadbalancer to access an application in ARO Ingress Controller.
+2. Azure Front Door will use a Private Link Service to access the Private IP of Azure Internal Network Load Balancer to access an application in ARO Ingress Controller.
 
 For non-web application accessing ARO Private the following flow applies:
 
 1. Clients from the public internet resolve the DNS name for the application pointing to the public IP of Azure Firewall or a Network Virtual Appliance.
-2. Azure Firewall or Network Virtual Appliance will forward the traffic (DNAT) to ARO Private cluster using the Private IP of Azure Internal Network Loadbalancer to access the application in ARO Ingress Controller.
+2. Azure Firewall or Network Virtual Appliance will forward the traffic (DNAT) to ARO Private cluster using the Private IP of Azure Internal Network Load Balancer to access the application in ARO Ingress Controller.
 
 ### Traffic from the ARO pods to backend services
 

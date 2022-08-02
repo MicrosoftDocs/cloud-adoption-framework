@@ -1152,6 +1152,22 @@ items:
                 href: /azure/aks/tutorial-kubernetes-prepare-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Create an Azure Red Hat OpenShift cluster
                 href: /azure/openshift/tutorial-create-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Azure Red Hat OpenShift
+              items:
+              - name: ARO Landing zone accelerator
+                href: scenarios\app-platform\aro\aro-landing-zone-accelerator.md
+              - name: ARO identity and access management
+                href: scenarios\app-platform\aro\aro-identity-and-access-management.md
+              - name: Network topology and connectivity
+                href: scenarios\app-platform\aro\aro-network-topology-and-connectivity.md
+              - name: Resource organization
+                href: scenarios\app-platform\aro\aro-resource-organization.md
+              - name: Security
+                href: scenarios\app-platform\aro\aro-security.md
+              - name: Operations management
+                href: scenarios\app-platform\aro\operations-bcdr-for-aro.md
+              - name: Platform automation 
+                href: scenarios\app-platform\aro\aro-platform-automation-devops.md
             - name: Spring Boot microservices
               items:
               - name: Launch an Azure Spring Cloud application

@@ -60,7 +60,7 @@ Your organization needs to design suitable Azure Red Hat OpenShift (ARO) platfor
 
 Consider the following factors:
 
-- The ARO cluster should use multiple machinesets to provide the minimum level of availability for your application.
+- The ARO cluster should use multiple machine sets to provide the minimum level of availability for your application.
 - Set pod requests and limits. Setting these limits lets Kubernetes:
   - Efficiently give CPU and memory resources to the pods.
   - Have higher container density on a node.
@@ -89,7 +89,7 @@ The following are best practices for your design:
 
 - Azure Red Hat OpenShift clusters are provisioned with three control plane nodes and three or more worker nodes. Ensure that the cluster is created in a region that supports availability zones so that the nodes are spread across the zones.
 - Don't run extra workloads on the control plane nodes. While they can be scheduled on the control plane nodes, it will cause extra resource usage and stability issues that can affect the entire cluster.
-- Create Infrastructure machinesets to hold infrastructure components. Apply specific Kubernetes labels to these Machines and then update the infrastructure components to run on only those Machines.
+- Create Infrastructure machine sets to hold infrastructure components. Apply specific Kubernetes labels to these Machines and then update the infrastructure components to run on only those Machines.
 - For high availability, deploy these nodes to different availability zones. Since you need different machine sets for each availability zone, create at least three machine sets.
 - Regular upkeep of your cluster, for example, making timely updates, is crucial for reliability. Azure Red Hat OpenShift supports two generally available (GA) minor versions of Red Hat OpenShift Container Platform. It's recommended to keep the cluster on the latest OpenShift version to avoid potential upgrade issues. Also, monitoring the health of the pods through probes is recommended.
 - Whenever possible, remove the service state from inside containers. Instead, use an Azure platform as a service (PaaS) that supports multiregion replication.
