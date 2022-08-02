@@ -3,7 +3,7 @@ title: Understand the function of cloud strategy
 description: Understand how cloud strategy functions provide alignment between business outcomes and cloud adoption efforts.
 author: JanetCThomas
 ms.author: janet
-ms.date: 08/01/2022
+ms.date: 08/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -51,7 +51,7 @@ Whenever possible, define the business outcomes and cloud strategy early in the 
 
 ### Build business justification
 
-- [Cloud migration business case](../strategy/cloud-migration-business-case.md). Establish a business case for cloud migration.
+- [Cloud migration business case](../strategy/cloud-migration-business-case.md): Establish a business case for cloud migration.
 
 ### Rationalize the digital estate
 
