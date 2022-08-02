@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aro
 ---
 
-# Network topology and connectivity considerations for ARO
+# Network topology and connectivity considerations for Azure RedHat OpenShift
 
 This article provides design considerations and recommendations for network topology and connectivity when using the ARO landing zone accelerator.
 

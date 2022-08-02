@@ -1,8 +1,8 @@
 ---
 title: Resource organization considerations for ARO
 description: ARO guidelines for resource organization
-author: rolandotorio
-ms.author: rolandotorio
+author: UmarMohamedUsman
+ms.author: umarm
 ms.date: 06/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-ARO
 ---
 
-# Resource organization considerations for ARO (optional)
+# Resource organization considerations for Azure RedHat OpenShift (optional)
 
 Resource organization consideration is mostly managed by the platform foundation, however here are some of the ways the platform foundation may affect ARO landing zone accelerator.
 

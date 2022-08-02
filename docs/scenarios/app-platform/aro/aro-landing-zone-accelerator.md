@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-ARO
 ---
 
-# ARO landing zone accelerator
+# Azure RedHat OpenShift landing zone accelerator
 
 ARO landing zone accelerator represents the strategic design path and target technical state for an Azure Red Hat OpenShift (ARO) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Red Hat OpenShift (ARO) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones.
 

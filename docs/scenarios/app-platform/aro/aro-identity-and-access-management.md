@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aro
 ---
 
-# Identity and access management considerations for ARO
+# Identity and access management considerations for Azure RedHat OpenShift
 
 Your organization or enterprise needs to design suitable security settings to meet their requirements. Identity and access management covers multiple aspects like cluster identities, workload identities, and operator access.
 

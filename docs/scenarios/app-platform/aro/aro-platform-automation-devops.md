@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Deployment option considerations for ARO
+# Deployment option considerations for Azure RedHat OpenShift
 
 This article provides design considerations and recommendations for platform automation and DevOps when using the Azure Red Hat OpenShift (ARO) landing zone accelerator. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
 
