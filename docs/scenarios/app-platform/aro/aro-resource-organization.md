@@ -1,8 +1,8 @@
 ---
 title: Resource organization considerations for ARO
 description: ARO guidelines for resource organization
-author: UmarMohamedUsman
-ms.author: umarm
+author: rotorr
+ms.author: rolandotorio
 ms.date: 06/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
