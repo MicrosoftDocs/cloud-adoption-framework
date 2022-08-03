@@ -1,5 +1,5 @@
 ---
-title: Business continuity and disaster recovery
+title: Azure Arc-enabled SQL Managed Instance Business continuity
 description: Learn how to implement business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance.
 author: sebassem
 ms.author: sebassem
@@ -75,7 +75,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 - When deploying a new Azure Arc-enabled SQL Managed Instance, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
 - Use a ReadWriteMany (RWX) capable storage class for the backups volume.
-- Use the [Dry-run switch](/cli/azure/sql/midb-arc?view=azure-cli-latest#az-sql-midb-arc-restore-optional-parameters) for restores first to validates if the restore operation can be successful or not before performing the actual restore.
+- Use the [Dry-run switch](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli) for restores first to validates if the restore operation can be successful or not before performing the actual restore.
 - Create a process to send backups that need longer retention to Azure or other on-opremises storage.
 
 ### High availability
