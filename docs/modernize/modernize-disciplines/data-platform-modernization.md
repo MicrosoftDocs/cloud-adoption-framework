@@ -1,5 +1,5 @@
 ---
-title: Modernize with database platforms
+title: Modernize your database in the cloud
 description: Understand and evaluate options for maturing your underlying data platforms for modernization.
 author: BrianBlanchard
 ms.author: chcomley
@@ -10,7 +10,14 @@ ms.subservice: modernize
 ms.custom: seo-caf-modernize
 keywords: collect data, migrate data, data migration, data modernization
 ---
-# Data platform modernization
+# Modernize your database in the cloud
+
+Learn how to modernize any database in the cloud with platform-as-a-service (PaaS) solutions.
+
+:::image type="content" source="../../_images/modernize/db-platforms/db-platforms-small.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. On the bottom there is an on-premises starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
+
+
+## Extra Content
 
 Companies often have different kinds of existing data that they can [democratize](../../innovate/considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be data modernization, and data migration to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, do your modernization by using the [Modernize methodology](index.md).
 
