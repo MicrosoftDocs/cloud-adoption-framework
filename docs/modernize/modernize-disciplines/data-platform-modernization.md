@@ -1,5 +1,5 @@
 ---
-title: Data platform modernization
+title: Modernize with database platforms
 description: Understand and evaluate options for maturing your underlying data platforms for modernization.
 author: BrianBlanchard
 ms.author: chcomley

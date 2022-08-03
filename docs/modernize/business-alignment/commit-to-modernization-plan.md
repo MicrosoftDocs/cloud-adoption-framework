@@ -1,5 +1,5 @@
 ---
-title: Commit to cloud modernization
+title: Commit to modernization in the cloud
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
@@ -15,23 +15,9 @@ Primary Deliverable: CAF/Modernize/Commit-to-modernization-plan.md
 Effort, Impact, Commitment
 Minimum: 1 article		Maximum: 4 articles-->
 
-# Commit to cloud modernization
-
-You can commit to a modernization plan once you've found a balance between effort and impact. When you outline the efforts required and their respective impact on your business, it delivers your case for modernization, and helps you gain commitment from stakeholders.
+# Commit to modernization in the cloud
 
 :::image type="content" source="../../_images/modernize/commit/commit.png" alt-text="Image showing where you are in the business alignment process.":::
-
-Explore the following questions to help you move toward commitment:
-
-- How long will it take to modernize your workloads?
-- Do you have the skills to modernize? Do you need a vendor? If so, what does it cost?
-- What work needs to be done before modernization?
-- Are we committed to move forward?
-- How do we prioritize those commitments?
-- What comes first, second, and third?
-
-If you haven't analyzed your assets to determine the best way to modernize each asset, do so now with  [Cloud rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization).
-If you haven't already, we recommend you see [Envision your modernization](envision-cloud-modernization.md) and [Evaluate your options](evaluate-modernization-options.md) before you continue.
 
 ## 1. Determine effort
 
@@ -40,8 +26,6 @@ Maximize your return from each of the following three phases required for migrat
 - **Assess workload:** Assess each workload to evaluate cost, architecture, and deployment tooling.
 - **Deploy workload:** Replicate functionality in the cloud using IaaS, PaaS, cloud-native, or other modernization solutions.
 - **Release workload:** Test, optimize, document, and review. Release by handing off for governance, management, and security.
-
-:::image type="content" source="../../_images/modernize/modernize-methodology-graphic.png" alt-text="Diagram showing the Cloud Adoption Framework modernization efforts required.":::
 
 Remember more of your behind-the-scenes efforts:
 
@@ -61,7 +45,7 @@ Workloads that have undergone any significant architectural change go back throu
 
 1. Begin with an inventory of all your applications, data, and infrastructure.
 
-   :::image type="content" source="../../_images/modernize/existing-datacenters.png" alt-text="Graphic showing an example of existing datacenters.":::
+:::image type="content" source="../../_images/modernize/existing-datacenters.png" alt-text="Graphic showing an example of existing datacenters.":::
 
 2. Group your apps, data, and infrastructure to form workloads, and then prioritize those workloads.
 
@@ -88,6 +72,17 @@ There are generally the following three groups from which it's important to get 
 Make sure they're named, identified, and have agreed to the backlog of commitments. If they're not committed, you'll want a [Well Architected Framework](/azure/architecture/framework/) review, and then evaluate afterward to see if you can proceed with modernization.
 
 If you're starting your cloud adoption journey with the Migrate horizon, you might need to run a migration analysis. For more information, see [Assess on-premises workloads for Azure migration](/azure/cloud-adoption-framework/plan/contoso-migration-assessment).
+
+## Extra content
+
+Explore the following questions to help you move toward commitment:
+
+- How long will it take to modernize your workloads?
+- Do you have the skills to modernize? Do you need a vendor? If so, what does it cost?
+- What work needs to be done before modernization?
+- Are we committed to move forward?
+- How do we prioritize those commitments?
+- What comes first, second, and third?
 
 ## Next steps
 

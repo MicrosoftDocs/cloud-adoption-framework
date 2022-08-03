@@ -16,10 +16,10 @@ Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption 
 
 # Modernize with DevOps Practices
 
+[Assess developer velocity](https://developervelocityassessment.com/)
+
 DevOps
 
-> [!TIP]
-> In the cloud, the traditional developer and operations roles have shifted and therefore developers are often expected to own quite a bit more of the operations of a given workload. For more information, see [Compare common cloud operating models](/azure/cloud-adoption-framework/operating-model/compare.md).
 
 ## Ideal state: Modernize through devops
 

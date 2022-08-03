@@ -34,7 +34,7 @@ Knowing *why* you are modernizing will determine *what* to modernize.
 
 ## Step 2: Identify workloads
 
-The cloud frees you to focus on workloads. After assessing your motivation triggers, start identifying your workloads. A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support an aspect of your business. In a data center, IT assets are logically separate (*see figure*).
+The cloud frees you to focus on workloads rather than individual IT assets. After assessing your motivation triggers, start identifying your workloads. A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support an aspect of your business. In a data center, IT assets are logically separate (*see figure*).
 
 :::image type="content" source="../../_images/modernize/envision/data-center-it-assets.png" alt-text="Graphic showing existing data center." :::
 

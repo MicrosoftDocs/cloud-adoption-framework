@@ -1,5 +1,5 @@
 ---
-title: Evaluate cloud modernization readiness
+title: Evaluate modernization readiness
 description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
 author: stephen-sumner
 ms.author: ssumner
@@ -11,16 +11,13 @@ ms.custom: internal, seo-caf-modernize
 keywords: evaluate, technical, financial indicators, workloads, modernize, cloud adoption framework
 ---
 <!--Primary Deliverable: CAF/Modernize/Evaluate-Modernization-Options.md​-->
-# Evaluate cloud modernization readiness
+# Evaluate your readiness for cloud modernization
 
-You envisioned the cloud modernization for each workload. Now, you need to evaluate if your workload is ready to modernize. To do this, you need to evaluate your financial readiness and your technical readiness. Financial readiness is a prerequisite to technical readiness.
-
-Evaluating financial readiness shows you know if you can modernize.<br>
-Evaluating technical readiness shows you know how to modernize.
+Evaluate if you're ready to modernize in the cloud.
 
 :::image type="content" source="../../_images/modernize/evaluate/evaluate.png" alt-text="Image showing where you are in the business alignment process.":::
 
-## Step 1: Evaluate your financial readiness
+## Step 1: Evaluate financial readiness
 
 Financial motivations are the key drivers of cloud modernization. Businesses know that modernizations done right can increase operational efficiency and generate new revenue.
 
@@ -30,10 +27,10 @@ Answering *yes* to all questions means you're likely ready to modernize. If you 
 
 |Question|Yes|No|
 |--|--|--|
-|**Can you quantify the business<br> value of modernizing this workloads?**|Modernize|Review|
-**Do you know what your <br>modernization cost will be?**|Modernize<br>|Review|
-|**Are these workloads business-critical?**|Modernize|Review|
-|**Does the cost of modernization<br> meet your desired cost savings?**|Modernize|Review|
+|*Can you quantify the business<br> value of modernizing this workloads?*|Modernize|Review|
+*Do you know what your <br>modernization cost will be?*|Modernize<br>|Review|
+|*Are these workloads business-critical?*|Modernize|Review|
+|*Does the cost of modernization<br> meet your desired cost savings?*|Modernize|Review|
 
 ## Step 2. Evaluate your technical readiness
 
@@ -41,25 +38,25 @@ Explore the following questions with your organization to determine your technic
 
 |Question|Yes|No|
 |--|--|--|
-|**Can you modernize the workload?**|Modernize| Migrate|
-|**Is the business actively investing<br> in these workloads?**|Modernize|Replace|
-|**Will these modernized workloads <br>need to operate in hybrid or<br> multi-cloud environment?** |Modernize|Migrate|
-|**Are your workloads portable?**|Modernize|Migrate
-|**Do you plan to keep the current architecture?**|Modernize|Review|
+|*Can you modernize the workload?*|Modernize| Migrate|
+|*Is the business actively investing<br> in these workloads?*|Modernize|Replace|
+|*Will these modernized workloads <br>need to operate in hybrid or<br> multi-cloud environment?* |Modernize|Migrate|
+|*Are your workloads portable?*|Modernize|Migrate
+|*Do you plan to keep the current architecture?*|Modernize|Review|
 
 For a workload that pass this readiness assessments, you can now align it with a modernization discipline.
 
 ## Step 3. Align workload with a modernization discipline
 
-The goal of this step is to align your workload with the modernization disciplines.
+Align your workload with a modernization strategy.
 
-|Motivation|Primary Discipline|Secondary Discipline|
-| --- | --- | --- |
+|Motivation| Modernization |
+| --- | --- |
 |Enabling hybrid work|Application platforms|
 |Faster time to market|Application platforms|
-|Cost optimization|Developer alignment|
+|Cost optimization|Application platforms<br>Database platforms|
 |Application innovation|Developer alignment|
-|Centralizing data|Data platform|
+|Centralizing data|Database platform|
 |
 
 ## Next steps
