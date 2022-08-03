@@ -92,7 +92,7 @@ This article provides key design considerations and recommendations for configur
 
 #### Indirectly connected mode
 
-- Create a process to monitor the upgrade process using the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status) or [Azure CLI](azure/azure-arc/data/upgrade-data-controller-indirect-cli#monitor-the-upgrade-status).
+- Create a process to monitor the upgrade process using the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status) or [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli#monitor-the-upgrade-status).
 - [Automate the process](https://github.com/microsoft/azure_arc/tree/main/arc_data_services/deploy/scripts) to pull down images to your private registry.
 
 ### Azure Arc-enabled SQL Managed Instance upgrades
