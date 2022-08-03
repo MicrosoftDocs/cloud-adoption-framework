@@ -105,6 +105,16 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 - You should set up the cluster timeout parameters recommended in the documentation for central-services and database clusters.
 
+### Storage for SAP Workloads
+
+**Design Considerations for storage:**
+
+- Designing for resiliency for your SAP workload includes choosing the right storage options available. The design for SAP Workloads on Azure storage is intended keep latency to a minimum and maximize throughput. You will have to consider your specific implementation and how the guidance below can help make architectural decisions for your SAP on Azure implementation. In order to understand the different types of storage and their capability and usability with SAP workloads and SAP components, please read [Azure Storage Types](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/planning-guide-storage) for SAP Workload.
+
+- SAP HANA on Azure should be run on only the types of storage that are certified by SAP. Please take note that certain volumes must be run on certain disk configurations, including enable Write Accelerator and choosing Premium storage, where applicable. Another consideration is to ensure that the filesystem that will run on the chosen storage needs to be compatible with the DBMS that will run on the machine. In order to understand the different types of storage configurations for SAP HANA please read [Storage Configurations for SAP HANA](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-storage) for more information.
+
+- An option for NFS shares when running SAP Workloads on Azure is to use Azure NetApp Files. ANF has its own throughput and sizing considerations. Please see the information regarding [Azure NetApp Files for SAP virtual machine](https://docs.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-operations-netapp).
+
 ### Backup/restore
 
 **Design Considerations for backup/restore:**
