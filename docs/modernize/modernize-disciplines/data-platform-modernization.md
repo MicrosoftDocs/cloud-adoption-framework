@@ -1,8 +1,8 @@
 ---
 title: Modernize your database in the cloud
 description: Understand and evaluate options for maturing your underlying data platforms for modernization.
-author: BrianBlanchard
-ms.author: chcomley
+author: stephen-sumner
+ms.author: ssumner
 ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,10 +12,30 @@ keywords: collect data, migrate data, data migration, data modernization
 ---
 # Modernize your database in the cloud
 
-Learn how to modernize any database in the cloud with platform-as-a-service (PaaS) solutions.
+Learn how to modernize any database in the cloud with IaaS and platform-as-a-service (PaaS) solutions.
 
-:::image type="content" source="../../_images/modernize/db-platforms/db-platforms-small.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. On the bottom there is an on-premises starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
+:::image type="content" source="../../_images/modernize/db-platforms/db-platforms-small-2.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. On the bottom there is an on-premises starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
 
+## Modernize SQL databases
+
+Modernize your SQL databases with a variety of options. Find the balance of control and productivity that meets your needs. For each need, the table identifies a solution,
+
+| Control vs. productivity | What is the Solution | Why would you want this solution | How you can implement the solution |
+| --- | --- | --- | --- |
+| *Control* | SQL Server on [Windows](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) or [Linux](/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview) virtual machines (VMs) | <ul><li>Require access to OS</li><li>Move to cloud fast as possible</li></ul> | Database origin: <ul><li>[SQL Server](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview)<li>[Oracle](/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide)</li><li>[Db2](/azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide)</li></ul>
+| *Balance of control & <br> productivity* | [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | <ul><li> Reduce management overhead </li><li> Need instance-scoped features (Service Broker, SQL Server Agent, etc.) </li></ul> | Database origin: <ul><li>[SQL Server](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview)</li><li>[Oracle](/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide)</li><li>[Db2](/azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide)</li></ul>
+| *Productivity* | [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | <ul><li>Multi-tenant SaaS application</li><li>Elasticity</li><li>Scale compute independent from storage</li></ul> | Database origin: <ul><li>[SQL Server](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview)</li><li>[Oracle](/azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide)</li><li>[Db2](/azure/azure-sql/migration-guides/database/db2-to-sql-database-guide)</li><li>[Access](/azure/azure-sql/migration-guides/database/access-to-sql-database-guide)</li><li>[SAP ASE](/azure/azure-sql/migration-guides/database/sap-ase-to-sql-database)</li></ul> |
+|
+
+## Modernize open-source & NoSQL databases
+
+Modernize your open-source databases and NoSQL databases with a variety of options. Find the balance of control and productivity that meets your needs.
+
+| Control vs. productivity | What is the Solution | Why would you want this solution | How you can implement the solution |
+| --- | --- | --- | --- |
+| *Control* | Open-source databases hosted on virtual machines (VMs) <br> <br> Supported database: <ul><li> [MySQL](/azure/mysql/single-server/overview) </li><li> [MariaDB](/azure/mariadb/overview)</li><li> [PostgreSQL](/azure/postgresql/single-server/overview) </li></ul> | <ul><li> Control OS version </li> <li> Zone redundancy </li></ul> | [Use guidance from Azure Database Migration Service](/azure/dms/) <br><br> [Use SQL migration guidance](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview)|
+| *Control & <br> productivity* | [Azure Cosmos DB](/azure/cosmos-db/introduction) <br><br> [Azure Managed instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/introduction)| Azure Cosmos DB <ul><li>Fully managed NoSQL</li><li>Simplified app development</li></ul> <br> Apache Cassandra <ul><li> Hybrid deployments</li> <li>Simplified PaaS solution | [Azure Cosmos DB migrate](/azure/cosmos-db/cosmosdb-migrationchoices) <br><br> [Apache Cassandra migrate](/azure/managed-instance-apache-cassandra/dual-write-proxy-migration) |
+| *Productivity* | [Azure Database for MySQL](/azure/mysql/single-server/overview) <br><br> [Azure Database for MariaDB](/azure/mariadb/overview) <br><br> [Azure Database for PostgreSQL](/azure/postgresql/single-server/overview) </li></ul> | Fully managed PaaS solution | [Azure Database for MySQL migrate](/azure/dms/tutorial-mysql-azure-mysql-offline-portal)<br><br>[Azure Database for MariaDB migrate](/azure/mariadb/howto-migrate-dump-restore)<br><br>[Azure Database for PostreSQL migrate](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal) | Fully managed PaaS solution
 
 ## Extra Content
 
