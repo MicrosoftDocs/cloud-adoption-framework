@@ -83,7 +83,7 @@ This article provides key design considerations and recommendations for configur
 - Create a process to monitor for new Azure Arc Data Controller upgrades availability.
 - Properly size your cluster by planning for future capacity, upgrades and features.
 - Avoid deploying Generally avaialble and preview Azure Arc-enabled SQL Managed Instances on the same Data Controller.
-- Avoid using preview versions in your production environment if you require an SLA on the service.
+- Avoid using preview versions in your production environment and only use them for evaluation purposes.
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
 
 #### Directly connected mode
@@ -116,7 +116,7 @@ This article provides key design considerations and recommendations for configur
 
 #### Business Critical service tier
 
-- Deploy the Business Critical instance with 3 replicas instead of 2.
+- Deploy the Business Critical instance with 3 replicas instead of 2 to achieve higher availability and less downtime with upgrade and failover activities.
 - Perform upgrades during non-business critical times to minimize the impact to users and data.
 - Review the of the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
 
