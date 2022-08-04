@@ -92,7 +92,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Create a process for initiating both manual and forced failovers.
 - Define different names for the Azure Arc-enabled SQL Managed Instance names in both the primary and secondary sites.
 - Review the [management critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) of Azure Arc-enabled SQL Managed Instance to understand the best practices to monitor the health of the clusters to understand when a failover is required.
-- Define the DNS record for the shared name of the Distributed Availability Group in your DNS servers to avoid creating manual DNS records during the failover.
+- Define the DNS record for the shared name of the [Distributed Availability Group](/sql/database-engine/availability-groups/windows/distributed-availability-groups) in your DNS servers to avoid creating manual DNS records during the failover.
 
 ## Next steps
 
