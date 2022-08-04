@@ -14,7 +14,7 @@ ms.custom: internal
 
 As more organizations embrace cloud solutions, IT professionals might feel anxious about their roles. Cloud technologies require a different set of skills. However, learning these new skills doesn't have to be hard. With the right training, you can gain the expertise and confidence to help your organization understand and embrace the changing technology landscape.
 
-![Diagram of skills mapped to IT roles in a cloud-hosted environment](../_images/skills-guidance.png)
+![Diagram of skills mapped to IT roles in a cloud-hosted environment.](../_images/skills-guidance.png)
 *Figure 1: Mapping of skills to IT roles in a cloud-hosted environment.*
 
 ## Cloud Adoption Framework resources
