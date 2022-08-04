@@ -12,25 +12,25 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Management and monitoring for Azure VMware Solution enterprise-scale scenario
 
-Proper management and monitoring are critical to the success of Azure VMware Solution. This enterprise-scale scenario outlines important recommendations for the planning and design phase. More guidance is available in the Azure enterprise-scale [landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
+Proper management and monitoring are critical to the success of [Azure VMware Solution](https://azure.microsoft.com/services/azure-vmware/). This enterprise-scale scenario outlines important recommendations for the design of your environment. More guidance is available in the Azure enterprise-scale [landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
 
-As you plan your management and monitoring environment for Azure VMware Solution, it's critical to understand the [shared responsibility matrix](/azure/cloud-adoption-framework/scenarios/azure-vmware/manage). The matrix shows which components Microsoft is responsible for, and which ones that you're responsible for managing and monitoring. Microsoft abstracts much of the ongoing maintenance, security, and management, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
+As you plan your management and monitoring environment for Azure VMware Solution, it's critical to understand the [shared responsibility matrix](/azure/cloud-adoption-framework/scenarios/azure-vmware/manage). The matrix shows which components Microsoft is responsible for, and which ones that you're responsible for managing and monitoring. Microsoft takes care of the ongoing maintenance, security, and management of cloud resources, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
 
 > [!IMPORTANT]
-> To support the Azure VMware Solution, it's extremely important to implement the following recommendations to configure service health alerting.
+> To support Azure VMware Solution, it's important to follow the recommendations below to configure service health alerts.
 
 ## Platform management and monitoring
 
-Review the following considerations for platform management and monitoring of Azure VMware Solution.
+Review the following *considerations* for platform management and monitoring of Azure VMware Solution.
 
 ### Azure tooling considerations
 
-- Create alerts and dashboards on the metrics that are most important to your operations teams. For more information, see [Configure alerts for Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities) for available monitoring and alerting metrics. An example monitoring dashboard is [available on GitHub](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Monitoring/AVS-Dashboard).
-- vSAN storage is a finite resource that needs to be managed to maintain availability and performance. Familiarize yourself with [Azure VMware Solution storage concepts](/azure/azure-vmware/concepts-storage). Use vSAN storage for guest virtual machine (VM) workloads only. Review the following design considerations to reduce unnecessary storage use on vSAN.
+- Create alerts and dashboards for the metrics that are most important to your operations teams. See [Configure alerts for Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities) for available monitoring and alerting metrics. An example monitoring dashboard is [available on GitHub](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Monitoring/AVS-Dashboard).
+- vSAN storage is a limited resource that needs to be managed to maintain availability and performance. Familiarize yourself with [Azure VMware Solution storage concepts](/azure/azure-vmware/concepts-storage). Use vSAN storage for guest virtual machine (VM) workloads only. Review the following design considerations to reduce unnecessary storage use on vSAN.
   - [Configure content libraries on Azure Blob Storage](https://vskeeball.com/2022/03/31/vsphere-content-library-on-azure-blob/) to move VM template storage off of vSAN.
-  - Store backups on an Azure virtual machine, either with [Microsoft tooling](/azure/azure-vmware/set-up-backup-server-for-azure-vmware-solution) or with a [partner vendor](/azure/azure-vmware/ecosystem-back-up-vms).
-- The Activity Log provides an immutable reference of operations performed within Azure. These operations include creation, updates, deletion, and special operations like listing credentials or keys. As an example, Azure VMware Solution will emit a `List PrivateClouds AdminCredentials` whenever someone visits the `Identity` tab within the Azure portal or programmatically requests `cloudadmin` credentials. Alert rules can be configured to send notifications when specific activities are logged.
-- Azure VMware Solution uses a local identity provider. After deployment, use a single administrative user account for the initial Azure VMware Solution configurations. Integrating Azure VMware Solution with [Active Directory](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-B23B1360-8838-4FF2-B074-71643C4CB040.html) enables traceability of actions to users. Review guidance from the identity portion of the enterprise-scale landing zone documentation.
+  - Store backups on an Azure VM, either with [Microsoft tooling](/azure/azure-vmware/set-up-backup-server-for-azure-vmware-solution) or with a [partner vendor](/azure/azure-vmware/ecosystem-back-up-vms).
+- The Activity Log provides a record of operations performed within Azure. These operations include creation, updates, deletion, and special operations like listing credentials or keys. For example, Azure VMware Solution will emit a `List PrivateClouds AdminCredentials` whenever someone visits the *Identity* tab within the Azure portal or programmatically requests `cloudadmin` credentials. Alert rules can be configured to send notifications when specific activities are logged.
+- Azure VMware Solution uses a local identity provider. After deployment, use a single administrative user account for the initial Azure VMware Solution configurations. Integrating Azure VMware Solution with [Active Directory](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-B23B1360-8838-4FF2-B074-71643C4CB040.html) allows traceability of actions to users. Review guidance from the [identity portion of the landing zone](../../ready/landing-zone/design-area/identity-access.md).
 
 ### VMware tooling considerations
 
@@ -43,18 +43,18 @@ Review the following considerations for platform management and monitoring of Az
 
 ### Guest workload management considerations
 
-- Virtual machines within Azure VMware Solution are treated the same as on-premises VMware virtual machines by default. You can continue using existing VM-level monitoring within AVS via existing agents.
-- Azure VMware Solution virtual machines won't show up in the Azure portal unless Azure Arc for Servers is deployed to them. [Azure Arc for Servers](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers) allows for an agent-based approach to VM management & monitoring from the Azure control plane. You can apply Azure Policy guest configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest VMs.
+- Virtual machines within Azure VMware Solution are treated the same as on-premises VMware VMs by default. You can continue using existing VM-level monitoring within AVS via existing agents.
+- Azure VMware Solution VMs won't show up in the Azure portal unless [Azure Arc for Servers](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers) is deployed to them. Azure Arc for Servers allows for an agent-based approach to VM management & monitoring from the Azure control plane. You can apply Azure Policy guest configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest VMs.
 
 ## Design recommendations
 
-Review the following recommendations for platform management and monitoring of Azure VMware Solution.
+Review the following *recommendations* for platform management and monitoring of Azure VMware Solution.
 
 ### Azure tooling recommendations
 
 - Configure [Azure Service Health to send alerts](/azure/service-health/resource-health-alert-monitor-guide) for service issues, planned maintenance, and other events that could impact Azure VMware Solution and other services. These notifications are sent to Action Groups, which can be used to send email, SMS, push notifications, and voice calls to addresses of your choice. Actions can also trigger Azure and third-party systems, including Azure Functions, Logic Apps, Automation Runbooks, Event Hubs, and Webhooks. 
-- Conduct baseline performance monitoring of Azure VMware Solution infrastructure through [Azure Monitor Metrics](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities). These metrics can be queried and filtered from the Azure portal, queried via REST API, or directed to Log Analytics, Azure Storage, Event Hubs, or [Partner Integrations](/azure/azure-monitor/partners).
-- Configure the following [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) to provide warnings if the Azure VMware Solution cluster nears threshhold values for disk, CPU, or RAM usage:
+- Monitor baseline performance of Azure VMware Solution infrastructure through [Azure Monitor Metrics](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities). These metrics can be queried and filtered from the Azure portal, queried via REST API, or directed to Log Analytics, Azure Storage, Event Hubs, or [Partner Integrations](/azure/azure-monitor/partners).
+- Configure the following [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) to provide warnings if the cluster nears threshhold values for disk, CPU, or RAM usage:
 
     | Metric                                    | Alert         |
     |-------------------------------------------|---------------|
@@ -65,15 +65,14 @@ Review the following recommendations for platform management and monitoring of A
 
 - You can automate the creation of [Azure Monitor Alerts](https://github.com/Azure/Enterprise-Scale-for-AVS/blob/main/BrownField/Monitoring/AVS-Utilization-Alerts/readme.md) and [Azure Service Health alerts](https://github.com/Azure/Enterprise-Scale-for-AVS/blob/main/BrownField/Monitoring/AVS-Service-Health/readme.md).
 - For service-level agreement (SLA) purposes, Azure VMware Solution requires that the cluster keep slack space of 25 percent available on vSAN.
-- For service-level agreement (SLA) purposes, Azure VMware Solution requires the number of failures to tolerate = 1 for clusters that have between three and five hosts, and the number of failures to tolerate = 2 for clusters that have between six and 16 hosts. The full SLA is documented in the following [service level agreement](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).
-- In a hybrid environment, you can use [Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to monitor communication from on-premises into Azure.
+- For SLA purposes, Azure VMware Solution requires the number of failures to `tolerate = 1` for clusters that have between three and five hosts, and the number of failures to `tolerate = 2` for clusters that have between six and 16 hosts. The full SLA is documented in the following [service level agreement](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).
+- In a hybrid environment, you can use [Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to monitor communication between on-premises and Azure resources.
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
-  - [Configure the first Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an Azure-based resource and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of the network connection between Azure and Azure VMware Solution over ExpressRoute.
-  - [Configure the second Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an on-premises-based VM and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of network connections between on-premises and Azure VMware Solution over ExpressRoute Global Reach.
+  - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connection over ExpressRoute Direct and also over ExpressRoute Global Reach.
 
 ### VMware tooling recommendations
 
-- During workload migration, use the model of "monitor-as-on-premises" to minimize changes during migration and provide the vSphere Administrators the experience they're accustomed to.
+- During workload migration, use the "monitor-as-on-premises" model to minimize changes during migration and provide vSphere Administrators with the experience they're accustomed to.
 - Monitor [vSphere Health Status](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.monitoring.doc/GUID-F957C1BB-A032-4648-9310-68A94733ABC8.html).
   - Create [vSphere events, alarms, and actions](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.monitoring.doc/GUID-9272E3B2-6A7F-427B-994C-B15FF8CADC25.html).
 - Consider using vRealize Log Insight for [monitoring a NSX-T Data Center environment](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.2/administration/GUID-8E3CA63B-71F8-4F47-88A6-DC5FA714DE8B.html).
@@ -82,9 +81,9 @@ Review the following recommendations for platform management and monitoring of A
 
 Review the following recommendations for guest management and for monitoring of workloads running in Azure VMware Solution.
 
-- During workload migration, use the model of "monitor-as-on-premises" to minimize changes during migration. After migration, consider using a [Azure Arc for Servers](/azure/azure-arc/servers/overview) to enable management and monitoring of Azure VMware Solution-hosted workloads with Azure native solutions.
-- Azure VMware Solution implements a default storage policy with thick provisioning enabled. For efficient use of vSAN capacity, evaluate using thin provisioning for VMs. Each VM's disk configuration can vary. A VM can have thick or thin disks, or both, depending on the requirements for the workload.
-- Configure guest monitoring for VMs running in Azure VMware Solution by following the [hybrid guidance](/azure/azure-monitor/vm/monitor-virtual-machine) for Windows and Linux. Configure both Windows and Linux this way for the following Azure integrations:
+- During workload migration, use the "monitor-as-on-premises" model to minimize changes during migration. After migration, consider using [Azure Arc for Servers](/azure/azure-arc/servers/overview) to enable management and monitoring of Azure VMware Solution-hosted workloads with Azure native solutions.
+- The default storage policy uses thick provisioning. For efficient use of vSAN capacity, evaluate using thin provisioning for VMs. Each VM's disk configuration can vary. A VM can have thick or thin disks, or both, depending on the requirements for the workload.
+- Configure guest monitoring for VMs by following the [hybrid guidance](/azure/azure-monitor/vm/monitor-virtual-machine) for Windows and Linux. Configure both Windows and Linux this way for the following Azure integrations:
 
     | Integration                                                                         | Description                                                                                                                                                                                                                                                                  |
     |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -96,7 +95,7 @@ Review the following recommendations for guest management and for monitoring of 
 
 ## Other considerations
 
-- If you use a network virtual appliance, consider monitoring trace logs between both on-premises and Azure. Ensure monitoring is in place between Azure and Azure VMware Solution.
+- If you use a network virtual appliance, consider monitoring trace logs between on-premise and Azure resources. Ensure monitoring is in place between Azure and Azure VMware Solution.
 
 - To help with storage concerns on the vSAN, consider using [Azure disk pools (preview)](/azure/virtual-machines/disks-pools-deploy) or [Azure NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
 
