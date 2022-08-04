@@ -191,7 +191,7 @@ For more information, see [Install HCX for Azure VMware Solution](/azure/azure-v
 
 #### Install and configure VMware HCX for the public cloud
 
-[VMware HCX](https://www.vmware.com/products/hcx.html) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but you can upgraded to HCX Enterprise if you require more features and functionality.
+[VMware HCX](https://www.vmware.com/products/hcx.html) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but you can upgrade to HCX Enterprise if you require more features and functionality.
 
 Azure VMware Solution automates the cloud manager component of HCX in Azure VMware Solution. It provides the customer activation keys and the download link to the connector HCX appliance that must be configured on the on-premises side and in a customer's vCenter Server domain. These elements are then paired with the Azure VMware Solution cloud appliance so that customers can take advantage of services like migration and Layer 2 stretch.
 
