@@ -124,7 +124,7 @@ Contoso needs to plan an IP address scheme that includes non-overlapping address
 
 The Azure VMware Solution private cloud is connected to Contoso's virtual network in Azure by using another ExpressRoute connection. Contoso will use the ExpressRoute Global Reach option to allow [direct connection](/azure/azure-vmware/concepts-networking#on-premises-interconnectivity) from on-premises VMs to VMs running on the Azure VMware Solution private cloud. The ExpressRoute Premium SKU is required to enable Global Reach.
 
-:::image type="content" source="media/contoso-migration-vmware-to-azure/adjacency-overview-drawing-double.png" border="false" alt-text="Diagram of ExpressRoute Global Reach with Azure VMware Solution.":::
+:::image type="content" source="media/contoso-migration-vmware-to-azure/adjacency-overview-drawing-double.png" border="false" alt-text="Diagram of ExpressRoute Global Reach with Azure VMware Solution." lightbox="media/contoso-migration-vmware-to-azure/adjacency-overview-drawing-double.png":::
 
 Azure VMware Solution private clouds require, at minimum, a `/22` CIDR network address block for subnets. To connect to on-premises environments and virtual networks, the network address block must be non-overlapping.
 
@@ -203,7 +203,7 @@ Azure VMware Solution automates the cloud manager component of HCX in Azure VMwa
 
 - As the team configures HCX, it enables migration and other options, including disaster recovery.
 
-  :::image type="content" source="media/contoso-migration-vmware-to-azure/hcx-manager.png" alt-text="Screenshot of the Create Service Mesh window for configuring HCX.":::
+  :::image type="content" source="media/contoso-migration-vmware-to-azure/hcx-manager.png" alt-text="Screenshot of the Create Service Mesh window for configuring HCX." lightbox="media/contoso-migration-vmware-to-azure/hcx-manager.png":::
 
    For more information, see [HCX installation workflow for HCX public clouds](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-FDE5473E-6B71-4A71-85B6-8C9BA2B73686.html).
 
@@ -213,7 +213,7 @@ When both the on-premises datacenter (source) and the Azure VMware Solution priv
 
 - Contoso's HCX application is online, and the status is green. The team is now ready to migrate and protect Azure VMware Solution VMs by using HCX.
 
-  :::image type="content" source="media/contoso-migration-vmware-to-azure/appliance-status.png" alt-text="Screenshot of the VMware vSphere web client page.":::
+  :::image type="content" source="media/contoso-migration-vmware-to-azure/appliance-status.png" alt-text="Screenshot of the VMware vSphere web client page." lightbox="media/contoso-migration-vmware-to-azure/appliance-status.png":::
 
 #### VMware HCX bulk migration
 
