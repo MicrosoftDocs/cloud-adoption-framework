@@ -12,16 +12,16 @@ ms.custom: think-tank
 
 # Move on-premises VMware infrastructure to Azure
 
-When the Contoso company decides to move its VMware virtual machines (VMs) from an on-premises datacenter to Azure, the IT team has two migration options to consider.
+When the Contoso company decides to move its VMware virtual machines (VMs) from an on-premises datacenter to Azure, the IT team has two migration options to consider:
 
 | Migration options | Outcome |
 | --- | --- |
-| [Azure Migrate](https://azure.microsoft.com/services/azure-migrate/) | <li> [Assess](/azure/migrate/tutorial-assess-vmware-azure-vm) and [migrate](/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <li> Run workloads using the Azure infrastructure as a service (IaaS). <li> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager/). |
-| [Azure VMware Solution](https://azure.microsoft.com/services/azure-vmware/) | <li> Use VMware HCX or vMotion to move on-premises VMs. <li> Run native VMware workloads on Azure bare-metal hardware. <li> Manage VMs using vSphere. |
+| [Azure Migrate](https://azure.microsoft.com/services/azure-migrate/) | <li> [Assess](/azure/migrate/tutorial-assess-vmware-azure-vm) and [migrate](/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <li> Run workloads by using the Azure infrastructure as a service (IaaS). <li> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager/). |
+| [Azure VMware Solution](https://azure.microsoft.com/services/azure-vmware/) | <li> Use VMware HCX or VMware vMotion to move on-premises VMs. <li> Run native VMware workloads on Azure bare-metal hardware. <li> Manage VMs using VMware vSphere. |
 
-Contoso reviews the options, and then chooses Azure VMware Solution as the best migration option for its business.
+Contoso reviews the options, and then it chooses Azure VMware Solution as the best migration option for its business.
 
-In this article, Contoso uses Azure VMware Solution to create a private cloud in Azure. The cloud has native access to VMware vCenter and other tools that are supported by VMware for workload migration. Contoso can confidently use Azure VMware Solution because it's a first-party Microsoft offering that's backed by VMware.
+In this article, Contoso uses Azure VMware Solution to create a private cloud in Azure. The cloud has native access to VMware vCenter Server and other VMware tools that are designed for workload migration. Contoso can confidently use Azure VMware Solution because it's a first-party Microsoft offering that's backed by VMware.
 
 ## Business drivers
 
@@ -35,19 +35,19 @@ The Contoso IT team works closely with business partners to define the business 
 
 ## Migration goals
 
-With its business drivers in mind, Contoso identifies a few goals for migrating VMware on-premises to VMware in the cloud:
+With its business drivers in mind, Contoso identifies goals for migrating VMware on-premises to VMware in the cloud:
 
-- Continue to manage its existing environments by using VMware tools that are familiar to its teams, but modernize its applications through native Azure services.
+- Continue to manage Contoso's existing environments by using VMware tools that are familiar to its teams, but modernize its applications through native Azure services.
 - Seamlessly move Contoso VMware-based workloads from its datacenter to Azure, and integrate the VMware environment with Azure.
 - After migration, the applications in Azure have the same performance capabilities as they do today in VMware. The applications will remain as critical in the cloud as they were on-premises.
 
-These goals support Contoso's decision to use Azure VMware Solution, and they validate it as the company's best migration method.
+These goals support Contoso's decision to use Azure VMware Solution, and they validate Azure VMware Solution as the company's best migration method.
 
 ## Benefits of running VMware workloads in Azure
 
 Azure VMware Solution gives Contoso a common operating framework to use to seamlessly run, manage, and secure applications across its VMware environment and Azure.
 
-Contoso can continue to capitalize on its existing VMware investments, skills, and tools, including VMware vSphere, vSAN, and vCenter. At the same time, Contoso gets the scale, performance, and innovation of Azure.
+Contoso can continue to capitalize on its existing VMware investments, experience, and tools, which include VMware vSphere, VMware vSAN, and VMware vCenter Server. But Contoso also gets the scale, performance, and innovation of Azure.
 
 With this solution, Contoso also can:
 
@@ -67,26 +67,26 @@ After Contoso solidifies its goals and requirements, the company designs and rev
 Here's how Contoso's current architecture is set up:
 
 - VMs deploy to an on-premises datacenter that's managed through [vSphere](https://www.vmware.com/products/vsphere.html).
-- Workloads deploy on a VMware ESXi host cluster that's managed through [vCenter](https://www.vmware.com/products/vcenter-server.html), [vSAN](https://www.vmware.com/products/vsan.html), and [NSX](https://www.vmware.com/products/nsx.html).
+- Workloads deploy on a VMware ESXi host cluster that's managed through [vCenter Server](https://www.vmware.com/products/vcenter-server.html), [vSAN](https://www.vmware.com/products/vsan.html), and [VMware NSX](https://www.vmware.com/products/nsx.html).
 
 ### Proposed architecture
 
-To create its proposed architecture, Contoso will complete these steps:
+To create its proposed architecture, Contoso must complete these steps:
 
 - Deploy an [Azure VMware Solution private cloud](/azure/azure-vmware/concepts-private-clouds-clusters) to the West US Azure region.
-- Connect the on-premises datacenter to Azure VMware Solution and run in West US by using virtual networks and [Azure ExpressRoute](/azure/azure-vmware/concepts-networking) with the Global Reach option enabled.
+- Connect the on-premises datacenter to Azure VMware Solution and run in the West US Azure region by using virtual networks and [Azure ExpressRoute](/azure/azure-vmware/concepts-networking) with the Global Reach option enabled.
 - Migrate VMs to dedicated Azure VMware Solution by using [VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
 
 :::image type="content" source="media/contoso-migration-vmware-to-azure/on-premises-stretched-network-expressroute.png" border="false" alt-text="Diagram of the proposed architecture.":::
 
 ## Solution review
 
-Contoso evaluates its proposed design by creating a list of pros and cons for the solution, as shown in the following table:
+Contoso evaluates its proposed design by creating a list of pros and cons for the solution:
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | <li> Bare-metal VMware infrastructure with high performance. <li> Infrastructure that's fully dedicated to Contoso and is physically isolated from the infrastructure of other customers. <li> Because Contoso is using a rehost that uses VMware, migration complexity and special configurations aren't factors Contoso needs to plan for. <li> Contoso can take advantage of its investment in Software Assurance by using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](/windows-server/) for legacy Windows and SQL Server platforms. <li> Contoso retains full control of the application VMs in Azure. <br><br> |
-| **Cons** | <li> Contoso will need to continue supporting the application as VMware VMs instead of moving the applications to a managed service like Azure App Service or Azure SQL Database. <li> Azure VMware Solution is set up and priced based on a minimum of three large nodes rather than individual VMs in the Azure IaaS. Contoso currently uses an on-premises environment that restricts it from the on-demand nature of other services in Azure, so the company must carefully plan its capacity needs. |
+| **Pros** | <li> Bare-metal VMware infrastructure with high performance. <li> Infrastructure that's fully dedicated to Contoso and is physically isolated from the infrastructure of other customers. <li> Because Contoso is using a rehost that uses VMware, migration complexity and special configurations aren't factors the company needs to plan for. <li> Contoso can take advantage of its investment in Software Assurance by using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](/windows-server/) for legacy Windows and SQL Server platforms. <li> Contoso retains full control of the application VMs in Azure. <br><br> |
+| **Cons** | <li> Contoso will need to continue supporting its application as VMware VMs instead of moving the applications to a managed service like Azure App Service or Azure SQL Database. <li> Azure VMware Solution is set up and priced based on a minimum of three large nodes rather than individual VMs in the Azure IaaS. Contoso currently uses an on-premises environment that restricts it from the on-demand nature of other services in Azure, so the company must carefully plan its capacity needs. |
 
 > [!NOTE]
 > For information about pricing, see [Azure VMware Solution pricing](https://azure.microsoft.com/pricing/details/azure-vmware/).
@@ -135,11 +135,11 @@ Azure VMware Solution private clouds require, at minimum, a `/22` CIDR network a
 
 With its network and IP address planning completed, Contoso next focuses on setting up the Azure VMware Solution service in the West US Azure region. Contoso can use Azure VMware Solution to deploy a vSphere cluster in Azure.
 
-An Azure VMware Solution private cloud is an isolated, VMware software-defined datacenter that supports ESXi hosts, vCenter, vSAN, and NSX. The stack runs on dedicated and isolated bare-metal hardware nodes in an Azure region. The minimum initial deployment for an Azure VMware Solution private cloud is 3 hosts. Additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster.
+An Azure VMware Solution private cloud is an isolated, VMware software-defined datacenter that supports ESXi hosts, vCenter Server, vSAN, and NSX. The stack runs on dedicated and isolated bare-metal hardware nodes in an Azure region. The minimum initial deployment for an Azure VMware Solution private cloud is 3 hosts. Additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster.
 
 For more information, see [Azure VMware Solution preview private cloud and cluster concepts](/azure/azure-vmware/concepts-private-clouds-clusters).
 
-Azure VMware Solution private clouds are managed through the Azure VMware Solution portal. Contoso has its own vCenter Server in its own management domain.
+Azure VMware Solution private clouds are managed through the Azure VMware Solution portal. Contoso has an instance of vCenter Server in its own management domain.
 
 To learn how to create Azure VMware Solution private clouds, see [Deploy an Azure VMware Solution private cloud in Azure](/azure/azure-vmware/tutorial-create-private-cloud).
 
@@ -159,9 +159,7 @@ To learn how to create Azure VMware Solution private clouds, see [Deploy an Azur
 
 ### Step 3: Configure networking
 
-An Azure VMware Solution private cloud requires a virtual network. Because Azure VMware Solution doesn't support an on-premises vCenter during preview, Contoso requires additional steps for integration with its on-premises environment. By setting up an ExpressRoute circuit and a virtual network gateway, the team connects its virtual networks to the Azure VMware Solution private cloud.
-
-For more information, see [Configure networking for your VMware private cloud in Azure](/azure/azure-vmware/tutorial-configure-networking).
+An Azure VMware Solution private cloud requires a virtual network. Because Azure VMware Solution doesn't support an on-premises instance of vCenter Server during preview, Contoso requires additional steps for integration with its on-premises environment. By setting up an ExpressRoute circuit and a virtual network gateway, the team connects its virtual networks to the Azure VMware Solution private cloud.
 
 1. The Contoso team first creates a virtual network with a gateway subnet.
 
@@ -172,7 +170,7 @@ For more information, see [Configure networking for your VMware private cloud in
 
    :::image type="content" source="media/contoso-migration-vmware-to-azure/create-virtual-network-gateway.png" alt-text="Screenshot of the Create virtual network gateway pane.":::
 
-1. The team gets the authorization key to connect ExpressRoute to the virtual network. The key is shown on the connectivity screen of the Azure VMware Solution private cloud resource in the Azure portal.
+1. The team gets the authorization key to connect ExpressRoute to the virtual network. The key is shown in the Azure portal under **Connectivity** for the Azure VMware Solution private cloud resource.
 
    :::image type="content" source="media/contoso-migration-vmware-to-azure/request-auth-key.png" alt-text="Screenshot of the ExpressRoute tab on the Contoso Azure VMware Solution private cloud connectivity pane.":::
 
@@ -180,7 +178,7 @@ For more information, see [Configure networking for your VMware private cloud in
 
    :::image type="content" source="media/contoso-migration-vmware-to-azure/add-connection.png" alt-text="Screenshot of the Add connection pane for connecting ExpressRoute to the virtual network.":::
 
-For more information, see [Learn how to access an Azure VMware Solution private cloud](/azure/azure-vmware/tutorial-access-private-cloud).
+For more information, see [Configure networking for your VMware private cloud in Azure](/azure/azure-vmware/tutorial-configure-networking) and [Learn how to access an Azure VMware Solution private cloud](/azure/azure-vmware/tutorial-access-private-cloud).
 
 ### Step 4: Migrate by using VMware HCX
 
@@ -193,9 +191,9 @@ For more information, see [Install HCX for Azure VMware Solution](/azure/azure-v
 
 #### Install and configure VMware HCX for the public cloud
 
-[VMware HCX](https://www.vmware.com/products/hcx.html) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but it can be upgraded to HCX Enterprise if more features and functionality are required.
+[VMware HCX](https://www.vmware.com/products/hcx.html) is a VMware product that's part of the Azure VMware Solution default installation. HCX Advanced is installed by default, but you can upgraded to HCX Enterprise if you require more features and functionality.
 
-Azure VMware Solution automates the cloud manager component of HCX in Azure VMware Solution. It provides the customer activation keys and the download link to the connector HCX appliance that must be configured on the on-premises side and in a customer's vCenter domain. These elements are then paired with the Azure VMware Solution cloud appliance so that customers can take advantage of services like migration and Layer 2 stretch.
+Azure VMware Solution automates the cloud manager component of HCX in Azure VMware Solution. It provides the customer activation keys and the download link to the connector HCX appliance that must be configured on the on-premises side and in a customer's vCenter Server domain. These elements are then paired with the Azure VMware Solution cloud appliance so that customers can take advantage of services like migration and Layer 2 stretch.
 
 - The Contoso team deploys the HCX appliance by using an OVF package that's provided by VMware.
 
@@ -219,7 +217,7 @@ When both the on-premises datacenter (source) and the Azure VMware Solution priv
 
 #### VMware HCX bulk migration
 
-This migration method uses the VMware vSphere replication protocols to move multiple VMs simultaneously to a destination site. Benefits include:
+The HCX bulk migration method uses the VMware vSphere replication protocols to move multiple VMs simultaneously to a destination site. Benefits include:
 
 - This method is designed to move multiple VMs in parallel.
 - The migration can be set to finish on a predefined schedule.
@@ -227,18 +225,18 @@ This migration method uses the VMware vSphere replication protocols to move mult
 
 #### VMware HCX vMotion live migration
 
-This migration method uses the VMware vMotion protocol to move a single VM to a remote site. Benefits include:
+The HCX vMotion live migration method uses the VMware vMotion protocol to move a single VM to a remote site. Benefits include:
 
 - This method is designed to move one VM at a time.
 - No service interruption when the VM state is migrated.
 
 #### VMware HCX cold migration
 
-This migration method uses the VMware near-field communication protocol. The option is automatically selected when the source VM is turned off.
+The HCX cold migration method uses the VMware near-field communication protocol. The option is automatically selected when the source VM is turned off.
 
 #### VMware HCX replication-assisted vMotion
 
-VMware HCX RAV combines the benefits of VMware HCX bulk migration with VMware HCX vMotion migration. It offers parallel operations, resiliency, and scheduling, with zero downtime during VM state migration.
+VMware HCX RAV combines the benefits of VMware HCX bulk migration with VMware HCX vMotion live migration. It offers parallel operations, resiliency, and scheduling, with zero downtime during VM state migration.
 
 ## VMware resources
 
