@@ -45,15 +45,15 @@ The following should be taken into account when choosing a Storage Class, this c
 - **Read/Write Ratio**. Understanding the workload can help choose the backing hardware to best meet the needs with appropriate costs. Heavy write workloads can take advantage of RAID 0 configurations, whereas infrequently accessed data might be best served using a SAN device storage.
 - **Database isolation and co-location**. All databases on an instance of SQL MI share Persistent Volume, so you can choose to move databases to separate instances of SQL MI to avoid storage resource contention.
 - **Capacity**. The defined storage size should meet the future capacity of your data controller and database instances to avoid having to re-size a PVC. Consider any storage limitations that your chosen Storage Class might have.
-- **Access Mode**. Storage Class providers have different Access Modes, allowing different capabilities for how a storage can be mounted and read or written by pods. RWX (Read Write Many) is required for the SQL Backups volume.
+- **Access Mode**. Storage Class providers have different Access Modes, allowing different capabilities for how a storage can be mounted and read or written by pods. RWX (Read Write Many) is required for the SQL Backup volume.
 
 ### Data Controller
 
-The data controller will have 4 different stateful pods running in the Kubernetes cluster: Controller SQL, Controller API, Logs DB, Metrics DB. Each pod will require two Persistent Volumes for the data and logs component. All Data Controller components require a remote Storage Class to ensure data durability, as the data controller components themselves do not natively provide data durability. Be sure to consider the [compute and memory resources](/azure/azure-arc/data/sizing-guidance#data-controller-sizing-details) the Data Controller requires. The following diagram represents the Data Controller Storage, PV and PVC resources.
+The data controller will have 4 different stateful pods running in the Kubernetes cluster: Controller SQL, Controller API, Logs DB, Metrics DB. Each pod will require two Persistent Volumes for the data and logs volumes. All Data Controller components require a remote Storage Class to ensure data durability, as the data controller components themselves do not natively provide data durability. Be sure to consider the [compute and memory resources](/azure/azure-arc/data/sizing-guidance#data-controller-sizing-details) the Data Controller requires. The following diagram represents the Data Controller Storage, PV and PVC Kubernetes resources.
 
 ![Temp Placeholder](../)
 
-The Data Controller default volume sizing is the recommended minimum. The storage used will be dependent on amount of database, usage, and logs generated. The data controller Storage Class is not sensitive to low latency, but users might see benefit in the Grafana and Kibana interfaces with faster performing storage if you have a large number of SQL MI deployments in a cluster.
+The Data Controller default volume sizing is the recommended minimum. The storage used will be dependent on amount of databases, usage, and logs generated. The data controller Storage Class is not sensitive to low latency, but users might see benefit in the Grafana and Kibana interfaces with faster performing storage if you have a large number of SQL MI deployments in a cluster.
 
 #### Data Controller Installing and Uninstalling
 
@@ -84,25 +84,25 @@ The General Purpose tier of SQL MI must use remote storage for the database inst
 
 #### Business Critical Tier
 
-Business Critical tier uses a multiple pod model where data and log volumes can be stored on local or remote Storage Classes. Local Storage Classes typically perform better in terms of latency and throughput because the storage device is attached to the node.  Remote storage typically offers built-in redundancy but often has lower latency and throughput compared with local storage.  Keep in mind that with Business Critical, additional replicas will also require additional Persistent Volumes for Data, Logs, and DataLogs. This means more total storage capacity is required.
+Business Critical tier uses a multiple pod model where data and log volumes can be stored on local or remote Storage Classes. Local Storage Classes typically perform better in terms of latency and throughput because the storage device is directly attached to the node.  Remote storage typically offers built-in redundancy but often has lower latency and throughput compared with local storage.  Keep in mind that with Business Critical, additional replicas will also require additional Persistent Volumes for Data, Logs, and DataLogs. This means the total storage capacity required is significantly higher.
 
-Below is a diagram to illustrate the Business Critical storage configuration for Arc-Enabled SQL MI.
+Below is a diagram to illustrate the Business Critical storage configuration for Arc-Enabled SQL MI with two replicas.
 
 ![SQL MI Business Critical Storage](../media/arc-enabled-datasvc-sqlmi-storage-bc.PNG)
 
 Business Critical allows for configuration of 2 or 3 secondary replicas, and failover is managed by [SQL always On Availability Group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server), which will provide less downtime for upgrades and failures than the General Purpose tier. Configuring multiple replicas with synchronous data replication can ensure data is preserved incase of a failed pod, node, or storage hardware as there will be multiple copies of the data on the replicas. Consider utilizing secondary replicas as read scale-out instances. Review the [Business Continuity and Disaster Recovery](./eslz-arc-datasvc-sqlmi-bcdr.md) section for more information in these areas.
 
-#### SQL MI Provisioning and Removing
+#### SQL MI Provisioning and Uninstalling
 
-When provisioning Azure SQL MI, you have the flexibility to assign different Storage Classes to each of the required SQL MI Persistent Volumes. Higher performance storage options could be desired for Data and DataLogs, but the Logs and Backup volumes could use a more cost-efficient Storage Class option to save on costs. In scenarios where local storage is used, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O.
+When provisioning Azure SQL MI, you have the flexibility to assign different Storage Classes to each of the required SQL MI Persistent Volumes. Higher performance storage options could be desired for Data and DataLogs, but the Logs and Backup volumes could use a more cost-efficient Storage Class options to save on costs. In scenarios where local storage is used, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O.
 
-When deleting a SQL MI, this does not remove its associated PVs and PVCs. This ensures that you can access the database files in case the deletion was accidental.
+When deleting SQL MI, this does not remove its associated PVs and PVCs. This ensures that you can access the database files in case the deletion was accidental.
 
 ## Design recommendations
 
 ### Storage Classes
 
-For public clouds, the recommended Storage Classes for production workloads in the following table.
+For public clouds, the recommended Storage Classes for production workloads are shown in the following table.
 
 | Provider    | Storages Validated & Recommended |
 | ------------- |:-------------:|
@@ -110,31 +110,31 @@ For public clouds, the recommended Storage Classes for production workloads in t
 | AWS (EKS)     | EBS CSI storage driver    |
 | Google (GKE)  | GCE Persistent disks     |
 
-When choosing a Storage Class in On-premise and vendor storage infrastructure scenarios, ensure the Storage Class is capable of meeting your intended storage capacity, IOPS, and throughput. The following sections provide additional recommendations for these scenarios.
+When choosing a Storage Class in On-premise and vendor storage infrastructure scenarios, ensure the Storage Class is capable of meeting your intended storage capacity, IOPS, and throughput needs. The following sections provide additional recommendations for these scenarios.
 
 ### Data Controller
 
 Choose a remote, shared Storage Class to ensure data durability in the event a pod or node is removed, the pod is brought back up and can connect again to the Persistent Volume. The underline Storage Class needs to be provide redundancy and high availability.
 
-It is recommended to use a custom deployment template when creating your Arc-Enabled Data Services Data Controller, which allows fine tuning of Storage Classes, storage size for data and logs, security, and service type. This can be customized to your environment and enterprise needs. The data controller requires a total of 8 Persistent Volumes. The default minimum configuration allows for 15Gi for data and 10Gi for logs on the PVs. Configure capacity that not only meets minimum recommendation but supports higher growth from having many SQL MI implementations running in a cluster. This will prevent the need of re-sizing PVC's in the future.
+It is recommended to use a custom deployment template when creating your Arc-Enabled Data Services Data Controller, which allows fine tuning of Storage Classes, storage size for data and logs, security, and Kubernetes Service Types. This can be customized to your environment and enterprise needs. The data controller requires a total of 8 Persistent Volumes. The default minimum configuration allows for 15Gi for data and 10Gi for logs on the PVs. Configure capacity that not only meets minimum recommendation but supports higher growth from having many SQL MI implementations running in a cluster. This will prevent the need of re-sizing PVC's in the future.
 
-It is recommended to choose a highly performant and low latency Storage Class in the event your cluster will have many databases and SQL MI deployments. This will improve user experience in Grafana and Kibana interfaces.
+It is recommended to choose a lower latency Storage Class in the event your cluster will have many databases and SQL MI deployments. This will improve user experience in Grafana and Kibana interfaces.
 
 ### SQL MI
 
 It is recommended to plan and account for all of the instances of SQL MI and corresponding SQL Databases that will be required on each Kubernetes cluster. This will prevent needing to move databases between instances at a later time. When configuring multiple database instances on a cluster, be sure to separate busy databases to their own instance to avoid I/O contention. Use node labels to ensure that database instances are put onto separate nodes to distribute the overall I/O traffic across multiple nodes. If operating in a virtualized environment, ensure that I/O is appropriately distributed at the physical host-level.
 
-Plan the capacity for SQL MI to have adequate storage sizes for Data, Logs, DataLogs, and Backups that can accommodates both current needs and projected growth for all the databases that will live on the instances of SQL MI. This will prevent having to resize the PVCs in the future.
+Plan the capacity for SQL MI to have adequate storage sizes for Data, Logs, DataLogs, and Backups that can accommodate both current needs and projected growth for all the databases that will live on the instances of SQL MI. This will prevent having to resize the PVCs in the future.
 
 While there are several factors that might dictate a deployment of the Business Critical or General Purpose tier of Azure Arc-enabled SQL MI, Business Critical using local storage will provide the lowest latency and highest availability. For on-premise storage infrastructure options, use the following recommendations:
 
 #### General Purpose
 
-It is recommended to choose a low latency remote Storage Class for the Data and DataLogs Persistent Volumes to have optimal performance of your SQL MI General Purpose instance. Avoid using a Storage Class that can introduce network partitions, such as having an on-premises cluster configured to use an internet provided Storage Class for the Backups and Logs Persistent Volumes.
+It is recommended to choose a low latency remote Storage Class for the Data and DataLogs Persistent Volumes to have optimal performance. Avoid using a Storage Class that can introduce network partitions, such as having an on-premises cluster configured to use an internet provided Storage Class for the Backups and Logs Persistent Volumes.
 
 #### Business Critical
 
-For lowest possible latency requirement scenarios SQL MI, it is recommended to choose local storage if this is an option for your Kubernetes infrastructure. The local storage volumes should land on different underlying storage devices to avoid contention on disk I/O and maximize performance.
+For lowest possible latency requirement scenarios, it is recommended to choose local storage if this is an option for your Kubernetes infrastructure. The local storage volumes should land on different underlying storage devices to avoid contention on disk I/O and maximize performance. The storage device should not have multiple functions, such as hosting the Operating System partition.
 
 For read intensive workloads and high availability, configure multiple replicas and configure your applications or clients to use secondary replicas as read scale-out instances.
 
