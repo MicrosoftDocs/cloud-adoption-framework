@@ -63,7 +63,7 @@ Cloud costs are flexible, and they can be reduced with:
 
 **Azure dev/test pricing:** Take advantage of [discounted rates for development and testing](https://azure.microsoft.com/pricing/dev-test/), including the Microsoft software charges on Azure Virtual Machines and special dev/test pricing on other services.
 
-**Extended security updates:** Receive [continued support](/lifecycle/faq/extended-security-updates) for SQL Server 2008 and SQL Server 2008 R2, which have reached the end of their support lifecycle. You can migrate your on-premises SQL Server instances to Azure virtual machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure VM.
+**Extended security updates:** Receive [continued support](/lifecycle/faq/extended-security-updates) for SQL Server 2008 and SQL Server 2008 R2, which have reached the end of their support lifecycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure VM.
 
 ## Tools and calculators
 
