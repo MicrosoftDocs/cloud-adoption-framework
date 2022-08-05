@@ -12,11 +12,11 @@ ms.custom: internal
 
 # Expand your landing zone
 
-This section of the Ready methodology builds on the principles of [landing zone refactoring](../landing-zone/refactor.md). As outlined in that article, a refactoring approach to infrastructure as code removes blockers to business success while minimizing risk. This series of articles assumes that you've deployed your first landing zone and would now like to expand that landing zone to meet enterprise requirements.
+This section of the Ready methodology builds on the principles of [landing zone refactoring](../landing-zone/refactor.md). A refactoring approach to infrastructure as code removes blockers to business success while minimizing risk. This series of articles assumes that you've deployed your first landing zone and would now like to expand that landing zone to meet enterprise requirements.
 
 ## Shared architecture pillars
 
-The following pillars need to be embedded into the landing zone and more broadly into your overall cloud environment.
+Landing zone expansion provides the opportunity to embed the following pillars into your landing zone and into your broader cloud environment.
 
 ![Diagram of shared architecture pillars.](../../_images/ready/shared-principles.png)
 *Figure 1: Shared architecture pillars.*
@@ -40,4 +40,4 @@ To better align with the Cloud Adoption Framework, the pillars above are grouped
 Before refactoring your first landing zone, it's important to understand test-driven development.
 
 > [!div class="nextstepaction"]
-> [Test-driven development of landing zones](development-strategy-test-driven-development.md)
+> [Test-driven development for landing zones](development-strategy-test-driven-development.md)
