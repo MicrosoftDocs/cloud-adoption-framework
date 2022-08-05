@@ -1,8 +1,8 @@
 ---
-title: DevOps practices
+title: Modernize your process 
 description: Understand how to evaluate your opportunities for growth and align with the modernize methodology.
-author: BrianBlanchard
-ms.author: brblanch
+author: stephen-sumner
+ms.author: ssumner
 ms.date: 07/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -14,66 +14,44 @@ ms.custom: internal
 Dependencies: cross linking​
 Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.-->
 
-# Modernize with DevOps Practices
+# Modernize your cloud operations
 
-[Assess developer velocity](https://developervelocityassessment.com/)
+Learn how to modernize your operations. Increasing operational efficiency will limit the total cost of ownership of your workloads.
+:::image type="content" source="../../_images/modernize/devops/devops-and-tools-512.png" alt-text="image showing a circle with 4 segments":::
 
-DevOps
+## Modernize your mindset
 
+Modernize you mindset by adopting a DevOps approach. Shift your focus to continuously delivering value to your customers.
 
-## Ideal state: Modernize through devops
+- *Primary Focus* - Continuously deliver value to customers.
+- *Method* - Integrate planning, development, delivery, and operations with DevOps tools.
+- *Benefit* - Quickly limits the total cost of ownership for your workloads in the cloud.
 
-1. Identify the components to modernize.
-2. Update configuration in your code base to reference the new components.
-3. Update your code base to reflect the best practices for running on any new platform components.
-4. [Test the changes](testing-architecture-modernization.md).
-5. Change the resource type and cloud API in your deployment pipeline.
-6. Deploy the modernized solution to the cloud, including configuration for new components.
+## Modernize your tools
 
-:::image type="content" source="../../_images/modernize/ideal-state-modernize-through-devops.png" alt-text="Image showing ideal state for modernizing through devops.":::
+Modernize your tools by adopting a DevOps toolset. Five DevOps tools make this possible. Using [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) makes this adoption easy (*see table*).
 
-### Minimum requirement
+| Tool | Description | Azure Solution | Alternative
+| --- | --- | --- | --- |
+| *Repository* | A centralized location to store code and code changes | [Azure Repos](/azure/devops/repos/get-started/what-is-repos) | GitHub
+| *Pipeline* | An automated process to validate and push code to a desired environment | [Azure Pipeline](/azure/devops/pipelines/get-started/pipelines-get-started) | Jenkins
+| *Boards* | A central dashboard that tracks the progress of work items | [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) | TaskBoard |
+| *Artifacts* | A tool to share code and publish packages | [Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts) | Nexus
+| *Testing* | A tool to run tests and quality assurance on code | [Azure Test Plans](/azure/devops/test/overview) | Selenium
+|
 
-- *Do you follow agile principles for software development lifecycle?*
-- *What DevOps tools are you currently using?*
-- Track your efforts in an iterative backlog management tool.
-- Align waves of workloads and modernization work.
-- We recommend cross-linking to backlogs for workloads with more mature devops practices.
+## Streamline DevOps process
 
-The baseline of devops maturity is best made by executing following groups of work iteratively:
+ Enhance your DevOps process with additional governance and monitoring tools. Add these tools to your DevOps toolset to streamline your operations.
 
-- **Modernize in waves:** Follow an iterative, workload-based, wave-oriented approach to migration.
-- **Use free tools:** Use free first-party migration tools to modernize components of each wave of workloads.
-- **Analyze dependencies:** Use dependency mapping and test migration to ensure your modernization cut-overs are predictable and successful.
+| Tool | Description | Azure Solution
+| --- | --- | --- |
+| *Resource deployment template* | A declarative way to orchestrate the deployment of various resource templates and other artifacts. | [Azure Blueprints](https://azure.microsoft.com/services/blueprints/)
+|*Automated auditing* | A tool to enforce organizational standards and to assess compliance at-scale.  | [Azure Policy](https://azure.microsoft.com/services/azure-policy/) |
+| *Health and performance monitoring* | A tool to monitor the health and performance of your systems and applications | [Azure Monitor](https://www.logicmonitor.com/lp/azure-monitoring) |
+|
 
-The following image illustrates that as modernization processes mature, you can improve devops practices in repeat waves of modernization.
+## Next Steps
 
-:::image type="content" source="../../_images/modernize/improve-devops-practices-incrementally.png" alt-text="Diagram that shows the Cloud Adoption Framework approach to improve devops practices.":::
-
-## Alignment with the Modernize methodology
-
-You can accelerate this type of digital modernization through the following levels of maturity. Technical guidance to accelerate digital modernization is listed in the table of contents next to this page. Those articles are grouped by maturity model level.
-
-- **Shared solution:** Establish a centralized repository for all aspects of the solution.
-- **Reliable testing:** Validate solution quality and expected changes to drive ensuring measurements. For more information, see [Automated Testing](/azure/architecture/framework/devops/release-engineering-testing).
-- **Solution deployment:** Deploy a solution to allow a team to frequently share changes with customers, making it easier to respond to issues since the team's used to the processes. A benefit of regular structured deployments is that deployment activities get rehearsed frequently, making it easier to respond to issues as the team gets used to the deployment processes.
-- **Integrated measurement:** Add learning metrics to the feedback loop for clear analysis by the full team. For example, platform metrics give an indication of whether workloads are under- or over-provisioned and application metrics can be shipped to and evaluated at scale in Azure Monitor.  This helps with diagnosing application issues when implemented alongside a strict correlation ID.
-
-## Toolchain
-
-For modernization teams that are mature professional development teams with many contributors, the Azure toolchain starts with [GitHub](https://github.com/) and [Azure DevOps](https://azure.microsoft.com/services/devops/).
-
-As your need grows, you can expand this foundation to use other tool features. The expanded foundation might involve some of the following tools:
-
-- [Azure Blueprints](https://azure.microsoft.com/services/blueprints/) - Simplify large scale deployments by packaging key environment artifacts, such as [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview), role-based access controls, and policies, in a single blueprint definition.
-- [Azure Policy](https://azure.microsoft.com/services/azure-policy/) - Reduce the time needed to audit your environments by having all your compliance data in a single place.
-- [Azure Monitor](https://www.logicmonitor.com/lp/azure-monitoring) - Monitor health and performance on the same platform for a unified view across all of your systems and applications.
-
-The table of contents lists guidance for each tool and aligns with the previously described maturity model.
-
-## Get started
-
-The table of contents outlines many articles. These articles help you get started with each of the tools in this toolchain.
-
-> [!NOTE]
-> Some links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
+>[!div class="nextstepaction"]
+> [Learn how to modernize your applications](../../modernize/modernize-disciplines/application-platform-modernization.md)

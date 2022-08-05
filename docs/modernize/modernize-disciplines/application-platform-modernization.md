@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: modernize
+ms.subservice: 
 ms.custom: internal, seo-caf-modernize
 keywords: application platform, modern, cloud modernization, cloud adoption framework
 ---
@@ -18,11 +18,25 @@ This should fit into one net new article.
 
 # Modernize your application in the cloud
 
-Learn how to modernize any application in the cloud with platform-as-a-service (PaaS) solutions.
+Learn how to modernize any application or framework in the cloud.
 
-:::image type="content" source="../../_images/modernize/app-platforms/app-paas-modernize-small-5.png" alt-text="Graphic showing the application platform options, moving from control to productivity. On the bottom is on-premises. Moving up, you see container platforms, app platforms, and low code platforms.":::
+:::image type="content" source="../../_images/modernize/app-platforms/app-modernize-586.png" alt-text="Graphic showing the application platform options, moving from control to productivity. On the bottom is on-premises. Moving up, you see container platforms, app platforms, and low code platforms.":::
 
-## Apps and frameworks supported
+## Modernize applications
+
+Modernize your applications and find the balance of control and productivity that meets your needs (*see table*).
+
+| Control vs. Productivity | Your solution... | When you need... | Implementation guidance for... |
+| --- | --- | --- | --- |
+| *Most Control* | [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) <br><br> [Azure Red Hat OpenShift](/azure/openshift/intro-openshift) | <ul><li>Infrastructure control</li> <li>Less administrative burden orchestrating clusters and nodes</li> </ul> | [Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app) <br><br> [Azure Red Hat OpenShift](/azure/openshift/tutorial-create-cluster)</li></ul>
+| *Balance control & <br>productivity* | [Azure App Service](/rest/api/appservice/) <br><br> [Azure Spring Apps](/azure/spring-apps/overview) <br><br> [Azure Functions](/azure/azure-functions/functions-overview) | <ul><li> Focus on developing customer code</li> <li>Automated infrastructure</li> </ul> | [Azure App Service](/azure/app-service/app-service-migration-assess-net) <br><br> [Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud) <br><br> [Azure Functions](/azure/azure-functions/functions-reference)</ul>
+| *Productivity* | [Power Apps](/power-apps/powerapps-overview) <br><br> [Power Automate](/power-automate/getting-started) | <ul><li>Fastest time-to-market</li> <li>Applications and automation built with little to no coding experience</li> </ul> | [Power Apps](/power-apps/powerapps-overview)<br><br> [Power Automate](/power-automate/getting-started)</li></ul>
+
+## Help choosing the right solution
+
+Use our [app modernization decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) for more help choosing the right solution.
+
+## Supported apps & frameworks
 
 - .NET
 - Java
@@ -30,36 +44,7 @@ Learn how to modernize any application in the cloud with platform-as-a-service (
 - Python
 - Multiple frameworks
 
-## Control vs. productivity
-
-This guidance starts with platforms that provide the most control (container PaaS). It ends with platforms that provide the most productivity (Low Code).
-
-## Container PaaS
-
-Modernize with container PaaS solutions. Container PaaS solutions reduce the administrative burden managing Kubernetes clusters. You manage the infrastructure and the platform manages the orchestration.
-
-- [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes)
-- [Azure Red Hat OpenShift](/azure/openshift/intro-openshift)
-
-## Application PaaS
-
-Modernize with Azure PaaS solutions. Azure PaaS solutions manage the infrastructure. You focus on your code.
-
-- [Azure App Service](/rest/api/appservice/)
-- [Azure Spring Apps](/azure/spring-apps/overview)
-
-## Low Code PaaS
-
-Modernize with Low Code PaaS solutions. Low Code PaaS enable you to create applications and build automation with little to no code.
-
-- [Power Apps](/power-apps/powerapps-overview)
-- [Power Automate](/power-automate/getting-started)
-
-## Help making the decision
-
-Use the [App modernization decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) for help making the modernization decision.
-
 ## Next Step
 
 >[!div class="nextstepaction"]
-> [Modernize with database platforms](data-platform-modernization.md)
+> [Modernize your database platforms](data-platform-modernization.md)
