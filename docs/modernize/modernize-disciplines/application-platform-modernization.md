@@ -24,7 +24,9 @@ Learn how to modernize any application or framework in the cloud.
 
 ## Modernize applications
 
-Modernize your applications and find the balance of control and productivity that meets your needs (*see table*).
+Modernize your applications and find the balance of control and productivity that meets your needs.
+
+In the table, find your desired level of control vs. productivity. Then, see if the solution meets your needs. Follow the implementation guidance for your use case.
 
 | Control vs. Productivity | Your solution... | When you need... | Implementation guidance for... |
 | --- | --- | --- | --- |
