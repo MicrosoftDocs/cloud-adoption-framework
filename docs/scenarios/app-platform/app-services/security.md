@@ -12,9 +12,9 @@ ms.custom: internal
 
 # Security considerations for the Azure App Service landing zone accelerator
 
-This article provides design considerations and recommendations for security when using the API Management landing zone accelerator. Security covers multiple aspects including securing application secrets, network isolation, and vulnerability scanning.
+This article provides design considerations and recommendations for security when using the Azure App Service landing zone accelerator. Security covers multiple aspects including securing application secrets, network isolation, and vulnerability scanning.
 
-Learn more about the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/secure) design area.
+Learn more about the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) design area.
 
 ## Design considerations
 

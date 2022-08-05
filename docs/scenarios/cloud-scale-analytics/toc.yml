@@ -140,7 +140,6 @@ items:
         href: architectures/data-mesh-master-data-management.md
       - name: Getting started checklist
         href: architectures/data-mesh-checklist.md
-
     - name: Reference architectures
       items:
       - name: Overview
@@ -162,6 +161,19 @@ items:
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md
+
+  - name: Tutorials
+    items:
+    - name: Evaluate an enterprise data scenario
+      href: ../cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md
+    - name: Create a data landing zone
+      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md
+    - name: Create a data product batch
+      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md
+    - name: Set up a data product batch
+      href: ../cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md
+    - name: Clean up resources
+      href: ../cloud-scale-analytics/tutorials/cleanup-instructions.md
 
   - name: Best practices
     items:
@@ -187,7 +199,7 @@ items:
         href: ./best-practices/azure-databricks-implementation.md
       - name: Azure Synapse Analytics implementation
         href: ./best-practices/azure-synapse-analytics-implementation.md
-      - name: Azure Purview implementation
+      - name: Microsoft Purview implementation
         items:
         - name: Readiness checklist
           href: ./best-practices/purview-checklist.md
@@ -237,7 +249,7 @@ items:
       href: /azure/governance/policy/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Private Link
       href: /azure/private-link/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-    - name: Azure Purview
+    - name: Microsoft Purview
       href: /azure/purview/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Stream Analytics
       href: /azure/stream-analytics/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json

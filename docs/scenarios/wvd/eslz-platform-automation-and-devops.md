@@ -97,7 +97,7 @@ Review the following recommendations as you design your organization's AVD envir
 
 ### Source code management
 
-We recommend using [Git](https://git-scm.com/) for managing source code and [keeping a simple branching strategy.](/azure/devops/repos/git/git-branching-guidance?view=azure-devops/) When using Git for your environment:
+We recommend using [Git](https://git-scm.com/) for managing source code and [keeping a simple branching strategy.](/azure/devops/repos/git/git-branching-guidance) When using Git for your environment:
 
 - Keep your Git repo and Azure DevOps project private unless your company policy specifies that repositories must be public.
 - Initialize your repo with a README file so you can start filling in information about your project.
@@ -109,7 +109,7 @@ We recommend using [Git](https://git-scm.com/) for managing source code and [kee
 
 Your pipeline deployment system is dictated by which source code management system you choose.
 
-If your organization has standardized on Azure DevOps, use [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops). If your organization has standardized on GitHub, use [GitHub Actions](https://docs.github.com/actions). Either option provides the ability to deploy a self-hosted agent within in your network, which has several benefits, including:
+If your organization has standardized on Azure DevOps, use [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines). If your organization has standardized on GitHub, use [GitHub Actions](https://docs.github.com/actions). Either option provides the ability to deploy a self-hosted agent within in your network, which has several benefits, including:
 
 - Allowance for longer build times
 - Ability to access resources within your network
@@ -178,7 +178,7 @@ For more information, see the [Azure Compute Gallery service overview](/azure/vi
 - For universal applications installed in your gold image, use the Packer method described earlier in this article.
 - [App-V](/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming applications on a per-user basis.
 - Use [FSLogix application masking](/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
-- Use [MSIX app attach](/azure/virtual-desktop/what-is-app-attach) where possible to dynamically deliver applications to users and reduce the overall size of your gold image. You can also use CI/CD pipelines to automate the process of packaging applications into the MSIX format. To learn more, see the [overview](/msix/desktop/cicd-overview).
+- Use [MSIX app attach](/azure/virtual-desktop/what-is-app-attach) where possible to dynamically deliver applications to users and reduce the overall size of your gold image. You can also use CI/CD pipelines to automate the process of packaging applications into the MSIX format. To learn more, see the [overview](/windows/msix/desktop/cicd-overview).
 
 ### Deploy languages in Azure Virtual Desktop images
 

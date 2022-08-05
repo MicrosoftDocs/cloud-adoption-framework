@@ -143,7 +143,7 @@ The following are best practices for your design:
 
 - Store your container images in [Azure Container Registry](/azure/aks/operator-best-practices-multi-region#enable-geo-replication-for-container-images) and geo-replicate the registry to each AKS region.
 
-- AKS can be used as a free service, but that tier doesn't offer a financially backed SLA. To get that SLA, you have to add an uptime SLA to what you buy. We recommend all production clusters use this option. Reserve clusters without this option for preproduction clusters. When combined with Availability Zones, the Kubernetes API server SLA is increased to 99.95%. Your node pools, and other resources are covered under their own SLA.
+- Use the [Uptime SLA](/azure/aks/uptime-sla) to enable a financially backed, higher SLA for all clusters hosting production workloads. Uptime SLA guarantees 99.95% availability of the Kubernetes API server endpoint for clusters that use Availability Zones and 99.9% of availability for clusters that don't use Availability Zones. Your nodes, node pools, and other resources are covered under their own SLA. AKS also offers a free tier with a service level objective (SLO) of 99.5% for its control plane components. Clusters without the Uptime SLA enabled should not be used for production workloads. 
 
 - Use multiple regions and peering locations for [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) connectivity.
 

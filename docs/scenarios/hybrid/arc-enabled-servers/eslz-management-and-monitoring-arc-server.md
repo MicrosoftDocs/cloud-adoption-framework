@@ -7,7 +7,7 @@ ms.date: 09/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Management and monitoring for Azure Arc-enabled servers
@@ -20,7 +20,7 @@ This article will help you operate Azure Arc-enabled servers on Azure enterprise
 
 The following diagram shows conceptual reference architecture, that demonstrates how the Azure [connected machine agent](/azure/azure-arc/servers/agent-overview) communicates with the different management and monitoring capabilities in Azure.
 
-[ ![Diagram that shows Azure connected machine agent architecture.](../media/arc-enabled-servers-connected-agent.png)](../media/arc-enabled-servers-connected-agent.png#lightbox)
+[ ![Diagram that shows Azure connected machine agent architecture.](./media/arc-enabled-servers-connected-agent.png)](./media/arc-enabled-servers-connected-agent.png#lightbox)
 
 ## Design considerations
 
@@ -48,7 +48,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 ### Azure Monitor configuration
 
 - Use [VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) to analyze the performance of your Azure Arc-enabled Windows and Linux servers. Monitor their processes and dependencies on other resources and external processes.
-- Create [dashboards](/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview), to track the relevant metrics and events across your Azure Arc-enabled servers. Samples of Log Analytics queries and VM insights can be found in this [article](/azure/azure-monitor/vm/vminsights-log-search#performance-records).
+- Create [dashboards](/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview), to track the relevant metrics and events across your Azure Arc-enabled servers. Samples of Log Analytics queries and VM insights can be found in this [article](/azure/azure-monitor/vm/vminsights-log-query).
 - Configure the needed [performance counters](/azure/azure-monitor/agents/data-sources-performance-counters) for the Azure Arc-enabled Windows and Linux servers, on the dedicated Log Analytics workspace.
 - Configure the needed [logs](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers, on the dedicated Log Analytics workspace.
 
