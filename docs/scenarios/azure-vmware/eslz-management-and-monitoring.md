@@ -38,7 +38,7 @@ Review the following *considerations* for platform management and monitoring of 
 - Metrics available in vRealize Operations are documented in [VMware's vRealize Operations documentation](https://docs.vmware.com/en/vRealize-Operations/8.6/com.vmware.vcom.metrics.doc/GUID-C272EDE0-49E0-44D6-B47F-C32723AC9246.html).
 - *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution. Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported. SNMP Traps aren't supported.
 - While Microsoft monitors the health of vSAN, it's possible to utilize vCenter to query and monitor the performance of vSAN. Performance metrics can be viewed from a VM or backend perspective, showing average latency, IOPS, throughput, and outstanding IO through vCenter.
-- vCenter logs can be sent to Storage Accounts or Event Hubs using the Diagnostic Settings within the Private Cloud resource in Azure. This is not directly configurable within vCenter, only via the Private Cloud resource in Azure. More information is available in the [configuring VMware syslog documentation](/azure/azure-vmware/configure-vmware-syslogs). The output is raw syslog, so consider retention and downstream processing before enabling.
+- vCenter logs can be sent to Storage Accounts or Event Hubs using the Diagnostic Settings within the Private Cloud resource in Azure. Log settings aren't directly configurable within vCenter, only via the Private Cloud resource in Azure. More information is available in the [configuring VMware syslog documentation](/azure/azure-vmware/configure-vmware-syslogs). The output is raw syslog, so consider retention and downstream processing before enabling.
 - In-guest memory collection isn't supported by vRealize Operations using VMware tools. Active and consumed memory will continue to work.
 
 ### Guest workload management considerations
@@ -54,7 +54,7 @@ Review the following *recommendations* for platform management and monitoring of
 
 - Configure [Azure Service Health to send alerts](/azure/service-health/resource-health-alert-monitor-guide) for service issues, planned maintenance, and other events that could impact Azure VMware Solution and other services. These notifications are sent to Action Groups, which can be used to send email, SMS, push notifications, and voice calls to addresses of your choice. Actions can also trigger Azure and third-party systems, including Azure Functions, Logic Apps, Automation Runbooks, Event Hubs, and Webhooks. 
 - Monitor baseline performance of Azure VMware Solution infrastructure through [Azure Monitor Metrics](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities). These metrics can be queried and filtered from the Azure portal, queried via REST API, or directed to Log Analytics, Azure Storage, Event Hubs, or [Partner Integrations](/azure/azure-monitor/partners).
-- Configure the following [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) to provide warnings if the cluster nears threshhold values for disk, CPU, or RAM usage:
+- Configure the following [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) to provide warnings if the cluster nears dangerous values for disk, CPU, or RAM usage:
 
     | Metric                                    | Alert         |
     |-------------------------------------------|---------------|
@@ -64,8 +64,8 @@ Review the following *recommendations* for platform management and monitoring of
     | Memory - Average Memory Usage (%)         | >80% warning  |
 
 - You can automate the creation of [Azure Monitor Alerts](https://github.com/Azure/Enterprise-Scale-for-AVS/blob/main/BrownField/Monitoring/AVS-Utilization-Alerts/readme.md) and [Azure Service Health alerts](https://github.com/Azure/Enterprise-Scale-for-AVS/blob/main/BrownField/Monitoring/AVS-Service-Health/readme.md).
-- For service-level agreement (SLA) purposes, Azure VMware Solution requires that the cluster keep slack space of 25 percent available on vSAN.
-- For SLA purposes, Azure VMware Solution requires the number of failures to `tolerate = 1` for clusters that have between three and five hosts, and the number of failures to `tolerate = 2` for clusters that have between six and 16 hosts. The full SLA is documented in the following [service level agreement](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).
+- For service-level agreement (SLA) purposes, Azure VMware Solution requires slack space of 25 percent available on vSAN.
+- For SLA purposes, Azure VMware Solution requires the number of failures to `tolerate = 1` for clusters that have between three and five hosts, and the number of failures to `tolerate = 2` for clusters with 6-to-16 hosts. The full SLA is documented in the following [service level agreement](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).
 - In a hybrid environment, you can use [Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to monitor communication between on-premises and Azure resources.
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
   - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connection over ExpressRoute Direct and also over ExpressRoute Global Reach.
@@ -95,7 +95,7 @@ Review the following recommendations for guest management and for monitoring of 
 
 ## Other considerations
 
-- If you use a network virtual appliance, consider monitoring trace logs between on-premise and Azure resources. Ensure monitoring is in place between Azure and Azure VMware Solution.
+- If you use a network virtual appliance, consider monitoring trace logs between on-premises and Azure resources. Ensure monitoring is in place between Azure and Azure VMware Solution.
 
 - To help with storage concerns on the vSAN, consider using [Azure disk pools (preview)](/azure/virtual-machines/disks-pools-deploy) or [Azure NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
 
