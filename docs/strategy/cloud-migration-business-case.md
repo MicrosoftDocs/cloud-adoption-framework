@@ -1,6 +1,6 @@
 ---
 title: Create a business case for cloud migration
-description: Learn how to create a cloud-migration business case that provides a technical and financial timeline of your environment.
+description: Learn how to create a cloud-migration business case that forecasts cost savings compared to on-premises resources.
 author: WendyRing
 ms.author: wering
 ms.date: 08/05/2022
@@ -51,7 +51,7 @@ As a final step, compare the cloud environment to an on-premises or status quo s
 
 ## Cloud savings
 
-Migrating resources to the cloud can save organizations money. Cloud billing models differ from on-premises, creating meaningful savings opportunities to reduce costs. These savings can then be reinvested into new technology initiatives. 
+Migrating resources to the cloud can save organizations money. Cloud billing models differ from on-premises, creating meaningful savings opportunities to reduce costs. Savings can then be reinvested into new technology initiatives. 
 
 Cloud costs are flexible, and they can be reduced with:
 
@@ -63,7 +63,7 @@ Cloud costs are flexible, and they can be reduced with:
 
 **Azure dev/test pricing:** Take advantage of [discounted rates for development and testing](https://azure.microsoft.com/pricing/dev-test/), including the Microsoft software charges on Azure Virtual Machines and special dev/test pricing on other services.
 
-**Extended security updates:** Receive [continued support](/lifecycle/faq/extended-security-updates) for SQL Server 2008 and SQL Server 2008 R2 in the cloud, which have reached the end of their support lifecycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure Virtual Machine.
+**Extended security updates:** Receive [continued support](/lifecycle/faq/extended-security-updates) for SQL Server 2008 and SQL Server 2008 R2, which have reached the end of their support lifecycle. You can migrate your on-premises SQL Server instances to Azure virtual machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure VM.
 
 ## Tools and calculators
 
