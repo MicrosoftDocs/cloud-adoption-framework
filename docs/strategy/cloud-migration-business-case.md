@@ -31,21 +31,21 @@ There are several key components to consider when you plan a business case.
 - What am I spending in my data center operations categories, for example, power or lease costs?
 - When is the next hardware refresh?
 
-**Projections: On-premises cost scenario:** Forecast what your on-premises costs will be if you don't migrate to the cloud.
+**On-premises cost scenario:** Forecast what your on-premises costs will be if you don't migrate to the cloud.
 
 :::image type="content" source="./media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of on-premises or status quo.":::
 
-**Projections: On-premises cost in Azure scenario:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it's important to account for them in the business case. Include all of the core benefits that the cloud provides.
+**Azure scenario for on-premises costs:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it's important to account for them in the business case. Include all of the core benefits that the cloud provides.
 
 :::image type="content" source="./media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of on-premises costs in Azure scenario.":::
 
-**Projections: Migration timeline and Azure costs (optimized):** Forecast the migration timeline and estimated costs for a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
+**Migration timeline and Azure costs:** Forecast the migration timeline and estimated costs for a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
 A business case isn't just a moment-in-time view. It's a plan that covers a period of time. As you shift to the cloud, your costs will begin to decrease. You can forecast the ramp-down in on-premises spending over time associated with your cloud migration plan.
 
 Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan.
 
-As a final step, compare the cloud environment to an on-premises or status quo scenario so you can assess the benefit of migrating to the cloud. The Azure view will show on-premises costs that are being reduced over time, your Azure environment costs, and any costs associated with the cloud migration.
+As a final step, compare the cloud environment to an on-premises or status quo scenario so you can assess the benefit of migrating to the cloud. The Azure view will show reduced on-premises costs over time, your Azure environment costs, and any costs associated with the cloud migration.
 
 :::image type="content" source="./media/create-financial-plan/cloud-on-premises-comparison.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
 
@@ -55,7 +55,7 @@ Migrating resources to the cloud can save organizations money. Cloud billing mod
 
 Cloud costs are flexible, and they can be reduced with:
 
-**Azure Hybrid Benefit:** Reduce the costs of running workloads in the cloud by using [this licensing benefit](https://azure.microsoft.com/pricing/hybrid-benefit/). You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit also applies to RedHat and SUSE Linux subscriptions.
+**Azure hybrid benefit:** Reduce the costs of running workloads in the cloud by using [this licensing benefit](https://azure.microsoft.com/pricing/hybrid-benefit/). You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit also applies to RedHat and SUSE Linux subscriptions.
 
 **Spot virtual machines:** You can use [spot virtual machines](https://azure.microsoft.com/services/virtual-machines/spot/) with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments including continuous integration and continuous delivery workloads, or large-scale stateless applications.
 
@@ -75,20 +75,20 @@ You can enter details of your on-premises infrastructure, including servers, dat
 
 **Retail Rates Prices API:** Use the [Retail Rates Prices API](/rest/api/cost-management/retail-prices/azure-retail-prices) to retrieve retail prices for all Azure services. Previously, the only way that you could retrieve prices for Azure services was to either use the Azure Pricing Calculator or use the Azure portal. This API gives you an unauthenticated experience to get retail rates for all Azure services. Use the API to explore prices for Azure services against different regions and different SKUs. The programmatic API can also help you create your own tools for internal analysis and price comparison across SKUs and regions.
 
-**Azure Virtual Machine cost estimator:** This Power BI model allows you to estimate your cost savings against pay-as-you-go pricing by optimizing Azure offers and benefits for VMs like Azure Hybrid Benefit and reserved instances. 
+**Azure VM cost estimator:** This Power BI model allows you to estimate your cost savings against pay-as-you-go pricing by optimizing Azure offers and benefits for VMs like Azure Hybrid Benefit and reserved instances. 
 
 Download the following files to use the Power BI model:
 
 - [Power BI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/azure-virtual-machine-cost-estimator.pbix)
 - [Excel file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/on-premises-compute-unit-lists.xlsx)
 
-**Azure Pricing Calculator:** Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate your hourly or monthly costs for Azure products.
+**Azure Pricing Calculator:** Use the [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to estimate your hourly or monthly costs for Azure products.
 
 **Partner toolsets:** Microsoft Partners have tools in the [Azure Marketplace](https://azuremarketplace.microsoft.com/home) that can help create a migration cost analysis.
 
 **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [solution assessment engagement](https://www.microsoft.com/solutionassessments/).
 
-**Azure Migration and Modernization Program:** Join the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/) to get guidance and expert help at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps so you can move forward with confidence.
+**Azure Migration and Modernization Program:** Join [this program](https://azure.microsoft.com/migration/migration-modernization-program/) to get guidance and expert help at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps so you can move forward with confidence.
 
 ### Learn about Azure with Microsoft Learn
 
