@@ -1,9 +1,9 @@
 ---
 title: Expand your landing zone
-description: Use the Cloud Adoption Framework for Azure to learn how to expand a landing zone.
+description: Learn how to expand a landing zone using the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/15/2020
+ms.date: 08/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -18,12 +18,12 @@ This section of the Ready methodology builds on the principles of [landing zone 
 
 Expanding your landing zone provides a code-first approach to embedding the following principles into the landing zone and more broadly into your overall cloud environment.
 
-![Shared architecture principles](../../_images/ready/shared-principles.png)
+![Diagram of shared architecture principles.](../../_images/ready/shared-principles.png)
 *Figure 1: Shared architecture principles.*
 
 These same architecture principles are shared by [Azure Advisor](/azure/advisor/advisor-overview), the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), and the solutions in the [Azure Architecture Center](/azure/architecture/).
 
-## Applying these principles to your landing zone improvements
+## Apply these principles to your landing zone improvements
 
 To better align with the methodologies of the Cloud Adoption Framework, the principles above are grouped into actionable landing zone improvements:
 
@@ -37,7 +37,7 @@ To better align with the methodologies of the Cloud Adoption Framework, the prin
 
 ## Next steps
 
-Before refactoring your first landing zone, it is important to understand [test-driven development of landing zones](https://github.com/MicrosoftDocs/cloud-adoption-framework/blob/main/docs/ready/considerations/development-strategy-test-driven-development.md).
+Before refactoring your first landing zone, it's important to understand test-driven development.
 
 > [!div class="nextstepaction"]
-> [Test-driven development of landing zones](https://github.com/MicrosoftDocs/cloud-adoption-framework/blob/main/docs/ready/considerations/development-strategy-test-driven-development.md)
+> [Test-driven development of landing zones](development-strategy-test-driven-development.md)
