@@ -72,8 +72,8 @@ Private IP addresses minimize your Azure resources' exposure to the internet. Ma
 | Compute instance | Private IP (no public IP preview) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio#compute-instance) |
 | Compute cluster | Private IP (no public IP preview) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio%2Cipaddress#compute-cluster) |
 | **More hosting resources** |
-| Kubernetes cluster | Private endpoint | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
-| Machine learning load balancer on AKS | Private load balancer | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
+| Kubernetes cluster | Private endpoint | [Secure inferencing environments](/azure/machine-learning/v1/how-to-secure-inferencing-vnet#secure-vnet-traffic) |
+| Machine learning load balancer on AKS | Private load balancer | [Secure inferencing environments](/azure/machine-learning/v1/how-to-secure-inferencing-vnet#secure-vnet-traffic) |
 | Azure Container Instances | Private endpoint | **Note:** You can't use a private endpoint with container instances if the container registry also uses a private endpoint.|
 
 ### Control virtual network inbound and outbound traffic
