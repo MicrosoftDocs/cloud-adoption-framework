@@ -33,7 +33,7 @@ To better align with the Cloud Adoption Framework, the pillars above are grouped
 - Security expansions: add **security** configurations to improve protection of sensitive data and critical systems.
 
 > [!WARNING]
-> If you have a midterm objective (within 24 months) to **host more than 1,000 application, infrastructure, or data assets in the cloud**, consider these expansions early in the cloud adoption journey. For all other adoption patterns, landing zone expansions could be a parallel iteration.
+> If you have a midterm objective (within 24 months) to **host more than 1,000 applications, infrastructure assets, or data assets in the cloud**, consider these expansions early in the cloud adoption journey. For all other adoption patterns, landing zone expansions could be a parallel iteration.
 
 ## Next steps
 
