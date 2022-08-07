@@ -1,6 +1,6 @@
 ---
 title: Machine learning operations
-description: Review best practices and learnings from adopting machine learning operations in the enterprise with Azure Machine Learning.
+description: Review best practices and recommendations from adopting machine learning operations in the enterprise with Azure Machine Learning.
 author: manu-kanwarpal
 ms.author: deeikele
 ms.date: 05/24/2021
@@ -12,13 +12,15 @@ ms.custom: internal
 
 # Machine learning operations
 
-Implementing machine learning operations in an organization is a change that relies on people, processes, and technology. The objective is to deliver machine learning solutions in a way that's robust, scalable, reliable, and automated. In this article, get a balanced view of how to successfully plan your resources to put in place organization-scale machine learning operations. Review best practices and learnings from adopting machine learning operations in the enterprise with Azure Machine Learning.
+Machine learning operations (also called *MLOps*) is the application of DevOps principles to AI-infused applications. To implement machine learning operations in an organization, specific skills, processes, and technology must be in place. The objective is to deliver machine learning solutions that are robust, scalable, reliable, and automated.
+
+In this article, learn how to plan resources to support machine learning operations at the organization level. Review best practices and recommendations from adopting machine learning operations in the enterprise with Azure Machine Learning.
 
 ## What is machine learning operations?
 
 Modern machine learning algorithms and frameworks make it increasingly easier to develop models that can make accurate predictions.
 
-You might have built a machine learning model that exceeds all your accuracy expectations and impresses your business sponsors. Now it's time to deploy the model to production, but that might not be as easy as you had expected. It's likely that you have to put many things in place before your organization can use your model in production.
+You might have built a machine learning model that exceeds all your accuracy expectations and impresses your business sponsors. Now it's time to deploy the model to production, but that might not be as easy as you had expected. It's likely that you have to put many things in place before the organization can use your model in production.
 
 Over time, you or a colleague might develop a new model that works better than the original model. Replacing a machine learning model that's used in production introduces some concerns that are important to the organization:
 
@@ -26,22 +28,32 @@ Over time, you or a colleague might develop a new model that works better than t
 - For regulatory purposes, you might be required to re-create the model and explain the model's predictions if unusual or biased predictions are made.
 - The data you use in your machine learning training and model might change over time. With changes in the data, you might need to periodically retrain the model to maintain the accuracy of its predictions. A person or role will need to be assigned responsibility to feed the data, monitor the performance, retrain the model, and fix the model if it fails.
 
-To address these concerns, you might choose to implement a machine learning operations strategy for your project. At a high level, machine learning operations is the application of DevOps principles to AI-infused applications. Consider a common use case: Suppose you have an application that serves a model's predictions via a REST API. Even a simple use case like this one might cause problems in production. Some machine learning operations tasks fit well in the general DevOps framework. Examples include setting up unit tests and integration tests and tracking changes by using version control. Other tasks are more unique to machine learning operations and include how to:
+To address these concerns, you might choose to implement a machine learning operations strategy for your project. Machine learning operations applies DevOps principles to AI-infused applications.
+
+Consider a common use case: Suppose you have an application that serves a model's predictions via a REST API. Even a simple use case like this one might cause problems in production. Some machine learning operations tasks fit well in the general DevOps framework. Examples include setting up unit tests and integration tests and tracking changes by using version control. Other tasks are more unique to machine learning operations:
 
 - Enable continuous experimentation and comparison against a baseline model.
-- Monitor the incoming data to detect [data drift](/azure/machine-learning/how-to-monitor-datasets?tabs=python).
-- Trigger model retraining and set up a rollback in case of failure.
-- Create reusable data pipelines that can be applied for both training and scoring.
+- Monitor incoming data to detect [data drift](/azure/machine-learning/how-to-monitor-datasets?tabs=python).
+- Trigger model retraining and set up a rollback for disaster recovery.
+- Create reusable data pipelines to use for training and scoring.
 
-Ultimately, the goal of machine learning operations is to close the gap between development and production and to deliver value to customers faster. To achieve this goal, you must rethink how you do things in development and production. The extent to which data scientists are involved in machine learning operations is an organizational choice. The role of data scientist varies between and within organizations. The [machine learning operations maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) can help you see where your organization is on the maturity scale and help you consider where you want it to be.
+The goal of machine learning operations is to close the gap between development and production and to deliver value to customers faster. To achieve this goal, you must rethink how you do things in development and production. The role of data scientists varies between and within organizations. The extent to which data scientists are involved in machine learning operations is the organization's choice. The [machine learning operations maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) can help you see where your organization is on the maturity scale and help you consider where you want to be.
 
 ## Machine learning operations vs. DevOps
 
-Machine learning operations is different from DevOps in several key areas.
+Machine learning operations is different from DevOps in several key areas. In machine learning operations:
+
+- Exploration precedes development and operations.
+- The data science lifecycle requires an adaptive way of working.
+- Limits on data quality and availability limit the process.
+- A greater operational effort is required than in DevOps.
+- Work teams require specialists and domain experts.
+
+Also, review the [seven principles of machine learning operations](seven-principles-of-machine-learning-operations).
 
 ### Exploration precedes development and operations
 
-Data science projects are different from application development or data engineering projects. A data science projects might make it to production, but it might now. After an initial analysis, it might become clear that the business outcome can't be achieved with the available datasets. For this reason, an exploration phase usually is the first step in a data science project.
+Data science projects are different from application development or data engineering projects. A data science project might make it to production, but it might not. After an initial analysis, it might become clear that the business outcome can't be achieved with the available datasets. For this reason, an exploration phase usually is the first step in a data science project.
 
 The goal of the exploration phase is to define and refine the problem. You run exploratory data analysis, in which you use statistics and visualizations to confirm or falsify the problem hypotheses. There needs to be a common understanding that the project might not extend beyond this phase. It's important to make this phase as seamless as possible for a quick turnaround. Unless there's an element of security, processes and procedures should be avoided. The data scientist should be allowed to work with the tools and data they prefer. Real data is needed for data exploration work.
 
@@ -53,7 +65,7 @@ The experimentation and development stage usually begins when there's confidence
 
 Because the nature and quality of data initially is uncertain, you might not accomplish your business goals if you apply a typical DevOps process to a data science project. Exploration and experimentation are recurring activities and needs throughout the machine learning process. Teams at Microsoft use a project lifecycle and a working process that reflect the nature of data science-specific activities. The [Team Data Science Process](/azure/architecture/data-science-process/overview) and [The Data Science Lifecycle Process](https://github.com/dslp/dslp) are examples of reference implementations.
 
-### Limits on data quality and availability restrict the work environment
+### Limits on data quality and availability limit the process
 
 For a machine learning team to effectively develop machine learning-infused applications, production data access is preferred across work environments. If production data access isn't possible because of compliance requirements or technical constraints, consider implementing [Azure role-based access control with Azure Machine Learning](/azure/machine-learning/how-to-assign-roles), [Just-in-Time access](/azure/security-center/security-center-just-in-time), or [data movement pipelines](/azure/data-factory/) to create production data replicas and enhance user productivity.
 
@@ -67,7 +79,7 @@ Although data science projects share roles with regular IT projects, the success
 
 Common technical roles that are unique to data science projects are domain expert, data engineer, data scientist, AI engineer, model validator, and machine learning engineer. To learn more about roles and tasks in a typical data science team, see the [Team Data Science Process](/azure/architecture/data-science-process/roles-tasks).
 
-### Seven principles for machine learning operations
+### Seven principles of machine learning operations
 
 When you plan to adopt machine learning operations for your next machine learning project, consider applying the following core principles as the foundation of any project:
 
