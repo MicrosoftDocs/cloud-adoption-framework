@@ -49,7 +49,7 @@ Machine learning operations is different from DevOps in several key areas. In ma
 - A greater operational effort is required than in DevOps.
 - Work teams require specialists and domain experts.
 
-Also, review the [seven principles of machine learning operations](seven-principles-of-machine-learning-operations).
+Also, review the [seven principles of machine learning operations](#seven-principles-of-machine-learning-operations).
 
 ### Exploration precedes development and operations
 
@@ -63,7 +63,7 @@ The experimentation and development stage usually begins when there's confidence
 
 ### Data science lifecycle requires an adaptive way of working
 
-Because the nature and quality of data initially is uncertain, you might not accomplish your business goals if you apply a typical DevOps process to a data science project. Exploration and experimentation are recurring activities and needs throughout the machine learning process. Teams at Microsoft use a project lifecycle and a working process that reflect the nature of data science-specific activities. The [Team Data Science Process](/azure/architecture/data-science-process/overview) and [The Data Science Lifecycle Process](https://github.com/dslp/dslp) are examples of reference implementations.
+Because the nature and quality of data initially is uncertain, you might not accomplish your business goals if you apply a typical DevOps process to a data science project. Exploration and experimentation are recurring activities and needs throughout the machine learning process. Teams at Microsoft use a project lifecycle and a working process that reflect the nature of data science-specific activities. The [Team Data Science Process](/azure/architecture/data-science-process/overview) and The [Data Science Lifecycle Process](https://github.com/dslp/dslp) are examples of reference implementations.
 
 ### Limits on data quality and availability limit the process
 
@@ -75,7 +75,7 @@ Unlike traditional software, the performance of a machine learning solution is c
 
 ### Machine learning teams require specialists and domain experts
 
-Although data science projects share roles with regular IT projects, the success of a machine learning effort highly depends on having  essential machine learning technology specialists and domain subject matter experts. The technology specialist has the right background to do end-to-end machine learning experimentation. The domain expert can support the specialist by analyzing and synthesizing data or by qualifying the data for use.
+Although data science projects share roles with regular IT projects, the success of a machine learning effort highly depends on having essential machine learning technology specialists and domain subject matter experts. The technology specialist has the right background to do end-to-end machine learning experimentation. The domain expert can support the specialist by analyzing and synthesizing data or by qualifying the data for use.
 
 Common technical roles that are unique to data science projects are domain expert, data engineer, data scientist, AI engineer, model validator, and machine learning engineer. To learn more about roles and tasks in a typical data science team, see the [Team Data Science Process](/azure/architecture/data-science-process/roles-tasks).
 
