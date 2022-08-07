@@ -97,7 +97,7 @@ When you plan to adopt machine learning operations for your next machine learnin
 
 - **Monitor services, models, and data:** When you serve machine learning models in an operationalized environment, it's critical to monitor the services for their infrastructure uptime, compliance, and model quality. [Set up monitoring](/learn/modules/monitor-data-drift-with-azure-machine-learning/) to identify data and model drift and to understand whether retraining is required, or to set up triggers for automatic retraining.
 
-## Machine learning operations best practices with Azure Machine Learning
+## Machine learning operations best practices
 
 Azure Machine Learning offers asset management, orchestration, and automation services to help you manage the lifecycle of your machine learning model training and deployment workflows. Next, review the best practices and recommendations to apply machine learning operations in the resource areas of people, process, and technology, supported by Azure Machine Learning.
 
@@ -157,7 +157,7 @@ Azure Machine Learning offers asset management, orchestration, and automation se
 
 - To trigger retraining, use [dataset monitors](/azure/machine-learning/how-to-monitor-datasets) and [event-driven workflows](/azure/machine-learning/how-to-use-event-grid). Subscribe to data drift events and automate the trigger of [machine learning pipelines for retraining](/azure/machine-learning/how-to-retrain-designer).
 
-## Organization-scale machine learning operations: AI factories
+## AI factory for organization machine learning operations
 
 A data science team might decide it can manage a handful of machine learning use cases internally. Adopting machine learning operations helps an organization set up project teams for better quality, reliability, and maintainability of solutions through balanced teams, supported processes, and technology automation. A team that adopts machine learning operations can scale and focus on developing new use cases.
 
