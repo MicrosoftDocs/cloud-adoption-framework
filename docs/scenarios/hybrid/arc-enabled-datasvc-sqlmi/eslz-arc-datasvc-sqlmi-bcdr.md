@@ -84,6 +84,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Deploy a Business Critical SQL Managed Instance in a three replica configuration instead of a two replica configuration to achieve near-zero data loss.
 - Use load balancer as your service type when deploying Azure Arc-enabled SQL Managed Instance for better availability.
 - Review the [high availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of the Azure Arc-enabled SQL Managed Instance.
+- Review the [supported availability modes](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) to decide on the right mode to use based on your high availability needs.
 
 ### Disaster recovery
 
