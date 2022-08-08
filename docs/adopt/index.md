@@ -16,7 +16,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The adopt phase helps you incorporate  cloud capabilities that meet your needs. Your business goals will determine your specific cloud adoption plan.
 
-There are three ways to adopt the cloud: migrate, modernize, and innovate. These three ways to adopt the cloud are not mutually exclusive. You can use all three in your cloud adoption journey. Or you can just use one or two. The order and number of ways you adopt the cloud depends your starting point and your goals (*see figure*).
+There are three ways to adopt the cloud: migrate, modernize, and innovate. These three ways to adopt the cloud aren't mutually exclusive. You can use all three in your cloud adoption journey. Or you can just use one or two. The order and number of ways you adopt the cloud depends your starting point and your goals (*see figure*).
 
 :::image type="content" source="../_images/adopt/cloud-adoption-plan-v3.png" alt-text="Image showing three cloud adoption paths":::
 
@@ -24,7 +24,7 @@ Below is an overview of each way to adopt the cloud.
 
 ## Migrate overview
 
-Migrate refers to moving your workloads to the cloud. There are different methods to migrating, such as rehost and replatform. But in this context, we are talking about rehosting, also known as the "lift-and-shift" approach. Basically, you trade an on-premises data center for cloud infrastructure-as-a-service (IaaS) solutions in the cloud. You don't have to worry about acquiring, managing, and securing hardware.
+Migrate refers to moving your workloads to the cloud. There are different methods to migrating, such as rehost and replatform. But in this context, we're talking about rehosting, also known as the "lift-and-shift" approach. Basically, you trade an on-premises data center for cloud infrastructure-as-a-service (IaaS) solutions in the cloud. You don't have to worry about acquiring, managing, and securing hardware.
 
 - *Example:* Migrate application from on-premises to IaaS solutions in the cloud.
 - *Goals:* Exit the data center, enhance security, improve operations.

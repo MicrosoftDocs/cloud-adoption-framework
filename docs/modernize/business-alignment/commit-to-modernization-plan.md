@@ -30,7 +30,7 @@ The technical leads team presents the ideal modernization path. The business lea
 
 ## Step 1 - Commit to a modernization path
 
-Commit to a modernization path by aligning your modernization motivations to a modernization strategy. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull these motivations out because we use them here to create a modernization path.
+Commit to a modernization path by aligning your modernization motivations to a modernization strategy. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull out these motivations because we use them here to create a modernization path.
 
 Most modernization motivations map to two or more modernization strategies (*see table*).
 
@@ -42,7 +42,7 @@ Most modernization motivations map to two or more modernization strategies (*see
 |*Application innovation*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
 |*Centralizing data*|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 
-Notice that process modernization is listed modernization motivation. Modernizing your process is essential to working in the cloud. It is the fastest way to reduce the total cost of ownership (TCO).
+Notice that process modernization is listed modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO).
 
 Use the table above to finalize your commitment path. Your commitment combines your workload, motivation, and strategy. See the example below. It builds on the table you created in the [envision step](../business-alignment/envision-cloud-modernization.md).
 
