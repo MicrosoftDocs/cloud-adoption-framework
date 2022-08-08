@@ -1,5 +1,5 @@
 ---
-title: Evaluate modernization readiness
+title: Evaluate cloud modernization readiness
 description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
 author: stephen-sumner
 ms.author: ssumner
@@ -17,7 +17,7 @@ Evaluate if you're ready to modernize in the cloud.
 
 :::image type="content" source="../../_images/modernize/evaluate/evaluate.png" alt-text="Image showing where you are in the business alignment process.":::
 
-## Step 1: Evaluate financial readiness
+## Step 1 - Evaluate financial readiness
 
 Financial motivations are the key drivers of cloud modernization. Businesses know that modernizations done right can increase operational efficiency and generate new revenue.
 
@@ -32,7 +32,7 @@ Answering *yes* to all questions means you're likely ready to modernize. If you 
 |*Are these workloads business-critical?*|Modernize|Review|
 |*Does the cost of modernization<br> meet your desired cost savings?*|Modernize|Review|
 
-## Step 2. Evaluate your technical readiness
+## Step 2 - Evaluate your technical readiness
 
 Explore the following questions with your organization to determine your technical readiness. You already determined that your workload(s) were financial ready. Now, you can begin evaluating the technical readiness of your workload(s). The technical readiness assessment will help you figure out what cloud adoption strategy to take.
 
@@ -44,22 +44,10 @@ Explore the following questions with your organization to determine your technic
 |*Are your workloads portable?*|Modernize|Migrate
 |*Do you plan to keep the current architecture?*|Modernize|Review|
 
-For a workload that pass this readiness assessments, you can now align it with a modernization discipline.
-
-## Step 3. Align workload with a modernization discipline
-
-Align your workload with a modernization strategy.
-
-|Motivation| Modernization |
-| --- | --- |
-|Enabling hybrid work|Application platforms|
-|Faster time to market|Application platforms|
-|Cost optimization|Application platforms<br>Database platforms|
-|Application innovation|Developer alignment|
-|Centralizing data|Database platform|
+For a workload that pass this readiness assessments, you can align it with a modernization discipline.
 |
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Commit](commit-to-modernization-plan.md)
+> [How to commit to modernization](commit-to-modernization-plan.md)

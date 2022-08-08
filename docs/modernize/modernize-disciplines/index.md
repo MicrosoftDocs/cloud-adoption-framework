@@ -14,10 +14,7 @@ ms.custom: internal
 
 The modernization disciplines include building skills required to execute repeatable processes, which accelerate modernization of multiple applications. Technical decision makers, architects, and engineers will move your company closer to a digital native state.
 
-Align your developers, so they can modernize your application and data platforms and then test the architecture. Incorporate the following disciplines into your CAF modernization plan:
+## Next steps
 
-- [Align your developers for modernization](developer-alignment-modernization.md)
-- [Modernize application platforms](application-platform-modernization.md)
-- [Modernize data platforms](data-platform-modernization.md)
-- [Perform architecture testing](testing-architecture-modernization.md)
-- [Use devops practices for modernization](devops-practices-modernization.md)
+> [!div class="nextstepaction"]
+> [Business Alignment](/docs/modernize/business-alignment/index.md)

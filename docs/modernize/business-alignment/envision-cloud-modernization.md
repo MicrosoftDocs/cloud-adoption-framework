@@ -1,5 +1,5 @@
 ---
-title: Envision cloud modernization possibilities
+title: Envision your cloud modernization
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
@@ -10,7 +10,7 @@ ms.subservice:
 ms.custom: internal, seo-caf-modernize
 keywords: envision, motivations, approach, modernization, cloud adoption framework
 ---
-# Envision cloud modernization possibilities
+# Envision your cloud modernization
 
 Envisioning modernization starts with understanding your cloud adoption motivations. These modernization motivations are your business goals. Your motivations will determine what you should modernize. Follow these steps to identify your motivations and the workloads you should modernize.
 
@@ -44,25 +44,24 @@ The cloud enables you to envision IT assets as workloads. Modernizing infrastruc
 
 **How to identify workloads:** List your primary business functions. Then, list the IT assets that support those functions. The supporting IT assets are your workloads (*see table for examples*).
 
-|Business Function<span title="Business Function">&nbsp;</span> |Workload (Supporting IT Assets)<span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |
-| --- | --- | --- |
+|Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span>
+| --- | --- |
 |E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server
-|
 
 ## Step 3: Align modernization motivations and workloads
 
 Return to list of modernization motivations that you created in Step 1. Start mapping one modernize motivation to each workloads (*see table*).
 
-|Business Function<span title="Business Function">&nbsp;</span> |Workload (Supporting IT Assets)<span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |
+|Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |
 | --- | --- | --- |
-|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|App innovation
+|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Data centralization
 |
 
 **Assign one motivation:** You'll likely have multiple motivations for modernizing each workload. But try to assign a single motivation to each workload.  Aligning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want.
 
-**Single motivation is unclear:** For workloads that have multiple motivations, you will want to add an additional step. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The guidance will help you determine what your primary motivation should be. Once you have a single motivation, you can move on the to the evaluate step.
+**When a single motivation is unclear:** For workloads that have multiple motivations, you will want to add an additional step. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The guidance will help you determine what your primary motivation should be. Once you have a single motivation, you can move on the to the evaluate step.
 
 ## Next steps
 

@@ -17,74 +17,46 @@ Minimum: 1 article		Maximum: 4 articles-->
 
 # Commit to modernization in the cloud
 
+Commit to modernization in the cloud by modernizing your operations and your workloads.
+
 :::image type="content" source="../../_images/modernize/commit/commit.png" alt-text="Image showing where you are in the business alignment process.":::
 
-## 1. Determine effort
+Modernization requires money, and the commit phase is where modernization receive the funding it needs. As part of the commitment phase, you gather key stakeholders:
 
-Maximize your return from each of the following three phases required for migrating each workload:
+- Business leads
+- Technical leads
 
-- **Assess workload:** Assess each workload to evaluate cost, architecture, and deployment tooling.
-- **Deploy workload:** Replicate functionality in the cloud using IaaS, PaaS, cloud-native, or other modernization solutions.
-- **Release workload:** Test, optimize, document, and review. Release by handing off for governance, management, and security.
+The technical leads team presents the ideal modernization path. The business leads agree to invest the time and money in that path.
 
-Remember more of your behind-the-scenes efforts:
+## Step 1 - Commit to a modernization path
 
-- Establish work items and tasks
-- Determine iterations
-- Align your priorities
+To get the most out of your cloud modernization efforts, you need to modernize your processes before, or in parallel with, your application and database modernization efforts.
 
-## 2. Set a timeline
+A on-premises mindset in the cloud severely limits your cost efficiency potential. Modernizing your processes is the best way to reduce the total cost of ownership (TCO) of your workloads in the cloud.
 
-Experience and complexity both have significant impact on timelines and migration velocity. In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as [SAP](https://azure.microsoft.com/solutions/sap/azure-solutions/), might take several two-week iterations to complete all three phases of migration effort for a single workload.
+## Step 2 - Commit to a modernization strategy
 
-## 3. Assess workloads
+Commit to a modernization strategy by align your modernization motivations to a modernization strategy. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md) of the modernize methodology. Now, we can align specific strategies to each modernization motivation (*see table*).
 
-Assess your workloads in the following steps.
+|Modernization Motivation <br> (What is your goal?)| Modernization Strategy <br> (How to reach your goal)|
+| --- | --- |
+|*Enabling hybrid work*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
+|*Faster time-to-market*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
+|*Cost optimization*|<ul><li>Process modernization</li><li>Application modernization</li><li>Database modernization</li></ul>|
+|*Application innovation*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
+|*Centralizing data*|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 
-Workloads that have undergone any significant architectural change go back through the [Well Architected Framework review](/azure/architecture/framework/).
+Process modernization is essential to experience the benefits of the cloud. It's a modernization strategy for each listed modernization motivation and is the best way to reduce the total cost of ownership in the cloud.
 
-1. Begin with an inventory of all your applications, data, and infrastructure.
+## Step 3 - Commit to a timeline
 
-:::image type="content" source="../../_images/modernize/existing-datacenters.png" alt-text="Graphic showing an example of existing datacenters.":::
+Commit to a timeline. The amount of time it takes to modernize your process and workloads depends on your team's experience and the complexity of your situation.
 
-2. Group your apps, data, and infrastructure to form workloads, and then prioritize those workloads.
-
-   :::image type="content" source="../../_images/modernize/workload-clusters.png" alt-text="Graphic showing an example of workload clusters.":::
-
-3. Align your motivations with each workload, so you can create your work items.
-
-   :::image type="content" source="../../_images/modernize/align-workload-motivations.png" alt-text="Graphic showing an example of aligning your motivations with workloads.":::
-
-4. Create your work items.
-
-   The following illustration shows an outline of the efforts required for a modernization plan. The efforts are broken down into epics, user stories, and tasks, using Azure DevOps as an example.
-
-   :::image type="content" source="../../_images/modernize/commitment-to-modernization-plan.png" alt-text="Graphic showing modernization plan commitment flow.":::
-
-## 5. Get commitment
-
-There are generally the following three groups from which it's important to get a commitment:
-
-- Business lead
-- Technical lead
-- Technical team - usually your business leads or an individual person, technical teams, or a group of people, which could include a partner
-
-Make sure they're named, identified, and have agreed to the backlog of commitments. If they're not committed, you'll want a [Well Architected Framework](/azure/architecture/framework/) review, and then evaluate afterward to see if you can proceed with modernization.
-
-If you're starting your cloud adoption journey with the Migrate horizon, you might need to run a migration analysis. For more information, see [Assess on-premises workloads for Azure migration](/azure/cloud-adoption-framework/plan/contoso-migration-assessment).
-
-## Extra content
-
-Explore the following questions to help you move toward commitment:
-
-- How long will it take to modernize your workloads?
-- Do you have the skills to modernize? Do you need a vendor? If so, what does it cost?
-- What work needs to be done before modernization?
-- Are we committed to move forward?
-- How do we prioritize those commitments?
-- What comes first, second, and third?
+Check out our [Fast Track for Azure](/programs/azure-fasttrack/) program if you don't have the right experience on your team to estimate a timeline. You can also use one of our certified partners in the [Azure Migration and Modernization Program](/azure/partners/ammp) to get the advice you need.
 
 ## Next steps
 
+With a modernization path identified, you can begin modernizing.
+
 > [!div class="nextstepaction"]
-> [Learn about application platform modernization](../modernize-disciplines/application-platform-modernization.md)
+> [Modernization strategies](../modernize-disciplines/index.md)

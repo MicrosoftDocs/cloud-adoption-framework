@@ -18,7 +18,9 @@ Find guidance on modernizing SQL, open-source, and NoSQL database. The guidance 
 
 ## Modernize with Azure SQL
 
-Modernize your SQL Server databases in the cloud with the balance of control and productivity that meets your needs (*see table*).
+Modernize your SQL Server databases and find the balance of control and productivity that meets your needs.
+
+In the table, find your desired level of control vs. productivity. Then, see if the solution meets your needs. Follow the implementation guidance for your use case.
 
 | Control vs. Productivity | Your solution... | When you need... | Implementation guidance for... |
 | --- | --- | --- | --- |
@@ -29,7 +31,9 @@ Modernize your SQL Server databases in the cloud with the balance of control and
 
 ## Modernize open-source SQL & NoSQL databases
 
-Modernize your open-source databases and NoSQL databases and find the balance of control and productivity that meets your needs (*see table*).
+Modernize your open-source databases and NoSQL databases and find the balance of control and productivity that meets your needs.
+
+In the table, find your desired level of control vs. productivity. Then, see if the solution meets your needs. Follow the implementation guidance for your use case.
 
 | Control vs. Productivity | Your solution... | When you need... | Implementation guidance for... |
 | --- | --- | --- | --- |

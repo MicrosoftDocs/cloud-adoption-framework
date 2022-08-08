@@ -16,7 +16,7 @@ Primary Deliverable: CAF/modernize/application-platform-modernization.md
 This should fit into one net new article.
 -->
 
-# Modernize your application in the cloud
+# Modernize your applications in the cloud
 
 Learn how to modernize any application or framework in the cloud.
 
