@@ -1,5 +1,5 @@
 ---
-title: Envision your cloud modernization
+title: Envision your cloud modernization possibilities
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
@@ -10,19 +10,21 @@ ms.subservice:
 ms.custom: internal, seo-caf-modernize
 keywords: envision, motivations, approach, modernization, cloud adoption framework
 ---
-# Envision your cloud modernization
+# Envision your cloud modernization possibilities
 
-Envisioning modernization starts with understanding your cloud adoption motivations. These modernization motivations are your business goals. Your motivations will determine what you should modernize. Follow these steps to identify your motivations and the workloads you should modernize.
+Envisioning modernization starts with understanding your motivations for wanting to adopt the cloud. Knowing your motivations for adopting the cloud will help determine what you should modernize.
 
 :::image type="content" source="../../_images/modernize/envision/envision.png" alt-text="Image showing where you are in the business alignment process.":::
 
-## Step 1: Identify modernization motivations
+Follow these three steps to envision your cloud modernization possibilities.
 
- Modernization motivations are the reasons you want to modernize. They drive revenue, improve productivity, and increase margins. Your motivations will be unique to your business goals. But commonalities exist across businesses and industries (*see figure*).
+## Step 1 - Identify your modernization motivations
+
+ Identify your modernization motivations. Modernization motivations are the reasons you want to modernize with the cloud. Your motivations will be unique to your goals. But commonalities exist across businesses and industries (*see figure*).
 
 :::image type="content" source="../../_images/modernize/envision/modernization-motivations.png" alt-text="Image showing modernization motivations.":::
 
-**Explaining Motivations:** Here are a some of the most common modernization triggers across industries:
+Some of the most common modernization motivations across industries are:
 
 - *Enabling hybrid work:* Make applications accessible and secure for remote productivity.
 - *Faster time to market:* Increase deployment speed to see a faster return-on-investment.
@@ -30,40 +32,58 @@ Envisioning modernization starts with understanding your cloud adoption motivati
 - *Application innovation:* Adopt new technologies and architectures to enable rapid innovation.
 - *Centralize data:* Store application data in a centralized repository to enhance security, reduce redundancy, and drive transparency.
 
-Knowing *why* you are modernizing will determine *what* to modernize.
+Knowing *why* you are modernizing will determine *what* to modernize. So, make sure you have a good understanding of your motivations before moving on.
 
-## Step 2: Identify workloads
+## Step 2 - Identify your workloads
 
-The cloud frees you to focus on workloads rather than individual IT assets. After assessing your motivation triggers, start identifying your workloads. A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support an aspect of your business. In a data center, IT assets are logically separate (*see figure*).
+Next, identify your workloads.
 
-:::image type="content" source="../../_images/modernize/envision/data-center-it-assets.png" alt-text="Graphic showing existing data center." :::
+## What is a workload
 
-The cloud enables you to envision IT assets as workloads. Modernizing infrastructure, applications, and data together as workloads enables your business to modernize at scale.
+A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a key process.
 
-:::image type="content" source="../../_images/modernize/envision/workload_small.png" alt-text="Image showing workload as a combination of applications, infrastructure, and data." :::
+Data centers force you to manage IT assets separately (*see figure*).
 
-**How to identify workloads:** List your primary business functions. Then, list the IT assets that support those functions. The supporting IT assets are your workloads (*see table for examples*).
+:::image type="content" source="../../_images/modernize/envision/data-center-it-assets-small.png" alt-text="Graphic showing existing data center." :::
+
+But the cloud lets you focus on workloads instead of IT assets. Modernizing infrastructure, applications, and data together as workloads let you streamline the modernization process.
+
+:::image type="content" source="../../_images/modernize/envision/workload_300.png" alt-text="Image showing workload as a combination of applications, infrastructure, and data." :::
+
+## How to identify workloads
+
+List your primary business functions. Then, list the IT assets that support those functions. The supporting IT assets collectively are your workloads (*see table for examples*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span>
 | --- | --- |
 |E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server
 
-## Step 3: Align modernization motivations and workloads
+## Step 3 - Align your modernization motivations and workloads
 
-Return to list of modernization motivations that you created in Step 1. Start mapping one modernize motivation to each workloads (*see table*).
+Finally, align your modernization motivations and workloads.
+
+## Map motivations and workloads
+
+Grab the list of modernization motivations you created in Step 1. Start mapping these motivations to the table you made in Step 2 (*see table for examples*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |
 | --- | --- | --- |
 |E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation
-|Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Data centralization
+|Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data
 |
 
-**Assign one motivation:** You'll likely have multiple motivations for modernizing each workload. But try to assign a single motivation to each workload.  Aligning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want.
+## Assign one motivation to each workload
 
-**When a single motivation is unclear:** For workloads that have multiple motivations, you will want to add an additional step. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The guidance will help you determine what your primary motivation should be. Once you have a single motivation, you can move on the to the evaluate step.
+Assigning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want. When you [modernize your process](/docs/modernize/modernize-strategies/devops-practices-modernization.md) and begin creating tasks to reach your goals, it is clearer to see why having a single motivation is helpful. It helps you organize your work.
+
+## When a single motivation is unclear
+
+It is sometimes difficult to assign have multiple motivations for modernizing each workload. But do you best. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9) if you're stuck. The well-architected review will help you figure out what you motivation should be.
 
 ## Next steps
+
+When you have a single motivation for each workload, you can move on the to the evaluate step.
 
 > [!div class="nextstepaction"]
 > [Evaluate](../../modernize/business-alignment/evaluate-modernization-options.md).

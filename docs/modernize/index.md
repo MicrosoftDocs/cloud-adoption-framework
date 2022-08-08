@@ -13,17 +13,19 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernization in the cloud is moving existing workloads closer to a cloud-native workload. Modernizing can happen after you migrate a workload or during the migration. [We have guidance to help you decide](/docs/adopt/migrate-modernize-approaches.md).
+Modernizing in the cloud meaning enhancing your existing applications with more cloud capabilities. Modernizing can happen [after you migrate or during the migration](/docs/adopt/migrate-modernize-approaches.md).
 
-**Methodology:** Modernization is a two-prong approach that involves aligning modernization efforts to business goals and enabling your organization to work with current modernization disciplines (*see figure*).
+## Methodology
+
+Modernization has two aspects. You must first align your business to your modernization goals. Then, you can begin the process modernization (*see figure*).
 
 :::image type="content" source="../_images/modernize/modernize-methodology-v5.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
-**Execution:** Success in the modernize horizon will require close collaboration between business and technical leads. Together, these two groups must identify the IT assets and business processes that need rework to meet certain goals.
+## How to use these articles
 
-**Process:** This series of articles will walk you through each aspect of the modernize horizon. We will start with business alignment first since it will be the foundation of your modernization horizon. We will cover each of the modernization disciplines separately.
+We have an article on each step of the modernize methodology. They are sequential, so it's best that you work through them in order. They are also designed to be referenced, not necessarily read from top to bottom. Find what you need and move on.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Business Alignment](/docs/modernize/business-alignment/index.md)
+> [Start with an intro to business alignment](/docs/modernize/business-alignment/index.md)
