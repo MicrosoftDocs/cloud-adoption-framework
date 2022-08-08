@@ -32,7 +32,7 @@ Some of the most common modernization motivations across industries are:
 - *Application innovation:* Adopt new technologies and architectures to enable rapid innovation.
 - *Centralize data:* Store application data in a centralized repository to enhance security, reduce redundancy, and drive transparency.
 
-Knowing *why* you are modernizing will determine *what* to modernize. So, make sure you have a good understanding of your motivations before moving on.
+Knowing *why* you're modernizing will determine *what* to modernize. So, make sure you have a good understanding of your motivations before moving on.
 
 ## Step 2 - Identify your workloads
 
@@ -75,15 +75,15 @@ Grab the list of modernization motivations you created in Step 1. Start mapping 
 
 ## Assign one motivation to each workload
 
-Assigning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want. When you [modernize your process](/docs/modernize/modernize-strategies/devops-practices-modernization.md) and begin creating tasks to reach your goals, it is clearer to see why having a single motivation is helpful. It helps you organize your work.
+Assigning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want. When you [modernize your process](/docs/modernize/modernize-strategies/devops-practices-modernization.md), it will be clearer why a single motivation is helpful. It helps you organize your work.
 
 ## When a single motivation is unclear
 
-It is sometimes difficult to assign have multiple motivations for modernizing each workload. But do you best. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9) if you're stuck. The well-architected review will help you figure out what you motivation should be.
+It's sometimes difficult to assign have multiple motivations for modernizing each workload. But do your best. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9) if you're stuck. The well-architected review will help you figure out what your motivation should be.
 
 ## Next steps
 
-When you have a single motivation for each workload, you can move on the to the evaluate step.
+When you have a single motivation for each workload, you can move to the evaluate step.
 
 > [!div class="nextstepaction"]
 > [Evaluate](../../modernize/business-alignment/evaluate-modernization-options.md).

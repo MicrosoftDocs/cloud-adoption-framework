@@ -23,7 +23,7 @@ Modernization has two aspects. You must first align your business to your modern
 
 ## How to use these articles
 
-We have an article on each step of the modernize methodology. They are sequential, so it's best that you work through them in order. They are also designed to be referenced, not necessarily read from top to bottom. Find what you need and move on.
+We have an article on each step of the modernize methodology. The articles are sequential, so it's best that you work through them in order. Use the article for reference. Complete the steps, but don't necessarily read from top to bottom. Find what you need and move on.
 
 ## Next steps
 

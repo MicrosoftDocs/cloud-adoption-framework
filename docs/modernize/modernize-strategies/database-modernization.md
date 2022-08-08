@@ -12,7 +12,7 @@ keywords: collect data, migrate data, data migration, data modernization
 ---
 # Modernize database in the cloud
 
-Modernize your databases in the cloud. The path you choose depends on where you're starting from and where you want to go. Below, you will find guidance on what to do and how to do it.
+Modernize your databases in the cloud. The path you choose depends on where you're starting from and where you want to go. Below, you'll find guidance on what to do and how to do it.
 
 There are solutions for:
 
@@ -22,7 +22,7 @@ There are solutions for:
 
 Depending on the amount of control you want, we provide solutions with infrastructure-as-a-service (IaaS) and platform-as-a-service (PaaS) offerings.
 
-:::image type="content" source="../../_images/modernize/db-platforms/db-modernize-531.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. On the bottom there is an on-premises starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
+:::image type="content" source="../../_images/modernize/db-platforms/db-modernize-531.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. The bottom has on-premises as the starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
 
 ## Modernize with Azure SQL
 
@@ -46,11 +46,11 @@ In the table below, find your desired level of control vs. productivity. Then, s
 | Control vs. Productivity | Solution | Your Needs | Implementation guidance |
 | --- | --- | --- | --- |
 | *Most control* | Open-source databases on virtual machines - [MySQL](/azure/mysql/single-server/overview),  [MariaDB](/azure/mariadb/overview), [PostgreSQL](/azure/postgresql/single-server/overview) | <ul><li>OS control </li> <li> Zone redundancy </li></ul> | Using the [Azure Database Migration Service](/azure/dms/) <br><br> [Installing a database on a VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview)|
-| *Balance control & productivity* | [Azure Managed instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/introduction)| <ul><li> Hybrid deployment </li> <li>Automated deployment & scaling for Apache Cassandra datacenters</li> <li>Automated patching</li> <li>Automated health checks</li> </ul> | [Apache Cassandra](/azure/managed-instance-apache-cassandra/dual-write-proxy-migration) |
-| *Most productivity* | [Azure Cosmos DB](/azure/cosmos-db/introduction) | <ul><li> A fully-managed NoSQL database</li><li>Cost-efficiency</li><li>Support for MongoDB & Gremlin</ul> | [Azure Cosmos DB](/azure/cosmos-db/cosmosdb-migrationchoices) |
-| *Most productivity* | [Azure Database for MySQL](/azure/mysql/single-server/overview) | <ul><li>A fully-managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MySQL](/azure/dms/tutorial-mysql-azure-mysql-offline-portal) <br><br> Using the [Azure Database Migration Service](/azure/dms/)|
-| *Most productivity* | [Azure Database for MariaDB](/azure/mariadb/overview) | <ul><li>A fully-managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MariaDB](/azure/mariadb/howto-migrate-dump-restore) |
-| *Most productivity* | [Azure Database for PostgreSQL](/azure/postgresql/single-server/overview) | <ul><li>A fully-managed SQL solution</li><li>Cost and performance efficiency</li></ul>| [Azure Database for PostreSQL](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal) |
+| *Balance control & productivity* | [Azure Managed Instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/introduction)| <ul><li> Hybrid deployment </li> <li>Automated deployment & scaling for Apache Cassandra datacenters</li> <li>Automated patching</li> <li>Automated health checks</li> </ul> | [Apache Cassandra](/azure/managed-instance-apache-cassandra/dual-write-proxy-migration) |
+| *Most productivity* | [Azure Cosmos DB](/azure/cosmos-db/introduction) | <ul><li> A fully managed NoSQL database</li><li>Cost-efficiency</li><li>Support for MongoDB & Gremlin</ul> | [Azure Cosmos DB](/azure/cosmos-db/cosmosdb-migrationchoices) |
+| *Most productivity* | [Azure Database for MySQL](/azure/mysql/single-server/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MySQL](/azure/dms/tutorial-mysql-azure-mysql-offline-portal) <br><br> Using the [Azure Database Migration Service](/azure/dms/)|
+| *Most productivity* | [Azure Database for MariaDB](/azure/mariadb/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MariaDB](/azure/mariadb/howto-migrate-dump-restore) |
+| *Most productivity* | [Azure Database for PostgreSQL](/azure/postgresql/single-server/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul>| [Azure Database for PostreSQL](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal) |
 |
 
 ## Next Steps

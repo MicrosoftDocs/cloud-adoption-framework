@@ -13,11 +13,11 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 # How to adopt the cloud
 
-The right cloud adoption option gives you the right balance of control and productivity. Control gives you the most configuration ability but has the most management overhead. Productivity restricts the amount of configurations you can make but has very little management overhead (*see figure*).
+The right cloud adoption option gives you the right balance of control and productivity. Control gives you the most configuration ability but has the most management overhead. Productivity restricts the number of configurations you can make but has little management overhead (*see figure*).
 
-:::image type="content" source="../_images/adopt/adopt-existing-apps-v4.png" alt-text="Diagram showing portfolio migration modernization approach.":::
+:::image type="content" source="../_images/adopt/adopt-existing-apps-v5.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
-Building a hybrid cloud gives you the most control over your portfolio, but it limit your productivity. Replacing applications with SaaS and low-code solutions gives you the most productivity. Most organizations adopt a balance of both control and productivity.
+Building a hybrid cloud gives you the most control over your portfolio, but it limits your productivity. Replacing applications with SaaS and low-code solutions gives you the most productivity. Most organizations adopt a balance of both control and productivity.
 
 The figure represents what a typical business does with their existing application portfolio:
 
@@ -27,7 +27,7 @@ The figure represents what a typical business does with their existing applicati
 
 ## Retire (35%)
 
-Retire or get rid of any applications or environments you don't need. To do this, take an inventory of your application portfolio and identify any that aren't worth the investment to keep. This isn't an approach that is unique to cloud adoption. You should take a regular inventory of your portfolio. But shrinking your portfolio before cloud adoption lets you focus on your most business-critical workloads.
+Retire or get rid of any applications or environments you don't need. Take an inventory of your application portfolio and identify any that aren't worth the investment to keep. Shrinking your portfolio before cloud adoption lets you focus on your most business-critical workloads.
 
 ## Replace (15%)
 
@@ -49,8 +49,7 @@ Some examples of workloads you could include in your first move are:
 
 - *Basic web apps:* Rehost most your web applications. Allow more planning for applications that are highly regulated, business-critical, or transaction intensive (OLTP workloads).
 - *Advanced portals:* Replatform your portals with [Power Apps portals](/power-apps/maker/portals/overview).
-- *New solutions:* Build new applications in the cloud with IaaS and PaaS solutions rather than rehost or replatform. This differs from the "Replace" strategy above. "Replace" uses SaaS and low-code tools instead of IaaS and PaaS.
-- *Modernized solutions:* Replatform your workloads with PaaS technologies during the move. For example, you can move from a SQL database to the fully managed Azure SQL Database service.
+- *Modernized solutions:* Finish modernizing workloads. If you modernized the application, now it's time to modernize the database.
 
 **2. Next to move (10%):** Use the lessons-learned from your first move to tackle more challenging workloads. The challenge can be technical or simply the importance of the workload. Joining the [migration and modernization program](https://azure.microsoft.com/migration/) offers self-guided support and expert-guided deployments. Some of the more challenging workloads to move are:
 

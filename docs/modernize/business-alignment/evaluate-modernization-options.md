@@ -25,13 +25,13 @@ Then, evaluate your technical readiness. Technical readiness shows you if modern
 
 Financial motivations are the key drivers of cloud modernization. Businesses know that modernizations done right can increase operational efficiency and generate new revenue.
 
-For each workload you're thinking about modernizing, answer the following questions. These are just example questions to get you thinking along the right lines. These questions are for workloads. They are not a general assessment or your organization or entire portfolio.
+For each workload you're thinking about modernizing, answer the following questions. The questions are just examples to get you thinking along the right lines. These questions are for workloads. They aren't a general assessment or your organization or entire portfolio.
 
 Answering *yes* to all questions means you're likely ready to modernize. If you answer *no* to any of the questions, we recommend you conduct a [well-architected review](/assessments/?mode=pre-assessment&session=local) of your workload.
 
 |Question|Yes|No|
 |--|--|--|
-|*Can you quantify the business<br> value of modernizing this workloads?*|Modernize|Review|
+|*Can you quantify the business<br> value of modernizing this workload?*|Modernize|Review|
 *Do you know what your <br>modernization cost will be?*|Modernize<br>|Review|
 |*Are these workloads business-critical?*|Modernize|Review|
 |*Does the cost of modernization<br> meet your desired cost savings?*|Modernize|Review|
@@ -42,7 +42,7 @@ Move on to step 2 when you've answered *yes* to all the above questions.
 
 The technical readiness assessment will help you figure out what cloud adoption strategy to take.
 
-For each workload you're thinking about modernizing, answer the following questions. These are just example questions to get you thinking along the right lines. These questions are for workloads. They are not a general assessment or your organization or entire portfolio.
+For each workload you're thinking about modernizing, answer the following questions. The questions are just examples to get you thinking along the right lines. These questions are for workloads. They aren't a general assessment or your organization or entire portfolio.
 
 |Question|Yes|No|
 |--|--|--|

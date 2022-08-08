@@ -20,7 +20,7 @@ Learn how to modernize your process. Modernizing your processes increases operat
 
 :::image type="content" source="../../_images/modernize/devops/devops-and-tools-512.png" alt-text="image showing a circle with 4 segments":::
 
-Modernize your process with an DevOps approach. DevOps uses an Agile framework to deliver continuous value to customers. The DevOps approach has a specific focus, approach, and benefits
+Modernize your process with a DevOps approach. DevOps uses an Agile framework to deliver continuous value to customers. The DevOps approach has a specific focus, approach, and benefits
 
 - *Focus* - Focus on continuously deliver value to customers.
 - *Approach* - Integrate planning, development, delivery, and operations with DevOps methods and tools.
@@ -28,7 +28,7 @@ Modernize your process with an DevOps approach. DevOps uses an Agile framework t
 
 ## Modernize your workflow
 
-Modernize your workflow by adopting an Agile cadence. To do this, follow these steps:
+Modernize your workflow by adopting an Agile cadence by following these steps:
 
 ### Step 1 - Reference your commitment path
 
@@ -47,9 +47,9 @@ Next, organize work tasks around the commitment path you created. The commitment
 
 | Step | Work Tasks | Example |
 | --- | --- | --- |
-| 1. Create large buckets of work (epics) | Combine your modernization motivation and workload. These are called epics in Agile. | Application innovation for the E-commerce website |
-| 2. Identify major tasks (user stories) | Create major tasks from a user or customer perspective. These are called user stories in Agile. | As a shopper, I want a more responsive website so I have a better shopping experience |
-| 3. Identify smaller tasks within the major tasks (subtasks)| Break down the major tasks into smaller activities. These are called tasks or subtasks in Agile. | <ul> <li>Choose Azure App Service plan</li> <li>Configure security</li>  <li>Configure caching</li> </ul>
+| 1. Create large buckets of work (epics) | Combine your modernization motivation and workload. High-level goals are epics in Agile. | Application innovation for the E-commerce website |
+| 2. Identify major tasks (user stories) | Create major tasks from a user or customer perspective. Major tasks are user stories in Agile. | As a shopper, I want a more responsive website so I have a better shopping experience |
+| 3. Identify smaller tasks within the major tasks (subtasks)| Break down the major tasks into smaller tasks. Smaller tasks are simply tasks or subtasks in Agile. | <ul> <li>Choose Azure App Service plan</li> <li>Configure security</li>  <li>Configure caching</li> </ul>
 | 4. Divide up the work into management pieces (sprints) | Set a two-week time frame and let your team members take on tasks that they can complete over that two week period | <ul> <li>Person-A takes "choose Azure App Service plan"</li> <li>Person-B takes "configure security"</li>  <li>Person-C takes "configure caching"</li> </ul>|
 |
 

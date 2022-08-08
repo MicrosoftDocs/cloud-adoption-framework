@@ -20,7 +20,7 @@ This should fit into one net new article.
 
 Learn how to modernize any application or framework in the cloud.
 
-:::image type="content" source="../../_images/modernize/app-platforms/app-modernize-586.png" alt-text="Graphic showing the application platform options, moving from control to productivity. On the bottom is on-premises. Moving up, you see container platforms, app platforms, and low code platforms.":::
+:::image type="content" source="../../_images/modernize/app-platforms/app-modernize-586.png" alt-text="Graphic showing the application platform options, moving from control to productivity. The bottom of the graphic shows on-premises solutions. Moving up, you see container platforms, app platforms, and low code platforms.":::
 
 ## Modernize applications
 
