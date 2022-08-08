@@ -28,7 +28,7 @@ Depending on the amount of control you want, we provide solutions with infrastru
 
 Modernize your proprietary SQL databases with Azure SQL.
 
-In the table below, find your desired level of control vs. productivity. Then, see if the solution given meets your needs. When you find the right solution, follow the implementation guidance.
+In the table below, find your desired level of control vs. productivity. Then, see if the solution given meets your needs. When you find the right solution, follow the implementation guidance to modernize your database.
 
 | Control vs. Productivity | Solution | Your Needs | Implementation guidance |
 | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ In the table below, find your desired level of control vs. productivity. Then, s
 
 Modernize your open-source databases and NoSQL databases and find the balance of control and productivity that meets your needs.
 
-In the table below, find your desired level of control vs. productivity. Then, see if the solution given meets your needs. When you find the right solution, follow the implementation guidance.
+In the table below, find your desired level of control vs. productivity. Then, see if the solution given meets your needs. When you find the right solution, follow the implementation guidance to modernize your database.
 
 | Control vs. Productivity | Solution | Your Needs | Implementation guidance |
 | --- | --- | --- | --- |
