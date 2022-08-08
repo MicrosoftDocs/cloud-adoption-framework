@@ -19,7 +19,7 @@ After you envision your cloud modernization possibilities, you need to evaluate 
 
 Evaluate your financial readiness first. Financial readiness shows you if you're ready to modernize or need more time reviewing your applications.
 
-Then, evaluate your technical readiness. Technical readiness shows you if modernizing is the best path forward or if another path is better. 
+Then, evaluate your technical readiness. Technical readiness shows you if modernizing is the best path forward or if another path is better.
 
 ## Step 1 - Evaluate financial readiness
 
@@ -51,8 +51,6 @@ For each workload you're thinking about modernizing, answer the following questi
 |*Will these modernized workloads <br>need to operate in hybrid or<br> multi-cloud environment?* |Modernize|Migrate|
 |*Are your workloads portable?*|Modernize|Migrate
 |*Do you plan to keep the current architecture?*|Modernize|Review|
-
-
 
 ## Next steps
 

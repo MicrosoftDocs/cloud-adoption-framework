@@ -12,13 +12,17 @@ ms.custom: internal
 
 # Business alignment for cloud modernization
 
-Business alignment is the first step in the modernize horizon. It is the process of prioritizing business goals, identifying the business processes that support those goals, and enhancing the technology used in those processes. We have broken these actions into three processes: envision, evaluate, and commit.
+Aligning your business to your cloud modernization goals is the first step in modernizing your organization. The "business alignment" process is where you:
+
+- Envision your modernization possibilities.
+- Evaluate your financial and technical readiness.
+- Commit to the modernization path you choose.
 
 :::image type="content" source="../../_images/modernize/business-alignment/business-alignment.png" alt-text="Image showing where you are in the business alignment process.":::
 
-These are sequential processes. Envision your business goals before you evaluate the modernization possibilities to achieve those goals. When you know the possibilities, you can commit to a plan to reach them.
+These are sequential processes. Make sure you envision the possibilities before you evaluate how ready you are to reach those goals. When you know the path that you're prepared to take, you can commit to a plan that has a great chance of success.
 
 ## Next Step
 
 >[!div class="nextstepaction"]
-> [Envision your cloud modernization](envision-cloud-modernization.md)
+> [Envision your cloud modernization possibilities](envision-cloud-modernization.md)

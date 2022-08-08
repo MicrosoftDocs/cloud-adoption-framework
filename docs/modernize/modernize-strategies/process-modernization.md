@@ -16,30 +16,48 @@ Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption 
 
 # Modernize your process
 
-Learn how to modernize your process. Increasing operational efficiency will limit the total cost of ownership of your workloads.
+Learn how to modernize your process. Modernizing your processes increases operational efficiency. Operational efficiency reduces the total cost of ownership of your workloads.
+
 :::image type="content" source="../../_images/modernize/devops/devops-and-tools-512.png" alt-text="image showing a circle with 4 segments":::
 
-Modernize your process with an DevOps approach. DevOps uses an Agile framework to deliver continuous value to customers.
+Modernize your process with an DevOps approach. DevOps uses an Agile framework to deliver continuous value to customers. The DevOps approach has a specific focus, approach, and benefits
 
 - *Focus* - Focus on continuously deliver value to customers.
-- *How* - Integrate planning, development, delivery, and operations with Agile processes and DevOps tools.
-- *Benefit* - Quickly limit the total cost of ownership of your workloads in the cloud.
+- *Approach* - Integrate planning, development, delivery, and operations with DevOps methods and tools.
+- *Benefits* - Quickly limit the total cost of ownership of your workloads in the cloud.
 
 ## Modernize your workflow
 
-Modernize your work cadence by adopting an Agile workflow. Take your mapping of modernization motivations and workloads that you created in [step 3 of the Envision phase](../business-alignment/envision-cloud-modernization.md). You need to create structure around the work that needs to get done so you can modernize your workloads.
+Modernize your workflow by adopting an Agile cadence. To do this, follow these steps:
 
-| Step | Activity | Example |
+### Step 1 - Reference your commitment path
+
+Reference the commitment path you created in step 1 of the [the commit phase](../business-alignment/envision-cloud-modernization.md#step-1---identify-your-modernization-motivations).
+
+For reference, the table we created in the commitment step has been copied below.
+
+|Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy
+| --- | --- | --- | --- |
+|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation |<ul><li>Process modernization</li><li>Application modernization</li></ul>|
+|
+
+### Organize work tasks around the commitment path
+
+Next, organize work tasks around the commitment path you created. The commitment path has all the information you need to modernize your workflow. Follow the table to organize your work tasks.
+
+| Step | Work Tasks | Example |
 | --- | --- | --- |
 | 1. Create large buckets of work (epics) | Combine your modernization motivation and workload. These are called epics in Agile. | Application innovation for the E-commerce website |
-| 2. Identify major tasks (user stories) | Create major tasks from a user or customer perspective. These are called user stories in Agile. | As a shopper, I want a more responsive website so I have better shopping experience |
+| 2. Identify major tasks (user stories) | Create major tasks from a user or customer perspective. These are called user stories in Agile. | As a shopper, I want a more responsive website so I have a better shopping experience |
 | 3. Identify smaller tasks within the major tasks (subtasks)| Break down the major tasks into smaller activities. These are called tasks or subtasks in Agile. | <ul> <li>Choose Azure App Service plan</li> <li>Configure security</li>  <li>Configure caching</li> </ul>
-| 4. Divide up the work into management pieces (sprints) | Set a two-week time frame and let your team members take on tasks that they can complete over that two week period | <ul> <li>Joy takes "choose Azure App Service plan"</li> <li>Jaye takes "configure security"</li>  <li>Jon takes "configure caching"</li> </ul>|
+| 4. Divide up the work into management pieces (sprints) | Set a two-week time frame and let your team members take on tasks that they can complete over that two week period | <ul> <li>Person-A takes "choose Azure App Service plan"</li> <li>Person-B takes "configure security"</li>  <li>Person-C takes "configure caching"</li> </ul>|
 |
 
 ## Modernize your tools
 
-Modernize your tools by adopting a DevOps toolset. Five DevOps tools make this possible. Using [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) makes this adoption easy (*see table*).
+Modernize your tools by adopting a DevOps toolset. A DevOps toolset has five components. You can patch together tools or use [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) to make modernizing your tools easier (*see table*).
+
+The table tells you what you need and the "Solution" column contains guidance on how to adopt that tool.
 
 | DevOps Tool | Tool Description | Solution | Alternative
 | --- | --- | --- | --- |
@@ -53,4 +71,4 @@ Modernize your tools by adopting a DevOps toolset. Five DevOps tools make this p
 ## Next Steps
 
 >[!div class="nextstepaction"]
-> [Learn how to modernize your applications](../../modernize/modernize-disciplines/application-platform-modernization.md)
+> [Learn how to modernize your applications](../../modernize/modernize-strategies/application-modernization.md)

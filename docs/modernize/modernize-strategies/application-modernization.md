@@ -24,17 +24,17 @@ Learn how to modernize any application or framework in the cloud.
 
 ## Modernize applications
 
-Modernize your applications and find the balance of control and productivity that meets your needs.
+Modernize your applications. Find the balance of control and productivity that meets your needs.
 
 In the table, find your desired level of control vs. productivity. Then, see if the solution meets your needs. Follow the implementation guidance for your use case.
 
-| Control vs. Productivity | Your solution... | When you need... | Implementation guidance for... |
+| Control vs. Productivity | Solution | Your Needs | Implementation guidance |
 | --- | --- | --- | --- |
 | *Most Control* | [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) <br><br> [Azure Red Hat OpenShift](/azure/openshift/intro-openshift) | <ul><li>Infrastructure control</li> <li>Less administrative burden orchestrating clusters and nodes</li> </ul> | [Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app) <br><br> [Azure Red Hat OpenShift](/azure/openshift/tutorial-create-cluster)</li></ul>
 | *Balance control & <br>productivity* | [Azure App Service](/rest/api/appservice/) <br><br> [Azure Spring Apps](/azure/spring-apps/overview) <br><br> [Azure Functions](/azure/azure-functions/functions-overview) | <ul><li> Focus on developing customer code</li> <li>Automated infrastructure</li> </ul> | [Azure App Service](/azure/app-service/app-service-migration-assess-net) <br><br> [Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud) <br><br> [Azure Functions](/azure/azure-functions/functions-reference)</ul>
 | *Productivity* | [Power Apps](/power-apps/powerapps-overview) <br><br> [Power Automate](/power-automate/getting-started) | <ul><li>Fastest time-to-market</li> <li>Applications and automation built with little to no coding experience</li> </ul> | [Power Apps](/power-apps/powerapps-overview)<br><br> [Power Automate](/power-automate/getting-started)</li></ul>
 
-## Help choosing the right solution
+## Find help choosing the right solution
 
 Use our [app modernization decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) for more help choosing the right solution.
 
@@ -49,4 +49,4 @@ Use our [app modernization decision tree](/azure/architecture/guide/technology-c
 ## Next Step
 
 >[!div class="nextstepaction"]
-> [Modernize your database platforms](data-platform-modernization.md)
+> [Modernize your database platforms](/database-modernization.md)

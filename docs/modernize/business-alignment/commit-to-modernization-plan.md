@@ -60,7 +60,7 @@ Check out our [Fast Track for Azure](/programs/azure-fasttrack/) program if you 
 
 ## Step 3 - Commit resources
 
-Commit resources to your modernization path. You have your modernization path and have created a timeline. Now, you need to put the right people on the project and commit to giving them the right tools. 
+Commit resources to your modernization path. You have your modernization path and have created a timeline. Now, you need to put the right people on the project and commit to giving them the right tools.
 
 ## Next steps
 
