@@ -48,7 +48,11 @@ The following should be taken into account when choosing a Storage Class, this c
 - **Database isolation and co-location**. All databases on an instance of Arc SQL MI share Persistent Volume, so you can choose to move databases to separate instances of Arc SQL MI to avoid storage resource contention.
 - **Capacity**. The defined storage size should meet the future capacity of your data controller and database instances to avoid having to re-size a PVC. Consider any storage limitations that your chosen Storage Class might have.
 - **Access Mode**. Storage Class providers have different Access Modes, allowing different capabilities for how a storage can be mounted and read or written by pods. RWX (Read Write Many) is required for the SQL Backup volume.
-
+- **Performance:** The storage device I/O throughput and IOPS should meet your database needs.
+- **Read/Write Ratio:** Understanding the workload can help choose the backing hardware to best meet the needs with appropriate costs. Heavy write workloads can take advantage of RAID 0 configurations, whereas infrequently accessed data might be best served using a SAN device storage.
+- **Database isolation and co-location:** All databases on an instance of SQL MI share Persistent Volume, so you can choose to move databases to separate instances of SQL MI to avoid storage resource contention.
+- **Capacity:** The defined storage size should meet the future capacity of your data controller and database instances to avoid having to re-size a PVC. Consider any storage limitations that your chosen Storage Class might have.
+- **Access Mode:** Storage Class providers have different Access Modes, allowing different capabilities for how a storage can be mounted and read or written by pods. RWX (Read Write Many) is required for the SQL Backup volume.
 ### Data Controller
 
 The data controller will have 4 different stateful pods running in the Kubernetes cluster: Controller SQL, Controller API, Logs DB, Metrics DB. Each pod will require two Persistent Volumes for the data and logs volumes. All Data Controller components require a remote Storage Class to ensure data durability, as the data controller components themselves do not natively provide data durability. Be sure to consider the [compute and memory resources](/azure/azure-arc/data/sizing-guidance#data-controller-sizing-details) the Data Controller requires. The following diagram represents the Data Controller Storage, PV and PVC Kubernetes resources.
