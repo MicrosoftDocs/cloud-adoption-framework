@@ -39,7 +39,7 @@ Configuration of the PV and PVC Kubernetes resources occurs when provisioning th
 There are two different storages types to choose from:
 
 - **Local:**. This is a volume that is mounted on a local storage device attached to the Kubernetes node where the pod is running on. This type of storage usually provides lower latency along with higher IOPS and throughput compared to Remote/Shared storage.
-- **Remote/Shared Storage**. These are network-attached storage devices that tend to come with built-in redundancy. Common options for this are NAS and SAN devices.
+- **Remote/Shared Storage:** these are network-attached storage devices that tend to come with built-in redundancy. Common options for this are NAS and SAN devices.
 
 The following should be taken into account when choosing a Storage Class, this criteria would also hold true for any database server you would build:
 
