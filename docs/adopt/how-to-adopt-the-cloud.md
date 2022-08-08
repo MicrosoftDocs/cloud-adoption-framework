@@ -29,7 +29,7 @@ The figure represents what a typical business does with their existing applicati
 
 Retire or get rid of any applications or environments you don't need. To do this, take an inventory of your application portfolio and identify any that aren't worth the investment to keep. This isn't an approach that is unique to cloud adoption. You should take a regular inventory of your portfolio. But shrinking your portfolio before cloud adoption lets you focus on your most business-critical workloads.
 
-### Replace (15%)
+## Replace (15%)
 
 Replacing critical workloads with SaaS and low-code solutions provides the most productivity for applications you need to keep. You can move "from" management-heavy technologies "to" cloud solutions that improve productivity (*see table for examples*).
 
@@ -41,7 +41,7 @@ Replacing critical workloads with SaaS and low-code solutions provides the most 
 |Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
 |
 
-#### Rehost and Replatform (50%)
+## Rehost and Replatform (50%)
 
 **1. First to move (35%):**  Pick easy wins for the first workloads to move. Test your cloud adoption plan on manageable applications before tackling the most complex or business critical workloads. Document your successes, revise your migration strategy, and extract lessons-learned. You'll apply these insights to your more complicated migrations. [Use Azure Migrate to plan your migration](/azure/migrate/migrate-services-overview).
 
@@ -49,7 +49,7 @@ Some examples of workloads you could include in your first move are:
 
 - *Basic web apps:* Rehost most your web applications. Allow more planning for applications that are highly regulated, business-critical, or transaction intensive (OLTP workloads).
 - *Advanced portals:* Replatform your portals with [Power Apps portals](/power-apps/maker/portals/overview).
-- *New solutions:* Build new applications in the cloud with IaaS and PaaS solutions rather than rehost or replatform. This differs from the "Replace" strategy above. "Replace" uses SaaS and low-code tools instead of IaaS and PaaS. **Is this right?**
+- *New solutions:* Build new applications in the cloud with IaaS and PaaS solutions rather than rehost or replatform. This differs from the "Replace" strategy above. "Replace" uses SaaS and low-code tools instead of IaaS and PaaS.
 - *Modernized solutions:* Replatform your workloads with PaaS technologies during the move. For example, you can move from a SQL database to the fully managed Azure SQL Database service.
 
 **2. Next to move (10%):** Use the lessons-learned from your first move to tackle more challenging workloads. The challenge can be technical or simply the importance of the workload. Joining the [migration and modernization program](https://azure.microsoft.com/migration/) offers self-guided support and expert-guided deployments. Some of the more challenging workloads to move are:
