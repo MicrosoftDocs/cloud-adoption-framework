@@ -37,7 +37,11 @@ Some machine learning operations tasks fit well in the general DevOps framework.
 - Trigger model retraining and set up a rollback for disaster recovery.
 - Create reusable data pipelines for training and scoring.
 
-The goal of machine learning operations is to close the gap between development and production and to deliver value to customers faster. To achieve this goal, you must rethink traditional development and production processes. The [machine learning operations maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) can help you see where your organization is on the machine learning operations maturity scale and help you plan for future growth.
+The goal of machine learning operations is to close the gap between development and production and to deliver value to customers faster. To achieve this goal, you must rethink traditional development and production processes.
+
+Not every organization's machine learning operations requirements are the same. The machine learning operations architecture of a large, multinational enterprise probably won't be the same infrastructure that a small startup establishes. Organizations typically begin small and build up as their maturity, model catalog, and experience grows.
+
+The [machine learning operations maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) can help you see where your organization is on the machine learning operations maturity scale and help you plan for future growth.
 
 ## Machine learning operations vs. DevOps
 
@@ -240,9 +244,9 @@ Everyone has a unique way of learning, so a mixture of the following types of gu
 - How-to videos.
 - Readiness assessments.
 
-#### Azure machine learning operations video series
+#### Machine learning operations in Azure video series
 
-The [Azure machine learning operations video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f) shows you how to enable machine learning operations for your machine learning solution, from initial development to production.
+A video series about [machine learning operations in Azure](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f) shows you how to establish machine learning operations for your machine learning solution, from initial development to production.
 
 ### Ethics
 
@@ -250,11 +254,9 @@ Ethics plays an instrumental role in the design of an AI solution. If ethical pr
 
 To ensure that the key ethical principles that the organization stands for are implemented across projects, the organization should provide a list of these principles and ways to validate them from a technical perspective during the testing phase. Use the machine learning features in Azure Machine Learning to understand what responsible machine learning is and how to build it into your machine learning operations.
 
-Not every organization's machine learning operations requirements are the same. The machine learning operations architecture of a large, multinational enterprise probably won't be the same as a small startup infrastructure. Organizations typically begin small and build up as their maturity, model catalog, and experience grows.
-
 ## Next steps
 
-Learn more about how to organize and set up Azure Machine Learning environments or watch hands-on [Azure machine learning operations video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f).
+Learn more about how to organize and set up Azure Machine Learning environments, or watch a hands-on video series about [machine learning operations in Azure](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f).
 
 > [!div class="nextstepaction"]
 > [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
@@ -262,4 +264,4 @@ Learn more about how to organize and set up Azure Machine Learning environments 
 Learn more about how to manage budgets, quotas, and costs by using Azure Machine Learning:
 
 > [!div class="nextstepaction"]
-> [Manage budgets, costs, and quotas for Azure Machine Learning in the organization](./optimize-ai-machine-learning-cost.md)
+> [Manage budgets, costs, and quotas in the organization with Azure Machine Learning](./optimize-ai-machine-learning-cost.md)
