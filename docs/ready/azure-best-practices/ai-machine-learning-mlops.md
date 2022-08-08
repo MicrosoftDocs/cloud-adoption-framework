@@ -165,7 +165,7 @@ Azure Machine Learning offers asset management, orchestration, and automation se
 
 A data science team might decide it can manage multiple machine learning use cases internally. Adopting machine learning operations helps an organization set up project teams for better quality, reliability, and maintainability of solutions. Through balanced teams, supported processes, and technology automation, a team that adopts machine learning operations can scale and focus on developing new use cases.
 
-As the number of use cases grows in an organization, the management burden of supporting the use cases grows linearly, or even more. The challenge for the organization becomes how to accelerate time to market, support quicker assessment of use case feasibility, implement repeatability, and best use available resources and skillsets on a range of projects. For many organizations, developing an AI factory is the solution.
+As the number of use cases grows in an organization, the management burden of supporting the use cases grows linearly, or even more. The challenge for the organization becomes how to accelerate time to market, support quicker assessment of use case feasibility, implement repeatability, and best use available resources and skill sets on a range of projects. For many organizations, developing an AI factory is the solution.
 
 An AI factory is a system of repeatable business processes and standardized artifacts that facilitates developing and deploying a large set of machine learning use cases. An AI factory optimizes team setup, recommended practices, machine learning operations strategy, architectural patterns, and reusable templates that are tailored to business requirements.
 
@@ -223,7 +223,7 @@ Use Azure Monitor metrics to build a dashboard for Azure Machine Learning and as
 
 ### Specialist machine learning engineering team
 
-Many organizations have implemented the role of machine learning engineer. A machine learning engineer specializes in creating and running robust machine learning pipelines, drift monitoring and retraining workflows, and monitoring dashboards. The engineer has  overall responsibility for industrializing the machine learning solution, from development to production. The engineer works closely with data engineering, architects, security ,and operations to ensure that all necessary controls are in place.
+Many organizations have implemented the role of machine learning engineer. A machine learning engineer specializes in creating and running robust machine learning pipelines, drift monitoring and retraining workflows, and monitoring dashboards. The engineer has  overall responsibility for industrializing the machine learning solution, from development to production. The engineer works closely with data engineering, architects, security, and operations to ensure that all necessary controls are in place.
 
 Although data science requires deep domain expertise, machine learning engineering is more technical in focus. The difference makes the machine learning engineer more flexible, so they can work on various projects and with various business departments. Large data science practices might benefit from a specialist machine learning engineering team that drives repeatability and reuse of automation workflows across various use cases and business areas.
 
@@ -254,7 +254,7 @@ Not every organization's machine learning operations requirements are the same. 
 
 ## Next steps
 
-To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Also, you can watch hands-on [Azure machine learning operations video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f).
+Learn more about how to organize and set up Azure Machine Learning environments or watch hands-on [Azure machine learning operations video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f).
 
 > [!div class="nextstepaction"]
 > [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
@@ -262,4 +262,4 @@ To learn more about how to organize and set up Azure Machine Learning environmen
 Learn more about how to manage budgets, quotas, and costs by using Azure Machine Learning:
 
 > [!div class="nextstepaction"]
-> [Manage budgets, costs, and quotas for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md)
+> [Manage budgets, costs, and quotas for Azure Machine Learning in the organization](./optimize-ai-machine-learning-cost.md)
