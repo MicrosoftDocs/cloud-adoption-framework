@@ -12,7 +12,7 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # Migrate or modernize first?
 
-Customers often ask if they should migrate first and modernize later or modernize during the migration. The timing depends on your business goals. We recommended two approaches: rehost and replatform (*see figure*).
+Customers often ask if they should migrate first and modernize later or modernize during the migration. The timing depends on the benefits you want to gain. We recommended two approaches: rehost and replatform (*see figure*).
 
 :::image type="content" source="../_images/adopt/migrate-or-modernize.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 

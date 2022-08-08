@@ -17,7 +17,7 @@ Modernization in the cloud is moving existing workloads closer to a cloud-native
 
 **Methodology:** Modernization is a two-prong approach that involves aligning modernization efforts to business goals and enabling your organization to work with current modernization disciplines (*see figure*).
 
-:::image type="content" source="../_images/modernize/overall/modernize-methodology-v5.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
+:::image type="content" source="../_images/modernize/modernize-methodology-v5.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
 **Execution:** Success in the modernize horizon will require close collaboration between business and technical leads. Together, these two groups must identify the IT assets and business processes that need rework to meet certain goals.
 

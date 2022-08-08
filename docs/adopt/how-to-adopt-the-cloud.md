@@ -13,9 +13,9 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 # How to adopt the cloud
 
-The right cloud adoption option comes down to how much you value control or productivity. They refers to level of management required to run your workloads. Control gives you the most customization but has the most management overhead. Productivity gives you the least customization but has very little management overhead (*see figure*).
+The right cloud adoption option gives you the right balance of control and productivity. Control gives you the most configuration ability but has the most management overhead. Productivity restricts the amount of configurations you can make but has very little management overhead (*see figure*).
 
-:::image type="content" source="../_images/adopt/adopt-existing-apps-v2.png" alt-text="Diagram showing portfolio migration modernization approach.":::
+:::image type="content" source="../_images/adopt/adopt-existing-apps-v4.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
 Building a hybrid cloud gives you the most control over your portfolio, but it limit your productivity. Replacing applications with SaaS and low-code solutions gives you the most productivity. Most organizations adopt a balance of both control and productivity.
 
@@ -69,4 +69,4 @@ Some examples of workloads you could include in your first move are:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Migrate or modernize first?](../adopt/migrate-modernize-approaches.md)
+> [Migrate or modernize first?](../adopt/migrate-or-modernize.md)
