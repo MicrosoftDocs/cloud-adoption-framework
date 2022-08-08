@@ -3,7 +3,7 @@ title: Migrate assets
 description: Learn how to start the migration to Azure by identifying the best tools to use, including native tools, third-party tools, and project management tools.
 author: matticusau
 ms.author: brblanch
-ms.date: 08/05/2022
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,17 +12,17 @@ ms.custom: think-tank, fasttrack-new, AQC
 
 # Migrate assets
 
-To migrate your assets, use the output of the assessment phase to begin migrating the environment. You'll deploy workloads and assets (infrastructure, apps, and data). This guide helps identify the right tools to reach a completed state. You'll explore native, third-party, and project management tools.
+In this phase of the adoption journey, use the output of the assessment phase to begin migrating your environment. Migrating your environment involves deploying workloads and assets, like infrastructure, apps, and data. This article helps you find the best tools for your migration. Explore native tools, third-party tools, and project management tools.
 
 ## [Native migration tools](#tab/Tools)
 
-The following sections describe the native Azure tools that perform or help with migration. For information on choosing the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
+The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
 
 ### Azure Migrate
 
-Azure Migrate delivers a unified and extensible migration experience. Azure Migrate provides a one-stop, dedicated experience to track your migration journey across the phases of assessment and migration to Azure. It gives you the option to use tools of your choice and track migration progress across the tools.
+Azure Migrate is a one-stop, extensible migration experience. Use Azure Migrate to track your Azure migration journey from assessment to migration. You can choose your migration tools, and track your migration progress in the tools.
 
-Azure Migrate is a centralized hub to assess and migrate on-premises servers, infrastructure, applications, and data to Azure. It provides the following functionality:
+Azure Migrate is a centralized hub where you can assess and then migrate on-premises servers, infrastructure, applications, and data to Azure. Azure Migrate offers these features:
 
 - Unified platform with assessment, migration, and progress tracking.
 - Enhanced assessment and migration capabilities:
@@ -60,9 +60,9 @@ Azure Database Migration Service is a fully managed service that enables seamles
 
 The first time you use Azure Database Migration Service, you must register the resource provider for your Azure subscription:
 
-1. Select **All services**, scroll to the **General** section, select **Subscriptions**, and choose the target subscription.
+1. Select **All services**. Under **General**, select **Subscriptions**, and choose the subscription to use.
 1. Select **Resource providers**.
-1. Search for `migration`, and then to the right of **Microsoft.DataMigration**, select **Register**.
+1. Search for `migration`. In the search results, to the right of **Microsoft.DataMigration**, select **Register**.
 
 ::: zone target="chromeless"
 
@@ -74,7 +74,7 @@ The first time you use Azure Database Migration Service, you must register the r
 
 After you register the resource provider, create an instance of Azure Database Migration Service.
 
-1. Select **+ Create a resource** and search the marketplace for **Azure Database Migration Service**.
+1. Select **+ Create a resource** and search Marketplace for **Azure Database Migration Service**.
 1. Complete the Create Migration Service wizard, then select **Create**.
 
 The service is now ready to migrate the supported source databases to target platforms such as SQL Server, MySQL, PostgreSQL, or MongoDB.
@@ -98,10 +98,10 @@ For more information, see:
 
 ### Azure App Service Migration Assistant
 
-The Azure App Service Migration Assistant is part of a [larger suite of applications](https://azure.microsoft.com/services/azure-migrate/) that help organizations with their transition to the cloud. The Migration Assistant provides a guided, wizard-like experience that performs two tasks:
+The Azure App Service Migration Assistant is part of a [larger suite of applications](https://azure.microsoft.com/services/azure-migrate/) that help organizations with their transition to the cloud. The Migration Assistant provides a guided, wizard-like experience that performs two tasks.
 
-1. It does an assessment of a specific web app installed on a Windows Server. The Migration Assistant runs pre-migration compatibility checks on the web app to see if a migration to Azure App Service is possible without requiring changes to the web app.
-1. If the assessment shows that the web app can be migrated without changes to it, the Migration Assistant does the migration. You'll need to give the Migration Assistant access to your Azure account. You'll also select which resource group you want to use and select a name for the web app, among other details.
+1. Azure App Service Migration Assistant assesses a specific web app that's installed on a computer running Windows Server. Migration Assistant runs pre-migration compatibility checks on the web app to see whether it can migrate to Azure App Service without modification.
+1. If the assessment shows that the web app can be migrated without being modified, Migration Assistant migrates the app. You'll need to give Migration Assistant access to your Azure account. You also select the resource group to use and enter a name for the web app, among other details.
 
 Alternatively, the Migration Assistant generates an Azure Resource Manager template that you can use to migrate the web application in a more automated and repeatable way.
 
@@ -111,31 +111,31 @@ The Migration Assistant begins the migration process by collecting key details f
 
 First, you'll sign in to your Azure account and associate your Migration Assistant session with your account by using a unique code. Next, you'll choose the subscription, the resource group, and the website's domain name. You can choose to create a new Azure App Service plan to host the web app or select an existing plan. The choice you make affects the geographical region from which your web app is hosted. You'll also have a chance to associate this migration effort with an existing Azure Migrate project. Finally, you can either choose to skip database setup or choose to set up a hybrid connection to enable a database connection.
 
-After the Migration Assistant collects and verifies your selections, it creates the necessary Azure App Service resources in the selected region and resource group. It zips up the web app's source files and uses the Azure App Service deployment API to deploy them. Finally, it performs optional migration steps, like helping you set up a hybrid connection.
+After the Migration Assistant collects and verifies your selections, it creates required Azure App Service resources in the selected region and resource group. It zips the web app's source files and uses the Azure App Service deployment API to deploy the files. It completes final, optional migration steps, like helping you set up a hybrid connection.
 
-After a successful migration, you'll need to run any post-migration tasks, which might include:
+After a successful migration, some post-migration tasks might include:
 
-- Manually move application settings and connection strings in your `web.config` file to Azure App Service
-- Migrate data from an on-premises SQL Server instance to an Azure SQL Database instance
-- Set up an SSL certificate
-- Set up custom domain names
-- Set up permissions in Azure Active Directory
+- Manually move application settings and connection strings in your `web.config` file to Azure App Service.
+- Migrate data from an on-premises SQL Server instance to an Azure SQL Database instance.
+- Set up an SSL certificate.
+- Set up custom domain names.
+- Set up permissions in Azure Active Directory.
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 
-For more information, see: [Migrate ASP.NET applications to Azure](/learn/paths/migrate-dotnet-apps-azure/).
+For more information, see [Migrate ASP.NET applications to Azure](/learn/paths/migrate-dotnet-apps-azure/).
 
 ### Data Migration Assistant
 
-Data Migration Assistant (DMA) helps you upgrade to a modern data platform. It detects compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and lets you move your schema, data, and uncontained objects from your source server to your target server.
+Data Migration Assistant helps you upgrade to a modern data platform. It detects compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. Data Migration Assistant recommends performance and reliability improvements for your target environment. You can use Data Migration Assistant to move your schema, data, and uncontained objects from your source server to your target server.
 
-Data Migration Assistant is integrated with Azure Migrate, and lets you track assessment progress in the Azure Migrate dashboard. Launch DMA from Azure Migrate by adding the Azure Migrate: database assessment tool. Add your database assessment to Azure Migrate by selecting the **Upload to Azure Migrate** button in DMA.
+Data Migration Assistant is integrated with Azure Migrate, so you can track assessment progress in the Azure Migrate dashboard. Open Data Migration Assistant in Azure Migrate by adding the Azure Migrate database assessment tool. Add your database assessment to Azure Migrate by selecting **Upload to Azure Migrate** in Data Migration Assistant.
 
 > [!NOTE]
 > For large migrations (in terms of number and size of databases), we recommend that you use Azure Database Migration Service, which can migrate databases at scale.
 >
 
-Start using Data Migration Assistant with the following steps:
+To begin using Data Migration Assistant:
 
 1. Download and install Data Migration Assistant from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53595).
 1. Create an assessment by selecting the **New (+)** icon, then select the **Assessment** project type.
@@ -147,7 +147,7 @@ Start using Data Migration Assistant with the following steps:
 
 For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/azure/migrate/tutorial-assess-sql). You assess multiple servers, combine the reports, and then use provided Power BI reports to analyze the results.
 
-For more information, including detailed usage steps, see:
+For more information, including detailed usage steps, see these resources:
 
 - [Data Migration Assistant overview](/sql/dma/dma-overview)
 - [Assess an enterprise and consolidate assessment reports with DMA](/azure/migrate/tutorial-assess-sql)
@@ -157,25 +157,25 @@ For more information, including detailed usage steps, see:
 
 Microsoft SQL Server Migration Assistant (SSMA) automates database migration to SQL Server from Microsoft access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools. But due to the variances in the process for each of the source systems, review the detailed [SQL Server Migration Assistant documentation](/sql/ssma/sql-server-migration-assistant).
 
-For more information, see: [SQL Server Migration Assistant overview](/sql/ssma/sql-server-migration-assistant).
+For more information, see [SQL Server Migration Assistant overview](/sql/ssma/sql-server-migration-assistant).
 
 ### Database Experimentation Assistant
 
-Database Experimentation Assistant (DEA) is an A/B testing solution for SQL Server upgrades. It helps evaluate a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server, can use these analysis metrics.
+Database Experimentation Assistant is an A/B testing solution for SQL Server upgrades. Database Experimentation Assistant helps you evaluate a targeted version of SQL for a specific workload. If you're upgrading from an earlier version of SQL Server (SQL Server 2005 and later) to any current version of SQL Server, you can use these analysis metrics.
 
 The Database Experimentation Assistant contains the following workflow activities:
 
-- **Capture:** The first step of SQL Server A/B testing is to capture a trace on your source server. The source server is usually the production server.
+- **Capture:** The first step of SQL Server A/B testing is to capture a trace on your source server. Usually, the source server is the production server.
 - **Replay:** The second step of SQL Server A/B testing is to replay the trace file that was captured to your target servers. Then, collect extensive traces from the replays for analysis.
 - **Analysis:** The final step is to generate an analysis report by using the replay traces. The analysis report can help you gain insight about the performance implications of the proposed change.
 
-For more information, see: [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview).
+For more information, see [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview).
 
 ### Azure Cosmos DB data migration tool
 
-Azure Cosmos DB data migration imports data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table Storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The data migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
+Azure Cosmos DB data migration imports data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table Storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. You can also use the data migration tool when migrating from a single partition collection to a multipartition collection for the SQL API.
 
-For more information, see: [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data).
+For more information, see [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data).
 
 ## [Third-party migration tools](#tab/third-party-tools)
 
@@ -185,37 +185,37 @@ Several third-party migration tools and ISV services can help you with the migra
 
 UnifyCloud is an ISV service that provides assessment, migration, and modernization automation tools.
 
-For more information, see: [UnifyCloud](https://www.unifycloud.com).
+For more information, see [UnifyCloud](https://www.unifycloud.com).
 
 ### Cloudamize
 
 Cloudamize is an ISV service that covers all phases of the migration strategy.
 
-For more information, see: [Cloudamize](https://www.cloudamize.com).
+For more information, see [Cloudamize](https://www.cloudamize.com).
 
 ### Zerto
 
 Zerto provides virtual replication handling for both Microsoft Hyper-V and VMware vSphere environments.
 
-For more information, see: [Zerto](https://go.microsoft.com/fwlink/?linkid=2152102).
+For more information, see [Zerto](https://go.microsoft.com/fwlink/?linkid=2152102).
 
 ### Carbonite
 
 Carbonite provides server and data migration solutions to migrate workloads to, from, or between any physical, virtual, or cloud-based environment.
 
-For more information, see: [Carbonite](https://www.carbonite.com/data-protection/data-migration-software).
+For more information, see [Carbonite](https://www.carbonite.com/data-protection/data-migration-software).
 
 ### Movere
 
-Movere is a discovery solution that provides the data and insights needed to plan cloud migrations and continuously optimize, monitor, and analyze IT environments with confidence.
+Movere, acquired by Microsoft in 2019, is a discovery solution that provides the required data and insights to plan cloud migrations and continuously optimize, monitor, and analyze IT environments with confidence.
 
-For more information, see: [Movere](https://www.movere.io).
+For more information, see [Movere](https://www.movere.io).
 
 ### Azure Cosmos DB partners
 
 You can choose between multiple experienced systems, integrator partners, and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 
-For more information, see: [Azure Cosmos DB partners migration ](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools).
+For more information, see [Azure Cosmos DB partners migration ](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools).
 
 Visit the [Azure migration and modernization center](https://azure.microsoft.com/migration/) to discover ready-to-use partner technology solutions to fit your migration scenarios. And you can also learn about other third-party migration tools and support services.
 
@@ -223,7 +223,7 @@ Visit the [Azure Database Migration Guide](/data-migration/) to see a range of d
 
 ## [Project management tools](#tab/project-management-tools)
 
-Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important to use a project management tool. There are many different tools available. Project managers in your organization might already have a favorite.
+Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, it's important to use a project management tool. There are many different tools available. Project managers in your organization might already have a favorite.
 
 Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly run during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](../../plan/template.md). You can then modify the template to reflect the [workloads](../../plan/workloads.md) and [assets](../../plan/assets.md) to be migrated.
 
