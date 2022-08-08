@@ -32,6 +32,12 @@ After you've created a taxonomy structure and agreed on naming standards, it's r
 
 After onboarding the Azure Arc-enabled SQL Managed Instance to resource groups and added tags, you can use [Resource Graph](/azure/governance/resource-graph/overview) queries, view groupings based on resource groups, or organize and inventory your resources using tags.
 
+## Data Controller and Custom location
+
+When planning for the deployment of an Azure Arc-enabled SQL Managed instance, consider that additional resources will be provisioned and will be projected in your Azure subscription. These resources are: an Arc-enabled Data Controller extension and a [custom location](/azure/azure-arc/platform/conceptual-custom-locations).
+
+You should include these resources as part of your resource organization methodology (tags and naming). It is especially important to consider that a custom location configures your Azure Arc-enabled Kubernetes clusters as target locations for deploying instances of Azure offerings and as such their naming and tagging should be relevant to your business and operations, aligning with physical location, data center name, and cloud environment. Resource naming convention for Azure Arc-enabled SQL MI should align with your line of business apps (LOB) using data services.
+
 ## Next steps
 
 For more information about your hybrid and multicloud cloud journey, see the following articles:
