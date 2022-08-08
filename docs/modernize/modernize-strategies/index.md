@@ -1,9 +1,9 @@
 ---
 title: Cloud modernization strategies
 description: Build the skills required to execute repeatable processes, which accelerate modernization of multiple applications.
-author: BrianBlanchard
-ms.author: chcomley
-ms.date: 07/20/2022
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice:

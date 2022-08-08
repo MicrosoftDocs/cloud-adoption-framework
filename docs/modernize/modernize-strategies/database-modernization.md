@@ -3,7 +3,7 @@ title: Modernize your SQL database in the cloud
 description: Understand and evaluate options for maturing your underlying data platforms for modernization.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 07/20/2022
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 

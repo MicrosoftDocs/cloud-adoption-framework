@@ -3,7 +3,7 @@ title: Modernize your applications in the cloud
 description: Learn to adopt and deploy modern application platforms during cloud adoption-related modernization.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 07/20/2022
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 

@@ -3,8 +3,7 @@ title: Adopt the cloud
 description: Use the Cloud Adoption Framework for Azure to understand the adoption horizons necessary to identify and prioritize, based on your adoption goals.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 07/26/2022
-
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice:

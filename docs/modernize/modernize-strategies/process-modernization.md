@@ -3,7 +3,7 @@ title: Modernize your process
 description: Understand how to evaluate your opportunities for growth and align with the modernize methodology.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 07/19/2022
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
