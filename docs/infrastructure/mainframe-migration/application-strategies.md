@@ -3,7 +3,7 @@ title: Mainframe application migration strategies
 description: Learn how to use rehost, retire, rebuild, or replace applications strategies to migrate from mainframe environments to Azure.
 author: njray
 ms.author: brblanch
-ms.date: 08/04/2022
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -16,11 +16,11 @@ When most teams migrate applications from mainframe environments to Azure, they 
 
 Application migration typically involves one or more of the following strategies:
 
-- *Rehost:* You move existing code, programs, and applications from the mainframe. You then recompile the code to run in a mainframe emulator hosted in a cloud instance. This approach typically starts with moving applications to a cloud-based emulator, and then migrating the database to a cloud-based database. Some engineering and refactoring are required with this strategy, along with data and file conversions.
+- *Rehost:* Move existing code, programs, and applications from the mainframe. Recompile the code to run in a mainframe emulator hosted in a cloud instance. This approach typically starts with moving applications to a cloud-based emulator, and then migrating the database to a cloud-based database. Some engineering and refactoring are required with this strategy, along with data and file conversions.
 
-    Alternatively, you can rehost using a traditional hosting provider. One of the principal benefits of the cloud is outsourcing infrastructure management. Find a datacenter provider that hosts your mainframe workloads for you. This model might buy some time, reduce vendor lock in, and produce interim cost savings.
+    Alternatively, you can rehost using a traditional hosting provider. One of the principal benefits of the cloud is outsourcing infrastructure management. Find a datacenter provider that hosts your mainframe workloads for you. This model can buy some time, reduce vendor lock in, and produce interim cost savings.
 
-- *Retire:* You retire applications that are no longer needed before migration.
+- *Retire:* Retire applications that are no longer needed before migration.
 
 - *Rebuild:* Some organizations choose to completely rewrite programs using modern techniques. Given the added cost and complexity of this approach, it's not as common as a lift-and-shift approach. Often after this type of migration, it makes sense to begin replacing modules and code using code transformation engines.
 
@@ -36,7 +36,7 @@ Azure services can emulate traditional mainframe environments. You can then reus
 
 Many mainframes have OLTP systems that process thousands or millions of updates for large numbers of users. These applications often use transaction processing and screen-form handling software, such as Customer Information Control System (CICS), Information Management System (IMS), and Terminal Interface Processor (TIP).
 
-When you move OLTP applications to Azure, emulators for mainframe transaction processing (TP) monitors can run as infrastructure as a service (IaaS) using virtual machines (VMs) on Azure. The web servers can also implement screen handling and form functionality. You can combine this approach with database APIs, such as ActiveX Data Objects (ADO), Open Database Connectivity (ODBC), and Java Database Connectivity (JDBC) for data access and transactions.
+When you move OLTP applications to Azure, emulators for mainframe transaction processing (TP) monitors can run as infrastructure as a service (IaaS) using virtual machines (VMs) on Azure. The web servers can also implement screen handling and form functionality. Combine this approach with database APIs, such as ActiveX Data Objects (ADO), Open Database Connectivity (ODBC), and Java Database Connectivity (JDBC) for data access and transactions.
 
 ### Time-constrained batch updates
 
@@ -46,7 +46,7 @@ Cloud-based batch environments use parallel compute and high-speed networks for 
 
 ### Data ingestion systems
 
-Mainframes ingest large batches of data from retail, financial services, manufacturing, and other solutions for processing. With Azure, you can use simple command-line utilities such as [AzCopy](/azure/storage/common/storage-use-azcopy-v10) for copying data to and from a storage location. You can also use the [Azure Data Factory](/azure/data-factory/introduction) service, to ingest data from disparate data stores and then create and schedule data-driven workflows.
+Mainframes ingest large batches of data from retail, financial services, manufacturing, and other solutions for processing. With Azure, you can use simple command-line utilities such as [AzCopy](/azure/storage/common/storage-use-azcopy-v10) for copying data to and from a storage location. You can also use the [Azure Data Factory](/azure/data-factory/introduction) service, to ingest data from disparate data stores and to create and schedule data-driven workflows.
 
 In addition to emulation environments, Azure provides platform as a service (PaaS) and analytics services that can enhance existing mainframe environments.
 
