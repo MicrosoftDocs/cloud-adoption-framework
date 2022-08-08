@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice:
+ms.subservice: 
 ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
