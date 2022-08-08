@@ -14,50 +14,54 @@ ms.custom: internal
 
 Machine learning operations (also called *MLOps*) is the application of DevOps principles to AI-infused applications. To implement machine learning operations in an organization, specific skills, processes, and technology must be in place. The objective is to deliver machine learning solutions that are robust, scalable, reliable, and automated.
 
-In this article, learn how to plan resources to support machine learning operations at the organization level. Review best practices and recommendations from adopting machine learning operations in the enterprise with Azure Machine Learning.
+In this article, learn how to plan resources to support machine learning operations at the organization level. Review best practices and recommendations that are based on using Azure Machine Learning to adopt machine learning operations in the enterprise.
 
 ## What is machine learning operations?
 
-Modern machine learning algorithms and frameworks make it increasingly easier to develop models that can make accurate predictions.
+Modern machine learning algorithms and frameworks make it increasingly easier to develop models that can make accurate predictions. Machine learning operations is a structured way to incorporate machine learning in application development in the enterprise.
 
-You might have built a machine learning model that exceeds all your accuracy expectations and impresses your business sponsors. Now it's time to deploy the model to production, but that might not be as easy as you had expected. It's likely that you have to put many things in place before the organization can use your model in production.
+In an example scenario, you've built a machine learning model that exceeds all your accuracy expectations and impresses your business sponsors. Now it's time to deploy the model to production, but that might not be as easy as you had expected. The organization likely will need to have people, processes, and technology in place before it can use your machine learning model in production.
 
 Over time, you or a colleague might develop a new model that works better than the original model. Replacing a machine learning model that's used in production introduces some concerns that are important to the organization:
 
-- You'll want to implement the new model without disrupting the business operations that rely on the original model.
-- For regulatory purposes, you might be required to re-create the model and explain the model's predictions if unusual or biased predictions are made.
-- The data you use in your machine learning training and model might change over time. With changes in the data, you might need to periodically retrain the model to maintain the accuracy of its predictions. A person or role will need to be assigned responsibility to feed the data, monitor the performance, retrain the model, and fix the model if it fails.
+- You'll want to implement the new model without disrupting the business operations that rely on the deployed model.
+- For regulatory purposes, you might be required to explain the model's predictions or re-create the model if unusual or biased predictions result from data in the new model.
+- The data you use in your machine learning training and model might change over time. With changes in the data, you might need to periodically retrain the model to maintain its prediction accuracy. A person or role will need to be assigned responsibility to feed the data, monitor the model's performance, retrain the model, and fix the model if it fails.
 
-To address these concerns, you might choose to implement a machine learning operations strategy for your project. Machine learning operations applies DevOps principles to AI-infused applications.
+Suppose you have an application that serves a model's predictions via REST API. Even a simple use case like this one might cause problems in production. Implementing a machine learning operations strategy can help you address deployment concerns and support business operations that rely on AI-infused applications.
 
-Consider a common use case: Suppose you have an application that serves a model's predictions via a REST API. Even a simple use case like this one might cause problems in production. Some machine learning operations tasks fit well in the general DevOps framework. Examples include setting up unit tests and integration tests and tracking changes by using version control. Other tasks are more unique to machine learning operations:
+Some machine learning operations tasks fit well in the general DevOps framework. Examples include setting up unit tests and integration tests and tracking changes by using version control. Other tasks are more unique to machine learning operations and might include:
 
 - Enable continuous experimentation and comparison against a baseline model.
 - Monitor incoming data to detect [data drift](/azure/machine-learning/how-to-monitor-datasets?tabs=python).
 - Trigger model retraining and set up a rollback for disaster recovery.
-- Create reusable data pipelines to use for training and scoring.
+- Create reusable data pipelines for training and scoring.
 
-The goal of machine learning operations is to close the gap between development and production and to deliver value to customers faster. To achieve this goal, you must rethink how you do things in development and production. The role of data scientists varies between and within organizations. The extent to which data scientists are involved in machine learning operations is the organization's choice. The [machine learning operations maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) can help you see where your organization is on the maturity scale and help you consider where you want to be.
+The goal of machine learning operations is to close the gap between development and production and to deliver value to customers faster. To achieve this goal, you must rethink traditional development and production processes. The [machine learning operations maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) can help you see where your organization is on the machine learning operations maturity scale and help you plan for future growth.
 
 ## Machine learning operations vs. DevOps
 
-Machine learning operations is different from DevOps in several key areas. In machine learning operations:
+Machine learning operations is different from DevOps in several key areas. Machine learning operations has these characteristics:
 
 - Exploration precedes development and operations.
 - The data science lifecycle requires an adaptive way of working.
-- Limits on data quality and availability limit the process.
+- Limits on data quality and availability limit progress.
 - A greater operational effort is required than in DevOps.
 - Work teams require specialists and domain experts.
 
-Also, review the [seven principles of machine learning operations](#seven-principles-of-machine-learning-operations).
+For a summary, review the [seven principles of machine learning operations](#seven-principles-of-machine-learning-operations).
 
 ### Exploration precedes development and operations
 
-Data science projects are different from application development or data engineering projects. A data science project might make it to production, but it might not. After an initial analysis, it might become clear that the business outcome can't be achieved with the available datasets. For this reason, an exploration phase usually is the first step in a data science project.
+Data science projects are different from application development or data engineering projects. A data science project might make it to production, but often more steps are involved than in a traditional deployment. After an initial analysis, it might become clear that the business outcome can't be achieved with the available datasets. A more detailed exploration phase usually is the first step in a data science project.
 
-The goal of the exploration phase is to define and refine the problem. You run exploratory data analysis, in which you use statistics and visualizations to confirm or falsify the problem hypotheses. There needs to be a common understanding that the project might not extend beyond this phase. It's important to make this phase as seamless as possible for a quick turnaround. Unless there's an element of security, processes and procedures should be avoided. The data scientist should be allowed to work with the tools and data they prefer. Real data is needed for data exploration work.
+The goal of the exploration phase is to define and refine the problem. During this phase, data scientists run exploratory data analysis. They use statistics and visualizations to confirm or falsify the problem hypotheses. Stakeholders should understand that the project might not extend beyond this phase. At the same time, it's important to make this phase as seamless as possible for a quick turnaround. Unless the problem to solve includes a security element, avoid restricting the exploratory phase with processes and procedures. Data scientists should be allowed to work with the tools and data they prefer. Real data is needed for this exploratory work.
 
-The experimentation and development stage usually begins when there's confidence that the data science project is feasible and can provide real business value. At this stage, development practices become increasingly important. It's a good practice to capture metrics for all of the experiments that are done at this stage. It's also important to incorporate source control so that you can compare models and toggle between different versions of the code if needed. Development activities include refactoring, testing, and automating exploration code in repeatable experimentation pipelines, and the creation of model serving applications and pipelines. Refactoring code into more modular components and libraries helps increase reusability and testability, and it allows for performance optimization. Finally, what is deployed into staging and production environments is the model serving application or batch inference pipelines. Next to monitoring of infrastructure reliability and performance, similar to what's done for a regular application with traditional DevOps, the quality of the data, the data profile, and the model must be continuously monitored at the risk of degradation or drift. Machine learning models require retraining over time to stay relevant in a changing environment.
+The project can move to the experimentation and development stages when stakeholders are confident that the data science project is feasible and can provide real business value. At this stage, development practices become increasingly important. It's a good practice to capture metrics for all of the experiments that are done at this stage. It's also important to incorporate source control so that you can compare models and toggle between different versions of the code.
+
+Development activities include refactoring, testing, and automating exploration code in repeatable experimentation pipelines. The organization must create applications and pipelines to serve the models. Refactoring code in modular components and libraries helps increase reusability, testing, and performance optimization.
+
+Finally, the application or batch inference pipelines that serve the models are deployed to staging or production environments. In addition to monitoring infrastructure reliability and performance like for a standard application, in a machine learning model deployment, you must continuously monitor the quality of the data, the data profile, and the model for degradation or drift. Machine learning models also require retraining over time to stay relevant in a changing environment.
 
 :::image type="content" source="media/mlops-stages.png" border="false" alt-text="Diagram of the machine learning DevOps stages explore, experiment and develop, and operate.":::
 
@@ -65,9 +69,9 @@ The experimentation and development stage usually begins when there's confidence
 
 Because the nature and quality of data initially is uncertain, you might not accomplish your business goals if you apply a typical DevOps process to a data science project. Exploration and experimentation are recurring activities and needs throughout the machine learning process. Teams at Microsoft use a project lifecycle and a working process that reflect the nature of data science-specific activities. The [Team Data Science Process](/azure/architecture/data-science-process/overview) and The [Data Science Lifecycle Process](https://github.com/dslp/dslp) are examples of reference implementations.
 
-### Limits on data quality and availability limit the process
+### Limits on data quality and availability limit progress
 
-For a machine learning team to effectively develop machine learning-infused applications, production data access is preferred across work environments. If production data access isn't possible because of compliance requirements or technical constraints, consider implementing [Azure role-based access control with Azure Machine Learning](/azure/machine-learning/how-to-assign-roles), [Just-in-Time access](/azure/security-center/security-center-just-in-time), or [data movement pipelines](/azure/data-factory/) to create production data replicas and enhance user productivity.
+For a machine learning team to effectively develop machine learning-infused applications, access to production data is preferred for all relevant work environments. If production data access isn't possible due to compliance requirements or technical constraints, consider implementing [Azure role-based access control with Azure Machine Learning](/azure/machine-learning/how-to-assign-roles), [just-in-time access](/azure/security-center/security-center-just-in-time), or [data movement pipelines](/azure/data-factory/) to create production data replicas and enhance user productivity.
 
 ### Machine learning requires a greater operational effort
 
@@ -75,27 +79,27 @@ Unlike traditional software, the performance of a machine learning solution is c
 
 ### Machine learning teams require specialists and domain experts
 
-Although data science projects share roles with regular IT projects, the success of a machine learning effort highly depends on having essential machine learning technology specialists and domain subject matter experts. The technology specialist has the right background to do end-to-end machine learning experimentation. The domain expert can support the specialist by analyzing and synthesizing data or by qualifying the data for use.
+Although data science projects share roles with regular IT projects, the success of a machine learning effort highly depends on having essential machine learning technology specialists and domain subject matter experts. A technology specialist has the right background to do end-to-end machine learning experimentation. A domain expert can support the specialist by analyzing and synthesizing data or by qualifying data for use.
 
 Common technical roles that are unique to data science projects are domain expert, data engineer, data scientist, AI engineer, model validator, and machine learning engineer. To learn more about roles and tasks in a typical data science team, see the [Team Data Science Process](/azure/architecture/data-science-process/roles-tasks).
 
 ### Seven principles of machine learning operations
 
-When you plan to adopt machine learning operations for your next machine learning project, consider applying the following core principles as the foundation:
+As you plan to adopt machine learning operations in your organization, consider applying the following core principles as the foundation:
 
-- **Version control code, data, and experimentation outputs:** Unlike in traditional software development, data has a direct influence on the quality of machine learning models. You should version your experimentation code base, but also version your datasets to ensure that you can reproduce experiments or inference results. Versioning experimentation outputs like models can save effort and the computational cost of re-creating them.
+- **Use version control for code, data, and experimentation outputs.** Unlike in traditional software development, data has a direct influence on the quality of machine learning models. You should version your experimentation code base, but also version your datasets to ensure that you can reproduce experiments or inference results. Versioning experimentation outputs like models can save effort and the computational cost of re-creating them.
 
-- **Use multiple environments:** To segregate development and testing from production work, [replicate](./ai-machine-learning-resource-organization.md) your infrastructure in at least two environments. Access control for users might be different for each environment.
+- **Use multiple environments.** To segregate development and testing from production work, [replicate](./ai-machine-learning-resource-organization.md) your infrastructure in at least two environments. Access control for users might be different for each environment.
 
-- **Manage your infrastructure and configurations as code:** When you create and update infrastructure components in your work environments, use [infrastructure as code](/azure/architecture/framework/devops/automation-infrastructure) to avoid creating inconsistencies between environments. Manage machine learning experiment job specifications as code so that you can easily rerun and reuse a version of your experiment across environments.
+- **Manage your infrastructure and configurations as code.** When you create and update infrastructure components in your work environments, use [infrastructure as code](/azure/architecture/framework/devops/automation-infrastructure) to avoid creating inconsistencies between environments. Manage machine learning experiment job specifications as code so that you can easily rerun and reuse a version of your experiment across environments.
 
-- **Track and manage machine learning experiments:** Track KPIs and other artifacts for your machine learning experiments. When you keep a history of job performance, you can do a quantitative analysis of experimentation success and enhance team collaboration and agility.
+- **Track and manage machine learning experiments.** Track KPIs and other artifacts for your machine learning experiments. When you keep a history of job performance, you can do a quantitative analysis of experimentation success and enhance team collaboration and agility.
 
-- **Test code, validate data integrity, and ensure model quality:** [Test](/azure/architecture/framework/scalability/test-checklist) your experimentation code base for correct data preparation and feature extraction functions, data integrity, and model performance.
+- **Test code, validate data integrity, and ensure model quality.** [Test](/azure/architecture/framework/scalability/test-checklist) your experimentation code base for correct data preparation and feature extraction functions, data integrity, and model performance.
 
-- **Machine learning continuous integration and delivery:** Use [continuous integration](/azure/architecture/framework/devops/release-engineering-ci) to automate testing for your team. Include model training as part of continuous training pipelines. Include A/B testing as part of your [release](/azure/architecture/framework/devops/release-engineering-cd) to ensure that only a qualitative model is used in production.
+- **Machine learning continuous integration and delivery.** Use [continuous integration](/azure/architecture/framework/devops/release-engineering-ci) to automate testing for your team. Include model training as part of continuous training pipelines. Include A/B testing as part of your [release](/azure/architecture/framework/devops/release-engineering-cd) to ensure that only a qualitative model is used in production.
 
-- **Monitor services, models, and data:** When you serve machine learning models in an operationalized environment, it's critical to monitor the services for their infrastructure uptime, compliance, and model quality. [Set up monitoring](/learn/modules/monitor-data-drift-with-azure-machine-learning/) to identify data and model drift and to understand whether retraining is required, or to set up triggers for automatic retraining.
+- **Monitor services, models, and data.** When you serve machine learning models in an operationalized environment, it's critical to monitor the services for their infrastructure uptime, compliance, and model quality. [Set up monitoring](/learn/modules/monitor-data-drift-with-azure-machine-learning/) to identify data and model drift and to understand whether retraining is required, or to set up triggers for automatic retraining.
 
 ## Machine learning operations best practices
 
