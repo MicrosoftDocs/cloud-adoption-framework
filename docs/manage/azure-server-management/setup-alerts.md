@@ -24,7 +24,7 @@ Azure Monitor offers [alerting](/azure/azure-monitor/alerts/alerts-overview) cap
 - The health of the underlying Azure platform.
 - Tests for website availability.
 
-See the [list of Azure Monitor data sources](/azure/azure-monitor/agents/data-sources) for a more detailed description of the sources of monitoring data that this service collects.
+See the [list of Azure Monitor data sources](/azure/azure-monitor/data-sources) for a more detailed description of the sources of monitoring data that this service collects.
 
 For details about manually creating and managing alerts by using the Azure portal, see the [Azure Monitor documentation](/azure/azure-monitor/alerts/alerts-metric).
 
