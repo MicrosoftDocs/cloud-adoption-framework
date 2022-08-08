@@ -20,7 +20,7 @@ Aligning your business to your cloud modernization goals is the first step in mo
 
 :::image type="content" source="../../_images/modernize/business-alignment/business-alignment.png" alt-text="Image showing where you are in the business alignment process.":::
 
-These are sequential processes. Make sure you envision the possibilities before you evaluate how ready you are to reach those goals. When you know the path that you're prepared to take, you can commit to a plan that has a great chance of success.
+The processes are sequential. Make sure you envision the possibilities before you evaluate how ready you're to reach those goals. When you know the path that you're prepared to take, you can commit to a plan that has a great chance of success.
 
 ## Next Step
 

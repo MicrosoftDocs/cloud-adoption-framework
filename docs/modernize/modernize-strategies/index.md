@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Cloud modernization strategies
 
-Cloud modernization strategies is where the change happens. Processes evolve and technology improves. [Business alignment](/docs/modernize/business-alignment/index.md) must take place before this step.
+Cloud modernization strategies are where the change happens. Processes evolve and technology improves. [Business alignment](/docs/modernize/business-alignment/index.md) must take place before this step.
 
 The "modernize strategies" process is where you:
 
@@ -22,7 +22,7 @@ The "modernize strategies" process is where you:
 
 :::image type="content" source="../../_images/modernize/modernize-strategies/modernize-strategies.png" alt-text="Image showing where you are in the business alignment process.":::
 
-As we saw in the [commit to modernization](/docs/modernize/business-alignment/commit-to-modernization-plan.md) step, process modernization is required for any cloud modernization journey. It's foundational to effective application and database modernization. After modernizing your process, you are free to choose what to modernize next: databases or applications.
+As we saw in the [commit to modernization](/docs/modernize/business-alignment/commit-to-modernization-plan.md) step, process modernization is required for any cloud modernization journey. It's foundational to effective application and database modernization. After modernizing your process, you're free to choose what to modernize next: databases or applications.
 
 ## Next steps
 
