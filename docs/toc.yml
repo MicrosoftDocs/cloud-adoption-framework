@@ -932,16 +932,13 @@ items:
           href: modernize/business-alignment/commit-to-modernization-plan.md      
       - name: Modernization disciplines
         items:
-        - name: DevOps practices 
-          href: modernize/modernize-disciplines/devops-practices-modernization.md
-        - name: Data platforms
-          href: modernize/modernize-disciplines/data-platform-modernization.md
-        - name: Application platforms
-          href: modernize/modernize-disciplines/application-platform-modernization.md
-        - name: Developer alignment
-          href: modernize/modernize-disciplines/developer-alignment-modernization.md
-        - name: Testing & architecture
-          href: modernize/modernize-disciplines/testing-architecture-modernization.md
+        - name: Process modernization 
+          href: modernize/modernize-strategies/process-modernization.md
+        - name: Database modernization
+          href: modernize/modernize-strategies/database-modernization.md
+        - name: Application modernization
+          href: modernize/modernize-strategies/database-modernization.md
+
     - name: Innovate
       items:
       - name: Overview
