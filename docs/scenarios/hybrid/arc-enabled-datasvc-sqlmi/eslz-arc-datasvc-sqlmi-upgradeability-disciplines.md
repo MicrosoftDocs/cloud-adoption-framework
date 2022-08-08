@@ -7,7 +7,7 @@ ms.date: 07/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance
