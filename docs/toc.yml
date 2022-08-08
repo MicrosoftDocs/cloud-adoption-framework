@@ -493,7 +493,9 @@ items:
     items:
     - name: Overview
       href: adopt/index.md
-    - name: How to adopt the cloud 
+    - name: How to adopt the cloud
+      href: adopt/how-to-adopt-the-cloud.md
+    - name: Migrate or modernize first? 
       href: adopt/migrate-modernize-approaches.md
     - name: Migrate
       items:
