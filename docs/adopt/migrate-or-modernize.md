@@ -18,7 +18,7 @@ Customers often ask if they should migrate first and modernize later or moderniz
 
 ## Rehost ("migrate first, modernize later")
 
-This approach is often called rehosting or "lift-and-shift." Here, you move an existing application to the cloud as-is. This approach allows you to quickly benefit from the cloud.
+Rehosting is often called "lift-and-shift." Here, you move an existing application to the cloud as-is. This approach allows you to quickly benefit from the cloud.
 
 **Rehosting Priorities:** Migrate before modernizing if you want immediate:
 
@@ -29,7 +29,7 @@ This approach is often called rehosting or "lift-and-shift." Here, you move an e
 
 ## Replatform ("modernize during the move")
 
-This approach is often called replatforming. Here, you'll modernize aspects of an application during the migration process.
+Replaforming lets you modernize aspects of an application during the migration process.
 
 **Replatforming Priorities:** Modernize during the move if you want:
 
