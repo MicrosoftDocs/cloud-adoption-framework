@@ -261,7 +261,7 @@ Learn more about how to organize and set up Azure Machine Learning environments,
 > [!div class="nextstepaction"]
 > [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
 
-Learn more about how to manage budgets, quotas, and costs by using Azure Machine Learning:
+Learn more about how to manage budgets, quotas, and costs at the organization level by using Azure Machine Learning:
 
 > [!div class="nextstepaction"]
-> [Manage budgets, costs, and quotas in the organization with Azure Machine Learning](./optimize-ai-machine-learning-cost.md)
+> [Manage machine learning budgets, costs, and quotas with Azure Machine Learning](./optimize-ai-machine-learning-cost.md)
