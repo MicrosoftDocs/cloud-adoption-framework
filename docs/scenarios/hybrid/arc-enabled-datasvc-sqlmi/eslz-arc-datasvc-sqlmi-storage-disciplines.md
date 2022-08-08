@@ -1,6 +1,6 @@
 ---
 title: Storage Disciplines for Azure Arc-Enabled Data Services
-description: Learn design considerations and recommendations for cost governance for Azure Arc-enabled Kubernetes.
+Learn design considerations and recommendations for storage for Azure Arc-enabled SQL Managed Instance.
 author: jpocloud
 ms.author: johnpoole
 ms.date: 08/04/2022
