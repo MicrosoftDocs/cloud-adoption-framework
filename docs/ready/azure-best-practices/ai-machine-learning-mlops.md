@@ -71,7 +71,7 @@ Because the nature and quality of data initially is uncertain, you might not acc
 
 ### Limits on data quality and availability limit progress
 
-For a machine learning team to effectively develop machine learning-infused applications, access to production data is preferred for all relevant work environments. If production data access isn't possible due to compliance requirements or technical constraints, consider implementing [Azure role-based access control with Azure Machine Learning](/azure/machine-learning/how-to-assign-roles), [just-in-time access](/azure/security-center/security-center-just-in-time), or [data movement pipelines](/azure/data-factory/) to create production data replicas and enhance user productivity.
+For a machine learning team to effectively develop machine learning-infused applications, access to production data is preferred for all relevant work environments. If production data access isn't possible due to compliance requirements or technical constraints, consider implementing [Azure role-based access control (Azure RBAC) with Azure Machine Learning](/azure/machine-learning/how-to-assign-roles), [just-in-time access](/azure/security-center/security-center-just-in-time), or [data movement pipelines](/azure/data-factory/) to create production data replicas and enhance user productivity.
 
 ### Machine learning requires a greater operational effort
 
@@ -89,35 +89,35 @@ As you plan to adopt machine learning operations in your organization, consider 
 
 - **Use version control for code, data, and experimentation outputs.** Unlike in traditional software development, data has a direct influence on the quality of machine learning models. You should version your experimentation code base, but also version your datasets to ensure that you can reproduce experiments or inference results. Versioning experimentation outputs like models can save effort and the computational cost of re-creating them.
 
-- **Use multiple environments.** To segregate development and testing from production work, [replicate](./ai-machine-learning-resource-organization.md) your infrastructure in at least two environments. Access control for users might be different for each environment.
+- **Use multiple environments.** To separate development and testing from production work, [replicate](./ai-machine-learning-resource-organization.md) your infrastructure in at least two environments. Access control for users might be different for each environment.
 
-- **Manage your infrastructure and configurations as code.** When you create and update infrastructure components in your work environments, use [infrastructure as code](/azure/architecture/framework/devops/automation-infrastructure) to avoid creating inconsistencies between environments. Manage machine learning experiment job specifications as code so that you can easily rerun and reuse a version of your experiment across environments.
+- **Manage your infrastructure and configurations as code.** When you create and update infrastructure components in your work environments, use [infrastructure as code](/azure/architecture/framework/devops/automation-infrastructure), so inconsistencies don't develop in your environments. Manage machine learning experiment job specifications as code so that you can easily rerun and reuse a version of your experiment in multiple environments.
 
-- **Track and manage machine learning experiments.** Track KPIs and other artifacts for your machine learning experiments. When you keep a history of job performance, you can do a quantitative analysis of experimentation success and enhance team collaboration and agility.
+- **Track and manage machine learning experiments.** Track key performance indicators and other artifacts for your machine learning experiments. When you keep a history of job performance, you can do a quantitative analysis of experimentation success and enhance team collaboration and agility.
 
 - **Test code, validate data integrity, and ensure model quality.** [Test](/azure/architecture/framework/scalability/test-checklist) your experimentation code base for correct data preparation and feature extraction functions, data integrity, and model performance.
 
-- **Machine learning continuous integration and delivery.** Use [continuous integration](/azure/architecture/framework/devops/release-engineering-ci) to automate testing for your team. Include model training as part of continuous training pipelines. Include A/B testing as part of your [release](/azure/architecture/framework/devops/release-engineering-cd) to ensure that only a qualitative model is used in production.
+- **Machine learning continuous integration and delivery.** Use [continuous integration (CI)](/azure/architecture/framework/devops/release-engineering-ci) to automate testing for your team. Include model training as part of continuous training pipelines. Include A/B testing as part of your [release](/azure/architecture/framework/devops/release-engineering-cd) to ensure that only a qualitative model is used in production.
 
-- **Monitor services, models, and data.** When you serve machine learning models in an operationalized environment, it's critical to monitor the services for their infrastructure uptime, compliance, and model quality. [Set up monitoring](/learn/modules/monitor-data-drift-with-azure-machine-learning/) to identify data and model drift and to understand whether retraining is required, or to set up triggers for automatic retraining.
+- **Monitor services, models, and data.** When you serve models in a machine learning operations environment, it's critical to monitor the services for their infrastructure uptime, compliance, and model quality. [Set up monitoring](/learn/modules/monitor-data-drift-with-azure-machine-learning/) to identify data and model drift and to understand whether retraining is required. Consider setting up triggers for automatic retraining.
 
-## Machine learning operations best practices
+## Best practices from Azure Machine Learning
 
-Azure Machine Learning offers asset management, orchestration, and automation services to help you manage the lifecycle of your machine learning model training and deployment workflows. Next, review the best practices and recommendations to apply machine learning operations in the resource areas of people, process, and technology, supported by Azure Machine Learning.
+Azure Machine Learning offers asset management, orchestration, and automation services to help you manage the lifecycle of your machine learning model training and deployment workflows. Review the best practices and recommendations to apply machine learning operations in the resource areas of people, process, and technology, all supported by Azure Machine Learning.
 
 ### People
 
-- Work in project teams to best use specialist and domain knowledge in your organization. [Organize and set up Azure Machine Learning workspaces](./ai-machine-learning-resource-organization.md) for each project to comply with use case segregation requirements.
+- Work in project teams to best use specialist and domain knowledge in your organization. Set up [Azure Machine Learning workspaces](./ai-machine-learning-resource-organization.md) for each project to comply with use case segregation requirements.
 
 - Define a set of responsibilities and tasks as a role so that any team member on a machine learning operations project team can be assigned to and fulfill multiple roles. Use custom roles in Azure to define a set of granular [Azure RBAC operations for Azure Machine Learning](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) that each role can perform.
 
-- Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/architecture/data-science-process/overview) provides a reference lifecycle implementation.
+- Standardize on a project lifecycle and Agile methodology. The [Team Data Science Process](/azure/architecture/data-science-process/overview) provides a reference lifecycle implementation.
 
 - Balanced teams can run all machine learning operations stages, including exploration, development, and operations.
 
 ### Process
 
-- Standardize on a code template for code reuse and to accelerate ramp-up time on a new project or when a new team member joins the project. [Azure Machine Learning pipelines](/azure/machine-learning/concept-ml-pipelines), [job submission scripts](/python/api/azureml-core/azureml.core.scriptrun), and [CI/CD pipelines](/azure/machine-learning/how-to-github-actions-machine-learning) work well as a basis when you create new templates.
+- Standardize on a code template for code reuse and to accelerate ramp-up time on a new project or when a new team member joins the project. Use [Azure Machine Learning pipelines](/azure/machine-learning/concept-ml-pipelines), [job submission scripts](/python/api/azureml-core/azureml.core.scriptrun), and [CI/CD pipelines](/azure/machine-learning/how-to-github-actions-machine-learning) as a basis for new templates.
 
 - Use version control. Jobs that are submitted from a Git-backed folder [automatically track repo metadata](/azure/machine-learning/concept-train-model-git-integration) with the job in Azure Machine Learning for reproducibility.
 
@@ -125,31 +125,31 @@ Azure Machine Learning offers asset management, orchestration, and automation se
 
 - Build up a [run history](/azure/machine-learning/how-to-track-monitor-analyze-runs?tabs=python) of experiment runs for comparison, planning, and collaboration. Use an experiment-tracking framework like [MLflow](/azure/machine-learning/how-to-use-mlflow) to collect metrics.
 
-- Continuously measure and control the quality of your team's work through [continuous integration](/azure/architecture/microservices/ci-cd) on the full experimentation code base.
+- Continuously measure and control the quality of your team's work through [CI](/azure/architecture/microservices/ci-cd) on the full experimentation code base.
 
 - Terminate training early in the process when a model doesn't converge. Use an experiment-tracking framework and the [run history](/azure/machine-learning/how-to-track-monitor-analyze-runs?tabs=python) in Azure Machine Learning to monitor job runs.
 
-- Define an experiment and model management strategy. Consider using a name like *champion* to refer to the current baseline model, or refer to *challenger* models for candidate models, which might outperform the *champion* model in production. Apply tags in Azure Machine Learning to mark experiment and models. In some scenarios, like sales forecasting, it might take months to determine whether the model's predictions are accurate.
+- Define an experiment and model management strategy. Consider using a name like *champion* to refer to the current baseline model. A *challenger* model is a candidate model that might outperform the *champion* model in production. Apply tags in Azure Machine Learning to mark experiments and models. In a scenario like sales forecasting, it might take months to determine whether the model's predictions are accurate.
 
-- Elevate [continuous integration](/azure/architecture/microservices/ci-cd) to continuous training by including model training as part of the build. For example, begin model training on the full dataset with each pull request.
+- Elevate [CI](/azure/architecture/microservices/ci-cd) for continuous training by including model training in the build. For example, begin model training on the full dataset with each pull request.
 
-- Shorten the time it takes to get feedback on the quality of machine learning pipeline by running an automated build on a sample of the data. Use [Azure Machine Learning pipeline parameters](/azure/machine-learning/how-to-use-pipeline-parameter) to parameterize input [datasets](/azure/machine-learning/how-to-train-with-datasets).
+- Shorten the time it takes to get feedback on the quality of the machine learning pipeline by running an automated build on a data sample. Use [Azure Machine Learning pipeline parameters](/azure/machine-learning/how-to-use-pipeline-parameter) to parameterize input [datasets](/azure/machine-learning/how-to-train-with-datasets).
 
-- Use [continuous deployment for machine learning models](/azure/machine-learning/how-to-safely-rollout-managed-endpoints) to automate deployment and testing of real-time scoring services in your Azure development, test, and production environments.
+- Use [continuous deployment (CD) for machine learning models](/azure/machine-learning/how-to-safely-rollout-managed-endpoints) to automate deployment and testing real-time scoring services in your Azure environments.
 
-- In some regulated industries, model validation steps might be required before a machine learning model can be used in a production environment. By automating validation steps, to an extent, you might accelerate time to delivery. When manual review or validation steps are still the bottleneck, consider whether you can certify the automated model validation pipeline. Use resource tags in Azure Machine Learning to indicate asset compliance and candidates for review, or as triggers for deployment.
+- In some regulated industries, you might be required to complete model validation steps before you can use a machine learning model in a production environment. Automating validation steps might accelerate time to delivery. When manual review or validation steps are still a bottleneck, consider whether you can certify the automated model validation pipeline. Use resource tags in Azure Machine Learning to indicate asset compliance and candidates for review or as triggers for deployment.
 
-- Don't retrain in production and directly replace the production model without any integration testing. Even though model performance and functional requirements appear good, among other potential issues, a model might have grown its environment footprint and breaks the server environment.
+- Don't retrain in production, and then directly replace the production model without doing integration testing. Even though model performance and functional requirements might appear good, among other potential issues, a retrained model might have a larger environment footprint and break the server environment.
 
-- When production data access is available only in production, use [Azure RBAC](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) and [custom roles](/azure/machine-learning/how-to-assign-roles) to give a select number of machine learning practitioners read access. For example, some roles might need to read the data for data exploration. Alternatively, make a data copy available in the nonproduction environments.
+- When production data access is available only in production, use [Azure RBAC](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) and [custom roles](/azure/machine-learning/how-to-assign-roles) to give a select number of machine learning practitioners read access. Some roles might need to read the data for related data exploration. Alternatively, make a data copy available in nonproduction environments.
 
 - Agree on naming conventions and tags for Azure Machine Learning [experiments](/python/api/azureml-core/azureml.core.experiment.experiment) to differentiate retraining baseline machine learning pipelines from experimental work.
 
 ### Technology
 
-- If you currently submit jobs via Azure Machine Learning studio UI or the CLI, instead of submitting jobs via the SDK, use the CLI or [Azure DevOps Machine Learning tasks](https://marketplace.visualstudio.com/items?itemName=ms-air-aiagility.vss-services-azureml) to configure automation pipeline steps. This process might reduce the code footprint by reusing the same job submissions directly from automation pipelines.
+- If you currently submit jobs via the Azure Machine Learning studio UI or CLI, instead of submitting jobs via the SDK, use the CLI or [Azure DevOps Machine Learning tasks](https://marketplace.visualstudio.com/items?itemName=ms-air-aiagility.vss-services-azureml) to configure automation pipeline steps. This process might reduce the code footprint by reusing the same job submissions directly from automation pipelines.
 
-- Use event-based programming. For example, trigger an offline model testing pipeline by using Azure Functions after a new model is registered. Or send a notification to a designated email alias when a critical pipeline fails to run. Azure Machine Learning [creates events in Azure Event Grid](/azure/machine-learning/how-to-use-event-grid). You can subscribe to be notified of an event.
+- Use event-based programming. For example, trigger an offline model testing pipeline by using Azure Functions after a new model is registered. Or, send a notification to a designated email alias when a critical pipeline fails to run. Azure Machine Learning [creates events in Azure Event Grid](/azure/machine-learning/how-to-use-event-grid). Multiple roles can subscribe to be notified of an event.
 
 - When you use Azure DevOps for automation, use [Azure DevOps Tasks for Machine Learning](https://marketplace.visualstudio.com/items?itemName=ms-air-aiagility.vss-services-azureml) to use machine learning models as pipeline triggers.
 
@@ -157,21 +157,27 @@ Azure Machine Learning offers asset management, orchestration, and automation se
 
 - Consider using a staging environment to test machine learning pipeline system integration with upstream or downstream application components.
 
-- Create unit and integration tests for your inference endpoints for enhanced debugging and accelerated time to deployment.
+- Create unit and integration tests for your inference endpoints for enhanced debugging and to accelerate time to deployment.
 
 - To trigger retraining, use [dataset monitors](/azure/machine-learning/how-to-monitor-datasets) and [event-driven workflows](/azure/machine-learning/how-to-use-event-grid). Subscribe to data drift events and automate the trigger of [machine learning pipelines for retraining](/azure/machine-learning/how-to-retrain-designer).
 
 ## AI factory for organization machine learning operations
 
-A data science team might decide it can manage a handful of machine learning use cases internally. Adopting machine learning operations helps an organization set up project teams for better quality, reliability, and maintainability of solutions through balanced teams, supported processes, and technology automation. A team that adopts machine learning operations can scale and focus on developing new use cases.
+A data science team might decide it can manage multiple machine learning use cases internally. Adopting machine learning operations helps an organization set up project teams for better quality, reliability, and maintainability of solutions. Through balanced teams, supported processes, and technology automation, a team that adopts machine learning operations can scale and focus on developing new use cases.
 
-As the number of use cases grows in an organization, the management burden of supporting the use cases grows linearly, or even more. The challenge becomes how to use organizational scale to accelerate time to market, quicker assessment of use case feasibility, enable repeatability, and how to best use the available resources and skillsets across the full range of projects.
+As the number of use cases grows in an organization, the management burden of supporting the use cases grows linearly, or even more. The challenge for the organization becomes how to accelerate time to market, support quicker assessment of use case feasibility, implement repeatability, and best use available resources and skillsets on a range of projects. For many organizations, developing an AI factory is the solution.
 
-An AI factory is the development of repeatable business process and a collection of standardized artifacts to accelerate the development and deployment of a large set of machine learning use cases. An AI factory optimizes team setup, recommended practices, machine learning operations strategy, architectural patterns, and reusable templates that are tailored to business requirements.
+An AI factory is a system of repeatable business processes and standardized artifacts that facilitates developing and deploying a large set of machine learning use cases. An AI factory optimizes team setup, recommended practices, machine learning operations strategy, architectural patterns, and reusable templates that are tailored to business requirements.
+
+A successful AI factory relies on repeatable processes and reusable assets to help the organization efficiently scale from tens of use cases to thousands of use cases.
+
+The following figure summarizes key elements of an AI factory:
+
+:::image type="content" source="media/ai-factory-summary.png" border="false" alt-text="Diagram of the key elements of an AI factory.":::
 
 ### Standardize on repeatable architectural patterns
 
-Repeatability is a key part of developing a factory process. Data science teams can accelerate project development and improve consistency across projects by developing a few repeatable architectural patterns that cover most of the machine learning use cases for their organization. When these patterns are in place, most projects can use the patterns to get the following benefits:
+Repeatability is a key characteristic of an AI factory. Data science teams can accelerate project development and improve consistency across projects by developing a few repeatable architectural patterns that cover most of the machine learning use cases for their organization. When these patterns are in place, most projects can use the patterns to get the following benefits:
 
 - Accelerated design phase
 - Accelerated approvals from IT and security teams when they reuse tools across projects
@@ -182,11 +188,11 @@ The architectural patterns can include but aren't limited to the following topic
 - Preferred services for each stage of the project
 - Data connectivity and governance
 - A machine learning operations strategy tailored to the requirements of the industry, business, or data classification
-- Experiment management process *Champion* or *Challenger* models
+- Experiment management champion and challenger models
 
 ### Facilitate cross-team collaboration and sharing
 
-Shared code repositories and utilities can accelerate the development of machine learning solutions. These repositories can be developed in a modular way during project development so that they're generic enough to be used in other projects. They can be made available in a central repository that all data science teams can access.
+Shared code repositories and utilities can accelerate the development of machine learning solutions. Code repositories can be developed in a modular way during project development so that they're generic enough to be used in other projects. They can be made available in a central repository that all data science teams can access.
 
 #### Share and reuse intellectual property
 
@@ -194,20 +200,20 @@ To maximize code reuse, review the following intellectual property at the beginn
 
 - Internal code that was designed to reuse in the organization. Examples include packages and modules.
 - Datasets that were created in other machine learning projects or which are available in the Azure ecosystem.
-- Existing data science projects that have similar architecture and business problem.
-- GitHub or open-source repos that can accelerate the project.
+- Existing data science projects that have a similar architecture and business problems.
+- GitHub or open source repositories that can accelerate the project.
 
-Project retrospectives should include an action item to review if elements of the project can be shared and generalized for broader reuse. This way, the list of assets the organization can share and reuse expands over time.
+Any project retrospective should include an action item to determine whether elements of the project can be shared and generalized for broader reuse. The list of assets the organization can share and reuse expands over time.
 
 To help with sharing and discovery, many organizations have introduced shared repositories to organize code snippets and machine learning artifacts. Artifacts in Azure Machine Learning, including [datasets](/azure/machine-learning/how-to-create-register-datasets), [models](/azure/machine-learning/how-to-create-register-datasets), [environments](/python/api/azureml-core/azureml.core.environment(class)), and [pipelines](/python/api/azureml-pipeline-core/azureml.pipeline.core.pipeline(class)), can be defined as code, so you can share them efficiently across projects and workspaces.
 
 #### Project templates
 
-To accelerate the process of migrating existing solutions and maximize code reuse when starting a new project, many companies have standardized on a project template to kick start a new project. Examples of project templates recommended for use with Azure Machine Learning are [Azure Machine Learning examples](https://github.com/Azure/azureml-examples), [Data science lifecycle process](https://github.com/dslp/dslp), and [Team data science process](https://github.com/Azure/Azure-TDSP-ProjectTemplate).
+To accelerate the process of migrating existing solutions and to maximize code reuse, many organizations standardize on a project template to kickstart new projects. Examples of project templates that are recommended for use with Azure Machine Learning are [Azure Machine Learning examples](https://github.com/Azure/azureml-examples), the [Data Science Lifecycle Process](https://github.com/dslp/dslp), and the [Team Data Science Process](https://github.com/Azure/Azure-TDSP-ProjectTemplate).
 
 #### Central data management
 
-The process of getting access to data for exploration or production usage can be time consuming. Many companies centralize their data management to bring together data producers and data consumers for easier access to data for machine learning experimentation.
+The process of getting access to data for exploration or production usage can be time consuming. Many organizations centralize data management to bring together data producers and data consumers for easier access to data for machine learning experimentation.
 
 #### Shared utilities
 
@@ -217,15 +223,15 @@ Use Azure Monitor metrics to build a dashboard for Azure Machine Learning and as
 
 ### Specialist machine learning engineering team
 
-Many companies have implemented the role of the machine learning engineer who specializes in the creation and operation of robust machine learning pipelines, drift monitoring and retraining workflows, monitoring dashboards, and drives overall responsibility for industrializing the machine learning solution from development to production. They work closely with data engineering, architects, and security and operations to ensure all the necessary controls are in place.
+Many organizations have implemented the role of machine learning engineer. A machine learning engineer specializes in creating and running robust machine learning pipelines, drift monitoring and retraining workflows, and monitoring dashboards. The engineer has  overall responsibility for industrializing the machine learning solution, from development to production. The engineer works closely with data engineering, architects, security ,and operations to ensure that all necessary controls are in place.
 
-While data science requires deep domain expertise, machine learning engineering as a discipline is more technical in focus. This difference makes the machine learning engineer more flexible, so they can work across various projects and business departments. Large data science practices might benefit from a specialist machine learning engineering team that drives repeatability and reuse of automation workflows across various use cases and business areas.
+Although data science requires deep domain expertise, machine learning engineering is more technical in focus. The difference makes the machine learning engineer more flexible, so they can work on various projects and with various business departments. Large data science practices might benefit from a specialist machine learning engineering team that drives repeatability and reuse of automation workflows across various use cases and business areas.
 
 ### Enablement and documentation
 
-It's important to provide clear guidance about the AI factory process for new and existing teams and users. Guidance helps ensure consistency and reduce the effort required from the machine learning engineering team when it industrializes a project. Consider designing content specifically for the various roles in your organization.
+It's important to provide clear guidance about the AI factory process for new and existing teams and users. Guidance helps ensure consistency and reduce the effort that's required from the machine learning engineering team when it industrializes a project. Consider designing content specifically for the various roles in your organization.
 
-Everyone has a unique way of learning, so a mixture of the following types of guidance can help accelerate the adoption of the AI factory framework:
+Everyone has a unique way of learning, so a mixture of the following types of guidance can help accelerate adoption of the AI factory framework:
 
 - A central hub that has links to all artifacts. For example, this hub might be a channel on Microsoft Teams or a Microsoft SharePoint site.
 - Training and an enablement plan designed for each role.
@@ -240,19 +246,11 @@ The [Azure machine learning operations video series](https://www.youtube.com/pla
 
 ### Ethics
 
-Ethics plays an instrumental role in the design of an AI solution. If ethical principles aren't implemented, trained models can exhibit the same bias present in the data they were trained on. This issue can result in the project being discontinued and, more importantly, it can risk the organization's reputation.
+Ethics plays an instrumental role in the design of an AI solution. If ethical principles aren't implemented, trained models might exhibit the same bias that's present in the data they were trained on. The result might be that the project is discontinued. More importantly, the organization's reputation might be at risk.
 
-To ensure that the key ethical principles that the company stands for are implemented across projects, a list of these principles, along with ways to validate them from a technical perspective during the testing phase, should be provided. Use the machine learning features in Azure Machine Learning to learn what responsible machine learning is and ways you can put it into practice.
+To ensure that the key ethical principles that the organization stands for are implemented across projects, the organization should provide a list of these principles and ways to validate them from a technical perspective during the testing phase. Use the machine learning features in Azure Machine Learning to understand what responsible machine learning is and how to build it into your machine learning operations.
 
-### Summary
-
-A successful AI factory relies on repeatable processes and reusable assets to help the organization efficiently scale from tens of use cases to thousands of use cases.
-
-The following figure summarizes key elements of an AI factory:
-
-:::image type="content" source="media/ai-factory-summary.png" border="false" alt-text="Diagram of the key elements of an AI factory.":::
-
-Not every organization's machine learning operations requirements are the same. The machine learning operations architecture of a large, multinational enterprise probably won't be the same as a small startup's infrastructure. Organizations typically begin small and build up as their maturity, model catalog, and experience grows.
+Not every organization's machine learning operations requirements are the same. The machine learning operations architecture of a large, multinational enterprise probably won't be the same as a small startup infrastructure. Organizations typically begin small and build up as their maturity, model catalog, and experience grows.
 
 ## Next steps
 
