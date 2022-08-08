@@ -26,7 +26,7 @@ Learn how to modernize any application or framework in the cloud.
 
 Modernize your applications. Find the balance of control and productivity that meets your needs.
 
-In the table, find your desired level of control vs. productivity. Then, see if the solution meets your needs. Follow the implementation guidance for your use case.
+In the table below, find your desired level of control vs. productivity. Then, see if the solution given meets your needs. When you find the right solution, follow the implementation guidance.
 
 | Control vs. Productivity | Solution | Your Needs | Implementation guidance |
 | --- | --- | --- | --- |
