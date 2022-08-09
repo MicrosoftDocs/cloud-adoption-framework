@@ -58,7 +58,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Consider the potential business impact of a downtime in the General Purpose service tier, due to the existence of only one replica.
 - Consider the number of replicas (1-3) to deploy in the Business Critical service tier.
 - When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the [number of secondary replicas](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries) to deploy in the Business Critical service tier.
-- Decide on the number of secondary replicas required to commit a transaction in the Business Critical service tier
+- Decide on prioritizing consistency over availability through the number of secondary replicas required to commit a transaction in the Business Critical service tier using the _--sync-secondary-to-commit_ option:
   - In a two-replica configuration, If there are connectivity issues between the replicas, then the primary replica may not commit any transactions as every transaction needs to be committed on both replicas before a success is returned back on the primary.
   - In a three replica configuration, a transaction needs to commit in at least 2 of the 3 replicas before returning a success message back to the application.
 - Decide if you need to designate a [specific replica to be the primary one](/azure/azure-arc/data/managed-instance-high-availability#preferred-primary-replica).
