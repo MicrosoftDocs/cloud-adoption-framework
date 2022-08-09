@@ -36,7 +36,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 ### Point-in-time restore
 
-- Understand your Recovery Point Objective (RPO) and Recovery Time Objective (RTO) targets.
+- Define your Recovery Point Objective (RPO) and Recovery Time Objective (RTO) targets.
 - Determine how long you would want to retain and restore your backups according to the supported retention period limits.
 - Consider the storage implications of increasing the retention period of your backups.
 - Consider the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to be used for the backups persistent volume.
