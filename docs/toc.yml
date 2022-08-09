@@ -973,7 +973,8 @@ items:
           href: modernize/business-alignment/evaluate-modernization-options.md
         - name: Commit
           href: modernize/business-alignment/commit-to-modernization-plan.md      
-      - name: Modernization disciplines
+      - name: Modernization strategies
+        href: modernize/modernize-strategies/index.md
         items:
         - name: Process modernization 
           href: modernize/modernize-strategies/process-modernization.md
