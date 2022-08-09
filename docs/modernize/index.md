@@ -28,4 +28,4 @@ We have an article on each step of the modernize methodology. The articles are s
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Start with an intro to business alignment](/docs/modernize/business-alignment/index.md)
+> [Start with business alignment](/docs/modernize/business-alignment/index.md)
