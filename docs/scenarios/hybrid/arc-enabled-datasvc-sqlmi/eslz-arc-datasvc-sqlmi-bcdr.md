@@ -65,7 +65,6 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
   - In a three replica configuration, a transaction needs to commit in at least 2 of the 3 replicas before returning a success message back to the application.
 - Decide if you need to designate a [specific replica to be the primary one](/azure/azure-arc/data/managed-instance-high-availability#preferred-primary-replica).
 - Decide which service type you will use between Kubernetes _LoadBalancer_ or _NodePort_. If the load balancer is used, then applications can reconnect to the same primary endpoint and Kubernetes will redirect the connection to the new primary. If the service type is _NodePort_ then the applications will need to reconnect to the new IP address.
-`` 
 
 ### Disaster recovery
 
