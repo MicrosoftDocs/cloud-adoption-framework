@@ -12,9 +12,9 @@ ms.custom: e2e-hybrid, think-tank
 
 # Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled SQL managed Instance allows you to keep your instances always current with servicing patches and new features with minimal downtime and manual intervention. Updates are pulled from the Microsoft Container Registry or a private registry  and deployment cadences are set by you in accordance with your policies, providing full control on the upgrade process.
+Azure Arc-enabled data services allows you to get the evergreen version of SQL that is only available in Azure as Azure SQL Managed Instance. By nature of being evergreen, you don’t have to worry about upgrades every 5-7 years as you would for on-premises installations of SQL Server.  You also get cloud innovation into your infrastructure as soon as it’s available in Azure.
 
-This article provides key design considerations and recommendations for configuring and managing the upgrade process on your Azure Arc-enabled SQL Managed Instances.
+This article provides key design considerations and recommendations for configuring and managing the upgrade process on your Azure Arc-enabled data services.
 
 ## Architecture
 
