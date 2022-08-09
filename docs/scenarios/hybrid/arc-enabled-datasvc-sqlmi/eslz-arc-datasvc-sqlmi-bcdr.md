@@ -70,7 +70,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 ### Disaster recovery
 
 - The Azure Arc-enabled SQL Managed Instance in both geo-primary and geo-secondary sites need to be identical in terms of their compute & capacity, as well as service tiers they are deployed in.
-- Decide on a location to store the mirroring certificates when creating the disaster recovery setup that is accessible by both clusters hosting the Azure Arc-enabled SQL Managed Instances.
+- Decide on a location to store the mirroring certificates when creating the disaster recovery setup that is accessible by both clusters hosting the Arc-enabled SQL MI.
 - Consider how to monitor the downtime of the primary instance to decide when to perform a failover to the secondary instance.
 - Each Azure Arc-enabled SQL Managed Instance has its own endpoints, consider how your applications will access the primary endpoint in case of a failover with minimum disruption.
 
