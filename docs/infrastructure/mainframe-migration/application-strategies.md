@@ -3,7 +3,7 @@ title: Mainframe application migration strategies
 description: Learn how to use rehost, retire, rebuild, or replace applications strategies to migrate from mainframe environments to Azure.
 author: njray
 ms.author: brblanch
-ms.date: 08/08/2022
+ms.date: 08/09/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -56,7 +56,7 @@ The lift-and-shift approach is the no-code option for quickly migrating existing
 
 TP monitors are available from various vendors and run on virtual machines, an infrastructure as a service (IaaS) option on Azure. The following diagrams show the before and after of an online application backed by IBM DB2, a relational database management system (DBMS), on an IBM z/OS mainframe. DB2 for z/OS uses Virtual Storage Access Method (VSAM) files to store the data and Indexed Sequential Access Method (ISAM) for flat files. This architecture also uses CICS for transaction monitoring.
 
-!["Lift and shift" migration of a mainframe environment to Azure using emulation software](../../_images/mainframe-migration/mainframe-vs-azure.png)
+![Diagram of a "lift and shift" migration of a mainframe environment to Azure using emulation software.](../../_images/mainframe-migration/mainframe-vs-azure.png)
 
 On Azure, emulation environments run the TP manager and the batch jobs that use JCL. In the data tier, DB2 is replaced by [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview), although you can also use Microsoft SQL Server, DB2 LUW, or Oracle Database. An emulator supports IMS, VSAM, and SEQ. The mainframe's system management tools are replaced by Azure services, and software from other vendors, that run in VMs.
 
@@ -154,7 +154,7 @@ In addition, each tier can also provide appropriate disaster recovery services. 
 
 The following figure shows a possible Azure deployment using a primary and a secondary site. In the primary site, the production, staging, and testing VMs deploy with high availability. The secondary site is for backup and disaster recovery.
 
-![A possible Azure deployment using a primary and a secondary site](../../_images/mainframe-migration/migration-backup-dr.png)
+![Diagram of a possible Azure deployment using a primary and a secondary site.](../../_images/mainframe-migration/migration-backup-dr.png)
 
 ## Perform a staged migration to Azure
 
