@@ -91,7 +91,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Use load balancer as your service type when deploying 'Arc-enabled SQL MI for better availability.
 - Review the [high availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of the Azure Arc-enabled SQL Managed Instance.
 - Review the [supported availability modes](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) to decide on the right mode to use based on your high availability needs.
-- When deploying a Business Critical instance with multiple replicas, use one of the secondary replicas for read workloads. You need to use the [secondary service listener endpoint](/azure/azure-arc/data/managed-instance-high-availability#get-the-primary-and-secondary-endpoints-and-ag-status) in your application connection string to get redirected to the secondary replicas.
+- When deploying a "Business Critical" instance with multiple replicas, use one of the secondary replicas for _Read_ workloads. You need to use the [secondary service listener endpoint](/azure/azure-arc/data/managed-instance-high-availability#get-the-primary-and-secondary-endpoints-and-ag-status) in your application connection string to get redirected to the secondary replicas.
 - Review the [management critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) to understand the best practices to monitor your instances' availability.
 
 ### Disaster recovery
