@@ -13,13 +13,11 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 <!--This article was called out as a dependency needed for the "envision" content of the modernize methodology documentation. Alternative proposed filename was "establishing-cloud-horizons", but naming index.md for now since it's serving as the overview for "adopt", at least for the time being.*-->
 # Adopt the cloud
 
-The adopt phase helps you incorporate  cloud capabilities that meet your needs. Your business goals will determine your specific cloud adoption plan.
-
-There are three ways to adopt the cloud: migrate, modernize, and innovate. These three ways to adopt the cloud aren't mutually exclusive. You can use all three in your cloud adoption journey. Or you can just use one or two. The order and number of ways you adopt the cloud depends your starting point and your goals (*see figure*).
+The adopt phase of the cloud adoption framework is where you start using the cloud. We show you how to migrate, modernize, and innovate in the cloud. You don't have to use all three. Pick the adoption paths that meet your immediate and long-term needs. The way you adopt the cloud depends your starting point and where you want to go (*see figure*).
 
 :::image type="content" source="../_images/adopt/cloud-adoption-plan-v3.png" alt-text="Image showing three cloud adoption paths":::
 
-Below is an overview of each way to adopt the cloud.
+Below is a brief overview of each way to adopt the cloud.
 
 ## Migrate overview
 
@@ -51,7 +49,7 @@ Innovate is using data to create customer-focused solutions that transform busin
 
 ## Next steps
 
-Next, read how most businesses change their portfolio to adopt the cloud.
+Read how most businesses change their portfolio to adopt the cloud.
 
 > [!div class="nextstepaction"]
 > [How to adopt the cloud](../adopt/how-to-adopt-the-cloud.md)
