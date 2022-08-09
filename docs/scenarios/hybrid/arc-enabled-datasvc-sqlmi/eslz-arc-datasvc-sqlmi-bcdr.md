@@ -74,7 +74,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 ### Point-in-time restore
 
 - When deploying a new Azure Arc-enabled SQL Managed Instance, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
-- Use a ReadWriteMany (RWX) capable storage class for the backups volume.
+- Use a ReadWriteMany (RWX) capable storage class for the backups volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
 - Use the [dry-run switch](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli) for restores first, to validate whether or not the restore operation would be successful before performing the actual restore.
 - Create a process to send backups that need longer retention to Azure or other on-premises cold storage.
 
