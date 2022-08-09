@@ -80,7 +80,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 ### High availability
 
-- Perform regular drills to validate the high availability of your Azure Arc-enabled SQL Managed Instance, whether its deleting the pod of a General Purpose instance or failing one of the replicas of a Business Critical instance.
+- Perform regular drills to validate the high availability of your Azure Arc-enabled SQL Managed Instance, whether it is deleting the pod of a General Purpose instance or failing one of the replicas of a Business Critical instance.
 - Deploy a Business Critical SQL Managed Instance in a three replica configuration instead of a two replica configuration to achieve near-zero data loss.
 - Use load balancer as your service type when deploying Azure Arc-enabled SQL Managed Instance for better availability.
 - Review the [high availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of the Azure Arc-enabled SQL Managed Instance.
