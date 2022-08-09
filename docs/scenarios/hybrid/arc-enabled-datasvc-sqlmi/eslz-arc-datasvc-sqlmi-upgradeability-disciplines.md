@@ -99,7 +99,7 @@ This article provides key design considerations and recommendations for configur
 
 #### General recommendations
 
-- Keep you Azure Arc-enabled Managed Instances up-to-date to the latest available version to make sure you receive the latest patches, bug fixes and features.
+- Keep your Azure Arc-enabled Managed Instances up-to-date to the latest available version to make sure you receive the latest patches, bug fixes and features.
 - Make sure to have your point in time restore backup policy configured as needed to be able to recover in case of problems during an upgrade. Review the [Business continuity and disaster recovery design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md).
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Use the Azure CLI to perform at scale upgrades of your Azure Arc-enabled SQL Managed Instances.
