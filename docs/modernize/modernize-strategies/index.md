@@ -27,4 +27,4 @@ As we saw in the [commit to modernization](/docs/modernize/business-alignment/co
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Modernize your process](/process-modernization.md)
+> [Modernize your process](../modernize-strategies/process-modernization.md)
