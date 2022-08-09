@@ -34,6 +34,8 @@ The following architecture diagram shows how Azure Arc-enabled SQL Managed Insta
 
 Review the [business continuity and disaster recovery design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery) of Azure landing zones to assess the effect of Azure Arc-enabled SQL Managed Instance on your overall BCDR model.
 
+>NOTE
+>The high availability and resiliency of your Azure Arc-enabled SQL Managed Instance is also dependent on the underlying Kubernetes infrastructure availability. The focus of this article will only be on the business continuity design considerations recommendations for the Azure Arc-enabled SQL Managed Instance.
 ### Point-in-time restore
 
 - Define your [Recovery Point Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [Recovery Time Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO) targets.
