@@ -85,13 +85,13 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Use load balancer as your service type when deploying Azure Arc-enabled SQL Managed Instance for better availability.
 - Review the [high availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of the Azure Arc-enabled SQL Managed Instance.
 - Review the [supported availability modes](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) to decide on the right mode to use based on your high availability needs.
+- When deploying a Business Critical instance with multiple replicas, use one of the secondary replicas for read workloads. You need to use the [secondary service listener endpoint](/azure/azure-arc/data/managed-instance-high-availability#get-the-primary-and-secondary-endpoints-and-ag-status) in your application connection string to get redirected to the secondary replicas.
 
 ### Disaster recovery
 
 - Ensure the SQL instances have different names for both primary and secondary sites, and the shared-name value should be identical on both sites.
 - Perform regular disaster recovery drills to validate the failover process.
 - Create a process for initiating both manual and forced failovers.
-- Define different names for the Azure Arc-enabled SQL Managed Instance names in both the primary and secondary sites.
 - Review the [management critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) of Azure Arc-enabled SQL Managed Instance to understand the best practices to monitor the health of the clusters to understand when a failover is required.
 - Define the DNS record for the shared name of the [Distributed Availability Group](/sql/database-engine/availability-groups/windows/distributed-availability-groups) in your DNS servers to avoid creating manual DNS records during the failover.
 
