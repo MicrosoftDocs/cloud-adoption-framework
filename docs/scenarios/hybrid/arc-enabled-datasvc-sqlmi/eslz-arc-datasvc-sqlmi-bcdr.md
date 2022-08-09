@@ -26,7 +26,7 @@ The following architecture diagrams show the high availability capabilities of t
 
   ![A diagram showing the secondary instance being promoted to primary](./media/arc-enabled-sqlmi-ha-3.png)
 
-The following architecture diagram shows how Azure Arc-enabled SQL Managed Instance can be deployed on two separate Kubernetes clusters on different sites for disaster recovery.
+The following architecture diagram shows how Azure Arc-enabled SQL Managed Instance can be deployed on two separate Kubernetes clusters in two different sites for disaster recovery.
 
   [ ![A diagram showing Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters](./media/arc-enabled-sqlmi-dr.png)](./media/arc-enabled-sqlmi-dr.png#lightbox)
 
