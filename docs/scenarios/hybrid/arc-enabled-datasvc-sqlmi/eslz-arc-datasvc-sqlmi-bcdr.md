@@ -96,7 +96,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 ### Disaster recovery
 
-- Ensure the SQL instances have different names for both primary and secondary sites, and the shared-name value should be identical on both sites.
+- Ensure the Arc-enabled SQL MI has different names for both primary and secondary sites, and the shared-name value should be identical on both sites.
 - Perform regular disaster recovery drills to validate the failover process.
 - Create a process for initiating both manual and forced failovers.
 - Review the [management critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) of Azure Arc-enabled SQL Managed Instance to understand the best practices to monitor the health of the clusters to understand when a failover is required.
