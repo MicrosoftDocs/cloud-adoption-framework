@@ -43,7 +43,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Consider the persistent volume size for backups according to the expected data size and retention period configured.
 - Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for storage best practices.
 - Backups are always performed on the primary replica, consider the performance impact of the backup and restore processes when identifying the resources allocated to your Azure Arc-enabled SQL Managed Instances.
-- Point-in-time-restores can not overwrite an existing database,it can restore a database from an existing database to a new database on the same Azure Arc-enabled SQL Managed Instance.
+- Take into account that point-in-time-restores cannot overwrite an existing database, it can restore a database from an existing database to a new database on the same Azure Arc-enabled SQL Managed Instance.
 - Consider the additional steps needed to fully recover your database if your application is online during your restore process.
 - Consider the [extra steps needed](/azure/azure-arc/data/managed-instance-high-availability#restoring-a-database-onto-a-multi-replica-instance) to restore a database onto a multi-replica Azure Arc-enabled SQL Managed Instance.
 - Determine the [tools](/azure/azure-arc/data/connect-managed-instance) that will be used by Database administrators to configure and restore backups.
