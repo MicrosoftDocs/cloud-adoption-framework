@@ -40,7 +40,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 - Define your [Recovery Point Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [Recovery Time Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO) targets.
 - Determine how long you would want to retain and restore your backups according to the supported retention period limits.
-- Consider the storage implications of increasing the retention period of your backups.
+- Consider the storage and cost implications of increasing the retention period of your backups. The default retention is seven days which means you can restore for up to seven days and you get one full backup, daily differential and transactional log backups about every five minutes.
 - Consider the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to be used for the backups persistent volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
 - Consider the persistent volume size for backups according to the expected data size and retention period configured.
 - Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for storage best practices.
@@ -79,6 +79,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Use a ReadWriteMany (RWX) capable storage class for the backups volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
 - Use the [dry-run switch](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli) for restores first, to validate whether or not the restore operation would be successful before performing the actual restore.
 - Create a process to send backups that need longer retention to Azure or other on-premises cold storage.
+- Monitor the storage consumed by your backups to determine if you can accomodate a longer retention if needed.
 
 ### High availability
 
