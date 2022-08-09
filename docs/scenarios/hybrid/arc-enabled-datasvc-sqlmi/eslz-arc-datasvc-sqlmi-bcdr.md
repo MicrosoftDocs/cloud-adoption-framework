@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank
 
 Azure Arc-enabled SQL Managed Instance provides capabilities for business continuity which allows businesses to recover and continue operating in the event of disruptions with minimal downtime.
 
-This article provides key design considerations and recommendations for configuring and managing the business continuity capabilities like point-in-time restore, high availability and disaster recovery.
+This article provides key design considerations and recommendations for configuring and managing the business continuity capabilities like point-in-time restore, high availability, and disaster recovery.
 
 ## Architecture
 
