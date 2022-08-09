@@ -112,7 +112,7 @@ This article provides key design considerations and recommendations for configur
 #### General Purpose service tier
 
 - Perform upgrades during non-business critical times to minimize the impact to users and data.
-- Review the of the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
+- Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
 
 #### Business Critical service tier
 
