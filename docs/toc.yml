@@ -380,6 +380,7 @@ items:
             href: ready/landing-zone/design-area/service-enablement-framework.md
           - name: Security Control Mapping
             href: ready/design area/security/control-mapping/security-control-mapping.md
+            
         - name: Management
           items:
           - name: Overview
