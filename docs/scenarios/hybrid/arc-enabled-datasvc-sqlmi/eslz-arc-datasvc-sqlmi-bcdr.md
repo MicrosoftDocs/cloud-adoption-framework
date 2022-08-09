@@ -53,7 +53,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Decide on the service tier to deploy Azure Arc-enabled SQL Managed Instance in, depending on the high availability requirements of your workload
   - In the General Purpose service tier, there is only one replica available, and the high availability is achieved via Kubernetes orchestration
   - In the Business Critical service tier, in addition to what is natively provided by Kubernetes orchestration, Azure SQL Managed Instance for Azure Arc provides a contained availability group.
-- Consider the potential downtime in the General Purpose service tier, due to the existence of only one replica.
+- Consider the potential business impact of a downtime in the General Purpose service tier, due to the existence of only one replica.
 - Consider the number of replicas (1-3) to deploy in the Business Critical service tier.
 - When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the [number of secondary replicas](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries) to deploy in the Business Critical service tier.
 - Decide on the number of secondary replicas required to commit a transaction in the Business Critical service tier
