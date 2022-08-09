@@ -974,8 +974,9 @@ items:
         - name: Commit
           href: modernize/business-alignment/commit-to-modernization-plan.md      
       - name: Modernization strategies
-        href: modernize/modernize-strategies/index.md
         items:
+        - name: Overview
+          href: modernize/modernize-strategies/index.md
         - name: Process modernization 
           href: modernize/modernize-strategies/process-modernization.md
         - name: Database modernization
