@@ -18,7 +18,7 @@ This article provides key design considerations and recommendations for configur
 
 ## Architecture
 
-The following architecture diagrams show the high availability capabilities of the Business Critical service tier which allows for near-zero downtime failover. Once the primary instance fails, the load balancer stops sending traffic to it and starts redirecting towards the secondary instances, in addition to promoting one of the secondary instances to primary. Once the failed instance comes back online, it will be added as secondary.
+The following architecture diagrams show the high availability capabilities of the Business Critical service tier which allows for near-zero downtime failover. In the event of primary instance failure, the load balancer stops sending traffic to it and starts redirecting towards the secondary instances, promoting one of them to primary. Once the failed instance comes back online, it will be added as secondary.
 
   ![A diagram showing the primary instance of the Azure Arc-enabled SQL Managed Instance going down](./media/arc-enabled-sqlmi-ha-1.png)
 
