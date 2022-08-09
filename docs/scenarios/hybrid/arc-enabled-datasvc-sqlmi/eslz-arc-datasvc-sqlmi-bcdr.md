@@ -72,13 +72,13 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - The Azure Arc-enabled SQL Managed Instance in both geo-primary and geo-secondary sites need to be identical in terms of their compute & capacity, as well as service tiers they are deployed in.
 - Decide on a location to store the mirroring certificates when creating the disaster recovery setup that is accessible by both clusters hosting the Arc-enabled SQL MI.
 - Consider how to monitor the downtime of the primary instance to decide when to perform a failover to the secondary instance.
-- Each Azure Arc-enabled SQL Managed Instance has its own endpoints, consider how your applications will access the primary endpoint in case of a failover with minimum disruption.
+- Each Azure Arc-enabled SQL Managed Instance has its own endpoints, consider how your applications will access the primary endpoint in case of failover with minimum disruption.
 
 ## Design recommendations
 
 ### Point-in-time restore
 
-- When deploying a new Azure Arc-enabled SQL Managed Instance, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
+- When deploying a new Arc-enabled SQL MI, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
 - Use a ReadWriteMany (RWX) capable storage class for the backups volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
 - Use the [dry-run switch](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli) for restores first, to validate whether or not the restore operation would be successful before performing the actual restore.
 - Create a process to send backups that need longer retention to Azure or other on-premises cold storage.
