@@ -42,14 +42,14 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 - Define your [Recovery Point Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [Recovery Time Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO) targets.
 - Determine how long you would want to retain and restore your backups according to the supported retention period limits.
-- Consider the storage and cost implications of increasing the retention period of your backups. The default retention is seven days which means you can restore for up to seven days and you get one full backup, daily differential and transactional log backups about every five minutes.
+- Consider the storage and cost implications of increasing the retention period of your backups. The default retention is seven days which means you can restore for up to seven days and you get one full backup, daily differential, and transactional log backups about every five minutes.
 - Consider the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to be used for the backups persistent volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
 - Consider the persistent volume size for backups according to the expected data size and retention period configured.
 - Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for storage best practices.
-- Backups are always performed on the primary replica, consider the performance impact of the backup and restore processes when identifying the resources allocated to your Azure Arc-enabled SQL Managed Instances.
-- Take into account that point-in-time-restores cannot overwrite an existing database, it can restore a database from an existing database to a new database on the same Azure Arc-enabled SQL Managed Instance.
+- Backups are always performed on the primary replica, consider the performance impact of the backup and restore processes when identifying the resources allocated to your Arc-enabled SQL MI.
+- Take into account that point-in-time restores cannot overwrite an existing database, it can restore a database from an existing database to a new database on the same Arc-enabled SQL MI.
 - Consider the additional steps needed to fully recover your database if your application is online during your restore process.
-- Consider the [extra steps needed](/azure/azure-arc/data/managed-instance-high-availability#restoring-a-database-onto-a-multi-replica-instance) to restore a database onto a multi-replica Azure Arc-enabled SQL Managed Instance.
+- Consider the [extra steps needed](/azure/azure-arc/data/managed-instance-high-availability#restoring-a-database-onto-a-multi-replica-instance) to restore a database onto a multi-replica Arc-enabled SQL MI.
 - Determine the [tools](/azure/azure-arc/data/connect-managed-instance) that will be used by Database administrators to configure and restore backups.
 
 ### High availability
