@@ -62,7 +62,8 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - In a two-replica configuration, if there are connectivity issues between the replicas, then the primary replica may not commit any transactions as every transaction needs to be committed on both replicas before a success is returned back on the primary.
   - In a three replica configuration, a transaction needs to commit in at least 2 of the 3 replicas before returning a success message back to the application.
 - Decide if you need to designate a [specific replica to be the primary one](/azure/azure-arc/data/managed-instance-high-availability#preferred-primary-replica).
-- Decide which service type you will use between load balancer and nodeport. If load balancer is the service type used, then applications can reconnect to the same primary endpoint and Kubernetes will redirect the connection to the new primary. If the service type is nodeport then the applications will need to reconnect to the new Ip address.
+- Decide which service type you will use between load balancer and nodeport. If load balancer is used, then applications can reconnect to the same primary endpoint and Kubernetes will redirect the connection to the new primary. If the service type is nodeport then the applications will need to reconnect to the new IP address.
+`` 
 
 ### Disaster recovery
 
