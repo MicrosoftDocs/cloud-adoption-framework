@@ -108,7 +108,7 @@ For more information on your hybrid and multicloud cloud journey, see the follow
 
 - Review the [capabilities](/azure/azure-arc/data/overview) of Azure Arc-enabled Data Services.
 - Review the [business continuity features](/azure/azure-arc/data/managed-instance-business-continuity-overview) for Azure
-- Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-enabled Data Services.
+- Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-enabled data services.
 - Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage)..
 - Experience Azure Arc-enabled SQL Managed Instance automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
