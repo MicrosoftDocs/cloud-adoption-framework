@@ -24,7 +24,7 @@ This article provides key design considerations and recommendations for configur
 
 ### Data Controller upgrades
 
-- Consider the different tools (Azure CLI, Azure portal or Kubernetes tools) that you can use to perform the Data Controller upgrades depending on the skillset of the team responsible for the upgrade process and the connectivity mode being used (directly or indirectly connected mode).
+- Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
 - Review your Azure Arc-enabled SQL Managed Instances to check if you have any preview data services deployed on the same Data Controller that will be upgraded with Generally Available instances. You cannot perform in-place upgrades if you have a mix of preview and Generally Available instances deployed on the same Data Controller.
 - Review the versions of all the Azure Arc-enabled SQL Managed Instances deployed on the Data Controller to be confirm they are at the same version as the Data Controller before performing the upgrade.
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next right version for your Data Controller before the upgrade.
@@ -51,6 +51,7 @@ This article provides key design considerations and recommendations for configur
 - Review the prerequisites for upgrades using the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli#prerequisites).
 - Decide if you will use the [Microsoft Artifact Registry](https://mcr.microsoft.com/) in case your clusters have internet connectivity or a private registry in case your clusters are air gapped to pull the Azure Arc Data services images.
 - Plan for the [required Kubernetes permissions](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#create-the-service-account-for-running-upgrade) to for the service account used to upgrade the Azure Arc Data Controller using Kubernetes tools.
+- Validate the repository information to make sure it is valid and new images have been already pulled to it.
 
 ### Azure Arc-enabled SQL Managed Instance upgrades
 
@@ -67,7 +68,7 @@ This article provides key design considerations and recommendations for configur
 
 #### Business Critical service tier
 
-- During an Azure Arc-enabled SQL Managed Instance in a Business Critical service tier upgrade with multiple replicas, the active database instance switches from one pod to another. It is important to understand the application and client side impact of an upgrade where there is a brief moment of downtime when the failover occurs.
+- During an Azure Arc-enabled SQL Managed Instance in a Business Critical service tier upgrade with multiple replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replica is promoted to become the new primary, and the old primary becomes a secondary and is upgraded. During the transition from old primary to new primary there is a brief moment of downtime when the failover happens. It is important to understand the application and client side impact of an upgrade when the failover occur.
 - Review your applications architecture to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
 
 ### Extension upgrade
@@ -78,12 +79,12 @@ This article provides key design considerations and recommendations for configur
 
 ### Data Controller upgrades
 
-- If upgrading using the Azure CLI , verify that the arcdata extension version corresponds to the image version you want to upgrade to in the Version log.
+- If upgrading using the Azure CLI , verify that the arcdata extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to monitor for new Azure Arc Data Controller upgrades availability.
 - Properly size your cluster by planning for future capacity, upgrades and features.
 - Avoid deploying Generally avaialble and preview Azure Arc-enabled SQL Managed Instances on the same Data Controller.
-- Avoid using preview versions in your production environment and only use them for evaluation purposes.
+- Avoid using preview versions in your production environment and only use and only use preview features for evaluation purposes on dev/test instances.
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
 
 #### Directly connected mode
@@ -100,7 +101,7 @@ This article provides key design considerations and recommendations for configur
 #### General recommendations
 
 - Keep your Azure Arc-enabled Managed Instances up-to-date to the latest available version to make sure you receive the latest patches, bug fixes and features.
-- Make sure to have your point in time restore backup policy configured as needed to be able to recover in case of problems during an upgrade. Review the [Business continuity and disaster recovery design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md).
+- Make sure to have your point in time restore backup policy configured as needed to be able to recover in case of problems during an upgrade. Review the [Business continuity and disaster recovery design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md). Use _kubectl describe sqlmi_ on your instances to verify.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Use the Azure CLI to perform at scale upgrades of your Azure Arc-enabled SQL Managed Instances.
 - Use [Automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off peak hour to perform the upgrade.
@@ -108,6 +109,7 @@ This article provides key design considerations and recommendations for configur
 - In case of manual upgrades, ensure that you establish a regular cadence to perform upgrades to stay within supported versions.
 - Create a process to monitor the upgrade status using [Azure CLI](/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status).
 - Review the [corresponding versions](/azure/azure-arc/data/version-log) of the different components before performing an upgrade to validate having the right components versions in place.
+- Test the upgrade on a dev/test instance before applying the upgrade directly in production.
 
 #### General Purpose service tier
 
