@@ -25,4 +25,4 @@ The processes are sequential. Make sure you envision the possibilities before yo
 ## Next Step
 
 >[!div class="nextstepaction"]
-> [Envision your cloud modernization possibilities](/docs/modernize/business-alignment/envision-cloud-modernization.md)
+> [Envision your cloud modernization possibilities](../../modernize/business-alignment/envision-cloud-modernization.md)
