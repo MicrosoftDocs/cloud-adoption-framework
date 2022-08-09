@@ -49,4 +49,4 @@ Use our [app modernization decision tree](/azure/architecture/guide/technology-c
 ## Next Step
 
 >[!div class="nextstepaction"]
-> [Modernize your databases](/database-modernization.md)
+> [Modernize your databases](../modernize-strategies/database-modernization.md)
