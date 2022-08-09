@@ -39,7 +39,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 - Define your [Recovery Point Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [Recovery Time Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO) targets.
 - Determine how long you would want to retain and restore your backups according to the supported retention period limits.
 - Consider the storage implications of increasing the retention period of your backups.
-- Consider the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to be used for the backups persistent volume.
+- Consider the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to be used for the backups persistent volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
 - Consider the persistent volume size for backups according to the expected data size and retention period configured
 - Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for storage best practices.
 - Backups are always performed on the primary replica, consider the performance impact of the backup and restore processes when identifying the resources allocated to your Azure Arc-enabled SQL Managed Instances.
