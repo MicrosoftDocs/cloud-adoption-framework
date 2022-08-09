@@ -30,7 +30,7 @@ The following architecture diagrams show how Azure Arc-enabled SQL Managed Insta
 
   [ ![A diagram showing Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters](./media/arc-enabled-sqlmi-dr1.png)](./media/arc-enabled-sqlmi-dr1.png#lightbox)
 
-  [ ![A diagram showing Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters](./media/arc-enabled-sqlmi-dr2.png)](./media/arc-enabled-sqlmi-dr2.png#lightbox)
+  [ ![A diagram showing initiating the Azure Arc-enabled SQL Managed Instance disaster recovery failover across two clusters](./media/arc-enabled-sqlmi-dr2.png)](./media/arc-enabled-sqlmi-dr2.png#lightbox)
 
 ## Design considerations
 
