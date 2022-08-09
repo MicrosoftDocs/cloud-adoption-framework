@@ -54,17 +54,17 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 ### High availability
 
-- Review the high availability requirements of your workload and decide on the service tier that is best suited for your Azure Arc-enabled SQL Managed Instance deployment:
+- Review the high availability requirements of your workload and decide on the service tier that is best suited for your Arc-enabled SQL MI deployment:
   - In the General Purpose service tier, there is only one replica available, and the high availability is achieved via Kubernetes orchestration
-  - In the Business Critical service tier, in addition to what is natively provided by Kubernetes orchestration, Azure SQL Managed Instance for Azure Arc provides a contained availability group.
-- Consider the potential business impact of a downtime in the General Purpose service tier, due to the existence of only one replica.
-- Consider the number of replicas (1-3) to deploy in the Business Critical service tier.
-- When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the [number of secondary replicas](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries) to deploy in the Business Critical service tier.
-- Decide on prioritizing consistency over availability through the number of secondary replicas required to commit a transaction in the Business Critical service tier using the _--sync-secondary-to-commit_ option:
+  - In the "Business Critical" service tier, in addition to what is natively provided by Kubernetes orchestration, Azure SQL Managed Instance for Azure Arc provides a contained availability group.
+- Consider the potential business impact of downtime in the General Purpose service tier, due to the existence of only one replica.
+- Consider the number of replicas (1-3) to deploy in the "Business Critical" service tier.
+- When deploying an instance in a "Business Critical" service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the [number of secondary replicas](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries) to deploy in the "Business Critical" service tier.
+- Decide on prioritizing consistency over availability through the number of secondary replicas required to commit a transaction in the "Business Critical" service tier using the _--sync-secondary-to-commit_ option:
 - In a two-replica configuration, if there are connectivity issues between the replicas, then the primary replica may not commit any transactions as every transaction needs to be committed on both replicas before a success is returned back on the primary.
   - In a three replica configuration, a transaction needs to commit in at least 2 of the 3 replicas before returning a success message back to the application.
 - Decide if you need to designate a [specific replica to be the primary one](/azure/azure-arc/data/managed-instance-high-availability#preferred-primary-replica).
-- Decide which service type you will use between load balancer and nodeport. If load balancer is used, then applications can reconnect to the same primary endpoint and Kubernetes will redirect the connection to the new primary. If the service type is nodeport then the applications will need to reconnect to the new IP address.
+- Decide which service type you will use between Kubernetes _LoadBalancer_ or _NodePort_. If the load balancer is used, then applications can reconnect to the same primary endpoint and Kubernetes will redirect the connection to the new primary. If the service type is _NodePort_ then the applications will need to reconnect to the new IP address.
 `` 
 
 ### Disaster recovery
