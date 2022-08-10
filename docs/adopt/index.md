@@ -28,8 +28,6 @@ Migrate refers to moving your workloads to the cloud. There are different method
 - *Solutions:* Trade your on-site capital expense for a pay-as-you-go model and adopt IaaS solutions.
 - *Key Benefits:* Cost, security, availability, visibility, performance.
 
-You can modernize while you migrate. The next article walks you through the pros and cons of each.
-
 ## Modernize overview
 
 Modernize means enhancing existing applications with more cloud capabilities. The most common form of modernization is adopting platform-as-a-service solutions (PaaS). The focus is enhancing business processes at scale.
