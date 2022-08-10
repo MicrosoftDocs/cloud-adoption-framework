@@ -143,7 +143,7 @@ For read-intensive workloads and high availability, configure multiple replicas 
 
 ### Monitoring
 
-It is recommended to monitor all PVCs created by Azure Arc-Enabled Data Services, including the Data Controller and all instances of Arc-enabled SQL MI in a cluster. Set alerts to be notified when a PVC is approaching near capacity. This will allow you to do re-sizing to the PVC prior to reaching capacity. For Directly Connected Clusters, [monitoring of PVCs](/azure/azure-monitor/containers/container-insights-persistent-volumes) and Alerting can be done by Azure Monitor and Container Insights.
+It is recommended to monitor all PVCs created by Arc-enabled data services, including the Data Controller and all instances of Arc-enabled SQL MI in a cluster. Set alerts to be notified when a PVC is approaching near capacity. This will allow you to do re-sizing to the PVC prior to reaching capacity. For Directly Connected clusters, [monitoring of PVCs](/azure/azure-monitor/containers/container-insights-persistent-volumes) and Alerting can be done by Azure Monitor and Container Insights.
 
 ## Next steps
 
