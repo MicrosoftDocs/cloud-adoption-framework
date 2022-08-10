@@ -16,7 +16,7 @@ Storage is a critical component in an Azure Arc-enabled SQL Managed Instance (Ar
 
 Rather than directly interacting with underlying storage, Kubernetes provides an abstraction layer to a variety of storage technologies through Storage Classes. Cloud providers, hardware vendors, and other Kubernetes managed platforms offer varying Storage Class options to suit specific environments and implementation scenarios.
 
-Arc-enabled SQL MI does not enforce limitations on Storage Classes used, so it is important to choose the correct storage design and configuration. The storage design for Arc-enabled SQL MI is just as relevant if you were choosing backing storage for a SQL Server when running on bare metal or virtual machines. These choices will ultimately represent your requirements surrounding RPO, RTO, capacity & performance.
+Arc-enabled SQL MI does not enforce limitations on Storage Classes used, so it is important to choose the correct storage design and configuration. The storage design for Arc-enabled SQL MI is just as important as if you were choosing backing storage for a SQL Server when running on bare metal or virtual machines. These choices will ultimately represent your requirements surrounding RPO, RTO, capacity & performance.
 
 For Arc-enabled SQL MI deployments, effectively planning for storage capabilities and configuration is crucial to operate successfully.  Read on to learn about the storage-related factors to consider, followed by recommendations for configuring Arc-enabled SQL MI.
 
@@ -60,11 +60,11 @@ The Data Controller default volume sizing is the recommended minimum. The storag
 
 #### Data Controller Installing and Uninstalling
 
-When provisioning the data controller, you can configure the Storage Class and the storage capacity for both Logs and Data, this will apply to all 8 PVs created for the Data Controller pods. During the provisioning, you can specify a [custom deployment template](/azure/azure-arc/data/create-custom-configuration-template) that can override default parameters such as capacity, log retention and items related to security such as Kubernetes Service Types used. Once the provisioning is complete, PV and PVC Kubernetes objects will be created.
+When provisioning the Data Controller, you can configure the Storage Class and the storage capacity for both Logs and Data, this will apply to all 8 PVs created for the Data Controller pods. During the provisioning, you can specify a [custom deployment template](/azure/azure-arc/data/create-custom-configuration-template) that can override default parameters such as capacity, log retention and items related to security such as Kubernetes Service Types used. Once the provisioning is complete, PV and PVC Kubernetes objects will be created.
 
-It is important to understand that the Storage Class for the Data Controller cannot be changed once it is provisioned. Without specifying a Storage Class, the data Controller will use the Kubernetes default Storage Class, which can vary dependent on your Kubernetes instance or provider.
+It is important to understand that the Storage Class for the Data Controller cannot be changed once it is provisioned. Without specifying a Storage Class, the Data Controller will use the Kubernetes default Storage Class, which can vary dependent on your Kubernetes instance or provider.
 
-When uninstalling the Data Controller, all Persistent Volumes associated with the Data Controller will be deleted. Take into consideration archiving any Arc-Enabled Data Services control-plane level logs that might be required to be saved by your organization before uninstalling the Data Controller.
+When uninstalling the Data Controller, all Persistent Volumes associated with the Data Controller will be deleted. Take into consideration archiving any Arc-Enabled data services control-plane level logs that might be required to be saved by your organization before uninstalling the Data Controller.
 
 ### Azure Arc-enabled SQL Managed Instance
 
