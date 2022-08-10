@@ -139,7 +139,7 @@ It is recommended to choose a low latency remote Storage Class for the Data and 
 
 For lowest possible latency requirement scenarios, it is recommended to choose local storage if this is an option for your Kubernetes infrastructure. The local storage volumes should land on different underlying storage devices to avoid contention on disk I/O and maximize performance. The storage device should not have multiple functions, such as hosting the Operating System partition.
 
-For read intensive workloads and high availability, configure multiple replicas and configure your applications or clients to use secondary replicas as read scale-out instances.
+For read-intensive workloads and high availability, configure multiple replicas and configure your applications or clients to use secondary replicas as Read scale-out instances.
 
 ### Monitoring
 
