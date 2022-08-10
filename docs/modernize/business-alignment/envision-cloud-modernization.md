@@ -14,7 +14,7 @@ keywords: envision, motivations, approach, modernization, cloud adoption framewo
 
 Envisioning modernization starts with understanding your motivations for wanting to adopt the cloud. Knowing your motivations for adopting the cloud will help determine what you should modernize.
 
-:::image type="content" source="../../_images/modernize/envision/envision.png" alt-text="Image showing where you are in the business alignment process.":::
+:::image type="content" source="../../_images/modernize/envision/envision-938.png" alt-text="Image showing where you are in the business alignment process.":::
 
 Follow these three steps to envision your cloud modernization possibilities.
 
@@ -38,9 +38,7 @@ Knowing *why* you're modernizing will determine *what* to modernize. So, make su
 
 Identify the workloads you want to modernize. The workloads should support your modernization motivations.
 
-### What is a workload
-
-A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a key process. Data centers encourage you to manage IT assets separately (*see figure*).
+**1. What is a workload?** A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a key process. Data centers encourage you to manage IT assets separately (*see figure*).
 
 :::image type="content" source="../../_images/modernize/envision/data-center-it-assets-small.png" alt-text="Graphic showing existing data center." :::
 
@@ -48,9 +46,7 @@ But the cloud lets you focus on workloads instead of IT assets. Modernizing infr
 
 :::image type="content" source="../../_images/modernize/envision/workload_300.png" alt-text="Image showing workload as a combination of applications, infrastructure, and data." :::
 
-### How to identify workloads
-
-To identify a workload, make a list business functions. Then, write down the IT assets that support those functions. The group of IT assets that support a business function are workloads (*see table for examples*).
+**2. How to identify workloads** To identify a workload, you first need to make a list of business functions. Then, write down the IT assets that support those business functions. The group of IT assets that support each business function is a workload (*see table for examples*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span>
 | --- | --- |
@@ -61,9 +57,7 @@ To identify a workload, make a list business functions. Then, write down the IT 
 
 Align your modernization motivations and workloads so you can evaluate their readiness in the next step.
 
-### Map motivations and workloads
-
-To map your motivations and workloads, grab the list of modernization motivations you created in Step 1. Start mapping these motivations to the table you made in Step 2 (*see table for examples*).
+**1. Map motivations and workloads**  To map your motivations and workloads, grab the list of modernization motivations you created in step 1. Start mapping these motivations to the table you made in step 2 (*see table for examples*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |
 | --- | --- | --- |
@@ -71,13 +65,9 @@ To map your motivations and workloads, grab the list of modernization motivation
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data
 |
 
-### Assign one motivation to each workload
+**2. Assign one motivation to each workload** Assign one motivation to each workload. Assigning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want. When you [modernize your process](/docs/modernize/modernize-strategies/devops-practices-modernization.md), it will be clearer why a single motivation is helpful. It helps you organize your work.
 
-Assign one motivation to each workload. Assigning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want. When you [modernize your process](/docs/modernize/modernize-strategies/devops-practices-modernization.md), it will be clearer why a single motivation is helpful. It helps you organize your work.
-
-## When a single motivation is unclear
-
-But do your best. When a single motivation is unclear, [conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The well-architected review will help you figure out what your motivation should be.
+**3. When a single motivation is unclear**  When a single motivation is unclear, [conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The well-architected review will help you figure out what your motivation should be. After running the review, return to this step and complete step 3.
 
 ## Next steps
 
