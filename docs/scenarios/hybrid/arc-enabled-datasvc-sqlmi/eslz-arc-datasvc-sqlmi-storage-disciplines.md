@@ -117,11 +117,11 @@ When choosing a production Storage Class in On-premise and vendor storage infras
 
 ### Data Controller
 
-Choose a remote, shared Storage Class to ensure data durability in the event a pod or node is removed, the pod is brought back up and can connect again to the Persistent Volume. The underline Storage Class needs to be provide redundancy and high availability.
+Choose a remote, shared Storage Class to ensure data durability in the event a pod or node is removed, the pod is brought back up and can connect again to the Persistent Volume. The underline Storage Class needs to provide redundancy and high availability.
 
-It is recommended to use a custom deployment template when creating your Arc-Enabled Data Services Data Controller, which allows fine tuning of Storage Classes, storage size for data and logs, security, and Kubernetes Service Types. This can be customized to your environment and enterprise needs. The data controller requires a total of 8 Persistent Volumes. The default minimum configuration allows for 15Gi for data and 10Gi for logs on the PVs. Configure capacity that not only meets minimum recommendation but supports higher growth from having many Arc-enabled SQL MI implementations running in a cluster. This will prevent the need of re-sizing PVC's in the future.
+It is recommended to use a custom deployment template when creating your Arc-enabled data services Data Controller, which allows fine-tuning of Storage Classes, storage size for data and logs, security, and Kubernetes Service Types. This can be customized to your environment and enterprise needs. The data controller requires a total of 8 Persistent Volumes. The default minimum configuration allows for 15Gi for data and 10Gi for logs on the PVs. Configure capacity that not only meets minimum recommendations but supports higher growth from having many Arc-enabled SQL MI implementations running in a cluster. This will prevent the need for re-sizing PVCs in the future.
 
-It is recommended to choose a lower latency Storage Class in the event your cluster will have many databases and Arc-enabled SQL MI deployments. This will improve user experience in Grafana and Kibana interfaces.
+It is recommended to choose a lower latency Storage Class in the event your cluster will have many databases and Arc-enabled SQL MI deployments. This will improve the user experience in Grafana and Kibana interfaces.
 
 ### Azure Arc-enabled SQL Managed Instance
 
