@@ -1,6 +1,6 @@
 ---
-title: Modernize your process 
-description: Understand how to evaluate your opportunities for growth and align with the modernize methodology.
+title: Learn how to modernize your processes for the cloud
+description: Learn how to modernize your processes in the cloud
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/08/2022
@@ -14,9 +14,9 @@ ms.custom: internal
 Dependencies: cross linking​
 Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.-->
 
-# Modernize your process
+# Modernize your processes for the cloud
 
-Learn how to modernize your process. Modernizing your processes increases operational efficiency. Operational efficiency reduces the total cost of ownership of your workloads.
+Learn how to modernize your process for the cloud. Modernizing your processes increases operational efficiency. Operational efficiency reduces the total cost of ownership of your workloads.
 
 :::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools-512.png" alt-text="image showing a circle with 4 segments":::
 
@@ -48,10 +48,10 @@ Follow the steps in the table below to organize your modernization efforts.
 
 | Step | Work Tasks | Example |
 | --- | --- | --- |
-| 1. Create large buckets of work (epics) | Combine your modernization motivation and workload. High-level goals are epics in Agile. | Application innovation for the E-commerce website |
-| 2. Identify major tasks (user stories) | Create major tasks from a user or customer perspective. Major tasks are user stories in Agile. | As a shopper, I want a more responsive website so I have a better shopping experience |
-| 3. Identify smaller tasks within the major tasks (subtasks)| Break down the major tasks into smaller tasks. Smaller tasks are simply tasks or subtasks in Agile. | <ul> <li>Choose Azure App Service plan</li> <li>Configure security</li>  <li>Configure caching</li> </ul>
-| 4. Divide up the work into manageable amounts (sprints) | Set a two-week time frame and let your team members take on tasks that they can complete over that two week period | <ul> <li>Person-A chooses the Azure App Service plan</li> <li>Person-B configures security</li>  <li>Person-C configures caching</li> </ul>|
+| 1. Create large buckets of work (epics) | Combine your modernization motivation and workload to create large buckets of work. Large buckets of work are epics in Agile. | Application innovation for the E-commerce website |
+| 2. Break down the large buckets of work into multiple tasks (user stories) | Create these tasks from the perspective of your user or customer. Tasked created from epics are user stories in Agile. | As a shopper, I want a more responsive website so I have a better shopping experience |
+| 3. Break down the tasks into subtasks (tasks)| Subtasks are specific and detailed. Subtasks are tasks in Agile. | <ul> <li>Choose Azure App Service plan</li> <li>Configure security</li>  <li>Configure caching</li> </ul>
+| 4. Prioritize user stories. Assign the work. Limit the time to complete the work (sprints) | Set a two-week time frame and let your team members take on tasks that they can complete in the two-week period | <ul> <li>Person-A takes on the Azure App Service plan task</li> <li>Person-B configures security</li>  <li>Person-C configures caching</li> </ul>|
 
 ## Modernize your tools
 
