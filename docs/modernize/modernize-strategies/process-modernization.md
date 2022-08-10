@@ -28,7 +28,7 @@ Modernize your process with a DevOps approach. DevOps uses an Agile framework to
 
 ## Modernize your workflow
 
-Modernize your workflow by adopting an Agile cadence and following these steps:
+Modernize your workflow by adopting an Agile cadence and following these steps.
 
 ### Step 1 - Grab your modernization path
 
