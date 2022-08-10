@@ -19,7 +19,7 @@ Minimum: 1 article		Maximum: 4 articles-->
 
 Commit to modernization in the cloud by modernizing your operations and your workloads.
 
-:::image type="content" source="../../_images/modernize/commit/commit.png" alt-text="Image showing where you are in the business alignment process.":::
+:::image type="content" source="../../_images/modernize/commit/commit-980.png" alt-text="Image showing where you are in the business alignment process.":::
 
 Modernization requires an investment of time and money. The commit phase is where modernization receives the time and money investments it needs. As part of the commitment phase, you gather key stakeholders:
 
@@ -42,9 +42,13 @@ Most modernization motivations map to two or more modernization strategies (*see
 |*Application innovation*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
 |*Centralizing data*|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 
-Notice that process modernization is listed modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO).
+**Process modernization** Notice that *process modernization* is listed with every modernization motivation.
 
-Use the table above to finalize your commitment path. Your commitment combines your workload, motivation, and strategy. See the example below. It builds on the table you created in the [envision step](../business-alignment/envision-cloud-modernization.md).
+Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter you motivation for modernization, you need to modernize your process.
+
+**Create a commitment path** Use the table above to create your commitment path. Your commitment path is a combination of your business function, workload, motivation, and modernization strategy.
+
+See the example below. It builds on the table you created in the [envision step](../business-alignment/envision-cloud-modernization.md).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy
 | --- | --- | --- | --- |
@@ -56,7 +60,9 @@ Use the table above to finalize your commitment path. Your commitment combines y
 
 Commit to a timeline. The amount of time it takes to modernize your process and workloads depends on your team's experience and the complexity of your situation.
 
-Check out our [Fast Track for Azure](/programs/azure-fasttrack/) program if you don't have the right experience on your team to estimate a timeline. You can also use one of our certified partners in the [Azure Migration and Modernization Program](/azure/partners/ammp) to get the advice you need.
+Check out our [Fast Track for Azure](/programs/azure-fasttrack/) program if you don't have the right experience on your team to estimate a timeline.
+
+You can also use one of our certified partners in the [Azure Migration and Modernization Program](/azure/partners/ammp) to get the advice you need.
 
 ## Step 3 - Commit resources
 
@@ -64,7 +70,7 @@ Commit resources to your modernization path. You have your modernization path an
 
 ## Next steps
 
-With a modernization path identified, you can begin modernizing.
+With your commitments in place, you can begin modernizing.
 
 > [!div class="nextstepaction"]
 > [Modernization strategies](../modernize-strategies/index.md)
