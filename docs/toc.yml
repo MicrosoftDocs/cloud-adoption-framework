@@ -979,9 +979,9 @@ items:
           href: modernize/modernize-strategies/index.md
         - name: Process modernization 
           href: modernize/modernize-strategies/process-modernization.md
-        - name: Database modernization
-          href: modernize/modernize-strategies/database-modernization.md
         - name: Application modernization
+          href: modernize/modernize-strategies/database-modernization.md
+        - name: Database modernization
           href: modernize/modernize-strategies/database-modernization.md
 
     - name: Innovate
