@@ -97,7 +97,7 @@ Business Critical allows for configuration of 2 or 3 secondary replicas, and fai
 
 #### Azure Arc SQL Managed Instance Provisioning and Uninstalling
 
-When provisioning Arc-enabled SQL MI, you have the flexibility to assign different Storage Classes to each of the required Arc-enabled SQL MI Persistent Volumes. Higher performance storage options could be desired for Data and DataLogs, but the Logs and Backup volumes could use a more cost-efficient Storage Class options to save on costs. In scenarios where local storage is used, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O.
+When provisioning Arc-enabled SQL MI, you have the flexibility to assign different Storage Classes to each of the required Arc-enabled SQL MI Persistent Volumes. Higher performance storage options could be desired for _Data_ and _DataLogs_, but the _Logs_ and _Backup_ volumes could use more cost-efficient Storage Class options to save on costs. In scenarios where local storage is used, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O.
 
 When deleting Arc-enabled SQL MI, this does not remove its associated PVs and PVCs. This ensures that you can access the database files in case the deletion was accidental.
 
