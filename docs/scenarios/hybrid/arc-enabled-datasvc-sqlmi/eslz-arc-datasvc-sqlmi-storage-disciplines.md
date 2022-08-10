@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank
 
 Storage is a critical component in an Azure Arc-enabled SQL Managed Instance (Arc-enabled SQL MI) deployment.  Understanding how the storage-related concepts described in this document affect the functioning of Kubernetes clusters is an important aspect of the storage design choices and management.
 
-Rather than directly interacting with underlying storage, Kubernetes provides an abstraction layer to a variety of storage technologies through Storage Classes. Cloud providers, hardware vendors, and other Kubernetes managed platforms offer varying Storage Class options to suit specific environments and implementation scenarios.
+Rather than directly interacting with underlying storage, Kubernetes provides an abstraction layer to a variety of storage technologies through Storage Classes. Cloud providers, hardware vendors, and other Kubernetes-managed platforms offer varying Storage Class options to suit specific environments and implementation scenarios.
 
 It is important to understand that the impact of choosing a storage design or configuration is as relevant for a SQL Server deployment when running on bare metal or virtual machines as it is to an Arc-enabled SQL MI deployment. These choices will ultimately represent your requirements surrounding RPO, RTO, capacity & performance.
 
