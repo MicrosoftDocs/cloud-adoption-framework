@@ -67,7 +67,7 @@ The table below shows you what DevOps tools you need and what it does. The "Solu
 | *Artifacts* | A tool to share code and publish packages | [Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts) | Nexus
 | *Testing* | A tool to run tests and quality assurance on code | [Azure Test Plans](/azure/devops/test/overview) | Selenium |
 
-With your DevOps tools in place, you can begin modernizing your applications or databases.
+With your DevOps tools in place, you can begin modernizing your applications and modernizing your databases.
 
 ## Next Steps
 
