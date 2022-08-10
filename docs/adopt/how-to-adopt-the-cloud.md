@@ -39,7 +39,6 @@ Replacing critical workloads with SaaS and low-code solutions provides the most 
 |DevOps tools|[GitHub](/learn/modules/introduction-to-github/)|:::image type="icon" source="../_images/adopt/github-icon.svg":::
 |Relationship <br>Management|[Dynamics](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
 |Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
-|
 
 ## Rehost and Replatform (50%)
 
@@ -55,7 +54,7 @@ Some examples of workloads you could include in your first move are:
 
 - *High Business Impact:* Workloads that drive revenue.
 - *High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:* Workloads that record business transactions.
-- *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and General Data Protection Regulation (GDPR)](/../cloud-adoption-framework-pr/docs/govern/policy-compliance/regulatory-compliance.md). Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance.md) to ensure compliance with these standards.
+- *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and GDPR](/../cloud-adoption-framework-pr/docs/govern/policy-compliance/regulatory-compliance.md). Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance.md) to ensure compliance with these standards.
 
 **3. Hard or costly to move (5%):** Move the most difficult and costly workloads last. These systems need more thought to move efficiently. Consider using [FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack/?v=18.03#overview) to get customized guidance from Azure engineers.
 
