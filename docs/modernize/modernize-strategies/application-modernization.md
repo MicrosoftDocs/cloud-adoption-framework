@@ -1,6 +1,6 @@
 ---
-title: Modernize your applications in the cloud
-description: Learn to adopt and deploy modern application platforms during cloud adoption-related modernization.
+title: Modernize applications in the cloud
+description: Learn to modernize applications in the cloud
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/08/2022
@@ -16,7 +16,7 @@ Primary Deliverable: CAF/modernize/application-platform-modernization.md
 This should fit into one net new article.
 -->
 
-# Modernize your applications in the cloud
+# Modernize applications in the cloud
 
 Learn how to modernize any application or framework in the cloud.
 
@@ -32,7 +32,7 @@ In the table below, find your desired level of control vs. productivity. Then, s
 | --- | --- | --- | --- |
 | *Most Control* | [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) <br><br> [Azure Red Hat OpenShift](/azure/openshift/intro-openshift) | <ul><li>Infrastructure control</li> <li>Less administrative burden orchestrating clusters and nodes</li> </ul> | [Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app) <br><br> [Azure Red Hat OpenShift](/azure/openshift/tutorial-create-cluster)</li></ul>
 | *Balance control & <br>productivity* | [Azure App Service](/rest/api/appservice/) <br><br> [Azure Spring Apps](/azure/spring-apps/overview) <br><br> [Azure Functions](/azure/azure-functions/functions-overview) | <ul><li> Focus on developing customer code</li> <li>Automated infrastructure</li> </ul> | [Azure App Service](/azure/app-service/app-service-migration-assess-net) <br><br> [Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud) <br><br> [Azure Functions](/azure/azure-functions/functions-reference)</ul>
-| *Productivity* | [Power Apps](/power-apps/powerapps-overview) <br><br> [Power Automate](/power-automate/getting-started) | <ul><li>Fastest time-to-market</li> <li>Applications and automation built with little to no coding experience</li> </ul> | [Power Apps](/power-apps/powerapps-overview)<br><br> [Power Automate](/power-automate/getting-started)</li></ul>
+| *Productivity* | [Power Apps](/power-apps/powerapps-overview) <br><br> [Power Automate](/power-automate/getting-started) | <ul><li>Fastest time-to-market</li> <li>Applications and automation built with little to no coding experience</li> </ul> | [Power Apps](/power-apps/powerapps-overview)<br><br> [Power Automate](/power-automate/getting-started)</li></ul> |
 
 ## Find help choosing the right solution
 
