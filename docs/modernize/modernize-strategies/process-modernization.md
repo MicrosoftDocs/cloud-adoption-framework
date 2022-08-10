@@ -18,7 +18,7 @@ Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption 
 
 Learn how to modernize your process for the cloud. Modernizing your processes increases operational efficiency. Operational efficiency reduces the total cost of ownership of your workloads.
 
-:::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools-512.png" alt-text="image showing a circle with 4 segments":::
+:::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools-512.png" alt-text="An image showing a circle with 4 segments corresponding to a basic DevOps workflow. The segments say plan, develop, deliver, and operate. In the middle of the circle, it says DevOps. There is a circular arrow showing that this is a continuous process. There are image of 5 Azure DevOps tools inside the circular arrow. The Azure DevOps tools are Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts.":::
 
 Modernize your process with a DevOps approach. DevOps uses an Agile framework to deliver continuous value to customers. The DevOps approach has a specific focus, approach, and benefits
 
