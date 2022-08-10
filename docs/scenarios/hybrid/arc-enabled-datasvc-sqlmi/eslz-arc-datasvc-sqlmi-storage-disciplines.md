@@ -149,8 +149,8 @@ It is recommended to monitor all PVCs created by Azure Arc-Enabled Data Services
 
 For more information on your hybrid and multicloud cloud journey, see the following articles:
 
-- Review the [storage configuration](/azure/azure-arc/data/storage-configuration) for Azure Arc-Enabled Data Services
-- Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-Enabled Data Services.
-- Review the [Sizing Guidance](/azure/azure-arc/data/sizing-guidance) of Azure Arc-Enabled Data Services.
+- Review the [storage configuration](/azure/azure-arc/data/storage-configuration) for Azure Arc-enabled data services
+- Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-enabled data services.
+- Review the [Sizing Guidance](/azure/azure-arc/data/sizing-guidance) of Azure Arc-enabled data services.
 - Experience Azure Arc-Enabled Arc-enabled SQL MI automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
