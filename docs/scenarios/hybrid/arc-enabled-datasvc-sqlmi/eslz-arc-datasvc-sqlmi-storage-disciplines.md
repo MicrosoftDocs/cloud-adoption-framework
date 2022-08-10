@@ -66,7 +66,7 @@ Be sure to consider the [compute and memory resources](/azure/azure-arc/data/siz
 
 ![A screenshot showing Data Controller Storage](../media/arc-enabled-datasvc-sqlmi-storage-datacontroller.PNG)
 
-The Data Controller default volume sizing is the recommended minimum. The storage used will be dependent on the number of databases, how the databases are being used, and the number of logs generated. The Data Controller Storage Class is not sensitive to low latency, but users might see benefits in the Grafana and Kibana interfaces with faster-performing storage if you have a large number of Arc-enabled SQL MI deployments in a cluster.
+The Data Controller default volume sizing is the recommended minimum. The storage used will be dependent on the number of databases, how the databases are being used, and the number of logs generated. The Data Controller Storage Class is not sensitive to low latency, but users might see benefits in the Grafana and Kibana interfaces with faster-performing storage if you have a large number of Arc-enabled SQL MI deployments in a cluster.  
 
 #### Data Controller Installing and Uninstalling
 
