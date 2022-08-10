@@ -20,9 +20,9 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 - **Monitor and visualize metrics.** Metrics are numerical values available from Azure resources that help you understand the health of your systems. You can customize charts for your dashboards, and use workbooks for reporting.
 
-- **Query and analyze logs.** Logs include activity logs and diagnostic logs from Azure. Collect logs from other monitoring and management solutions for your cloud or on-premises resources. Log Analytics provides a central repository to aggregate all this data. From there, you can run queries to help troubleshoot issues or to visualize data.
+- **Query and analyze logs.** Log Analytics provides a central repository to aggregate data from activity and diagnostic logs in Azure. From there, you can run queries to help troubleshoot issues or to visualize data. You can also collect logs from other monitoring and management solutions for your cloud or on-premises resources. 
 
-- **Set up alerts and actions.** Alerts proactively notify you of critical conditions. Corrective actions can be taken based on triggers from metrics, logs, or service health issues. You can set up different notifications and actions and send data to your IT service management tools.
+- **Set up alerts and actions.** Alerts proactively notify you of critical conditions, so you can take corrective actions based on triggers from metrics, logs, or service health issues. You can set up different notifications and actions, and send data to your IT service management tools.
 
 ::: zone target="docs"
 
@@ -55,7 +55,7 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 ## [Azure Service Health](#tab/AzureServiceHealth)
 
-Azure Service Health provides a personalized view of the health of the Azure services and regions you use. Information about active issues is posted to Azure Service Health to help you understand the impact to your resources. Regular updates keep you informed as issues are resolved.
+Azure Service Health provides a personalized view of the health of your Azure services and regions. Information about active issues is posted to Azure Service Health to help you understand the impact to your resources. Regular updates keep you informed as issues are resolved.
 
 Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect the Azure services and regions you use. You can also view planned maintenance events that could affect the availability of your resources.
 
@@ -93,7 +93,7 @@ For more information, see [Azure Service Health documentation](/azure/service-he
 
 ## [Azure Advisor](#tab/AzureAdvisor)
 
-Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. It analyzes your resource configuration and usage telemetry, and then recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
+Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. Advisor analyzes your resource configuration and usage telemetry, and then recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
 
 - **High availability:** To improve the continuity of your business-critical applications. Recommendations might include adding virtual machines to an availability set or adding geo-redundant endpoints.
 - **Security:** To detect threats and vulnerabilities that might lead to security breaches. Recommendations might include applying Azure Disk Encryption or enabling network security groups.
@@ -123,7 +123,7 @@ To learn more, see [Azure Advisor documentation](/azure/advisor/).
 
 ## [Microsoft Defender for Cloud](#tab/AzureSecurityCenter)
 
-Microsoft Defender for Cloud also plays an important part in your monitoring strategy. Defender for Cloud can help you monitor the security of your machines, networks, storage, data services, and applications. It provides advanced threat detection by using machine learning and behavioral analytics to help identify active threats targeting your Azure resources. It also provides threat protection that blocks malware or other unwanted code, and reduces the surface area exposed to brute force and other network attacks.
+Microsoft Defender for Cloud also plays an important part in your monitoring strategy. Defender for Cloud can help you monitor the security of your machines, networks, storage, data services, and applications. It provides advanced threat detection by using machine learning and behavioral analytics to help identify active threats that target your Azure resources. Defender for Cloud also provides threat protection that blocks malware or other unwanted code, and reduces the surface area exposed to brute force and other network attacks.
 
 When Defender for Cloud identifies a threat, it triggers a security alert with steps you need to take to respond to an attack. It also provides a report with information about the threat that was detected.
 
