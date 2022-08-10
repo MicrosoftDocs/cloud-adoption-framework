@@ -1,6 +1,6 @@
 ---
 title: Storage Disciplines for Azure Arc-enabled SQL Managed Instance
-Learn design considerations and recommendations for storage for Azure Arc-enabled SQL Managed Instance.
+description: Learn design considerations and recommendations for Storage Disciplines with Azure Arc-enabled SQL Managed Instance.
 author: jpocloud
 ms.author: johnpoole
 ms.date: 08/04/2022
@@ -16,7 +16,7 @@ Storage is a critical component in an Azure Arc-enabled SQL Managed Instance (Ar
 
 Rather than directly interacting with underlying storage, Kubernetes provides an abstraction layer to a variety of storage technologies through Storage Classes. Cloud providers, hardware vendors, and other Kubernetes managed platforms offer varying Storage Class options to suit specific environments and implementation scenarios.
 
-It is important to understand that the impact of choosing a storage design or configuration is as relevant for a SQL Server deployment when running on bare metal or virtual machines as it is to an Arc-enabled SQL MI deployment. These choices will ultimately represent your requirements surrounding RPO, RTO, capacity & performance.
+Arc-enabled SQL MI does not enforce limitations on Storage Classes used, so it is important to choose the correct storage design and configuration. The storage design for Arc-enabled SQL MI is just as relevant if you were choosing backing storage for a SQL Server when running on bare metal or virtual machines. These choices will ultimately represent your requirements surrounding RPO, RTO, capacity & performance.
 
 For Arc-enabled SQL MI deployments, effectively planning for storage capabilities and configuration is crucial to operate successfully.  Read on to learn about the storage-related factors to consider, followed by recommendations for configuring Arc-enabled SQL MI.
 
@@ -74,8 +74,8 @@ The following table describes the different Persistent Volumes used by each Arc-
 
 | Persistent Volume       | Description           | Storage Class Requirements |
 | ------------- |:-------------:| -----:|
-| Data      | SQL Data (.mdf files) | Depends on tier |
-| DataLogs     | SQL log (.ldf files)      |   Depends on tier |  
+| Data      | SQL Database Data files (.mdf files) | Depends on tier |
+| DataLogs     | SQL Database log files (.ldf files)      |   Depends on tier |  
 | Logs  | SQL agent, error logs, trace files, health logs      |   Depends on tier  |
 | Backups  | SQL Server Backup files including Full, Diff, Transactional Log      |    Remote, ReadWriteMany Access Mode |
 
@@ -93,7 +93,7 @@ Below is a diagram to illustrate the Business Critical storage configuration for
 
 ![Arc-enabled SQL MI Business Critical Storage](../media/arc-enabled-datasvc-sqlmi-storage-bc.PNG)
 
-Business Critical allows for configuration of 2 or 3 secondary replicas, and failover is managed by [SQL always On Availability Group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server), which will provide less downtime for upgrades and failures than the General Purpose tier. Configuring multiple replicas with synchronous data replication can ensure better protection against failures such as a failed pod, node, or storage hardware as there will be multiple copies of the data on the replicas. Consider utilizing secondary replicas as read scale-out instances, which can be configured by creating a separate secondary listener endpoint and configuring clients to connect to it. It is recommended to review the [Availability mode differences](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups), which will require different configuration for each option. Review the [Business Continuity and Disaster Recovery](./eslz-arc-datasvc-sqlmi-bcdr.md) section for more information in these areas.
+Business Critical allows for configuration of 2 or 3 secondary replicas, and failover is managed by [SQL always On Availability Group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server), which will provide less downtime for upgrades and failures than the General Purpose tier. Configuring multiple replicas with synchronous-commit mode can ensure better protection against failures such as a failed pod, node, or storage hardware as there will be multiple copies of the data on the replicas. Consider utilizing secondary replicas as read scale-out instances, which can be configured by creating a separate secondary listener endpoint and configuring clients to connect to it. It is recommended to review the [Availability mode differences](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups), which will require different configuration for each option. Review the [Business Continuity and Disaster Recovery](./eslz-arc-datasvc-sqlmi-bcdr.md) section for more information in these areas.
 
 #### Azure Arc SQL Managed Instance Provisioning and Uninstalling
 
@@ -113,7 +113,7 @@ For specific public clouds, the recommended Storage Classes for production workl
 | AWS (EKS)     | EBS CSI storage driver    |
 | Google (GKE)  | GCE Persistent disks     |
 
-When choosing a production Storage Class in On-premise and vendor storage infrastructure scenarios, ensure the Storage Class is capable of meeting your intended storage capacity, IOPS, and throughput needs. The following sections provide additional recommendations for these scenarios.
+When choosing a production Storage Class in on-premise or multicloud scenarios, ensure the Storage Class is capable of meeting your intended storage capacity, IOPS, redundancy, and throughput needs. The following sections provide additional recommendations for these scenarios.
 
 ### Data Controller
 
@@ -125,7 +125,7 @@ It is recommended to choose a lower latency Storage Class in the event your clus
 
 ### Azure Arc-enabled SQL Managed Instance
 
-It is recommended to plan and account for all of the instances of Arc-enabled SQL MI and corresponding SQL Databases that will be required on each Kubernetes cluster. This will prevent needing to move databases between instances at a later time. Provision Arc-enabled SQL MI deployments to different Kubernetes clusters to separate environments, create security boundaries, and avoid having all databases rely on the scale and performance of a single Kubernetes cluster. When configuring multiple database instances on a cluster, be sure to separate busy databases to their own instance to avoid I/O contention. Use node labels to ensure that database instances are put onto separate nodes to distribute the overall I/O traffic across multiple nodes, see Kubernetes [Node Labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#built-in-node-labels) along with Kubernetes [Node Affinity and Anti-Affinity Labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) for configuring this. If operating in a virtualized environment, ensure that I/O is appropriately distributed at the physical host-level.
+It is recommended to plan and account for all of the new and existing databases involved in the migration and deployment of Arc-enabled SQL MI. and corresponding SQL Databases that will be required on each Kubernetes cluster. This will prevent needing to move databases between instances at a later time. Provision Arc-enabled SQL MI deployments to different Kubernetes clusters to separate environments, create security boundaries, and avoid having all databases rely on the scale and performance of a single Kubernetes cluster. When configuring multiple database instances on a cluster, be sure to separate busy databases to their own instance to avoid I/O contention. Use node labels to ensure that database instances are put onto separate nodes to distribute the overall I/O traffic across multiple nodes, see Kubernetes [Node Labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#built-in-node-labels) along with Kubernetes [Node Affinity and Anti-Affinity Labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) for configuring this. If operating in a virtualized environment, ensure that I/O is appropriately distributed at the physical host-level.
 
 Plan the capacity for Arc-enabled SQL MI to have adequate storage sizes for Data, Logs, DataLogs, and Backups that can accommodate both current needs and projected growth for all the databases that will live on the instances of Arc-enabled SQL MI. This will prevent having to resize the PVCs in the future.
 
