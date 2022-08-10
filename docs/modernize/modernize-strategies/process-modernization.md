@@ -39,7 +39,6 @@ The sample modernization path we created is below for easy reference.
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy
 | --- | --- | --- | --- |
 |E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation |<ul><li>Process modernization</li><li>Application modernization</li></ul>|
-|
 
 ### Step 2 - Organize modernization efforts around your modernization path
 
