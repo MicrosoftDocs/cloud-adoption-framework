@@ -1,9 +1,9 @@
 ---
 title: Monitoring and reporting in Azure
-description: Use the Cloud Adoption Framework for Azure to learn how to set up monitoring, reporting, and alerts for your Azure management environment.
+description: Learn how to use the Cloud Adoption Framework to set up monitoring, reporting, and alerts in Azure.
 author: timleyden
 ms.author: brblanch
-ms.date: 04/09/2019
+ms.date: 08/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,15 +12,15 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Monitoring and reporting in Azure
 
-Azure offers many services that together provide a comprehensive solution for collecting, analyzing, and acting on telemetry from your applications and the Azure resources that support them. In addition, these services can extend to monitoring critical on-premises resources to provide a hybrid monitoring environment.
+Azure offers many services that together provide a comprehensive solution for collecting, analyzing, and acting on telemetry from your applications and from the Azure resources that support them. These services can also monitor critical on-premises resources to provide a hybrid monitoring environment.
 
 ## [Azure Monitor](#tab/AzureMonitor)
 
-Azure Monitor provides a single unified hub for all monitoring and diagnostics data in Azure. You can use it to get visibility across your resources. With Azure Monitor, you can find and fix problems and optimize performance. You also can understand customer behavior.
+Azure Monitor provides a single unified hub for all monitoring and diagnostics data in Azure. You can use it to get visibility across your resources. With Azure Monitor, you can find and fix problems, optimize performance, and understand customer behavior.
 
-- **Monitor and visualize metrics.** Metrics are numerical values available from Azure resources that help you understand the health of your systems. Customize charts for your dashboards, and use workbooks for reporting.
+- **Monitor and visualize metrics.** Metrics are numerical values available from Azure resources that help you understand the health of your systems. You can customize charts for your dashboards, and use workbooks for reporting.
 
-- **Query and analyze logs.** Logs include activity logs and diagnostic logs from Azure. Collect additional logs from other monitoring and management solutions for your cloud or on-premises resources. Log Analytics provides a central repository to aggregate all this data. From there, you can run queries to help troubleshoot issues or to visualize data.
+- **Query and analyze logs.** Logs include activity logs and diagnostic logs from Azure. Collect logs from other monitoring and management solutions for your cloud or on-premises resources. Log Analytics provides a central repository to aggregate all this data. From there, you can run queries to help troubleshoot issues or to visualize data.
 
 - **Set up alerts and actions.** Alerts proactively notify you of critical conditions. Corrective actions can be taken based on triggers from metrics, logs, or service health issues. You can set up different notifications and actions and send data to your IT service management tools.
 
@@ -30,10 +30,10 @@ Start monitoring your:
 
 - [Applications](/azure/azure-monitor/app/app-insights-overview)
 - [Containers](/azure/azure-monitor/containers/container-insights-overview)
-- [Virtual machines](/azure/azure-monitor/vm/service-map)
+- [Virtual machines](/azure/azure-monitor/vm/vminsights-overview)
 - [Networks](/azure/networking/network-monitoring-overview)
 
-To monitor other resources, find additional solutions in the Azure Marketplace.
+To monitor other resources, find more solutions in the Azure Marketplace.
 
 To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview).
 
@@ -55,9 +55,9 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 ## [Azure Service Health](#tab/AzureServiceHealth)
 
-Azure Service Health provides a personalized view of the health of the Azure services and regions you use. Information about active issues is posted to Azure Service Health to help you understand the impact to your resources. Regular updates keep you informed as the issue is resolved.
+Azure Service Health provides a personalized view of the health of the Azure services and regions you use. Information about active issues is posted to Azure Service Health to help you understand the impact to your resources. Regular updates keep you informed as issues are resolved.
 
-We also publish planned maintenance events to Azure Service Health so you'll know about changes that could affect the availability of your resources. Set up Service Health alerts to be notified when service issues, planned maintenance, or other changes might affect the Azure services and regions you use.
+Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect the Azure services and regions you use. You can also view planned maintenance events that could affect the availability of your resources.
 
 Azure Service Health includes:
 
@@ -87,13 +87,13 @@ To set up an Azure Service Health alert, go to the [Azure portal](https://portal
 
 ### Learn more
 
-For more information, see [Azure Service Health](/azure/service-health/).
+For more information, see [Azure Service Health documentation](/azure/service-health/).
 
 ::: zone-end
 
 ## [Azure Advisor](#tab/AzureAdvisor)
 
-Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. It analyzes your resource configuration and usage telemetry and recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
+Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. It analyzes your resource configuration and usage telemetry, and then recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
 
 - **High availability:** To improve the continuity of your business-critical applications. Recommendations might include adding virtual machines to an availability set or adding geo-redundant endpoints.
 - **Security:** To detect threats and vulnerabilities that might lead to security breaches. Recommendations might include applying Azure Disk Encryption or enabling network security groups.
@@ -123,11 +123,11 @@ To learn more, see [Azure Advisor documentation](/azure/advisor/).
 
 ## [Microsoft Defender for Cloud](#tab/AzureSecurityCenter)
 
-Microsoft Defender for Cloud also plays an important part in your monitoring strategy. It can help you monitor the security of your machines, networks, storage, data services, and applications. Defender for Cloud provides advanced threat detection by using machine learning and behavioral analytics to help identify active threats targeting your Azure resources. It also provides threat protection that blocks malware or other unwanted code, and reduces the surface area exposed to brute force and other network attacks.
+Microsoft Defender for Cloud also plays an important part in your monitoring strategy. Defender for Cloud can help you monitor the security of your machines, networks, storage, data services, and applications. It provides advanced threat detection by using machine learning and behavioral analytics to help identify active threats targeting your Azure resources. It also provides threat protection that blocks malware or other unwanted code, and reduces the surface area exposed to brute force and other network attacks.
 
 When Defender for Cloud identifies a threat, it triggers a security alert with steps you need to take to respond to an attack. It also provides a report with information about the threat that was detected.
 
-Microsoft Defender for Cloud is offered in two tiers: free and standard. Features like security recommendations are available for free. The Standard tier provides additional protection like advanced threat detection and protection across hybrid cloud workloads.
+Defender for Cloud is offered in two tiers: free and standard. Features like security recommendations are available for free. The standard tier provides more protection like advanced threat detection and protection across hybrid cloud workloads.
 
 ::: zone target="chromeless"
 
