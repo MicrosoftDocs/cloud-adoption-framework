@@ -83,7 +83,6 @@ This article provides key design considerations and recommendations for configur
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to monitor for new Azure Arc Data Controller upgrades availability.
 - Properly size your cluster by planning for future capacity, upgrades and features.
-- Avoid deploying Generally avaialble and preview Azure Arc-enabled SQL Managed Instances on the same Data Controller.
 - Avoid using preview versions in your production environment and only use and only use preview features for evaluation purposes on dev/test instances.
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
 
