@@ -3,7 +3,7 @@ title: Governance, security, and compliance in Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: brblanch
-ms.date: 08/09/2022
+ms.date: 08/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -97,10 +97,10 @@ Azure Policy helps you create, assign, and manage policies. These policies enfor
 
 Use common policies to:
 
-- Enforce tagging for resources and resource groups
-- Restrict regions for deployed resources
-- Restrict expensive SKUs for specific resources
-- Audit the use of important optional features like Azure-managed disks
+- Enforce tagging for resources and resource groups.
+- Restrict regions for deployed resources.
+- Restrict expensive SKUs for specific resources.
+- Audit the use of important optional features like Azure-managed disks.
 
 ::: zone target="chromeless"
 
