@@ -81,7 +81,7 @@ The following table describes the different Persistent Volumes used by each Arc-
 
 #### General Purpose Tier
 
-The General Purpose tier of Arc-enabled SQL MI must use remote storage for the database instance so that, upon failure of a pod, the data remains available to newly created pods. Failover is managed by Kubernetes pod & node orchestration. This is a simpler configuration compared to Business Critical which uses Availability Groups and multiple Arc-enabled SQL MI replicas. The single pod configuration with General purpose means that you can minimize the amount of storage due to not having to duplicate storage capacity for other replicas.
+The General Purpose tier of Arc-enabled SQL MI must use remote storage for the database instance so that, upon failure of a pod, the data remains available to newly created pods. Failover is managed by Kubernetes pod and node orchestration. This is a simpler configuration compared to Business Critical which uses [SQL Availability Groups](/azure/azure-arc/data/managed-instance-high-availability) and multiple Arc-enabled SQL MI replicas. The single pod configuration of the General Purpose tier means that you can minimize the amount of storage due to not having to duplicate storage capacity for other replicas.
 
 ![Arc-enabled SQL MI General Purpose Storage](../media/arc-enabled-datasvc-sqlmi-storage-gp.PNG)
 
