@@ -46,7 +46,7 @@ Most modernization motivations map to two or more modernization strategies (*see
 
 Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter you motivation for modernization, you need to modernize your process.
 
-**Create a commitment path** Use the table above to create your commitment path. Your commitment path is a combination of your business function, workload, motivation, and modernization strategy.
+**Create a modernization path** Use the table above to create your modernization path. Your modernization path is a combination of your business function, workload, motivation, and modernization strategy.
 
 See the example below. It builds on the table you created in the [envision step](../business-alignment/envision-cloud-modernization.md).
 
@@ -56,9 +56,9 @@ See the example below. It builds on the table you created in the [envision step]
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 |
 
-## Step 2 - Commit to a timeline
+## Step 2 - Commit to a modernization timeline
 
-Commit to a timeline. The amount of time it takes to modernize your process and workloads depends on your team's experience and the complexity of your situation.
+Commit to a modernization timeline. The amount of time it takes to modernize your process and workloads depends on your team's experience and the complexity of your situation.
 
 Check out our [Fast Track for Azure](/programs/azure-fasttrack/) program if you don't have the right experience on your team to estimate a timeline.
 
