@@ -61,7 +61,7 @@ The table below shows you what DevOps tools you need and what it does. The "Solu
 
 | DevOps Tool | Tool Description | Solution | Alternative
 | --- | --- | --- | --- |
-| *Repository* | A centralized location to store code and code changes | [Azure Repos](/azure/devops/repos/get-started/what-is-repos) | GitHub
+| *Repository* | A cloud-based location to store all code, track changes, and merge work | [Azure Repos](/azure/devops/repos/get-started/what-is-repos) | GitHub
 | *Pipeline* | An automated process to validate and push code to a desired environment | [Azure Pipeline](/azure/devops/pipelines/get-started/pipelines-get-started) | Jenkins
 | *Boards* | A central dashboard that tracks the progress of work items | [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) | TaskBoard |
 | *Artifacts* | A tool to share code and publish packages | [Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts) | Nexus
