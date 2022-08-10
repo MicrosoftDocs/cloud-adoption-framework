@@ -25,7 +25,7 @@ This article provides key design considerations and recommendations for configur
 ### Data Controller upgrades
 
 - Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
-- Review your Azure Arc-enabled SQL Managed Instances to check if you have any preview data services deployed on the same Data Controller that will be upgraded with Generally Available instances. You cannot perform in-place upgrades if you have a mix of preview and Generally Available instances deployed on the same Data Controller.
+- Review your Azure Arc-enabled SQL MI to check if you have any preview data services deployed on the same Data Controller that will be upgraded with Generally Available instances. You cannot perform in-place upgrades if you have a mix of preview and Generally Available instances deployed on the same Data Controller.
 - Review the versions of all the Azure Arc-enabled SQL Managed Instances deployed on the Data Controller to be confirm they are at the same version as the Data Controller before performing the upgrade.
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next right version for your Data Controller before the upgrade.
 - Create an inventory of the current versions of the deployed Data Controllers. [Azure Resource Graph](/azure/governance/resource-graph/overview) can be used to query your current deployed Data Controllers.
@@ -57,18 +57,18 @@ This article provides key design considerations and recommendations for configur
 
 #### General considerations
 
-- Upgrades to the Data Controller must be performed prior to upgrading the Azure Arc-enabled SQL Managed Instances. The data and SQL MI extensions versions are related and must be the same version.
+- Upgrades to the Data Controller must be performed prior to upgrading the Azure Arc-enabled SQL MI. The data and SQL MI extensions versions are related and must be the same version.
 - Decide if you will use automatic or manual upgrades of your Azure Arc-enabled SQL Managed Instances depending on your requirements.
 - In case of automatic upgrades, only a single maintenance window can be defined for a Data Controller. Consider the number of different maintenance windows needed for different workloads to identify the number of needed Data Controllers.
 
 #### General Purpose service tier
 
-- During an Azure Arc-enabled SQL Managed Instance in a General Purpose service tier upgrade, the pod will be terminated and reprovisioned at the new version. It is important to understand the application and client side impact of an upgrade where there will be a short amount of downtime as the new pod is created.
+- During an Azure Arc-enabled SQL MI in a General Purpose service tier upgrade, the pod will be terminated and reprovisioned at the new version. It is important to understand the application and client side impact of an upgrade where there will be a short amount of downtime as the new pod is created.
 - Review your applications architecture to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
 
 #### Business Critical service tier
 
-- During an Azure Arc-enabled SQL Managed Instance in a Business Critical service tier upgrade with multiple replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replica is promoted to become the new primary, and the old primary becomes a secondary and is upgraded. During the transition from old primary to new primary there is a brief moment of downtime when the failover happens. It is important to understand the application and client side impact of an upgrade when the failover occur.
+- During an Azure Arc-enabled SQL MI in a Business Critical service tier upgrade with multiple replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replica is promoted to become the new primary, and the old primary becomes a secondary and is upgraded. During the transition from old primary to new primary there is a brief moment of downtime when the failover happens. It is important to understand the application and client side impact of an upgrade when the failover occur.
 - Review your applications architecture to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
 
 ### Extension upgrade
@@ -132,7 +132,7 @@ For more information on your hybrid and multicloud cloud journey, see the follow
 - Review the [capabilities](/azure/azure-arc/data/overview) of Azure Arc-enabled Data Services.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-enabled Data Services.
 - Review the upgrade process of the Data Controller in [directly](/azure/azure-arc/data/upgrade-data-controller-direct-cli) and [indirectly](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) connected modes.
-- Review the upgrade process of the Azure Arc SQL Managed Instance in [directly](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli) and [indirectly](/azure/azure-arc/data/upgrade-sql-managed-instance-cli) connected modes.
+- Review the upgrade process of the Azure Arc SQL MI in [directly](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli) and [indirectly](/azure/azure-arc/data/upgrade-sql-managed-instance-cli) connected modes.
 - Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
-- Experience Azure Arc-enabled SQL Managed Instance automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
+- Experience Azure Arc-enabled SQL MI automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
