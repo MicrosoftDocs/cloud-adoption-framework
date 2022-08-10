@@ -1,6 +1,6 @@
 ---
-title: Modernize your SQL database in the cloud
-description: Understand and evaluate options for maturing your underlying data platforms for modernization.
+title: Learn how to modernize proprietary SQL, open-source SQL, and NoSQL databases in the cloud
+description: Learn how to modernize your database
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/08/2022
@@ -10,7 +10,7 @@ ms.subservice:
 ms.custom: seo-caf-modernize
 keywords: collect data, migrate data, data migration, data modernization
 ---
-# Modernize database in the cloud
+# Modernize databases in the cloud
 
 Modernize your databases in the cloud. The path you choose depends on where you're starting from and where you want to go. Below, you'll find guidance on what to do and how to do it.
 
@@ -50,8 +50,9 @@ In the table below, find your desired level of control vs. productivity. Then, s
 | *Most productivity* | [Azure Cosmos DB](/azure/cosmos-db/introduction) | <ul><li> A fully managed NoSQL database</li><li>Cost-efficiency</li><li>Support for MongoDB & Gremlin</ul> | [Azure Cosmos DB](/azure/cosmos-db/cosmosdb-migrationchoices) |
 | *Most productivity* | [Azure Database for MySQL](/azure/mysql/single-server/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MySQL](/azure/dms/tutorial-mysql-azure-mysql-offline-portal) <br><br> Using the [Azure Database Migration Service](/azure/dms/)|
 | *Most productivity* | [Azure Database for MariaDB](/azure/mariadb/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MariaDB](/azure/mariadb/howto-migrate-dump-restore) |
-| *Most productivity* | [Azure Database for PostgreSQL](/azure/postgresql/single-server/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul>| [Azure Database for PostreSQL](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal) |
-|
+| *Most productivity* | [Azure Database for PostgreSQL](/azure/postgresql/single-server/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul>| [Azure Database for PostreSQL](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal)|
+
+You have completed the guidance on how to modernize in the cloud. You're ready to Innovate in the cloud.
 
 ## Next Steps
 
