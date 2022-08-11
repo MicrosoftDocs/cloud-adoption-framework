@@ -407,7 +407,7 @@
       },
       {
          "source_path": "docs/ready/considerations/compute-options.md",
-         "redirect_url": "https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree",
+         "redirect_url": "/azure/architecture/guide/technology-choices/compute-decision-tree",
          "redirect_document_id": false
       },
       {
@@ -496,6 +496,16 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/scenarios/wvd/design-area-enterprise-enrollment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/wvd/eslz-enterprise-enrollment",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/wvd/design-area-resource-organization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/wvd/eslz-resource-organization",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/reference/fundamental-concepts/hierarchy-azure-tools.md",
          "redirect_url": "/azure/cloud-adoption-framework/resources/fundamental-concepts/hierarchy-azure-tools",
          "redirect_document_id": true
@@ -544,6 +554,16 @@
          "source_path": "docs/ready/enterprise-scale/design-principles.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-principles",
          "redirect_document_id": false
-      }          
+      },
+      {
+         "source_path": "docs/ready/considerations/azure-test-driven-development.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/considerations/test-driven-development.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development",
+         "redirect_document_id": false
+      }            
    ]
 }
