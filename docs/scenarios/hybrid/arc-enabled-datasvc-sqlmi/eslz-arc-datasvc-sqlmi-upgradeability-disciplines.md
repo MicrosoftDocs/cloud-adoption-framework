@@ -59,7 +59,7 @@ This article provides key design considerations and recommendations for configur
 #### General considerations
 
 - Upgrades to the Data Controller must be performed prior to upgrading the Azure Arc-enabled SQL MI. The data and SQL MI extensions versions are related and must be the same version.
-- Decide if you will use automatic or manual upgrades of your Azure Arc-enabled SQL Managed Instances depending on your requirements.
+- Decide if you will use automatic or manual upgrades of your Arc-enabled SQL MI depending on your requirements.
 - In case of automatic upgrades, only a single maintenance window can be defined for a Data Controller. Consider the number of different maintenance windows needed for different workloads to identify the number of needed Data Controllers.
 
 #### General Purpose service tier
