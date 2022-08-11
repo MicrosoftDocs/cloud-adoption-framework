@@ -115,8 +115,8 @@ This article provides key design considerations and recommendations for configur
 
 #### Business Critical service tier
 
-- Deploy the Business Critical instance with 3 replicas instead of 2 to achieve higher availability and less downtime with upgrade and failover activities.
-- Perform upgrades during non-business critical times to minimize the impact to users and data.
+- Deploy the Business Critical instance with 3 replicas instead of 2 to achieve higher availability and less downtime with during upgrade and failover activities.
+- Perform upgrades during non-business critical times to minimize the impact on users and organization data.
 - Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
 
 ## Next steps
