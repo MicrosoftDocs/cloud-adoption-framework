@@ -79,7 +79,7 @@ This article provides key design considerations and recommendations for configur
 - If upgrading using the Azure CLI, verify that the _arcdata_ Cluster extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to monitor for new Azure Arc Data Controller upgrades availability.
-- Properly size your cluster by planning for future capacity, upgrades, and features.
+- Properly [size your cluster](/azure/azure-arc/data/sizing-guidance) by planning for future capacity, upgrades, and features.
 - Avoid using Preview features in your production environment and only use preview features for evaluation purposes on dev/test instances.
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
 
