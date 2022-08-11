@@ -1,18 +1,18 @@
 ---
-title: Cloud monitoring strategy
-description: Gain an understanding of how to define an effective cloud monitoring strategy.
+title: Cloud monitoring strategy guide
+description: Learn how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: brblanch
-ms.date: 03/22/2021
+ms.date: 08/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-# Cloud monitoring guide: Formulate a monitoring strategy
+# Cloud monitoring strategy guide
 
-As you undergo your digital transformation to the cloud, it's important that you plan and develop an effective cloud monitoring strategy with participation of developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively; always aligned with business needs. Its outcome delivers an agile operations modality centered around the ability of the organization to proactively monitor complex distributed applications the business depends on.
+As your organization adopts cloud resources, it's important to plan and develop an effective monitoring strategy with participation from developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively. It should always aligned with business needs. The outcome is an agile organization that has the ability to proactively monitor complex distributed applications the business depends on.
 
 ## Where to start?
 
