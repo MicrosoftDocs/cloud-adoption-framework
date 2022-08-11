@@ -38,7 +38,7 @@ After Arc-enabled SQL MI is deployed to a resource group and tags have been adde
 
 ## Custom location
 
-When planning for the deployment of Azure Arc-enabled data services in [directly connected mode](/azure/azure-arc/data/connectivity), consider that additional resources name ["Custom Location"](/azure/azure-arc/platform/conceptual-custom-locations) will be provisioned and will be projected in your Azure subscription.
+When planning for the deployment of Azure Arc-enabled data services in [directly connected mode](/azure/azure-arc/data/connectivity), consider that additional resource, ["Custom Location"](/azure/azure-arc/platform/conceptual-custom-locations) will be provisioned and will be projected in your Azure subscription.
 
 ![Azure Arc-enabled data service Custom Locations and namespace mapping](../media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png)
 
