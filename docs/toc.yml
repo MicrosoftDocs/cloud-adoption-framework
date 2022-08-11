@@ -241,7 +241,7 @@ items:
         href: ready/azure-setup-guide/manage-costs.md
       - name: Plan governance, security, and compliance
         href: ready/azure-setup-guide/govern-org-compliance.md
-      - name: Establish monitoring and reporting
+      - name: Monitoring and reporting
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
