@@ -38,7 +38,7 @@ This article provides key design considerations and recommendations for configur
    ```
 
 > NOTE
-> An upgrade of the data controller will not cause downtime for the data services.
+> An upgrade of the Data Controller will not cause downtime for the Arc-enabled SQL MI.
 
 #### Directly connected mode
 
