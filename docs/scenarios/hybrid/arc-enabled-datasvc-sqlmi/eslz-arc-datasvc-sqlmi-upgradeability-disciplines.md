@@ -50,7 +50,7 @@ This article provides key design considerations and recommendations for configur
 
 - Determine if upgrading the Azure Arc Data Controller in indirectly connected mode will be implemented using the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) or [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools).
 - Review the prerequisites for upgrades using the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli#prerequisites).
-- Decide if you will use the [Microsoft Artifact Registry](https://mcr.microsoft.com/) in case your clusters have internet connectivity or a private registry in case your clusters are air gapped to pull the Azure Arc Data services images.
+- Decide if you will use the [Microsoft Artifact Registry](https://mcr.microsoft.com/) in case your clusters have internet connectivity or a private registry in case your clusters are air-gapped to pull the Azure Arc-enabled data services images.
 - Plan for the [required Kubernetes permissions](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#create-the-service-account-for-running-upgrade) to for the service account used to upgrade the Azure Arc Data Controller using Kubernetes tools.
 - Validate the repository information to make sure it is valid and new images have been already pulled to it.
 
