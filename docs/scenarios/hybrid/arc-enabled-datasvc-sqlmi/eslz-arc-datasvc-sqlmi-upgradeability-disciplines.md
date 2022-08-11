@@ -64,53 +64,53 @@ This article provides key design considerations and recommendations for configur
 
 #### General Purpose service tier
 
-- During an Azure Arc-enabled SQL MI in a General Purpose service tier upgrade, the pod will be terminated and reprovisioned at the new version. It is important to understand the application and client side impact of an upgrade where there will be a short amount of downtime as the new pod is created.
-- Review your applications architecture to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
+- During an Arc-enabled SQL MI in a General Purpose service tier upgrade, the Kubernetes pod will be terminated and reprovisioned with the new version. It is important to understand the application and client-side impact of an upgrade where there will be a short amount of downtime as the new pod is created.
+- Review the architecture of your applications to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
 
 #### Business Critical service tier
 
-- During an Azure Arc-enabled SQL MI in a Business Critical service tier upgrade with multiple replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replica is promoted to become the new primary, and the old primary becomes a secondary and is upgraded. During the transition from old primary to new primary there is a brief moment of downtime when the failover happens. It is important to understand the application and client side impact of an upgrade when the failover occur.
-- Review your applications architecture to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
+- During an Arc-enabled SQL MI in a Business Critical service tier upgrade with multiple Kubernetes replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replicas is promoted to become the new primary replica while the old primary becomes a secondary and is upgraded. During the transition from the old primary to the new primary, there is a brief moment of downtime when the failover happens. It is important to understand the application and client-side impact of an upgrade when the failover occurs.
+- Review the architecture of your application to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
 
 ## Design recommendations
 
 ### Data Controller upgrades
 
-- If upgrading using the Azure CLI , verify that the arcdata extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
+- If upgrading using the Azure CLI, verify that the _arcdata_ Cluster extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to monitor for new Azure Arc Data Controller upgrades availability.
-- Properly size your cluster by planning for future capacity, upgrades and features.
-- Avoid using preview features in your production environment and only use and only use preview features for evaluation purposes on dev/test instances.
+- Properly size your cluster by planning for future capacity, upgrades, and features.
+- Avoid using Preview features in your production environment and only use preview features for evaluation purposes on dev/test instances.
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
 
 #### Directly connected mode
 
 - Create a process to monitor the upgrade process using the [Azure Portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#monitor-the-upgrade-status) or [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status).
-- Upgrade the [Arc Data Controller extension](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-arc-data-controller-extension) before upgrading the Data Controller.
+- Upgrade the [_arcdata_ Cluster extension](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-arc-data-controller-extension) before upgrading the Data Controller itself.
 
 #### Indirectly connected mode
 
 - Create a process to monitor the upgrade process using the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status) or [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli#monitor-the-upgrade-status).
-- [Automate the process](https://github.com/microsoft/azure_arc/tree/main/arc_data_services/deploy/scripts) to pull down images to your private registry.
+- Automate the process to [pull down images](https://github.com/microsoft/azure_arc/tree/main/arc_data_services/deploy/scripts) to your private registry.
 
 ### Azure Arc-enabled SQL Managed Instance upgrades
 
 #### General recommendations
 
-- Keep your Azure Arc-enabled Managed Instances up-to-date to the latest available version to make sure you receive the latest patches, bug fixes and features.
-- Make sure to have your point in time restore backup policy configured as needed to be able to recover in case of problems during an upgrade. Review the [Business continuity and disaster recovery design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md). Use _kubectl describe sqlmi_ on your instances to verify.
+- Keep your Arc-enabled SQL MI up-to-date to the latest available version to make sure you receive the latest patches, bug fixes, and features.
+- Make sure to have your "point-in-time restore" backup policy configured as needed to be able to recover in case of issues during an upgrade. Review the [Business continuity and disaster recovery critical design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md) and use the _kubectl describe sqlmi_ command against your instances to verify.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
-- Use the Azure CLI to perform at scale upgrades of your Azure Arc-enabled SQL Managed Instances.
-- Use [Automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off peak hour to perform the upgrade.
+- Use the Azure CLI to perform at-scale upgrades of your Arc-enabled SQL MI.
+- Use [Automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off-peak hour to perform the upgrade.
 - If automatic upgrades will be used, make sure to define a suitable maintenance window to allow for upgrades to happen during off-peak hours.
 - In case of manual upgrades, ensure that you establish a regular cadence to perform upgrades to stay within supported versions.
 - Create a process to monitor the upgrade status using [Azure CLI](/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status).
-- Review the [corresponding versions](/azure/azure-arc/data/version-log) of the different components before performing an upgrade to validate having the right components versions in place.
+- Review the [corresponding versions](/azure/azure-arc/data/version-log) of the different components before performing an upgrade to validate having the versions of the right components in place.
 - Test the upgrade on a dev/test instance before applying the upgrade directly in production.
 
 #### General Purpose service tier
 
-- Perform upgrades during non-business critical times to minimize the impact to users and data.
+- Perform upgrades during non-business critical times to minimize the impact on users and the organization data.
 - Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
 
 #### Business Critical service tier
