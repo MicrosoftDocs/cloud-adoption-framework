@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Storage Disciplines for Azure Arc-enabled SQL Managed Instance
+# Storage disciplines for Azure Arc-enabled SQL Managed Instance
 
 Storage is a critical component in an Azure Arc-enabled SQL Managed Instance (Arc-enabled SQL MI) deployment.  Understanding how the storage-related concepts described in this document affect the functioning of Kubernetes clusters is an important aspect of the storage design choices and management.
 
@@ -24,7 +24,7 @@ For Arc-enabled SQL MI deployments, effectively planning for storage capabilitie
 
 The following architecture diagram shows the logical design of Azure Arc-enabled data services components. These components include a required Data Controller and one or more Arc-enabled SQL MI which contain databases provisioned for reference. Both the Data Controller and Arc-enabled SQL MI have various options for backing storage devices which will be dependent upon Kubernetes distribution and storage infrastructure providers.
 
-![A screenshot showing the Azure Arc-enabled data services Logical Diagram](../media/arc-enabled-datasvc-sqlmi-storage-logical.PNG)
+![A screenshot showing the Azure Arc-enabled data services Logical Diagram](../media/arc-enabled-data-svc-sql-mi-storage-logical.png)
 
 ## Design considerations
 
@@ -36,7 +36,7 @@ Choosing the right Kubernetes Storage Class and configuration for your Azure Arc
 
 The Storage Class options will vary depending upon what your cloud provider, hardware vendor offers, and what the Kubernetes Administrator has configured. The Persistent Volume Claim will request a Persistent Volume be created for the desired Storage Class and size requested. The following diagram is a reference of the relationship between these Kubernetes resources and potential options for Storage Classes.
 
-![A screenshot showing Kubernetes storage concepts with options of Storage Classes](../media/arc-enabled-datasvc-sqlmi-storage-k8srelationship.PNG)
+![A screenshot showing Kubernetes storage concepts with options of Storage Classes](../media/arc-enabled-data-svc-sql-mi-storage-k8s-relationship.png)
 
 Configuration of the PV and PVC Kubernetes resources occurs when provisioning the Data Controller and Arc-enabled SQL MI respectively.
 
@@ -64,11 +64,11 @@ The Data Controller will have 4 different stateful pods running in the Kubernete
 
 Be sure to consider the [compute and memory resources](/azure/azure-arc/data/sizing-guidance#data-controller-sizing-details) the Data Controller requires. The following diagram represents the Data Controller Storage, PV, and PVC Kubernetes resources.
 
-![A screenshot showing Data Controller Storage](../media/arc-enabled-datasvc-sqlmi-storage-datacontroller.PNG)
+![A screenshot showing Data Controller Storage](../media/arc-enabled-data-svc-sql-mi-storage-data-controller.png)
 
 The Data Controller default volume sizing is the recommended minimum. The storage used will be dependent on the number of databases, how the databases are being used, and the number of logs generated. The Data Controller Storage Class is not sensitive to low latency, but users might see benefits in the Grafana and Kibana interfaces with faster-performing storage if you have a large number of Arc-enabled SQL MI deployments in a cluster. Grafana and Kibana are open source monitoring visualization tools deployed with the Data Controller which are provisioned with dashboards for [viewing metrics and logs](/azure/azure-arc/data/monitor-grafana-kibana) in context of Arc-enabled SQL MI.  
 
-#### Data Controller Installing and Uninstalling
+#### Data Controller installing and uninstalling
 
 When provisioning the Data Controller, you can configure the Storage Class and the storage capacity for both Logs and Data, this will apply to all 8 PVs created for the Data Controller pods. During the provisioning, you can specify a [custom deployment template](/azure/azure-arc/data/create-custom-configuration-template) that can override default parameters such as capacity, log retention, and items related to security such as Kubernetes Service Types used. Once the provisioning is complete, PV and PVC Kubernetes objects will be created.
 
@@ -91,25 +91,25 @@ The following table describes the different Persistent Volumes used by each Arc-
 | Logs  | SQL agent, error logs, trace files, health logs      |   Depends on tier  |
 | Backups  | SQL Server Backup files including Full, Diff, Transactional Log      |    Remote, ReadWriteMany Access Mode |
 
-#### General Purpose Tier
+#### General Purpose service tier
 
 The General Purpose tier of Arc-enabled SQL MI must use remote storage for the database instance so that, upon failure of a pod, the data remains available to newly created pods. Failover is managed by Kubernetes pod and node orchestration. This is a simpler configuration compared to Business Critical which uses [SQL Availability Groups](/azure/azure-arc/data/managed-instance-high-availability) and multiple Arc-enabled SQL MI replicas. The single pod configuration of the General Purpose tier means that you can minimize the amount of storage due to not having to duplicate storage capacity for other replicas.
 
-![A screenshot showing Arc-enabled SQL MI General Purpose Storage](../media/arc-enabled-datasvc-sqlmi-storage-gp.PNG)
+![A screenshot showing Arc-enabled SQL MI General Purpose Storage](../media/arc-enabled-data-svc-sql-mi-storage-gp.png)
 
-#### Business Critical Tier
+#### Business Critical service tier
 
 Business Critical tier uses a multiple pod model where data and log volumes can be stored on local or remote Storage Classes. Local Storage Classes typically perform better in terms of latency and throughput because the storage device is directly attached to the node.  Remote storage typically offers built-in redundancy but often has lower latency and throughput compared with local storage.  Keep in mind that with Business Critical, additional replicas will also require additional Persistent Volumes for _Data_, _Logs_, and _DataLogs_. This means the total storage capacity required is significantly higher.
 
 Below is a diagram to illustrate the Business Critical storage configuration for Arc-Enabled SQL MI with two replicas.
 
-![A screenshot showing Arc-enabled SQL MI Business Critical Storage](../media/arc-enabled-datasvc-sqlmi-storage-bc.PNG)
+![A screenshot showing Arc-enabled SQL MI Business Critical Storage](../media/arc-enabled-data-svc-sql-mi-storage-bc.png)
 
 Business Critical allows for the configuration of 2 or 3 secondary replicas, and failover is managed by [SQL Always On Availability Group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server), which will provide less downtime for upgrades and failures than the General Purpose tier.
 
 Configuring multiple replicas with synchronous-commit mode data replication can ensure better protection against failures such as a failed pod, node, or storage hardware as there will be multiple copies of the data on the replicas. Consider configuring secondary replicas as Read scale-out instances, which can be connected to by clients when using the secondary listener endpoint.
 
-#### Azure Arc SQL Managed Instance Provisioning and Uninstalling
+#### Azure Arc SQL Managed Instance provisioning and uninstalling
 
 When provisioning Arc-enabled SQL MI, you have the flexibility to assign different Storage Classes to each of the required Arc-enabled SQL MI Persistent Volumes. Higher performance storage options could be desired for _Data_ and _DataLogs_, but the _Logs_ and _Backup_ volumes could use more cost-efficient Storage Class options to save on costs. In scenarios where local storage is used, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O. Placing the _Data_ and _DataLogs_ on the same physical drive can cause contention for that storage drive, resulting in poor performance. Instead, consider placing the _Data_ and _DataLogs_ on separate storage drives to parallelize I/O for both database data and logs.
 
@@ -141,21 +141,21 @@ It is recommended to choose a lower latency Storage Class in the event your clus
 
 It is recommended to plan and account for all of the new and existing databases involved in the migration and deployment of Arc-enabled SQL MI. This will prevent needing to move databases between instances at a later time.
 
-Depending on your Kubernetes cluster organization, provision Arc-enabled SQL MI deployments to different Kubernetes clusters based on the need to separate environments (non-prod, prod), regions and other business factors. Review the [Resource Organization](./eslz-arc-datasvc-sqlmi-resource-organization.md) design area for more recommendations. When configuring multiple database instances on a cluster, be sure to separate busy databases to their own instance to avoid I/O contention.
+Depending on your Kubernetes cluster organization, provision Arc-enabled SQL MI deployments to different Kubernetes clusters based on the need to separate environments (non-prod, prod), regions and other business factors. Review the [Resource Organization](./eslz-arc-datasvc-sql-mi-resource-organization.md) design area for more recommendations. When configuring multiple database instances on a cluster, be sure to separate busy databases to their own instance to avoid I/O contention.
 
 Use node labels to ensure that database instances are put onto separate nodes to distribute the overall I/O traffic across multiple nodes, see Kubernetes [Node Labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#built-in-node-labels) along with Kubernetes [Node Affinity and Anti-Affinity Labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) for configuring this. If operating in a virtualized environment, ensure that I/O is appropriately distributed at the physical host-level.
 
 Plan the capacity for Arc-enabled SQL MI to have adequate storage sizes for _Data_, _Logs_, _DataLogs_, and _Backups_ that can accommodate both current needs and projected growth for all the databases that will live on the instances of Arc-enabled SQL MI. This will prevent having to resize the PVCs in the future. Choose separate physical drives for _Data_ and _DataLogs_ to allow parallel I/O activity to occur, resulting in improved performance by avoiding possible contention caused when using a shared drive.
 
-Review the [Arc-enabled SQL MI Business Continuity](./eslz-arc-datasvc-sqlmi-bcdr.md) design area for additional recommendations surrounding point-in-time restore, high availability, and disaster recovery.
+Review the [Arc-enabled SQL MI Business Continuity](./eslz-arc-datasvc-sql-mi-bcdr.md) design area for additional recommendations surrounding point-in-time restore, high availability, and disaster recovery.
 
 While there are several factors that might dictate a deployment of the Business Critical or General Purpose tier of Arc-enabled SQL MI, Business Critical using local storage will provide the lowest latency and highest availability. The following subsections provide more specific recommendations for each tier:
 
-#### General Purpose
+#### General Purpose service tier
 
 It is recommended to choose a low latency remote Storage Class for the _Data_ and _DataLogs_ Persistent Volumes to have optimal performance. Avoid using a Storage Class that can introduce network partitions, such as having an on-premises cluster configured to use an internet-provided Storage Class for the _Backup_ and _Logs_ Persistent Volumes.
 
-#### Business Critical
+#### Business Critical service tier
 
 It is recommended to review the [Availability mode differences](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups), which will require different configuration for each chosen mode.
 
@@ -167,7 +167,7 @@ For read-intensive workloads and high availability, configure multiple replicas 
 
 It is recommended to monitor all PVCs created by Arc-enabled data services, including the Data Controller and all instances of Arc-enabled SQL MI in a cluster. Set alerts to be notified when a PVC is approaching near capacity. This will allow you to do re-sizing to the PVC prior to reaching capacity. For Directly Connected clusters, [monitoring of PVCs](/azure/azure-monitor/containers/container-insights-persistent-volumes) and Alerting can be done by Azure Monitor and Container Insights. When using Indirect Connected clusters, monitoring and alerting can be done in Grafana and Kibana. The Grafana installation includes dashboards for Arc-enabled SQL MI metrics and Kubernetes resources.
 
-Review the [Arc-enabled SQL MI Governance Disciplines](./eslz-arc-datasvc-sqlmi-governance-disciplines.md) for additional recommendations on monitoring Arc-enabled SQL MI.
+Review the [Arc-enabled SQL MI Governance Disciplines](./eslz-arc-datasvc-sql-mi-governance-disciplines.md) for additional recommendations on monitoring Arc-enabled SQL MI.
 
 ## Next steps
 
