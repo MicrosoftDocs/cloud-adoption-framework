@@ -44,7 +44,7 @@ This article provides key design considerations and recommendations for configur
 
 - Determine if upgrading the Data Controller in directly connected mode will be implemented using the Azure Portal or the Azure CLI.
 - Review the prerequisites for upgrades using the [Azure portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#prerequisites).
-- Review the [extensions management critical design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management) in the [Azure Arc-enabled Kubernetes landing zone accelerator](/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
+- Review the [extensions management critical design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management) in the [Azure Arc-enabled Kubernetes Landing Zone Accelerator](/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
 
 #### Indirectly connected mode
 
