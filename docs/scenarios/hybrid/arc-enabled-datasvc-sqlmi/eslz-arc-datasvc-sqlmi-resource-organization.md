@@ -30,13 +30,17 @@ When designing this structure, keep in mind the [Azure Resource Manager service 
 
 After you've created a taxonomy structure and agreed on naming standards, it's recommended to apply [tags](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) to the Azure Arc-enabled SQL Managed Instance resources. You can apply a tag either during Azure Arc-enabled SQL Managed Instance onboarding or once it's registered in Azure (meaning your Azure Arc-enabled SQL Managed Instance has a resource ID and is part of a resource group within your subscription) and it can benefit from standard Azure constructs such as resource tags. Resource tags let you add metadata to a resource so you can quickly locate it and automate operational tasks, which is important for day-to-day operations. For detailed guidance on tagging, review the [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
-After onboarding the Azure Arc-enabled SQL Managed Instance to resource groups and added tags, you can use [Resource Graph](/azure/governance/resource-graph/overview) queries, view groupings based on resource groups, or organize and inventory your resources using tags.
+After onboarding the Azure Arc-enabled SQL Managed Instance to a resource group and have added tags, you can use [Resource Graph](/azure/governance/resource-graph/overview) queries, view groupings based on resource groups, or organize and inventory your resources using tags.
 
 ## Data Controller and Custom location
 
-When planning for the deployment of an Azure Arc-enabled SQL Managed instance, consider that additional resources will be provisioned and will be projected in your Azure subscription. These resources are: an Arc-enabled Data Controller extension and a [custom location](/azure/azure-arc/platform/conceptual-custom-locations).
+When planning for the deployment of an Azure Arc-enabled Data services, consider that additional resources will be provisioned and will be projected in your Azure subscription. These resources are: an Arc-enabled Data Controller extension and a [custom location](/azure/azure-arc/platform/conceptual-custom-locations).
+
+![Arc-enabled Data Service SQL MI custom location and namespace mapping](../media/arc-enabled-datasvc-sqlmi-custom-location-namespace-mapping.png)
 
 You should include these resources as part of your resource organization methodology (tags and naming). It is especially important to consider that a custom location configures your Azure Arc-enabled Kubernetes clusters as target locations for deploying instances of Azure offerings and as such their naming and tagging should be relevant to your business and operations, aligning with physical location, data center name, and cloud environment. Resource naming convention for Azure Arc-enabled SQL MI should align with your line of business apps (LOB) using data services.
+
+![Arc-enabled Data Service SQL MI custom location and Azure tags](../media/arc-enabled-datasvc-sqlmi-custom-location-azure-tags.png)
 
 ## Next steps
 
