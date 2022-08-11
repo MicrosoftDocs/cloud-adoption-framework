@@ -1,15 +1,15 @@
 ---
-title: Enterprise-scale platform automation and DevOps for {{Token-LongName}}
-description: <<Describe how this enterprise-scale scenario can improve platform automation and devops of <<Token-Name}}.}}
-author: <<Token-ContributorGithubId}}
-ms.author: <<Token-Alias}}
-ms.date: <<Token-Date}}
+title: Security disciplines for {{Token-LongName}}
+description: <<Describe how this scenario can improve security, for {{Token-Name}}.>>
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: strategy
 ---
 
-# Platform automation and devops for {{Token-LongName}} enterprise-scale scenario
+# Security disciplines for {{Token-LongName}}
 
 Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
