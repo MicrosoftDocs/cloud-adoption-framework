@@ -99,7 +99,14 @@ Below is an example from the recommended structure above for the AVD resources a
 
 :::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-2.png" alt-text="Screenshot showing A V D Service Objects and compute Subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-2.png":::
 
-## Next steps
+## Additional guidance and examples 
 
 - [Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
 - [Naming and tagging in Azure](../../decision-guides/resource-tagging/index.md)
+
+## Next steps
+
+Learn about management and monitoring for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Management and monitoring](./eslz-management-and-monitoring.md)
