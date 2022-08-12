@@ -49,7 +49,7 @@ The following sections contain design recommendations for Arc-enabled SQL MI cos
 
 ### Service Tier
 
-The biggest cost component in an Arc-enabled SQL MI deployment is the service tier selected.  Choose the service tier that meets business requirements (refer to [this](/azure/azure-arc/data/service-tiers#service-tier-comparison) comparison for more details).
+The biggest cost component in an Arc-enabled SQL MI deployment is the service tier selected.  Choose the service tier that meets business requirements. Refer to the [Service tier comparison](/azure/azure-arc/data/service-tiers#service-tier-comparison) for more details.
 
 ### Reserved Instances
 
