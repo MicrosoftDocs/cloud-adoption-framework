@@ -20,11 +20,11 @@ It's important to know how to use consistent resource grouping, defined naming s
 
 ## Resource consistency and organization
 
-Before deploying Arc-enable SQL MI, it's important to define a structure on how resources will be projected to Azure management scopes (management groups, subscriptions, and resource groups). Review the Cloud Adoption Framework recommendations on how to [organize resources](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy).
+Before deploying Arc-enabled SQL MI, it's important to define a structure on how resources will be projected to Azure management scopes (management groups, subscriptions, and resource groups). Review the Cloud Adoption Framework recommendations on how to [organize resources](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy).
 
 In addition, review the [resource organization design](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org) area of the Azure landing zones to assess the impact of Azure Arc-enabled SQL MI on your overall resource organization model.
 
-Review this [resource organization](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization) if you are working with Azure Arc-enabled Kubernetes.
+In the directly connected mode, the Kubernetes cluster where the Azure Arc-enabled data services will be deployed needs to be an Azure Arc-enabled Kubernetes resource, this connects your Kubernetes cluster to Azure, so you can deploy and manage Azure Arc data services directly from the Azure portal. As the Kubernetes cluster becomes an ARM resource once Arc-enabled, it is recommended to review the best practices for [resource organization](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization) for Azure Arc-enabled Kubernetes.
 
 This mapping is the key to determining how you can interact with these resources when applying [role-based access control (RBAC)](/azure/active-directory/roles/best-practices) and assigning [Azure Policy](/azure/governance/policy/overview) as part of your governance model.
 
