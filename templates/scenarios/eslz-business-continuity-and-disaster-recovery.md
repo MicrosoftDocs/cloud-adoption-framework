@@ -1,12 +1,13 @@
 ---
 title: Enterprise-scale business continuity and disaster recovery for {{Token-LongName}}
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of <<Token-Name}}.
-author: <<Token-ContributorGithubId}}
-ms.author: <<Token-Alias}}
-ms.date: <<Token-Date}}
+description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of {{Token-Name}}.
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank
 ---
 
 # Business continuity and disaster recovery for {{Token-LongName}} enterprise-scale scenario

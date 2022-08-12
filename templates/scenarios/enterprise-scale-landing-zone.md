@@ -1,12 +1,13 @@
 ---
 title: Enterprise-scale support for {{Token-LongName}}
-description: <<Describe how enterprise-scale can accelerate adoption of <<Token-Name}}.}}
-author: <<Token-ContributorGithubId}}
-ms.author: <<Token-Alias}}
-ms.date: <<Token-Date}}
+description: {{Describe how enterprise-scale can accelerate adoption of {{Token-Name}}.}}
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank
 ---
 
 # Construction set for {{Token-LongName}} enterprise-scale scenario

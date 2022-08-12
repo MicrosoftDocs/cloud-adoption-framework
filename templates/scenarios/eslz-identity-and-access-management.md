@@ -1,12 +1,13 @@
 ---
 title: Enterprise-scale identity and access management for {{Token-LongName}}
-description: <<Describe how this enterprise-scale scenario can improve identity and access management of <<Token-Name}}.}}
-author: <<Token-ContributorGithubId}}
-ms.author: <<Token-Alias}}
-ms.date: <<Token-Date}}
+description: {{Describe how this enterprise-scale scenario can improve identity and access management of {{Token-Name}}.}}
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank
 ---
 
 # Identity and access management for {{Token-LongName}} enterprise-scale scenario

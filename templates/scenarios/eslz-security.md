@@ -1,12 +1,13 @@
 ---
 title: Security disciplines for {{Token-LongName}}
-description: <<Describe how this scenario can improve security, for {{Token-Name}}.>>
+description: {{Describe how this scenario can improve security, for {{Token-Name}}.>>
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: strategy
+ms.subservice: scenario
+ms.custom: think-tank
 ---
 
 # Security disciplines for {{Token-LongName}}

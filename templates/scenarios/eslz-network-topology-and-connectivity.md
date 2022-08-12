@@ -1,12 +1,13 @@
 ---
 title: Enterprise-scale network topology and connectivity for {{Token-LongName}}
-description: <<Describe how this enterprise-scale scenario can improve network topology and connectivity of <<Token-Name}}.}}
-author: <<Token-ContributorGithubId}}
-ms.author: <<Token-Alias}}
-ms.date: <<Token-Date}}
+description: {{Describe how this enterprise-scale scenario can improve network topology and connectivity of {{Token-Name}}.}}
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank
 ---
 
 # Network topology and connectivity for {{Token-LongName}} enterprise-scale scenario

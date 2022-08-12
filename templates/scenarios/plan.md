@@ -6,7 +6,8 @@ ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: strategy
+ms.subservice: scenario
+ms.custom: think-tank
 ---
 
 # Plan for {{Token-Name}}
@@ -36,6 +37,6 @@ The following list of articles will take you to guidance found at specific point
 - [Plan for {{Token-Name}}](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Migrate {{Token-Name}}](./migrate.md)
-- [Innovate with <<Token-Name}}](./innovate.md)
-- [Govern <<Token-Name}}](./govern.md)
-- [Manage <<Token-Name}}](./manage.md)
+- [Innovate with {{Token-Name}}](./innovate.md)
+- [Govern {{Token-Name}}](./govern.md)
+- [Manage {{Token-Name}}](./manage.md)
