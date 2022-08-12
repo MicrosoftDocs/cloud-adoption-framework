@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Identity and access management considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses Azure role-based access control (RBAC) with certain conditions outlined in this article.
+Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses [Azure role-based access control (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) with certain conditions outlined in this article.
 
 ## RBAC design
 
