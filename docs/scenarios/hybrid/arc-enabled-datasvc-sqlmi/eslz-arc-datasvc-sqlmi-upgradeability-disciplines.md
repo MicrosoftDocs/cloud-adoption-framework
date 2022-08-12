@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled data services allows you to get the evergreen version of SQL that is only available in Azure as Azure SQL Managed Instance. By nature of being evergreen, you don’t have to worry about upgrades every 5-7 years as you would for on-premises installations of SQL Server.  You also get cloud innovation into your infrastructure as soon as it’s available in Azure.
+Azure Arc-enabled data services allow you to get the evergreen version of SQL that is only available in Azure as Azure SQL Managed Instance. By nature of being evergreen, and unlike you would do for on-premises installations of SQL Server, Arc-enabled SQL MI provides managed service-based upgradability so you can benefit from Azure innovation on your infrastructure, rather on-premises or in a Multicloud environment, as soon as it’s available in Azure.
 
 This article provides key design considerations and recommendations for configuring and managing the upgrade process on your Azure Arc-enabled data services.
 
@@ -58,7 +58,8 @@ This article provides key design considerations and recommendations for configur
 
 #### General considerations
 
-- Upgrades to the Data Controller must be performed prior to upgrading the Azure Arc-enabled SQL MI. The data and SQL MI extensions versions are related and must be the same version.
+- Upgrades to the Data Controller must be performed prior to upgrading the Arc-enabled SQL MI. The _arcdata_ 
+Cluster extension and SQL MI extensions versions are related and must be the same version.
 - Decide if you will use automatic or manual upgrades of your Arc-enabled SQL MI depending on your requirements.
 - In the case of automatic upgrades, only a single maintenance window can be defined for a Data Controller. Consider the number of different maintenance windows needed for different workloads to identify the number of needed Data Controllers.
 
@@ -78,7 +79,7 @@ This article provides key design considerations and recommendations for configur
 
 - If upgrading using the Azure CLI, verify that the _arcdata_ Cluster extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
-- Create a process to monitor for new Azure Arc Data Controller upgrades availability.
+- Create a process to monitor for new Data Controller upgrades availability.
 - Properly [size your cluster](/azure/azure-arc/data/sizing-guidance) by planning for future capacity, upgrades, and features.
 - Avoid using Preview features in your production environment and only use preview features for evaluation purposes on dev/test instances.
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
