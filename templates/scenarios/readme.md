@@ -45,7 +45,7 @@ The following table lists the structure and parts of the technical platform scen
 
 ## Token used in the templates
 
-The following table contains the tokens that reappear throughout the templates used in the scenario.
+The following table contains the tokens that reappear throughout the templates used in the scenario. You can either search and replace to update the tokens, or use a build automation tool to add your values.
 
 |     Token                            |     Description                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
