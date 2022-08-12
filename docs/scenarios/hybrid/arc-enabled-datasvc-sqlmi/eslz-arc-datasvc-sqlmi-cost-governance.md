@@ -27,29 +27,33 @@ The costs of Arc-enabled SQL MI is in addition to any additional functionality d
 
 ## Cost of High Availability Infrastructure
 
-While not a direct cost of Arc-enabled SQL MI, consider that deploying an instance in the Business Critical tier offers high availability, which necessitates deploying and maintaining an additional Kubernetes cluster.  
+While not a direct cost of Arc-enabled SQL MI, consider that deploying an instance in the Business Critical tier offers high availability, which necessitates deploying and maintaining an additional Kubernetes cluster. 
 
 ## Design considerations
 
-- **Service Tier** Define the business requirements to determine the most appropriate service tier.
+- **Service Tier** Define the business requirements to determine the most appropriate service tier. In addition, consider the additional infrastructure needed to support [business continuity and disaster recovery](./eslz-arc-datasvc-sqlmi-bcdr.md). 
+
+- **Connectivity Modes** How usage and billing information is sent to Azure will vary depending on whether one is using the directly connected or indirectly connected mode.  If using the indirectly connected mode, consider how the usage and billing information will be regularly sent to Azure.
 
 - **Reserved Instances** Based on the expected time for Arc-enabled SQL MI, consider whether pay-as-you-go, a one-year reserved instance, or a three-year reserved instance offers savings.
 
 - **Azure Hybrid Benefit** For SQL Server, Azure Hybrid Benefits offers savings on both service tiers of Arc-enabled SQL MI.
 
 
-Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit?view=azuresql&tabs=azure-portal).  In addition, [Dev/Test pricing](/pricing/dev-test/) is available for both service tiers.  Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and/or the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
+Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit?view=azuresql&tabs=azure-portal).  In addition, [Dev/Test pricing](/pricing/dev-test/) is available for both service tiers, though this is only for development use.  Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and/or the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
 
 ## Design recommendations
 
 The following sections contain design recommendations for Arc-enabled SQL MI cost governance.
 
-> [!NOTE]
-> Pricing information shown in the provided screenshots are examples and provided to allow a demonstrating Azure Calculator, and don't reflect the actual pricing information you might see in your own Azure Arc deployments.
 
 ### Service Tier
 
-The biggest cost component in an Arc-enabled SQL MI deployment is the service tier selected.  Choose the service tier that meets business requirements. Refer to the [Service tier comparison](/azure/azure-arc/data/service-tiers#service-tier-comparison) for more details.
+The biggest cost component in an Arc-enabled SQL MI deployment is the service tier selected.  Choose the service tier that meets business requirements. Refer to the [Service tier comparison](/azure/azure-arc/data/service-tiers#service-tier-comparison) for more details.  Consider the need for high-availability and read scale-out, among other factors.  If this is an existing SQL Server deployment being migrated, consider the SQL edition currently in use and the features that will be required for the Arc-enabled SQL MI deployment.
+
+### Connectivity Mode
+
+If using the directly connected mode, no additional action is needed for the necessary usage and billing data to be sent to Azure.  If using the indirectly connected mode, establish an automated mechanism to transmit this data based on what is described in [Upload usage data to Azure in indirect mode](/azure/azure-arc/data/upload-usage-data).  Configure a cron job or other automated task to upload the data on a daily basis and monitor the job for failure.  While the uploaded data is only required to be sent every 30 days, uploading it on a daily basis reduces the chance of entering a degraded state.
 
 ### Reserved Instances
 
