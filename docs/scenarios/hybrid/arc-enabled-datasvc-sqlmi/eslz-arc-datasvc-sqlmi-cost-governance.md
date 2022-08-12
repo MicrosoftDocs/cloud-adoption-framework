@@ -31,11 +31,12 @@ While not a direct cost of Arc-enabled SQL MI, consider that deploying an instan
 
 ## Design considerations
 
-- **Service Tier** Define the business requirements to determine the most appropriate service tier
+- **Service Tier** Define the business requirements to determine the most appropriate service tier.
 
-- **Reserved Instances** Based on the expected time for Arc-enabled SQL MI, consider whether pay as you go, a one year reserved instance, or a three year reserved instance offers savings
+- **Reserved Instances** Based on the expected time for Arc-enabled SQL MI, consider whether pay-as-you-go, a one-year reserved instance, or a three-year reserved instance offers savings.
 
-- **Azure Hybrid Benefit** For SQL Server, Azure Hybrid Benefits offers savings on both service tiers of Arc-enabled SQL MI
+- **Azure Hybrid Benefit** For SQL Server, Azure Hybrid Benefits offers savings on both service tiers of Arc-enabled SQL MI.
+
 
 Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit?view=azuresql&tabs=azure-portal).  In addition, [Dev/Test pricing](/pricing/dev-test/) is available for both service tiers.  Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and/or the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
 
