@@ -18,28 +18,20 @@ This article provides key design considerations and recommendations for configur
 
 ## Architecture
 
-The following diagrams show the request flow and relevant components when performing upgrades to both the Data Controller and Arc-enabled SQL MI. There are multiple options for how an upgrade can be triggered, and the request flow varies depending on whether the cluster uses direct connect or indirect connected mode.
+The following diagrams show the request flow and relevant components when performing upgrades to both the Data Controller and Arc-enabled SQL MI. There are multiple options for how an upgrade can be triggered, and the request flow varies depending on whether the cluster uses directly connected or indirectly connected mode.
 
-![A screenshot showing upgrade request flows and options using direct connected mode](./media/temp.png)
+![A screenshot showing upgrade request flows and options using directly connected mode](./media/temp.png)
 
-![A screenshot showing upgrade request flows and options using indirect connected mode](./media/temp.png)
+![A screenshot showing upgrade request flows and options using indirectly connected mode](./media/temp.png)
 
 ## Design considerations
 
 ### Data Controller upgrades
 
-- Upgrades can be performed using a variety of tools (Azure CLI, Azure portal, Azure Data Studio, or Kubernetes CLI). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
-- Review your Data Controller to check if you have any preview data services deployed alongside Generally Available ones. You cannot perform in-place upgrades if you have a mix of preview and Generally Available services deployed on the same Data Controller.
+- Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode), comfort level with the tool options, and what tool is approved in your organization.
+- Review your Data Controller to check if you have any preview data services deployed alongside Generally Available ones. You cannot perform in-place upgrades if you have a mix of preview and Generally Available data services deployed on the same Data Controller. An example of this could be a preview Arc data service such as PostgresSQL running in the same cluster as Arc-enabled SQL MI. Consider a using a separate cluster for each of these Arc data services.
 - Review the versions of all the Arc-enabled SQL MI used by the Data Controller to confirm they are at the same version as the Data Controller before performing the upgrade.
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next right version for your Data Controller before the upgrade.
-- Create an inventory of the current versions of the deployed Data Controllers. [Azure Resource Graph](/azure/governance/resource-graph/overview) can be used to query your current deployed Data Controllers.
-
-   ```shell
-    resources
-    | where type == 'microsoft.azurearcdata/datacontrollers'
-    | extend version = tostring(properties.k8sRaw.status.runningVersion)
-    | project name,location,resourceGroup,version
-   ```
 
 > NOTE
 > An upgrade of the Data Controller will not cause downtime for the Arc-enabled SQL MI.
@@ -74,19 +66,27 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 
 #### Business Critical service tier
 
-- During an Arc-enabled SQL MI in a Business Critical service tier upgrade with multiple Kubernetes replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replicas is promoted to become the new primary replica while the old primary becomes a secondary and is upgraded. During the transition from the old primary to the new primary, there is a brief moment of downtime when the failover happens. It is important to understand the application and client-side impact of an upgrade when the failover occurs.
+- During an Arc-enabled SQL MI in a Business Critical service tier upgrade with multiple replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replicas is promoted to become the new primary replica while the old primary becomes a secondary and is upgraded. During the transition from the old primary to the new primary, there is a brief moment of downtime when the failover happens. It is important to understand the application and client-side impact of an upgrade when the failover occurs.
 - Review the architecture of your application to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
 
 ## Design recommendations
 
 ### Data Controller upgrades
 
-- If upgrading using the Azure CLI, verify that the _arcdata_ Cluster extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
+- If upgrading using the Azure CLI, verify that the _arcdata_ Azure CLI extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to monitor for new Data Controller upgrades availability.
 - Properly [size your cluster](/azure/azure-arc/data/sizing-guidance) by planning for future capacity, upgrades, and features.
 - Avoid using Preview features in your production environment and only use preview features for evaluation purposes on dev/test instances.
-- Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
+- Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to retrieve the needed logs and to understand the reason for upgrade failure allowing you to resolve any potential issue.
+- Create an inventory of the current versions of the deployed Data Controllers. [Azure Resource Graph](/azure/governance/resource-graph/overview) can be used to query your current deployed Data Controllers.
+
+   ```shell
+    resources
+    | where type == 'microsoft.azurearcdata/datacontrollers'
+    | extend version = tostring(properties.k8sRaw.status.runningVersion)
+    | project name,location,resourceGroup,version
+   ```
 
 #### Directly connected mode
 
@@ -102,8 +102,9 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 
 #### General recommendations
 
-- Keep your Arc-enabled SQL MI up-to-date to the latest available version to make sure you receive the latest patches, bug fixes, and features.
-- Make sure to have your "point-in-time restore" backup policy configured as needed to be able to recover in case of issues during an upgrade. Review the [Business continuity and disaster recovery critical design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md) and use the _kubectl describe sqlmi_ command against your instances to verify.
+- Keep your Arc-enabled SQL MI up-to-date to the latest available version to make sure you receive the latest patches, bug fixes, and features. Currently Arc data services does not support skipping releases during upgrades. So if there are multiple releases to upgrade, you will need to upgrade to sequential releases to get to to the latest version. So, it is recommended to not drift too far from the latest releases.
+- Make sure to have your "point-in-time restore" backup policy configured as needed to be able to recover in case of issues during an upgrade. Review the [Business continuity and disaster recovery critical design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md) and use the _kubectl describe sqlmi_ command against your instances to verify the current retention settings.
+- In multi-cluster environment or scenarios with multiple deployments of Arc-enabled SQL MI which represent different environments, perform upgrades first in lower environments, such as the development environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Use the Azure CLI to perform at-scale upgrades of your Arc-enabled SQL MI.
 - Use [Automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off-peak hour to perform the upgrade.
