@@ -43,6 +43,17 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Learn modules | NA | NA | Table of contents section. |
 | L2 | Example | NA | NA | Provide a title  and link in the   table of contents for one or more supporting [Learn modules](https://docs.microsoft.com/learn/). |
 
+## Token used in the templates
+
+The following table contains the tokens that reappear throughout the templates used in the scenario.
+
+|     Token                            |     Description                                                 |
+|--------------------------------------|-----------------------------------------------------------------|
+|     {{Token-Name}}                   |     Short   name of the scenario.                               |
+|     {{Token-LongName}}               |     The   long name of the scenario.                            |
+|     {{Token-ContributorGithubId}}    |     Author's   GitHub ID.                                       |
+|     {{Token-Alias}}                  |     Author's   Microsoft ID.                                    |
+|     {{Token-Date}}                   |     Publication   date of the scenario in MM/DD/YYYY format.    |
 
 ## CAF work to finalize the scenarios
 
