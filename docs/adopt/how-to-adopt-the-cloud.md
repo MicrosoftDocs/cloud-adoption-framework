@@ -15,7 +15,7 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 The right cloud adoption option gives you the right balance of control and productivity. Control gives you the most configuration ability but has the most management overhead. Productivity restricts the number of configurations you can make but has little management overhead (*see figure*).
 
-:::image type="content" source="../_images/adopt/adopt-existing-apps-v5.png" alt-text="Diagram showing portfolio migration modernization approach.":::
+:::image type="content" source="../_images/adopt/adopt-existing-apps-v6.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
 Building a hybrid cloud gives you the most control over your portfolio, but it limits your productivity. Replacing applications with SaaS and low-code solutions gives you the most productivity. Most organizations adopt a balance of both control and productivity.
 
