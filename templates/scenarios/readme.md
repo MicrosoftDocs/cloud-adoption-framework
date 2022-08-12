@@ -4,7 +4,7 @@ The files in this folder are designed to start a new tech platform scenario with
 
 For the procedure for contributing a scenario to the Cloud Adoption Framework, see [CAF contributor workflow overview](https://review.docs.microsoft.com/en-us/help/contribute/cloud-adoption-framework/caf-contribution-overview?branch=main).
 
-You can review recently published scenarios in the [Cloud Adoption Framework docs](/azure/cloud-adoption-framework/scenarios/overview).
+You can review recently published scenarios in the [Cloud Adoption Framework docs](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/overview).
 
 ## Individual files for a tech platform scenario
 
@@ -64,6 +64,8 @@ The following table contains the tokens that reappear throughout the templates u
 
 ## ThinkTank team steps to use this template
 
+1. Review the table to understand the purpose of each document in the template.
+1. Use the tokens to update the documents with the values for your sceneario.
 1. All scenario articles (not prefixed with `eslz-`) must accurately reflect the Cloud Adoption Framework (CAF) methodologies **and** the marketing motion to drive this scenario. Each starts with a series of sections that must be evaluated and updated based on CAF links in each section.
 1. Add as many (##) H2 sections after the core CAF sections as required to tell the story and guide adoption.
 1. Draft all remaining ESLZ articles (prefixed with `eslz-`) to reflect any considerations or recommendations required to prepare for the ESLZ deployment. Any additional guidance may be added after the H2s for recommendations and considerations.
