@@ -39,12 +39,12 @@ Consider the following before you onboard Azure Arc-enabled Kubernetes clusters 
 
 ### Cluster Extensions
 
-- Determine which Azure capabilities you want to have on your Azure Arc-enabled Kubernetes cluster. Some services require a cluster extension to be deployed.
+- Determine which Azure capabilities you want to have on your Azure Arc-enabled Kubernetes cluster. Some services require a cluster extension to be deployed. 
   - For more information specific to extensions, see the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md).
 
 ### Network Connectivity
 
-- Your cluster has connectivity from your on-premises network or third-party cloud providers to Azure, directly connected via a proxy server or private endpoint.
+- Your cluster has connectivity from your on-premises network or third-party cloud providers to Azure, directly connected via a proxy server or private endpoint. 
   - For specific design considerations and recommendations, see the [Network connectivity for Azure Arc-enabled Kubernetes critical design area](./eslz-arc-kubernetes-network-connectivity.md).
 
 ### Agent lifecycle automation
@@ -77,10 +77,10 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
 During the onboarding process, Azure Arc-enabled Kubernetes provisions agents into your Kubernetes cluster. Agent versions change as Azure Arc technologies evolve, so it's important for your agents to be frequently updated.
 
-- Enable the auto-upgrade feature for Azure Arc agents running inside your cluster, which is the default behavior when onboarding a cluster to Azure Arc.
+- Enable the auto-upgrade feature for Azure Arc agents running inside your cluster, which is the default behavior when onboarding a cluster to Azure Arc. 
   - For more information on the auto-upgrade feature and version support policy, review the [Upgrade Agents guidance](/azure/azure-arc/kubernetes/agent-upgrade) and the [extensions management design area](./eslz-arc-kubernetes-extensions-management.md).
 
-- Extensions also require updates in your cluster. For any extension installed on your cluster, we recommend that you leave the default behavior to automatically upgrade the extension minor version enabled during provisioning. For major version upgrades, a migration path is documented to move to the extension major release.
+- Extensions also require updates in your cluster. For any extension installed on your cluster, we recommend that you leave the default behavior to automatically upgrade the extension minor version enabled during provisioning. For major version upgrades, a migration path is documented to move to the extension major release. 
   - For more information, review the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md).
 
 ## Next steps
