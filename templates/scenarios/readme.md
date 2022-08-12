@@ -27,7 +27,7 @@ The following table lists the structure and parts of the technical platform scen
 | L3 | Governance discipline | Governance disciplines for {{Token-LongName}} | [eslz-governance-and-compliance.md](eslz-governance-and-compliance.md) | Disclose any required dependency on ESLZ design area or other ALZ design   areas, with links to those supporting materials. |
 | L3 | Platform automation and DevOps | Platform automation and devops for {{Token-LongName}} enterprise-scale   scenario | [eslz-platform-automation-and-devops.md](eslz-platform-automation-and-devops.md) | Disclose any required dependency on ESLZ design area or other ALZ design   areas, with links to those supporting materials. |
 | L2 | Implementation options | NA | NA | Table of contents section. |
-| L3 | {{Token-Name}} landing zone accelerator | Construction set for {{Token-LongName}} enterprise-scale scenario | [landing-zone-accelerator.md](landing-zone-accelerator.md) | The {{Token-LongName}} construction set is an open-source collection of   Terraform templates that you can use to automate the deployment of an   environment capable of hosting {{Token-LongName}}.  |
+| L3 | {{Token-Name}} landing zone accelerator | Construction set for {{Token-LongName}} enterprise-scale scenario | [landing-zone-accelerator.md](landing-zone-accelerator.md) | The {{Token-LongName}} construction set is an open-source collection of   Terraform templates that you can use to automate the deployment of an environment capable of hosting {{Token-LongName}}.<br>*Construction sets* are often at a different scope than the parent scenario. The name of those assets will likely match a hero technology, instead of the business problem reflected in the scenario name.<br>Update the [landing-zone-accelerator.md](landing-zone-accelerator.md) file to reflect the demonstrated architecture and link to the actionable deployment.  |
 | L1 | Migrate {{{{Token-Name}}}} to Azure | Migrate {{Token-Name}} | [migrate.md](migrate.md) | Establish a driving statement to shape migration of this technology   platform. |
 | L1 | Innovate with {{{{Token-Name}}}} on Azure | Innovate with {{Token-Name}} | [innovate.md](innovate.md) | The innovate methodology of the Cloud Adoption Framework for Azure drives   adoption through the build-measure-learn cycle.  |
 | L1 | Govern {{{{Token-Name}}}} in Azure | Govern {{Token-Name}} | [govern.md](govern.md) | The [Cloud Adoption Framework provides a   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/) to systematically and   incrementally improve governance of your cloud portfolio. |
@@ -57,18 +57,16 @@ The following table contains the tokens that reappear throughout the templates u
 
 ## CAF work to finalize the scenarios
 
-- For each ESLZ page, the headers & metadata need to look more like the corresponding file in the AKS scenario
-- CAF team to review the articles & identify any additional requirements for each page
+- For each ESLZ page, the headers and metadata need to look more like the corresponding file in the AKS scenario
+- CAF team to review the articles and identify any additional requirements for each page
 - CAF team to review the articles for quality to ensure we don't start with known errors
 - CAF team to update the Ready article to match AKS scenario flow
 
 ## ThinkTank team steps to use this template
 
-1. All scenario articles (not prefixed with `eslz-`) must accurately reflect the CAF methodologies **and** the marketing motion to drive this scenario. Each starts with a series of sections that must be evaluated & populated based on CAF links in each section.
-1. Add as many H2 sections after the core CAF sections as required to tell the story & guide adoption.
-1. Codename: *Construction sets* are often at a different scope than the parent scenario. The name of those assets will likely match a hero technology, instead of the business problem reflected in the scenario name.
-1. Update the `enterprise-scale-landing-zone.md` file to reflect the demonstrated architecture & link to the actionable deployment.
-1. Draft all remaining ESLZ articles (prefixed with `eslz-`) to reflect any considerations or recommendations required to prepare for the ESLZ deployment. Any additional guidance may be added after the H2's for recommendations & considerations.
+1. All scenario articles (not prefixed with `eslz-`) must accurately reflect the Cloud Adoption Framework (CAF) methodologies **and** the marketing motion to drive this scenario. Each starts with a series of sections that must be evaluated and updated based on CAF links in each section.
+1. Add as many (##) H2 sections after the core CAF sections as required to tell the story and guide adoption.
+1. Draft all remaining ESLZ articles (prefixed with `eslz-`) to reflect any considerations or recommendations required to prepare for the ESLZ deployment. Any additional guidance may be added after the H2s for recommendations and considerations.
 
 ## For more information
 
