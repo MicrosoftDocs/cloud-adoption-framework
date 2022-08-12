@@ -14,10 +14,10 @@ The following table lists the structure and parts of the technical platform scen
 |---|---|---|---|---|
 | Table of contents | NA | Introduction to the {{Token-Name}} scenario | [toc.yml](toc.yml) | The yaml table of contents file contains the outline, the order and   organization, of documents in the scenario. The CAF content team will make   the required updates to the main TOC. This shouldn't be done by a   contributor, unless it's a separate TOC file for an end-to-end scenario. |
 | L1 | {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure | Introduction to the {{Token-Name}} scenario | [index.md](index.md) | The landing page describes the context and narrative of the scenario. |
-| L1 | Strategic impact | Strategic impact of {{Token-Name}} | [strategy.md](strategy.md) | Best practice encourages customers to create a single centralized cloud   adoption strategy, using the [Cloud Adoption Framework's Strategy   methodology](../../strategy/index.md). |
+| L1 | Strategic impact | Strategic impact of {{Token-Name}} | [strategy.md](strategy.md) | Best practice encourages customers to create a single centralized cloud   adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/). |
 | L1 | Technical planning | Plan for {{Token-Name}} | [plan.md](plan.md) | [Cloud Adoption Framework's Plan   methodology](/azure/cloud-adoption-framework/plan/) helps create an overall   cloud adoption plan to guide the programs and teams involved in your   cloud-based digital transformation. |
 | L1 | Prepare your environment | NA | NA | Table of contents section. |
-| L2 | Azure Landing Zones | Azure Landing Zone review for {{Token-Name}} | [ready.md](ready.md) | The [Ready methodology](/azure/cloud-adoption-framework/ready/) of the   Microsoft Azure Cloud Adoption Framework guides customers through environment   readiness to prepare for cloud adoption. |
+| L2 | Azure Landing Zones | Azure Landing Zone review for {{Token-Name}} | [ready.md](ready.md) | The [Ready methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/) of the   Microsoft Azure Cloud Adoption Framework guides customers through environment   readiness to prepare for cloud adoption. |
 | L2 | Design areas | NA | NA | Table of contents section. |
 | L3 | Identity and access management | Identity and access management for {{Token-LongName}} enterprise-scale   scenario | [eslz-identity-and-access-management.md](eslz-identity-and-access-management.md) | Disclose any required dependency on ESLZ design area or other ALZ design   areas, with links to those supporting materials. |
 | L3 | Network topology and connectivity | Network topology and connectivity for {{Token-LongName}} enterprise-scale   scenario | [eslz-network-topology-and-connectivity.md](eslz-network-topology-and-connectivity.md) | Disclose any required dependency on ESLZ design area or other ALZ design   areas, with links to those supporting materials. |
@@ -30,18 +30,18 @@ The following table lists the structure and parts of the technical platform scen
 | L3 | {{Token-Name}} landing zone accelerator | Construction set for {{Token-LongName}} enterprise-scale scenario | [landing-zone-accelerator.md](landing-zone-accelerator.md) | The {{Token-LongName}} construction set is an open-source collection of   Terraform templates that you can use to automate the deployment of an   environment capable of hosting {{Token-LongName}}.  |
 | L1 | Migrate {{{{Token-Name}}}} to Azure | Migrate {{Token-Name}} | [migrate.md](migrate.md) | Establish a driving statement to shape migration of this technology   platform. |
 | L1 | Innovate with {{{{Token-Name}}}} on Azure | Innovate with {{Token-Name}} | [innovate.md](innovate.md) | The innovate methodology of the Cloud Adoption Framework for Azure drives   adoption through the build-measure-learn cycle.  |
-| L1 | Govern {{{{Token-Name}}}} in Azure | Govern {{Token-Name}} | [govern.md](govern.md) | The [Cloud Adoption Framework provides a   methodology](/azure/cloud-adoption-framework/govern/) to systematically and   incrementally improve governance of your cloud portfolio. |
-| L1 | Manage {{{{Token-Name}}}} platform and workloads | Manage {{Token-Name}} | [manage.md](manage.md) | The [Manage methodology](/azure/cloud-adoption-framework/manage/) in the   Microsoft Cloud Adoption Framework for Azure outlines a path for implementing   an operations baseline, and maturing that baseline throughout your cloud   adoption lifecycle. |
+| L1 | Govern {{{{Token-Name}}}} in Azure | Govern {{Token-Name}} | [govern.md](govern.md) | The [Cloud Adoption Framework provides a   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/) to systematically and   incrementally improve governance of your cloud portfolio. |
+| L1 | Manage {{{{Token-Name}}}} platform and workloads | Manage {{Token-Name}} | [manage.md](manage.md) | The [Manage methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/) in the   Microsoft Cloud Adoption Framework for Azure outlines a path for implementing   an operations baseline, and maturing that baseline throughout your cloud   adoption lifecycle. |
 | L1 | Well-architected | NA | NA | Table of contents section. |
-| L2 | Example | NA | NA | Provide a title  and link in the   table of contents for one or more related artciles in [application   architecture fundmentals](/azure/architecture/guide/). |
+| L2 | Example | NA | NA | Provide a title  and link in the   table of contents for one or more related artciles in [application   architecture fundmentals](https://docs.microsoft.com/azure/architecture/guide/). |
 | L1 | Architectures | NA | NA | Table of contents section. |
-| L2 | Example | NA | NA | Provide a title  and link in the   table of contents for one or more supporting [Azure reference   architectures](/azure/architecture/browse/). |
+| L2 | Example | NA | NA | Provide a title  and link in the   table of contents for one or more supporting [Azure reference   architectures](https://docs.microsoft.com/azure/architecture/browse/). |
 | L1 | Best practices | NA | NA | Table of contents section. |
-| L2 | Example | NA | NA | Provide a title  and link in the   table of contents to one or more supporting [cloud best   practices](/azure/architecture/best-practices/index-best-practices). |
+| L2 | Example | NA | NA | Provide a title  and link in the   table of contents to one or more supporting [cloud best   practices](https://docs.microsoft.com/azure/architecture/best-practices/index-best-practices). |
 | L1 | Microsoft products | NA | NA | Table of contents section. |
 | L2 | Example | NA | NA | Provide a title  and link in the   table of contents to related and supporting technical docs for [Microsoft   products](/documentation/) used in the solution. |
 | L1 | Learn modules | NA | NA | Table of contents section. |
-| L2 | Example | NA | NA | Provide a title  and link in the   table of contents for one or more supporting [Learn modules](/learn/). |
+| L2 | Example | NA | NA | Provide a title  and link in the   table of contents for one or more supporting [Learn modules](https://docs.microsoft.com/learn/). |
 
 
 ## CAF work to finalize the scenarios
