@@ -178,4 +178,7 @@ For networking design process, see:
 
 ## Next steps
 
-[Management and monitoring](./eslz-management-and-monitoring.md)
+Learn about management and monitoring for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Management and monitoring](./eslz-management-and-monitoring.md)
