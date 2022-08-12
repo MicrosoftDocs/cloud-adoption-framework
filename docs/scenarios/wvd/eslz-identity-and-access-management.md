@@ -65,3 +65,10 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Azure Virtual Desktop application groups. For more information, see [Delegated access in Azure Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
 - Create conditional access policies for Azure Virtual Desktop. Such policies can enforce multifactor authentication based on conditions like risky sign-ins to increase an organization's security posture. For more information, see [Enable Azure Active Directory multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 - Configure AD FS to enable single sign-on for users on the corporate network.
+
+## Next steps
+
+Learn about resource organization for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Resource organization](./eslz-resource-organization.md)
