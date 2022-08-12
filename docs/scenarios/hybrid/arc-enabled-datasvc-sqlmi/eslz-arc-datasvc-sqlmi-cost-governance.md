@@ -53,7 +53,8 @@ The biggest cost component in an Arc-enabled SQL MI deployment is the service ti
 
 ### Reserved Instances
 
-Based on the expected duration of the Arc-enabled SQL MI deployment, choose a one or three year reserved instance if it will result in savings for the organization.  Refer to the [Cloud Adoption Framework](/azure/cloud-adoption-framework/govern/cost-management/best-practices#best-practice-use-azure-reserved-vm-instances) for more details on reservation.
+Based on the expected duration of the Arc-enabled SQL MI deployment, choose a one or three-year reserved instance if it will result in savings for the organization. Refer to the [Cloud Adoption Framework](/azure/cloud-adoption-framework/govern/cost-management/best-practices#best-practice-use-azure-reserved-vm-instances) for more details on reservation.
+
 
 ### Azure Hybrid Benefit
 
