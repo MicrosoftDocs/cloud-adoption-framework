@@ -74,6 +74,7 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 ### Data Controller upgrades
 
 - If upgrading using the Azure CLI, verify that the _arcdata_ Azure CLI extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
+- In multi-cluster environment, perform upgrades first in lower environments, such as the development environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to monitor for new Data Controller upgrades availability.
 - Properly [size your cluster](/azure/azure-arc/data/sizing-guidance) by planning for future capacity, upgrades, and features.
