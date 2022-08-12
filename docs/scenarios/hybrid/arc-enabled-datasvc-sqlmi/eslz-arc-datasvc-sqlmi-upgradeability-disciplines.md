@@ -12,13 +12,17 @@ ms.custom: e2e-hybrid, think-tank
 
 # Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled data services allow you to get the evergreen version of SQL that is only available in Azure as Azure SQL Managed Instance. By nature of being evergreen, and unlike you would do for on-premises installations of SQL Server, Arc-enabled SQL MI provides managed service-based upgradability so you can benefit from Azure innovation on your infrastructure, rather on-premises or in a Multicloud environment, as soon as it’s available in Azure.
+Azure Arc-enabled data services allow you to get the evergreen version of SQL that is only available in Azure as Arc-enabled SQL Managed Instance (SQL MI). By nature of being evergreen, and unlike you would do for on-premises installations of SQL Server, Arc-enabled SQL MI provides managed service-based upgradability so you can benefit from Azure innovation on your infrastructure, rather on-premises or in a Multicloud environment, as soon as it’s available in Azure.
 
 This article provides key design considerations and recommendations for configuring and managing the upgrade process on your Azure Arc-enabled data services.
 
 ## Architecture
 
-[Placeholder for diagrams]
+The following diagrams show the request flow and relevant components when performing upgrades to both the Data Controller and Arc-enabled SQL MI. There are multiple options for how an upgrade can be triggered, and the request flow varies depending on whether the cluster uses direct connect or indirect connected mode.
+
+![A screenshot showing upgrade request flows and options using direct connected mode](./media/temp.png)
+
+![A screenshot showing upgrade request flows and options using indirect connected mode](./media/temp.png)
 
 ## Design considerations
 
