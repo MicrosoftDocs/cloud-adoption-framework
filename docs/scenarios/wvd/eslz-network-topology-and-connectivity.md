@@ -92,7 +92,7 @@ You can implement this scenario with:
 ### Considerations
 
 - This scenario doesn't account for client direct network connectivity to session public or private (no RDP Shortpath) hosts.
-- Azure Virtual Desktop control plane Gateway (public endpoint) manages client connections. Therefore AVD clients can create outbound connections to required AVD URLs (check required URL list under general design considerations and recommendations).
+- Azure Virtual Desktop control plane Gateway (public endpoint) manages client connections. Therefore AVD clients can create outbound connections to required AVD URLs ([Required URL list and check tool](/azure/virtual-desktop/safe-url-list)).
 - No public IPs or any other public inbound path to session hosts is needed, traffic from clients to session hosts flows through Azure Virtual Desktop control plane gateway.
 - No virtual network peering between Azure Virtual Desktop spokes, all the traffic goes through the connectivity hub.
 - Outbound internet connection from Azure Virtual Desktop session hosts goes through the default Azure outbound NAT using dynamic Azure public IPs (no customer control on outbound public IPs used).
@@ -135,11 +135,11 @@ The connection latency varies depending on the location of the users and the vir
 
 RDP Shortpath for managed networks provides a direct UDP-based transport between Remote Desktop Client and Session host. RDP Shortpath for managed networks enables configuration of Quality of Service (QoS) policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic that's sensitive to network delays to "cut in line" in front of traffic that's less sensitive.
 
-You can learn more information on QoS, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos)
+You can learn more information on QoS, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos).
 
 ### Internet
 
-Azure Virtual Desktop compute resources and clients require access to specific public endpoints that creates the need for internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure virtual Desktop requirements are met.
+Azure Virtual Desktop compute resources and clients require access to specific public endpoints. This creates the need for internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure virtual Desktop requirements are met.
 
 See [Required URL list and check tool](/azure/virtual-desktop/safe-url-list) to understand the requirements for AVD session hosts and client devices.
 
