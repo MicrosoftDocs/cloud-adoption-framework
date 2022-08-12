@@ -89,8 +89,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 - Review a [sample assessment for the fictional Contoso company](../../plan/contoso-migration-assessment.md).
 
 ## Best practice: Select the right storage
-
-To tune and maintain on-premises storage (SAN or NAS), and the networks to support them, can be costly and time-consuming. File (storage) data is commonly migrated to the cloud to help alleviate operational and management headaches. Microsoft provides several options for moving data to Azure, and you need to make decisions about those options. Picking the right storage type for data can save your organization several thousands of dollars every month. Here are a few considerations:
+Having to tune and maintain on-premises storage (SAN or NAS), and the networks to support them, can be costly and time-consuming. File (storage) data is commonly migrated to the cloud to help alleviate operational and management headaches. Microsoft provides several options for moving data to Azure, and you need to make decisions about those options. Picking the right storage type for data can save your organization several thousands of dollars every month. Here are a few considerations:
 
 - Data that isn't accessed much and isn't business-critical doesn't need to be placed on the most expensive storage.
 - Conversely, important business-critical data should be located on higher-tier storage options.
@@ -157,7 +156,7 @@ A portfolio that integrates on-premises Microsoft software with Azure provides y
 
 ### Learn more about Azure Hybrid Benefit
 
-- Take a look at the [Azure Hybrid Benefit savings calculator](https://azure.microsoft.com/pricing/hybrid-benefit/).
+- Take a look at the [Azure Hybrid Benefit savings calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator).
 - Learn more about [Azure Hybrid Benefit for Windows Server](https://azure.microsoft.com/pricing/hybrid-benefit/).
 - Review [pricing guidance for SQL Server Azure VMs](/azure/azure-sql/virtual-machines/windows/pricing-guidance).
 
@@ -289,7 +288,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge effec
 ### Learn more about how to optimize storage
 
 - Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
-- Read the [StorSimple overview](/azure/azure-monitor/overview).
+- Read the [StorSimple overview](https://azure.microsoft.com/services/storsimple/).
 - Review [StorSimple pricing](https://azure.microsoft.com/pricing/details/storsimple/).
 
 ## Best practice: Automate VM optimization
