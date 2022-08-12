@@ -101,3 +101,10 @@ Review the following considerations and recommendation for infrastructure manage
 - Set up the performance counters according to the [documentation](/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
 - Set up the Network Performance Monitor in the same region as your Azure Virtual Network and session hosts.
 - Incorporate Azure policies and governance for enterprise-scale into the Azure Virtual Desktop landing zone.
+
+## Next steps
+
+Learn about business continuity and disaster recovery for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
