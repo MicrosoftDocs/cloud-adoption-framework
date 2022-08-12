@@ -28,7 +28,7 @@ The following diagrams show the request flow and relevant components when perfor
 
 ### Data Controller upgrades
 
-- Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
+- Upgrades can be performed using a variety of tools (Azure CLI, Azure portal, Azure Data Studio, or Kubernetes CLI). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
 - Review your Data Controller to check if you have any preview data services deployed alongside Generally Available ones. You cannot perform in-place upgrades if you have a mix of preview and Generally Available services deployed on the same Data Controller.
 - Review the versions of all the Arc-enabled SQL MI used by the Data Controller to confirm they are at the same version as the Data Controller before performing the upgrade.
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next right version for your Data Controller before the upgrade.
