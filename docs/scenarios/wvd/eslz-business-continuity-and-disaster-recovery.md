@@ -155,3 +155,10 @@ We recommend storing FSLogix user profile and office containers on Azure Files o
   - Network infrastructure, as part of hub and spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
   - Hybrid connectivity must be highly available in both the primary and secondary regions.
   - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
+
+## Next steps
+
+Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
