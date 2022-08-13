@@ -25,24 +25,16 @@ This article provides key design considerations and recommendations for configur
 ### Data Controller upgrades
 
 - Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
-- Review your Data Controller to check if you have any preview data services deployed alongside Generally Available ones. You cannot perform in-place upgrades if you have a mix of preview and Generally Available services deployed on the same Data Controller.
+- Review your Data Controller to check if you have any preview data services like Azure Arc-enabled PostgreSQL deployed alongside Azure Arc-enabled SQL MI. You cannot perform in-place upgrades if you have a mix of preview and Generally Available services deployed on the same Data Controller.
 - Review the versions of all the Arc-enabled SQL MI used by the Data Controller to confirm they are at the same version as the Data Controller before performing the upgrade.
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next right version for your Data Controller before the upgrade.
-- Create an inventory of the current versions of the deployed Data Controllers. [Azure Resource Graph](/azure/governance/resource-graph/overview) can be used to query your current deployed Data Controllers.
 
-   ```shell
-    resources
-    | where type == 'microsoft.azurearcdata/datacontrollers'
-    | extend version = tostring(properties.k8sRaw.status.runningVersion)
-    | project name,location,resourceGroup,version
-   ```
-
-> NOTE
+> [!NOTE]
 > An upgrade of the Data Controller will not cause downtime for the Arc-enabled SQL MI.
 
 #### Directly connected mode
 
-- Determine if upgrading the Data Controller in directly connected mode will be implemented using the Azure Portal or the Azure CLI.
+- Determine if upgrading the Data Controller in directly connected mode will be implemented using the Azure Portal, the Azure CLI or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver16).
 - Review the prerequisites for upgrades using the [Azure portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#prerequisites).
 - Review the [extensions management critical design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management) in the [Azure Arc-enabled Kubernetes Landing Zone Accelerator](/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
 
@@ -80,12 +72,22 @@ This article provides key design considerations and recommendations for configur
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to monitor for new Azure Arc Data Controller upgrades availability.
 - Properly [size your cluster](/azure/azure-arc/data/sizing-guidance) by planning for future capacity, upgrades, and features.
+- Do not mix PostgreSQL and Azure Arc-enabled SQL MI on the same Data controller as PostgreSQL is still in preview while Azure Arc-enabled SQL MI is generally available. Consider a separate cluster with its own data controller to test PostgreSQL.
 - Avoid using Preview features in your production environment and only use preview features for evaluation purposes on dev/test instances.
+- Create an inventory of the current versions of the deployed Data Controllers. [Azure Resource Graph](/azure/governance/resource-graph/overview) can be used to query your current deployed Data Controllers.
+
+   ```shell
+    resources
+    | where type == 'microsoft.azurearcdata/datacontrollers'
+    | extend version = tostring(properties.k8sRaw.status.runningVersion)
+    | project name,location,resourceGroup,version
+   ```
+
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
 
 #### Directly connected mode
 
-- Create a process to monitor the upgrade process using the [Azure Portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#monitor-the-upgrade-status) or [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status).
+- Create a process to monitor the upgrade process using the [Azure Portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#monitor-the-upgrade-status), [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver16).
 - Upgrade the [_arcdata_ Cluster extension](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-arc-data-controller-extension) before upgrading the Data Controller itself.
 
 #### Indirectly connected mode
