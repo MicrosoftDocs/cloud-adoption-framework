@@ -29,7 +29,7 @@ The following diagrams show the request flow and relevant components when perfor
 ### Data Controller upgrades
 
 - Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
-- Review your Data Controller to check if you have any preview data services like Azure Arc-enabled PostgreSQL deployed alongside Azure Arc-enabled SQL MI. You cannot perform in-place upgrades if you have a mix of preview and Generally Available services deployed on the same Data Controller.
+- Review your Data Controller to check if you have any preview data services like Azure Arc-enabled PostgreSQL deployed alongside Arc-enabled SQL MI. You cannot perform in-place upgrades if you have a mix of preview and Generally Available services deployed on the same Data Controller.
 - Review the versions of all the Arc-enabled SQL MI used by the Data Controller to confirm they are at the same version as the Data Controller before performing the upgrade.
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next right version for your Data Controller before the upgrade.
 
@@ -77,7 +77,7 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 - In multi-cluster environments, perform upgrades first in a test/dev environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Create a process to [monitor for new Data Controller upgrades availability](/azure/azure-arc/data/upgrade-data-controller-direct-cli#view-available-images-and-chose-a-version) availability.
-- Do not mix PostgreSQL and Azure Arc-enabled SQL MI on the same Data controller as PostgreSQL is still in preview while Azure Arc-enabled SQL MI is generally available. Consider a separate cluster with its own data controller to test PostgreSQL.
+- Do not mix PostgreSQL and Arc-enabled SQL MI on the same Data controller as PostgreSQL is still in preview while Arc-enabled SQL MI is generally available. Consider a separate cluster with its own data controller to test PostgreSQL.
 - Avoid using Preview features in your production environment and only use preview features for evaluation purposes on dev/test instances.
 - Create an inventory of the current versions of the deployed Data Controllers. [Azure Resource Graph](/azure/governance/resource-graph/overview) can be used to query your current deployed Data Controllers.
 
@@ -106,7 +106,7 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 
 - Keep your Arc-enabled SQL MI up-to-date to the latest available version to make sure you receive the latest patches, bug fixes, and features. Currently Arc data services does not support skipping releases during upgrades. So if there are multiple releases to upgrade, you will need to upgrade to sequential releases to get to to the latest version. So, it is recommended to not drift too far from the latest releases.
 - Make sure to have your "point-in-time restore" backup policy configured as needed to be able to recover in case of issues during an upgrade. Review the [Business continuity and disaster recovery critical design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md) and use the _kubectl describe sqlmi_ command against your instances to verify the current retention settings.
-- In multi-cluster environments or scenarios with multiple deployments of Azure Arc-enabled SQL MI which represent different environments, perform upgrades first in dev/test environments, such as the development environment to validate any potential issues or breaking changes.
+- In multi-cluster environments or scenarios with multiple deployments of Arc-enabled SQL MI which represent different environments, perform upgrades first in dev/test environments, such as the development environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Use the Azure CLI to perform at-scale upgrades of your Arc-enabled SQL MI.
 - Use [Automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off-peak hour to perform the upgrade.
@@ -138,5 +138,5 @@ For more information on your hybrid and multicloud cloud journey, see the follow
 - Review the upgrade process of the Data Controller in [directly](/azure/azure-arc/data/upgrade-data-controller-direct-cli) and [indirectly](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) connected modes.
 - Review the upgrade process of the Azure Arc SQL MI in [directly](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli) and [indirectly](/azure/azure-arc/data/upgrade-sql-managed-instance-cli) connected modes.
 - Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
-- Experience Azure Arc-enabled SQL MI automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
+- Experience Arc-enabled SQL MI automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
