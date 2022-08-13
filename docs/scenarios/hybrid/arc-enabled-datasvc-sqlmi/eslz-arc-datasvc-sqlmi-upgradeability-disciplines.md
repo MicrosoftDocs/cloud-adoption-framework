@@ -54,7 +54,7 @@ The following diagrams show the request flow and relevant components when perfor
 
 #### General considerations
 
-- Upgrades to the Data Controller must be performed prior to upgrading the Arc-enabled SQL MI. The _arcdata_ 
+- Upgrades to the Data Controller must be performed prior to upgrading the Arc-enabled SQL MI. The _arcdata_
 Cluster extension and SQL MI extensions versions are related and must be the same version.
 - Decide if you will use automatic or manual upgrades of your Arc-enabled SQL MI depending on your requirements.
 - In the case of automatic upgrades, only a single maintenance window can be defined for a Data Controller. Consider the number of different maintenance windows needed for different workloads to identify the number of needed Data Controllers.
@@ -74,9 +74,9 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 ### Data Controller upgrades
 
 - If upgrading using the Azure CLI, verify that the _arcdata_ Azure CLI extension version corresponds to the image version you want to upgrade to in the [Version log](/azure/azure-arc/data/version-log).
-- In multi-cluster environment, perform upgrades first in lower environments, such as the development environment to validate any potential issues or breaking changes.
+- In multi-cluster environments, perform upgrades first in a test/dev environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
-- Create a process to monitor for new Data Controller upgrades availability.
+- Create a process to [monitor for new Data Controller upgrades availability](/azure/azure-arc/data/upgrade-data-controller-direct-cli#view-available-images-and-chose-a-version) availability.
 - Do not mix PostgreSQL and Azure Arc-enabled SQL MI on the same Data controller as PostgreSQL is still in preview while Azure Arc-enabled SQL MI is generally available. Consider a separate cluster with its own data controller to test PostgreSQL.
 - Avoid using Preview features in your production environment and only use preview features for evaluation purposes on dev/test instances.
 - Create an inventory of the current versions of the deployed Data Controllers. [Azure Resource Graph](/azure/governance/resource-graph/overview) can be used to query your current deployed Data Controllers.
@@ -88,7 +88,7 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
     | project name,location,resourceGroup,version
    ```
 
-- Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs and understand the reason for upgrade failure.
+- Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs to resolve any upgrade issues.
 
 #### Directly connected mode
 
@@ -106,26 +106,28 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 
 - Keep your Arc-enabled SQL MI up-to-date to the latest available version to make sure you receive the latest patches, bug fixes, and features. Currently Arc data services does not support skipping releases during upgrades. So if there are multiple releases to upgrade, you will need to upgrade to sequential releases to get to to the latest version. So, it is recommended to not drift too far from the latest releases.
 - Make sure to have your "point-in-time restore" backup policy configured as needed to be able to recover in case of issues during an upgrade. Review the [Business continuity and disaster recovery critical design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md) and use the _kubectl describe sqlmi_ command against your instances to verify the current retention settings.
-- In multi-cluster environment or scenarios with multiple deployments of Arc-enabled SQL MI which represent different environments, perform upgrades first in lower environments, such as the development environment to validate any potential issues or breaking changes.
+- In multi-cluster environments or scenarios with multiple deployments of Azure Arc-enabled SQL MI which represent different environments, perform upgrades first in dev/test environments, such as the development environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
 - Use the Azure CLI to perform at-scale upgrades of your Arc-enabled SQL MI.
 - Use [Automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off-peak hour to perform the upgrade.
-- If automatic upgrades will be used, make sure to define a suitable maintenance window to allow for upgrades to happen during off-peak hours.
+- If automatic upgrades will be used, make sure to define a suitable [maintenance window](/azure/azure-arc/data/maintenance-window) to allow for upgrades to happen during off-peak hours.
 - In case of manual upgrades, ensure that you establish a regular cadence to perform upgrades to stay within supported versions.
+
+>[!NOTE]
+>You can also [poll the Microsoft Artifact Registry](/azure/azure-arc/data/upgrade-data-controller-direct-cli#view-available-images-and-chose-a-version) for new container image versions.
+
 - Create a process to monitor the upgrade status using [Azure CLI](/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status).
 - Review the [corresponding versions](/azure/azure-arc/data/version-log) of the different components before performing an upgrade to validate having the versions of the right components in place.
-- Test the upgrade on a dev/test instance before applying the upgrade directly in production.
 
 #### General Purpose service tier
 
-- Perform upgrades during non-business critical times to minimize the impact on users and the organization data.
+- Perform upgrades during non critical hours to minimize the impact on users and the organization data.
 - Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
 
 #### Business Critical service tier
 
 - Deploy the Business Critical instance with 3 replicas instead of 2 to achieve higher availability and less downtime with during upgrade and failover activities.
-- Perform upgrades during non-business critical times to minimize the impact on users and organization data.
-- Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
+- Perform upgrades during non critical hours to minimize the impact on users and organization data.
 
 ## Next steps
 
