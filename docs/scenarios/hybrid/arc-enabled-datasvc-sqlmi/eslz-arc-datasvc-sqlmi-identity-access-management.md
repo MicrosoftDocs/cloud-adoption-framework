@@ -18,14 +18,13 @@ Azure [Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-
 
 - Azure Arc Data Controller
 - Azure Arc Active Directory connector
-- Kibana dashboard
-- Grafana dashboard
+- Azure Arc-enabled SQL Managed Instance
 
 ## Architecture
 
 ### SQL Authentication
 
-SQL authentication is supported in Azure Arc-enabled SQL Managed Instance using a local [SQL identities](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver16#connecting-through-sql-server-authentication). This authentication method is used during the initial setup of the SQL Managed Instance to support Active Directory authentication and grant required permissions to the database and when consumer applications do not support AD authentication to connect to Arc-enabled SQL Managed Instance.
+SQL authentication is supported in Azure Arc-enabled SQL Managed Instance using a local [SQL identities](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication). This authentication method is used during the initial setup of the SQL Managed Instance to support Active Directory authentication and grant required permissions to the database and when consumer applications do not support AD authentication to connect to Arc-enabled SQL Managed Instance.
 
 Azure Arc Data Controller, Grafana, and Kibana dashboards support only basic authentication at this time.
 
@@ -41,7 +40,7 @@ Azure Arc-enabled SQL Managed Instance uses Kerberos keytab to support [AD authe
 
 Following is the architecture diagram for AD connector with system-managed keytab mode.
 
-[![Diagram that shows AD authentication with SQL Managed Instance.](./media/arc-enabled-sqlmi-adauth-system-keytab.png)](./media/arc-enabled-sqlmi-adauth-system-keytab.png#lighbox)
+[![Diagram that shows AD authentication using system-managed keytab mode.](./media/arc-enabled-sqlmi-adauth-system-keytab.png)](./media/arc-enabled-sqlmi-adauth-system-keytab.png#lighbox)
 
 #### Customer-managed keytab
 
@@ -49,7 +48,7 @@ Active Directory connector with [customer-managed keytab mode](/azure/azure-arc/
 
 Following is the architecture diagram for AD connector with customer-managed keytab mode.
 
-[![Diagram that shows AD authentication with SQL Managed Instance.](./media/arc-enabled-sqlmi-adauth-customer-keytab.png)](./media/arc-enabled-sqlmi-adauth-customer-keytab.png#lighbox)
+[![Diagram that shows AD authentication using customer-managed keytab mode.](./media/arc-enabled-sqlmi-adauth-customer-keytab.png)](./media/arc-enabled-sqlmi-adauth-customer-keytab.png#lighbox)
 
 ### Data controller managed identity integration
 
@@ -61,7 +60,7 @@ Following are the required RBAC permissions to publish monitoring metrics to Azu
 
 |Role|Description|
 |-----------|------------|
-|Contributor|Grants full access to manage all resources in a resource group.| (**???Please confirm if this is needed**)
+|Contributor|Grants full access to manage all resources in a resource group.|
 |Monitoring Metrics Publisher|Enables publishing metrics against Azure resources.|
 
 ### Securely access Azure Arc-enabled SQL Managed Instance
@@ -110,7 +109,7 @@ Azure Arc-enabled SQL Managed Instance access controls are fully independent of 
 
 - Where appropriate use AD authentication with SQL Managed Instance to offload user lifecycle management to the directory services and use security groups in AD to manage user permissions to access SQL database.
 
-- Use SQL authentication with SQL Managed Instance as a [least preferred authentication](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver16#disadvantages-of-sql-server-authentication) type and when it is not possible to use AD authentication due to the its [support in the consumer applications or services](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver16#advantages-of-sql-server-authentication).
+- Use SQL authentication with SQL Managed Instance as a [least preferred authentication](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver16#disadvantages-of-sql-server-authentication) type and when it is not possible to use AD authentication due to the its [support in the consumer applications or services](/sql/relational-databases/security/choose-an-authentication-mode#advantages-of-sql-server-authentication).
 
 - Once AD authentication is supported avoid using SQL authentication for day to day operations. Use SQL authentication only for emergency access to the database server for database administration.
 
@@ -132,11 +131,11 @@ When using system-managed keytab mode explicit permissions to [Domain Service Ac
 
 ### SQL Server roles
 
-|Roles|Details|
+|Role|Details|
 |-----------|------------|
-|Server-level roles | Refer [details](/sql/relational-databases/security/authentication-access/server-level-roles?view=sql-server-ver16)|
-|Database-level roles| Refer [details](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver16)|
-|Application roles|Refer [details](/sql/relational-databases/security/authentication-access/application-roles?view=sql-server-ver16)|
+|Server-level roles | Refer [details](/sql/relational-databases/security/authentication-access/server-level-roles)|
+|Database-level roles| Refer [details](/sql/relational-databases/security/authentication-access/database-level-roles)|
+|Application roles|Refer [details](/sql/relational-databases/security/authentication-access/application-roles)|
 
 ## Next steps
 
