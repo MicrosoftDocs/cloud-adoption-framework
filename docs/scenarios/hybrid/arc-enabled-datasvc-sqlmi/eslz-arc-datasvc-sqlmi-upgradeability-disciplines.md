@@ -55,7 +55,7 @@ The following diagrams show the request flow and relevant components when perfor
 #### General considerations
 
 - Upgrades to the Data Controller must be performed prior to upgrading the Arc-enabled SQL MI. The _arcdata_
-Cluster extension and SQL MI extensions versions are related and must be the same version.
+Cluster extension and SQL MI extensions versions are related and must be the same.
 - Decide if you will use automatic or manual upgrades of your Arc-enabled SQL MI depending on your requirements.
 - In the case of automatic upgrades, only a single maintenance window can be defined for a Data Controller. Consider the number of different maintenance windows needed for different workloads to identify the number of needed Data Controllers.
 
