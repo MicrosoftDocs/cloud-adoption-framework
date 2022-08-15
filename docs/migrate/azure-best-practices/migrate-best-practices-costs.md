@@ -3,7 +3,7 @@ title: Best practices to cost and size workloads migrated to Azure
 description: Use the Cloud Adoption Framework for Azure to learn best practices to cost and size workloads migrated to Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/12/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -210,8 +210,8 @@ With Azure Cost Management + Billing, you can:
 
 - Create a budget for financial accountability.
   - Account for the services you consume or subscribe to for a specific period (monthly, quarterly, or annually), and a scope (subscriptions or resource groups). For example, you can create an Azure subscription budget for a monthly, quarterly, or annual period.
-    - After you create a budget, it's shown in a cost analysis. Viewing your budget against current spending is important when you're analyzing your costs and spending.
-  - Choose to have email notifications sent when your budget thresholds are reached.
+  - After you create a budget, it's shown in a cost analysis. Viewing your budget against current spending is important when you're analyzing your costs and spending.
+  - Choose to have email notifications sent when budget thresholds are reached.
   - Export costs management data to Azure Storage to analyze it.
 
   ![Screenshot of an Azure Cost Management + Billing budget.](./media/migrate-best-practices-costs/budget.png)
