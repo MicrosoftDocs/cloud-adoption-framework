@@ -34,7 +34,7 @@ Azure Arc-enabled SQL Managed Instance uses Kerberos keytab to support [AD authe
 
 #### System-managed keytab
 
-[Active Directory connector in system-managed keytab mode](/azure/azure-arc/data/deploy-system-managed-keytab-active-directory-connector#active-directory-connector-in-system-managed-keytab-mode) simplifies domain service account(DSA) and keytab management. AD connector takes responsibility of creating service accounts, assigning [service principals](/windows/win32/ad/service-principal-names), and [generating keytab](/windows-server/administration/windows-commands/ktpass) to support AD authentication in Arc-enabled SQL Managed Instance. This is recommended for customers who would prefer simplifying operations over granular control to auto-manage keytab for AD authentication.
+[Active Directory connector in system-managed keytab mode](/azure/azure-arc/data/deploy-system-managed-keytab-active-directory-connector#active-directory-connector-in-system-managed-keytab-mode) simplifies AD account generation and keytab management for SQL Managed Instance. AD connector takes the responsibility of creating service accounts, assigning [service principals](/windows/win32/ad/service-principal-names), and [generating keytab](/windows-server/administration/windows-commands/ktpass) to support AD authentication in Arc-enabled SQL Managed Instance. This is recommended for customers who would prefer simplifying operations over granular control to auto-manage the keytab for AD authentication.
 
 Following is the architecture diagram for AD connector with system-managed keytab mode.
 
