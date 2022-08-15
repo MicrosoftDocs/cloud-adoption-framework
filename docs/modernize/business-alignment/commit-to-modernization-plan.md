@@ -28,9 +28,9 @@ Modernization requires an investment of time and money. The commit phase is wher
 
 The technical leads team presents the ideal modernization path. The business leads agree to invest the time and money in that path.
 
-## Step 1 - Commit to a modernization path
+## Step 1 - Commit to a modernization roadmap
 
-Commit to a modernization path by aligning your modernization motivations to a modernization strategy. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull out these motivations because we use them here to create a modernization path.
+Commit to a modernization roadmap by aligning your modernization motivations to a modernization strategy. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull out these motivations because we use them here to create a modernization roadmap.
 
 Most modernization motivations map to two or more modernization strategies (*see table*).
 
@@ -46,7 +46,9 @@ Most modernization motivations map to two or more modernization strategies (*see
 
 Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter you motivation for modernization, you need to modernize your process.
 
-**Create a modernization path** Use the table above to create your modernization path. Your modernization path is a combination of your business function, workload, motivation, and modernization strategy.
+## Step 2 - Create a modernization roadmap
+
+Use the table above to create your modernization roadmap. Your modernization roadmap guides your modernization journey. It aligns business function, workload, and modernization motivations to specific modernization strategies.
 
 See the example below. It builds on the table you created in the [envision step](../business-alignment/envision-cloud-modernization.md).
 
@@ -56,7 +58,7 @@ See the example below. It builds on the table you created in the [envision step]
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 |
 
-## Step 2 - Commit to a modernization timeline
+## Step 3 - Commit to a modernization timeline
 
 Commit to a modernization timeline. The amount of time it takes to modernize your process and workloads depends on your team's experience and the complexity of your situation.
 
@@ -64,9 +66,9 @@ Check out our [Fast Track for Azure](/programs/azure-fasttrack/) program if you 
 
 You can also use one of our certified partners in the [Azure Migration and Modernization Program](/azure/partners/ammp) to get the advice you need.
 
-## Step 3 - Commit resources
+## Step 4 - Commit resources
 
-Commit resources to your modernization path. You have your modernization path and have created a timeline. Now, you need to put the right people on the project and commit to giving them the right tools.
+Commit resources to your modernization roadmap. You have your modernization path and have created a timeline. Now, you need to put the right people on the project and commit to giving them the right tools.
 
 ## Next steps
 
