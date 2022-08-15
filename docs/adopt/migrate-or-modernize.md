@@ -42,3 +42,5 @@ Replaforming lets you modernize aspects of an application during the migration p
 
 > [!div class="nextstepaction"]
 > [Learn how to migrate](../migrate/index.md)
+> [!div class="nextstepaction"]
+> [Learn how to modernize](../modernize/index.md)
