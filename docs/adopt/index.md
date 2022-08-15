@@ -21,21 +21,21 @@ There are three common approaches for adopting the cloud: migrate, modernize, an
 
 ## Migrate approach
 
-The migrate approach is where you move your workloads from on-premises to the cloud. Different forms of migration exist, but we'll focus on rehosting, also known as "lift-and-shift." In this approach, you move from an on-premises solution and adopt infrastructure-as-a-service (IaaS) solutions in the cloud. You don't have to worry about acquiring, managing, and securing hardware.
+The migrate approach is where you move your workloads from on-premises to the cloud. Different forms of migration exist, but we'll focus on rehosting, also known as "lift-and-shift." In this approach, you move from an on-premises solution and adopt infrastructure-as-a-service (IaaS) solutions in the cloud.
 
 - *Example:* Migrate application from on-premises to IaaS solutions in the cloud.
 - *Goals:* Quickly exit on-premises, enhance security, and improve operations.
 - *Solutions:* Adopt IaaS solutions in the cloud.
-- *Key Benefits:* Cost, security, availability, visibility, performance.
+- *Key Benefits:* Cost, security, availability, visibility, performance. You don't have to worry about acquiring, managing, and securing hardware.
 
 ## Modernize approach
 
-The modernize approach is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. The most common form of modernization is adopting platform-as-a-service solutions (PaaS). The focus is enhancing business processes at scale.
+The modernize approach is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. Modernizing uses managed platform-as-a-service solutions (PaaS) to improve your business at scale.
 
 - *Examples*: Move to managed services. Move from SQL database to Azure SQL database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Container Apps.
 - *Goals:* Reduce technical debt, modernize applications, and modernize data platforms
 - *Solutions:* Adopt platform-as-a-service (PaaS) solutions across workload clusters.
-- *Key Benefits:* Cost, security, availability, visibility, performance, and operations.
+- *Key Benefits:* Cost, security, availability, visibility, performance, and operations. You don't have to managed the underlying infrastructure and can focus on scaling your business.
 
 ## Innovate approach
 
