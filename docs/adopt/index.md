@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 # Adopt the cloud
 
-The adopt methodology is where you start adopting the cloud to meet your goals. Your goals will determine how you adopt the cloud. The adopt methodology walks you through how to assess your goals and how to adopt the right approach to meeting those goals.
+The adopt methodology is where you start benefiting from the cloud. You will learn how to use the cloud to meet your short-term and long-term business goals. Your goals will determine the approach you take to adopt the cloud. This series of article will guide to the right approach for your business. It will also give you concrete steps to adopting the cloud to your application portfolio.
 
 There are three common approaches for adopting the cloud: migrate, modernize, and innovate. Each cloud adoption approach has different goals, solutions, and benefits (*see figure*).
 
