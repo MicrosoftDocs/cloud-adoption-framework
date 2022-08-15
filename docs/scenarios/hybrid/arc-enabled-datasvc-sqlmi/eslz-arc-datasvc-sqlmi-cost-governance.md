@@ -46,10 +46,14 @@ Consider the combination of service tier needs, timeline for Arc-enabled SQL MI 
 
 The following sections contain design recommendations for Arc-enabled SQL MI cost governance.
 
+> [!Note]
+> Pricing information shown in the provided screenshots are examples and provided to demonstrate cost governance concepts but don't reflect the actual pricing information you might see in your own Azure Arc deployments.
 
 ### Service Tier
 
 The biggest cost component in an Arc-enabled SQL MI deployment is the service tier selected.  Choose the service tier that meets business requirements. Refer to the [Service tier comparison](/azure/azure-arc/data/service-tiers#service-tier-comparison) for more details.  Consider the need for high-availability and read scale-out, among other factors.  If this is an existing SQL Server deployment being migrated, consider the SQL edition currently in use and the features that will be required for the Arc-enabled SQL MI deployment.
+
+[![Screenshot of service tier and estimated cost summary](./media/arc-enabled-sqlmi-cost-1.png)]
 
 ### Connectivity Mode
 
@@ -59,6 +63,7 @@ If using the directly connected mode, no additional action is needed for the nec
 
 Based on the expected duration of the Arc-enabled SQL MI deployment, choose a one or three-year reserved instance if it will result in savings for the organization. Refer to the [Cloud Adoption Framework](/azure/cloud-adoption-framework/govern/cost-management/best-practices#best-practice-use-azure-reserved-vm-instances) for more details on reservation.
 
+[![Screenshot of reservation purchase overview](./media/arc-enabled-sqlmi-cost-2.png)]
 
 ### Azure Hybrid Benefit
 
@@ -67,6 +72,10 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 ### Governance
 
 - Review the recommendations in the [resource organization](./eslz-arc-datasvc-sqlmi-resource-organization.md) and [governance disciplines](./eslz-arc-datasvc-sqlmi-governance-disciplines.md) critical design areas to implement a governance strategy, organize your resources for better cost control and visibility, and avoid unnecessary costs by using the least privileged access model for onboarding and management.  Further, review the broader recommendations for Azure Arc-enabled Kubernetes [resource organization](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization) and [governance discipline](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines) to understand governance principles outside of a data services context.
+
+- Use [Azure cost management and billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) to understand Arc-enabled SQL MI costs.
+
+[![Screenshot of cost analysis](./media/arc-enabled-sqlmi-cost-3.png)]
 
 ### Azure Policy for Kubernetes
 
