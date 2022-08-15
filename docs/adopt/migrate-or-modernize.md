@@ -14,7 +14,7 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 Customers often ask if they should migrate first and modernize later or modernize during the migration. The timing depends on the benefits you want to gain. We recommended two approaches: rehost and replatform (*see figure*).
 
-:::image type="content" source="../_images/adopt/migrate-or-modernize-v2.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
+:::image type="content" source="../_images/adopt/migrate-or-modernize-v3.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
 ## Rehost ("migrate first, modernize later")
 
@@ -41,4 +41,4 @@ Replaforming lets you modernize aspects of an application during the migration p
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Learn how to Migrate](../migrate/index.md)
+> [Learn how to migrate](../migrate/index.md)
