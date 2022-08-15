@@ -3,7 +3,7 @@ title: Modernize your apps and data
 description: Learn how cloud adoption-related modernization can provide business value by unlocking new technical skills and expanded business capabilities.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/08/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
@@ -13,19 +13,19 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernizing in the cloud meaning enhancing your existing applications with more cloud capabilities. Modernizing can happen [after you migrate or during the migration](/docs/adopt/migrate-modernize-approaches.md).
+Modernize your workloads in the cloud. Modernization is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and minimize cost. Modernizing uses managed platform-as-a-service solutions (PaaS) to improve your business at scale.
 
-## Methodology
+## How to modernize in the cloud
 
-Modernization has two aspects. You must first align your business to your modernization goals. Then, you can begin the process modernization (*see figure*).
+Modernizing in the cloud requires business alignment and modernization strategies (*see figure*).
 
-:::image type="content" source="../_images/modernize/modernize-methodology-v5.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
+:::image type="content" source="../_images/modernize/modernize-methodology-v7.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
-## How to use these articles
-
-We have an article on each step of the modernize methodology. The articles are sequential, so it's best that you work through them in order. Use the article for reference. Complete the steps, but don't necessarily read from top to bottom. Find what you need and move on.
+During business alignment, you envision, evaluate, and commit to a modernization roadmap. The modernization roadmap he modernization strategies will show you how to modernize your process, application, and database.
 
 ## Next steps
+
+Read through the modernize article in sequential order.
 
 > [!div class="nextstepaction"]
 > [Start with business alignment](../modernize/business-alignment/index.md)
