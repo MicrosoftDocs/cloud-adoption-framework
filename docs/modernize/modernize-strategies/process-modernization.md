@@ -10,10 +10,6 @@ ms.subservice: general
 ms.custom: internal
 ---
 
-<!--
-Dependencies: cross linking​
-Review the current TOC under CAF/Adopt/Innovate/Best practices/Empower adoption for other cross linking suggestions.-->
-
 # Modernize your development and operations processes for the cloud
 
 Learn how to modernize your development and operations processes for the cloud. Modernizing your development and operations processes increases your team's efficiency and ultimately reduces the total cost of ownership of your workloads.
