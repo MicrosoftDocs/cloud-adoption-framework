@@ -21,7 +21,6 @@ There are three common approaches for adopting the cloud: migrate, modernize, an
 
 :::image type="content" source="../_images/adopt/cloud-adoption-plan-v4.png" alt-text="Image showing three cloud adoption approaches and their goals. The three approaches to adopting the cloud are migrate, modernize, and innovate. ":::
 
-
 ## Migrate approach
 
 The migrate approach is where you move your workloads from on-premises to the cloud. Different forms of migration exist, but we'll focus on rehosting, also known as "lift-and-shift." In this approach, you move from an on-premises solution and adopt infrastructure-as-a-service (IaaS) solutions in the cloud.
