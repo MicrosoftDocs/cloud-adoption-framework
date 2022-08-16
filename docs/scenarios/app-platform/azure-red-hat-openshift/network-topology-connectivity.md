@@ -49,7 +49,7 @@ ARO API cluster IP visibility can be either public or private. [Private clusters
 
 Following enterprise-scale proven practices, DNS resolution for Azure workloads is offered by centralized DNS servers deployed in the connectivity subscription, either in a hub virtual network or in a shared services virtual network connected to an Azure Virtual WAN. These servers will conditionally resolve Azure-specific and public names using Azure DNS (IP address 168.63.129.16), and private names using corporate DNS servers. This connectivity model is a common practice and is important to allow private access to other Azure resources when using Private Endpoints.
 
-![Diagram showing a network for a private cluster.](./media/aro-landing-zone-architecture.png)
+![Diagram showing a network for a private cluster.](./media/landing-zone-architecture.png)
 
 ### Traffic from application users to the cluster
 

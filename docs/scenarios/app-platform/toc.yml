@@ -76,20 +76,20 @@ items:
         href: app-services/platform-automation-and-devops.md
     - name: Azure Red Hat OpenShift
       items:
-      - name: ARO landing zone accelerator
-        href: aro\aro-landing-zone-accelerator.md
+      - name: Azure Red Hat OpenShift landing zone accelerator
+        href: azure-red-hat-openshift\landing-zone-accelerator.md
       - name: Identity and access management
-        href: aro\aro-identity-and-access-management.md
+        href: azure-red-hat-openshift\identity-access-management.md
       - name: Network topology and connectivity
-        href: aro\aro-network-topology-and-connectivity.md
+        href: azure-red-hat-openshift\network-topology-connectivity.md
       - name: Resource organization
-        href: aro\aro-resource-organization.md
+        href: azure-red-hat-openshift\resource-organization.md
       - name: Security
-        href: aro\aro-security.md
+        href: azure-red-hat-openshift\security.md
       - name: Operations management
-        href: aro\operations-bcdr-for-aro.md
+        href: azure-red-hat-openshift\operations.md
       - name: Platform automation 
-        href: aro\aro-platform-automation-devops.md
+        href: azure-red-hat-openshift\platform-automation-devops.md
   - name: Migrate to modern application platforms
     href: migrate.md
   - name: Innovation on modern application platforms
