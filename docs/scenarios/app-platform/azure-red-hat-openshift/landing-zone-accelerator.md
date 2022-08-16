@@ -46,7 +46,7 @@ These articles provide guidelines for creating your landing zone based on the de
 
 The following diagram shows ARO Landing Zone Accelerator architecture.
 
-[![Diagram showing the ARO landing zone accelerator architecture.](./media/landing-zone-architecture.png)](./media/aro-landing-zone-architecture.png)
+[![Diagram showing the ARO landing zone accelerator architecture.](./media/landing-zone-architecture.png)](./media/landing-zone-architecture.png)
 
 ## Deploy ARO landing zone accelerator
 
