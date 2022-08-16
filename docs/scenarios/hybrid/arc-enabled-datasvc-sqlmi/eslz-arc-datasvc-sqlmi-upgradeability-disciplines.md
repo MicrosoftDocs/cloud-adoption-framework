@@ -18,17 +18,43 @@ This article provides key design considerations and recommendations for configur
 
 ## Architecture
 
-The following diagrams show the request flow and relevant components when performing upgrades to both the Data Controller and Arc-enabled SQL MI. There are multiple options for how an upgrade can be triggered, and the request flow varies depending on whether the cluster uses directly connected or indirectly connected mode.
+### Directly Connected mode
 
-![A screenshot showing upgrade request flows and options using directly connected mode](./media/temp.png)
+The following diagram displays the data service upgrade flow in the Directly Connected mode.
 
-![A screenshot showing upgrade request flows and options using indirectly connected mode](./media/temp.png)
+   ![A screenshot showing the data service upgrade flow in the Directly Connected mode](./media/directly-connected-mode-upgrade-flow.png)
+
+### Indirectly Connected mode
+
+The following diagram displays the data service upgrade flow in the Indirectly Connected mode.
+
+   ![A screenshot showing the data service upgrade flow in the Indirectly Connected mode](./media/indirectly-connected-mode-upgrade-flow.png)
+
+### General Purpose service tier
+
+The following diagrams display the upgrade process of an Arc-enabled SQL MI in a General Purpose service tier.
+
+   ![A screenshot showing the pre-upgrade process of an Arc-enabled SQL MI in a General Purpose service tier](./media/general-purpose-pre-upgrade.png)
+
+   ![A screenshot showing the upgrade process of an Arc-enabled SQL MI in a General Purpose service tier](./media/general-purpose-upgrade.png)
+
+### Business Critical service tier
+
+The following diagrams display the upgrade process of an Arc-enabled SQL MI in a Business Critical service tier.
+
+   ![A screenshot showing the pre-upgrade process of an Arc-enabled SQL MI in a Business Critical service tier](./media/business-critical-pre-upgrade.png)
+
+   ![A screenshot showing the upgrade process of an Arc-enabled SQL MI in a Business Critical service tier](./media/business-critical-new-pod.png)
+
+   ![A screenshot showing the remaining secondary replicas upgrade rollout in a Business Critical service tier upgrade](./media/business-critical-upgrade-rollout.png)
+
+   ![A screenshot showing the SQL-level failover and last Pod instantiation in a Business Critical service tier upgrade](./media/business-critical-last-pod.png)
 
 ## Design considerations
 
 ### Data Controller upgrades
 
-- Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or indirectly connected mode) and the tool you are most comfortable with.
+- Upgrades can be performed using a variety of tools (Azure CLI, Azure portal or Kubernetes tools). Consider which tool to use depending on the connectivity mode being used (directly or Indirectly Connected mode) and the tool you are most comfortable with.
 - Review your Data Controller to check if you have any preview data services like Azure Arc-enabled PostgreSQL deployed alongside Arc-enabled SQL MI. You cannot perform in-place upgrades if you have a mix of preview and Generally Available services deployed on the same Data Controller.
 - Review the versions of all the Arc-enabled SQL MI used by the Data Controller to confirm they are at the same version as the Data Controller before performing the upgrade.
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next right version for your Data Controller before the upgrade.
@@ -36,15 +62,15 @@ The following diagrams show the request flow and relevant components when perfor
 > [!NOTE]
 > An upgrade of the Data Controller will not cause downtime for the Arc-enabled SQL MI.
 
-#### Directly connected mode
+#### Directly Connected mode
 
-- Determine if upgrading the Data Controller in directly connected mode will be implemented using the Azure Portal, the Azure CLI or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
+- Determine if upgrading the Data Controller in Directly Connected mode will be implemented using the Azure Portal, the Azure CLI or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
 - Review the prerequisites for upgrades using the [Azure portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#prerequisites).
 - Review the [extensions management critical design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management) in the [Azure Arc-enabled Kubernetes Landing Zone Accelerator](/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
 
-#### Indirectly connected mode
+#### Indirectly Connected mode
 
-- Determine if upgrading the Azure Arc Data Controller in indirectly connected mode will be implemented using the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) or [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools).
+- Determine if upgrading the Azure Arc Data Controller in Indirectly Connected mode will be implemented using the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) or [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools).
 - Review the prerequisites for upgrades using the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli#prerequisites).
 - Decide if you will use the [Microsoft Artifact Registry](https://mcr.microsoft.com/) in case your clusters have internet connectivity or a private registry in case your clusters are air-gapped to pull the Azure Arc-enabled data services images.
 - Plan for the [required Kubernetes permissions](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#create-the-service-account-for-running-upgrade) to for the service account used to upgrade the Azure Arc Data Controller using Kubernetes tools.
@@ -90,12 +116,12 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 
 - Review the [troubleshooting guide](/azure/azure-arc/data/maintenance-window#failed-upgrades) to understand how to get the needed logs to resolve any upgrade issues.
 
-#### Directly connected mode
+#### Directly Connected mode
 
 - Create a process to monitor the upgrade process using the [Azure Portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#monitor-the-upgrade-status), [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
 - Upgrade the [_arcdata_ Cluster extension](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-arc-data-controller-extension) before upgrading the Data Controller itself.
 
-#### Indirectly connected mode
+#### Indirectly Connected mode
 
 - Create a process to monitor the upgrade process using the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status) or [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli#monitor-the-upgrade-status).
 - Automate the process to [pull down images](https://github.com/microsoft/azure_arc/tree/main/arc_data_services/deploy/scripts) to your private registry.
