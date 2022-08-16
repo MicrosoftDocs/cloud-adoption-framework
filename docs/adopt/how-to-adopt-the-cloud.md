@@ -3,7 +3,7 @@ title: How to adopt the cloud
 description: Use the Cloud Adoption Framework for Azure to understand the typical journey to the cloud and how your existing portfolio will change.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/08/2022
+ms.date: 08/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
@@ -13,25 +13,25 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 
 # How to adopt the cloud
 
-We want to give you a sense of what your cloud adoption journey could look like. To that end, it can be helpful to see how other organizations adopt the cloud (*see figure*).
+We want to give you a sense of what your cloud adoption journey could look like. To that end, it can be helpful to see how other organizations adopt the cloud (*see the following diagram*).
 
 :::image type="content" source="../_images/adopt/adopt-existing-apps-v7.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 
-An important consideration in adopting the right cloud solution is control versus productivity. Most organizations find a balance that meets there needs. A typical business will use three strategies:
+An important consideration in adopting the right cloud solution is control versus productivity. Most organizations find a balance that meets their needs. A typical business will use the following strategies:
 
 - Retire 35% of existing applications
 - Replace 15% of existing applications
-- Replatform and Rehost 50% of existing applications
+- Replatform and rehost 50% of existing applications
 
-Below we provide some guidance on how to approach each cloud adoption strategy.
+Read further for guidance on how you can approach each cloud adoption strategy.
 
 ## Retire (35%)
 
-Retire or get rid of any applications and environments you don't need. Take an inventory of your application portfolio and identify applications and environments that aren't worth the investment to keep. Shrinking your portfolio before cloud adoption frees you to focus on your most important workloads.
+Retire or get rid of any applications and environments you don't need. Take an inventory of your application portfolio and identify applications and environments that aren't worth the investment to keep. Shrink your portfolio before you adopt the cloud to focus on your most important workloads.
 
 ## Replace (15%)
 
-Replacing workloads with SaaS and low-code solutions provides the most productivity for applications you need to keep. You can move "from" solutions that take more time to manage ("control"). You can move "to" cloud solutions that let you focus on building solutions that grow your business ("productivity") (*see table for examples*).
+Replace workloads with SaaS and low-code solutions to provide the most productivity for the applications you need to keep. You can move "from" solutions that take more time to manage ("control") and move "to" cloud solutions that let you focus on growing your business ("productivity"). See the following table for examples.
 
 | From<span title="Replace">&nbsp;</span> | To<span title="To">&nbsp;</span> |<span></span>|
 |-|-|-|
@@ -40,11 +40,13 @@ Replacing workloads with SaaS and low-code solutions provides the most productiv
 |Relationship <br>Management|[Dynamics](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
 |Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
 
-## Rehost or Replatform (50%)
+## Rehost or replatform (50%)
 
 A typical business will rehost ("lift-and-shift") or replatform ("modernize") about half of its existing applications. The next article will help you decide which one to choose for each workload.
 
-**1. First workloads to move (35%):**  Pick easy wins for the first workloads to move. Test your adoption plan on easier applications before tackling more complex workloads. As you work, make sure document your successes and revise your strategy. You'll apply these insights to your more complicated migrations.
+### First to move (35%)
+
+Pick easy wins for the first workloads to move. Test your adoption plan on easier applications before tackling more complex workloads. As you work, make sure to document your successes and revise your strategy if needed. Apply these insights to your more complicated moves.
 
 Some examples of workloads you could include in your first move are:
 
@@ -52,13 +54,17 @@ Some examples of workloads you could include in your first move are:
 - *Advanced portals:* Replatform your portals with [Power Apps portals](/power-apps/maker/portals/overview).
 - *Modernized solutions:* Finish modernizing workloads. If you modernized the application, now it's time to modernize the database.
 
-**2. Next to move (10%):** Use the lessons-learned from your first moves to tackle more challenging workloads. Some of the more challenging workloads to move are:
+### Next to move (10%)
+
+Use the lessons-learned from your first moves to tackle more challenging workloads. Some of the more challenging workloads to move could be:
 
 - *High Business Impact:* Workloads that drive revenue.
 - *High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:* Workloads that record business transactions.
 - *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and GDPR](/../cloud-adoption-framework-pr/docs/govern/policy-compliance/regulatory-compliance.md). Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance.md) to ensure compliance with these standards.
 
-**3. Hard or costly to move (5%):** Move the most difficult and costly workloads last. These systems need more thought to move efficiently.
+### Hard or costly to move (5%)
+
+Move the most difficult and costly workloads last. The following systems may need more thought to move efficiently:
 
 - *High Value Asset (HVA):* Disruption or corruption of this workload would disrupt all business operations.
 - *Public Key Infrastructure (PKI) systems:* Workloads that manage x509 digital certificates and provide network encryption and authentication.
