@@ -35,25 +35,25 @@ The landing zone accelerator approach for ARO provides these assets to support y
 
 These articles provide guidelines for creating your landing zone based on the design areas of Azure landing zones:
 
-- [Identity and access management](./aro-identity-and-access-management.md)
-- [Network topology and connectivity](./aro-network-topology-and-connectivity.md)
-- [Resource organization](./aro-resource-organization.md)
-- [Security](./aro-security.md)
-- [Operations management and BCDR](./operations-bcdr-for-aro.md)
-- [Deployment options](./aro-platform-automation-devops.md)
+- [Identity and access management](./identity-access-management.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Resource organization](./resource-organization.md)
+- [Security](./security.md)
+- [Operations management and BCDR](./operations.md)
+- [Deployment options](./platform-automation-devops.md)
 
 ## Reference architecture
 
 The following diagram shows ARO Landing Zone Accelerator architecture.
 
-[![Diagram showing the ARO landing zone accelerator architecture.](./media/aro-landing-zone-architecture.png)](./media/aro-landing-zone-architecture.png)
+[![Diagram showing the ARO landing zone accelerator architecture.](./media/landing-zone-architecture.png)](./media/aro-landing-zone-architecture.png)
 
 ## Deploy ARO landing zone accelerator
 
-ARO landing zone accelerator is an open-source repo consist of Azure CLI reference implementation along with Critical Design Area recommendations, available in the [`ARO landing zone accelerator`](https://aka.ms/aro-landing-zone-accelerator) repo.
+ARO landing zone accelerator is an open-source repo consist of Azure CLI reference implementation along with Critical Design Area recommendations, available in the [ARO landing zone accelerator](https://aka.ms/aro-landing-zone-accelerator) repo.
 
 ## Next steps
 
 Learn about design considerations for identity and access management in your Azure landing zones.
 
-[Identity and access management for Azure Red Hat Openshift (ARO) landing Zone accelerator scenario](./aro-identity-and-access-management.md).
+[Identity and access management for Azure Red Hat Openshift (ARO) landing Zone accelerator scenario](./identity-access-management.md).
