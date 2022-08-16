@@ -241,7 +241,7 @@ items:
         href: ready/azure-setup-guide/manage-costs.md
       - name: Plan governance, security, and compliance
         href: ready/azure-setup-guide/govern-org-compliance.md
-      - name: Establish monitoring and reporting
+      - name: Monitoring and reporting
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
@@ -979,9 +979,9 @@ items:
           href: modernize/modernize-strategies/index.md
         - name: Process modernization 
           href: modernize/modernize-strategies/process-modernization.md
-        - name: Database modernization
-          href: modernize/modernize-strategies/database-modernization.md
         - name: Application modernization
+          href: modernize/modernize-strategies/database-modernization.md
+        - name: Database modernization
           href: modernize/modernize-strategies/database-modernization.md
 
     - name: Innovate
@@ -1924,13 +1924,13 @@ items:
           href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
       - name: AI + machine learning
         items:
-        - name: Organize and set up Azure Machine Learning environments
+        - name: Organize and set up Azure Machine Learning
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
         - name: Best practices for enterprise security
           href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
-        - name: Budget, cost, and quota management with Azure Machine Learning
+        - name: Manage budget, cost, and quota with Azure
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
-        - name: Machine learning DevOps (MLOps)
+        - name: Machine learning operations
           href: ready/azure-best-practices/ai-machine-learning-mlops.md
       - name: Create hybrid cloud consistency
         href: ready/considerations/hybrid-consistency.md

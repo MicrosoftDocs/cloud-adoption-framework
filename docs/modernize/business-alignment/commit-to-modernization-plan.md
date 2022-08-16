@@ -3,36 +3,31 @@ title: Commit to modernization in the cloud
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/08/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice:
 ms.custom: internal, seo-caf-modernize
 keywords: effort, impact, balance, modern, cloud modernization, cloud adoption framework
 ---
-<!--This article might have dependencies or require links to future articles related to the modernization disciplines. But no other known links or dependencies are identified at this point.
-Primary Deliverable: CAF/Modernize/Commit-to-modernization-plan.md
-Effort, Impact, Commitment
-Minimum: 1 article		Maximum: 4 articles-->
 
 # Commit to modernization in the cloud
 
-Commit to modernization in the cloud by modernizing your operations and your workloads.
+Commit to modernization in the cloud. Modernization requires an investment of time and money. The commit phase is where modernization receives the time and money investments it needs.
 
-:::image type="content" source="../../_images/modernize/commit/commit.png" alt-text="Image showing where you are in the business alignment process.":::
+:::image type="content" source="../../_images/modernize/commit/commit-980.png" alt-text="Image showing where you are in the business alignment process.":::
 
-Modernization requires an investment of time and money. The commit phase is where modernization receives the time and money investments it needs. As part of the commitment phase, you gather key stakeholders:
+ As part of the commitment phase, you gather key stakeholders. The two primary groups are business leads and technical leads.
 
-- Business leads
-- Technical leads
+*Business leads* - Approve the time and financial investments in the modernization roadmap.
 
-The technical leads team presents the ideal modernization path. The business leads agree to invest the time and money in that path.
+*Technical Leads* - Design and present the modernization roadmap.
 
-## Step 1 - Commit to a modernization path
+## Step 1 - Align your modernization motivations to modernization strategies
 
-Commit to a modernization path by aligning your modernization motivations to a modernization strategy. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull out these motivations because we use them here to create a modernization path.
+Align your modernization motivations to modernization strategies. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull out these motivations because you use them to determine what modernization strategies you'll commit to.
 
-Most modernization motivations map to two or more modernization strategies (*see table*).
+Most modernization motivations align two or more modernization strategies (*see table*).
 
 |Modernization Motivation <br> (What is your goal?)| Modernization Strategy <br> (How to reach your goal)|
 | --- | --- |
@@ -42,29 +37,45 @@ Most modernization motivations map to two or more modernization strategies (*see
 |*Application innovation*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
 |*Centralizing data*|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 
-Notice that process modernization is listed modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO).
+*Process modernization* - notice that *process modernization* is listed with every modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter you motivation for modernization, you need to modernize your process.
 
-Use the table above to finalize your commitment path. Your commitment combines your workload, motivation, and strategy. See the example below. It builds on the table you created in the [envision step](../business-alignment/envision-cloud-modernization.md).
+## Step 2 - Update your workload table with modernization strategies
+
+Update your workload table with modernization strategies. Add the modernization strategies you identified in step 1 with the table you created in the [envision step of business alignment](../business-alignment/envision-cloud-modernization.md) (*see the example below*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy
 | --- | --- | --- | --- |
 |E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation |<ul><li>Process modernization</li><li>Application modernization</li></ul>|
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
-|
 
-## Step 2 - Commit to a timeline
+## Step 3 - Create a modernization timeline for each workload
 
-Commit to a timeline. The amount of time it takes to modernize your process and workloads depends on your team's experience and the complexity of your situation.
+Create a modernization timeline. The amount of time it takes to modernize your workloads depends on your team's experience and the complexity of your situation (*see table*).
 
-Check out our [Fast Track for Azure](/programs/azure-fasttrack/) program if you don't have the right experience on your team to estimate a timeline. You can also use one of our certified partners in the [Azure Migration and Modernization Program](/azure/partners/ammp) to get the advice you need.
+|Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy|Timeline|
+| --- | --- | --- | --- | --- |
+|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation |<ul><li>Process modernization</li><li>Application modernization</li></ul>| N-weeks|
+|Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data|<ul><li>Process modernization</li><li>Database modernization</li></ul>|N-weeks|
 
-## Step 3 - Commit resources
+You might have the technical expertise to estimate the modernization effort. If not, here are some resources to get the expert advice you need.
 
-Commit resources to your modernization path. You have your modernization path and have created a timeline. Now, you need to put the right people on the project and commit to giving them the right tools.
+- [Azure Migration and Modernization Program](/azure/partners/ammp)
+- [Fast Track for Azure](/programs/azure-fasttrack/)
+
+## Step 4 - Commit resources to the modernization
+
+Commit resources to the modernization. Business leads need to give the modernization effort a budget. The budget should allow the technical leads to put the right people on the project and give them the technical team the right tools.
 
 ## Next steps
 
-With a modernization path identified, you can begin modernizing.
+By completing the steps above, you have created a high-level modernization roadmap. You have identified and put the right resources behind:
+
+- What you want to modernize (workload)
+- Why you want to modernize (modernization motivation)
+- How you can modernize (modernization strategies)
+- When you'll modernize (timeline)
+
+With your modernization roadmap and commitments in place, you can begin modernizing.
 
 > [!div class="nextstepaction"]
 > [Modernization strategies](../modernize-strategies/index.md)

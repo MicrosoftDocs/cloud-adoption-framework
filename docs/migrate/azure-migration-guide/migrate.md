@@ -24,13 +24,13 @@ Azure Migrate is a one-stop, extensible migration experience. Use Azure Migrate 
 
 Azure Migrate is a centralized hub where you can assess and then migrate on-premises servers, infrastructure, applications, and data to Azure. Azure Migrate offers these features:
 
-- Unified platform with assessment, migration, and progress tracking.
+- Unified platform, with assessment, migration, and progress tracking.
 - Enhanced assessment and migration capabilities:
-  - Assess on-premises servers, including SQL Server instances and migrate them to Azure virtual machines or Azure VMware Solution (AVS) (Preview).
+  - Assess on-premises servers, including SQL Server instances, and migrate them to Azure Virtual Machines or Azure VMware Solution.
   - Agentless migration of VMware virtual machines to Azure.
-  - Assess on-premises databases and migrate them to Azure SQL Database or to SQL Managed Instance.
-  - Assess on-premises web applications and migrate them to Azure App Service by using the Azure App Service Migration Assistant.
-  - Assess your on-premises virtual desktop infrastructure (VDI) and migrate it to Azure Virtual Desktop.
+  - Assess on-premises databases and migrate them to Azure SQL Database or Azure SQL Managed Instance.
+  - Assess on-premises web applications and migrate them to Azure App Service by using Azure App Service Migration Assistant.
+  - Assess your on-premises virtual desktop infrastructure and migrate it to Azure Virtual Desktop.
   - Migrate large amounts of data to Azure quickly and cost-effectively using Azure Data Box products.
 - Extensible approach with ISV integration (such as Cloudamize).
 
