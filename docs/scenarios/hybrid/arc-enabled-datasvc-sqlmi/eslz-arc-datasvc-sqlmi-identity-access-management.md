@@ -94,6 +94,8 @@ Arc-enabled SQL MI access controls are fully independent of underlying [Azure Ar
 
 ## Design recommendations
 
+In addition to design recommendations provided in this section, review the [identity and access management design recommendations](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management#design-recommendations) of Azure Arc-enabled Kubernetes as Arc-enabled SQL MI is deployed on the Arc-enabled Kubernetes cluster.
+
 ### Arc-enabled data services deployment
 
 - For enterprise organizations that follow strict ITIL processes, isolate teams responsible for managing Arc-enabled data services from Arc-enabled Kubernetes by creating different security groups and assigning permissions to manage Arc-enabled data services.
@@ -148,3 +150,5 @@ For more information about Azure Arc-enabled SQL Managed Instance identity and a
 - [Azure Arc-enabled SQL Managed Instance in Active Directory authentication pre-requisites](/azure/azure-arc/data/active-directory-prerequisites)
 - [Tutorial – Deploy Active Directory connector using Azure CLI](/azure/azure-arc/data/deploy-active-directory-connector-cli)
 - [Deploy Active Directory integrated Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/deploy-active-directory-sql-managed-instance)
+- Experience Azure Arc-enabled SQL MI automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
+- To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
