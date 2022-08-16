@@ -38,7 +38,7 @@ Knowing *why* you're modernizing will determine *what* to modernize. So make sur
 
 Identify the workloads you want to modernize.
 
-**1. What is a workload?** A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a business function. Data centers encourage you to manage IT assets separately (*see figure*).
+*What is a workload?* A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a business function. Data centers encourage you to manage IT assets separately (*see figure*).
 
 :::image type="content" source="../../_images/modernize/envision/data-center-it-assets-small.png" alt-text="Graphic showing existing data center." :::
 
@@ -46,7 +46,9 @@ But the cloud lets you focus on workloads instead of separate IT assets. Moderni
 
 :::image type="content" source="../../_images/modernize/envision/workload_300.png" alt-text="Image showing workload as a combination of applications, infrastructure, and data." :::
 
-**2. How to identify workloads** Identify workloads by first making a list of business functions. Business functions are the key components of your business. With these business functions, find the IT assets that support each business function. The group of IT assets that support a specific business function is a workload (*see table for simplified examples*).
+*How to identify workloads*. Identify workloads by making a list of business functions. Business functions are the key components of your business.
+
+Next, identify the IT assets that support each business function. The group of IT assets that support a specific business function is a workload (*see table for simplified examples*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span>
 | --- | --- |
@@ -57,17 +59,16 @@ But the cloud lets you focus on workloads instead of separate IT assets. Moderni
 
 Align your modernization motivations and workloads so you can evaluate their readiness in the next step.
 
-**1. Map motivations and workloads**  Map your motivations and workloads using the list of modernization motivations you created in step 1. Start mapping these motivations to the table you made in step 2 (*see table for examples*).
+*Map motivations and workloads*. Map your modernization motivations (step 1) to workloads you identified (step 2).
+
+*Assign one motivation to each workload*. Assigning a single modernization motivation to each workload will help you organize your work when it's time to modernize (*see table for examples*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |
 | --- | --- | --- |
 |E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation
-|Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data
-|
+|Factory Production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing Data|
 
-**2. Assign one motivation to each workload** Assign one motivation to each workload. Assigning a single motivation to a workload will enable you to create streamlined processes for achieving the outcomes you want. It helps you organize your work.When you [modernize your process](/docs/modernize/modernize-strategies/devops-practices-modernization.md), it will be clearer why a single motivation is helpful.
-
-**3. When a single motivation is unclear**  When a single motivation is unclear, [conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The well-architected review will help you figure out what your motivation should be. After running the review, return to this step and complete step 3.
+*When a single motivation is unclear*. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The well-architected review will help you figure out what your motivation should be. After running the review, return to this step and complete step 3.
 
 ## Next steps
 
