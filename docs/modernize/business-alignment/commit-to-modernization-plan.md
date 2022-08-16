@@ -68,7 +68,14 @@ Commit resources to the modernization. Business leads need to give the moderniza
 
 ## Next steps
 
-By completing the steps above, you have created a high-level modernization roadmap. You have identified what, why, how, when, and who. Now you just need to commit resources to make the modernization a success. With your modernization roadmap and commitments in place, you can begin modernizing.
+By completing the steps above, you have created a high-level modernization roadmap. You have identified and put the right resources behind:
+
+- What you want to modernize (workload)
+- Why you want to modernize (modernization motivation)
+- How you can modernize (modernization strategies)
+- When you'll modernize (timeline)
+
+With your modernization roadmap and commitments in place, you can begin modernizing.
 
 > [!div class="nextstepaction"]
 > [Modernization strategies](../modernize-strategies/index.md)

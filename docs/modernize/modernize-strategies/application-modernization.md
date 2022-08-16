@@ -3,30 +3,33 @@ title: Modernize applications in the cloud
 description: Learn to modernize applications in the cloud
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/08/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
 ms.custom: internal, seo-caf-modernize
 keywords: application platform, modern, cloud modernization, cloud adoption framework
 ---
-<!--
-Dependencies: Cross-link to [Compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json) - We are concerned with a subset of this decision tree that relates to app plat)
-Primary Deliverable: CAF/modernize/application-platform-modernization.md
-This should fit into one net new article.
--->
 
 # Modernize applications in the cloud
 
-Learn how to modernize any application or framework in the cloud.
+Learn how to modernize any application or framework in the cloud. The cloud has modernizations solutions for any application or framework. Three different platform-as-a-service (PaaS) technologies give you this flexibility (*see figure*)
 
-:::image type="content" source="../../_images/modernize/app-platforms/app-modernize-586.png" alt-text="Graphic showing the application platform options, moving from control to productivity. The bottom of the graphic shows on-premises solutions. Moving up, you see container platforms, app platforms, and low code platforms.":::
+:::image type="content" source="../../_images/modernize/app-platforms/app-modernize-586.png" alt-text="Graphic showing the application platform options, moving from control to productivity. The bottom of the graphic shows on-premises solutions. Moving up, you see container platforms, application platforms, and low-code and no-code platforms.":::
 
-## Modernize applications
+- *Container PaaS* - Azure Kubernetes Service and Azure Red Hat OpenShift give you the most control over your workloads.
+- *Application PaaS* - Azure App Service, Azure Spring Cloud, and Azure Functions give you a balance of control and productivity.
+- *Low/No Code PaaS* - Power Apps and Power Automate give you the most productivity power.
 
-Modernize your applications. Find the balance of control and productivity that meets your needs.
+## Step 1 - Use a decision tree to narrow options
 
-In the table below, find your desired level of control vs. productivity. Then, see if the solution given meets your needs. When you find the right solution, follow the implementation guidance to modernize your application.
+Use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization service options. The goal is to narrow the options, not to decide the right one for you. After you've worked through the tree, return here to find relevant implementation guidance.
+
+## Step 2 - Find the right implementation guidance
+
+Find the right implementation guidance. You'll have a general idea of the service you want to use after working through the decision tree. But you still want to make sure the solution gives you the right balance of control and productivity. Finding the right balance is a main consideration in application modernization.
+
+Use the table to find the balance. Check to see if the solution listed meets your needs. When you find the right solution, follow the implementation guidance to modernize your application.
 
 | Control vs. Productivity | Solution | Your Needs | Implementation guidance |
 | --- | --- | --- | --- |
@@ -34,19 +37,11 @@ In the table below, find your desired level of control vs. productivity. Then, s
 | *Balance control & <br>productivity* | [Azure App Service](/rest/api/appservice/) <br><br> [Azure Spring Apps](/azure/spring-apps/overview) <br><br> [Azure Functions](/azure/azure-functions/functions-overview) | <ul><li> Focus on developing customer code</li> <li>Automated infrastructure</li> </ul> | [Azure App Service](/azure/app-service/app-service-migration-assess-net) <br><br> [Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud) <br><br> [Azure Functions](/azure/azure-functions/functions-reference)</ul>
 | *Productivity* | [Power Apps](/power-apps/powerapps-overview) <br><br> [Power Automate](/power-automate/getting-started) | <ul><li>Fastest time-to-market</li> <li>Applications and automation built with little to no coding experience</li> </ul> | [Power Apps](/power-apps/powerapps-overview)<br><br> [Power Automate](/power-automate/getting-started)</li></ul> |
 
-## Find help choosing the right solution
-
-Use our [app modernization decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) for more help choosing the right solution.
-
-## Supported apps & frameworks
-
-- .NET
-- Java
-- Spring
-- Python
-- Multiple frameworks
-
 ## Next Step
+
+Get more guidance with the [Azure Migration and Modernization Program](/migration/migration-modernization-program/#program-form)
+
+If you haven't already, modernize your databases.
 
 >[!div class="nextstepaction"]
 > [Modernize your databases](../modernize-strategies/database-modernization.md)

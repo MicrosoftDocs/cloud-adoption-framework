@@ -12,55 +12,19 @@ ms.custom: internal
 
 # Modernize your development and operations processes for the cloud
 
-Learn how to modernize your development and operations processes for the cloud. Modernizing your development and operations processes increases your team's efficiency and ultimately reduces the total cost of ownership of your workloads.
+Learn how to modernize your development and operations processes for the cloud. Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads.
+
+The DevOps methodology provides these essential mechanisms. DevOps uses special planning strategies and tools that let you continuously deliver value to customers (*see figure*).
 
 :::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools-512.png" alt-text="An image showing a circle with four segments corresponding to a basic DevOps workflow. The segments say plan, develop, deliver, and operate. In the middle of the circle, it says DevOps. There's a circular arrow showing that DevOps is a continuous process. There are images of five Azure DevOps tools inside the circular arrow. The Azure DevOps tools are Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts.":::
 
-We recommend you modernize your processes inline with DevOps. DevOps uses proven planning strategies and tools to continuously deliver value to customers. We outline how to start with DevOps in the sections below.
+## Step 1 - Modernize your tools
 
-## Modernize your planning strategies
+Modernize your tools so you can plan and deliver value to customers. DevOps tools let you easily integrate planning, development, delivery, and operations. The DevOps toolset has five components.
 
-Modernize your planning strategies by adopting a DevOps process. DevOps is an Agile framework that lets you plan effectively and modernize efficiently. Here are three steps to start planning your workload modernization efforts.
+The table has each DevOps tool and what it does. The "solution" column has a link that shows you how to adopt each tool with an alternative open-source solution.
 
-### Step 1 - Use your modernization roadmap
-
-Use the modernization roadmap you created in the [commit phase](../business-alignment/envision-cloud-modernization.md#step-1---identify-your-modernization-motivations) to begin modernizing your planning strategies. It has all the details you need.
-
-The sample modernization path we created in the previous steps is copied below for easy reference.
-
-|Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy
-| --- | --- | --- | --- |
-|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation |<ul><li>Process modernization</li><li>Application modernization</li></ul>|
-
-### Step 2 - Plan your modernization efforts
-
-Organize modernization efforts around the modernization path you created. The modernization path has all the information you need to modernize your workflow.
-
-Follow the steps in the table below to organize your modernization efforts.
-
-| Step | Work Tasks | Example |
-| --- | --- | --- |
-| 1. Create large buckets of work (epics) | Combine your modernization motivation and workload to create large buckets of work. Large buckets of work are called *epics* in Agile. | Application innovation for the E-commerce website |
-| 2. Break down the large buckets of work into multiple tasks (user stories) |Create these tasks from the perspective of your user or customer. Tasked created from epics are called *user stories* in Agile. The number of user stories you have depends on the complexity of the workload. There's no right or wrong number. | You could have one or many user stories. Here's one example:<br><br> "As a shopper, I want a more responsive website so I have a better shopping experience" |
-| 3. Break down the tasks identified in step 2 into smaller tasks (tasks)| These smaller tasks should be specific and detailed. Together, they meet the need identified in the user story. Subtasks are called *tasks* in Agile. | Sticking with our sample user story in step 2, here are some sample tasks: <br><ul> <li>Choose an Azure App Service plan</li> <li>Configure security for the app</li>  <li>Configure caching for the app</li> </ul>
-| 4. Prioritize your user stories and tasks | Put your user stories in order of priority. Ordering by priority will allow your team to meet the most important goals first | 1. As a shopper, I want a more responsive website ...<br>2. As a developer, I want better comments in our code ... <br><br>In this example, customer needs are more important than the need for better code comments.
-| 5. Assign work (sprints) | Set a two-week time frame for your work efforts. These time frames are called sprints in Agile. Have your team members take on tasks that they can complete in the two-week period | We will use the user story from step 2:<br><ul> <li>Person-A takes on the Azure App Service plan task</li> <li>Person-B configures security</li>  <li>Person-C configures caching</li> </ul>|
-
-The goal is the break the modernization work into manageable pieces and make the changes that have the most effect on customer and user needs.
-
-### Step 3 - Begin working
-
-You're ready to begin working. You've identified your epics, user stories, and tasks. You have a prioritized list of tasks and have assigned each task to people on your team. You're now ready to begin working on your first sprint.
-
-For more details on modernizing your planning efforts, you can look at more robust [DevOps planning guidance](/devops/plan/planning-efficient-workloads-with-devops).
-
-## Modernize your tools
-
-Modernize your tools to facilitate your DevOps planning strategies. You need to adopt DevOps tools to gain the efficiencies of DevOps. DevOps has a toolset with five components. You can use open-source tools or use [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) to make modernizing easier (*see table*).
-
-The table below shows you what DevOps tools you need and what it does. The "Solution" column gives you guidance on how to adopt each tool. "Alternative" gives an open-source option.
-
-| DevOps Tool | Tool Description | Solution | Alternative
+| DevOps Tool | Tool Description | Solution | Open-Source Solution
 | --- | --- | --- | --- |
 | *Repository* | A cloud-based location to store all code, track changes, and merge work | [Azure Repos](/azure/devops/repos/get-started/what-is-repos) | GitHub
 | *Pipeline* | An automated process to validate and push code to a desired environment | [Azure Pipeline](/azure/devops/pipelines/get-started/pipelines-get-started) | Jenkins
@@ -68,9 +32,45 @@ The table below shows you what DevOps tools you need and what it does. The "Solu
 | *Artifacts* | A tool to share code and publish packages | [Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts) | Nexus
 | *Testing* | A tool to run tests and quality assurance on code | [Azure Test Plans](/azure/devops/test/overview) | Selenium |
 
-With your DevOps tools in place, you can begin modernizing your applications and modernizing your databases.
+With these tools in place, you're ready to modernize your planning strategies.
+
+## Step 2 - Modernize your planning strategies
+
+Modernize your planning strategies with a DevOps mindset. DevOps is an Agile framework that integrates planning, development, delivery, and operations into a continuous feedback loop (*see figure above*).
+
+The goal of DevOps is to deliver value quickly. You deliver value quickly by prioritizing your tasks and working on high-priority tasks for a short period of time.
+
+### Consult your modernization roadmap
+
+Consult the modernization roadmap you created in the [commit phase](../business-alignment/envision-cloud-modernization.md#step-1---identify-your-modernization-motivations) to begin modernizing your planning strategies. It has all the details you need.
+
+Here's the sample modernization roadmap we created.
+
+|Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy|Timeline|
+| --- | --- | --- | --- | --- |
+|E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation |<ul><li>Process modernization</li><li>Application modernization</li></ul>| N-weeks|
+
+### Plan your modernization efforts
+
+Plan your modernization efforts using the modernization roadmap you created. Follow the steps in the table to divide the work into manageable pieces and assign them to members of your team.
+
+| Step | Work Tasks | Example |
+| --- | --- | --- |
+| 1. Identify major efforts (epics) | Major efforts are simply a combination of your modernization motivation and workload. Major efforts are called *epics* in Agile. | Application innovation for the E-commerce website |
+| 2. Break down the major efforts (*epics*) into smaller tasks (user stories) |Analyze the major efforts (*epic*) from the perspective of your customers. Divide the major efforts (*epics*) into smaller, logical tasks that correspond to customer needs. Tasks created from epics are called *user stories* in Agile. The number of user stories you have for each epic depends on the complexity of the workload. There's no right or wrong number. | "As a customer, I want a more responsive website so I have a better shopping experience" <br><br> "As a customer, I want a complete order history so I can reorder items easier"|
+| 3. Break down the tasks (*user stories*) further into smaller tasks (tasks)| These smaller tasks should be specific and detailed. Create as many as you need to meet the request in the user story. Subtasks are called *tasks* in Agile. | Choose an App Service plan<br><br>Configure resiliency<br><br>Configure caching
+| 4. Prioritize your user stories | Put your user stories in order of priority. Ordering by priority will allow your team to meet the most important goals first | 1. Better shopping experience <br><br> 2. Order history
+| 5. Assign work (sprints) | Set a two-week time frame for your work efforts. These time frames are called sprints in Agile. Have your team members take on tasks that they can complete in the two-week period | Assign two-week tasks (App Service plan, configure resiliency, configure caching) to team.
+
+For more details on modernizing your planning efforts, you can look at more robust [DevOps planning guidance](/devops/plan/planning-efficient-workloads-with-devops).
+
+## Step 3 - Begin modernizing
+
+You're ready to begin modernizing. You've adopted DevOps tools. You've planned your work. Begin working on your first sprint.
 
 ## Next Steps
+
+Your [modernization roadmap](/business-alignment/commit-to-modernization-plan.md/#next-steps) will guide you to modernize your application or database next.
 
 >[!div class="nextstepaction"]
 > [Modernize your applications](../../modernize/modernize-strategies/application-modernization.md)
