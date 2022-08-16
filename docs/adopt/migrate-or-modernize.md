@@ -12,26 +12,26 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # Migrate or modernize?
 
-For on-premises applications, prioritizing migration ("rehost") or modernize ("replatform") is a common dilemma.  depends on what you want for your business (*see figure*). For help answering this question, read through the benefits of each approach below to help you decide.
+For on-premises applications, prioritizing whether to migrate ("rehost") or modernize ("replatform") first is a common dilemma. Depending on your business goals (*see figure*) and the following benefits of each approach, you'll be better equipped to move forward with an approach.
 
 :::image type="content" source="../_images/adopt/migrate-or-modernize-v5.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
 
 ## Migrate ("Rehost")
 
-Migrate or rehost your application. This approach is often called "lift-and-shift." You move an existing application to the cloud as it is and modernize later.
+Migrate or rehost your applications first. This approach is often called "lift-and-shift." You move an existing application to the cloud as it is and modernize later.
 
-**Migrate benefits:** Migrate first if you want:
+**Benefits of migrating first:**
 
 - *Immediate sustainability:* The lift-and-shift approach is the fastest way to reduce your data center footprint.
-- *Immediate cost savings:* Using IaaS solutions will let you trade capital expense with operational expense. Pay as you go and only pay for what you use.
-- *IaaS Solutions:* IaaS virtual machines (VMs) provide immediate compatibility with existing on-premises applications. Migrate your workloads to Azure Virtual Machines and modernize while in the cloud.
+- *Immediate cost savings:* Using IaaS solutions will let you trade capital expense with operational expense. Pay-as-you-go and only pay for what you use.
+- *IaaS solutions:* IaaS virtual machines (VMs) provide immediate compatibility with existing on-premises applications. Migrate your workloads to Azure Virtual Machines and modernize while in the cloud.
 - *Immediate cloud-readiness test:* Test your migration to ensure your organization has the people and processes in place to adopt the cloud. Migrating a minimum viable product is a great approach to test the cloud-readiness of your organization.  
 
 ## Modernize ("Replatform")
 
-Modernize or replatform your application. In this approach, you change parts of an application during the migration process. It takes a little more work to get to the cloud, but the application will have better cost and performance efficiency in the cloud.
+Modernize or replatform your applications first. In this approach, you change parts of an application during the migration process. It takes a little more work to get to the cloud, but your applications have better cost and performance efficiency in the cloud.
 
-**Modernize Benefits:** Modernize during the move if you want:
+**Benefits of modernizing first:**
 
 - *Faster time-to-market:* Use existing PaaS technologies to speed up deployment.
 - *Increased application innovation:* PaaS allows developers to focus on business logic and critical data plays.
@@ -40,7 +40,7 @@ Modernize or replatform your application. In this approach, you change parts of 
 
 ## Next steps
 
-You have a sense of what to do first. Start migrating or modernizing.
+Now you have a sense of what to do first. Start migrating or modernizing.
 
 > [!div class="nextstepaction"]
 > [Learn how to migrate](../migrate/index.md)
