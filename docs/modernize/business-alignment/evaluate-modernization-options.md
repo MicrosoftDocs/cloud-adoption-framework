@@ -23,7 +23,7 @@ The evaluation is two steps. It involves assessing your financial readiness and 
 
 ## Step 1 - Evaluate the financial readiness of each workload
 
-Evaluate the financial readiness of each workload. This evaluation helps determine if it makes business sense to modernize your workload. Financial motivations are the key drivers of cloud modernization. Cloud modernizations can improve margins though efficiencies and generate new revenue streams. But to realize those benefits, you have evaluate the financial aspect of the effort.
+Evaluate the financial readiness of each workload. This evaluation helps determine if it makes business sense to modernize your workload. Financial motivations are the key drivers of cloud modernization. Cloud modernizations can improve margins through efficiencies and generate new revenue streams. But to realize those benefits, you need to evaluate the financial aspect of the effort.
 
 For each workload you want to modernize, answer the following questions. The questions are examples to get you thinking along the right lines.
 
@@ -40,15 +40,15 @@ If answered *yes* to all the financial readiness questions, the workload is like
 
 ## Step 2 - Evaluate the technical readiness of each workload
 
-Evaluate the technical readiness of each workload. This evaluation helps determine what cloud adoption strategy you should to take. It will help you see if your workload is ready for modernization or if it is better fit for a different cloud adoption strategy altogether (e.g. migrate or replace).
+Evaluate the technical readiness of each workload. This evaluation helps determine what cloud adoption strategy you should take. It will help you see if your workload is ready for modernization. It will also help show if your workload is better fit for a different cloud adoption strategy.
 
-For each workload you want to modernize, answer the following questions. The questions are very simple and just meant to get you thinking along the right lines.
+For each workload you want to modernize, answer the following questions. The questions are simple and meant to get you thinking along the right lines.
 
 |Question|Yes|No|
 |--|--|--|
 |*Do you have enough control over the workload to modernize it?*|Modernize| Migrate|
 |*Is your business actively investing<br> in these workloads?*|Modernize|Replace|
-|*Will these modernized workloads <br>need to operate in hybrid or<br> multi-cloud environment?* |Modernize|Migrate|
+|*Will these modernized workloads <br>need to operate in hybrid or<br> multicloud environment?* |Modernize|Migrate|
 |*Are your workloads portable?*|Modernize|Migrate|
 |*Do you plan to keep the current architecture?*|Modernize|Conduct<br>Review|
 
@@ -56,7 +56,7 @@ If you answered *yes* to all the technical-readiness questions, you're likely re
 
 ## Next steps
 
-You have envisioned and evaluated. You still need to commit to a modernization path.
+You've envisioned and evaluated. You still need to commit to a modernization path.
 
 > [!div class="nextstepaction"]
 > [How to commit to modernization](commit-to-modernization-plan.md)
