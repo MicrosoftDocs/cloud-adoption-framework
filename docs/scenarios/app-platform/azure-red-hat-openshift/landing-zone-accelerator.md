@@ -18,9 +18,9 @@ This solution is open source. You can adapt the templates to create an architect
 
 ## Implement a platform foundation
 
-The Azure Red Hat OpenShift landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. Having the platform foundation isn't mandatory when implementing a landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. 
+The Azure Red Hat OpenShift landing zone accelerator assumes that a platform foundation has been successfully implemented, which will take care of the shared services required to construct and operationalize a landing zone. Shared services include networking, security, identity, and governance.
 
-If you already have one, you can skip this step. For more information, review [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
+A platform foundation isn't mandatory to implement a landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have a platform foundation, you can skip this step. For more information, review [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
 ## Landing zone accelerator benefits
 
@@ -56,4 +56,4 @@ The landing zone accelerator is an open-source repo that consists of an Azure CL
 
 ## Next steps
 
-Learn about [identity and access management for your Azure Red Hat Openshift landing zone](./identity-access-management.md).
+Learn about [identity and access management for your Azure Red Hat OpenShift landing zone](./identity-access-management.md).
