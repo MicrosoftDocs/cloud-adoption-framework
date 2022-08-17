@@ -68,11 +68,11 @@ Following are the required RBAC permissions to publish monitoring metrics to Azu
 
 Following is the architecture diagram to securely access Arc-enabled SQL MI using AD authentication.
 
-[![Diagram that shows secure access to Arc-enabled SQL MI using AD authentication](./media/arc-enabled-sqlmi-secure-access.png)](./media/arc-enabled-sqlmi-secure-access.png#lighbox)
+[![Diagram that shows secure access to Arc-enabled SQL MI using AD authentication.](./media/arc-enabled-sqlmi-secure-access.png)](./media/arc-enabled-sqlmi-secure-access.png#lighbox)
 
 Following is the architecture diagram to securely access Arc-enabled SQL MI using SQL authentication.
 
-[![Diagram that shows secure access to Arc-enabled SQL MI using SQL authentication](./media/arc-enabled-sqlmi-secure-access-sql-auth.png)](./media/arc-enabled-sqlmi-secure-access-sql-auth.png#lighbox)
+[![Diagram that shows secure access to Arc-enabled SQL MI using SQL authentication.](./media/arc-enabled-sqlmi-secure-access-sql-auth.png)](./media/arc-enabled-sqlmi-secure-access-sql-auth.png#lighbox)
 
 ## Design considerations
 
