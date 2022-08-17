@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Plan platform automation and DevOps for Azure Red Hat OpenShift
 
-Get design considerations and recommendations for platform automation and DevOps for the Azure Red Hat OpenShift landing zone accelerator. Rely on automation and general DevOps best practices to plan your highly automated, DevOps platform.
+Get design considerations and recommendations for platform automation and DevOps for the Azure Red Hat OpenShift landing zone accelerator. Rely on automation and general DevOps best practices to plan your highly automated, DevOps platform for Azure Red Hat OpenShift.
 
 ## Design considerations
 
@@ -22,9 +22,9 @@ As you plan platform automation and DevOps for your Azure Red Hat OpenShift land
 
 - When you secure and protect access to development, test, Q&A, and production environments, evaluate security options from a CI/CD perspective. Deployments happen automatically, so map access control accordingly.
 
-- Consider using prefixes and suffixes that follow well-defined conventions to uniquely identify each deployed resource. Naming conventions avoid conflicts when you deploy adjacent solutions and improve overall team agility and throughput.
+- Consider using prefixes and suffixes that follow well-defined conventions to uniquely identify each deployed resource. Naming conventions avoid conflicts when you deploy adjacent solutions, and they help improve overall team agility and throughput.
 
-- Inventory your workflows to help you engineer, update, and deploy your solution in normal and Digital Rebar Provision (DRP) scenarios. To maximize familiarity and productivity, consider mapping pipelines to workflows. Examples include:
+- Inventory your workflows to help you engineer, update, and deploy your solution both in normal and in Digital Rebar Provision scenarios. To maximize familiarity and productivity, consider mapping pipelines to workflows, including:
 
   - Cluster deployment and upgrades
   - Application deployment and upgrades
@@ -42,11 +42,11 @@ As you plan platform automation and DevOps for your Azure Red Hat OpenShift land
 
 Use these design recommendations to plan your platform automation and DevOps for Azure RedHat OpenShift:
 
-- Use pipelines or actions to meet DevOps goals, including:
+- Use pipelines or actions to:
 
-  - Maximize applied practices across the team
-  - Remove much of the burden of new development
-  - Provide predictability and insight in overall quality and agility
+  - Maximize applied practices across the team.
+  - Remove much of the burden of new development.
+  - Provide predictability and insight in overall quality and agility.
 
 - Deploy early and often by using trigger-based and scheduled pipelines. Trigger-based pipelines ensure that changes go through proper validation. Scheduled pipelines manage behavior in changing environments.
 
@@ -56,7 +56,7 @@ Use these design recommendations to plan your platform automation and DevOps for
 
 - Use [GitOps](/azure/azure-arc/kubernetes/conceptual-gitops-flux2-ci-cd) to deploy and maintain applications. GitOps uses the Git repository as a single source of truth. You can avoid configuration drift and increase productivity and reliability during rollbacks and related procedures.
 
-  - Also consider using [Red Hat OpenShift GitOps](https://docs.openshift.com/container-platform/4.10/cicd/gitops/understanding-openshift-gitops.html). Red Hat OpenShift GitOps uses Argo CD to maintain cluster resources and support application CI/CD.
+  Also consider using [Red Hat OpenShift GitOps](https://docs.openshift.com/container-platform/4.10/cicd/gitops/understanding-openshift-gitops.html). Red Hat OpenShift GitOps uses Argo CD to maintain cluster resources and support application CI/CD.
 
 - Use [Azure Key Vault Provider for Secrets Store CSI Driver](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to protect secrets, certificates, and connection strings.
 
@@ -66,8 +66,8 @@ Use these design recommendations to plan your platform automation and DevOps for
 
 - Embrace a [shift-left](/devops/develop/shift-left-make-testing-fast-reliable) DevOps approach consistently through:
 
-  - **Security**: Add vulnerability-scanning tools like container scanning early in the pipeline.
-  - **Policy**: Use policy as code and enforce policies as cloud-native by using admission controllers.
+  - **Security**. Add vulnerability-scanning tools like container scanning early in the pipeline.
+  - **Policy**. Use policy as code and enforce policies as cloud-native by using admission controllers.
 
 - Treat every failure, error, or outage as an opportunity to automate and improve overall solution quality. Integrate this approach in your shift left and [site reliability engineering](/azure/site-reliability-engineering/) framework.
 
