@@ -36,7 +36,7 @@ Security is a shared responsibility between Microsoft and customers. You can upl
 
 For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
 
-Azure Landing Zones have specific guidance regarding zero-trust based network security to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](https://docs.microsoft.com/azure/architecture/framework/security/design-network).
+Azure Landing Zones have specific guidance regarding zero-trust based network security to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#zero-trust).
 
 ### Enable Microsoft Defender for Cloud
 
