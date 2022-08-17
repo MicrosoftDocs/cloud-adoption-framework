@@ -18,9 +18,9 @@ This solution is open source. You can adapt the templates to create an architect
 
 ## Implement a platform foundation
 
-The Azure Red Hat OpenShift landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. Having the platform foundation isn't mandatory when implementing a landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review this article:
+The Azure Red Hat OpenShift landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. Having the platform foundation isn't mandatory when implementing a landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. 
 
-- [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/design-area/identity-access.md)
+If you already have one, you can skip this step. For more information, review [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
 ## Landing zone accelerator benefits
 
@@ -35,8 +35,8 @@ The landing zone accelerator approach for Azure Red Hat OpenShift provides:
 
 There are many issues to consider when creating Azure landing zones.
 
-- [Identity and access management considerations](./identity-and-access-management.md)
-- [Network topology and connectivity considerations](./network-topology-and-connectivity.md)
+- [Identity and access management considerations](./identity-access-management.md)
+- [Network topology and connectivity considerations](./network-topology-connectivity.md)
 - [Resource organization considerations](./resource-organization.md)
 - [Security considerations](./security.md)
 - [Operations management and baseline considerations](./operations.md)
