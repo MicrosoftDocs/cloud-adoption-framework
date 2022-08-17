@@ -40,6 +40,7 @@ Review the [business continuity and disaster recovery design area](/azure/cloud-
 
 >NOTE
 >The high availability and resiliency of your Azure Arc-enabled SQL MI is also dependent on the underlying Kubernetes infrastructure availability. The focus of this article will only be on the business continuity design considerations recommendations for the Azure Arc-enabled SQL MI.
+
 ### Point-in-time restore
 
 - Define your [Recovery Point Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [Recovery Time Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO) targets.

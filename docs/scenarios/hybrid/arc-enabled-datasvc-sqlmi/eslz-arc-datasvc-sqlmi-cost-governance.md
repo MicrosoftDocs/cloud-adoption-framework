@@ -27,11 +27,11 @@ The costs of Arc-enabled SQL MI is in addition to any additional functionality d
 
 ## Cost of High Availability Infrastructure
 
-While not a direct cost of Arc-enabled SQL MI, consider that deploying an instance in the Business Critical tier offers high availability, which necessitates deploying and maintaining an additional Kubernetes cluster. 
+While not a direct cost of Arc-enabled SQL MI, consider that deploying an instance in the Business Critical tier offers high availability, which necessitates deploying and maintaining an additional Kubernetes cluster.
 
 ## Design considerations
 
-- **Service Tier** Define the business requirements to determine the most appropriate service tier. In addition, consider the additional infrastructure needed to support [business continuity and disaster recovery](./eslz-arc-datasvc-sqlmi-bcdr.md). 
+- **Service Tier** Define the business requirements to determine the most appropriate service tier. In addition, consider the additional infrastructure needed to support [business continuity and disaster recovery](./eslz-arc-datasvc-sqlmi-bcdr.md).
 
 - **Connectivity Modes** How usage and billing information is sent to Azure will vary depending on whether one is using the directly connected or indirectly connected mode.  If using the indirectly connected mode, consider how the usage and billing information will be regularly sent to Azure.
 
@@ -39,14 +39,13 @@ While not a direct cost of Arc-enabled SQL MI, consider that deploying an instan
 
 - **Azure Hybrid Benefit** For SQL Server, Azure Hybrid Benefits offers savings on both service tiers of Arc-enabled SQL MI.
 
-
 Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit?view=azuresql&tabs=azure-portal).  In addition, [Dev/Test pricing](/pricing/dev-test/) is available for both service tiers, though this is only for development use.  Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and/or the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
 
 ## Design recommendations
 
 The following sections contain design recommendations for Arc-enabled SQL MI cost governance.
 
-> [!Note]
+> [!NOTE]
 > Pricing information shown in the provided screenshots are examples and provided to demonstrate cost governance concepts but don't reflect the actual pricing information you might see in your own Azure Arc deployments.
 
 ### Service Tier

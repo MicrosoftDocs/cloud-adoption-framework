@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled data services allow you to get the evergreen version of SQL that is only available in Azure as Arc-enabled SQL Managed Instance (SQL MI). By nature of being evergreen, and unlike you would do for on-premises installations of SQL Server, Arc-enabled SQL MI provides managed service-based upgradability so you can benefit from Azure innovation on your infrastructure, rather on-premises or in a Multicloud environment, as soon as it’s available in Azure.
+Azure Arc-enabled data services allow you to get the evergreen version of SQL that is only available in Azure as Arc-enabled SQL Managed Instance (SQL MI). By nature of being evergreen, and unlike you would do for on-premises installations of SQL Server, Arc-enabled SQL MI provides managed service-based upgradeability so you can benefit from Azure innovation on your infrastructure, rather on-premises or in a Multicloud environment, as soon as it’s available in Azure.
 
 This article provides key design considerations and recommendations for configuring and managing the upgrade process on your Azure Arc-enabled data services.
 
@@ -80,14 +80,13 @@ The following diagrams display the upgrade process of an Arc-enabled SQL MI in a
 
 #### General considerations
 
-- Upgrades to the Data Controller must be performed prior to upgrading the Arc-enabled SQL MI. The _arcdata_
-Cluster extension and SQL MI extensions versions are related and must be the same.
+- Upgrades to the Data Controller must be performed prior to upgrading the Arc-enabled SQL MI. The _arcdata_ Cluster extension and SQL MI extensions versions are related and must be the same.
 - Decide if you will use automatic or manual upgrades of your Arc-enabled SQL MI depending on your requirements.
 - In the case of automatic upgrades, only a single maintenance window can be defined for a Data Controller. Consider the number of different maintenance windows needed for different workloads to identify the number of needed Data Controllers.
 
 #### General Purpose service tier
 
-- During an Arc-enabled SQL MI in a General Purpose service tier upgrade, the Kubernetes pod will be terminated and reprovisioned with the new version. It is important to understand the application and client-side impact of an upgrade where there will be a short amount of downtime as the new pod is created.
+- During an Arc-enabled SQL MI in a General Purpose service tier upgrade, the Kubernetes pod will be terminated and reprovision with the new version. It is important to understand the application and client-side impact of an upgrade where there will be a short amount of downtime as the new pod is created.
 - Review the architecture of your applications to understand if they have the needed resiliency and re-try logic to support brief impact during an upgrade.
 
 #### Business Critical service tier
@@ -148,7 +147,7 @@ Cluster extension and SQL MI extensions versions are related and must be the sam
 #### General Purpose service tier
 
 - Perform upgrades during non critical hours to minimize the impact on users and the organization data.
-- Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on architecting [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
+- Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on how to architect for [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
 
 #### Business Critical service tier
 
