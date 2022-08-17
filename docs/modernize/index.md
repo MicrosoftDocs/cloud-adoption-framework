@@ -1,5 +1,5 @@
 ---
-title: Modernize your apps and data
+title: Modernize your applications and data in the cloud
 description: Learn how cloud adoption-related modernization can provide business value by unlocking new technical skills and expanded business capabilities.
 author: stephen-sumner
 ms.author: ssumner
@@ -13,11 +13,7 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernize your workloads in the cloud. Modernization is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and minimize cost. Modernizing uses managed platform-as-a-service solutions (PaaS) to improve your business at scale.
-
-## How to modernize in the cloud
-
-Modernizing in the cloud requires business alignment and modernization strategies (*see figure*).
+Modernize your workloads in the cloud. Modernization is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and minimize cost. Modernizing uses managed platform-as-a-service solutions (PaaS) to improve your business at scale. Modernizing in the cloud requires business alignment and modernization strategies (*see figure*).
 
 :::image type="content" source="../_images/modernize/modernize-methodology-v7.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
@@ -25,7 +21,7 @@ During business alignment, you envision, evaluate, and commit to a modernization
 
 ## Next steps
 
-Read through the modernize article in sequential order.
+Read through the modernize articles in sequential order to learn how to modernize in the cloud.
 
 > [!div class="nextstepaction"]
 > [Start with business alignment](../modernize/business-alignment/index.md)
