@@ -24,7 +24,9 @@ As you plan platform automation and DevOps for your Azure Red Hat OpenShift land
 
 - Consider using prefixes and suffixes that follow well-defined conventions to uniquely identify each deployed resource. Naming conventions avoid conflicts when you deploy adjacent solutions, and they help improve overall team agility and throughput.
 
-- Inventory your workflows to help you engineer, update, and deploy your solution both in normal and in Digital Rebar Provision scenarios. To maximize familiarity and productivity, consider mapping pipelines to workflows, including:
+- Inventory your workflows to help you engineer, update, and deploy your solution both in normal and in Digital Rebar Provision scenarios. To maximize familiarity and productivity, consider mapping pipelines to workflows.
+
+  Examples include:
 
   - Cluster deployment and upgrades
   - Application deployment and upgrades
@@ -64,10 +66,10 @@ Use these design recommendations to plan your platform automation and DevOps for
 
 - Rely on well-known conventions across infrastructure deployments and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) with [Azure Policy extension for Azure Arc-enabled Kubernetes (preview)](/azure/governance/policy/concepts/policy-for-kubernetes) to validate and enforce conventions and other defined policies.
 
-- Embrace a [shift-left](/devops/develop/shift-left-make-testing-fast-reliable) DevOps approach consistently through:
+- Embrace a [shift-left](/devops/develop/shift-left-make-testing-fast-reliable) DevOps approach consistently through security and policy:
 
-  - **Security**. Add vulnerability-scanning tools like container scanning early in the pipeline.
-  - **Policy**. Use policy as code and enforce policies as cloud-native by using admission controllers.
+  - **Security**: Add vulnerability-scanning tools like container scanning early in the pipeline.
+  - **Policy**: Use policy as code and enforce policies as cloud-native by using admission controllers.
 
 - Treat every failure, error, or outage as an opportunity to automate and improve overall solution quality. Integrate this approach in your shift left and [site reliability engineering](/azure/site-reliability-engineering/) framework.
 
