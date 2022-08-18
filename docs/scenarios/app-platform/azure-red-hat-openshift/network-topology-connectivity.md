@@ -70,7 +70,7 @@ Use incoming (ingress) controllers to expose applications running in the Azure R
 The following steps describe the flow if you use [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door) with an Azure Red Hat OpenShift private cluster and ingress controller:
 
 1. Clients from the public internet resolve the DNS name for the application that points to [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door).
-1. Azure Front Door uses a private link service to access the private IP address of the Azure internal network load balancer and access an application in the Azure Red Hat OpenShift ingress controller.
+1. Azure Front Door uses the Azure Private Link service to access the private IP address of the Azure internal network load balancer and access an application in the Azure Red Hat OpenShift ingress controller.
 
 These steps describe the flow for a non-web application that accesses an Azure Red Hat OpenShift private cluster:
 
