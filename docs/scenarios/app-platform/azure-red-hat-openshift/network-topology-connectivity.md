@@ -98,4 +98,4 @@ Traffic between the Azure Red Hat OpenShift pods and the private endpoints by de
 - All web applications you configure to use an ingress should use TLS encryption and not allow access over unencrypted HTTP.
 - Use [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door) with [Azure Web Application Firewall](/azure/frontdoor/web-application-firewall) to securely publish Azure Red Hat OpenShift applications to the internet.
 - If your security policy requires you to inspect all outbound internet traffic that's generated in the Azure Red Hat OpenShift cluster, secure egress network traffic by using Azure Firewall or a third-party network virtual appliance that's deployed in the managed hub virtual network. For more information, see [Control egress traffic to an Azure Red Hat OpenShift cluster](/azure/openshift/howto-restrict-egress).
-- Use the Standard tier rather than the Basic tier of Azure Load Balancer for non-web applications.
+- Use the Azure Load Balancer Standard tier instead of the Basic tier for non-web applications.
