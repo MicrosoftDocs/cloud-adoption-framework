@@ -14,7 +14,7 @@ ms.custom: internal
 
 Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads.
 
-We recommend using Azure DevOps to allow your teams to plan work, collaborate on code development, and build and deploy applications, so you can continuously deliver value to customers at a faster pace (*see figure*). For demonstration purposes, we're using Azure DevOps Services, which supports integration with GitHub.com and GitHub Enterprise Server repositories. For more information, see the [Azure DevOps and GitHub integration overview](azure/devops/cross-service/github-integration) and [What is Azure DevOps?](azure/devops/user-guide/what-is-azure-devops).
+We recommend using Azure DevOps to allow your teams to plan work, collaborate on code development, and build and deploy applications, so you can continuously deliver value to customers at a faster pace (*see figure*). For demonstration purposes, we're using Azure DevOps Services, which supports integration with GitHub.com and GitHub Enterprise Server repositories. For more information, see the [Azure DevOps and GitHub integration overview](/azure/devops/cross-service/github-integration) and [What is Azure DevOps?](/azure/devops/user-guide/what-is-azure-devops).
 <!---
 Need to add Azure DevOps to image, not just DevOps.
 -->
@@ -52,7 +52,7 @@ Here's the sample modernization roadmap we created.
 
 ### Plan your modernization efforts
 
-Plan your modernization efforts using your modernization roadmap. Do the steps in the following table to divide the work into manageable pieces and assign it to members of your team. For illustrating this purpose, we're using the Agile process in Azure Boards. For more information, see [Plan and track work in Azure Boards](azure/devops/boards/get-started/plan-track-work).
+Plan your modernization efforts using your modernization roadmap. Do the steps in the following table to divide the work into manageable pieces and assign it to members of your team. For illustrating this purpose, we're using the Agile process in Azure Boards. For more information, see [Plan and track work in Azure Boards](/azure/devops/boards/get-started/plan-track-work).
 
 | Step | Work tasks | Example |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ Plan your modernization efforts using your modernization roadmap. Do the steps i
 | 4. Prioritize your user stories | Prioritize your user stories, so your team can meet the most important goals first. | 1. Better shopping experience <br><br> 2. Order history
 | 5. Assign work (sprints) | Set a two-week time frame for your work efforts. These time frames are called sprints in Agile. Have your team members take on tasks that they can complete within the two-week period. | Assign two-week tasks (App Service plan, configure resiliency, configure caching) to your team.
 
-For more details on modernizing your planning efforts, you can look at more robust [DevOps planning guidance](azure/devops/plan/planning-efficient-workloads-with-devops).
+For more details on modernizing your planning efforts, you can look at more robust [DevOps planning guidance](/azure/devops/plan/planning-efficient-workloads-with-devops).
 
 ## Step 3 - Begin modernizing
 
