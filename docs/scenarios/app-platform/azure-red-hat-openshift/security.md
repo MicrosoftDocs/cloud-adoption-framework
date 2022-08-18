@@ -39,7 +39,7 @@ Here are some design considerations for security governance and compliance:
 - Limit access to the [Azure Red Hat OpenShift cluster configuration](/azure/openshift/configure-azure-ad-cli) file by integrating with Azure Active Directory or your own [identity provider](https://docs.openshift.com/container-platform/4.10/authentication/identity_providers/configuring-ldap-identity-provider.html). Assign appropriate [OpenShift role-based access control](https://docs.openshift.com/container-platform/4.10/authentication/using-rbac.html) such as cluster-admin or cluster-reader.
 - [Secure pod access to resources](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
 
-- To manage and protect secrets, certificates, and connection strings in your cluster, you should [connect Azure Red Hat OpenShift cluster to Arc enabled kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and use the [Azure Key Vault Secrets Provider extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to fetch secrets.
+- To manage and protect secrets, certificates, and connection strings in your cluster, you should [connect Azure Red Hat OpenShift cluster to Arc-enabled kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and use the [Azure Key Vault Secrets Provider extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to fetch secrets.
 
 - For Azure Red Hat OpenShift 4 clusters, *etcd* data isn't encrypted by default, but it's recommended to [enable etcd encryption](https://docs.openshift.com/container-platform/4.10/security/encrypting-etcd.html) to provide another layer of data security.
 
