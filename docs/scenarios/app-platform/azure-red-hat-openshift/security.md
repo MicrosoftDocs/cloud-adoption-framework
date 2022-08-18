@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aro
 ---
 
-# Security for Azure Red Hat OpenShift landing zone accelerator
+# Security for the Azure Red Hat OpenShift landing zone accelerator
 
 Security is a critical concern for all online systems. This article provides design considerations and recommendations to protect and secure your Azure Red Hat OpenShift deployments.
 
@@ -26,9 +26,9 @@ Here are some design considerations for security governance and compliance:
 
 - Decide how to control and secure [egress traffic from your Azure Red Hat OpenShift cluster](/azure/openshift/howto-restrict-egress) using Azure Firewall or other network virtual appliance.
 
-- Decide how secrets will be managed in your cluster. You can either use [Azure Key Vault provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, or [connect Azure Red Hat OpenShift cluster to Arc-enabled kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and use [Azure Key Vault Secrets Provider extension to fetch secrets](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider).
+- Decide how secrets will be managed in your cluster. You can either use [Azure Key Vault Provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, or [connect Azure Red Hat OpenShift cluster to Arc-enabled kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and use the [Azure Key Vault Secrets Provider extension to fetch secrets](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider).
 
-- Decide whether your container registry is accessible via the internet, or only within a specific virtual network. Disabling internet access in a container registry can have negative effects on other systems that rely on public connectivity to access it, such as continuous integration pipelines or Microsoft Defender for Containers image scanning. For more information, see [Connect privately to a container registry using Azure Private Link](/azure/container-registry/container-registry-private-link).
+- Decide whether your container registry is accessible via the internet, or only within a specific virtual network. Disabling internet access in a container registry can have negative effects on other systems that rely on public connectivity, such as continuous integration pipelines or Microsoft Defender for Containers image scanning. For more information, see [Connect privately to a container registry using Azure Private Link](/azure/container-registry/container-registry-private-link).
 
 - Decide whether your private container registry will be shared across multiple landing zones or if you'll deploy a dedicated container registry to each landing zone subscription.
 
@@ -39,11 +39,11 @@ Here are some design considerations for security governance and compliance:
 - Limit access to the [Azure Red Hat OpenShift cluster configuration](/azure/openshift/configure-azure-ad-cli) file by integrating with Azure Active Directory or your own [identity provider](https://docs.openshift.com/container-platform/4.10/authentication/identity_providers/configuring-ldap-identity-provider.html). Assign appropriate [OpenShift role-based access control](https://docs.openshift.com/container-platform/4.10/authentication/using-rbac.html) such as cluster-admin or cluster-reader.
 - [Secure pod access to resources](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
 
-- To manage and protect secrets, certificates, and connection strings in your cluster, you should [connect Azure Red Hat OpenShift cluster to Arc enabled kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and use [Azure Key Vault Secrets Provider extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to fetch secrets.
+- To manage and protect secrets, certificates, and connection strings in your cluster, you should [connect Azure Red Hat OpenShift cluster to Arc enabled kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and use the [Azure Key Vault Secrets Provider extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to fetch secrets.
 
 - For Azure Red Hat OpenShift 4 clusters, *etcd* data isn't encrypted by default, but it's recommended to [enable etcd encryption](https://docs.openshift.com/container-platform/4.10/security/encrypting-etcd.html) to provide another layer of data security.
 
-- Keep your clusters on the latest OpenShift version to avoid potential security or upgrade issues. Azure Red Hat OpenShift only supports [the current and previous generally available minor release](/azure/openshift/support-lifecycle#red-hat-openshift-container-platform-version-support-policy) of Red Hat OpenShift Container Platform. [Upgrade the cluster](/azure/openshift/howto-upgrade) if it's on a version that's older than the last minor release).
+- Keep your clusters on the latest OpenShift version to avoid potential security or upgrade issues. Azure Red Hat OpenShift only supports [the current and previous generally available minor release](/azure/openshift/support-lifecycle#red-hat-openshift-container-platform-version-support-policy) of Red Hat OpenShift Container Platform. [Upgrade the cluster](/azure/openshift/howto-upgrade) if it's on a version that's older than the last minor release.
 
 - Monitor and enforce configuration by using the [Azure Policy Extension](/azure/governance/policy/concepts/policy-for-kubernetes#install-azure-policy-extension-for-azure-arc-enabled-kubernetes).
 
