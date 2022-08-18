@@ -12,11 +12,11 @@ ms.custom: think-tank, e2e-aro
 
 # Security for Azure Red Hat OpenShift landing zone accelerator
 
-Security is a critical concern for all online systems. This article provides design considerations and recommendations to protect and secure your resources when using the Azure Red Hat OpenShift landing zone accelerator.
+Security is a critical concern for all online systems. This article provides design considerations and recommendations to protect and secure your Azure Red Hat OpenShift deployments.
 
 ## Design considerations
 
-Azure Red Hat OpenShift has several interfaces to other Azure services like Azure Active Directory, Azure Container Registry, Azure Storage, and Azure Virtual Network. These interfaces require special attention during the planning phase. Azure Red Hat OpenShift also adds extra complexity, so you should consider applying the same security governance and compliance mechanisms and controls as in the rest of your infrastructure landscape.
+Azure Red Hat OpenShift works with other Azure services like Azure Active Directory, Azure Container Registry, Azure Storage, and Azure Virtual Network. These interfaces require special attention during the planning phase. Azure Red Hat OpenShift also adds extra complexity, so you should consider applying the same security governance and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
 Here are some design considerations for security governance and compliance:
 
@@ -55,7 +55,7 @@ Here are some design considerations for security governance and compliance:
 
 - Use [Private Link for Azure Container Registry](/azure/container-registry/container-registry-private-link) to connect it to Azure Red Hat OpenShift.
 
-- Use a [bastion host](/azure/aks/operator-best-practices-network#securely-connect-to-nodes-through-a-bastion-host) and Jumpbox VM to securely access Azure Red Hat OpenShift Private Cluster.
+- Use a [bastion host](/azure/aks/operator-best-practices-network#securely-connect-to-nodes-through-a-bastion-host), or jumpbox, to securely access Azure Red Hat OpenShift Private Cluster.
 
 ## Next steps
 
