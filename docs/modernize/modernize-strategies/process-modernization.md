@@ -14,7 +14,7 @@ ms.custom: internal
 
 Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads.
 
-We recommend using Azure DevOps to allow your teams to plan work, collaborate on code development, and build and deploy applications, so you can continuously deliver value to customers at a faster pace (*see figure*). For demonstration purposes, we're using Azure DevOps Services, which supports integration with GitHub.com and GitHub Enterprise Server repositories. For more information, see the [Azure DevOps and GitHub integration overview](azure/devops/cross-service/github-integration?view=azure-devops) and [What is Azure DevOps?](azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
+We recommend using Azure DevOps to allow your teams to plan work, collaborate on code development, and build and deploy applications, so you can continuously deliver value to customers at a faster pace (*see figure*). For demonstration purposes, we're using Azure DevOps Services, which supports integration with GitHub.com and GitHub Enterprise Server repositories. For more information, see the [Azure DevOps and GitHub integration overview](azure/devops/cross-service/github-integration) and [What is Azure DevOps?](azure/devops/user-guide/what-is-azure-devops).
 <!---
 Need to add Azure DevOps to image, not just DevOps.
 -->
@@ -52,7 +52,7 @@ Here's the sample modernization roadmap we created.
 
 ### Plan your modernization efforts
 
-Plan your modernization efforts using your modernization roadmap. Do the steps in the following table to divide the work into manageable pieces and assign it to members of your team. For illustrating this purpose, we're using the Agile process in Azure Boards. For more information, see [Plan and track work in Azure Boards](/azure/devops/boards/get-started/plan-track-work?view=azure-devops&tabs=agile-process).
+Plan your modernization efforts using your modernization roadmap. Do the steps in the following table to divide the work into manageable pieces and assign it to members of your team. For illustrating this purpose, we're using the Agile process in Azure Boards. For more information, see [Plan and track work in Azure Boards](azure/devops/boards/get-started/plan-track-work).
 
 | Step | Work tasks | Example |
 | --- | --- | --- |
