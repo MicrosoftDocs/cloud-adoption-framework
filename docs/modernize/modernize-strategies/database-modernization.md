@@ -3,7 +3,7 @@ title: Learn how to modernize proprietary SQL, open-source SQL, and NoSQL databa
 description: Learn how to modernize your database
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/17/2022
+ms.date: 08/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
@@ -12,7 +12,7 @@ keywords: collect data, migrate data, data migration, data modernization
 ---
 # Modernize databases in the cloud
 
-Learn about solutions for modernizing your databases in the cloud. The cloud has database solutions for any database. Two categories of databases give you this flexibility. Within each category, there are three levels of control that include infrastructure-as-a-service (Iaas) and platform-as-a-service (PaaS) solutions (*see image*).
+Learn about solutions for modernizing your databases in the cloud. The cloud has database solutions for any database. Two categories of databases give you this flexibility. Within each category, there are three levels of control. Infrastructure-as-a-service (Iaas) solutions give you the most control. Platform-as-a-service (PaaS) solutions facilitate more productivity (*see image*).
 
 :::image type="content" source="../../_images/modernize/db-platforms/db-modernize-531X491.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. The bottom has on-premises as the starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
 
