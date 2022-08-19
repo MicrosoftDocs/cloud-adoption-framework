@@ -3,7 +3,7 @@ title: Envision your cloud modernization possibilities
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/08/2022
+ms.date: 08/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice:
@@ -12,7 +12,7 @@ keywords: envision, motivations, approach, modernization, cloud adoption framewo
 ---
 # Envision your cloud modernization possibilities
 
-Envisioning modernization starts with understanding your motivations. You have reasons for wanting to adopt the cloud, and these reasons are the key to modernization. Knowing your motivations lets you determine what you should modernize.
+Envisioning you cloud modernization possibilities starts with understanding your motivations. You have reasons for wanting to adopt the cloud, and these reasons are the key to modernization. Knowing your motivations lets you determine what you should modernize.
 
 :::image type="content" source="../../_images/modernize/envision/envision-938.png" alt-text="Image showing where you are in the business alignment process.":::
 
