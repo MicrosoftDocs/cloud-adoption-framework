@@ -3,7 +3,7 @@ title: Modernize your development and operations processes for the cloud
 description: Learn how to modernize your processes in the cloud
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/18/2022
+ms.date: 08/18\9/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
