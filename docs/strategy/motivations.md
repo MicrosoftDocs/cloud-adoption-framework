@@ -22,7 +22,7 @@ Business transformations that are supported by cloud adoption can be driven by v
 
 | Critical business events | Migration | Innovation |
 |---|---|---|
-| Datacenter exit <br><br> Merger, acquisition, or divestiture <br><br> Reduction in capital expenses <br><br> End of support for mission-critical technologies <br><br> Response to regulatory compliance changes <br><br> New data sovereignty requirements <br><br> Reduction of disruptions and improvement of IT stability <br><br>Reduce carbon footprint <br><br> | Cost savings <br><br> Reduction in vendor or technical complexity <br><br> Optimization of internal operations <br><br> Increase in business agility <br><br> Preparation for new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Integration of a complex IT portfolio <br><br> | Preparation for new technical capabilities <br><br> Building new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Improved customer experiences and engagements <br><br> Transformation of products or services <br><br> Market disruption with new products or services <br><br> Democratization and/or self-service environments |
+| Datacenter exit <br><br> Merger, acquisition, or divestiture <br><br> Reduction in capital expenses <br><br> End of support for mission-critical technologies <br><br> Response to regulatory compliance changes <br><br> New data sovereignty requirements <br><br> Reduction of disruptions and improvement of IT stability <br><br>Report and manage the environmental impact of your business <br><br> | Cost savings <br><br> Reduction in vendor or technical complexity <br><br> Optimization of internal operations <br><br> Increase in business agility <br><br> Preparation for new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Integration of a complex IT portfolio <br><br> | Preparation for new technical capabilities <br><br> Building new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Improved customer experiences and engagements <br><br> Transformation of products or services <br><br> Market disruption with new products or services <br><br> Democratization and/or self-service environments |
 
 ## Classify your motivations
 
@@ -46,6 +46,7 @@ The *migration* motivations listed near the top of the motivations table, are th
 
 Some motivations align well with a migration strategy. Motivations at the top of this list can have less business impact than the ones towards the bottom. **Strategies with migration driving motivations** have helped organizations to successfully create business outcomes that:
 
+- Move towards their [Sustainability goals](/business-outcomes/sustainability.md)
 - Increase cost savings. Read the [customer story](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
 - Reduce vendor or technical complexity.
 - Optimize internal operations.
@@ -60,6 +61,7 @@ Data is the new commodity, and modern applications are the supply chain driving 
 
 The motivations below help IT organizations to focus more on innovation than a migration strategy. **Strategies with innovation driving motivations** have helped organizations to successfully create business outcomes that:
 
+- Move towards their [Sustainability goals](/business-outcomes/sustainability.md)
 - Increase business agility.
 - Prepare for new technical capabilities.
 - Build new technical capabilities. Read the [customer story](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
