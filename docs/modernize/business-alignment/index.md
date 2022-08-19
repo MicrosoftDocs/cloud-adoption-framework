@@ -3,7 +3,7 @@ title: Business alignment for cloud modernization
 description: Find articles to help you align your business and make a commitment toward your modernization effort.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/17/2022
+ms.date: 08/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice:
