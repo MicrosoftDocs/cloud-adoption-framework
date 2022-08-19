@@ -980,7 +980,7 @@ items:
         - name: Process modernization 
           href: modernize/modernize-strategies/process-modernization.md
         - name: Application modernization
-          href: modernize/modernize-strategies/database-modernization.md
+          href: modernize/modernize-strategies/application-modernization.md
         - name: Database modernization
           href: modernize/modernize-strategies/database-modernization.md
 
