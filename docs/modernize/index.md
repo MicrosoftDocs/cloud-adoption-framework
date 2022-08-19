@@ -3,7 +3,7 @@ title: Modernize your applications and data in the cloud
 description: Learn how cloud adoption-related modernization can provide business value by unlocking new technical skills and expanded business capabilities.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/15/2022
+ms.date: 08/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
