@@ -14,11 +14,15 @@ ms.custom: internal
 
 Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads.
 
-We recommend using Azure DevOps to allow your teams to plan work, collaborate on code development, and build and deploy applications, so you can continuously deliver value to customers at a faster pace (*see figure*). For demonstration purposes, we're using Azure DevOps Services, which supports integration with GitHub.com and GitHub Enterprise Server repositories. For more information, see the [Azure DevOps and GitHub integration overview](/azure/devops/cross-service/github-integration) and [What is Azure DevOps?](/azure/devops/user-guide/what-is-azure-devops).
+We recommend using a DevOps methodology. DevOps empowers your teams to deliver value to customers faster. The methodology integrates work planning, code development, application deployment, and operations. You gain efficiencies across your business with this integration (*see figure*). 
+
+:::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools-512.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts.":::
+
+You can use Azure DevOps Services to implement your DevOps methodology. Azure DevOps supports [integration with GitHub](/azure/devops/user-guide/what-is-azure-devops).
+
 <!---
 Need to add Azure DevOps to image, not just DevOps.
 -->
-:::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools-512.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts.":::
 
 ## Step 1 - Modernize your tools
 
@@ -29,7 +33,7 @@ Modernize your tools so you can plan and deliver value to customers. Azure DevOp
 | *[Azure Repos](/azure/devops/repos/get-started/what-is-repos)* | Get unlimited, cloud-hosted private Git repositories for your project. | GitHub
 | *[Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)* | Continuously build, test, and deploy to any platform and cloud. | Jenkins
 | *[Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards)* | Plan, track, and discuss work across your teams. | TaskBoard |
-| *[Azure Artifacts](/azure/devops/artifacts/artifacts-overview)* | Share code and publish packages | Nexus
+| *[Azure Artifacts](/azure/devops/artifacts/artifacts-overview)* | Share code and publish packages | Nexus |
 | *[Azure Test Plans](/azure/devops/test/overview)* | Run tests and quality assurance on code | Selenium |
 
 With modernized tools, you're ready to modernize your planning strategies.
@@ -52,7 +56,7 @@ Here's the sample modernization roadmap we created.
 
 ### Plan your modernization efforts
 
-Plan your modernization efforts using your modernization roadmap. Do the steps in the following table to divide the work into manageable pieces and assign it to members of your team. For illustrating this purpose, we're using the Agile process in Azure Boards. For more information, see [Plan and track work in Azure Boards](/azure/devops/boards/get-started/plan-track-work).
+Plan your modernization efforts using your modernization roadmap. Complete the steps in the following table to divide the work into manageable pieces and assign it to members of your team. You can [plan and track work in Azure Boards](/azure/devops/boards/get-started/plan-track-work).
 
 | Step | Work tasks | Example |
 | --- | --- | --- |
@@ -66,7 +70,7 @@ For more details on modernizing your planning efforts, you can look at more robu
 
 ## Step 3 - Begin modernizing
 
-You're ready to modernize, since you've adopted DevOps tools and planned your work. Begin working on your first sprint.
+Begin modernizing. You've adopted DevOps tools and planned your work. Start planning your first sprint.
 
 ## Next steps
 
