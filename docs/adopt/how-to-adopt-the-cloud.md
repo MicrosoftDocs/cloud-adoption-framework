@@ -70,7 +70,7 @@ Move the most difficult and costly workloads last. The following systems may nee
 - *Public Key Infrastructure (PKI) systems:* Workloads that manage x509 digital certificates and provide network encryption and authentication.
 - *Legacy source control:* Source control systems that aren't easily replaced with GitHub.
 - *Can't be modernized:* Legacy or proprietary technology that can't be modernized.
-- *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/well-architected-pr/well-architected/index.md) rather than the CAF modernize horizon.
+- *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/well-architected-pr/well-architected/index.md) rather than the CAF modernize approach.
 
 ## More resources
 
