@@ -13,17 +13,13 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 # Adopt the cloud
 
-The adopt methodology is where you start seeing the vast benefits of the cloud. Adopting cloud technologies lets you focus on building better solutions for your customers. Introducing new processes and tools streamlines development and operations so you can rapidly meet customer needs.
-
-This series of articles will help you tailor your cloud adoption approach around your goals. With your goals at the center of each decision, you'll find concrete steps to follow that will help you adopt the cloud and transform your business.
-
-There are three common approaches for adopting the cloud: migrate, modernize, and innovate. Each cloud adoption approach has different goals, solutions, and benefits (*see figure*).
+Adopt the cloud to improve your business. The adopt methodology is where you start using the cloud and experiencing its benefits. There are three common approaches for adopting the cloud: migrate, modernize, and innovate. Each cloud adoption approach has different goals, solutions, and benefits (*see figure*).
 
 :::image type="content" source="../_images/adopt/cloud-adoption-plan-v4.png" alt-text="Image showing three cloud adoption approaches and their goals. The three approaches to adopting the cloud are migrate, modernize, and innovate. ":::
 
 ## Migrate approach
 
-The migrate approach is where you move your workloads from on-premises to the cloud. Different forms of migration exist, but we'll focus on rehosting, also known as "lift-and-shift." In this approach, you move from an on-premises solution and adopt infrastructure-as-a-service (IaaS) solutions in the cloud.
+The migrate approach is where you move your workloads to the cloud. Different forms of migration exist, but we'll focus on rehosting. Rehosting is also known as the "lift-and-shift" approach. In this approach, you move an existing workload to infrastructure-as-a-service (IaaS) solutions in the cloud and don't modify the workload.
 
 - *Example:* Migrate applications from on-premises to IaaS solutions in the cloud.
 - *Goals:* Quickly exit on-premises, enhance security, and improve operations.
@@ -49,7 +45,7 @@ The innovate approach is where you adopt cloud-native technologies to create cus
 
 ## Next steps
 
-See how most businesses change their portfolios to adopt the cloud.
+The adopt methodology will help you tailor your cloud adoption approach around your goals. With your goals at the center of each decision, you'll find concrete steps to adopt the cloud and transform your business. See how most businesses change their portfolios to adopt the cloud.
 
 > [!div class="nextstepaction"]
 > [How to adopt the cloud](../adopt/how-to-adopt-the-cloud.md)
