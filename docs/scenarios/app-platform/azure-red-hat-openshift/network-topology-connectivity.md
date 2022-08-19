@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aro
 ---
 
-# Network topology and connectivity considerations for Azure RedHat OpenShift
+# Network topology and connectivity considerations for Azure Red Hat OpenShift
 
 Review design considerations and recommendations for network topology and connectivity when you use the Azure Red Hat OpenShift landing zone accelerator.
 
@@ -79,7 +79,7 @@ These steps describe the flow for a non-web application that accesses an Azure R
 
 ### Traffic from the Azure Red Hat OpenShift pods to back-end services
 
-The pods running inside the Azure Red Hat OpenShift cluster might need to access back-end services like Azure Storage, Azure Key Vault, Azure SQL Database, and Azure Cosmos DB. You can use [virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) and [Azure Private Link](/azure/private-link/private-link-overview) to secure connectivity to these Azure managed services.
+The pods running inside the Azure Red Hat OpenShift cluster might need to access back-end services like Azure Storage, Azure Key Vault, Azure SQL Database, and Azure Cosmos DB. You can use [virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) and [Azure Private Link](/azure/private-link/private-link-overview) to secure connectivity to these Azure-managed services.
 
 If you're using Azure private endpoints for back-end traffic, you can use Azure Private DNS zones for DNS resolution for the Azure services. Because the DNS resolvers for the entire environment are in the hub virtual network (or in the shared services virtual network, if you use the virtual WAN connectivity model), create these private zones in the connectivity subscription. To create the A-record that's required to resolve the FQDN of the private service, you can associate the private DNS zone in the connectivity subscription with the private endpoint in the application subscription. This operation requires specific permissions in those subscriptions.
 
