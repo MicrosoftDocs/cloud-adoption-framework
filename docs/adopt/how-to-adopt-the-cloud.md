@@ -3,7 +3,7 @@ title: How to adopt the cloud
 description: Use the Cloud Adoption Framework for Azure to understand the typical journey to the cloud and how your existing portfolio will change.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/16/2022
+ms.date: 08/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
