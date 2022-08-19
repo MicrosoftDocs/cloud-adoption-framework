@@ -59,7 +59,7 @@ Identify the IT assets that support each business function. The group of IT asse
 
 Align your modernization motivations and workloads so you can evaluate their readiness in the next step.
 
-*Map motivations and workloads*. Map your modernization motivations (step 1) to workloads you identified (step 2).
+*Map motivations and workloads*. Map your modernization motivations (step 1) to the workloads you identified (step 2).
 
 *Assign one motivation to each workload*. Assigning a single modernization motivation to each workload will help you organize your work when it's time to modernize (*see table for examples*).
 
