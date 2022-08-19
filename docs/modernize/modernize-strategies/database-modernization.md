@@ -21,7 +21,7 @@ Learn about solutions for modernizing your databases in the cloud. The cloud has
 
 ## Option 1 - Modernize your SQL Server and other SQL databases
 
-Azure SQL also supports other proprietary SQL databases, like Oracle and Db2.
+Modernize your SQL Server and other SQL databases. Azure SQL supports SQL Server and other proprietary SQL databases like Oracle and Db2.
 
 Finding the right balance of control and productivity is a main consideration in database modernization. Use the following table to find the right balance. Check to see if the solution listed meets your needs.
 
