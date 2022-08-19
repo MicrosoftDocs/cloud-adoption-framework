@@ -1,9 +1,9 @@
 ---
-title: Modernize applications in the cloud
+title: Modernize any application or framework in the cloud
 description: Learn to modernize applications in the cloud
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/17/2022
+ms.date: 08/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
@@ -13,7 +13,7 @@ keywords: application platform, modern, cloud modernization, cloud adoption fram
 
 # Modernize applications in the cloud
 
-The cloud has modernization solutions for any application or framework. The following platform-as-a-service (PaaS) technologies give you flexibility (*see figure*) for modernizing any application or framework in the cloud.
+Modernize any application or framework in the cloud. The following platform-as-a-service (PaaS) technologies give you flexibility (*see figure*) for modernizing any application or framework in the cloud.
 
 :::image type="content" source="../../_images/modernize/app-platforms/app-modernize-586.png" alt-text="Graphic showing the application platform options, moving from control to productivity. The bottom of the graphic shows on-premises solutions. Moving up, you see container platforms, application platforms, and low-code and no-code platforms.":::
 
