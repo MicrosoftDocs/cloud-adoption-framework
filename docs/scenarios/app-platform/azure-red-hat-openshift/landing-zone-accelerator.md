@@ -1,59 +1,59 @@
 ---
-title: ARO landing zone accelerator
-description: Learn to deploy ARO Landing Zone Accelerator.
+title: Azure Red Hat OpenShift landing zone accelerator
+description: Learn how to deploy Azure Red Hat OpenShift landing zone accelerator.
 author: UmarMohamedUsman
 ms.author: umarm
-ms.date: 06/14/2022
+ms.date: 08/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-ARO
 ---
 
-# Azure RedHat OpenShift landing zone accelerator
+# Azure Red Hat OpenShift landing zone accelerator
 
-ARO landing zone accelerator represents the strategic design path and target technical state for an Azure Red Hat OpenShift (ARO) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Red Hat OpenShift (ARO) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones.
+The Azure Red Hat OpenShift landing zone accelerator is a collection of design guidance and implementation references to accelerate deployment of Azure Red Hat OpenShift clusters in your landing zone.
 
-This solution is open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable ARO cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
+This solution is open source. You can adapt the templates to create an architecture that meets your needs. The landing zone accelerator is both a strategic design path and a target technical state, and it adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
 ## Implement a platform foundation
 
-ARO landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. Having the platform foundation isn't mandatory when implementing ARO landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
+The Azure Red Hat OpenShift landing zone accelerator assumes that a platform foundation has been successfully implemented, which will take care of the shared services required to construct and operationalize a landing zone. Shared services include networking, security, identity, and governance.
 
-- [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/design-area/identity-access.md)
+A platform foundation isn't mandatory to implement a landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have a platform foundation, you can skip this step. For more information, review [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
-## What the ARO landing zone accelerator provides
+## Landing zone accelerator benefits
 
-The landing zone accelerator approach for ARO provides these assets to support your project:
+The landing zone accelerator approach for Azure Red Hat OpenShift provides:
 
 - A modular approach that allows you to customize your environment variables.
 - Design guidelines for evaluating critical decisions.
 - The landing zone architecture.
-- A Microsoft-recommended ARO reference implementation using Azure CLI.
+- A Microsoft-recommended reference implementation using Azure CLI.
 
 ## Design areas
 
-These articles provide guidelines for creating your landing zone based on the design areas of Azure landing zones:
+There are many issues to consider when creating Azure landing zones.
 
-- [Identity and access management](./identity-access-management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Resource organization](./resource-organization.md)
-- [Security](./security.md)
-- [Operations management and BCDR](./operations.md)
-- [Deployment options](./platform-automation-devops.md)
+- [Identity and access management considerations](./identity-access-management.md)
+- [Network topology and connectivity considerations](./network-topology-connectivity.md)
+- [Resource organization considerations](./resource-organization.md)
+- [Security considerations](./security.md)
+- [Operations management and baseline considerations](./operations.md)
+- [Deployment option considerations](./platform-automation-devops.md)
 
 ## Reference architecture
 
-The following diagram shows ARO Landing Zone Accelerator architecture.
+The following diagram shows the landing zone accelerator architecture.
 
-[![Diagram showing the ARO landing zone accelerator architecture.](./media/landing-zone-architecture.png)](./media/landing-zone-architecture.png)
+[![Diagram showing the landing zone accelerator architecture.](./media/landing-zone-architecture.png)](./media/landing-zone-architecture.png)
 
-## Deploy ARO landing zone accelerator
+<!--- Need GitHub URL when it launches
+## Resources on GitHub
 
-ARO landing zone accelerator is an open-source repo consist of Azure CLI reference implementation along with Critical Design Area recommendations, available in the [ARO landing zone accelerator](https://aka.ms/aro-landing-zone-accelerator) repo.
+The landing zone accelerator is an open-source repo that consists of an Azure CLI reference implementation along with Critical Design Area recommendations. The repo is [available on GitHub](https://github.com/Azure/ARO-Landing-Zone-Accelerator).
+--->
 
 ## Next steps
 
-Learn about design considerations for identity and access management in your Azure landing zones.
-
-[Identity and access management for Azure Red Hat Openshift (ARO) landing Zone accelerator scenario](./identity-access-management.md).
+Learn about [identity and access management for your Azure Red Hat OpenShift landing zone](./identity-access-management.md).
