@@ -1,0 +1,39 @@
+<svg data-slug-id="powerapps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+	<g clip-path="url(#powerapps_5e79cee0-e358-4f69-8ac2-b71250fda2ba)" mask="url(#powerapps_cea89acf-1804-40bf-a811-7d8388748433)">
+		<path d="M20 48L-1 24L20 0L41 24L20 48Z" fill="url(#powerapps_9d5e7df2-2317-4f2e-8df3-f16a50f8dba0)"/>
+		<path filter="url(#powerapps_a0759139-9015-4a52-9b18-bb0a3dbfbf11)" d="M26.9995 1L48.9995 25L26.9995 49L17.2384 38.3515C16.5374 37.5868 16.5374 36.4132 17.2384 35.6485L25.7607 26.3514C26.4616 25.5868 26.4616 24.4132 25.7607 23.6486L17.2384 14.3514C16.5374 13.5868 16.5374 12.4132 17.2384 11.6486L26.9995 1Z" fill="black" fill-opacity="0.32"/>
+		<path filter="url(#powerapps_a0759139-9022-4a52-9b18-bb0a3dbfbf11)" d="M26.9995 0.190063L48.9995 24.1901L26.9995 48.19L17.2384 37.5415C16.5374 36.7769 16.5374 35.6033 17.2384 34.8386L25.7607 25.5415C26.4616 24.7769 26.4616 23.6033 25.7607 22.8386L17.2384 13.5415C16.5374 12.7769 16.5374 11.6033 17.2384 10.8386L26.9995 0.190063Z" fill="black" fill-opacity="0.24"/>
+		<path d="M26.9995 0L48.9995 24L26.9995 48L17.2384 37.3515C16.5374 36.5868 16.5374 35.4132 17.2384 34.6485L25.7607 25.3514C26.4616 24.5868 26.4616 23.4132 25.7607 22.6486L17.2384 13.3514C16.5374 12.5868 16.5374 11.4132 17.2384 10.6486L26.9995 0Z" fill="url(#powerapps_43c498f2-3fdb-4435-847b-8f0c20001042)"/>
+		<path d="M36.5257 13.6084C37.3184 12.7436 38.6817 12.7436 39.4743 13.6084L49 24L39.4743 34.3917C38.6817 35.2564 37.3184 35.2564 36.5257 34.3917L28.8583 26.0272C27.8069 24.8802 27.8069 23.1198 28.8583 21.9729L36.5257 13.6084Z" fill="url(#powerapps_443451e0-dc95-4423-bd47-8da587abcc20)"/>
+	</g>
+	<defs>
+		<mask id="powerapps_cea89acf-1804-40bf-a811-7d8388748433" mask-type="alpha" maskUnits="userSpaceOnUse" x="-1" y="0" width="49" height="48">
+			<path d="M0.728598 22.0245C-0.261095 23.1555 -0.261096 24.8444 0.728598 25.9755L18.4949 46.2798C19.2917 47.1905 20.7084 47.1905 21.5052 46.2798L23.4184 44.0933L25.5252 46.3916C26.3179 47.2564 27.6812 47.2564 28.4738 46.3916L47.1413 26.0271C48.1927 24.8802 48.1927 23.1198 47.1413 21.9728L28.4738 1.60833C27.6812 0.743594 26.3179 0.743594 25.5252 1.60833L23.4184 3.9067L21.5052 1.72017C20.7084 0.809514 19.2917 0.809514 18.4949 1.72017L0.728598 22.0245Z" fill="white"/>
+		</mask>
+		<filter id="powerapps_a0759139-9015-4a52-9b18-bb0a3dbfbf11" x="8.71265" y="-7" width="48.2868" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur"/>
+		</filter>
+		<filter id="powerapps_a0759139-9022-4a52-9b18-bb0a3dbfbf11" x="15.9526" y="-0.569937" width="33.8068" height="49.52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="0.38" result="effect1_foregroundBlur"/>
+		</filter>
+		<linearGradient id="powerapps_9d5e7df2-2317-4f2e-8df3-f16a50f8dba0" x1="35.5" y1="48.0001" x2="7.5" y2="-20.4999" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#742774"/>
+			<stop offset="1" stop-color="#BB35A4"/>
+		</linearGradient>
+		<linearGradient id="powerapps_43c498f2-3fdb-4435-847b-8f0c20001042" x1="16" y1="0.000121892" x2="39" y2="48.0001" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#E48CC7"/>
+			<stop offset="1" stop-color="#D467B9"/>
+		</linearGradient>
+		<linearGradient id="powerapps_443451e0-dc95-4423-bd47-8da587abcc20" x1="31" y1="14.5001" x2="38" y2="36" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#E9A1CB"/>
+			<stop offset="1" stop-color="#E48CC7"/>
+		</linearGradient>
+		<clipPath id="powerapps_5e79cee0-e358-4f69-8ac2-b71250fda2ba">
+			<rect width="48" height="48" fill="white"/>
+		</clipPath>
+	</defs>
+</svg>
