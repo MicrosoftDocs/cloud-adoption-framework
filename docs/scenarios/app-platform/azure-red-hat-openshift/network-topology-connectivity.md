@@ -51,7 +51,7 @@ An Azure Red Hat OpenShift API cluster IP address can be either public or privat
 
 In line with proven enterprise practices, DNS resolution for Azure workloads is offered by centralized DNS servers that are deployed in the connectivity subscription. Azure DNS servers are either in a hub virtual network or in a shared services virtual network that's connected to an instance of Azure Virtual WAN. The DNS servers conditionally resolve Azure-specific and public names by using Azure DNS (IP address `168.63.129.16`). The servers resolve private names by using corporate DNS servers. This connectivity model is common, and it's important to allow private access to other Azure resources if you use private endpoints.
 
-:::image type="content" source=`media/landing-zone-architecture.png` border="false" alt-text="Diagram that shows a network for a private cluster." lightbox=`media/landing-zone-architecture.png`:::
+:::image type="content" source="media/landing-zone-architecture.png" border="false" alt-text="Diagram that shows a network for a private cluster." lightbox="media/landing-zone-architecture.png":::
 
 ### Traffic from application users to the cluster
 
