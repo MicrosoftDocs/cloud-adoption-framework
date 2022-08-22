@@ -34,9 +34,7 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 - Back up and restore considerations.
 - Cross-regional versus regional disaster recovery decision criteria.
 
-### High availability within an Azure region
-
-**Design considerations for high availability:**
+## Design considerations for high availability within an Azure region
 
 With high availability, the focus is to provide availability for SAP software's single point of failure, such as with:
 
@@ -67,7 +65,7 @@ Before you deploy your high availability infrastructure and depending on the reg
 
 One advantage of deploying your high availability architecture across different availability zones is that your service level agreement (SLA) for the VMs can be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. Read through [SAP workload configurations with Azure availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones) for more information about SAP workload deployments across different availability zones.
 
-**Design recommendations for high availability:**
+### Design recommendations for high availability
 
 - Azure offers several options to help your applications meet their infrastructure SLAs. You should choose the same option for all the three SAP components, central services, application server, and database.
 
@@ -98,9 +96,7 @@ One advantage of deploying your high availability architecture across different 
 
 - You should set up the cluster timeout parameters recommended in the documentation for central-services and database clusters.
 
-## Back up and restore
-
-**Design considerations for backup and restore:**
+## Design considerations for backup and restore
 
 Though backup and restore aren't typically considered as adequate high availability functionality for a production SAP workload, this technology covers various other areas. Most companies that use SAP applications need to follow compliance regulations that require backups to be stored for many years. There are also other conditions and scenarios where it's essential to have a backup and be able to restore from it. The assumption is that you've already established and follow backup and restore best practices for deploying SAP applications, which means that you can:
 
@@ -117,16 +113,14 @@ If you're satisfied with your current solution, check if your backup vendor supp
 
 Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview), which takes VM snapshots and manages streaming [SQL Server](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) backups. If you're using [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) to store your SAP HANA databases, you can run backups based on HANA-consistent storage snapshots.
 
-**Design recommendations for backup and restore:**
+### Design recommendations for backup and restore
 
 - You can use Azure Backup to back up SAP application server and central-services VMs.
 - You can use an SAP HANA backup for HANA deployments up to 8 TB. For more information, explore the support matrix for [backing up SAP HANA databases on Azure VMs](/azure/backup/sap-hana-backup-support-matrix).
 - Test the backup and recovery times to verify if they meet your RTO.
 - Ideally, avoid pulling your backups from Azure into your on-premises backup infrastructure, especially with large databases. This option impacts how much bandwidth the ExpressRoute circuits consume.
 
-## Disaster recovery
-
-**Design considerations for disaster recovery:**
+## Design considerations for disaster recovery
 
 The [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/) shows over 60 Azure regions, and not all of them run the same services. During larger SAP software deployments and especially the ones using SAP HANA, look for Azure regions that offer Azure [M-series](/azure/virtual-machines/m-series) and/or [Mv2-series](/azure/virtual-machines/mv2-series) VMs. Azure Storage also pairs different regions to replicate a smaller subset of storage types to another region. For more information, see [Overview of Azure paired regions](/azure/best-practices-availability-paired-regions).
 
@@ -153,7 +147,7 @@ Some customers use a combination high availability and disaster recovery archite
 
 Another factor to consider when choosing your disaster recovery region is the RPO and RTO for failing over to the disaster recovery site. The greater the distance between the production and disaster recovery regions, the larger the network latency. Though you would replicate asynchronously between different Azure regions, a smaller or larger network latency can affect the throughput you're able to replicate and the RPO target. You can often minimize your recovery point objectives (RPO) by using high availability and disaster recovery architecture. But this configuration poses a potentially higher risk from large-scale, natural disasters.
 
-**Design recommendations for disaster recovery:**
+### Design recommendations for disaster recovery
 
 - The classless inter-domain routing (CIDR) for the primary virtual network shouldn't conflict or overlap with the CIDR of the disaster recovery site's virtual network.
 - Set up ExpressRoute connections from on-premises to the primary and secondary Azure disaster recovery region.
