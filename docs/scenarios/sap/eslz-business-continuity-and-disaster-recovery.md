@@ -34,7 +34,11 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 - Back up and restore considerations.
 - Cross-regional versus regional disaster recovery decision criteria.
 
-## Design considerations for high availability within an Azure region
+## High availability within an Azure region
+
+Review design considerations and recommendations for high availability within an Azure region for an SAP enterprise scenario.
+
+### Design considerations for high availability
 
 With high availability, the focus is to provide availability for SAP software's single point of failure, such as with:
 
@@ -96,7 +100,11 @@ One advantage of deploying your high availability architecture across different 
 
 - You should set up the cluster timeout parameters recommended in the documentation for central-services and database clusters.
 
-## Design considerations for backup and restore
+## Backup and restore
+
+Review design considerations and recommendations for backup and restore in an SAP enterprise scenario.
+
+### Design considerations for backup and restore
 
 Though backup and restore aren't typically considered as adequate high availability functionality for a production SAP workload, this technology covers various other areas. Most companies that use SAP applications need to follow compliance regulations that require backups to be stored for many years. There are also other conditions and scenarios where it's essential to have a backup and be able to restore from it. The assumption is that you've already established and follow backup and restore best practices for deploying SAP applications, which means that you can:
 
@@ -120,7 +128,11 @@ Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview
 - Test the backup and recovery times to verify if they meet your RTO.
 - Ideally, avoid pulling your backups from Azure into your on-premises backup infrastructure, especially with large databases. This option impacts how much bandwidth the ExpressRoute circuits consume.
 
-## Design considerations for disaster recovery
+## Disaster recovery
+
+Review design considerations and recommendations for disaster recovery in an SAP enterprise scenario. 
+
+### Design considerations for disaster recovery
 
 The [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/) shows over 60 Azure regions, and not all of them run the same services. During larger SAP software deployments and especially the ones using SAP HANA, look for Azure regions that offer Azure [M-series](/azure/virtual-machines/m-series) and/or [Mv2-series](/azure/virtual-machines/mv2-series) VMs. Azure Storage also pairs different regions to replicate a smaller subset of storage types to another region. For more information, see [Overview of Azure paired regions](/azure/best-practices-availability-paired-regions).
 
