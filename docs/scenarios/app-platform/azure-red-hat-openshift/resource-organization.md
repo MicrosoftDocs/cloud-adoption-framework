@@ -49,7 +49,7 @@ For example, if you have public and private applications, separate them into dif
   - Use the integrated Red Hat OpenShift Container Platform registry. Consider these factors:
     - You must configure the [built-in container registry](/azure/openshift/built-in-container-registry).
     - For an enterprise-quality container registry, use the [Red Hat Quay registry](https://access.redhat.com/documentation/en-us/red_hat_quay/3.7).
-  - Use [Azure Container Registry](/azure/openshift/howto-use-acr-with-aro). Consider these factors:  
+  - Use [Azure Container Registry](/azure/openshift/howto-use-acr-with-aro). Consider these factors:
     - Implement [Azure Container Registry best practices](/azure/container-registry/container-registry-best-practices).
     - Use a [quarantine pattern](https://github.com/AzureCR/QuarantinePattern-Spec) to ensure that the registry contains only images that have been vulnerability-scanned.
   - Use a third-party container registry.

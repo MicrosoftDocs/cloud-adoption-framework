@@ -27,7 +27,7 @@ Consider the following factors:
 - Be aware of important system updates and upgrades. Critical patch updates are applied to clusters automatically by Azure Red Hat OpenShift site reliability engineers (SRE). Customers who wish to install patch updates in advance are free to do so.
 - Be aware of resource limitations of the cluster and individual workloads.
 - Be aware of the differences between [horizontal pod autoscaler](https://docs.openshift.com/container-platform/4.10/nodes/pods/nodes-pods-autoscaling.html) and [cluster autoscaling](https://docs.openshift.com/container-platform/4.10/machine_management/applying-autoscaling.html).
-- Review the [support lifecycle](/azure/openshift/support-lifecycle) and understand the version support policy. Azure Red Hat OpenShift only supports [the current and previous generally available minor releases](/azure/openshift/support-lifecycle#red-hat-openshift-container-platform-version-support-policy) of Red Hat OpenShift Container Platform. Support requests require the cluster to be within a supported version.
+- Review the [support lifecycle](/azure/openshift/support-lifecycle) and understand the version support policy. Azure Red Hat OpenShift only supports the [current and previous generally available minor releases](/azure/openshift/support-lifecycle#red-hat-openshift-container-platform-version-support-policy) of Red Hat OpenShift Container Platform. Support requests require the cluster to be within a supported version.
 - Review [cluster configuration requirements](/azure/openshift/support-policies-v4#cluster-configuration-requirements) to maintain cluster supportability.
 - Review cross-namespace networking to secure traffic within the cluster using [network policy](https://docs.openshift.com/container-platform/4.10/networking/network_policy/about-network-policy.html).
 
@@ -63,9 +63,9 @@ Consider the following factors:
   - Have higher container density on a node.
   - Increase reliability with reduced costs because of better use of hardware.
 - Spread nodes across all the available zones for higher availability.
-  - Choose a region that supports availability zones.
+  - Choose a region that supports Availability Zones.
   - For complete zonal benefit, all service dependencies must also support zones. If a dependent service doesn't support zones, it's possible that a zone failure could cause that service to fail. Review the disk types used when spreading the workload across zones.
-  - For higher availability beyond what availability zones can achieve, run multiple clusters in different paired regions. If an Azure resource supports geo-redundancy, provide the location where the redundant service will have its secondary region.
+  - For higher availability beyond what Availability Zones can achieve, run multiple clusters in different paired regions. If an Azure resource supports geo-redundancy, provide the location where the redundant service will have its secondary region.
 - Consistently create backups for applications and data.
   - A non-stateful service can be replicated efficiently.
   - If you need to store *state* in the cluster, back up the data frequently in the paired region.
@@ -84,11 +84,11 @@ Consider the following factors:
 
 The following are best practices for your design:
 
-- Azure Red Hat OpenShift clusters are provisioned with three control plane nodes and three or more worker nodes. Ensure that the cluster is created in a region that supports availability zones so that the nodes are spread across the zones.
-- For high availability, deploy these nodes to different availability zones. Since you need different machine sets for each availability zone, create at least three machine sets.
+- Azure Red Hat OpenShift clusters are provisioned with three control plane nodes and three or more worker nodes. Ensure that the cluster is created in a region that supports Availability Zones so that the nodes are spread across the zones.
+- For high availability, deploy these nodes to different Availability Zones. Since you need different machine sets for each Availability Zone, create at least three machine sets.
 - Don't run extra workloads on the control plane nodes. While they can be scheduled on the control plane nodes, it will cause extra resource usage and stability issues that can affect the entire cluster.
 - Create infrastructure machine sets to hold infrastructure components. Apply specific Kubernetes labels to these machines and then update the infrastructure components to run on only those machines.
-- Whenever possible, remove the service state from inside containers. Instead, use an Azure platform-as-a-service (PaaS) that supports multiregion replication.
+- Whenever possible, remove the service state from inside containers. Instead, use an Azure platform as a service (PaaS) that supports multiregion replication.
 - Deployments should specify pod resource requirements. The scheduler can then appropriately schedule the pod. Reliability depreciates significantly when pods aren't scheduled.
 - Set up multiple replicas in the deployment to handle disruptions like hardware failures. For planned events like updates and upgrades, a disruption budget can ensure the required number of pod replicas exist to handle expected application load.
 - Use [pod topology](https://docs.openshift.com/container-platform/4.9/nodes/scheduling/nodes-scheduler-pod-topology-spread-constraints.html) constraints to automatically schedule pods on nodes throughout the cluster.
@@ -106,10 +106,10 @@ The following are best practices for your design:
 - Store your container images in [Azure Container Registry](/azure/openshift/howto-use-acr-with-aro) and [geo-replicate](/azure/container-registry/container-registry-geo-replication) the registry to each region.
 - Use multiple regions and peering locations for [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) connectivity. If an outage affecting an Azure region or peering provider location occurs, a redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity.
 - Interconnect regions with global virtual network peering. If the clusters need to talk to each other, connecting both virtual networks to each other can be achieved through virtual network peering. This technology interconnects virtual networks to each other to provide high bandwidth across Microsoft's backbone network, even across different geographic regions.
-- Use the split TCP-based anycast protocol, [Azure Front Door Service](/azure/frontdoor/front-door-overview), to promptly connect your end users to the nearest front door POP (point of presence). More features of Azure Front Door Service include:
+- Use the split TCP-based anycast protocol, [Azure Front Door](/azure/frontdoor/front-door-overview), to promptly connect your end users to the nearest Front Door POP (point of presence). More features of Azure Front Door include:
   - TLS termination
   - Custom domain
-  - Web application firewall
+  - Web Application Firewall
   - URL rewrite
   - Session affinity
 

@@ -33,12 +33,12 @@ Use these design considerations and recommendations to create an identity and ac
   - Decide what permissions are required for security operations (SecOps).
   - Decide what permissions are required for the landing zone owner.
   - Decide what permissions are required for the application teams to deploy to the cluster.
-- Decide how to store secrets and sensitive information in your cluster. You can store secrets and sensitive information as base64 encoded Kubernetes secrets or use a secret store provider such as [Azure Keyvault Provider for Secrets Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/).
+- Decide how to store secrets and sensitive information in your cluster. You can store secrets and sensitive information as Base64 encoded Kubernetes secrets or use a secret store provider such as [Azure Key Vault Provider for Secrets Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/).
 
 ## Design recommendations
 
 - **Cluster identities**
-  - Create a service principal and define the custom Azure RBAC roles for your Azure Red Hat OpenShift landing zone. Roles simplify how you manage  permissions for your Azure Red Hat OpenShift cluster service principal.
+  - Create a service principal and define the custom Azure RBAC roles for your Azure Red Hat OpenShift landing zone. Roles simplify how you manage permissions for your Azure Red Hat OpenShift cluster service principal.
 - **Cluster access**
   - Configure [Azure AD integration](/azure/openshift/configure-azure-ad-cli) to use Azure AD to authenticate users in your Azure Red Hat OpenShift cluster.
   - Define OpenShift projects to restrict RBAC privilege and isolate workloads in your cluster.
@@ -47,7 +47,7 @@ Use these design considerations and recommendations to create an identity and ac
   - Use Azure Red Hat OpenShift with Azure AD to [limit user rights](/azure/aks/azure-ad-rbac) and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access.
   - Give full access only as needed and just-in-time. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
 - **Cluster workloads**
-  - For applications that require access to sensitive information, use a service principal and the [Azure Keyvault Provider for Secret Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/) to mount secrets stored in Azure Keyvault to your pods.
+  - For applications that require access to sensitive information, use a service principal and the [Azure Key Vault Provider for Secret Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/) to mount secrets stored in Azure Key Vault to your pods.
 
 ## Next steps
 

@@ -35,7 +35,7 @@ As you plan platform automation and DevOps for your Azure Red Hat OpenShift land
   - Canary environment maintenance
 
 - Consider deploying [Azure Arc-enabled Open Service Mesh](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) to add more security, encryption, and log capabilities to your workloads.
-  
+
 - Consider deploying other resources, like subscriptions, tagging, and labels to support your DevOps experience. Use these resources to track and trace deployments and related artifacts.
 
 - Consider the effect of the *cattle versus pets* DevOps paradigm shift. Expect pods and other aspects of Kubernetes to be ephemeral, and align your automation and pipeline infrastructure accordingly. Don't rely on IP addresses or other resources to be fixed or permanent.
@@ -68,8 +68,8 @@ Use these design recommendations to plan your platform automation and DevOps for
 
 - Embrace a [shift-left](/devops/develop/shift-left-make-testing-fast-reliable) DevOps approach consistently through security and policy:
 
-  - **Security**: Add vulnerability-scanning tools like container scanning early in the pipeline.
-  - **Policy**: Use policy as code and enforce policies as cloud-native by using admission controllers.
+  - **Security:** Add vulnerability-scanning tools like container scanning early in the pipeline.
+  - **Policy:** Use policy as code and enforce policies as cloud-native by using admission controllers.
 
 - Treat every failure, error, or outage as an opportunity to automate and improve overall solution quality. Integrate this approach in your shift left and [site reliability engineering](/azure/site-reliability-engineering/) framework.
 
