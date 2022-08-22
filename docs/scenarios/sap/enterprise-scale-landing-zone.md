@@ -62,11 +62,11 @@ The architecture describes an SAP system landscape depicting production and non-
 
 The architecture depicts three subscriptions 
 
-   •	Azure Hub Subscription where Hub vnet exists for primary and secondary region.
+   - Azure Hub Subscription where Hub vnet exists for primary and secondary region.
 
-   •	Azure SAP Prod Subscription where Production Systems and Disaster Recovery systems are configured.
+   - Azure SAP Prod Subscription where Production Systems and Disaster Recovery systems are configured.
 
-   •	Azure SAP Non-Prod Subscription - Non-Production system which includes Sandbox, Development, Quality or Pre-Production systems. This is an optional configuration and one can have subscription per workload zone. 
+   - Azure SAP Non-Prod Subscription - Non-Production system which includes Sandbox, Development, Quality or Pre-Production systems. This is an optional configuration and one can have subscription per workload zone. 
 
 
 **Networking:**
@@ -81,13 +81,13 @@ The architecture subdivides the vnet address space into subnets. Each subnet can
 
 In this Architecture, there are three or four Subnets depending on the tier. An Example for the production systems is four Subnets 
 
-   a.	NetApp Subnet – [A delegated Subnet](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) when using ANF for different SAP on Azure Scenarios. 
+   - NetApp Subnet – [A delegated Subnet](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) when using ANF for different SAP on Azure Scenarios. 
 
-   b.	Application Gateway Subnet - This to handle the traffic coming from Internet for example Fiori Apps.
+   - Application Gateway Subnet - This to handle the traffic coming from Internet for example Fiori Apps.
 
-   c.	SAP Application Subnet - SAP application servers, SAP Central Services / Enqueue replication services Instances and Web Dispatchers. 
+   - SAP Application Subnet - SAP application servers, SAP Central Services / Enqueue replication services Instances and Web Dispatchers. 
 
-   d.	Database Subnet - For the Database Virtual Machines.
+   - Database Subnet - For the Database Virtual Machines.
    
  **Note:** - The architecture shows explicit definition of Web Dispatchers in a separate availability set. The Web Dispatcher component is used as a load balancer for SAP traffic among the SAP application servers. To achieve [high availability of the SAP Web Dispatcher](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/48/9a9a6b48c673e8e10000000a42189b/frameset.htm), Azure Internal Load Balancer implements either the failover cluster or the parallel Web Dispatcher setup. For internet facing communications a stand-alone solution in DMZ would be the recommended architecture to satisfy security concerns. [Embedded Web Dispatcher on ASCS](https://help.sap.com/docs/SLTOOLSET/00b4e4853ef3494da20ebcaceb181d5e/2e708e2d42134b4baabdfeae953b24c5.html?locale=en-US&version=CURRENT_VERSION) is a special option, proper sizing due to additional workload on ASCS should be taken into account.
 
@@ -110,18 +110,18 @@ To handle the requirements on transport directory, one can create the transport 
 
 High availability requirements for SAP Central Services would differ based on the operating system. For example 
 
-   a. For Linux based operation system, the shared file systems are typically placed on high availability NFS storage. [NFS over Azure Files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-nfs-azure-files) or [Azure NetApp Files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files) to provide a high-availability NFS share. 
+   - For Linux based operation system, the shared file systems are typically placed on high availability NFS storage. [NFS over Azure Files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-nfs-azure-files) or [Azure NetApp Files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files) to provide a high-availability NFS share. 
 
-   b.	For Windows, [Azure Files with SMB](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-azure-files-smb) and [Azure NetApp Files SMB](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb)
+   - For Windows, [Azure Files with SMB](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-azure-files-smb) and [Azure NetApp Files SMB](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb)
 
 
 Azure NetApp Files shares can host the SAP HANA data and log files. This configuration enables the HANA scale-out deployment model with standby nodes. ANF Supports HANA Scale-up or [HANA Scale-out](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-hana-scale-out-standby-netapp-files-suse) with Standby node. 
 
 [Azure Files](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction) provides two main types of endpoints for accessing Azure file shares:
 
-   •	Public endpoints, which have a public IP address and can be accessed from anywhere in the world.
+   - Public endpoints, which have a public IP address and can be accessed from anywhere in the world.
 
-   •	Private endpoints, which exist within a virtual network and have a private IP address from within the address space of that virtual network.
+   - Private endpoints, which exist within a virtual network and have a private IP address from within the address space of that virtual network.
 
   The architecture depicts [Private Endpoints](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview) to allow clients on a virtual network (Vnet) to securely access data over a [Private Link](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview). 
 
@@ -130,38 +130,38 @@ Azure NetApp Files shares can host the SAP HANA data and log files. This configu
 
 Private link service on Azure is now Generally Available (GA). SAP Private Link service currently supports connections from SAP BTP, Cloud Foundry runtime and certain services on top to [Azure Private Link resources](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/e8bc0c6440834a47a0ff57cb4efc0dc2.html?locale=en-US) for the most common load balancer + VM scenario with e.g. SAP S/4HANA or SAP ERP running on the VM, as well as the scenario of connecting to Azure native services, in particular to:
 
-   •	[Azure Database for MariaDB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/862fa2958c574c3cbfa12a927ce1d5fe.html?locale=en-US)
+   - [Azure Database for MariaDB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/862fa2958c574c3cbfa12a927ce1d5fe.html?locale=en-US)
 
-   •	[Azure Database for MySQL](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/5c70499ee70b415d954145a795e43355.html?locale=en-US)
+   - [Azure Database for MySQL](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/5c70499ee70b415d954145a795e43355.html?locale=en-US)
 
 The architecture depicts SAP private link service connection to BTP environments. SAP Private Link service establishes a private connection between selected SAP BTP services and selected services in your own IaaS provider accounts. By reusing the private link functionality, it lets BTP services access your S/4 HANA environment through private network connections and this avoids data transfer via the public Internet. Please refer to this [blog](https://blogs.sap.com/2021/07/27/btp-private-linky-swear-with-azure-how-many-pinkies-do-i-need/) for more information on different scenarios for connection to BTP services. 
 
 
 **Considerations:** 
 
-  **Landscape consolidation:**
-    Consider landscape consolidation for the non-production systems, e.g. Sandbox and Development environments. Please see different use cases 
+**Landscape consolidation:**
+  Consider landscape consolidation for the non-production systems, e.g. Sandbox and Development environments. Please see different use cases 
 
-      1. HANA DB scenarios generally run App and DB in separate VMs.
+  - HANA DB scenarios generally run App and DB in separate VMs.
 
-      2. AnyDB scenarios could have two-tier deployments where SAP App and DB are running in the Same VM. 
+  - AnyDB scenarios could have two-tier deployments where SAP App and DB are running in the Same VM. 
 
-    One may choose to design based on different customer requirements. The components are separate in the architecture to  provide greater flexibility for maintenance, sizing, monitoring and change control. 
+  One may choose to design based on different customer requirements. The components are separate in the architecture to  provide greater flexibility for maintenance, sizing, monitoring and change control. 
 
-  **Component Information:**
+**Component Information:**
     The architecture also mentions about components which are used for day two operations, example Recovery Services Vault for backup of SAP systems and components which help our customers to extend and innovate their SAP Data platform with cloud native Azure data services. Azure services like Synapse, data factory and data lake helps the customers to unlock business insights by combining SAP Data with non-SAP Data and creating analytics platform. To evaluate solution development environment design, please see the best practices [here](https://docs.microsoft.com/en-us/azure/synapse-analytics/guidance/implementation-success-evaluate-solution-development-environment-design).  There are different instances of data factory, data lake based on SAP Tier based on the best practices for environment design. 
 
   [The Integration Runtime (IR)](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime) is the compute infrastructure used by Azure Data Factory and Azure Synapse pipelines to provide data integration capabilities. Consider the deployment of runtime Virtual Machines for these services per Tier. Please see few examples of different ways to connect with SAP systems and deployment of Integration Runtime as part of that. 
 
-   a.	[SAP change data capture solution (Preview) - SHIR preparation - Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-shir-preparation)
+   -	[SAP change data capture solution (Preview) - SHIR preparation - Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-shir-preparation)
 
-   b.	[Copy data from SAP ECC - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-ecc?tabs=data-factory)
+   -	[Copy data from SAP ECC - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-ecc?tabs=data-factory)
 
-   c.	[Copy data from SAP HANA - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-hana?tabs=data-factory)
+   -	[Copy data from SAP HANA - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-hana?tabs=data-factory)
 
-   d.	[Copy data from an SAP table - Azure Data Factory and Azure Synapse] (https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-table?tabs=data-factory)
+   -	[Copy data from an SAP table - Azure Data Factory and Azure Synapse] (https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-table?tabs=data-factory)
 
-   e.	[Copy data from SAP Business Warehouse via Open Hub - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-business-warehouse-open-hub)
+   -	[Copy data from SAP Business Warehouse via Open Hub - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-business-warehouse-open-hub)
 
 To gain deeper understanding on each and every component shown in the architecture, please refer to the documentation mentioned [here](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/sap/sap-s4hana)  
 
