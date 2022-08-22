@@ -129,7 +129,7 @@ The main challenges of pairing Azure regions for SAP workloads are:
 - The pairs aren't always consistent with M-series or Mv2-series VM services. Many customers deploying their SAP systems aren't following Azure paired regions and are following the service availability of required VM families instead.
 - You can replicate standard storage between paired regions, but you can't use standard storage to store your databases or virtual hard disks. You can replicate backups only between paired regions that you use. For all your other data, run your own replications with native DBMS features like SQL Server Always On, SAP HANA System Replication, and other services. Use a combination of Azure Site Recovery, `rsync` or `robocopy`, and other third-party software for the SAP application layer.
 
-After you define Azure regions, your organization's second design decision is:
+After you define your Azure regions, your organization must choose one of these deployment patterns:
 
 - Whether you're going to deploy production systems into your primary region.
 - Deploy nonproduction SAP systems into the disaster recovery region.
@@ -156,7 +156,7 @@ Another factor to consider when choosing your disaster recovery region is the RP
 - Use [cross-region replication in Azure NetApp Files](/azure/azure-netapp-files/cross-region-replication-introduction) (currently in public preview) to synchronize file volumes between the primary region and the disaster recovery region.
 - Use native database replication to synchronize data to the disaster recovery site, rather than Azure Site Recovery.
 - Peer the primary and disaster recovery virtual networks. For example, for HANA System Replication, an SAP HANA DB virtual network needs to be peered to the disaster recovery site's SAP HANA DB virtual network.
-- If you use Azure NetApp Files storage for your SAP deployments, at minimum, you should create two Azure NetApp Files accounts in two different regions at the Premium tier.
+- If you use Azure NetApp Files storage for your SAP deployments, at a minimum, create two Azure NetApp Files accounts in two different regions at the Premium tier.
 
 ## Next steps
 
