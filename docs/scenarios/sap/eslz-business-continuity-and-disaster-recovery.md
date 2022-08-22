@@ -96,7 +96,11 @@ One advantage of deploying your high availability architecture across different 
 
 - You should set up the cluster timeout parameters recommended in the documentation for central-services and database clusters.
 
-## Design considerations for backup and restore
+## Backup and restore
+
+Review design considerations and recommendations for backup and restore in an SAP enterprise scenario.
+
+### Design considerations for backup and restore
 
 Though backup and restore aren't typically considered as adequate high availability functionality for a production SAP workload, this technology covers various other areas. Most companies that use SAP applications need to follow compliance regulations that require backups to be stored for many years. There are also other conditions and scenarios where it's essential to have a backup and be able to restore from it. The assumption is that you've already established and follow backup and restore best practices for deploying SAP applications, which means that you can:
 
