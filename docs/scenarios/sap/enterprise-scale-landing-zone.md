@@ -130,19 +130,20 @@ Azure NetApp Files shares can host the SAP HANA data and log files. This configu
 
 Private link service on Azure is now Generally Available (GA). SAP Private Link service currently supports connections from SAP BTP, Cloud Foundry runtime and certain services on top to [Azure Private Link resources](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/e8bc0c6440834a47a0ff57cb4efc0dc2.html?locale=en-US) for the most common load balancer + VM scenario with e.g. SAP S/4HANA or SAP ERP running on the VM, as well as the scenario of connecting to Azure native services, in particular to:
 
- •	[Azure Database for MariaDB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/862fa2958c574c3cbfa12a927ce1d5fe.html?locale=en-US)
+   •	[Azure Database for MariaDB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/862fa2958c574c3cbfa12a927ce1d5fe.html?locale=en-US)
 
- •	[Azure Database for MySQL](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/5c70499ee70b415d954145a795e43355.html?locale=en-US)
+   •	[Azure Database for MySQL](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/5c70499ee70b415d954145a795e43355.html?locale=en-US)
 
 The architecture depicts SAP private link service connection to BTP environments. SAP Private Link service establishes a private connection between selected SAP BTP services and selected services in your own IaaS provider accounts. By reusing the private link functionality, it lets BTP services access your S/4 HANA environment through private network connections and this avoids data transfer via the public Internet. Please refer to this [blog](https://blogs.sap.com/2021/07/27/btp-private-linky-swear-with-azure-how-many-pinkies-do-i-need/) for more information on different scenarios for connection to BTP services. 
 
 
 **Considerations:** 
 
-  ***Landscape consolidation:*** 
+  **Landscape consolidation:**
     Consider landscape consolidation for the non-production systems, e.g. Sandbox and Development environments. Please see different use cases 
 
-      1. HANA DB scenarios generally run App and DB in separate VMs. 
+      1. HANA DB scenarios generally run App and DB in separate VMs.
+
       2. AnyDB scenarios could have two-tier deployments where SAP App and DB are running in the Same VM. 
 
     One may choose to design based on different customer requirements. The components are separate in the architecture to  provide greater flexibility for maintenance, sizing, monitoring and change control. 
@@ -152,19 +153,19 @@ The architecture depicts SAP private link service connection to BTP environments
 
   [The Integration Runtime (IR)](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime) is the compute infrastructure used by Azure Data Factory and Azure Synapse pipelines to provide data integration capabilities. Consider the deployment of runtime Virtual Machines for these services per Tier. Please see few examples of different ways to connect with SAP systems and deployment of Integration Runtime as part of that. 
 
-  a.	[SAP change data capture solution (Preview) - SHIR preparation - Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-shir-preparation)
+   a.	[SAP change data capture solution (Preview) - SHIR preparation - Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-shir-preparation)
 
-  b.	[Copy data from SAP ECC - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-ecc?tabs=data-factory)
+   b.	[Copy data from SAP ECC - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-ecc?tabs=data-factory)
 
-  c.	[Copy data from SAP HANA - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-hana?tabs=data-factory)
+   c.	[Copy data from SAP HANA - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-hana?tabs=data-factory)
 
-  d.	[Copy data from an SAP table - Azure Data Factory and Azure Synapse] (https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-table?tabs=data-factory)
+   d.	[Copy data from an SAP table - Azure Data Factory and Azure Synapse] (https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-table?tabs=data-factory)
 
-  e.	[Copy data from SAP Business Warehouse via Open Hub - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-business-warehouse-open-hub)
+   e.	[Copy data from SAP Business Warehouse via Open Hub - Azure Data Factory and Azure Synapse](https://docs.microsoft.com/en-us/azure/data-factory/connector-sap-business-warehouse-open-hub)
 
 To gain deeper understanding on each and every component shown in the architecture, please refer to the documentation mentioned [here](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/sap/sap-s4hana)  
 
-## SAP landscaep Architectre - Three SAP products
+## SAP landscape Architectre - Three SAP products
 
 The following diagram is reference architecture that describes an example use case of three SAP products and is an extension of the high level architectre. This is one of the options to deploy SAP systems into Azure using Availability Sets Configuration.
 
