@@ -13,11 +13,11 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernize your workloads in the cloud. Modernization is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and minimize cost. Modernizing uses managed platform-as-a-service solutions (PaaS) to improve your business at scale. Modernizing in the cloud starts with business alignment. Business alignment enables creates a roadmap to implement your modernization strategies (*see figure*).
+Modernize your workloads in the cloud. Modernization is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and minimize cost. Modernizing uses managed platform-as-a-service solutions (PaaS) to improve your business at scale. Modernizing in the cloud starts with business alignment. Business alignment helps you create a roadmap to implement your modernization strategies (*see figure*).
 
 :::image type="content" source="../_images/modernize/modernize-methodology-v7.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
-During business alignment, you envision, evaluate, and commit to a modernization roadmap. The modernization roadmap he modernization strategies will show you how to modernize your process, application, and database.
+During business alignment, you envision, evaluate, and commit to modernization strategies. The modernization strategies will show you how to modernize your process, application, and database.
 
 ## Next steps
 

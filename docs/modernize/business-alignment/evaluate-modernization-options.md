@@ -16,23 +16,23 @@ Once you've envisioned your cloud modernization possibilities, you can evaluate 
 
 :::image type="content" source="../../_images/modernize/evaluate/evaluate-971.png" alt-text="Image showing where you are in the business alignment process.":::
 
-Evaluating your readiness for modernization involves the following steps:
+Evaluating your readiness for modernization has to components. You need to assess you financial readiness and technical readiness.
 
-- *Financial readiness* - you're either ready to modernize or need more time to review your applications.
-- *Technical readiness* - you're either ready to modernize or need to choose a different adoption path.
+- *Financial readiness assessment* - helps you determine if you need more time to review your applications.
+- *Technical readiness assessment* - helps you determine if you need to choose a different adoption path other than modernize.
 
 ## Step 1 - Evaluate the financial readiness of each workload
 
-This evaluation helps determine if it makes business sense to modernize your workload. Financial motivations are the key drivers of cloud modernization. Cloud modernizations can improve margins through efficiencies and generate new revenue streams. To realize those benefits, you need to evaluate the financial aspects of the effort.
+A financial readiness assessment helps you determine if it makes business sense to modernize your workload. Financial motivations are the key drivers of cloud modernization. Cloud modernizations can improve margins through efficiencies and generate new revenue streams. To realize those benefits, you need to evaluate the financial aspects of the effort.
 
-For each workload you want to modernize, answer the following example questions to get you thinking from a financial readiness perspective.
+For each workload you want to modernize, answer the following questions to assess your financial readiness.
 
 Answering *yes* to all questions means you're likely ready to modernize. If you answer *no* to any of the questions, we recommend you conduct an [Azure Well-Architected Review](/assessments/?mode=pre-assessment&session=local) of your workload.
 
 |Question|Yes|No|
 |--|--|--|
 |*Can you quantify the business<br> value of modernizing the workload?*|Modernize|Conduct Azure Well-Architected Review|
-*Do you know what your <br>modernization cost will be?*|Modernize<br>|Conduct Azure Well-Architected Review|
+|*Do you know what your <br>modernization cost will be?*|Modernize<br>|Conduct Azure Well-Architected Review|
 |*Are these workloads business-critical?*|Modernize|Conduct Azure Well-Architected Review|
 |*Does the cost of modernization<br> meet your desired cost savings?*|Modernize|Conduct Azure Well-Architected Review|
 
@@ -40,9 +40,9 @@ If you answered *yes* to all the financial readiness questions, the workload is 
 
 ## Step 2 - Evaluate the technical readiness of each workload
 
-This evaluation helps you determine whether your workload is ready for modernization and helps show if your workload is better fit for a different cloud adoption strategy.
+A technical readiness assessment helps you determine if your workload is ready for modernization or is better fit for a different cloud adoption strategy.
 
-For each workload you want to modernize, answer the following example questions to get you thinking from a technical readiness perspective.
+For each workload you want to modernize, answer the following questions to begin assess your technical readiness.
 
 |Question|Yes|No|
 |--|--|--|
