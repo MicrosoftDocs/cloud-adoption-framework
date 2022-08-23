@@ -1624,7 +1624,7 @@ items:
         - name: Recover from data corruption or accidental deletion
           href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
-    - name: Management considerations
+  - name: Management considerations
       items:
       - name: Overview
         href: manage/considerations/index.md
