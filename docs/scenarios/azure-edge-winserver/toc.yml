@@ -1,0 +1,68 @@
+items:
+  - name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environments
+    items: 
+    - name: Azure Landing Zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: eslz-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: eslz-resource-organization.md
+      - name: Security
+        href: eslz-security.md
+      - name: Management
+        href: eslz-management-and-monitoring.md
+      - name: Governance discipline
+        href: eslz-security-governance-and-compliance.md
+      - name: Business continuity and disaster recovery
+        href: eslz-business-continuity-and-disaster-recovery.md
+      - name: Platform automation and DevOps
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
+      items:
+      - name: Enterprise-scale for {{Token-LongName}}
+        href: enterprise-scale-landing-zone.md
+      - name: TODO - Add reference to smaller RA from AAC here
+        href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
+  - name: Govern {{Token-Name}} and Azure
+    href: govern.md
+  - name: Secure {{Token-Name}}
+    href: secure.md
+  - name: Organize {{Token-Name}}
+    href: organize.md
+  - name: Migrate {{Token-Name}} to Azure
+    href: migrate.md
+  - name: Innovate with {{Token-Name}} on Azure
+    href: migrate.md
+  - name: Govern {{Token-Name}} in Azure
+    href: govern.md
+  - name: Manage {{Token-Name}} platform and workloads
+    href: manage.md
+  - name: Well-architected considerations
+    href: well-architected-framework.md
+
+  - name: {{Token-Name}} Architectures - Add links to product architectures
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Azure product documentatoin - Add links to product docs
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Build skills on Learn - Add links to Learn modules
+
+    items:
+    - name: Example
+      href: /learn
