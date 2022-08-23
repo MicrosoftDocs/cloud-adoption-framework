@@ -32,7 +32,7 @@ Answering *yes* to all questions means you're likely ready to modernize. If you 
 |Question|Yes|No|
 |--|--|--|
 |*Can you quantify the business<br> value of modernizing the workload?*|Modernize|Conduct Azure Well-Architected Review|
-*Do you know what your <br>modernization cost will be?*|Modernize<br>|Conduct Azure Well-Architected Review|
+|*Do you know what your <br>modernization cost will be?*|Modernize<br>|Conduct Azure Well-Architected Review|
 |*Are these workloads business-critical?*|Modernize|Conduct Azure Well-Architected Review|
 |*Does the cost of modernization<br> meet your desired cost savings?*|Modernize|Conduct Azure Well-Architected Review|
 
