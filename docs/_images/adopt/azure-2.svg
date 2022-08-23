@@ -1,0 +1,23 @@
+<svg data-slug-id="azure-product" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="azure-product_f069caa6-84f1-4be4-82b7-9c017f3ae32f" x1="-805.6954" y1="119.6377" x2="-814.6074" y2="93.3095" gradientTransform="matrix(1, 0, 0, -1, 820, 124)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#114a8b"/>
+      <stop offset="1" stop-color="#0669bc"/>
+    </linearGradient>
+    <linearGradient id="azure-product_f16358cd-6714-426a-b248-367e0a42901f" x1="-804.0632" y1="120.4059" x2="-794.2807" y2="94.3426" gradientTransform="matrix(1, 0, 0, -1, 820, 124)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3ccbf4"/>
+      <stop offset="1" stop-color="#2892df"/>
+    </linearGradient>
+  </defs>
+    <path d="M11.1607,2.3374h8.5975L10.845,28.747a1.3459,1.3459,0,0,1-1.2753.9156H2.8471a1.3461,1.3461,0,0,1-1.2754-1.7765L9.8855,3.2529A1.3459,1.3459,0,0,1,11.1607,2.3374Z" fill="url(#azure-product_f069caa6-84f1-4be4-82b7-9c017f3ae32f)"/>
+    <path d="M23.0312,19.5421H9.4814a.6262.6262,0,0,0-.4273,1.0838L18.3458,29.3a1.3464,1.3464,0,0,0,.9187.3622h7.6789Z" fill="#0078d4"/>
+    <g opacity="0.5">
+      <path d="M20.6189,29.6626h6.3166l-3.9122-10.12H17.8716l2.98,8.821A1.3612,1.3612,0,0,1,20.6189,29.6626Z"/>
+      <path d="M15.9112,13.73,19.7563,2.3374h-7.801a1.3608,1.3608,0,0,1,.2605.4559Z"/>
+    </g>
+    <g opacity="0.5">
+      <path d="M11.4683,2.3374,15.66,14.48l.5808-1.7274-3.51-10.4155Z" fill-opacity="0.5"/>
+      <path d="M19.41,29.6625l7.5257,0-5.714,0a1.8586,1.8586,0,0,0,.1106-1.4616l-2.9256-8.6588h-1.07l3.0352,8.9833a.8612.8612,0,0,1-.816,1.1371Z" fill-opacity="0.5"/>
+    </g>
+    <path d="M22.1146,3.253a1.346,1.346,0,0,0-1.2754-.9156H11.261a1.366,1.366,0,0,1,1.2944.9293l8.3,24.5931a1.366,1.366,0,0,1-1.2942,1.8028h9.5915a1.3461,1.3461,0,0,0,1.2754-1.7765Z" fill="url(#azure-product_f16358cd-6714-426a-b248-367e0a42901f)"/>
+</svg>
