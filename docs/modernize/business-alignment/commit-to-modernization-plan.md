@@ -49,7 +49,7 @@ Update your workload table with modernization strategies by adding the moderniza
 
 ## Step 3 - Create a modernization timeline for each workload
 
-The amount of time it takes to modernize your workloads depends on your team's experience and the complexity of your situation (*see table*).
+Create a modernization timeline for each workload. The amount of time it takes to modernize your workloads depends on your team's experience and the complexity of your situation (*see table*).
 
 |Business Function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy|Timeline|
 | --- | --- | --- | --- | --- |
