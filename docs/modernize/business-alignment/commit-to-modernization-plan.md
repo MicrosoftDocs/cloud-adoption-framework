@@ -63,7 +63,7 @@ You might have the technical expertise to estimate the modernization effort. If 
 
 ## Step 4 - Commit resources to the modernization
 
-Business leads provide the budget for the modernization effort. The budget should allow the technical leads to put the right people on the project and give them the technical team the right tools.
+Business leads provide the budget for the modernization effort. The budget should allow the technical leads to put the right people on the project and give the technical team the right tools.
 
 ## Next steps
 
