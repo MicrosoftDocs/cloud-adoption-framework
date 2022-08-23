@@ -32,14 +32,14 @@ Are there specific requirements for operations of the landing zone or platform f
 
 Are there specific requirements for operations of the individual workloads running on this platform?
 
-## Next step: Your next migration iteration
+## Next steps
 
-Once the {{Token-Name}} migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next {{Token-Name}} migration or deployment.
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Strategy for {{Token-Name}}](./strategy.md)
 - [Plan for {{Token-Name}}](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
+- [Govern {{Token-Name}}](./govern.md)
+- [Strategic impact of {{Token-Name}}](./secure.md)
+- [Organize team members for {{Token-Name}} in Azure](./organize.md)
 - [Migrate {{Token-Name}}](./migrate.md)
 - [Innovate with {{Token-Name}}](./innovate.md)
-- [Govern {{Token-Name}}](./govern.md)
-- [Manage {{Token-Name}}](./manage.md)

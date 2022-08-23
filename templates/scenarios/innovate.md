@@ -28,9 +28,14 @@ How does this new innovation impact digital invention disciplines:
 - Device interactions
 - Predict & influence (ML/AI)
 
-## Next step: Govern {{Token-Name}}
+## Next steps
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
+- [Plan for {{Token-Name}}](./plan.md)
+- [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Govern {{Token-Name}}](./govern.md)
+- [Strategic impact of {{Token-Name}}](./secure.md)
+- [Organize team members for {{Token-Name}} in Azure](./organize.md)
+- [Migrate {{Token-Name}}](./migrate.md)
 - [Manage {{Token-Name}}](./manage.md)

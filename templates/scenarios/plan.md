@@ -30,13 +30,15 @@ https://docs.microsoft.com/azure/cloud-adoption-framework/plan/template
 
 Are there specific skills or extra training this team should take before getting started?
 
-## Next step: Review your environment or Azure Landing Zone
+
+## Next steps
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for {{Token-Name}}](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
+- [Govern {{Token-Name}}](./govern.md)
+- [Strategic impact of {{Token-Name}}](./secure.md)
+- [Organize team members for {{Token-Name}} in Azure](./organize.md)
 - [Migrate {{Token-Name}}](./migrate.md)
 - [Innovate with {{Token-Name}}](./innovate.md)
-- [Govern {{Token-Name}}](./govern.md)
 - [Manage {{Token-Name}}](./manage.md)

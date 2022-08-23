@@ -36,7 +36,6 @@ The following list of articles will take you to guidance found at specific point
 - [Plan for {{Token-Name}}](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Govern {{Token-Name}}](./govern.md)
-- [Strategic impact of {{Token-Name}}](./secure.md)
 - [Organize team members for {{Token-Name}} in Azure](./organize.md)
 - [Migrate {{Token-Name}}](./migrate.md)
 - [Innovate with {{Token-Name}}](./innovate.md)

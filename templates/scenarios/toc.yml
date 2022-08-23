@@ -34,7 +34,12 @@ items:
         href: enterprise-scale-landing-zone.md
       - name: TODO - Add reference to smaller RA from AAC here
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
-
+  - name: Govern {{Token-Name}} and Azure
+    href: govern.md
+  - name: Secure {{Token-Name}}
+    href: secure.md
+  - name: Organize {{Token-Name}}
+    href: organize.md
   - name: Migrate {{Token-Name}} to Azure
     href: migrate.md
   - name: Innovate with {{Token-Name}} on Azure
