@@ -1,9 +1,9 @@
 ---
 title: Enterprise-scale enterprise enrollment and Azure AD tenants for {{Token-LongName}}
 description: #Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of {{Token-Name}}.
-author: \{{Token-ContributorGithubId}}
-ms.author: \{{Token-Alias}}
-ms.date: \{{Token-Date}}
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

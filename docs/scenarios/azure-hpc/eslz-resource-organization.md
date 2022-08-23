@@ -1,9 +1,9 @@
 ---
 title: Enterprise-scale management group and subscription organization for {{Token-LongName}}
 description: #Describe how this enterprise-scale scenario can improve management group and subscription organization of {{Token-Name}}.
-author: \{{Token-ContributorGithubId}}
-ms.author: \{{Token-Alias}}
-ms.date: \{{Token-Date}}
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
