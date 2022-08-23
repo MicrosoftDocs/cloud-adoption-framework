@@ -12,7 +12,9 @@ ms.custom: internal
 
 # Business alignment for cloud modernization
 
-Cloud modernization requires business alignment. Modernization is a business decision. It's important to assess your business goals before you commit to modernizing. Business alignemnt for cloud modernization involves the following tasks:
+Cloud modernization is a business decision and requires business alignment. It's important to assess your business goals before you commit to modernizing. 
+
+Business alignemnt for cloud modernization requires you to:
 
 - Envision your modernization possibilities.
 - Evaluate your financial and technical readiness.
@@ -20,7 +22,7 @@ Cloud modernization requires business alignment. Modernization is a business dec
 
 :::image type="content" source="../../_images/modernize/business-alignment/business-alignment.png" alt-text="Image showing where you are in the business alignment process.":::
 
-These steps are sequential. Make sure you envision the possibilities before you evaluate your readiness toward reaching those goals. When you know the path that you're prepared to take, you can commit to a well-vetted plan.
+These steps are sequential. Make sure you envision the possibilities before you evaluate your readiness to reach those goals. When you know the path that you're prepared to take, you can commit to a well-vetted plan.
 
 ## Next step
 
