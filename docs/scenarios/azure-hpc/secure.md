@@ -1,6 +1,6 @@
 ---
-title: Strategy for {{Token-Name}} adoption
-description: #Describe the scenario's impact on strategy.
+title: Secure {{Token-Name}} in Azure
+description: #Learn about the security principles for {{Token-Name}} in Azure.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,24 +10,21 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Strategic impact of {{Token-Name}}
+# Secure cloud-scale analytics in Azure
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article will help expose a number of technical considerations regarding {{Token-Name}} that may have an impact on your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Security methodology](../../secure/index.md)
 
-## {{Token-Name}} motivations
+## Security principles
 
-What would motivate the customer to act on this scenario?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
+The focus of cloud-scale analytics is based on key management principles:
 
-## {{Token-Name}} outcomes
-
-When customers act on this scenario, what do they expect to see as an outcome?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
-
-## {{Token-Name}} business justification
-
-Is there something special that customers have to do to justify doing this thing?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+| Principle | Description |
+|--|--|
+| **Single authoritative source of identity**| Use consistency and a single authoritative source to increase clarity, and reduce the risk from human error and configuration and automation complexity. |
+| **Automated approach to data security**| Use automation to enable auditing, implement multiple control points, and reduce human errors. Automation also makes data governance easier and limits overhead.|
+| **Grant least privilege required to complete task**| Grant only the amount of access to users that they need to do their jobs and limit the allowed actions for a particular scope.|
+|  **Simplified yet secure permissions**| Avoid customization. Customization leads to complexity, which inhibits human understanding, security, automation, and governance. For example, use built-in roles to assign permissions to data services and avoid permissions that specifically reference individual resources or users.|
+| **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
 ## Next steps
 
