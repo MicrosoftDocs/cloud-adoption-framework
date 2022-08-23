@@ -1,6 +1,6 @@
 ---
 title: Modernize any application or framework in the cloud
-description: Learn to modernize applications in the cloud
+description: Modernize applications in the cloud
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/19/2022
