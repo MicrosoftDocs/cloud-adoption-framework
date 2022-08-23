@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Secure cloud-scale analytics in Azure
+# Secure {{Token-Name}} in Azure
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Security methodology](../../secure/index.md)
 
 ## Security principles
 
-The focus of cloud-scale analytics is based on key management principles:
+The focus of {{Token-Name}} is based on key management principles:
 
 | Principle | Description |
 |--|--|
