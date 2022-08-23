@@ -1,7 +1,6 @@
 items:
-  - name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
+  - name: \{{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
     href: strategy.md
   - name: Technical planning
@@ -12,6 +11,8 @@ items:
       href: ready.md
     - name: Design areas
       items:
+      - name: Billing and Active Directory tenant
+        href: eslz-enterprise-enrollment-and-azure-ad-tenants.md
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
@@ -34,8 +35,6 @@ items:
         href: enterprise-scale-landing-zone.md
       - name: TODO - Add reference to smaller RA from AAC here
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
-  - name: Govern {{Token-Name}} and Azure
-    href: govern.md
   - name: Secure {{Token-Name}}
     href: secure.md
   - name: Organize {{Token-Name}}
@@ -51,7 +50,7 @@ items:
   - name: Well-architected considerations
     href: well-architected-framework.md
 
-  - name: {{Token-Name}} Architectures - Add links to product architectures
+  - name: \{{Token-Name}} Architectures - Add links to product architectures
     items:
     - name: Example
       href: /azure

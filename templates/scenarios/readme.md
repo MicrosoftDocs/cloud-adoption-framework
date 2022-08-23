@@ -20,6 +20,7 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Prepare your environment | NA | NA | Table of contents section. |
 | L2 | Azure landing zones | Azure Landing Zone review for {{Token-Name}} | [ready.md](ready.md) | NA |
 | L2 | Design areas | NA | NA | Table of contents section. |
+| L3 | Billing and Active Directory tenant |  | [eslz-enterprise-enrollment-and-azure-ad-tenants.md](eslz-enterprise-enrollment-and-azure-ad-tenants.md) | Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials. | 
 | L3 | Enterprise enrollment |  | [eslz-identity-and-access-management.md](eslz-identity-and-access-management.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Identity and access   management |  | [eslz-network-topology-and-connectivity.md](eslz-network-topology-and-connectivity.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Network topology and   connectivity |  | [eslz-resource-organization.md](eslz-resource-organization.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
