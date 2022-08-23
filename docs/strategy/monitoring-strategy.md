@@ -1,5 +1,5 @@
 ---
-title: Cloud monitoring strategy guide
+title: Cloud monitoring strategy
 description: Learn how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-# Cloud monitoring strategy guide
+# Cloud monitoring strategy
 
 As your organization migrates to a cloud environment, it's important to plan and develop an effective monitoring strategy with participation from developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively. It should always align with business needs, and produce an agile organization that can proactively monitor complex distributed applications that the business depends on.
 
@@ -28,11 +28,11 @@ The following are important areas that strongly influence a sound monitoring str
 
 - Ensure security requirements correspond with your organizations security compliance policy.
 
-- Prioritize alerts from relevant and practical incidents, such as warnings and exceptions. Align severity with its significance following your incident priority and urgency escalation matrix.
+- Prioritize alerts from relevant and practical incidents, such as warnings and exceptions. Align their severity with their significance following your incident priority and urgency escalation matrix.
 
 - Collect only the metrics and logs that are useful, measurable, and identifiable to the business and IT organization.
 
-- Define an integration plan with existing ITSM solutions such as remedy or ServiceNow for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
+- Define an integration plan with existing IT service management (ITSM) solutions, such as remedy or ServiceNow for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
 
 - Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.
 
@@ -128,7 +128,7 @@ Consider your data flows and tools:
 
 - The role of global monitoring or the top-tier.
 
-- The role of IT service management (ITSM) integration to trigger on significant events.
+- The role of ITSM integration to trigger on significant events.
 
 Consider a single policy in your governance plan for event significance to drive alerting and notifications. It's one of the key policies in your monitoring strategy. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
 
@@ -154,10 +154,10 @@ Consider scale in your strategy and who will be defining and standardizing *moni
 
 In Azure, you'll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Azure Active Directory sign-in and audit logs, and if integrated, the Microsoft 365 unified audit log, all contain sensitive data that may need to be protected under privacy laws.
 
-Your monitoring strategy should include these components:
+Your monitoring strategy should include these actions:
 
-- Separate non-monitoring data from monitoring data
-- Restrict access to resources
+- Separate non-monitoring data from monitoring data.
+- Restrict access to resources.
 
 ### Consider business continuity
 
