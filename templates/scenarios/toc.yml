@@ -48,28 +48,21 @@ items:
     href: govern.md
   - name: Manage {{Token-Name}} platform and workloads
     href: manage.md
+  - name: Well-architected considerations
+    href: well-architected-framework.md
 
-  - name: Well-architected - TBD
-    items:
-    - name: Example
-      href: /azure
-
-  - name: Architectures - TBD
+  - name: {{Token-Name}} Architectures - Add links to product architectures
     items:
     - name: Example
       href: /azure
 
-  - name: Best practices - TBD
-    items:
-    - name: Example
-      href: /azure
-       
-  - name: Microsoft products - Add links to product docs
+  - name: Azure product documentatoin - Add links to product docs
     items:
     - name: Example
       href: /azure
 
-  - name: Learn modules - TBD
+  - name: Build skills on Learn - Add links to Learn modules
+
     items:
     - name: Example
-      href: /azure
+      href: /learn
