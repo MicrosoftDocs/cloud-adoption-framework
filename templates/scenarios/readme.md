@@ -39,11 +39,11 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Manage {{Token-Name}}   platform and workloads |  | [manage.md](manage.md) | The [Manage   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/)   in the Microsoft Cloud Adoption Framework for Azure outlines a path for   implementing an operations baseline, and maturing that baseline throughout   your cloud adoption lifecycle. |
 | L1 | Well-architected   considerations |  | [well-architected-framework.md](well-architected-framework.md) | For many of the named workloads, it's important to adhere to a   set of architectural principles. These principles help guide development and   optimization of the workloads. The five architectural constructs are detailed   in the [Azure Well-Architected Framework](https://docs.microsoft.com/azure/azure/architecture/framework/). |
 | L1 | {{Token-Name}} architectures |  | NA | Table of contents section. |
-|  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Azure reference   architectures](/azure/architecture/browse/). |
+|  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Azure reference   architectures](https://docs.microsoft.com/azure/architecture/browse/). |
 | L1 | Azure product documentation |  | NA | Table of contents section. |
-|  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Learn   modules](/learn/). |
+|  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Technical documentation](https://docs.microsoft.com/documentation/). |
 | L1 | Build skills on Learn |   | NA | Table of contents section. |
-|  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Learn   modules](/learn/). |
+|  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Learn modules](https://docs.microsoft.com/learn/). |
 
 ## Token used in the templates
 
