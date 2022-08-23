@@ -1,7 +1,6 @@
 items:
-  - name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
+  - name: \{{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
     href: strategy.md
   - name: Technical planning
@@ -51,7 +50,7 @@ items:
   - name: Well-architected considerations
     href: well-architected-framework.md
 
-  - name: {{Token-Name}} Architectures - Add links to product architectures
+  - name: \{{Token-Name}} Architectures - Add links to product architectures
     items:
     - name: Example
       href: /azure
