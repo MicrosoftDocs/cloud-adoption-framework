@@ -17,7 +17,7 @@ Modernize your workloads in the cloud. Modernization is where you enhance existi
 
 :::image type="content" source="../_images/modernize/modernize-methodology-v7.png" alt-text="Graphic showing business alignment and modernization disciplines.":::
 
-During business alignment, you envision, evaluate, and commit to a modernization roadmap. The modernization roadmap he modernization strategies will show you how to modernize your process, application, and database.
+During business alignment, you envision, evaluate, and commit to modernization strategies. The modernization strategies will show you how to modernize your process, application, and database.
 
 ## Next steps
 
