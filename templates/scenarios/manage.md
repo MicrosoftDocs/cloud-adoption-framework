@@ -1,6 +1,6 @@
 ---
 title: Manage {{Token-Name}}
-description: {{Describe the scenario's impact on operations management.}}
+description: #Describe the scenario's impact on operations management.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}

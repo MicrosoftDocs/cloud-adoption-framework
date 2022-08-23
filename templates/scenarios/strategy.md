@@ -1,6 +1,6 @@
 ---
 title: Strategy for {{Token-Name}} adoption
-description: {{Describe the scenario's impact on strategy.}}
+description: #Describe the scenario's impact on strategy.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}

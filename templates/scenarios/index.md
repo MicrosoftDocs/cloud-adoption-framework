@@ -1,6 +1,6 @@
 ---
 title: Introduction to the {{Token-Name}} adoption scenario
-description: {{Describe the scenario.}}
+description: #Describe the scenario.}}
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}

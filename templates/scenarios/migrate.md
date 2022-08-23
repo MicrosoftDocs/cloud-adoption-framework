@@ -1,6 +1,6 @@
 ---
 title: Migrate workloads for {{Token-Name}}
-description: {{Describe the scenario's impact on migration deployment.}}
+description: #Describe the scenario's impact on migration deployment.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}

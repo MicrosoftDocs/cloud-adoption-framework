@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale platform automation and DevOps for {{Token-LongName}}
-description: {{Describe how this enterprise-scale scenario can improve platform automation and devops of {{Token-Name}}.}}
+description: #Describe how this enterprise-scale scenario can improve platform automation and devops of {{Token-Name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}

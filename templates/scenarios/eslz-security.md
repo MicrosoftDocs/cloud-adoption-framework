@@ -1,6 +1,6 @@
 ---
 title: Security disciplines for {{Token-LongName}}
-description: {{Describe how this scenario can improve security, for {{Token-Name}}.>>
+description: #Describe how this scenario can improve security, for {{Token-Name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
