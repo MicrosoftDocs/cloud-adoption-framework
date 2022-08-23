@@ -5,12 +5,14 @@ items:
     href: strategy.md
   - name: Technical planning
     href: plan.md
-  - name: Prepare your environments
+  - name: Prepare your environment
     items: 
     - name: Azure Landing Zones
       href: ready.md
     - name: Design areas
       items:
+      - name: Billing and Active Directory tenant
+        href: eslz-enterprise-enrollment-and-azure-ad-tenants.md
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
@@ -33,12 +35,6 @@ items:
         href: enterprise-scale-landing-zone.md
       - name: TODO - Add reference to smaller RA from AAC here
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
-  - name: Govern {{Token-Name}} and Azure
-    href: govern.md
-  - name: Secure {{Token-Name}}
-    href: secure.md
-  - name: Organize {{Token-Name}}
-    href: organize.md
   - name: Migrate {{Token-Name}} to Azure
     href: migrate.md
   - name: Innovate with {{Token-Name}} on Azure
@@ -47,6 +43,10 @@ items:
     href: govern.md
   - name: Manage {{Token-Name}} platform and workloads
     href: manage.md
+  - name: Secure {{Token-Name}}
+    href: secure.md
+  - name: Organize {{Token-Name}}
+    href: organize.md
   - name: Well-architected considerations
     href: well-architected-framework.md
 
