@@ -74,7 +74,7 @@ Begin modernizing. You've adopted DevOps tools and planned your work. Start plan
 
 ## Next steps
 
-Your [modernization roadmap](/business-alignment/commit-to-modernization-plan.md/#next-steps) will guide you to modernize your applications or databases next.
+Your modernization roadmap will guide you to modernize your applications or databases next.
 
 >[!div class="nextstepaction"]
 > [Modernize your applications](../../modernize/modernize-strategies/application-modernization.md)
