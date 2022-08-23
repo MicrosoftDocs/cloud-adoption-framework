@@ -1648,10 +1648,10 @@ items:
         href: manage/considerations/platform.md
       - name: Workload operations
         href: manage/considerations/workload.md
-    - name: Advanced management and system design
-      href: manage/design-principles.md
-    - name: Manage antipatterns
-      href: antipatterns/manage-antipatterns.md
+      - name: Advanced management and system design
+        href: manage/design-principles.md
+      - name: Manage antipatterns
+        href: antipatterns/manage-antipatterns.md
 
   - name: Secure
     items:
