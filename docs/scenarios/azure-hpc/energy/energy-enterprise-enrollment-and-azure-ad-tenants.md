@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
+
 ---
 
 # Enterprise enrollment and Azure AD tenants for Azure high-performance computing (HPC) enterprise-scale scenario - Energy
