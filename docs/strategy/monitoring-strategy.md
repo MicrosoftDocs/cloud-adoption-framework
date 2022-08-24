@@ -32,7 +32,7 @@ The following are important areas that strongly influence a sound monitoring str
 
 - Collect only the metrics and logs that are useful, measurable, and identifiable to the business and IT organization.
 
-- Define an integration plan with existing IT service management (ITSM) solutions, such as remedy or ServiceNow for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
+- Define an integration plan with existing IT service management (ITSM) solutions, such as remedy or ServiceNow, for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
 
 - Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.
 
@@ -108,7 +108,7 @@ Some key questions include:
 
 To assemble this architecture, here are several considerations:
 
-- Consider a dataflow approaches that starts from service assets and goes up the stack: metrics and log data emitted by infrastructure, IoT devices, mobile devices, and others. Are all of the items under management-to-monitoring tools (mid-tier)? Move upward and outward (ITSM tools, global monitoring, security information and event management (SIEM), custom alert enrichment, and others).
+- Consider a dataflow approach that starts from service assets and goes up the stack: metrics and log data emitted by infrastructure, IoT devices, mobile devices, and others. Are all of the items under management-to-monitoring tools (mid-tier)? Move upward and outward (ITSM tools, global monitoring, security information and event management (SIEM), custom alert enrichment, and others).
 
 - Whether to continue with [System Center Operations Manager](/system-center/scom/welcome) or other monitoring tools.
 
