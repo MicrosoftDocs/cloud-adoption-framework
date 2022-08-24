@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale network topology and connectivity for {{Token-LongName}}
+title: Enterprise-scale network topology and connectivity for Azure high-performance computing (HPC)
 description: #Describe how this enterprise-scale scenario can improve network topology and connectivity of HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,21 +10,21 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Network topology and connectivity for {{Token-LongName}} enterprise-scale scenario
+# Network topology and connectivity for Azure high-performance computing (HPC) enterprise-scale scenario
 
 Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of {{Token-LongName}}.
+The following is a bulleted list of things you must think about when preparing for **any** deployment of Azure high-performance computing (HPC).
 
 ## Design recommendations
 
-The following is a bulleted list of best practices that should be included in any deployment of {{Token-LongName}}.
+The following is a bulleted list of best practices that should be included in any deployment of Azure high-performance computing (HPC).
 
 ## Enterprise-scale assumptions
 
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for {{Token-LongName}}.
+The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Azure high-performance computing (HPC).
 
 ## Additional considerations
 

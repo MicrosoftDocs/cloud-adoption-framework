@@ -30,7 +30,7 @@ The following table lists the structure and parts of the technical platform scen
 | L3 | Deployment options |  | [eslz-platform-automation-and-devops.md](eslz-platform-automation-and-devops.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L2 | Implementation options | NA | NA | Table of contents section. |
 | L3 | Example |  | NA | Link to a reference architecture |
-| L3 | HPC on Azure landing zone   accelerator |  | [enterprise-scale-landing-zone.md](enterprise-scale-landing-zone.md) | The {{Token-LongName}} construction set is an open-source   collection of Terraform templates that you can use to automate the deployment   of an environment capable of hosting {{Token-LongName}}.  |
+| L3 | HPC on Azure landing zone   accelerator |  | [enterprise-scale-landing-zone.md](enterprise-scale-landing-zone.md) | The Azure high-performance computing (HPC) construction set is an open-source   collection of Terraform templates that you can use to automate the deployment   of an environment capable of hosting Azure high-performance computing (HPC).  |
 | L1 | Govern |  | [govern.md](govern.md) | The [Cloud Adoption Framework provides a   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/)   to systematically and incrementally improve governance of your cloud   portfolio. |
 | L1 | Secure |  | [secure.md](secure.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Strategy   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/) |
 | L1 | Organize |  | [organize.md](organize.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Organize   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/).  |
@@ -52,7 +52,7 @@ The following table contains the tokens that reappear throughout the templates u
 |     Token                            |     Description                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
 |     HPC                   |     Short   name of the scenario.                               |
-|     {{Token-LongName}}               |     The   long name of the scenario.                            |
+|     Azure high-performance computing (HPC)               |     The   long name of the scenario.                            |
 |     {{Token-ContributorGithubId}}    |     Author's   GitHub ID.                                       |
 |     {{Token-Alias}}                  |     Author's   Microsoft ID.                                    |
 |     {{Token-Date}}                   |     Publication   date of the scenario in MM/DD/YYYY format.    |
