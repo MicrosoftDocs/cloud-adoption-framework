@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Platform automation and devops for Azure high-performance computing (HPC) enterprise-scale scenario
+# Platform automation and devops for Azure high-performance computing (HPC) enterprise-scale scenario - Finance
 
 Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 

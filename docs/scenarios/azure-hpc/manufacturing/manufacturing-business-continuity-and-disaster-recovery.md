@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Business continuity and disaster recovery for Azure high-performance computing (HPC) enterprise-scale scenario
+# Business continuity and disaster recovery for Azure high-performance computing (HPC) enterprise-scale scenario - Manufacturing
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 

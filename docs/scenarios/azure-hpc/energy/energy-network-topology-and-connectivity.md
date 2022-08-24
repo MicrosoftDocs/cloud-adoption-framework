@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Network topology and connectivity for Azure high-performance computing (HPC) enterprise-scale scenario
+# Network topology and connectivity for Azure high-performance computing (HPC) enterprise-scale scenario - Energy
 
 Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 

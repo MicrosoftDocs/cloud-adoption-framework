@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Management and monitoring for Azure high-performance computing (HPC) enterprise-scale scenario
+# Management and monitoring for Azure high-performance computing (HPC) enterprise-scale scenario - Energy
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 

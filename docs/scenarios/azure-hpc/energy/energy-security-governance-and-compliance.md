@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Governance disciplines for Azure high-performance computing (HPC)
+# Governance disciplines for Azure high-performance computing (HPC) - Energy
 
 Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
