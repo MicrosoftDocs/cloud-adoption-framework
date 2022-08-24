@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale identity and access management for Azure high-performance computing (HPC)
-description: #Describe how this enterprise-scale scenario can improve identity and access management of HPC.
+title: Security disciplines for Azure high-performance computing (HPC)
+description: #Describe how this scenario can improve security, for HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Identity and access management for Azure high-performance computing (HPC) enterprise-scale scenario - Finance
+# Security disciplines for Azure high-performance computing (HPC)
 
 Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 

@@ -1,6 +1,6 @@
 ---
-title: Secure {{Token-Name}} in Azure
-description: #Learn about the security principles for {{Token-Name}} in Azure.
+title: Secure HPC in Azure
+description: #Learn about the security principles for HPC in Azure.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Secure {{Token-Name}} in Azure
+# Secure HPC in Azure
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Security methodology](../../secure/index.md)
 
 ## Security principles
 
-The focus of {{Token-Name}} is based on key management principles:
+The focus of HPC is based on key management principles:
 
 | Principle | Description |
 |--|--|
@@ -30,10 +30,10 @@ The focus of {{Token-Name}} is based on key management principles:
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for {{Token-Name}}](./plan.md)
+- [Plan for HPC](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern {{Token-Name}}](./govern.md)
-- [Organize team members for {{Token-Name}} in Azure](./organize.md)
-- [Migrate {{Token-Name}}](./migrate.md)
-- [Innovate with {{Token-Name}}](./innovate.md)
-- [Manage {{Token-Name}}](./manage.md)
+- [Govern HPC](./govern.md)
+- [Organize team members for HPC in Azure](./organize.md)
+- [Migrate HPC](./migrate.md)
+- [Innovate with HPC](./innovate.md)
+- [Manage HPC](./manage.md)

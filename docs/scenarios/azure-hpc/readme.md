@@ -12,13 +12,13 @@ The following table lists the structure and parts of the technical platform scen
 
 | Level | TOC Entry | Topic Title | Filename | Summary |
 |---|---|---|---|---|
-| TOC | Introduction to the {{Token-Name}} scenario | Introduction to the {{Token-Name}} scenario | [toc.yml](toc.yml) | The yaml table of contents file contains the outline, the   order and organization, of documents in the scenario. The CAF content team   will make the required updates to the main TOC. This shouldn't be done by a   contributor, unless it's a separate TOC file for an end-to-end scenario. |
-| L1 | {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure | Introduction to the {{Token-Name}} scenario | [index.md](index.md) | The landing page describes the context and narrative of the   scenario. |
-| L1 | {{Token-Name}} adoption - Microsoft Cloud Adoption Framework   for Azure | NA | NA | Table of contents section. |
-| L1 | Strategic impact | Strategic impact of {{Token-Name}} | [strategy.md](strategy.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Strategy   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/). |
-| L1 | Technical planning | Plan for {{Token-Name}} | [plan.md](plan.md) | [Cloud Adoption Framework's Plan   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/)   helps create an overall cloud adoption plan to guide the programs and teams   involved in your cloud-based digital transformation. |
+| TOC | Introduction to the HPC scenario | Introduction to the HPC scenario | [toc.yml](toc.yml) | The yaml table of contents file contains the outline, the   order and organization, of documents in the scenario. The CAF content team   will make the required updates to the main TOC. This shouldn't be done by a   contributor, unless it's a separate TOC file for an end-to-end scenario. |
+| L1 | HPC - Microsoft Cloud Adoption Framework for Azure | Introduction to the HPC scenario | [index.md](index.md) | The landing page describes the context and narrative of the   scenario. |
+| L1 | HPC adoption - Microsoft Cloud Adoption Framework   for Azure | NA | NA | Table of contents section. |
+| L1 | Strategic impact | Strategic impact of HPC | [strategy.md](strategy.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Strategy   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/). |
+| L1 | Technical planning | Plan for HPC | [plan.md](plan.md) | [Cloud Adoption Framework's Plan   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/)   helps create an overall cloud adoption plan to guide the programs and teams   involved in your cloud-based digital transformation. |
 | L1 | Prepare your environment | NA | NA | Table of contents section. |
-| L2 | Azure landing zones | Azure Landing Zone review for {{Token-Name}} | [ready.md](ready.md) | NA |
+| L2 | Azure landing zones | Azure Landing Zone review for HPC | [ready.md](ready.md) | NA |
 | L2 | Design areas | NA | NA | Table of contents section. |
 | L3 | Enterprise enrollment |  | [eslz-identity-and-access-management.md](eslz-identity-and-access-management.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Identity and access   management |  | [eslz-network-topology-and-connectivity.md](eslz-network-topology-and-connectivity.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
@@ -30,15 +30,15 @@ The following table lists the structure and parts of the technical platform scen
 | L3 | Deployment options |  | [eslz-platform-automation-and-devops.md](eslz-platform-automation-and-devops.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L2 | Implementation options | NA | NA | Table of contents section. |
 | L3 | Example |  | NA | Link to a reference architecture |
-| L3 | {{Token-Name}} on Azure landing zone   accelerator |  | [enterprise-scale-landing-zone.md](enterprise-scale-landing-zone.md) | The {{Token-LongName}} construction set is an open-source   collection of Terraform templates that you can use to automate the deployment   of an environment capable of hosting {{Token-LongName}}.  |
+| L3 | HPC on Azure landing zone   accelerator |  | [enterprise-scale-landing-zone.md](enterprise-scale-landing-zone.md) | The Azure high-performance computing (HPC) construction set is an open-source   collection of Terraform templates that you can use to automate the deployment   of an environment capable of hosting Azure high-performance computing (HPC).  |
 | L1 | Govern |  | [govern.md](govern.md) | The [Cloud Adoption Framework provides a   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/)   to systematically and incrementally improve governance of your cloud   portfolio. |
 | L1 | Secure |  | [secure.md](secure.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Strategy   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/) |
 | L1 | Organize |  | [organize.md](organize.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Organize   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/).  |
-| L1 | Migrate {{Token-Name}} to   Azure |  | [migrate.md](migrate.md) | Establish a driving statement to shape migration of this   technology platform. Best practice encourages customers to create a migration   statement, using the [Cloud Adoption Framework's migrate   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/).  |
-| L1 | Innovate with   {{Token-Name}} and Azure |  | [innovate.md](innovate.md) | The innovate methodology of the Cloud Adoption Framework for   Azure drives adoption through the build-measure-learn cycle. For more   information, see [Innovate   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/innovate/). |
-| L1 | Manage {{Token-Name}}   platform and workloads |  | [manage.md](manage.md) | The [Manage   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/)   in the Microsoft Cloud Adoption Framework for Azure outlines a path for   implementing an operations baseline, and maturing that baseline throughout   your cloud adoption lifecycle. |
+| L1 | Migrate HPC to   Azure |  | [migrate.md](migrate.md) | Establish a driving statement to shape migration of this   technology platform. Best practice encourages customers to create a migration   statement, using the [Cloud Adoption Framework's migrate   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/).  |
+| L1 | Innovate with   HPC and Azure |  | [innovate.md](innovate.md) | The innovate methodology of the Cloud Adoption Framework for   Azure drives adoption through the build-measure-learn cycle. For more   information, see [Innovate   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/innovate/). |
+| L1 | Manage HPC   platform and workloads |  | [manage.md](manage.md) | The [Manage   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/)   in the Microsoft Cloud Adoption Framework for Azure outlines a path for   implementing an operations baseline, and maturing that baseline throughout   your cloud adoption lifecycle. |
 | L1 | Well-architected   considerations |  | [well-architected-framework.md](well-architected-framework.md) | For many of the named workloads, it's important to adhere to a   set of architectural principles. These principles help guide development and   optimization of the workloads. The five architectural constructs are detailed   in the [Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/). |
-| L1 | {{Token-Name}} architectures |  | NA | Table of contents section. |
+| L1 | HPC architectures |  | NA | Table of contents section. |
 |  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Azure reference   architectures](https://docs.microsoft.com/azure/architecture/browse/). |
 | L1 | Azure product documentation |  | NA | Table of contents section. |
 |  | Example |  | NA | Provide a title  and   link in the table of contents for one or more supporting [Technical documentation](https://docs.microsoft.com/documentation/). |
@@ -51,8 +51,8 @@ The following table contains the tokens that reappear throughout the templates u
 
 |     Token                            |     Description                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-|     {{Token-Name}}                   |     Short   name of the scenario.                               |
-|     {{Token-LongName}}               |     The   long name of the scenario.                            |
+|     HPC                   |     Short   name of the scenario.                               |
+|     Azure high-performance computing (HPC)               |     The   long name of the scenario.                            |
 |     {{Token-ContributorGithubId}}    |     Author's   GitHub ID.                                       |
 |     {{Token-Alias}}                  |     Author's   Microsoft ID.                                    |
 |     {{Token-Date}}                   |     Publication   date of the scenario in MM/DD/YYYY format.    |

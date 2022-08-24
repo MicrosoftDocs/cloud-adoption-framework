@@ -1,5 +1,5 @@
 ---
-title: Organize team members for {{Token-Name}} in Azure
+title: Organize team members for HPC in Azure
 description: #Describe the scenario's organizational impact.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Organize team members for {{Token-Name}} in Azure
+# Organize team members for HPC in Azure
 
-{{Token-Name}} architecture was designed with a set of core principles.
+HPC architecture was designed with a set of core principles.
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Organize methodology](../../organize/index.md). Align the teams and roles supporting your organization's cloud adoption efforts.
 
@@ -41,10 +41,10 @@ For more information, see [Align responsibilities across teams](https://docs.mic
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for {{Token-Name}}](./plan.md)
+- [Plan for HPC](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern {{Token-Name}}](./govern.md)
-- [Strategic impact of {{Token-Name}}](./secure.md)
-- [Migrate {{Token-Name}}](./migrate.md)
-- [Innovate with {{Token-Name}}](./innovate.md)
-- [Manage {{Token-Name}}](./manage.md)
+- [Govern HPC](./govern.md)
+- [Strategic impact of HPC](./secure.md)
+- [Migrate HPC](./migrate.md)
+- [Innovate with HPC](./innovate.md)
+- [Manage HPC](./manage.md)
