@@ -1,5 +1,5 @@
 ---
-title: The Azure Well-Architected Framework for {{Token-Name}}
+title: The Azure Well-Architected Framework for HPC
 description: #Use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your scenario.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# The Azure Well-Architected Framework for {{Token-Name}}
+# The Azure Well-Architected Framework for HPC
 
 The [Plan methodology of this scenario](./plan.md) outlines a process for you to rationalize your scenario, prioritize technical efforts, and identify workloads. For many of the named workloads, it's important to adhere to a set of architectural principles. These principles help guide development and optimization of the workloads. The five architectural constructs are detailed in the [Azure Well-Architected Framework](/azure/architecture/framework/). This guidance provides a summary of how you can apply these principles to the management of your data workloads.
 
@@ -46,4 +46,4 @@ Describe how you will design a system to adapt to changes in load.
 
 ## Next steps
 
-[Introduction to architectures for {{Token-Name}}](./index.md)
+[Introduction to architectures for HPC](./index.md)

@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale support for {{Token-LongName}}
-description: #Describe how enterprise-scale can accelerate adoption of {{Token-Name}}.
+description: #Describe how enterprise-scale can accelerate adoption of HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}

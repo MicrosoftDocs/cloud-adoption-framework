@@ -1,5 +1,5 @@
 items:
-  - name: \{{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
+  - name: HPC - Microsoft Cloud Adoption Framework for Azure
     href: index.md
   - name: Strategic impact
     href: strategy.md
@@ -35,27 +35,27 @@ items:
         href: enterprise-scale-landing-zone.md
       - name: TODO - Add reference to smaller RA from AAC here
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
-  - name: Migrate {{Token-Name}} to Azure
+  - name: Migrate HPC to Azure
     href: migrate.md
-  - name: Innovate with {{Token-Name}} on Azure
+  - name: Innovate with HPC on Azure
     href: migrate.md
-  - name: Govern {{Token-Name}} in Azure
+  - name: Govern HPC in Azure
     href: govern.md
-  - name: Manage {{Token-Name}} platform and workloads
+  - name: Manage HPC platform and workloads
     href: manage.md
-  - name: Secure {{Token-Name}}
+  - name: Secure HPC
     href: secure.md
-  - name: Organize {{Token-Name}}
+  - name: Organize HPC
     href: organize.md
   - name: Well-architected considerations
     href: well-architected-framework.md
 
-  - name: \{{Token-Name}} Architectures - Add links to product architectures
+  - name: HPC Architectures - Add links to product architectures
     items:
     - name: Example
       href: /azure
 
-  - name: Azure product documentatoin - Add links to product docs
+  - name: Azure product documentation - Add links to product docs
     items:
     - name: Example
       href: /azure

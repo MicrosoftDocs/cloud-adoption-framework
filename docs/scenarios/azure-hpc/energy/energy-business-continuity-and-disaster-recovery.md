@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale business continuity and disaster recovery for {{Token-LongName}}
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of {{Token-Name}}.
+description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}

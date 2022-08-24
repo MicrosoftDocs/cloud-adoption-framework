@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale management group and subscription organization for {{Token-LongName}}
-description: #Describe how this enterprise-scale scenario can improve management group and subscription organization of {{Token-Name}}.
+description: #Describe how this enterprise-scale scenario can improve management group and subscription organization of HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
