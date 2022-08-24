@@ -184,9 +184,9 @@ As you gain confidence in Azure Monitor capabilities, you can start measuring he
 
 As part of the learning cycle, you'll get monitoring data and insights into the hands of managers, and ensure the right consumers have the monitoring data they need. Learning cycles include continual tuning and optimizing of your initial monitoring plans to adapt, to improve service, and inform adoption plans.
 
-![Chart that shows monitoring and control strategy principles and modes.](./media/monitoring-strategy/monitoring-and-control-strategy.png)
+The DIKW model is often used for learning. Actions and decisions move from *data* to *information*, *knowledge*, and *wisdom*.
 
-<sup>1</sup> The DIKW model is an often used method, with roots in knowledge management, to explain the ways we move from *data* to *information*, *knowledge*, and *wisdom* with a component of actions and decisions.
+![Chart that shows monitoring and control strategy principles and modes.](./media/monitoring-strategy/monitoring-and-control-strategy.png)
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
