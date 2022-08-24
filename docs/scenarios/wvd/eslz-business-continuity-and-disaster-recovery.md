@@ -1,16 +1,16 @@
 ---
-title: BCDR for Azure Virtual Desktop
-description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for an Azure Virtual Desktop environment.
+title: Business continuity and disaster recovery for Azure Virtual Desktop
+description: Learn how this design area can improve business continuity and disaster recovery for an Azure Virtual Desktop environment.
 author: igorpag
 ms.author: brblanch
-ms.date: 05/18/2021
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Business continuity and disaster recovery (BCDR) considerations for Azure Virtual Desktop
+# Business continuity and disaster recovery considerations for Azure Virtual Desktop
 
 Azure Virtual Desktop is a Microsoft-managed service that provides a control plane for your desktop virtualization environment. The service is free of charge and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Azure Virtual Desktop service URLs.
 
@@ -19,17 +19,17 @@ Azure Virtual Desktop is a Microsoft-managed service that provides a control pla
 
 A good BCDR strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages. Your strategy should consider resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, like host pools and storage.
 
-To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If there is an outage, the service infrastructure components fail over to the secondary location and continue functioning as normal.
+To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
-For more information on BCDR considerations for your Azure resources, see [Set up a business continuity and disaster recovery plan](/azure/virtual-desktop/disaster-recovery).
+For more information about BCDR considerations for your Azure resources, see [Set up a business continuity and disaster recovery plan](/azure/virtual-desktop/disaster-recovery).
 
 ## Design considerations
 
-### Host pool *active-active* vs. *active-passive*
+### Host pool active-active vs. active-passive
 
 For an Azure Virtual Desktop host pool, you can adopt either an *active-active* or *active-passive* BCDR approach.
 
-An *active-active* approach:
+In an *active-active* approach:
 
 - Storage outages are mitigated without requiring the user to reauthenticate.
 - Continuous testing of the disaster recovery location is enabled.
@@ -120,9 +120,9 @@ The following are best practices for your design:
 - Azure Site Recovery is also supported for pooled (*shared*) host pools. This option can be evaluated and compared to the deployment of another host pool in the secondary disaster recovery region.
 - When maximum resiliency of the host pool is required in a single region, use *Availability Zones*. Verify the *Availability Zones* feature availability in the specific region, and availability of the specific VM SKU inside all the zones.
 
-We recommend storing FSLogix user profile and office containers on Azure Files or Azure NetApp Files for most scenarios.
+For most scenarios, we recommend that you store FSLogix user profile and Office containers on Azure Files or Azure NetApp Files.
 
-- Split user profile and office containers.
+- Split user profile and Office containers.
 - The recommended options for container storage types are (in order): Azure Files Premium tier, Azure NetApp Files Standard tier, and Azure NetApp Files Premium tier.
 - The recommended storage type depends on the resources and latency required by the specific workload.
 - For optimal performance, place FSLogix containers on storage close to the VM the user is logged on to. Keeping the containers in the same datacenter is best.
@@ -132,9 +132,9 @@ We recommend storing FSLogix user profile and office containers on Azure Files o
   - Use LRS with local only resiliency if no zone/region protection is required.
 
 > [!NOTE]
-> GRS isn't available with Azure Files Premium tier or Standard tier with large file support enabled.
+> GRS isn't available with Azure Files Premium tier or Standard tier if large file support is enabled.
 
-- Only use cloud cache when:
+- Use cloud cache only when:
   - The user profile or office container data availability requires high-availability, or an SLA is critical and must be resilient to region failure.
   - The selected storage option can't satisfy BCDR requirements. For example, GRS isn't available with Azure Files Premium tier or Standard tier with large file support enabled.
   - Replication between disparate storage is required.
@@ -145,13 +145,13 @@ We recommend storing FSLogix user profile and office containers on Azure Files o
   - Make sure that the managed disk for the local VM is large enough to accommodate the local cache of all user's FSLogix profile and office containers.
 
 - Use an Azure Shared Image Gallery to replicate golden images to different regions.
-  - The storage used for image creation should be zone-redundant storage (ZRS). At least two copies per region should be maintained.
+  - Use zone-redundant storage (ZRS) to create the image. Maintain at least two copies of the image per region.
 
-- Use Azure Backup to protect critical user data from data loss or logical corruption when using either Azure Files Standard tier or Premium tier.
-  - Use snapshots and policies when using the Azure NetApp Files service.
-  - Even if supported, using Azure Backup to save your VM state in the host pool isn't recommended since it should be stateless.
+- Use Azure Backup to protect critical user data from data loss or logical corruption when you use the Azure Files Standard tier or Premium tier.
+  - Use snapshots and policies when you use the Azure NetApp Files service.
+  - We recommend that you don't use Azure Backup to save your VM state in the host, even if the option is supported. The VM saved in the host pool should be stateless.
 
-- Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or on-premises.
-  - Network infrastructure, as part of hub and spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
-  - Hybrid connectivity must be highly available in both the primary and secondary regions.
+- Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or in your on-premises environment.
+  - Network infrastructure, as part of a hub-and-spoke architecture or as a virtual wide area network (WAN) architecture, must be available in the secondary region.
+  - Hybrid connectivity must be highly available in both the primary and the secondary regions.
   - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
