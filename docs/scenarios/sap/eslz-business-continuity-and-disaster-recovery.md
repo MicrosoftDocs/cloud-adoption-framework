@@ -113,8 +113,13 @@ One advantage of deploying your high availability architecture across different 
 
 ### Backup/restore
 
-**Design Considerations for backup/restore:**
-=======
+### Design recommendations for backup and restore
+
+- You can use Azure Backup to back up SAP application server and central-services VMs.
+- You can use an SAP HANA backup for HANA deployments up to 8 TB. For more information, explore the support matrix for [backing up SAP HANA databases on Azure VMs](/azure/backup/sap-hana-backup-support-matrix).
+- Test the backup and recovery times to verify if they meet your RTO.
+- Ideally, avoid pulling your backups from Azure into your on-premises backup infrastructure, especially with large databases. This option impacts how much bandwidth the ExpressRoute circuits consume.
+
 ## Backup and restore
 
 Review design considerations and recommendations for backup and restore in an SAP enterprise scenario.
