@@ -12,9 +12,9 @@ ms.custom: think-tank
 
 # Plan for {{Token-Name}}
 
-[Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include {{Token-Name}} into the overall cloud adoption plan.
+[Cloud Adoption Framework's Plan methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/plan) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include {{Token-Name}} into the overall cloud adoption plan.
 
-Application of the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
+Application of the Plan methodology focuses on the [five Rs of rationalizing your digital estate](https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
 
 ## {{Token-Name}} estate
 

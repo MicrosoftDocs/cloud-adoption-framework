@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Azure Landing Zone review for {{Token-Name}}
 
-The [Ready methodology](../../ready/index.md) of the Microsoft Azure Cloud Adoption Framework guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practices guidance in the Cloud Adoption Framework. When preparing for a {{Token-Name}}, there are a number of environment configurations that may be slightly different.
+The [Ready methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/ready) of the Microsoft Azure Cloud Adoption Framework guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practices guidance in the Cloud Adoption Framework. When preparing for a {{Token-Name}}, there are a number of environment configurations that may be slightly different.
 
 This article outlines key considerations and changes that are necessary to prepare your environments for the following:
 

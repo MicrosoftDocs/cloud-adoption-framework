@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Modernize your workloads for {{Token-Name}}
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](../../modernize/index.md).
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/).
 
 ## {{Token-Name}} business alignment
 

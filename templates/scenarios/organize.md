@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 {{Token-Name}} architecture was designed with a set of core principles.
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Organize methodology](../../organize/index.md). Align the teams and roles supporting your organization's cloud adoption efforts.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Organize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/organize). Align the teams and roles supporting your organization's cloud adoption efforts.
 
 ## Core principles
 
