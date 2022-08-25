@@ -19,9 +19,9 @@ To build a [cost-conscious organization](../../organize/cost-conscious-organizat
 
 ## Establish a well-managed environment
 
-Cost control, much like governance and other management constructs, depends on a well-managed environment. To establish such an environment, especially a complex one, you need to consistently classify and organize all assets. Azure provides several mechanisms for classifying and organizing assets. 
+Cost control, much like governance and other management constructs, depends on a well-managed environment. To establish such an environment, especially a complex one, you need to consistently classify and organize all assets. Azure provides several mechanisms for classifying and organizing assets.
 
-Assets, which are also known as resources, include all virtual machines, data sources, and applications deployed to the cloud. [Organize and manage your subscriptions](../azure-best-practices/organize-subscriptions.md) based on multiple criteria to establish a well-managed environment. 
+Assets, which are also known as resources, include all virtual machines, data sources, and applications deployed to the cloud. [Organize and manage your subscriptions](../azure-best-practices/organize-subscriptions.md) based on multiple criteria to establish a well-managed environment.
 
 ### Classify assets
 
@@ -59,7 +59,7 @@ The rest of this article assumes the use of the best-practice approach in the pr
 
 ## Provide the right level of cost access
 
-Managing cost is a team activity. The organization readiness section of the Cloud Adoption Framework defines a few core teams and outlines how those teams support cloud adoption efforts. 
+Managing cost is a team activity. The organization readiness section of the Cloud Adoption Framework defines a few core teams and outlines how those teams support cloud adoption efforts.
 
 For the proper level of visibility into cost management data, the members of the team are assigned scope and roles. **Roles** define what a user can do to various assets. The **Scope** defines which assets, such as user, group, service principal, or managed identity, that a user can affect. As a general best practice, we suggest a least-privilege model in assigning people to various roles and scopes.
 
