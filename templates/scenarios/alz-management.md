@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale enterprise enrollment and Azure AD tenants for {{Token-LongName}}
-description: #Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of {{Token-Name}}.
+title: Enterprise-scale management for {{Token-LongName}}
+description: #Describe how this enterprise-scale scenario can improve management and monitoring of {{Token-Name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Enterprise enrollment and Azure AD tenants for {{Token-LongName}} enterprise-scale scenario
+# Management for {{Token-LongName}} enterprise-scale scenario
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 

@@ -1,5 +1,5 @@
 items:
-  - name: \{{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
+  - name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
     href: index.md
   - name: Strategic impact
     href: strategy.md
@@ -11,24 +11,22 @@ items:
       href: ready.md
     - name: Design areas
       items:
-      - name: Billing and Active Directory tenant
-        href: eslz-enterprise-enrollment-and-azure-ad-tenants.md
+      - name: Azure billing and Active Directory tenant
+        href: alz-azure-billing-and-active-directory-tenant.md
       - name: Identity and access management
-        href: eslz-identity-and-access-management.md
+        href: alz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: eslz-network-topology-and-connectivity.md
+        href: alz-network-topology-and-connectivity.md
       - name: Resource organization
-        href: eslz-resource-organization.md
+        href: alz-resource-organization.md
       - name: Security
-        href: eslz-security.md
+        href: alz-security.md
       - name: Management
-        href: eslz-management-and-monitoring.md
+        href: alz-management.md
       - name: Governance discipline
-        href: eslz-security-governance-and-compliance.md
-      - name: Business continuity and disaster recovery
-        href: eslz-business-continuity-and-disaster-recovery.md
+        href: alz-security-governance-and-compliance.md
       - name: Platform automation and DevOps
-        href: eslz-platform-automation-and-devops.md
+        href: alz-platform-automation-and-devops.md
     - name: Implementation options
       items:
       - name: Enterprise-scale for {{Token-LongName}}
@@ -42,7 +40,9 @@ items:
   - name: Migrate {{Token-Name}} to Azure
     href: migrate.md
   - name: Innovate with {{Token-Name}} on Azure
-    href: migrate.md
+    href: innovate.md
+  - name: Modernize
+    href: modernize.md
   - name: Govern {{Token-Name}} in Azure
     href: govern.md
   - name: Manage {{Token-Name}} platform and workloads
@@ -50,12 +50,12 @@ items:
   - name: Well-architected considerations
     href: well-architected-framework.md
 
-  - name: \{{Token-Name}} Architectures - Add links to product architectures
+  - name: {{Token-Name}} Architectures - Add links to product architectures
     items:
     - name: Example
       href: /azure
 
-  - name: Azure product documentatoin - Add links to product docs
+  - name: Azure product documentation - Add links to product docs
     items:
     - name: Example
       href: /azure

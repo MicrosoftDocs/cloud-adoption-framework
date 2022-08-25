@@ -38,12 +38,12 @@ The construction set approach to landing zones provides these assets to support 
 
 These articles provide guidelines for creating your landing zone:
 
-- [{{Token-LongName}} enterprise-scale scenario](./eslz-identity-and-access-management.md)
-- [Network topology and connectivity for {{Token-LongName}} enterprise-scale scenario](./eslz-network-topology-and-connectivity.md)
-- [Management and monitoring for {{Token-LongName}} enterprise-scale scenario](./eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery for {{Token-LongName}} enterprise-scale scenario](./eslz-business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance for {{Token-LongName}} enterprise-scale scenario](./eslz-security-governance-and-compliance.md)
-- [Platform automation and DevOps for {{Token-LongName}} enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
+- [{{Token-LongName}} enterprise-scale scenario](./alz-identity-and-access-management.md)
+- [Network topology and connectivity for {{Token-LongName}} enterprise-scale scenario](./alz-network-topology-and-connectivity.md)
+- [Management and monitoring for {{Token-LongName}} enterprise-scale scenario](./alz-management-and-monitoring.md)
+- [Business continuity and disaster recovery for {{Token-LongName}} enterprise-scale scenario](./alz-business-continuity-and-disaster-recovery.md)
+- [Security, governance, and compliance for {{Token-LongName}} enterprise-scale scenario](./alz-security-governance-and-compliance.md)
+- [Platform automation and DevOps for {{Token-LongName}} enterprise-scale scenario](./alz-platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
@@ -57,4 +57,4 @@ The {{Token-LongName}} construction set is available here...
 
 ## Next steps
 
-- Review the {{Token-LongName}} construction set critical design areas to make complete considerations and recommendations for your {{Token-LongName}} construction set architecture. See [{{Token-LongName}} enterprise-scale scenario](./eslz-identity-and-access-management.md).
+- Review the {{Token-LongName}} construction set design areas to make complete considerations and recommendations for your {{Token-LongName}} construction set architecture. See [{{Token-LongName}} enterprise-scale scenario](./alz-identity-and-access-management.md).
