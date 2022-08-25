@@ -1,5 +1,5 @@
 ---
-title: Modernize databases in the cloud: proprietary SQL, open-source SQL, and NoSQL
+title: Modernize databases in the cloud
 description: Learn how to modernize your database
 author: stephen-sumner
 ms.author: ssumner
