@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management and monitoring for Azure high-performance computing (HPC)
-description: #Describe how this enterprise-scale scenario can improve management and monitoring of HPC.
+title: Security disciplines for Azure high-performance computing (HPC)
+description: #Describe how this scenario can improve security, for HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Management and monitoring for Azure high-performance computing (HPC) enterprise-scale scenario - Finance
+# Security disciplines for Azure high-performance computing (HPC) - Energy
 
-Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
+Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
 ## Design considerations
 

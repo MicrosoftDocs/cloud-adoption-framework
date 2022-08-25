@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale business continuity and disaster recovery for Azure high-performance computing (HPC)
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of HPC.
+title: Azure billing and Active Directory tenant for Azure high-performance computing (HPC)
+description: #Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Business continuity and disaster recovery for Azure high-performance computing (HPC) enterprise-scale scenario - Finance
+# Azure billing and Active Directory tenant for Azure high-performance computing (HPC) enterprise-scale scenario - Manufacturing
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for ANY deployment of Azure high-performance computing (HPC).
+The following is a bulleted list of things you must think about when preparing for **any** deployment of Azure high-performance computing (HPC).
 
 ## Design recommendations
 

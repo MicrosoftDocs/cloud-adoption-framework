@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale enterprise enrollment and Azure AD tenants for Azure high-performance computing (HPC)
-description: #Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of HPC.
+title: Enterprise-scale management for Azure high-performance computing (HPC)
+description: #Describe how this enterprise-scale scenario can improve management and monitoring of HPC.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Enterprise enrollment and Azure AD tenants for Azure high-performance computing (HPC) enterprise-scale scenario - Finance
+# Management for Azure high-performance computing (HPC) enterprise-scale scenario - Energy
 
 Intro paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 
