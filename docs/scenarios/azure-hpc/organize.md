@@ -1,5 +1,5 @@
 ---
-title: Organize team members for HPC in Azure
+title: Organize team members for Azure high-performance computing (HPC) in Azure
 description: #Describe the scenario's organizational impact.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Organize team members for HPC in Azure
+# Organize team members for Azure high-performance computing (HPC) in Azure
 
 HPC architecture was designed with a set of core principles.
 

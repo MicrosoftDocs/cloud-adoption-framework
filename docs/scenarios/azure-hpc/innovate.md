@@ -1,5 +1,5 @@
 ---
-title: Innovate with HPC
+title: Innovate with Azure high-performance computing (HPC)
 description: #Describe the scenario's impact on empowering innovation.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Innovate with HPC
+# Innovate with Azure high-performance computing (HPC)
 
 The innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses HPC to {{why would you innovate with this scenario}}. For more information, see [Innovate methodology](../../innovate/index.md).
 

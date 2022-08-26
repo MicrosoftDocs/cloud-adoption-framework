@@ -1,5 +1,5 @@
 ---
-title: Govern HPC
+title: Govern Azure high-performance computing (HPC)
 description: #Describe the scenario's impact on governance.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Govern HPC
+# Govern Azure high-performance computing (HPC)
 
 The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to govern HPC.
 

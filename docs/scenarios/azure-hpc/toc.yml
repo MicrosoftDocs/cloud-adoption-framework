@@ -1,5 +1,5 @@
 items:
-  - name: HPC - Microsoft Cloud Adoption Framework for Azure
+  - name: Azure high-performance computing (HPC) - Microsoft Cloud Adoption Framework for Azure
     href: index.md
   - name: Strategic impact
     href: strategy.md
@@ -14,61 +14,61 @@ items:
       - name: Design areas
         items:
         - name: Billing and Active Directory tenant
-          href: energy/energy-azure-billing-and-active-directory-tenant
+          href: energy/azure-billing-active-directory-tenant.md
         - name: Identity and access management
-          href: energy/energy-identity-and-access-management.md
+          href: energy/identity-access-management.md
         - name: Network topology and connectivity
-          href: energy/energy-network-topology-and-connectivity.md
+          href: energy/network-topology-connectivity.md
         - name: Resource organization
-          href: energy/energy-resource-organization.md
+          href: energy/resource-organization.md
         - name: Security
-          href: energy/energy-security.md
+          href: energy/security.md
         - name: Management
-          href: energy/energy-management.md
+          href: energy/management.md
         - name: Governance discipline
-          href: energy/energy-security-governance-and-compliance.md
+          href: energy/security-governance-compliance.md
         - name: Platform automation and DevOps
-          href: energy/energy-platform-automation-and-devops.md
+          href: energy/platform-automation-devops.md
     - name: Finance  
       items:
       - name: Design areas
         items:
         - name: Billing and Active Directory tenant
-          href: finance/finance-azure-billing-and-active-directory-tenant
+          href: finance/azure-billing-active-directory-tenant.md
         - name: Identity and access management
-          href: finance/finance-identity-and-access-management.md
+          href: finance/identity-access-management.md
         - name: Network topology and connectivity
-          href: finance/finance-network-topology-and-connectivity.md
+          href: finance/network-topology-connectivity.md
         - name: Resource organization
-          href: finance/finance-resource-organization.md
+          href: finance/resource-organization.md
         - name: Security
-          href: finance/finance-security.md
+          href: finance/security.md
         - name: Management
-          href: finance/finance-management.md
+          href: finance/management.md
         - name: Governance discipline
-          href: finance/finance-security-governance-and-compliance.md
+          href: finance/security-governance-compliance.md
         - name: Platform automation and DevOps
-          href: finance/finance-platform-automation-and-devops.md
+          href: finance/platform-automation-devops.md
     - name: Manufacturing  
       items:
       - name: Design areas
         items:
         - name: Billing and Active Directory tenant
-          href: manufacturing/manufacturing-azure-billing-and-active-directory-tenant
+          href: manufacturing/azure-billing-active-directory-tenant.md
         - name: Identity and access management
-          href: manufacturing/manufacturing-identity-and-access-management.md
+          href: manufacturing/identity-access-management.md
         - name: Network topology and connectivity
-          href: manufacturing/manufacturing-network-topology-and-connectivity.md
+          href: manufacturing/network-topology-connectivity.md
         - name: Resource organization
-          href: manufacturing/manufacturing-resource-organization.md
+          href: manufacturing/resource-organization.md
         - name: Security
-          href: manufacturing/manufacturing-security.md
+          href: manufacturing/security.md
         - name: Management
-          href: manufacturing/manufacturing-management.md
+          href: manufacturing/management.md
         - name: Governance discipline
-          href: manufacturing/manufacturing-security-governance-and-compliance.md
+          href: manufacturing/security-governance-compliance.md
         - name: Platform automation and DevOps
-          href: manufacturing/manufacturing-platform-automation-and-devops.md
+          href: manufacturing/platform-automation-devops.md
 
 
     - name: Implementation options
@@ -79,6 +79,8 @@ items:
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
   - name: Migrate HPC to Azure
     href: migrate.md
+  - name: Modernize iwh HPC on Azure
+    href: modernize.md
   - name: Innovate with HPC on Azure
     href: migrate.md
   - name: Govern HPC in Azure

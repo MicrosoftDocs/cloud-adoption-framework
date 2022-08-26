@@ -1,5 +1,5 @@
 ---
-title: Introduction to the HPC adoption scenario
+title: Introduction to the Azure high-performance computing (HPC) adoption scenario
 description: #Describe the scenario.}}
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Introduction to the HPC scenario
+# Introduction to the Azure high-performance computing (HPC) scenario
 
 Describe your scenario
 

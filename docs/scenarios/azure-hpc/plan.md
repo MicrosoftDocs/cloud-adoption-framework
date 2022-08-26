@@ -1,5 +1,5 @@
 ---
-title: Plan for HPC
+title: Plan for Azure high-performance computing (HPC)
 description: #Describe the scenario's impact on planning.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Plan for HPC
+# Plan for Azure high-performance computing (HPC)
 
 [Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include HPC into the overall cloud adoption plan.
 

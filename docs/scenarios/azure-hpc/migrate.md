@@ -1,5 +1,5 @@
 ---
-title: Migrate workloads for HPC
+title: Migrate workloads for Azure high-performance computing (HPC)
 description: #Describe the scenario's impact on migration deployment.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Migrate HPC
+# Migrate Azure high-performance computing (HPC)
 
 Establish a driving statement to shape migration of this technology platform. Best practice encourages customers to create a migration statement, using the [Cloud Adoption Framework's migrate methodology](../../migrate/index.md). Migrate and modernize existing workloads.
 
