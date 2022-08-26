@@ -38,12 +38,15 @@ The landing zone accelerator approach to landing zones provides these assets to 
 
 These articles provide guidelines for creating your landing zone:
 
-- [{{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-identity-access-management.md)
-- [Network topology and connectivity for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-network-topology-connectivity.md)
-- [Management and monitoring for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-management-monitoring.md)
-- [Business continuity and disaster recovery for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-business-continuity-disaster-recovery.md)
-- [Security, governance, and compliance for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-security-governance-compliance.md)
-- [Platform automation and DevOps for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-platform-automation-devops.md)
+ - [Azure billing and Active Directory tenant for {{Token-Name}} - {{Insert-accelerator-name}} landing zone accelerator](./alz-azure-billing-active-directory-tenant.md)
+ - [Enterprise-scale identity and access management for {{Token-Name}} - {{Insert-accelerator-name}}](./alz-azure-billing-active-directory-tenant.md)
+ - [Enterprise-scale management for {{Token-Name}} - {{Insert-accelerator-name}}](./alz-identity-access-management.md)
+ - [Management for {{Token-Name}} - {{Insert-accelerator-name}} landing zone accelerator](./alz-management.md)
+ - [Network topology and connectivity for {{Token-Name}} - {{Insert-accelerator-name}} landing zone accelerator](./alz-network-topology-connectivity.md)
+ - [Platform automation and devops for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-platform-automation-devops.md)
+ - [Management group and subscription organization for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-resource-organization.md)
+ - [Governance disciplines for {{Token-LongName}}](./alz-security-governance-compliance.md)
+ - [Security disciplines for {{Token-LongName}}](./alz-security.md)
 
 ## Example conceptual reference architecture
 
