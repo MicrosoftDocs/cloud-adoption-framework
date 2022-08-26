@@ -38,12 +38,12 @@ The  landing zone accelerator approach to landing zones provides these assets to
 
 These articles provide guidelines for creating your landing zone:
 
-- [HPC {{Insert-accelerator-name}} landing zone accelerator](./identity-and-access-management.md)
-- [Network topology and connectivity for HPC {{Insert-accelerator-name}} landing zone accelerator](./network-topology-and-connectivity.md)
-- [Management and monitoring for HPC {{Insert-accelerator-name}} landing zone accelerator](./management-and-monitoring.md)
-- [Business continuity and disaster recovery for HPC {{Insert-accelerator-name}} landing zone accelerator](./business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance for HPC {{Insert-accelerator-name}} landing zone accelerator](./security-governance-and-compliance.md)
-- [Platform automation and DevOps for HPC {{Insert-accelerator-name}} landing zone accelerator](./platform-automation-and-devops.md)
+- [HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/identity-and-access-management.md)
+- [Network topology and connectivity for HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/network-topology-and-connectivity.md)
+- [Management and monitoring for HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/management-and-monitoring.md)
+- [Business continuity and disaster recovery for HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/business-continuity-and-disaster-recovery.md)
+- [Security, governance, and compliance for HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/security-governance-and-compliance.md)
+- [Platform automation and DevOps for HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
