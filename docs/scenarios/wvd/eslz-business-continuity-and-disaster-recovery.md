@@ -12,12 +12,12 @@ ms.custom: think-tank, e2e-avd
 
 # Business continuity and disaster recovery considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. The service is free of charge and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Azure Virtual Desktop service URLs.
+Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. The service is free of charge. Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
-A good business continuity and disaster recovery (BCDR) strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages. Your strategy should consider resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, like host pools and storage.
+A good business continuity and disaster recovery (BCDR) strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages. Your strategy should consider resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, including host pools and storage.
 
 To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
@@ -44,7 +44,7 @@ For an Azure Virtual Desktop host pool, you can use either an *active-active* or
 #### Active-passive host pool
 
 - You can use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) or a secondary host pool (hot standby) to maintain a backup environment.
-- You can use Azure Site Recovery for both *personal* (dedicated) and *pooled* (shared) host pool types, and you can maintain a single host pool entity.
+- You can use Azure Site Recovery for both personal (dedicated) and pooled (shared) host pool types, and you can maintain a single host pool entity.
 - You can create a new host pool in the failover region and keep all the resources turned off. For this method, set up new application groups in the failover region and assign users to the groups. Then, you can use a recovery plan in Azure Site Recovery to turn on host pools and create an orchestrated process.
 
 ### Host pool resiliency
@@ -53,26 +53,26 @@ For host pool VM resiliency:
 
 - When you create a new Azure Virtual Desktop host pool, you can choose from different [options](/azure/virtual-machines/availability).
 - It's important to select the right option based on your requirements when you create the VM. You can't change the options later.
-- The default resiliency option for Azure Virtual Desktop host pool deployment is an availability set. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
+- The default resiliency option for Azure Virtual Desktop host pool deployment is an availability set. This option only ensures host pool resiliency at the single Azure datacenter level, with a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
   > [!NOTE]
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-- By using [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should take into account enough extra compute capacity to ensure Azure Virtual Desktop continues to operate even if a single zone is lost.
+- By using [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single zone is lost.
 
   > [!NOTE]
-  > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure portal.
+  > You must use an Azure Resource Manager template (ARM template) to specify zones. This option isn't available yet in the Azure portal.
 
-Before approaching BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with different disaster recovery approaches and capabilities.
+Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications your organization accesses via Azure Virtual Desktop are critical. You might want to separate critical applications from non-critical applications so that you can provision multiple host pools with different disaster recovery approaches and capabilities.
 
-### Optimal storage for profile and office containers
+### Optimal storage for profile and Office containers
 
-The location of storage used for FSLogix containers is critical to ensure the lowest latency from the host pool VM. The FSLogix agent can support multiple profile locations for higher resiliency if you configure the `VHDLocations` registry entry. You can use cloud cache or ensure that a proper [replication mechanism](/azure/virtual-desktop/disaster-recovery#fslogix-configuration) is in place based on the storage type used.
+The location of storage that you use for FSLogix containers is critical to ensure the lowest latency from the host pool VM. The FSLogix agent can support multiple profile locations for higher resiliency if you configure the `VHDLocations` registry entry. You can use cloud cache or ensure that a proper [replication mechanism](/azure/virtual-desktop/disaster-recovery#fslogix-configuration) is in place based on the storage type you use.
 
 Azure offers multiple storage solutions that you can use to store your FSLogix profile and Office container:
 
 - [Storage options for FSLogix profile containers in Azure Virtual Desktop](/azure/virtual-desktop/store-fslogix-profile) compares the different managed storage solutions available.
-- Azure Files or Azure NetApp Files offers the most value to customers, simplifying management of Azure Virtual Desktop. It's the preferred storage solution for this workload.
+- Azure Files or Azure NetApp Files offers the most value to customers and simplify management of Azure Virtual Desktop. It's the preferred storage solution for this workload.
 - Storage Spaces Direct is also supported with FSLogix and Azure Virtual Desktop. It's a self-managed storage solution that's out of scope for this article.
 
 #### User data storage replication and resiliency
@@ -81,7 +81,7 @@ You can reduce the time it takes to back up, restore, and replicate data after a
 
 - Separate the user profile and Office container disks. FSLogix offers the option to place disks in separate storage locations.
 - Don't make the Office disk resilient. In normal usage, the Office disk can consume many more gigabytes than the profile disk. It's a cache of data that you can download again from Microsoft 365 online services, so don't make the disk resilient.
-- Use OneDrive to redirect [well-known folders](/onedrive/redirect-known-folders) (Desktop, Documents, Pictures, Screenshots, and Camera Roll). The redirection ensures the resilience of this data without special consideration in a BCDR scenario.
+- Use OneDrive to redirect [standard folders](/onedrive/redirect-known-folders) like Desktop, Documents, Pictures, Screenshots, and Camera Roll. The redirection ensures the resilience of this data without special consideration in a BCDR scenario.
 - Don't include cache data for the profile disk so that you can more quickly back up, replicate, and restore the disk.
 
   > [!NOTE]
@@ -160,3 +160,4 @@ For most scenarios, we recommend that you store FSLogix user profile and Office 
 
 ## Next steps
 
+- [Platform automation and DevOps considerations for Azure Virtual Desktop](eslz-platform-automation-and-devops.md)
