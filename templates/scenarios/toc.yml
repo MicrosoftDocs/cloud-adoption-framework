@@ -39,10 +39,10 @@ items:
     href: organize.md
   - name: Migrate {{Token-Name}} to Azure
     href: migrate.md
-  - name: Innovate with {{Token-Name}} on Azure
-    href: innovate.md
   - name: Modernize
     href: modernize.md
+  - name: Innovate with {{Token-Name}} on Azure
+    href: innovate.md
   - name: Govern {{Token-Name}} in Azure
     href: govern.md
   - name: Manage {{Token-Name}} platform and workloads

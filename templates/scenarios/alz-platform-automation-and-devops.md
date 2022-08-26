@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale platform automation and DevOps for {{Token-LongName}}
-description: #Describe how this enterprise-scale scenario can improve platform automation and devops of {{Token-Name}}.
+description: #Describe how this {{Insert-accelerator-name}} landing zone accelerator can improve platform automation and devops of {{Token-Name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Platform automation and devops for {{Token-LongName}} enterprise-scale scenario
+# Platform automation and devops for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator
 
 Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
 

@@ -10,22 +10,22 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Construction set for {{Token-LongName}} enterprise-scale scenario
+# landing zone accelerator for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator
 
-The {{Token-LongName}} construction set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting {{Token-LongName}}. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+The {{Token-LongName}} landing zone accelerator is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting {{Token-LongName}}. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
 
-Customers adopt {{Token-LongName}} in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
+Customers adopt {{Token-LongName}} in various ways. The landing zone accelerator can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
 ## To begin, implement an enterprise-scale landing zone
 
-The {{Token-LongName}} construction set assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
+The {{Token-LongName}} landing zone accelerator assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
-## What the AKS construction set provides
+## What the AKS landing zone accelerator provides
 
-The construction set approach to landing zones provides these assets to support your project:
+The landing zone accelerator approach to landing zones provides these assets to support your project:
 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
@@ -38,12 +38,12 @@ The construction set approach to landing zones provides these assets to support 
 
 These articles provide guidelines for creating your landing zone:
 
-- [{{Token-LongName}} enterprise-scale scenario](./alz-identity-and-access-management.md)
-- [Network topology and connectivity for {{Token-LongName}} enterprise-scale scenario](./alz-network-topology-and-connectivity.md)
-- [Management and monitoring for {{Token-LongName}} enterprise-scale scenario](./alz-management-and-monitoring.md)
-- [Business continuity and disaster recovery for {{Token-LongName}} enterprise-scale scenario](./alz-business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance for {{Token-LongName}} enterprise-scale scenario](./alz-security-governance-and-compliance.md)
-- [Platform automation and DevOps for {{Token-LongName}} enterprise-scale scenario](./alz-platform-automation-and-devops.md)
+- [{{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-identity-and-access-management.md)
+- [Network topology and connectivity for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-network-topology-and-connectivity.md)
+- [Management and monitoring for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-management-and-monitoring.md)
+- [Business continuity and disaster recovery for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-business-continuity-and-disaster-recovery.md)
+- [Security, governance, and compliance for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-security-governance-and-compliance.md)
+- [Platform automation and DevOps for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
@@ -51,10 +51,10 @@ The following conceptual reference architecture is an example that shows design 
 
 TODO: Include RA image here
 
-## Obtain the {{Token-LongName}} construction set
+## Obtain the {{Token-LongName}} landing zone accelerator
 
-The {{Token-LongName}} construction set is available here...
+The {{Token-LongName}} landing zone accelerator is available here...
 
 ## Next steps
 
-- Review the {{Token-LongName}} construction set design areas to make complete considerations and recommendations for your {{Token-LongName}} construction set architecture. See [{{Token-LongName}} enterprise-scale scenario](./alz-identity-and-access-management.md).
+- Review the {{Token-LongName}} landing zone accelerator design areas to make complete considerations and recommendations for your {{Token-LongName}} landing zone accelerator architecture. See [{{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator](./alz-identity-and-access-management.md).

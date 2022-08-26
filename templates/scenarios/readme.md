@@ -20,14 +20,14 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Prepare your environment | NA | NA | Table of contents section. |
 | L2 | Azure landing zones | Azure Landing Zone review for {{Token-Name}} | [ready.md](ready.md) | NA |
 | L2 | Design areas | NA | NA | Table of contents section. |
-| L3 | Billing and Active Directory tenant |  | [alz-azure-billing-and-active-directory-tenant.md](alz-azure-billing-and-active-directory-tenant.md) | Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials. | 
-| L3 | Enterprise enrollment |  | [alz-identity-and-access-management.md](alz-identity-and-access-management.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Identity and access   management |  | [alz-network-topology-and-connectivity.md](alz-network-topology-and-connectivity.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Network topology and   connectivity |  | [alz-resource-organization.md](alz-resource-organization.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Resource organization |  | [alz-security.md](alz-security.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Governance disciplines |  | [alz-management-.md](alz-management.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Operations baseline |  | [alz-security-governance-and-compliance.md](alz-security-governance-and-compliance.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Deployment options |  | [alz-platform-automation-and-devops.md](alz-platform-automation-and-devops.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Billing and Active Directory tenant |  | [alz-azure-billing-and-active-directory-tenant.md](alz-azure-billing-and-active-directory-tenant.md) | Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials. | 
+| L3 | Enterprise enrollment |  | [alz-identity-and-access-management.md](alz-identity-and-access-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Identity and access   management |  | [alz-network-topology-and-connectivity.md](alz-network-topology-and-connectivity.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Network topology and   connectivity |  | [alz-resource-organization.md](alz-resource-organization.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Resource organization |  | [alz-security.md](alz-security.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Governance disciplines |  | [alz-management-.md](alz-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Operations baseline |  | [alz-security-governance-and-compliance.md](alz-security-governance-and-compliance.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Deployment options |  | [alz-platform-automation-and-devops.md](alz-platform-automation-and-devops.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L2 | Implementation options | NA | NA | Table of contents section. |
 | L3 | Example |  | NA | Link to a reference architecture |
 | L3 | {{Token-Name}} on Azure landing zone   accelerator |  | [technology-name-landing-zone-accelerator.md](technology-name-landing-zone-accelerator.md) | The {{Token-LongName}} landing zone accelerator is an open-source   collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting {{Token-LongName}}.  |
@@ -35,8 +35,8 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Secure |  | [secure.md](secure.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Strategy   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/) |
 | L1 | Organize |  | [organize.md](organize.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Organize   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/).  |
 | L1 | Migrate {{Token-Name}} to   Azure |  | [migrate.md](migrate.md) | Establish a driving statement to shape migration of this   technology platform. Best practice encourages customers to create a migration   statement, using the [Cloud Adoption Framework's migrate   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/).  |
+| L1 | Modernize {{Token-Name}} |  | [modernize.md](modernize.md) | Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/). |
 | L1 | Innovate with   {{Token-Name}} and Azure |  | [innovate.md](innovate.md) | The innovate methodology of the Cloud Adoption Framework for   Azure drives adoption through the build-measure-learn cycle. For more   information, see [Innovate   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/innovate/). |
-| L1 | Modernize {{Token-Name}} |  | [modernize.md](modernize.md) | Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/).
 | L1 | Manage {{Token-Name}} platform and workloads |  | [manage.md](manage.md) | The [Manage   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/)   in the Microsoft Cloud Adoption Framework for Azure outlines a path for   implementing an operations baseline, and maturing that baseline throughout   your cloud adoption lifecycle. |
 | L1 | Well-architected   considerations |  | [well-architected-framework.md](well-architected-framework.md) | For many of the named workloads, it's important to adhere to a   set of architectural principles. These principles help guide development and   optimization of the workloads. The five architectural constructs are detailed   in the [Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/). |
 | L1 | {{Token-Name}} architectures |  | NA | Table of contents section. |
@@ -60,7 +60,7 @@ The following table contains the tokens that reappear throughout the templates u
 
 ## CAF work to finalize the scenarios
 
-- For each ESLZ page, the headers and metadata need to look more like the corresponding file in the AKS scenario
+- For each ALZ page, the headers and metadata need to look more like the corresponding file in the AKS scenario
 - CAF team to review the articles and identify any additional requirements for each page
 - CAF team to review the articles for quality to ensure we don't start with known errors
 - CAF team to update the Ready article to match AKS scenario flow
@@ -71,7 +71,7 @@ The following table contains the tokens that reappear throughout the templates u
 1. Use the tokens to update the documents with the values for your sceneario.
 1. All scenario articles (not prefixed with `alz-`) must accurately reflect the Cloud Adoption Framework (CAF) methodologies **and** the marketing motion to drive this scenario. Each starts with a series of sections that must be evaluated and updated based on CAF links in each section.
 1. Add as many (##) H2 sections after the core CAF sections as required to tell the story and guide adoption.
-1. Draft all remaining ESLZ articles (prefixed with `alz-`) to reflect any considerations or recommendations required to prepare for the ESLZ deployment. Any additional guidance may be added after the H2s for recommendations and considerations.
+1. Draft all remaining ALZ articles (prefixed with `alz-`) to reflect any considerations or recommendations required to prepare for the ALZ deployment. Any additional guidance may be added after the H2s for recommendations and considerations.
 
 ## For more information
 
