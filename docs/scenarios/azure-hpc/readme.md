@@ -20,14 +20,14 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Prepare your environment | NA | NA | Table of contents section. |
 | L2 | Azure landing zones | Azure Landing Zone review for HPC | [ready.md](ready.md) | NA |
 | L2 | Design areas | NA | NA | Table of contents section. |
-| L3 | Enterprise enrollment |  | [identity-and-access-management.md](identity-and-access-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Identity and access   management |  | [network-topology-and-connectivity.md](network-topology-and-connectivity.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Enterprise enrollment |  | [identity-access-management.md](identity-access-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Identity and access   management |  | [network-topology-connectivity.md](network-topology-connectivity.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Network topology and   connectivity |  | [resource-organization.md](resource-organization.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Resource organization |  | [security.md](security.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Governance disciplines |  | [management-and-monitoring.md](management-and-monitoring.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Operations baseline |  | [security-governance-and-compliance.md](security-governance-and-compliance.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Business continuity and   disaster recovery |  | [business-continuity-and-disaster-recovery.md](business-continuity-and-disaster-recovery.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Deployment options |  | [platform-automation-and-devops.md](platform-automation-and-devops.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Governance disciplines |  | [management-monitoring.md](management-monitoring.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Operations baseline |  | [security-governance-compliance.md](security-governance-compliance.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Business continuity and   disaster recovery |  | [business-continuity-disaster-recovery.md](business-continuity-disaster-recovery.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Deployment options |  | [platform-automation-devops.md](platform-automation-devops.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L2 | Implementation options | NA | NA | Table of contents section. |
 | L3 | Example |  | NA | Link to a reference architecture |
 | L3 | HPC on Azure landing zone   accelerator |  | [enterprise-scale-landing-zone.md](enterprise-scale-landing-zone.md) | The Azure high-performance computing (HPC) landing zone accelerator is an open-source   collection of Terraform templates that you can use to automate the deployment   of an environment capable of hosting Azure high-performance computing (HPC).  |

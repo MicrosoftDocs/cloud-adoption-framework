@@ -14,11 +14,11 @@ items:
       - name: Design areas
         items:
         - name: Billing and Active Directory tenant
-          href: energy/azure-billing-and-active-directory-tenant.md
+          href: energy/azure-billing-active-directory-tenant.md
         - name: Identity and access management
-          href: energy/identity-and-access-management.md
+          href: energy/identity-access-management.md
         - name: Network topology and connectivity
-          href: energy/network-topology-and-connectivity.md
+          href: energy/network-topology-connectivity.md
         - name: Resource organization
           href: energy/resource-organization.md
         - name: Security
@@ -26,19 +26,19 @@ items:
         - name: Management
           href: energy/management.md
         - name: Governance discipline
-          href: energy/security-governance-and-compliance.md
+          href: energy/security-governance-compliance.md
         - name: Platform automation and DevOps
-          href: energy/platform-automation-and-devops.md
+          href: energy/platform-automation-devops.md
     - name: Finance  
       items:
       - name: Design areas
         items:
         - name: Billing and Active Directory tenant
-          href: finance/azure-billing-and-active-directory-tenant.md
+          href: finance/azure-billing-active-directory-tenant.md
         - name: Identity and access management
-          href: finance/identity-and-access-management.md
+          href: finance/identity-access-management.md
         - name: Network topology and connectivity
-          href: finance/network-topology-and-connectivity.md
+          href: finance/network-topology-connectivity.md
         - name: Resource organization
           href: finance/resource-organization.md
         - name: Security
@@ -46,19 +46,19 @@ items:
         - name: Management
           href: finance/management.md
         - name: Governance discipline
-          href: finance/security-governance-and-compliance.md
+          href: finance/security-governance-compliance.md
         - name: Platform automation and DevOps
-          href: finance/platform-automation-and-devops.md
+          href: finance/platform-automation-devops.md
     - name: Manufacturing  
       items:
       - name: Design areas
         items:
         - name: Billing and Active Directory tenant
-          href: manufacturing/azure-billing-and-active-directory-tenant.md
+          href: manufacturing/azure-billing-active-directory-tenant.md
         - name: Identity and access management
-          href: manufacturing/identity-and-access-management.md
+          href: manufacturing/identity-access-management.md
         - name: Network topology and connectivity
-          href: manufacturing/network-topology-and-connectivity.md
+          href: manufacturing/network-topology-connectivity.md
         - name: Resource organization
           href: manufacturing/resource-organization.md
         - name: Security
@@ -66,9 +66,9 @@ items:
         - name: Management
           href: manufacturing/management.md
         - name: Governance discipline
-          href: manufacturing/security-governance-and-compliance.md
+          href: manufacturing/security-governance-compliance.md
         - name: Platform automation and DevOps
-          href: manufacturing/platform-automation-and-devops.md
+          href: manufacturing/platform-automation-devops.md
 
 
     - name: Implementation options

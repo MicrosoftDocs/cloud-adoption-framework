@@ -38,13 +38,13 @@ The  landing zone accelerator approach to landing zones provides these assets to
 
 These articles provide guidelines for creating your landing zone:
 
-- [Azure billing and HPC - Energy landing zone accelerator](./energy/azure-billing-and-active-directory-tenant.md)
-- [Identity and access management for HPC - Energy landing zone accelerator](./energy/identity-and-access-management.md)
+- [Azure billing and HPC - Energy landing zone accelerator](./energy/azure-billing-active-directory-tenant.md)
+- [Identity and access management for HPC - Energy landing zone accelerator](./energy/identity-access-management.md)
 - [Management for HPC - Energy landing zone accelerator](./energy/management.md)
-- [Network topology and connectivity for HPC - Energy landing zone accelerator](./energy/network-topology-and-connectivity.md)
-- [Platform automation and devops for HPC - Energy landing zone accelerator](./energy/platform-automation-and-devops.md)
+- [Network topology and connectivity for HPC - Energy landing zone accelerator](./energy/network-topology-connectivity.md)
+- [Platform automation and devops for HPC - Energy landing zone accelerator](./energy/platform-automation-devops.md)
 - [Management group and subscription organization for HPC - Energy landing zone accelerator](./energy/resource-organization.md)
-- [Governance disciplines for HPC - Energy](./energy/security-governance-and-compliance.md)
+- [Governance disciplines for HPC - Energy](./energy/security-governance-compliance.md)
 - [Security disciplines for HPC - Energy](./energy/security.md)
 
 ## Example conceptual reference architecture
@@ -59,4 +59,4 @@ The HPC  landing zone accelerator is available here...
 
 ## Next steps
 
-- Review the HPC  landing zone accelerator critical design areas to make complete considerations and recommendations for your HPC  landing zone accelerator architecture. See [HPC {{Insert-accelerator-name}} landing zone accelerator](./identity-and-access-management.md).
+- Review the HPC  landing zone accelerator critical design areas to make complete considerations and recommendations for your HPC  landing zone accelerator architecture. See [HPC {{Insert-accelerator-name}} landing zone accelerator](./identity-access-management.md).
