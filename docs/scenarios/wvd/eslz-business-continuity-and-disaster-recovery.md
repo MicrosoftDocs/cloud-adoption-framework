@@ -80,7 +80,7 @@ Azure offers multiple storage solutions that you can use to store your FSLogix p
 You can reduce the time it takes to back up, restore, and replicate data after an outage.
 
 - Separate user profile and Office container disks. FSLogix offers the option to place disks in separate storage locations.
-- Don't make the Office disk resilient. In normal usage, the Office disk might consume many more gigabytes than the profile disk. It's a cache of data that you can download again from Microsoft 365 online services, so don't make the disk resilient.
+- Don't make the Office disk resilient. In normal usage, the Office disk might consume many more gigabytes than the profile disk. It's a cache of data that you can download again from Microsoft 365 online services.
 - Use OneDrive to redirect [standard folders](/onedrive/redirect-known-folders) like *Desktop*, *Documents*, *Pictures*, *Saved Pictures*, and *Camera Roll*. The redirection ensures the resilience of this data without special consideration in a BCDR scenario.
 - Don't include cache data for the profile disk, so that you can more quickly back up, replicate, and restore the disk.
 
