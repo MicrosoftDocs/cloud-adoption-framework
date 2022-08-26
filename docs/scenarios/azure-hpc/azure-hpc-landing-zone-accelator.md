@@ -59,4 +59,4 @@ The HPC  landing zone accelerator is available here...
 
 ## Next steps
 
-- Review the HPC  landing zone accelerator critical design areas to make complete considerations and recommendations for your HPC  landing zone accelerator architecture. See [HPC {{Insert-accelerator-name}} landing zone accelerator](./identity-access-management.md).
+- Review the HPC  landing zone accelerator critical design areas to make complete considerations and recommendations for your HPC  landing zone accelerator architecture. See [HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/identity-access-management.md).
