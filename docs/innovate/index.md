@@ -3,7 +3,7 @@ title: Cloud adoption-related innovation
 description: Learn how cloud adoption-related innovation can provide business value by unlocking new technical skills and expanded business capabilities.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/23/2022
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -22,7 +22,7 @@ To prepare for this phase of the cloud adoption lifecycle, the framework suggest
 | <span title="icon">&nbsp;</span> | <span title="description">&nbsp;</span> |
 |--|--|
 | <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Create hypothesis with business value consensus](./business-value.md): Before you decide on technical solutions, identify how new innovations can drive business value and come up with a hypothesis about customer needs. |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Build your first MVP](./considerations/build.md): Once you have a hypothesis with enough value potential to integrate it into your application, you start the build process. Development sprints should be as quick as possible. Quick sprints let teams quickly verify or reject a hypothesis, or fine tune how required functionality integrates with the application.  |
+| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Build your first MVP](./considerations/build.md): Once you have a hypothesis with enough value potential to integrate it into your application, start the build process. Development sprints should be as quick as possible. Quick sprints let teams quickly verify or reject a hypothesis, or fine tune how required functionality integrates with the application.  |
 | <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Measure](./considerations/measure.md) & [Learn](./considerations/learn.md) from your MVP: You want to verify the accuracy of your hypothesis as soon as possible. A minimum viable product (MVP) is a preliminary version of the new feature that offers enough functionality to gather feedback and confirm if you're moving in the right direction. |
 | <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Expand digital innovation](./considerations/invention.md): To refine your hypothesis using the innovation disciplines or the digital inventions that include: <li> Democratize data <li> Engage via applications <li> Empower adoption <li> Interact with devices <li> Predict and influence
 
@@ -45,13 +45,13 @@ This article series emphasizes the following aspects of this methodology:
 - First, always start with customer adoption to generate feedback that builds customer partnerships through the build-measure-learn feedback loop.
 - Second, examine approaches to developing digital inventions that prioritize adoption.
 
-You don't need to adopt all these disciplines at once. These disciplines highlight several approaches to developing digital inventions while also letting you focus on adoption and customer empathy.
+You don't need to adopt all the practices at once. These disciplines highlight several approaches to developing digital inventions while also letting you focus on adoption and customer empathy.
 
-The following section describes the formula for innovation and the commitments it takes to be successful with this approach.
+The following section describes the formula for innovation and the commitments it takes to achieve success with this approach.
 
 ## Formula for innovation
 
-Successful innovation isn't a big-bang transformational event or an elusive magical unicorn. Success in innovation is more of a balancing act, illustrated by a simple equation: **innovation = invention + adoption**.
+Successful innovation isn't about some big transformational event or an elusive, mythical process. Success in innovation is more of a balancing act, illustrated by a simple equation: **innovation = invention + adoption**.
 
 Innovation happens at the intersection of invention and adoption. True innovation stems from slowly adjusting human experiences through new approaches, new processes, and new technologies. In this formula, invention means you create a new solution that meets a customer need. Conversely, adoption means you apply the new solution to shape human behaviors and interactions. Finding the right balance between invention and adoption requires iteration, data-driven decision making, constant learning, and a growth mindset. It also requires technologies that can keep pace with the countless opportunities to learn in today's digital society.
 
