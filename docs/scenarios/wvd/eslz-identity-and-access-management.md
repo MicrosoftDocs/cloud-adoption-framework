@@ -42,7 +42,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Azure AD DS](/azure/active-directory-domain-services/compare-identity-solutions).
 - [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services/). is a supported option, but there are limitations:
   - You must have password hash synchronization enabled ([configuration guide](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-configure-password-hash-sync)).
-  - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless Single Sign-On for Microsoft 365 services.
+  - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless single sign-on for Microsoft 365 services.
   
   For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
 - When joining to an Azure AD DS domain, the account must be part of the Azure AD DC administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).

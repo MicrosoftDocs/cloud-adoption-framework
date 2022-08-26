@@ -61,7 +61,7 @@ For host pool VM resiliency:
      > [!NOTE]
      > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure portal.
 
-Before approaching BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with a different disaster recovery approaches and capabilities.
+Before approaching BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with different disaster recovery approaches and capabilities.
 
 ### Optimal storage for profile and office containers
 
