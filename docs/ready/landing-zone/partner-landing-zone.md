@@ -26,7 +26,7 @@ Partners in the AMMP program adhere to specific ALZ guidelines. They complete Az
 
 |Step 1.<br>Prepare ALZ | Step 2.<br>Deploy ALZ | Step 3.<br>Improve ALZ|
 | --- | --- | --- |
-|<ul><li>Organize resources</li> <li>Manage access</li> <li>Manage cost and billing</li> <li>Plan for governance, security, and compliance</li> <li>Set up monitoring and reporting</li> </ul>|<ul><li>ALZ accelerator or customized approach</li><li>Identity management</li> <li>Network architecture</li> <li>Resource organization</li></ul>| 
+|<ul><li>Organize resources</li> <li>Manage access</li> <li>Manage cost and billing</li> <li>Plan for governance, security, and compliance</li> <li>Set up monitoring and reporting</li> </ul>|<ul><li>ALZ accelerator or customized approach</li><li>Identity management</li> <li>Network architecture</li> <li>Resource organization</li></ul>|
 
  – understand, personalize, evaluate order
 

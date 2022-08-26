@@ -1,5 +1,17 @@
+---
+title: Questions to ask landing zone partners
+description: Questions to ask a landing zone partner
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 08/29/2022
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: internal
+---
+# Questions to ask a landing zone partner
 
-
+You can use the following questions to help find the right partner and understand their offers.
 
 ## Platform development velocity
 
