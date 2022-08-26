@@ -12,11 +12,11 @@ items:
     - name: Design areas
       items:
       - name: Azure billing and Active Directory tenant
-        href: alz-azure-billing-and-active-directory-tenant.md
+        href: alz-azure-billing-active-directory-tenant.md
       - name: Identity and access management
-        href: alz-identity-and-access-management.md
+        href: alz-identity-access-management.md
       - name: Network topology and connectivity
-        href: alz-network-topology-and-connectivity.md
+        href: alz-network-topology-connectivity.md
       - name: Resource organization
         href: alz-resource-organization.md
       - name: Security
@@ -24,15 +24,15 @@ items:
       - name: Management
         href: alz-management.md
       - name: Governance discipline
-        href: alz-security-governance-and-compliance.md
+        href: alz-security-governance-compliance.md
       - name: Platform automation and DevOps
-        href: alz-platform-automation-and-devops.md
+        href: alz-platform-automation-devops.md
     - name: Implementation options
       items:
       - name: Enterprise-scale for {{Token-LongName}}
         href: enterprise-scale-landing-zone.md
       - name: TODO - Add reference to smaller RA from AAC here
-        href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
+        href: enterprise-scale-landing-zone.md?add-toc-breadcrumb-here
   - name: Secure {{Token-Name}}
     href: secure.md
   - name: Organize {{Token-Name}}

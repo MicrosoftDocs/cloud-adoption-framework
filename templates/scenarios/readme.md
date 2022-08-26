@@ -20,14 +20,14 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Prepare your environment | NA | NA | Table of contents section. |
 | L2 | Azure landing zones | Azure Landing Zone review for {{Token-Name}} | [ready.md](ready.md) | NA |
 | L2 | Design areas | NA | NA | Table of contents section. |
-| L3 | Billing and Active Directory tenant |  | [alz-azure-billing-and-active-directory-tenant.md](alz-azure-billing-and-active-directory-tenant.md) | Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials. | 
-| L3 | Enterprise enrollment |  | [alz-identity-and-access-management.md](alz-identity-and-access-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Identity and access   management |  | [alz-network-topology-and-connectivity.md](alz-network-topology-and-connectivity.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Billing and Active Directory tenant |  | [alz-azure-billing-active-directory-tenant.md](alz-azure-billing-active-directory-tenant.md) | Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials. | 
+| L3 | Enterprise enrollment |  | [alz-identity-access-management.md](alz-identity-access-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Identity and access   management |  | [alz-network-topology-connectivity.md](alz-network-topology-connectivity.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Network topology and   connectivity |  | [alz-resource-organization.md](alz-resource-organization.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Resource organization |  | [alz-security.md](alz-security.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L3 | Governance disciplines |  | [alz-management-.md](alz-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Operations baseline |  | [alz-security-governance-and-compliance.md](alz-security-governance-and-compliance.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Deployment options |  | [alz-platform-automation-and-devops.md](alz-platform-automation-and-devops.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Operations baseline |  | [alz-security-governance-compliance.md](alz-security-governance-compliance.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Deployment options |  | [alz-platform-automation-devops.md](alz-platform-automation-devops.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L2 | Implementation options | NA | NA | Table of contents section. |
 | L3 | Example |  | NA | Link to a reference architecture |
 | L3 | {{Token-Name}} on Azure landing zone   accelerator |  | [technology-name-landing-zone-accelerator.md](technology-name-landing-zone-accelerator.md) | The {{Token-LongName}} landing zone accelerator is an open-source   collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting {{Token-LongName}}.  |

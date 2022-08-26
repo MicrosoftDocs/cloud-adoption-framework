@@ -29,3 +29,8 @@ The following are assumptions that went into the development of the deployable a
 ## Additional considerations
 
 Create as many H2 "##" headers as is required to educate the customer on this topic.
+
+## See also
+
+[Landing zone accelerator for {{Token-LongName}} - {{Insert-accelerator-name}} landing zone accelerator](./technology-name-landing-zone-accelerator.md)
+
