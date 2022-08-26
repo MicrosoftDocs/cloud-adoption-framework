@@ -1,16 +1,16 @@
 ---
-title: Understand and align the portfolio hierarchy
+title: Portfolio hierarchy
 description: Learn how workloads, resources, and supporting services fit together in your portfolio hierarchy.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/25/2022
+ms.date: 08/26/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
 ms.custom: internal
 ---
 
-# Understand and align the portfolio hierarchy
+# Portfolio hierarchy
 
 To understand how a *portfolio* of workloads, assets, and supporting services all work together, you need to establish a portfolio hierarchy. This article provides clear definitions for the levels of your portfolio hierarchy, along with guidance for teams to deliver on the expectations for each level. Throughout this article, each level of the hierarchy is also called a *scope*.
 
@@ -35,13 +35,13 @@ When you're deploying your first workload, the workload and its assets might be 
 
 When companies support workloads through matrixed approaches or centralized approaches, a broader hierarchy likely exists to support those workloads:
 
-![Diagram of an IT portfolio with multiple public and private cloud platforms.](../../_images/ready/buildout-cloud-platforms.png)
+[ ![Diagram of an IT portfolio with multiple public and private cloud platforms.](../../_images/ready/buildout-cloud-platforms.png) ](../../_images/ready/buildout-cloud-platforms.png#lightbox)
 
-- **Landing zones:** Landing zones provide workloads with the necessary *foundational utilities*, or shared plumbing, that are required to support one or more workloads. Landing zones are so critical in the cloud that the entire Ready methodology of the Cloud Adoption Framework focuses on landing zones. For a more detailed definition, see [What is a landing zone?](../../ready/landing-zone/index.md)
+- **Landing zones:** Landing zones provide workloads with the necessary foundational utilities, or shared plumbing, that are required to support one or more workloads. Landing zones are so critical in the cloud that the entire *Ready* methodology of the Cloud Adoption Framework focuses on landing zones. For a more detailed definition, see [What is a landing zone?](../../ready/landing-zone/index.md)
 - **Foundational utilities:** These shared IT services are required for workloads to operate within the technology and business portfolio.
 - **Platform foundation:** This organizational construct centralizes foundational solutions and helps ensure that those controls are enforced for all landing zones.
-- **Cloud platforms:** Depending on the overall strategy for supporting the full *portfolio*, customers might need multiple cloud platforms with distinct deployments of the platform foundation to govern multiple regions, hybrid solutions, or even multicloud solutions.
-- **Portfolio:** Through a technology lens, the portfolio is a collection of workloads, assets, and supporting resources that span all cloud platforms. Through a business lens, the portfolio is the collection of projects, people, processes, and investments that support and manage the technology portfolio to drive business outcomes. Together, these two lenses capture the *portfolio*.
+- **Cloud platforms:** Depending on the overall strategy for supporting the full portfolio, customers might need multiple cloud platforms with distinct deployments of the platform foundation to govern multiple regions, hybrid solutions, or even multicloud solutions.
+- **Portfolio:** Through a technology lens, the portfolio is a collection of workloads, assets, and supporting resources that span all cloud platforms. Through a business lens, the portfolio is the collection of projects, people, processes, and investments that support and manage the technology portfolio to drive business outcomes. Together, these two lenses capture the portfolio.
 
 ## Hierarchy accountability and guidance
 
@@ -50,7 +50,7 @@ An accountable team manages each layer of the portfolio hierarchy. The following
 > [!NOTE]
 > The teams mentioned in the following list might be virtual teams or individuals. For some variants of this hierarchy, some of the accountable teams can be collapsed as described later in the accountability variants.
 
-![Diagram that shows accountability aligned to the hierarchy.](../../_images/ready/hierarchy-with-roles.png)
+[ ![Diagram that shows accountability aligned to the hierarchy.](../../_images/ready/hierarchy-with-roles.png) ](../../_images/ready/hierarchy-with-roles.png#lightbox)
 
 <!-- docutune:ignore "Strategy and Plan methodologies" "Migrate and Plan methodologies" "Migrate and Innovate methodologies" -->
 
