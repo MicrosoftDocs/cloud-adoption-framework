@@ -1,5 +1,5 @@
 ---
-title: Secure HPC in Azure
+title: Secure Azure high-performance computing (HPC) in Azure
 description: #Learn about the security principles for HPC in Azure.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Secure HPC in Azure
+# Secure Azure high-performance computing (HPC) in Azure
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Security methodology](../../secure/index.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Manage HPC
+title: Manage Azure high-performance computing (HPC)
 description: #Describe the scenario's impact on operations management.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Manage HPC
+# Manage Azure high-performance computing (HPC)
 
 The [Manage methodology](../../manage/index.md) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle.
 

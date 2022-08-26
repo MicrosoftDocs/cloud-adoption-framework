@@ -20,17 +20,17 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | Prepare your environment | NA | NA | Table of contents section. |
 | L2 | Azure landing zones | Azure Landing Zone review for HPC | [ready.md](ready.md) | NA |
 | L2 | Design areas | NA | NA | Table of contents section. |
-| L3 | Enterprise enrollment |  | [eslz-identity-and-access-management.md](eslz-identity-and-access-management.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Identity and access   management |  | [eslz-network-topology-and-connectivity.md](eslz-network-topology-and-connectivity.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Network topology and   connectivity |  | [eslz-resource-organization.md](eslz-resource-organization.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Resource organization |  | [eslz-security.md](eslz-security.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Governance disciplines |  | [eslz-management-and-monitoring.md](eslz-management-and-monitoring.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Operations baseline |  | [eslz-security-governance-and-compliance.md](eslz-security-governance-and-compliance.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Business continuity and   disaster recovery |  | [eslz-business-continuity-and-disaster-recovery.md](eslz-business-continuity-and-disaster-recovery.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
-| L3 | Deployment options |  | [eslz-platform-automation-and-devops.md](eslz-platform-automation-and-devops.md) | Disclose any required dependency on ESLZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Enterprise enrollment |  | [eslz-identity-and-access-management.md](eslz-identity-and-access-management.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Identity and access   management |  | [eslz-network-topology-and-connectivity.md](eslz-network-topology-and-connectivity.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Network topology and   connectivity |  | [eslz-resource-organization.md](eslz-resource-organization.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Resource organization |  | [eslz-security.md](eslz-security.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Governance disciplines |  | [eslz-management-and-monitoring.md](eslz-management-and-monitoring.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Operations baseline |  | [eslz-security-governance-and-compliance.md](eslz-security-governance-and-compliance.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Business continuity and   disaster recovery |  | [eslz-business-continuity-and-disaster-recovery.md](eslz-business-continuity-and-disaster-recovery.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
+| L3 | Deployment options |  | [eslz-platform-automation-and-devops.md](eslz-platform-automation-and-devops.md) | Disclose any required dependency on ALZ design area or other   ALZ design areas, with links to those supporting materials. |
 | L2 | Implementation options | NA | NA | Table of contents section. |
 | L3 | Example |  | NA | Link to a reference architecture |
-| L3 | HPC on Azure landing zone   accelerator |  | [enterprise-scale-landing-zone.md](enterprise-scale-landing-zone.md) | The Azure high-performance computing (HPC) construction set is an open-source   collection of Terraform templates that you can use to automate the deployment   of an environment capable of hosting Azure high-performance computing (HPC).  |
+| L3 | HPC on Azure landing zone   accelerator |  | [enterprise-scale-landing-zone.md](enterprise-scale-landing-zone.md) | The Azure high-performance computing (HPC) landing zone accelerator is an open-source   collection of Terraform templates that you can use to automate the deployment   of an environment capable of hosting Azure high-performance computing (HPC).  |
 | L1 | Govern |  | [govern.md](govern.md) | The [Cloud Adoption Framework provides a   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/)   to systematically and incrementally improve governance of your cloud   portfolio. |
 | L1 | Secure |  | [secure.md](secure.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Strategy   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/) |
 | L1 | Organize |  | [organize.md](organize.md) | Best practice encourages customers to create a single   centralized cloud adoption strategy, using the [Cloud Adoption Framework's   Organize   methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/).  |
@@ -59,7 +59,7 @@ The following table contains the tokens that reappear throughout the templates u
 
 ## CAF work to finalize the scenarios
 
-- For each ESLZ page, the headers and metadata need to look more like the corresponding file in the AKS scenario
+- For each ALZ page, the headers and metadata need to look more like the corresponding file in the AKS scenario
 - CAF team to review the articles and identify any additional requirements for each page
 - CAF team to review the articles for quality to ensure we don't start with known errors
 - CAF team to update the Ready article to match AKS scenario flow
@@ -70,7 +70,7 @@ The following table contains the tokens that reappear throughout the templates u
 1. Use the tokens to update the documents with the values for your sceneario.
 1. All scenario articles (not prefixed with `eslz-`) must accurately reflect the Cloud Adoption Framework (CAF) methodologies **and** the marketing motion to drive this scenario. Each starts with a series of sections that must be evaluated and updated based on CAF links in each section.
 1. Add as many (##) H2 sections after the core CAF sections as required to tell the story and guide adoption.
-1. Draft all remaining ESLZ articles (prefixed with `eslz-`) to reflect any considerations or recommendations required to prepare for the ESLZ deployment. Any additional guidance may be added after the H2s for recommendations and considerations.
+1. Draft all remaining ALZ articles (prefixed with `eslz-`) to reflect any considerations or recommendations required to prepare for the ALZ deployment. Any additional guidance may be added after the H2s for recommendations and considerations.
 
 ## For more information
 

@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management group and subscription organization for Azure high-performance computing (HPC)
-description: #Describe how this enterprise-scale scenario can improve management group and subscription organization of HPC.
+title: Enterprise-scale management group and subscription organization for HPC - Finance
+description: #Describe how this Finance landing zone accelerator can improve management group and subscription organization of Finance.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -10,21 +10,21 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Management group and subscription organization for Azure high-performance computing (HPC) enterprise-scale scenario - Finance
+# Management group and subscription organization for HPC - Finance landing zone accelerator
 
-Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
+Introduction paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of Azure high-performance computing (HPC).
+The following is a bulleted list of things you must think about when preparing for **any** deployment of Finance.
 
 ## Design recommendations
 
-The following is a bulleted list of best practices that should be included in any deployment of Azure high-performance computing (HPC).
+The following is a bulleted list of best practices that should be included in any deployment of Finance.
 
 ## Enterprise-scale assumptions
 
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Azure high-performance computing (HPC).
+The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Finance.
 
 ## Additional considerations
 

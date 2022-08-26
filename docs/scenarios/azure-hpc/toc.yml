@@ -1,5 +1,5 @@
 items:
-  - name: HPC - Microsoft Cloud Adoption Framework for Azure
+  - name: Azure high-performance computing (HPC) - Microsoft Cloud Adoption Framework for Azure
     href: index.md
   - name: Strategic impact
     href: strategy.md
@@ -79,6 +79,8 @@ items:
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
   - name: Migrate HPC to Azure
     href: migrate.md
+  - name: Modernize iwh HPC on Azure
+    href: modernize.md
   - name: Innovate with HPC on Azure
     href: migrate.md
   - name: Govern HPC in Azure
