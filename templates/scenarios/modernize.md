@@ -1,5 +1,5 @@
 ---
-title: Modernize for {{Token-Name}} adoption
+title: Modernize for {{Token-LongName}} adoption
 description: #Describe the scenario's impact on strategy.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Modernize your workloads for {{Token-Name}}
+# Modernize your workloads for {{Token-LongName}}
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/).
 

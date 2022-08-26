@@ -1,5 +1,5 @@
 ---
-title: Manage {{Token-Name}}
+title: Manage {{Token-LongName}}
 description: #Describe the scenario's impact on operations management.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Manage {{Token-Name}}
+# Manage {{Token-LongName}}
 
 The [Manage methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/manage) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle.
 

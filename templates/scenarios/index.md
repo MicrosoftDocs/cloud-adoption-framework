@@ -1,5 +1,5 @@
 ---
-title: Introduction to the {{Token-Name}} adoption scenario
+title: Introduction to the {{Token-LongName}} adoption scenario
 description: #Describe the scenario.}}
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Introduction to the {{Token-Name}} scenario
+# Introduction to the {{Token-LongName}} scenario
 
 Describe your scenario
 

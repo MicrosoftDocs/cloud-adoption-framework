@@ -1,6 +1,6 @@
 ---
-title: Security disciplines for {{Token-LongName}}
-description: #Describe how this scenario can improve security, for {{Token-Name}}.
+title: Security disciplines for title: Azure billing and Active Directory tenant for {{Token-Name}} - {{Insert-accelerator-name}}
+description: #Describe how this scenario can improve security, for {{Insert-accelerator-name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Security disciplines for {{Token-LongName}}
 
-Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
+Introduction paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
 
 ## Design considerations
 

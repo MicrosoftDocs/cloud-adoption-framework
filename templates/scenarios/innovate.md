@@ -1,5 +1,5 @@
 ---
-title: Innovate with {{Token-Name}}
+title: Innovate with {{Token-LongName}}
 description: #Describe the scenario's impact on empowering innovation.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Innovate with {{Token-Name}}
+# Innovate with {{Token-LongName}}
 
 The innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses {{Token-Name}} to {{why would you innovate with this scenario}}. For more information, see [Innovate methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/innovate).
 

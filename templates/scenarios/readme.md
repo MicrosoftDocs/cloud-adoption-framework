@@ -50,13 +50,14 @@ The following table lists the structure and parts of the technical platform scen
 
 The following table contains the tokens that reappear throughout the templates used in the scenario. You can either search and replace to update the tokens, or use a build automation tool to add your values.
 
-|     Token                            |     Description                                                 |
-|--------------------------------------|-----------------------------------------------------------------|
-|     {{Token-Name}}                   |     Short   name of the scenario.                               |
-|     {{Token-LongName}}               |     The   long name of the scenario.                            |
-|     {{Token-ContributorGithubId}}    |     Author's   GitHub ID.                                       |
-|     {{Token-Alias}}                  |     Author's   Microsoft ID.                                    |
-|     {{Token-Date}}                   |     Publication   date of the scenario in MM/DD/YYYY format.    |
+|     Token                            |     Description                                                        |
+|--------------------------------------|------------------------------------------------------------------------|
+|     {{Token-Name}}                   |     Short name of the scenario.                                        |
+|     {{Token-LongName}}               |     The long name of the scenario.                                     |
+|     {{Token-ContributorGithubId}}    |     Author's GitHub ID.                                                |
+|     {{Token-Alias}}                  |     Author's Microsoft ID.                                             |
+|     {{Token-Date}}                   |     Publication date of the scenario in MM/DD/YYYY format.             |
+|     {{Insert-accelerator-name}}      |     Each landing zone addresses an area; one or more design area docs. |
 
 ## CAF work to finalize the scenarios
 

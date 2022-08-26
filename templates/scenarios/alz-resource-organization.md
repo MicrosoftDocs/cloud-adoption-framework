@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management group and subscription organization for {{Token-LongName}}
-description: #Describe how this {{Insert-accelerator-name}} landing zone accelerator can improve management group and subscription organization of {{Token-Name}}.
+title: Enterprise-scale management group and subscription organization for {{Token-Name}} - {{Insert-accelerator-name}}
+description: #Describe how this {{Insert-accelerator-name}} landing zone accelerator can improve management group and subscription organization of {{Insert-accelerator-name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Management group and subscription organization for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator
 
-Introduction paragraph. Disclose any required dependency on ESLZ design area or other ALZ design areas, with links to those supporting materials.
+Introduction paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
 
 ## Design considerations
 

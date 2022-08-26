@@ -1,5 +1,5 @@
 ---
-title: Govern {{Token-Name}}
+title: Govern {{Token-LongName}}
 description: #Describe the scenario's impact on governance.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Govern {{Token-Name}}
+# Govern {{Token-LongName}}
 
 The [Cloud Adoption Framework provides a methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/govern) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to govern {{Token-Name}}.
 

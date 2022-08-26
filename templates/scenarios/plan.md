@@ -1,5 +1,5 @@
 ---
-title: Plan for {{Token-Name}}
+title: Plan for {{Token-LongName}}
 description: #Describe the scenario's impact on planning.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Plan for {{Token-Name}}
+# Plan for {{Token-LongName}}
 
 [Cloud Adoption Framework's Plan methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/plan) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include {{Token-Name}} into the overall cloud adoption plan.
 

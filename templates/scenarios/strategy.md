@@ -1,5 +1,5 @@
 ---
-title: Strategy for {{Token-Name}} adoption
+title: Strategy for {{Token-LongName}} adoption
 description: #Describe the scenario's impact on strategy.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Strategic impact of {{Token-Name}}
+# Strategic impact of {{Token-LongName}}
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article will help expose a number of technical considerations regarding {{Token-Name}} that may have an impact on your strategy.
 

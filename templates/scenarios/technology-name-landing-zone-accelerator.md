@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale support for {{Token-LongName}}
+title: Enterprise-scale support for {{Token-LongName}} - {{Insert-accelerator-name}}
 description: #Describe how enterprise-scale can accelerate adoption of {{Token-Name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# landing zone accelerator for {{Token-LongName}} {{Insert-accelerator-name}} landing zone accelerator
+# landing zone accelerator for {{Token-LongName}} - {{Insert-accelerator-name}} landing zone accelerator
 
 The {{Token-LongName}} landing zone accelerator is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting {{Token-LongName}}. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
 

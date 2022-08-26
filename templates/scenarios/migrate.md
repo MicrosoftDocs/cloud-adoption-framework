@@ -1,5 +1,5 @@
 ---
-title: Migrate workloads for {{Token-Name}}
+title: Migrate workloads for {{Token-LongName}}
 description: #Describe the scenario's impact on migration deployment.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Migrate {{Token-Name}}
+# Migrate {{Token-LongName}}
 
 Establish a driving statement to shape migration of this technology platform. Best practice encourages customers to create a migration statement, using the [Cloud Adoption Framework's migrate methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate). Migrate and modernize existing workloads.
 

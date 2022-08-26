@@ -1,5 +1,5 @@
 ---
-title: Secure {{Token-Name}} in Azure
+title: Secure {{Token-LongName}} in Azure
 description: #Learn about the security principles for {{Token-Name}} in Azure.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Secure{{Token-Name}} in Azure
+# Secure {{Token-LongName}} in Azure
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Security methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/secure/)
 
