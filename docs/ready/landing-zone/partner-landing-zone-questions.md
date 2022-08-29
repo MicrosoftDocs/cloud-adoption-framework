@@ -13,32 +13,11 @@ ms.custom: internal
 
 You can use the following questions to help find the right partner and understand their offers.
 
-## Platform development velocity
-
-As outlined in the [Azure landing zone implementation options](./implementation-options.md), there are two high-level approaches to landing zone implementation based on how you want to develop your landing zones.
-
-**Question for the partner:** Which of the following approaches are supported by the partner's Azure landing zone solution?
-
-- **Start small and expand:** Begin with a lightweight template. The landing zone solution is matured over time as your desired cloud operating model becomes clearer.
-- **Start with enterprise-scale:** Begin with a more comprehensive reference implementation. The reference architecture builds on a well-defined cloud operating model that requires less iteration to reach a mature solution.
-- **Other:** The partner has a modified approach and should be able to describe the approach.
-
-## Design principles
+## Design areas
 
 All Azure landing zones must consider the following set of common design areas. We refer to the way those design areas are implemented as design principles. The following sections will help validate the partner's design principles that define the Azure landing zone implementation.
 
-### Deployment options
-
-Partners who offer an Azure landing zone solution might support one or more options to deploy (or modify/expand the landing zone) the solution to your Azure tenant.
-
-**Question for the partner:** Which of the following does your Azure landing zone solution support?
-
-- **Configuration automation:** Does the solution deploy the landing zone from a deployment pipeline or deployment tool?
-- **Manual configuration:** Does the solution empower the IT team to manually configure the landing zone, without injecting errors into the landing zone source code?
-
-**Question for the partner:** Which of the Azure landing zone implementation options are supported by the partner's solution? See the [Azure landing zone implementation options](./implementation-options.md) article for a full list of options.
-
-### Identity
+### Identity and access management
 
 Identity is perhaps the most important design area to evaluate in the partner solution.
 
@@ -73,7 +52,19 @@ Sound governance and operational management of the cloud starts with best practi
 
 **Question for the partner:** Does the partner provide onboarding documentation to [track foundational decisions](../../get-started/cloud-concepts.md) and educate staff? See the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) for an example of such documentation.
 
-### Governance disciplines
+### Management
+
+Your operations management requirements could influence configuration of specific Azure products during landing zone implementation. Many partners provide a separate offering to fully implement the operations baseline and advanced operations later in the cloud adoption journey, but before your first workload is released for production use. But, the partner's landing zone solution might include configuration for a number of operations management tools by default.
+
+**Question for the partner:** Does the partner solution include design options to support any of the cloud operations disciplines?
+
+- **Inventory and visibility:** Does the landing zone include tooling to ensure that 100% of assets are centrally monitored?
+- **Operational compliance:** Does the architecture include tooling and automated processes to enforce patching or other operational compliance requirements?
+- **Protect and recover:** Does the partner offer include tooling and configuration to ensure a minimal standard of backup and recovery for 100% of assets deployed?
+- **Platform operations:** Does the landing zone offering include tooling or processes to optimize operations across the portfolio?
+- **Workload operations:** Does the landing zone offering include tooling to manage workload-specific operations requirements and ensure that each workload is well-architected?
+
+### Governance
 
 Your governance requirements can heavily influence any complex landing zone designs. Many partners provide a separate offering to fully implement governance disciplines after landing zones are deployed. The following questions will help create clarity around the aspects of governance that will be built into any landing zones.
 
@@ -91,14 +82,23 @@ Your governance requirements can heavily influence any complex landing zone desi
 - **Resource consistency:** Does the partner offer prepare the team to ensure that all assets in the cloud are onboarded into relevant operations management processes?
 - **Identity baseline:** Does the partner offer prepare the team to maintain identity, role definitions, and assignments after the initial landing zone is deployed?
 
-### Operations baseline
+### Platform automation and DevOps
 
-Your operations management requirements could influence configuration of specific Azure products during landing zone implementation. Many partners provide a separate offering to fully implement the operations baseline and advanced operations later in the cloud adoption journey, but before your first workload is released for production use. But, the partner's landing zone solution might include configuration for a number of operations management tools by default.
+Partners who offer an Azure landing zone solution might support one or more options to deploy (or modify/expand the landing zone) the solution to your Azure tenant.
 
-**Question for the partner:** Does the partner solution include design options to support any of the cloud operations disciplines?
+**Question for the partner:** Which of the following does your Azure landing zone solution support?
 
-- **Inventory and visibility:** Does the landing zone include tooling to ensure that 100% of assets are centrally monitored?
-- **Operational compliance:** Does the architecture include tooling and automated processes to enforce patching or other operational compliance requirements?
-- **Protect and recover:** Does the partner offer include tooling and configuration to ensure a minimal standard of backup and recovery for 100% of assets deployed?
-- **Platform operations:** Does the landing zone offering include tooling or processes to optimize operations across the portfolio?
-- **Workload operations:** Does the landing zone offering include tooling to manage workload-specific operations requirements and ensure that each workload is well-architected?
+- **Configuration automation:** Does the solution deploy the landing zone from a deployment pipeline or deployment tool?
+- **Manual configuration:** Does the solution empower the IT team to manually configure the landing zone, without injecting errors into the landing zone source code?
+
+**Question for the partner:** Which of the Azure landing zone implementation options are supported by the partner's solution? See the [Azure landing zone implementation options](./implementation-options.md) article for a full list of options.
+
+## Implementation options
+
+As outlined in the [Azure landing zone implementation options](./implementation-options.md), there are two high-level approaches to landing zone implementation based on how you want to develop your landing zones.
+
+**Question for the partner:** Which of the following approaches are supported by the partner's Azure landing zone solution?
+
+- **Start small and expand:** Begin with a lightweight template. The landing zone solution is matured over time as your desired cloud operating model becomes clearer.
+- **Start with enterprise-scale:** Begin with a more comprehensive reference implementation. The reference architecture builds on a well-defined cloud operating model that requires less iteration to reach a mature solution.
+- **Other:** The partner has a modified approach and should be able to describe the approach.
