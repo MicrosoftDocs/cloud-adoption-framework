@@ -85,4 +85,4 @@ Read more:
 - [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml)
 - [Azure Synapse content on Microsoft Learn](/learn/browse/?terms=synapse)
 - [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
-- [Data scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)
+- [Data scientist learning path](/learn/browse/?roles=data-scientist)

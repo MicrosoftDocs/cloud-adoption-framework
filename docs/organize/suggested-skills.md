@@ -60,9 +60,9 @@ Microsoft and partners offer various options for all audiences to develop skills
 
 Microsoft Learn is a new approach to learning. Readiness for the new responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points, reach new levels, and achieve more.
 
-The following are a few examples of role-specific learning paths on Microsoft Learn:
+The following are a few examples of role-specific learning paths:
 
-- [Business users](/learn/browse/?roles=business-user) may experience a steep learning curve when they help plan, test, and adopt cloud-based technology. Microsoft Learn modules focus on adopting cloud models and tools for better managing business through cloud-based services.
+- [Business users](/learn/browse/?roles=business-user) might experience a steep learning curve when they help plan, test, and adopt cloud-based technology. Learn modules focus on adopting cloud models and tools for better managing business through cloud-based services.
 
 - [Solution architects](/learn/browse/?roles=solution-architect) can access hundreds of modules and learning paths. The available topics range from core infrastructure services to advanced data transformation.
 
