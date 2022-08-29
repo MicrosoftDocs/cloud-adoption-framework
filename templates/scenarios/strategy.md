@@ -17,17 +17,17 @@ Best practice encourages customers to create a single centralized cloud adoption
 ## {{Token-Name}} motivations
 
 What would motivate the customer to act on this scenario?
-Microsoft technical documentation/azure/cloud-adoption-framework/strategy/motivations
+See [Motivations](/azure/cloud-adoption-framework/strategy/motivations).
 
 ## {{Token-Name}} outcomes
 
 When customers act on this scenario, what do they expect to see as an outcome?
-Microsoft technical documentation/azure/cloud-adoption-framework/strategy/business-outcomes/
+See [Business outcomes](/azure/cloud-adoption-framework/strategy/business-outcomes/).
 
 ## {{Token-Name}} business justification
 
 Is there something special that customers have to do to justify doing this thing?
-Microsoft technical documentation/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+See [Cloud migration business case](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case).
 
 ## Next steps
 
