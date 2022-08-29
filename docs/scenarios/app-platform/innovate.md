@@ -1,6 +1,6 @@
 ---
 title: Innovation on modern application platforms
-description: Understand the Innovate methodology for a modern application platforms environment in the Cloud Adoption Framework for Azure.
+description: Understand the Innovate methodology of the Cloud Adoption Framework to establish a modern application platform environment.
 author: brianblanchard
 ms.author: brblanch
 ms.date: 05/14/2021
@@ -12,7 +12,7 @@ ms.custom: e2e-aks, think-tank
 
 # Innovation on modern application platforms
 
-The Innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern application platform. For more information, see [Innovate methodology](../../innovate/index.md).
+The Innovate methodology of the Cloud Adoption Framework drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern application platform. For more information, see the [Innovate methodology](../../innovate/index.md).
 
 ## Modern application platform innovation
 
