@@ -60,7 +60,7 @@ Use the lessons-learned from your first moves to tackle more challenging workloa
 
 - *High Business Impact:* Workloads that drive revenue.
 - *High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:* Workloads that record business transactions.
-- *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and GDPR](/../cloud-adoption-framework-pr/docs/govern/policy-compliance/regulatory-compliance.md). Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance.md) to ensure compliance with these standards.
+- *Regulated Information:* Workloads that require compliance with legal and industry standards such as HIPAA, PCI DSS, and GDPR. Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance) to ensure compliance with these standards.
 
 ### Hard or costly to move (5%)
 
@@ -70,7 +70,7 @@ Move the most difficult and costly workloads last. The following systems may nee
 - *Public Key Infrastructure (PKI) systems:* Workloads that manage x509 digital certificates and provide network encryption and authentication.
 - *Legacy source control:* Source control systems that aren't easily replaced with GitHub.
 - *Can't be modernized:* Legacy or proprietary technology that can't be modernized.
-- *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/well-architected-pr/well-architected/index.md) rather than the CAF modernize approach.
+- *Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) rather than the CAF modernize approach.
 
 ## More resources
 
