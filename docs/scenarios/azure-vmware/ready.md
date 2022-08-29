@@ -3,7 +3,7 @@ title: Azure landing zone review for Microsoft Azure VMware Solution
 description: Learn about how Microsoft Azure VMware Solution affects your Azure landing zone design.
 author: WendyRing
 ms.author: janet
-ms.date: 09/16/2021
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -29,6 +29,7 @@ As part of the identity and access management enterprise-scale landing zone, an 
 **Network topology and connectivity:** Establish any required network configuration in the landing zone before migration. Consider requirements that might affect your Azure VMware Solution deployment such as:
 
 - Traffic inspection
+- Network traffic flows
 - Internet egress and ingress
 - Use of NVAs
 - Connectivity to standard hub virtual network or an Azure Virtual WAN hub
@@ -36,7 +37,7 @@ As part of the identity and access management enterprise-scale landing zone, an 
 
 **Management and monitoring​:** Create alerts and dashboards on metrics that are most important to your operations teams.
 
-License VMware ecosystem solutions like vRealize Operations Manager and vRealize Network Insight. These solutions provide a detailed understanding of the Azure VMware Solution platform.
+License VMware ecosystem solutions like vRealize Operations, vRealize Log Insight and vRealize Network Insight. These solutions provide a detailed understanding of the Azure VMware Solution platform.
 
 Configure guest monitoring for virtual machines that run in Azure VMware Solution by following the hybrid documentation available for Windows and Linux.
 
