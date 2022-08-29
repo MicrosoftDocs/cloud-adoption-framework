@@ -20,11 +20,11 @@ This document explains network architecture, design considerations, and design r
 
 The following diagram displays an Azure Arc-enabled Kubernetes network architecture that supports fully connected and semi-connected network connectivity modes.
 
-[ ![A diagram showing Azure Arc-enabled Kubernetes network architecture.](./media/arc-enabled-kubernetes-network.png)](./media/arc-enabled-kubernetes-network.png#lightbox)
+[![A diagram showing Azure Arc-enabled Kubernetes network architecture.](./media/arc-enabled-kubernetes-network.png)](./media/arc-enabled-kubernetes-network.png#lightbox)
 
 The following diagram displays a network architecture that allows cluster access from any network location using [Azure Arc-enabled Kubernetes Cluster Connect capability](/azure/azure-arc/kubernetes/conceptual-cluster-connect) feature.
 
-[ ![A diagram showing Azure Arc-enabled Kubernetes Cluster Connect network architecture.](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
+[![A diagram showing Azure Arc-enabled Kubernetes Cluster Connect network architecture.](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
 
 ## Design considerations
 
@@ -62,5 +62,5 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - Understand [Azure Arc-enabled Open Service Mesh](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) to secure Azure Arc-enabled Kubernetes cluster communication and the [services observability](./eslz-arc-kubernetes-services-observability.md) critical design area.
 - Learn how to [Access Azure Arc-enabled Kubernetes clusters from anywhere using Cluster Connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect).
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
-- Review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/) to learn about Azure Arc.
+- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) for answers to most common questions.
