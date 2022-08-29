@@ -35,7 +35,7 @@ The choice of which remote access solution is most appropriate depends on factor
 - Review the [Azure Bastion FAQ](/answers/products/) for answers to common questions you might have about the service.
 - Azure Bastion can be used in Azure Virtual WAN topology. Known limitations include:
   - Azure Bastion can't be deployed in a Virtual WAN virtual hub.
-  - Azure Bastion currently isn't supported with the routing capabilities native to Virtual WAN. Instead, it must be deployed within each spoke virtual network to provide connectivity to VMs within the same virtual network.
+  - Azure Bastion can be deployed in any spoke with VWAN connectivity for accessing hosts in any VNets which are peered through Virtual WAN routing  
   
 ## Design recommendations
 
