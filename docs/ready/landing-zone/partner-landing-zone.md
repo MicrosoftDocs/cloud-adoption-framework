@@ -3,50 +3,74 @@ title: How to find a landing zone partner
 description: Find landing zone partner
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/24/2022
+ms.date: 08/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
 
-# How to find a landing zone partner
+# Help with your landing zone
 
-Getting your Azure landing zone (ALZ) done right and on time is important. It impacts your business or organization and your ability to start benefiting from the cloud.
+Getting your Azure landing zone (ALZ) done right and on time is important. Working with a certified Azure partner is a great way to get the support you need to build your ALZ.
 
-In this case, you need to team with an ALZ partner.
+**Two options -** There are two options to find an ALZ partner (*see figure*).
+
+- *Option 1* - use the Azure Migration and Modernization Program.
+- *Option 2* - find a partner offer for a landing zone in our marketplace.
+
+![A flowchart that summarizes the two options just described. It also lists the subprocesses for each of the two options.](./media/alz-partners-v2.png)
+
+We tell you how to find a partner and what to expect for each option.
 
 ## Option 1 - Azure Migration and Modernization Program (AMMP)
 
-The easiest option to find an ALZ partner is through the Azure Migration and Modernization Program (AMMP). Take 5-minutes to [fill out a simple form](/migration/migration-modernization-program/#program-form), and someone from AMMP will help you find the right partner.
+The easiest option to find an ALZ partner is through the Azure Migration and Modernization Program (AMMP).
 
-**What to expect from an AMMP partner:**
+**Find an AMMP partner -**
+Take 5 minutes to [fill out the AMMP form](/migration/migration-modernization-program/#program-form). Someone from AMMP will help you find the right partner.
 
-Partners in the AMMP program adhere to specific ALZ guidelines. They complete Azure workshops and follow uniform guidance that aligns with CAF principles.
+**What to expect -**
+All the partners in the AMMP program adhere to ALZ best-practices. We vet AMMP partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
 
-|Step 1.<br>Prepare ALZ | Step 2.<br>Deploy ALZ | Step 3.<br>Improve ALZ|
-| --- | --- | --- |
-|<ul><li>Organize resources</li> <li>Manage access</li> <li>Manage cost and billing</li> <li>Plan for governance, security, and compliance</li> <li>Set up monitoring and reporting</li> </ul>|<ul><li>ALZ accelerator or customized approach</li><li>Identity management</li> <li>Network architecture</li> <li>Resource organization</li></ul>|
+1. *ALZ planning* – The AMMP partner will work with you to create the business and technical foundation needed to build your ALZ. ALZ planning includes:
 
- – understand, personalize, evaluate order
+    - Selecting your operating models
+    - Reviewing your ALZ implementation options
+    - Identifying your compliance requirements
+    - Identifying any customization needed
 
-## Option 2 - Customer enablement offer
+1. *ALZ building* – Your partner will build and monitor an ALZ pilot. ALZ building includes:
 
-Go to [Azure Customer Enablement Offers](https://www.microsoft.com/azure/partners/adopt?filters=ready).
+    - Reviewing your ALZ objectives and outcomes
+    - Defining your ALZ build plan
+    - Building your ALZ pilot
+    - Monitoring your ALZ pilot
 
-1. *Filter results* - Select the "Ready" box in the the *Cloud Adoption Framework Methodology* dropdown. Select your region in the *Regions* dropdown to find the closest partners.
-1. *Find landing zone offer* - Each square on the page contains a different partner offer. Offers are presented as links at the bottom of each square. Some partners have more than one offer aligned to the Ready methodology, and these partners will appear multiple times on the page. Look through the offer links at the bottom of each square for landing zone offers. Click on these landing offer links to learn more about the partner and the offer.
-1. *Meet potential partners* - Reach out to multiple partners to see what partner meets your needs the best. Meet with each potential partner to get a sense of their process. [Here are some questions you can use to facilitate your meeting](partner-landing-zone-questions.md).
+1. *Deployment planning* – Your partner will work with you to define your deployment plan. Deployment planning includes:
 
-**What to expect from a customer enablement offer**
+    - Assessing existing workload compatibility
+    - Presenting deployment plan options
+    - Defining resources, timeline, and next steps to execute the deployment plan
 
-- 
+## Option 2 - Partner offers
 
-## Find an ALZ partner
+We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](/azure/partners/adopt?filters=ready) is a marketplace of offers from certified Azure partners. Microsoft vets and approves each offer. They're trustworthy.
 
-Find an ALZ partner by  You will receive advice on connecting with a partner and customized resources.
+Offers have a price, description of what you get, and way to contact the partner. Like any marketplace, offers vary. Partners design offers that they want to sell, and Microsoft approves them for publication on the offer marketplace.
 
+**Find a partner offer -**
+To find a landing zone offer from a partner, follow these steps:
 
+1. *Find lading zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers. Offers are links at the bottom of each tile
+    - *Filter results* - In the Cloud Adoption Framework Methodology dropdown, select the Ready box. In the Regions dropdown, select your region. With these filters, you'll only see offers aligned to the Ready methodology in your region.
+    - *Look for landing zone offers* – Look at the links at the bottom of the tiles. Find and select landing zone offers. Some partners have more than one offer aligned to the Ready methodology. Not every tile on the page will be a landing zone offer. Only select the links at the bottom of the tiles. Selecting the partner’s name or logo takes you to an overview of the partner. Only the link takes you to the offer.
+1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes. We have questions you can use to facilitate these meetings. ADD LINK to questions.
+1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of AMMP. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
+1. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
+
+**What to expect -**
+Partner offers are vetted and approved for the marketplace. They follow CAF principles in general but have more freedom to customize their approach to the ALZ process. Expectations should align with the offer description and any other agreements made between you and your chosen partner.
 
 ## Next steps
 
@@ -54,5 +78,3 @@ Learn about the process for refactoring landing zones.
 
 > [!div class="nextstepaction"]
 > [Refactor landing zones](./refactor.md)
-
-
