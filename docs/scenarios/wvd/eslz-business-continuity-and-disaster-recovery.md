@@ -165,8 +165,6 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Hybrid connectivity must be highly available in both the primary and secondary regions.
   - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
 
-## Next steps
-
 Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
