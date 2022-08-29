@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Design area: Security
 
-This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Cloud Adoption Framework's Secure methodology](../../../secure/index.md).
+This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework.
 
 ## Design area review
 
@@ -26,7 +26,7 @@ This design area creates a foundation for security across your Azure, hybrid, an
 
 Security is a core consideration for all customers, in every environment. When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
 
-The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/index.md) in the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
+The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
 
 ### Azure Security Benchmark
 

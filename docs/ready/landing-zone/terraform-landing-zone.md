@@ -49,7 +49,7 @@ The following diagram shows an overview of a developer environment, including an
 
 ![Diagram of a seamless experience from coding to pipelines.](../../_images/ready/terraform-dev-rover.png)
 
-For all of those reasons, we recommend the use of containers on the developer's machine and in the pipelines. The Cloud Adoption Framework  serves this purpose. All GitHub repositories for the Cloud Adoption Framework have a `.devcontainer` folder that includes a reference to a container (Rover) for the recommended runtime environment.
+For all of those reasons, we recommend the use of containers on the developer's machine and in the pipelines. The Cloud Adoption Framework serves this purpose. All GitHub repositories for the Cloud Adoption Framework have a `.devcontainer` folder that includes a reference to a container (Rover) for the recommended runtime environment.
 
 >[!TIP]
 >Although Rover is useful, it's not mandatory. You can use any Cloud Adoption Framework Terraform component separately.
