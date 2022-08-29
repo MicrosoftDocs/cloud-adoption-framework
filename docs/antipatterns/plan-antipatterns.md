@@ -43,7 +43,7 @@ Review strategic priorities, portfolio scope, requirements, and constraints. Exp
 
 Companies sometimes assume that PaaS solutions cost less than infrastructure-as-a-service (IaaS) solutions. This assumption can lead to the wrong choice of service model. Cost-conscious companies often make this mistake when their main reason for moving to the cloud is to lower costs. These companies forget that they also need to change processes when they adopt PaaS, especially when they move certain responsibilities to cloud providers. Switching to PaaS introduces fundamental changes in coordination efforts, engineering practices, and delivery pipelines. Unexpected cost increases and delays can result.
 
-### Example: Choose PaaS chosen over IaaS
+### Example: Choose PaaS over IaaS
 
 A publisher launches a program to migrate its datacenters to the cloud. The executives would like to modernize their current application architecture and tooling all at once. Their reasons include:
 
