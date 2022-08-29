@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Secure {{Token-LongName}} in Azure
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Security methodology](/azure/cloud-adoption-framework/secure/) of the Cloud Adoption Framework
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Security methodology](/azure/cloud-adoption-framework/secure/) of the Cloud Adoption Framework.
 
 ## Security principles
 
