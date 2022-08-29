@@ -54,7 +54,7 @@ Before diving deep into infrastructure discovery and assessment, consider readin
 - Review the [Azure Migrate: Discovery and assessment tool overview](/azure/migrate/migrate-services-overview#azure-migrate-discovery-and-assessment-tool).
 - Review the deployment scenarios and requirements for the Azure Migrate appliance that performs discovery, [Azure Migrate appliance](/azure/migrate/migrate-appliance#deployment-scenarios).
 - Review the [Azure Migrate assessment overview](/azure/migrate/concepts-assessment-calculation).
-- Optionally, complete the Microsoft Learn training, [Migrate virtual machines and applications using Azure Migrate](/learn/paths/m365-azure-migrate-virtual-machine/).
+- Optionally, complete the learning path, [Migrate virtual machines and applications using Azure Migrate](/learn/paths/m365-azure-migrate-virtual-machine/).
 
 ## Step 1: Set up tooling for discovery and assessment
 
