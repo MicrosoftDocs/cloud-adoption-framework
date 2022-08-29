@@ -60,7 +60,7 @@ Use the lessons-learned from your first moves to tackle more challenging workloa
 
 - *High Business Impact:* Workloads that drive revenue.
 - *High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:* Workloads that record business transactions.
-- *Regulated Information:* Workloads that require compliance with legal and industry standards such as [HIPAA, PCI DSS, and GDPR](../govern/policy-compliance/regulatory-compliance). Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance) to ensure compliance with these standards.
+- *Regulated Information:* Workloads that require compliance with legal and industry standards such as HIPAA, PCI DSS, and GDPR. Use [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance) to ensure compliance with these standards.
 
 ### Hard or costly to move (5%)
 
