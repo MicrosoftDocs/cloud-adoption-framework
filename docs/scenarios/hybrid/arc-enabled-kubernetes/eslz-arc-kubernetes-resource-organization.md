@@ -32,7 +32,7 @@ Once you've onboarded clusters to resource groups and added tags, you can use [R
 
 The following diagram provides a visual overview of resource tagging for Azure Arc-enabled Kubernetes:
 
-[ ![A diagram depicting resource tagging for Azure Arc-enabled kubernetes.](./media/arc-enabled-kubernetes-resource-tagging.png)](./media/arc-enabled-kubernetes-resource-tagging.png#lightbox)
+[![A diagram depicting resource tagging for Azure Arc-enabled kubernetes.](./media/arc-enabled-kubernetes-resource-tagging.png)](./media/arc-enabled-kubernetes-resource-tagging.png#lightbox)
 
 ## Next steps
 
@@ -43,5 +43,5 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
 - Learn how to [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli).
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
-- Learn about Azure Arc in the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See the [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) for answers to most common questions.

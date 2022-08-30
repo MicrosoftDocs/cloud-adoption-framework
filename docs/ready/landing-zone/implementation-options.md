@@ -32,7 +32,7 @@ Beside the use of the Azure landing zone accelerator, there are use cases where 
 To address the customization use cases, consider the [implementation options](#implementation-options) given in this article. The options are intended for users with strong skills in technologies such as Azure Resource Manager, Azure Policy, DevOps tools, and third-party deployment tools. Those technologies are required for a solid foundation on which to build a landing zone.
 
 > [!CAUTION]
-> The best practices used for customization will ultimately be aligned with the [Azure landing zone](./index.md). However, there's added investment in time and effort which might be justified to  to fit specific business requirements.
+> The best practices used for customization will ultimately be aligned with the [Azure landing zone](./index.md). However, there's added investment in time and effort which might be justified to fit specific business requirements.
 
 Finally, guidance in the [Govern](/azure/cloud-adoption-framework/govern/) and [Manage](/azure/cloud-adoption-framework/manage/) methodologies will build on top of your initial landing zones. The design of any Azure landing zone outline will likely require refactoring over time.
 
