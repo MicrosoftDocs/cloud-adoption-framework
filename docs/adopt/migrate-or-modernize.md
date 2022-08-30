@@ -1,16 +1,16 @@
 ---
-title: Migrate or modernize first?
-description: Use the Cloud Adoption Framework for Azure to understand the various approaches to migrate and modernize in your cloud adoption journey.
+title: Cloud migration or modernization first?
+description: Understand the benefits of migrating to the cloud first or modernizing before migrating to the cloud.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/19/2022
+ms.date: 08/30/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
 ms.custom: internal, seo-caf-adopt
 keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
-# Migrate or modernize?
+# Cloud migration or modernization first?
 
 For on-premises applications, prioritizing whether to migrate ("rehost") or modernize ("replatform") first is a common dilemma. Depending on your business goals (*see figure*) and the following benefits of each approach, you'll be better equipped to move forward with an approach.
 
