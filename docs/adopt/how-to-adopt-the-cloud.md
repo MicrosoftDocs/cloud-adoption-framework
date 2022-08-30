@@ -1,17 +1,17 @@
 ---
-title: How to adopt the cloud
+title: Understand the cloud adotion journey
 description: Use the Cloud Adoption Framework for Azure to understand the typical journey to the cloud and how your existing portfolio will change.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/19/2022
+ms.date: 08/30/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
 ms.custom: internal, seo-caf-adopt
-keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
+keywords: cloud adoption, approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
 
-# How to adopt the cloud
+# Understand the cloud adotion journey
 
 We want to give you a sense of what your cloud adoption journey could look like. It can be helpful to see how other organizations adopt the cloud (*see the following diagram*).
 
