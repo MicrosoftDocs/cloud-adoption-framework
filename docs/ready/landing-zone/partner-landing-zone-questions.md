@@ -3,7 +3,7 @@ title: Questions to ask landing zone partners
 description: Questions to ask a landing zone partner
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/29/2022
+ms.date: 08/30/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -11,7 +11,7 @@ ms.custom: internal
 ---
 # Questions to ask a landing zone partner
 
-You can use the following questions to help find the right partner and understand their offers.
+You can use the following questions when you meet with potential partners. The questions can help you get a better understanding of the offer. We organized the questions by landing zone design areas.
 
 ## Design areas
 
