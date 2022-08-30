@@ -62,7 +62,7 @@ For hosting infrastructure as a service (IaaS) hybrid identity solutions, evalua
 
 - For options to meet organizational requirements when integrating on-premises Active Directory with Azure, see [Integrate on-premises AD with Azure](/azure/architecture/reference-architectures/identity).
 
-- Authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the authentication methods Azure AD offers. For more information, see [Authentication for Azure AD hybrid identity solutions](/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json).
+- Authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the authentication methods Azure AD offers. For more information, see [Authentication for Azure AD hybrid identity solutions](/azure/active-directory/hybrid/choose-ad-authn?toc=/azure/architecture/toc.json&bc=/azure/architecture/bread/toc.json).
 
 - If you have Active Directory Federation Services (AD FS) federation with Azure AD, you can use password hash synchronization as a backup. AD FS doesn't support seamless single sign-on (SSO).
 

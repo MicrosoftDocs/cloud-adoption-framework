@@ -227,7 +227,7 @@ Use Azure Monitor metrics to build a dashboard for Azure Machine Learning and as
 
 ### Specialist machine learning engineering team
 
-Many organizations have implemented the role of machine learning engineer. A machine learning engineer specializes in creating and running robust machine learning pipelines, drift monitoring and retraining workflows, and monitoring dashboards. The engineer has  overall responsibility for industrializing the machine learning solution, from development to production. The engineer works closely with data engineering, architects, security, and operations to ensure that all necessary controls are in place.
+Many organizations have implemented the role of machine learning engineer. A machine learning engineer specializes in creating and running robust machine learning pipelines, drift monitoring and retraining workflows, and monitoring dashboards. The engineer has overall responsibility for industrializing the machine learning solution, from development to production. The engineer works closely with data engineering, architects, security, and operations to ensure that all necessary controls are in place.
 
 Although data science requires deep domain expertise, machine learning engineering is more technical in focus. The difference makes the machine learning engineer more flexible, so they can work on various projects and with various business departments. Large data science practices might benefit from a specialist machine learning engineering team that drives repeatability and reuse of automation workflows across various use cases and business areas.
 

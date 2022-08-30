@@ -12,22 +12,22 @@ ms.custom: think-tank
 
 # Strategic impact of {{Token-LongName}}
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article will help expose a number of technical considerations regarding {{Token-Name}} that may have an impact on your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article will help expose a number of technical considerations regarding {{Token-Name}} that may have an impact on your strategy.
 
 ## {{Token-Name}} motivations
 
 What would motivate the customer to act on this scenario?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
+See [Motivations](/azure/cloud-adoption-framework/strategy/motivations).
 
 ## {{Token-Name}} outcomes
 
 When customers act on this scenario, what do they expect to see as an outcome?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
+See [Business outcomes](/azure/cloud-adoption-framework/strategy/business-outcomes/).
 
 ## {{Token-Name}} business justification
 
 Is there something special that customers have to do to justify doing this thing?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+See [Cloud migration business case](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case).
 
 ## Next steps
 
