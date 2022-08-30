@@ -21,7 +21,7 @@ Getting your Azure landing zone (ALZ) done right and on time is important. Worki
 
 We tell you how to find a partner and what to expect for each option.
 
-![A flowchart that summarizes the two options just described. It also lists the subprocesses for each of the two options.](./media/alz-partners-v2.png)
+![A graphic that summarizes the two options to find a partner: the Azure Migration and Modernization Program and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partners-v2.png)
 
 ## Option 1 - Azure Migration and Modernization Program (AMMP)
 
