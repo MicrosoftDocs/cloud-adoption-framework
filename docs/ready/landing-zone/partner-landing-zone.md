@@ -21,16 +21,18 @@ Getting your Azure landing zone (ALZ) done right and on time is important. Worki
 
 We tell you how to find a partner and what to expect for each option.
 
-![A graphic that summarizes the two options to find a partner: the Azure Migration and Modernization Program and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partners-v2.png)
+![A graphic that summarizes the two options to find a partner: the Azure Migration and Modernization Program and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partner-options.png)
 
 ## Option 1 - Azure Migration and Modernization Program (AMMP)
 
 The easiest option to find an ALZ partner is through the Azure Migration and Modernization Program (AMMP).
 
-**Find an AMMP partner** -
+**How to find an AMMP partner:**
+
 Take 5 minutes to [fill out the AMMP form](/migration/migration-modernization-program/#program-form). Someone from AMMP will help you find the right partner.
 
-**What to expect** -
+**What to expect from an AMMP partner:**
+
 All the partners in the AMMP program adhere to ALZ best-practices. We vet AMMP partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
 
 1. *ALZ planning* – The AMMP partner will work with you to create the business and technical foundation needed to build your ALZ. ALZ planning includes:
@@ -59,7 +61,8 @@ We have a self-discovery process you can use to find a partner. [The Azure Custo
 
 Offers have a price, description of what you get, and way to contact the partner. Like any marketplace, offers vary. Partners design offers that they want to sell, and Microsoft approves them for publication on the offer marketplace.
 
-**Find a partner offer** -
+**How to find a partner offer:**
+
 To find a landing zone offer from a partner, follow these steps:
 
 1. *Find lading zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers. Offers are links at the bottom of each tile
@@ -69,7 +72,8 @@ To find a landing zone offer from a partner, follow these steps:
 1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of AMMP. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 1. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
 
-**What to expect** -
+**What to expect from partner offers:**
+
 Partner offers are vetted and approved for the marketplace. They follow CAF principles in general but have more freedom to customize their approach to the ALZ process. Expectations should align with the offer description and any other agreements made between you and your chosen partner.
 
 ## Next steps
