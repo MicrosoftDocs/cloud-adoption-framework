@@ -76,6 +76,11 @@ To find a landing zone offer from a partner, follow these steps:
 
 Partner offers are vetted and approved for the marketplace. They follow CAF principles in general but have more freedom to customize their approach to the ALZ process. Expectations should align with the offer description and any other agreements made between you and your chosen partner.
 
+## Links to find a landing zone partner
+
+- Option 1 - [Azure Migration and Modernization Program](/migration/migration-modernization-program/#program-form)
+- Option 2 - [Partner offers](/azure/partners/adopt?filters=ready)
+
 ## Next steps
 
 Learn about the process for refactoring landing zones.
