@@ -3,7 +3,7 @@ title: Approaches to digital estate planning
 description: Understand the characteristics and requirements of top-down workload-driven, asset-driven, or incremental approaches to digital estate planning.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/26/2022
+ms.date: 08/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -59,7 +59,7 @@ We strongly suggest an incremental approach, as we do for many processes in the 
 
 - **Migration planning:** After you've assembled a cloud strategy team, build an initial migration backlog using a workload-driven approach that's based on their collective knowledge and limited stakeholder interviews. This approach quickly builds a lightweight workload assessment to foster collaboration.
 
-- **Release planning:** At each release, prune and reprioritize the migration backlog to focus on the most relevant business impact. During this process, you select the next five to 10 workloads as prioritized releases. At this point, the cloud strategy team invests the time in completing an exhaustive workload-driven approach. Delaying this assessment until a release better respects the time of stakeholders. It also delays the investment in full analysis until the business starts to see results from earlier efforts.
+- **Release planning:** At each release, prune and reprioritize the migration backlog to focus on the most relevant business impact. During this process, you select the next 5 to 10 workloads as prioritized releases. At this point, the cloud strategy team invests the time in completing an exhaustive workload-driven approach. Delaying this assessment until a release better respects the time of stakeholders. It also delays the investment in full analysis until the business starts to see results from earlier efforts.
 
 - **Implementation analysis:** Before migrating, modernizing, or replicating any asset, assess it both individually and as part of a collective release. At this point, you can scrutinize the data from the initial asset-driven approach to ensure accurate sizing and operational constraints.
 
