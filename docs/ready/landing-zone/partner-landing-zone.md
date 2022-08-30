@@ -1,5 +1,5 @@
 ---
-title: How to find help building a landing zone
+title: How to get help building a landing zone
 description: Ways to find partners to help you build a landing zone and what to expect from partners.
 author: stephen-sumner
 ms.author: ssumner
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Help with your landing zone
+# How to get help building a landing zone
 
 Getting your Azure landing zone (ALZ) done right and on time is important. Working with a certified Azure partner is a great way to get the support you need to build your ALZ. We will show you how to find a partner and what to expect from your partner.
 
@@ -57,9 +57,11 @@ All the partners in the AMMP program adhere to ALZ best-practices. We vet AMMP p
 
 ## Option 2 - Partner offers
 
-We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](/azure/partners/adopt?filters=ready) is a marketplace of offers from certified Azure partners. Microsoft vets and approves each offer. They're trustworthy.
+We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](/azure/partners/adopt?filters=ready) is a marketplace of offers from certified Azure partners. Microsoft vets and approves each offer. Each offer comes from Azure Advanced Specialization Partners or Azure Expert Managed Services Providers (MSPs).
 
-Offers have a price, description of what you get, and way to contact the partner. Like any marketplace, offers vary. Partners design offers that they want to sell, and Microsoft approves them for publication on the offer marketplace.
+Advanced specialization partners demonstrate deep technical knowledge, proven success, and ethical business practices. Azure Expert MSPs also meet these criteria but must additionally pass a time- and cost-intensive auditing process.
+
+Offers in the marketplace have a price, description of what you get, and way to contact the partner. Like any marketplace, the offers are not all the same. There is flexibility in what the offer can be. Partners design and propose offers. Microsoft approves them for the marketplace. This flexibility allows creates value for the customer. You to find an offer that meets your specific needs.
 
 **How to find a partner offer:**
 
