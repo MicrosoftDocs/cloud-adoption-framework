@@ -3,7 +3,7 @@ title: Organize and set up Azure Machine Learning environments
 description: Learn about the considerations and decision points that affect how you plan for and create an Azure Machine Learning workspace.
 author: denniseik
 ms.author: deeikele
-ms.date: 08/26/2022
+ms.date: 08/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -46,7 +46,7 @@ With this approach, the workspace might become cluttered quickly when many machi
 
 An environment is a collection of resources that deployments target based on their stage in the application lifecycle. Common examples of environment names are Dev, Test, QA, Staging, and Production.
 
-The development process in your organization affects requirements for environment usage. Your environment affects the setup of Azure Machine Learning and associated resources, such as, attached compute. For example, data availability might constrain the manageability of having a machine learning instance available for each environment. The following solution patterns are common:
+The development process in your organization affects requirements for environment usage. Your environment affects the setup of Azure Machine Learning and associated resources, such as attached compute. For example, data availability might constrain the manageability of having a machine learning instance available for each environment. The following solution patterns are common:
 
 **Single environment workspace deployment:** When you choose a single environment workspace deployment, Azure Machine Learning deploys to one environment. This setup is common for research-centered scenarios, where there's no need to release machine learning artifacts based on their lifecycle stage, across environments. Another scenario where this setup makes sense is when only inferencing services, and not machine learning pipelines, are deployed across environments.
 
@@ -84,7 +84,7 @@ The location of your resources, data, or users might require you to create Azure
 
 The benefit of this setup is you can do experimentation in the data center where the data is located with the least network latency. With this approach, when a machine learning pipeline runs across multiple workspace instances, it adds more management complexity. It becomes challenging to compare experimentation results across instances and adds overhead to quota and compute management.
 
-If you want to attach storage across regions, but use compute from one region, Azure Machine Learning supports the scenario of attaching storage accounts in a region rather than the workspace. Metadata, for example, metrics, is stored in the workspace region.
+If you want to attach storage across regions, but use compute from one region, Azure Machine Learning supports the scenario of attaching storage accounts in a region rather than the workspace. Metadata, for example metrics, is stored in the workspace region.
 
 :::image type="content" source="./media/azure-ml-setup-regional-training.png" alt-text="Diagram of training jobs operating in the same Azure region as the data." lightbox="./media/azure-ml-setup-regional-training.png":::
 
@@ -98,9 +98,9 @@ With this approach, a multi-region setup provides several advantages, but also a
 
 **Regional fine-tuning:** A base model trains on an initial dataset, for example, public data or data from all regions, and is later fine-tuned with a regional dataset. The regional dataset might only exist in a particular region because of compliance or data movement constraints. For example, you might need base model training to be done in a workspace in region A, while fine tuning happens in a workspace in region B.
 
-The benefit of this setup is you can experiment compliantly in the data center where the data resides. And you can still take advantage of base model training on a larger dataset in an earlier pipeline stage.
+The benefit of this setup is you can experiment compliantly in the data center where the data resides. You can also still take advantage of base model training on a larger dataset in an earlier pipeline stage.
 
-With this approach, it supports complex experimentation pipelines but it might create more challenges. For example, when you compare experiment results across regions, it might add more overhead to the quota and compute management.
+This approach supports complex experimentation pipelines but it might create more challenges. For example, when you compare experiment results across regions, it might add more overhead to the quota and compute management.
 
 :::image type="content" source="./media/azure-ml-setup-regional-fine-tuning.png" alt-text="Diagram of an initial dataset deployed using public data or data from all regions, and fine-tuned later with a regional dataset." lightbox="./media/azure-ml-setup-regional-fine-tuning.png":::
 
