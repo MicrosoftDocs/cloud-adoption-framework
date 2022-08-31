@@ -3,7 +3,7 @@ title: Envision your cloud modernization possibilities
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/19/2022
+ms.date: 08/31/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice:
@@ -14,7 +14,7 @@ keywords: envision, motivations, approach, modernization, cloud adoption framewo
 
 Envisioning your cloud modernization possibilities starts with understanding your motivations. You have reasons for wanting to adopt the cloud, and these reasons are the key to modernization. Knowing your motivations lets you determine what you should modernize.
 
-:::image type="content" source="../../_images/modernize/envision/envision-938.png" alt-text="Image showing where you are in the business alignment process.":::
+:::image type="content" source="../../_images/modernize/envision/envision-300.png" alt-text="Image showing where you are in the business alignment process." border="false":::
 
 Follow these three steps to envision your cloud modernization possibilities.
 
@@ -22,7 +22,7 @@ Follow these three steps to envision your cloud modernization possibilities.
 
 Discover the reasons you want to modernize with the cloud. Your motivations will be unique to your goals. The following commonalities exist across businesses and industries (*see figure*).
 
-:::image type="content" source="../../_images/modernize/envision/modernization-motivations.png" alt-text="Image showing modernization motivations.":::
+:::image type="content" source="../../_images/modernize/envision/modernization-motivations.png" alt-text="Image showing modernization motivations." border="false":::
 
 Some of the most common modernization motivations are:
 
@@ -40,11 +40,9 @@ Identify the workloads you want to modernize.
 
 *What is a workload?* A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a business function. Data centers encourage you to manage IT assets separately (*see figure*).
 
-:::image type="content" source="../../_images/modernize/envision/data-center-it-assets-small.png" alt-text="Graphic showing existing data center." :::
+:::image type="content" source="../../_images/modernize/envision/data-center-it-assets-400.png" alt-text="Graphic showing existing data center." border="false":::
 
 The cloud lets you focus on workloads instead of separate IT assets. Modernizing infrastructure, applications, and data together as workloads lets you streamline your modernization processes. You can reuse these processes and apply them to each workload requiring the same modernization strategy.
-
-:::image type="content" source="../../_images/modernize/envision/workload_300.png" alt-text="Image showing workload as a combination of applications, infrastructure, and data." :::
 
 *How to identify workloads*. Identify workloads by making a list of business functions. Business functions are the key components of your business.
 
