@@ -120,7 +120,7 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Microsoft Learn path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. In brief, the admins perform the following actions:
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure/) learning path as a guide during the process. In brief, the admins perform the following actions:
 
 - They use the Azure [App Service migration assessment](https://azure.microsoft.com/services/app-service/migration-assistant/) tool to evaluate any dependencies between their web apps and to determine whether there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 
