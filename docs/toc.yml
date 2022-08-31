@@ -833,7 +833,7 @@ items:
             href: infrastructure/mainframe-migration/application-strategies.md
         - name: Migrate secure workloads
           items:
-          - name: Securing and managing workloads after migration
+          - name: Secure and manage workloads after migration
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
           - name: Azure database security best practices
             href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
