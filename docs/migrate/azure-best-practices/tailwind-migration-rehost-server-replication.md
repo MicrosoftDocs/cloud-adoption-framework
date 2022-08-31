@@ -36,7 +36,7 @@ Before we start diving deep in infrastructure migration planning and deployment,
 
 - Review the [Azure Migrate: Server Migration tool overview](/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
 - Review the differences between the [Azure Migrate appliance](/azure/migrate/common-questions-appliance), [replication appliance](/azure/migrate/migrate-replication-appliance), and [Hyper-V migration architecture](/azure/migrate/hyper-v-migration-architecture).
-- Optionally, complete the Microsoft Learn training, [Migrate virtual machines and applications using Azure Migrate](/learn/paths/m365-azure-migrate-virtual-machine/) training.
+- Optionally, complete the learning path, [Migrate virtual machines and applications using Azure Migrate](/learn/paths/m365-azure-migrate-virtual-machine/) training.
 
 ## Step 1: Tooling and replication
 
