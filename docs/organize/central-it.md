@@ -3,7 +3,7 @@ title: Understand the functions of a central IT team
 description: Understand the function of a central IT team, including the source, scope, deliverables, and risks.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/29/2022
+ms.date: 08/31/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -33,7 +33,7 @@ The following disciplines and structures cover the requirements for setting up c
 - Application owners within IT
 
 > [!WARNING]
-> You should only apply Centralized IT in the cloud when you've based your existing delivery on-premises on the central IT team model. If you based your current on-premises model on delegated control, consider a cloud center of excellence (CCoE) approach for a more cloud-compatible alternative.
+> You should only apply centralized IT in the cloud when you've based your existing delivery on-premises on the central IT team model. If you based your current on-premises model on delegated control, consider a cloud center of excellence (CCoE) approach for a more cloud-compatible alternative.
 
 ## Key responsibilities
 
