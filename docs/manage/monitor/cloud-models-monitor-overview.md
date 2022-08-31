@@ -1,34 +1,34 @@
 ---
 title: Monitoring strategy for cloud deployment models
-description: Use the Cloud Adoption Framework for Azure to learn which monitoring strategy for cloud management to employ.
+description: Learn about monitoring strategy for cloud deployment models in Azure.
 author: MGoedtel
 ms.author: brblanch
-ms.date: 10/20/2020
+ms.date: 08/31/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: think-tank
 ---
 
-# Cloud monitoring guide: Monitoring strategy for cloud deployment models
-
-This article includes our recommended monitoring strategy for each of the cloud deployment models, based on the following criteria:
-
-- You must maintain your commitment to Operations Manager or another enterprise monitoring platform, because it's integrated with your IT operations processes, knowledge, and expertise, or certain functionality isn't available yet in Azure Monitor.
-- You must monitor workloads both on-premises and in the public cloud, or just in the cloud.
-- Your cloud migration strategy includes modernizing IT operations and moving to our cloud monitoring services and solutions.
-- You might have critical systems that are air-gapped or physically isolated, or are hosted in a private cloud or on physical hardware, and these systems need to be monitored.
+# Monitoring strategy for cloud deployment models
 
 Our strategy includes support for monitoring infrastructure (compute, storage, and server workloads), application (end-user, exceptions, and client), and network resources. It delivers a complete, service-oriented monitoring perspective.
 
+This article includes our recommended monitoring strategy for each of the cloud deployment models, based on the following criteria:
+
+- Maintain your commitment to Operations Manager or another enterprise monitoring platform, because it's integrated with your IT operations processes, knowledge, and expertise, or certain functionality isn't available yet in Azure Monitor.
+- Monitor workloads both on-premises and in the public cloud, or just in the cloud.
+- Your cloud migration strategy includes modernizing IT operations and moving to our cloud monitoring services and solutions.
+- You might have critical systems that are air-gapped or physically isolated, or are hosted in a private cloud or on physical hardware, and these systems need to be monitored.
+
 ## Azure cloud monitoring
 
-Azure Monitor is the Azure native platform service that provides a single source for monitoring Azure resources. It's designed for cloud solutions that:
+Azure Monitor is the native platform service that provides a single source for monitoring Azure resources. It's designed for cloud solutions that:
 
 - Are built on Azure.
 - Support a business capability that's based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
 
-It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, and subscription-level events and Azure Service Health.
+It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, subscription-level events, and Azure Service Health.
 
 It also monitors infrastructure resources, such as VMs, storage, and network resources. At the top layer, it monitors your application.
 
