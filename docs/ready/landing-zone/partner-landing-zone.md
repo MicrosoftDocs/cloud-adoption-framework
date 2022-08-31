@@ -3,7 +3,7 @@ title: Partner options for implementing Azure landing zones
 description: Learn how to validate partner implementation options for Azure landing zones.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/30/2022
+ms.date: 08/31/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -23,7 +23,7 @@ This article provides a set of questions that help you understand the scope of y
 > [!IMPORTANT]
 > Partners define their offers and Azure landing zone implementation options based on their extensive experience helping customers adopt the cloud.
 >
-> Partners might choose to omit specific design areas in their initial landing zone implementation. However, whenever possible,they should be able to communicate when and how each design area implements, as well as the range of costs for completing that design area.
+> Partners might choose to omit specific design areas in their initial landing zone implementation. However, whenever possible, they should be able to communicate when and how you implement each design area, as well as the range of costs for completing that design area.
 >
 > Other partner solutions might be flexible enough to support multiple options for each of the following questions. Use these questions to ensure you're comparing partner offers and self-service options equally.
 
@@ -68,7 +68,7 @@ Identity is perhaps the most important design area to evaluate in the partner so
 
 **Question for the partner:** Which of the following identity management options does the partner solution support?
 
-- **Azure AD:** The suggested best practice is to use Azure AD and Azure role-based access control to manage identity and access in Azure.
+- **Azure Active Directory (Azure AD):** The suggested best practice is to use Azure AD and Azure role-based access control to manage identity and access in Azure.
 - **Active Directory:** If necessary, does the partner solution provide an option to deploy Active Directory as an infrastructure as a service solution?
 - **Third-party identity provider:** If your company uses a third-party identity solution, determine whether and how the partner's Azure landing zone integrates with the third-party solution.
 
