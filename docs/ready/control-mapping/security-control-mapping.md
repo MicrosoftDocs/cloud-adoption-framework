@@ -1,6 +1,6 @@
 ---
 title: Security Control Mapping with Azure Landing Zone
-description: This document is an End-to-End guidance for Security Control Mapping when deploying Azure Landing Zone for those organizations that are required to comply with regional and other regulatory compliances.
+description: This document is an End-to-End guidance for Security Control Mapping when deploying Azure Landing Zone for those organizations that are required to comply with regional and other regulatory compliance.
 author: Tshah2808
 ms.author: tanshah
 ms.date: 07/06/2022
@@ -22,7 +22,7 @@ There are many ASB Regulatory compliance built-in initiatives already available.
 
 The process flow of control mapping:
 
-:::image type="content" source="./media/control-mapping-process-flow.svg" alt-text="Control Mapping Process Flow - with ALZ" lightbox="./media/control-mapping-process-flow.svg":::
+:::image type="content" source="media/control-mapping-process-flow.png" alt-text="Control Mapping Process Flow with ALZ" lightbox="media/control-mapping-process-flow.png":::
 
 ## Control Mapping process steps
 
@@ -59,11 +59,11 @@ In this example, we can look at the existing categorization of a given control �
 To quickly search a given version of the Azure Security Benchmark we provide [Excel download files](/security/benchmark/azure/overview#download) of each release that can be quickly searched by control ID or part of the description verbiage.
 In this step the process identifies and maps controls that are covered under ASB.
 
-### 3.Identify the controls not mapped with ASB and respective policies
+### 3. Identify the controls not mapped with ASB and respective policies
 
 Any identified controls that might not map directly to ASB should be marked as needing mitigating automation, and a custom policy or automation script should be developed in the guardrail implementation process.
 
-### 4.Perform platform and Service level Assessment
+### 4. Perform platform and Service level Assessment
 
 Once you have your controls & objectives clearly mapped to ASB and have gathered the supporting information on responsibility, guidance, and monitoring, the IT security office or supporting organization must review all provided information in an official platform assessment. This platform assessment will determine if the Azure Security Benchmark meets the minimum threshold for usage and if it can meet all security and compliance requirements imposed by the regulations. If there are gaps identified, you can still use Azure and ASB but might need to develop mitigating controls until these gaps are closed and the benchmark can release updates to address them. In addition, you can map the custom controls by creating a policy definition and optionally adding to an initiative.
 
@@ -83,11 +83,11 @@ Once you have your controls & objectives clearly mapped to ASB and have gathered
     - Where there are gaps in monitoring or enforcement for the service and control
         1. report to the ASB team to drive gaps closed (content, monitoring, or enforcement)
 
-    - For any areas that do not meet the your requirements, please notate the risk involved if you choose to exempt that requirement, the impact, and if it is acceptable to approve or if you are blocked due to the gap.
+    - For any areas that do not meet your requirements, note the risk involved if you choose to exempt that requirement, the impact, and if it is acceptable to approve or if you are blocked due to the gap.
 
 4. Service status is determined:
-    - Either the service meets all requirements, or that the risk is acceptable and is placed on an allow list to be used after guardrails are in place
-    - OR the service gaps are too large / risk is too big and service is placed on a deny list - it cannot be used until gaps are closed by Microsoft
+    - Either the service meets all requirements, or that the risk is acceptable and is placed on an allowlist to be used after guardrails are in place
+    - OR the service gaps are too large / risk is too big and service is placed on a blocklist - it cannot be used until gaps are closed by Microsoft
 
 ##### Inputs - platform level
 
@@ -119,7 +119,7 @@ After the approval from your internal Security/Audit team that the platform and 
 
 - Custom Policy Initiative
 
-### 5.Implement Guardrails (policy initiative) using Azure Landing Zone or native tools
+### 5. Implement Guardrails (policy initiative) using Azure Landing Zone or native tools
 
 > [!TIP]
 > As part of the Azure Landing Zone Accelerators (Portal, Bicep & Terraform), by default, we assign the ASB policy initiative to Intermediate Root Management Group (‘Contoso’ for example). This article describes the process of identifying, mapping, and implementing regulatory compliance related controls as part of Azure Landing Zone (ALZ) deployment.ALZ deployment covers policies that are aligned with ASB for platform level security controls.
@@ -129,9 +129,9 @@ After the approval from your internal Security/Audit team that the platform and 
 Depending on the customer’s control objectives, you might need to create custom policies, policy initiatives and policies assignments.
 
 Please reference the guidance below for each ALZ implementation option.
-[ALZ Accelerator using the Azure Portal](https://aka.ms/caf/ready/accelerator)
+[ALZ Accelerator using the Azure portal](https://aka.ms/caf/ready/accelerator)
 
-When using the ALZ Accelerator Azure Portal based experience, please refer to the following articles.
+When using the ALZ Accelerator Azure portal based experience, please refer to the following articles.
 
 Adding Azure Policy Definitions and initiatives:
 
@@ -176,9 +176,9 @@ Implementing custom policy definitions, initiatives and assignments when not usi
 
 **If you are following the ALZ guidance but not using any of the ALZ implementations, you might need to create custom policies, policy initiatives and policies assignments.**
 
-## Azure Portal
+## Azure portal
 
-When using the Azure Portal, please refer to the following articles.
+When using the Azure portal, please refer to the following articles.
 Adding Customer Azure Policy Definitions and initiatives
 
 [create custom security policies in MDC](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
