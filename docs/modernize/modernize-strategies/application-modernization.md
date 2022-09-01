@@ -23,7 +23,7 @@ PaaS gives you the flexibility to modernize any application or framework. Your a
 
 - *Container PaaS* - Contains PaaS solutions use container technologies to run your workloads. You provide code and manage agent nodes. The platforms manage health, maintenance, and deployment. Azure Kubernetes Service and Azure Red Hat OpenShift are examples of give you the most control over your workloads.
 
-- *Application PaaS* - Application PaaS solutions use virtualization to run your workload without containers. You provide code and select configuration options. The platform manages health, availability, and deployment. There is less management than with Container PaaS. Azure App Service, Azure Spring Cloud, and Azure Functions give you a balance of control and productivity.
+- *Application PaaS* - Application PaaS solutions use virtualization to run your workload without containers. You provide code and select configuration options. The platform manages health, availability, and deployment. There's less management than with Container PaaS. Azure App Service, Azure Spring Cloud, and Azure Functions give you a balance of control and productivity.
 
 - *Low/No Code PaaS* - Low code PaaS and no-code PaaS solutions let you build apps with little to no coding required. You can rapidly build applications and focus more time on your business. Power Apps and Power Automate are low/no code PaaS solutions that maximize your productivity.
 
