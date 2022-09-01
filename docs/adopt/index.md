@@ -17,7 +17,7 @@ Adopt the cloud to improve your business or organization. The adopt methodology 
 
 There are three common approaches for adopting the cloud: migrate, modernize, and innovate. Each approach has different solutions and provides unique benefits. The approach you take depends on the goals you have for cloud adoption (*see figure*).
 
-:::image type="content" source="../_images/adopt/cloud-adoption-plan-v4.png" alt-text="Image showing three cloud adoption approaches and their goals. The three approaches to adopting the cloud are migrate, modernize, and innovate. ":::
+:::image type="content" source="../_images/adopt/cloud-adoption-approaches.png" alt-text="Image showing three cloud adoption approaches and their goals. The three approaches to adopting the cloud are migrate, modernize, and innovate. " border="false":::
 
 Here's a brief overview of each approach to get you started. Focus on the goals of each approach, and see if they resonate. If they do, explore that approach further for implementation guidance.
 

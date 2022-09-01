@@ -14,7 +14,7 @@ keywords: collect data, migrate data, data migration, data modernization
 
 Learn about solutions for modernizing your databases in the cloud. The cloud has database solutions for any database. Two categories of database solutions give you this flexibility: Azure SQL and open-source/NoSQL databases (*see image*). Within each of these two categories, there are three levels of control. Infrastructure-as-a-service (Iaas) solutions give you the most control. Platform-as-a-service (PaaS) solutions facilitate more productivity.
 
-:::image type="content" source="../../_images/modernize/db-platforms/db-modernize-531X491.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. The bottom has on-premises as the starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
+:::image type="content" source="../../_images/modernize/db-platforms/db-modernize.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. The bottom has on-premises as the starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases":::
 
 - *Azure SQL* - SQL Server on virtual machines, Azure SQL Managed Instance, and Azure SQL Database give you options to modernize SQL server databases.
 - *Open-source SQL & NoSQL* - virtual machines, Azure Cosmos/Managed Instance, and open-source managed services give you options to modernize open-source SQL and NoSQL databases.

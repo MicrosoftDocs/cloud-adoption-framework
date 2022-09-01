@@ -14,9 +14,9 @@ ms.custom: internal
 
 Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads.
 
-We recommend using a DevOps methodology. DevOps empowers your teams to deliver value to customers faster. The methodology integrates work planning, code development, application deployment, and operations. You gain efficiencies across your business with this integration (*see figure*). 
+We recommend using a DevOps methodology. DevOps empowers your teams to deliver value to customers faster. The methodology integrates work planning, code development, application deployment, and operations. You gain efficiencies across your business with this integration (*see figure*).
 
-:::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools-512.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts.":::
+:::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
 
 You can use Azure DevOps Services to implement your DevOps methodology. Azure DevOps supports [integration with GitHub](/azure/devops/user-guide/what-is-azure-devops).
 
@@ -56,7 +56,7 @@ Here's the sample modernization roadmap we created.
 
 ### Plan your modernization efforts
 
-Plan your modernization efforts using your modernization roadmap. Complete the steps in the following table to divide the work into manageable pieces and assign it to members of your team. 
+Plan your modernization efforts using your modernization roadmap. Complete the steps in the following table to divide the work into manageable pieces and assign it to members of your team.
 
 | Step | Work tasks | Example |
 | --- | --- | --- |
