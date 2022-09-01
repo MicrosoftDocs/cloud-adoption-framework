@@ -28,8 +28,8 @@ Need to add Azure DevOps to image, not just DevOps.
 
 Modernize your tools so you can plan and deliver value to customers. Azure DevOps lets you easily integrate planning, development, delivery, and operations. In the following table, we've listed the standalone services offered and examples of alternative open-source solutions.
 
-| Azure DevOps standalone service | Description |  Open-source solution
-| --- | --- | --- | --- |
+| Azure DevOps  service | Description |  Open-source solution
+| --- | --- | --- |
 | *[Azure Repos](/azure/devops/repos/get-started/what-is-repos)* | Get unlimited, cloud-hosted private Git repositories for your project. | GitHub
 | *[Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)* | Continuously build, test, and deploy to any platform and cloud. | Jenkins
 | *[Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards)* | Plan, track, and discuss work across your teams. | TaskBoard |
