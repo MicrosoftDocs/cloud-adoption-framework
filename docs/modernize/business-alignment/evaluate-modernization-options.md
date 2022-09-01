@@ -27,16 +27,14 @@ A financial readiness assessment helps you determine if it makes business sense 
 
 For each workload you want to modernize, answer the following questions to assess your financial readiness.
 
-Answering *yes* to all questions means you're likely ready to modernize. If you answer *no* to any of the questions, we recommend you conduct an [Azure Well-Architected Review](/assessments/?mode=pre-assessment&session=local) of your workload.
+- *Can you quantify the business value of modernizing the workload?*
+- *Do you know what your modernization cost will be?*
+- *Are these workloads business-critical?*
+- *Does the cost of modernization meet your desired cost savings?*
 
-|Question|Yes|No|
-|--|--|--|
-|*Can you quantify the business<br> value of modernizing the workload?*|Modernize|Conduct Azure Well-Architected Review|
-|*Do you know what your <br>modernization cost will be?*|Modernize<br>|Conduct Azure Well-Architected Review|
-|*Are these workloads business-critical?*|Modernize|Conduct Azure Well-Architected Review|
-|*Does the cost of modernization<br> meet your desired cost savings?*|Modernize|Conduct Azure Well-Architected Review|
+Answering *yes* to all questions means you're likely ready to modernize. If you answered *no* to any of the questions, we recommend you conduct an [Azure Well-Architected Review](/assessments/?mode=pre-assessment&session=local) of your workload
 
-If you answered *yes* to all the financial readiness questions, the workload is likely ready to adopt the cloud. The next step, [technical readiness evaluation](#step-2---evaluate-the-technical-readiness-of-each-workload), will help you determine if you're ready to modernize or take another adoption path.
+The next step, [technical readiness evaluation](#step-2---evaluate-the-technical-readiness-of-each-workload), will help you determine if you're ready to modernize or find another adoption path.
 
 ## Step 2 - Evaluate the technical readiness of each workload
 
