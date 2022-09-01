@@ -13,13 +13,17 @@ keywords: application platform, modern, cloud modernization, cloud adoption fram
 
 # Modernize applications in the cloud
 
-Modernize any application or framework in the cloud. The following platform-as-a-service (PaaS) technologies give you flexibility (*see figure*) for modernizing any application or framework in the cloud.
+Modernizing your applications can rapidly transform your business or organization. The goal of application modernization is to rapidly enhance operations with solutions that allow your business to scale. Adopting platform-as-a-service (PaaS) technologies gives you these benefits.
+
+PaaS technologies give you the flexibility to modernize any application or framework. Your applications running .NET, Java/Spring, Python, or multiple frameworks have a home in a PaaS solution. You can choose three variations of PaaS technologies depending on the balance of control and productivity you want (*see figure*).
 
 :::image type="content" source="../../_images/modernize/app-platforms/app-modernize-586.png" alt-text="Graphic showing the application platform options, moving from control to productivity. The bottom of the graphic shows on-premises solutions. Moving up, you see container platforms, application platforms, and low-code and no-code platforms.":::
 
-- *Container PaaS* - Azure Kubernetes Service and Azure Red Hat OpenShift give you the most control over your workloads.
-- *Application PaaS* - Azure App Service, Azure Spring Cloud, and Azure Functions give you a balance of control and productivity.
-- *Low/No Code PaaS* - Power Apps and Power Automate give you the most productivity power.
+- *Container PaaS* - Contains PaaS solutions use container technologies to run your workloads. You provide code and manage agent nodes. The platforms manage health, maintenance, and deployment. Azure Kubernetes Service and Azure Red Hat OpenShift are examples of give you the most control over your workloads.
+
+- *Application PaaS* - Application PaaS solutions use virtualization to run your workload without containers. You provide code and select configuration options. The platform manages health, availability, and deployment. There is less management than with Container PaaS. Azure App Service, Azure Spring Cloud, and Azure Functions give you a balance of control and productivity.
+
+- *Low/No Code PaaS* - Low code and no-code PaaS let you build apps with almost no coding required. The platforms let you rapidly build applications without the need to maintain code. Power Apps and Power Automate give you more time to focus on your business.
 
 ## Step 1 - Use a decision tree to narrow options
 
