@@ -378,7 +378,9 @@ items:
             href: ready/landing-zone/design-area/encryption-and-keys.md
           - name: Service enablement framework
             href: ready/landing-zone/design-area/service-enablement-framework.md
-
+          - name: Security Control Mapping
+            href: ready\control-mapping\security-control-mapping.md
+            
         - name: Management
           items:
           - name: Overview
@@ -525,8 +527,7 @@ items:
             href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Azure operational security best practices
             href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-    - name: Skills relevant to ready and landing zones
+        - name: Skills relevant to ready and landing zones
       href: ready/suggested-skills.md
 
     - name: Ready antipatterns
