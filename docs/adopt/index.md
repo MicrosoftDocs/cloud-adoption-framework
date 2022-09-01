@@ -3,7 +3,7 @@ title: Adopt the cloud
 description: Use the Cloud Adoption Framework for Azure to understand the adoption horizons necessary to identify and prioritize, based on your adoption goals.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/24/2022
+ms.date: 09/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice:
@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 # Adopt the cloud
 
-Adopt the cloud to improve your business or organization. The adopt methodology is where you start using the cloud and experiencing its benefits. 
+Adopt the cloud to improve your business or organization. The adopt methodology is where you start using the cloud and experiencing its benefits.
 
 There are three common approaches for adopting the cloud: migrate, modernize, and innovate. Each approach has different solutions and provides unique benefits. The approach you take depends on the goals you have for cloud adoption (*see figure*).
 
@@ -37,7 +37,7 @@ The modernize approach is where you enhance existing applications to improve ope
 - *Goals:* Reduce technical debt, modernize applications, and modernize data platforms.
 - *Examples*: Move to managed services. Move from SQL database to Azure SQL database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Container Apps.
 - *Solutions:* Adopt platform-as-a-service (PaaS) solutions across workload clusters.
-- *Key benefits:* Cost, security, availability, visibility, performance, and operations. You don't have to managed the underlying infrastructure and can focus on scaling your business.
+- *Key benefits:* Cost, security, availability, visibility, performance, and operations. You don't have to manage the underlying infrastructure and can focus on scaling your business.
 
 ## Innovate
 
