@@ -334,7 +334,7 @@ Broadly, your BCDR strategy must consider:
 
 Although the Azure platform provides some built-in resiliency capabilities, you need to design your Azure deployment to take advantage of them.
 
-- Your BCDR solution will depend on your company objectives, and is influenced by your Azure deployment strategy. IaaS and PaaS deployments present different challenges for BCDR.
+- Your BCDR solution will depend on your company objectives, and is influenced by your Azure deployment strategy. Infrastructure as a service (IaaS) and platform as a service (PaaS) deployments present different challenges for BCDR.
 - After they are in place, your BCDR solutions should be tested regularly to check that your strategy remains viable.
 
 #### Back up an IaaS deployment
