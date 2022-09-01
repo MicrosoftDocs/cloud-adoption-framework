@@ -13,7 +13,7 @@ keywords: cloud adoption, approaches, strategy, cloud migration, cloud moderniza
 
 # Understand the cloud adoption journey
 
-We want to give you a sense of what your cloud adoption journey could look like. It can be helpful to see how other organizations adopt the cloud (*see the following diagram*).
+Most cloud adoption journeys follow a similar path.  It's helpful to see how other organizations adopt the cloud. Knowing what workloads to tackle first and what to do with them will streamline your cloud adoption journey (*see the following diagram*).
 
 :::image type="content" source="../_images/adopt/adopt-existing-apps-v7.png" alt-text="Diagram showing portfolio migration modernization approach.":::
 

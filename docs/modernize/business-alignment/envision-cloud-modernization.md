@@ -59,14 +59,14 @@ Align your modernization motivations and workloads so you can evaluate their rea
 
 *Map motivations and workloads*. Map your modernization motivations (step 1) to the workloads you identified (step 2).
 
-*Assign one motivation to each workload*. Assigning a single modernization motivation to each workload will help you organize your work when it's time to modernize (*see table for examples*).
+*Assign one motivation to each workload.* Assigning a single modernization motivation to each workload will help you organize your work when it's time to modernize (*see table for examples*).
 
 |Business function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |
 | --- | --- | --- |
 |E-commerce<br>website| Web app<br>Business logic<br>Database<br>Servers<br>Payment System|Application innovation
 |Factory production|Machine/Robot<br>IOT device<br>Programmable Logic Controller<br>Monitoring<br>Server|Centralizing data|
 
-*When a single motivation is unclear*. [Conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9). The well-architected review will help you figure out what your motivation should be. After running the review, return to this step and complete step 3.
+*When a single motivation is unclear, [conduct a well-architected review on the workload](/assessments/?mode=pre-assessment&id=azure-architecture-review&session=e88fbec1-a73c-4d4f-8192-e2633676d3b9).* The well-architected review will help you figure out what your motivation should be. After running the review, return to this step and complete step 3.
 
 ## Next steps
 
