@@ -16,6 +16,24 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## August 2022
+
+### Azure Red Hat OpenShift landing zone accelerator
+
+The Azure Red Hat OpenShift landing zone accelerator is a collection of templates, design recommendations, and implementation references to accelerate deployment of Azure Red Hat OpenShift clusters in your landing zone. This landing zone accelerator is open source. You can adapt the templates and recommendations to create an architecture that meets your needs. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
+
+Use the following links to get started with this landing zone accelerator:
+
+| Article | Description |
+| ---- | --- |
+| [Introduction](../scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md) | Learn about the benefits of the landing zone accelerator approach for Azure Red Hat OpenShift. |
+| [Identity and access management](../scenarios/app-platform/azure-red-hat-openshift/identity-access-management.md) | Create an identity and access management plan that meets your organization's requirements. |
+| [Network topology and connectivity](../scenarios/app-platform/azure-red-hat-openshift/network-topology-connectivity.md) | Control network traffic and connectivity to your clusters. |
+| [Resource organization considerations](../scenarios/app-platform/azure-red-hat-openshift/resource-organization.md) | Design your resource groups for proper resource governance and isolation. |
+| [Security](../scenarios/app-platform/azure-red-hat-openshift/security.md) | Protect and secure your Azure Red Hat OpenShift deployments. |
+| [Operations baseline guidance](../scenarios/app-platform/azure-red-hat-openshift/operations.md) | Achieve operational excellence with management and monitoring solutions. |
+| [Platform automation and DevOps](../scenarios/app-platform/azure-red-hat-openshift/platform-automation-devops.md) | Get recommendations for automation and DevOps for your Azure Red Hat OpenShift platform. |
+
 ## July 2022
 
 ### Cloud-scale analytics tutorials
