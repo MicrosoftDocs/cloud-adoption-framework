@@ -34,7 +34,7 @@ After you've created a taxonomy structure and agreed on naming standards, it's r
 
 Resource tags let you add metadata to a resource so you can quickly locate it and automate operational tasks, which is important for day-to-day operations. For detailed guidance on tagging, review the [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
-Before deploying Arc-enabled SQL MI, review [Identity and access management](./eslz-arc-datasvc-sqlmi-identity-access-management.md) to get recommendations on identity and access management for the Azure Arc-enabled SQL MI. In addition, review [Network connectivity](./eslz-arc-datasvc-sqlmi-network-connectivity.md) and [Storage disciplines](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) design area for more considerations and recommendations.
+Before deploying Arc-enabled SQL MI, review [Identity and access management](./eslz-arc-datasvc-sqlmi-identity-access-management.md) to get recommendations on identity and access management for the Azure Arc-enabled SQL MI. In addition, review [Network connectivity](./eslz-arc-datasvc-sqlmi-network-connectivity.md) and [Storage disciplines](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) design areas for more considerations and recommendations.
 
 After Arc-enabled SQL MI is deployed to a resource group and tags have been added, you can use [Resource Graph](/azure/governance/resource-graph/overview) queries, view groupings based on resource groups, or organize and inventory your resources using tags.
 
