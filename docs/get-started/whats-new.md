@@ -20,7 +20,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Azure Red Hat OpenShift landing zone accelerator
 
-The Azure Red Hat OpenShift landing zone accelerator is a collection of templates, design recommendations, and implementation references to accelerate deployment of Azure Red Hat OpenShift clusters in your landing zone. This landing zone accelerator is open source. You can adapt the templates and recommendations to create an architecture that meets your needs. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
+The Azure Red Hat OpenShift landing zone accelerator is a collection of templates, design recommendations, and implementation references to accelerate deployment of Azure Red Hat OpenShift clusters in your landing zone. This landing zone accelerator is open source. You can adapt the templates and recommendations to create an architecture that meets your needs. By following this guidance, your organization can lay the groundwork for scalability.
 
 Use the following links to get started with this landing zone accelerator:
 
