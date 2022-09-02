@@ -19,13 +19,13 @@ Modernization is where you begin to unlock the benefits of the cloud. Migration 
 
 Modernization is about maximizing value for your business. The goal is to make the biggest impact with the least amount of effort. The result of modernization is a digital transformation that reduces management burden, increases performance, and minimizes cost. The results of modernization are critical to driving growth.
 
-**Definition of modernization:**
+**Scope of modernization:**
 
-Modernization is a loaded term. It means different things to different people. So let’s define what we mean by modernization. Modernization has two scopes: process and workloads. You need to modernize your development and operations processes, and you need to modernize your workloads.
+Modernization is a loaded term. It means different things to different people. So let’s define what we mean by modernization. Modernization is enhancing your workloads and the process to support those workloads. Let's address each aspect:
 
-1. *Process* - Modernizing your process means adopting a DevOps methodology. Process modernization must come before you modernize your workloads.
+1. *Process modernization* - Modernizing your process means adopting a DevOps methodology. Process modernization must come before you modernize your workloads.
 
-1. *Workloads* - Modernizing your workloads means adopting platform-as-a-service solutions (PaaS). This definition is oversimplified, but it applies to most scenarios.
+1. *Workload modernization* - Modernizing your workloads means adopting platform-as-a-service solutions (PaaS). This definition is oversimplified, but it applies to most scenarios.
 
 **How to modernize:**
 
