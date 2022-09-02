@@ -14,11 +14,7 @@ keywords: envision, motivations, approach, modernization, cloud adoption framewo
 
 Envisioning your cloud modernization possibilities starts with understanding your motivations. You have reasons for wanting to adopt the cloud, and these reasons are the key to modernization. Knowing your motivations lets you determine what you should modernize.
 
-<div style="text-align: center;">
-
 :::image type="content" source="../../_images/modernize/envision/envision.png" alt-text="Image showing where you are in the business alignment process." border="false":::
-
-</div>
 
 Follow these three steps to envision your cloud modernization possibilities.
 
@@ -44,11 +40,7 @@ Identify the workloads you need to modernize to fulfill your modernization motiv
 
 *What is a workload?* A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a business function. Data centers encourage you to manage IT assets separately (*see figure*).
 
-<div style="text-align: center;">
-
 :::image type="content" source="../../_images/modernize/envision/data-center-it-assets.png" alt-text="Graphic showing existing data center." border="false":::
-
-</div>
 
 The cloud lets you focus on workloads instead of separate IT assets. Modernizing infrastructure, applications, and data together as workloads lets you streamline your modernization processes. You can reuse these processes and apply them to each workload requiring the same modernization strategy.
 
