@@ -28,7 +28,7 @@ We scope modernization to just three different modernization strategies. These s
 
 - *Process modernization* - Adopt a DevOps methodology to modernize your development and operations. Process modernization is essential to lowering the total cost of ownership of your workloads.
 
-- *Application modernization* - Adopt application platform-as-a-service (PaaS) solutions to modernize any application or framework.
+- *Application modernization* - Adopt PaaS solutions to modernize any application or framework.
 
 - *Database modernization* - Adopt database PaaS and infrastructure-as-a-service (IaaS) solutions to modernize any databases.
 
