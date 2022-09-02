@@ -52,4 +52,4 @@ The innovate approach is where you adopt cloud-native technologies to create cus
 The adopt methodology will help you tailor your cloud adoption approach around your goals. With your goals at the center of each decision, you'll find concrete steps to adopt the cloud and transform your business. See how most businesses change their portfolios to adopt the cloud.
 
 > [!div class="nextstepaction"]
-> [Understand Cloud adoption](cloud-adoption.md)
+> [Cloud adoption journey](cloud-adoption.md)

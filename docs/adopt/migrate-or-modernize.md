@@ -10,7 +10,7 @@ ms.subservice:
 ms.custom: internal, seo-caf-adopt
 keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
-# Migrate or modernize?
+# Migrate or modernize first?
 
 For on-premises applications, prioritizing whether to migrate ("rehost") or modernize ("replatform") first is a common dilemma. Depending on your business goals (*see figure*) and the following benefits of each approach, you'll be better equipped to move forward with an approach.
 

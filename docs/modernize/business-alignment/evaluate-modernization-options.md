@@ -1,6 +1,6 @@
 ---
 title: Evaluate cloud modernization readiness
-description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
+description: Learn how to evaluate your technical and financial cloud readiness to determine which workloads you want to modernize during cloud adoption.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/01/2022
@@ -13,8 +13,6 @@ keywords: evaluate, technical, financial indicators, workloads, modernize, cloud
 # Evaluate cloud modernization readiness
 
 Once you've envisioned your cloud modernization possibilities, evaluate whether you're ready to modernize in the cloud.
-
-:::image type="content" source="../../_images/modernize/evaluate/evaluate.png" alt-text="Image showing where you are in the business alignment process." border="false":::
 
 Evaluating your readiness for modernization has two components. You need to assess your financial readiness and technical readiness.
 

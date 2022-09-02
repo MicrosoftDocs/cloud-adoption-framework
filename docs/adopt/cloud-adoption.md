@@ -1,5 +1,5 @@
 ---
-title: Understand the cloud adoption journey
+title: Cloud adoption journey
 description: Understand the typical cloud adoption journey. Seeing the steps others take can increase the success of your cloud adoption journey.
 author: stephen-sumner
 ms.author: ssumner
@@ -11,7 +11,7 @@ ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
 
-# Understand the cloud adoption journey
+# Cloud adoption journey
 
 Most cloud adoption journeys follow a similar path.  It's helpful to see how other organizations adopt the cloud. Knowing what workloads to tackle first and what to do with them will streamline your cloud adoption journey (*see the following diagram*).
 

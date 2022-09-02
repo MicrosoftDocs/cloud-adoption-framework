@@ -17,11 +17,13 @@ Modernization is where you begin to unlock the benefits of the cloud. Migration 
 
 **Maximizing value:**
 
-Modernization is about maximizing value for your business. The goal is to make the biggest impact with the least amount of effort. The result of modernization is a digital transformation that reduces management burden, increases performance, and minimizes cost. The results of modernization are critical to driving growth.
+Modernization is about maximizing value for your business. The goal is to make the biggest impact with the least amount of effort. The result of modernization is a digital transformation that reduces management burden, increases performance, and minimizes cost. These outcomes are critical to driving growth.
 
 **Scope of modernization:**
 
-Modernization is a loaded term. It means different things to different people. So let’s define what we mean by modernization. Modernization is enhancing your workloads and the process to support those workloads. Let's address each aspect:
+Modernization is a loaded term. It means different things to different people. So let’s define what we mean by modernization.
+
+Modernization is enhancing your workloads and the process to support those workloads. Let's address each aspect:
 
 1. *Process modernization* - Modernizing your process means adopting a DevOps methodology. Process modernization must come before you modernize your workloads.
 
@@ -31,16 +33,18 @@ Modernization is a loaded term. It means different things to different people. S
 
 :::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Graphic showing business alignment and modernization disciplines." border="false":::
 
-We have developed sequential steps that show you how to modernize. The first step is aligning your modernization to your business goals. Based on these goals, you'll determine:
+We developed a framework that walks you through the most effective modernization processes. The first step is aligning your modernization to your business goals. Based on these goals, you'll determine:
 
 - When to modernize
 - What to modernize
 
-You'll create a modernization roadmap that identifies the workloads you need to modernize and the modernization strategies you need to use. With the modernization roadmap created, you can begin modernizing your processes, applications, and databases.
+You'll create a modernization roadmap that identifies the workloads you need to modernize and the modernization strategies you need to use.
+
+With the modernization roadmap created, you can begin modernizing. You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
 
 ## Next steps
 
-Read through the modernize articles in sequential order to learn how to modernize in the cloud.
+Modernization starts with business alignment
 
 > [!div class="nextstepaction"]
-> [Start with business alignment](../modernize/business-alignment/index.md)
+> [Learn about business alignment](../modernize/business-alignment/index.md)

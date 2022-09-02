@@ -1,5 +1,5 @@
 ---
-title: Envision your cloud modernization possibilities
+title: Envision cloud modernization possibilities
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
@@ -10,15 +10,13 @@ ms.subservice:
 ms.custom: internal, seo-caf-modernize
 keywords: envision, motivations, approach, modernization, cloud adoption framework
 ---
-# Envision your cloud modernization possibilities
+# Envision cloud modernization possibilities
 
 Envisioning your cloud modernization possibilities starts with understanding your motivations. You have reasons for wanting to adopt the cloud, and these reasons are the key to modernization. Knowing your motivations lets you determine what you should modernize.
 
-:::image type="content" source="../../_images/modernize/envision/envision.png" alt-text="Image showing where you are in the business alignment process." border="false":::
-
 Follow these three steps to envision your cloud modernization possibilities.
 
-## Step 1 - Identify your modernization motivations
+## Step 1 - Identify modernization motivations
 
 Discover the reasons you want to modernize with the cloud. Your motivations will be unique to your goals. The following commonalities exist across businesses and industries (*see figure*).
 
@@ -34,7 +32,7 @@ Some of the most common modernization motivations are:
 
 Knowing *why* you're modernizing helps you determine *what* to modernize. So, make sure you have a good understanding of your motivations before moving forward.
 
-## Step 2 - Identify your workloads
+## Step 2 - Identify workloads
 
 Identify the workloads you need to modernize to fulfill your modernization motivations.
 
@@ -53,7 +51,7 @@ Identify the IT assets that support each business function. The group of IT asse
 |E-commerce<br>Website| Web App<br>Business logic<br>Database<br>Servers<br>Payment system|
 |Factory Production|Machine/Robot<br>IOT device<br>Programmable logic controller<br>Monitoring<br>Server
 
-## Step 3 - Align your modernization motivations and workloads
+## Step 3 - Align modernization motivations and workloads
 
 Align your modernization motivations and workloads so you can evaluate their readiness in the next step.
 

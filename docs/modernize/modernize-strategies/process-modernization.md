@@ -48,7 +48,7 @@ DevOps focuses you on quickly delivering value to customers. You prioritize your
 
 ### Consult your modernization roadmap
 
-Consult the modernization roadmap you created in the [commit phase](../business-alignment/envision-cloud-modernization.md#step-1---identify-your-modernization-motivations) to begin modernizing your planning strategies. It has all the details you need.
+Consult the modernization roadmap you created in the [commit phase](../business-alignment/envision-cloud-modernization.md#step-1---identify-modernization-motivations) to begin modernizing your planning strategies. It has all the details you need.
 
 Here's the sample modernization roadmap we created.
 
