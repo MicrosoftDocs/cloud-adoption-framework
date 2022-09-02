@@ -1,6 +1,6 @@
 ---
 title: Modernize your applications and data in the cloud
-description: Learn how to modernize in cloud as part of your cloud adoption journey. Modernization requires business alignment that helps you implement modernization strategies. 
+description: Learn what it means to modernize in cloud and maximize value. Modernization is a critical approach to cloud adoption that unlocks to the benefits of the cloud.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/02/2022
