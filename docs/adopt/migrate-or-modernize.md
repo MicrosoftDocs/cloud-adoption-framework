@@ -12,11 +12,11 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # Migrate or modernize first?
 
-Figuring out if you should migrate an on-premises application first ("rehost") or modernize first ("replatform") is a common dilemma. So, we've put together guidance that helps you determine the path that is right for you.
+Figuring out if you should migrate an on-premises application first ("rehost") or modernize first ("replatform") is a common dilemma. The answer depends on your goals. Aligning your goals to an approach can be difficult. So, we've created a quick assessment to help you find the right path.
 
-The answer to the question depends on your goals. So, we've created a quick assessment. We define each approach and outline their benefits. If the benefits described match your goals, then you've likely found the answer to your question.
+We define each approach and outline their benefits. If the benefits described match your goals, then you've likely found the answer to your question.
 
-:::image type="content" source="../_images/adopt/migrate-or-modernize-first.png" alt-text="Diagram showing approaches to cloud migration and modernization.":::
+:::image type="content" source="../_images/adopt/migrate-or-modernize-first.png" alt-text="Diagram that shows approaches to cloud migration and modernization.":::
 
 ## Migrate ("Rehost")
 
