@@ -15,14 +15,14 @@ keywords: effort, impact, balance, modern, cloud modernization, cloud adoption f
 
 Modernization requires an investment of time and money. The commit phase is where modernization receives the time and money investments it needs.
 
-:::image type="content" source="../../_images/modernize/commit/commit.png" alt-text="Image showing where you are in the business alignment process." border="false":::
-
  As part of the commitment phase, gather your primary key stakeholders and define their involvement:
 
 - *Business leads* - Approve the time and financial investments in the modernization roadmap.
 - *Technical Leads* - Design and present the modernization roadmap.
 
-## Step 1 - Align your modernization motivations to modernization strategies
+Follow these steps to commit to modernization.
+
+## Step 1 - Align modernization motivations to modernization strategies
 
 Align your modernization motivations to modernization strategies. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull out these motivations because you use them to determine what modernization strategies you'll commit to.
 
@@ -38,7 +38,7 @@ Most modernization motivations align two or more modernization strategies (*see 
 
 *Process modernization* - notice that *process modernization* is listed with every modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter your motivation for modernization, you must modernize your process.
 
-## Step 2 - Update your workload table with modernization strategies
+## Step 2 - Add modernization strategies
 
 Update your workload table with modernization strategies by adding the modernization strategies you identified in step 1 with the table you created in the [envision step of business alignment](../business-alignment/envision-cloud-modernization.md) (*see the following example*).
 
