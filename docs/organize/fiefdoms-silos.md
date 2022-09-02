@@ -3,18 +3,18 @@ title: Silos and fiefdoms
 description: Learn about antipatterns that can block a growth mindset in organizations. Specifically, learn about silo and fiefdom antipatterns.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/10/2019
+ms.date: 09/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: internal
 ---
 
-# Organizational antipatterns: Silos and fiefdoms
+# Silos and fiefdoms
 
 Success in any major change to business practices, culture, or technology operations requires a growth mindset. At the heart of the growth mindset is an acceptance of change and the ability to lead in spite of ambiguity.
 
-Some antipatterns can block a growth mindset in organizations that want to grow and transform, including micromanagement, biased thinking, and exclusionary practices. Many of these blockers are personal challenges that create personal growth opportunities for everyone. But two common antipatterns in IT require more than individual growth or maturity: silos and fiefdoms.
+Some antipatterns block the growth mindset in organizations that want to grow and transform. These antipatterns include micromanagement, biased thinking, and exclusionary practices. Many of these blockers are personal challenges that create personal growth opportunities for everyone. But two common antipatterns in IT require more than individual growth or maturity: silos and fiefdoms.
 
 ![Comparison of healthy teams and organizational antipatterns](../_images/ready/fiefdom-and-silo.png)
 
