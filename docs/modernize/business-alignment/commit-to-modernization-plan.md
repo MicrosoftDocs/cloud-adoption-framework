@@ -36,7 +36,7 @@ Most modernization motivations align two or more modernization strategies (*see 
 |*Application innovation*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
 |*Centralizing data*|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 
-*Process modernization* - notice that *process modernization* is listed with every modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter your motivation for modernization, you must modernize your process.
+Notice that *process modernization* is listed with every modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter your motivation for modernization, you must modernize your process.
 
 ## Step 2 - Add modernization strategies
 
