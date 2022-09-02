@@ -14,31 +14,41 @@ ms.custom: internal
 
 Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads. Adopting a DevOps methodology drives efficiencies across your development and operations processes. DevOps empowers your teams to deliver value to customers faster.
 
-The DevOps methodology integrates work planning, code development, application deployment, and operations. You gain efficiencies across your business with this integration (*see figure*).
+**Modernization overview:**
+
+The DevOps methodology integrates work planning, code development, application deployment, and operations. You gain efficiency across your business with this integration.
+
+You'll first want to adopt some DevOps tools. Azure has a set of DevOps tools called [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops). You can use these Azure tools to implement DevOps, or you can use open-source solutions to get started.
+
+After adopting DevOps tools, you can start modernizing your development and operations processes. Follow the steps below to get started.
+
+<div style="text-align: center;">
 
 :::image type="content" source="../../_images/modernize/process-modernization/devops-tools.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
 
-You can use Azure DevOps Services to implement your DevOps methodology. Azure DevOps supports [integration with GitHub](/azure/devops/user-guide/what-is-azure-devops).
+</div>
 
-## Step 1 - Modernize your tools
+## Step 1 - Adopt DevOps tools
 
-Modernize your tools so you can plan and deliver value to customers. Azure DevOps lets you easily integrate planning, development, delivery, and operations. In the following table, we've listed the standalone services offered and examples of alternative open-source solutions.
+Adopting DevOps tools can help you plan better and deliver value to customers faster. Azure DevOps lets you easily integrate planning, development, delivery, and operations.
 
-| Azure DevOps  service | Description |  Open-source solution
-| --- | --- | --- |
-| *[Azure Repos](/azure/devops/repos/get-started/what-is-repos)* | Get unlimited, cloud-hosted private Git repositories for your project. | GitHub
-| *[Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)* | Continuously build, test, and deploy to any platform and cloud. | Jenkins
-| *[Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards)* | Plan, track, and discuss work across your teams. | TaskBoard |
-| *[Azure Artifacts](/azure/devops/artifacts/artifacts-overview)* | Share code and publish packages | Nexus |
-| *[Azure Test Plans](/azure/devops/test/overview)* | Run tests and quality assurance on code | Selenium |
+In the following table, we've listed the DevOps tool and description. For each tool, we listed a service from the Azure DevOps Services and an alternative open-source solution.
+
+| DevOps tool | Description | Azure DevOps Services tool |  Open-source solution
+| --- | --- | --- | --- |
+| Source control | Get unlimited, cloud-hosted private Git repositories for your project. | *[Azure Repos](/azure/devops/repos/get-started/what-is-repos)* | GitHub
+| CI/CD pipeline | Continuously build, test, and deploy to any platform and cloud. | *[Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)* |  Jenkins
+| Task board | Plan, track, and discuss work across your teams. | *[Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards)* | TaskBoard |
+| Package manager | Share code and publish packages | *[Azure Artifacts](/azure/devops/artifacts/artifacts-overview)* | Nexus |
+| Test management| Run tests and quality assurance on code | *[Azure Test Plans](/azure/devops/test/overview)* | Selenium |
 
 With modernized tools, you're ready to modernize your planning strategies.
 
-## Step 2 - Modernize your planning strategies
+## Step 2 - Adopt DevOps strategies
 
-Modernize your planning strategies with an Agile framework that integrates planning, development, delivery, and operations into a continuous feedback loop (*see previous figure*).
+Modernize your planning strategies with DevOps. DevOps is an Agile framework that integrates planning, development, delivery, and operations into a continuous feedback loop (*see previous figure*).
 
-You can quickly deliver value by prioritizing your tasks and working on high-priority tasks for a short period of time.
+DevOps focuses you on quickly delivering value to customers. You prioritize your high-value tasks and work on these tasks for a defined period of time. The combination of task prioritization and time constrained activities promotes rapid innovation.
 
 ### Consult your modernization roadmap
 
