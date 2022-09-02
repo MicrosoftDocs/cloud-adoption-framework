@@ -15,11 +15,7 @@ keywords: effort, impact, balance, modern, cloud modernization, cloud adoption f
 
 Modernization requires an investment of time and money. The commit phase is where modernization receives the time and money investments it needs.
 
-<div style="text-align: center;">
-
 :::image type="content" source="../../_images/modernize/commit/commit.png" alt-text="Image showing where you are in the business alignment process." border="false":::
-
-</div>
 
  As part of the commitment phase, gather your primary key stakeholders and define their involvement:
 
