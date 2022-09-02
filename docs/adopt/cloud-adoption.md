@@ -15,7 +15,7 @@ keywords: cloud adoption, approaches, strategy, cloud migration, cloud moderniza
 
 Most cloud adoption journeys follow a similar path.  It's helpful to see how other organizations adopt the cloud. Knowing what workloads to tackle first and what to do with them will streamline your cloud adoption journey (*see the following diagram*).
 
-:::image type="content" source="../_images/adopt/adopt-existing-apps.png" alt-text="Diagram showing portfolio migration modernization approach.":::
+:::image type="content" source="../_images/adopt/cloud-adoption-journey.png" alt-text="Diagram showing portfolio migration modernization approach." border="false":::
 
 An important consideration in adopting the right cloud solution is control versus productivity. Most organizations find a balance that meets their needs. A typical business will use the following strategies:
 
