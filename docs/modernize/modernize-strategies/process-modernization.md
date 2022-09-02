@@ -1,6 +1,6 @@
 ---
-title: Modernize your development and operations processes for the cloud
-description: Learn how to modernize your processes in the cloud
+title: Modernize your processes for the cloud
+description: Adopt a DevOps methodology to modernize your development and operations. Process modernization is essential to lowering the total cost of ownership of your workloads.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/19/2022
@@ -10,11 +10,11 @@ ms.subservice: general
 ms.custom: internal
 ---
 
-# Modernize your development and operations processes for the cloud
+# Modernize your processes for the cloud
 
-Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads.
+Process modernization creates the mechanism in your business to gain operational efficiencies and lower the total cost of ownership of your workloads. Adopting a DevOps methodology drives efficiencies across your development and operations processes. DevOps empowers your teams to deliver value to customers faster.
 
-We recommend using a DevOps methodology. DevOps empowers your teams to deliver value to customers faster. The methodology integrates work planning, code development, application deployment, and operations. You gain efficiencies across your business with this integration (*see figure*).
+The DevOps methodology integrates work planning, code development, application deployment, and operations. You gain efficiencies across your business with this integration (*see figure*).
 
 :::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
 

@@ -14,7 +14,11 @@ keywords: evaluate, technical, financial indicators, workloads, modernize, cloud
 
 Once you've envisioned your cloud modernization possibilities, evaluate whether you're ready to modernize in the cloud.
 
+<div style="text-align: center;">
+
 :::image type="content" source="../../_images/modernize/evaluate/evaluate.png" alt-text="Image showing where you are in the business alignment process." border="false":::
+
+</div>
 
 Evaluating your readiness for modernization has two components. You need to assess your financial readiness and technical readiness.
 
