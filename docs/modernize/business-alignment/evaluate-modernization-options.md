@@ -55,4 +55,4 @@ If you answered *yes* to all the technical-readiness questions, you're likely re
 You've [envisioned](envision-cloud-modernization.md) and [evaluated](evaluate-modernization-options.md). It's time to commit to a modernization path.
 
 > [!div class="nextstepaction"]
-> [How to commit to modernization](commit-to-modernization-plan.md)
+> [Commit to modernization](commit-to-modernization-plan.md)
