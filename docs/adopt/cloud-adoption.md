@@ -1,9 +1,9 @@
 ---
 title: Understand the cloud adoption journey
-description: Use the Cloud Adoption Framework for Azure to understand the typical journey to the cloud and how your existing portfolio will change.
+description: Understand the typical cloud adoption journey. Seeing the steps others take can increase the success of your cloud adoption journey.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/30/2022
+ms.date: 09/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
