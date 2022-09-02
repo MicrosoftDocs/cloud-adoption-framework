@@ -7,7 +7,7 @@ ms.date: 05/26/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal, homepage, rebrand
+ms.custom: internal, homepage
 ---
 
 # What is the Microsoft Cloud Adoption Framework for Azure?
