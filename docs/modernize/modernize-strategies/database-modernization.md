@@ -18,8 +18,8 @@ Modernizing your databases can improve how you store, process, and feed data. Th
 
 We have two categories of database solutions. These two categories allow you to modernize any type of database in the cloud.
 
-- Azure SQL is a category of database solutions for SQL Server and other closed-source SQL databases.
-- Open-source and NoSQL category of database solutions is for open-source SQL databases and NoSQL databases.
+- "*Azure SQL*" is a category of database solutions for SQL Server and other closed-source SQL databases.
+- "*Open-source and NoSQL*" is a category of database solutions for open-source SQL databases and NoSQL databases.
 
 <div style="text-align: center;">
 
@@ -29,19 +29,21 @@ We have two categories of database solutions. These two categories allow you to 
 
 **PaaS and IaaS solutions:**
 
-There are two PaaS and one IaaS solution to choose from in each database category. Each option provides a different balance of control and productivity. We include an infrastructure-as-a-service (Iaas) solutions to accommodate the different database origins customers start with.
+There are two PaaS and one IaaS solution to choose from in each database category. Each option provides a different balance of control and productivity. We include infrastructure-as-a-service (IaaS) solutions to accommodate the different database origins customers start with.
 
 *Azure SQL:*
 
 - SQL Server on virtual machines (IaaS)
 - Azure SQL Managed Instance (PaaS)
-- Azure SQL Database (PaaS)
+- Fully managed Azure SQL database (PaaS)
 
 *Open-source SQL & NoSQL:*
 
 - MySQL, MariaDB, or PostgreSQL on virtual machines (IaaS)
-- Azure Cosmos DB and Managed Instance for Apache Casandra
-- Managed databases for MySQL, MariaDB, or PostgreSQL
+- Azure Cosmos DB and Azure Managed Instance for Apache Casandra (PaaS)
+- Fully managed MySQL, MariaDB, and PostgreSQL databases (PaaS)
+
+Use the tables below to find implementation guidance on modernizing your database.
 
 ## Option 1 - Modernize your SQL Server and other SQL databases
 

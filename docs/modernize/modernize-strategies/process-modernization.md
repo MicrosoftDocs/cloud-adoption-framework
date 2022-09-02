@@ -16,13 +16,9 @@ Process modernization creates the mechanism in your business to gain operational
 
 The DevOps methodology integrates work planning, code development, application deployment, and operations. You gain efficiencies across your business with this integration (*see figure*).
 
-:::image type="content" source="../../_images/modernize/process-modernization/devops-and-tools.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
+:::image type="content" source="../../_images/modernize/process-modernization/devops-tools.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
 
 You can use Azure DevOps Services to implement your DevOps methodology. Azure DevOps supports [integration with GitHub](/azure/devops/user-guide/what-is-azure-devops).
-
-<!---
-Need to add Azure DevOps to image, not just DevOps.
--->
 
 ## Step 1 - Modernize your tools
 
