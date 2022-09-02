@@ -75,4 +75,4 @@ Align your modernization motivations and workloads so you can evaluate their rea
 When you have a single motivation for each workload, you can evaluate your options.
 
 > [!div class="nextstepaction"]
-> [Evaluate cloud modernization readiness](../../modernize/business-alignment/evaluate-modernization-options.md)
+> [Evaluate your cloud modernization readiness](../../modernize/business-alignment/evaluate-modernization-options.md)
