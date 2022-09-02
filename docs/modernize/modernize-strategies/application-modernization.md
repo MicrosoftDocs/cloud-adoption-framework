@@ -13,7 +13,7 @@ keywords: application platform, modern, cloud modernization, cloud adoption fram
 
 # Modernize any application in the cloud
 
-Modernizing your applications can rapidly transform how people interact with your business or organization. The goal of application modernization is to enhance your applications to meet the needs of internal users and external customers. Adopting platform-as-a-service (PaaS) solutions lets you to modernize any application or framework and enables your business to scale.
+Modernizing your applications can rapidly transform how people interact with your business or organization. The goal of application modernization is to enhance your applications to meet the needs of internal users and external customers. Adopting platform-as-a-service (PaaS) solutions lets you modernize any application or framework and enables your business to scale.
 
 **PaaS solutions:**
 
