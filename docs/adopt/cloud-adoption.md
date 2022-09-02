@@ -31,13 +31,13 @@ Retire or get rid of any applications and environments you don't need. Take an i
 
 ## Replace (15%)
 
-Replace workloads with SaaS and low-code solutions to provide the most productivity for the applications you need to keep. You can move "from" solutions that take more time to manage ("control") and move "to" cloud solutions that let you focus on growing your business ("productivity"). See the following table for examples.
+Replace workloads with software-as-a-service (SaaS) and low-code solutions to provide the most productivity for the applications you need to keep. You can move "from" solutions that take more time to manage ("control") and move "to" cloud solutions that let you focus on growing your business ("productivity"). See the following table for examples.
 
 | From<span title="Replace">&nbsp;</span> | To<span title="To">&nbsp;</span> |<span></span>|
 |-|-|-|
 |Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)| :::image type="icon" source="../_images/adopt/powerapps.svg":::
 |DevOps tools|[GitHub](/learn/modules/introduction-to-github/)|:::image type="icon" source="../_images/adopt/github-icon.svg":::
-|Relationship <br>Management|[Dynamics](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
+|Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
 |Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
 
 ## Rehost or replatform (50%)
