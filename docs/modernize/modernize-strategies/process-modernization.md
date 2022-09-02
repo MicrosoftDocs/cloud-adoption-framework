@@ -33,7 +33,7 @@ Modernize your tools so you can plan and deliver value to customers. Azure DevOp
 | *[Azure Repos](/azure/devops/repos/get-started/what-is-repos)* | Get unlimited, cloud-hosted private Git repositories for your project. | GitHub
 | *[Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)* | Continuously build, test, and deploy to any platform and cloud. | Jenkins
 | *[Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards)* | Plan, track, and discuss work across your teams. | TaskBoard |
-| *[Azure Artifacts](/azure/devops/artifacts/artifacts-overview)* | Share code and publish packages | Nexus |
+| *[Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts)* | Share code and publish packages | Nexus |
 | *[Azure Test Plans](/azure/devops/test/overview)* | Run tests and quality assurance on code | Selenium |
 
 With modernized tools, you're ready to modernize your planning strategies.
