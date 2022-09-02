@@ -31,7 +31,7 @@ Modernization is enhancing your workloads and the process to support those workl
 
 ## How to modernize
 
-:::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Graphic showing business alignment and modernization disciplines." border="false":::
+:::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Diagram that shows three business alignment processes (envision, evaluate, and commit) and three modernization strategies (process, application, and database modernization)." border="false":::
 
 We developed a framework that walks you through the most effective modernization processes. The first step is aligning your modernization to your business goals. Based on these goals, you'll determine:
 

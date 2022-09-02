@@ -20,7 +20,7 @@ Business alignment is the process of identifying your modernization motivations 
 
 ## Business alignment process
 
-:::image type="content" source="../../_images/modernize/business-alignment/business-alignment.png" alt-text="Image showing where you are in the business alignment process." border="false":::
+:::image type="content" source="../../_images/modernize/business-alignment/business-alignment.png" alt-text="Diagram that shows the business alignment process. It shows the envision, evaluate, and commit processes ordered from left to right." border="false":::
 
 The business alignment process is three steps. It helps ensure that your modernization journey leads to the most profitable outcome. These steps are logical and sequential.
 

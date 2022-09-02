@@ -22,7 +22,7 @@ You'll first want to adopt some DevOps tools. Azure has a set of DevOps tools ca
 
 After adopting DevOps tools, you can start modernizing your development and operations processes. Follow the steps below to get started.
 
-:::image type="content" source="../../_images/modernize/process-modernization/devops-tools.png" alt-text="An image showing a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
+:::image type="content" source="../../_images/modernize/process-modernization/devops-tools.png" alt-text="Diagram that shows a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
 
 ## Step 1 - Adopt DevOps tools
 

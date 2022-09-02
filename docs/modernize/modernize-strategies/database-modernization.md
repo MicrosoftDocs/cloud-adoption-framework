@@ -21,7 +21,7 @@ We have two categories of database solutions. These two categories allow you to 
 - "*Azure SQL*" is a category of database solutions for SQL Server and other closed-source SQL databases.
 - "*Open-source and NoSQL*" is a category of database solutions for open-source SQL databases and NoSQL databases.
 
-:::image type="content" source="../../_images/modernize/db-platforms/db-modernize.png" alt-text="image showing database platform options in the cloud, moving from most control to most productivity. The bottom has on-premises as the starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases" border="false":::
+:::image type="content" source="../../_images/modernize/db-platforms/db-modernize.png" alt-text="Diagram that shows database platform options in the cloud, moving from most control to most productivity. The bottom has on-premises as the starting point. Two paths emerge, one for SQL database and another for open-source and NoSQL databases" border="false":::
 
 **PaaS and IaaS solutions:**
 
