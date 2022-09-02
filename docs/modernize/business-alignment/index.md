@@ -14,11 +14,11 @@ ms.custom: internal
 
 Modernization is a business decision. The goal is to improve your technology so that your business can scale. Since business goals are the key drivers of modernization, it’s essential that your modernization efforts align with your business goals.
 
-**Definition of business alignment:**
+## Definition of business alignment
 
 Business alignment is the process of identifying your modernization motivations and creating a modernization roadmap around these motivations. It’s that simple. You identify specific motivations for each workload you want to modernize. The motivations determine what modernization strategy you take.
 
-**Business alignment process:**
+## Business alignment process
 
 :::image type="content" source="../../_images/modernize/business-alignment/business-alignment.png" alt-text="Image showing where you are in the business alignment process." border="false":::
 
