@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Cloud modernization strategies
 
-Cloud modernization strategies identify the right path for each workload when you [commit to modernization](/business-alignment/commit-to-modernization-plan.md/#step-2---update-your-workload-table-with-modernization-strategies) in the business alignment phase. Use this roadmap to guide you to the right cloud modernization strategies (*see figure).
+Cloud modernization strategies identify the right path for each workload when you [commit to modernization](/azure/cloud-adoption-framework/modernize/business-alignment/commit-to-modernization-plan#step-2---update-your-workload-table-with-modernization-strategies) in the business alignment phase. Use this roadmap to guide you to the right cloud modernization strategies (*see figure).
 
 :::image type="content" source="../../_images/modernize/modernize-strategies/modernize-strategies.png" alt-text="Image showing where you are in the modernize strategies process. The image shows three modernization strategies. Process modernization is in the middle with an arrow pointing to the two other modernization strategies. Database modernization is on the left and application modernization is on the right":::
 
