@@ -33,7 +33,7 @@ Modernize your tools so you can plan and deliver value to customers. Azure DevOp
 | *[Azure Repos](/azure/devops/repos/get-started/what-is-repos)* | Get unlimited, cloud-hosted private Git repositories for your project. | GitHub
 | *[Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)* | Continuously build, test, and deploy to any platform and cloud. | Jenkins
 | *[Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards)* | Plan, track, and discuss work across your teams. | TaskBoard |
-| *[Azure Artifacts](/azure/devops/artifacts/artifacts-overview)* | Share code and publish packages | Nexus |
+| *[Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts)* | Share code and publish packages | Nexus |
 | *[Azure Test Plans](/azure/devops/test/overview)* | Run tests and quality assurance on code | Selenium |
 
 With modernized tools, you're ready to modernize your planning strategies.
@@ -66,7 +66,7 @@ Plan your modernization efforts using your modernization roadmap. Complete the s
 | 4. Prioritize your user stories | Prioritize your user stories, so your team can meet the most important goals first. | 1. Better shopping experience <br><br> 2. Order history
 | 5. Assign work (sprints) | Set a two-week time frame for your work efforts. These time frames are called sprints in Agile. Have your team members take on tasks that they can complete within the two-week period. | Assign two-week tasks (App Service plan, configure resiliency, configure caching) to your team.
 
-[Azure Boards](/azure/devops/boards/get-started/plan-track-work) makes it easy to plan and track work. For more details on modernizing your planning efforts, you can look at more robust [DevOps planning guidance](/azure/devops/plan/planning-efficient-workloads-with-devops).
+[Azure Boards](/azure/devops/boards/get-started/plan-track-work) makes it easy to plan and track work. For more details on modernizing your planning efforts, you can look at more robust [DevOps planning guidance](/devops/plan/planning-efficient-workloads-with-devops).
 
 ## Step 3 - Begin modernizing
 
