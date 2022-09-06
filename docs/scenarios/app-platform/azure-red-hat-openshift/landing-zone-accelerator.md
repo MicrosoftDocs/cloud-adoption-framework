@@ -48,11 +48,9 @@ The following diagram shows the landing zone accelerator architecture.
 
 [![Diagram showing the landing zone accelerator architecture.](./media/landing-zone-architecture.png)](./media/landing-zone-architecture.png)
 
-<!--- Need GitHub URL when it launches
 ## Resources on GitHub
 
 The landing zone accelerator is an open-source repo that consists of an Azure CLI reference implementation along with Critical Design Area recommendations. The repo is [available on GitHub](https://github.com/Azure/ARO-Landing-Zone-Accelerator).
---->
 
 ## Next steps
 

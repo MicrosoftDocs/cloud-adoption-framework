@@ -9,7 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
-
 # How to get help building a landing zone
 
 Getting your Azure landing zone (ALZ) done right and on time is important. Working with a certified Azure partner is a great way to get the support you need to build your ALZ. We'll show you how to find a partner and what to expect from your partner.

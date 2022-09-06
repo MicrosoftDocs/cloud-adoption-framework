@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Azure landing zones for modern application platforms
 
-The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
+The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. You'll need to evaluate any landing zone that is to be used for modern application platform solutions no matter what implementation option you choose.
 

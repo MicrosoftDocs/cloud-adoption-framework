@@ -36,6 +36,8 @@ Security is a shared responsibility between Microsoft and customers. You can upl
 
 For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
 
+Azure Landing Zones have specific guidance regarding zero-trust based network security to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#zero-trust).
+
 ### Enable Microsoft Defender for Cloud
 
 Enterprises that use hub-spoke network topologies often deploy cloud architecture patterns across multiple Azure subscriptions. In the following cloud deployment diagram, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads and subscriptions.

@@ -12,18 +12,15 @@ ms.custom: think-tank
 
 # Modernize your workloads for {{Token-LongName}}
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/).
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Modernize methodology](/azure/cloud-adoption-framework/modernize/) of the Cloud Adoption Framework.
 
 ## {{Token-Name}} business alignment
 
-Assess your business goals before you commit to modernizing.
-https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/business-alignment/
+Assess your business goals before you commit to [modernizing](/azure/cloud-adoption-framework/modernize/business-alignment/).
 
 ## {{Token-Name}} modernization strategy
 
-Use the framework modernization roadmap to guide you to the right cloud modernization strategies.
-https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/modernize-strategies/
-
+Use the framework modernization roadmap to guide you to the right [cloud modernization strategies](/azure/cloud-adoption-framework/modernize/modernize-strategies/).
 
 ## Next steps
 

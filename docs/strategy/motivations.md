@@ -42,7 +42,7 @@ This section highlights the *migration* and *innovation* motivations and their c
 
 ### Migration
 
-The *migration* motivations listed near the top of the motivations table, are the most common reasons for adopting the cloud, but not necessarily the most significant. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
+The *migration* motivations listed near the top of the motivations table, are the most common reasons for adopting the cloud, but not necessarily the most significant. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) of the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
 
 Some motivations align well with a migration strategy. Motivations at the top of this list can have less business impact than the ones towards the bottom. **Strategies with migration driving motivations** have helped organizations to successfully create business outcomes that:
 
@@ -56,7 +56,7 @@ Some motivations align well with a migration strategy. Motivations at the top of
 
 ### Innovation
 
-Data is the new commodity, and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) in the Cloud Adoption Framework includes *motivations aligned to a technology strategy* that appear lower in the *Innovation* column of the motivation list above.
+Data is the new commodity, and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) of the Cloud Adoption Framework includes *motivations aligned to a technology strategy* that appear lower in the *Innovation* column of the motivation list above.
 
 The motivations below help IT organizations to focus more on innovation than a migration strategy. **Strategies with innovation driving motivations** have helped organizations to successfully create business outcomes that:
 

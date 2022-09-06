@@ -215,7 +215,7 @@ For more information, see [Movere](https://www.movere.io).
 
 You can choose between multiple experienced systems, integrator partners, and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 
-For more information, see [Azure Cosmos DB partners migration ](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools).
+For more information, see [Azure Cosmos DB partners migration](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools).
 
 Visit the [Azure migration and modernization center](https://azure.microsoft.com/migration/) to discover ready-to-use partner technology solutions to fit your migration scenarios. And you can also learn about other third-party migration tools and support services.
 
@@ -246,7 +246,7 @@ Azure DevOps provides the required functionality and integration with Azure, on-
 
 Microsoft Learn is a new approach to learning. The skills and responsibilities that come with cloud adoption don't necessarily come easily. Microsoft Learn provides rewarding, hands-on learning modules that help you reach your goals faster. Earn points and levels while you learn and achieve more.
 
-Here's an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework.
+Here's an example of a tailored learning path that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
 [Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 

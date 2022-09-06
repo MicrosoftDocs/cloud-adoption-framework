@@ -25,7 +25,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 | <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Expand the management baseline](./best-practices.md): Based on business commitments and operations decisions, make use of the included best practices to implement the required cloud management tooling. |
 | <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Advanced operations and design principles](./design-principles.md): Platforms or workloads that require a higher level of business commitment might require a deeper architecture review to deliver on resiliency and reliability commitments. |
 
-The preceding steps create actionable approaches to deliver on the Cloud Adoption Framework's Manage methodology.
+The preceding steps create actionable approaches to deliver on the Manage methodology of the Cloud Adoption Framework.
 
 ![Manage methodology of the Cloud Adoption Framework](../_images/manage/caf-manage.png)
 

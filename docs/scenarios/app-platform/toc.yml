@@ -74,7 +74,7 @@ items:
         href: app-services/governance.md
       - name: Platform automation and DevOps
         href: app-services/platform-automation-and-devops.md
-    - name: Azure Red Hat OpenShift
+    - name: Azure Red Hat OpenShift (ARO)
       items:
       - name: Azure Red Hat OpenShift landing zone accelerator
         href: azure-red-hat-openshift\landing-zone-accelerator.md
