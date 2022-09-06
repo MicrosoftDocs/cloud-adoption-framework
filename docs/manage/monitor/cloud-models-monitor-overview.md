@@ -1,6 +1,6 @@
 ---
 title: Monitoring strategy for cloud deployment models
-description: Learn about monitoring strategy for cloud deployment models in Azure.
+description: Learn about our recommended monitoring strategy for each of the cloud deployment models in Azure.
 author: MGoedtel
 ms.author: brblanch
 ms.date: 08/31/2022
@@ -12,54 +12,50 @@ ms.custom: think-tank
 
 # Monitoring strategy for cloud deployment models
 
-Our strategy includes support for monitoring infrastructure (compute, storage, and server workloads), application (end-user, exceptions, and client), and network resources. It delivers a complete, service-oriented monitoring perspective.
+This article describes our recommended monitoring strategy for each of the cloud deployment models, based on the following criteria:
 
-This article includes our recommended monitoring strategy for each of the cloud deployment models, based on the following criteria:
-
-- Maintain your commitment to Operations Manager or another enterprise monitoring platform, because it's integrated with your IT operations processes, knowledge, and expertise, or certain functionality isn't available yet in Azure Monitor.
-- Monitor workloads both on-premises and in the public cloud, or just in the cloud.
+- You maintain your commitment to [System Center Operations Manager](/system-center/scom/key-concepts), or another enterprise monitoring platform, because it's integrated with your IT operations processes, knowledge, and expertise, or because certain functionality isn't available yet in Azure Monitor.
+- You monitor workloads both on-premises and in the public cloud, or just in the cloud.
 - Your cloud migration strategy includes modernizing IT operations and moving to our cloud monitoring services and solutions.
 - You might have critical systems that are air-gapped or physically isolated, or are hosted in a private cloud or on physical hardware, and these systems need to be monitored.
 
+The strategy includes support for monitoring infrastructure (compute, storage, and server workloads), application (end-user, exceptions, and client), and network resources. It delivers a complete, service-oriented monitoring perspective.
+
 ## Azure cloud monitoring
 
-Azure Monitor is the native platform service that provides a single source for monitoring Azure resources. It's designed for cloud solutions that:
+[Azure Monitor](/azure/azure-monitor/overview) is a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It's designed for cloud solutions that:
 
 - Are built on Azure.
 - Support a business capability that's based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
 
-It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, subscription-level events, and Azure Service Health.
+Azure Monitor examines all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, subscription-level events, and Azure Service Health.
 
-It also monitors infrastructure resources, such as VMs, storage, and network resources. At the top layer, it monitors your application.
-
-By monitoring these dependencies and collecting the right signals that each dependency can emit, you get the observability of applications and the key infrastructure you need.
+It also monitors infrastructure resources, such as VMs, storage, and network resources. At the top layer, it monitors your application. By monitoring dependencies and collecting the right signals that each dependency can emit, you gain visibility into applications and the key infrastructure you need.
 
 Our recommended approach to monitoring each layer of the stack is summarized in the following table:
 
 | Layer | Resource | Scope | Method |
 |---|---|---|---|
-| Application | A web-based application that runs on .NET, .NET Core, Java, JavaScript, and Node.js platform on an Azure VM, Azure App Service, Azure Service Fabric, Azure Functions, and Azure Cloud Services. | Monitor a live web application to automatically detect performance anomalies, identify code exceptions and issues, and collect user behavior analytics. | Application Insights (a feature of Azure Monitor). |
-| Azure resources - platform as a service (PaaS) | Azure database services (for example, SQL or MySQL). | Azure SQL Database performance metrics. | Enable diagnostics logging to stream SQL data to Azure Monitor Logs. |
-| Azure resources - infrastructure as a service (IaaS) | 1. Azure Storage <br> 2. Azure [load balancing services](/azure/architecture/guide/technology-choices/load-balancing-overview#azure-load-balancing-services) <br> 3. Network security groups <br> 4. Azure Virtual Machines <br> 5. [Azure Kubernetes Service](/azure/aks/intro-kubernetes) / [Azure Container Instances](/azure/container-instances/) | 1. Capacity, availability, and performance. <br> 2. Performance and diagnostics logs (activity, access, performance, and firewall). <br> 3. Monitor events when rules are applied, and the rule counter for how many times a rule is applied to deny or allow. <br> 4. Monitor capacity, availability, and performance in a guest VM operating system (OS). Map application dependencies hosted on each VM, including the visibility of active network connections between servers, inbound and outbound connection latency, and ports across any TCP-connected architecture. <br> 5. Monitor capacity, availability, and performance of workloads running on containers and container instances. | <li> For items 1 through 5 in the first column, platform metrics and the activity log are automatically collected and available in Azure Monitor for analysis and alerting. <li> Configure diagnostic settings to forward resource logs to Azure Monitor Logs. <li> Enable [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview). <li> Enable [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview). |
+| Application | A web-based application that runs on .NET, .NET Core, Java, JavaScript, or Node.js platform on an Azure VM, Azure App Service, Azure Service Fabric, Azure Functions, or Azure Cloud Services. | Monitor a live web application to automatically detect performance anomalies, identify code exceptions and issues, and collect user behavior analytics. | Application Insights (a feature of Azure Monitor). |
+| Azure resources: platform as a service (PaaS) | Azure database services (for example, SQL or MySQL). | Azure SQL Database performance metrics. | Enable diagnostics logging to stream SQL data to Azure Monitor Logs. |
+| Azure resources: infrastructure as a service (IaaS) | 1. Azure Storage <br> 2. Azure [load balancing services](/azure/architecture/guide/technology-choices/load-balancing-overview#azure-load-balancing-services) <br> 3. Network security groups <br> 4. Azure Virtual Machines <br> 5. [Azure Kubernetes Service](/azure/aks/intro-kubernetes) / [Azure Container Instances](/azure/container-instances/) | 1. Capacity, availability, and performance. <br> 2. Performance and diagnostics logs (activity, access, performance, and firewall). <br> 3. Monitor events when rules are applied, and use rule counter for how many times a rule is applied to deny or allow. <br> 4. Monitor capacity, availability, and performance in a guest VM operating system. Map application dependencies hosted on each VM, including the visibility of active network connections between servers, inbound and outbound connection latency, and ports across any TCP-connected architecture. <br> 5. Monitor capacity, availability, and performance of workloads running on containers and container instances. | <li> For items 1 through 5 in the first column, platform metrics and the activity log are automatically collected and available in Azure Monitor for analysis and alerting. <li> Configure diagnostic settings to forward resource logs to Azure Monitor Logs. <li> Enable [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview). <li> Enable [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview). |
 | Network | Communication between your virtual machine and one or more endpoints (another VM, a fully qualified domain name, a uniform resource identifier, or an IPv4 address). | Monitor reachability, latency, and network topology changes that occur between the VM and the endpoint. | Azure Network Watcher. |
 | Azure subscription | [Azure Service Health](/azure/service-health/overview) and basic resource health from the perspective of the Azure service. | <li> Administrative actions performed on a service or resource. <li> Service health of an Azure service is in a degraded or unavailable state. <li> Health issues detected with an Azure resource from the Azure service perspective. <li> Operations performed with Azure autoscale indicating a failure or exception. <li> Operations performed with Azure Policy indicating that an allowed or denied action occurred. <li> Record of alerts generated by Microsoft Defender for Cloud. | Delivered in the activity log for monitoring and alerting by using Azure Monitor. |
 | Azure tenant | Azure Active Directory | Azure AD audit logs and sign-in logs. | Enable [diagnostics logging](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), and configure streaming to Azure Monitor Logs. |
 
 ## Hybrid cloud monitoring
 
-For many organizations, transition to the cloud must be approached gradually, where the hybrid cloud model is the most common first step in the journey. You carefully select the appropriate subset of applications and infrastructure to begin your migration, while you avoid disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers might be uncertain as to which platform is the best choice to support their business and IT operational goals.
+For many organizations, when transition to the cloud must be approached gradually, the hybrid cloud model is the most common first step in the journey. You carefully select the appropriate subset of applications and infrastructure to begin your migration, while you avoid disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers might be uncertain which platform is the best choice to support their business and IT operational goals.
 
-In this section, we address the uncertainty by reviewing several factors and offering an understanding of which platform to consider.
-
-Keep in mind the following key technical aspects:
+This section presents several factors that help determine which platform to consider. Keep in mind the following key technical aspects:
 
 - You need to collect data from Azure resources that support the workload, then forward the data to your existing on-premises or managed service provider tools.
 
-- You need to maintain your current investment in System Center Operations Manager, and configure it to monitor IaaS and PaaS resources that are running in Azure. Optionally, because you're monitoring two environments with different characteristics, based on your requirements, you need to determine how integrating with Azure Monitor supports your strategy.
+- You need to maintain your current investment in System Center Operations Manager, and configure it to monitor infrastructure as a service (IaaS) and platform as a service (PaaS) resources that are running in Azure. Optionally, because you're monitoring two environments with different characteristics, you need to determine how integrating with Azure Monitor supports your strategy.
 
 - As part of your modernization strategy to standardize on a single tool to reduce cost and complexity, you need to commit to Azure Monitor for monitoring the resources in Azure and on your corporate network.
 
-The following table summarizes the requirements that Azure Monitor and System Center Operations Manager support with monitoring the hybrid cloud model based on a common set of criteria.
+Azure Monitor and System Center Operations Manager support the following requirements for monitoring hybrid clouds.
 
 | Requirement | Azure Monitor | Operations Manager |
 |---|---|---|
