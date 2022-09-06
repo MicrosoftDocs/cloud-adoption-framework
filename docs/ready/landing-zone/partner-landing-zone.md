@@ -66,12 +66,17 @@ Offers in the marketplace have a price, description of what you get, and way to 
 
 To find a landing zone offer from a partner, follow these steps:
 
-1. *Find landing zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers. Offers are links at the bottom of each tile
+1. *Find landing zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers. Offers are links at the bottom of each tile.
+
     - *Filter results* - In the Cloud Adoption Framework Methodology dropdown, select the Ready box. In the Regions dropdown, select your region. With these filters, you'll only see offers aligned to the Ready methodology in your region.
+ 
     - *Look for landing zone offers* – Look at the links at the bottom of the tiles. Find and select landing zone offers. Some partners have more than one offer aligned to the Ready methodology. Not every tile on the page will be a landing zone offer. Only select the links at the bottom of the tiles. Selecting the partner’s name or logo takes you to an overview of the partner. Only the link takes you to the offer.
+
 1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes. [We have questions you can use to facilitate these meetings.](partner-landing-zone-questions.md).
-1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of AMMP. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
-1. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
+
+3. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of AMMP. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
+
+5. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
 
 **What to expect from partner offers:**
 
