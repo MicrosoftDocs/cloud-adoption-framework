@@ -1,137 +1,91 @@
 ---
-title: Partner options for implementing Azure landing zones
-description: Learn how to validate partner implementation options for Azure landing zones.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 08/31/2022
+title: How to get help building a landing zone
+description: How to find building a landing zone and what to expect from partners.
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 09/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
+# How to get help building a landing zone
 
-# Partner options for implementing Azure landing zones
+Getting your Azure landing zone (ALZ) done right and on time is important. Working with a certified Azure partner is a great way to get the support you need to build your ALZ. We'll show you how to find a partner and what to expect from your partner.
 
-The Cloud Adoption Framework provides cloud adoption as a self-service activity. The objective is to empower each team that supports adoption through standardized approaches. In practice, you can't assume that a self-service approach is sufficient for all adoption activities.
+*Two options* - There are two options to find an ALZ partner (*see image*).
 
-Successful cloud adoption programs typically involve at least one level of third-party support. Many cloud adoption efforts require support from a systems integrator (SI) or consulting partner who provides services that accelerate cloud adoption. Managed service providers (MSPs) provide enduring value by supporting landing zones and cloud adoption, but they also provide post-adoption operations management support. Additionally, successful cloud adoption efforts tend to engage one or more independent software vendors (ISV) who provide software-based services that accelerate cloud adoption. 
+- *Option 1* - use the Azure Migration and Modernization Program.
+- *Option 2* - find a partner offer for a landing zone in our marketplace.
 
-The rich partner ecosystems of SIs, ISVs, MSPs, and other forms of Microsoft partners align their offerings to specific methodologies found in the Cloud Adoption Framework. When a partner is aligned to the Ready methodology of this framework, they'll likely offer their own Azure landing zone implementation option.
+We tell you how to find a partner and what to expect for each option.
 
-This article provides a set of questions that help you understand the scope of your Azure landing zone implementation options.
+![A graphic that summarizes the two options to find a partner: the Azure Migration and Modernization Program and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partner-options-v5.png)
 
-> [!IMPORTANT]
-> Partners define their offers and Azure landing zone implementation options based on their extensive experience helping customers adopt the cloud.
->
-> Partners might choose to omit specific design areas in their initial landing zone implementation. However, whenever possible, they should be able to communicate when and how you implement each design area, as well as the range of costs for completing that design area.
->
-> Other partner solutions might be flexible enough to support multiple options for each of the following questions. Use these questions to ensure you're comparing partner offers and self-service options equally.
+## Option 1 - Azure Migration and Modernization Program (AMMP)
 
-## Find a partner
+The easiest option to find an ALZ partner is through the Azure Migration and Modernization Program (AMMP).
 
-If you need a partner to implement your Azure landing zones, start with the approved list of Cloud Adoption Framework aligned partners. Specifically, start with partners who have [offers aligned to the Ready methodology](https://www.microsoft.com/azure/partners/adopt?filters=ready).
+**How to find an AMMP partner:**
 
-Additionally, all [Azure expert managed service providers (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all) are audited to validate their ability to deliver each methodology of the Cloud Adoption Framework. While a particular partner might not have an aligned offer, all partners demonstrate alignment during technical delivery.
+Take 5 minutes to [fill out the AMMP form](/migration/migration-modernization-program/#program-form). Someone from AMMP will help you find the right partner.
 
-## Validate a partner offer
+**What to expect from an AMMP partner:**
 
-Once you select a partner, use the remainder of this article to guide your validation of the partner offer. Each section includes a summary of what to look for and a list of questions to ask the partner. The partner's answers to these questions shouldn't be considered as right or wrong. Instead, the questions are designed to help you evaluate whether the partner offer meets your business requirements.
+All the partners in the AMMP program adhere to ALZ best-practices. We vet AMMP partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
 
-## Platform development velocity
+1. *ALZ planning* – The AMMP partner will work with you to create the business and technical foundation needed to build your ALZ. ALZ planning includes:
 
-As outlined in the [Azure landing zone implementation options](./implementation-options.md), there are two high-level approaches to landing zone implementation based on how you want to develop your landing zones.
+    - Selecting your operating models
+    - Reviewing your ALZ implementation options
+    - Identifying your compliance requirements
+    - Identifying any customization needed
 
-**Question for the partner:** Which of the following approaches does the partner's Azure landing zone solution support?
+1. *ALZ building* – Your partner will build and monitor an ALZ pilot. ALZ building includes:
 
-- **Start small and expand:** Begin with a lightweight template. The landing zone solution matures over time as your chosen cloud operating model becomes clearer.
-- **Start with enterprise-scale:** Begin with a more comprehensive reference implementation. The reference architecture builds on a well-defined cloud operating model that requires less iteration to reach a mature solution.
-- **Other:** The partner has a modified approach and should be able to describe the approach.
+    - Reviewing your ALZ objectives and outcomes
+    - Defining your ALZ build plan
+    - Building your ALZ pilot
+    - Monitoring your ALZ pilot
 
-## Design principles
+1. *Deployment planning* – Your partner will work with you to define your deployment plan. Deployment planning includes:
 
-All Azure landing zones must follow a set of common design areas. We refer to the implementation of the design areas as design principles. The following sections help validate the partner's design principles that define the Azure landing zone implementation.
+    - Assessing existing workload compatibility
+    - Presenting deployment plan options
+    - Defining resources, timeline, and next steps to execute the deployment plan
 
-### Deployment options
+## Option 2 - Partner offers
 
-Partners who offer an Azure landing zone solution might support one or more options to deploy (or modify and expand) the solution to your Azure tenant.
+We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](/azure/partners/adopt?filters=ready) is a marketplace of offers from certified Azure partners. Microsoft vets and approves each offer. Each offer comes from Azure Advanced Specialization Partners or Azure Expert Managed Services Providers (MSPs).
 
-**Question for the partner:** Which of the following configurations does your Azure landing zone solution support?
+Advanced specialization partners demonstrate deep technical knowledge, proven success, and ethical business practices. Azure Expert MSPs also meet these criteria but must additionally pass a time- and cost-intensive auditing process.
 
-- **Configuration automation:** Does the solution deploy the landing zone from a deployment pipeline or deployment tool?
-- **Manual configuration:** Does the solution empower the IT team to manually configure the landing zone, without injecting errors into the landing zone source code?
+Offers in the marketplace have a price, description of what you get, and way to contact the partner. Like any marketplace, the offers aren't all the same. There's flexibility in what the offer can be. Partners design and propose offers. Microsoft approves them for the marketplace. This flexibility creates value for you. You can find an offer that meets your specific needs.
 
-**Question for the partner:** Which of the Azure landing zone implementation options does the partner's solution support? See the [Azure landing zone implementation options](./implementation-options.md) article for a full list of options.
+**How to find a partner offer:**
 
-### Identity
+To find a landing zone offer from a partner, follow these steps:
 
-Identity is perhaps the most important design area to evaluate in the partner solution.
+1. *Find landing zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers. Offers are links at the bottom of each tile.
 
-**Question for the partner:** Which of the following identity management options does the partner solution support?
+    - *Filter results* - In the Cloud Adoption Framework Methodology dropdown, select the Ready box. In the Regions dropdown, select your region. With these filters, you'll only see offers aligned to the Ready methodology in your region.
+ 
+    - *Look for landing zone offers* – Look at the links at the bottom of the tiles. Find and select landing zone offers. Some partners have more than one offer aligned to the Ready methodology. Not every tile on the page will be a landing zone offer. Only select the links at the bottom of the tiles. Selecting the partner’s name or logo takes you to an overview of the partner. Only the link takes you to the offer.
 
-- **Azure Active Directory (Azure AD):** The suggested best practice is to use Azure AD and Azure role-based access control to manage identity and access in Azure.
-- **Active Directory:** If necessary, does the partner solution provide an option to deploy Active Directory as an infrastructure as a service solution?
-- **Third-party identity provider:** If your company uses a third-party identity solution, determine whether and how the partner's Azure landing zone integrates with the third-party solution.
+1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
-### Network topology and connectivity
+3. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of AMMP. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 
-Networking is arguably the second most important design area to evaluate. There are several best practice approaches to network topology and connectivity.
+5. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
 
-**Question for the partner:** Which of the following options is included with the partner's Azure landing zone solution? Are any of the following options incompatible with the partner's solution?
+**What to expect from partner offers:**
 
-- **Virtual network:** Does the partner solution configure a virtual network? Can you modify its topology to meet your technical or business constraints?
-- **Virtual private network (VPN):** Does the partner's landing zone design include VPN configuration to connect the cloud to existing datacenters or offices?
-- **High-speed connectivity:** Does the landing zone design include a high-speed connection such as Azure ExpressRoute?
-- **Virtual network peering:** Does the design include connectivity between different subscriptions or virtual networks in Azure?
+Partner offers are vetted and approved for the marketplace. They follow CAF principles in general but have more freedom to customize their approach to the ALZ process. Expectations should align with the offer description and any other agreements made between you and your chosen partner.
 
-### Resource organization
+## Links to find a landing zone partner
 
-Sound governance and operational cloud management starts with best practice resource organization.
-
-**Question for the partner:** Does the partner's landing zone design include considerations for the following resource organization practices?
-
-- **Naming standards:** What [naming standards](../azure-best-practices/naming-and-tagging.md) does this offering follow and is that standard automatically enforced through policy?
-- **Tagging standards:** Does the landing zone configuration follow and enforce specific [standards for tagging assets](../azure-best-practices/resource-tagging.md)?
-- **Subscription design:** What [subscription design strategies](../../decision-guides/subscriptions/index.md) does the partner offer support?
-- **Management group design:** Does the partner offer follow a defined pattern for the [Azure management group hierarchy](../azure-best-practices/organize-subscriptions.md) to organize subscriptions?
-- **Resource group alignment:** How are assets grouped and deployed to the cloud by the resource groups? In the partner offer, do the resource groups collect the assets into workloads, deployment packages, or other organization standards?
-
-**Question for the partner:** Does the partner provide onboarding documentation to [track foundational decisions](../../get-started/cloud-concepts.md) and educate staff? See the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) for an example of such documentation.
-
-### Governance disciplines
-
-Your governance requirements can heavily influence any complex landing zone designs. Many partners provide a separate offering to fully implement governance disciplines after landing zones deploy. The following questions help clarify aspects of governance to build into any landing zones.
-
-**Question for the partner:** What governance tooling does the partner solution include as part of the landing zone implementation?
-
-- **Policy compliance monitoring:** Does the partner's landing zone solution include defined governance policies along with tools and processes to monitor compliance? Does the offer include policies customization to fit your governance needs?
-- **Policy enforcement:** Does the partner's landing zone solution include automated enforcement tools and processes?
-- **Cloud platform governance:** Does the partner offer include a solution for maintaining compliance with a common set of policies across all subscriptions? Or is the scope limited to individual subscriptions?
-- **N/A:** Start-small approaches intentionally postpone governance decisions until the team deploys low-risk workloads to Azure. You can address this approach in a separate offer after your landing zone solution deploys.
-
-**Question for the partner:** Does the partner offer go beyond governance tooling to also include processes and practices for delivering any of the following cloud governance disciplines?
-
-- **Cost management:** Does the partner offer prepare the team to evaluate, monitor, and optimize spending while creating cost accountability with workload teams?
-- **Security baseline:** Does the partner offer prepare the team to maintain compliance as security requirements change and mature?
-- **Resource consistency:** Does the partner offer prepare the team to ensure that all assets in the cloud are onboarded into relevant operations management processes?
-- **Identity baseline:** Does the partner offer prepare the team to maintain identity, role definitions, and assignments after the initial landing zone deploys?
-
-### Operations baseline
-
-Your operations management requirements might influence how you configure specific Azure products during landing zone implementation. Many partners provide a separate offering to fully implement the operations baseline and advanced operations later in the cloud adoption journey, but before your first workload is released for production use. But, the partner's landing zone solution might include configuration for some operations management tools by default.
-
-**Question for the partner:** Does the partner solution include design options to support any of the cloud operations disciplines?
-
-- **Inventory and visibility:** Does the landing zone include tooling to ensure that 100% of assets are centrally monitored?
-- **Operational compliance:** Does the architecture include tooling and automated processes to enforce patching or other operational compliance requirements?
-- **Protect and recover:** Does the partner offer include tooling and configuration to ensure a minimal standard of backup and recovery for 100% of assets deployed?
-- **Platform operations:** Does the landing zone offering include tooling or processes to optimize operations across the portfolio?
-- **Workload operations:** Does the landing zone offering include tooling to manage workload-specific operations requirements and ensure that each workload is well-architected?
-
-## Take action
-
-After you review the partner's Azure landing zone offer or solution using the questions above, your team is better equipped to choose the partner whose Azure landing zone most closely aligns to your cloud operating model.
-
-If you determine that a self-service approach to Azure landing zone deployment is a better fit, review or revisit the [Azure landing zone implementation options](./implementation-options.md). You can choose the templated landing zone approach that best aligns with your cloud operating model.
+- Option 1 - [Azure Migration and Modernization Program](/migration/migration-modernization-program/#program-form)
+- Option 2 - [Partner offers](/azure/partners/adopt?filters=ready)
 
 ## Next steps
 
