@@ -58,8 +58,8 @@ Create a modernization timeline for each workload. The amount of time it takes t
 
 You might have the technical expertise to estimate the modernization effort. If not, see the following resources to get the expert advice you need.
 
-- [Azure Migration and Modernization Program](/azure/partners/ammp)
-- [Fast Track for Azure](/programs/azure-fasttrack/)
+- [Azure Migration and Modernization Program](https://www.microsoft.com/azure/partners/ammp)
+- [Fast Track for Azure](https://azure.microsoft.com/programs/azure-fasttrack/)
 
 ## Step 4 - Commit resources to the modernization
 

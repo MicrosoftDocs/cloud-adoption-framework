@@ -72,7 +72,7 @@ When you find the right solution, follow the implementation guidance to moderniz
 
 ## Next steps
 
-Get more guidance with the [Azure Migration and Modernization Program](/migration/migration-modernization-program/#program-form)
+Get more guidance with the [Azure Migration and Modernization Program](/migration/migration-modernization-program/)
 
 >[!div class="nextstepaction"]
 > [Learn how to Innovate in the cloud](../../innovate/index.md)
