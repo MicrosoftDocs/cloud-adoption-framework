@@ -72,7 +72,7 @@ To find a landing zone offer from a partner, follow these steps:
  
     - *Look for landing zone offers* – Look at the links at the bottom of the tiles. Find and select landing zone offers. Some partners have more than one offer aligned to the Ready methodology. Not every tile on the page will be a landing zone offer. Only select the links at the bottom of the tiles. Selecting the partner’s name or logo takes you to an overview of the partner. Only the link takes you to the offer.
 
-1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes. [We have questions you can use to facilitate these meetings.](partner-landing-zone-questions.md).
+1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes. [We have questions you can use to facilitate these meetings](partner-landing-zone-questions.md).
 
 3. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of AMMP. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 
