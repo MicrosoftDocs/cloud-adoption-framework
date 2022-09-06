@@ -20,7 +20,7 @@ By now, you should have a clear understanding of your modernization goals and th
 
 A modernization strategy is a modernization effort that targets a key component of your business technology. We defined modernization as enhancing your workloads and the process to support those workloads. A modernization strategy gives you concrete steps to modernize both your workload and supporting process.
 
-:::image type="content" source="../../_images/modernize/modernize-strategies/modernize-strategies.png" alt-text="Diagram that shows where you are in the modernize strategies process. The image shows three modernization strategies. Process modernization is in the middle with an arrow pointing to the two other modernization strategies. Database modernization is on the left and application modernization is on the right" border="false":::
+:::image type="content" source="../../_images/modernize/modernize-strategies/modernize-strategies.png" alt-text="Diagram that shows where you are in the modernize strategies process. The image shows three modernization strategies. Process modernization is in the middle with an arrow pointing to the two other modernization strategies. Database modernization is on the left and application modernization is on the right." border="false":::
 
 ## Modernization strategies
 

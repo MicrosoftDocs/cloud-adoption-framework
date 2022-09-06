@@ -21,7 +21,7 @@ Follow these three steps to envision your cloud modernization possibilities.
 Knowing *why* you're modernizing helps you determine *what* to modernize. So, make sure you have a good understanding of your motivations before moving forward.
 Your motivations for modernization will be unique to your business goals, but they likely aren't unique to you.
 
-:::image type="content" source="../../_images/modernize/envision/modernization-motivations.png" alt-text="Shows five migration motivation and five modernization motivations. The five modernization motivations are enabling hybrid work, faster time to market, cost-optimizing application, application innovation, and centralizing data." border="false":::
+:::image type="content" source="../../_images/modernize/envision/modernization-motivations.png" alt-text="Diagram that shows five migration motivation and five modernization motivations. The five modernization motivations are enabling hybrid work, faster time to market, cost-optimizing application, application innovation, and centralizing data." border="false":::
 
 We see similar motivations across businesses and industries. Some of the most common modernization motivations are:
 
