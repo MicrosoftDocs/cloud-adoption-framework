@@ -72,7 +72,7 @@ Your governance requirements can heavily influence any complex landing zone desi
 
 - **Policy compliance monitoring:** Does the partner's landing zone solution includes defined governance policies along with tools and processes to monitor compliance? Does the offer include customization of policies to fit your governance needs?
 - **Policy enforcement:** Does the partner's landing zone solution include automated enforcement tools and processes?
-- **Cloud platform governance:** Does the partner offer include a solution for maintaining compliance to a common set of policies across all subscriptions? Or is the scope limited to individual subscriptions?
+- **Cloud platform governance:** Does the partner offer include a solution for maintaining compliance with a common set of policies across all subscriptions? Or is the scope limited to individual subscriptions?
 - **N/A:** Start-small approaches intentionally postpone governance decisions until the team has deployed low-risk workloads to Azure. This can be addressed in a separate offer after the landing zone solution has been deployed.
 
 **Question for the partner:** Does the partner offer go beyond governance tooling to also include processes and practices for delivering any of the following cloud governance disciplines?
