@@ -78,7 +78,7 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 
 ### Azure Policy for Kubernetes
 
-- Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).  This is an optional component that may complement Arc-enabled SQL MI
+- Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).  This is an optional component that may complement Arc-enabled SQL MI by, for example, enforcing tagging or controlling the enablement of Azure services
 - Review the [Security, governance, and compliance critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) to learn best practices and recommendations for implementing Azure Policy for Kubernetes. These best practices include:
   - Enforcing tagging for better cost visibility across clusters
   - Controlling the enablement of Azure services
