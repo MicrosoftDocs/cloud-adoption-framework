@@ -536,7 +536,7 @@ items:
     items:
     - name: Overview
       href: adopt/index.md
-    - name: Understand cloud adoption
+    - name: Cloud adoption journey
       href: adopt/cloud-adoption.md
     - name: Migrate or modernize first? 
       href: adopt/migrate-or-modernize.md

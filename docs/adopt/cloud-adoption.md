@@ -1,9 +1,9 @@
 ---
-title: Understand the cloud adoption journey
-description: Use the Cloud Adoption Framework for Azure to understand the typical journey to the cloud and how your existing portfolio will change.
+title: Cloud adoption journey
+description: Understand the typical cloud adoption journey. Seeing the steps others take can increase the success of your cloud adoption journey.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/30/2022
+ms.date: 09/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: 
@@ -11,11 +11,11 @@ ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
 
-# Understand the cloud adoption journey
+# Cloud adoption journey
 
-We want to give you a sense of what your cloud adoption journey could look like. It can be helpful to see how other organizations adopt the cloud (*see the following diagram*).
+Most cloud adoption journeys follow a similar path.  It's helpful to see how other organizations adopt the cloud. Knowing what workloads to tackle first and what to do with them will streamline your cloud adoption journey (*see the following diagram*).
 
-:::image type="content" source="../_images/adopt/adopt-existing-apps-v7.png" alt-text="Diagram showing portfolio migration modernization approach.":::
+:::image type="content" source="../_images/adopt/cloud-adoption-journey.png" alt-text="Diagram showing portfolio migration modernization approach." border="false":::
 
 An important consideration in adopting the right cloud solution is control versus productivity. Most organizations find a balance that meets their needs. A typical business will use the following strategies:
 
@@ -31,13 +31,13 @@ Retire or get rid of any applications and environments you don't need. Take an i
 
 ## Replace (15%)
 
-Replace workloads with SaaS and low-code solutions to provide the most productivity for the applications you need to keep. You can move "from" solutions that take more time to manage ("control") and move "to" cloud solutions that let you focus on growing your business ("productivity"). See the following table for examples.
+Replace workloads with software-as-a-service (SaaS) and low-code solutions to provide the most productivity for the applications you need to keep. You can move "from" solutions that take more time to manage ("control") and move "to" cloud solutions that let you focus on growing your business ("productivity"). See the following table for examples.
 
 | From<span title="Replace">&nbsp;</span> | To<span title="To">&nbsp;</span> |<span></span>|
 |-|-|-|
 |Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)| :::image type="icon" source="../_images/adopt/powerapps.svg":::
 |DevOps tools|[GitHub](/learn/modules/introduction-to-github/)|:::image type="icon" source="../_images/adopt/github-icon.svg":::
-|Relationship <br>Management|[Dynamics](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
+|Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
 |Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
 
 ## Rehost or replatform (50%)
