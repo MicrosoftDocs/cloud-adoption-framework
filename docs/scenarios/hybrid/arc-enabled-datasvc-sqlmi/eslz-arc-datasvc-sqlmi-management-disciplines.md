@@ -23,7 +23,7 @@ The diagram below illustrates the overall management architecture:
 
 ### Cluster management
 
-Prior to deploying an Azure Arc-enabled SQL MI instance, review the Cloud Adoption Framework (CAF) design considerations and recommendations for [Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines) to understand cluster management principles for the underlying Kubernetes cluster.
+Prior to deploying an Azure Arc-enabled SQL MI instance, review the [Cloud Adoption Framework (CAF)](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines) design considerations and recommendations for [Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines) to understand cluster management principles for the underlying Kubernetes cluster.
 
 ### Cluster monitoring
 
