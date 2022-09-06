@@ -38,7 +38,7 @@ Replace workloads with software-as-a-service (SaaS) and low-code solutions to pr
 |Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)| :::image type="icon" source="../_images/adopt/powerapps.svg":::
 |DevOps tools|[GitHub](/learn/modules/introduction-to-github/)|:::image type="icon" source="../_images/adopt/github-icon.svg":::
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
-|Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
+|Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
 
 ## Rehost or replatform (50%)
 
