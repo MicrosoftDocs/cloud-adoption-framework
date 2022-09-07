@@ -35,7 +35,7 @@ The process flow of control mapping:
 > [!TIP]
 > You should review the guidance in [Tailor the Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) for details on how to tailor the Azure Landing Zone architecture to support your control mapping requirements.
 
-### 1.Identify the controls required
+### 1. Identify the controls required
 
 Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found [Here](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fb%2Fd%2F3%2Fbd3fa8ca-35ab-43b9-bc3e-3c291f011786%2FAzure%2520Security%2520Controls%2520Template%2520.xlsx&wdOrigin=BROWSELINK)
 
@@ -43,7 +43,7 @@ Gather all existing and required lists of compliance controls from the Security 
 
 _A sample of formalized controls list:_
 
-### 2.Map the controls to ASB and create set of custom controls
+### 2. Map the controls to ASB and create set of custom controls
 
 For each control you have captured use appropriate control titles, domain categories, and guidance/description to identify related ASB controls which are a match appropriately. Align the intent of each control as close as possible and note the deviance or gaps in the spreadsheet.
 You can also use common frameworks that are mapped to both your organization’s and ASB where they exist. For example, if both yours and ASB controls are already mapped to NIST 800-53 r4 or CIS 7.1 you could join the data sets together on that pivot. Intermediate common frameworks can be found in the [ASB resources section](/security/benchmark/azure/v2-cis-benchmark)
@@ -73,7 +73,7 @@ This platform assessment will determine if the Azure Security Benchmark meets th
 
 If there are gaps identified, you can still use Azure and ASB but might need to develop mitigating controls until these gaps are closed and the benchmark can release updates to address them. In addition, you can map the custom controls by creating a [policy definition](/azure/governance/policy/overview#policy-definition) and optionally adding to an [initiative definition](/azure/governance/policy/overview#initiative-definition).
 
-#### Checklist Platform
+#### Checklists for Sign-off
 
 1. Security team has approved the Azure Platform for usage
 2. You will need to join an individual ASB Service Baseline excel to the previously completed (platform level) ASB control mappings.
@@ -137,7 +137,7 @@ After the approval from your internal Security/Audit team that the platform and 
 
 Depending on the customer’s control objectives, you might need to create custom [policy definitions](/azure/governance/policy/concepts/definition-structure), [policy initiatives definitions](/azure/governance/policy/concepts/initiative-definition-structure) and [policy assignments](/azure/governance/policy/concepts/assignment-structure).
 
-Please refer to the guidance below for each ALZ accelerator implementation options.
+Please refer to the guidance below for each ALZ accelerator implementation option.
 
 #### ALZ Accelerator Portal
 
