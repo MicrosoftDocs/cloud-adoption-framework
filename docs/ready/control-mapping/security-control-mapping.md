@@ -194,7 +194,7 @@ When using the ARM templates refer to the following articles.
 - [Assigning Azure Policy or Policy initiatives](/azure/governance/policy/assign-policy-portal)
 - [Quickstart: Create a policy assignment to identify non-compliant resources by using an ARM template](/azure/governance/policy/assign-policy-template)
 - [Bicep & ARM Policy Definition template reference](/azure/templates/microsoft.authorization/policydefinitions?tabs=json)
-- [Bicep & ARM Policy set (initative) template reference](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json)
+- [Bicep & ARM Policy set (initiative) template reference](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=json)
 - [Bicep & ARM Policy assignment template reference](/azure/templates/microsoft.authorization/policyassignments?tabs=json)
 
 #### Terraform
@@ -212,7 +212,7 @@ When using the Bicep templates refer to the following articles.
 
 - [Quickstart: Create a policy assignment to identify non-compliant resources by using a Bicep file](/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell)
 - [Bicep & ARM Policy Definition template reference](/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep)
-- [Bicep & ARM Policy set (initative) template reference](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
+- [Bicep & ARM Policy set (initiative) template reference](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
 - [Bicep & ARM Policy assignment template reference](/azure/templates/microsoft.authorization/policyassignments?tabs=bicep)
 
 ## Additional Guidance using MDFC (Microsoft Defender for Cloud)
