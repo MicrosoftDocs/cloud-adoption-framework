@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 09/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: 
+ms.subservice: adopt
 ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
 ---
@@ -38,7 +38,7 @@ Replace workloads with software-as-a-service (SaaS) and low-code solutions to pr
 |Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)| :::image type="icon" source="../_images/adopt/powerapps.svg":::
 |DevOps tools|[GitHub](/learn/modules/introduction-to-github/)|:::image type="icon" source="../_images/adopt/github-icon.svg":::
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|:::image type="icon" source="../_images/adopt/dynamics.svg":::
-|Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
+|Industry <br>verticals|[3rd-party <br>SaaS](/marketplace/apps)|:::image type="icon" source="../_images/adopt/azure-2.svg":::
 
 ## Rehost or replatform (50%)
 
@@ -64,7 +64,7 @@ Use the lessons-learned from your first moves to tackle more challenging workloa
 
 ### Hard or costly to move (5%)
 
-Move the most difficult and costly workloads last. The following systems may need more thought to move efficiently:
+Move the most difficult and costly workloads last. The following systems might need more thought to move efficiently:
 
 - *High Value Asset (HVA):* Disruption or corruption of this workload would disrupt all business operations.
 - *Public Key Infrastructure (PKI) systems:* Workloads that manage x509 digital certificates and provide network encryption and authentication.

@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 09/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: modernize
 ms.custom: internal
 ---
 
