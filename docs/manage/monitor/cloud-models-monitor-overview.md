@@ -1,6 +1,6 @@
 ---
 title: Monitoring strategy for cloud deployment models
-description: Learn about our recommended monitoring strategy for each of the cloud deployment models in Azure.
+description: Learn how to adopt our recommended monitoring strategy for each of the cloud deployment models in Azure.
 author: MGoedtel
 ms.author: brblanch
 ms.date: 09/07/2022
