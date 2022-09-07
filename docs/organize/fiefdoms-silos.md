@@ -3,7 +3,7 @@ title: Silos and fiefdoms
 description: Learn about antipatterns that can block a growth mindset in organizations. Specifically, learn about silo and fiefdom antipatterns.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/06/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -56,7 +56,7 @@ Even in toxic cultures, the efforts of the CCoE and the cloud governance team sh
 
 Team members in an IT silo are likely to define themselves through their alignment to a few IT vendors or an area of technical specialization. But don't confuse silos with IT fiefdoms. Silos tend to be driven by comfort and passion, and silos are sometimes easier to overcome than the fear-driven motives behind fiefdoms.
 
-This antipattern often emerges from of a common passion for a specific solution. IT silos are then reinforced by the team's advanced skills as a result of the investment in that specific solution. This superior skill is an accelerator to cloud adoption efforts if you can overcome the resistance to change. It can also become a major blocker if the silos are broken down or if the team members can't accurately evaluate options. Fortunately, you can usually overcome IT silos without making any significant changes to the organizational chart.
+This antipattern often emerges from a common passion for a specific solution. IT silos are then reinforced by the team's advanced skills as a result of the investment in that specific solution. This superior skill is an accelerator to cloud adoption efforts if you can overcome the resistance to change. It can also become a major blocker if the silos are broken down or if the team members can't accurately evaluate options. Fortunately, you can usually overcome IT silos without making any significant changes to the organizational chart.
 
 ### Address resistance from IT silos
 
@@ -76,7 +76,7 @@ During review of the competing solution, use the practices outlined in [Define c
 
 When IT silos start to resist, it's important to be "boundary-less" in your own solutions. Be mindful of one simple truth: cloud-native isn't always the best solution. Consider hybrid solutions that might provide an opportunity to extend the existing investments of the IT silo into the future.
 
-Also consider cloud-based versions of the solution that the IT silo team uses now. Experiment with the solutions and get exposer to the viewpoint of team members working in the IT silo. At a minimum, you'll gain a fresh perspective. In many situations, you might earn enough of the IT silo's respect to lessen resistance.
+Also consider cloud-based versions of the solution that the IT silo team uses now. Experiment with the solutions and get exposure to the viewpoint of team members working in the IT silo. At a minimum, you'll gain a fresh perspective. In many situations, you might earn enough of the IT silo's respect to lessen resistance.
 
 **Invest in education:** Many people living in an IT silo became passionate about the current solution as a result of expanding their own education. Investing in the education of these teams is seldom misplaced. Allocate time for these individuals to engage in self-learning, classes, or even conferences to break the day-to-day focus on the current solution.
 
