@@ -3,7 +3,7 @@ title: Unified operations for hybrid, multicloud, and edge
 description: Implement effective controls for consistently operations management across hybrid, multicloud, and edge deployments.
 author: brianblanchard
 ms.author: brblanch
-ms.date: 09/01/2022
+ms.date: 09/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -20,7 +20,7 @@ Hybrid, multicloud, and edge deployment approaches often lead to increases in op
 
 In hybrid and multicloud strategies, the first increase in overhead costs might be duplicated cloud platform utilities: network, identity, governance, security, and operations tooling. In the longer term, business challenges could emerge, such as staffing core functions or teams with the required skills to manage diverse environments.
 
-Hybrid and multicloud strategies lead many decision makers to incorrectly conclude that the cloud is more expensive than on-premises technologies. A recent Forrester Consulting study, commissioned by Microsoft, found that a hybrid and multicloud strategy can provide significant [three-year return on investment, and substantial avoided on-premises infrastructure and staff costs](https://azure.microsoft.com/resources/forrester-tei-microsoft-azure-iaas/) for organizations. An Accenture and WSP environment and energy study further concluded that cloud solutions add increased energy efficiencies for large deployments. See [Organizations reduce energy use and carbon emissions by more than 30 percent against business applications installed on-premises](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf). For small deployments, cloud solutions reach 90+ percent reductions with a shared cloud service.
+Hybrid and multicloud strategies lead many decision makers to incorrectly conclude that the cloud is more expensive than on-premises technologies. A recent Forrester Consulting study, commissioned by Microsoft, found that a hybrid and multicloud strategy can provide significant [three-year return on investment, and substantial avoided on-premises infrastructure and staff costs](https://azure.microsoft.com/resources/forrester-tei-microsoft-azure-iaas/) for organizations. An Accenture and WSP environment and energy study further concluded that cloud solutions add increased energy efficiencies for large deployments. Organizations using cloud solutions [reduce energy use and carbon emissions by more than 30 percent against business applications installed on-premises](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf). For small deployments, cloud solutions reach over 90 percent reductions with a shared cloud service.
 
 Organizations can modernize and optimize overall operations using a simple approach to overcoming risks, overhead cost increases, or challenges related to staffing core functions. The *Unified operations* approach provides hybrid, multicloud, and edge cloud strategies that reduce short-term duplication and long-term strain on your technology staff. This article describes the provider-neutral approach of using unified operations to extend a single enterprise control plane across distributed assets in hybrid, multicloud, and edge environments.
 
@@ -32,7 +32,7 @@ Successful hybrid, multicloud, and edge strategies begin with a primary cloud pl
 
 ![Diagram that shows the primary cloud platform with facilities, services, and controls to support your processes.](../../_images/hybrid/primary-cloud-provider.png)
 
-Whether located in a public or private cloud, your primary cloud platform is where your operational processes host, along with a set of defined cloud facilities. In Azure, those facilities are [Azure regions](https://azure.microsoft.com/global-infrastructure/), whereas on-premises, they could be datacenters. These facilities host the cloud services necessary to manage core operations, and to support other workloads hosted on the platform. Your primary cloud platform also includes a series of controls designed to support operations within that cloud.
+Whether located in a public or private cloud, your primary cloud platform hosts your operational processes, along with a set of defined cloud facilities. In Azure, those facilities are [Azure regions](https://azure.microsoft.com/global-infrastructure/), whereas on-premises, they could be datacenters. These facilities host the cloud services necessary to manage core operations, and to support other workloads hosted on the platform. Your primary cloud platform also includes a series of controls designed to support operations within that cloud.
 
 > [!NOTE]
 > Your primary cloud platform might not host all, or even the majority, of your workloads, but it does **host the services and controls required to complete core processes for operations management, governance, compliance, security, and so on**.
