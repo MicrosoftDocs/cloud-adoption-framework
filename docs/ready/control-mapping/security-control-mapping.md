@@ -14,7 +14,7 @@ ms.subservice: ready
 Many organizations are required to comply with certain industry/regional regulations before adopting and onboarding the Azure cloud services. These compliance regulations are identified by compliance domain and controls respectively. For example, **CMMC L3 AC 1.001** where AC is Access Control domain and 1.001 is a control ID in Cybersecurity Maturity Model Certification (CMMC) framework. The best practice recommendation is to map the required compliance controls to [Azure Security Benchmark (ASB)](/security/benchmark/azure/) and create custom set of the controls that are not covered by ASB.
 
 Mapping the required controls to ASB can greatly expedite secure Azure onboarding experience. ASB provides a canonical set of cloud-centric technical security controls based on widely used compliance control framework such as NIST, CIS, PCI.
-There are many ASB Regulatory compliance built-in initiatives already available. If you are interested in a specific Compliance Domain, please reference:
+There are many ASB Regulatory compliance built-in initiatives already available. If you are interested in a specific Compliance Domain, reference:
  [Regulatory Compliance Built-in initiatives](/azure/governance/policy/samples/azure-security-benchmark)
 
 > [!NOTE]
@@ -37,7 +37,7 @@ The process flow of control mapping:
 
 ### 1. Identify the controls required
 
-Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found [Here](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fb%2Fd%2F3%2Fbd3fa8ca-35ab-43b9-bc3e-3c291f011786%2FAzure%2520Security%2520Controls%2520Template%2520.xlsx&wdOrigin=BROWSELINK)
+Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found [Here](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fb%2Fd%2F3%2Fbd3fa8ca-35ab-43b9-bc3e-3c291f011786%2FAzure%2520Security%2520Controls%2520Template%2520.xlsx&wdOrigin=BROWSELINK)
 
 :::image type="content" source="./media/formalized-controls-list-template.jpg" alt-text="Formalized Controls list - Template" lightbox="./media/formalized-controls-list-template.jpg":::
 
@@ -45,7 +45,7 @@ _A sample of formalized controls list:_
 
 ### 2. Map the controls to ASB and create set of custom controls
 
-For each control you have captured use appropriate control titles, domain categories, and guidance/description to identify related ASB controls which are a match appropriately. Align the intent of each control as close as possible and note the deviance or gaps in the spreadsheet.
+For each control you have captured use appropriate control titles, domain categories, and guidance/description to identify related ASB controls, which are a match appropriately. Align the intent of each control as close as possible and note the deviance or gaps in the spreadsheet.
 You can also use common frameworks that are mapped to both your organization’s and ASB where they exist. For example, if both yours and ASB controls are already mapped to NIST 800-53 r4 or CIS 7.1 you could join the data sets together on that pivot. Intermediate common frameworks can be found in the [ASB resources section](/security/benchmark/azure/v2-cis-benchmark)
 
 :::image type="content" source="./media/single-control-mapping-sample.jpg" alt-text="Single Control  - Sample" lightbox="./media/single-control-mapping-sample.jpg":::
@@ -54,9 +54,9 @@ _Single Control Mapping Example: Your Org's Control Objectives_
 
 _The above table shows one of the unique control objectives with key words highlighted._
 
-In this example, we can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the ASB controls and guidance for a proper match we can see that there are many controls which might apply and map appropriately. 
+In this example, we can look at the existing categorization of a given control ‘Application Security' to identify this is an application related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the ASB controls and guidance for a proper match we can see that there are many controls, which might apply and map appropriately. 
 To quickly search a given version of the Azure Security Benchmark we provide [Excel download files](/security/benchmark/azure/overview#download) of each release that can be quickly searched by control ID or part of the description verbiage.
-In this step the process identifies and maps controls that are covered under ASB.
+In this step, the process identifies and maps controls that are covered under ASB.
 
 ### 3. Identify the controls not mapped with ASB and respective policies
 
@@ -137,13 +137,13 @@ After the approval from your internal Security/Audit team that the platform and 
 
 Depending on the customer’s control objectives, you might need to create custom [policy definitions](/azure/governance/policy/concepts/definition-structure), [policy initiatives definitions](/azure/governance/policy/concepts/initiative-definition-structure) and [policy assignments](/azure/governance/policy/concepts/assignment-structure).
 
-Please refer to the guidance below for each ALZ accelerator implementation option.
+Refer to the guidance below for each ALZ accelerator implementation option.
 
 #### ALZ Accelerator Portal
 
 [ALZ Accelerator using the Azure portal](https://aka.ms/caf/ready/accelerator)
 
-When using the ALZ Accelerator Azure portal based experience, please refer to the following articles:
+When using the ALZ Accelerator Azure portal based experience, refer to the following articles:
 
 - [Create custom security policies in Microsoft Defender for Cloud](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
 - [Tutorial: Create a custom policy definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
@@ -153,7 +153,7 @@ When using the ALZ Accelerator Azure portal based experience, please refer to th
 
 [ARM](https://aka.ms/alz/arm) and [AzOps](https://github.com/azure/azops-accelerator>)
 
-When using the ALZ ARM templates implementation with AzOps, please refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
+When using the ALZ ARM templates implementation with AzOps, refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
 
 - [Adding Custom Azure Policy Definitions and Initiatives](https://aka.ms/alz/wiki/azops)
 - [Assigning Azure Policy](https://aka.ms/alz/wiki/azops)
@@ -170,7 +170,7 @@ When using the [ALZ Terraform module (caf-enterprise-scale)](https://aka.ms/alz/
 
 #### ALZ-Bicep
 
-When using the ALZ-Bicep implementation please refer to the article “How does ALZ-Bicep implement Azure Policy” to learn how to create your own policy definitions and assignments.
+When using the ALZ-Bicep implementation refer to the article [How does ALZ-Bicep implement Azure Policy](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive) to learn how to create your own policy definitions and assignments.
 
 - [Adding Custom Azure Policy Definitions and Initiatives](https://aka.ms/alz/bicep/custompolicy)
 - [Assigning Azure Policies](https://aka.ms/alz/bicep/assignpolicy)
@@ -179,7 +179,7 @@ When using the ALZ-Bicep implementation please refer to the article “How does 
 
 #### Azure portal
 
-When using the Azure portal, please refer to the following articles.
+When using the Azure portal refer to the following articles.
 
 - [Create custom security policies in Microsoft Defender for Cloud](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
 - [Create Custom Policy Definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
@@ -188,7 +188,7 @@ When using the Azure portal, please refer to the following articles.
 
 #### ARM Templates
 
-When using the ARM templates, please refer to the following articles.
+When using the ARM templates refer to the following articles.
 
 - [Create Custom Policy Definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
 - [Assigning Azure Policy or Policy initiatives](/azure/governance/policy/assign-policy-portal)
@@ -199,7 +199,7 @@ When using the ARM templates, please refer to the following articles.
 
 #### Terraform
 
-When using Terraform, please refer to the following articles.
+When using Terraform refer to the following articles.
 
 - [Adding Custom Azure Policy Definitions and Initiatives](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/policy_definition)
 - [Adding Azure Policy set Definition](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_policy_assignment)
@@ -208,7 +208,7 @@ When using Terraform, please refer to the following articles.
 
 #### Bicep
 
-When using the Bicep templates, please refer to the following articles.
+When using the Bicep templates refer to the following articles.
 
 - [Quickstart: Create a policy assignment to identify non-compliant resources by using a Bicep file](/azure/governance/policy/assign-policy-bicep?tabs=azure-powershell)
 - [Bicep & ARM Policy Definition template reference](/azure/templates/microsoft.authorization/policydefinitions?tabs=bicep)
@@ -223,7 +223,7 @@ When using the Bicep templates, please refer to the following articles.
 
 ### We are using a framework that ASB is not mapped to yet, how can I still onboard our control objectives to ASB controls?
 
-We provide ASB mappings to many of the most in-demand industry frameworks, however for the controls that are currently not covered, a manual mapping exercise is needed. In these instances, please refer to our steps for performing a manual control mapping.
+We provide ASB mappings to many of the most in-demand industry frameworks, however for the controls that are currently not covered, a manual mapping exercise is needed. In these instances, refer to our steps for performing a manual control mapping.
 
 _[Example]_ We need to meet Canada Federal Protected B (PBMM) compliance, and ASB does not yet have a mapping to PBMM. To bridge this mapping, you can find a shared framework mapping such as NIST SP 800-53 R4 which is available and mapped to both PBMM and ASB v2. Using this common framework, you can understand what recommendations and guidance you must follow in Azure to meet your desired framework.
 
