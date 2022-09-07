@@ -140,7 +140,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
     This strategy delivers visibility of the network layer, without the need for SNMP. It can also present, in an interactive topology map, the hop-by-hop topology of routes between the source and destination endpoint. It's a better choice than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
 
-### Monitor with Azure Monitor
+### Monitoring with Azure Monitor
 
 Although a migration to the cloud presents numerous challenges, it also provides opportunities. Your organization can migrate from one or more on-premises enterprise monitoring tools to not only potentially reduce capital expenditures and operating costs, but also to benefit from the advantages that a cloud monitoring platform such as Azure Monitor can deliver at cloud scale. Examine your monitoring and alerting requirements, configuration of existing monitoring tools, and workloads transitioning to the cloud. After your plan is finalized, configure Azure Monitor.
 
