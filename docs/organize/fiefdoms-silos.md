@@ -16,7 +16,7 @@ Success in any major change to business practices, culture, or technology operat
 
 Some antipatterns block the growth mindset in organizations that want to grow and transform. These antipatterns include micromanagement, biased thinking, and exclusionary practices. Many of these blockers are personal challenges that create personal growth opportunities for everyone. But two common antipatterns in IT, silos and fiefdoms, require more than individual growth or maturity to address.
 
-![Diagram that shows a comparison of healthy teams and organizational antipatterns](../_images/ready/fiefdom-and-silo.png)
+![Diagram that shows a comparison of healthy teams and organizational antipatterns.](../_images/ready/fiefdom-and-silo.png)
 
 These antipatterns are a result of organic changes within various teams, which result in unhealthy organizational behaviors. To address the resistance caused by each antipattern, it's important to understand the root cause of the formation.
 
