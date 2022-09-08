@@ -2,8 +2,8 @@
 title: Identity and access management for Azure Arc-enabled SQL Managed Instance
 description: Describes how to improve identity and access management for the Azure Arc-enabled SQL Managed Instance.
 author: chintalavr
-ms.author: chintalavr
-ms.date: 07/04/2022
+ms.author: vchintala
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
