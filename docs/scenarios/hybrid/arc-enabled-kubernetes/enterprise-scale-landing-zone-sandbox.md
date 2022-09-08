@@ -23,7 +23,7 @@ ArcBox runs in your Azure landing zone sandbox subscription and bootstraps all r
 
 [![A diagram of ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png).](./media/arcbox-sandbox-subscription.png#lightbox)
 
-[![A diagram that shows an ArcBox resource group.](./media/arcbox-resource-group.png)](./media/./media/arcbox-resource-group.png#lightbox)
+[![A diagram that shows an ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox)
 
 The single resource group ArcBox deploys contains two Azure Arc-enabled Kubernetes clusters. It also includes a *unified operations* resource layer so you can integrate with Azure services and understand Azure Arc-enabled Kubernetes value proposition.
 
