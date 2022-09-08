@@ -3,7 +3,7 @@ title: Silos and fiefdoms
 description: Learn about antipatterns that can block a growth mindset in organizations. Specifically, learn about silo and fiefdom antipatterns.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/07/2022
+ms.date: 09/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -38,7 +38,7 @@ When cloud architects and other leaders invest in abolishing personal biases and
 
 ### Healthy friction
 
-It's easy to confuse resistance with friction. Existing IT teams are commonly knowledgeable about past mistakes, tangible risks, tribal knowledge about solutions, and undocumented technical debt. Unfortunately, even the healthiest IT teams can fall into the trap of describing these important data points as part of a specific technical solution that shouldn't be changed. This approach to communication masks the teams' knowledge, and creates a perception of resistance.
+It's easy to confuse resistance with friction. Existing IT teams are commonly knowledgeable about past mistakes, tangible risks, tribal knowledge about solutions, and undocumented technical debt. Unfortunately, even the healthiest IT teams can fall into the trap of describing these important data points as part of a specific technical solution that shouldn't be changed. This approach to communication masks the teams' knowledge and creates a perception of resistance.
 
 Providing these teams with a mechanism for communicating in future-looking terminology adds data points, identifies gaps, and creates healthy friction around the proposed solutions. That extra friction sands down the solution's rough edges and drives longer-term values. Simply changing the conversation can create clarity around complex subjects and generate energy to deliver more successful solutions.
 
@@ -50,7 +50,7 @@ The organic and responsive growth within IT that creates healthy IT teams can al
 
 As mentioned earlier, healthy IT teams can create natural resistance and positive friction. Silos and fiefdoms are a different challenge. There's no documented leading indicator for either antipattern. These antipatterns tend to be identified after months of [cloud center of excellence](./cloud-center-of-excellence.md) and [cloud governance team](./cloud-governance.md) efforts. They're discovered as the result of ongoing resistance.
 
-Even in toxic cultures, the efforts of the CCoE and the cloud governance team should help drive cultural growth and technical progress. After months of effort, a few teams might still show no signs of inclusive behaviors, and stand firm in their resistance to change. These teams are likely operating in one of the following antipattern models: silos and fiefdoms. Although these models have similar symptoms, the root cause and approaches to addressing resistance is radically different between them.
+Even in toxic cultures, the efforts of the CCoE and the cloud governance team should help drive cultural growth and technical progress. After months of effort, a few teams might still show no signs of inclusive behaviors and stand firm in their resistance to change. These teams are likely operating in one of the following antipattern models: silos and fiefdoms. Although these models have similar symptoms, the root cause and approaches to addressing resistance is radically different between them.
 
 ## IT silos
 
@@ -88,7 +88,7 @@ For instance, if IT security is the roadblock because its security solution can'
 
 If the network team operates as a silo, identify workloads that are self-contained and don't have network dependencies. In parallel, you can experiment, expose, and educate the network team while working on hybrid or alternative solutions.
 
-**Be patient and be inclusive:** It's tempting to move on without support of an IT silo. But this decision causes disruptions and roadblocks down the road. Changing minds in the IT silo can take time. Be patient with their natural resistance. Convert it into value. Be inclusive and invite healthy friction to improve the future solution.
+**Be patient and be inclusive:** It's tempting to move on without support of an IT silo. But this decision causes disruptions and roadblocks down the road. Changing minds about the IT silo can take time. Be patient with their natural resistance. Convert it into value. Be inclusive and invite healthy friction to improve the future solution.
 
 **Never compete:** The IT silo exists for a reason. It persists for a reason. There's an investment in maintaining the solution that the team members are passionate about. Directly competing with the solution or the IT silo distracts from the real goal of achieving business outcomes. This trap has blocked many transformation projects.
 
@@ -108,7 +108,7 @@ Generally, fiefdoms are the result of a line manager who fears loss of the team 
 
 ### Address resistance from IT fiefdoms
 
-IT fiefdoms can demonstrate growth by following the approaches to [addressing IT silo resistance](#address-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up the organization). Challenges that are IT silo-driven are typically easier to overcome.
+IT fiefdoms can demonstrate growth by following the approaches to [addressing IT silo resistance](#address-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up in the organization). Challenges that are IT silo-driven are typically easier to overcome.
 
 When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders must carefully consider insights from the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) before making decisions.
 
