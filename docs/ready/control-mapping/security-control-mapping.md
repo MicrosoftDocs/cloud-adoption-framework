@@ -53,7 +53,7 @@ _Single control mapping example: Your organization's control objectives_
 
 _The table above shows one of the unique control objectives with key words highlighted._
 
-In this example, we can look at the existing categorization of a given control ‘Application Security' to identify this is an application-related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the Azure Security Benchmark controls and guidance for a proper match, we can see that there are many controls that might apply and map appropriately.
+In this example, we can look at the existing categorization of a given control ‘Application Security' to identify it as an application-related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the Azure Security Benchmark controls and guidance for a proper match, we can see that there are many controls that might apply and map appropriately.
  
 To quickly search a given version of the Azure Security Benchmark, we provide [Excel download files](/security/benchmark/azure/overview#download) for each release that can be quickly searched by control ID or part of the description verbiage. In this step, the process identifies and maps controls that are covered under Azure Security Benchmark.
 
@@ -75,7 +75,7 @@ If there are gaps identified, you can still use Azure Security Benchmark but mig
 #### Checklists for approval
 
 1. Security team has approved the Azure platform for usage.
-2. You'll need to join an individual Azure Security Benchmark service baseline excel to the previously completed, platform-level control mappings.
+2. You'll need to join an individual Azure Security Benchmark service baseline Excel to the previously completed, platform-level control mappings.
     - Add in columns to accommodate the assessment like: coverage, enforcement, effects allowed.
 3. Perform a line-by-line analysis of the resulting service baseline assessment template:
     - For each control objective, indicate:
@@ -86,7 +86,7 @@ If there are gaps identified, you can still use Azure Security Benchmark but mig
         5. What Azure Policy can enforce/monitor the control.
 
     - Where there are gaps in monitoring or enforcement for the service and control:
-        1. Report to the Azure Security Benchmark team to close gaps (content, monitoring, or enforcement).
+        1. Report to the Azure Security Benchmark team to close gaps in content, monitoring, or enforcement.
 
     - For any areas that don't meet your requirements, note the risk involved if you choose to exempt that requirement, the impact, and if it's acceptable to approve or if you're blocked due to the gap.
 
@@ -107,7 +107,7 @@ If there are gaps identified, you can still use Azure Security Benchmark but mig
 - Gaps
 - Approval/non-approval for service usage
 
-After the approval from your internal security/audit team that the platform and core services meet their needs, you need to implement the agreed upon appropriate monitoring and guardrails. During the mapping and assessment process, if there were mitigating controls that extend beyond Azure Security Benchmark, built-in controls or Azure Policy will need to be implemented using [policy definitions](/azure/governance/policy/overview#policy-definition) and optionally adding to an [initiative definition](/azure/governance/policy/overview#initiative-definition).
+After the approval from your internal security/audit team that the platform and core services meet their needs, you need to implement the agreed upon appropriate monitoring and guardrails. During the mapping and assessment process, if there were mitigating controls that extend beyond Azure Security Benchmark, then built-in controls or Azure Policy will need to be implemented using [policy definitions](/azure/governance/policy/overview#policy-definition) and optionally adding to an [initiative definition](/azure/governance/policy/overview#initiative-definition).
 
 #### Checklist - service level
 
@@ -182,7 +182,7 @@ When using the Azure portal, refer to the following articles.
 
 #### Azure Resource Manager templates
 
-When using the Resource Manger templates, refer to the following articles.
+When using the Resource Manager templates, refer to the following articles.
 
 - [Create a custom policy definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
 - [Assign policy initiatives](/azure/governance/policy/assign-policy-portal)
@@ -209,13 +209,13 @@ When using the Bicep templates, refer to the following articles.
 - [Bicep and Resource Manager policy set (initiative) template reference](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
 - [Bicep and Resource Manager policy assignment template reference](/azure/templates/microsoft.authorization/policyassignments?tabs=bicep)
 
-## Additional guidance using Microsoft Defender for Cloud
+## Guidance for using Microsoft Defender for Cloud
 
 [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) continually compares the configuration of your resources with requirements in industry standards, regulations, and benchmarks. The regulatory compliance dashboard provides insight into your compliance posture. Learn more about [improving your regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard).
 
 ## Frequently asked questions
 
-### We're using a framework that Azure Security Benchmark isn't mapped to yet, how can I still onboard our control objectives?
+### We're using a framework not mapped to Azure Security Benchmark, how can I still onboard our control objectives?
 
 We provide Azure Security Benchmark mappings to many of the most in-demand industry frameworks. However, for the controls that are currently not covered, a manual mapping exercise is needed. In these instances, refer to our steps for performing a manual control mapping.
 
@@ -223,7 +223,7 @@ _[Example]_ We need to meet Canada Federal Protected B (PBMM) compliance, and Az
 
 ### Our control objectives aren’t covered by the Azure Security Benchmark controls, how can I unblock them from onboarding?
 
-Azure Security Benchmark is focused on Azure technical controls. Objective areas surrounding non-technical items such as training, or for those that aren't direct technical security, such as data center security, are omitted by design. These items can be marked as Microsoft responsibility, and evidence of compliance can be provided from Azure Security Benchmark content or Microsoft audit reports. If you find that the objective truly is a technical control, then create a mitigating control in-addition to the base for tracking, and send a request to *asbteam@microsoft.com* to address the missing controls in future releases.
+Azure Security Benchmark is focused on Azure technical controls. Objective areas surrounding non-technical items such as training, or for items that aren't direct technical security, such as data center security, are omitted by design. These items can be marked as Microsoft responsibility, and evidence of compliance can be provided from Azure Security Benchmark content or Microsoft audit reports. If you find that the objective truly is a technical control, then create a mitigating control in-addition to the base for tracking, and send a request to *asbteam@microsoft.com* to address the missing controls in future releases.
 
 ## Resources
 
