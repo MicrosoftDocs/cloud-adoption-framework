@@ -7,7 +7,7 @@ ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Azure Arc-enabled SQL Managed Instance Azure landing zone sandbox
@@ -18,7 +18,9 @@ Azure Arc-enabled SQL Managed Instance has near 100% compatibility with the late
 
 ArcBox runs in your Azure landing zone sandbox subscription and bootstraps all required Azure resources within a single resource group.
 
-<!-- [![A diagram that shows an ArcBox resource group.](./media/arc-enabled-kubernetes-onboarding.png)](./media/arc-enabled-kubernetes-onboarding.png#lightbox) -->
+<!-- [![A diagram of ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png)](./media/arcbox-sandbox-subscription.png#lightbox)
+
+[![A diagram of an ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox) -->
 
 <!-- The single resource group ArcBox deploys contains two Azure Arc-enabled Kubernetes clusters. It also includes a *unified operations* resource layer so you can integrate with Azure services and understand Azure Arc-enabled Kubernetes value proposition. -->
 

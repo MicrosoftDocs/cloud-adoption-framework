@@ -21,9 +21,9 @@ You can connect clusters running on public cloud providers or your on-premises d
 
 ArcBox runs in your Azure landing zone sandbox subscription and bootstraps all required Azure resources within a single resource group.
 
-<!-- :::image type="content" source="./media/arcbox-sandbox-subscription.png" alt-text="Diagram of ArcBox in a sandbox subscription." lightbox="./media/arcbox-sandbox-subscription.png"::: -->
+[![A diagram of ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png).](./media/arcbox-sandbox-subscription.png#lightbox)
 
-:::image type="content" source="./media/arcbox-resource-group.png" alt-text="Diagram that shows an ArcBox resource group." lightbox="./media/arcbox-resource-group.png":::
+[![A diagram that shows an ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox)
 
 The single resource group ArcBox deploys contains two Azure Arc-enabled Kubernetes clusters. It also includes a *unified operations* resource layer so you can integrate with Azure services and understand Azure Arc-enabled Kubernetes value proposition.
 
