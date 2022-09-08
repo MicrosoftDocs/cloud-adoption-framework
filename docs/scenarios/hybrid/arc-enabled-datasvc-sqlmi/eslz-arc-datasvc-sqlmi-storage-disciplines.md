@@ -24,7 +24,7 @@ For Arc-enabled SQL MI deployments, effectively planning for storage capabilitie
 
 The following architecture diagram shows the logical design of Azure Arc-enabled data services components. These components include a required Data Controller and one or more Arc-enabled SQL MI which contain databases provisioned for reference. Both the Data Controller and Arc-enabled SQL MI have various options for backing storage devices which will be dependent upon Kubernetes distribution and storage infrastructure providers.
 
-![A screenshot showing the Azure Arc-enabled data services Logical Diagram](../media/arc-enabled-data-svc-sql-mi-storage-logical.png)
+[![A screenshot showing the Azure Arc-enabled data services logical architecture diagram.](./media/arc-enabled-data-svc-sql-mi-storage-logical.png)](./media/arc-enabled-data-svc-sql-mi-storage-logical.png#lightbox)
 
 ## Design considerations
 
@@ -36,7 +36,7 @@ Choosing the right Kubernetes Storage Class and configuration for your Azure Arc
 
 The Storage Class options will vary depending upon what your cloud provider, hardware vendor offers, and what the Kubernetes Administrator has configured. The Persistent Volume Claim will request a Persistent Volume be created for the desired Storage Class and size requested. The following diagram is a reference of the relationship between these Kubernetes resources and potential options for Storage Classes.
 
-![A screenshot showing Kubernetes storage concepts with options of Storage Classes](../media/arc-enabled-data-svc-sql-mi-storage-k8s-relationship.png)
+[![A screenshot showing Kubernetes storage concepts with options of Storage Classes.](./media/arc-enabled-data-svc-sql-mi-storage-k8s-relationship.png)](./media/arc-enabled-data-svc-sql-mi-storage-k8s-relationship.png#lightbox)
 
 Configuration of the PV and PVC Kubernetes resources occurs when provisioning the Data Controller and Arc-enabled SQL MI respectively.
 
@@ -64,7 +64,7 @@ The Data Controller will have 4 different stateful pods running in the Kubernete
 
 Be sure to consider the [compute and memory resources](/azure/azure-arc/data/sizing-guidance#data-controller-sizing-details) the Data Controller requires. The following diagram represents the Data Controller Storage, PV, and PVC Kubernetes resources.
 
-![A screenshot showing Data Controller Storage](../media/arc-enabled-data-svc-sql-mi-storage-data-controller.png)
+[![A screenshot showing Data Controller Storage.](./media/arc-enabled-data-svc-sql-mi-storage-data-controller.png)](./media/arc-enabled-data-svc-sql-mi-storage-data-controller.png#lightbox)
 
 The Data Controller default volume sizing is the recommended minimum. The storage used will be dependent on the number of databases, how the databases are being used, and the number of logs generated. The Data Controller Storage Class is not sensitive to low latency, but users might see benefits in the Grafana and Kibana interfaces with faster-performing storage if you have a large number of Arc-enabled SQL MI deployments in a cluster. Grafana and Kibana are open source monitoring visualization tools deployed with the Data Controller which are provisioned with dashboards for [viewing metrics and logs](/azure/azure-arc/data/monitor-grafana-kibana) in context of Arc-enabled SQL MI.  
 
@@ -95,7 +95,7 @@ The following table describes the different Persistent Volumes used by each Arc-
 
 The General Purpose tier of Arc-enabled SQL MI must use remote storage for the database instance so that, upon failure of a pod, the data remains available to newly created pods. Failover is managed by Kubernetes pod and node orchestration. This is a simpler configuration compared to Business Critical which uses [SQL Availability Groups](/azure/azure-arc/data/managed-instance-high-availability) and multiple Arc-enabled SQL MI replicas. The single pod configuration of the General Purpose tier means that you can minimize the amount of storage due to not having to duplicate storage capacity for other replicas.
 
-![A screenshot showing Arc-enabled SQL MI General Purpose Storage](../media/arc-enabled-data-svc-sql-mi-storage-gp.png)
+[![A screenshot showing Arc-enabled SQL MI General Purpose Storage.](./media/arc-enabled-data-svc-sql-mi-storage-general-purpose-tier.png)](./media/arc-enabled-data-svc-sql-mi-storage-general-purpose-tier.png#lightbox)
 
 #### Business Critical service tier
 
@@ -103,9 +103,7 @@ Business Critical tier uses a multiple pod model where data and log volumes can 
 
 Below is a diagram to illustrate the Business Critical storage configuration for Arc-Enabled SQL MI with two replicas.
 
-![A screenshot showing Arc-enabled SQL MI Business Critical Storage](../media/arc-enabled-data-svc-sql-mi-storage-bc.png)
-
-![A screenshot showing Arc-enabled SQL MI Business Critical Storage](../media/arc-enabled-data-svc-sql-mi-storage-bc.png)
+[![A screenshot showing Arc-enabled SQL MI Business Critical Storage.](./media/arc-enabled-data-svc-sql-mi-storage-business-critical-tier.png)](./media/arc-enabled-data-svc-sql-mi-storage-business-critical-tier.png#lightbox)
 
 Business Critical allows for the configuration of 2 or 3 secondary replicas, and failover is managed by [SQL Always On Availability Group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server), which will provide less downtime for upgrades and failures than the General Purpose tier.
 

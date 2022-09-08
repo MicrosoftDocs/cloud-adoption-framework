@@ -22,33 +22,33 @@ This article provides key design considerations and recommendations for configur
 
 The following diagram displays the data service upgrade flow in the Directly Connected mode.
 
-   ![A screenshot showing the data service upgrade flow in the Directly Connected mode](./media/directly-connected-mode-upgrade-flow.png)
+   [![A screenshot showing the data service upgrade flow in the Directly Connected mode.](./media/arc-enabled-data-svc-sql-mi-direct-connect-upgrade-flow.png)](./media/arc-enabled-data-svc-sql-mi-direct-connect-upgrade-flow.png#lightbox)
 
 ### Indirectly Connected mode
 
 The following diagram displays the data service upgrade flow in the Indirectly Connected mode.
 
-   ![A screenshot showing the data service upgrade flow in the Indirectly Connected mode](./media/indirectly-connected-mode-upgrade-flow.png)
+   [![A screenshot showing the data service upgrade flow in the Indirectly Connected mode.](./media/arc-enabled-data-svc-sql-mi-indirectly-connect-upgrade-flow.png)](./media/arc-enabled-data-svc-sql-mi-indirectly-connect-upgrade-flow.png#lightbox)
 
 ### General Purpose service tier
 
 The following diagrams display the upgrade process of an Arc-enabled SQL MI in a General Purpose service tier.
 
-   ![A screenshot showing the pre-upgrade process of an Arc-enabled SQL MI in a General Purpose service tier](./media/general-purpose-pre-upgrade.png)
+   [![A screenshot showing the pre-upgrade process of an Arc-enabled SQL MI in a General Purpose service tier.](./media/arc-enabled-data-svc-sql-mi-general-purpose-tier-pre-upgrade.png)](./media/arc-enabled-data-svc-sql-mi-general-purpose-tier-pre-upgrade.png#lightbox)
 
-   ![A screenshot showing the upgrade process of an Arc-enabled SQL MI in a General Purpose service tier](./media/general-purpose-upgrade.png)
+   [![A screenshot showing the upgrade process of an Arc-enabled SQL MI in a General Purpose service tier.](./media/arc-enabled-data-svc-sql-mi-general-purpose-tier-upgrade.png)](./media/arc-enabled-data-svc-sql-mi-general-purpose-tier-upgrade.png#lightbox)
 
 ### Business Critical service tier
 
 The following diagrams display the upgrade process of an Arc-enabled SQL MI in a Business Critical service tier.
 
-   ![A screenshot showing the pre-upgrade process of an Arc-enabled SQL MI in a Business Critical service tier](./media/business-critical-pre-upgrade.png)
+   [![A screenshot showing the pre-upgrade process of an Arc-enabled SQL MI in a Business Critical service tier.](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-pre-upgrade.png)](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-pre-upgrade.png#lightbox)
 
-   ![A screenshot showing the upgrade process of an Arc-enabled SQL MI in a Business Critical service tier](./media/business-critical-new-pod.png)
+   [![A screenshot showing the upgrade process of an Arc-enabled SQL MI in a Business Critical service tier.](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-new-pod.png)](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-new-pod.png#lightbox)
 
-   ![A screenshot showing the remaining secondary replicas upgrade rollout in a Business Critical service tier upgrade](./media/business-critical-upgrade-rollout.png)
+   [![A screenshot showing the remaining secondary replicas upgrade rollout in a Business Critical service tier upgrade.](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-rollout.png)](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-rollout.png#lightbox)
 
-   ![A screenshot showing the SQL-level failover and last Pod instantiation in a Business Critical service tier upgrade](./media/business-critical-last-pod.png)
+   [![A screenshot showing the SQL-level failover and last Pod instantiation in a Business Critical service tier upgrade.](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-last-pod.png)](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-last-pod.png#lightbox)
 
 ## Design considerations
 

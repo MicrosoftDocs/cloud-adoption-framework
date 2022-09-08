@@ -42,11 +42,11 @@ After Arc-enabled SQL MI is deployed to a resource group and tags have been adde
 
 When planning for the deployment of Azure Arc-enabled data services in [directly connected mode](/azure/azure-arc/data/connectivity), consider that additional resource, ["Custom Location"](/azure/azure-arc/platform/conceptual-custom-locations) will be provisioned and will be projected in your Azure subscription.
 
-![Azure Arc-enabled data service Custom Locations and namespace mapping](../media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png)
+[![Diagram that shows Azure Arc-enabled data service Custom Locations and namespace mapping.](./media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png)](./media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png#lightbox)
 
 It is recommended to include these resources as part of your resource organization methodology (tags and naming). It is especially important to consider that a Custom Location configures your Azure Arc-enabled Kubernetes clusters as target locations for deploying instances of Azure offerings and as such their naming and tagging should be relevant to your business and operations, aligning with a physical location, data center name, and cloud environment. Resource naming convention for Azure Arc-enabled SQL MI should align with your line of business apps (LOB) using data services.
 
-![Arc-enabled data SQL MI custom location and Azure tags](../media/arc-enabled-data-svc-sql-mi-custom-location-azure-tags.png)
+[![Diagram that shows Azure Arc-enabled SQL Managed Instance custom location and Azure tags.](./media/arc-enabled-data-svc-sql-mi-custom-location-azure-tags.png)](./media/arc-enabled-data-svc-sql-mi-custom-location-azure-tags.png#lightbox)
 
 ## Next steps
 

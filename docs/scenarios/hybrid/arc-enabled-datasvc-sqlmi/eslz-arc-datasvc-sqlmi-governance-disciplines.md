@@ -18,7 +18,7 @@ This article provides key design considerations and best practices for security,
 
 The following diagram shows a conceptual reference architecture depicting the security, compliance, and governance design areas for Arc-enabled SQL MI:
 
-  [![Diagram showing the Enterprise-scale security, governance, and compliance for Azure Arc-enabled SQL Managed Instance.](./media/arc-enabled-sql-mi-security-compliance-governance.png)](./media/arc-enabled-sql-mi-security-compliance-governance.png#lightbox)
+  [![A Diagram showing the Enterprise-scale security, governance, and compliance for Azure Arc-enabled SQL Managed Instance.](./media/arc-enabled-data-svc-sql-mi-logical-sec-gov-overview.png)](./media/arc-enabled-data-svc-sql-mi-logical-sec-gov-overview.png#lightbox)
 
 ## Design considerations
 

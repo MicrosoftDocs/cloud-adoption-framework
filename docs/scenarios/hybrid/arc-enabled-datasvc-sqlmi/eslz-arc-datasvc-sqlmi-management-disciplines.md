@@ -18,8 +18,7 @@ This article provides key design considerations and recommendations for managing
 
 To build the right architecture for your organization to onboard on-premises or public cloud Kubernetes clusters, you need to understand the broad  [Azure Arc-enabled Kubernetes network architecture](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity) and [network connectivity for Azure Arc-enabled data services](./eslz-arc-datasvc-sqlmi-network-connectivity.md), specifically concerning the two connectivity modes.
 
-The diagram below illustrates the overall management architecture:
-![An architecture showing management-related resources and traffic flows](./media/arc-enabled-sqlmi-mgt-architecture-1.png)
+[![A diagram showing architecture of Azure Arc-enabled data services.](./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png)](./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png#lightbox)
 
 ### Cluster management
 
@@ -65,13 +64,13 @@ First, Review the [management design area](/azure/cloud-adoption-framework/ready
 - For an easy, out-of-the-box experience for monitoring, use the [Workbooks available in Container Insights](/azure/azure-monitor/containers/container-insight-reports) to view performance and health information about your cluster and components such as nodes, pods, and persistent volumes.  Once familiar with workbooks, design a custom workbook that illustrates the data in a way that's most useful to your operations.
 - Review the included Grafana dashboards to see what's provided out-of-the-box to avoid re-work
 
-![A screenshot showing the out-of-the-box Grafana dashboards](./media/arc-enabled-sqlmi-grafana-1.png)
+[![A screenshot showing the out-of-the-box Grafana dashboards.](./media/arc-enabled-data-svc-sql-mi-grafana-1.png)](./media/arc-enabled-data-svc-sql-mi-grafana-1.png#lightbox)
 
-![A screenshot showing the Grafana SQL Managed Instance Metrics dashboard](./media/arc-enabled-sqlmi-grafana-2.png)
+[![A screenshot showing the Grafana SQL Managed Instance Metrics dashboard.](./media/arc-enabled-data-svc-sql-mi-grafana-2.png)](./media/arc-enabled-data-svc-sql-mi-grafana-2.png#lightbox)
 
 - Use [Azure Resource Graph](/azure/azure-arc/kubernetes/resource-graph-samples?tabs=azure-cli) or [Log Analytics queries](/azure/azure-monitor/logs/queries) to monitor cluster health and raise alerts.
 - refer to [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design) to strategize how best to organize Log Analytics Workspace(s) based on business needs and organization
-- because of the importance of [storage](./enterprise-scale-landing-zone-arc-data-svc-sql-mi-storage-disciplines.md) on the various components of an Azure Arc-enabled SQL MI deployment, establish dashboards and alerts on the health and capacity of local and remote storage.
+- because of the importance of [storage](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) on the various components of an Azure Arc-enabled SQL MI deployment, establish dashboards and alerts on the health and capacity of local and remote storage.
 - review considerations and recommendations for [managing upgrades](./eslz-arc-datasvc-sqlmi-upgradeability-disciplines.md)
 - if using the indirect connectivity mode, implement an automated mechanism, such as a cron job, to [upload usage data](/azure/azure-arc/data/upload-usage-data), [logs](/azure/azure-arc/data/upload-logs?tabs=windows), and [metrics](/azure/azure-arc/data/upload-metrics?tabs=powershell) on a daily basis.  While uploading logs and metrics are optional, doing so is recommended so as to be able to use Azure Monitor for visibility across your environment.
 - implement a process to verify that usage and billing data is being uploaded at least once per month to ensure that the ability to create new instances is not disabled
