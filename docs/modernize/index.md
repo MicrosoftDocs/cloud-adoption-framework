@@ -3,10 +3,10 @@ title: Modernize your applications and data in the cloud
 description: Learn what it means to modernize in cloud and maximize value. Modernization is a critical approach to cloud adoption that unlocks to the benefits of the cloud.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 09/02/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: 
+ms.subservice: modernize
 ms.custom: internal, seo-caf-modernize
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
