@@ -3,7 +3,7 @@ title: Storage Disciplines for Azure Arc-enabled SQL Managed Instance
 description: Learn design considerations and recommendations for Storage Disciplines with Azure Arc-enabled SQL Managed Instance.
 author: jpocloud
 ms.author: johnpoole
-ms.date: 08/04/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

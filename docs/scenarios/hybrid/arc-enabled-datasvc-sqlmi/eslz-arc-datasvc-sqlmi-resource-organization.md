@@ -3,11 +3,11 @@ title: Resource organization for Azure Arc-enabled SQL Managed Instance
 description: Learn how to organize resources when working with Azure Arc-enabled SQL Managed Instance.
 author: tiagobalabuch
 ms.author: tibalabu
-ms.date: 07/25/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Resource organization for Azure Arc-enabled SQL Managed Instance

@@ -3,7 +3,7 @@ title: Upgradeability disciplines
 description: Learn how to implement upgradeability disciplines for Azure Arc-enabled SQL Managed Instance.
 author: sebassem
 ms.author: sebassem
-ms.date: 07/28/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
