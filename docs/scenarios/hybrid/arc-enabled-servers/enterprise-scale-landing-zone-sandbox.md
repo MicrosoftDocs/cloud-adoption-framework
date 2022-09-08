@@ -32,7 +32,7 @@ The ArcBox solution is designed to run in your Azure landing zone sandbox subscr
 
 [![A diagram of ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png).](./media/arcbox-sandbox-subscription.png#lightbox)
 
-[![A diagram that shows an ArcBox resource group.](./media/arcbox-resource-group.png)](./media/./media/arcbox-resource-group.png#lightbox)
+[![A diagram that shows an ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox)
 
 Once the solution is deployed, the resource group contains six Azure Arc-enabled server resources out of which, one of them is Azure Arc-enabled SQL Server resource and the rest of the five resources are part of *unified operations* resource layer.
 
