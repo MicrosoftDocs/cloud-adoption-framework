@@ -3,11 +3,11 @@ title: Network connectivity for Azure Arc-enabled SQL Managed Instance
 description: Understand the design considerations and recommendations for network connectivity in Azure Arc-enabled SQL Managed Instance
 author: welasco
 ms.author: vsantana
-ms.date: 07/21/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Network connectivity for Azure Arc-enabled SQL Managed Instance
@@ -20,11 +20,11 @@ This document explains network architecture, design considerations, and design r
 
 The following diagram shows an Arc-enabled data services network architecture that supports directly connected and indirectly connected network connectivity modes.
 
-[![A diagram showing Azure Arc-enabled data services network architecture.](./media/arc-enabled-sqlmi-network.png)](./media/arc-enabled-sqlmi-network.png#lightbox)
+[![A diagram showing Azure Arc-enabled data services network architecture.](./media/arc-enabled-data-svc-sql-mi-network-connectivity-integrations.png)](./media/arc-enabled-data-svc-sql-mi-network-connectivity-integrations.png#lightbox)
 
 The following is an example scenario diagram for securely accessing Arc-enabled SQL MI by various consumer services.
 
-[![A diagram showing Azure Arc-enabled data services secure access network architecture.](./media/arc-enabled-sqlmi-secure-access-network.png)](./media/arc-enabled-sqlmi-secure-access-network.png#lightbox)
+[![A diagram showing Azure Arc-enabled data services secure access network architecture.](./media/arc-enabled-data-svc-sql-mi-secure-access-network.png)](./media/arc-enabled-data-svc-sql-mi-secure-access-network.png#lightbox)
 
 ## Design considerations
 

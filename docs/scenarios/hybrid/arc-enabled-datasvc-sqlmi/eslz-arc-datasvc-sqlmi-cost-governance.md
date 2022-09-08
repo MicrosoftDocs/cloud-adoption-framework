@@ -3,10 +3,10 @@ title: Cost governance for Azure Arc-enabled SQL Managed Instance
 description: Learn design considerations and recommendations for cost governance for Azure Arc-enabled SQL Managed Instance
 author: mrhoads
 ms.author: mirhoads
-ms.date: 07/31/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank
 ---
 
@@ -52,7 +52,7 @@ The following sections contain design recommendations for Arc-enabled SQL MI cos
 
 The biggest cost component in an Arc-enabled SQL MI deployment is the service tier selected.  Choose the service tier that meets business requirements. Refer to the [Service tier comparison](/azure/azure-arc/data/service-tiers#service-tier-comparison) for more details.  Consider the need for high-availability and read scale-out, among other factors.  If this is an existing SQL Server deployment being migrated, consider the SQL edition currently in use and the features that will be required for the Arc-enabled SQL MI deployment.
 
-![Screenshot of service tier and estimated cost summary](./media/arc-enabled-sqlmi-cost-1.png)
+[![A Screenshot of service tier and estimated cost summary.](./media/arc-enabled-data-svc-sql-mi-cost-01.png)](./media/arc-enabled-data-svc-sql-mi-cost-01.png#lightbox)
 
 ### Connectivity Mode
 
@@ -62,7 +62,7 @@ If using the directly connected mode, no additional action is needed for the nec
 
 Based on the expected duration of the Arc-enabled SQL MI deployment, choose a one or three-year reserved instance if it will result in savings for the organization. Refer to the [Cloud Adoption Framework](/azure/cloud-adoption-framework/govern/cost-management/best-practices#best-practice-use-azure-reserved-vm-instances) for more details on reservation.
 
-![Screenshot of reservation purchase overview](./media/arc-enabled-sqlmi-cost-2.png)
+[![A Screenshot of reservation purchase overview.](./media/arc-enabled-data-svc-sql-mi-cost-02.png)](./media/arc-enabled-data-svc-sql-mi-cost-02.png#lightbox)
 
 ### Azure Hybrid Benefit
 
@@ -74,7 +74,7 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 
 - Use [Azure cost management and billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) to understand Arc-enabled SQL MI costs.
 
-![Screenshot of cost analysis](./media/arc-enabled-sqlmi-cost-3.png)
+[![A Screenshot of cost analysis.](./media/arc-enabled-data-svc-sql-mi-cost-03.png)](./media/arc-enabled-data-svc-sql-mi-cost-03.png#lightbox)
 
 ### Azure Policy for Kubernetes
 

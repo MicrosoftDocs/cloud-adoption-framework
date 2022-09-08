@@ -3,7 +3,7 @@ title: Governance, security, and compliance baseline for Azure Arc-enabled SQL M
 description: Expand Azure governance, security, and compliance baseline for deployment on Azure Arc-enabled SQL Managed Instance.
 author: sebassem
 ms.author: sebassem
-ms.date: 07/28/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -18,7 +18,7 @@ This article provides key design considerations and best practices for security,
 
 The following diagram shows a conceptual reference architecture depicting the security, compliance, and governance design areas for Arc-enabled SQL MI:
 
-  [![Diagram showing the Enterprise-scale security, governance, and compliance for Azure Arc-enabled SQL Managed Instance.](./media/arc-enabled-sql-mi-security-compliance-governance.png)](./media/arc-enabled-sql-mi-security-compliance-governance.png#lightbox)
+  [![A Diagram showing the Enterprise-scale security, governance, and compliance for Azure Arc-enabled SQL Managed Instance.](./media/arc-enabled-data-svc-sql-mi-logical-sec-gov-overview.png)](./media/arc-enabled-data-svc-sql-mi-logical-sec-gov-overview.png#lightbox)
 
 ## Design considerations
 

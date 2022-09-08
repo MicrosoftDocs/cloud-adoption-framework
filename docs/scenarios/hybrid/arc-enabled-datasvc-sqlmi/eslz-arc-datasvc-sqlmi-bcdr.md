@@ -3,7 +3,7 @@ title: Azure Arc-enabled SQL Managed Instance Business continuity
 description: Learn how to implement business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance.
 author: sebassem
 ms.author: sebassem
-ms.date: 07/28/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -20,19 +20,19 @@ This article provides key design considerations and recommendations for configur
 
 The following architecture diagrams show the [high availability capabilities](/azure/azure-arc/data/managed-instance-high-availability) of the Arc-enabled SQL MI "Business Critical" service tier which allows for near-zero downtime failover. In the event of the primary instance failure, the load balancer stops sending traffic to it, one of the secondary instances gets promoted to be the primary and start receiving "Read-Write" traffic from the load balancer. Once the failed instance comes back online, it will be added as secondary.
 
-  ![A diagram showing the operational state of a highly available business critical instance](./media/arc-enabled-sqlmi-ha-1.png)
+  [![A diagram showing the operational state of a highly available business critical instance.](./media/arc-enabled-data-svc-sql-mi-ha-01.png)](./media/arc-enabled-data-svc-sql-mi-ha-01.png#lightbox)
 
-  ![A diagram showing a failure in the primary replica and promoting a secondary replica to primary](./media/arc-enabled-sqlmi-ha-2.png)
+  [![A diagram showing a failure in the primary replica and promoting a secondary replica to primary.](./media/arc-enabled-data-svc-sql-mi-ha-02.png)](./media/arc-enabled-data-svc-sql-mi-ha-02.png#lightbox)
 
-  ![A diagram showing the primary replica failure](./media/arc-enabled-sqlmi-ha-3.png)
+  [![A diagram showing the primary replica failure.](./media/arc-enabled-data-svc-sql-mi-ha-03.png)](./media/arc-enabled-data-svc-sql-mi-ha-03.png#lightbox)
 
-  ![A diagram showing the operational state restored](./media/arc-enabled-sqlmi-ha-4.png)
+  [![A diagram showing the operational state restored.](./media/arc-enabled-data-svc-sql-mi-ha-04.png)](./media/arc-enabled-data-svc-sql-mi-ha-04.png#lightbox)
 
 The following architecture diagrams show how Arc-enabled SQL MI can be deployed on two separate Kubernetes clusters in two different sites for disaster recovery and when a disaster recovery failover is initiated.
 
-  [ ![A diagram showing Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters](./media/arc-enabled-sqlmi-dr1.png)](./media/arc-enabled-sqlmi-dr1.png#lightbox)
+  [![A diagram showing Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters.](./media/arc-enabled-data-svc-sql-mi-dr-01.png)](./media/arc-enabled-data-svc-sql-mi-dr-01.png#lightbox)
 
-  [ ![A diagram showing initiating the Azure Arc-enabled SQL Managed Instance disaster recovery failover across two clusters](./media/arc-enabled-sqlmi-dr2.png)](./media/arc-enabled-sqlmi-dr2.png#lightbox)
+  [![A diagram showing initiating the Azure Arc-enabled SQL Managed Instance disaster recovery failover across two clusters.](./media/arc-enabled-data-svc-sql-mi-dr-02.png)](./media/arc-enabled-data-svc-sql-mi-dr-02.png#lightbox)
 
 ## Design considerations
 

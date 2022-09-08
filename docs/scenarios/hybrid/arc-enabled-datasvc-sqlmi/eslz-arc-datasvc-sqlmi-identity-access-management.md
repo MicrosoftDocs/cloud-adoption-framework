@@ -3,7 +3,7 @@ title: Identity and access management for Azure Arc-enabled SQL Managed Instance
 description: Describes how to improve identity and access management for the Azure Arc-enabled SQL Managed Instance.
 author: chintalavr
 ms.author: vchintala
-ms.date: 07/04/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -30,7 +30,7 @@ SQL authentication is supported for Arc-enabled SQL MI using a local [SQL identi
 
 For many enterprise organizations Active Directory (AD) authentication is the standard for enforcing role-based access controls (RBAC) with SQL Servers running on-premises and other cloud environments. Azure Arc-enabled SQL MI supports AD authentication to seamlessly migrate existing SQL Server databases to Arc-enabled SQL MI and stay current with the latest SQL Server version and security patches.
 
-Arc-enabled SQL MI uses Kerberos keytab to support [AD authentication](/azure/azure-arc/data/active-directory-introduction) when running on Arc-enabled Kubernetes clusters. [Active Directory connector](/azure/azure-arc/data/active-directory-introduction#what-is-an-active-directory-ad-connector) is a key component in Arc-enabled data services to support AD authentication in Arc-enabled SQL MI. 
+Arc-enabled SQL MI uses Kerberos keytab to support [AD authentication](/azure/azure-arc/data/active-directory-introduction) when running on Arc-enabled Kubernetes clusters. [Active Directory connector](/azure/azure-arc/data/active-directory-introduction#what-is-an-active-directory-ad-connector) is a key component in Arc-enabled data services to support AD authentication in Arc-enabled SQL MI.
 
 Following are two ways to generate and manage Kerberos keytab and use it in Arc-enabled SQL MI. The sections below explain the scenarios and when to use the appropriate keytab mode.
 
@@ -40,7 +40,7 @@ Following are two ways to generate and manage Kerberos keytab and use it in Arc-
 
 Following is the architecture diagram for the AD connector with system-managed keytab mode.
 
-[![Diagram that shows AD authentication using system-managed keytab mode.](./media/arc-enabled-sqlmi-adauth-system-keytab.png)](./media/arc-enabled-sqlmi-adauth-system-keytab.png#lighbox)
+[![A diagram that shows AD authentication using system-managed keytab mode.](./media/arc-enabled-data-svc-sql-mi-adauth-system-keytab.png)](./media/arc-enabled-data-svc-sql-mi-adauth-system-keytab.png#lightbox)
 
 #### Customer-managed keytab
 
@@ -48,7 +48,7 @@ Active Directory connector with [customer-managed keytab mode](/azure/azure-arc/
 
 Following is the architecture diagram for AD connector with customer-managed keytab mode.
 
-[![Diagram that shows AD authentication using customer-managed keytab mode.](./media/arc-enabled-sqlmi-adauth-customer-keytab.png)](./media/arc-enabled-sqlmi-adauth-customer-keytab.png#lighbox)
+[![A diagram that shows AD authentication using customer-managed keytab mode.](./media/arc-enabled-data-svc-sql-mi-adauth-customer-keytab.png)](./media/arc-enabled-data-svc-sql-mi-adauth-customer-keytab.png#lightbox)
 
 ### Data Controller managed identity integration
 
@@ -68,11 +68,11 @@ Following are the required RBAC permissions to publish monitoring metrics to Azu
 
 Following is the architecture diagram to securely access Arc-enabled SQL MI using AD authentication.
 
-[![Diagram that shows secure access to Arc-enabled SQL MI using AD authentication.](./media/arc-enabled-sqlmi-secure-access.png)](./media/arc-enabled-sqlmi-secure-access.png#lighbox)
+[![Diagram that shows secure access to Arc-enabled SQL MI using AD authentication.](./media/arc-enabled-data-svc-sql-mi-adauth-secured-flow.png)](./media/arc-enabled-data-svc-sql-mi-adauth-secured-flow.png#lightbox)
 
 Following is the architecture diagram to securely access Arc-enabled SQL MI using SQL authentication.
 
-[![Diagram that shows secure access to Arc-enabled SQL MI using SQL authentication.](./media/arc-enabled-sqlmi-secure-access-sql-auth.png)](./media/arc-enabled-sqlmi-secure-access-sql-auth.png#lighbox)
+[![Diagram that shows secure access to Arc-enabled SQL MI using SQL authentication.](./media/arc-enabled-data-svc-sql-mi-ssis-sql-authentication-flow.png)](./media/arc-enabled-data-svc-sql-mi-ssis-sql-authentication-flow.png#lightbox)
 
 ## Design considerations
 
@@ -124,7 +124,7 @@ In addition to design recommendations provided in this section, review the [iden
 
 ## Role based access controls (RBAC)
 
-When using system-managed keytab mode explicit permissions to [Domain Service Account (DSA)](/azure/azure-arc/data/active-directory-prerequisites#create-the-domain-service-account-dsa) is required at [Active Directory OU](/azure/azure-arc/data/active-directory-prerequisites#create-an-ou) level for Arc-enabled SQL MI. 
+When using system-managed keytab mode explicit permissions to [Domain Service Account (DSA)](/azure/azure-arc/data/active-directory-prerequisites#create-the-domain-service-account-dsa) is required at [Active Directory OU](/azure/azure-arc/data/active-directory-prerequisites#create-an-ou) level for Arc-enabled SQL MI.
 
 Following are [the required RBAC permissions](/azure/azure-arc/data/active-directory-prerequisites#set-permissions-for-the-dsa). For customer-managed keytab mode, no explicit permissions are required for the domain service account at the Active Directory OU level.
 
