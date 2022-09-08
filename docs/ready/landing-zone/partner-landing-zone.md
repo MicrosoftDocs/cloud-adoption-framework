@@ -26,11 +26,11 @@ We tell you how to find a partner and what to expect for each option.
 
 The easiest option to find an ALZ partner is through the Azure Migration and Modernization Program (AMMP).
 
-**How to find an AMMP partner:**
+### How to find an AMMP partner
 
 Take 5 minutes to [fill out the AMMP form](/migration/migration-modernization-program/#program-form). Someone from AMMP will help you find the right partner.
 
-**What to expect from an AMMP partner:**
+### What to expect from an AMMP partner
 
 All the partners in the AMMP program adhere to ALZ best-practices. We vet AMMP partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
 
@@ -62,7 +62,7 @@ Advanced specialization partners demonstrate deep technical knowledge, proven su
 
 Offers in the marketplace have a price, description of what you get, and way to contact the partner. Like any marketplace, the offers aren't all the same. There's flexibility in what the offer can be. Partners design and propose offers. Microsoft approves them for the marketplace. This flexibility creates value for you. You can find an offer that meets your specific needs.
 
-**How to find a partner offer:**
+### How to find partner offers
 
 To find a landing zone offer from a partner, follow these steps:
 
@@ -78,7 +78,7 @@ To find a landing zone offer from a partner, follow these steps:
 
 5. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
 
-**What to expect from partner offers:**
+### What to expect from partner offers
 
 Partner offers are vetted and approved for the marketplace. They follow CAF principles in general but have more freedom to customize their approach to the ALZ process. Expectations should align with the offer description and any other agreements made between you and your chosen partner.
 
