@@ -70,11 +70,11 @@ This flexibility creates value for you and allows you to find an offer that meet
 
 To find a landing zone offer from a partner, follow these steps:
 
-1. *Find landing zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers. The partner offers are presented as links at the bottom of each tile.
+1. *Find landing zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. The link at the bottom of each tile takes you to the partner offers.
 
     - *Filter results* - In the "Cloud Adoption Framework Methodology" dropdown, select the "Ready" box. In the "Regions" dropdown, select your region. With these filters, you'll only see offers aligned to the Ready methodology in your region.
 
-    - *Look for landing zone offers* – Scan at the links at the bottom of the tiles. Find and select landing zone offers. Not every tile on the page will be a landing zone offer, and some partners have more than one offer aligned to the Ready methodology. Select the offer links at the bottom of the tile to see the offer. Selecting the partner’s name or logo takes you to an overview of the partner.
+    - *Look for landing zone offers* – Scan the links at the bottom of the tiles. Find and select landing zone offers. Not every tile on the page will be a landing zone offer, and some partners have more than one offer aligned to the Ready methodology. Select the offer links at the bottom of the tile to see the offer. Selecting the partner’s name or logo takes you to an overview of the partner.
 
 1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
