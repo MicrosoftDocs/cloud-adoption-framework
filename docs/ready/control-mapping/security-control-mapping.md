@@ -79,14 +79,14 @@ If there are gaps identified, you can still use Azure Security Benchmark but mig
     - Add in columns to accommodate the assessment like: coverage, enforcement, effects allowed.
 3. Perform a line-by-line analysis of the resulting service baseline assessment template:
     - For each control objective, indicate:
-        1. If it can be met by the service or a risk.
-        2. Risk value, if any.
-        3. Status of review for that line item.
-        4. Needed mitigating controls, if any.
-        5. What Azure Policy can enforce/monitor the control.
+        - If it can be met by the service or a risk.
+        - Risk value, if any.
+        - Status of review for that line item.
+        - Needed mitigating controls, if any.
+        - What Azure Policy can enforce/monitor the control.
 
     - Where there are gaps in monitoring or enforcement for the service and control:
-        1. Report to the Azure Security Benchmark team to close gaps in content, monitoring, or enforcement.
+        - Report to the Azure Security Benchmark team to close gaps in content, monitoring, or enforcement.
 
     - For any areas that don't meet your requirements, note the risk involved if you choose to exempt that requirement, the impact, and if it's acceptable to approve or if you're blocked due to the gap.
 
