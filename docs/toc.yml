@@ -378,7 +378,7 @@ items:
             href: ready/landing-zone/design-area/encryption-and-keys.md
           - name: Service enablement framework
             href: ready/landing-zone/design-area/service-enablement-framework.md
-          - name: Security Control Mapping
+          - name: Security control mapping
             href: ready\control-mapping\security-control-mapping.md
             
         - name: Management
