@@ -28,7 +28,7 @@ The easiest option to find an ALZ partner is through the Azure Migration and Mod
 
 ### How to find an AMMP partner
 
-Take 5 minutes to [fill out the AMMP form](/migration/migration-modernization-program/#program-form). Someone from AMMP will help you find the right partner.
+Take 5 minutes to [fill out the AMMP form](https://azure.microsoft.com/migration/migration-modernization-program/#program-form). Someone from AMMP will help you find the right partner.
 
 ### What to expect from an AMMP partner
 
@@ -56,7 +56,7 @@ All the partners in the AMMP program adhere to ALZ best-practices. We vet AMMP p
 
 ## Option 2 - Partner offers
 
-We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](/azure/partners/adopt?filters=ready) is a marketplace of offers from certified Azure partners. Microsoft vets and approves each offer. Each offer comes from Azure Advanced Specialization Partners or Azure Expert Managed Services Providers (MSPs).
+We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](https://www.microsoft.com/azure/partners/practices/enable-customers-for-success/directory) is a marketplace of offers from certified Azure partners. Microsoft vets and approves each offer. Each offer comes from Azure Advanced Specialization Partners or Azure Expert Managed Services Providers (MSPs).
 
 Advanced specialization partners demonstrate deep technical knowledge, proven success, and ethical business practices. Azure Expert MSPs also meet these criteria but must additionally pass a time- and cost-intensive auditing process.
 
@@ -84,8 +84,8 @@ Partner offers are vetted and approved for the marketplace. They follow CAF prin
 
 ## Links to find a landing zone partner
 
-- Option 1 - [Azure Migration and Modernization Program](/migration/migration-modernization-program/#program-form)
-- Option 2 - [Partner offers](/azure/partners/adopt?filters=ready)
+- Option 1 - [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#program-form)
+- Option 2 - [Partner offers](https://www.microsoft.com/azure/partners/practices/enable-customers-for-success/directory)
 
 ## Next steps
 
