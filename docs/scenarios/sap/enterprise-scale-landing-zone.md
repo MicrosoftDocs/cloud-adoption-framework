@@ -3,7 +3,7 @@ title: SAP on Azure landing zone accelerator
 description: Learn about SAP on Azure landing zone accelerator.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 09/08/2022
+ms.date: 09/09/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,11 +12,11 @@ ms.custom: think-tank, e2e-sap
 
 # SAP on Azure landing zone accelerator
 
-SAP on Azure landing zone accelerator lets you construct and operate platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. It provides a specific architectural approach and reference implementation. Use SAP on Azure landing zone accelerator after you successfully implement an enterprise-scale landing zone. Review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before you deploy SAP on Azure landing zone accelerator.
+SAP on Azure landing zone accelerator lets you set up and operate platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. SAP on Azure landing zone accelerator provides a specific architectural approach and reference implementation. Use SAP on Azure landing zone accelerator after you successfully implement an enterprise-scale landing zone. Review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before you deploy SAP on Azure landing zone accelerator.
 
 ## Adopt SAP on Azure landing zone accelerator
 
-Architecture for SAP on Azure landing zone accelerator varies by customer. Technical considerations and SAP on Azure landing zone accelerator design recommendations lead to trade-offs based on each organization's particular scenario. Follow the core recommendations to find an architecture that sets your organization on a path to sustainable scaling. SAP on Azure landing zone accelerator is modular by design and you can customize environmental variables. This approach to landing zones includes the following assets to support your cloud teams:
+Architecture for SAP on Azure landing zone accelerator varies by customer. Technical considerations and design recommendations lead to trade-offs based on each organization's particular scenario. Follow the core recommendations to find an architecture that sets your organization on a path to sustainable scaling. SAP on Azure landing zone accelerator is modular by design and you can customize environmental variables. This approach to landing zones includes the following assets to support your cloud teams:
 
 - [Design guidelines](#design-guidelines)
 - [Architecture](#architecture)
@@ -24,7 +24,7 @@ Architecture for SAP on Azure landing zone accelerator varies by customer. Techn
 
 ## Design guidelines
 
-You must make critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. Consider these six critical design areas:
+You must make crucial decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. Consider the following six critical design areas:
 
 - [Identity and access management](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
@@ -35,51 +35,54 @@ You must make critical decisions that drive the design of the Cloud Adoption Fra
 
 ## Architecture
 
-The following diagram is a conceptual reference architecture that shows the six critical design areas:
+The following diagram of a conceptual reference architecture shows the critical design areas:
 
 :::image type="content" source="./media/overview-architecture.png" alt-text="A diagram depicting the SAP on Azure landing zone accelerator conceptual reference architecture." lightbox="./media/overview-architecture.png":::
 
 
-## SAP System High level Architecture 
-The following diagram is reference architecture that describes an overall SAP system landscape depicting production and non-production systems. This diagram shows one of the options to deploy SAP systems into Azure using Availability Sets Configuration.
+## SAP system high-level architecture
+ 
+The following diagram shows reference architecture with an overall SAP system landscape that includes production and non-production systems. This architecture is just one of your options for deploying SAP systems on Azure using availability sets configuration.
 
-Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/sap/media/sap-landscape-multiplesystems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when planning your landing zone implementation.
+Use the architecture here as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/sap/media/sap-landscape-multiplesystems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when planning your landing zone implementation.
 
-:::image type="content" source="./media/sap-landscape-hla.png" alt-text="A diagram depicting high-level Architecture of an SAP System landscape on Azure with production and non-production systems." lightbox="./media/sap-landscape-hla.png":::
+:::image type="content" source="./media/sap-landscape-hla.png" alt-text="A diagram showing high-level architecture of an SAP system landscape on Azure with production and non-production systems." lightbox="./media/sap-landscape-hla.png":::
 
 **Workflow:**
 
-This reference architecture describes SAP system landscape with Production and Non-Production systems. This architecture deploys with virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs. The intention is to illustrate a big picture of overall SAP architecture across different tiers.
+The reference architecture includes an SAP system landscape with production and non-production systems that deploys with virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs. The intent of this article is to show high-level, overall SAP architecture across different tiers.
 
-**Note:** 
-There are multiple options to deploy SAP systems into Azure depending on a customer’s requirement. This section describes one of the options to deploy SAP systems into Azure using Availability Sets Configuration. The network layout is greatly simplified to demonstrate architectural principles and isn't intended to describe a full enterprise network.
+> [!NOTE]
+> There are multiple options to deploy SAP systems into Azure depending on a customer’s requirements. This section describes just one of the options to deploy SAP systems into Azure using availability sets configuration. The network layout here is greatly simplified to demonstrate architectural principles and isn't intended to describe a full enterprise network.
 
-**Recommendations:** 
+**Recommendations:**
 
-The architecture describes an SAP system landscape that shows production and non-production level deployment. Your deployment will differ based on your business requirements, so consider these recommendations as a starting point.
+Your deployment will differ based on your business requirements. Consider these recommendations as a starting point.
 
 **Subscriptions:**
 
-The architecture depicts three subscriptions: 
+The architecture uses the following three subscriptions:
 
-   - Azure Hub Subscription where Hub vnet exists for primary and secondary region.
+   - Azure Hub Subscription where the Hub vnet exists for the primary and secondary regions.
 
-   - Azure SAP Production Subscription where Production Systems and Disaster Recovery systems are configured.
+   - Azure SAP Production Subscription where the production systems and disaster recovery systems are configured.
 
-   - Azure SAP Non-Prod Subscription - Non-Production system, which includes Sandbox, Development, Quality, or Pre-Production systems. This configuration is optional and can have a subscription per workload zone. 
+   - Azure SAP Non-Prod Subscription  with a non-production system that includes sandbox, development, quality assurance, or pre-production systems. This configuration is optional and you can use a subscription for each workload zone.
 
 
 **Networking:**
 
-This architecture uses a hub-spoke topology, where the hub vnet acts as a central point of connectivity to an on-premises network. The spokes are SAP vnet that peer with the hub, and they can be used to isolate workloads. This architecture uses one SAP vnet per workload zone that is different SAP vnet for Production, Development, Quality Assurance and Sandbox. In the Architecture, the Hub vnet is peered with Production, Development, Quality and Sandbox vnet. Traffic flows between the on-premises datacenter and the hub through a gateway connection. 
+This architecture uses a hub-spoke topology, where the hub vnet acts as a central point of connectivity to an on-premises network. The spokes are an SAP vnet that peer with the hub. You can use the spokes to isolate workloads. This architecture uses one SAP vnet per workload zone, meaning a different SAP vnet for production, development, quality assurance, and the sandbox. In the Architecture, you peer the Hub vnet with production, development, quality assurance, and the sandbox vnet. Traffic flows between the on-premises datacenter and the hub through a gateway connection.
 
-  **Note:** - Consider configuring S2S VPN as a backup of ExpressRoute or for any third-party route requirements. For more information, see [Use S2S VPN as a backup for ExpressRoute private peering](https://docs.microsoft.com/en-us/azure/expressroute/use-s2s-vpn-as-backup-for-expressroute-privatepeering).
+  > [!NOTE]
+> Consider configuring S2S VPN as a backup of ExpressRoute or for any third-party route requirements. For more information, see [Use S2S VPN as a backup for ExpressRoute private peering](/azure/expressroute/use-s2s-vpn-as-backup-for-expressroute-privatepeering).
 
 
 **Subnets and NSGs:**
-The architecture subdivides the vnet address space into subnets. Each subnet can be associated with an NSG that defines the access policies for the subnet. Place application servers on a separate subnet so you can secure them more easily by managing the subnet security policies, rather than the individual servers. When associated with a subnet, an NSG applies to all the servers within the subnet and offers fine-grained control over the servers. 
 
-In this Architecture, there are three or four Subnets depending on the tier. An Example for the production systems is four Subnets 
+The architecture subdivides the vnet address space into subnets. You can associate each subnet with an NSG that defines the access policies for the subnet. Place application servers on a separate subnet so you can secure them more easily by managing the subnet security policies, rather than the individual servers. When associated with a subnet, an NSG applies to all the servers within the subnet and offers fine-grained control over the servers. 
+
+In this architecture, there are three or four Subnets depending on the tier. An Example for the production systems is four Subnets 
 
    - NetApp Subnet – [A delegated Subnet](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) when using ANF for different SAP on Azure Scenarios. 
 
@@ -110,12 +113,11 @@ To handle the transport directory requirements, create the transport groups opti
 
 The high availability requirements for SAP Central Services differ based on the operating system. For example: 
 
-   - For the Linux operating system, the shared file systems are typically placed on high availability NFS storage or NetApp files to provide a high-availability NFS share. For more information, see [NFS over Azure files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-nfs-azure-files) or [Azure NetApp files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files). 
+   - For the Linux operating system, the shared file systems are typically placed on high availability NFS storage or NetApp files to provide a high-availability NFS share. For more information, see [NFS over Azure files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-nfs-azure-files) or [Azure NetApp files](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files).
 
    - For Windows operating system, see [Azure Files with SMB](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-azure-files-smb) and [Azure NetApp Files SMB](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb).
 
-
-Azure NetApp Files shares can host the SAP HANA data and log files. This configuration enables the HANA scale-out deployment model with standby nodes. ANF Supports HANA Scale-up or [HANA Scale-out](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-hana-scale-out-standby-netapp-files-suse) with Standby node. 
+Azure NetApp Files shares can host the SAP HANA data and log files. This configuration enables the HANA scale-out deployment model with standby nodes. ANF Supports HANA Scale-up or [HANA Scale-out](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-hana-scale-out-standby-netapp-files-suse) with Standby node.
 
 [Azure Files](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction) provides two main types of endpoints for accessing Azure file shares:
 
@@ -123,12 +125,12 @@ Azure NetApp Files shares can host the SAP HANA data and log files. This configu
 
    - Private endpoints, which exist within a virtual network and have a private IP address from within the address space of that virtual network.
 
-  The architecture depicts [Private Endpoints](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview) to allow clients on a virtual network (Vnet) to securely access data over a [Private Link](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview). 
+  The architecture uses [Private Endpoints](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview) to let clients on a virtual network (Vnet) and securely access data over a [Private Link](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview). 
 
 
 **BTP Connectivity:** 
 
-Private link service on Azure is now Generally Available (GA). SAP Private Link service currently supports connections from SAP BTP, Cloud Foundry runtime, and certain services on top of [Azure Private Link resources](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/e8bc0c6440834a47a0ff57cb4efc0dc2.html?locale=en-US) for the most common load balancer + VM scenario with for example, SAP S/4HANA or SAP ERP running on the VM, and the scenario of connecting to Azure native services, in particular to:
+Azure Private Link service is now Generally Available (GA). SAP Private Link service currently supports connections from SAP BTP, Cloud Foundry runtime, and other services on top of [Azure Private Link resources](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/e8bc0c6440834a47a0ff57cb4efc0dc2.html?locale=en-US) for the most common load balancer + VM scenario with for example, SAP S/4HANA or SAP ERP running on the VM, and the scenario of connecting to Azure native services, in particular to:
 
    - [Azure Database for MariaDB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/862fa2958c574c3cbfa12a927ce1d5fe.html?locale=en-US)
 
@@ -140,18 +142,20 @@ The architecture depicts SAP private link service connection to BTP environments
 **Considerations:** 
 
 **Landscape consolidation:**
-  Consider landscape consolidation for the non-production systems, for example, Sandbox and Development environments. See different use cases 
+
+Consider setting up landscape consolidation for the non-production systems, for example, sandbox and development environments. See different use cases 
 
   - HANA DB scenarios generally run App and DB in separate VMs.
 
   - AnyDB scenarios could have two-tier deployments where SAP App and DB are running in the Same VM. 
 
-  One may choose to design based on different customer requirements. The components are separate in the architecture to  provide greater flexibility for maintenance, sizing, monitoring and change control. 
+  You might choose to design based on different customer requirements. The components are separate in the architecture to provide greater flexibility for maintenance, sizing, monitoring, and change control. 
 
 **Component Information:**
-    The architecture also mentions components you can use for day two operations. The components include Recovery Services Vault to back up SAP systems, and others that help customers extend and improve their SAP Data platform with cloud native Azure data services. Azure services like Synapse, data factory, and data lake help customers unlock business insights by combining SAP Data with non-SAP Data and creating the analytics platform. To evaluate solution development environment design, see the [best practices](https://docs.microsoft.com/en-us/azure/synapse-analytics/guidance/implementation-success-evaluate-solution-development-environment-design). There are different instances of data factory and data lake based on SAP Tier and best practices for environment design. 
 
-  [The Integration Runtime (IR)](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime) is the compute infrastructure that Azure Data Factory and Azure Synapse pipelines use to provide data integration capabilities. Consider the deployment of runtime Virtual Machines for these services per Tier. Refer to the examples of different ways to connect with SAP systems and how to deploy Integration Runtime. 
+The architecture also mentions components you can use for day two operations. The components include Recovery Services Vault to back up SAP systems, and others that help customers extend and improve their SAP Data platform with cloud native Azure data services. Azure services like Synapse, data factory, and data lake help customers unlock business insights by combining SAP Data with non-SAP Data and creating the analytics platform. To evaluate solution development environment design, see the [best practices](https://docs.microsoft.com/en-us/azure/synapse-analytics/guidance/implementation-success-evaluate-solution-development-environment-design). There are different instances of data factory and data lake based on SAP Tier and best practices for environment design. 
+
+[The Integration Runtime (IR)](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime) is the compute infrastructure that Azure Data Factory and Azure Synapse pipelines use to provide data integration capabilities. Consider the deployment of runtime Virtual Machines for these services per Tier. Refer to the examples of different ways to connect with SAP systems and how to deploy Integration Runtime. 
 
    -	[SAP change data capture solution (Preview) - SHIR preparation - Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-shir-preparation)
 
@@ -186,7 +190,7 @@ The architecture is an extension of High Level architecture portraying SAP Produ
 
 The **SAP on Azure deployment automation framework** is a collection of processes combined with a flexible workflow. The [SAP deployment automation framework repository](https://github.com/Azure/sap-hana) contains code for automatic deployment of SAP landscapes in the Azure cloud. Templates are split into the following categories:
 
-- Terraform modules that deploy infrastructure components in Azure, which include:
+- Terraform modules that deploy infrastructure components in Azure include:
   - VMs
   - Network
   - Storage
