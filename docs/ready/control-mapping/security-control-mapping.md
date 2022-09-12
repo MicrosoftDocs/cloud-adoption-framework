@@ -39,7 +39,7 @@ The process flow of control mapping:
 
 ### 1.Identify the controls required
 
-Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found [Here](https://github.com/microsoft/CloudAdoptionFramework/blob/master/ready/Azure%20Security%20Control%20Mapping-%20Template%20with%20Example.xlsx)
+Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. The template to use for capturing required controls and related frameworks can be found[Here](https://github.com/microsoft/CloudAdoptionFramework/blob/master/ready/Azure%20Security%20Control%20Mapping-%20Template%20with%20Example.xlsx)
 
 A sample of formalized controls list:
 
