@@ -16,7 +16,7 @@ Before considering a deployment, it's important for your organization to put gua
 
 ## Background
 
-A core principle of cloud-scale analytics  is to make it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance. This governance is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
+A core principle of cloud-scale analytics is to make it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance. This governance is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
 
 The [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md) already uses this concept. Cloud-scale analytics adds [Custom Azure policies](#azure-policies-for-cloud-scale-analytics) to build on these standards. The standards are then applied to our data management landing zones and data landing zones.
 
@@ -26,7 +26,7 @@ Azure Policy is important when ensuring security and compliance within cloud-sca
 
 ## Design considerations
 
-Azure policies in cloud-scale analytics  were developed with the following design considerations in mind:
+Azure policies in cloud-scale analytics were developed with the following design considerations in mind:
 
 - Use Azure policies to implement governance and enforce rules for resource consistency, regulatory compliance, security, cost, and management.
 - Use available prebuilt policies to save time.

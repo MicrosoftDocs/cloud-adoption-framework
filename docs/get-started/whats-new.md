@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 06/09/2022
+ms.date: 09/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -15,6 +15,61 @@ ms.custom: internal
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## August 2022
+
+### Azure Red Hat OpenShift landing zone accelerator
+
+The Azure Red Hat OpenShift landing zone accelerator is a collection of templates, design recommendations, and implementation references to accelerate deployment of Azure Red Hat OpenShift clusters in your landing zone. This landing zone accelerator is open source. You can adapt the templates and recommendations to create an architecture that meets your needs. By following this guidance, your organization can lay the groundwork for scalability.
+
+Use the following links to get started with this landing zone accelerator:
+
+| Article | Description |
+| ---- | --- |
+| [Introduction](../scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md) | Learn about the benefits of the landing zone accelerator approach for Azure Red Hat OpenShift. |
+| [Identity and access management](../scenarios/app-platform/azure-red-hat-openshift/identity-access-management.md) | Create an identity and access management plan that meets your organization's requirements. |
+| [Network topology and connectivity](../scenarios/app-platform/azure-red-hat-openshift/network-topology-connectivity.md) | Control network traffic and connectivity to your clusters. |
+| [Resource organization considerations](../scenarios/app-platform/azure-red-hat-openshift/resource-organization.md) | Design your resource groups for proper resource governance and isolation. |
+| [Security](../scenarios/app-platform/azure-red-hat-openshift/security.md) | Protect and secure your Azure Red Hat OpenShift deployments. |
+| [Operations baseline guidance](../scenarios/app-platform/azure-red-hat-openshift/operations.md) | Achieve operational excellence with management and monitoring solutions. |
+| [Platform automation and DevOps](../scenarios/app-platform/azure-red-hat-openshift/platform-automation-devops.md) | Get recommendations for automation and DevOps for your Azure Red Hat OpenShift platform. |
+
+## July 2022
+
+### Cloud-scale analytics tutorials
+
+Cloud-scale analytics tutorials provide comprehensive guidance on setting up landing zones that host and run analytics workloads. Cloud-scale analytics builds upon Azure landing zones that supply the necessary infrastructure for applications and workloads. The landing zones meet security, governance, and compliance standards. Microsoft provides sample templates to get started. The tutorials walk through the steps for evaluating an example enterprise scenario and then show how to plan, set up, deploy, and operate landing zones.
+
+Each tutorial builds upon the next and provides detailed guidance on the recommended approach.
+
+| Article | Description |
+| ---- | --- |
+| [Tutorial: Evaluate an enterprise data scenario](../scenarios/cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md) | A tutorial using an example enterprise scenario that shows how Azure cloud-scale analytics provides a scalable, repeatable framework for building a modern data platform. |
+| [Tutorial: Create a data landing zone](../scenarios/cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md) | A tutorial that shows how to create a data landing zone by using the Deploy to Azure option in the Azure portal. |
+| [Tutorial: Create a data product batch](../scenarios/cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md) | A tutorial that shows how to use the Deploy to Azure feature, a customized deployment template, to deploy resources for the data product batch in a data landing zone. |
+| [Tutorial: Set up a data product batch](../scenarios/cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md) | A tutorial that shows how to set up already deployed data product services and use Azure Data Factory to integrate and orchestrate the data. The tutorial then shows how to use Microsoft Purview to discover, manage, and govern data assets. |
+| [Tutorial: Clean up resources](../scenarios/cloud-scale-analytics/tutorials/cleanup-instructions.md) | A tutorial that shows how to use scripts to remove tutorial resources created in an Azure subscription when encountering deployment issues or to remove the tutorial resources in a subscription when finished with the tutorials. |
+
+## June 2022
+
+### Security best practices for infrastructure and development
+
+Security best practices for infrastructure and development are a comprehensive guidance set for the full cloud security development lifecycle across strategy, architecture, implementation, operations, and governance. These best practices complement the Microsoft Cloud Adoption Framework for Azure, Microsoft tools, security guides, and technical documentation with a focus on infrastructure and development. They also align with the Azure Security Benchmark recommendations.
+
+Each topic provides top-level guidance, followed by recommended tools, materials, and a recommended best practice approach.
+
+| Article | Description |
+|--|--|
+|[Introduction](../secure/security-best-practices-introduction.md) |An introduction to infrastructure security and development security that covers the full lifecycle of strategy, architecture, implementation, operations, and governance.|
+| [Infrastructure security best practices overview](../secure/infrastructure-security-overview.md) |An outline of the interrelationship of development security's dependency on infrastructure security, with a continuous improvement approach that progresses towards a "north star" end-state across security strategy, architecture, implementation, and operations. |
+| [Infrastructure security strategy](../secure/infrastructure-security-strategy.md) | Define a security strategy that reduces business risk from attacks. Take incremental steps to build confidentiality, integrity, and availability assurances into all information systems and data. |
+| [Infrastructure security architecture](../secure/infrastructure-security-architecture.md) | Best practices related to the ideal end state and key components of infrastructure security, including Azure landing zones, Zero Trust principles, and additional Azure Security Benchmark security recommendations. |
+| [Infrastructure security implementation](../secure/infrastructure-security-implementation.md) and [security operations and governance](../secure/infrastructure-security-operations-governance.md) | Learn about implementation, operations, and governance security, including IaC approaches, native security controls, ALZ accelerators, operational role responsibility assignments, security governance best practices, cloud workload protection, and cloud security posture management.|
+| [Development security strategy](../secure/development-security-strategy-overview.md) | Best practices related to development security strategy including innovation security, Shift Left strategies, and the technical strategies to protect applications, code, and the underlying infrastructure, platform, or device. |
+| [Development innovation security](../secure/development-innovation-security.md) | Develop an innovation security strategy that enables your organization to balance the protection of innovation data and processes with incremental and continuous improvements in the development lifecycle. Define an innovation minimum viable product (MVP) across development, security, and operations—integrating Shift Left security thinking within your DevOps lifecycle from the beginning. |
+| [Securing DevOps strategy and process](../secure/devops-strategy-process-security.md) | Learn how to move towards a DevSecOps strategy end-state, balancing smaller, iterative improvements with innovation and the development lifecycle. Push rapid releases with elements of classic security and operations. Ensure your minimum viable product (MVP) balances the need for rapid releases—natively embedding guardrails across security, governance, and compliance—while balancing production, performance, and reliability. |
+| [Development security architecture](../secure/development-security-architecture.md) | Best practices related to the ideal end state and key components of development security, including IaC deployment consistency, and integrated process for security development.
+| [Development security implementation and operations](../secure/development-security-implementation-operations.md) | Learn about the implementation and operations aspects of development security, including comprehensive repository toolsets, continuous, incremental governance improvements, and DevSecOps controls. |
 
 ## May 2022
 
@@ -235,7 +290,7 @@ We've added a new retail industry scenario in this release, designed to guide a 
 | [Cloud adoption plan for the retail industry](../industry/retail/plan.md) | Use this guidance to develop a refined cloud adoption plan for the retail industry. |
 | [Innovation in the retail industry](../industry/retail/innovate.md) | Learn how to innovate even faster and improve your retail outcomes by using the steps outlined in the Innovate methodology. |
 | [Governance in the retail industry](../industry/retail/govern.md) | Use the Cloud Adoption Framework methodology to systematically and incrementally improve governance of your cloud portfolio across the five governance disciplines. This article refines the methodology for governance needs specific to the retail industry. |
-| [Management in the retail industry](../industry/retail/manage.md) | Learn how to use the Manage methodology in the Cloud Adoption Framework for Azure to manage the cloud for the retail industry. |
+| [Management in the retail industry](../industry/retail/manage.md) | Learn how to use the Manage methodology of the Cloud Adoption Framework to manage the cloud for the retail industry. |
 
 ## May 2021
 

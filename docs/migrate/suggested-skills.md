@@ -58,9 +58,11 @@ The following tools can help the team find ways to secure and manage migrated as
 
 - [Secure and manage workloads in Azure](./azure-best-practices/migrate-best-practices-security-management.md): Best practices for securing and managing workloads in Azure.
 
+## Migration best practices
+
+It can be helpful at this point to return to the [migration best practices checklist](./azure-best-practices/index.md) to ensure your migration method is fully aligned.
+
 ## Next steps
 
-Return to the [migration best practices checklist](./azure-best-practices/index.md) to ensure your migration method is fully aligned.
-
 > [!div class="nextstepaction"]
-> [Migration best practices checklist](./index.md)
+> [Modernize](../modernize/index.md)

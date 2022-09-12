@@ -1,6 +1,6 @@
 ---
-title: Infrastructure security implementation, operations, and governance
-description: Learn about the Infrastructure security implementation, operations, and governance. Cloud Adoption Framework offers guidance for deploying Azure landing zones.
+title: Infrastructure security implementation
+description: Learn about implementation for your organization in the context of infrastructure security.
 author: mpvenables
 ms.author: mas
 ms.date: 06/17/2022
@@ -10,9 +10,9 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Infrastructure security implementation, operations, and governance
+# Infrastructure security implementation
 
-This article describes infrastructure security implementation, operations, and governance in the Cloud Adoption Framework.
+This article describes implementation for your organization in the context of infrastructure security.
 
 ## Implementation
 
@@ -47,4 +47,5 @@ Terraform is an open-source IaC software tool. Read about [how to use, configure
 
 ## Next steps
 
-- [Operations](infrastructure-security-operations-governance.md)
+> [!div class="nextstepaction"]
+> [Infrastructure security operations and governance](infrastructure-security-operations-governance.md)

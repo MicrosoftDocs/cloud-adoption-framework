@@ -49,7 +49,7 @@ As you get started, use the checklist and application development resources in t
   For more information, see:
   - [Project design and layout for successful Kubernetes applications (webinar)](https://info.microsoft.com/ww-OnDemandRegistration-successful-kubernetes-applications-webinar.html)
   - [How Kubernetes deployments work (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=mNK14yXIZF4&index=3)
-  - [Develop and deploy applications on Kubernetes (Microsoft Learn)](/learn/paths/develop-deploy-applications-kubernetes/)
+  - [Develop and deploy applications on Kubernetes](/learn/paths/develop-deploy-applications-kubernetes/)
 
 - **Manage application storage.** Understand the performance needs and access methods for pods so that you can provide the appropriate storage options. Also, plan for ways to back up and test the restore process for attached storage.
 

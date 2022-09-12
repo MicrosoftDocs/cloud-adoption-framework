@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Infrastructure security architecture
 
-This article describes best practices related to the ideal end state and key components of infrastructure security.
+This article describes an ideal end state for infrastructure security in your organization.
 
 ## Build scalable, modular Azure landing zones
 
@@ -57,4 +57,5 @@ ASB controls that are most applicable to securing infrastructure resources are:
 
 ## Next steps
 
-- [Implementation](infrastructure-security-implementation.md)
+> [!div class="nextstepaction"]
+> [Infrastructure security implementation](infrastructure-security-implementation.md)
