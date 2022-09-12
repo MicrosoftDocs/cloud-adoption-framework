@@ -35,14 +35,18 @@ The Microsoft journey started over a decade ago when the company started to appl
 - **Water:** Reducing use intensity and investing in technology for managing water.
 - **Waste:** Practicing responsible sourcing, recycling, and disposal; using software and technology to make buildings more efficient.
 
-Additionally, there are four main drivers contributing to the smaller energy and carbon footprint of the Microsoft Cloud. The first three: IT operational efficiency, IT equipment efficiency, and datacenter infrastructure efficiency—reduce the energy required to deliver the services. The fourth is the purchase of renewable electricity, which will power 100 percent of electricity consumed in Microsoft datacenters, buildings, and campuses by 2025.
+Additionally, there are four main drivers contributing to a lowered energy and carbon footprint of the Microsoft Cloud:
+
+- **IT operational efficiency, IT equipment efficiency, and datacenter infrastructure efficiency**: reduce the energy required to deliver the services.
+- **Purchase of new renewable electricity**: will power 100 percent of electricity consumed in Microsoft datacenters, buildings, and campuses by 2025.
 
 Read more about how Microsoft's [commitment to a planet-sized challenge](https://www.microsoft.com/sustainability/approach) has helped us plan and achieve sustainability goals.
 
 ## Building a Sustainability Strategy
 
 Sustainability continues to gain importance as a performance indicator for organizations. As the sustainability transformation is making its mark on companies across industries, adding pressure from new types of stakeholders and challenging existing profit pools while creating opportunities to open new ones, companies are increasingly forced to respond effectively with new types of solutions and tech-enabled approaches.
-Doing so is good for business. Research from multiple sources indicates that sustainability front runners have a lower cost-of-capital, deliver superior equity market returns, get easier access to new markets by creating new types of products and services, and/or are better at managing risk and ensuring more resilient operations.
+
+This transformation is good for business. Research from multiple sources indicates that sustainability front runners have a lower cost-of-capital, deliver superior equity market returns, get easier access to new markets by creating new types of products and services, and/or are better at managing risk and ensuring more resilient operations.
 
 Read about the [Sustainability Executive Playbook](https://info.microsoft.com/ww-landing-Sustainability-Executive-Playbook.html)
 
@@ -57,26 +61,36 @@ Common considerations for building a sustainability strategy could include:
 
 ## Understanding your current emissions
 
-As defined by the Greenhouse Gas (GHG) Protocol, the operational boundaries of a carbon emissions inventory are broken down into three “scopes” (both direct and indirect) of emissions data, each further broken down into distinct emission sources:
+As defined by the Greenhouse Gas (GHG) Protocol, the operational boundaries of a carbon emissions inventory are broken down into three "scopes" (both direct and indirect) of emissions data, each further broken down into distinct emission sources:
 
-- **Scope 1:** Emissions that your organization produces directly (such as through the use of carbon-based fuels).
+- **Scope 1:** Emissions that your organization produces directly (such as by using carbon-based fuels).
 - **Scope 2:** Emissions that your organization incurs indirectly through the purchase of electricity, heat, or steam.
 - **Scope 3:** Emissions that your organization incurs indirectly beyond Scope 2 emissions (for example, emissions related to your supply chain, waste disposal, business travel, and employee commuting).
 
-You'll need a way to both understand and track those scopes. Microsoft has [education](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) to help you learn about and account for your organization’s emissions.
+You'll need a way to understand and track those scopes. 
 
-## Sustainability Tooling
+- Read Microsoft's additional information about [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) learn about and account for your organization's emissions.
+- Read about [measuring and tracking carbon impact in the Azure Well-Architected Framework](/azure/architecture/framework/sustainability/sustainability-operational-procedures#measure-and-track-carbon-impact).
 
-To help you build your strategy Microsoft has a range of tooling.
-[Microsoft Cloud for Sustainability](/industry/sustainability/) empowers organizations to accelerate sustainability progress and business growth by bringing together a set of environmental, social, and governance (ESG) capabilities across the Microsoft cloud portfolio plus solutions from our global ecosystem of partners.
+## Sustainability tools and resources
 
-What is [Microsoft Cloud for Sustainability](/industry/sustainability/overview)?
+To help you build your strategy Microsoft has a range of tooling and resources available.
+
+### Microsoft Cloud for Sustainability
+
+[Microsoft Cloud for Sustainability](/industry/sustainability/) empowers organizations to accelerate sustainability progress and business growth by bringing together a set of Environmental, Social, and Governance (ESG) capabilities across the Microsoft cloud portfolio plus solutions from our global ecosystem of partners.
+
+- Learn more by reading [what is Microsoft Cloud for Sustainability?](/industry/sustainability/overview)
+
+### Microsoft Sustainability Manager
 
 The [Microsoft Sustainability Manager](/industry/sustainability/sustainability-manager-overview) is an extensible solution that unifies data intelligence and provides comprehensive, integrated, and automated sustainability management for organizations at any stage of their sustainability journey. It automates manual processes, enabling organizations to more efficiently record, report, and reduce their emissions.
 
+### Cloud migration
+
 Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption, costs and reduce physical footprints of their datacenters. In fact, transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options (depending on specific server usage, renewable energy purchases made, and other factors).
 
-Microsoft provides [solutions](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
+Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
 
 ## Examples of sustainability outcomes
 
