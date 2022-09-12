@@ -11,7 +11,10 @@ ms.subservice: ready
 
 # Security control mapping with Azure landing zones
 
-Many organizations are required to comply with industry or regional regulations before adopting Azure cloud services. These regulations are identified by compliance domain and controls respectively. For example, **CMMC L3 AC 1.001** where AC is Access Control domain and 1.001 is a control ID in Cybersecurity Maturity Model Certification (CMMC) framework. The best practice recommendation is to map the required compliance controls to [Azure Security Benchmark](/security/benchmark/azure/) and create a custom set of the controls that aren't covered.
+
+Many organizations are required to comply with certain industry/regional regulations before adopting and onboarding the Azure cloud services. These compliance regulations are identified by compliance domain and controls respectively. For example, **CMMC L3 AC 1.001** where AC is Access Control domain and 1.001 is a control ID in Cybersecurity Maturity Model Certification (CMMC) framework. The best practice recommendation is to map the required compliance controls to Azure Security Benchmark (ASB) and identify the custom set of the controls that are not covered by ASB.
+
+In Addition, ASB also provides the list of built-in policies and Policy initiatives GUIDs to addresses the required controls. For the controls that are not covered in ASB, the control mapping guidance includes a step by step process on how to build policies and initiatives.
 
 Mapping the required controls to Azure Security Benchmark can greatly expedite secure Azure onboarding experience. Azure Security Benchmark provides a canonical set of cloud-centric technical security controls based on widely used compliance control frameworks such as NIST, CIS, PCI. There are built-in regulatory compliance initiatives already available. If you're interested in a specific compliance domain, refer to [Regulatory compliance built-in initiatives](/azure/governance/policy/samples/azure-security-benchmark).
 
@@ -35,7 +38,7 @@ The following diagram shows the process flow of control mapping:
 
 ### 1. Identify the controls required
 
-Gather all existing and required lists of compliance controls from the security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Use the format below as guidance to build the list. A list should consist of controls from one or many compliance frameworks. See the [template for capturing required controls and related frameworks](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fb%2Fd%2F3%2Fbd3fa8ca-35ab-43b9-bc3e-3c291f011786%2FAzure%2520Security%2520Controls%2520Template%2520.xlsx&wdOrigin=BROWSELINK).
+Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. Use the [Security control mapping template](https://github.com/microsoft/CloudAdoptionFramework/blob/master/ready/Azure%20Security%20Control%20Mapping-%20Template%20with%20Example.xlsx) to capture required controls and related frameworks. 
 
 :::image type="content" source="./media/formalized-controls-list-template.jpg" alt-text="Screenshot of a formalized controls list template." lightbox="./media/formalized-controls-list-template.jpg":::
 
