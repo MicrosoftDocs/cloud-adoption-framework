@@ -15,6 +15,10 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 Modernization is where you begin to unlock the benefits of the cloud. Migration got you to the cloud. Modernization lets you capitalize on the cloud.
 
+:::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Diagram that shows three business alignment processes (envision, evaluate, and commit) and three modernization strategies (process, application, and database modernization)." border="false":::
+
+*Diagram 1: Overview of the modernization process*
+
 ## Maximizing value
 
 Modernization is about maximizing value for your business. The goal is to make the biggest impact with the least amount of effort. The result of modernization is a digital transformation that reduces management burden, increases performance, and minimizes cost. These outcomes are critical to driving growth.
@@ -30,8 +34,6 @@ Modernization is enhancing your workloads and the process to support those workl
 1. *Workload modernization* - Modernizing your workloads means adopting platform-as-a-service solutions (PaaS). This definition is oversimplified, but it applies to most scenarios.
 
 ## How to modernize
-
-:::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Diagram that shows three business alignment processes (envision, evaluate, and commit) and three modernization strategies (process, application, and database modernization)." border="false":::
 
 We developed a framework that walks you through the most effective modernization processes. The first step is aligning your modernization to your business goals. Based on these goals, you'll determine:
 
