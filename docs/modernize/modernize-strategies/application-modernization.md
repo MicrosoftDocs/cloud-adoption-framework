@@ -45,7 +45,7 @@ Use the following table to find the balance. Check to see if the solution listed
 
 ## Next steps
 
-Get more guidance with the [Azure Migration and Modernization Program](/migration/migration-modernization-program/)
+Get more guidance with the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program)
 
 If you haven't already, modernize your databases.
 

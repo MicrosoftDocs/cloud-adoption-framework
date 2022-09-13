@@ -75,7 +75,7 @@ Move the most difficult and costly workloads last. The following systems might n
 ## More resources
 
 - Use the tools available in [Azure Migrate](/azure/migrate/migrate-services-overview) to simplify your journey.
-- Join the [migration and modernization program](/migration/migration-modernization-program/#program-form) for self-guided digital support and expert-guided deployments.
+- Join the [migration and modernization program](https://azure.microsoft.com/migration/migration-modernization-program/#program-form) for self-guided digital support and expert-guided deployments.
 - Use [FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack/?v=18.03#overview) to get customized guidance from Azure engineers.
 
 ## Next steps
