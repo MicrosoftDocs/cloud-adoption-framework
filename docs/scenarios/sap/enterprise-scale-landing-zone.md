@@ -3,7 +3,7 @@ title: SAP on Azure landing zone accelerator
 description: Learn about the SAP on Azure landing zone accelerator.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 09/12/2022
+ms.date: 09/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -49,7 +49,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 ### SAP systems high-level architecture
 
-The following diagram is a reference architecture of an SAP systems landscape that includes production and non-production systems. This architecture is only one option you can use to deploy SAP systems in Azure. The implementation you choose will depend on your requirements.
+The following diagram is a reference architecture of an SAP systems landscape that includes production and non-production systems. This architecture is only one option you can use to deploy SAP systems in Azure. The implementation you choose depends on your requirements.
 
 Use the reference architecture as a starting point. You can download the associated [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/sap/media/sap-landscape-multiplesystems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
@@ -180,7 +180,7 @@ For more information about all architecture components, see [SAP S/4HANA in Linu
 
 ### SAP landscape architecture example of three SAP products
 
-The following diagram is an example reference architecture that's an extension of the high-level architecture shown earlier in the article. The diagram describes an example use case of three SAP products. The diagram shows just one of the options you can use to deploy SAP systems to Azure by using an availability sets configuration.
+The following diagram is an example reference architecture that's an extension of the high-level architecture shown earlier in the article. The diagram describes an example use case of three SAP products. It shows just one of the options you can use to deploy SAP systems to Azure by using availability sets configuration.
 
 Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/sap/media/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
