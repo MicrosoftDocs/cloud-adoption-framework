@@ -23,7 +23,7 @@ Architecture for the SAP on Azure landing zone accelerator varies by customer. T
 The SAP on Azure landing zone accelerator is modular by design, and you can customize environmental variables. A customizable approach to landing zones includes the following assets to support your cloud teams:
 
 - [Design guidelines](#design-guidelines)
-- [Architecture](#landing-zone-architecture)
+- [Architecture](#architecture)
 - [Implementation](#implementation)
 
 ## Design guidelines
