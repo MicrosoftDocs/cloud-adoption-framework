@@ -14,11 +14,11 @@ ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 
 Enterprises are currently building and running applications across various ecosystems on-premises, in multiple public clouds, and on the edge. When you're working in these distributed environments, it's critical that you find a way to ensure compliance and manage servers, applications, and data at scale while you still maintain agility.
 
-[Enterprise-scale landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
+[Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
 
-[![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
+:::image type="content" source="/azure/cloud-adoption-framework/ready/landing-zone/enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="/azure/cloud-adoption-framework/ready/landing-zone/enterprise-scale/media/ns-arch-cust-expanded.png":::
 
-Enterprise-scale was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two simple additions:
+Azure landing zones was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two simple additions:
 
 - **Hybrid and multicloud connectivity:** Understand key network design considerations and recommendations for working with Azure Arc.
 - **Unified operations:** Include Azure Arc-enabled resources to extend your governance and operations support with consistent tooling.
@@ -31,7 +31,7 @@ You can use landing zone concepts introduced as part of the Cloud Adoption Frame
 
 ## Prerequisites
 
-It's beneficial to have familiarity with the enterprise-scale landing zone. For more information, see the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and enterprise-scale [implementation guidance](../../ready/enterprise-scale/implementation.md).
+It's beneficial to have familiarity with the Azure landing zones. For more information, see the Azure landing zones [overview](../../ready/landing-zone/index.md) and Azure landing zones [implementation guidance](../../ready/landing-zone/implementation-options.md).
 
 [![Diagram that shows Azure Arc high level architecture.](./media/single-control-plane.png)](./media/single-control-plane.png#lightbox)
 
