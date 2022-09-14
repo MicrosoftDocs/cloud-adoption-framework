@@ -164,7 +164,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | IoT hub | `Microsoft.Devices/IotHubs` | `iot-` |
 | Provisioning services | `Microsoft.Devices/provisioningServices` | `provs-` |
 | Provisioning services certificate | `Microsoft.Devices/provisioningServices/certificates` | `pcert-` |
-| Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi-` |
+| Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi` |
 | Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi-` |
 
 ## Azure Virtual Desktop
