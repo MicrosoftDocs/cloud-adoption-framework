@@ -18,7 +18,7 @@ This article focuses on modernizing your machine learning, visualization, and re
 
 High-performance computing (HPC) in Azure is the complete set of computing, networking, and storage resources integrated with workload orchestration services for applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering.
 
-Industries such as automotive, energy, health and life sciences, silicon, and manufacturing typically use Azure HPC workloads to run simulations with their known and familiar tools/processes to perform the intensive and potential thousands of compute hours in a matter of days. While the computation of their data is being orchestrated, each industry customer can focus more on analyzing and creating value from the results to prioritize and achieve their business goals in a cost effective and timely manner.
+Industries such as automotive, energy, health and life sciences, silicon, and manufacturing typically use Azure HPC workloads to run complex simulations with their known and familiar tools/processes to perform the intensive and potential thousands of compute hours in a matter of days. While the computation of their data is being orchestrated, each industry customer can focus more on analyzing and creating value from the results to prioritize and achieve their business goals in a cost effective and timely manner.
 
 ## HPC narrative
 
