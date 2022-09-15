@@ -1,6 +1,6 @@
 ---
 title: Modernize any application or framework in the cloud
-description: Adopt application platform-as-a-service (PaaS) solutions to modernize any application or framework. Find implementation guidance that gives you the right balance of control and productivity.
+description: Adopt application platform-as-a-service (PaaS) solutions to modernize any application or framework. Find implementation guidance to get the right balance of control and productivity.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/15/2022
