@@ -3,7 +3,7 @@ title: SAP on Azure landing zone accelerator
 description: Learn about the SAP on Azure landing zone accelerator.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 09/13/2022
+ms.date: 09/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -51,7 +51,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 The following diagram is a reference architecture of an SAP systems landscape that includes production and non-production systems. This architecture is only one option you can use to deploy SAP systems in Azure. The implementation you choose depends on your requirements.
 
-Use the reference architecture as a starting point. You can download the associated [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/sap/media/sap-landscape-multiplesystems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+Use the reference architecture as a starting point. You can download the associated [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 :::image type="content" source="./media/sap-landscape-high-level-architecture.png" border="false" alt-text="Diagram that shows the high-level architecture of an SAP systems landscape in Azure with production and non-production systems." lightbox="./media/sap-landscape-high-level-architecture.png":::
 
