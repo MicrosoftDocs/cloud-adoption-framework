@@ -35,7 +35,7 @@ In the following table, we've listed the DevOps tool and description. For each t
 | Source control | Get unlimited, cloud-hosted private Git repositories for your project. | *[Azure Repos](/azure/devops/repos/get-started/what-is-repos)* | GitHub
 | CI/CD pipeline | Continuously build, test, and deploy to any platform and cloud. | *[Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)* |  Jenkins
 | Task board | Plan, track, and discuss work across your teams. | *[Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards)* | TaskBoard |
-| Package manager | Share code and publish packages | *[Azure Artifacts](/azure/devops/artifacts/artifacts-overview)* | Nexus |
+| Package manager | Share code and publish packages | *[Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts)* | Nexus |
 | Test management| Run tests and quality assurance on code | *[Azure Test Plans](/azure/devops/test/overview)* | Selenium |
 
 With modernized tools, you're ready to modernize your planning strategies.
