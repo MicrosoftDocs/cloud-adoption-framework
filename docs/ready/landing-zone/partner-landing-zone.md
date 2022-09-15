@@ -1,9 +1,9 @@
 ---
-title: How to get help building a landing zone
-description: How to find building a landing zone and what to expect from partners.
+title: Get help building a landing zone
+description: How to get help building a landing zone and what to expect.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 09/06/2022
+ms.date: 09/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -11,14 +11,14 @@ ms.custom: internal
 ---
 # How to get help building a landing zone
 
-Getting your Azure landing zone (ALZ) done right and on time is important. Working with a certified Azure partner is a great way to get the support you need to build your ALZ. We'll show you how to find a partner and what to expect from your partner.
+Getting your Azure landing zone (ALZ) done right and on time is important. Working with a certified Azure partner is a great way to get the support you need to build your ALZ.
 
 There are two options to find an ALZ partner (*see image*).
 
 - *Option 1* - use the Azure Migration and Modernization Program.
 - *Option 2* - find a partner offer for a landing zone in our marketplace.
 
-We tell you how to find a partner and what to expect for each option.
+We'll show you how to find a partner and what to expect from your partner.
 
 ![A graphic that summarizes the two options to find a partner: the Azure Migration and Modernization Program and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partner-options-v5.png)
 
