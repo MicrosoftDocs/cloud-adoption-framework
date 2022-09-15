@@ -35,7 +35,7 @@ Use a [decision tree](/azure/architecture/guide/technology-choices/compute-decis
 
 Find the right implementation guidance. You'll have a general idea of the service you want to use after working through the decision tree. You still want to make sure the solution gives you the right balance of control and productivity. Finding the right balance is a main consideration in application modernization.
 
-Use the following table to find the balance. Check to see if the solution listed meets your needs. When you find the right solution, follow the implementation guidance to modernize your application.
+Use the following table to find a solution that meets your needs. When you find the right solution, follow the implementation guidance to modernize your application.
 
 | Control vs. Productivity | Solution | Your needs | Implementation guidance |
 | --- | --- | --- | --- |
