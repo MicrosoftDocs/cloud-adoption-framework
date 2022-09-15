@@ -13,7 +13,7 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernization is where you start capitalizing on the cloud. It's all about maximizing value. How can you make the biggest impact with the least amount of effort. The result of modernization is an increase in operational efficiency. You can lower your management burdens and increase performance while minimizing cost. Less work and more productivity is how you rapidly meet and exceed objectives.
+Modernization is where you start capitalizing on the cloud. It's all about maximizing value and making the biggest impact with the least amount of effort. The result of modernization is an increase in operational efficiency. You can lower your management burdens and increase performance while minimizing cost. Less work and more productivity is how you rapidly meet and exceed objectives.
 
 Below you'll find a brief overview of the modernization process. We've distilled the process into two steps:
 
@@ -41,7 +41,7 @@ Modernization is a loaded term. It means different things to different people. S
 
 Modernization is enhancing your workloads and the process to support those workloads. Let's address each aspect:
 
-- **Process modernization** - Modernizing your process means adopting a DevOps methodology. Process modernization must come before you modernize your workloads.
+- **Process modernization** - Modernizing your process means to adopt a DevOps methodology. Process modernization must come before you modernize your workloads.
 
 - **Workload modernization** - Modernizing your workloads means adopting platform-as-a-service solutions (PaaS). This definition is oversimplified, but it applies to most scenarios.
 
