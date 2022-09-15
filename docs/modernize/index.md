@@ -13,20 +13,18 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernization is about maximizing value. The goal of modernization is to make the biggest impact with the least amount of effort. The result is a digital transformation that reduces management burden, increases performance, and minimizes cost.
+Modernization is where you start capitalizing on the cloud. It's all about maximizing value. How can you make the biggest impact with the least amount of effort. The result of modernization is an increase in operational efficiency. You can lower your management burdens and increase performance while minimizing cost. Less work and more productivity is how you rapidly meet and exceed objectives.
 
-We've distilled the journey into two steps:
+Below you'll find a brief overview of the modernization process. We've distilled the modernization journey into two steps:
 
 - [Step 1. Business alignment](#step-1-business-alignment)
 - [Step 2. Modernization strategies](#step-2-modernization-strategies)
 
-Below you'll find a brief overview of the modernization process.
-
 :::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Diagram that shows three business alignment processes (envision, evaluate, and commit) and three modernization strategies (process, application, and database modernization)." border="false":::
 
-*Diagram 1: Overview of the modernization process*
+*Diagram: Overview of the modernization process*
 
-## [Step 1. Business alignment](../modernize/business-alignment/index.md)
+## Step 1. Business alignment
 
 We developed a framework that walks you through the most effective modernization processes. The first step is aligning your modernization to your business goals. Based on these goals, you'll determine:
 
@@ -37,7 +35,7 @@ You'll create a modernization roadmap that identifies the workloads you need to 
 
 With the modernization roadmap created, you can begin modernizing. You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
 
-## [Step 2. Modernization strategies](../modernize/modernize-strategies/index.md)
+## Step 2. Modernization strategies
 
 Modernization is a loaded term. It means different things to different people. So let’s define what we mean by modernization.
 
