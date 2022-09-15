@@ -1,9 +1,9 @@
 ---
 title: Introduction to the Azure high-performance computing (HPC) adoption scenario
-description: #Describe the scenario.}}
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: As an IT Professional, I want to find guidance in the Cloud Adoption Framework covering the end-to-end scenario for using Azure High-performance computing (HPC) as part of my IT strategy.
+author: ericd-mst-github
+ms.author: erd
+ms.date: 09/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
