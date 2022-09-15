@@ -41,7 +41,7 @@ Modernization is a loaded term. It means different things to different people. S
 
 Modernization is enhancing your workloads and the process to support those workloads. Let's address each aspect:
 
-- **Process modernization** - Modernizing your process means to adopt a DevOps methodology. Process modernization must come before you modernize your workloads.
+- **Process modernization** - Modernizing your process means adopting a DevOps methodology. Process modernization must come before you modernize your workloads.
 
 - **Workload modernization** - Modernizing your workloads means adopting platform-as-a-service solutions (PaaS). This definition is oversimplified, but it applies to most scenarios.
 
