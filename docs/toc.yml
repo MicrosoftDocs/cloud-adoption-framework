@@ -528,7 +528,7 @@ items:
           - name: Azure operational security best practices
             href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Skills relevant to ready and landing zones
-      href: ready/suggested-skills.md
+          href: ready/suggested-skills.md
 
     - name: Ready antipatterns
       href: antipatterns/ready-antipatterns.md
