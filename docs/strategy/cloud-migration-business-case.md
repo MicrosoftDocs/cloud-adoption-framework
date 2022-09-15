@@ -92,13 +92,13 @@ Download the following files to use the Power BI model:
 
 ### Learn about Azure with Microsoft Learn
 
-[Microsoft Learn](/learn/) offers many Azure learning paths that you might want to consider as you build your business case.
+[Microsoft Learn](/training/) offers many Azure learning paths that you might want to consider as you build your business case.
 
-- [Control Azure spending and manage bills with Azure Cost Management + Billing](/learn/paths/control-spending-manage-bills/).
-- [Microsoft Azure Well-Architected Framework - Cost Optimization](/learn/modules/azure-well-architected-cost-optimization/)
-- [Plan and manage your Azure costs](/learn/modules/plan-manage-azure-costs/)
-- [Analyze costs and create budgets with Azure Cost Management](/learn/modules/analyze-costs-create-budgets-azure-cost-management/)
-- [Configure and manage costs as a Microsoft partner by using Azure Cost Management](/learn/modules/manage-costs-partner-cost-management/)
+- [Control Azure spending and manage bills with Azure Cost Management + Billing](/training/paths/control-spending-manage-bills/).
+- [Microsoft Azure Well-Architected Framework - Cost Optimization](/training/modules/azure-well-architected-cost-optimization/)
+- [Plan and manage your Azure costs](/training/modules/plan-manage-azure-costs/)
+- [Analyze costs and create budgets with Azure Cost Management](/training/modules/analyze-costs-create-budgets-azure-cost-management/)
+- [Configure and manage costs as a Microsoft partner by using Azure Cost Management](/training/modules/manage-costs-partner-cost-management/)
 
 ## Next steps
 
