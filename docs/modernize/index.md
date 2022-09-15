@@ -15,7 +15,7 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 Modernization is where you start capitalizing on the cloud. It's all about maximizing value. How can you make the biggest impact with the least amount of effort. The result of modernization is an increase in operational efficiency. You can lower your management burdens and increase performance while minimizing cost. Less work and more productivity is how you rapidly meet and exceed objectives.
 
-Below you'll find a brief overview of the modernization process. We've distilled the modernization journey into two steps:
+Below you'll find a brief overview of the modernization process. We've distilled the process into two steps:
 
 - [Step 1. Business alignment](#step-1-business-alignment)
 - [Step 2. Modernization strategies](#step-2-modernization-strategies)
