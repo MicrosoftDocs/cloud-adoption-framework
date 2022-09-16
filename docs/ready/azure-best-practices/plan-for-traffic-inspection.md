@@ -12,7 +12,9 @@ ms.custom: think-tank
 
 # Plan for traffic inspection
 
-Knowing what comes in and out of your network is essential to your security posture. You should capture all inbound and outbound traffic and perform near real-time analysis on that traffic. This section explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network.
+Knowing what goes in and out of your network is essential to maintaining your security posture. You should capture all inbound and outbound traffic and perform near real-time analysis on that traffic to detect threats and mitigate network vulnerabilities.
+
+This section explores key considerations and recommended approaches for capturing and analyzing traffic within an Azure virtual network.
 
 **Design considerations:**
 
@@ -22,23 +24,26 @@ Knowing what comes in and out of your network is essential to your security post
 
 *Azure Network Watcher* has multiple tools you should consider if you're using infrastructure-as-a-service (IaaS) solutions:
 
-- *Packet capture -* Network Watcher lets you create temporary capture packet sessions to and from a virtual machine. Each packet capture session has a time limit and creates a `pcap` file for analysis. Network Watcher packet capture can't give you continuous port mirroring with these time constraints. For more information, see [packet capture overview](/azure/network-watcher/network-watcher-packet-capture-overview).
+- *Packet capture -* Network Watcher lets you create temporary capture packet sessions on traffic headed to and from a virtual machine. Each packet capture session has a time limit. When the session ends, packet capture creates a `pcap` file that you can download and analyze. Network Watcher packet capture can't give you continuous port mirroring with these time constraints. For more information, see [packet capture overview](/azure/network-watcher/network-watcher-packet-capture-overview).
   
-- *Network Security Group (NSG) flow Logs -* NSG flow logs capture information about IP traffic flowing through your NSGs. Network Watcher stores NSG flow logs as JSON files in Azure Storage account. [You can export the NSG flow logs to an external tool for analysis. For more information, see NSG flow logs [overview](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) and [data analysis options](/azure/network-watcher/network-watcher-visualize-nsg-flow-logs-power-bi).
+- *Network Security Group (NSG) flow Logs -* NSG flow logs capture information about IP traffic flowing through your NSGs. Network Watcher stores NSG flow logs as JSON files in Azure Storage account. You can export the NSG flow logs to an external tool for analysis. For more information, see NSG flow logs [overview](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) and [data analysis options](/azure/network-watcher/network-watcher-visualize-nsg-flow-logs-power-bi).
   
-- *Traffic Analytics -* Traffic Analytics ingests and analyzes NSG flow logs. It creates a dashboard of insights on all inbound and outbound network traffic. It creates a geo-map view of your resources and traffic with detailed dashboard analysis. For more information, see [Traffic Analytics overview](/azure/network-watcher/traffic-analytics).
+- *Traffic Analytics -* Traffic Analytics ingests and analyzes NSG flow logs. It creates a dashboard of insights on the NSG flow logs and creates a geo-map view of your resources for easy analysis. For more information, see [Traffic Analytics overview](/azure/network-watcher/traffic-analytics).
 
 **Design recommendations:**
 
-- Use Traffic Analytics to capture inbound and outbound network traffic with out-of-the-box dashboard visualization and security analysis.
+- Enable Traffic Analytics. The tool lets you easily capture and analyze network traffic with out-of-the-box dashboard visualization and security analysis.
 
-- Configure Network Watcher packet capture to get a more detailed understanding of your network traffic. Run packet capture sessions at different times and days to get a more comprehensive view of your network traffic.
+- If you need more capabilities than Traffic Analytics offers, you can supplement Traffic Analytics with one of our partner solutions. You can find available partner solutions in the [Azure Marketplace](https://azuremarketplace.microsoft.com/home).
 
-- Find and deploy partner solutions for supplementary or enhanced traffic monitoring solutions. You can find available solutions in the [Azure Marketplace](https://azuremarketplace.microsoft.com/home).
+- Use Network Watcher packet capture regularly to get a more detailed understanding of your network traffic. Run packet capture sessions at various times throughout the week to get a good understanding of the types of traffic traversing your network.
 
-- Don't develop a custom solution to mirror traffic for large deployments. The complexity and supportability issues tend to make custom solutions difficult to generate value.
+- Don't develop a custom solution to mirror traffic for large deployments. The complexity and supportability issues tend to make custom solutions inefficient.
 
 ## Additional platforms
 
-- Manufacturing plants often have operational technology (OT) requirements that include traffic mirroring. Microsoft Defender for IoT can be connected to a mirror on a switch or a TAP for industrial control systems (ICS) or Supervisory control and data acquisition (CSADA) data. See [Traffic mirroring methods for OT monitoring](/azure/defender-for-iot/organizations/best-practices/traffic-mirroring-methods).
-- Traffic mirroring is an application dev technique that can be used as part of advanced workload deployment techniques to do pre-production regression testing using live workload traffic or offline quality/security assurance processes. When using Azure Kubernetes Service (AKS), ensure your ingress controller supports this feature if you plan on using it as part of your workload lifecycle.  Common ingress controllers that support this are [Istio](https://istio.io/latest/docs/tasks/traffic-management/mirroring/), [NGINX](https://nginx.org/en/docs/http/ngx_http_mirror_module.html), [Traefik](https://doc.traefik.io/traefik/routing/services/#mirroring-service).
+- Manufacturing plants often have operational technology (OT) requirements that include traffic mirroring. Microsoft Defender for IoT can connect to a mirror on a switch or a TAP for industrial control systems (ICS) or supervisory control and data acquisition (SCADA) data. For more information, see [traffic mirroring methods for OT monitoring](/azure/defender-for-iot/organizations/best-practices/traffic-mirroring-methods).
+
+- Traffic mirroring supports advanced workload deployment strategies in application development. With traffic mirroring, you can perform pre-production regression testing on live workload traffic or assess quality assurance and security assurance processes offline.
+
+- When using Azure Kubernetes Service (AKS), ensure your ingress controller supports traffic mirroring if it's a part of your workload. Common ingress controllers that support this are [Istio](https://istio.io/latest/docs/tasks/traffic-management/mirroring/), [NGINX](https://nginx.org/en/docs/http/ngx_http_mirror_module.html), [Traefik](https://doc.traefik.io/traefik/routing/services/#mirroring-service).
