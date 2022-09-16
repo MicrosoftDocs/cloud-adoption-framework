@@ -22,9 +22,11 @@ Industries such as automotive, energy, health and life sciences, silicon, and ma
 
 While the computation of their data is being orchestrated, each industry customer can focus more on analyzing and creating value from the results to prioritize and achieve their business goals in a cost effective and timely manner.
 
+<!--adding an architecture diagram appropriate at the end?-->
+
 ## HPC narrative <!--CAF for HPC as alternate title?-->
 
-Use this section to tell the story & Microsoft's position on this story.
+As customers choose the relevant HPC solution for their business goals, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
 
 ## Next step: Integrate HPC into your cloud adoption journey
 
