@@ -3,7 +3,8 @@ title: Database restore points for Azure Synapse Analytics
 description: Learn how to use Azure Synapse Analytics features to address database restore and disaster recovery requirements.
 author: v-hanki
 ms.author: brblanch
-ms.date: 06/29/2021
+ms.date: 9/16/2022
+ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -26,6 +27,9 @@ The service also supports user-defined restore points. Manually triggering snaps
 
 ## Disaster recovery
 
-In addition to the snapshots described earlier, Azure Synapse Analytics performs a standard geo-backup once per day to a paired datacenter. The RPO for a geo-restore is 24 hours. The dedicated SQL pool is backed up. You can restore the geo-backup to a server in any other region where Azure Synapse Analytics is supported. A geo-backup ensures that a data warehouse can be restored in case the restore points in the primary region are not available.
+In addition to the snapshots described earlier, Azure Synapse Analytics performs a standard geo-backup once per day to a paired datacenter. The RPO for a geo-restore is 24 hours. The dedicated SQL pool is backed up. Dedicated SQL pool (formerly SQL DW) refers to the enterprise data warehousing features that are available in Azure Synapse Analytics. You can restore the geo-backup to a server in any other region where Azure Synapse Analytics is supported. A geo-backup ensures that a data warehouse can be restored in case the restore points in the primary region are not available.
 
-For more details about database backup and recovery, see [Backup and restore in Azure Synapse Dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/backup-and-restore).
+For more information, see:
+
+- [Backup and restore in Azure Synapse Dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/backup-and-restore)
+- [Dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)
