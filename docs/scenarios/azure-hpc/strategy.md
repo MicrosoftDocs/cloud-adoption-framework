@@ -16,18 +16,21 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 ## HPC motivations
 
-What would motivate the customer to act on this scenario?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/motivations
+When building your own HPC solution, there is significant investment required in specifying the right supercomputer specs and clusters. There are also financial concerns for investing in capital for continually upgrading computing hardware to meet high demanding workloads. 
+
+There are other concerns with time, as scheduling can take from days to months to run an HPC workload which will heavily affect optimization of internal operations.
 
 ## HPC outcomes
 
-When customers act on this scenario, what do they expect to see as an outcome?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/business-outcomes/
+With HPC in Azure, there is less concern in building your own expensive hardware and more focus on aligning your tools and processes to get the data you need for simulation and modeling results.
+
+As geographical and market HPC demands require scaling out the compute resources, an Azure HPC system allows flexibility by adding dynamic resources as they are needed and remove them as demand falls to ensure a cost effective and high performing solution.
 
 ## HPC business justification
 
-Is there something special that customers have to do to justify doing this thing?
-https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case
+When configuring your HPC environment to the cloud, you will want to consider forecasting what your on-premises HPC costs would be if no cloud migration is planned versus the costs of migrating to the cloud to determine how much spending is done to run your environment today, in an average year, and what the migration timeline will look like.
+
+Cloud billing models are flexible and Azure HPC Cache pricing offers low-latency file access to support HPC workloads in Azure. You can use Azure HPC Cache for transferring excess compute capacity to Azure while leaving large datasets in your network-attached storage (NAS) or Azure Blob storage for a cloud NAS solution.
 
 ## Next steps
 
