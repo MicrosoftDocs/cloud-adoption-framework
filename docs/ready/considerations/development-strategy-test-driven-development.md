@@ -116,9 +116,9 @@ You can easily integrate these Azure tools and features into TDD for landing zon
 
 Depending on your preferred approach, you can also use the following tools:
 
-- [Cloud Adoption Framework for Azure Terraform landing zones](https://github.com/Azure/caf-terraform-landingzones).
-- [Azure Landing Zones using Bicep](https://github.com/Azure/ALZ-Bicep).
-- [AzOps](https://github.com/Azure/AzOps), a PowerShell module that pushes resource templates and Bicep files at all Azure scope levels, and pulls and exports Azure resource hierarchies.
+- [Deploy landing zones using Terraform](/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform).
+- [Deploy landing zones using Bicep](https://github.com/Azure/ALZ-Bicep).
+- [Manage landing zones using AzOps](https://github.com/Azure/AzOps), a PowerShell module that pushes resource templates and Bicep files at all Azure scope levels, and pulls and exports Azure resource hierarchies.
 
 ## Next steps
 

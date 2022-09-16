@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Development security implementation and operations
 
-This article provides best practices for development security implementation and operations.
+This article describes implementation and operations for your organization in the context of development security.
 
 Follow [development security best practices architecture](security-best-practices-introduction.md). Use secure landing zone deployments with repeatable governance and security tools and controls to quickly achieve a security baseline for your organization. The Cloud Adoption Framework's Security Baseline discipline doesn't replace the IT teams, processes, and procedures that your organization currently uses to secure cloud-deployed resources.
 
@@ -36,10 +36,16 @@ Ensure your organization's developers use consistent tooling and focus on the se
 
 Learn how you to [integrate security processes and tools](/azure/cloud-adoption-framework/secure/devsecops-controls) into your DevOps development process.
 
-The following video contains guidance to help you implement secure and rapid innovation for your organization:
+Learn how to implement secure and rapid innovation for your organization:
 
-> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RWVu6q>]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu6q]
+
+For more information about core DevOps security controls in the Azure Security Benchmark, see [Security Control v3: DevOps security](/security/benchmark/azure/security-controls-v3-devops-security).
 
 ## Next steps
 
-For more information about core DevOps security controls in the Azure Security Benchmark, see [DevOps Security (Security Control v3)](/security/benchmark/azure/security-controls-v3-devops-security).
+> [!div class="nextstepaction"]
+> [Infrastructure and development security best practices overview](security-best-practices-introduction.md)
+
+> [!div class="nextstepaction"]
+> [Define a security strategy](../strategy/define-security-strategy.md)

@@ -12,9 +12,11 @@ ms.custom: internal
 
 # Infrastructure security strategy
 
-This article contains best practices for infrastructure security strategies. It includes security for common enterprise-wide elements that multiple workloads depend on, as shown in the following diagram:
+This article describes security for enterprise-wide elements that multiple workloads depend on, as shown in the following diagram:
 
 [ ![Diagram of infrastructure security strategies flow](./media/enterprise-infrastructure-security-strategy.png).](./media/enterprise-infrastructure-security-strategy.png#lightbox)
+
+## Strategy
 
 Start with a proven cloud infrastructure security approach and adapt it to your organization's needs and initial workload deployments. Don't try to use a custom approach right away.
 
@@ -24,7 +26,10 @@ Align your initial MVP and incremental progress priorities with established best
 
 The Cloud Adoption Framework's strategy approach also includes considerations that help you modernize strategies, architectures, and technology end-to-end on your organization's cloud adoption path. For more information, see [Defining security strategies](/azure/cloud-adoption-framework/strategy/define-security-strategy).
 
-Next steps:
+## Next steps
 
-- [Infrastructure security architecture](infrastructure-security-architecture.md)
-- [Infrastructure security implementation, operations, and governance](infrastructure-security-implementation.md)
+> [!div class="nextstepaction"]
+> [Infrastructure security architecture](infrastructure-security-architecture.md)
+
+> [!div class="nextstepaction"]
+> [Infrastructure security implementation](infrastructure-security-implementation.md)

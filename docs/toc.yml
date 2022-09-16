@@ -241,7 +241,7 @@ items:
         href: ready/azure-setup-guide/manage-costs.md
       - name: Plan governance, security, and compliance
         href: ready/azure-setup-guide/govern-org-compliance.md
-      - name: Establish monitoring and reporting
+      - name: Monitoring and reporting
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
@@ -378,7 +378,9 @@ items:
             href: ready/landing-zone/design-area/encryption-and-keys.md
           - name: Service enablement framework
             href: ready/landing-zone/design-area/service-enablement-framework.md
-
+          - name: Security control mapping
+            href: ready\control-mapping\security-control-mapping.md
+            
         - name: Management
           items:
           - name: Overview
@@ -477,7 +479,7 @@ items:
 
         - name: ISV considerations for landing zones
           href: ready/landing-zone/isv-landing-zone.md
-        - name: Partner landing zones
+        - name: Get landing zone help
           href: ready/landing-zone/partner-landing-zone.md
 
       - name: Align
@@ -496,9 +498,19 @@ items:
         - name: Improve landing zone operations
           href: ready/considerations/landing-zone-operations.md
         - name: Improve landing zone governance
-          href: ready/considerations/landing-zone-governance.md
-        - name: Improve landing zone security
           items:
+          - name: Overview
+            href: ready/considerations/landing-zone-governance.md
+          - name: Naming and tagging standards
+            href: ready/azure-best-practices/naming-and-tagging.md
+          - name: Track costs across workloads
+            href: ready/azure-best-practices/track-costs.md
+          - name: Scale with multiple subscriptions
+            href: ready/azure-best-practices/scale-subscriptions.md
+          - name: Organize subscriptions
+            href: ready/landing-zone/design-area/resource-org.md
+        - name: Improve landing zone security
+          items: 
           - name: Overview
             href: ready/considerations/landing-zone-security.md
           - name: Onboard a subscription to Microsoft Defender for Cloud
@@ -525,6 +537,12 @@ items:
 
   - name: Adopt
     items:
+    - name: Overview
+      href: adopt/index.md
+    - name: Cloud adoption journey
+      href: adopt/cloud-adoption.md
+    - name: Migrate or modernize first? 
+      href: adopt/migrate-or-modernize.md
     - name: Migrate
       items:
       - name: Overview
@@ -818,7 +836,7 @@ items:
             href: infrastructure/mainframe-migration/application-strategies.md
         - name: Migrate secure workloads
           items:
-          - name: Securing and managing workloads after migration
+          - name: Secure and manage workloads after migration
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
           - name: Azure database security best practices
             href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
@@ -943,6 +961,31 @@ items:
 
       - name: Skills relevant to migrate
         href: migrate/suggested-skills.md
+    
+    - name: Modernize
+      items:
+      - name: Overview  
+        href: modernize/index.md
+      - name: Business alignment
+        items:
+        - name: Overview
+          href: modernize/business-alignment/index.md
+        - name: Envision 
+          href: modernize/business-alignment/envision-cloud-modernization.md
+        - name: Evaluate
+          href: modernize/business-alignment/evaluate-modernization-options.md
+        - name: Commit
+          href: modernize/business-alignment/commit-to-modernization-plan.md      
+      - name: Modernization strategies
+        items:
+        - name: Overview
+          href: modernize/modernize-strategies/index.md
+        - name: Process modernization 
+          href: modernize/modernize-strategies/process-modernization.md
+        - name: Application modernization
+          href: modernize/modernize-strategies/application-modernization.md
+        - name: Database modernization
+          href: modernize/modernize-strategies/database-modernization.md
 
     - name: Innovate
       items:
@@ -1171,6 +1214,7 @@ items:
             - name: Get started with a shared repository via GitHub
               href: https://guides.github.com/introduction/git-handbook/
             - name: Get started with a shared backlog
+              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
             - name: Synchronize Power Apps with Azure DevOps
               href: /power-platform/alm/devops-build-tools?&preserve-view=true&toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Feedback loops
@@ -1186,7 +1230,7 @@ items:
           - name: Reliable testing
             items:
             - name: Manage and track test plans
-              href: /azure/devops/test/track-test-status?&preserve-view=true&bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
           - name: Solution deployment
             items:
             - name: Continuous deployment with Azure Pipelines and GitHub
@@ -1669,48 +1713,41 @@ items:
         href: secure/devsecops-controls.md
 
     - name: Best practices
-      items:
-      - name: Securing DevOps
-        href: secure/best-practices/secure-devops.md
-      - name: Secure DevOps governance
-        href: secure/best-practices/end-to-end-governance.md
-      - name: Azure Virtual Desktop
-        href: scenarios/wvd/eslz-security-governance-and-compliance.md
-      - name: Managing secrets
-        href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Network security
-        href: /security/compass/network-security-containment
+      items:  
+      - name: Infrastructure and development security
+        items:
+        - name: Introduction
+          href: secure/security-best-practices-introduction.md
+        - name: Infrastructure security
+          items:
+          - name: Overview
+            href: secure/infrastructure-security-overview.md
+          - name: Strategy
+            href: secure/infrastructure-security-strategy.md
+          - name: Architecture
+            href: secure/infrastructure-security-architecture.md
+          - name: Implementation
+            href: secure/infrastructure-security-implementation.md
+          - name: Operations and governance
+            href: secure/infrastructure-security-operations-governance.md
+        - name: Development security
+          items:
+          - name: Strategy
+            href: secure/development-security-strategy-overview.md
+          - name: Innovation security
+            href: secure/development-innovation-security.md
+          - name: Securing DevOps strategy and process
+            href: secure/devops-strategy-process-security.md
+          - name: Securing DevOps CI/CD pipelines
+            href: secure/best-practices/secure-devops.md
+          - name: Secure DevOps governance
+            href: secure/best-practices/end-to-end-governance.md
+          - name: Architecture
+            href: secure/development-security-architecture.md
+          - name: Implementation
+            href: secure/development-security-implementation-operations.md
       - name: Toolchain
         href: secure/best-practices/toolchain.md
-
-    - name: Infrastructure and Development
-      items:
-      - name: Introduction
-        href: secure/security-best-practices-introduction.md
-      - name: Infrastructure
-        items:        
-        - name: Overview
-          href: secure/infrastructure-security-overview.md
-        - name: Strategy
-          href: secure/infrastructure-security-strategy.md
-        - name: Security architecture
-          href: secure/infrastructure-security-architecture.md
-        - name: Security implementation, operations, and governance
-          href: secure/infrastructure-security-implementation.md
-        - name: Operations
-          href: secure/infrastructure-security-operations-governance.md
-      - name: Development
-        items:                  
-        - name: Development security strategy
-          href: secure/development-security-strategy-overview.md
-        - name: Development innovation security
-          href: secure/development-innovation-security.md
-        - name: Securing DevOps strategy and process
-          href: secure/devops-strategy-process-security.md
-        - name: Development security architecture
-          href: secure/development-security-architecture.md
-        - name: Development security implementation and operations
-          href: secure/development-security-implementation-operations.md
 
     - name: Security considerations
       items:
@@ -1722,11 +1759,11 @@ items:
         href: get-started/security.md
       - name: Azure security top 10
         href: secure/security-top-10.md
-      - name: Microsoft cybersecurity reference architectures
+      - name: Microsoft Cybersecurity Reference Architectures
         href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Security documentation
         href: /security/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Azure security benchmarks
+      - name: Azure Security Benchmark
         href: /security/benchmark/azure/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
   - name: Organize
@@ -1890,13 +1927,13 @@ items:
           href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
       - name: AI + machine learning
         items:
-        - name: Organize and set up Azure Machine Learning environments
+        - name: Organize and set up Azure Machine Learning
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
         - name: Best practices for enterprise security
           href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
-        - name: Budget, cost, and quota management with Azure Machine Learning
+        - name: Manage budget, cost, and quota with Azure
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
-        - name: Machine learning DevOps (MLOps)
+        - name: Machine learning operations
           href: ready/azure-best-practices/ai-machine-learning-mlops.md
       - name: Create hybrid cloud consistency
         href: ready/considerations/hybrid-consistency.md

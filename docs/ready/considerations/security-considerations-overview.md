@@ -34,7 +34,7 @@ Manage security in Azure DevOps by using security groups, policies, and settings
 
 ## Restrict repository and branch access
 
-Restrict repository access, permissions, and branch creation to protect your code and environments from undesired or malicious changes. [Restrict access to repositories](/azure/devops/repos/git/set-git-repository-permissions?toc=%2fazure%2fdevops%2forganizations%2fsecurity%2ftoc.json&bc=%2fazure%2fdevops%2forganizations%2fsecurity%2fbreadcrumb%2ftoc.json) by using security groups in Azure DevOps. Limit who can read and update code in your branches by setting [branch permissions](/azure/devops/repos/git/branch-permissions?toc=%2Fazure%2Fdevops%2Forganizations%2Fsecurity%2Ftoc.json&bc=%2Fazure%2Fdevops%2Forganizations%2Fsecurity%2Fbreadcrumb%2Ftoc.json).
+Restrict repository access, permissions, and branch creation to protect your code and environments from undesired or malicious changes. [Restrict access to repositories](/azure/devops/repos/git/set-git-repository-permissions?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json) by using security groups in Azure DevOps. Limit who can read and update code in your branches by setting [branch permissions](/azure/devops/repos/git/branch-permissions?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json).
 
 ## Restrict pipeline access and permissions
 

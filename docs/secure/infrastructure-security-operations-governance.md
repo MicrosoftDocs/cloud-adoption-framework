@@ -1,5 +1,5 @@
 ---
-title: Operations
+title: Infrastructure security operations and governance
 description: Learn about which roles are responsible for security decisions, governance best practices and continuous assessment, and other elements of operations.
 author: mpvenables
 ms.author: mas
@@ -10,9 +10,9 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Operations
+# Infrastructure security operations and governance
 
-This article describes infrastructure security operations governance.
+This article describes operations and governance for your organization in the context of infrastructure security.
 
 ## Responsibility assignment and awareness
 
@@ -62,4 +62,8 @@ Your processes and procedures should also include:
 
 ## Next steps
 
-- [Development security](development-security-strategy-overview.md)
+> [!div class="nextstepaction"]
+> [Development security strategy](development-security-strategy-overview.md)
+
+> [!div class="nextstepaction"]
+> [Infrastructure security operations](security-operations.md)

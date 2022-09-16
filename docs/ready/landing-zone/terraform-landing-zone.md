@@ -49,7 +49,7 @@ The following diagram shows an overview of a developer environment, including an
 
 ![Diagram of a seamless experience from coding to pipelines.](../../_images/ready/terraform-dev-rover.png)
 
-For all of those reasons, we recommend the use of containers on the developer's machine and in the pipelines. The Cloud Adoption Framework  serves this purpose. All GitHub repositories for the Cloud Adoption Framework have a `.devcontainer` folder that includes a reference to a container (Rover) for the recommended runtime environment.
+For all of those reasons, we recommend the use of containers on the developer's machine and in the pipelines. The Cloud Adoption Framework serves this purpose. All GitHub repositories for the Cloud Adoption Framework have a `.devcontainer` folder that includes a reference to a container (Rover) for the recommended runtime environment.
 
 >[!TIP]
 >Although Rover is useful, it's not mandatory. You can use any Cloud Adoption Framework Terraform component separately.
@@ -142,7 +142,7 @@ Rover is an open-source project. You can use it directly from [Docker Hub](https
 
 ### Azure landing zone module
 
-You can use the Terraform module for Azure landing zones to deploy the management groups and policy recommendations for the enterprise-scale critical design area. This module is available from the [HashiCorp Terraform Registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest).
+You can use the Azure landing zones Terraform module to deploy the management groups and policy recommendations for the enterprise-scale critical design area. This module is available from the [Terraform Registry](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest).
 
 The configuration of the enterprise-scale module, through either the default parameters or a highly customized environment for management groups and policies, is left to the implementation phase to map the needs of each organization.
 
