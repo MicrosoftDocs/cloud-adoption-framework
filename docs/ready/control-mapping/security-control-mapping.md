@@ -132,7 +132,7 @@ After the approval from your internal security/audit team that the platform and 
 The following sections describe the process of identifying, mapping, and implementing regulatory compliance-related controls as part of Azure landing zone deployment. Deployment covers policies that are aligned with Azure Security Benchmark for platform-level security controls.
 
 > [!TIP]
-> As part of the Azure landing zone accelerators ([Portal](https://aka.ms/alz), [Bicep](https://aka.ms/alz/bicep) & [Terraform](https://aka.ms/alz/tf)), we assign the Azure Security Benchmark policy initiative to Intermediate Root Management Group by default.
+> As part of the Azure landing zone accelerators ([Portal](/azure/cloud-adoption-framework/ready/landing-zone/), [Bicep](https://aka.ms/alz/bicep) & [Terraform](https://aka.ms/alz/tf)), we assign the Azure Security Benchmark policy initiative to Intermediate Root Management Group by default.
 
 You can learn about [policies assigned as part of an Azure landing zone Accelerator deployment](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
 
