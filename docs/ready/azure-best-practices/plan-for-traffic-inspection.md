@@ -16,9 +16,7 @@ Knowing what goes in and out of your network is essential to maintaining your se
 
 This section explores key considerations and recommended approaches for capturing and analyzing traffic within an Azure virtual network.
 
-**Design considerations:**
-
-<!-- docutune:ignore TAP -->
+## Design considerations
 
 *Azure VPN Gateway -* VPN Gateway lets you run a packet capture on a VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. These can be gateway-wide and per-connection packet captures. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture).
 
@@ -30,7 +28,7 @@ This section explores key considerations and recommended approaches for capturin
   
 - *Traffic Analytics -* Traffic Analytics ingests and analyzes NSG flow logs. It creates a dashboard of insights on the NSG flow logs and generates a geo-map view of your resources for easy analysis. For more information, see [Traffic Analytics overview](/azure/network-watcher/traffic-analytics).
 
-**Design recommendations:**
+## Design recommendations
 
 - Enable Traffic Analytics. The tool lets you easily capture and analyze network traffic with out-of-the-box dashboard visualization and security analysis.
 
