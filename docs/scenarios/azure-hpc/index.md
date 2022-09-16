@@ -26,7 +26,7 @@ While the computation of their data is being orchestrated, each industry custome
 
 ## HPC narrative <!--CAF for HPC as alternate title?-->
 
-As customers choose the relevant HPC solution for their business goals, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
+As customers choose the relevant HPC solution for their specialized computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
 
 ## Next step: Integrate HPC into your cloud adoption journey
 
