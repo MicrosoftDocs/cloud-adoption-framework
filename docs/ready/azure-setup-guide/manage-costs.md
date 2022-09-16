@@ -80,8 +80,6 @@ To learn more, see:
 1. Go to **Cost Management + Billing**.
 1. Select **Invoices** or **Payment methods** from the **Billing** section in the left pane.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/ModernBillingMenuBlade/Overview]" submitText="Go to Cost Management + Billing" ::: form-end
-
 **Billing and subscription support:**
 
 We offer 24-hour access every day for billing and subscription support to Azure customers. If you need assistance to understand Azure usage, create a support request.
@@ -97,7 +95,5 @@ To submit a new support request:
 
 1. Go to **Help + Support**.
 2. Select **All support requests**.
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview]" submitText="Go to Help + Support" ::: form-end
 
 ::: zone-end
