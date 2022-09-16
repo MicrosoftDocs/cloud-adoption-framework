@@ -18,7 +18,7 @@ This section explores key considerations and recommended approaches for capturin
 
 ## Design considerations
 
-*Azure VPN Gateway -* VPN Gateway lets you run a packet capture on a VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. These can be gateway-wide and per-connection packet captures. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture).
+*Azure VPN Gateway -* VPN Gateway lets you run a packet capture on a VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. They can be gateway-wide and per-connection packet captures. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture).
 
 *Azure Network Watcher* has multiple tools you should consider if you're using infrastructure-as-a-service (IaaS) solutions:
 
@@ -38,10 +38,10 @@ This section explores key considerations and recommended approaches for capturin
 
 - Don't develop a custom solution to mirror traffic for large deployments. The complexity and supportability issues tend to make custom solutions inefficient.
 
-## Additional platforms
+## Other platforms
 
 - Manufacturing plants often have operational technology (OT) requirements that include traffic mirroring. Microsoft Defender for IoT can connect to a mirror on a switch or a terminal access point (TAP) for industrial control systems (ICS) or supervisory control and data acquisition (SCADA) data. For more information, see [traffic mirroring methods for OT monitoring](/azure/defender-for-iot/organizations/best-practices/traffic-mirroring-methods).
 
 - Traffic mirroring supports advanced workload deployment strategies in application development. With traffic mirroring, you can perform pre-production regression testing on live workload traffic or assess quality assurance and security assurance processes offline.
 
-- When using Azure Kubernetes Service (AKS), ensure your ingress controller supports traffic mirroring if it's a part of your workload. Common ingress controllers that support this are [Istio](https://istio.io/latest/docs/tasks/traffic-management/mirroring/), [NGINX](https://nginx.org/en/docs/http/ngx_http_mirror_module.html), [Traefik](https://doc.traefik.io/traefik/routing/services/#mirroring-service).
+- When using Azure Kubernetes Service (AKS), ensure your ingress controller supports traffic mirroring if it's a part of your workload. Common ingress controllers that support traffic mirroring are [Istio](https://istio.io/latest/docs/tasks/traffic-management/mirroring/), [NGINX](https://nginx.org/en/docs/http/ngx_http_mirror_module.html), [Traefik](https://doc.traefik.io/traefik/routing/services/#mirroring-service).
