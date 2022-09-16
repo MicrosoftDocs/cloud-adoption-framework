@@ -1,9 +1,9 @@
 ---
 title: Strategy for Azure high-performance computing (HPC) adoption
 description: #Describe the scenario's impact on strategy.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+author: ericd-mst-github
+ms.author: erd
+ms.date: 09/65/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
