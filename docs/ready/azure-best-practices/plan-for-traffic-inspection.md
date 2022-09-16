@@ -20,15 +20,15 @@ This section explores key considerations and recommended approaches for capturin
 
 <!-- docutune:ignore TAP -->
 
-*Azure VPN Gateway -* VPN Gateway lets you run a packet capture on the VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. They can be gateway-wide and per-connection packet captures. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture)
+*Azure VPN Gateway -* VPN Gateway lets you run a packet capture on a VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. These can be gateway-wide and per-connection packet captures. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture).
 
 *Azure Network Watcher* has multiple tools you should consider if you're using infrastructure-as-a-service (IaaS) solutions:
 
 - *Packet capture -* Network Watcher lets you create temporary capture packet sessions on traffic headed to and from a virtual machine. Each packet capture session has a time limit. When the session ends, packet capture creates a `pcap` file that you can download and analyze. Network Watcher packet capture can't give you continuous port mirroring with these time constraints. For more information, see [packet capture overview](/azure/network-watcher/network-watcher-packet-capture-overview).
   
-- *Network Security Group (NSG) flow Logs -* NSG flow logs capture information about IP traffic flowing through your NSGs. Network Watcher stores NSG flow logs as JSON files in Azure Storage account. You can export the NSG flow logs to an external tool for analysis. For more information, see NSG flow logs [overview](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) and [data analysis options](/azure/network-watcher/network-watcher-visualize-nsg-flow-logs-power-bi).
+- *Network Security Group (NSG) flow logs -* NSG flow logs capture information about IP traffic flowing through your NSGs. Network Watcher stores NSG flow logs as JSON files in Azure Storage account. You can export the NSG flow logs to an external tool for analysis. For more information, see NSG flow logs [overview](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) and [data analysis options](/azure/network-watcher/network-watcher-visualize-nsg-flow-logs-power-bi).
   
-- *Traffic Analytics -* Traffic Analytics ingests and analyzes NSG flow logs. It creates a dashboard of insights on the NSG flow logs and creates a geo-map view of your resources for easy analysis. For more information, see [Traffic Analytics overview](/azure/network-watcher/traffic-analytics).
+- *Traffic Analytics -* Traffic Analytics ingests and analyzes NSG flow logs. It creates a dashboard of insights on the NSG flow logs and generates a geo-map view of your resources for easy analysis. For more information, see [Traffic Analytics overview](/azure/network-watcher/traffic-analytics).
 
 **Design recommendations:**
 
@@ -42,7 +42,7 @@ This section explores key considerations and recommended approaches for capturin
 
 ## Additional platforms
 
-- Manufacturing plants often have operational technology (OT) requirements that include traffic mirroring. Microsoft Defender for IoT can connect to a mirror on a switch or a TAP for industrial control systems (ICS) or supervisory control and data acquisition (SCADA) data. For more information, see [traffic mirroring methods for OT monitoring](/azure/defender-for-iot/organizations/best-practices/traffic-mirroring-methods).
+- Manufacturing plants often have operational technology (OT) requirements that include traffic mirroring. Microsoft Defender for IoT can connect to a mirror on a switch or a terminal access point (TAP) for industrial control systems (ICS) or supervisory control and data acquisition (SCADA) data. For more information, see [traffic mirroring methods for OT monitoring](/azure/defender-for-iot/organizations/best-practices/traffic-mirroring-methods).
 
 - Traffic mirroring supports advanced workload deployment strategies in application development. With traffic mirroring, you can perform pre-production regression testing on live workload traffic or assess quality assurance and security assurance processes offline.
 
