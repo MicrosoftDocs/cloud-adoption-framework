@@ -75,11 +75,7 @@ To create a management group, subscription, or resource group, sign in to the [A
 
 - To create a **management group** to help you manage multiple subscriptions, go to **Management groups** and select **Create**.
 
-  ::: form action="OpenBlade[#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade]" submitText="Go to Management groups" :::
-
 - To create another **subscription** to associate users with resources, go to **Subscriptions** and select **Add**.
-
-  ::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/SubscriptionsBlade]" submitText="Go to Subscriptions" :::
 
 - To create a **resource group** to hold resources that share the same permissions and policies:
   1. Go to **Resource groups** and select **Create**.
@@ -88,8 +84,6 @@ To create a management group, subscription, or resource group, sign in to the [A
      1. Enter a name for the **Resource group**.
      1. Select a **Region** for the resource group location.
   1. Select **Review + create**, and if the review passes, select **Create**.
-
-  ::: form action="Create[#create/Microsoft.ResourceGroup]" submitText="Create a resource group" :::
 
 ::: zone-end
 
@@ -159,8 +153,6 @@ To apply a tag to a resource group:
 1. Go to **Resource groups** and select a resource group.
 1. Select **Tags** in the left navigation.
 1. Enter a new name and value, or select an existing name and value, and then select **Apply**.
-
-::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups]" submitText="Go to resource groups" :::
 
 ::: zone-end
 
