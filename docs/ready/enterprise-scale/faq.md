@@ -110,8 +110,8 @@ A common challenge to this approach is that you might need some policies to appl
 
 *Some management groups have been removed for illustration clarity purposes.*
 
-> [!NOTE]
-> We discussed this topic in our Azure landing zone community call in August 2021. You can find the recording on [YouTube.](https://youtu.be/Zx_gHevekm0?t=1954)
+> [!TIP]
+> We discussed this topic in a recent YouTube video: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA)
 
 ## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
 
