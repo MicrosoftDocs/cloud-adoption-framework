@@ -526,7 +526,7 @@ items:
           - name: Azure operational security best practices
             href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
-      - name: Azure Landing Zones FAQ
+      - name: Azure landing zones FAQ
         href: ready/enterprise-scale/faq.md
 
     - name: Skills relevant to ready and landing zones
