@@ -29,7 +29,6 @@ All Azure services that provide a consumption-based cost model can be resized th
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/metrics]" submitText="Go to Monitor" :::
 
 ::: zone-end
 
@@ -50,7 +49,6 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Compute%2FVirtualMachines]" submitText="Go to Virtual Machines" :::
 
 ::: zone-end
 
@@ -75,7 +73,6 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Storage%2FStorageAccounts]" submitText="Go to Storage Accounts" :::
 
 ::: zone-end
 
@@ -88,7 +85,6 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Sql%2FServers%2FDatabases]" submitText="Go to SQL Databases" :::
 
 ::: zone-end
 
@@ -104,7 +100,6 @@ Azure Cost Management + Billing works with Azure Advisor to provide cost optimiz
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/ModernBillingMenuBlade/Overview]" submitText="Go to Cost Management + Billing" :::
 
 ::: zone-end
 
@@ -116,7 +111,6 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Expert/AdvisorBlade]" submitText="Go to Azure Advisor" :::
 
 ::: zone-end
 
