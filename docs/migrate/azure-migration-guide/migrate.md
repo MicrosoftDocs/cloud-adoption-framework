@@ -66,7 +66,6 @@ The first time you use Azure Database Migration Service, you must register the r
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/SubscriptionsBlade]" submitText="Go to Subscriptions" :::
 
 ::: zone-end
 
@@ -81,7 +80,6 @@ The service is now ready to migrate the supported source databases to target pla
 
 ::: zone target="chromeless"
 
-::: form action="Create[#create/Microsoft.AzureDMS]" submitText="Create an Azure Database Migration Service instance" :::
 
 ::: zone-end
 

@@ -58,7 +58,6 @@ See the [Azure Monitor Application Insights hub](/azure/azure-monitor/azure-moni
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#create/Microsoft.AppInsights]" submitText="Create Application Insight resources" :::
 
 ::: zone-end
 
@@ -73,7 +72,6 @@ Application Insights contains different kinds of options for monitoring performa
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Insights%2FComponents]" submitText="Monitor applications" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
