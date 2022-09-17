@@ -121,7 +121,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb-` |
-| SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi-` |
+| Azure SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi-` |
+| SQL Server on Azure VM | `Microsoft.Compute/virtualMachines` | `sqlvm-` |
 
 ## Storage
 
