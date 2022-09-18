@@ -24,8 +24,7 @@ It is recommended to assess your current environment's HPC usage to decide which
 
 ## HPC adoption plan
 
-Do you have a specific devops backlog the customer should use? Or is the standard adoption plan template still sufficient?
-https://docs.microsoft.com/azure/cloud-adoption-framework/plan/template
+When planning cloud adoption for your HPC environment, review the Azure DevOps [strategy and plan template](../../plan/template.md#align-the-cloud-adoption-plan) to align your tasks and organize objectives through epics, features, and user stories.
 
 ## HPC readiness plan
 
