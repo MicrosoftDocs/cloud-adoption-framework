@@ -18,9 +18,9 @@ Application of the Plan methodology focuses on the [five Rs of rationalizing you
 
 ## HPC estate
 
-While it is important to gather inventory data for a digital estate for cloud adoption, HPC in Azure does has a [migration](https://azure.microsoft.com/en-us/resources/hpc-migration-guide/) path in the demand of newer hardware for better performance, but keep in mind that certain VM series of hardware are specifically scoped, particularly the A8 to A11 series. 
+While it is important to gather inventory data for a digital estate for cloud adoption, HPC in Azure does has a [migration](https://azure.microsoft.com/en-us/resources/hpc-migration-guide/) path in the demand of newer hardware for better performance, but keep in mind that certain VM series of hardware are specifically scoped, particularly the A8 to A11 series.
 
-It is recommended to assess your current environment's HPC usage to decide which HPC cluster is needed. Your organization may benefit from the performance and cost advantages of a more traditional VM SKU as well.
+It is recommended to assess your current environment's HPC usage to decide which HPC cluster is needed. Your organization could benefit from the performance and cost advantages of a more traditional VM SKU as well.
 
 ## HPC adoption plan
 
