@@ -3,6 +3,7 @@ title: Replication options
 description: Use the Cloud Adoption Framework for Azure to understand the replication process and why you need replication for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
+ms.reviewer: ssumner
 ms.date: 1/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,15 +13,11 @@ ms.custom: internal
 
 # Replication options
 
-Before starting migration, ensure that primary systems are safe and will continue to run without issues. System downtime disrupts users or customers, and it costs time and money. Migration isn't as simple as turning off the virtual machines on-premises and copying them across to Azure. Migration tools must take into account asynchronous, or synchronous replication, to ensure that live systems merge to Azure with no downtime. Most of all, systems must be kept in lockstep with on-premises counterparts. To ensure that workloads work as expected, you might want to test migrated resources in isolated partitions in Azure.
+We recommend Azure Migrate for replicating assets to the cloud in most scenarios. However, there are other options available and certain scenarios where services like Azure Site Recovery and Azure Database Migration Service are preferable. This article helps you understand when to choose these other options.
 
-Content in the Cloud Adoption Framework assumes that Azure Migrate (or Azure Site Recovery) is the most appropriate tool for replicating assets to the cloud. However, there are other options available, and this article discusses those options to help enable decision-making.
-
-## Azure Site Recovery (also known as Azure Migrate)
+## Azure Site Recovery
 
 [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) orchestrates and manages disaster recovery for Azure VMs, on-premises VMs, and physical servers. You can also use Site Recovery to manage migration of machines on-premises and other cloud providers to Azure. Replicate on-premises machines to Azure or Azure VMs to a secondary region. Then, you fail the VM from the primary site to the secondary, and complete the migration process. With Azure Site Recovery, you can achieve various migration scenarios:
-
-For more information about Azure Migrate see [Migrate VWware VMs to Azure](/azure/migrate/tutorial-migrate-vmware)
 
 - **Migrate from on-premises to Azure.** Migrate on-premises VMware VMs, Hyper-V VMs, and physical servers to Azure. Complete the same steps as you would for full disaster recovery. Simply don't fail machines back from Azure to the on-premises site.
 - **Migrate between Azure regions.** Migrate Azure VMs from one Azure region to another. After the migration is complete, configure disaster recovery for the Azure VMs now in the secondary region to which you migrated.
