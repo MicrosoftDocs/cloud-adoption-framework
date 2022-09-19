@@ -1,6 +1,6 @@
 ---
 title: Migrate workloads for Azure high-performance computing (HPC)
-description: #Describe the scenario's impact on migration deployment.
+description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering governance for using Azure High-performance computing (HPC) as part of my IT strategy.
 author: ericd-mst-github
 ms.author: erd
 ms.date: 09/19/2022
