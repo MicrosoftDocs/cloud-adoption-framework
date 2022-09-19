@@ -1,9 +1,9 @@
 ---
 title: Govern Azure high-performance computing (HPC)
 description: #Describe the scenario's impact on governance.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+author: ericd-mst-github
+ms.author: erd
+ms.date: 09/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
