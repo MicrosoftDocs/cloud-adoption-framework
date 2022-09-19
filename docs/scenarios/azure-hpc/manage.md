@@ -1,9 +1,9 @@
 ---
 title: Manage Azure high-performance computing (HPC)
-description: #Describe the scenario's impact on operations management.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering management for using Azure High-performance computing (HPC) as part of my IT strategy.
+author: ericd-mst-github
+ms.author: erd
+ms.date: 09/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
