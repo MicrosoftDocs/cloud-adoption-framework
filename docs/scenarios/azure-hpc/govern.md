@@ -24,7 +24,9 @@ For approaching disciplines for HPC in Azure, follow and understand any decision
 
 ## HPC governance references
 
-Are there specific examples the customer can look to for best practices? [no](../../govern/governance-disciplines.md)
+Organizations in the manufacturing or automotive space often rely on additional compliance and regulation standards like [Trusted Information Security Assessment Exchange (TISAX)](https://docs.microsoft.com/en-us/azure/compliance/offerings/offering-tisax).
+
+Banking organizations will also have [data security considerations](https://learn.microsoft.com/en-us/azure/architecture/industries/finance/risk-grid-banking-overview#data-security-considerations-for-risk-grid-computing) that include conducting security risk assessments before placing workloads in the cloud. 
 
 ## Next steps
 
