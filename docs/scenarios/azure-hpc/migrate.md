@@ -35,7 +35,39 @@ Evaluate the [resource organization considerations](https://docs.microsoft.com/e
 
 ## HPC workload specific activities
 
-Are there specific criteria for workloads in that portfolio that would require the customer to run a well-architected review for any workloads?
+For HPC workload specific activities, you should define a network topology that works best for your deployment model, consider the various factors in large-scale workloads to decide on which storage solution to use, and implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
+
+### Network topology and connectivity
+Use a network topology based on either Azure Virtual WAN or hub-and-spoke architecture.
+
+Use **Azure Virtual WAN** if your organization plans to deploy resources across several Azure regions and connect your global locations to both Azure and on-premises, fully integrate software-defined WAN deployments with Azure, and deploying up to 2,000 virtual machine workloads across all VNets connected to one Virtual WAN hub.
+
+Use **[hub-and-spoke architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli)** for deploying resources in only select Azure regions, have no need for a global, interconnected network, fewer than 30 IP security tunnels, and full control and granularity to manually configure your Azure network.
+
+### Storage
+Large-scale HPC workloads tend to have demands for data storage and access that exceed capabilities of traditional cloud file systems. The factors for storage consideration are:
+- Latency
+- IOPS,
+- Throughput
+- File sizes and count
+- Job run time
+- Cost associated
+- Affinity for storage location - on-premises vs Azure
+
+Use [standard or premium blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) to provide exabyte scale, lowest cost cloud offering, and optimizing costs by moving to cooler tiers with the ability to perform lifecycle management with last update/access time, intelligent tiering, and customizable policies.
+
+For write-once/read-once applications and random access workloads, use [Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/) to have the widest choice of file protocols in the public cloud, fast deployment in minutes, and for flexible capacity pool types and performance.
+
+
+### Resource organization
+
+Resource organization for HPC follows alignment with the [Ready methodology](../../ready/index.md#prepare-for-cloud-adoption) by determining single vs multiple Azure subscriptions based on organizational needs and executing a naming and tagging strategy for components of resource names and metadata tags.
+
+Review the [decision](../../decision-guides/subscriptions/index.md) making process for subscriptions.
+
+The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
+
+Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags, route tables, managed disks, and public IPs.
 
 ## Next steps
 
