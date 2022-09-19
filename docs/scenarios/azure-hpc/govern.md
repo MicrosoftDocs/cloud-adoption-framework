@@ -16,21 +16,15 @@ The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to 
 
 ## HPC policies
 
-Are there specific corporate policies that should be in place prior to adopting this scenario?
+While HPC in Azure does not have any specific considerations or recommendations which would impact governance related decisions, it is important to understand any decisions previously made by the cloud platform team to be aware of existing governance recommendations [for corporate policies](../../govern/corporate-policy.md).
 
 ## HPC disciplines
 
-Are there changes to how the governance team should approach the governance disciplines for this scenario?
-
-- Cost
-- Security baseline
-- Identity
-- Resource consistency
-- Deployment acceleration
+For approaching disciplines for HPC in Azure, follow and understand any decisions previously made by the cloud platform team for existing [cloud governance disciplines.](../../govern/governance-disciplines.md)
 
 ## HPC governance references
 
-Are there specific examples the customer can look to for best practices?
+Are there specific examples the customer can look to for best practices? [no](../../govern/governance-disciplines.md)
 
 ## Next steps
 
