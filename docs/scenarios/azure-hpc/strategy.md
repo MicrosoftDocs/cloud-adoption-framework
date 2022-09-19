@@ -1,6 +1,6 @@
 ---
 title: Strategy for Azure high-performance computing (HPC) adoption
-description: #Describe the scenario's impact on strategy.
+description: As an IT Professional, I want to find guidance in the Cloud Adoption Framework covering the strategy scenario for using Azure High-performance computing (HPC) as part of my IT strategy.
 author: ericd-mst-github
 ms.author: erd
 ms.date: 09/15/2022
@@ -16,7 +16,7 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 ## HPC motivations
 
-When building your own HPC solution, there is significant investment required in specifying the right supercomputer specs and clusters. There are also financial concerns for investing in capital for continually upgrading computing hardware to meet high demanding workloads. 
+When building your own HPC solution, there is significant investment required in specifying the right supercomputer specs and clusters. There are also financial concerns for investing in capital for continually upgrading computing hardware to meet high demanding workloads.
 
 There are other concerns with time, as scheduling can take from days to months to run an HPC workload which will heavily affect optimization of internal operations.
 
