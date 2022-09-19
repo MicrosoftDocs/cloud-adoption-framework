@@ -1,9 +1,9 @@
 ---
-title: Understand cloud center of excellence (CCoE) functions
+title: Cloud center of excellence (CCoE) functions
 description: Understand the functions of a cloud center of excellence (CCoE), including the source, scope, and deliverables.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/03/2021
+ms.date: 09/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -42,7 +42,7 @@ The primary duty of the CCoE team is to accelerate cloud adoption through cloud-
 
 The objective of the CCoE is to:
 
-- Help build a modern IT organization through agile approaches to capture and implement business requirements.
+- Help build a modern IT organization by using agile approaches to capture and implement business requirements.
 - Use reusable deployment packages that align with security, compliance, and management policies.
 - Maintain a functional Azure platform in alignment with operational procedures.
 - Review and approve the use of cloud-native tools.
@@ -50,7 +50,7 @@ The objective of the CCoE is to:
 
 ## Meeting cadence
 
-The CCoE is staffed by four high-demand teams. It's important to allow for organic collaboration and to track growth through a common repository or solution catalog. Maximize natural interactions, but minimize meetings. Recurring meetings such as release meetings that are hosted by the cloud adoption team can provide data inputs, but when this function matures, try to limit dedicated meetings. Hosting a meeting after each release plan is shared can provide a minimum touch point for this team.
+The CCoE is staffed by four high-demand teams. It's important to allow for organic collaboration and to track growth through a common repository or solution catalog. Maximize natural interactions, but minimize meetings. Recurring meetings, such as release meetings that are hosted by the cloud adoption team, can provide data inputs. However, after this function matures, try to limit dedicated meetings. Hosting a meeting after each release plan is shared can provide a minimum touch point for this team.
 
 ## Solutions and controls
 
@@ -60,7 +60,7 @@ The following table describes some examples of this transition.
 
 | Scenario | Pre-CCoE solution | Post-CCoE solution |
 |---------|---------|---------|
-| Provision a SQL server in production | Network, IT, and data platform teams provision components over the course of days or even weeks. | The team that requires the server deploys a platform as a service (PaaS) instance of Azure SQL Database. Alternatively, deployment can use a preapproved template for all of the infrastructure as a service (IaaS) assets to the cloud in hours. |
+| Provision a SQL server in production | Network, IT, and data platform teams provision components over the course of days or weeks. | The team that requires the server deploys a platform as a service (PaaS) instance of Azure SQL Database. Alternatively, deployment can use a preapproved template for all of the infrastructure as a service (IaaS) assets to the cloud in hours. |
 | Provision a development environment | Network, IT, development, and DevOps teams agree on specifications and deploy an environment. | The development team defines their own specifications and deploys an environment based on allocated budget. |
 | Update security requirements to improve data protection | Networking, IT, and security teams update networking devices and virtual machines (VMs) across several environments to add protections. | Cloud governance tools are used to update policies that can be applied immediately to all assets in all cloud environments. |
 
@@ -94,13 +94,13 @@ This type of change takes time, experimentation, and negotiation. There will be 
 
 ### Key stakeholders
 
-IT leadership is the first and most obvious stakeholder. IT managers play an important part, but the support of the CIO and other executive-level IT leaders is needed during this process.
+IT leadership is the first and most obvious stakeholder. IT managers play an important part, but implementing this model requires the support of the CIO and other executive-level IT leaders.
 
-Less obvious is the need for business stakeholders. Business agility and time-to-market are key motivations for CCoE formation. As such, the key stakeholders have a vested interest in these areas. Examples of business stakeholders include line-of-business leaders, finance executives, operations executives, and business product owners.
+Less obvious is the need for business stakeholders. Business agility and time to market are primary motivations for forming a CCoE. As such, the key stakeholders have a vested interest in these areas. Examples of business stakeholders include line-of-business leaders, finance executives, operations executives, and business product owners.
 
 ### Support from business stakeholders
 
-Support from the business stakeholders can accelerate CCoE efforts. Much of the focus of CCoE efforts is centered around making long-term improvements to business agility and speed. Defining the effects of current operating models and the value of improvements is valuable as a guide and negotiation tool for the CCoE. We suggest establishing or clearly defining in documentation the following items for CCoE support:
+Support from the business stakeholders can accelerate CCoE efforts. Much of the focus of CCoE efforts is centered around making long-term improvements to business agility and speed. Defining the effects of current operating models and the value of improvements is valuable as a guide and negotiation tool for the CCoE. We suggest establishing or clearly defining in documentation the following items for raising support for a CCoE:
 
 - Expected business outcomes and goals.
 
@@ -112,11 +112,11 @@ Support from the business stakeholders can accelerate CCoE efforts. Much of the 
 
 - Timelines and metrics that are related to those opportunities.
 
-These data points aren't an attack on IT. Instead, they help CCoE learn from the past and establish a realistic backlog and plan for improvement.
+These data points aren't an attack on IT. Instead, they help the CCoE team to learn from the past, establish a realistic backlog, and plan for improvement.
 
 ### Ongoing support and engagement from stakeholders
 
-CCoE teams can demonstrate quick returns in some areas, but the higher-level goals, like business agility and time to market, can take much longer. During maturation, there's a high risk of the CCoE being discouraged or pulled off to focus on other IT efforts.
+CCoE teams can demonstrate quick returns in some areas, but the higher-level goals, like business agility and time to market, can take much longer. During maturation, there's a high risk of the CCoE team becoming discouraged or for members to be pulled to focus on other IT efforts.
 
 During the first six to nine months of CCoE efforts, we recommend that business stakeholders meet monthly with IT leadership and the CCoE. There's little need for formal ceremony to these meetings. Simply reminding the CCoE members and their leadership of the importance of this program can go a long way toward CCoE success.
 
@@ -128,7 +128,7 @@ Support from IT stakeholders should include the following activities:
 
 - **Support the vision:** A successful CCoE effort requires a great deal of negotiation with existing IT team members.
 
-  When done well, all of IT contributes to the solution and feels comfortable with the change. Occasionally, some members of the existing IT team might want to hold on to control mechanisms. Support of IT stakeholders is vital to the success of the CCoE when those situations occur. IT stakeholders need to encourage and reinforce the overall goals of the CCoE to resolve blockers to proper negotiation. On rare occasions, IT stakeholders might even need to step in and break up a deadlock or tied vote to keep the CCoE progressing.
+  When done well, all of IT contributes to the solution and feels comfortable with the change. Occasionally, some members of the existing IT team might want to hold on to control mechanisms. When such situations occur, support for the CCoE by IT stakeholders is vital to the success of the CCoE. IT stakeholders need to encourage and reinforce the overall goals of the CCoE to resolve blocks to proper negotiation. On rare occasions, IT stakeholders might even need to step in and break up a deadlock or a tied vote to maintain the progress of the CCoE.
 
 - **Maintain focus:** A CCoE can be a significant commitment for any resource-constrained IT team.
 
@@ -136,7 +136,7 @@ Support from IT stakeholders should include the following activities:
 
 - **Create a buffer:** The CCoE team experiments with new approaches.
 
-  Some of new approaches won't align well with existing operations or technical constraints. The CCoE might experience pressure or recourse from other teams when experiments fail. It's important to encourage and buffer the team from the consequences of "fast fail" learning opportunities. It's equally important to hold the team accountable to a growth mindset, ensuring that they learn from those experiments and find better solutions.
+  Some new approaches won't align well with existing operations or technical constraints. The CCoE team might experience pressure or recourse from other teams when experiments fail. It's important to encourage and buffer the CCoE team from the consequences of "fast fail" learning opportunities. It's equally important to hold the team accountable to a growth mindset to ensure that they learn from those experiments and find better solutions.
 
 ## Next steps
 
