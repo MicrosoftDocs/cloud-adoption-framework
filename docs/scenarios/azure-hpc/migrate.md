@@ -16,7 +16,12 @@ Establish a driving statement to shape migration of this technology platform. Be
 
 ## HPC process details
 
-Are there data points outside of a standard Azure Migrate assessment that you need to prepare for migration?
+Migrating to newer HPC clusters in Azure is not required, but offers benefits. You should reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of VMs. It is also possible to move to a more cost-effective, non HPC cluster.
+
+Get started by following the [guidelines](https://azure.microsoft.com/en-us/resources/hpc-migration-guide/) in an HPC migration:
+- **Review the current VM size**: Review your CPU, memory, disk, and networking specifications for existing VMs to determine appropriate VM sizes.
+- **Verify Azure subscription quota limits**: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes you choose.
+- **Identify the deployment model**: Automate deployment as much as possible by choosing between Azure Resource Manager or Azure Service Manager, previously known as classic deployment.
 
 ## HPC process flow
 
