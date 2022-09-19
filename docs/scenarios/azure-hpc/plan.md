@@ -28,7 +28,7 @@ When planning cloud adoption for your HPC environment, review the Azure DevOps [
 
 ## HPC readiness plan
 
-Are there specific skills or extra training this team should take before getting started?
+Ensure that the IT teams understand the [HPC and batch solutions](https://learn.microsoft.com/en-us/training/browse/?terms=HPC) available in Azure and identify where HPC and batch technologies will fit in your organization needs.
 
 
 ## Next steps
