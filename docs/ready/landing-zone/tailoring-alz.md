@@ -123,4 +123,4 @@ Consider the following points when you think about tailoring your implementation
 - Avoid going beyond a hierarchy depth of four layers to avoid complexity and unnecessary exclusions. Expand archetypes horizontally instead of vertically in the hierarchy.
 - Don't create archetypes for environments like development, test, and production.
   
-  For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+  For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
