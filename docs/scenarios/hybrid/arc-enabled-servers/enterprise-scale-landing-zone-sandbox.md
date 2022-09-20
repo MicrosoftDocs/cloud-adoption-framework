@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 
 # Azure Arc-enabled servers Azure landing zone sandbox
 
-With Azure Arc, you can onboard infrastructure assets that are located outside of Azure, or deploy Azure services to any infrastructure, either on-premises or in a multi-cloud environment.
+With Azure Arc, you can onboard infrastructure assets that are located outside of Azure, or deploy Azure services to any infrastructure, either on-premises or in a multicloud environment.
 
 Azure Arc-enabled servers allow you to manage:
 

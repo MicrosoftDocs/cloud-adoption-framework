@@ -64,7 +64,7 @@ The following is an example scenario diagram for securely accessing Arc-enabled 
 
 - When using Azure private endpoints for Microsoft Artifact Registry (also known as Microsoft Container Registry or MCR), Azure Key Vault, Azure Log Analytics, and Storage Accounts configure [on-premises DNS servers to forward DNS queries](/azure/private-link/private-endpoint-dns#on-premises-workloads-using-a-dns-forwarder) to DNS forwarder in Azure. This will enable auto-discover these private endpoints using DNS names and eliminates the need to use host entries or DNS entry registration in on-premises DNS servers.
 
-- Since AD authentication for Arc-enabled SQL MI requires connectivity to ADDS, make sure to have connectivity to domain controllers in primary and disaster recovery sites for high availability. As many enterprises deploy site recovery forests across geographies, make sure to use the nearest site to reduce network latency to domain controllers. Please review [Arc-enabled SQL MI business continuity and disaster recovery](./eslz-arc-datasvc-sqlmi-bcdr.md) for additional guidances.
+- Since AD authentication for Arc-enabled SQL MI requires connectivity to ADDS, make sure to have connectivity to domain controllers in primary and disaster recovery sites for high availability. As many enterprises deploy site recovery forests across geographies, make sure to use the nearest site to reduce network latency to domain controllers. Please review [Arc-enabled SQL MI business continuity and disaster recovery](./eslz-arc-datasvc-sqlmi-bcdr.md) for additional guidance.
 
 ## Next steps
 

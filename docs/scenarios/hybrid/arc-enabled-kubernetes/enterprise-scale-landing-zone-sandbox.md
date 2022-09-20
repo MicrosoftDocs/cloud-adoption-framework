@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 
 # Azure Arc-enabled Kubernetes Azure landing zone sandbox
 
-Azure Arc helps you both onboard infrastructure assets located outside of Azure and deploy Azure services to your infrastructure, whether on-premises or in a multi-cloud environment.
+Azure Arc helps you both onboard infrastructure assets located outside of Azure and deploy Azure services to your infrastructure, whether on-premises or in a multicloud environment.
 
 With Azure Arc-enabled Kubernetes, you can attach and configure Kubernetes clusters from any location.
 You can connect clusters running on public cloud providers or your on-premises datacenter to Azure Arc.
