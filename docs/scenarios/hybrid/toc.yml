@@ -60,23 +60,23 @@ items:
     - name: Azure Arc-enabled SQL Managed Instance
       items:
       - name: Identity and access management
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-identity-access-management.md
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-identity-access-management.md
       - name: Network topology and connectivity
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-network-connectivity.md
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-network-connectivity.md
       - name: Storage disciplines
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-storage-disciplines.md       
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-storage-disciplines.md       
       - name: Resource organization
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-resource-organization.md
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-resource-organization.md
       - name: Governance and security disciplines
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-governance-disciplines.md
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-governance-disciplines.md
       - name: Management disciplines
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-management-disciplines.md
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-management-disciplines.md
       - name: Business continuity and disaster recovery
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md      
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-bcdr.md      
       - name: Upgradeability disciplines
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-upgradeability-disciplines.md
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-upgradeability-disciplines.md
       - name: Cost governance
-        href: arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-cost-governance.md       
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-datasvc-sqlmi-cost-governance.md       
     - name: Implementation options
       items:
       - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
