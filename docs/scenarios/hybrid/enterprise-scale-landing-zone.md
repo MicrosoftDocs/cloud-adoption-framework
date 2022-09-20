@@ -3,20 +3,20 @@ title: Introduction to Azure Arc landing zone accelerator for hybrid and multicl
 description: Learn how Azure Arc can accelerate your adoption of a hybrid or multicloud architecture.
 author: likamrat
 ms.author: doalle
-ms.date: 09/19/2022
+ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 ---
 
-# Azure Arc landing zone accelerator for hybrid and multicloud
+# Introduction to Azure Arc landing zone accelerator for hybrid and multicloud
 
 Enterprises are currently building and running applications across various ecosystems on-premises, in multiple public clouds, and on the edge. When you're working in these distributed environments, it's critical that you find a way to ensure compliance and manage servers, applications, and data at scale while you still maintain agility.
 
 [Enterprise-scale landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
 
-[![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
+:::image type="content" source="./media/landing-zone-design-revised.png" alt-text="Diagram that shows a landing zone design." lightbox="./media/landing-zone-design-revised.png":::
 
 Enterprise-scale was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two simple additions:
 
@@ -25,17 +25,17 @@ Enterprise-scale was designed with hybrid and multicloud in mind. To support hyb
 
 ## Why hybrid?
 
-As organizations adopt modern cloud services and their associated benefits, periods of parallel-running alongside the legacy on-premises infrastructure are inevitable. As your organization further evaluates cloud services, or as business requirements dictate, your team might choose to run more than one public cloud service. Operating a distributed heterogeneous estate requires simplified, consolidated management and governance in order to reduce operational impact.
+As organizations adopt modern cloud services and the associated benefits, periods of running services parallel alongside the legacy on-premises infrastructure are inevitable. As your organization further evaluates cloud services, or as business requirements dictate, your team might choose to run more than one public cloud service. Operating a distributed heterogeneous estate requires simplified, consolidated management and governance in order to reduce operational impact.
 
 Use landing zone concepts introduced as part of the Cloud Adoption Framework guidance to establish patterns for building out hybrid architectures and introducing standards for connectivity, governance, and monitoring. This work helps when your strategic intent is to simplify and combine the infrastructure and services following migration projects. Setting standards for management processes and tools removes the need to retrofit workloads after you move them into Azure.
 
 ## Prerequisites
 
-It's beneficial to have familiarity with the enterprise-scale landing zone. For more information, see the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and enterprise-scale [implementation guidance](../../ready/enterprise-scale/implementation.md).
+It's beneficial to have familiarity with the enterprise-scale landing zone. For more information, see the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
-[![Diagram that shows Azure Arc high-level architecture.](./media/single-control-plane.png)](./media/single-control-plane.png#lightbox)
+:::image type="content" source="./media/single-control-plane.png" alt-text="Diagram that shows Azure Arc high-level architecture." lightbox="./media/single-control-plane.png":::
 
-Azure provides various management tools to help you monitor and govern infrastructure and applications at scale. When you implement a hybrid landing zone, you should also extend these Azure tools to control infrastructure and applications running outside of Azure. This approach creates a single management plane and single view of your entire hybrid estate, which makes monitoring and management at scale as straightforward as possible.
+Azure provides various management tools to help you monitor and govern infrastructure and applications at scale. When you implement a hybrid landing zone, be sure to also extend the Azure tools to control infrastructure and applications running outside of Azure. This approach creates a single management plane and single view of your entire hybrid estate, which makes monitoring and management at scale as straightforward as possible.
 
 ## Azure Arc-enabled servers design guidelines
 
@@ -65,5 +65,13 @@ The design guidelines provide recommendations for the critical decisions that dr
 | [Automation disciplines](./arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) | Azure Arc lets organizations manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Azure landing zone implementation, plan to use automation as much as possible. Opportunities for automation include cluster onboarding, agent and extensions lifecycle, and expanding Azure control plane capabilities for Azure Arc-enabled Kubernetes cluster resources. |
 | [Extensions management](./arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) | Best practices for managing Azure Arc-enabled Kubernetes cluster extensions, which support expanding Azure control plane capabilities for Azure Arc-enabled Kubernetes resources. |
 | [CI/CD and GitOps disciplines disciplines](./arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) | As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Learn key CI/CD and GitOps disciplines in your hybrid and multicloud environment by using it with Azure Arc-enabled Kubernetes cluster resources. |
-| [Services observability](./arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Service observability is important as it helps you understand performance and issues that occur with distributed and cloud systems that are based on dynamic architectures. Learn how design services observability patterns in a hybrid and multicloud environment with conjunction to Azure Arc-enabled Kubernetes cluster resources. |
-| [Cost governance](./arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks for Azure Arc-enabled Kubernetes cluster resources. |
+| [Services observability](./arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Service observability is important. It helps you understand performance and issues that occur with distributed and cloud systems that are based on dynamic architectures. Learn about design services observability patterns in a hybrid and multicloud environment with Azure Arc-enabled Kubernetes cluster resources. |
+| [Cost governance](./arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from increasing accountability with budgets, cost allocation, and chargebacks for Azure Arc-enabled Kubernetes cluster resources. |
+
+## Next steps
+
+For more information about your hybrid and multicloud cloud journey, review the following resources:
+
+- Understand how to design the [right access controls to secure hybrid environments](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management).
+- Review the [Network topology and connectivity for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity) requirements.
+- Understand how to [manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
