@@ -53,13 +53,13 @@
       "titleSuffix": "Cloud Adoption Framework",
       "brand": "azure",
       "uhfHeaderId": "azure",
+      "searchScope": [ "Azure", "Cloud Adoption Framework" ],
       "_op_documentIdPathDepotMapping": {
         "./": {
           "depot_name": "architecture-center",
           "folder_relative_path_in_docset": "./"
         }
       }
-      "searchScope": [ "Azure", "Cloud Adoption Framework" ]
     },
     "fileMetadata": {},
     "template": [],
