@@ -56,13 +56,35 @@ items:
       - name: Services observability
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md
       - name: Cost governance
-        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md        
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
+    - name: Azure Arc-enabled SQL Managed Instance
+      items:
+      - name: Identity and access management
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-identity-access-management.md
+      - name: Network topology and connectivity
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-network-connectivity.md
+      - name: Storage disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-storage-disciplines.md 
+      - name: Resource organization
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-resource-organization.md
+      - name: Governance and security disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-governance-disciplines.md
+      - name: Management disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-management-disciplines.md
+      - name: Business continuity and disaster recovery
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery.md    
+      - name: Upgradeability disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-upgradeability-disciplines.md
+      - name: Cost governance
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-cost-governance.md    
     - name: Implementation options
       items:
       - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
         href: arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md
       - name: Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox
         href: arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md
+      - name: Start with Azure Arc-enabled SQL Managed Instance landing zone accelerator sandbox
+        href: arc-enabled-data-service-sql-managed-instance/enterprise-scale-landing-zone-sandbox.md
 
   - name: Migrate to the cloud
     href: migrate.md
