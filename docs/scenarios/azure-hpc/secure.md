@@ -1,9 +1,9 @@
 ---
 title: Secure Azure high-performance computing (HPC) in Azure
-description: #Learn about the security principles for HPC in Azure.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering security for using Azure High-performance computing (HPC) as part of my IT strategy.
+author: ericd-mst-github
+ms.author: erd
+ms.date: 09/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
