@@ -41,7 +41,7 @@ Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-
 
 ### Cluster security
 
-- Your Arc-enabled SQL MI can reside on hybrid or multi-cloud Kubernetes clusters, review the security and governance considerations for your chosen cloud provider and Kubernetes distribution.
+- Your Arc-enabled SQL MI can reside on hybrid or multicloud Kubernetes clusters, review the security and governance considerations for your chosen cloud provider and Kubernetes distribution.
 - Review the design considerations in the Azure Arc-enabled Kubernetes [governance and security disciplines design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines).
 
 ### Network security
@@ -62,7 +62,7 @@ Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-
 
 ### Azure Arc-enabled SQL Managed Instance security
 
-- Decide on the [connectivity mode](/azure/azure-arc/data/connectivity#connectivity-modes) to be used, considering the trade-offs between having and not having direct connection to Azure and how this can affect your hybrid and multi-cloud instances from leveraging the current and future security capabilities enabled by Azure.
+- Decide on the [connectivity mode](/azure/azure-arc/data/connectivity#connectivity-modes) to be used, considering the trade-offs between having and not having direct connection to Azure and how this can affect your hybrid and multicloud instances from leveraging the current and future security capabilities enabled by Azure.
 - Review the [security capabilities](/azure/azure-arc/data/managed-instance-features#RDBMSS) that are available in Arc-enabled SQL MI for your data workloads.
 - Define the storage platform to be used for persistent volumes within your Kubernetes clusters and understand the security capabilities available to secure data residing on the persistent volumes. Review the [storage disciplines critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) while you design for your landing zone.
 - Review the requirements and architecture of [Transparent Data Encryption](/sql/relational-databases/security/encryption/transparent-data-encryption) before enabling it on your Arc-enabled SQL MI.
@@ -87,7 +87,7 @@ Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-
 
 - Prefer the use of AD authentication to offload user lifecycle management to the directory services and use security groups in AD to manage user permissions to access the SQL database.
 - Use system-managed keytab mode for AD authentication support to offload domain account and keytab management overhead to simplify operations.
-- If SQL authentication is used. Make sure to use strong password policies and enable auditing to monitor SQL user identities and permissions granted to access database servers and databases.
+- If SQL authentication is used, make sure to use strong password policies and enable auditing to monitor SQL user identities and permissions granted to access database servers and databases.
 - Dedicate a Kubernetes namespace for the Azure Arc Data Controller deployment and assign the least privilege permissions to deploy and manage.
 - Create [strong passwords for Grafana and Kibana](/azure/azure-arc/data/least-privilege#create-the-metrics-and-logs-dashboards-user-names-and-passwords) dashboards and make sure to audit and rotate on a regular basis.
 - Monitor the [activity log](/azure/azure-monitor/essentials/activity-log) of your Arc-enabled SQL MI and Data Controllers to audit the different operations occurring on your hybrid resources, create alerts for relevant events and integrate with SIEM tools such as [Azure](/azure/sentinel/overview) for security monitoring and incident response.
