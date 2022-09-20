@@ -28,7 +28,9 @@ HPC workloads do not have special requirements for operational compliance but it
 
 ## HPC platform operations
 
-Are there specific requirements for operations of the landing zone or platform for this scenario?
+For defining HPC platform operations, you'll want to refer to the cloud adoption guidance in [cloud management](../../manage/considerations/platform.md) establish a service catalog by building and defining your platform operations.
+
+Get started by reviewing how your organization's data is hosted in either specific platforms such as platform as a service (PaaS) or infrastructure as a service (IaaS) when building out your service catalog.
 
 ## HPC workload operations
 
