@@ -13,9 +13,9 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Recommended abbreviations for Azure resource types
 
-This list provides recommended abbreviations for various Azure resource types to include in your naming conventions.
+This page provides recommended abbreviations for various Azure resource types to include in your naming conventions.
 
-The [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) can help automate and scale your resource naming strategy.
+You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) to help automate and scale your naming strategy.
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 
