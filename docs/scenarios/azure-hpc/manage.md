@@ -34,7 +34,7 @@ Get started by reviewing how your organization's data is hosted in either specif
 
 ## HPC workload operations
 
-Are there specific requirements for operations of the individual workloads running on this platform?
+Invest in your HPC [workload operations](../../manage/considerations/workload.md) when the cloud adoption strategy, business outcomes, and operational metrics are well understand. There must be rich data about your HPC workload dependencies, application performance, virtual machine telemetry in order to be able to test automation and communicate changes to the workloads.
 
 ## Next steps
 
