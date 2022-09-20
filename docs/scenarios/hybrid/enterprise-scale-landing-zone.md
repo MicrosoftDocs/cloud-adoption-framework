@@ -14,11 +14,11 @@ ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 
 Enterprises are currently building and running applications across various ecosystems on-premises, in multiple public clouds, and on the edge. When you're working in these distributed environments, it's critical that you find a way to ensure compliance and manage servers, applications, and data at scale while you still maintain agility.
 
-[Enterprise-scale landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
+[Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
 
-:::image type="content" source="./media/landing-zone-design-revised.png" alt-text="Diagram that shows a landing zone design." lightbox="./media/landing-zone-design-revised.png":::
+:::image type="content" source="/azure/cloud-adoption-framework/ready/landing-zone/enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="/azure/cloud-adoption-framework/ready/landing-zone/enterprise-scale/media/ns-arch-cust-expanded.png":::
 
-Enterprise-scale was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two simple additions:
+Azure landing zones was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two simple additions:
 
 - **Hybrid and multicloud connectivity:** Understand key network design considerations and recommendations for working with Azure Arc.
 - **Unified operations:** Include Azure Arc-enabled resources to extend your governance and operations support with consistent tooling.
@@ -31,7 +31,7 @@ Use landing zone concepts introduced as part of the Cloud Adoption Framework gui
 
 ## Prerequisites
 
-It's beneficial to have familiarity with the enterprise-scale landing zone. For more information, see the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
+It's beneficial to have familiarity with the Azure landing zones. For more information, see the Azure landing zones [overview](../../ready/landing-zone/index.md) and Azure landing zones [implementation guidance](../../ready/landing-zone/implementation-options.md).
 
 :::image type="content" source="./media/single-control-plane.png" alt-text="Diagram that shows Azure Arc high-level architecture." lightbox="./media/single-control-plane.png":::
 
@@ -65,8 +65,24 @@ The design guidelines provide recommendations for the critical decisions that dr
 | [Automation disciplines](./arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) | Azure Arc lets organizations manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Azure landing zone implementation, plan to use automation as much as possible. Opportunities for automation include cluster onboarding, agent and extensions lifecycle, and expanding Azure control plane capabilities for Azure Arc-enabled Kubernetes cluster resources. |
 | [Extensions management](./arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) | Best practices for managing Azure Arc-enabled Kubernetes cluster extensions, which support expanding Azure control plane capabilities for Azure Arc-enabled Kubernetes resources. |
 | [CI/CD and GitOps disciplines disciplines](./arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) | As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Learn key CI/CD and GitOps disciplines in your hybrid and multicloud environment by using it with Azure Arc-enabled Kubernetes cluster resources. |
-| [Services observability](./arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Service observability is important. It helps you understand performance and issues that occur with distributed and cloud systems that are based on dynamic architectures. Learn about design services observability patterns in a hybrid and multicloud environment with Azure Arc-enabled Kubernetes cluster resources. |
-| [Cost governance](./arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from increasing accountability with budgets, cost allocation, and chargebacks for Azure Arc-enabled Kubernetes cluster resources. |
+| [Services observability](./arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Service observability is important as it allows you to understand performance and issues that are occurring with distributed and cloud systems that are based on dynamic architectures. Learn how design services observability patterns in a hybrid and multicloud environment with conjunction to Azure Arc-enabled Kubernetes cluster resources. |
+| [Cost governance](./arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks for Azure Arc-enabled Kubernetes cluster resources. |
+
+## Azure Arc-enabled SQL Managed Instance design guidelines
+
+The design guidelines provide recommendations to the critical decisions that drive the design of the Cloud Adoption Framework for Azure landing zone, in a hybrid multicloud environment. There are seven critical design areas that need to be considered, as part of your Azure landing zone implementation, when working with Azure Arc-enabled SQL Managed Instance:
+
+| CDA | Description |
+|--|--|
+| [Identity and access management](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-identity-access-management.md) | Design considerations and best practices for right access controls design to secure Azure Arc-enabled SQL Managed Instance  and Data Controller resources. |
+| [Network topology and connectivity](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-network-connectivity.md) | Design considerations and best practices when working with Azure Arc-enabled SQL Managed Instance and how to securely connect them to your Azure landing zone. |
+| [Storage disciplines](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-storage-disciplines.md) | Design considerations and best practices for choosing the right storage architecture when working with Azure Arc-enabled SQL Managed Instance. |
+| [Resource organization](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-resource-organization.md) | Design considerations and best practices for resource consistency and tagging strategy, that includes your hybrid and multicloud Azure Arc-enabled data services resources. |
+| [Governance and security disciplines](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-governance-disciplines.md) | The [Cloud Adoption Framework's Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access control (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc-enabled SQL Managed Instance. |
+| [Management disciplines](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-management-disciplines.md) | Similar to governance techniques, Azure management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Azure landing zone provides guidance on how operationally maintain and operate Azure Arc-enabled data services resources on Azure enterprise estate, with centralized management and monitoring at the platform level. |
+| [Business continuity and disaster recovery](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md) | Design considerations and best practices on designing a highly-available, disaster recovery-ready architecture to support Azure Arc-enabled SQL Managed Instance business continuity in the enterprise. |
+| [Upgradeability disciplines](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-upgradeability-disciplines.md) | Design considerations and best practices for configuring and managing the upgrade process on your Azure Arc-enabled SQL Managed Instance. |
+| [Cost governance](./arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks for Azure Arc-enabled SQL Managed Instance resources. |
 
 ## Next steps
 
