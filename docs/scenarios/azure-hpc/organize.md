@@ -32,7 +32,7 @@ For more information, see [Mature Team Structures](https://docs.microsoft.com/az
 
 ## Deployment and operations
 
-Describe how the responsibilities for the roles in teams in supporting the deployment and operation of the cloud solution.
+Align responsibilities for your HPC environment by developing a cross-team matrix to identify responsibility, accountability, consultancy, and informed parties.
 
 For more information, see [Align responsibilities across teams](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/raci-alignment).
 
