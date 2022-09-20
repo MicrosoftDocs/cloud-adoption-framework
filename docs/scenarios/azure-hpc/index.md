@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 This article focuses on modernizing your machine learning, visualization, and rendering workloads in Azure at any scale with HPC + AI through the Cloud Adoption Framework.
 
-# Defining HPC
+## Defining HPC
 
 High-performance computing (HPC) in Azure is the complete set of computing, networking, and storage resources integrated with workload orchestration services for applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering.
 
