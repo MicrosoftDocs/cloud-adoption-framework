@@ -42,13 +42,13 @@ First, Review the [management design area](/azure/cloud-adoption-framework/ready
 
 ### Directly connected mode
 
-- when an Arc-enabled SQL MI is deployed in Directly connected mode, certain metadata about your cluster is automatically sent to Azure for inventory and billing purposes.
+- When an Arc-enabled SQL MI is deployed in Directly connected mode, certain metadata about your cluster is automatically sent to Azure for inventory and billing purposes.
 - All traffic is initiated from the cluster and no inbound firewall rules are required to facilitate this
-- during the deployment of the Data Controller, logs and metrics can be uploaded automatically to an Azure Log Analytics workspace by providing the Workspace ID and the workspace's access key.  After deployment, this can be disabled or enabled as desired.
+- During the deployment of the Data Controller, logs and metrics can be uploaded automatically to an Azure Log Analytics workspace by providing the Workspace ID and the workspace's access key.  After deployment, this can be disabled or enabled as desired.
 
 ### Indirectly connected mode
 
-- when an Arc-enabled SQL MI is deployed in Indirectly connected mode, there is assumed to be no direct connection to Azure.  At least once per month, metadata about the instance must be uploaded to Azure for inventory and billing purposes.  Get more information about this it in the data collection and reporting document available [here](/azure/azure-arc/data/privacy-data-collection-and-reporting).
+- When an Arc-enabled SQL MI is deployed in Indirectly connected mode, there is assumed to be no direct connection to Azure.  At least once per month, metadata about the instance must be uploaded to Azure for inventory and billing purposes.  Get more information about this it in the data collection and reporting document available [here](/azure/azure-arc/data/privacy-data-collection-and-reporting).
 - When deploying in Indirectly connected mode, consider how the Arc-enabled SQL MI data will be exported from the cluster and [uploaded to Azure](/azure/azure-arc/data/upload-logs?tabs=windows) and consider ways to automate this upload process.
 
 > [!NOTE]
@@ -64,16 +64,16 @@ First, Review the [management design area](/azure/cloud-adoption-framework/ready
 - For an easy, out-of-the-box experience for monitoring, use the [Workbooks available in Container Insights](/azure/azure-monitor/containers/container-insight-reports) to view performance and health information about your cluster and components such as nodes, pods, and persistent volumes.  Once familiar with workbooks, design a custom workbook that illustrates the data in a way that's most useful to your operations.
 - Review the included Grafana dashboards to see what's provided out-of-the-box to avoid re-work
 
-[![A screenshot showing the out-of-the-box Grafana dashboards.](./media/arc-enabled-data-svc-sql-mi-grafana-1.png)](./media/arc-enabled-data-svc-sql-mi-grafana-1.png#lightbox)
+    [![A screenshot showing the out-of-the-box Grafana dashboards.](./media/arc-enabled-data-svc-sql-mi-grafana-1.png)](./media/arc-enabled-data-svc-sql-mi-grafana-1.png#lightbox)
 
-[![A screenshot showing the Grafana SQL Managed Instance Metrics dashboard.](./media/arc-enabled-data-svc-sql-mi-grafana-2.png)](./media/arc-enabled-data-svc-sql-mi-grafana-2.png#lightbox)
+    [![A screenshot showing the Grafana SQL Managed Instance Metrics dashboard.](./media/arc-enabled-data-svc-sql-mi-grafana-2.png)](./media/arc-enabled-data-svc-sql-mi-grafana-2.png#lightbox)
 
 - Use [Azure Resource Graph](/azure/azure-arc/kubernetes/resource-graph-samples?tabs=azure-cli) or [Log Analytics queries](/azure/azure-monitor/logs/queries) to monitor cluster health and raise alerts.
-- refer to [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design) to strategize how best to organize Log Analytics Workspace(s) based on business needs and organization
-- because of the importance of [storage](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) on the various components of an Azure Arc-enabled SQL MI deployment, establish dashboards and alerts on the health and capacity of local and remote storage.
-- review considerations and recommendations for [managing upgrades](./eslz-arc-datasvc-sqlmi-upgradeability-disciplines.md)
-- if using the indirect connectivity mode, implement an automated mechanism, such as a cron job, to [upload usage data](/azure/azure-arc/data/upload-usage-data), [logs](/azure/azure-arc/data/upload-logs?tabs=windows), and [metrics](/azure/azure-arc/data/upload-metrics?tabs=powershell) on a daily basis.  While uploading logs and metrics are optional, doing so is recommended so as to be able to use Azure Monitor for visibility across your environment.
-- implement a process to verify that usage and billing data is being uploaded at least once per month to ensure that the ability to create new instances is not disabled
+- Refer to [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design) to strategize how best to organize Log Analytics Workspace(s) based on business needs and organization
+- Because of the importance of [storage](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) on the various components of an Azure Arc-enabled SQL MI deployment, establish dashboards and alerts on the health and capacity of local and remote storage.
+- Review considerations and recommendations for [managing upgrades](./eslz-arc-datasvc-sqlmi-upgradeability-disciplines.md)
+- If using the indirect connectivity mode, implement an automated mechanism, such as a cron job, to [upload usage data](/azure/azure-arc/data/upload-usage-data), [logs](/azure/azure-arc/data/upload-logs?tabs=windows), and [metrics](/azure/azure-arc/data/upload-metrics?tabs=powershell) on a daily basis.  While uploading logs and metrics are optional, doing so is recommended so as to be able to use Azure Monitor for visibility across your environment.
+- Implement a process to verify that usage and billing data is being uploaded at least once per month to ensure that the ability to create new instances is not disabled
 
 ## Next steps
 

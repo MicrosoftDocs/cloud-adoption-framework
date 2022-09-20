@@ -39,7 +39,7 @@ Azure provides various management tools to help you monitor and govern infrastru
 
 ## Azure Arc-enabled servers design guidelines
 
-[Azure Arc](/azure/azure-arc/) simplifies governance and management by providing a consistent multicloud and on-premises management platform. Azure Arc lets you to manage your entire environment with a single pane of glass by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
+[Azure Arc](/azure/azure-arc/) simplifies governance and management by providing a consistent multicloud and on-premises management platform. Azure Arc lets you manage your entire environment with a single pane of glass by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 
 | CDA | Description |
 |--|--|
@@ -65,7 +65,7 @@ The design guidelines provide recommendations to the critical decisions that dri
 | [Automation disciplines](./arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Azure landing zone implementation you should plan cluster onboarding, agent and extensions lifecycle automation, and expansion of the Azure control plane capabilities for Azure Arc-enabled Kubernetes cluster resources with as much automation as possible. |
 | [Extensions management](./arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) | Best practices for managing Azure Arc-enabled Kubernetes cluster extensions, which enables the expansion of the Azure control plane capabilities for Azure Arc-enabled Kubernetes resources. |
 | [CI/CD and GitOps disciplines disciplines](./arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) | As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Learn key CI/CD and GitOps disciplines in your hybrid and multicloud environment by using it with Azure Arc-enabled Kubernetes cluster resources. |
-| [Services observability](./arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Service observability is important as it allows you to understand performance and issues that are occurring with distributed and cloud systems that are based on dynamic architectures. Learn how design services observability patterns in an hybrid and multicloud environment with conjunction to Azure Arc-enabled Kubernetes cluster resources. |
+| [Services observability](./arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) | Service observability is important as it allows you to understand performance and issues that are occurring with distributed and cloud systems that are based on dynamic architectures. Learn how design services observability patterns in a hybrid and multicloud environment with conjunction to Azure Arc-enabled Kubernetes cluster resources. |
 | [Cost governance](./arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks for Azure Arc-enabled Kubernetes cluster resources. |
 
 ## Azure Arc-enabled SQL Managed Instance design guidelines
