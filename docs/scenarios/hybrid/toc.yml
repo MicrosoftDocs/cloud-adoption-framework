@@ -84,7 +84,7 @@ items:
       - name: Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox
         href: arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md
       - name: Start with Azure Arc-enabled SQL Managed Instance landing zone accelerator sandbox
-        href: arc-enabled-datasvc-sqlmi/enterprise-scale-landing-zone-sandbox.md
+        href: arc-enabled-data-service-sql-managed-instance/enterprise-scale-landing-zone-sandbox.md
 
   - name: Migrate to the cloud
     href: migrate.md
