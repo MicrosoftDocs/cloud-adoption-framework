@@ -24,7 +24,7 @@ For [business alignment](../../manage/considerations/business-alignment.md), rev
 
 ## HPC operations baseline
 
-Does this workload have special requirements for Visibility, Operational Compliance, or BCDR?
+HPC workloads do not have special requirements for operational compliance but it would be important to review how the [components of operations compliance](../../manage/considerations/operational-compliance.md#components-of-operations-compliance) are implemented by the cloud management team.
 
 ## HPC platform operations
 
