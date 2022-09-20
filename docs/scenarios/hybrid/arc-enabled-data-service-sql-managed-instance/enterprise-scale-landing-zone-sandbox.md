@@ -43,4 +43,4 @@ Based on the desired deployment method, you can install either the Azure CLI or 
 
 ## Next steps
 
-The Azure Arc-enabled data services landing zone accelerator sandbox is based on the fully automated Jumpstart ArcBox solution. For more information, see the [Jumpstart ArcBox website page](https://aka.ms/JumpstartArcBox).
+The Azure Arc-enabled data services landing zone accelerator sandbox is based on the fully automated Jumpstart ArcBox solution. For more information, see the [Jumpstart ArcBox overview](https://azurearcjumpstart.io/azure_jumpstart_arcbox).
