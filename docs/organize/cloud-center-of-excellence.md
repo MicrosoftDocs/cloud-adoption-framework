@@ -142,7 +142,5 @@ Support from IT stakeholders should include the following activities:
 
 A CCoE model requires cloud platform functions and cloud automation functions. The next step is to align cloud platform functions.
 
-Learn more about:
-
-- [Cloud platform functions](./cloud-platform.md)
-- [Cloud automation functions](./cloud-automation.md)
+> [!div class="nextstepaction"]
+> [Cloud platform functions](./cloud-platform.md)
