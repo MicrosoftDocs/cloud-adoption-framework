@@ -80,7 +80,7 @@ Review the [identity and access management critical design area](/azure/cloud-ad
 
 ### Arc-enabled data services deployment
 
-- Consider the identity being used to deploy Azure Arc-enabled data services depending on the type of deployment such as manual vs automated selected for Arc-enabled data services deployment. This identity could be an Azure Active Directory account or Lightweight Directory Access Protocol (LDAP) account from Active Directory Domain Services (ADDS) or a 3rd party LDAP provider based on how underlying Azure Arc-enabled Kubernetes access controls are managed in on-premises or other cloud environments.
+- Consider the identity being used to deploy Azure Arc-enabled data services depending on the type of deployment such as manual vs automated selected for Arc-enabled data services deployment. This identity could be an Azure Active Directory account or Lightweight Directory Access Protocol (LDAP) account from Active Directory Domain Services (AD DS) or a 3rd party LDAP provider based on how underlying Azure Arc-enabled Kubernetes access controls are managed in on-premises or other cloud environments.
 
 - Consider whether a group-based access control or individual identity-based access controls are more appropriate for your Information Technology (IT) organization to manage Arc-enabled data services based on the operations overhead created by both options.
 
@@ -116,7 +116,7 @@ In addition to design recommendations provided in this section, review the [iden
 
 - Where appropriate use AD authentication with SQL MI to offload user lifecycle management to the directory services and use security groups in AD to manage user permissions to access the SQL database.
 
-- Use SQL authentication with Arc-enabled SQL MI as a [least preferred authentication](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver16#disadvantages-of-sql-server-authentication) type and when it is not possible to use AD authentication due to the its [support in the consumer applications or services](/sql/relational-databases/security/choose-an-authentication-mode#advantages-of-sql-server-authentication).
+- Use SQL authentication with Arc-enabled SQL MI as a [least preferred authentication](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver16#disadvantages-of-sql-server-authentication) type and when it is not possible to use AD authentication due to its [support in the consumer applications or services](/sql/relational-databases/security/choose-an-authentication-mode#advantages-of-sql-server-authentication).
 
 - Once AD authentication is made possible for your organizational needs, avoid using SQL authentication for day-to-day operations. Use SQL authentication only for emergency access to the database server for database administration.
 
@@ -133,7 +133,7 @@ Following are [the required RBAC permissions](/azure/azure-arc/data/active-direc
 |Permission|Description|
 |-----------|------------|
 |Read all properties|Allow to read all properties of a directory object. |
-|Write all properties|Allow updates to all properties of the directory object .|
+|Write all properties|Allow updates to all properties of the directory object.|
 |Create User objects|Allow creation of directory objects in the OU.|
 |Delete User objects|Allow deletion of directory objects in the OU. |
 |Reset password| Allow password reset of user objects in the OU.|
