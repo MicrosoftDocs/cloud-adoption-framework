@@ -28,13 +28,13 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 Devise a cloud adoption team to drive all HPC technical changes to have consistency to onboarding solutions into the cloud. Best practices include having a minimum viable product (MVP) that includes a cloud governance team to balance out the cloud adoption team by ensuring platform maturity, operations, governance, and automation.
 
-For more information, see [Mature Team Structures](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/organization-structures).
+For more information, see [Mature Team Structures](../../organize/organization-structures.md).
 
 ## Deployment and operations
 
 Align responsibilities for your HPC environment by developing a cross-team matrix to identify responsibility, accountability, consultancy, and informed parties.
 
-For more information, see [Align responsibilities across teams](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/raci-alignment).
+For more information, see [Align responsibilities across teams.](../../organize/raci-alignment.md)
 
 
 ## Next steps
