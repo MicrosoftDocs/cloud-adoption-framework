@@ -64,7 +64,7 @@ The following diagrams display the upgrade process of an Arc-enabled SQL MI in a
 
 #### Directly Connected mode
 
-- Determine if upgrading the Data Controller in Directly Connected mode will be implemented using the Azure Portal, the Azure CLI or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
+- Determine if upgrading the Data Controller in Directly Connected mode will be implemented using the Azure portal, the Azure CLI or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
 - Review the prerequisites for upgrades using the [Azure portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#prerequisites).
 - Review the [extensions management critical design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management) in the [Azure Arc-enabled Kubernetes Landing Zone Accelerator](/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
 
@@ -117,7 +117,7 @@ The following diagrams display the upgrade process of an Arc-enabled SQL MI in a
 
 #### Directly Connected mode
 
-- Create a process to monitor the upgrade process using the [Azure Portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#monitor-the-upgrade-status), [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
+- Create a process to monitor the upgrade process using the [Azure portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#monitor-the-upgrade-status), [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
 - Upgrade the [_arcdata_ Cluster extension](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-arc-data-controller-extension) before upgrading the Data Controller itself.
 
 #### Indirectly Connected mode
@@ -129,7 +129,7 @@ The following diagrams display the upgrade process of an Arc-enabled SQL MI in a
 
 #### General recommendations
 
-- Keep your Arc-enabled SQL MI up-to-date to the latest available version to make sure you receive the latest patches, bug fixes, and features. Currently Arc data services does not support skipping releases during upgrades. So if there are multiple releases to upgrade, you will need to upgrade to sequential releases to get to to the latest version. So, it is recommended to not drift too far from the latest releases.
+- Keep your Arc-enabled SQL MI up-to-date to the latest available version to make sure you receive the latest patches, bug fixes, and features. Currently Arc data services does not support skipping releases during upgrades. So if there are multiple releases to upgrade, you will need to upgrade to sequential releases to get to the latest version. So, it is recommended to not drift too far from the latest releases.
 - Make sure to have your "point-in-time restore" backup policy configured as needed to be able to recover in case of issues during an upgrade. Review the [Business continuity and disaster recovery critical design area](../arc-enabled-datasvc-sqlmi/eslz-arc-datasvc-sqlmi-bcdr.md) and use the _kubectl describe sqlmi_ command against your instances to verify the current retention settings.
 - In multi-cluster environments or scenarios with multiple deployments of Arc-enabled SQL MI which represent different environments, perform upgrades first in dev/test environments, such as the development environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token (if used) and that the registry exists before attempting an actual upgrade.
@@ -137,22 +137,21 @@ The following diagrams display the upgrade process of an Arc-enabled SQL MI in a
 - Use [Automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off-peak hour to perform the upgrade.
 - If automatic upgrades will be used, make sure to define a suitable [maintenance window](/azure/azure-arc/data/maintenance-window) to allow for upgrades to happen during off-peak hours.
 - In case of manual upgrades, ensure that you establish a regular cadence to perform upgrades to stay within supported versions.
-
->[!NOTE]
->You can also [poll the Microsoft Artifact Registry](/azure/azure-arc/data/upgrade-data-controller-direct-cli#view-available-images-and-chose-a-version) for new container image versions.
+    >[!NOTE]
+    >You can also [poll the Microsoft Artifact Registry](/azure/azure-arc/data/upgrade-data-controller-direct-cli#view-available-images-and-chose-a-version) for new container image versions.
 
 - Create a process to monitor the upgrade status using [Azure CLI](/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or the [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status).
 - Review the [corresponding versions](/azure/azure-arc/data/version-log) of the different components before performing an upgrade to validate having the versions of the right components in place.
 
 #### General Purpose service tier
 
-- Perform upgrades during non critical hours to minimize the impact on users and the organization data.
+- Perform upgrades during noncritical hours to minimize the impact on users and the organization data.
 - Review the [reliability pillar](/azure/architecture/framework/resiliency/overview) of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) for more information on how to architect for [resiliency and retry guidance](/azure/architecture/best-practices/retry-service-specific#sql-database-using-adonet) for your applications.
 
 #### Business Critical service tier
 
 - Deploy the Business Critical instance with 3 replicas instead of 2 to achieve higher availability and less downtime with during upgrade and failover activities.
-- Perform upgrades during non critical hours to minimize the impact on users and organization data.
+- Perform upgrades during noncritical hours to minimize the impact on users and organization data.
 
 ## Next steps
 
