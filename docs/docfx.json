@@ -59,6 +59,7 @@
           "folder_relative_path_in_docset": "./"
         }
       }
+      "searchScope": [ "Azure", "Cloud Adoption Framework" ]
     },
     "fileMetadata": {},
     "template": [],
