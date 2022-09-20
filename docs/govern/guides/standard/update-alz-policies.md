@@ -31,7 +31,7 @@ If the policy to be migrated to builtin is assigned at any scope in your Azure e
 
 ### Policies assigned through ALZ initiative
 If the policy to be migrated to builtin is part of an ALZ initiative and is assigned at any scope in your Azure estate, do the following:
-- Delete existing ALZ initiative assignments at all relevant scopes
+- Delete existing ALZ initiative assignments at all relevant scopes. Before deleting the assignments, record the assignment scope location and parameter values if different from ALZ default values
 - Update the ALZ initiative definition with the appropriate policy references. See [here](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization) for specific details. For consistency remember to update meta data information as well.
 - Re-assign the updated initiative.
 
@@ -40,19 +40,17 @@ If the policy to be migrated to builtin is part of an ALZ initiative and is assi
 There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
 - You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded
 - You follow [ALZ Bicep release guidance](https://github.com/Azure/ALZ-Bicep/releases) and note that one or more policies are indicated as being superseded
-- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/
-Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as  superseded
+- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as  superseded
 
 ## Migration steps 
 fixme to be discussed with Jack
-
+ 
 # For ALZ environments deployed through ALZ-Terraform
 ## Detect updates
 There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
 - You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded
 - You follow [ALZ Terraform release guidance](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases) and note that one or more policies are indicated as being superseded
-- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/
-Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as  superseded
+- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as  superseded
 
 ## Migration steps
 The ALZ Terraform module provides update guidance when deploying breaking changes. Follow the update guidance available for your specific version [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki).
