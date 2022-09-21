@@ -36,7 +36,7 @@ Replace workloads with software-as-a-service (SaaS) and low-code solutions to pr
 | From<span title="Replace">&nbsp;</span> | To<span title="To">&nbsp;</span> |
 |-|-|
 |Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)|
-|DevOps tools|[GitHub](/learn/modules/introduction-to-github/)|
+|DevOps tools|[GitHub](/training/modules/introduction-to-github/)|
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|
 |Industry <br>verticals|[3rd-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas&page=1li)|
 
