@@ -102,7 +102,7 @@ Cloud-scale analytics provides prescribed guidance to help you consider how to o
 
 - Persona, role, and responsibility definitions
 - Suggested structures for agile, vertical, and cross-domain teams
-- Skilling resources, including Azure data and AI certifications via Microsoft Learn training
+- Skilling resources, including Azure data and AI certifications via Microsoft Learn
 
 It's also important to engage your end users throughout the modernization process, and as you continue to evolve your platform and onboard new use cases.
 
