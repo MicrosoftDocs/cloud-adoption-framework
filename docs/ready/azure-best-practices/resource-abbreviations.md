@@ -1,6 +1,6 @@
 ---
-title: Abbreviations for Azure resource types
-description: Abbreviations to when naming your Azure resources
+title: Recommended abbreviations for Azure resources
+description: Recommended abbreviations for Azure resources
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 9/20/2022
@@ -11,9 +11,9 @@ ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
-# Recommended abbreviations for Azure resource types
+# Recommended abbreviations for Azure resources
 
-This page provides recommended abbreviations for various Azure resource types to include in your naming conventions.
+Here you'll find recommended abbreviations for naming Azure resource. The tables below list Azures resource, the resource provider namespace or entity, and the recommended abbreviation for that resource.
 
 You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) to help automate and scale your naming strategy.
 
@@ -21,7 +21,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## General
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
@@ -31,7 +31,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Networking
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
 | Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
@@ -76,7 +76,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Compute and Web
 
-| Asset type | Resource provider namespace/entity | Abbreviation |
+| Azure resource | Resource provider namespace/entity | Abbreviation |
 |--|--|--|
 | App Service environment | `Microsoft.Web/sites` | `ase` |
 | App Service plan | `Microsoft.Web/serverFarms` | `plan` |
@@ -100,7 +100,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Containers
 
-| Asset type | Resource provider namespace/entity | Abbreviation |
+| Azure resource | Resource provider namespace/entity | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
@@ -109,7 +109,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Databases
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos` |
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
@@ -126,14 +126,14 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Storage
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
 
 ## AI and Machine Learning
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
 | Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
@@ -141,7 +141,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Analytics and IoT
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
@@ -170,7 +170,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Azure Virtual Desktop
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Virtual desktop host pool | | `vdpool` |
 | Virtual desktop application group | | `vdag` |
@@ -178,14 +178,14 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Developer tools
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 
 ## Integration
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
 | Logic apps | `Microsoft.Logic/workflows` | `logic` |
@@ -195,7 +195,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Management and governance
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Automation account | `Microsoft.Automation/automationAccounts` | `aa` |
 | Application Insights | `Microsoft.Insights/components` | `appi` |
@@ -208,7 +208,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Migration
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr` |
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms` |
@@ -216,7 +216,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Deprecated product names
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Azure resource | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw` |
 
