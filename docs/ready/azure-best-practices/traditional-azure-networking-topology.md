@@ -54,7 +54,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
 - ExpressRoute is bound to certain limits; there are a maximum number of ExpressRoute connections per ExpressRoute gateway and ExpressRoute private peering can identify a maximum number of routes from Azure to on-premises. See [ExpressRoute limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#expressroute-limits) for more information about these limits.
 
-- A VPN gateway's maximum aggregated throughput is 10 gigabits per second. It supports up to 30 Site-to-Site or network-to-network tunnels.
+- A VPN gateway's maximum aggregated throughput is 10 gigabits per second. It supports up to 100 Site-to-Site or network-to-network tunnels.
 
 - If NVA is part of the architecture, Azure Route Server can be considered to simplify dynamic routing between your network virtual appliance (NVA) and your virtual network. It allows you to exchange routing information directly through Border Gateway Protocol (BGP) routing protocol between any NVA that supports the BGP routing protocol and the Azure software defined network (SDN) in the Azure virtual network (VNet) without the need to manually configure or maintain route tables.
 
