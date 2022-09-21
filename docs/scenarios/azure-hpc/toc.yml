@@ -99,10 +99,10 @@ items:
     - name: Example
       href: /azure
 
-  - name: Azure product documentation - Add links to product docs
+  - name: Azure product documentation
     items:
-    - name: Example
-      href: /azure
+    - name: Azure HPC Product documentation
+      href: /azure/architecture/topics/high-performance-computing/
 
   - name: Build skills on Learn
 
