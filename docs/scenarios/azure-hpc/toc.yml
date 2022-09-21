@@ -94,10 +94,10 @@ items:
   - name: Well-architected considerations
     href: well-architected-framework.md
 
-  - name: HPC Architectures - Add links to product architectures
+  - name: HPC Architectures
     items:
-    - name: Example
-      href: /azure
+    - name: Azure HPC Architecture examples
+      href: /azure/architecture/topics/high-performance-computing/#example-hpc-architectures
 
   - name: Azure product documentation
     items:
