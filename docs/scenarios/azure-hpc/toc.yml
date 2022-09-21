@@ -97,7 +97,7 @@ items:
   - name: HPC Architectures
     items:
     - name: Azure HPC Architecture examples
-      href: /azure/architecture/topics/high-performance-computing/#example-hpc-architectures
+      href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
 
   - name: Azure product documentation
     items:
