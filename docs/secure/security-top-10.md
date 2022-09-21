@@ -85,7 +85,7 @@ Ensure that technical security professionals have time set aside for self-paced 
 Microsoft provides extensive resources to help technical professionals ramp up on securing Azure resources and report compliance. Those resources include:
 
 - Azure security
-  - Az-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) and certification
+  - Az-500 [learning path](/certifications/exams/az-500?tab=tab-learning-paths) and certification
   - [Azure Security Benchmark (ASB)](/security/benchmark/azure/) 
     - [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview) 
   - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction)

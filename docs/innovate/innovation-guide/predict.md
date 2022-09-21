@@ -106,7 +106,7 @@ Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com
 
 Interact more naturally with your customers and improve customer engagement through conversational experiences powered by Bot Framework and Azure Bot Service. In addition, use Cognitive Services APIs like Language Understanding (LUIS), QnA Maker, and Speech service. These help your customers with common tasks, leaving your call center agents time to focus on more nuanced, higher value cases.
 
-For more information on how to build bots, see [Azure Bot Service](/learn/paths/create-conversational-ai-solutions/).
+For more information on how to build bots, see [Azure Bot Service](/training/paths/create-conversational-ai-solutions/).
 
 #### Action
 

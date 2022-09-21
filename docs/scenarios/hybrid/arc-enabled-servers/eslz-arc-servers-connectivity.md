@@ -93,4 +93,4 @@ For more guidance for your hybrid cloud adoption journey,  review the following 
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
 - Plan your [Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup).
 - For solving any connectivity issues, review the [troubleshooting Azure Arc-enabled servers agent connection guide](/azure/azure-arc/servers/troubleshoot-agent-onboard).
-- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
