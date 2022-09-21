@@ -13,7 +13,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Recommended abbreviations for Azure resources
 
-Here you'll find recommended abbreviations for naming Azure resource. The tables below list Azures resource, the resource provider namespace or entity, and the recommended abbreviation for that resource.
+Here you'll find recommended abbreviations for naming Azure resources. The tables below list Azures resource, the resource provider namespace or entity, and the recommended abbreviation for that resource.
 
 You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) to help automate and scale your naming strategy.
 
