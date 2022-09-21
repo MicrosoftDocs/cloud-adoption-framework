@@ -104,7 +104,7 @@ items:
     - name: Example
       href: /azure
 
-  - name: Build skills on Learn - Add links to Learn modules
+  - name: Build skills on Learn
 
     items:
     - name: Learning path for running HPC applications
