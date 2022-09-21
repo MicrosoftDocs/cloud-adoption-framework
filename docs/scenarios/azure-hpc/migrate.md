@@ -35,29 +35,7 @@ Evaluate the [resource organization considerations](../../scenarios/sap/eslz-res
 
 ## HPC workload specific activities
 
-For HPC workload specific activities, you should define a network topology that works best for your deployment model, consider the various factors in large-scale workloads to decide on which storage solution to use, and implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
-
-### Network topology and connectivity
-Use a network topology based on either Azure Virtual WAN or hub-and-spoke architecture.
-
-Use **Azure Virtual WAN** if your organization plans to deploy resources across several Azure regions and connect your global locations to both Azure and on-premises, fully integrate software-defined WAN deployments with Azure, and deploying up to 2,000 virtual machine workloads across all VNets connected to one Virtual WAN hub.
-
-Use **[hub-and-spoke architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli)** for deploying resources in only select Azure regions, have no need for a global, interconnected network, fewer than 30 IP security tunnels, and full control and granularity to manually configure your Azure network.
-
-### Storage
-Large-scale HPC workloads tend to have demands for data storage and access that exceed capabilities of traditional cloud file systems. The factors for storage consideration are:
-- Latency
-- IOPS,
-- Throughput
-- File sizes and count
-- Job run time
-- Cost associated
-- Affinity for storage location - on-premises vs Azure
-
-Use [standard or premium blob storage](/azure/storage/blobs/storage-blobs-introduction) to provide exabyte scale, lowest cost cloud offering, and optimizing costs by moving to cooler tiers with the ability to perform lifecycle management with last update/access time, intelligent tiering, and customizable policies.
-
-For write-once/read-once applications and random access workloads, use [Azure NetApp Files](/azure/azure-netapp-files) to have the widest choice of file protocols in the public cloud, fast deployment in minutes, and for flexible capacity pool types and performance.
-
+To get started on migrating HPC workload activities, refer to the [migration resources](../../migrate/azure-migration-guide/assess.md) to use the data and assessment tool to make informed decisions on migration readiness, aligning organization with the relevant stakeholders, and evaluating the timeline.
 
 ### Resource organization
 
