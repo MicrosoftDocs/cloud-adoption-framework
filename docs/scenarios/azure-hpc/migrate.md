@@ -54,9 +54,9 @@ Large-scale HPC workloads tend to have demands for data storage and access that 
 - Cost associated
 - Affinity for storage location - on-premises vs Azure
 
-Use [standard or premium blob storage](../../../../azure-docs-pr/articles/storage/blobs/storage-blobs-introduction.md) to provide exabyte scale, lowest cost cloud offering, and optimizing costs by moving to cooler tiers with the ability to perform lifecycle management with last update/access time, intelligent tiering, and customizable policies.
+Use [standard or premium blob storage](/azure/storage/blobs/storage-blobs-introduction) to provide exabyte scale, lowest cost cloud offering, and optimizing costs by moving to cooler tiers with the ability to perform lifecycle management with last update/access time, intelligent tiering, and customizable policies.
 
-For write-once/read-once applications and random access workloads, use [Azure NetApp Files](https://docs.microsoft.com/azure/azure-netapp-files/) to have the widest choice of file protocols in the public cloud, fast deployment in minutes, and for flexible capacity pool types and performance.
+For write-once/read-once applications and random access workloads, use [Azure NetApp Files](/azure/azure-netapp-files) to have the widest choice of file protocols in the public cloud, fast deployment in minutes, and for flexible capacity pool types and performance.
 
 
 ### Resource organization
