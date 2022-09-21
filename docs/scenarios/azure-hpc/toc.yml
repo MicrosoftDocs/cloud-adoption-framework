@@ -79,7 +79,7 @@ items:
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
   - name: Migrate HPC to Azure
     href: migrate.md
-  - name: Modernize iwh HPC on Azure
+  - name: Modernize with HPC on Azure
     href: modernize.md
   - name: Innovate with HPC on Azure
     href: migrate.md
@@ -107,5 +107,5 @@ items:
   - name: Build skills on Learn - Add links to Learn modules
 
     items:
-    - name: Example
-      href: /learn
+    - name: Learning path for running HPC applications
+      href: /learn/paths/run-high-performance-computing-applications-azure/
