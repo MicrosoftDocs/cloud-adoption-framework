@@ -31,7 +31,7 @@ However, it could be important to understand any decisions previously made by th
 
 Review the [identity and access management considerations](../../scenarios/sap/eslz-identity-and-access-management.md) to understand how the Azure Active Directory tenant is applied in the design of authentication and authorization solutions.
 
-Evaluate the [resource organization considerations](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/sap/eslz-resource-organization) to understand how the enrollment is be organized into management groups, subscriptions, and resource groups.
+Evaluate the [resource organization considerations](../../scenarios/sap/eslz-resource-organization.md) to understand how the enrollment is be organized into management groups, subscriptions, and resource groups.
 
 ## HPC workload specific activities
 
