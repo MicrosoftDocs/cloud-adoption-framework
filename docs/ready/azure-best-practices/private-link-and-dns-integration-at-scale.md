@@ -150,7 +150,12 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
 
 3. `DeployIfNotExists` policy to automatically create the required DNS record in the central private DNS zone.
 
-   This policy will be triggered if a private endpoint resource is created with a service-specific `groupId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. We then trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which is used to associate the private endpoint with our private DNS zone. For our example, the `groupId` for Azure Storage blobs is `blob` (`groupId` for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that `groupId` in the private endpoint created, it will deploy a [`privateDNSZoneGroup`][link-6] within the private endpoint, and it will be linked to the private DNS zone resource ID that is specified as parameter. For our example, the private DNS zone resource ID would be:
+    The following policy examples demonstrate two approaches of identifying which privateDNSZoneGroup a Private Endpoint DNS entry is created. The first policy relies on the `groupId` while the second policy uses both `privateLinkServiceId` and `groupID`. The second policy should be used when `groupId`'s clash (collide) with another resource. For example, the `groupId` **SQL** is used for both Cosmos DB and Synapse Analytics. If both resource types are deployed and the first policy is being assigned to create the DNS entry, it's possible the Private Endpoint entry will be created in the wrong privateDNSZoneGroup. For a list of Private-link resources `groupId`, refer to the [subresources column][link-14].
+
+> [!TIP]
+> Azure Policy built-in definitions are constantly being added, deleted, and updated. It is highly recommended to use built-in policies vs. managing your own policies. Utilize the [AzPolicyAdvertizer][link-12] to find existing built-in policies '...to use private DNS zones'. In addition, Azure Landing Zones (ALZ) has a policy initiative, [Configure Azure PaaS services to use private DNS zones][link-13], containing the built-in policies as well. If a built-in policy is not available for your situation, consider creating an issue on the `azure-policy` feedback site [Azure Governance · Community][link-15] following the [new-built-in-policy-proposals][link-16] states.
+
+- a) This policy will be triggered if a private endpoint resource is created with a service-specific `groupId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. We then trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which is used to associate the private endpoint with our private DNS zone. For our example, the `groupId` for Azure Storage blobs is `blob` (`groupId` for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that `groupId` in the private endpoint created, it will deploy a [`privateDNSZoneGroup`][link-6] within the private endpoint, and it will be linked to the private DNS zone resource ID that is specified as parameter. For our example, the private DNS zone resource ID would be:
 
    `/subscriptions/<subscription-id>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net`
 
@@ -249,6 +254,114 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
    }
    ```
 
+- b) This policy will be triggered if a private endpoint resource is created with a service-specific `groupId` and  `privateLinkServiceId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. The `privateLinkServiceId` is the resource ID of the remote resource (service) this private endpoint should connect to. We then trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which is used to associate the private endpoint with our private DNS zone. For our example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privateLinkServiceId` must contain `Microsoft.DocumentDb/databaseAccounts` (`groupId` and `privateLinkServiceId` for other Azure services can be found on [this][link-4] article, under the **Subresource** column). When policy finds that `groupId` and `privateLinkServiceId` in the private endpoint created, it will deploy a [`privateDNSZoneGroup`][link-6] within the private endpoint, and it will be linked to the private DNS zone resource ID that is specified as parameter. For our example, the private DNS zone resource ID would be:
+
+   `/subscriptions/<subscription-id>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/privateDnsZones/privatelink.documents.azure.com`
+
+   This policy definition is listed below:
+
+   ```json
+   {
+     "mode": "Indexed",
+     "policyRule": {
+       "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/privateEndpoints"
+          },
+          {
+            "count": {
+              "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*]",
+              "where": {
+                "allOf": [
+                  {
+                    "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*].privateLinkServiceId",
+                    "contains": "Microsoft.DocumentDb/databaseAccounts"
+                  },
+                  {
+                    "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*].groupIds[*]",
+                    "equals": "[parameters('privateEndpointGroupId')]"
+                  }
+                ]
+              }
+            },
+            "greaterOrEquals": 1
+          }
+        ]
+      },
+       "then": {
+         "effect": "deployIfNotExists",
+         "details": {
+           "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+           "roleDefinitionIds": [
+             "/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7"
+           ],           
+           "deployment": {
+             "properties": {
+               "mode": "incremental",
+               "template": {
+                 "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                 "contentVersion": "1.0.0.0",
+                 "parameters": {
+                   "privateDnsZoneId": {
+                     "type": "string"
+                   },
+                   "privateEndpointName": {
+                     "type": "string"
+                   },
+                   "location": {
+                     "type": "string"
+                   }
+                 },
+                 "resources": [
+                   {
+                     "name": "[concat(parameters('privateEndpointName'), '/deployedByPolicy')]",
+                     "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+                     "apiVersion": "2020-03-01",
+                     "location": "[parameters('location')]",
+                     "properties": {
+                       "privateDnsZoneConfigs": [
+                         {
+                           "name": "cosmosDB-privateDnsZone",
+                           "properties": {
+                             "privateDnsZoneId": "[parameters('privateDnsZoneId')]"
+                           }
+                         }
+                       ]
+                     }
+                   }
+                 ]
+               },
+               "parameters": {
+                 "privateDnsZoneId": {
+                   "value": "[parameters('privateDnsZoneId')]"
+                 },
+                 "privateEndpointName": {
+                   "value": "[field('name')]"
+                 },
+                 "location": {
+                   "value": "[field('location')]"
+                 }
+               }
+             }
+           }
+         }
+       }
+     },
+     "parameters": {
+       "privateDnsZoneId": {
+         "type": "String",
+         "metadata": {
+           "displayName": "Private Dns Zone Id",
+           "description": "The private DNS zone to deploy in a new private DNS zone group and link to the private endpoint",
+           "strongType": "Microsoft.Network/privateDnsZones"
+         }
+       }
+     }
+   }
+   ```
+
 ### Policy assignments
 
 Once policy definitions have been deployed, [assign the policies][link-7] at the desired scope in your management group hierarchy. Ensure that the policy assignments target the Azure subscriptions that will be used by the application teams to deploy PaaS services with private endpoint access exclusively.
@@ -315,6 +428,11 @@ If an application owner deletes the private endpoint, the corresponding records 
 [link-9]: /azure/governance/policy/how-to/remediate-resources
 [link-10]: /azure/governance/policy/overview
 [link-11]: /azure/governance/policy/how-to/remediate-resources#configure-policy-definition
+[link-12]: https://www.azadvertizer.net/azpolicyadvertizer_all.html#%7B%22col_3%22%3A%7B%22flt%22%3A%22to%20use%20private%20DNS%20zones%22%7D%7D
+[link-13]: https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-Private-DNS-Zones.html
+[link-14]: /azure/private-link/private-endpoint-overview#private-link-resource
+[link-15]: https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0
+[link-16]: https://github.com/Azure/azure-policy#new-built-in-policy-proposals
 [image-1]: ./media/private-link-example-central-dns.png
 [image-2]: ./media/create-private-dns-zones.jpg
 [image-3]: ./media/create-storage-account-blob.jpg
