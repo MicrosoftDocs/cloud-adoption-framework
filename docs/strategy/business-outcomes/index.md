@@ -33,6 +33,7 @@ The following are a few business outcomes that tend to trigger conversations wit
 - **Sales:** Accelerate sales, improve customer lifetime value.
 - **Human resources:** Retain, recruit, and empower employees.
 - **Executive leadership:** Meeting market growth requirements and environmental sustainability metrics.
+- **Sustainability:** Driving sustainability as a strategy throughout the entire business
 
 ## Sample outcomes by category
 
@@ -72,7 +73,7 @@ Learn more about [performance outcomes](./performance-outcomes.md).
 
 ### Sustainability goals
 
-Organizations are increasingly discussing environmental goals and sustainability targets.
+Organizations are increasingly discussing environmental goals and sustainability targets. Environmental sustainability is quickly moving from a "nice to have" function of Corporate Social Responsibility (CSR) to a centerpiece of business strategy, increasingly embedded into everything a company does.
 
 Learn more about [sustainability goals](./sustainability.md).
 
