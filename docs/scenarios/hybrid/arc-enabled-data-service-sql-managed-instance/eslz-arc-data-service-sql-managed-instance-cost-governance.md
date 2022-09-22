@@ -1,9 +1,9 @@
 ---
 title: Cost governance for Azure Arc-enabled SQL Managed Instance
-description: Learn design considerations and recommendations for cost governance for Azure Arc-enabled SQL Managed Instance
+description: Learn design considerations and recommendations on cost governance for Azure Arc-enabled SQL Managed Instance.
 author: mrhoads
 ms.author: mirhoads
-ms.date: 09/21/2022
+ms.date: 09/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -31,7 +31,7 @@ While not a direct cost of Arc-enabled SQL MI, when you deploy an instance in th
 
 ## Design considerations
 
-- **Service tier** Define the business requirements to determine the most appropriate service tier. In addition, consider the extra infrastructure needed to support [business continuity and disaster recovery](./eslz-arc-datasvc-sqlmi-bcdr.md).
+- **Service tier** Define the business requirements to determine the most appropriate service tier. In addition, consider the extra infrastructure needed to support [business continuity and disaster recovery](./eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery.md).
 
 - **Connectivity modes** How usage and billing information is sent to Azure varies depending on whether one is using the directly connected or indirectly connected mode. If you're using the indirectly connected mode, consider how the usage and billing information is regularly sent to Azure.
 
@@ -46,13 +46,13 @@ Consider the combination of service tier needs, timeline for Arc-enabled SQL MI 
 The following sections contain design recommendations for Arc-enabled SQL MI cost governance.
 
 > [!NOTE]
-> Pricing information shown in the provided screenshots are examples and provided to demonstrate cost governance concepts but don't reflect the actual pricing information you might see in your own Azure Arc deployments.
+> Pricing information shown in these screenshots are examples that demonstrate cost governance concepts but don't necessarily reflect the actual pricing information you might see in your own Azure Arc deployments.
 
 ### Service tier
 
 The biggest cost component in an Arc-enabled SQL MI deployment is the service tier you select. Choose the service tier that meets your business requirements. For more information on service tiers, see the [Service tier comparison](/azure/azure-arc/data/service-tiers#service-tier-comparison). Consider your needs for high-availability and read scale-out, among other factors. If you're migrating an existing SQL Server deployment, think about the SQL edition currently in use and required features for the Arc-enabled SQL MI deployment.
 
-[![A screenshot of service tier and estimated cost summary.](./media/arc-enabled-data-svc-sql-mi-cost-01.png)](./media/arc-enabled-data-svc-sql-mi-cost-01.png#lightbox)
+:::image type="content" source="./media/arc-enabled-data-svc-sql-mi-cost-01.png" alt-text="A screenshot of a service tier and estimated cost summary." lightbox="./media/arc-enabled-data-svc-sql-mi-cost-01.png":::
 
 ### Connectivity mode
 
@@ -62,7 +62,7 @@ If you're using the directly connected mode, no further action is needed. The ne
 
 Based on the expected duration of the Arc-enabled SQL MI deployment, choose a one-year or three-year reserved instance if it results in savings for your organization. For more information on reserved VM instances, see the [Cloud Adoption Framework](/azure/cloud-adoption-framework/govern/cost-management/best-practices#best-practice-use-azure-reserved-vm-instances) best practices.
 
-[![A screenshot of reservation purchase overview.](./media/arc-enabled-data-svc-sql-mi-cost-02.png)](./media/arc-enabled-data-svc-sql-mi-cost-02.png#lightbox)
+:::image type="content" source="./media/arc-enabled-data-svc-sql-mi-cost-02.png" alt-text="A screenshot of a reserved instance purchase overview." lightbox="./media/arc-enabled-data-svc-sql-mi-cost-02.png":::
 
 ### Azure Hybrid Benefit
 
@@ -74,21 +74,21 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 
 - Use [Azure cost management and billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) to understand Arc-enabled SQL MI costs.
 
-[![A screenshot of cost analysis.](./media/arc-enabled-data-svc-sql-mi-cost-03.png)](./media/arc-enabled-data-svc-sql-mi-cost-03.png#lightbox)
+:::image type="content" source="./media/arc-enabled-data-svc-sql-mi-cost-03.png" alt-text="A screenshot of cost analysis." lightbox="./media/arc-enabled-data-svc-sql-mi-cost-03.png":::
 
 ### Azure Policy for Kubernetes
 
-- Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).  An optional component that might complement Arc-enabled SQL MI by, for example, enforcing tagging or controlling the enablement of Azure services.
-- Review the [Security, governance, and compliance critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) to learn best practices and recommendations for implementing Azure Policy for Kubernetes. These best practices include:
-  - Enforcing tagging for better cost visibility across clusters
-  - Controlling the enablement of Azure services
+- Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/). An optional component that might complement Arc-enabled SQL MI by, for example, enforcing tagging or controlling the enablement of Azure services.
+- Review the [Security, governance, and compliance critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) to learn best practices and recommendations for implementing Azure Policy for Kubernetes. These best practices include how to:
+  - Enforce tagging for better cost visibility across clusters
+  - Control the enablement of Azure services
 
 ## Next steps
 
-For more information about your hybrid and multicloud cloud journey, see the following articles:
+For more information about your hybrid and multicloud journey, see the following articles:
 
 - Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
-- Experience Azure Arc-enabled data services automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
+- Explore Azure Arc-enabled data services automated scenarios with [Azure Arc Jumpstart Project](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - Learn more about Azure Arc in the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
-- See the [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.
+- See the [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to the most common questions.
