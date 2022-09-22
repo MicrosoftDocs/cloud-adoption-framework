@@ -18,7 +18,7 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 When building your own HPC solution, there is significant investment required in specifying the right supercomputer specs and clusters. There are also financial concerns for investing in capital for continually upgrading computing hardware to meet high demanding workloads.
 
-There are other concerns with time, as scheduling can take from days to months to run an HPC workload which will heavily affect optimization of internal operations.
+There are other concerns with time, as scheduling can take from days to months to run an on-premise HPC workload which will heavily affect optimization of internal operations.
 
 ## HPC outcomes
 
