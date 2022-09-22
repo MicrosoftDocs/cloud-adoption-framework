@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank
 
 This article describes [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview) identity and access management (IAM) architecture, design considerations, and recommendations for various scenarios.
 
-[Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview) relies on the [Azure Arc-enabled data services](/azure/azure-arc/data/overview) extension running on Azure Arc-enabled Kubernetes cluster. Following are the various components of Azure Arc-enabled data services that are important for identity and access management as part of this critical design area.
+Arc-enabled SQL Managed Instance relies on the [Azure Arc-enabled data services](/azure/azure-arc/data/overview) extension running on Azure Arc-enabled Kubernetes cluster. Following are the various components of Azure Arc-enabled data services that are important for identity and access management as part of this critical design area.
 
 - Azure Arc data controller
 - Azure Arc Active Directory connector
@@ -24,7 +24,7 @@ This article describes [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc
 
 ### SQL authentication
 
-SQL authentication is supported for Arc-enabled SQL Managed Instance using local [SQL identities](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication). SQL authentication method is used during first-time login to create login credentials from Windows for administrators and to grant permissions to the database to access Arc-enabled SQL Managed Instance using Active Directory authentication. Grafana and Kibana dashboards support only basic authentication at this time.
+SQL authentication is supported for Arc-enabled SQL Managed Instance using local [SQL identities](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication). SQL authentication method is used during first-time sign in to create sign-in credentials from Windows for administrators and to grant permissions to the database to access Arc-enabled SQL Managed Instance using Active Directory authentication. Grafana and Kibana dashboards support only basic authentication at this time.
 
 ### Active Directory authentication
 
@@ -44,7 +44,7 @@ Active Directory connector in [system-managed keytab mode](/azure/azure-arc/data
 
 #### Customer-managed keytab
 
-Active Directory connector in [customer-managed keytab mode](/azure/azure-arc/data/deploy-customer-managed-keytab-active-directory-connector) provides full control of managing service accounts, service principals, and generating keytab to the customers who strictly follow the [Information Technology Infrastructure Library (ITIL)](https://www.axelos.com/certifications/itil-service-management) process and separation of duties to delegate activities to different teams to comply with organizational security policies and governance.
+Active Directory connector in [customer-managed keytab mode](/azure/azure-arc/data/deploy-customer-managed-keytab-active-directory-connector) provides full control of managing service accounts, service principals, and generating keytab to the customers who strictly follow the [Information Technology Infrastructure Library (ITIL)](https://www.axelos.com/certifications/itil-service-management) process and separation of duties to delegate activities to different teams.
 
 [![Diagram that shows Active Directory authentication using customer-managed keytab mode.](./media/arc-enabled-data-svc-sql-mi-ad-auth-customer-keytab.png)](./media/arc-enabled-data-svc-sql-mi-ad-auth-customer-keytab.png#lightbox)
 
@@ -54,7 +54,7 @@ Active Directory connector in [customer-managed keytab mode](/azure/azure-arc/da
 
 When the Arc-enabled data services extension is installed in Directly connected mode, a [managed identity](/azure/azure-arc/data/create-data-controller-direct-cli?tabs=windows#retrieve-the-managed-identity-and-grant-roles) is created for Arc-enabled data services to interact with Azure Resource Manager (ARM) APIs control plane and data plane. Azure Arc data controller uses this managed identity to perform these actions when managing Arc-enabled SQL Managed Instance.
 
-In an Indirect connectivity mode a [service principal](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor#create-service-principal) with [required permissions](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor?tabs=windows#assign-roles-to-the-service-principal) is needed by the data controller to periodically [export usage information](/en-us/azure/azure-arc/data/upload-usage-data#upload-usage-data) such as inventory and resource usage to Azure.
+In an Indirect connectivity mode, a [service principal](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor#create-service-principal) with [required permissions](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor?tabs=windows#assign-roles-to-the-service-principal) is needed by the data controller to periodically [export usage information](/en-us/azure/azure-arc/data/upload-usage-data#upload-usage-data) such as inventory and resource usage to Azure.
 
 ### Azure RBAC on Azure Arc-enabled data services
 
@@ -92,7 +92,7 @@ Review the [identity and access management critical design area](/azure/cloud-ad
 
 Arc-enabled SQL Managed Instance access controls are fully independent of underlying [Azure Arc-enabled Kubernetes access controls](/azure/azure-arc/kubernetes/azure-rbac). It's important to make a few design decisions to administer Arc-enabled SQL Managed Instance and provide access to consumer applications and end users.
 
-- Choose between AD and SQL authentication depending on your organization's applications or service capabilities. As not all applications support AD authentication, review your organization's security policies for allowed authentication types and enforce additional security controls necessary when using SQL authentication.
+- Choose between AD and SQL authentication depending on your organization's applications or service capabilities. As not all applications support AD authentication, review your organization's security policies for allowed authentication types, and enforce extra security controls necessary when using SQL authentication.
 
 - When cloud-native services need to authenticate and connect to Arc-enabled SQL Managed Instance databases to extract and ingest data into data analytics services, consider using self-hosted runtime virtual or physical machines on-premises that are AD joined over SQL to authenticate and connect to Arc-enabled SQL Managed Instance.
 
@@ -116,7 +116,7 @@ In addition to the following design recommendations, review the [identity and ac
 
 - Where appropriate, use AD authentication with SQL Managed Instance to offload user lifecycle management to directory services and use security groups in AD to manage user permissions.
 
-- Use SQL authentication with Arc-enabled SQL Managed Instance as a [least preferred authentication](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver16#disadvantages-of-sql-server-authentication) type and [when it's not possible to use AD authentication](/sql/relational-databases/security/choose-an-authentication-mode#advantages-of-sql-server-authentication).
+- Use SQL authentication with Arc-enabled SQL Managed Instance as a [least preferred authentication](/sql/relational-databases/security/choose-an-authentication-mode#disadvantages-of-sql-server-authentication) type and [when it's not possible to use AD authentication](/sql/relational-databases/security/choose-an-authentication-mode#advantages-of-sql-server-authentication).
 
 - Once AD authentication is made possible for your organizational needs, avoid using SQL authentication for day-to-day operations. Use SQL authentication only for emergency access to the database server for database administration.
 
@@ -124,7 +124,7 @@ In addition to the following design recommendations, review the [identity and ac
 
 ## Role-based access controls (RBAC)
 
-When using system-managed keytab mode, explicit permissions to [Domain Service Account (DSA)](/azure/azure-arc/data/active-directory-prerequisites#create-the-domain-service-account-dsa) are required at [Active Directory OU](/azure/azure-arc/data/active-directory-prerequisites#create-an-ou) level for Arc-enabled SQL Managed Instance.
+In system-managed keytab mode, explicit permissions to [Domain Service Account (DSA)](/azure/azure-arc/data/active-directory-prerequisites#create-the-domain-service-account-dsa) are required at [Active Directory OU](/azure/azure-arc/data/active-directory-prerequisites#create-an-ou) level for Arc-enabled SQL Managed Instance.
 
 Following are [the required RBAC permissions](/azure/azure-arc/data/active-directory-prerequisites#set-permissions-for-the-dsa). For customer-managed keytab mode, no explicit permissions are required for the domain service account at the Active Directory OU level.
 
