@@ -1,30 +1,31 @@
 ---
-title: 'Resource organization | Microsoft Docs'
-description: 'To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.'
-author: ericd-mst-github
-ms.author: erd
+title: Enterprise-scale management group and subscription organization for HPC - Finance
+description: #Describe how this Finance landing zone accelerator can improve management group and subscription organization of Finance.
+author: {{Token-ContributorGithubId}}
+ms.author: {{Token-Alias}}
+ms.date: {{Token-Date}}
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
 ---
 
-# Resource organization
+# Management group and subscription organization for HPC - Finance landing zone accelerator
 
-To align with the [Ready methodology](/azure/cloud-adoption-framework/ready/) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
+Introduction paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
 
-## Use single vs multiple Azure subscriptions.
+## Design considerations
 
- - In Azure Active Directory (Azure AD), a tenant is representative of an organization. It is a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for using Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Azure AD.
- - You can choose single vs multiple subscription based on the organizations needs.
-     - Multiple Subscriptions allow for easy view billing for each subscription and limit who can access the Microsoft Azure services associated with that subscription – for example production vs non-production subscriptions, internal vs external etc.
-     - Having multiple subscriptions helps in planning for [subscriptions limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
-     - You can learn more about the decision making process for subscriptions [here](/azure/cloud-adoption-framework/decision-guides/subscriptions/).
-     - We also recommend that you consider ARM throttling limits while choosing to go with multiple vs single subscription, you can learn more about it [here](/azure/azure-resource-manager/management/request-limits-and-throttling).
+The following is a bulleted list of things you must think about when preparing for **any** deployment of Finance.
 
-## Use Azure resource naming and tagging conventions
+## Design recommendations
 
-The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
+The following is a bulleted list of best practices that should be included in any deployment of Finance.
 
-Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags, route tables, managed disks, and public IPs. A sample use case could be to tag all Azure development VMs with the tag Dev. This eases reporting and billing operations to pull a report for all things Dev. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+## Enterprise-scale assumptions
+
+The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Finance.
+
+## Additional considerations
+
+Create as many H2 "##" headers as is required to educate the customer on this topic.
