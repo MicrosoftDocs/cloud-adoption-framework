@@ -31,7 +31,7 @@ Consider also [getting assistance](../../migrate/azure-migration-guide/assistanc
 
 In regards to dedicated data migration assistance, find an Azure [HPC industry partner](https://appsource.microsoft.com/en-us/marketplace/partner-dir) near you to help with potential latency problems and large sets of important data to be moved.
 
-Alternatively, you can also use [Azure HPC Cache](azure/services/hpc-cache) services to create a copy of your data needed for temporary processing in the cloud. Typically Azure HPC Cache is used for read-heavy file access workflows, NFS-accessible storage and Azure Blobs, and compute farms of up to 75,000 cores.
+You can also use [Azure HPC Cache](azure/services/hpc-cache) services to create a copy of your data needed for temporary processing in the cloud. Typically Azure HPC Cache is used for read-heavy file access workflows, NFS-accessible storage and Azure Blobs, and compute farms of up to 75,000 cores.
 
 A wide variety of workflows across many industries that have a large number of machines needed to access a set of files at scale and low latency will benefit from Azure HPC Cache.
 
