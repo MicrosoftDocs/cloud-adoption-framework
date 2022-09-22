@@ -102,4 +102,4 @@ For more guidance for your hybrid cloud adoption journey,  review the following 
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
 - Review [Azure Automation in a hybrid environment](/azure/architecture/hybrid/azure-automation-hybrid) for Hybrid Runbook Worker feature of Azure Automation.
-- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

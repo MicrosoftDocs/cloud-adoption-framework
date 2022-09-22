@@ -90,7 +90,7 @@ Download the following files to use the Power BI model:
 
 **Azure Migration and Modernization Program:** Join [this program](https://azure.microsoft.com/migration/migration-modernization-program/) to get guidance and expert help at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps so you can move forward with confidence.
 
-### Learn about Azure with Microsoft Learn
+### Learn about Azure
 
 [Microsoft Learn training](/training/) offers many learning paths for Azure that you might want to consider as you build your business case.
 

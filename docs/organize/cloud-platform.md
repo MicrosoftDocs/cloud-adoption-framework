@@ -32,7 +32,7 @@ The skills needed to provide full platform functionality can be provided by:
 
 - [`Foundations for Cloud Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
 - [`Microsoft Azure Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
-- [Azure network services](/learn/modules/azure-networking-fundamentals/): Learn Azure networking basics and how to improve resiliency and reduce latency.
+- [Azure network services](/training/modules/azure-networking-fundamentals/): Learn Azure networking basics and how to improve resiliency and reduce latency.
 
 **Review the following:**
 
