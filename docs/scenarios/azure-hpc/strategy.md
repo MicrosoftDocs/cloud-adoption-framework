@@ -39,7 +39,7 @@ As geographical and market HPC demands require scaling out the compute resources
 
 When configuring your HPC environment to the cloud, you will want to consider forecasting what your on-premises HPC costs would be if no cloud migration is planned versus the costs of migrating to the cloud to determine how much spending is done to run your environment today, in an average year, and what the migration timeline will look like.
 
-Cloud billing models are flexible and Azure HPC Cache pricing offers low-latency file access to support HPC workloads in Azure. You can use Azure HPC Cache for transferring excess compute capacity to Azure while leaving large datasets in your network-attached storage (NAS) or Azure Blob storage for a cloud NAS solution.
+[Create a business case](../../strategy/cloud-migration-business-case.md) to help foster support from your finance team and other areas of the business to accelerate your cloud migration timeline and promote business agility. Also look into the different types of [cloud savings](../../strategy/cloud-migration-business-case.md#cloud-savings) to determine which billing model will be most cost effective for your HPC environment.
 
 ## Next steps
 
