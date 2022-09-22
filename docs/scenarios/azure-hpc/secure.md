@@ -26,7 +26,7 @@ The focus of HPC is based on key management principles:
 |  **Simplified yet secure permissions**| Avoid customization. Customization leads to complexity, which inhibits human understanding, security, automation, and governance. For example, use built-in roles to assign permissions to data services and avoid permissions that specifically reference individual resources or users.|
 | **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
-It is recommended to follow the security baseline recommendations for the following HPC services:
+It is also recommended to follow the security baseline recommendations for the following HPC services:
 - [Azure HPC Cache:](https://learn.microsoft.com/security/benchmark/azure/baselines/hpc-cache-security-baseline) Ensure that network security, identity management, privileged access, data protection, asset management, logging/threat detection, posture/vulnerability management, and backup/recovery is in place.
 - [Azure CycleCloud:](/azure/cyclecloud/concepts/security-best-practices) Have your HPC administrator setup SSL, configure networking and secret management, and create a secure locked-down environment.
 - [Azure Batch:](/azure/batch/security-controls-policy) Use the latest Azure Security Benchmarks available to implement recommendations on securing your Batch nodes based on the appropriate compliance standard.
