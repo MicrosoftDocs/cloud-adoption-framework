@@ -12,40 +12,33 @@ ms.custom: think-tank
 
 # Migrate Azure high-performance computing (HPC)
 
-Establish a driving statement to shape migration of this technology platform. Best practice encourages customers to create a migration statement, using the [Cloud Adoption Framework's migrate methodology](../../migrate/index.md). Migrate and modernize existing workloads.
+Azure HPC offers sustainability, efficiency, and flexibility with various digital solutions to not only supplement on-premise infrastructure but also reduces reliance on persistent cycles concerning hardware refreshes for higher demanding computation. 
+
+See how your HPC environment could be [migrated](../../migrate/index.md) to the cloud and determine which approach best fits your environment.
 
 ## HPC process details
 
-Migrating to newer HPC clusters in Azure is not required, but offers benefits. You should reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of VMs. It is also possible to move to a more cost-effective, non HPC cluster.
+You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of VMs. It is also possible to move to a more cost-effective, non HPC cluster.
 
-Get started by following the [guidelines](https://azure.microsoft.com/resources/hpc-migration-guide/) in an HPC migration:
+Review the [migration tool](../../migrate/azure-migration-guide/index.md#migration-toolstabmigrationtools) to define your HPC migration process and in addition:
 - **Review the current VM size**: Review your CPU, memory, disk, and networking specifications for existing VMs to determine appropriate VM sizes.
 - **Verify Azure subscription quota limits**: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes you choose.
 - **Identify the deployment model**: Automate deployment as much as possible by choosing between Azure Resource Manager or Azure Service Manager, previously known as classic deployment.
 
+Consider also [getting assistance](../../migrate/azure-migration-guide/assistance.md) to accelerate your HPC migration efforts.
+
 ## HPC process flow
 
-Azure landing zones for HPC do not have any specific considerations or recommendations which would impact billing offer decisions, enterprise enrollment or Active Directory tenant decisions.
+In regards to dedicated data migration assistance, find an Azure [HPC industry partner](https://appsource.microsoft.com/en-us/marketplace/partner-dir) near you to help with potential latency problems and large sets of important data to be moved.
 
-However, it could be important to understand any decisions previously made by the cloud platform team to be aware of [existing enterprise enrollment or Azure Active Directory tenant decisions.](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md)
+Alternatively, you can also use [Azure HPC Cache](azure/services/hpc-cache) services to create a copy of your data needed for temporary processing in the cloud. Typically Azure HPC Cache is used for read-heavy file access workflows, NFS-accessible storage and Azure Blobs, and compute farms of up to 75,000 cores.
 
-Review the [identity and access management considerations](../../scenarios/sap/eslz-identity-and-access-management.md) to understand how the Azure Active Directory tenant is applied in the design of authentication and authorization solutions.
-
-Evaluate the [resource organization considerations](../../scenarios/sap/eslz-resource-organization.md) to understand how the enrollment is be organized into management groups, subscriptions, and resource groups.
+A wide variety of workflows across many industries that have a large number of machines needed to access a set of files at scale and low latency will benefit from Azure HPC Cache.
 
 ## HPC workload specific activities
 
-To get started on migrating HPC workload activities, refer to the [migration resources](../../migrate/azure-migration-guide/assess.md) to use the data and assessment tool to make informed decisions on migration readiness, aligning organization with the relevant stakeholders, and evaluating the timeline.
+To get started on migrating HPC workload activities, refer to the [migration resources](../../migrate/azure-migration-guide/assess.md#assess-workloads-and-refine-plans) to use the data and assessment tool to access/define your HPC workloads, make informed decisions on migration readiness, align your organization with the relevant stakeholders, and evaluating the timeline of migration.
 
-### Resource organization
-
-Resource organization for HPC follows alignment with the [Ready methodology](../../ready/index.md#prepare-for-cloud-adoption) by determining single vs multiple Azure subscriptions based on organizational needs and executing a naming and tagging strategy for components of resource names and metadata tags.
-
-Review the [decision](../../decision-guides/subscriptions/index.md) making process for subscriptions.
-
-The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
-
-Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags, route tables, managed disks, and public IPs.
 
 ## Next steps
 
