@@ -28,14 +28,17 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 Devise a cloud adoption team to drive all HPC technical changes to have consistency to onboarding solutions into the cloud. Best practices include having a minimum viable product (MVP) that includes a cloud governance team to balance out the cloud adoption team by ensuring platform maturity, operations, governance, and automation.
 
+Consider forming a cloud strategy team with both executive leadership and IT management for accountability of the cloud adoption lifecycle.
+
 For more information, see [Mature Team Structures](../../organize/organization-structures.md).
 
 ## Deployment and operations
 
+Establish coordination with your organization IT leaders and research teams to identify strong use cases only possible for HPC cloud when it comes to cost and needed performance. Use cases could be studying variations of a genetic disease in life and health sciences, automotive designers simulating the forces and stresses that impact vehicle safety operations, or the continual growing demands of AI computation.
+
 Align responsibilities for your HPC environment by developing a cross-team matrix to identify responsibility, accountability, consultancy, and informed parties.
 
 For more information, see [Align responsibilities across teams.](../../organize/raci-alignment.md)
-
 
 ## Next steps
 
