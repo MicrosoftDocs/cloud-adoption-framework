@@ -18,17 +18,22 @@ Application of the Plan methodology focuses on the [five Rs of rationalizing you
 
 ## HPC estate
 
-While it is important to gather inventory data for a digital estate for cloud adoption, HPC in Azure does has a [migration](./migrate.md) path in the demand of newer hardware for better performance, but keep in mind that certain VM series of hardware are specifically scoped, particularly the A8 to A11 series.
+While it is important to gather inventory data for a digital estate for cloud adoption, it is recommended to assess your current environment's HPC usage. [Digital estate measurements](../../digital-estate/index.md#how-can-a-digital-estate-be-measured)
+ can change depending on the desired business outcomes.
 
-It is recommended to assess your current environment's HPC usage to decide which HPC cluster is needed. Your organization could benefit from the performance and cost advantages of a more traditional VM SKU as well.
+Evaluate the attributes of your HPC environment in terms of an [asset-driven](../../digital-estate/approach.md#asset-driven-approach) approach when planning your digital estate.
 
 ## HPC adoption plan
 
 When planning cloud adoption for your HPC environment, review the Azure DevOps [strategy and plan template](../../plan/template.md#align-the-cloud-adoption-plan) to align your tasks and organize objectives through epics, features, and user stories.
 
+For skilling your IT teams on adopting Azure HPC services, [identify gaps](../../plan/adapt-roles-skills-processes.md#identify-gaps) when forming your digital transformation.
+
+Once your team gaps have been identified, the next steps are further developing HPC skills with [Microsoft learn.](/learn/paths/run-high-performance-computing-applications-azure)
+
 ## HPC readiness plan
 
-Ensure that the IT teams understand the [HPC and batch solutions](https://learn.microsoft.com/training/browse/?terms=HPC) available in Azure and identify where HPC and batch technologies will fit in your organization needs.
+While identifying gaps is important to adopting Azure HPC services, it is also crucial to [build a readiness plan](../../plan/adapt-roles-skills-processes.md) as IT staff members will likely have role changes and have concerns to new job duties in the adoption efforts. Capturing these concerns might involve executive leadership to help drive the relevant training needed to support expanding functions.
 
 
 ## Next steps
