@@ -39,7 +39,7 @@ While not a direct cost of Arc-enabled SQL MI, when you deploy an instance in th
 
 - **Azure Hybrid Benefit** For SQL Server, Azure Hybrid Benefits offers savings on both service tiers of Arc-enabled SQL MI.
 
-Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit?view=azuresql&tabs=azure-portal). Also, [Dev/Test pricing](/pricing/dev-test/) is available for both service tiers, though it's only for development use. Review the [cost management considerations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance#cost-management-considerations) of Azure landing zones to understand broad cost-related considerations. Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
+Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit). Also, [Dev/Test pricing](/pricing/dev-test/) is available for both service tiers, though it's only for development use. Review the [cost management considerations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance#cost-management-considerations) of Azure landing zones to understand broad cost-related considerations. Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
 
 ## Design recommendations
 
@@ -66,11 +66,11 @@ Based on the expected duration of the Arc-enabled SQL MI deployment, choose a on
 
 ### Azure Hybrid Benefit
 
-If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit?view=azuresql&tabs=azure-portal), use it to lower the cost of Arc-enabled SQL MI.
+If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit), use it to lower the cost of Arc-enabled SQL MI.
 
 ### Governance
 
-- Review the recommendations in the [resource organization](./eslz-arc-datasvc-sqlmi-resource-organization.md) and [governance disciplines](./eslz-arc-datasvc-sqlmi-governance-disciplines.md) critical design areas. The recommendations help you implement a governance strategy, organize your resources for better cost control and visibility, and avoid unnecessary costs by using the least privileged access model for onboarding and management. Also, review the broader recommendations for Azure Arc-enabled Kubernetes [resource organization](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization) and [governance discipline](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines) to understand governance principles outside of a data services context.
+- Review the recommendations in the [resource organization](eslz-arc-data-service-sql-managed-instance-resource-organization.md) and [governance disciplines](eslz-arc-data-service-sql-managed-instance-governance-disciplines.md) critical design areas. The recommendations help you implement a governance strategy, organize your resources for better cost control and visibility, and avoid unnecessary costs by using the least privileged access model for onboarding and management. Also, review the broader recommendations for Azure Arc-enabled Kubernetes [resource organization](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization) and [governance discipline](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines) to understand governance principles outside of a data services context.
 
 - Use [Azure cost management and billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) to understand Arc-enabled SQL MI costs.
 
@@ -79,7 +79,7 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 ### Azure Policy for Kubernetes
 
 - Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/). An optional component that might complement Arc-enabled SQL MI by, for example, enforcing tagging or controlling the enablement of Azure services.
-- Review the [Security, governance, and compliance critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) to learn best practices and recommendations for implementing Azure Policy for Kubernetes. These best practices include how to:
+- Review the [Security, governance, and compliance critical design area](.\eslz-arc-data-service-sql-managed-instance-management-disciplines.md) to learn best practices and recommendations for implementing Azure Policy for Kubernetes. These best practices include how to:
   - Enforce tagging for better cost visibility across clusters
   - Control the enablement of Azure services
 
