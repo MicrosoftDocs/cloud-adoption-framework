@@ -37,6 +37,8 @@ A wide variety of workflows across many industries that have a large number of m
 
 ## HPC workload specific activities
 
+As there are various industries using HPC for specific and different computing needs, there are many ways to migrate workloads.
+
 To get started on migrating HPC workload activities, refer to the [migration resources](../../migrate/azure-migration-guide/assess.md#assess-workloads-and-refine-plans) to use the data and assessment tool to access/define your HPC workloads, make informed decisions on migration readiness, align your organization with the relevant stakeholders, and evaluating the timeline of migration.
 
 
