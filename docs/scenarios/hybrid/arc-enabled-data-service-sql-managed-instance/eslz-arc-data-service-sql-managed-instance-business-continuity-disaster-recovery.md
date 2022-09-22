@@ -18,7 +18,7 @@ This article provides key design considerations and recommendations for configur
 
 ## Architecture
 
-The following architecture diagrams show the [high-availability capabilities](/azure/azure-arc/data/managed-instance-high-availability) of the Arc-enabled SQL Managed Instance in the Business Critical service tier, which supports failover with near-zero downtime. If the primary instance fails, the load balancer stops sending traffic to that instance. Then one of the secondary instances is promoted to primary, and the newly promoted instance starts receiving read-write traffic from the load balancer. After the failed instance comes back online, it is added as a secondary instance.
+The following architecture diagrams show the [high-availability capabilities](/azure/azure-arc/data/managed-instance-high-availability) of the Arc-enabled SQL Managed Instance in the Business Critical service tier, which supports failover with near-zero downtime. If the primary instance fails, the load balancer stops sending traffic to that instance. Then one of the secondary instances is promoted to primary, and the newly promoted instance starts receiving read-write traffic from the load balancer. After the failed instance comes back online, it's added as a secondary instance.
 
 :::image type="content" alt-text="A diagram that shows the operational state of a highly available business critical instance." source="./media/arc-enabled-data-svc-sql-mi-ha-01.png" lightbox="./media/arc-enabled-data-svc-sql-mi-ha-01.png":::
 
@@ -32,7 +32,7 @@ The following architecture diagram shows how Arc-enabled SQL Managed Instance ca
 
 :::image type="content" alt-text="A diagram that shows Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters." source="./media/arc-enabled-data-svc-sql-mi-dr-01.png" lightbox="./media/arc-enabled-data-svc-sql-mi-dr-01.png":::
 
-The following architecture diagram show how Arc-enabled SQL Managed Instance responds when a disaster recovery failover is initiated.
+The following architecture diagram shows how Arc-enabled SQL Managed Instance responds when a disaster recovery failover is initiated.
 
 :::image type="content" alt-text="A diagram that shows initiating the Azure Arc-enabled SQL Managed Instance disaster recovery failover across two clusters." source="./media/arc-enabled-data-svc-sql-mi-dr-02.png" lightbox="./media/arc-enabled-data-svc-sql-mi-dr-02.png":::
 
@@ -77,13 +77,14 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 - When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the number of secondary replicas to deploy in the Business Critical service tier. For information on changing the number, see [Configure readable secondaries](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries).
 
-- Decide on prioritizing consistency over availability through the number of secondary replicas that are required to commit a transaction in the Business Critical service tier by using the **--sync-secondary-commit** option:
+- Decide on prioritizing consistency over availability through the number of secondary replicas that are required to commit a transaction in the Business Critical service tier by using the **--sync-secondary-commit** option. If there are connectivity problems between the replicas, the primary might not commit any transactions: 
 
-- If there are connectivity problems between the replicas, the primary might not commit any transactions. In a two-replica configuration, a transaction must be committed on both replicas for the primary to receive a success message. In a three-replica configuration, at least two of the three replicas must must commit a transaction to return a success message .
+  - In a two-replica configuration, a transaction must be committed on both replicas for the primary to receive a success message. 
+  - In a three-replica configuration, at least two of the three replicas must commit a transaction to return a success message.
 
 - Decide if you need to designate a specific replica as the primary. For information about specifying a primary replica, see [Preferred primary replica](/azure/azure-arc/data/managed-instance-high-availability#preferred-primary-replica).
 
-- Decide which service type you'll use between Kubernetes *LoadBalancer* or *NodePort*. If you use the load balancer, then applications can reconnect to the same primary endpoint, and Kubernetes will redirect the connection to the new primary. If you use the node port, then applications must reconnect to the new IP address.
+- Decide which Kubernetes service type you'll use, *LoadBalancer* or *NodePort*. If you use the load balancer, then applications can reconnect to the same primary endpoint, and Kubernetes will redirect the connection to the new primary. If you use the node port, then applications must reconnect to the new IP address.
 
 ### Disaster recovery
 
