@@ -1,32 +1,19 @@
 ---
-title: Azure billing and Active Directory tenant for HPC - Energy
-description: #Describe how this Energy landing zone accelerator can improve enterprise enrollment and Azure AD tenants of Energy.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+title: 'Azure Billing and Azure Active Directory Tenants| Microsoft Docs'
+description: 'Azure landing zones for HPC do not have any specific considerations or recommendations which would impact billing offer decisions, enterprise enrollment or Active Directory tenant decisions.'
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-
+ms.date: 09/23/2022
 ---
 
-# Azure billing and HPC - Energy landing zone accelerator
+# Azure Billing and Azure Active Directory Tenants
 
-Intro paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
+Azure landing zones for HPC do not have any specific considerations or recommendations which would impact billing offer decisions, enterprise enrollment or Active Directory tenant decisions.
 
-## Design considerations
+However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Azure Active Directory tenant decisions](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant).
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of Energy.
-
-## Design recommendations
-
-The following is a bulleted list of best practices that should be included in any deployment of Energy.
-
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Energy.
-
-## Additional considerations
-
-Create as many H2 "##" headers as is required to educate the customer on this topic.
+You may also want to review the [identity and access management considerations](/azure/cloud-adoption-framework/scenarios/sap/eslz-identity-and-access-management) to understand how the Azure Active Directory tenant is applied in the design of authentication and authorization solutions. You may also want to evaluate the [resource organization considerations](/azure/cloud-adoption-framework/scenarios/sap/eslz-resource-organization) to understand how the enrollment may be organized into management groups, subscriptions, and resource groups.

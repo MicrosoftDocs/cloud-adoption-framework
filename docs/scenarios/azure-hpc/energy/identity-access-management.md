@@ -1,31 +1,41 @@
 ---
-title: Enterprise-scale identity and access management for HPC - Energy
-description: #Describe how this Energy landing zone accelerator can improve identity and access management of Energy.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+title: 'Azure Identity and Access Management| Microsoft Docs'
+description: 'This article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
+ms.date: 09/23/2022
 ---
 
-# Identity and access management for HPC - Energy landing zone accelerator
+# Azure Identity and Access Management
 
-Introduction paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an HPC application designed for the financial industry on Microsoft Azure.
 
-## Design considerations
+[Azure Active Directory](/azure/active-directory-domain-services/overview) Domain Services (Azure ADD) can be employed to make use of managed domain services such as domain join, group policy and access to legacy authentication protocols such as lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Azure AD DS integrates with your existing Azure AD tenant. This integration lets users sign into services and applications connected to the managed domain using their existing credentials in Azure AD. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for a hybrid environment.
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of Energy.
+For more details, refer to [design recommendations for platform access](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-platform-access#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones).
 
-## Design recommendations
+## HPC Design Considerations
 
-The following is a bulleted list of best practices that should be included in any deployment of Energy.
+HPC deployment will leverage the Azure Landing Zone infrastructure setup for its Security Identity and Access Management needs.
 
-## Enterprise-scale assumptions
+Two of the common deployment scenarios in Energy Oil and Gas workloads are Cloud Only and the Cloud Hybrid Model. While it is less complex to have all your resources in the cloud (compute, storage, and visualization), it is not uncommon for our customers to have a Hybrid model due to multiple business constraints for Seismic and Reservoir Simulation HPC workloads.
 
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Energy.
+Both HPC in the Cloud Only and HPC Cloud Hybrid model may have their own unique identity and access needs and consideration on which type of Active Directory solution to adopt.
 
-## Additional considerations
+Such workloads in the Cloud Only deployment model will leverage Azure Active Directory (Azure AD) for Azure fabric authentication, while HPC hybrid deployment model will leverage Microsoft [Azure AD Hybrid solution](/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json) for authentication need based on decision made by cloud team. Independently on the type of deployment, Linux clients and POSIX compliant storage solutions require legacy AD support through Azure Active Directory Domain Services.
 
-Create as many H2 "##" headers as is required to educate the customer on this topic.
+A typical HPC setup includes a front-end for submitting jobs, a job scheduler or orchestrator, a compute cluster, and shared storage. The jobs can be submitted from on-prem and/or in the cloud.   IAM considerations for users and visualization devices may vary depending on the enterprise standards.
+
+Review the Azure administration and management activities you require your teams to do. Consider your HPC on Azure landscape. Determine the best possible distribution of responsibilities within your organization.
+
+## HPC Design recommendations
+
+Depending on the chosen HPC Compute Resource Orchestrator, different types of authentication methods are supported:
+
+ - Azure CycleCloud – offers three methods of authentication: a built-in database with encryption, Active Directory, or LDAP.
+ - Azure Batch - Batch account access supports two methods of authentication: Shared Key and Azure Active Directory (Azure AD).
+ - Microsoft HPC Pack - Currently all HPC Pack nodes must be joined into an Active Directory Domain. If you are deploying the HPC Pack cluster in a virtual network which has a Site-to-Site VPN or ExpressRoute connection with your corporate network, typically there is already an existing Active Directory Domain. If you don't have an AD domain in your virtual network yet, you can choose to create a new AD domain by promoting the head node as domain controller.
