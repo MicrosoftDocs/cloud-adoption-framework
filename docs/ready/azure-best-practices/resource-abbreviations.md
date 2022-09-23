@@ -13,7 +13,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Abbreviation examples for Azure resources
 
-This page gives you a list of abbreviation examples that you can use when naming Azure resources. These abbreviations are examples to provide guidance. They are not authoritative. If you have an abbreviation system that works for you, keep using it. The best abbreviation system is one that you love. If you don't have an abbreviation system, feel free to use the abbreviations below to build one.
+This page gives you a list of abbreviation examples that you can use when naming Azure resources. If you have an abbreviation system that works for you, keep using it. The best abbreviation system is one that you love. If you don't have an abbreviation system, feel free to use the abbreviations below to build one.
 
 ## Azure Naming Tool
 
