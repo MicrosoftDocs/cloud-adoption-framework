@@ -17,7 +17,7 @@ This page gives you a list of abbreviation examples that you can use when naming
 
 ## Azure Naming Tool
 
-There's one advantage to using the abbreviations listed here. You can use the Azure Naming Tool. The Azure Naming Tool standardizes and automates your naming process. It uses the abbreviations below to generate Azure resource names. It only generates names that meet Azure naming requirements, and you customize the names to be as detailed as you needed.
+The advantage of using the abbreviations listed here is you can use the Azure Naming Tool. The Azure Naming Tool standardizes and automates your naming process. It uses these abbreviations to generate Azure resource names that meet Azure naming requirements. You can customize the tool meet to generate names that meet your needs.
 
 For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool)
 
