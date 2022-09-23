@@ -75,8 +75,12 @@ items:
       items:
       - name: Enterprise-scale for Azure high-performance computing (HPC)
         href: azure-hpc-landing-zone-accelator.md
-      - name: TODO - Add reference to smaller RA from AAC here
-        href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
+      - name: Compute manufacturing architecture
+        href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview#machine-learning-ml
+      - name: Condition monitoring architecture
+        href: /azure/architecture/solution-ideas/articles/condition-monitoring#architecture
+      - name: Video rendering architecture
+        href: /azure/architecture/example-scenario/infrastructure/video-rendering#architecture       
   - name: Migrate HPC to Azure
     href: migrate.md
   - name: Modernize with HPC on Azure
