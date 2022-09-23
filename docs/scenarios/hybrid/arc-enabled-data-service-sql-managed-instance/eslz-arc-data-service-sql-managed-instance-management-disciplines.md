@@ -16,9 +16,9 @@ This article provides key design considerations and recommendations for managing
 
 ## Architecture
 
-To build the right architecture for your organization to onboard Kubernetes clusters on-premises or in the public cloud Kubernetes, you need to understand the broad [Azure Arc-enabled Kubernetes network architecture](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity) and [network connectivity for Azure Arc-enabled data services](./eslz-arc-data-service-sql-managed-instance-network-connectivity.md), specifically concerning the two connectivity modes.
+To build the right architecture for your organization to onboard Kubernetes clusters on-premises or in the public cloud Kubernetes, you need a broad understanding [Azure Arc-enabled Kubernetes network architecture](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity) and [network connectivity for Azure Arc-enabled data services](./eslz-arc-data-service-sql-managed-instance-network-connectivity.md), specifically concerning the two connectivity modes.
 
-[![A diagram showing architecture of Azure Arc-enabled data services.](./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png)](./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png#lightbox)
+:::image type="content" alt-text="A diagram that shows architecture of Azure Arc-enabled data services." source="./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png" lightbox="./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png":::
 
 ### Cluster management
 
@@ -64,9 +64,9 @@ First, Review the [management design area](/azure/cloud-adoption-framework/ready
 - For an easy, out-of-the-box experience for monitoring, use the [Workbooks available in Container Insights](/azure/azure-monitor/containers/container-insights-reports) to view performance and health information about your cluster and components such as nodes, pods, and persistent volumes.  Once familiar with workbooks, design a custom workbook that illustrates the data in a way that's most useful to your operations.
 - Review the included Grafana dashboards to see what's provided out-of-the-box to avoid re-work
 
-    [![A screenshot showing the out-of-the-box Grafana dashboards.](./media/arc-enabled-data-svc-sql-mi-grafana-1.png)](./media/arc-enabled-data-svc-sql-mi-grafana-1.png#lightbox)
+  :::image type="content" alt-text="A screenshot that shows the out-of-the-box Grafana dashboards." source="./media/arc-enabled-data-svc-sql-mi-grafana-1.png" lightbox="./media/arc-enabled-data-svc-sql-mi-grafana-1.png":::
 
-    [![A screenshot showing the Grafana SQL Managed Instance Metrics dashboard.](./media/arc-enabled-data-svc-sql-mi-grafana-2.png)](./media/arc-enabled-data-svc-sql-mi-grafana-2.png#lightbox)
+  :::image type="content" alt-text="A screenshot that shows the Grafana SQL Managed Instance Metrics dashboard." source="./media/arc-enabled-data-svc-sql-mi-grafana-2.png" lightbox="./media/arc-enabled-data-svc-sql-mi-grafana-2.png":::
 
 - Use [Azure Resource Graph](/azure/azure-arc/kubernetes/resource-graph-samples?tabs=azure-cli) or [Log Analytics queries](/azure/azure-monitor/logs/queries) to monitor cluster health and raise alerts.
 - Refer to [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design) to strategize how best to organize Log Analytics Workspace(s) based on business needs and organization
