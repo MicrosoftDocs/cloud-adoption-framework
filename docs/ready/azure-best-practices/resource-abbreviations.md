@@ -13,23 +13,17 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Abbreviation examples for Azure resources
 
-This page gives you abbreviation examples for many of the resources in Azure. The tables below list the:
-
-- *Azure resource*
-- *Resource provider namespace*
-- *Abbreviation example*
+This page gives you abbreviation examples for many of the resources in Azure. Below you'll find *abbreviations* mapped to *resource* and *resource provider namespace*.
 
 ## Azure Naming Tool
 
-If you use the abbreviations listed below, you should check out the Azure Naming Tool. It uses the abbreviations below to generate Azure-compliant names.
-
-For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
+If you use the abbreviations listed below, you should check out the Azure Naming Tool. It uses the abbreviations below to generate Azure-compliant names and could help you standardize your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 
 ## General
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
@@ -39,7 +33,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Networking
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
 | Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
@@ -84,7 +78,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Compute and Web
 
-| Azure resource | Resource provider namespace/entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Service environment | `Microsoft.Web/sites` | `ase` |
 | App Service plan | `Microsoft.Web/serverFarms` | `plan` |
@@ -108,7 +102,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Containers
 
-| Azure resource | Resource provider namespace/entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
@@ -117,7 +111,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Databases
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos` |
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
@@ -134,14 +128,14 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Storage
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
 
 ## AI and Machine Learning
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
 | Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
@@ -149,7 +143,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Analytics and IoT
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
@@ -178,7 +172,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Azure Virtual Desktop
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Virtual desktop host pool | | `vdpool` |
 | Virtual desktop application group | | `vdag` |
@@ -186,14 +180,14 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Developer tools
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 
 ## Integration
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
 | Logic apps | `Microsoft.Logic/workflows` | `logic` |
@@ -203,7 +197,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Management and governance
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Automation account | `Microsoft.Automation/automationAccounts` | `aa` |
 | Application Insights | `Microsoft.Insights/components` | `appi` |
@@ -216,7 +210,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Migration
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr` |
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms` |
@@ -224,7 +218,7 @@ For more information, see [Azure Naming Tool Overview](https://github.com/micros
 
 ## Deprecated product names
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw` |
 
