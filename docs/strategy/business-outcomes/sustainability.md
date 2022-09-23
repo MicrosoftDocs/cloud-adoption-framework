@@ -92,6 +92,14 @@ Many businesses understand that [migrating workloads to the cloud](/industry/sus
 
 Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
 
+Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/en-gb/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/en-gb/cloud-adoption-framework/) for Azure and [Well-Architected Framework](https://docs.microsoft.com/en-gb/azure/architecture/framework/) at every stage of your cloud adoption journey.
+
+Migrate and modernise your apps, data and infrastructure using proven cloud migration tools and patterns.
+
+### Emissions savings estimator for Microsoft Cloud
+
+The [Emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) enables you to define your on-premises infrastructure workloads and then uses the information to report your current on-premises footprint and comparable Azure footprint.
+
 ## Examples of sustainability outcomes
 
 Focusing on sustainability and protecting limited environmental resources is key to our future, and this focus also benefits business. Today, companies can draw from a broad range of assets and resources that can help them to expand into new geographic areas and develop innovative resource management solutions.
