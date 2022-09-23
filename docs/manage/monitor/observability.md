@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 07/12/2022
+ms.date: 09/23/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -20,6 +20,8 @@ The goal of this article is to take the [monitoring strategy](../../strategy/mon
 > [!NOTE]
 > In this article, a *monitoring solution* is the unit of production doing the monitoring of a service in the cloud, and a *monitoring target* is the service or thing that is being monitored. A monitoring solution encompasses all aspects of monitoring: the tool, the monitoring data, alerts, type of response, recovery actions, type of visualization, role-based access, and so on.
 
+While observability and monitoring compliment each other, there is a notable distinction. Monitoring collects information and informs you that it detected an issue based on you configuring it to monitor for those conditions. Simply stated, you're monitoring for known or predictable failures. Where observability is focused on combing through all the data collected by your monitoring tool(s) and looking opportunities to understand the behavior of those systems. And in turn, using that knowledge to further tune how you monitor for those symptoms or conditions.
+  
 ## Terminology
 
 Before we go into details on observability, we need to highlight several monitoring-related terms we'll be using:
