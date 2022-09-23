@@ -1,5 +1,5 @@
 ---
-title: Identity and access for Azure Arc-enabled SQL Managed Instance
+title: Identity and access management for Azure Arc-enabled SQL Managed Instance
 description: Learn how to improve identity and access management for Azure Arc-enabled SQL Managed Instance deployments.
 author: chintalavr
 ms.author: vchintala
@@ -16,8 +16,8 @@ This article describes [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc
 
 Arc-enabled SQL Managed Instance relies on the [Azure Arc-enabled data services](/azure/azure-arc/data/overview) extension running on Azure Arc-enabled Kubernetes cluster. Following are the various components of Azure Arc-enabled data services that are important for identity and access management as part of this critical design area.
 
-- Azure Arc data controller
-- Azure Arc Active Directory connector
+- Azure Arc Data Controller
+- Azure Arc Active Directory Connector
 - Azure Arc-enabled SQL Managed Instance
 
 ## Architecture
@@ -50,11 +50,11 @@ Active Directory connector in [customer-managed keytab mode](/azure/azure-arc/da
 
 *Figure 2: Architecture diagram for AD connector in customer-managed keytab mode.*
 
-### Azure Arc data controller
+### Azure Arc Data Controller
 
-When the Arc-enabled data services extension is installed in Directly connected mode, a [managed identity](/azure/azure-arc/data/create-data-controller-direct-cli?tabs=windows#retrieve-the-managed-identity-and-grant-roles) is created for Arc-enabled data services to interact with Azure Resource Manager (ARM) APIs control plane and data plane. Azure Arc data controller uses this managed identity to perform these actions when managing Arc-enabled SQL Managed Instance.
+When the Arc-enabled data services extension is installed in Directly connected mode, a [managed identity](/azure/azure-arc/data/create-data-controller-direct-cli?tabs=windows#retrieve-the-managed-identity-and-grant-roles) is created for Arc-enabled data services to interact with Azure Resource Manager (ARM) APIs control plane and data plane. Azure Arc Data Controller uses this managed identity to perform these actions when managing Arc-enabled SQL Managed Instance.
 
-In an Indirect connectivity mode, a [service principal](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor#create-service-principal) with [required permissions](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor?tabs=windows#assign-roles-to-the-service-principal) is needed by the data controller to periodically [export usage information](/en-us/azure/azure-arc/data/upload-usage-data#upload-usage-data) such as inventory and resource usage to Azure.
+In an Indirect connectivity mode, a [service principal](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor#create-service-principal) with [required permissions](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor?tabs=windows#assign-roles-to-the-service-principal) is needed by Azure Arc Data Controller to periodically [export usage information](/en-us/azure/azure-arc/data/upload-usage-data#upload-usage-data) such as inventory and resource usage to Azure.
 
 ### Azure RBAC on Azure Arc-enabled data services
 
@@ -86,7 +86,7 @@ Review the [identity and access management critical design area](/azure/cloud-ad
 
 - Consider between Azure Arc-enabled Kubernetes administrators vs database management group (DMG) vs application administration group to deploy and manage Azure Arc-enabled data services depending on your organization's security governance and separation of duties requirements.
 
-- Consider the usage pattern between system-managed keytab and customer-managed keytab to deploy Azure Arc AD connector to support AD authentication in Arc-enabled SQL Managed Instance. Both methods have the benefits of simplified operations compared to full customer control of managing service accounts and keytab for AD authentication support.
+- Consider the usage pattern between system-managed keytab and customer-managed keytab to deploy Azure Arc AD Connector to support AD authentication in Arc-enabled SQL Managed Instance. Both methods have the benefits of simplified operations compared to full customer control of managing service accounts and keytab for AD authentication support.
 
 ### Arc-enabled data services access
 
@@ -128,7 +128,7 @@ In system-managed keytab mode, explicit permissions to [Domain Service Account (
 
 Following are [the required RBAC permissions](/azure/azure-arc/data/active-directory-prerequisites#set-permissions-for-the-dsa). For customer-managed keytab mode, no explicit permissions are required for the domain service account at the Active Directory OU level.
 
-### Azure Arc AD connector permissions
+### Azure Arc AD Connector permissions
 
 |Permission|Description|
 |-----------|------------|
