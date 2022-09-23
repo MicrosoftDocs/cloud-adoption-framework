@@ -1,9 +1,9 @@
 ---
 title: Migrate workloads for Azure high-performance computing (HPC)
-description: #Describe the scenario's impact on migration deployment.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering migration for using Azure High-performance computing (HPC) as part of my IT strategy.
+author: Rajani-Janaki-Ram
+ms.author: erd
+ms.date: 09/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,19 +12,35 @@ ms.custom: think-tank
 
 # Migrate Azure high-performance computing (HPC)
 
-Establish a driving statement to shape migration of this technology platform. Best practice encourages customers to create a migration statement, using the [Cloud Adoption Framework's migrate methodology](../../migrate/index.md). Migrate and modernize existing workloads.
+Azure HPC offers sustainability, efficiency, and flexibility with various digital solutions to not only supplement on-premise infrastructure but also reduces reliance on persistent cycles concerning hardware refreshes for higher demanding computation. 
+
+See how your HPC environment will [migrate](../../migrate/index.md) to the cloud and determine which approach best fits your environment.
 
 ## HPC process details
 
-Are there data points outside of a standard Azure Migrate assessment that you need to prepare for migration?
+You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of VMs. It is also possible to move to a more cost-effective, non HPC cluster.
+
+Review the [migration resources](../../migrate/azure-migration-guide/index.md#azure-migration-guide-overview) to define your HPC migration process and in addition:
+- **Review the current VM size**: Review your CPU, memory, disk, and networking specifications for existing VMs to determine appropriate VM sizes.
+- **Verify Azure subscription quota limits**: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes you choose.
+- **Identify the deployment model**: Automate deployment as much as possible by choosing between Azure Resource Manager or Azure Service Manager, previously known as classic deployment.
+
+Consider also [getting assistance](../../migrate/azure-migration-guide/assistance.md) to accelerate your HPC migration efforts.
 
 ## HPC process flow
 
-Are there Azure migrate partners that can help get the data? What about other 3rd parties?
+In regards to dedicated data migration assistance, find an Azure [HPC industry partner](https://appsource.microsoft.com/en-us/marketplace/partner-dir) near you to help with potential latency problems and large sets of important data to be moved.
+
+You can also use [Azure HPC Cache](/azure/services/hpc-cache/) services to create a copy of your data needed for temporary processing in the cloud. Typically Azure HPC Cache is used for read-heavy file access workflows, NFS-accessible storage and Azure Blobs, and compute farms of up to 75,000 cores.
+
+A wide variety of workflows across many industries that have a large number of machines needed to access a set of files at scale and low latency will benefit from Azure HPC Cache.
 
 ## HPC workload specific activities
 
-Are there specific criteria for workloads in that portfolio that would require the customer to run a well-architected review for any workloads?
+As there are various industries using HPC for specific and different computing needs, there are many ways to migrate workloads.
+
+To get started on migrating HPC workload activities, refer to the [migration resources](../../migrate/azure-migration-guide/assess.md#assess-workloads-and-refine-plans) to use the data and assessment tool to access/define your HPC workloads, make informed decisions on migration readiness, align your organization with the relevant stakeholders, and evaluating the timeline of migration.
+
 
 ## Next steps
 

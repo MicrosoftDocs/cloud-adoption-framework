@@ -1,9 +1,9 @@
 ---
 title: Plan for Azure high-performance computing (HPC)
-description: #Describe the scenario's impact on planning.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering the planning scenario for using Azure High-performance computing (HPC) as part of my IT strategy.
+author: Rajani-Janaki-Ram
+ms.author: erd
+ms.date: 09/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -18,17 +18,22 @@ Application of the Plan methodology focuses on the [five Rs of rationalizing you
 
 ## HPC estate
 
-Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient?
-https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/inventory
+While it is important to gather inventory data for a digital estate for cloud adoption, it is recommended to assess your current environment's HPC usage. [Digital estate measurements](../../digital-estate/index.md#how-can-a-digital-estate-be-measured)
+ can change depending on the desired business outcomes.
+
+Evaluate the attributes of your HPC environment in terms of an [asset-driven](../../digital-estate/approach.md#asset-driven-approach) approach when planning your digital estate.
 
 ## HPC adoption plan
 
-Do you have a specific devops backlog the customer should use? Or is the standard adoption plan template still sufficient?
-https://docs.microsoft.com/azure/cloud-adoption-framework/plan/template
+When planning cloud adoption for your HPC environment, review the Azure DevOps [strategy and plan template](../../plan/template.md#align-the-cloud-adoption-plan) to align your tasks and organize objectives through epics, features, and user stories.
+
+For skilling your IT teams on adopting Azure HPC services, [identify gaps](../../plan/adapt-roles-skills-processes.md#identify-gaps) when forming your digital transformation.
+
+Once your team gaps have been identified, the next steps are further developing HPC skills with [Microsoft learn.](/learn/paths/run-high-performance-computing-applications-azure)
 
 ## HPC readiness plan
 
-Are there specific skills or extra training this team should take before getting started?
+While identifying gaps is important to adopting Azure HPC services, it is also crucial to [build a readiness plan](../../plan/adapt-roles-skills-processes.md) as IT staff members will likely have role changes and have concerns to new job duties in the adoption efforts. Capturing these concerns might involve executive leadership to help drive the relevant training needed to support expanding functions.
 
 
 ## Next steps

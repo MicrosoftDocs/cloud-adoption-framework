@@ -75,11 +75,15 @@ items:
       items:
       - name: Enterprise-scale for Azure high-performance computing (HPC)
         href: azure-hpc-landing-zone-accelator.md
-      - name: TODO - Add reference to smaller RA from AAC here
-        href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
+      - name: Compute manufacturing architecture
+        href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview#machine-learning-ml
+      - name: Condition monitoring architecture
+        href: /azure/architecture/solution-ideas/articles/condition-monitoring#architecture
+      - name: Video rendering architecture
+        href: /azure/architecture/example-scenario/infrastructure/video-rendering#architecture       
   - name: Migrate HPC to Azure
     href: migrate.md
-  - name: Modernize iwh HPC on Azure
+  - name: Modernize with HPC on Azure
     href: modernize.md
   - name: Innovate with HPC on Azure
     href: migrate.md
@@ -94,18 +98,18 @@ items:
   - name: Well-architected considerations
     href: well-architected-framework.md
 
-  - name: HPC Architectures - Add links to product architectures
+  - name: HPC Architectures
     items:
-    - name: Example
-      href: /azure
+    - name: Azure HPC Architecture examples
+      href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
 
-  - name: Azure product documentation - Add links to product docs
+  - name: Azure product documentation
     items:
-    - name: Example
-      href: /azure
+    - name: Azure HPC Product documentation
+      href: /azure/architecture/topics/high-performance-computing/
 
-  - name: Build skills on Learn - Add links to Learn modules
+  - name: Build skills on Learn
 
     items:
-    - name: Example
-      href: /learn
+    - name: Learning path for running HPC applications
+      href: /learn/paths/run-high-performance-computing-applications-azure/

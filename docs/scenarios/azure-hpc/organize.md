@@ -1,9 +1,9 @@
 ---
 title: Organize team members for Azure high-performance computing (HPC) in Azure
-description: #Describe the scenario's organizational impact.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering organization for using Azure High-performance computing (HPC) as part of my IT strategy.
+author: Rajani-Janaki-Ram
+ms.author: erd
+ms.date: 09/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -26,16 +26,19 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 ## Roles and teams
 
-Describe how the roles and teams can be structured to support the scenario.
+Devise a cloud adoption team to drive all HPC technical changes to have consistency to onboarding solutions into the cloud. Best practices include having a minimum viable product (MVP) that includes a cloud governance team to balance out the cloud adoption team by ensuring platform maturity, operations, governance, and automation.
 
-For more information, see [Mature Team Structures](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/organization-structures).
+Consider forming a cloud strategy team with both executive leadership and IT management for accountability of the cloud adoption lifecycle.
+
+For more information, see [Mature Team Structures](../../organize/organization-structures.md).
 
 ## Deployment and operations
 
-Describe how the responsibilities for the roles in teams in supporting the deployment and operation of the cloud solution.
+Establish coordination with your organization IT leaders and research teams to identify strong use cases only possible for HPC cloud when it comes to cost and needed performance. Use cases could be studying variations of a genetic disease in life and health sciences, automotive designers simulating the forces and stresses that impact vehicle safety operations, or the continual growing demands of AI computation.
 
-For more information, see [Align responsibilities across teams](https://docs.microsoft.com/azure/cloud-adoption-framework/organize/raci-alignment).
+Align responsibilities for your HPC environment by developing a cross-team matrix to identify responsibility, accountability, consultancy, and informed parties.
 
+For more information, see [Align responsibilities across teams.](../../organize/raci-alignment.md)
 
 ## Next steps
 
