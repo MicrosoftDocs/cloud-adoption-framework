@@ -1,9 +1,9 @@
 ---
-title: Recommended abbreviations for Azure resources
-description: Recommended abbreviations for Azure resources
+title: Abbreviation examples for Azure resources
+description: Abbreviation examples for Azure resources
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 9/20/2022
+ms.date: 9/22/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -11,11 +11,15 @@ ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
-# Recommended abbreviations for Azure resources
+# Abbreviation examples for Azure resources
 
-Here you'll find recommended abbreviations for naming Azure resources. The tables below list Azures resource, the resource provider namespace or entity, and the recommended abbreviation for that resource.
+This page gives you a list of abbreviation examples that you can use when naming Azure resources. If you have an abbreviation system that works for you, keep using it. The best abbreviation system is one that you love. If you don't have an abbreviation system, feel free to use the abbreviations below to build one.
 
-You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) to help automate and scale your naming strategy.
+## Azure Naming Tool
+
+The advantage of using the abbreviations listed here is you can use the Azure Naming Tool. The Azure Naming Tool standardizes and automates your naming process. It uses these abbreviations to generate Azure resource names that meet Azure naming requirements. You can customize the tool meet to generate names that meet your needs.
+
+For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool)
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 
