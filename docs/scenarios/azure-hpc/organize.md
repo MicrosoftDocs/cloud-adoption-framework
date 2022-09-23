@@ -1,7 +1,7 @@
 ---
 title: Organize team members for Azure high-performance computing (HPC) in Azure
 description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering organization for using Azure High-performance computing (HPC) as part of my IT strategy.
-author: ericd-mst-github
+author: Rajani-Janaki-Ram
 ms.author: erd
 ms.date: 09/19/2022
 ms.topic: conceptual
