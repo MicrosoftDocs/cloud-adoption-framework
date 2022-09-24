@@ -26,7 +26,7 @@ Prior to deploying Azure Arc-enabled SQL Managed Instance, review the [Cloud Ado
 
 ### Cluster monitoring
 
-Azure Arc-enabled data services provides two connectivity modes: *directly* connected and *indirectly* connected. In either mode, you can integrate Grafana and Kibana, two open-source tools, into the cluster for monitoring. Directly connected mode supports using the dashboards of both Grafana and Kibana, in addition to Azure Monitor.
+Azure Arc-enabled data services provide two connectivity modes: *directly* connected and *indirectly* connected. In either mode, you can integrate Grafana and Kibana, two open-source tools, into the cluster for monitoring. Directly connected mode supports using the dashboards of both Grafana and Kibana, in addition to Azure Monitor.
 
 To understand the connectivity modes, see [Network connectivity for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-network-connectivity.md).  
 
@@ -53,13 +53,13 @@ To understand the role of Azure Arc-enabled Kubernetes on your overall managemen
 
 ### Indirectly connected mode
 
-- When you deploy Arc-enabled SQL Managed Instance indirectly connected mode, there is no direct connection to Azure. At least once per month, you must upload metadata about the instance to Azure for inventory and billing purposes. For more information about this, see [Azure Arc data services data collection and reporting](/azure/azure-arc/data/privacy-data-collection-and-reporting).
+- When you deploy Arc-enabled SQL Managed Instance indirectly connected mode, there's no direct connection to Azure. At least once per month, you must upload metadata about the instance to Azure for inventory and billing purposes. For more information about this, see [Azure Arc data services data collection and reporting](/azure/azure-arc/data/privacy-data-collection-and-reporting).
 
 - When you when plan to deploy an instance in indirectly connected mode, consider how to upload logs and metadata about the instance from the cluster to Azure. Consider how to automate this process. For more information, see [Upload logs to Azure Monitor](/azure/azure-arc/data/upload-logs?tabs=windows).
 
 ## Design recommendations
 
-- Wherever possible, use the directly connected mode, because it makes monitoring through Azure easier. However, directly connected mode is not suitable for all scenarios. For more information, see [Connectivity modes and requirements](/azure/azure-arc/data/connectivity).
+- Wherever possible, use the directly connected mode, because it makes monitoring through Azure easier. However, directly connected mode isn't suitable for all scenarios. For more information, see [Connectivity modes and requirements](/azure/azure-arc/data/connectivity).
 
 - Use Grafana and Kibana if your organization already uses these tools. Grafana and Kibana are open-source tools that are automatically deployed and integrated with deployments of Azure Arc-enabled SQL Managed Instance.
 
@@ -69,7 +69,7 @@ To understand the role of Azure Arc-enabled Kubernetes on your overall managemen
 
 - Use [Azure Policy](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines#policy-management-and-reporting) to ensure that Container Insights is deployed automatically.
 
-- For an easy, out-of-the-box experience for monitoring, use the workbooks that are available in Container insights  to view performance and health information about your cluster and components such as nodes, pods, and persistent volumes. When you are familiar with the workbooks, design a custom workbook that illustrates the data in a way that's most useful to your operations. For more information about workbooks, see [Reports in Container insights](/azure/azure-monitor/containers/container-insights-reports).
+- For an easy, out-of-the-box experience for monitoring, use the workbooks that are available in Container insights  to view performance and health information about your cluster and components such as nodes, pods, and persistent volumes. When you're familiar with the workbooks, design a custom workbook that illustrates the data in a way that's most useful to your operations. For more information about workbooks, see [Reports in Container insights](/azure/azure-monitor/containers/container-insights-reports).
 
 - Review the included Grafana dashboards to see what's provided out-of-the-box to avoid duplication of effort.
 
@@ -87,7 +87,7 @@ To understand the role of Azure Arc-enabled Kubernetes on your overall managemen
 
 - If your deployment uses indirectly connected mode, implement an automated mechanism, such as a cron job, to upload [usage data](/azure/azure-arc/data/upload-usage-data), [logs](/azure/azure-arc/data/upload-logs?tabs=windows), and [metrics](/azure/azure-arc/data/upload-metrics?tabs=powershell) on a daily basis. Uploading logs and metrics are optional, but doing so is required to be able to use Azure Monitor to monitor your environment.
 
-- Implement a process to verify that usage and billing data is uploaded at least once per month to ensure that the ability to create new instances is not disabled.
+- Implement a process to verify that usage and billing data is uploaded at least once per month to ensure that the ability to create new instances isn't disabled.
 
 ## Next steps
 
