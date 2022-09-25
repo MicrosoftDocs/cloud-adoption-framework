@@ -42,11 +42,11 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 ### Point-in-time restore
 
-- Define your [recovery point objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [recovery time objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO) targets.
+- Define your targets for [recovery point objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [recovery time objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO).
 
-- Determine how long you want to retain and restore your backups according to the supported retention limits.
+- Determine how long you want to retain and restore your backups within the supported retention limits.
 
-- Consider the implications for storage and cost of increasing the retention period of your backups. The default retention is seven days. With this duration, you can restore for up to seven days, and you get one full backup, a daily differential, and backups of transactional logs about every five minutes.
+- Consider the implications for storage and the cost of increasing the retention period of your backups. The default retention is seven days. With this duration, you can restore for up to seven days, and you get one full backup, a daily differential, and backups of transactional logs about every five minutes.
 
 - Consider which [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to use for the persistent volume for backups. For guidance, see [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
 
@@ -54,9 +54,9 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 - For best practices for storage, see the [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
 
-- Backups are always performed on the primary replica. Consider the performance effects of the backup and restore processes when identifying the resources that are allocated to your Arc-enabled SQL Managed Instance.
+- Backups are always performed on the primary replica. Consider the performance effects of the backup and restore processes when identifying the resources that are allocated to your instance.
 
-- Take into account that point-in-time restores of a database can't overwrite an existing database. However, they can restore data to a new database on the same Arc-enabled SQL Managed Instance.
+- Take into account that point-in-time restores of a database can't overwrite an existing database. However, they can restore data to a new database on the same instance.
 
 - Consider the additional steps that are required to fully recover your database if your application is online during the restore process.
 
@@ -66,10 +66,10 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 ### High availability
 
-- Review the availability requirements of your workload and decide on the service tier that is best for your Arc-enabled SQL Managed Instance deployment:
+- Review the availability requirements of your workload and decide on the service tier that is best for your deployment of Arc-enabled SQL Managed Instance:
 
   - In the General Purpose service tier, there's a single replica available, and the high availability is achieved via Kubernetes orchestration.
-  - In the Business Critical service tier, Azure SQL Managed Instance for Azure Arc provides a contained availability group, in addition to what is natively provided by Kubernetes orchestration.
+  - In the Business Critical service tier, Azure Arc-enabled SQL Managed Instance provides a contained availability group, in addition to what is natively provided by Kubernetes orchestration.
 
 - Consider the potential business effects of downtime in the General Purpose service tier that could result due to the existence of only one replica.
 
@@ -77,7 +77,7 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 - When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the number of secondary replicas to deploy in the Business Critical service tier. For information on changing the number, see [Configure readable secondaries](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries).
 
-- Decide on prioritizing consistency over availability through the number of secondary replicas that are required to commit a transaction in the Business Critical service tier by using the **--sync-secondary-commit** option. If there are connectivity problems between the replicas, the primary might not commit any transactions: 
+- Decide on prioritizing consistency over availability through the number of secondary replicas that are required to commit a transaction in the Business Critical service tier by using the [optional parameter](/cli/azure/sql/mi-arc?view=azure-cli-latest#az-sql-mi-arc-update-optional-parameters) **--sync-secondary-to-commit**. If there are connectivity problems between the replicas, the primary might not commit any transactions: 
 
   - In a two-replica configuration, a transaction must be committed on both replicas for the primary to receive a success message. 
   - In a three-replica configuration, at least two of the three replicas must commit a transaction to return a success message.
@@ -88,9 +88,9 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 ### Disaster recovery
 
-- The Azure Arc-enabled SQL Managed Instance in both geo-primary and geo-secondary sites must be identical in compute and capacity, as well as deployed to the same service tiers.
+- The instances of Azure Arc-enabled SQL Managed Instance in both geo-primary and geo-secondary sites must be identical in compute and capacity, as well as deployed to the same service tiers.
 
-- Decide on a location to store the mirroring certificates when you create the disaster recovery setup that is accessible by both clusters that host the instance.
+- Decide on a location in which to store the mirroring certificates when you create the disaster recovery configuration that is accessible by both clusters that host the instance.
 
 - Consider how to monitor the downtime of the primary instance to decide when to perform a failover to the secondary instance.
 
@@ -102,25 +102,25 @@ The following sections list design recommendations for point-in-time restore, hi
 
 ### Point-in-time restore
 
-- When deploying a new Arc-enabled SQL Managed Instance, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
+- When deploying a new instance of Arc-enabled SQL Managed Instance, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
 
-- Use a storage class that is *ReadWriteMany* (RWX) capable for the backups volume. For guidance, see the [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
+- Use a storage class that supports *ReadWriteMany* (RWX) for the backups volume. For guidance, see the [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
 
-- Before starting a restore operation, use **--dry-run** in the Azure CLI to first validate whether the operation would be successful. For more information, see [Create a database from a point-in-time using az CLI](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli).
+- Before starting a restore operation, use [optional parameter](/cli/azure/sql/mi-arc?view=azure-cli-latest#az-sql-mi-arc-update-optional-parameters) **--dry-run** to first validate whether the operation would be successful. For more information, see [Create a database from a point-in-time using az CLI](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli).
 
-- Create a process to send backups that need longer retention to Azure or other on-premises cold storage.
+- Create a process to send backups that need longer retention periods to Azure or other on-premises cold storage.
 
 - Monitor the storage that is consumed by your backups to determine if you can accommodate longer retention, if needed.
 
 ### High availability
 
-- Perform regular drills to validate the high availability of your Arc-enabled SQL Managed Instance. Examples of drills include deletion of a pod in a General Purpose instance and failure of a replica in a Business Critical instance.
+- Perform regular drills to validate the high availability of your instance of Arc-enabled SQL Managed Instance. Examples of drills include deletion of a pod in a General Purpose instance and failure of a replica in a Business Critical instance.
 
-- In the Business Critical tier, deploy a SQL Managed Instance in a three-replica configuration instead of a two-replica configuration to achieve near-zero data loss.
+- In the Business Critical tier, deploy an instance in a three-replica configuration instead of a two-replica configuration to achieve near-zero data loss.
 
-- For better availability, use LoadBalancer as the service type when deploying Arc-enabled SQL Managed Instance.
+- For better availability, use LoadBalancer as the service type when deploying an instance.
 
-- Review the [high-availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of the Azure Arc-enabled SQL Managed Instance.
+- Review the [high-availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of Azure Arc-enabled SQL Managed Instance.
 
 - Review the [supported availability modes](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) to decide which mode to use based on your high-availability needs.
 
@@ -130,7 +130,7 @@ The following sections list design recommendations for point-in-time restore, hi
 
 ### Disaster recovery
 
-- Ensure that the Arc-enabled SQL Managed Instance has different names for primary and secondary sites, and that the shared-name value for the sites is identical.
+- Ensure that your instances of Arc-enabled SQL Managed Instance have different names for primary and secondary sites, and that the shared-name value for the sites is identical.
 
 - Perform regular disaster recovery drills to validate the failover process.
 
