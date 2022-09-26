@@ -51,7 +51,7 @@ Consider your organization's preferred monitoring tools when evaluating how to m
 
 - All traffic is initiated from the cluster, and the firewall requires no inbound rules to facilitate this.
 
-- During deployment of the data controller, you can have logs and metrics automatically uploaded to an Azure Log Analytics workspace by providing the workspace ID and access key.  After deployment, you can retain or disable this functionality.
+- During deployment of Azure Arc Data Controller, you can have logs and metrics automatically uploaded to an Azure Log Analytics workspace by providing the workspace ID and access key.  After deployment, you can retain or disable this functionality.
 
 ### Indirectly connected mode
 
