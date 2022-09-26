@@ -24,7 +24,7 @@ Before deploying Azure Arc-enabled SQL Managed Instance, it's important to defin
 
 In addition, to assess the effects of Azure Arc-enabled SQL Managed Instance on your overall resource organization model, review the [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org) design area of the Azure landing zones.
 
-In the directly connected mode, the Kubernetes cluster where the Azure Arc-enabled data services are deployed must be an Azure Arc-enabled Kubernetes resource. This connects your Kubernetes cluster to Azure, so that you can deploy and manage Azure Arc-enabled data services directly from the Azure portal. Because the Kubernetes cluster is a resource to Azure Resource Manager when it's Arc-enabled, you should review the best practices in [Resource organization for Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization).
+In the Directly connected mode, the Kubernetes cluster where the Azure Arc-enabled data services are deployed must be an Azure Arc-enabled Kubernetes resource. This connects your Kubernetes cluster to Azure, so that you can deploy and manage Azure Arc-enabled data services directly from the Azure portal. Because the Kubernetes cluster is a resource to Azure Resource Manager when it's Arc-enabled, you should review the best practices in [Resource organization for Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization).
 
 Mapping is the key to determining how you can interact with these resources when applying role-based access control (RBAC) and assigning [Azure Policy](/azure/governance/policy/overview) as part of your governance model. For more information, see [Best practices for Azure AD roles](/azure/active-directory/roles/best-practices).
 
@@ -41,7 +41,7 @@ After you deploy Azure Arc-enabled SQL Managed Instance to a resource group and 
 
 ## Custom location
 
-When planning for the deployment of Azure Arc-enabled data services in [directly connected mode](/azure/azure-arc/data/connectivity), consider that [Custom locations](/azure/azure-arc/platform/conceptual-custom-locations) will be provisioned and be projected in your Azure subscription.
+When planning for the deployment of Azure Arc-enabled data services in [Directly connected mode](/azure/azure-arc/data/connectivity), consider that [Custom locations](/azure/azure-arc/platform/conceptual-custom-locations) will be provisioned and be projected in your Azure subscription.
 
 :::image type="content" alt-text="Diagram that shows mapping of custom locations to namespaces of Azure Arc-enabled data service." source="./media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png" lightbox="./media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png":::
 
@@ -55,7 +55,7 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - [Plan an Azure Arc-enabled data services deployment](/azure/azure-arc/data/plan-azure-arc-data-services)
 - [Connectivity modes and requirements](/azure/azure-arc/data/connectivity)
-- [Create data controller in Azure Data Studio](/azure/azure-arc/data/create-data-controller-indirect-azure-data-studio), indirectly connected mode
+- [Create data controller in Azure Data Studio](/azure/azure-arc/data/create-data-controller-indirect-azure-data-studio), Indirectly connected mode
 - [Prerequisites to deploy the data controller in direct connectivity mode](/azure/azure-arc/data/create-data-controller-direct-prerequisites?tabs=azure-cli)
 - [Introduction to Azure Arc](/learn/modules/intro-to-azure-arc/), a Learn module 
 - [Azure Arc-enabled data services](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/) for automated scenarios with Azure Arc Jumpstart
