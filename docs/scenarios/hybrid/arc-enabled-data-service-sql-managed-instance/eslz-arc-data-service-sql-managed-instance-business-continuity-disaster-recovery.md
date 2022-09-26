@@ -12,105 +12,141 @@ ms.custom: e2e-hybrid, think-tank
 
 # Business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled SQL Managed Instance provides capabilities for business continuity which allows businesses to recover and continue operating in the event of disruptions with minimal downtime.
+Azure Arc-enabled SQL Managed Instance provides capabilities for business continuity and disaster recovery (BCDR) that helps businesses to recover from disruptions and continue operating with minimal downtime.
 
-This article provides key design considerations and recommendations for configuring and managing the business continuity capabilities like point-in-time restore, high availability, and disaster recovery.
+This article provides key design considerations and recommendations for configuring and managing business continuity capabilities like point-in-time restore, high availability, and disaster recovery.
 
 ## Architecture
 
-The following architecture diagrams show the [high availability capabilities](/azure/azure-arc/data/managed-instance-high-availability) of the Arc-enabled SQL MI "Business Critical" service tier which allows for near-zero downtime failover. In the event of the primary instance failure, the load balancer stops sending traffic to it, one of the secondary instances gets promoted to be the primary and start receiving "Read-Write" traffic from the load balancer. Once the failed instance comes back online, it will be added as secondary.
+The following architecture diagrams show the [high-availability capabilities](/azure/azure-arc/data/managed-instance-high-availability) of the Arc-enabled SQL Managed Instance in the Business Critical service tier, which supports failover with near-zero downtime. If the primary instance fails, the load balancer stops sending traffic to that instance. Then one of the secondary instances is promoted to primary, and the newly promoted instance starts receiving read-write traffic from the load balancer. After the failed instance comes back online, it's added as a secondary instance.
 
-  [![A diagram showing the operational state of a highly available business critical instance.](./media/arc-enabled-data-svc-sql-mi-ha-01.png)](./media/arc-enabled-data-svc-sql-mi-ha-01.png#lightbox)
+:::image type="content" alt-text="A diagram that shows the operational state of a highly available business critical instance." source="./media/arc-enabled-data-svc-sql-mi-ha-01.png" lightbox="./media/arc-enabled-data-svc-sql-mi-ha-01.png":::
 
-  [![A diagram showing a failure in the primary replica and promoting a secondary replica to primary.](./media/arc-enabled-data-svc-sql-mi-ha-02.png)](./media/arc-enabled-data-svc-sql-mi-ha-02.png#lightbox)
+:::image type="content" alt-text="A diagram that shows a failure in the primary replica and promoting a secondary replica to primary." source="./media/arc-enabled-data-svc-sql-mi-ha-02.png" lightbox="./media/arc-enabled-data-svc-sql-mi-ha-02.png":::
 
-  [![A diagram showing the primary replica failure.](./media/arc-enabled-data-svc-sql-mi-ha-03.png)](./media/arc-enabled-data-svc-sql-mi-ha-03.png#lightbox)
+:::image type="content" alt-text="A diagram that shows the primary replica failure." source="./media/arc-enabled-data-svc-sql-mi-ha-03.png" lightbox="./media/arc-enabled-data-svc-sql-mi-ha-03.png":::
 
-  [![A diagram showing the operational state restored.](./media/arc-enabled-data-svc-sql-mi-ha-04.png)](./media/arc-enabled-data-svc-sql-mi-ha-04.png#lightbox)
+:::image type="content" alt-text="A diagram that shows the operational state restored." source="./media/arc-enabled-data-svc-sql-mi-ha-04.png" lightbox="./media/arc-enabled-data-svc-sql-mi-ha-04.png":::
 
-The following architecture diagrams show how Arc-enabled SQL MI can be deployed on two separate Kubernetes clusters in two different sites for disaster recovery and when a disaster recovery failover is initiated.
+The following architecture diagram shows how Arc-enabled SQL Managed Instance can be deployed on two separate Kubernetes clusters in two different sites for disaster recovery.
 
-  [![A diagram showing Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters.](./media/arc-enabled-data-svc-sql-mi-dr-01.png)](./media/arc-enabled-data-svc-sql-mi-dr-01.png#lightbox)
+:::image type="content" alt-text="A diagram that shows Azure Arc-enabled SQL Managed Instance deployed in a Disaster recovery setup across two clusters." source="./media/arc-enabled-data-svc-sql-mi-dr-01.png" lightbox="./media/arc-enabled-data-svc-sql-mi-dr-01.png":::
 
-  [![A diagram showing initiating the Azure Arc-enabled SQL Managed Instance disaster recovery failover across two clusters.](./media/arc-enabled-data-svc-sql-mi-dr-02.png)](./media/arc-enabled-data-svc-sql-mi-dr-02.png#lightbox)
+The following architecture diagram shows how Arc-enabled SQL Managed Instance responds when a disaster recovery failover is initiated.
+
+:::image type="content" alt-text="A diagram that shows initiating the Azure Arc-enabled SQL Managed Instance disaster recovery failover across two clusters." source="./media/arc-enabled-data-svc-sql-mi-dr-02.png" lightbox="./media/arc-enabled-data-svc-sql-mi-dr-02.png":::
 
 ## Design considerations
 
-Review the [business continuity and disaster recovery design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery) of Azure landing zones to assess the effect of Azure Arc-enabled SQL MI on your overall BCDR model.
-
-> NOTE
-> The high availability and resiliency of your Azure Arc-enabled SQL MI is also dependent on the underlying Kubernetes infrastructure availability. The focus of this article will only be on the business continuity design considerations recommendations for the Azure Arc-enabled SQL MI.
+To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall BCDR model, review the BCDR recommendations for landing zones in [Business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery). Note that the focus of [Business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery) is on design recommendations for business continuity only, but the high availability and resiliency of your instance is also dependent on the availability of the underlying Kubernetes infrastructure.
 
 ### Point-in-time restore
 
-- Define your [Recovery Point Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [Recovery Time Objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO) targets.
-- Determine how long you would want to retain and restore your backups according to the supported retention period limits.
-- Consider the storage and cost implications of increasing the retention period of your backups. The default retention is seven days which means you can restore for up to seven days and you get one full backup, daily differential, and transactional log backups about every five minutes.
-- Consider the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to be used for the backups persistent volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
-- Consider the persistent volume size for backups according to the expected data size and retention period configured.
-- Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for storage best practices.
-- Backups are always performed on the primary replica, consider the performance impact of the backup and restore processes when identifying the resources allocated to your Arc-enabled SQL MI.
-- Take into account that point-in-time restores cannot overwrite an existing database, it can restore a database from an existing database to a new database on the same Arc-enabled SQL MI.
-- Consider the additional steps needed to fully recover your database if your application is online during your restore process.
-- Consider the [extra steps needed](/azure/azure-arc/data/managed-instance-high-availability#restoring-a-database-onto-a-multi-replica-instance) to restore a database onto a multi-replica Arc-enabled SQL MI.
-- Determine the [tools](/azure/azure-arc/data/connect-managed-instance) that will be used by Database administrators to configure and restore backups.
+- Define your targets for [recovery point objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [recovery time objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO).
+
+- Determine how long you want to retain and restore your backups within the supported retention limits.
+
+- Consider the implications for storage and the cost of increasing the retention period of your backups. The default retention is seven days. With this duration, you can restore for up to seven days, and you get one full backup, a daily differential, and backups of transactional logs about every five minutes.
+
+- Consider which [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) to use for the persistent volume for backups. For guidance, see [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
+
+- Consider the size of the persistent volume for backups in the context of the expected data size and the configured retention period.
+
+- For best practices for storage, see the [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
+
+- Backups are always performed on the primary replica. Consider the performance effects of the backup and restore processes when identifying the resources that are allocated to your instance.
+
+- Take into account that point-in-time restores of a database can't overwrite an existing database. However, they can restore data to a new database on the same instance.
+
+- Consider the additional steps that are required to fully recover your database if your application is online during the restore process.
+
+- Consider the extra steps that are required to restore a database onto a multi-replica instance, as described in [Restoring a database onto a multi-replica instance](/azure/azure-arc/data/managed-instance-high-availability#restoring-a-database-onto-a-multi-replica-instance).
+
+- Determine the tools that database administrators use to configure and restore backups. For more information, see [Connect to Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/connect-managed-instance).
 
 ### High availability
 
-- Review the high availability requirements of your workload and decide on the service tier that is best suited for your Arc-enabled SQL MI deployment:
-  - In the General Purpose service tier, there is only one replica available, and the high availability is achieved via Kubernetes orchestration
-  - In the "Business Critical" service tier, in addition to what is natively provided by Kubernetes orchestration, Azure SQL MI for Azure Arc provides a contained availability group.
-- Consider the potential business impact of downtime in the General Purpose service tier, due to the existence of only one replica.
-- Consider the number of replicas (1-3) to deploy in the "Business Critical" service tier.
-- When deploying an instance in a "Business Critical" service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the [number of secondary replicas](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries) to deploy in the "Business Critical" service tier.
-- Decide on prioritizing consistency over availability through the number of secondary replicas required to commit a transaction in the "Business Critical" service tier using the _--sync-secondary-to-commit_ option:
-- In a two-replica configuration, if there are connectivity issues between the replicas, then the primary replica may not commit any transactions as every transaction needs to be committed on both replicas before a success is returned back on the primary.
-  - In a three replica configuration, a transaction needs to commit in at least 2 of the 3 replicas before returning a success message back to the application.
-- Decide if you need to designate a [specific replica to be the primary one](/azure/azure-arc/data/managed-instance-high-availability#preferred-primary-replica).
-- Decide which service type you will use between Kubernetes _LoadBalancer_ or _NodePort_. If the load balancer is used, then applications can reconnect to the same primary endpoint and Kubernetes will redirect the connection to the new primary. If the service type is _NodePort_ then the applications will need to reconnect to the new IP address.
+- Review the availability requirements of your workload and decide on the service tier that is best for your deployment of Arc-enabled SQL Managed Instance:
+
+  - In the General Purpose service tier, there's a single replica available, and the high availability is achieved via Kubernetes orchestration.
+  - In the Business Critical service tier, Azure Arc-enabled SQL Managed Instance provides a contained availability group, in addition to what is natively provided by Kubernetes orchestration.
+
+- Consider the potential business effects of downtime in the General Purpose service tier that could result due to the existence of only one replica.
+
+- Consider how many replicas—one to three—to deploy in the Business Critical service tier.
+
+- When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the number of secondary replicas to deploy in the Business Critical service tier. For information on changing the number, see [Configure readable secondaries](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries).
+
+- Decide on prioritizing consistency over availability through the number of secondary replicas that are required to commit a transaction in the Business Critical service tier by using the [optional parameter](/cli/azure/sql/mi-arc#az-sql-mi-arc-update-optional-parameters) **--sync-secondary-to-commit**. If there are connectivity problems between the replicas, the primary might not commit any transactions: 
+
+  - In a two-replica configuration, a transaction must be committed on both replicas for the primary to receive a success message. 
+  - In a three-replica configuration, at least two of the three replicas must commit a transaction to return a success message.
+
+- Decide if you need to designate a specific replica as the primary. For information about specifying a primary replica, see [Preferred primary replica](/azure/azure-arc/data/managed-instance-high-availability#preferred-primary-replica).
+
+- Decide which Kubernetes service type you'll use, *LoadBalancer* or *NodePort*. If you use the load balancer, then applications can reconnect to the same primary endpoint, and Kubernetes will redirect the connection to the new primary. If you use the node port, then applications must reconnect to the new IP address.
 
 ### Disaster recovery
 
-- The Azure Arc-enabled SQL MI in both geo-primary and geo-secondary sites need to be identical in terms of their compute & capacity, as well as service tiers they are deployed in.
-- Decide on a location to store the mirroring certificates when creating the disaster recovery setup that is accessible by both clusters hosting the Arc-enabled SQL MI.
+- The instances of Azure Arc-enabled SQL Managed Instance in both geo-primary and geo-secondary sites must be identical in compute and capacity, as well as deployed to the same service tiers.
+
+- Decide on a location in which to store the mirroring certificates when you create the disaster recovery configuration that is accessible by both clusters that host the instance.
+
 - Consider how to monitor the downtime of the primary instance to decide when to perform a failover to the secondary instance.
-- Each Azure Arc-enabled SQL MI has its own endpoints, consider how your applications will access the primary endpoint in case of failover with minimum disruption.
+
+- Each instance has its own endpoints. Consider how your applications will access the primary endpoint with minimum disruption in case of failover.
 
 ## Design recommendations
 
+The following sections list design recommendations for point-in-time restore, high availability, and disaster recovery.
+
 ### Point-in-time restore
 
-- When deploying a new Arc-enabled SQL MI, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
-- Use a _ReadWriteMany_ (RWX) capable storage class for the backups volume. Review the [storage critical design area](./eslz-arc-datasvc-sqlmi-storage-disciplines.md) for more guidance.
-- Use the [dry-run switch](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli) for restores first, to validate whether or not the restore operation would be successful before performing the actual restore.
-- Create a process to send backups that need longer retention to Azure or other on-premises cold storage.
-- Monitor the storage consumed by your backups to determine if you can accommodate longer retention if needed.
+- When deploying a new instance of Arc-enabled SQL Managed Instance, always define the [storage class](/azure/azure-arc/data/storage-configuration#database-instance-storage-configuration) for backups to avoid defaulting to the data storage class.
+
+- Use a storage class that supports *ReadWriteMany* (RWX) for the backups volume. For guidance, see the [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
+
+- Before starting a restore operation, use [optional parameter](/cli/azure/sql/mi-arc#az-sql-mi-arc-update-optional-parameters) **--dry-run** to first validate whether the operation would be successful. For more information, see [Create a database from a point-in-time using az CLI](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli).
+
+- Create a process to send backups that need longer retention periods to Azure or other on-premises cold storage.
+
+- Monitor the storage that is consumed by your backups to determine if you can accommodate longer retention, if needed.
 
 ### High availability
 
-- Perform regular drills to validate the high availability of your Arc-enabled SQL MI, whether it is deleting the pod of a General Purpose instance or failing one of the replicas of a "Business Critical" instance.
-- Deploy a "Business Critical" SQL Managed Instance in a three replica configuration instead of a two replica configuration to achieve near-zero data loss.
-- Use load balancer as your service type when deploying 'Arc-enabled SQL MI for better availability.
-- Review the [high availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of the Azure Arc-enabled SQL MI.
-- Review the [supported availability modes](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) to decide on the right mode to use based on your high availability needs.
-- When deploying a "Business Critical" instance with multiple replicas, use one of the secondary replicas for _Read_ workloads. You need to use the [secondary service listener endpoint](/azure/azure-arc/data/managed-instance-high-availability#get-the-primary-and-secondary-endpoints-and-ag-status) in your application connection string to get redirected to the secondary replicas.
-- Review the [management critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) to understand the best practices to monitor your instances' availability.
+- Perform regular drills to validate the high availability of your instance of Arc-enabled SQL Managed Instance. Examples of drills include deletion of a pod in a General Purpose instance and failure of a replica in a Business Critical instance.
+
+- In the Business Critical tier, deploy an instance in a three-replica configuration instead of a two-replica configuration to achieve near-zero data loss.
+
+- For better availability, use LoadBalancer as the service type when deploying an instance.
+
+- Review the [high-availability limitations](/azure/azure-arc/data/managed-instance-high-availability#limitations) of Azure Arc-enabled SQL Managed Instance.
+
+- Review the [supported availability modes](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) to decide which mode to use based on your high-availability needs.
+
+- When deploying a Business Critical instance with multiple replicas, use one of the secondary replicas for *Read* workloads. Your application connection string must specify the secondary endpoint as service listener for redirection to the secondary replicas. For information about endpoints, see [Get the primary and secondary endpoints and AG status](/azure/azure-arc/data/managed-instance-high-availability#get-the-primary-and-secondary-endpoints-and-ag-status).
+
+- To understand the best practices for monitoring the availability of your instances, see [Management and monitoring for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-management-disciplines.md).
 
 ### Disaster recovery
 
-- Ensure the Arc-enabled SQL MI has different names for both primary and secondary sites, and the shared-name value should be identical on both sites.
+- Ensure that your instances of Arc-enabled SQL Managed Instance have different names for primary and secondary sites, and that the shared-name value for the sites is identical.
+
 - Perform regular disaster recovery drills to validate the failover process.
+
 - Create a process for initiating both manual and forced failovers.
-- Review the [management critical design area](./eslz-arc-datasvc-sqlmi-management-disciplines.md) of Azure Arc-enabled SQL MI to understand the best practices to monitor the health of the clusters to understand when a failover is required.
-- Define the DNS record for the shared name of the [Distributed Availability Group](/sql/database-engine/availability-groups/windows/distributed-availability-groups) in your DNS servers to avoid creating manual DNS records during the failover.
+
+- To understand the best practices to monitor the health of the clusters, and to understand when a failover is required, see [Management and monitoring for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-management-disciplines.md).
+
+- Define the DNS record for the shared name of the [distributed availability group](/sql/database-engine/availability-groups/windows/distributed-availability-groups) in your DNS servers to avoid needing to manually create DNS records during the failover.
 
 ## Next steps
 
 For more information on your hybrid and multicloud cloud journey, see the following articles:
 
-- Review the [capabilities](/azure/azure-arc/data/overview) of Azure Arc-enabled Data Services.
-- Review the [business continuity features](/azure/azure-arc/data/managed-instance-business-continuity-overview) for Azure
-- Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-enabled data services.
-- Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
-- Experience Azure Arc-enabled SQL MI automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
-- To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- [What are Azure Arc-enabled data services?](/azure/azure-arc/data/overview)
+- [Overview: Azure Arc-enabled SQL Managed Instance business continuity](/azure/azure-arc/data/managed-instance-business-continuity-overview)
+- [Azure Arc-enabled data services Kubernetes validation](/azure/azure-arc/data/validation-program)
+- [Manage your portfolio across hybrid and multicloud operations](/azure/cloud-adoption-framework/scenarios/hybrid/manage)
+- [Azure Arc-enabled data services](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/) for automated scenarios with Azure Arc Jumpstart
+- [Bring Azure innovation to your hybrid environments with Azure Arc](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/), a learning path from Microsoft Learn
