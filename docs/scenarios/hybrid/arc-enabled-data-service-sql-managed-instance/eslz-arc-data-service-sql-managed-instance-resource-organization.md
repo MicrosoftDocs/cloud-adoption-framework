@@ -41,7 +41,7 @@ After you deploy Azure Arc-enabled SQL Managed Instance to a resource group and 
 
 ## Custom location
 
-When planning for the deployment of Azure Arc-enabled data services in [directly connected mode](/azure/azure-arc/data/connectivity), consider that [Custom locations](/azure/azure-arc/platform/conceptual-custom-locations) will be provisioned and will be projected in your Azure subscription.
+When planning for the deployment of Azure Arc-enabled data services in [directly connected mode](/azure/azure-arc/data/connectivity), consider that [Custom locations](/azure/azure-arc/platform/conceptual-custom-locations) will be provisioned and be projected in your Azure subscription.
 
 :::image type="content" alt-text="Diagram that shows mapping of custom locations to namespaces of Azure Arc-enabled data service." source="./media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png" lightbox="./media/arc-enabled-data-svc-sql-mi-custom-location-namespace-mapping.png":::
 
