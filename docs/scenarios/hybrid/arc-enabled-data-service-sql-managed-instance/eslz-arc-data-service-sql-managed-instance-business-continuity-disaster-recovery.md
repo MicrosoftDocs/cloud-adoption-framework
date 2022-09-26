@@ -77,7 +77,7 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 - When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the number of secondary replicas to deploy in the Business Critical service tier. For information on changing the number, see [Configure readable secondaries](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries).
 
-- Decide on prioritizing consistency over availability through the number of secondary replicas that are required to commit a transaction in the Business Critical service tier by using the [optional parameter](/cli/azure/sql/mi-arc?view=azure-cli-latest#az-sql-mi-arc-update-optional-parameters) **--sync-secondary-to-commit**. If there are connectivity problems between the replicas, the primary might not commit any transactions: 
+- Decide on prioritizing consistency over availability through the number of secondary replicas that are required to commit a transaction in the Business Critical service tier by using the [optional parameter](/cli/azure/sql/mi-arc#az-sql-mi-arc-update-optional-parameters) **--sync-secondary-to-commit**. If there are connectivity problems between the replicas, the primary might not commit any transactions: 
 
   - In a two-replica configuration, a transaction must be committed on both replicas for the primary to receive a success message. 
   - In a three-replica configuration, at least two of the three replicas must commit a transaction to return a success message.
@@ -106,7 +106,7 @@ The following sections list design recommendations for point-in-time restore, hi
 
 - Use a storage class that supports *ReadWriteMany* (RWX) for the backups volume. For guidance, see the [Storage disciplines for Azure Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-storage-disciplines.md).
 
-- Before starting a restore operation, use [optional parameter](/cli/azure/sql/mi-arc?view=azure-cli-latest#az-sql-mi-arc-update-optional-parameters) **--dry-run** to first validate whether the operation would be successful. For more information, see [Create a database from a point-in-time using az CLI](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli).
+- Before starting a restore operation, use [optional parameter](/cli/azure/sql/mi-arc#az-sql-mi-arc-update-optional-parameters) **--dry-run** to first validate whether the operation would be successful. For more information, see [Create a database from a point-in-time using az CLI](/azure/azure-arc/data/point-in-time-restore#create-a-database-from-a-point-in-time-using-az-cli).
 
 - Create a process to send backups that need longer retention periods to Azure or other on-premises cold storage.
 
