@@ -37,9 +37,8 @@ Whether located in a public or private cloud, your primary cloud platform is whe
 > [!NOTE]
 > Your primary cloud platform may not host all, or even the majority, of your workloads, but it does **host the services and controls required to complete core processes for operations management, governance, compliance, security, and so on**.
 >
-> [!CAUTION]
-> You probably already have a primary cloud platform. Unfortunately, many cloud platforms were designed and built before operations required hybrid, multicloud, or edge deployment options. This has often led customers to replicate processes, using different cloud controls to manage cloud services across each cloud platform. If your cloud strategy calls for hybrid, multicloud, or edge deployment options **and** your primary cloud platform doesn't support them, consider a platform that can deploy the requisite functionalities for unified operations.
->
+
+When identifying your primary cloud platform, it's important to ensure that cloud has the necessary toolsets to manage all of the clouds in your portfolio. Many cloud platforms were designed and built before operations required hybrid, multicloud, or edge deployment options. Insufficient capabilities in current operation tools could require operations teams to replicate processes-using different cloud controls to manage cloud services across each cloud platform. If your cloud strategy calls for hybrid, multicloud, or edge deployment options **and** your primary cloud platform doesn't support them, you should consider a platform that can deploy the requisite functionalities for unified operations.
 
 ## Defining unified operations
 
@@ -47,19 +46,15 @@ The concept behind how unified operations works is simple: implement an extensio
 
 In implementing unified operations, a single enterprise control plane extends across your organization's distributed assets, bringing consistent management, application development, and cloud services to any infrastructure, anywhere, at scale. Enabling consistent management and governance for organizations, a gateway with such cloud controls extends consistent operations management and data services across disparate on-premises, multicloud and edge environments.
 
-When identifying your primary cloud platform, it's important to ensure that cloud has the necessary toolsets to manage all of the clouds in your portfolio. Many cloud platforms were designed and built before operations required hybrid, multicloud, or edge deployment options. Insufficient capabilities in current operation tools could require operations teams to replicate processes-using different cloud controls to manage cloud services across each cloud platform. If your cloud strategy calls for hybrid, multicloud, or edge deployment options **and** your primary cloud platform doesn't support them, you should consider a platform that can deploy the requisite functionalities for unified operations.
-
 ## Unified operations
 
 A single cloud management and operations experience across your portfolio of distributed assets at scale (bringing consistent governance, management, application development, and cloud services to any infrastructure, anywhere) enables an integrated hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth. The addition of a gateway for cloud controls that extend management and data services to on-premises, multicloud and the edge, enables consistent management and governance for organizations; an integral hybrid and multicloud strategy that can increase your organization's future innovation, agility, and business growth, anywhere. Implement an extension (or gateway) in order to apply the controls in your primary cloud provider across your hybrid, multicloud, or edge deployments.
 
 ![Unified operations extends cloud controls to hybrid, multicloud, and edge deployments](../../_images/hybrid/primary-cloud-provider-extended.png)
 
-> [!WARNING]
-> Implementation of unified operations can be relatively straightforward. But, if your cloud platform cannot manage the necessary primary unified operations processes, it will require additional capital expenditures, with costly development to create extensions, or gateways to other clouds. The main constraining factor why customers create duplicated or fractured operations and processes is because of existing primary cloud platforms with such limitations.
->
-> An inconsistent approach to implementing unified operations can multiply cost inefficiencies for your organization-with increased operating costs (from duplicated cloud platform utilities, or operations tooling), and negative business impacts (staffing teams without the necessary cloud skilling in place).
->
+Implementation of unified operations can be relatively straightforward. But, if your cloud platform cannot manage the necessary primary unified operations processes, it will require additional capital expenditures, with costly development to create extensions, or gateways to other clouds. The main constraining factor why customers create duplicated or fractured operations and processes is because of existing primary cloud platforms with such limitations.
+
+An inconsistent approach to implementing unified operations can multiply cost inefficiencies for your organization-with increased operating costs (from duplicated cloud platform utilities, or operations tooling), and negative business impacts (staffing teams without the necessary cloud skilling in place).
 
 If your current primary cloud provider does not offer the required capabilities for unified operations, consider optimizing your operations and processes using a modern cloud provider.
 
