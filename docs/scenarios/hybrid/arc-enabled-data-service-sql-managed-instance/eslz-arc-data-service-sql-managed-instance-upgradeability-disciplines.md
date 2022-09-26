@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled data services allow you to get an evergreen version of SQL that's only available in Arc-enabled SQL Managed Instance. By nature of being evergreen, Arc-enabled SQL Managed Instance provides managed service-based upgradeability so you can benefit from Azure innovation in your infrastructure as soon as it’s available in Azure, unlike on-premises installations or multicloud environments.
+Azure Arc-enabled data services allow you to get an evergreen version of SQL that's only available in Arc-enabled SQL Managed Instance. By nature of being evergreen, Arc-enabled SQL Managed Instance provides managed service-based upgradeability so you can benefit from innovation in your Azure infrastructure as soon as it’s available, unlike on-premises installations or multicloud environments.
 
 This article provides key design considerations and recommendations for configuring and managing the upgrade process for your Azure Arc-enabled data services.
 
@@ -32,7 +32,7 @@ The following diagram displays the data service upgrade flow in *indirectly conn
 
 ### General purpose service tier
 
-The following diagrams display the upgrade process for an Arc-enabled SQL Managed Instance in a *general purpose* service tier.
+The following diagrams display the upgrade process for Arc-enabled SQL Managed Instance in a *general purpose* service tier.
 
    [![Screenshot that shows the pre-upgrade process of an Arc-enabled SQL Managed Instance in a general purpose service tier.](./media/arc-enabled-data-svc-sql-mi-general-purpose-tier-pre-upgrade.png)](./media/arc-enabled-data-svc-sql-mi-general-purpose-tier-pre-upgrade.png#lightbox)
 
@@ -40,7 +40,7 @@ The following diagrams display the upgrade process for an Arc-enabled SQL Manage
 
 ### Business critical service tier
 
-The following diagrams display the upgrade process for an Arc-enabled SQL Managed Instance in a *business critical* service tier.
+The following diagrams display the upgrade process for Arc-enabled SQL Managed Instance in a *business critical* service tier.
 
    [![Screenshot that shows the pre-upgrade process of an Arc-enabled SQL Managed Instance in a business critical service tier.](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-pre-upgrade.png)](./media/arc-enabled-data-svc-sql-mi-business-critical-tier-pre-upgrade.png#lightbox)
 
@@ -60,17 +60,17 @@ The following diagrams display the upgrade process for an Arc-enabled SQL Manage
 - Consider the [supported upgrade path](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-path) to determine the next correct version for your data controller before the upgrade.
 
 > [!NOTE]
-> An upgrade of the data controller will not cause downtime for the Arc-enabled SQL Managed Instance.
+> An upgrade of the data controller doesn't cause downtime for the Arc-enabled SQL Managed Instance.
 
 #### Directly connected mode
 
-- Determine if the data controller upgrade in directly connected mode will be implemented using the Azure portal, the Azure CLI, or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
+- Determine if the data controller upgrade in directly connected mode should be implemented using the Azure portal, the Azure CLI, or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
 - Review the prerequisites for upgrades using the [Azure portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#prerequisites).
 - Review the [extensions management critical design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management) in the [Azure Arc-enabled Kubernetes landing zone accelerator](/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
 
 #### Indirectly connected mode
 
-- Determine if the data controller upgrade in indirectly connected mode will be implemented using the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) or [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools).
+- Determine if the data controller upgrade in indirectly connected mode should be implemented using the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) or [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools).
 - Review the prerequisites for upgrades using [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-indirect-cli#prerequisites).
 - Decide if you'll use [Microsoft Artifact Registry](https://mcr.microsoft.com/) in case your clusters have internet connectivity or a private registry if your clusters are air-gapped to pull the Azure Arc-enabled data services images.
 - Plan for [required Kubernetes permissions](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#create-the-service-account-for-running-upgrade) for the service account used to upgrade the Azure Arc data controller using Kubernetes tools.
@@ -86,12 +86,12 @@ The following diagrams display the upgrade process for an Arc-enabled SQL Manage
 
 #### General purpose service tier
 
-- During a general purpose service-tier upgrade, the Kubernetes pod will be terminated and re-provisioned with the new version. It's important to understand the application and client-side impact of an upgrade where there will be a short amount of downtime as the new pod is created.
+- During a general purpose service-tier upgrade, the Kubernetes pod is terminated and reprovisioned with the new version. It's important to understand the application and client-side effect of an upgrade where there's a short amount of downtime as the new pod is created.
 - Review the architecture of your applications to understand if they have the needed resiliency and retry logic to support brief impact during an upgrade.
 
 #### Business critical service tier
 
-- During a business critical service-tier upgrade with multiple replicas, the secondary replicas are upgraded first, and one of the upgraded secondary replicas is promoted to become the new primary replica while the old primary becomes a secondary and is upgraded. During the transition from the old primary to the new primary, there's a brief moment of downtime when the failover happens. It's important to understand the application and client-side impact of an upgrade when the failover occurs.
+- During a business critical service-tier upgrade with multiple replicas, the secondary replicas are upgraded first. One of the upgraded secondary replicas is promoted to become the new primary replica while the old primary becomes a secondary and is upgraded. During the transition from the old primary to the new primary, there's a brief moment of downtime when the failover happens. It's important to understand the application and client-side impact of an upgrade when the failover occurs.
 - Review the architecture of your application to understand if they have the needed resiliency and retry logic to support brief impact during an upgrade.
 
 ## Design recommendations
@@ -135,7 +135,7 @@ The following diagrams display the upgrade process for an Arc-enabled SQL Manage
 - Perform a [dry run](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli#upgrade-the-managed-instance) prior to the upgrade to validate the version schema, the private repository authorization token if used, and that the registry exists before attempting an actual upgrade.
 - Use the Azure CLI to perform at-scale upgrades of your Arc-enabled SQL Managed Instance.
 - Use [automatic upgrades](/azure/azure-arc/data/maintenance-window) for workloads that can tolerate immediate upgrades and opt-out of automatic upgrades for workloads that need a scheduled off-peak hour to perform the upgrade.
-- If automatic upgrades will be used, make sure to define a suitable [maintenance window](/azure/azure-arc/data/maintenance-window) to allow for upgrades to happen during off-peak hours.
+- If automatic upgrades are used, make sure to define a suitable [maintenance window](/azure/azure-arc/data/maintenance-window) to allow for upgrades to happen during off-peak hours.
 - In case of manual upgrades, ensure that you establish a regular cadence to perform upgrades to stay within supported versions.
     >[!NOTE]
     >You can also [poll the Microsoft Artifact Registry](https://mcr.microsoft.com) for new container image versions.
@@ -164,3 +164,4 @@ For more information about the hybrid cloud and multicloud journey, see the foll
 - Manage [hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
 - Experience Arc-enabled SQL Managed Instance automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- 
