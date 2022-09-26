@@ -3,7 +3,7 @@ title: Network connectivity for Azure Arc-enabled SQL Managed Instance
 description: Understand the design considerations and recommendations for network connectivity in Azure Arc-enabled SQL Managed Instance
 author: welasco
 ms.author: vsantana
-ms.date: 09/23/2022
+ms.date: 09/26/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,13 +12,13 @@ ms.custom: e2e-hybrid, think-tank
 
 # Network connectivity for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled data services support two different connectivity modes. The [Direct connectivity and Indirect connectivity](/azure/azure-arc/data/connectivity) modes deploy an Azure Arc-enabled SQL Managed Instance running on Azure Arc-enabled Kubernetes clusters with an Azure Arc control plane.
+Azure Arc-enabled data services support two different connectivity modes. The [Directly connected and Indirectly connected](/azure/azure-arc/data/connectivity) modes deploy an Azure Arc-enabled SQL Managed Instance running on Azure Arc-enabled Kubernetes clusters with an Azure Arc control plane.
 
 The Arc-enabled data services components are:
 
-* Azure Arc data controller
-* Azure Arc Active Directory connector
-* Arc-enabled SQL Managed Instance
+* Azure Arc Data Controller
+* Azure Arc Active Directory Connector
+* Azure Arc-enabled SQL Managed Instance
 
 These components communicate with the Azure Arc endpoints, Active Directory domain controllers, and domain name system (DNS) servers that are running on-premises and in other cloud environments.
 
