@@ -51,7 +51,7 @@ However, it is a major added benefit and part of the continuous environment opti
 
 Projected business outcomes can be synchronized with the sustainability benefits brought by the migration – link to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/#sustainability-goals.
 
-Resource intensive workloads can be discovered using About Azure Migrate - Azure Migrate | Microsoft Learn.
+Resource intensive workloads can be discovered using Azure Migrate- https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview.
 
 Note: maybe something could be added as a step/question part of this assessment: https://learn.microsoft.com/en-us/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment&session=local
 
