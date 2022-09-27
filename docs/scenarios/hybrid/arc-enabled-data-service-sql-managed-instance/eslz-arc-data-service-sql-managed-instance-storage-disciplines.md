@@ -30,7 +30,7 @@ The following architecture diagram shows the logical design of Azure Arc-enabled
 
 The following are considerations for your storage design and configuration.
 
-### Storage classes
+### Storage Classes
 
 Choosing the right Kubernetes StorageClass and configuration for your Azure Arc-enabled data services components is important for your data storage performance, resiliency, and capacity.
 
@@ -53,7 +53,7 @@ Consider the following standards when choosing a StorageClass. These criteria wo
 - **Read/Write ratio:** Understanding the workload can help you choose the backing hardware to best meet your needs with appropriate costs. Heavy write workloads can take advantage of RAID 0 configurations, whereas infrequently accessed data might be best served using a SAN device storage.
 - **Database isolation and co-location:** All databases on an instance of Arc-enabled SQL Managed Instance share PV, so you can choose to move databases to separate instances of Arc-enabled SQL Managed Instance and avoid storage resource contention.
 - **Capacity:** The defined storage size should meet the future capacity of your data controller and database instances to avoid having to resize a PVC. Consider any storage limitations that your chosen StorageClass might have.
-- **Access mode:** Storage class providers have different access modes, supporting different capabilities for how storage can be mounted and read or written by pods. RWX (Read Write Many) is required for the SQL Backup volume.
+- **Access mode:** Storage Class providers have different access modes, supporting different capabilities for how storage can be mounted and read or written by pods. RWX (Read Write Many) is required for the SQL Backup volume.
 - **Redundancy:** Replication of the data at the physical storage layer (RAID) to support seamless failover if hardware disk failure happens, which is separate from the database level redundancy done by Availability Groups (AG).
 
 Both the Azure Arc Data Controller and Arc-enabled SQL Managed Instance Arc data services provide granular options for configuring different storage classes for database data. These data services also provide logs, which allow for flexibility in choosing storage classes to meet needs.
@@ -86,7 +86,7 @@ In scenarios with multiple databases on a given database instance, all the datab
 
 The following table describes the different Persistent Volumes used by each Arc-enabled SQL Managed Instance pod and its purpose.
 
-| Persistent Volume       | Description           | Storage class requirements |
+| Persistent Volume       | Description           | Storage Class requirements |
 | ------------- |:-------------:| -----:|
 | Data      | SQL Database data files (.mdf files) | Depends on tier |
 | DataLogs     | SQL Database log files (.ldf files)      |   Depends on tier |  
@@ -121,7 +121,7 @@ When you delete Arc-enabled SQL Managed Instance, its associated PVs and PVCs ar
 
 The following are recommendations for your storage design and configuration.
 
-### Storage classes for production workloads
+### Storage Classes for production workloads
 
 For specific public clouds, the recommended storage classes for production workloads are shown in the following table.
 
