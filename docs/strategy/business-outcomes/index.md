@@ -33,7 +33,7 @@ The following are a few business outcomes that tend to trigger conversations wit
 - **Sales:** Accelerate sales, improve customer lifetime value.
 - **Human resources:** Retain, recruit, and empower employees.
 - **Executive leadership:** Meeting market growth requirements and environmental sustainability metrics.
-- **Sustainability:** Driving sustainability as a strategy throughout the entire business
+- **Sustainability leads:** Driving sustainability as a strategy throughout the entire business, aligned with the company's commitments
 
 ## Sample outcomes by category
 
