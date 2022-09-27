@@ -15,7 +15,7 @@ ms.custom: internal
 
 This article outlines a high-level approach to agile change management in a migration effort. We'll discuss the role of migration, release, and iteration backlogs in organizing and executing your migration.
 
-![Relationship between the migration, release, and iteration backlogs used during the migration process](../../../_images/migrate/backlog-relationships.png)
+![Diagram that shows the relationship between the migration, release, and iteration backlogs used during the migration process](../../../_images/migrate/backlog-relationships.png)
 
 *Diagram 1: The relationship between the migration, release, and iteration backlogs.*
 
