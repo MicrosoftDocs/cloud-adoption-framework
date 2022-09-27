@@ -39,7 +39,7 @@ Capacity optimization, where you only for the resources you utilize over time, i
 
 With a shift to the cloud, it's important to think differently about how you'll consume and manage your cloud resources. As you build your business case, it's critical to understand the key principles of cloud economics. When you plan short-term and long-term cloud solutions and align them to business outcomes, you can achieve more with every dollar you invest.
 
-## NOTE: this might be a section better fit for the Plan part of CAF
+## NOTE: this might be a section better fit for the Plan part of CAF/TBD
 ## Migration strategy - How do we select the first project to migrate based on potential sustainability impact? 
 Building a sustainable IT is tightly connected to moving workloads from on-premises to the cloud.
 
@@ -60,6 +60,8 @@ This way a customer can analyze the diversity of their workloads and the potenti
 Identifying the first workload targeted for migration from sustainability standpoint can be performed using the 80:20 rule – 80% of the emissions that derive from 20% of the workload.
 
 This is a generic suggestion, as a customer needs to perform own assessment based on the unique needs of its landscape and desired business outcomes.
+
+
 
 ### Align your partner strategy
 
