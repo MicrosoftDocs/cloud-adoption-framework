@@ -43,7 +43,7 @@ With a shift to the cloud, it's important to think differently about how you'll 
 ## Migration strategy - How do we select the first project to migrate based on potential sustainability impact? 
 Building a sustainable IT is tightly connected to moving workloads from on-premises to the cloud.
 
-Moving the first workload is always aligned with the business goals, depending on how the migration aligns with an array of factors that lead to this decision: link to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations#motivations
+Moving the first workload is always aligned with the business goals, depending on how the migration aligns with an array of factors that lead to this decision: link to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations#motivations.
 
 Although sustainability is a key concept, in reality, it might be idealistic to believe it will be the main decision factor for a cloud migration.
 
