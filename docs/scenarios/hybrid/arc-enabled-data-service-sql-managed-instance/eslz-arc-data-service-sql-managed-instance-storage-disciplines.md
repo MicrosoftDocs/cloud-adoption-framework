@@ -3,7 +3,7 @@ title: Storage disciplines for Azure Arc-enabled SQL Managed Instance
 description: Learn design considerations and recommendations for Storage disciplines with Azure Arc-enabled SQL Managed Instance.
 author: jpocloud
 ms.author: johnpoole
-ms.date: 09/26/2022
+ms.date: 09/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank
 
 Storage is a critical component in an Azure Arc-enabled SQL Managed Instance (Arc-enabled SQL Managed Instance) deployment. Understanding how the storage-related concepts described in this document affect the functioning of Kubernetes clusters is an important aspect of the storage design choices and management.
 
-Rather than directly interacting with underlying storage, Kubernetes provides an abstraction layer to various storage technologies through storage classes. Cloud providers, hardware vendors, and other Kubernetes-managed platforms offer varying storage class options to suit specific environments and implementation scenarios.
+Rather than directly interacting with underlying storage, Kubernetes provides an abstraction layer to various storage technologies through storage classes. Cloud providers, hardware vendors, and other Kubernetes-managed platforms offer varying StorageClass options to suit specific environments and implementation scenarios.
 
 Arc-enabled SQL Managed Instance doesn't limit or enforce using any storage classes, so it's important to choose the correct storage design and configuration. The storage design for Arc-enabled SQL Managed Instance is as important as if you were choosing the backing storage devices for a SQL Server when running on bare metal or virtual machines. These choices ultimately represent your requirements surrounding RPO, RTO, capacity, and performance.
 
@@ -22,7 +22,7 @@ For Arc-enabled SQL Managed Instance deployments, effectively planning for stora
 
 ## Architecture
 
-The following architecture diagram shows the logical design of Azure Arc-enabled data services components. These components include a required data controller and one or more Arc-enabled SQL Managed Instance(s) that contain databases provisioned for reference. Both the data controller and Arc-enabled SQL Managed Instance provide options for backing storage devices, which are dependent upon Kubernetes distribution and storage infrastructure providers.
+The following architecture diagram shows the logical design of Azure Arc-enabled data services components. These components include a required Azure Arc Data Controller and one or more Arc-enabled SQL Managed Instance(s) that contain databases provisioned for reference. Both the Azure Arc Data Controller and Arc-enabled SQL Managed Instance provide options for backing storage devices, which are dependent upon Kubernetes distribution and storage infrastructure providers.
 
 :::image type="content" source="./media/arc-enabled-data-svc-sql-mi-storage-logical.png" alt-text="A screenshot showing the Azure Arc-enabled data services logical architecture diagram." lightbox="./media/arc-enabled-data-svc-sql-mi-storage-logical.png":::
 
@@ -36,53 +36,53 @@ Choosing the right Kubernetes StorageClass and configuration for your Azure Arc-
 
 The [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/), [PersistentVolume (PV)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/), and [PersistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) are Kubernetes resource objects that the system creates in your Kubernetes cluster when provisioning the Azure Arc-enabled data services components.
 
-Storage class options vary depending on what your cloud provider, hardware vendor offers and what the Kubernetes Administrator has configured. The PersistentVolumeClaim requests a PersistentVolume to be created for the StorageClass and the size requested. The following diagram is a reference of the relationship between these Kubernetes resources and potential options for the storage classes.
+StorageClass options vary depending on what your cloud provider, hardware vendor offers and what the Kubernetes Administrator has configured. The PersistentVolumeClaim requests a PersistentVolume to be created for the StorageClass and the size requested. The following diagram is a reference of the relationship between these Kubernetes resources and potential options for the storage classes.
 
 :::image type="content" source="./media/arc-enabled-data-svc-sql-mi-storage-k8s-relationship.png" alt-text="A screenshot showing Kubernetes storage concepts with the storage classes options." lightbox="./media/arc-enabled-data-svc-sql-mi-storage-k8s-relationship.png":::
 
-The PV and PVC Kubernetes resources are configured when provisioning the data controller and Arc-enabled SQL Managed Instance, respectively.
+The PV and PVC Kubernetes resources are configured when provisioning the Azure Arc Data Controller and Arc-enabled SQL Managed Instance, respectively.
 
 There are two different storages types to choose from:
 
 - **Local:** A volume that's mounted on a local storage device attached to the Kubernetes node where the pod is running. This type of storage usually provides lower latency along with higher input/output operations per second (IOPS) and throughput compared to Remote/Shared storage.
 - **Remote/Shared storage:** Network-attached storage devices that tend to come with built-in redundancy. Common storage options are NAS and SAN devices.
 
-Consider the following standards when choosing a storage class. These criteria would also hold true for any database server you'd build:
+Consider the following standards when choosing a StorageClass. These criteria would also hold true for any database server you'd build:
 
 - **Performance:** The storage device input/output (I/O) throughput and IOPS should meet your database needs.
 - **Read/Write ratio:** Understanding the workload can help you choose the backing hardware to best meet your needs with appropriate costs. Heavy write workloads can take advantage of RAID 0 configurations, whereas infrequently accessed data might be best served using a SAN device storage.
 - **Database isolation and co-location:** All databases on an instance of Arc-enabled SQL Managed Instance share PV, so you can choose to move databases to separate instances of Arc-enabled SQL Managed Instance and avoid storage resource contention.
-- **Capacity:** The defined storage size should meet the future capacity of your data controller and database instances to avoid having to resize a PVC. Consider any storage limitations that your chosen storage class might have.
+- **Capacity:** The defined storage size should meet the future capacity of your data controller and database instances to avoid having to resize a PVC. Consider any storage limitations that your chosen StorageClass might have.
 - **Access mode:** Storage class providers have different access modes, supporting different capabilities for how storage can be mounted and read or written by pods. RWX (Read Write Many) is required for the SQL Backup volume.
 - **Redundancy:** Replication of the data at the physical storage layer (RAID) to support seamless failover if hardware disk failure happens, which is separate from the database level redundancy done by Availability Groups (AG).
 
-Both the data controller and Arc-enabled SQL Managed Instance Arc data services provide granular options for configuring different storage classes for database data. These data services also provide logs, which allow for flexibility in choosing storage classes to meet needs.
+Both the Azure Arc Data Controller and Arc-enabled SQL Managed Instance Arc data services provide granular options for configuring different storage classes for database data. These data services also provide logs, which allow for flexibility in choosing storage classes to meet needs.
 
 ### Data controller
 
-A single data controller is required for a Kubernetes Cluster as a pre-requisite for creating instances of Arc-enabled SQL Managed Instance. More than one data controller running in a cluster isn't supported.
+A single Azure Arc Data Controller is required for a Kubernetes Cluster as a pre-requisite for creating instances of Arc-enabled SQL Managed Instance. More than one data controller running in a cluster isn't supported.
 
-The data controller will have four different stateful pods running in the Kubernetes cluster: Controller SQL, Controller API, Logs DB, and Metrics DB. Each pod  requires two Persistent Volumes for the data and logs volumes. All data controller components require a remote storage class to ensure data durability, as the data controller components themselves don't natively provide data durability.
+The Azure Arc Data Controller will have four different stateful pods running in the Kubernetes cluster: Controller SQL, Controller API, Logs DB, and Metrics DB. Each pod requires two Persistent Volumes for the data and logs volumes. All data controller components require a remote StorageClass to ensure data durability, as the data controller components themselves don't natively provide data durability.
 
-Be sure to consider the [compute and memory resources](/azure/azure-arc/data/sizing-guidance#data-controller-sizing-details) that the data controller requires. The following diagram represents the data controller storage, PV, and PVC Kubernetes resources.
+Be sure to consider the [compute and memory resources](/azure/azure-arc/data/sizing-guidance#data-controller-sizing-details) that the Azure Arc Data Controller requires. The following diagram represents the data controller storage, PV, and PVC Kubernetes resources.
 
-:::image type="content" source="./media/arc-enabled-data-svc-sql-mi-storage-data-controller.png" alt-text="A screenshot showing data controller storage." lightbox="./media/arc-enabled-data-svc-sql-mi-storage-data-controller.png":::
+:::image type="content" source="./media/arc-enabled-data-svc-sql-mi-storage-data-controller.png" alt-text="A screenshot showing the Azure Arc Data Controller storage." lightbox="./media/arc-enabled-data-svc-sql-mi-storage-data-controller.png":::
 
-The data controller default volume sizing is the recommended minimum. The storage you use depends on the number of databases, how you use the databases, and the number of logs generated. The data controller storage class isn't sensitive to low latency. Even so, users might see benefits in the Grafana and Kibana interfaces with faster-performing storage if you have many Arc-enabled SQL Managed Instance deployments in a cluster. Grafana and Kibana are open source monitoring visualization tools deployed with the data controller and provisioned with dashboards for [viewing metrics and logs](/azure/azure-arc/data/monitor-grafana-kibana) for Arc-enabled SQL Managed Instance.  
+The data controller default volume sizing is the recommended minimum. The storage you use depends on the number of databases, how you use the databases, and the number of logs generated. The Azure Arc Data Controller StorageClass isn't sensitive to low latency. Even so, users might see benefits in the Grafana and Kibana interfaces with faster-performing storage if you have many Arc-enabled SQL Managed Instance deployments in a cluster. Grafana and Kibana are open source monitoring visualization tools deployed with the data controller and provisioned with dashboards for [viewing metrics and logs](/azure/azure-arc/data/monitor-grafana-kibana) for Arc-enabled SQL Managed Instance.  
 
 #### Data controller provisioning
 
-When you provision the data controller, configure the storage class and the storage capacity for both logs and data. Configuring storage for both logs and data then applies to all eight PVs you create for the data controller pods. During the provisioning, you can specify a [custom deployment template](/azure/azure-arc/data/create-custom-configuration-template) that overrides default parameters such as capacity, log retention, and items related to security such as Kubernetes Service Types. Once the provisioning completes, PV and PVC Kubernetes objects are created.
+When you provision the Azure Arc Data Controller, configure the StorageClass and the storage capacity for both logs and data. Configuring storage for both logs and data then applies to all eight PVs you create for the data controller pods. During the provisioning, you can specify a [custom deployment template](/azure/azure-arc/data/create-custom-configuration-template) that overrides default parameters such as capacity, log retention, and items related to security such as Kubernetes Service Types. Once the provisioning completes, PV and PVC Kubernetes objects are created.
 
-It's important to understand that the storage class for the data controller can't be changed once it's provisioned. If you don't specify a storage class, the data controller uses the Kubernetes default StorageClass, which can vary depending on your Kubernetes instance or provider.
+It's important to understand that the StorageClass for the data controller can't be changed once it's provisioned. If you don't specify a StorageClass, the data controller uses the Kubernetes default StorageClass, which can vary depending on your Kubernetes instance or provider.
 
-When you uninstall the data controller, all Persistent Volumes associated with the data controller are deleted. Archive any Azure Arc-enabled data services control-plane level logs that your organization needs to save before uninstalling the data controller.
+When you uninstall the Azure Arc Data Controller, all Persistent Volumes associated with it are deleted. Archive any Azure Arc-enabled data services control-plane level logs that your organization needs to save before uninstalling the data controller.
 
 ### Azure Arc-enabled SQL Managed Instance
 
 Arc-enabled SQL Managed Instance offers two different tiers depending on business requirements: General Purpose and Business Critical. For both tiers, it's important to review the minimum and maximum [Arc-enabled SQL Managed Instance limits](/azure/azure-arc/data/sizing-guidance#sql-managed-instance-sizing-details), which are configurable, and ensure that the deployed Kubernetes cluster has the appropriate compute and memory capacity.
 
-In scenarios with multiple databases on a given database instance, all the databases use the same storage class, PVC, and PV specified for the Arc-enabled SQL Managed Instance. It's possible to have multiple instances of Arc-enabled SQL Managed Instance in a single Kubernetes cluster. This configuration allows for independent Persistent Volumes and can help separate IO contention from different databases by deploying the databases to different instances of Arc-enabled SQL Managed Instance.
+In scenarios with multiple databases on a given database instance, all the databases use the same StorageClass, PVC, and PV specified for the Arc-enabled SQL Managed Instance. It's possible to have multiple instances of Arc-enabled SQL Managed Instance in a single Kubernetes cluster. This configuration allows for independent Persistent Volumes and can help separate IO contention from different databases by deploying the databases to different instances of Arc-enabled SQL Managed Instance.
 
 The following table describes the different Persistent Volumes used by each Arc-enabled SQL Managed Instance pod and its purpose.
 
@@ -101,7 +101,7 @@ The General Purpose tier of Arc-enabled SQL Managed Instance must use remote sto
 
 #### Business Critical service tier
 
-Business Critical tier uses a multiple pod model where data and log volumes can be stored on local or remote Storage Classes. Local Storage Classes typically perform better in terms of latency and throughput because the storage device is directly attached to the node. Remote storage typically offers built-in redundancy but often has lower latency and throughput compared with local storage. Keep in mind that using more Business Critical database replicas requires extra Persistent Volumes for _Data_, _Logs_, and _DataLogs_. The required total storage capacity is much higher.
+Business Critical tier uses a multiple pod model where data and log volumes can be stored on local or remote storage classes. Local storage classes typically perform better in terms of latency and throughput because the storage device is directly attached to the node. Remote storage typically offers built-in redundancy but often has lower latency and throughput compared with local storage. Keep in mind that using more Business Critical database replicas requires extra Persistent Volumes for _Data_, _Logs_, and _DataLogs_. The required total storage capacity is much higher.
 
 The following diagram shows the Business Critical storage configuration for Arc-Enabled SQL Managed Instance with two replicas.
 
@@ -113,7 +113,7 @@ Configuring multiple replicas with synchronous-commit mode data replication ensu
 
 #### Azure Arc SQL Managed Instance provisioning and uninstalling
 
-When provisioning Arc-enabled SQL Managed Instance, you have the flexibility to assign different storage classes to each of the required Arc-enabled SQL Managed Instance Persistent Volumes. You might want higher-performance storage options for _Data_ and _DataLogs_, but the _Logs_ and _Backup_ volumes could use more cost-efficient storage class options to save on costs. In scenarios where you use local storage, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O. Placing the _Data_ and _DataLogs_ on the same physical drive can cause contention for that storage drive, resulting in poor performance. Instead, consider placing the _Data_ and _DataLogs_ on separate storage drives to parallelize I/O for both database data and logs.
+When provisioning Arc-enabled SQL Managed Instance, you have the flexibility to assign different storage classes to each of the required Arc-enabled SQL Managed Instance Persistent Volumes. You might want higher-performance storage options for _Data_ and _DataLogs_, but the _Logs_ and _Backup_ volumes could use more cost-efficient StorageClass options to save on costs. In scenarios where you use local storage, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O. Placing the _Data_ and _DataLogs_ on the same physical drive can cause contention for that storage drive, resulting in poor performance. Instead, consider placing the _Data_ and _DataLogs_ on separate storage drives to parallelize I/O for both database data and logs.
 
 When you delete Arc-enabled SQL Managed Instance, its associated PVs and PVCs aren't removed. This behavior ensures that you can access the database files in case the deletion was accidental.
 
@@ -131,15 +131,15 @@ For specific public clouds, the recommended storage classes for production workl
 | Amazon Elastic Kubernetes Service (EKS)     | EBS CSI storage driver    |
 | Google (GKE)  | GCE Persistent disks     |
 
-When choosing a production storage class in on-premises or multicloud scenarios, ensure the storage class is capable of meeting your intended storage capacity, IOPS, redundancy, and throughput needs. The following sections provide more recommendations for these scenarios.
+When choosing a production StorageClass in on-premises or multicloud scenarios, ensure that it's capable of meeting your intended storage capacity, IOPS, redundancy, and throughput needs. The following sections provide more recommendations for these scenarios.
 
 ### Data controller design
 
-Choose a remote, shared storage class to ensure data durability. In the event a pod or node is removed, you can bring the pod back up and connect again to the Persistent Volume. The underline storage class needs to provide redundancy and high availability.
+Choose a remote, shared StorageClass to ensure data durability. In the event a pod or node is removed, you can bring the pod back up and connect again to the Persistent Volume. The underline StorageClass must provide redundancy and high availability.
 
-We recommend using a custom deployment template when you create your Arc-enabled data services data controller. A custom template lets you fine-tune Storage Classes, storage size for data and logs, security, and Kubernetes Service Types. You can customize them for your environment and enterprise needs. The data controller requires a total of eight Persistent Volumes. The default minimum configuration allows for 15Gi for data and 10Gi for logs on the PVs. Configure capacity that not only meets minimum recommendations but supports higher growth from having many Arc-enabled SQL Managed Instance implementations running in a cluster. This configuration will prevent the need for resizing PVCs in the future.
+We recommend using a custom deployment template when you create your Arc-enabled data services data controller. A custom template lets you fine-tune storage classes, storage size for data and logs, security, and Kubernetes Service Types. You can customize them for your environment and enterprise needs. The Azure Arc Data Controller requires a total of eight Persistent Volumes. The default minimum configuration allows for 15Gi for data and 10Gi for logs on the PVs. Configure capacity that not only meets minimum recommendations but supports higher growth from having many Arc-enabled SQL Managed Instance implementations running in a cluster. This configuration will prevent the need for resizing PVCs in the future.
 
-We recommend you choose a lower-latency storage class in the event your cluster has many databases and Arc-enabled SQL Managed Instance deployments. Lower latency improves the user experience in Grafana and Kibana interfaces.
+We recommend you choose a lower-latency StorageClass in the event your cluster has many databases and Arc-enabled SQL Managed Instance deployments. Lower latency improves the user experience in Grafana and Kibana interfaces.
 
 ### Azure Arc-enabled SQL Managed Instance migration
 
@@ -157,7 +157,7 @@ The following subsections provide more specific recommendations for each tier:
 
 #### General Purpose service tier recommendations
 
-It's recommended to choose a low latency remote storage class for the _Data_ and _DataLogs_ Persistent Volumes for optimal performance. Avoid using a storage class that introduces network partitions, such as having an on-premises cluster configured to use an internet-provided storage class for the _Backup_ and _Logs_ Persistent Volumes.
+It's recommended to choose a low latency remote StorageClass for the _Data_ and _DataLogs_ Persistent Volumes for optimal performance. Avoid using a StorageClass that introduces network partitions, such as having an on-premises cluster configured to use an internet-provided StorageClass for the _Backup_ and _Logs_ Persistent Volumes.
 
 #### Business Critical service tier recommendations
 
@@ -169,7 +169,7 @@ For read-intensive workloads and high availability, configure multiple replicas 
 
 ### Monitoring
 
-It's recommended to monitor all PVCs created by Arc-enabled data services, including the data controller and all instances of Arc-enabled SQL Managed Instance in a cluster. Set alerts to notify you when a PVC is approaching near capacity. Notification lets you resize the PVC prior to reaching capacity. For Directly Connected clusters, [monitoring of PVCs](/azure/azure-monitor/containers/container-insights-persistent-volumes) and alerting is done by Azure Monitor and Container Insights. When you use Indirect Connected clusters, do the monitoring and alerting in Grafana and Kibana. The Grafana installation includes dashboards for Arc-enabled SQL Managed Instance metrics and Kubernetes resources.
+It's recommended to monitor all PVCs created by Arc-enabled data services, including the Azure Arc Data Controller and all instances of Arc-enabled SQL Managed Instance in a cluster. Set alerts to notify you when a PVC is approaching near capacity. Notification lets you resize the PVC prior to reaching capacity. For Directly Connected clusters, [monitoring of PVCs](/azure/azure-monitor/containers/container-insights-persistent-volumes) and alerting is done by Azure Monitor and Container Insights. When you use Indirect Connected clusters, do the monitoring and alerting in Grafana and Kibana. The Grafana installation includes dashboards for Arc-enabled SQL Managed Instance metrics and Kubernetes resources.
 
 Review the [Arc-enabled SQL Managed Instance governance disciplines](./eslz-arc-data-service-sql-managed-instance-cost-governance.md) for more recommendations on monitoring Arc-enabled SQL Managed Instance.
 
