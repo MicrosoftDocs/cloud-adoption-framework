@@ -1,31 +1,35 @@
 ---
-title: Enterprise-scale identity and access management for HPC - Manufacturing
-description: #Describe how this Manufacturinglanding zone accelerator can improve identity and access management of Manufacturing.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+title: 'Azure Identity and Access Management | Microsoft Docs'
+description: 'This article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
+ms.date: 09/23/2022
 ---
 
-# Identity and access management for HPC - Manufacturing landing zone accelerator - Manufacturing
+# Azure Identity and Access Management
 
-Introduction paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an HPC application designed for the manufacturing industry on Microsoft Azure.
 
-## Design considerations
+[Azure Active Directory](/azure/active-directory-domain-services/overview) Domain Services (Azure ADD) can be employed to make use of managed domain services such as domain join, group policy and access to legacy authentication protocols such as lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Azure AD DS integrates with your existing Azure AD tenant. This integration lets users sign into services and applications connected to the managed domain using their existing credentials in Azure AD. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for a hybrid environment.
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of Manufacturing.
+For more details, refer to [design recommendations for platform access](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-platform-access#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones).
 
-## Design recommendations
+## HPC Design Considerations:
 
-The following is a bulleted list of best practices that should be included in any deployment of Manufacturing.
+Depending on the chosen HPC Compute Resource Orchestrator, different types of authentication methods are supported:
 
-## Enterprise-scale assumptions
+ - Azure [CycleCloud](/azure/cyclecloud/overview?view=cyclecloud-8) – offers [three methods of authentication](/azure/cyclecloud/how-to/user-authentication?view=cyclecloud-8): a built-in database with encryption, Active Directory, or LDAP.
+ - [Azure Batch](/azure/batch/batch-technical-overview) - Batch account access supports [two methods of authentication](/azure/batch/security-best-practices): Shared Key and Azure Active Directory (Azure AD).
+ - Microsoft [HPC Pack](/azure/cyclecloud/hpcpack?view=cyclecloud-8) - Currently all HPC Pack nodes must be joined into an Active Directory Domain. If you are deploying the HPC Pack cluster in a virtual network which has a Site-to-Site VPN or ExpressRoute connection with your corporate network, typically there is already an existing Active Directory Domain. If you don't have an AD domain in your virtual network yet, you can choose to create a new AD domain by promoting the head node as domain controller.
 
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Manufacturing.
+:::image type="content" alt-text="Reference Architecture with Azure CycleCloud" source="../media/reference-architecture-with-azure-cyclecloud.png" lightbox="../media/reference-architecture-with-azure-cyclecloud.png":::
 
-## Additional considerations
+***Figure 1: Reference Architecture with Azure CycleCloud***
 
-Create as many H2 "##" headers as is required to educate the customer on this topic.
+:::image type="content" alt-text="Reference Architecture with Azure CycleCloud" source="../media/reference-architecture-with-azure-batch.png" lightbox="../media/reference-architecture-with-azure-batch.png":::
+
+***Figure 2: Reference Architecture with Azure Batch***

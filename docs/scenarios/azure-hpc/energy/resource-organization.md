@@ -1,31 +1,21 @@
 ---
-title: Enterprise-scale management group and subscription organization for HPC - Energy
-description: #Describe how this Energy landing zone accelerator can improve management group and subscription organization of Energy.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+title: 'Resource Organization | Microsoft Docs'
+description: 'To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.'
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
+ms.date: 09/23/2022
 ---
 
-# Management group and subscription organization for HPC - Energy landing zone accelerator
+# Resource Organization
 
-Introduction paragraph. Disclose any required dependency on ALZ design area or other ALZ design areas, with links to those supporting materials.
+To align with the [Ready methodology](/azure/cloud-adoption-framework/ready/) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
 
-## Design considerations
+## Use Azure resource naming and tagging conventions
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of Energy.
+The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
 
-## Design recommendations
-
-The following is a bulleted list of best practices that should be included in any deployment of Energy.
-
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Energy.
-
-## Additional considerations
-
-Create as many H2 "##" headers as is required to educate the customer on this topic.
+Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags, route tables, managed disks, and public IPs. A sample use case could be to tag all Azure development VMs with the tag Dev. This eases reporting and billing operations to pull a report for all things Dev. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
