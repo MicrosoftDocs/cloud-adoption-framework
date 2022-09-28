@@ -85,7 +85,7 @@ The quality of the subsurface model and the quality & resolution of the data is 
 
 :::image type="content" alt-text="Network Reference Architecture - Seismic Processing" source="../media/network-reference-architecture-seismic-processing.png" lightbox="../media/network-reference-architecture-seismic-processing.png":::
 
-### Use Case and Reference Architecture for Reservoir Simulation/Modelling:
+### Use Case and Reference Architecture for Reservoir Simulation/Modeling:
 
 Use case description:
 
