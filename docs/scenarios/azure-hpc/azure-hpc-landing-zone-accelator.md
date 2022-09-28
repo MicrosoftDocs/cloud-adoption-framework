@@ -1,9 +1,9 @@
 ---
 title: Enterprise-scale support for Azure high-performance computing (HPC)
 description: #Describe how enterprise-scale can accelerate adoption of HPC.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
+ms.date: 09/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
