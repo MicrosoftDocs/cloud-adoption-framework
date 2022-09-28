@@ -58,11 +58,11 @@ Plan your modernization efforts using your modernization roadmap. Complete the s
 
 | Step | Work tasks | Example |
 | --- | --- | --- |
-| 1. Identify major efforts | Major efforts include a combination of your modernization motivations and workloads. Major efforts are often called *epics* in Agile. | Application innovation for the E-commerce website. |
+| 1. Identify major efforts | Major efforts include your modernization motivations and workloads. Major efforts are *epics* in Agile. | Application innovation for the E-commerce website. |
 | 2. Break down the major efforts (*epics*) into smaller tasks (user stories) |Analyze the major efforts (*epic*) from the perspective of your customers. Divide the major efforts (*epics*) into smaller, logical tasks that correspond to customer needs. Tasks created from epics are called *user stories* in Agile. The number of user stories you have for each epic depends on the complexity of the workload. There's no right or wrong number. | "As a customer, I want a more responsive website so I have a better shopping experience" <br><br> "As a customer, I want a complete order history so I can reorder items easier"|
-| 3. Break down the tasks (*user stories*) further into smaller tasks (tasks)| These smaller tasks should be specific and detailed. Create as many as you need to meet the request in the user story. Subtasks are called *tasks* in Agile. | Choose an App Service plan<br><br>Configure resiliency<br><br>Configure caching
+| 3. Break down the tasks (*user stories*) further into smaller tasks (tasks)| These smaller tasks should be specific and detailed. Create as many as you need to meet the request in the user story. Subtasks are *tasks* in Agile. | Choose an App Service plan<br><br>Configure resiliency<br><br>Configure caching
 | 4. Prioritize your user stories | Prioritize your user stories, so your team can meet the most important goals first. | 1. Better shopping experience <br><br> 2. Order history
-| 5. Assign work (sprints) | Set a two-week time frame for your work efforts. These time frames are called sprints in Agile. Have your team members take on tasks that they can complete within the two-week period. | Assign two-week tasks (App Service plan, configure resiliency, configure caching) to your team.
+| 5. Assign work (sprints) | Set a two-week period for your work efforts. These periods are *sprints* in Agile. Have your team members take on tasks that they can complete within the two-week period. | Assign two-week tasks (App Service plan, configure resiliency, configure caching) to your team.
 
 This table captures the essentials of DevOps. It's enough to work with, but you might need more guidance. For more DevOps guidance, see [DevOps planning guidance](/devops/plan/planning-efficient-workloads-with-devops).
 
