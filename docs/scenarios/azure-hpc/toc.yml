@@ -112,6 +112,8 @@ items:
     items:
     - name: Azure HPC Architecture examples
       href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
+    - name: Energy example architecture
+      href: energy/compute.md#hpc-reference-architecture
 
   - name: Azure product documentation
     items:
