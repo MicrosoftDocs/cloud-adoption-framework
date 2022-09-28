@@ -19,6 +19,10 @@ items:
           href: energy/identity-access-management.md
         - name: Network topology and connectivity
           href: energy/network-topology-connectivity.md
+        - name: Compute
+          href: energy/compute.md
+        - name: Storage
+          href: energy/storage.md
         - name: Resource organization
           href: energy/resource-organization.md
         - name: Security
@@ -39,6 +43,8 @@ items:
           href: finance/identity-access-management.md
         - name: Network topology and connectivity
           href: finance/network-topology-connectivity.md
+        - name: Storage
+          href: finance/storage.md
         - name: Resource organization
           href: finance/resource-organization.md
         - name: Security
@@ -59,10 +65,14 @@ items:
           href: manufacturing/identity-access-management.md
         - name: Network topology and connectivity
           href: manufacturing/network-topology-connectivity.md
+        - name: Storage
+          href: manufacturing/storage.md
         - name: Resource organization
           href: manufacturing/resource-organization.md
         - name: Security
           href: manufacturing/security.md
+        - name: Storage
+          href: manufacturing/storage.md
         - name: Management
           href: manufacturing/management.md
         - name: Governance discipline
