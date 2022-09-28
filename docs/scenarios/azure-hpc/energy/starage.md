@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Storage
+# Storage for HPC energy environments
 
 Large-scale HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.
 
