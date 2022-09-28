@@ -51,7 +51,7 @@ These articles provide guidelines for creating your landing zone:
 
 The following conceptual reference architecture is an example that shows design areas and best practices for energy environments.
 
-:::image type="content" alt-text="Network interconnect Compute and Storage - Seismic Interpretation and Modeling" source="./media/network-interconnect.png" lightbox="../media/network-interconnect.png":::
+:::image type="content" alt-text="Network interconnect Compute and Storage - Seismic Interpretation and Modeling" source="./media/network-interconnect.png" lightbox="./media/network-interconnect.png":::
 
 ## Example conceptual finance reference architecture
 
@@ -64,7 +64,7 @@ The following conceptual reference architecture is an example that shows design 
 
 The following conceptual reference architecture is an example that shows design areas and best practices for manufacturing environments.
 
-:::image type="content" alt-text="HPC manufacturing architecture example" source="./media/HPC-manufacturing-architecture-example.png" lightbox="../media/HPC-manufacturing-architecture-example.png":::
+:::image type="content" alt-text="HPC manufacturing architecture example" source="./media/HPC-manufacturing-architecture-example.png" lightbox="./media/HPC-manufacturing-architecture-example.png":::
 
 ## Obtain the HPC landing zone accelerator
 
