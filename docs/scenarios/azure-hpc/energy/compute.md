@@ -95,7 +95,7 @@ Reservoir Modeling workload is also an area of Reservoir Engineering, that, comb
 
 :::image type="content" alt-text="Network Reference Architecture: Reservoir Simulation" source="../media/network-reference-architecture-reservoir-simulation.png" lightbox="../media/network-reference-architecture-reservoir-simulation.png":::
 
-:::image type="content" alt-text="Networ Interconnect Compute and Storage Seismic Analysis" source="../media/network-interconnect-compute-and-storage-seismic-analysis.png" lightbox="../media/network-interconnect-compute-and-storage-seismic-analysis.png":::
+:::image type="content" alt-text="Network Interconnect Compute and Storage Seismic Analysis" source="../media/network-interconnect-compute-and-storage-seismic-analysis.png" lightbox="../media/network-interconnect-compute-and-storage-seismic-analysis.png":::
 
 For more information on ref architecture or cookbooks for relevant HPC ISV applications supporting HPC for Energy use cases, see
 
