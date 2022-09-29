@@ -137,9 +137,7 @@ items:
     items:
     - name: Azure HPC Product documentation
       href: /azure/architecture/topics/high-performance-computing/
-
   - name: Build skills on Learn
-
     items:
     - name: Learning path for running HPC applications
-      href: /learn/paths/run-high-performance-computing-applications-azure/
+      href: /learn/paths/run-high-performance-computing-applications-azure
