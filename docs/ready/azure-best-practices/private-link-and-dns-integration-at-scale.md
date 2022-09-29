@@ -427,8 +427,11 @@ If an application owner deletes the private endpoint, the corresponding records 
 
 > [!IMPORTANT]
 > Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform. This article outlines DNS and Private link intigration at scale so there is no need to intigrate DNS with code as the DINE (deployifnotexsist) policy assigned to the Management Group will do it for you. 
-> - For Private Endpoint creation with Bicep review [Create a private endpoint using Bicep Quickstart](https://learn.microsoft.com/azure/private-link/create-private-endpoint-bicep?tabs=CLI). 
-> - For Private Endpoint creation with HashiCorp Terraform review [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry. 
+> For Private Endpoint creation as code: 
+>
+> -  [Quickstart Create a private endpoint using Bicep](https://learn.microsoft.com/azure/private-link/create-private-endpoint-bicep?tabs=CLI). 
+>
+> - Create a private endpoint using HashiCorp Terraform [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry. 
 
 [link-1]: /azure/private-link/private-link-overview
 [link-2]: /azure/private-link/private-link-overview#availability
