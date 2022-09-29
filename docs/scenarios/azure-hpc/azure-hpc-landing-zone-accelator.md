@@ -57,14 +57,14 @@ The following conceptual reference architecture is an example that shows design 
 
 The following conceptual reference architecture is an example that shows design areas and best practices for finance environments.
 
-:::image type="content" alt-text="HPC finance architecture example" source="./media/HPC-finance-architecture-example.png" lightbox="./media/HPC-finance-architecture-example.png":::
+:::image type="content" alt-text="hpc finance architecture example" source="./media/hpc-finance-architecture-example.png" lightbox="./media/hpc-finance-architecture-example.png":::
 
 
 ## Example conceptual manufacturing reference architecture
 
 The following conceptual reference architecture is an example that shows design areas and best practices for manufacturing environments.
 
-:::image type="content" alt-text="HPC manufacturing architecture example" source="./media/HPC-manufacturing-architecture-example.png" lightbox="./media/HPC-manufacturing-architecture-example.png":::
+:::image type="content" alt-text="hpc manufacturing architecture example" source="./media/hpc-manufacturing-architecture-example.png" lightbox="./media/HPC-manufacturing-architecture-example.png":::
 
 ## Obtain the HPC landing zone accelerator
 
