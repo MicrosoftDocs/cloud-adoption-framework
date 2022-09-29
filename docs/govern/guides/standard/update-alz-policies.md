@@ -50,6 +50,7 @@ If the policy to be migrated to builtin is part of an ALZ initiative and is assi
 - Re-assign the updated ALZ initiative.
 
 ### Detect updates
+
 There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
 - You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded
 - You follow [ALZ Terraform release guidance](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Module-Releases) and note that one or more policies are indicated as being superseded
