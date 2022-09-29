@@ -16,9 +16,9 @@ Process modernization creates the mechanisms in your business to gain operationa
 
 :::image type="content" source="../../_images/modernize/process-modernization/devops-tools.png" alt-text="Diagram that shows a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
 
-The DevOps methodology integrates planning, development, delivery, and operations into a single pipeline. The integration allows teams to identify the highest priorities in your organization and work on resolving them together. The collective focus on high-priorities means you're delivering value to your customers faster.
+The DevOps methodology integrates planning, development, delivery, and operations into a single pipeline. Integration allows teams to name the highest priorities in your organization and resolve them together. The collective focus on the things that matter creates the most value with the least amount of work.
 
-We've broken process modernization into three step.
+We've broken process modernization into three steps: tools, strategies, and benefits.
 
 ## Step 1 - Adopt DevOps tools
 
@@ -34,13 +34,13 @@ In the following table, we've listed the DevOps tool and description. Azure has 
 | Package manager | Share code and publish packages | *[Azure Artifacts](/azure/devops/artifacts/start-using-azure-artifacts)* | Nexus |
 | Test management| Run tests and quality assurance on code | *[Azure Test Plans](/azure/devops/test/overview)* | Selenium |
 
-With modernized tools, you're ready to modernize your planning strategies.
+With your DevOps tools in place, you're ready to modernize your planning strategies.
 
 ## Step 2 - Adopt DevOps strategies
 
-Modernize your planning strategies with DevOps. DevOps is an Agile framework that integrates planning, development, delivery, and operations into a continuous feedback loop (*see previous figure*).
+Modernize your process by adopting DevOps strategies. DevOps strategies are ways of doing things in an Agile framework. You integrate your development and operations, focus on the highest-priority tasks, and work on tasks for a defined period of time. These strategies allow you to modernize effectively in the cloud.
 
-DevOps focuses you on quickly delivering value to customers. You prioritize your high-value tasks and work on these tasks for a defined period of time. The combination of task prioritization and time constrained activities promotes rapid innovation.
+You're going to consult your modernization roadmap and plan your modernization efforts around it.
 
 ### Consult your modernization roadmap
 
