@@ -43,7 +43,9 @@ If the policy to be migrated to builtin is not assigned in your Azure estate, an
 #### Policies assigned and not part of ALZ initiative 
 If the policy to be migrated to built-in is assigned to any scope in your Azure estate, and is not part of an existing initiative, do the following:
 - Create new policy assignments at the same scopes leveraging the Azure built-in policies with matching settings as per the assignment of the previous ALZ custom policy definition
-- Delete existing ALZ policy assignments at all relevant scopes
+- Delete existing ALZ policy assignment at all scopes, where assigned
+- Delete the ALZ policy definition from the ALZ intermediate root Management Group (for example `Contoso`).
+
 
 #### Policies assigned through ALZ initiative
 If the policy to be migrated to builtin is part of an ALZ initiative and is assigned through that at any scope in your Azure estate, do the following:
