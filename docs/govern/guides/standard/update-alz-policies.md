@@ -21,6 +21,7 @@ You have deployed ALZ at a specific time and are now looking to update the exist
 - Baseline ALZ policies/initiatives has been superseded by newer Azure Built-in policies/initiatives.
 
 ## For ALZ environments deployed through portal accelerator
+
 ### Detect updates
 There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
 - You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded
