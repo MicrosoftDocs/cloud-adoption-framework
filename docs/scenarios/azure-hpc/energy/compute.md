@@ -89,7 +89,7 @@ The quality of the subsurface model and the quality & resolution of the data is 
 
 Use case description:
 
-Reservoir Modelling also places values on physical subsurface characteristics such as water saturation, porosity and permeability, which are important in determining what kind of recovery approach and equipment to deploy, and ultimately where to optimally position wells.
+Reservoir Modeling also places values on physical subsurface characteristics such as water saturation, porosity and permeability, which are important in determining what kind of recovery approach and equipment to deploy, and ultimately where to optimally position wells.
 
 Reservoir Modeling workload is also an area of Reservoir Engineering, that, combining Physics, Mathematics, and Computer Programming to a reservoir model – which allows the analysis and the prediction of the fluid behavior in the reservoir over time. This requires high computation power and typical big compute workload needs including fast networking.
 
