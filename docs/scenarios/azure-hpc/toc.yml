@@ -121,6 +121,14 @@ items:
     items:
     - name: Azure HPC Product documentation
       href: /azure/architecture/topics/high-performance-computing/
+    - name: CycleCloud
+      href: /azure/cyclecloud/overview/
+    - name: Batch
+      href: /azure/batch/
+    - name: HPC Pack
+      href: /powershell/high-performance-computing/overview/
+    - name: HPC VMs (N & H)
+      href: /azure/virtual-machines/workloads/hpc/overview/
 
   - name: Build skills on Learn
 
