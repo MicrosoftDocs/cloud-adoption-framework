@@ -17,7 +17,7 @@ ms.custom: internal
 This article describes how to migrate policies deployed as part of ALZ initial deployment to Azure built-in policies. Implementations done by ALZ accelerator and ALZ-Terraform are covered.
 
 ## Use case scenario  
-You have deployed ALZ at a specific time and are now looking to update the existing policies/initiatives to leverage new or updated functionality with Azure built-in policies, the following scenarios are covered:
+You have deployed ALZ at a specific time and are now looking to update the existing policies/initiatives to leverage new or updated functionality with Azure built-in policies that have superseded the ALZ custom policies, the following scenarios are covered:
 - Baseline ALZ policies/initiatives has been superseded by newer Azure Built-in policies/initiatives.
 
 ## For ALZ environments deployed through portal accelerator
