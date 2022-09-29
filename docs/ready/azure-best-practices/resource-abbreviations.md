@@ -216,6 +216,7 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms` |
 | Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv` |
 
+
 ## Deprecated product names
 
 | Resource | Resource provider namespace | Abbreviation |
