@@ -66,7 +66,6 @@ The first time you use Azure Database Migration Service, you must register the r
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/SubscriptionsBlade]" submitText="Go to Subscriptions" :::
 
 ::: zone-end
 
@@ -81,7 +80,6 @@ The service is now ready to migrate the supported source databases to target pla
 
 ::: zone target="chromeless"
 
-::: form action="Create[#create/Microsoft.AzureDMS]" submitText="Create an Azure Database Migration Service instance" :::
 
 ::: zone-end
 
@@ -123,7 +121,7 @@ After a successful migration, some post-migration tasks might include:
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 
-For more information, see [Migrate ASP.NET applications to Azure](/learn/paths/migrate-dotnet-apps-azure/).
+For more information, see [Migrate ASP.NET applications to Azure](/training/paths/migrate-dotnet-apps-azure/).
 
 ### Data Migration Assistant
 
@@ -248,7 +246,7 @@ Microsoft Learn is a new approach to learning. The skills and responsibilities t
 
 Here's an example of a tailored learning path that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
-[Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
+[Build applications with Azure DevOps](/training/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
 ## [Cost management](#tab/ManageCost)
 

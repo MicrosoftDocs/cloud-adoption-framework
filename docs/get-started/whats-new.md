@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 09/01/2022
+ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -15,6 +15,14 @@ ms.custom: internal
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## September 2022
+
+### Security control mapping with Azure landing zones
+
+Many organizations are required to comply with regulations that govern their industry or location before adopting cloud services. Our best-practice recommendation is to [map required compliance controls to Azure Security Benchmark](../ready/control-mapping/security-control-mapping.md), which provides a set of cloud-centric security controls based on widely used compliance control frameworks.
+
+Mapping required controls to Azure Security Benchmark can greatly expedite a secure Azure onboarding experience. The article also provides guidance on how to build policies and initiatives for controls that aren't covered by Azure Security Benchmark.
 
 ## August 2022
 

@@ -84,7 +84,6 @@ To create or manage runbooks:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Go to Azure Automation" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -116,7 +115,6 @@ Microsoft Defender for Cloud is offered in two tiers: Free and Standard. Feature
 
 After you enable and configure security policies for a subscription's resources, you can view the security state of your resources and any issues on the **Prevention** pane. You can also view a list of those issues on the **Recommendations** tile.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0]" submitText="Explore Azure Security Center" :::
 
 ::: zone-end
 

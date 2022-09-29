@@ -3,10 +3,10 @@ title: Commit to modernization in the cloud
 description: Learn how to balance your modernization effort and modernization impact, to gain commitment to your cloud adoption-related modernization plan.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/19/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice:
+ms.subservice: modernize
 ms.custom: internal, seo-caf-modernize
 keywords: effort, impact, balance, modern, cloud modernization, cloud adoption framework
 ---
@@ -15,14 +15,14 @@ keywords: effort, impact, balance, modern, cloud modernization, cloud adoption f
 
 Modernization requires an investment of time and money. The commit phase is where modernization receives the time and money investments it needs.
 
-:::image type="content" source="../../_images/modernize/commit/commit-980.png" alt-text="Image showing where you are in the business alignment process.":::
-
  As part of the commitment phase, gather your primary key stakeholders and define their involvement:
 
 - *Business leads* - Approve the time and financial investments in the modernization roadmap.
 - *Technical Leads* - Design and present the modernization roadmap.
 
-## Step 1 - Align your modernization motivations to modernization strategies
+Follow these steps to commit to modernization.
+
+## Step 1 - Align modernization motivations to modernization strategies
 
 Align your modernization motivations to modernization strategies. We covered five modernization motivations in the [envision step](../business-alignment/envision-cloud-modernization.md). Pull out these motivations because you use them to determine what modernization strategies you'll commit to.
 
@@ -36,9 +36,9 @@ Most modernization motivations align two or more modernization strategies (*see 
 |*Application innovation*|<ul><li>Process modernization</li><li>Application modernization</li></ul>|
 |*Centralizing data*|<ul><li>Process modernization</li><li>Database modernization</li></ul>|
 
-*Process modernization* - notice that *process modernization* is listed with every modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter your motivation for modernization, you must modernize your process.
+Notice that *process modernization* is listed with every modernization motivation. Modernizing your process is essential to working in the cloud. It's the fastest way to reduce the total cost of ownership (TCO). No matter your motivation for modernization, you must modernize your process.
 
-## Step 2 - Update your workload table with modernization strategies
+## Step 2 - Add modernization strategies
 
 Update your workload table with modernization strategies by adding the modernization strategies you identified in step 1 with the table you created in the [envision step of business alignment](../business-alignment/envision-cloud-modernization.md) (*see the following example*).
 
@@ -58,8 +58,8 @@ Create a modernization timeline for each workload. The amount of time it takes t
 
 You might have the technical expertise to estimate the modernization effort. If not, see the following resources to get the expert advice you need.
 
-- [Azure Migration and Modernization Program](/azure/partners/ammp)
-- [Fast Track for Azure](/programs/azure-fasttrack/)
+- [Azure Migration and Modernization Program](https://www.microsoft.com/azure/partners/ammp)
+- [Fast Track for Azure](https://azure.microsoft.com/programs/azure-fasttrack/)
 
 ## Step 4 - Commit resources to the modernization
 

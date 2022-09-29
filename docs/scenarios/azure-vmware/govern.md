@@ -68,7 +68,7 @@ Azure Resource Manager (ARM) is the operating system of Azure that, stretching a
 - [Back up VMware VMs with Azure Backup Server](/azure/backup/backup-azure-backup-server-vmware)
 - [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](/azure/site-recovery/avs-tutorial-prepare-azure?context=/azure/azure-vmware/context/context)
 
-To learn more about how Azure VMware Solution integrates with native Azure services, see [What is Azure VMware Solution](/learn/modules/intro-azure-vmware-solution/2-what-is-azure-vmware-solution)
+To learn more about how Azure VMware Solution integrates with native Azure services, see [What is Azure VMware Solution](/training/modules/intro-azure-vmware-solution/2-what-is-azure-vmware-solution)
 
 ## Governance MVP for hybrid workloads
 
