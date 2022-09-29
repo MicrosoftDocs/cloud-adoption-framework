@@ -426,7 +426,7 @@ At this point, application teams can use the storage account via a private endpo
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone will automatically be removed.
 
 > [!IMPORTANT]
-> Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform. This article outlines DNS and Private link intigration at scale so there is no need to intigrate DNS with code as the DINE (deployifnotexsist) policy assigned to the Management Group will do it for you.
+> This article outlines DNS and Private link intigration at scale using DINE (deployifnotexsist) policy assigned to the Management Group. Which means there is no need to intigrate DNS in code when creating private endpoints with this approach. Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform. 
 >
 > For Private Endpoint creation as code: 
 >
