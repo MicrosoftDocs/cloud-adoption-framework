@@ -4,6 +4,7 @@ description: Learn how to migrate an on-premises Remote Desktop Services environ
 author: benstegink
 ms.author: abuck
 ms.date: 09/07/2021
+ms.review: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,14 +13,11 @@ ms.custom: think-tank
 
 # Move on-premises Remote Desktop Services to Azure Virtual Desktop scenario
 
-Azure Virtual Desktop is a comprehensive desktop and application virtualization service running in the cloud. It's the only virtual desktop infrastructure (VDI) that delivers simplified management, Windows 10 Enterprise multi-session optimizations for Microsoft 365 Apps for enterprise, and support for Remote Desktop Services (RDS) environments. Deploy and scale Windows desktops and applications on Azure in minutes, and get built-in security and compliance features.
+This article focuses on using Azure Virtual Desktop to move an on-premises RDS environment to Azure. With Azure Virtual Desktop, you can bring your existing Remote Desktop Services (RDS) and Windows Server desktops and apps to any computer.
 
 | Migration options | Outcome |
 |--- | --- |
 | [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
-
-> [!NOTE]
-> This article focuses on using Azure Virtual Desktop to move an on-premises RDS environment to Azure.
 
 ## Business drivers
 

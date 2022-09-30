@@ -27,7 +27,7 @@ Developing the necessary skills can be accelerated with the following learning p
   - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
   - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
 
-- Learn how to secure resources using policy, Azure role-based access control, and other Azure services by viewing [implement resource management security in Azure](/learn/paths/implement-resource-mgmt-security/).
+- Learn how to secure resources using policy, Azure role-based access control, and other Azure services by viewing [implement resource management security in Azure](/training/paths/implement-resource-mgmt-security/).
 
 - [`Monitoring Microsoft Azure Resources and Workloads`](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
 
@@ -55,7 +55,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
   - [`Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms`](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
 
-  - [Capture and view page load times in your Azure web app](/learn/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
+  - [Capture and view page load times in your Azure web app](/training/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your applications components running in Azure.
 
   - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
@@ -65,7 +65,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Data analysis
 
-- Learn how to write [log queries in Azure Monitor](/learn/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto Query Language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
+- Learn how to write [log queries in Azure Monitor](/training/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto Query Language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
 
 - [`Kusto Query Language (KQL) from Scratch`](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch) is a comprehensive course that includes detailed examples covering a wide range of use-cases and techniques for log analysis in Azure Monitor Logs.
 
@@ -79,7 +79,7 @@ Microsoft and partners offer various options for all audiences to develop skills
 
 - [Map roles and skills](../../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills that you need most to stay relevant.
 
-- Explore [Azure certification training and exams](/learn/certifications/) to gain official recognition for your Azure knowledge.
+- Explore [Azure certification training and exams](/certifications/) to gain official recognition for your Azure knowledge.
 
 ## Azure DevOps and project management
 
@@ -89,13 +89,13 @@ As part of migrating to a cloud monitoring platform, the IT team responsible for
 
 To learn more, review the following:
 
-- [Get started with Azure DevOps](/learn/modules/get-started-with-devops/).
+- [Get started with Azure DevOps](/training/modules/get-started-with-devops/).
 
-- [Introduce DevOps Dojo: Create efficiencies that support your business](/learn/paths/devops-dojo-white-belt-foundation/).
+- [Introduce DevOps Dojo: Create efficiencies that support your business](/training/paths/devops-dojo-white-belt-foundation/).
 
-- [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/).
+- [Evolve your DevOps practices](/training/paths/evolve-your-devops-practices/).
 
-- [Automate your deployments with Azure DevOps](/learn/modules/deploy-nodejs/).
+- [Automate your deployments with Azure DevOps](/training/modules/deploy-nodejs/).
 
 ## Other considerations
 
@@ -105,4 +105,4 @@ Review the following to understand the updates made to the most popular ITSM fra
 
 ## Learn more
 
-To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse/). Use the roles filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn training catalog](/training/browse/). Use the roles filter to align learning paths with your role.

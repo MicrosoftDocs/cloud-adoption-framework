@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale BCDR for Azure VMware Solution
 description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery (BCDR) of Azure VMware Solution.
-author: mhenry, sonmitt
+author: mhenry,sonmitt
 ms.author: janet
 ms.date: 09/27/2022
 ms.topic: conceptual
@@ -27,7 +27,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - VMware High Availability (HA) is enabled by default on Azure VMware Solution. The HA admittance policy ensures a reservation of the compute and memory capacity of a single node. This reservation ensures sufficient reserve capacity to restart workloads in another node in an Azure VMware Solution cluster.
 
-- High Availability with Stretch Cluster - With Azure VMware Solution, ESXi hosts deployed in a standard vSphere cluster traditionally reside in a single Azure Availability Zone (AZ) and are protected by vSphere high availability (HA). However, it doesn't protect the workloads against an Azure AZ failure. To protect against an AZ failure, a single vSAN cluster can be enabled to span two separate availability zones, called a vSAN stretched cluster. For more information and stretch cluster configuration, see [Deploy vSAN stretched clusters](https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-vsan-stretched-clusters)
+- High Availability with Stretch Cluster - With Azure VMware Solution, ESXi hosts deployed in a standard vSphere cluster traditionally reside in a single Azure Availability Zone (AZ) and are protected by vSphere high availability (HA). However, it doesn't protect the workloads against an Azure AZ failure. To protect against an AZ failure, a single vSAN cluster can be enabled to span two separate availability zones, called a vSAN stretched cluster. For more information and stretch cluster configuration, see [Deploy vSAN stretched clusters](azure/azure-vmware/deploy-vsan-stretched-clusters)
 
 ## Business continuity design recommendations
 

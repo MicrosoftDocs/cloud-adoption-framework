@@ -66,19 +66,19 @@ To establish your DevOps framework, consider using the frameworks that are alrea
 
 - [Microsoft DevOps Dojo](https://devblogs.microsoft.com/devops/intro-of-devops-dojo/) establishes a DevOps taxonomy built on four foundational pillars and eight capabilities:
   - Pillars:
-    - [Culture](/learn/modules/introduce-foundation-pillars-devops/3-explore-first-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Lean Product](/learn/modules/introduce-foundation-pillars-devops/4-explore-second-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Architecture](/learn/modules/define-foundation-pillars/2-explore-third-foundation-pillar?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Technology](/learn/modules/define-foundation-pillars/3-explore-last-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Culture](/training/modules/introduce-foundation-pillars-devops/3-explore-first-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Lean Product](/training/modules/introduce-foundation-pillars-devops/4-explore-second-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Architecture](/training/modules/define-foundation-pillars/2-explore-third-foundation-pillar?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Technology](/training/modules/define-foundation-pillars/3-explore-last-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
   - Capabilities:
-    - [Continuous Planning](/learn/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Integration](/learn/modules/analyze-devops-continuous-planning-intergration/3-analyze-continuous-integration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Delivery](/learn/modules/explain-devops-continous-delivery-quality/2-use-continuous-delivery-release-faster?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Operations](/learn/modules/explore-devops-continuous-security-operations/3-explore-continuous-operations?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Security](/learn/modules/explore-devops-continuous-security-operations/2-explore-continuous-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Quality](/learn/modules/explain-devops-continous-delivery-quality/3-explore-continuous-quality?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Improvement](/learn/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Collaboration](/learn/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Planning](/training/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Integration](/training/modules/analyze-devops-continuous-planning-intergration/3-analyze-continuous-integration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Delivery](/training/modules/explain-devops-continous-delivery-quality/2-use-continuous-delivery-release-faster?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Operations](/training/modules/explore-devops-continuous-security-operations/3-explore-continuous-operations?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Security](/training/modules/explore-devops-continuous-security-operations/2-explore-continuous-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Quality](/training/modules/explain-devops-continous-delivery-quality/3-explore-continuous-quality?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Improvement](/training/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Collaboration](/training/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
 
 ### Define DevOps practices for your Azure Landing Zones management
 

@@ -92,7 +92,7 @@ Bicep modules commonly use:
 You have several options for publishing and sharing Bicep modules.
 
 - **Public registry:** The public module registry is hosted in a Microsoft container registry (MCR). Its source code and the modules it contains are stored in [GitHub](https://github.com/azure/bicep-registry-modules).
-- **Private registry:** You can use Azure container registry to publish modules to a private registry. For information on publishing modules to a registry in a CI/CD pipeline, see [Bicep and GitHub Actions](/learn/modules/publish-reusable-bicep-code-using-github-actions/), or if you prefer, [Bicep and Azure Pipelines](/learn/modules/publish-reusable-bicep-code-using-azure-pipelines/).
+- **Private registry:** You can use Azure container registry to publish modules to a private registry. For information on publishing modules to a registry in a CI/CD pipeline, see [Bicep and GitHub Actions](/training/modules/publish-reusable-bicep-code-using-github-actions/), or if you prefer, [Bicep and Azure Pipelines](/training/modules/publish-reusable-bicep-code-using-azure-pipelines/).
 - **Template Spec:** You can use [template specs](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) to publish Bicep modules. Template specs are meant to be complete templates, but Bicep allows you to use template specs to deploy modules.
 - **Version control system:** You can load modules directly from version control tools like GitHub or Azure DevOps.
 

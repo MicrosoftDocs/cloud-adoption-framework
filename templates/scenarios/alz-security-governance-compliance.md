@@ -22,9 +22,6 @@ The following is a bulleted list of things you must think about when preparing f
 
 The following is a bulleted list of best practices that should be included in any deployment of {{Token-LongName}}.
 
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for {{Token-LongName}}.
 
 ## Additional considerations
 
