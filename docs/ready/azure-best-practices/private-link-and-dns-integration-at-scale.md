@@ -3,7 +3,7 @@ title: Private Link and DNS integration at scale
 description: Private Link and DNS integration at scale
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 09/29/2022
+ms.date: 09/30/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -43,7 +43,7 @@ Application teams have permissions to create Azure resource in their own subscri
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution and where name resolution for Private Link resources is done via Azure Private DNS:
 
-![image-1][image-1]
+![A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources.][image-1]
 
 From the previous diagram, it's important to highlight that:
 
@@ -61,7 +61,7 @@ There are two conditions that must be true for application teams to create any r
 - Central networking and/or central platform teams must ensure that when they create private endpoints, they set up how to handle the corresponding records. Set up the corresponding records such that they're automatically created in the centralized private DNS zone that matches the service being created.
   - DNS record must follow the lifecycle of the private endpoint, in that, it's automatically removed when the private endpoint is deleted.
 
-The following sections describe how application teams enable these conditions by using [Azure Policy][link-10]. The example uses Azure Storage as the Azure service that application teams need to deploy. But the same principle applies to most Azure services that [support][link-2] Private Link.
+The following sections describe how application teams enable these conditions by using [Azure Policy][link-10]. The example uses Azure Storage as the Azure service that application teams need to deploy. But the same principle applies to most [Azure services that support Private Link][link-2].
 
 ## Configuration required by the platform team
 
@@ -266,7 +266,9 @@ This policy triggers if you create a private endpoint resource with a service-sp
 
 #### Second `DeployIfNotExists` Policy - Matching on `groupId` & `privateLinkServiceId`
 
-This policy triggers if you create a private endpoint resource with a service-specific `groupId` and  `privateLinkServiceId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. The `privateLinkServiceId` is the resource ID of the remote resource (service) this private endpoint should connect to. Then, trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which associates the private endpoint with the private DNS zone. In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privateLinkServiceId` must contain `Microsoft.DocumentDb/databaseAccounts`. For more information on the `groupId` and `privateLinkServiceId` for other Azure services, see [Azure Private Endpoint DNS configuration][link-4], under the **Subresource** column. When the policy finds `groupId` and `privateLinkServiceId` in the private endpoint, it deploys a `privateDNSZoneGroup` within the private endpoint. And it's linked to the private DNS zone resource ID that's specified as the parameter. The following policy definition shows the private DNS zone resource ID:
+This policy triggers if you create a private endpoint resource with a service-specific `groupId` and  `privateLinkServiceId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. The `privateLinkServiceId` is the resource ID of the remote resource (service) this private endpoint should connect to. Then, trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which associates the private endpoint with the private DNS zone. 
+
+In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privateLinkServiceId` must contain `Microsoft.DocumentDb/databaseAccounts`. For more information on the `groupId` and `privateLinkServiceId` for other Azure services, see [Azure Private Endpoint DNS configuration][link-4], under the **Subresource** column. When the policy finds `groupId` and `privateLinkServiceId` in the private endpoint, it deploys a `privateDNSZoneGroup` within the private endpoint. And it's linked to the private DNS zone resource ID that's specified as the parameter. The following policy definition shows the private DNS zone resource ID:
 
    `/subscriptions/<subscription-id>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/privateDnsZones/privatelink.documents.azure.com`
 
@@ -396,21 +398,21 @@ After the platform team deploys the platform infrastructure components (private 
 
 2. In the networking tab, select **Private endpoint**. If you select an option other than **Private endpoint**, the Azure portal won't allow you to create the storage account in the **Review + create** section of the deployment wizard. The policy prevents you from creating this service if the public endpoint is enabled.
 
-   ![image-8][image-8]
+   ![A screenshot that shows the Networking tab and the private endpoints option.][image-8]
 
 3. It's possible to create the private endpoint now or after you create the storage account. This example shows creating the private endpoint after the storage account is created. Select **Review + create** to complete the step.
 
 4. After you create the storage account, make a private endpoint through the Azure portal.
 
-   ![image-9][image-9]
+   ![A screenshot that shows the private endpoints settings.][image-9]
 
 5. In the **Resource** section, locate the storage account you created in the previous step. Under target subresource, select **Blob**, and then select **Next**.
 
-   ![image-10][image-10]
+   ![A screenshot that shows the Resources tab for selecting the target subresource.][image-10]
 
 6. In the **Configuration** section, after selecting your VNet and subnet, be sure that **Integrate with private DNS zone** is set to **No**. Otherwise, the Azure portal prevents you from creating the private endpoint.  Azure Policy won't allow you to create a private DNS zone with the `privatelink` prefix.
 
-   ![image-11][image-11]
+   ![A screenshot that shows the Configuration tab for setting the integrate with private DNS zone option to no.][image-11]
 
 7. Select **Review + create**, and then select **Create** to deploy the private endpoint.
 
@@ -418,19 +420,24 @@ After the platform team deploys the platform infrastructure components (private 
 
 9. After you create the private endpoint, select it, and review its FQDN and private IP:
 
-   ![image-12][image-12]
+   ![A screenshot that shows where to review the private endpoint, FQDN, and private IP.][image-12]
 
 10. Check the activity log for the resource group where the private endpoint was created. Or you can check the activity log of the private endpoint itself. You'll notice that after a few minutes, a `DeployIfNotExist` policy action runs and that configures the DNS zone group on the private endpoint:
 
-    ![image-13][image-13]
+    ![A screenshot that shows the activity log for the resource group and the private endpoint.][image-13]
 
 11. If the central networking team goes to the `privatelink.blob.core.windows.net` private DNS zone, they'll confirm that the DNS record is there for the private endpoint you created, and both the name and IP address match the values within the private endpoint.
 
-    ![image-14][image-14]
+    ![A screenshot that shows the private DNS zone and where to confirm that the DNS record exists.][image-14]
 
 At this point, application teams can use the storage account through a private endpoint from any VNet in the hub and spoke network environment and from on-premises. The DNS record has been automatically recorded in the private DNS zone.
 
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone are automatically removed.
+
+## Next steps
+
+Review [DNS for on-premises and Azure resources](/dns-for-on-premises-and-azure-resources.md).
+Review [Plan for virtual machine remote access](/plan-for-virtual-machine-remote-access.md).
 
 [link-1]: /azure/private-link/private-link-overview
 [link-2]: /azure/private-link/availability
