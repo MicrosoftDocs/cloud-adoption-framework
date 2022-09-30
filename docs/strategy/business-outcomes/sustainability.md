@@ -59,6 +59,17 @@ Common considerations for building a sustainability strategy could include:
 - Increased Operational efficiencies
 - Improving societal outcomes by co-developing with partners
 
+### Regulatory Compliance
+
+It is your responsibility to make sure you are up to date with compliance regulations across your industry.
+Consider also how government regulation and/or policy for your region might influence your organisation's motivations for migrating to the cloud.
+
+A few governmental sustainability goals include:
+
+- The UK Government target to bring all greenhouse gas emissions to net zero by 2050 
+- The US Government target to achieve net zero by 2050 
+- A European Climate Law with a 55% reduction target in greenhouse emissions by 2030 as well as the European Union target to achieve net zero by 2050
+
 ## Understanding your current emissions
 
 As defined by the Greenhouse Gas (GHG) Protocol, the operational boundaries of a carbon emissions inventory are broken down into three "scopes" (both direct and indirect) of emissions data, each further broken down into distinct emission sources:
