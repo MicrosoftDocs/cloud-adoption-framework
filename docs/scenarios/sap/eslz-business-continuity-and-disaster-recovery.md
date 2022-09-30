@@ -158,11 +158,12 @@ There are different tiers based on the business criticality and availability SLA
 -	Recovery Time Objective (RTO)- time required to bring a failed system back
 -	Recovery Point Objective (RPO)- amount of data (measured in time) lost due to a failure
 
-|  | Buisness Criticality | Data Availability | RPO | RTO | Data Copy Time
+| Tier | Buisness Criticality | Data Availability | RPO | RTO | Data Copy Time
 |---|---|---|---|---|---|
-| Tier 1 | Microsoft Defender for Cloud Standard | Microsoft Defender for Cloud Standard helps onboard Windows and Linux machines from on-premises and cloud and shows a consolidated security posture. |
-| Tier 2 | SAP HANA native encryption and SQL TDE | For databases, use the SAP HANA native encryption technology. If you're using SQL Database, enable TDE. |
-| Tier 3 | Azure Front Door | Front Door is an application delivery network that provides global load balancing and site acceleration service for web applications. |
+| Tier 1 | Mission Critical | 99.99 | 15 mins | 4h to 8h | None |
+| Tier 2 | Business Critical | 99.99 | 15 mins | 4h to 12h | None |
+| Tier 3 | Business Importent | 99.90 | 2h | 12h to 24h | 10 Min |
+| Tier 4 | Less Critical | 99 | 24h | 24h | 12h |
 
 
 ### Design considerations for disaster recovery
