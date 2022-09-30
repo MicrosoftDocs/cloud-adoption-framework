@@ -152,7 +152,7 @@ Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview
 
 Review design considerations and recommendations for disaster recovery in an SAP enterprise scenario.
 
-## Disaster recovery Classification
+## Disaster recovery classification
 
 There are different tiers based on the business criticality and availability SLAs. The SLAs are usually defined in 
 -	Recovery Time Objective (RTO)- time required to bring a failed system back
