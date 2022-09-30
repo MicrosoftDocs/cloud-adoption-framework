@@ -150,11 +150,24 @@ Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview
 
 ## Disaster recovery
 
-Review design considerations and recommendations for disaster recovery in an SAP enterprise scenario. 
+Review design considerations and recommendations for disaster recovery in an SAP enterprise scenario.
+
+## Disaster recovery Classification
+
+There are different tiers based on the business criticality and availability SLAs. The SLAs are usually defined in 
+-	Recovery Time Objective (RTO)- time required to bring a failed system back
+-	Recovery Point Objective (RPO)- amount of data (measured in time) lost due to a failure
+
+|  | Buisness Criticality | Data Availability | RPO | RTO | Data Copy Time
+|---|---|---|---|---|---|
+| Tier 1 | Microsoft Defender for Cloud Standard | Microsoft Defender for Cloud Standard helps onboard Windows and Linux machines from on-premises and cloud and shows a consolidated security posture. |
+| Tier 2 | SAP HANA native encryption and SQL TDE | For databases, use the SAP HANA native encryption technology. If you're using SQL Database, enable TDE. |
+| Tier 3 | Azure Front Door | Front Door is an application delivery network that provides global load balancing and site acceleration service for web applications. |
+
 
 ### Design considerations for disaster recovery
 
-The [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/) shows over 60 Azure regions, and not all of them run the same services. In larger SAP software deployments, and especially ones that use SAP HANA, look for Azure regions that offer Azure [M-series](/azure/virtual-machines/m-series) and/or [Mv2-series](/azure/virtual-machines/mv2-series) VMs. Azure Storage also pairs different regions to replicate a smaller subset of storage types to another region. For more information, see [Overview of Azure paired regions](/azure/best-practices-availability-paired-regions).
+The [Azure region map](https://azure.microsoft.com/global-infrastructure/geographies/) shows over 65 Azure regions, and not all of them run the same services. In larger SAP software deployments, and especially ones that use SAP HANA, look for Azure regions that offer Azure [M-series](/azure/virtual-machines/m-series) and/or [Mv2-series](/azure/virtual-machines/mv2-series) VMs. Azure Storage also pairs different regions to replicate a smaller subset of storage types to another region. For more information, see [Overview of Azure paired regions](/azure/best-practices-availability-paired-regions).
 
 The main challenges of pairing Azure regions for SAP workloads are:
 
