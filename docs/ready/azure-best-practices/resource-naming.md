@@ -3,7 +3,7 @@ title: Define your naming convention
 description: Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
 author: BrianBlanchard
 ms.author: ssumner
-ms.date: 09/13/2022
+ms.date: 09/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,7 +12,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Define your naming convention
 
-An effective naming convention composes resource names from important information about each resource. A good name helps you quickly identify the resource's type, associated workload, environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
+An effective naming convention consists of resource names from important information about each resource. A good name helps you quickly identify the resource's type, associated workload, environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
 
 ![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
@@ -20,7 +20,7 @@ An effective naming convention composes resource names from important informatio
 
 ## Naming scope
 
-All Azure resource types have a scope that defines the level that resource names must be unique. A resource must have a unique name within its scope.
+All Azure resource types have a scope that defines the level of that resource and that the resource names must be unique. A resource must have a unique name within its scope.
 
 For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups could have their own virtual network named `vnet-prod-westus-001`. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
 
@@ -34,7 +34,7 @@ Resource names have length limits. Balancing the context embedded in a name with
 
 ### Recommended naming components
 
-When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types. The following list provides examples of information that are useful when you construct resource names.
+When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types. The following list provides examples of information that's useful when you construct resource names.
 
 Keep the length of naming components short to prevent exceeding resource name length limits.
 
@@ -49,16 +49,16 @@ Keep the length of naming components short to prevent exceeding resource name le
 
 ## Example names for common Azure resource types
 
-The following section provides some example names for common Azure resource types in an enterprise cloud deployment.
+The following section provides example names for common Azure resource types in an enterprise cloud deployment.
 
 > [!NOTE]
 > Some of these example names use a three-digit padding scheme (`###`), such as `mktg-prod-001`.
 >
 > Padding improves readability and sorting of assets when those assets are managed in a configuration management database (CMDB), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
 >
-> Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches which might iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and run time.
+> Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches that might iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and run time.
 >
-> Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more, CMDB and asset management solutions or code-based inventory management. Then consistently follow the padding option that best fits your operational needs.
+> Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than showing which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more, CMDB and asset management solutions or code-based inventory management. Then, consistently follow the padding option that best fits your operational needs.
 
 <!-- cspell:ignoreRegExp [a-z]+-[a-z]+ -->
 <!-- cspell:ignoreRegExp `[a-z]+` -->
