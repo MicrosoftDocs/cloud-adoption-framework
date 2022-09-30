@@ -26,6 +26,11 @@ Microsoft has been leading in many of these areas. The company has been operatin
 
 [Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
+### Emerging Software Design Principle
+
+More opportunities have arisen recently to design software that is more sustainable. [Green Software Development](https://nam06.safelinks.protection.outlook.com/GetUrlReputation) is an emerging discipline with principles, philosophies and competencies to define, develop and run sustainable software applications. The sooner this discipline is adopted into your sustainability journey, the better, as it will help to reduce the carbon emissions consumed by applications. 
+ 
+
 ## The Microsoft sustainability journey
 
 The Microsoft journey started over a decade ago when the company started to apply new business practices and adopt cloud technology. We lowered our carbon emissions by 30 percent in 2009. Since then, Microsoft has made large strides forward by investing in reducing the company's carbon footprint further. Microsoft has focused on these four areas:
@@ -122,7 +127,10 @@ An intentional approach can help organizations to navigate their sustainability 
 
 **Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 
+**Step 5:**  Assess ways to incorporate [Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) principles into your company's sustainability goals. How can you work towards designing sustainable software applications that can be  reused and has extended  longevity of use and minimal computational and memory resource requirements.
+
 Learn more about how your organization can [measure](./okr.md) and [reach](./reach-outcomes.md) sustainability outcomes with the cloud.
+
 
 > [!div class="nextstepaction"]
 > [Reach outcomes](./reach-outcomes.md)
