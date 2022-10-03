@@ -20,7 +20,7 @@ Organize your cloud-based resources to secure, manage, and track costs that are 
 
 Azure provides four levels of management: management groups, subscriptions, resource groups, and resources. The following diagram shows the relationship between these levels.
 
-![Diagram that shows the relationship of management hierarchy levels.](./media/organize-resources/scope-levels.png)
+:::image type="content" alt-text="Diagram that shows the relationship of management hierarchy levels." source="./media/organize-resources/scope-levels.png" lightbox="./media/organize-resources/scope-levels.png":::
 
 - **Management groups** help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions that are applied to the management group.
 
