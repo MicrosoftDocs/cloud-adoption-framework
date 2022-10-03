@@ -566,7 +566,7 @@
          "redirect_document_id": false
       },
     {
-      "source_path": "docs/scenarios/azure-hpc/energy/storage.md",
+      "source_path": "docs/scenarios/azure-hpc/energy/starage.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/storage",
       "redirect_document_id": true
     }
