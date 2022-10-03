@@ -147,7 +147,7 @@ To apply one or more tags to a resource group:
 1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the resource group.
 1. Select **Assign tags** in the navigation at the top of the page.
 1. Enter the name and value for a tag under **Name** and **Value**.
-1. Enter additional names and values or select **Save**.
+1. Enter more names and values or select **Save**.
 
 ### Remove a resource tag
 
@@ -155,7 +155,7 @@ To remove one or more tags from a resource group:
 
 1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
 1. Select the trash can icon for each tag that you want to remove.
-1. To save your changes, click **Save**.
+1. To save your changes, select **Save**.
 
 
 ::: zone-end
@@ -169,14 +169,14 @@ To apply one or more tags to a resource group:
 1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the resource group.
 1. Select **Assign tags** in the navigation at the top of the page.
 1. Enter the name and value for a tag under **Name** and **Value**.
-1. Enter additional names and values or select **Save**.
+1. Enter more names and values or select **Save**.
 
 
 To remove one or more tags from a resource group:
 
 1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
 1. Select the trash can icon for each tag that you want to remove.
-1. To save your changes, click **Save**.
+1. To save your changes, select **Save**.
 
 
 ::: zone-end
