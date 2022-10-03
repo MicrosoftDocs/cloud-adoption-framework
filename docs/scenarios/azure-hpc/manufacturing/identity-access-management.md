@@ -1,6 +1,6 @@
 ---
 title: 'Azure Identity and Access Management | Microsoft Docs'
-description: 'This article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
+description: 'This article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management in manufacturing environments.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Azure Identity and Access Management
+# Azure Identity and Access Management for Manufacturing
 
 This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an HPC application designed for the manufacturing industry on Microsoft Azure.
 
@@ -22,14 +22,14 @@ For more details, refer to [design recommendations for platform access](/azure/c
 
 Depending on the chosen HPC Compute Resource Orchestrator, different types of authentication methods are supported:
 
- - Azure [CycleCloud](/azure/cyclecloud/overview?view=cyclecloud-8) – offers [three methods of authentication](/azure/cyclecloud/how-to/user-authentication?view=cyclecloud-8): a built-in database with encryption, Active Directory, or LDAP.
+ - Azure [CycleCloud](/azure/cyclecloud/overview?view=cyclecloud-8&preserve-view=true) – offers [three methods of authentication](/azure/cyclecloud/how-to/user-authentication?view=cyclecloud-8&preserve-view=true): a built-in database with encryption, Active Directory, or LDAP.
  - [Azure Batch](/azure/batch/batch-technical-overview) - Batch account access supports [two methods of authentication](/azure/batch/security-best-practices): Shared Key and Azure Active Directory (Azure AD).
- - Microsoft [HPC Pack](/azure/cyclecloud/hpcpack?view=cyclecloud-8) - Currently all HPC Pack nodes must be joined into an Active Directory Domain. If you are deploying the HPC Pack cluster in a virtual network which has a Site-to-Site VPN or ExpressRoute connection with your corporate network, typically there is already an existing Active Directory Domain. If you don't have an AD domain in your virtual network yet, you can choose to create a new AD domain by promoting the head node as domain controller.
+ - Microsoft [HPC Pack](/azure/cyclecloud/hpcpack?view=cyclecloud-8&preserve-view=true) - Currently all HPC Pack nodes must be joined into an Active Directory Domain. If you are deploying the HPC Pack cluster in a virtual network which has a Site-to-Site VPN or ExpressRoute connection with your corporate network, typically there is already an existing Active Directory Domain. If you don't have an AD domain in your virtual network yet, you can choose to create a new AD domain by promoting the head node as domain controller.
 
-:::image type="content" alt-text="Reference Architecture with Azure CycleCloud" source="../media/reference-architecture-with-azure-cycle-cloud.png" lightbox="../media/reference-architecture-with-azure-cycle-cloud.png":::
+:::image type="content" alt-text="Reference Architecture design with Azure CycleCloud" source="../media/reference-architecture-with-azure-cycle-cloud.png" lightbox="../media/reference-architecture-with-azure-cycle-cloud.png":::
 
 ***Figure 1: Reference Architecture with Azure CycleCloud***
 
-:::image type="content" alt-text="Reference Architecture with Azure CycleCloud" source="../media/reference-architecture-with-azure-batch.png" lightbox="../media/reference-architecture-with-azure-batch.png":::
+:::image type="content" alt-text="Reference Architecture design with Azure CycleCloud" source="../media/reference-architecture-with-azure-batch.png" lightbox="../media/reference-architecture-with-azure-batch.png":::
 
 ***Figure 2: Reference Architecture with Azure Batch***
