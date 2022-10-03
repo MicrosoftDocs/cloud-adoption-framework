@@ -64,7 +64,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre`|
 | Route filter | `Microsoft.Network/routeFilters` | `rf` |
 | Route table | `Microsoft.Network/routeTables` | `rt` |
-| Service endpoint | `Microsoft.serviceEndPointPolicies` | `se` |
+| Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
