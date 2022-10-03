@@ -439,6 +439,19 @@ If an application owner deletes the private endpoint, the corresponding records 
 Review [DNS for on-premises and Azure resources](/dns-for-on-premises-and-azure-resources.md).
 Review [Plan for virtual machine remote access](/plan-for-virtual-machine-remote-access.md).
 
+> [!IMPORTANT]
+> This article outlines DNS and Private link integration at scale using DINE (DeployIfNotExists) policies assigned to the Management Group. Which means there is no need to handle the DNS integration in code when creating Private Endpoints with this approach, as it is handled by the policies. It is also unlikely that the application teams have RBAC access to the centralized Private DNS Zones also.
+
+Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform. 
+>
+> For Private Endpoint creation with Infrastructure-as-Code: 
+>
+> -  [Quickstart Create a private endpoint using Bicep](https://learn.microsoft.com/azure/private-link/create-private-endpoint-bicep?tabs=CLI). 
+>
+> - Create a private endpoint using HashiCorp Terraform [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry. 
+>
+> You can still create private endpoints in your Infrastructure-as-Code tooling however, if using the DINE policy approach as outlined in this article you should leave the DNS integration side out of your code and let the DINE policies that have the required RBAC to the Private DNS Zones handle this instead.
+
 [link-1]: /azure/private-link/private-link-overview
 [link-2]: /azure/private-link/availability
 [link-3]: /azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
