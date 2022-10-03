@@ -565,10 +565,10 @@
          "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development",
          "redirect_document_id": false
       }
-      {
-         "source_path": "docs/scenarios/azure-hpc/energy/storage.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/storage",
-         "redirect_document_id": false
-      }
+    {
+      "source_path": "docs/scenarios/azure-hpc/energy/storage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/storage",
+      "redirect_document_id": true
+    }
    ]
 }
