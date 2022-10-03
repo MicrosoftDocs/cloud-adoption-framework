@@ -110,15 +110,16 @@ The following table shows naming patterns for a few sample Azure resource types:
 ::: zone target="docs"
 
 > [!NOTE]
-> Avoid using special characters, such as hyphen and underscore (`-` and `_`), as the first or last characters in a name. Doing so can cause most validation rules to fail.
+> - Avoid using special characters, such as hyphen and underscore (`-` and `_`), as the first or last characters in a name. Doing so can cause validation rules to fail.
+> - Names of tags are case-insensitive.
 
 ::: zone-end
 
-| Entity | Scope | Length | Casing | Valid characters | Suggested pattern | Example |
-| --- | --- | --- | --- | --- | --- | --- |
-| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, and period except at end | `<service-short-name>-<environment>-rg` | `profx-prod-rg` |
-| Availability set | Resource group | 1-80 | Case insensitive | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-as` | `profx-SQL-as` |
-| Tag | Associated entity | 512 (name), 256 (value) | Case insensitive | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period | `key` : `value` | `Department` : `Central IT ☺` |
+| Entity | Scope | Length | Valid characters | Suggested pattern | Example |
+| --- | --- | --- | --- | --- | --- |
+| Resource group | Subscription | 1-90 | Alphanumeric, underscore, parentheses, hyphen, and period except at end | `<service-short-name>-<environment>-rg` | `profx-prod-rg` |
+| Availability set | Resource group | 1-80 | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-as` | `profx-SQL-as` |
+| Tag | Associated entity | 512 (name), 256 (value) | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period | `key` : `value` | `Department` : `Central IT ☺` |
 
 ## Resource tags
 
