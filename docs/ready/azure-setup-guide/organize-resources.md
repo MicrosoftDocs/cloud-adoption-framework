@@ -125,14 +125,14 @@ The following table shows naming patterns for a few sample Azure resource types:
 
 Tags can quickly identify your resources and resource groups. You apply tags to your Azure resources to logically organize them by categories. Tags can include context about the resource's associated workload or application, operational requirements, and ownership information.
 
-Each tag consists of a name and a value. For example, you can apply the name `environment` and the value `production` to all the resources in production.
+Each tag consists of a name and a value. For example, you can apply the name *environment* and the value *production* to all the resources in production.
 
 After you apply tags, you can easily retrieve all the resources in your subscription that have that tag name and value. When you organize resources for billing or management, tags can help you retrieve related resources from different resource groups.
 
 Other common uses for tags include:
 
-- **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like `ProjectOwner`.
-- **Automation:** Regularly running scripts can take action based on a tag value like `ShutdownTime` or `DeprovisionDate`.
+- **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like *ProjectOwner*.
+- **Automation:** Regularly running scripts can take action based on a tag value like *ShutdownTime* or *DeprovisionDate*.
 - **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the costs. In Azure Cost Management + Billing, you can apply the cost center tag as a filter to report charges based on team or department usage.
 
 Each resource or resource group can have a maximum of 50 pairs of tag names and values. This limitation is only for tags that directly apply to the resource group or resource.
