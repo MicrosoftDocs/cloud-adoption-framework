@@ -568,7 +568,7 @@
     {
       "source_path": "docs/scenarios/azure-hpc/energy/starage.md",
       "redirect_url": "https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/storage",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
    ]
 }
