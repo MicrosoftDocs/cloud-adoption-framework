@@ -47,7 +47,7 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for HPC](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Strategic impact of HPC](./secure.md)
+- [Secure HPC](./secure.md)
 - [Migrate HPC](./migrate.md)
 - [Innovate with HPC](./innovate.md)
 - [Manage HPC](./manage.md)
