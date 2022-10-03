@@ -64,9 +64,9 @@ To create a management group, subscription, or resource group, sign in to the [A
 
   1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
   1. In the **Create a resource group** form:
-     1. Select the **Subscription** in which to create the resource group.
-     1. Enter a name for the **Resource group**.
-     1. Select a **Region** for the resource group location.
+     1. For **Subscription**, select the subscription in which to create the resource group.
+     1. For **Resource group**, enter a name for the new resource group.
+     1. For **Region**, select a region in which to locate the resource group.
   1. Select **Review + create**, and after the review passes, select **Create**.
 
 ::: zone-end
@@ -75,18 +75,23 @@ To create a management group, subscription, or resource group, sign in to the [A
 
 ### Actions
 
-- To create a *management group* to help you manage multiple subscriptions, go to **Management groups** and select **Create**.
+To create a management group, subscription, or resource group, sign in to the [Azure portal](https://portal.azure.com).
 
-- To create another *subscription* to associate users with resources, go to **Subscriptions** and select **Add**.
+- To create a *management group* to help you manage multiple subscriptions, go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade) and select **Create**.
 
-- To create a **resource group** to hold resources that share the same permissions and policies:
+- To create a *subscription* to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
 
-  1. Go to **Resource groups** and select **Create**.
+  > [!NOTE]
+  > You can also create subscriptions programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription).
+
+- To create a *resource group* to hold resources that share the same permissions and policies:
+
+  1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
   1. In the **Create a resource group** form:
-     1. Select the **Subscription** to create the resource group under.
-     1. Enter a name for the **Resource group**.
-     1. Select a **Region** for the resource group location.
-  1. Select **Review + create**, and if the review passes, select **Create**.
+     1. For **Subscription**, select the subscription in which to create the resource group.
+     1. For **Resource group**, enter a name for the new resource group.
+     1. For **Region**, select a region in which to locate the resource group.
+  1. Select **Review + create**, and after the review passes, select **Create**.
 
 ::: zone-end
 
