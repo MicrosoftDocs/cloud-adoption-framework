@@ -30,7 +30,7 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for HPC](./plan.md)
 - [Govern HPC](./govern.md)
-- [Strategic impact of HPC](./secure.md)
+- [Secure HPC](./secure.md)
 - [Organize team members for HPC in Azure](./organize.md)
 - [Migrate HPC](./migrate.md)
 - [Innovate with HPC](./innovate.md)
