@@ -14,8 +14,11 @@ ms.custom: internal
 
 # Azure Landing Zone governance guide: Migrate Azure Landing Zone policies to Azure Built-in policies
 
-Over time Azure Landing Zone (ALZ) custom policies and policy initiatives, may become deprecated or superseded by Azure built-in policies, and so should be removed or migrated. This article describes how to migrate ALZ custom policies and policy initiatives to Azure built-in policies. The guidance provided in this document describes manual high-level steps for performing the migration, as well as how to handle the process for implementations managed through the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale)
+Over time Azure Landing Zone (ALZ) custom policies and policy initiatives, may become deprecated or superseded by Azure built-in policies, and so should be removed or migrated. This article describes how to migrate ALZ custom policies and policy initiatives to Azure built-in policies. The guidance provided in this document describes manual high-level steps for performing the migration, as well as how to handle the process for implementations managed through the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale).
 
+The following infographic provides a frame of reference for the update process flow.
+
+![Diagram showing policy update process flow going from ALZ to built-in policies.](../../../_images/govern/alz-policy_to_builtin_update.jpg)
 
 
 ## Manual update steps for Azure Landing Zone environments
