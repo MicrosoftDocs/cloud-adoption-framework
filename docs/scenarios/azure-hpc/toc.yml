@@ -77,18 +77,19 @@ items:
           href: manufacturing/security-governance-compliance.md
         - name: Platform automation and DevOps
           href: manufacturing/platform-automation-devops.md
-
-
     - name: Implementation options
       items:
       - name: Enterprise-scale for Azure high-performance computing (HPC)
         href: azure-hpc-landing-zone-accelator.md
       - name: Compute manufacturing architecture
-        href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview#machine-learning-ml
+        href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview
+        maintainContext: true
       - name: Condition monitoring architecture
-        href: /azure/architecture/solution-ideas/articles/condition-monitoring#architecture
+        href: /azure/architecture/solution-ideas/articles/condition-monitoring
+        maintainContext: true
       - name: Video rendering architecture
-        href: /azure/architecture/example-scenario/infrastructure/video-rendering#architecture       
+        href: /azure/architecture/example-scenario/infrastructure/video-rendering
+        maintainContext: true
   - name: Migrate HPC to Azure
     href: migrate.md
   - name: Modernize with HPC on Azure
@@ -105,17 +106,50 @@ items:
     href: organize.md
   - name: Well-architected considerations
     href: well-architected-framework.md
-
-  - name: HPC Architectures
+  - name: HPC architectures
     items:
-    - name: Azure HPC Architecture examples
+    - name: Overview
       href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
+
     - name: Energy example architecture
       href: energy/compute.md#hpc-reference-architecture
     - name: Finance example architecture
       href: azure-hpc-landing-zone-accelator.md#example-conceptual-finance-reference-architecture
     - name: Manufacturing example architecture
       href: azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture
+
+
+      maintainContext: true
+    - name: 3D video rendering
+      href: /azure/architecture/example-scenario/infrastructure/video-rendering
+      maintainContext: true
+    - name: Computer-aided engineering
+      href: /azure/architecture/example-scenario/apps/hpc-saas
+      maintainContext: true
+    - name: Digital image-based modeling
+      href: /azure/architecture/example-scenario/infrastructure/image-modeling
+      maintainContext: true
+    - name: HPC cluster deployed in the cloud
+      href: /azure/architecture/solution-ideas/articles/hpc-cluster
+      maintainContext: true
+    - name: HPC media rendering
+      href: /azure/architecture/solution-ideas/articles/azure-batch-rendering
+      maintainContext: true
+    - name: HPC risk analysis
+      href: /azure/architecture/solution-ideas/articles/hpc-risk-analysis
+      maintainContext: true
+    - name: HPC system and big compute
+      href: /azure/architecture/solution-ideas/articles/big-compute-with-azure-batch
+      maintainContext: true
+    - name: Hybrid HPC in Azure with HPC Pack
+      href: /azure/architecture/solution-ideas/articles/hybrid-hpc-in-azure-with-hpc-pack
+      maintainContext: true
+    - name: Run CFD simulations
+      href: /azure/architecture/example-scenario/infrastructure/hpc-cfd
+      maintainContext: true
+    - name: Run reservoir simulations
+      href: /azure/architecture/example-scenario/infrastructure/reservoir-simulation
+      maintainContext: true
 
   - name: Azure product documentation
     items:
@@ -130,8 +164,8 @@ items:
     - name: HPC VMs (N & H)
       href: /azure/virtual-machines/workloads/hpc/overview/
 
-  - name: Build skills on Learn
 
+  - name: Build skills on Learn
     items:
     - name: Learning path for running HPC applications
-      href: /learn/paths/run-high-performance-computing-applications-azure/
+      href: /learn/paths/run-high-performance-computing-applications-azure
