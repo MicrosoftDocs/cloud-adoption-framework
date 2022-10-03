@@ -12,17 +12,17 @@ ms.custom: think-tank
 
 # Modernize your workloads for Azure high-performance computing (HPC)
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/).
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](../../modernize/index.md).
 
 ## HPC business alignment
 
-Assess your business goals before you commit to modernizing.
-https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/business-alignment/
+Assess your [business goals]([business goals](../../modernize/business-alignment/index.md) before you commit to modernizing.
+
 
 ## HPC modernization strategy
 
-Use the framework modernization roadmap to guide you to the right cloud modernization strategies.
-https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/modernize-strategies/
+Use the framework [modernization](../../modernize/modernize-strategies/index.md) roadmap to guide you to the right cloud modernization strategies.
+
 
 
 ## Next steps
