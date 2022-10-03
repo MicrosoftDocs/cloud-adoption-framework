@@ -1,9 +1,9 @@
 ---
 title: Modernize for Azure high-performance computing (HPC) adoption
-description: #Describe the scenario's impact on strategy.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: This is HPC scenario's impact on cloud adoption strategy.
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
+ms.date: 10/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
