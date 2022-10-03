@@ -142,11 +142,21 @@ For more tagging recommendations and examples, see [Develop your naming and tagg
 
 ### Apply a resource tag
 
-To apply a tag to a resource group:
+To apply one or more tags to a resource group:
 
 1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the resource group.
-1. Select **Tags** in the left navigation.
-1. Enter a new name and value, or select an existing name and value, and then select **Apply**.
+1. Select **Assign tags** in the navigation at the top of the page.
+1. Enter the name and value for a tag under **Name** and **Value**.
+1. Enter additional names and values or select **Save**.
+
+### Remove a resource tag
+
+To remove one or more tags from a resource group:
+
+1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
+1. Select the trash can icon for each tag that you want to remove.
+1. To save your changes, click **Save**.
+
 
 ::: zone-end
 
@@ -154,13 +164,20 @@ To apply a tag to a resource group:
 
 ### Action
 
-**Apply a resource tag:**
+To apply one or more tags to a resource group:
 
-To apply a tag to a resource group:
+1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the resource group.
+1. Select **Assign tags** in the navigation at the top of the page.
+1. Enter the name and value for a tag under **Name** and **Value**.
+1. Enter additional names and values or select **Save**.
 
-1. Go to **Resource groups** and select a resource group.
-1. Select **Tags** in the left navigation.
-1. Enter a new name and value, or select an existing name and value, and then select **Apply**.
+
+To remove one or more tags from a resource group:
+
+1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
+1. Select the trash can icon for each tag that you want to remove.
+1. To save your changes, click **Save**.
+
 
 ::: zone-end
 
