@@ -20,7 +20,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - If your organization prefers to use non-Azure network virtual appliance (NVAs), or for situations where native services don't satisfy specific requirements, the Azure landing zone architecture is fully compatible with partner NVAs.
 
-- Azure provides several direct internet outbound connectivity methods, such as [Virtual network NAT gateways](/azure/virtual-network/nat-gateway/nat-overview) or [public load balancers with outbound rules](/azure/load-balancer/load-balancer-overview), for virtual machines (VMs) or compute instances on a virtual network. Load balancer and NAT gateway are fully managed by Azure and provide secure outbound connectivity by default. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
+- Azure provides a few direct internet outbound connectivity methods for virtual machines (VMs) or compute instances in a virtual network. These outbound connectivity methods include [Virtual network NAT gateways](/azure/virtual-network/nat-gateway/nat-overview) and [public load balancers with outbound rules](/azure/load-balancer/load-balancer-overview). Load balancer and NAT gateway are fully managed by Azure and provide secure outbound connectivity by default. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 ## Design recommendations
 
@@ -46,7 +46,7 @@ This article lists considerations and recommendations for inbound and outbound c
   - **Secure by default** and part of your virtual network. The virtual network is a private and isolated network. No inbound initiated traffic from the internet passes through NAT gateway.
   - **Resilient to infrastructure failures**. NAT gateway has multiple fault domains and can sustain multiple failures without service outage. 
   - **Scaled out upon creation**. Add a public IP address to NAT gateway and all 64,512 SNAT ports provided by the public IP are made available to resources in a NAT gateway subnet. Up to 16 IP addresses can be added to NAT gateway in any combination of public IP addresses, prefixes, or both. With 16 public IPs, [NAT gateway can scale to over 1 million SNAT ports](/azure/virtual-network/nat-gateway/nat-gateway-resource#scalability) for outbound connectivity.
-  - Enterprise grade performance as a multi-tenant platform service. NAT gateway provides outbound connectivity immediately upon deployment and does not impact network bandwidth. 
+  - Enterprise grade performance as a multi-tenant platform service. NAT gateway provides outbound connectivity immediately upon deployment and doesn't impact network bandwidth. 
   - Alleviates risk of SNAT port exhaustion with its [on-demand SNAT port allocation](/azure/virtual-network/nat-gateway/nat-gateway-resource#nat-gateway-dynamically-allocates-snat-ports) to all IP based resources in a NAT gateway associated subnet. 
   - Integrated with other Azure services such as [Azure Firewall](/azure/firewall/integrate-with-nat-gateway) and [Azure App Services](/azure/app-service/networking/nat-gateway-integration) to provide secure and scalable outbound connectivity.
 
