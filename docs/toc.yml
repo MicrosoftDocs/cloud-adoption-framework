@@ -1757,7 +1757,7 @@ items:
         href: organize/cloud-security.md
       - name: Getting started
         href: get-started/security.md
-      - name: Azure security top 10
+      - name: Security best practices
         href: secure/security-top-10.md
       - name: Microsoft Cybersecurity Reference Architectures
         href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
