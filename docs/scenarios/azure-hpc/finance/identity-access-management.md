@@ -1,5 +1,5 @@
 ---
-title: 'Azure identity and access management | Microsoft Docs'
+title: 'Finance HPC Azure identity and access management | Microsoft Docs'
 description: 'This article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Azure identity and access management
+# Azure identity and access management for finance HPC
 
 This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an HPC application designed for the financial industry on Microsoft Azure.
 
@@ -44,3 +44,15 @@ This article builds on a number of considerations and recommendations defined in
  - If it is a hybrid environment where you want to extend your on-prem capabilities, authentication can be done through Active Directory with a Read Only domain controller hosted in Azure to minimize traffic across the link, This integration lets users sign into services and applications connected to the managed domain using their existing credentials. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure.
 
 For more details, refer to [design recommendations for platform access](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-platform-access#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones).
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
