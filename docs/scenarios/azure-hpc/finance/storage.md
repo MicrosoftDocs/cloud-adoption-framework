@@ -1,6 +1,6 @@
 ---
-title: 'Storage | Microsoft Docs'
-description: 'Large-scale HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.'
+title: 'Finance HPC Storage | Microsoft Docs'
+description: 'Large-scale HPC workloads in finance have demands for data storage and access that exceed the capabilities of traditional cloud file systems.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Storage
+# Storage for finance HPC
 
 Large-scale HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.
 
@@ -51,3 +51,16 @@ Below are the factors you would need to consider and identify about your applica
 | Performance (Per volume) | Up to 20,000 IOPS, up to 100 Gib/s throughput. | Up to 100,000 IOPS, up to 80 Gib/s throughput. | Up to 460,000 IOPS, up to 36 Gib/s throughput. |
 | Scale | Up to 2 PiB for a single volume. <br><br> Up to ~4.75 TiB max for a single file. <br><br> No minimum capacity requirements. | Up to 100 TiB for a single file share. <br><br> Up to 4 TiB for a single file. <br><br> 100 GiB min capacity. | Up to 100 TiB for a single volume. <br><br> Up to 16 TiB for a single file. <br><br> Consistent hybrid cloud experience. |
 | Pricing | [Azure Blob Storage pricing](https://azure.microsoft.com/pricing/details/storage/blobs/) | [Azure Files pricing](https://azure.microsoft.com/pricing/details/storage/files/) | [Azure NetApp Files pricing](https://azure.microsoft.com/pricing/details/netapp/) |
+
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
