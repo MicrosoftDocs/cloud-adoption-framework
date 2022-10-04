@@ -1,5 +1,5 @@
 ---
-title: 'Platform automation and DevOps| Microsoft Docs'
+title: 'Manufacturing HPC platform automation and DevOps| Microsoft Docs'
 description: 'Azure landing zones for HPC in manufacturing do not have any specific considerations or recommendations which would impact DevOps related decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,8 +10,20 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Platform automation and DevOps
+# Platform automation and DevOps for manufacturing HPC
 
 Azure landing zones for HPC in manufacturing do not have any specific considerations or recommendations which would impact DevOps related decisions.
 
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [platform automation and DevOps recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
