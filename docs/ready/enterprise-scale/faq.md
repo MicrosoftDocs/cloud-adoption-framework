@@ -86,6 +86,7 @@ The following equation helps to highlight why management groups per environment 
 So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production", you're left with:
 
 > N = number of workloads/apps = 30
+>
 > Z = number of management groups for workload and environments (1 per workload + 3 for envs) = 4
 
 > N (30) x Z (4) = 120 total management groups
