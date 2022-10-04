@@ -39,3 +39,15 @@ Depending on the chosen HPC Compute Resource Orchestrator, different types of au
  - Azure CycleCloud – offers three methods of authentication: a built-in database with encryption, Active Directory, or LDAP.
  - Azure Batch - Batch account access supports two methods of authentication: Shared Key and Azure Active Directory (Azure AD).
  - Microsoft HPC Pack - Currently all HPC Pack nodes must be joined into an Active Directory Domain. If you are deploying the HPC Pack cluster in a virtual network which has a Site-to-Site VPN or ExpressRoute connection with your corporate network, typically there is already an existing Active Directory Domain. If you don't have an AD domain in your virtual network yet, you can choose to create a new AD domain by promoting the head node as domain controller.
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./starage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
