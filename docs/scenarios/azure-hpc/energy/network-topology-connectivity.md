@@ -147,4 +147,4 @@ The following list of articles will take you to guidance found at specific point
 - [Security Governance Compliance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./starage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)![image](https://user-images.githubusercontent.com/99199490/193832286-29db5bf6-70ec-42f3-b766-744da00bf9d3.png)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)![image]
