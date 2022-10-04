@@ -24,30 +24,25 @@ Below you'll find an overview of each phase and guidance on where to start your 
 
 :::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Diagram that shows three business alignment processes (envision, evaluate, and commit) and three modernization strategies (process, application, and database modernization)." border="false":::
 
-*Diagram: Overview of the modernization process*
+*Figure 1: Overview of the modernization process*
 
 ## Phase 1. Business alignment
 
-Phase 1 of modernization is is aligning your modernization efforts to your business goals. You will identify your business goals and determine:
+Phase 1 of modernization where you identify your business goals and create a modernization roadmap that allows you to reach those goals. This process determines what you need to modernize and your modernization priorities. The roadmap lists the workloads you need to modernize and the modernization strategies you need to use.
 
-- What to modernize
-- When to modernize
-
-As part of this phase, you'll create a modernization roadmap. The roadmap will identify the workloads you need to modernize and the modernization strategies you need to use.
-
-With the modernization roadmap created, you can begin modernizing. You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
+When you finish your modernization roadmap, you can move on to phase two and begin modernizing.
 
 ## Phase 2. Modernization strategies
 
-Phase 2 is where you implement essential modernization strategies. This is where change happens.
+Phase 2 is where you implement essential modernization strategies. This is where change happens.  You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
 
-- **Process modernization** - To modernize your process, we recommend adopting a DevOps methodology. DevOps wil help expedite your modernization efforts. Process modernization is so key to workload modernization that it's a necessary prerequisite to workload modernization.
+- **Process modernization** - We recommend adopting a DevOps methodology. DevOps will help speed up your modernization efforts and drive down your total cost of ownership. Process modernization is so key to workload modernization, it should be a necessary prerequisite to workload modernization.
 
-- **Workload modernization** - Modernizing your workloads means adopting platform-as-a-service solutions (PaaS). This definition is oversimplified, but it applies to most scenarios.
+- **Workload modernization** - On the technical side, we recommend adopting platform-as-a-service solutions (PaaS) in your modernization effort. PaaS technologies are cost efficient and allow your workloads to scale with minimal management overhead.
 
 ## Next steps
 
-Modernization starts with business alignment
+Modernization starts with business alignment.
 
 > [!div class="nextstepaction"]
 > [Learn about business alignment](../modernize/business-alignment/index.md)
