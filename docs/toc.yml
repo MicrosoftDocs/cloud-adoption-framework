@@ -1626,8 +1626,8 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-       - name: Monitoring
-        items:
+        - name: Monitoring
+          items:
         - name: Overview
           href: manage/monitor/index.md
         - name: Monitoring cloud models
