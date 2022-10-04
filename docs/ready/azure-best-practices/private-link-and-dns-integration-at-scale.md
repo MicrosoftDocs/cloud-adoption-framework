@@ -154,7 +154,7 @@ In addition to the private DNS zones, you also need to [create a set of custom A
 
     The following policy examples show two approaches for identifying which `privateDNSZoneGroup` is created on a Private Endpoint.
 
-    The [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) relies on the `groupId` while the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) when `groupId` will clash (collide) with another resource. 
+    The [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) relies on the `groupId` while the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) when `groupId` will clash (collide) with another resource.
 
     For example, the `groupId` **SQL** is used for both Cosmos DB and Synapse Analytics. If both resource types deploy and the [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) has been assigned to create the `privateDNSZoneGroup` on the Private Endpoint entry, it's created and mapped to the incorrect Private DNS Zone, of either Cosmos DB or Synapse Analytics. It then might toggle between each of the zones due to the clashing `groupId` that the first policy looks for in its policy rule.
 
@@ -266,7 +266,7 @@ This policy triggers if you create a private endpoint resource with a service-sp
 
 #### Second `DeployIfNotExists` Policy - Matching on `groupId` & `privateLinkServiceId`
 
-This policy triggers if you create a private endpoint resource with a service-specific `groupId` and  `privateLinkServiceId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. The `privateLinkServiceId` is the resource ID of the remote resource (service) this private endpoint should connect to. Then, trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which associates the private endpoint with the private DNS zone. 
+This policy triggers if you create a private endpoint resource with a service-specific `groupId` and  `privateLinkServiceId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. The `privateLinkServiceId` is the resource ID of the remote resource (service) this private endpoint should connect to. Then, trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which associates the private endpoint with the private DNS zone.
 
 In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privateLinkServiceId` must contain `Microsoft.DocumentDb/databaseAccounts`. For more information on the `groupId` and `privateLinkServiceId` for other Azure services, see [Azure Private Endpoint DNS configuration][link-4], under the **Subresource** column. When the policy finds `groupId` and `privateLinkServiceId` in the private endpoint, it deploys a `privateDNSZoneGroup` within the private endpoint. And it's linked to the private DNS zone resource ID that's specified as the parameter. The following policy definition shows the private DNS zone resource ID:
 
@@ -442,13 +442,13 @@ Review [Plan for virtual machine remote access](/plan-for-virtual-machine-remote
 > [!IMPORTANT]
 > This article outlines DNS and Private link integration at scale using DINE (DeployIfNotExists) policies assigned to the Management Group. Which means there is no need to handle the DNS integration in code when creating Private Endpoints with this approach, as it is handled by the policies. It is also unlikely that the application teams have RBAC access to the centralized Private DNS Zones also.
 
-Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform. 
+Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform.
 >
-> For Private Endpoint creation with Infrastructure-as-Code: 
+> For Private Endpoint creation with Infrastructure-as-Code:
 >
-> -  [Quickstart Create a private endpoint using Bicep](https://learn.microsoft.com/azure/private-link/create-private-endpoint-bicep?tabs=CLI). 
+> - [Quickstart Create a private endpoint using Bicep](/azure/private-link/create-private-endpoint-bicep?tabs=CLI).
 >
-> - Create a private endpoint using HashiCorp Terraform [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry. 
+> - Create a private endpoint using HashiCorp Terraform [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry.
 >
 > You can still create private endpoints in your Infrastructure-as-Code tooling however, if using the DINE policy approach as outlined in this article you should leave the DNS integration side out of your code and let the DINE policies that have the required RBAC to the Private DNS Zones handle this instead.
 
