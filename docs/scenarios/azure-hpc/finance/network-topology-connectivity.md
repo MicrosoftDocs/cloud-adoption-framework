@@ -1,6 +1,6 @@
 ---
 title: 'Network topology and connectivity | Microsoft Docs'
-description: 'This guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
+description: 'This finance HPC guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Network topology and connectivity
+# Network topology and connectivity for finance HPC
 
 This guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity. Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
 
@@ -89,3 +89,15 @@ This section explores key recommendations for encrypting networks between on-pre
 **Design considerations and recommendations:**
 
  - Traffic performance should be an important consideration when enabling encryption. IPsec tunnels encrypt internet traffic by default, and any additional encryption or decryption could negatively affect the performance. With Express route, traffic is not encrypted by default , however it's up to you to determine whether HPC traffic should be encrypted. Explore network topology and connectivity to understand network encryption options in enterprise-scale landing zones.
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
