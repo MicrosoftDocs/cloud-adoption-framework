@@ -15,7 +15,7 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 Modernization is when you enhance your workloads and the processes to support those workloads. It's all about maximizing value and adopting cloud technologies that allow you to unlock more benefits of the cloud. The goal of modernization is to make the cloud work for you. Modernization can improve operational efficiency. It can reduce management overhead and optimize costs. Cloud modernization allows your business or organization to be more productive with less. Efficiency at this scale should be a priority.
 
-Modernization is not complicated. We recommend modernizing in two phases:
+Modernization isn't complicated. We recommend modernizing in two phases:
 
 - **Phase 1. Business alignment**
 - **Phase 2. Modernization strategies**
@@ -34,7 +34,7 @@ When you finish creating your modernization roadmap, you can move on to phase tw
 
 ## Phase 2. Modernization strategies
 
-Phase 2 is where you implement essential modernization strategies. This is where change happens.  You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
+Phase 2 is where you implement essential modernization strategies. This phase is where change happens.  You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
 
 - **Process modernization** - We recommend adopting a DevOps methodology. DevOps will help speed up your modernization efforts and drive down your total cost of ownership. Process modernization is so key to workload modernization, it should be a necessary prerequisite to workload modernization.
 
