@@ -17,8 +17,8 @@ Modernization is when you enhance your workloads and the processes to support th
 
 Modernization is not complicated. We recommend modernizing in two phases:
 
-- [Phase 1. Business alignment](#step-1-business-alignment)
-- [Phases 2. Modernization strategies](#step-2-modernization-strategies)
+- **Phase 1. Business alignment**
+- **Phase 2. Modernization strategies**
 
 Below you'll find an overview of each phase and guidance on where to start your modernization journey. We developed a framework that walks you through the most effective modernization processes.
 
