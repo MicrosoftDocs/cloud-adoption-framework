@@ -1,6 +1,6 @@
 ---
 title: 'Azure Identity and Access Management| Microsoft Docs'
-description: 'This article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
+description: 'This HPC energy scenarior article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
