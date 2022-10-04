@@ -28,9 +28,9 @@ Below you'll find an overview of each phase and guidance on where to start your 
 
 ## Phase 1. Business alignment
 
-Phase 1 of modernization where you identify your business goals and create a modernization roadmap that allows you to reach those goals. This process determines what you need to modernize and your modernization priorities. The roadmap lists the workloads you need to modernize and the modernization strategies you need to use.
+Phase 1 of modernization where you identify your business goals and create a modernization roadmap that allows you to reach those goals. The roadmap lists the workloads you need to modernize and the modernization strategies you need to use.
 
-When you finish your modernization roadmap, you can move on to phase two and begin modernizing.
+When you finish creating your modernization roadmap, you can move on to phase two and begin modernizing.
 
 ## Phase 2. Modernization strategies
 
