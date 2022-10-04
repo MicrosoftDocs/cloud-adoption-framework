@@ -30,7 +30,7 @@ Educate your security and IT teams about the cloud security journey and the chan
 
 ### Why?
 
-Cloud migration requires a shift in mindset and approach to security. While the outcomes that security provides to the organization don't change, the best way to accomplish these outcomes in the cloud can change significantly.
+Cloud security requires a shift in mindset and approach. While the outcomes that security provides to the organization don't change, the best way to accomplish these outcomes in the cloud can change significantly.
 
 The transition to the cloud is similar to moving from a standalone house to a high-rise apartment building. You still have basic infrastructure, like plumbing and electricity, and do similar activities, such as socializing, cooking, TV and internet, and so on. However, there's often quite a difference in what comes with the building, who provides and maintains it, and your daily routine.
 
@@ -49,7 +49,7 @@ Microsoft has published the following lessons that customers and IT organization
 - [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513).
 - [Learnings from Microsoft's experience in securing hyperscale cloud environment](/security/compass/microsoft-security-compass-introduction#microsoft-security-practices-1349).
 
-For more information, see the Azure Security Benchmark (ASB) [organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-4-align-organization-roles-responsibilities-and-accountabilities).
+For more information, see the Azure Security Benchmark [roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-4-align-organization-roles-responsibilities-and-accountabilities).
 
 ## 2. People: Educate teams on cloud security technology
 
@@ -80,7 +80,7 @@ Security, IT technical managers, and project managers can develop familiarity wi
 Ensure that technical security professionals have time set aside for self-paced training on how to secure cloud assets. While not always feasible, provide access to formal training with an experienced instructor and hands-on labs.
 
 > [!IMPORTANT]
-> Identity protocols are critical to access control in the cloud but often not prioritized in on-premises security. Security teams must focus on developing familiarity with these protocols and logs.
+> Identity protocols are critical for access control in the cloud, but often not prioritized in on-premises security. Security teams must focus on developing familiarity with these protocols and logs.
 
 Microsoft provides extensive resources to help technical professionals ramp up their capabilities. These resources include:
 
@@ -93,8 +93,8 @@ Microsoft provides extensive resources to help technical professionals ramp up t
   - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard)
 - Identity protocols and security
   - [Azure security documentation site](/azure/security/)
-  - Azure Active Directory authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
-  - [Securing Azure environments with Azure Active Directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
+  - Azure Active Directory (Azure AD) authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
+  - [Securing Azure environments with Azure AD](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
 
 ## 3. Process: Assign accountability for cloud security decisions
 
@@ -289,7 +289,7 @@ Implement passwordless or multifactor authentication. Train administrators on ho
 
 - [Passwordless Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 - [Passwordless authenticator app](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
-- [Azure Active Directory (Azure AD) multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates)
+- [Azure AD multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates)
 - Third-party multifactor authentication solution
 
 > [!NOTE]
@@ -526,4 +526,4 @@ The Cloud Adoption Framework includes guidance to help your teams with:
 - **[Building a cloud strategy team](../get-started/team/cloud-strategy.md)**: Ideally, you integrate security into an existing cloud strategy.
 - **[Build or modernize a security strategy](../strategy/define-security-strategy.md)**: Meet business and security goals in the current age of cloud services and modern threats.
 
-For more information, see the [Azure Security Benchmark governance strategy](/security/benchmark/azure/security-controls-v2-governance-strategy).
+For more information, see the Azure Security Benchmark [governance strategy](/security/benchmark/azure/security-controls-v2-governance-strategy).
