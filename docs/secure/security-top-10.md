@@ -80,12 +80,12 @@ Security, IT technical managers, and project managers can develop familiarity wi
 Ensure that technical security professionals have time set aside for self-paced training on how to secure cloud assets. While not always feasible, provide access to formal training with an experienced instructor and hands-on labs.
 
 > [!IMPORTANT]
-> Identity protocols are critical to access control in the cloud but often not prioritized in on-premises security. So, security teams must focus on developing familiarity with these protocols and logs.
+> Identity protocols are critical to access control in the cloud but often not prioritized in on-premises security. Security teams must focus on developing familiarity with these protocols and logs.
 
-Microsoft provides extensive resources to help technical professionals ramp up on securing Azure resources and report compliance. Those resources include:
+Microsoft provides extensive resources to help technical professionals ramp up their capabilities. These resources include:
 
 - Azure security
-  - Az-500 [learning path](/certifications/exams/az-500?tab=tab-learning-paths) and certification
+  - [Az-500 learning path and certification](/certifications/exams/az-500?tab=tab-learning-paths)
   - [Azure Security Benchmark](/security/benchmark/azure/) 
     - [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview) 
   - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction)
@@ -124,7 +124,7 @@ Security leadership chooses which teams or individuals are accountable for makin
 
 ### How?
 
-Choose groups or individuals who will be responsible for making key security decisions.
+Choose groups or individuals to be responsible for making key security decisions.
 
 Document these owners, their contact information, and socialize the information widely within the security, IT, and cloud teams. Socialization ensures that it's easy for all roles to contact them.
 
@@ -154,7 +154,7 @@ Prepare for security incidents on your Azure cloud platform. This preparation in
 
 ### Why?
 
-Active attackers present an immediate risk to the organization. The risk can quickly become a difficult-to-control situation. Respond quickly and effectively to attacks. This incident response (IR) process must be effective for your entire estate, including all cloud platforms hosting enterprise data, systems, and accounts.
+Active attackers present an immediate risk to the organization. The situation can quickly become difficult to control. Respond quickly and effectively to attacks. This incident response (IR) process must be effective for your entire estate, including all cloud platforms hosting enterprise data, systems, and accounts.
 
 While similar in many ways, cloud platforms are different technically from on-premises systems. On-premises systems can break existing processes, typically because information is available in a different form. Security analysts might have challenges rapidly responding to an unfamiliar environment that can slow them down. This statement is especially true if they're trained only on classic on-premises architectures and network/disk forensics approaches.
 
@@ -213,7 +213,7 @@ Ensure that you're actively managing the security posture of your Azure environm
 
 Rapidly identifying and remediating common security hygiene risks significantly reduces organizational risk.
 
-The software-defined nature of cloud datacenters enables continuous monitoring of security risks (such as software vulnerabilities or security misconfigurations) with extensive asset instrumentation. The speed at which developers and IT team can deploy VMs, databases, and other resources creates a need to ensure resources are configured securely and actively monitored.
+The software-defined nature of cloud datacenters enables continuous monitoring of security risks, such as software vulnerabilities or security misconfigurations, with extensive asset instrumentation. The speed at which developers and IT team can deploy VMs, databases, and other resources creates a need to ensure resources are configured securely and actively monitored.
 
 These new capabilities offer new possibilities, but realizing value from them requires assigning responsibility for using them. Executing consistently with rapidly evolving cloud operations requires keeping human processes as simple and automated as possible. See the "drive simplicity" [security principle](/azure/architecture/framework/security/security-principles).
 
@@ -517,7 +517,7 @@ Build and implement a security strategy for cloud that includes the input and ac
 - **Active input from teams**: Strategies typically fail if people in the organization don't buy into them. Ideally, get all teams in the same room to collaboratively build the strategy. In the workshops we conduct with customers, we often find organizations have been operating in de facto silos and these meetings often result in people meeting each other for the first time. We find that inclusiveness is a requirement. If some teams aren't invited, this meeting typically has to be repeated until all participants join it. If they don't join, then the project doesn't move forward.
 - **Documented and communicated clearly**: All teams must have awareness of the security strategy. Ideally, the security strategy is a security component of the overall technology strategy. This strategy includes why to integrate security, what is important in security, and what security success looks like. This strategy includes specific guidance for application and development teams so they can get clear, organized guidance without having to read through non-relevant information.
 - **Stable, but flexible**: Keep strategies relatively consistent and stable, but the architectures and the documentation might need to add clarity and accommodate the dynamic nature of cloud. For example, filtering out malicious external traffic would stay consistent as a strategic imperative even if you shift from the use of a third-party next generation firewall to Azure Firewall and adjust diagrams and guidance on how to do it.
-- **Start with segmentation**: Over the course of cloud adoption, your teams will address many strategy issues large and small, but you need to start somewhere. Start the security strategy with enterprise asset segmentation. This segmentation is a foundational decision that would be challenging to change later and requires both business input and many technical teams.
+- **Start with segmentation**: There are strategy issues both large and small to address, but you need to start somewhere. Start the security strategy with enterprise asset segmentation. This segmentation is a foundational decision that would be challenging to change later and requires both business input and many technical teams.
 
 Microsoft has published video guidance for [applying a segmentation strategy to Azure](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151). There are documents published about [enterprise segmentation](/security/compass/governance#enterprise-segmentation-strategy) and [aligning network security to it](/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy).
 
@@ -526,4 +526,4 @@ The Cloud Adoption Framework includes guidance to help your teams with:
 - **[Building a cloud strategy team](../get-started/team/cloud-strategy.md)**: Ideally, you integrate security into an existing cloud strategy.
 - **[Build or modernize a security strategy](../strategy/define-security-strategy.md)**: Meet business and security goals in the current age of cloud services and modern threats.
 
-For more information, see the [Azure Security Benchmark governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy).
+For more information, see the [Azure Security Benchmark governance strategy](/security/benchmark/azure/security-controls-v2-governance-strategy).
