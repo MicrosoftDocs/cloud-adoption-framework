@@ -1,5 +1,5 @@
 ---
-title: 'Azure Identity and Access Management | Microsoft Docs'
+title: 'Manufacturing HPC Azure Identity and Access Management | Microsoft Docs'
 description: 'This article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management in manufacturing environments.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Azure Identity and Access Management for Manufacturing
+# Azure Identity and Access Management for Manufacturing HPC
 
 This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an HPC application designed for the manufacturing industry on Microsoft Azure.
 
@@ -33,3 +33,15 @@ Depending on the chosen HPC Compute Resource Orchestrator, different types of au
 :::image type="content" alt-text="Manufacturing Reference Architecture design with Azure Batch" source="../media/reference-architecture-with-azure-batch.png" lightbox="../media/reference-architecture-with-azure-batch.png":::
 
 ***Figure 2: Reference Architecture with Azure Batch***
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
