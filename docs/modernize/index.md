@@ -28,17 +28,17 @@ Below you'll find an overview of each phase and guidance on where to start your 
 
 ## Phase 1. Business alignment
 
-Phase 1 of modernization where you identify your business goals and create a modernization roadmap that allows you to reach those goals. The roadmap lists the workloads you need to modernize and the modernization strategies you need to use.
+Phase 1 of modernization is where you identify your business goals and create a modernization roadmap to reach those goals. The roadmap will list the workloads you need to modernize and the modernization strategies you need to use.
 
 When you finish creating your modernization roadmap, you can move on to phase two and begin modernizing.
 
 ## Phase 2. Modernization strategies
 
-Phase 2 is where you implement essential modernization strategies. This phase is where change happens.  You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
+Phase 2 is where you implement modernization strategies. Technical change happens in this phase.  You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
 
 - **Process modernization** - We recommend adopting a DevOps methodology. DevOps will help speed up your modernization efforts and drive down your total cost of ownership. Process modernization is so key to workload modernization, it should be a necessary prerequisite to workload modernization.
 
-- **Workload modernization** - On the technical side, we recommend adopting platform-as-a-service solutions (PaaS) in your modernization effort. PaaS technologies are cost efficient and allow your workloads to scale with minimal management overhead.
+- **Application and Database modernization** - On the technical side, we recommend adopting platform-as-a-service solutions (PaaS) in your modernization effort. Application and database PaaS technologies are cost efficient solutions that help you scale and reduce your management overhead.
 
 ## Next steps
 
