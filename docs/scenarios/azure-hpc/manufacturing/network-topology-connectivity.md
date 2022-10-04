@@ -1,5 +1,5 @@
 ---
-title: 'Network topology and connectivity | Microsoft Docs'
+title: 'Manufacturing HPC Network topology and connectivity | Microsoft Docs'
 description: 'This guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
 author: ericd-mst-github
 author: Rajani-Janaki-Ram
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Network topology and connectivity
+# Network topology and connectivity for manufacturing HPC
 
 This guidance builds on considerations and recommendations defined in the Azure landing zone article for [network topology and connectivity](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
 
@@ -134,3 +134,15 @@ It's vital to plan for IP addressing in Azure to ensure that:
  - MPI environments are dedicated as they have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and are not very amenable to sharing with other workloads. MPI applications leverage the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect.
 
 :::image type="content" alt-text="Infini Band" source="../media/infiniband.png" lightbox="../media/infiniband.png":::
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
