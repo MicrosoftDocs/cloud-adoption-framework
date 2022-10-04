@@ -295,7 +295,7 @@ Implement passwordless or multifactor authentication. Train administrators on ho
 > [!NOTE]
 > Text message-based multifactor authentication is now relatively inexpensive for attackers to bypass, so focus on passwordless and stronger multifactor authentication.
 
-For more information, see the Azure Security Benchmark [strong authentication controls for all Azure AD-based access](/security/benchmark/azure/security-controls-v3-identity-management#im-6use-strong-authentication-controls).
+For more information, see the Azure Security Benchmark [strong authentication controls for all Azure AD-based access](/security/benchmark/azure/security-controls-v3-identity-management#im-6-use-strong-authentication-controls).
 
 ## 7. Technology: Integrate native firewall and network security
 
@@ -430,7 +430,7 @@ The ideal time to combine your use of identity is during application development
 
 While there are valid reasons for a separate directory for independent business units or regulatory requirements, avoid multiple directories in all other circumstances.
 
-For more information, see the Azure Security Benchmark [Azure AD central identity and authentication system](/security/benchmark/azure/security-controls-v3-identity-management#im-1-use-centralized-identity-and-authentication-sytem).
+For more information, see the Azure Security Benchmark [Azure AD central identity and authentication system](/security/benchmark/azure/security-controls-v3-identity-management#im-1-use-centralized-identity-and-authentication-system).
 
 > [!IMPORTANT]
 > The only exception to the single accounts rule is that privileged users, including IT administrators and security analysts, can have separate accounts for standard user tasks compared to administrative tasks.
