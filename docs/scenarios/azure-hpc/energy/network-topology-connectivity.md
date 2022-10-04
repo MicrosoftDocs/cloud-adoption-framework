@@ -141,10 +141,13 @@ It's vital to plan for IP addressing in Azure to ensure that:
 
 ## Next steps
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-
+- [Compute](./compute.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
 - [Platform Automation DevOps](./platform-automation-devops.md)
 - [Resource Organization](./resource-organization.md)
 - [Security Governance Compliance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./starage.md)
 - Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+
