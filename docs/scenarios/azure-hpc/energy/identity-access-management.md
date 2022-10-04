@@ -42,6 +42,7 @@ Depending on the chosen HPC Compute Resource Orchestrator, different types of au
 
 ## Next steps
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
 - [Compute](./compute.md)
 - [Management](./management.md)
 - [Network Topology Connectivity](./network-topology-connectivity.md)
