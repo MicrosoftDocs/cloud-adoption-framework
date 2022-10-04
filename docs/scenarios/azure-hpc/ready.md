@@ -1,9 +1,9 @@
 ---
 title: Azure Landing Zone review for Azure high-performance computing (HPC)
-description: #Describe the scenario's impact on Azure Landing Zone design.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: This is the HPC scenario's impact on the Azure Landing Zone design.
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
+ms.date: 10/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -30,7 +30,7 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for HPC](./plan.md)
 - [Govern HPC](./govern.md)
-- [Strategic impact of HPC](./secure.md)
+- [Secure HPC](./secure.md)
 - [Organize team members for HPC in Azure](./organize.md)
 - [Migrate HPC](./migrate.md)
 - [Innovate with HPC](./innovate.md)

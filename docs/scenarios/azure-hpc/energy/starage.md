@@ -1,6 +1,6 @@
 ---
-title: 'Storage | Microsoft Docs'
-description: 'Large-scale HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.'
+title: 'Storage HPC Energy | Microsoft Docs'
+description: 'Large-scale HPC energy workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Storage
+# Storage for HPC energy environments
 
 Large-scale HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.
 
@@ -87,3 +87,18 @@ For more information on Parallel Virtual file system on Azure, see [Parallel Vir
  - The Oil and Gas Energy workloads may also require large data size and volumes transfer mechanism from On-Prem to Cloud and vice versa that can be achieved by
      - Offline - device based migration (DataBox)
      - Online - over the network (ExpressRoute) based migration.
+
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Compute](./compute.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+

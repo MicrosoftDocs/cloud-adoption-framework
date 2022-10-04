@@ -81,23 +81,38 @@ Seismic processing/imaging is fundamental for the oil and gas business as it cre
 
 The quality of the subsurface model and the quality & resolution of the data is crucial to make the right business decision regarding bidding on leases or deciding where to drill. Seismic image interpretation images can improve the position of wells and reduce the risk of drilling a “dry hole”. For oil and gas companies, having a better understanding of subsurface structures translates directly to reducing exploration risk. Basically, the higher the accuracy of the company’s view of the geological area, the better its chance of striking oil when it drills. This job is very data- and compute-intensive which needs to process terabytes of data and requires massive and fast computation power including fast networking.  Due to the data/computing intensive nature of seismic imaging, parallel computing is used to process data to reduce the time compilation and completion. Large volumes of seismic acquisition data are processed relentlessly in an attempt to locate, accurately quantify and qualify the hydrocarbon content in reservoirs discovered in the subsurface before recovery operations commence. As acquisition data is mainly unstructured and can easily reach petabyte levels for one potential oil and gas field, seismic processing activity can only be completed within a meaningful timescale by using HPC and appropriate data management strategies.
 
-:::image type="content" alt-text="Network interconnect Compute and Storage - Seismic Interpretation and Modelling" source="../media/network-interconnect.png" lightbox="../media/network-interconnect.png":::
+:::image type="content" alt-text="Network interconnect Compute and Storage - Seismic Interpretation and Modeling" source="../media/network-interconnect.png" lightbox="../media/network-interconnect.png":::
 
 :::image type="content" alt-text="Network Reference Architecture - Seismic Processing" source="../media/network-reference-architecture-seismic-processing.png" lightbox="../media/network-reference-architecture-seismic-processing.png":::
 
-### Use Case and Reference Architecture for Reservoir Simulation/Modelling:
+### Use Case and Reference Architecture for Reservoir Simulation/Modeling:
 
 Use case description:
 
-Reservoir Modelling also places values on physical subsurface characteristics such as water saturation, porosity and permeability, which are important in determining what kind of recovery approach and equipment to deploy, and ultimately where to optimally position wells.
+Reservoir Modeling also places values on physical subsurface characteristics such as water saturation, porosity and permeability, which are important in determining what kind of recovery approach and equipment to deploy, and ultimately where to optimally position wells.
 
 Reservoir Modeling workload is also an area of Reservoir Engineering, that, combining Physics, Mathematics, and Computer Programming to a reservoir model – which allows the analysis and the prediction of the fluid behavior in the reservoir over time. This requires high computation power and typical big compute workload needs including fast networking.
 
 :::image type="content" alt-text="Network Reference Architecture: Reservoir Simulation" source="../media/network-reference-architecture-reservoir-simulation.png" lightbox="../media/network-reference-architecture-reservoir-simulation.png":::
 
-:::image type="content" alt-text="Networ Interconnect Compute and Storage Seismic Analysis" source="../media/network-interconnect-compute-and-storage-seismic-analysis.png" lightbox="../media/network-interconnect-compute-and-storage-seismic-analysis.png":::
+:::image type="content" alt-text="Network Interconnect Compute and Storage Seismic Analysis" source="../media/network-interconnect-compute-and-storage-seismic-analysis.png" lightbox="../media/network-interconnect-compute-and-storage-seismic-analysis.png":::
 
 For more information on ref architecture or cookbooks for relevant HPC ISV applications supporting HPC for Energy use cases, see
 
  - [Azure HPC | HOME (azurehpc-certification.github.io)](https://azurehpc-certification.github.io/)
  - [Microsoft Azure HPC OnDemand Platform | Cloud HPC made easy](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338) (standalone ref arch may not be compliant with ALZ paradigm)
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./starage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+
+

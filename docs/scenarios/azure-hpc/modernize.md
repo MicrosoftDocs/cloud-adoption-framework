@@ -1,9 +1,9 @@
 ---
 title: Modernize for Azure high-performance computing (HPC) adoption
-description: #Describe the scenario's impact on strategy.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: This is HPC scenario's impact on cloud adoption strategy.
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
+ms.date: 10/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,17 +12,17 @@ ms.custom: think-tank
 
 # Modernize your workloads for Azure high-performance computing (HPC)
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/).
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Modernize methodology](../../modernize/index.md).
 
 ## HPC business alignment
 
-Assess your business goals before you commit to modernizing.
-https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/business-alignment/
+Assess your [business goals]([business goals](../../modernize/business-alignment/index.md) before you commit to modernizing.
+
 
 ## HPC modernization strategy
 
-Use the framework modernization roadmap to guide you to the right cloud modernization strategies.
-https://docs.microsoft.com/azure/cloud-adoption-framework/modernize/modernize-strategies/
+Use the framework [modernization](../../modernize/modernize-strategies/index.md) roadmap to guide you to the right cloud modernization strategies.
+
 
 
 ## Next steps
@@ -32,7 +32,7 @@ The following list of articles will take you to guidance found at specific point
 - [Plan for HPC](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Govern HPC](./govern.md)
-- [Strategic impact of HPC](./secure.md)
+- [Secure HPC](./secure.md)
 - [Organize team members for HPC in Azure](./organize.md)
 - [Migrate HPC](./migrate.md)
 - [Innovate with HPC](./innovate.md)

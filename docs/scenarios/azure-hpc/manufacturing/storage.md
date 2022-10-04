@@ -1,5 +1,5 @@
 ---
-title: 'Storage | Microsoft Docs'
+title: 'Manufacturing HPC Storage | Microsoft Docs'
 description: 'Storage access is an important part of planning for HPC workload performance.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Storage
+# Storage for manufacturing HPC
 
 ## Design Considerations
 
@@ -92,3 +92,15 @@ Just as with NFS, you can create a multi-node BeeGFS or Lustre file system. Perf
 
 One of the biggest challenges with the largest workloads is replicating the pure “bare-metal” performance of very large compute clusters working alongside very large Lustre environments (in terms of TB/s throughput, and perhaps in terms of Petabytes of storage). These workloads can now be run in Azure by leveraging the Cray ClusterStor solution. This is a pure bare-metal Lustre deployment placed in the relevant Azure data center. 
 Parallel file systems such as BeeGFS and Lustre provide the highest performance due to their architecture. However, that architecture comes with a high management price and so the use of these technologies.
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)

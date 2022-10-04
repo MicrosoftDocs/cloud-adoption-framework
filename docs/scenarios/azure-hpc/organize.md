@@ -3,7 +3,7 @@ title: Organize team members for Azure high-performance computing (HPC) in Azure
 description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering organization for using Azure High-performance computing (HPC) as part of my IT strategy.
 author: Rajani-Janaki-Ram
 ms.author: erd
-ms.date: 09/19/2022
+ms.date: 09/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -47,7 +47,7 @@ The following list of articles will take you to guidance found at specific point
 - [Plan for HPC](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Govern HPC](./govern.md)
-- [Strategic impact of HPC](./secure.md)
+- [Secure HPC](./secure.md)
 - [Migrate HPC](./migrate.md)
 - [Innovate with HPC](./innovate.md)
 - [Manage HPC](./manage.md)

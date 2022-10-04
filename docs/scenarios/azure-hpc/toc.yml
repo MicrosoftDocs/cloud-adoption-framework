@@ -19,6 +19,10 @@ items:
           href: energy/identity-access-management.md
         - name: Network topology and connectivity
           href: energy/network-topology-connectivity.md
+        - name: Compute
+          href: energy/compute.md
+        - name: Storage
+          href: energy/starage.md
         - name: Resource organization
           href: energy/resource-organization.md
         - name: Security
@@ -39,6 +43,8 @@ items:
           href: finance/identity-access-management.md
         - name: Network topology and connectivity
           href: finance/network-topology-connectivity.md
+        - name: Storage
+          href: finance/storage.md
         - name: Resource organization
           href: finance/resource-organization.md
         - name: Security
@@ -59,6 +65,8 @@ items:
           href: manufacturing/identity-access-management.md
         - name: Network topology and connectivity
           href: manufacturing/network-topology-connectivity.md
+        - name: Storage
+          href: manufacturing/storage.md
         - name: Resource organization
           href: manufacturing/resource-organization.md
         - name: Security
@@ -102,6 +110,15 @@ items:
     items:
     - name: Overview
       href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
+
+    - name: Energy example architecture
+      href: energy/compute.md#hpc-reference-architecture
+    - name: Finance example architecture
+      href: azure-hpc-landing-zone-accelator.md#example-conceptual-finance-reference-architecture
+    - name: Manufacturing example architecture
+      href: azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture
+
+
       maintainContext: true
     - name: 3D video rendering
       href: /azure/architecture/example-scenario/infrastructure/video-rendering
@@ -133,10 +150,21 @@ items:
     - name: Run reservoir simulations
       href: /azure/architecture/example-scenario/infrastructure/reservoir-simulation
       maintainContext: true
+
   - name: Azure product documentation
     items:
     - name: Azure HPC Product documentation
       href: /azure/architecture/topics/high-performance-computing/
+    - name: CycleCloud
+      href: /azure/cyclecloud/overview/
+    - name: Batch
+      href: /azure/batch/
+    - name: HPC Pack
+      href: /powershell/high-performance-computing/overview/
+    - name: HPC VMs (N & H)
+      href: /azure/virtual-machines/workloads/hpc/overview/
+
+
   - name: Build skills on Learn
     items:
     - name: Learning path for running HPC applications

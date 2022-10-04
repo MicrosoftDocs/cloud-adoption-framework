@@ -1,9 +1,9 @@
 ---
 title: Enterprise-scale support for Azure high-performance computing (HPC)
-description: #Describe how enterprise-scale can accelerate adoption of HPC.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: Describe how enterprise-scale can accelerate adoption of HPC.
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
+ms.date: 09/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -47,15 +47,28 @@ These articles provide guidelines for creating your landing zone:
 - [Governance disciplines for HPC - Energy](./energy/security-governance-compliance.md)
 - [Security disciplines for HPC - Energy](./energy/security.md)
 
-## Example conceptual reference architecture
+## Example conceptual energy reference architecture
 
-The following conceptual reference architecture is an example that shows design areas and best practices.
+The following conceptual reference architecture is an example that shows design areas and best practices for energy environments.
 
-TODO: Include RA image here
+:::image type="content" alt-text="Network interconnect Compute and Storage - Seismic Interpretation and Modeling" source="./media/network-interconnect.png" lightbox="./media/network-interconnect.png":::
 
-## Obtain the HPC  landing zone accelerator
+## Example conceptual finance reference architecture
 
-The HPC  landing zone accelerator is available here...
+The following conceptual reference architecture is an example that shows design areas and best practices for finance environments.
+
+:::image type="content" alt-text="hpc finance architecture example" source="./media/hpc-finance-architecture-example.png" lightbox="./media/hpc-finance-architecture-example.png":::
+
+
+## Example conceptual manufacturing reference architecture
+
+The following conceptual reference architecture is an example that shows design areas and best practices for manufacturing environments.
+
+:::image type="content" alt-text="hpc manufacturing architecture example" source="./media/hpc-manufacturing-architecture-example.png" lightbox="./media/HPC-manufacturing-architecture-example.png":::
+
+## Obtain the HPC landing zone accelerator
+
+The HPC landing zone accelerator is available here...
 
 ## Next steps
 
