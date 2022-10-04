@@ -81,7 +81,7 @@ With Azure landing zone architecture, you want to avoid complicated and volatile
 
 *Archetype-aligned* means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services). However, all environments ("dev/test/production"), whether split across separate subscriptions or in a single subscription, are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
 
-The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: *(N apps) x (N+3) = Total management groups*
+The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: *(N apps) x (1 + x) = Total management groups*, where *x* is the number of environments, for instance, "dev/test/production".
 
 So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production", you're left with:
 
