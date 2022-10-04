@@ -194,7 +194,7 @@ Update processes and prepare your team so they know what to do when they find an
   - [Incident investigation](https://www.microsoft.com/security/blog/2019/12/23/ciso-series-lessons-learned-from-the-microsoft-soc-part-3b-a-day-in-the-life/)
   - [Incident remediation](https://www.microsoft.com/security/blog/2020/05/04/lessons-learned-microsoft-soc-part-3c/)
 
-For more information, see the Azure Security Benchmark [incident response process for Azure](/security/benchmark/azure/security-controls-v3-incident-response#ir-1-preparation--update-incident-response-plan-and-handling-process).
+For more information, see the Azure Security Benchmark [incident response process for Azure](/security/benchmark/azure/security-controls-v3-incident-response#ir-1-preparation---update-incident-response-plan-and-handling-process).
 
 ## 5. Process: Establish security posture management
 
@@ -377,7 +377,7 @@ Typically driven by the [security operations](../organize/cloud-security-operati
 
 Enable [threat detection in Microsoft Defender for Cloud](/azure/security-center/azure-defender) for all the resources you're using and have each team integrate these resources into their processes as described above.
 
-For more information, see the Azure Security Benchmark [threat detection for Azure resources](/security/benchmark/azure/security-controls-v3-logging-threat-detection#lt-1-enable-threat-detection-capabilties).
+For more information, see the Azure Security Benchmark [threat detection for Azure resources](/security/benchmark/azure/security-controls-v3-logging-threat-detection#lt-1-enable-threat-detection-capabilities).
 
 ## 9. Architecture: Standardize on a single directory and identity
 
@@ -477,7 +477,7 @@ For non-human accounts such as services or automation, use [managed identities](
 
 For services that don't support managed identities, use Azure AD to create a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) with restricted permissions at the resource level instead. You should configure service principals with certificate credentials and fallback to client secrets. In both cases, [Azure Key Vault](/azure/key-vault/general/overview) can be used with Azure managed identities, so that the runtime environment, such as an Azure function, can retrieve the credential from the key vault.
 
-For more information, see the Azure Security Benchmark [application identities](/security/benchmark/azure/security-controls-v3-identity-management#im-2-manage-application-identities-securely-and-automatically).
+For more information, see the Azure Security Benchmark [application identities](/security/benchmark/azure/security-controls-v3-identity-management#im-3-manage-application-identities-securely-and-automatically).
 
 ## 11. Architecture: Establish a single unified security strategy
 
