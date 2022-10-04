@@ -484,8 +484,6 @@ items:
 
       - name: Align
         items:
-        - name: Brownfield considerations
-          href: ready/landing-zone/brownfield-considerations.md
         - name: Refactor landing zones
           href: ready/landing-zone/refactor.md
         - name: Transition to the Azure landing zone conceptual architecture
@@ -1626,8 +1624,9 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-        - name: Monitoring
-          items:
+
+      - name: Monitoring
+        items:
         - name: Overview
           href: manage/monitor/index.md
         - name: Monitoring cloud models
@@ -1659,7 +1658,7 @@ items:
         - name: Recover from data corruption or accidental deletion
           href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
-  - name: Management considerations
+    - name: Management considerations
       items:
       - name: Overview
         href: manage/considerations/index.md
@@ -1683,10 +1682,10 @@ items:
         href: manage/considerations/platform.md
       - name: Workload operations
         href: manage/considerations/workload.md
-      - name: Advanced management and system design
-        href: manage/design-principles.md
-      - name: Manage antipatterns
-        href: antipatterns/manage-antipatterns.md
+    - name: Advanced management and system design
+      href: manage/design-principles.md
+    - name: Manage antipatterns
+      href: antipatterns/manage-antipatterns.md
 
   - name: Secure
     items:
