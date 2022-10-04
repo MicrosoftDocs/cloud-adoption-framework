@@ -13,35 +13,35 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernization is where you start capitalizing on the cloud. It's all about maximizing value and making the biggest impact with the least amount of effort. The result of modernization is an increase in operational efficiency. You can lower your management burdens and increase performance while minimizing cost. Less work and more productivity is how you rapidly meet and exceed objectives.
+Modernization is when you enhance your workloads and the processes to support those workloads. It's all about maximizing value and adopting cloud technologies that allow you to unlock more benefits of the cloud. The goal of modernization is to make the cloud work for you. Modernization can improve operational efficiency. It can reduce management overhead and optimize costs. Cloud modernization allows your business or organization to be more productive with less. Efficiency at this scale should be a priority.
 
-Below you'll find a brief overview of the modernization process. We've distilled the process into two steps:
+Modernization is not complicated. We recommend modernizing in two phases:
 
-- [Step 1. Business alignment](#step-1-business-alignment)
-- [Step 2. Modernization strategies](#step-2-modernization-strategies)
+- [Phase 1. Business alignment](#step-1-business-alignment)
+- [Phases 2. Modernization strategies](#step-2-modernization-strategies)
+
+Below you'll find an overview of each phase and guidance on where to start your modernization journey. We developed a framework that walks you through the most effective modernization processes.
 
 :::image type="content" source="../_images/modernize/modernize-methodology.png" alt-text="Diagram that shows three business alignment processes (envision, evaluate, and commit) and three modernization strategies (process, application, and database modernization)." border="false":::
 
 *Diagram: Overview of the modernization process*
 
-## Step 1. Business alignment
+## Phase 1. Business alignment
 
-We developed a framework that walks you through the most effective modernization processes. The first step is aligning your modernization to your business goals. Based on these goals, you'll determine:
+Phase 1 of modernization is is aligning your modernization efforts to your business goals. You will identify your business goals and determine:
 
-- When to modernize
 - What to modernize
+- When to modernize
 
-You'll create a modernization roadmap that identifies the workloads you need to modernize and the modernization strategies you need to use.
+As part of this phase, you'll create a modernization roadmap. The roadmap will identify the workloads you need to modernize and the modernization strategies you need to use.
 
 With the modernization roadmap created, you can begin modernizing. You'll adopt new methodologies and new technologies to enhance your processes, applications, and databases.
 
-## Step 2. Modernization strategies
+## Phase 2. Modernization strategies
 
-Modernization is a loaded term. It means different things to different people. So let’s define what we mean by modernization.
+Phase 2 is where you implement essential modernization strategies. This is where change happens.
 
-Modernization is enhancing your workloads and the process to support those workloads. Let's address each aspect:
-
-- **Process modernization** - Modernizing your process means adopting a DevOps methodology. Process modernization must come before you modernize your workloads.
+- **Process modernization** - To modernize your process, we recommend adopting a DevOps methodology. DevOps wil help expedite your modernization efforts. Process modernization is so key to workload modernization that it's a necessary prerequisite to workload modernization.
 
 - **Workload modernization** - Modernizing your workloads means adopting platform-as-a-service solutions (PaaS). This definition is oversimplified, but it applies to most scenarios.
 
