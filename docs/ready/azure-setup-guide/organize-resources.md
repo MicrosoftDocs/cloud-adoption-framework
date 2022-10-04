@@ -105,8 +105,6 @@ A good naming standard helps to identify resources in the Azure portal, on a bil
 
 [Naming rules and restrictions](/azure/azure-resource-manager/management/resource-name-rules) vary by the type of resource. For more information and for recommendations that support cloud adoption by enterprises, see [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md).
 
-The following table shows naming patterns for a few sample Azure resource types:
-
 ::: zone target="docs"
 
 > [!NOTE]
@@ -115,16 +113,10 @@ The following table shows naming patterns for a few sample Azure resource types:
 
 ::: zone-end
 
-| Entity | Scope | Length | Valid characters | Suggested pattern | Example |
-| --- | --- | --- | --- | --- | --- |
-| Resource group | Subscription | 1-90 | Alphanumeric, underscore, parentheses, hyphen, and period except at end | `<service-short-name>-<environment>-rg` | `profx-prod-rg` |
-| Availability set | Resource group | 1-80 | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-as` | `profx-SQL-as` |
-| Tag | Associated entity | 512 (name), 256 (value) | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period | `key` : `value` | `Department` : `Central IT ☺` |
-
-<br/>
+The following table shows restrictions and naming patterns for resource groups, availability sets, and tags.
 
 | | Resource group | Availability set | Tag |
-|-------------------|-----------------|--------------------|-----------------------|
+|----------|----------|----------|----------|
 | **Scope** | Subscription | Resource group | Associated entity |
 | **Length** | 1-90 | 1-80 | 512 (name), 256 (value) |
 | **Valid characters** | Alphanumeric, underscore, parentheses, hyphen, and period except at end | Alphanumeric, underscore, and hyphen | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period |
