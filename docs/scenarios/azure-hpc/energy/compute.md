@@ -101,3 +101,16 @@ For more information on ref architecture or cookbooks for relevant HPC ISV appli
 
  - [Azure HPC | HOME (azurehpc-certification.github.io)](https://azurehpc-certification.github.io/)
  - [Microsoft Azure HPC OnDemand Platform | Cloud HPC made easy](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338) (standalone ref arch may not be compliant with ALZ paradigm)
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+
+- [Identity Access Management](./identity-access-management.md)
+- [Management](./management.md)
+- [Network Topology Connectivity](./network-topology-connectivity.md)
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./starage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
