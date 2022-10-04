@@ -15,7 +15,7 @@ ms.date: 09/23/2022
 It would be important to understand any decisions previously made by the cloud platform team to be aware of existing [security recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security).
 We also recommend that you consider Azure security baseline recommendations provided for various services used in HPC environment including
  - [Azure HPC Cache](/security/benchmark/azure/baselines/hpc-cache-security-baseline)
- - [Azure Cycelcloud](/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8)
+ - [Azure Cycelcloud](/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8&preserve-view=true)
  - [Azure Batch](/azure/batch/security-controls-policy)
 
 ## Next steps
