@@ -18,7 +18,8 @@ However, it could be important to understand any decisions previously made by th
 
 ## Next steps
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-
+- [Compute](./compute.md)
+- [Identity Access Management](./identity-access-management.md)
 - [Network Topology Connectivity](./network-topology-connectivity.md)
 - [Platform Automation DevOps](./platform-automation-devops.md)
 - [Resource Organization](./resource-organization.md)
@@ -26,3 +27,4 @@ The following list of articles will take you to guidance found at specific point
 - [Security](./security.md)
 - [Storage](./starage.md)
 - Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+
