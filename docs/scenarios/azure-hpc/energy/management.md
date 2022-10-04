@@ -1,5 +1,5 @@
 ---
-title: 'Management | Microsoft Docs'
+title: 'Energy Management | Microsoft Docs'
 description: 'Azure landing zones for HPC in Energy do not have any specific considerations or recommendations which would impact management related decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Management
+# Management for Energy HPC
 
 Azure landing zones for HPC in Energy do not have any specific considerations or recommendations which would impact management related decisions.
 
