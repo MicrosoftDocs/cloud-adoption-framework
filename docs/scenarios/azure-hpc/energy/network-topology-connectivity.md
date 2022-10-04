@@ -1,6 +1,6 @@
 ---
-title: 'Network Topology and Connectivity| Microsoft Docs'
-description: 'This guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
+title: 'Energy HPC Network Topology and Connectivity| Microsoft Docs'
+description: 'This HPC energy guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Network Topology and Connectivity
+# Network Topology and Connectivity for Energy HPC
 
 This guidance builds on considerations and recommendations defined in the Azure landing zone article for [network topology and connectivity](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
 
@@ -138,3 +138,13 @@ It's vital to plan for IP addressing in Azure to ensure that:
          - Functions
 
  - MPI environments are dedicated as they have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and are not very amenable to sharing with other workloads. MPI applications leverage the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect.
+
+## Next steps
+The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+
+- [Platform Automation DevOps](./platform-automation-devops.md)
+- [Resource Organization](./resource-organization.md)
+- [Security Governance Compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./starage.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)![image](https://user-images.githubusercontent.com/99199490/193832286-29db5bf6-70ec-42f3-b766-744da00bf9d3.png)
