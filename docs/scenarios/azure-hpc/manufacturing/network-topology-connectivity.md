@@ -1,7 +1,6 @@
 ---
 title: 'Manufacturing HPC Network topology and connectivity | Microsoft Docs'
 description: 'This guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
-author: ericd-mst-github
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.service: cloud-adoption-framework
@@ -24,7 +23,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
  - Proper planning for subnet configuration happens in advance.
  - Sufficent excess addressing is considered for future expansion or additional services
 
-## HPC Design considerations:
+## HPC manufacturing design considerations:
 
 1. Consider creating separate subnets to assign IP addresses across functional components of the environment. For example, a dedicated HPC VNet could include the following subnets:
     1. Compute
@@ -40,7 +39,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
 
 Domain Name System (DNS) is a critical design topic in the overall Azure landing zone architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
 
-## HPC Design considerations:
+## HPC networking design considerations:
 
 The following recommendations are for when a virtual machine's DNS or virtual name doesn't change during migration.
 
