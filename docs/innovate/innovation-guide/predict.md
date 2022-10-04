@@ -50,7 +50,6 @@ A data scientist can use Azure Machine Learning to train and build a model by us
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces]" submitText="Go to Azure Machine Learning resources" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -92,7 +91,6 @@ To get started with a Cognitive Services API:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts]" submitText="Go to Cognitive Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -108,7 +106,7 @@ Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com
 
 Interact more naturally with your customers and improve customer engagement through conversational experiences powered by Bot Framework and Azure Bot Service. In addition, use Cognitive Services APIs like Language Understanding (LUIS), QnA Maker, and Speech service. These help your customers with common tasks, leaving your call center agents time to focus on more nuanced, higher value cases.
 
-For more information on how to build bots, see [Azure Bot Service](/learn/paths/create-conversational-ai-solutions/).
+For more information on how to build bots, see [Azure Bot Service](/training/paths/create-conversational-ai-solutions/).
 
 #### Action
 
@@ -124,7 +122,6 @@ To get started with Azure Bot Service:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FBotServices]" submitText="Go to Azure Bot Service" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -158,7 +155,6 @@ To get started:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FSearchServices]" submitText="Go to Azure Cognitive Search" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

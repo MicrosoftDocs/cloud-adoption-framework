@@ -97,7 +97,7 @@ Spokes can also be interconnected to a spoke that acts as a hub. This approach c
 
 > [!NOTE]
 > You can use [Azure Virtual Network Manager (AVNM)](/azure/virtual-network-manager/overview) to create new or onboard existing
-hub and spoke virtual network topologies for central management of connectivity    and security controls.
+hub and spoke virtual network topologies for central management of connectivity and security controls.
 >
 > A connectivity configuration enables you to create a mesh or a hub-and-spoke network topology including direct connectivity between spoke virtual networks.
 >

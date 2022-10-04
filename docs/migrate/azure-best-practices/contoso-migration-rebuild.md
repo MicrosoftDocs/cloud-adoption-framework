@@ -695,8 +695,8 @@ In this article, Contoso rebuilds the SmartHotel360 application in Azure. The on
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. With Microsoft Learn, you can earn points, rise through levels, and achieve more.
 
-Here are two examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 application in Azure.
+Here are two examples of tailored learning paths that align with the Contoso SmartHotel360 application in Azure.
 
-- [Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
+- [Deploy a website to Azure with Azure App Service](/training/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- [Create computer vision solutions with Azure Cognitive Services](/learn/paths/create-computer-vision-solutions-azure-cognitive-services/): Azure Cognitive Services offers prebuilt functionality to enable Computer Vision functionality in your applications. Learn how to use the vision APIs in Azure Cognitive Services to detect faces, tag and classify images, and identify objects.
+- [Create computer vision solutions with Azure Cognitive Services](/training/paths/create-computer-vision-solutions-azure-cognitive-services/): Azure Cognitive Services offers prebuilt functionality to enable Computer Vision functionality in your applications. Learn how to use the vision APIs in Azure Cognitive Services to detect faces, tag and classify images, and identify objects.

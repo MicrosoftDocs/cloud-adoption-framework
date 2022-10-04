@@ -48,7 +48,7 @@ Governance provides mechanisms and processes for maintaining control over platfo
 
 The design area review explores the considerations and recommendations that help you make informed decisions as you plan your landing zone.
 
-The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](../../../govern/index.md) in the Cloud Adoption Framework gives guidance for governance processes and tools.
+The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](../../../govern/index.md) of the Cloud Adoption Framework gives guidance for governance processes and tools.
 
 The Govern methodology consists of five disciplines:
 

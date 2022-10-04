@@ -26,15 +26,15 @@ Resource tags allow you to add metadata to a resource to quickly locate it and a
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled servers:
 
-[ ![A diagram depicting resource tagging for Azure Arc-enabled servers.](./media/arc-enabled-servers-resource-tagging.png)](./media/arc-enabled-servers-resource-tagging.png#lightbox)
+[![A diagram depicting resource tagging for Azure Arc-enabled servers.](./media/arc-enabled-servers-resource-tagging.png)](./media/arc-enabled-servers-resource-tagging.png#lightbox)
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey, review the following articles:
+For more guidance for your hybrid cloud adoption journey, review the following resources:
 
-- Understand how to manage [hybrid and multicloud](../manage.md) environments
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
-- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
-- Learn how to apply [resource tags](../../../manage/hybrid/server/best-practices/arc-inventory-tagging.md) for Azure Arc-enabled servers
-- To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
+- Understand how to manage [hybrid and multicloud](../manage.md) environments.
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
+- Learn how to apply [resource tags](../../../manage/hybrid/server/best-practices/arc-inventory-tagging.md) for Azure Arc-enabled servers.
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

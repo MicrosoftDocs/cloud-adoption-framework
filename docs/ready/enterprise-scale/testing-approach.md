@@ -105,7 +105,7 @@ Considerations to take into account when you use a single Azure AD tenant are:
   - In a single Azure AD tenant, you can use the different Azure AD groups for both production environments and canary enterprise-scale environments, with the same users, assigned to their relevant management group hierarchy within the same Azure AD tenant.
 - Increased or duplicated Azure AD licensing costs because of multiple identities across different Azure AD tenants.
   - This point is especially relevant to customers who use Azure AD Premium features.
-- RBAC changes will be more complex in both canary environments and  production environments, as it's likely that the users and groups aren't identical across both Azure AD tenants.
+- RBAC changes will be more complex in both canary environments and production environments, as it's likely that the users and groups aren't identical across both Azure AD tenants.
   - Furthermore, the users and groups IDs won't be the same across Azure AD tenants because of them being globally unique.
 - Reduces complexity and management overhead caused by managing multiple Azure AD Tenants.
   - Privileged users that must maintain access and sign in to separate tenants to perform testing might make changes to the production environment accidentally, instead of making changes to the canary environment and vice versa.

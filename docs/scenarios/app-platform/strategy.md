@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Strategic impact of modern application platform adoption
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
 This article will help expose a number of considerations regarding containers that will have an impact on your strategy.
 

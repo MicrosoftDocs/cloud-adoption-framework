@@ -50,13 +50,13 @@ For full documentation, visit the [Delta Lake Documentation Page](https://docs.d
 
 Using lots of small files often results in suboptimal performance and higher costs from increased read/list operations. Azure Data Lake Storage Gen2 is optimized for larger files that allow your analytics jobs to run faster and with lower cost.
 
-Delta Lake includes many features that can help you [Optimize performance with file management](/azure/databricks/delta/optimizations/file-mgmt).
+Delta Lake includes many features that can help you [Optimize performance with file management](/azure/databricks/delta/file-mgmt).
 
 Examples include:
 
 - The transaction log minimizes expensive LIST operations.
 - Z-Ordering (multi-dimensional clustering) enables optimized predicate pushdown for your query filters.
-- Native caching and query optimizations reduce the amount of storage scanning you require. For more information, see [Optimize performance with caching](/azure/databricks/delta/optimizations/delta-cache).
+- Native caching and query optimizations reduce the amount of storage scanning you require. For more information, see [Optimize performance with caching](/azure/databricks/optimizations/disk-cache).
 - OPTIMIZE coalesces small files into larger ones.
 
 Make these optimizations part of your data loading process to maintain data freshness and performance.

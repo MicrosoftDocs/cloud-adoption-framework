@@ -61,7 +61,6 @@ To create an IoT Hub instance:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FIotHubs]" submitText="Go to IoT Hub" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -78,7 +77,6 @@ To create an Azure IoT Hub Device Provisioning Service:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FProvisioningServices]" submitText="Go to Device Provisioning Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -113,7 +111,6 @@ To create Azure Digital Twins:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.IoTSpaces%2FGraph]" submitText="Go to Digital Twins" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -148,7 +145,6 @@ To use location intelligence:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2FAccounts]" submitText="Go to Azure Maps Account" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -185,7 +181,6 @@ To use Azure Spatial Anchors:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FSpatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -217,7 +212,6 @@ To use Remote Rendering:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FBatchAccounts]" submitText="Go to Azure Batch" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

@@ -54,10 +54,10 @@ In software defined cloud infrastructure, teams use various tools and techniques
 ## Read more
 
 - [Adopt policy-driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
-- [Bicep fundamentals](/learn/paths/fundamentals-bicep)
-- [Intermediate Bicep](/learn/paths/intermediate-bicep)
-- [Advanced Bicep](/learn/paths/advanced-bicep)
-- [Use Bicep and GitHub Actions to deploy Azure resources](/learn/paths/bicep-github-actions)
-- [Use Bicep and Azure Pipelines to deploy Azure resources](/learn/paths/bicep-azure-pipelines)
-- [Control and govern your Azure environment by deploying your infrastructure as code](/learn/modules/control-govern-azure-environment-deploying-infrastructure-code/)
+- [Bicep fundamentals](/training/paths/fundamentals-bicep)
+- [Intermediate Bicep](/training/paths/intermediate-bicep)
+- [Advanced Bicep](/training/paths/advanced-bicep)
+- [Use Bicep and GitHub Actions to deploy Azure resources](/training/paths/bicep-github-actions)
+- [Use Bicep and Azure Pipelines to deploy Azure resources](/training/paths/bicep-azure-pipelines)
+- [Control and govern your Azure environment by deploying your infrastructure as code](/training/modules/control-govern-azure-environment-deploying-infrastructure-code/)
 -
