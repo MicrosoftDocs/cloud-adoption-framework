@@ -1,6 +1,6 @@
 ---
 title: 'Azure Billing and Azure Active Directory Tenants| Microsoft Docs'
-description: 'Azure landing zones for HPC do not have any specific considerations or recommendations which would impact billing offer decisions, enterprise enrollment or Active Directory tenant decisions.'
+description: 'Azure landing zones for energy HPC environments do not have any specific considerations or recommendations which would impact billing offer decisions, enterprise enrollment or Active Directory tenant decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
