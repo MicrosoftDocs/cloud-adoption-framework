@@ -34,11 +34,11 @@ How can the cloud help your team be more productive? It's critical to consider h
 
 ## Sustainability
 
-Migrating to the cloud can [reduce your carbon footprint](https://azure.microsoft.com/en-us/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/) and your organization immediately benefits from a sustainability perspective. Data centers that are hosting cloud services, such as Azure, are done at such scale that you benefit from overall sustainability with the least amount of environmental impact.
+Migrating to the cloud can [reduce your carbon footprint](https://azure.microsoft.com/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/) and your organization immediately benefits from a sustainability perspective. Data centers hosting cloud services, such as Azure, are done at such a scale that you benefit from overall sustainability with the most negligible environmental impact.
 
-Cost can be used as a carbon proxy. The ability to track your carbon footprint across your cloud environments can sometimes be a challenge. You may not get much in the way of visibility of the underlying infrastructure you deploy and, in fact, you may have third parties controlling some of your deployments. At some level, the embodied carbon and electricity costs of all your compute are factored into the cost of all your services.
+Cost can be used as a carbon proxy. The ability to track your carbon footprint across your cloud environments can sometimes be a challenge. You don't always get much visibility of the underlying infrastructure you deploy, and you can have third parties controlling some of your deployments. At some level, all your compute's embodied carbon and electricity costs are factored into the cost of all your services.
 
-Given this, optimizing the OPEX spend can be a way of optimizing for carbon.
+Given this, optimizing the OPEX spend can be a way of optimizing carbon efficiency.
 
 ## Next steps
 
