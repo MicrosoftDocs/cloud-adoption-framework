@@ -64,6 +64,16 @@ Common considerations for building a sustainability strategy could include:
 - Increased Operational efficiencies
 - Improving societal outcomes by co-developing with partners
 
+### Regulatory Compliance
+
+Customers are responsible for ensuring they're up to date with regulatory compliance regulations across their industry. Additionally, consider how government regulations or policies for your region might influence your organization's motivations for migrating to the cloud.
+
+A few governmental sustainability goals include:
+
+- The UK Government targets bringing all greenhouse gas emissions to net zero by 2050.
+- The US Government target to achieve net zero by 2050.
+- A European Climate Law with a 55% reduction target in greenhouse emissions by 2030 and the European Union target to achieve net zero by 2050.
+
 ## Understanding your current emissions
 
 As defined by the Greenhouse Gas (GHG) Protocol, the operational boundaries of a carbon emissions inventory are broken down into three "scopes" (both direct and indirect) of emissions data, each further broken down into distinct emission sources:
@@ -99,7 +109,7 @@ Microsoft provides solutions for [migrating workloads to the cloud](/industry/su
 
 Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/en-gb/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/en-gb/cloud-adoption-framework/) for Azure and [Well-Architected Framework](https://docs.microsoft.com/en-gb/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
-Migrate and modernise your apps, data and infrastructure using proven cloud migration tools and patterns.
+Migrate and modernize your apps, data and infrastructure using proven cloud migration tools and patterns.
 
 ### Emissions savings estimator for Microsoft Cloud
 
