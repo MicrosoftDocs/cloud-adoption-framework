@@ -26,10 +26,11 @@ Microsoft has been leading in many of these areas. The company has been operatin
 
 [Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
-### Emerging Software Design Principle
+## Emerging Software Design Principles
 
-More opportunities have arisen recently to design software that is more sustainable. [Green Software Development](https://nam06.safelinks.protection.outlook.com/GetUrlReputation) is an emerging discipline with principles, philosophies and competencies to define, develop and run sustainable software applications. The sooner this discipline is adopted into your sustainability journey, the better, as it will help to reduce the carbon emissions consumed by applications. 
- 
+More opportunities have arisen recently to design software that is more sustainable. [Green Software](https://learn.greensoftware.foundation/practitioner/introduction) is an emerging discipline with principles, patterns, philosophies, practices, and competencies to define, develop and run sustainable software applications. The sooner this discipline is adopted into your sustainability journey, the better, as it will help to reduce the carbon emissions consumed by applications.
+
+Read more about building [Sustainable workloads on Azure](/azure/architecture/framework/sustainability/sustainability-get-started) in the Azure Well-Architected Framework guidance.
 
 ## The Microsoft sustainability journey
 
@@ -82,7 +83,7 @@ As defined by the Greenhouse Gas (GHG) Protocol, the operational boundaries of a
 - **Scope 2:** Emissions that your organization incurs indirectly through the purchase of electricity, heat, or steam.
 - **Scope 3:** Emissions that your organization incurs indirectly beyond Scope 2 emissions (for example, emissions related to your supply chain, waste disposal, business travel, and employee commuting).
 
-You'll need a way to understand and track those scopes. 
+You'll need a way to understand and track those scopes.
 
 - Read Microsoft's additional information about [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) learn about and account for your organization's emissions.
 - Read about [measuring and tracking carbon impact in the Azure Well-Architected Framework](/azure/architecture/framework/sustainability/sustainability-operational-procedures#measure-and-track-carbon-impact).
@@ -107,7 +108,7 @@ Many businesses understand that [migrating workloads to the cloud](/industry/sus
 
 Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
 
-Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/en-gb/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/en-gb/cloud-adoption-framework/) for Azure and [Well-Architected Framework](https://docs.microsoft.com/en-gb/azure/architecture/framework/) at every stage of your cloud adoption journey.
+Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
 Migrate and modernize your apps, data and infrastructure using proven cloud migration tools and patterns.
 
@@ -133,14 +134,13 @@ An intentional approach can help organizations to navigate their sustainability 
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
-**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/en-us/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
+**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
 
 **Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 
 **Step 5:**  Assess ways to incorporate [Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) principles into your company's sustainability goals. How can you work towards designing sustainable software applications that can be  reused and has extended  longevity of use and minimal computational and memory resource requirements.
 
 Learn more about how your organization can [measure](./okr.md) and [reach](./reach-outcomes.md) sustainability outcomes with the cloud.
-
 
 > [!div class="nextstepaction"]
 > [Reach outcomes](./reach-outcomes.md)
