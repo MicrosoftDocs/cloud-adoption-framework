@@ -186,6 +186,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
+| Maps account | `Microsoft.Maps/accounts` | `map` |
 
 ## Integration
 
