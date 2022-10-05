@@ -155,7 +155,7 @@ The deployment and code artifacts include the following services:
 
 - [Key Vault](/azure/key-vault/general)
 - [Data Factory](/azure/data-factory/) (select between Data Factory and Synapse)
-- [Cosmos DB](/azure/cosmos-db/introduction) (optional)
+- [Azure Cosmos DB](/azure/cosmos-db/introduction) (optional)
 - [Synapse Workspace](/azure/synapse-analytics/) (select between Data Factory and Synapse)
 - [MySQL Database](/azure/mysql/overview) (optional)
 - [Azure SQL Database](/azure/azure-sql/database/) (optional)
@@ -178,7 +178,7 @@ The deployment and code artifacts include the following services:
 - [Event Hubs](/azure/event-hubs/)
 - [IoT Hub](/azure/iot-hub/about-iot-hub)
 - [Stream Analytics](/azure/stream-analytics/stream-analytics-introduction) (optional)
-- [Cosmos DB](/azure/cosmos-db/introduction) (optional)
+- [Azure Cosmos DB](/azure/cosmos-db/introduction) (optional)
 - [Synapse Workspace](/azure/synapse-analytics/)
 - [Azure SQL Database](/azure/azure-sql/database/) (optional)
 - [SQL Pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (optional)
