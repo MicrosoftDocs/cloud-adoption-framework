@@ -104,13 +104,13 @@ The [Microsoft Sustainability Manager](/industry/sustainability/sustainability-m
 
 ### Cloud migration
 
-Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption, costs and reduce physical footprints of their datacenters. In fact, transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options (depending on specific server usage, renewable energy purchases made, and other factors).
+Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption and costs and reduce the physical footprints of their datacenters. Transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options, depending on specific server usage, renewable energy purchases, and other factors.
 
-Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
+Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions-related usage of Microsoft Cloud services and an estimator to give you some idea of how much you could save by migrating to Azure.
 
 Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
-Migrate and modernize your apps, data and infrastructure using proven cloud migration tools and patterns.
+Migrate and modernize your apps, data, and infrastructure using proven cloud migration tools and patterns.
 
 ### Emissions savings estimator for Microsoft Cloud
 
