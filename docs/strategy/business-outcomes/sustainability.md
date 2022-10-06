@@ -60,24 +60,21 @@ Common considerations for building a sustainability strategy could include:
 - Improving societal outcomes by co-developing with partners
  
 ## Sustainability for your company's brand
-Sustainability for your company's brand
 
 A sustainable business model can improve reputation, build trust and attract new talent/partners/investors.
-You can also see the benefits of sustainability as part of your business signature, combining your sustainability exercises with the capability to further communicate the reasoning behind your green journey.
+You can also see the benefits of sustainability as part of your business signature, combining your sustainability exercises with the capability to communicate the reasoning behind your green journey further.
 
-As a player in the dynamic business space, sustainability is critical to ensure long term success. Transforming the company towards a green model can also enable the intrinsic motivation of people and attract new talent, with an active interest in sustainability on the long run.
+Sustainability is critical to ensure long-term success as a player in the dynamic business space. Transforming the company towards a green model can also enable people's intrinsic motivation and attract new talent with an active interest in sustainability in the long run.
 
-Sustainability is an approach beyond a marketing play, rather with a conscious business purpose, that can be part of a customer’s brand identity - link to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations#innovation (part related to "Improve customer experience and engagement.")
+Sustainability is an approach beyond a marketing play, with a conscious business purpose that can be part of a customer's brand identity. See [Improve customer experience and engagement](/azure/cloud-adoption-framework/strategy/motivations#innovation) in the Cloud Adoption Framework.
 
-Add sustainability and environmental responsibility as part of the mission statement, therefore ensuring that brand values are aligned with the business activities and practices
+Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices. 
 
-Evaluate the end2end supply chain to ensure also Scope 3 is being measured – link to Scope 3 emissions | Microsoft Learn
+Additionally, you should evaluate the end-to-end supply chain to ensure [Scope 3 is also measured](/industry/sustainability/calculate-scope3).
 
-Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports – link to sustainability report: 2021 Environmental Sustainability Report | Microsoft CSR
+Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report).
 
-Consistent communication of promoting your green efforts, thus ensuring maintaining a consistent brand integrity.
-
-
+Be consistent in the communication of promoting your green efforts, thus ensuring maintaining consistent brand integrity.
 
 ## Understanding your current emissions
 
