@@ -66,11 +66,6 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/governance/resource-consistency/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency/overview",
-         "redirect_document_id": true
-      },
-      {
          "source_path": "docs/governance/security-baseline/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/security-baseline/index",
          "redirect_document_id": false

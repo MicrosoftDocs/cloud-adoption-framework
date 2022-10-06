@@ -10,4 +10,4 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-# Management group structure
+# Business constraints

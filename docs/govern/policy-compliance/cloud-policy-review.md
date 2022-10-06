@@ -34,7 +34,7 @@ Cloud policy reviews align existing IT governance and IT security policies with 
 - [Cost Management discipline](../cost-management/index.md)
 - [Security Baseline discipline](../security-baseline/index.md)
 - [Identity Baseline discipline](../identity-baseline/index.md)
-- [Resource Consistency discipline](../resource-consistency/index.md)
+- [Resource Consistency discipline](../resource-consistency/overview.md)
 - [Deployment Acceleration discipline](../deployment-acceleration/index.md).
 
 For these disciplines, the review process follows these steps:
