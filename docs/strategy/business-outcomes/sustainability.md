@@ -27,10 +27,11 @@ Microsoft has been leading in many of these areas. The company has been operatin
 
 [Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
-### Emerging Software Design Principle
+## Emerging Software Design Principles
 
-More opportunities have arisen recently to design software that is more sustainable. [Green Software Development](https://nam06.safelinks.protection.outlook.com/GetUrlReputation) is an emerging discipline with principles, philosophies and competencies to define, develop and run sustainable software applications. The sooner this discipline is adopted into your sustainability journey, the better, as it will help to reduce the carbon emissions consumed by applications. 
- 
+More opportunities have arisen recently to design software that is more sustainable. [Green Software](https://learn.greensoftware.foundation/practitioner/introduction) is an emerging discipline with principles, patterns, philosophies, practices, and competencies to define, develop and run sustainable software applications. The sooner this discipline is adopted into your sustainability journey, the better, as it will help to reduce the carbon emissions consumed by applications.
+
+Read more about building [Sustainable workloads on Azure](/azure/architecture/framework/sustainability/sustainability-get-started) in the Azure Well-Architected Framework guidance.
 
 ## The Microsoft sustainability journey
 
@@ -64,25 +65,25 @@ Common considerations for building a sustainability strategy could include:
 - Improving emissions recording
 - Increased Operational efficiencies
 - Improving societal outcomes by co-developing with partners
- 
+
 ## Sustainability for your company's brand
 
 A sustainable business model can improve reputation, build trust and attract new talent/partners/investors.
 You can also see the benefits of sustainability as part of your business signature, combining your sustainability exercises with the capability to communicate the reasoning behind your green journey further.
 
-Sustainability is critical to ensure long-term success as a player in the dynamic business space. Transforming the company towards a green model can also enable people's intrinsic motivation and attract new talent with an active interest in sustainability in the long run.
+Sustainability is critical to ensure long-term success as a player in the dynamic business space. Transforming the company towards a green model can also enable people's intrinsic motivation and attract new talent with an active interest in sustainability in the end.
 
 Sustainability is an approach beyond a marketing play, with a conscious business purpose that can be part of a customer's brand identity. See [Improve customer experience and engagement](/azure/cloud-adoption-framework/strategy/motivations#innovation) in the Cloud Adoption Framework.
 
-Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices. 
+Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices.
 
 Additionally, you should evaluate the end-to-end supply chain to ensure [Scope 3 is also measured](/industry/sustainability/calculate-scope3).
 
-Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report).
+Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/corporate-responsibility/sustainability/report).
 
 Be consistent in the communication of promoting your green efforts, thus ensuring maintaining consistent brand integrity.
 
-### Regulatory Compliance
+## Regulatory Compliance
 
 Customers are responsible for ensuring they're up to date with regulatory compliance regulations across their industry. Additionally, consider how government regulations or policies for your region might influence your organization's motivations for migrating to the cloud.
 
@@ -100,7 +101,7 @@ As defined by the Greenhouse Gas (GHG) Protocol, the operational boundaries of a
 - **Scope 2:** Emissions that your organization incurs indirectly through the purchase of electricity, heat, or steam.
 - **Scope 3:** Emissions that your organization incurs indirectly beyond Scope 2 emissions (for example, emissions related to your supply chain, waste disposal, business travel, and employee commuting).
 
-You'll need a way to understand and track those scopes. 
+You'll need a way to understand and track those scopes.
 
 - Read Microsoft's additional information about [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) learn about and account for your organization's emissions.
 - Read about [measuring and tracking carbon impact in the Azure Well-Architected Framework](/azure/architecture/framework/sustainability/sustainability-operational-procedures#measure-and-track-carbon-impact).
@@ -121,13 +122,13 @@ The [Microsoft Sustainability Manager](/industry/sustainability/sustainability-m
 
 ### Cloud migration
 
-Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption, costs and reduce physical footprints of their datacenters. In fact, transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options (depending on specific server usage, renewable energy purchases made, and other factors).
+Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption and costs and reduce the physical footprints of their datacenters. Transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options, depending on specific server usage, renewable energy purchases, and other factors.
 
-Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
+Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions-related usage of Microsoft Cloud services and an estimator to give you some idea of how much you could save by migrating to Azure.
 
-Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
+Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
-Migrate and modernize your apps, data and infrastructure using proven cloud migration tools and patterns.
+Migrate and modernize your apps, data, and infrastructure using proven cloud migration tools and patterns.
 
 ### Emissions savings estimator for Microsoft Cloud
 
@@ -155,10 +156,9 @@ An intentional approach can help organizations to navigate their sustainability 
 
 **Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 
-**Step 5:**  Assess ways to incorporate [Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) principles into your company's sustainability goals. How can you work towards designing sustainable software applications that can be  reused and has extended  longevity of use and minimal computational and memory resource requirements.
+**Step 5:**  Assess ways to incorporate [Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) principles into your company's sustainability goals. How can you work towards designing sustainable software applications that can be  reused and has extended  longevity of use and minimal computational and memory resource requirements?
 
 Learn more about how your organization can [measure](./okr.md) and [reach](./reach-outcomes.md) sustainability outcomes with the cloud.
-
 
 > [!div class="nextstepaction"]
 > [Reach outcomes](./reach-outcomes.md)
