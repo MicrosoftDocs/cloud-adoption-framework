@@ -3,7 +3,8 @@ title: Sustainability outcomes and benefits for business
 description: Learn how the Cloud Adoption Framework and cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 author: mpvenables
 ms.author: brblanch
-ms.date: 03/02/2021
+ms.reviewer: tozimmergren
+ms.date: 10/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -65,7 +66,24 @@ Common considerations for building a sustainability strategy could include:
 - Increased Operational efficiencies
 - Improving societal outcomes by co-developing with partners
 
-### Regulatory Compliance
+## Sustainability for your company's brand
+
+A sustainable business model can improve reputation, build trust and attract new talent/partners/investors.
+You can also see the benefits of sustainability as part of your business signature, combining your sustainability exercises with the capability to communicate the reasoning behind your green journey further.
+
+Sustainability is critical to ensure long-term success as a player in the dynamic business space. Transforming the company towards a green model can also enable people's intrinsic motivation and attract new talent with an active interest in sustainability in the end.
+
+Sustainability is an approach beyond a marketing play, with a conscious business purpose that can be part of a customer's brand identity. See [Improve customer experience and engagement](/azure/cloud-adoption-framework/strategy/motivations#innovation) in the Cloud Adoption Framework.
+
+Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices.
+
+Additionally, you should evaluate the end-to-end supply chain to ensure [Scope 3 is also measured](/industry/sustainability/calculate-scope3).
+
+Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/corporate-responsibility/sustainability/report).
+
+Be consistent in the communication of promoting your green efforts, thus ensuring maintaining consistent brand integrity.
+
+## Regulatory Compliance
 
 Customers are responsible for ensuring they're up to date with regulatory compliance regulations across their industry. Additionally, consider how government regulations or policies for your region might influence your organization's motivations for migrating to the cloud.
 
@@ -138,7 +156,7 @@ An intentional approach can help organizations to navigate their sustainability 
 
 **Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 
-**Step 5:**  Assess ways to incorporate [Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) principles into your company's sustainability goals. How can you work towards designing sustainable software applications that can be  reused and has extended  longevity of use and minimal computational and memory resource requirements.
+**Step 5:**  Assess ways to incorporate [Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) principles into your company's sustainability goals. How can you work towards designing sustainable software applications that can be  reused and has extended  longevity of use and minimal computational and memory resource requirements?
 
 Learn more about how your organization can [measure](./okr.md) and [reach](./reach-outcomes.md) sustainability outcomes with the cloud.
 
