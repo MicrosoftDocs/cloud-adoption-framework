@@ -3,7 +3,8 @@ title: Sustainability outcomes and benefits for business
 description: Learn how the Cloud Adoption Framework and cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 author: mpvenables
 ms.author: brblanch
-ms.date: 03/02/2021
+ms.reviewer: tozimmergren
+ms.date: 10/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -64,6 +65,23 @@ Common considerations for building a sustainability strategy could include:
 - Improving emissions recording
 - Increased Operational efficiencies
 - Improving societal outcomes by co-developing with partners
+ 
+## Sustainability for your company's brand
+
+A sustainable business model can improve reputation, build trust and attract new talent/partners/investors.
+You can also see the benefits of sustainability as part of your business signature, combining your sustainability exercises with the capability to communicate the reasoning behind your green journey further.
+
+Sustainability is critical to ensure long-term success as a player in the dynamic business space. Transforming the company towards a green model can also enable people's intrinsic motivation and attract new talent with an active interest in sustainability in the long run.
+
+Sustainability is an approach beyond a marketing play, with a conscious business purpose that can be part of a customer's brand identity. See [Improve customer experience and engagement](/azure/cloud-adoption-framework/strategy/motivations#innovation) in the Cloud Adoption Framework.
+
+Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices. 
+
+Additionally, you should evaluate the end-to-end supply chain to ensure [Scope 3 is also measured](/industry/sustainability/calculate-scope3).
+
+Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/en-us/corporate-responsibility/sustainability/report).
+
+Be consistent in the communication of promoting your green efforts, thus ensuring maintaining consistent brand integrity.
 
 ### Regulatory Compliance
 

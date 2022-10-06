@@ -39,6 +39,29 @@ Capacity optimization, where you only for the resources you utilize over time, i
 
 With a shift to the cloud, it's important to think differently about how you'll consume and manage your cloud resources. As you build your business case, it's critical to understand the key principles of cloud economics. When you plan short-term and long-term cloud solutions and align them to business outcomes, you can achieve more with every dollar you invest.
 
+## Migration strategy - How do we select the first project to migrate based on potential sustainability impact? 
+Building a sustainable IT is tightly connected to moving workloads from on-premises to the cloud.
+
+Moving the first workload is always aligned with the business goals, depending on how the migration aligns with an array of factors that lead to this decision: link to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations#motivations.
+
+Although sustainability is a key concept, in reality, it might be idealistic to believe it will be the main decision factor for a cloud migration.
+
+However, it is a major added benefit and part of the continuous environment optimization efforts that align with the green strategy of a business.
+
+Projected business outcomes can be synchronized with the sustainability benefits brought by the migration – link to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/#sustainability-goals.
+
+Resource intensive workloads can be discovered using Azure Migrate- https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview.
+
+Note: maybe something could be added as a step/question part of this assessment: https://learn.microsoft.com/en-us/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment&session=local
+
+This way a customer can analyze the diversity of their workloads and the potential Azure destination mapping. Depending on the results and underlying complexity, one can define migration waves. Their carbon intensity can be assessed using the Emissions savings estimator https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html, that can support comparing the existing footprint of a workload compared to the one in Azure, based on https://www.microsoft.com/en-us/download/confirmation.aspx?id=56950.
+
+Identifying the first workload targeted for migration from sustainability standpoint can be performed using the 80:20 rule – 80% of the emissions that derive from 20% of the workload.
+
+This is a generic suggestion, as a customer needs to perform own assessment based on the unique needs of its landscape and desired business outcomes.
+
+
+
 ### Align your partner strategy
 
 The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In practice, you can't assume that a self-service approach will be sufficient for all adoption activities.
