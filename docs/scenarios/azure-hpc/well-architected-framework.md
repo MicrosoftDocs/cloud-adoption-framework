@@ -30,7 +30,21 @@ On top of these environmental controls, the workload team should consider:
 
 ## Security
 
-Describe how you will protect applications and data from threats.
+### Operating System Images: 
+Azure marketplace provides Linux based HPC images to use in the cluster. These images come packed with popular InfiniBand-based MPI libraries, Mellanox OFED, Preconfigured IP over InfiniBand, Communication Runtimes, Intel/AMD Optimized libraries, Azure HPC diagnostic tools, etc. Users can start with these images and then apply their organization's security hardening policies to strengthen software images against vulnerabilities and cyber threats. Upon hardening the new image can be saved in Azure's Image Gallery to be utilised to create the Virtual Machines within Azure's HPC Cluster orchestrator service, Azure CycleCloud and Azure HPC Service, Azure Batch.
+
+### Landing Zone: 
+Dedicate a specific landing zone for HPC and/or HPC application. 
+
+### User access
+Define clear lines of responsibility and separation of duties for each function. Restrict access based on a need-to-know basis and least privilege security principles.
+Assign permissions to users, groups, and applications at a certain scope through Azure RBAC. Use built-in roles when possible.
+Prevent deletion or modification of a resource, resource group, or subscription through management locks.
+Use Managed Identities to access resources in Azure.
+Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
+Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact accounts.
+Preferably use passwordless methods or opt for modern password methods.
+Block legacy protocols and authentication methods.
 
 ## Cost optimization
 
@@ -55,6 +69,9 @@ Azure CycleCloud allows you to set budgets per cluster and can send notification
 ## Operational excellence
 
 Outline the operations processes that keep a system running in production.
+
+### Infrastructure as a Code
+
 
 ## Performance Efficiency
 
