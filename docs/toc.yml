@@ -45,6 +45,8 @@ items:
           href: get-started/what-is-azure.md
         - name: Azure fundamental concepts
           href: ready/considerations/fundamental-concepts.md
+        - name: How does Azure Resource Manager work?
+          href: get-started/how-azure-resource-manager-works.md        
         - name: Portfolio hierarchy
           href: resources/fundamental-concepts/hosting-hierarchy.md
         - name: Azure hierarchy support
@@ -1529,33 +1531,21 @@ items:
       - name: Resource consistency
         items:
         - name: Overview of resource consistency
-          href: govern/resource-consistency/index.md
-        - name: Download the template
-          href: govern/resource-consistency/template.md
-        - name: Understand business risks
-          href: govern/resource-consistency/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/resource-consistency/metrics-tolerance.md
-        - name: Sample Resource Consistency policies
-          href: govern/resource-consistency/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/resource-consistency/compliance-processes.md
-        - name: Improve resource consistency
-          href: govern/resource-consistency/discipline-improvement.md
-        - name: Azure tools for resource consistency
-          href: govern/resource-consistency/toolchain.md
-        - name: Resource access management
-          href: govern/resource-consistency/resource-access-management.md
-        - name: Governance design for a simple workload
-          href: govern/resource-consistency/governance-simple-workload.md
-        - name: Governance design for multiple teams
-          href: govern/resource-consistency/governance-multiple-teams.md
+          href: govern/resource-consistency/overview.md
+        - name: Management groups guidance
+          href: govern/resource-consistency/management-group-structure.md
+        - name: Resource naming guidance
+          href: govern/resource-consistency/naming.md
+        - name: Resource tagging guidance
+          href: govern/resource-consistency/tagging.md
+        - name: Managing business constraints
+          href: govern/resource-consistency/business-constraints.md
         - name: Why update an Azure landing zone?
           href: govern/resource-consistency/why-update-azure-landing-zone.md
         - name: Migrate Azure landing zone policies to Azure built-in policies
           href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
         - name: Update Azure landing zone custom policies
-          href: govern/guides/standard/update-custom-policies.md
+          href: govern/guides/standard/update-custom-policies.md          
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration

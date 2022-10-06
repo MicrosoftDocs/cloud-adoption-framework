@@ -67,7 +67,7 @@
       },
       {
          "source_path": "docs/governance/resource-consistency/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency/overview",
          "redirect_document_id": true
       },
       {
@@ -619,7 +619,7 @@
          "source_path": "docs/ready/considerations/networking-options.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
          "redirect_document_id": false   
-       },
+      },
       {         
          "source_path": "docs/govern/identity-baseline/business-risks.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
@@ -689,6 +689,61 @@
          "source_path": "docs/govern/deployment-acceleration/toolchain.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/deployment-acceleration",
          "redirect_document_id": false
-      }   
+      },
+      {   
+         "source_path": "docs/governance/resource-consistency/business-risks.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/compliance-processes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/discipline-improvement.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/governance-multiple-teams.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/governance-simple-workload.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/metrics-tolerance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/policy-statements.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/resource-access-management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/how-azure-resource-manager-works",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/governance/resource-consistency/toolchain.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
+         "redirect_document_id": false
+      }         
    ]
 }
