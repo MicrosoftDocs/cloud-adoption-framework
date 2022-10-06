@@ -110,7 +110,7 @@ Many businesses understand that [migrating workloads to the cloud](/industry/sus
 
 Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
 
-Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/cloud-adoption-framework/) for Azure and [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) at every stage of your cloud adoption journey.
+Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
 Migrate and modernise your apps, data and infrastructure using proven cloud migration tools and patterns.
 
