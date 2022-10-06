@@ -29,6 +29,7 @@ For deeper content that helps you stay current with Azure topics, review these r
 
 - [Azure Friday](/shows/azure-friday/): Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights.
 - [John Savill's Technical Training](https://www.youtube.com/c/NTFAQGuy): Two to three new videos a week on Azure, PowerShell, and DevOps including playlists for certification and Azure Master Classes.
+- [Azure Customer Archtecture and Engineering](https://www.youtube.com/c/CustomerArchitectureEngineering/about): Regularly published video's and demos on Azure landing zones design and implementation.
 - [`Azure Charts`](https://azurecharts.com): This visualization shows all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes. \*
 - [`AzAdvertizer`](https://www.azadvertizer.net): Release and change tracking on Azure governance capabilities such as Azure Policy, policy initiatives, policy aliases and Azure role-based access control (Azure RBAC). \*
 - [`Azure Weekly`](https://azureweekly.info)*
