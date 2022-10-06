@@ -3,7 +3,8 @@ title: Sustainability outcomes and benefits for business
 description: Learn how the Cloud Adoption Framework and cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 author: mpvenables
 ms.author: brblanch
-ms.date: 03/02/2021
+ms.reviewer: tozimmergren
+ms.date: 10/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -109,7 +110,7 @@ Many businesses understand that [migrating workloads to the cloud](/industry/sus
 
 Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions related usage of Microsoft Cloud services and also an estimator to give you some idea of how much you could save by migrating to Azure.
 
-Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/en-gb/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/en-gb/cloud-adoption-framework/) for Azure and [Well-Architected Framework](https://docs.microsoft.com/en-gb/azure/architecture/framework/) at every stage of your cloud adoption journey.
+Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](https://azure.microsoft.com/cloud-adoption-framework/) for Azure and [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
 Migrate and modernise your apps, data and infrastructure using proven cloud migration tools and patterns.
 
@@ -135,7 +136,7 @@ An intentional approach can help organizations to navigate their sustainability 
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
-**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/en-us/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
+**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
 
 **Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 
