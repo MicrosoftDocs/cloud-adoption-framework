@@ -3,7 +3,8 @@ title: Business outcomes from transformation journeys
 description: Use the Cloud Adoption Framework for Azure to understand the business outcomes associated with cloud transformations.
 author: mpvenables
 ms.author: brblanch
-ms.date: 03/02/2021
+ms.reviewer: tozimmergren
+ms.date: 10/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -29,11 +30,11 @@ Learn more about [how cloud economics works](https://azure.microsoft.com/overvie
 The following are a few business outcomes that tend to trigger conversations with various personas:
 
 - **Finance leadership:** Increase profitability while driving compliance.
-- **Marketing:** Acquire and retain customers, build reputation.
-- **Sales:** Accelerate sales, improve customer lifetime value.
-- **Human resources:** Retain, recruit, and empower employees.
+- **Marketing:** Acquire and retain customers, and build a reputation.
+- **Sales:** Accelerate sales and improve customer lifetime value.
+- **Human resources:** Retain, recruit and empower employees.
 - **Executive leadership:** Meeting market growth requirements and environmental sustainability metrics.
-- **Sustainability leads:** Driving sustainability as a strategy throughout the entire business, aligned with the company's commitments
+- **Sustainability leads:** Driving sustainability as a strategy throughout the business, aligned with the company's commitments.
 
 ## Sample outcomes by category
 
@@ -77,7 +78,7 @@ Organizations are increasingly discussing environmental goals and sustainability
 
 Learn more about [sustainability goals](./sustainability.md).
 
-Each of the business outcomes listed in the preceding categories can help facilitate a focused conversation among your business and technical team members. However, you shouldn't limit your conversations to these generic samples. Understanding the unique needs of your own business, and building outcomes that match, maximizes the value of a cloud transformation.
+Each business outcome listed in the preceding categories can help facilitate a focused conversation among your business and technical team members. However, you shouldn't limit your conversations to these generic samples. Understanding the unique needs of your business and building outcomes that match maximizes the value of a cloud transformation.
 
 ## Next steps
 
