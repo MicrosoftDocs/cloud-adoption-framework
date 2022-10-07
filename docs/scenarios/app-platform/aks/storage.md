@@ -12,10 +12,6 @@ ms.custom: think-tank, e2e-aks
 
 # Storage considerations for Azure Kubernetes Service (AKS)
 
-Your organization or enterprise needs to design suitable AKS platform-level capabilities to meet its specific requirements. These application workloads likely have different storage requirements. There are multiple considerations when choosing the storage needs for these applications such as performance, persistence, accessibility, and cost. Kubernetes provides different storage concepts to suit those needs, and in AKS you need to choose the right service for each application.
-
-# Storage considerations for Azure Kubernetes Service (AKS)
-
 Your organization or enterprise needs to design suitable AKS platform-level capabilities to meet its specific requirements. These application workloads likely have different storage requirements. There are multiple considerations when choosing the storage needs for these applications such as performance, persistence, accessibility, and cost.
 
 Kubernetes can be used for both stateless and stateful workloads. Stateful workloads need a storage solution to store their state onto. Within the Azure Kubernetes Service (AKS) multiple storage solutions exist. Picking the right solution for your storage needs can be a challenge, and the goal of this document is to provide you with guidance in making the right choice.
