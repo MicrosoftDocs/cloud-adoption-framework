@@ -49,12 +49,13 @@ Tagging schemes that align with business, like accounting, business ownership, o
 
 |   | Description | Example |
 |---|-------------|---------|
-| **Baseline naming conventions** | Resource naming is required for deployment. A standardized naming schema is the minimum tag. |   |
-| **Functional**                  | Tags that describe the function of the virtual machine for easy identification. | Workload; function in the workload (app, data, and so on); environment (such as development, staging, production). |
-| **Classification**              | Tags that classify the value of an asset can aid in making decisions. | Data classification (public, private, confidential, and so on); criticality; SLA. |
-| **Accounting**                  | Tags that help to track costs that are associated with asset operations. | Department, project, region, and so on. |
-| **Partnership**                 | Tags that align partners that count on this asset, outside of IT. | Owner, owner alias, stakeholder, power user, executive. |
-| **Purpose**                     | Tags that align an asset to a business function can be valuable in making investment decisions. | Business process, business criticality, revenue impact. |
+| **Primary design considerations** | Baseline operations requirements, supplemented by additive business requirements. |   |
+| **Baseline naming conventions**   | Resource naming is required for deployment. A standardized naming schema is the minimum tag. |   |
+| **Functional**                    | Tags that describe the function of the virtual machine for easy identification. | Workload; function in the workload (app, data, and so on); environment (such as development, staging, production). |
+| **Classification**                | Tags that classify the value of an asset can aid in making decisions. | Data classification (public, private, confidential, and so on); criticality; SLA. |
+| **Accounting**                    | Tags that help to track costs that are associated with asset operations. | Department, project, region, and so on. |
+| **Partnership**                   | Tags that align partners that count on this asset, outside of IT. | Owner, owner alias, stakeholder, power user, executive. |
+| **Purpose**                       | Tags that align an asset to a business function can be valuable in making investment decisions. | Business process, business criticality, revenue impact. |
 
 
 ## Baseline naming conventions
