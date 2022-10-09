@@ -16,7 +16,7 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
 
 - **Resource management:** Your IT teams need to quickly locate resources that are associated with specific workloads, environments, ownership groups, or other important information. Organizing resources is critical to assigning organizational roles and access permissions for resource management.
 
-- **Cost management and optimization:** Making business groups aware of the consumption of cloud resources requires IT to understand the resources and workloads that each team is using. The following topics are supported by cost-related tags:
+- **Cost management and optimization:** Making business groups aware of the consumption of cloud resources requires IT to understand the resources and workloads that each team uses. The following topics are supported by cost-related tags:
 
   - [Cloud accounting models](../../strategy/cloud-accounting.md)
   - [ROI calculations](../../strategy/cloud-migration-business-case.md)
@@ -31,7 +31,7 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
 
 - **Security:** Classification of data and security impact is vital for the team when breaches or other security issues arise. Operating securely requires tagging for [data classification](../../govern/policy-compliance/data-classification.md).
 
-- **Governance and regulatory compliance:** Maintaining consistency across resources helps with identifying divergence from policies. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) demonstrates how one of the tagging patterns that are described [Resource tagging patterns](#resource-tagging-patterns), later in this article, can help with deployment of governance practices. Similar patterns are available to evaluate regulatory compliance by using tags.
+- **Governance and regulatory compliance:** Maintaining consistency across resources helps with identifying divergence from policies. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) demonstrates how one of the tagging patterns that are described in [Resource tagging patterns](#resource-tagging-patterns), later in this article, can help with deployment of governance practices. Similar patterns are available to evaluate regulatory compliance by using tags.
 
 - **Automation:** A proper organizational scheme allows you to take advantage of automation as part of creating resources, monitoring operations, and creating DevOps processes. Automation also makes resources easier for IT to manage.
 
@@ -39,17 +39,18 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
 
 ## Tagging decision guide
 
-:::image type="content" alt-text="Diagram that shows plotting tagging options from least complex to most complex." source="../../_images/decision-guides/decision-guide-resource-tagging.png" lightbox="../../_images/decision-guides/decision-guide-resource-tagging.png":::
-
 Your approach to tagging can be simple or complex. It can support IT teams who manage cloud workloads or integrate information that's related to all aspects of the business.
 
 A tagging scheme that aligns with IT, such as tagging based on workload, application, or environment, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
 
-Tagging schemes that align with business, like accounting, business ownership, or business criticality, might require a larger investment of time. You'll need to invest more time to create tagging standards that reflect business interests and maintain those standards in the future. This investment yields a tagging system that provides improved accounting for costs and value of IT assets to the overall business. Linking an asset's business value to its operational cost can change the view of IT as a cost center within your wider organization.
+Tagging schemes that align with business, like accounting, business ownership, or business criticality, might require a larger investment of time. You need to invest more time to create tagging standards that reflect business interests and maintain those standards in the future. This investment yields a tagging system that provides improved accounting for costs and value of IT assets to the overall business. Linking an asset's business value to its operational cost can change the view of IT as a cost center within your wider organization.
+
+:::image type="content" alt-text="Diagram that shows plotting tagging options from least complex to most complex." source="../../_images/decision-guides/decision-guide-resource-tagging.png" lightbox="../../_images/decision-guides/decision-guide-resource-tagging.png":::
+
 
 ## Baseline naming conventions
 
-A standardized naming convention is the starting point for organizing your cloud-hosted resources. A properly structured naming system allows you to quickly identify resources for both management and accounting purposes. You might have existing IT-aligned naming conventions in other parts of your organization. If so, consider whether your cloud naming conventions should align with them or if you should establish separate cloud-based standards.
+A standardized naming convention is the starting point for organizing your cloud-hosted resources. A properly structured naming system allows you to quickly identify resources for both management and accounting purposes. You might have existing IT-aligned naming conventions in other parts of your organization. If so, consider whether your cloud naming conventions should align with them, or if you should establish separate cloud-based standards.
 
 > [!NOTE]
 > [Naming rules and restrictions](/azure/azure-resource-manager/management/resource-name-rules) vary by Azure resource. Your naming conventions must comply with these rules.
@@ -58,7 +59,7 @@ A standardized naming convention is the starting point for organizing your cloud
 
 For more sophisticated organization than a consistent naming convention alone provides, cloud platforms support the ability to tag resources.
 
-Tags are metadata elements that are attached to resources. Tags consist of pairs of key-value strings. The values that you include in these pairs is up to you. However, the application of a consistent set of global tags, as part of a comprehensive naming and tagging policy, is a critical part of an overall governance policy.
+Tags are metadata elements that are attached to resources. Tags consist of pairs of key-value strings. The values that you include in these pairs are up to you. However, the application of a consistent set of global tags, as part of a comprehensive naming and tagging policy, is a critical part of an overall governance policy.
 
 As part of your planning process, use the following questions to determine the kind of information that your resource tags must support:
 
@@ -74,10 +75,10 @@ The following tagging patterns are examples of how you can use tagging to organi
 
 | Tag type | Examples | Description |
 |--|--|--|
-| Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorize resources by their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
-| Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it's used and what policies apply to it. |
+| Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorizes resources by their purposes within a workload, the environment they've been deployed to, or other functionality and operational details. |
+| Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it's used and the policies that apply to it. |
 | Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Allows a resource to be associated with specific groups within an organization for billing purposes. |
-| Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
+| Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about who (outside of IT) is related to or otherwise affected by the resource. |
 | Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
 
 ## Learn more
