@@ -3,7 +3,7 @@ title: 'Complex enterprise governance: Best practices explained'
 description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a complex enterprise.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/07/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -102,7 +102,7 @@ Some of the policy statements can't or shouldn't be controlled by automated tool
 
 **Corporate policy changes:** The cloud governance team makes changes to the governance MVP design to adopt the new policies. The value of the governance MVP is that it lets you automatically enforce the new policies.
 
-**Adoption acceleration:** The cloud governance team reviews deployment scripts across multiple teams. They've maintained a set of scripts that serve as deployment templates. Cloud adoption and DevOps teams use the templates to more quickly define deployments. Each script contains the requirements for enforcing governance policies. Extra effort from cloud adoption engineers isn't needed. As the curators of these scripts, engineers can implement policy changes more quickly. Also, the scripts are accelerators of adoption. This process ensures consistent deployments without strictly enforcing adherence.
+**Adoption acceleration:** The cloud governance team reviews deployment scripts across multiple teams. They maintain a set of scripts that serve as deployment templates. The cloud adoption and DevOps teams use the templates to more quickly define deployments. Those scripts contain the necessary requirements to enforce a set of governance policies with no extra effort from cloud adoption engineers. As the curators of these scripts, the cloud governance team can more quickly implement policy changes. As a result of script curation, the cloud governance team is the source of adoption acceleration, which creates consistency among deployments, without strictly forcing adherence.
 
 **Engineer training:** The cloud governance team offers bimonthly training sessions and has created two videos for engineers. Both resources help engineers get up to speed quickly on the governance culture and learn how to do the deployments. The team is adding training assets to demonstrate the difference between production and nonproduction deployments, which helps engineers understand how the new policies affect adoption. The training ensures consistent deployments without strictly enforcing adherence.
 
