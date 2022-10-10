@@ -41,10 +41,6 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
 
 Your approach to tagging can be simple or complex. It can support IT teams who manage cloud workloads or integrate information that's related to all aspects of the business.
 
-A tagging scheme that aligns with IT, such as tagging based on workload, application, or environment, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
-
-Tagging schemes that align with business, like accounting, business ownership, or business criticality, might require a larger investment of time. You need to invest more time to create tagging standards that reflect business interests and maintain those standards in the future. This investment yields a tagging system that provides improved accounting for costs and value of IT assets to the overall business. Linking an asset's business value to its operational cost can change the view of IT as a cost center within your wider organization.
-
 :::image type="content" alt-text="Diagram that shows plotting tagging options from least complex to most complex." source="../../_images/decision-guides/decision-guide-resource-tagging.png" lightbox="../../_images/decision-guides/decision-guide-resource-tagging.png":::
 
 |   | Description | Example |
@@ -56,6 +52,10 @@ Tagging schemes that align with business, like accounting, business ownership, o
 | **Accounting**                    | Tags that help to track costs that are associated with asset operations. | Department, project, region, and so on. |
 | **Partnership**                   | Tags that align partners that count on this asset, outside of IT. | Owner, owner alias, stakeholder, power user, executive. |
 | **Purpose**                       | Tags that align an asset to a business function can be valuable in making investment decisions. | Business process, business criticality, revenue impact. |
+
+A tagging scheme that aligns with IT, such as tagging based on workload, application, or environment, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
+
+Tagging schemes that align with business, like accounting, business ownership, or business criticality, might require a larger investment of time. You need to invest more time to create tagging standards that reflect business interests and maintain those standards in the future. This investment yields a tagging system that provides improved accounting for costs and value of IT assets to the overall business. Linking an asset's business value to its operational cost can change the view of IT as a cost center within your wider organization.
 
 
 ## Baseline naming conventions
