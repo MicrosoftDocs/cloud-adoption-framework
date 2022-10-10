@@ -7,7 +7,7 @@ ms.date: 09/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, ignite-2022
 ---
 
 # Cost governance for Azure Arc-enabled SQL Managed Instance
