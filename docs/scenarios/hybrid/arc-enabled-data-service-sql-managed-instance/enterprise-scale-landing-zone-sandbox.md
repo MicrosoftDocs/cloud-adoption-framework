@@ -7,7 +7,7 @@ ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, ignite-2022
 ---
 
 # Deploy a sandbox for Azure Arc-enabled SQL Managed Instance
