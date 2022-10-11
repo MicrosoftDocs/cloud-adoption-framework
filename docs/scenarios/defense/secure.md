@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Secure for defense cloud adoption
+description: Recommendations for securing cloud workloads in a defense organization
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ---
-# 
+# Secure for defense cloud adoption
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [](.md)
+> [](manage.md)

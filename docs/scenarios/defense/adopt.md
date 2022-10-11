@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Adopt for defense cloud adoption
+description: Recommendations for adopting cloud technologies in a defense organization
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ---
-# 
+# Adopt for defense cloud adoption
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [](.md)
+> [](secure.md)

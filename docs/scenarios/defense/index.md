@@ -1,6 +1,6 @@
 ---
-title: Defense adoption scenario
-description: A cloud adoption framework for defense contexts 
+title: Defense cloud adoption framework
+description: A cloud adoption framework for a defense organization
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
 ---
-# Defense cloud adoption
+# Defense cloud adoption framework
 
 The CAF Defense scenario is a cloud adoption framework tailored for defense organizations. The content focuses on the challenges that many defense mission owners face in cloud adoption and offers recommendations to navigate those challenges. The goal of this framework is to accelerate the digital transformation efforts of defense organizations.
 
