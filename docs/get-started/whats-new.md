@@ -16,6 +16,35 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## October 2022
+
+### Azure Arc-enabled SQL Managed Instance
+
+<!-- Description -->
+
+| Article | Description |
+|-----------------------------|----------------------------------------------------------------------------------------------|
+| [Identity and access management for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-identity-access-management?branch=release-integration-ignite-2022
+) |  |
+| [Network connectivity for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-network-connectivity?branch=release-integration-ignite-2022
+) |               |
+| [Storage disciplines for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-storage-disciplines?branch=release-integration-ignite-2022
+) |                         |
+| [Resource organization for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-resource-organization?branch=release-integration-ignite-2022
+) |                      |
+| [Governance and security for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-governance-disciplines?branch=release-integration-ignite-2022
+) |                             |
+| [Management and monitoring for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-management-disciplines?branch=release-integration-ignite-2022
+) |                 |
+| [Deploy a sandbox for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/enterprise-scale-landing-zone-sandbox?branch=release-integration-ignite-2022
+) |                              |
+| [Business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery?branch=release-integration-ignite-2022
+) |                          |
+| [Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-upgradeability-disciplines?branch=release-integration-ignite-2022
+) |                                     |
+| [Cost governance for Azure Arc-enabled SQL Managed Instance](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-cost-governance?branch=release-integration-ignite-2022
+) |                                 |
+
 ## September 2022
 
 ### Security control mapping with Azure landing zones
