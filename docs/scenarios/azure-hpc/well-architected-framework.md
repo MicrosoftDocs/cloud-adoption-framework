@@ -46,12 +46,19 @@ Set up Azure AD Conditional Access. Enforce and measure key security attributes 
 Preferably use passwordless methods or opt for modern password methods.
 Block legacy protocols and authentication methods.
 
+### Azure batch security 
+Follow the best practices to enable security for [Azure batch](https://learn.microsoft.com/en-us/azure/batch/security-best-practices)
+
+### Azure CycleCloud security
+Follow the best practices to enable security for [Azure CycleCloud](https://learn.microsoft.com/en-us/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8)
+
+
 ## Cost optimization
 
 The following measures would be helpful in cost optimisation of the HPC workloads
 
 ### Choice of Operating System: 
-Linux has been the dominant operating system when it comes to HPC workloads. Linux is open-source, tuned for performance to leverage the HPC infrastructure, thus the MPI libraries and Infiniband drivers work very well on Linux vs. Windows. Thereby leveraging Linux VMs over Windows for setting up a HPC cluster would definitely save costs. However, it is understandable that some users may have a strong preference for a Windows environment especially while doing the pre/post processing tasks in workload such as Computational Fluid Dynamics. In such a case the recommendation is to have a Windows Front End submitting jobs to a Linux host (Head Node) which can leverage the compute nodes for simulations. 
+Linux has been the dominant operating system for HPC workloads. Linux is open-source, tuned for performance to leverage the HPC infrastructure, thus the MPI libraries and Infiniband drivers work very well on Linux vs. Windows. Thereby leveraging Linux VMs over Windows for setting up a HPC cluster would definitely save costs. However, it is understandable that some users may have a strong preference for a Windows environment especially while doing the pre/post processing tasks in workload such as Computational Fluid Dynamics. In such a case the recommendation is to have a Windows Front End submitting jobs to a Linux host (Head Node) which can leverage the compute nodes for simulations. 
 
 ### Auto Scaling: 
 Autoscaling is a capability to provision and utilise the VMs only when the job is submitted/active. Once the job is complete the nodes turn off automatically. Azure CycleCloud has built in autoscaling turned on in its schedulers by default. The default time limit to switch the nodes off is 15 minutes and can be customised. This ensures that the users pay only for what they use. Azure batch, on the other hand, provides the user a mechanism to integrate an autoscaling formula with the choice of parameters.     
@@ -70,7 +77,24 @@ Azure CycleCloud allows you to set budgets per cluster and can send notification
 
 Outline the operations processes that keep a system running in production.
 
+
 ### Infrastructure as a Code
+HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Storage, Visualization Nodes, License Servers, etc. To automate the deployment it is recommended to leverage industry standard tools like Terraform, Ansible and Packer to simplify the process. 
+spack to build applications on Image. 
+Azure container registry built-in. 
+
+
+### Understand operational health
+### Node health check
+[Azure Managed Grafana](https://azure.microsoft.com/en-us/services/managed-grafana/#overview) is a fully managed service for analytics and monitoring solutions. It's supported by Grafana Enterprise, which provides extensible data visualizations. This can be integrated in the HPC workloads and Azure HPC OnDemand platform like [AzHop](https://azure.github.io/az-hop/) has this incorporated
+
+
+### Rehearse recovery and practice failure
+Dual domain control
+High Availability 
+Checkpoint restart. 
+
+### Embrace continuous operational improvement
 
 
 ## Performance Efficiency
