@@ -1,9 +1,9 @@
 ---
 title: The Azure Well-Architected Framework for HPC
-description: #Use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your scenario.
-author: {{Token-ContributorGithubId}}
-ms.author: {{Token-Alias}}
-ms.date: {{Token-Date}}
+description: Use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your HPC scenario.
+author: Rajani-Janaki-Ram
+ms.author: rajanaki
+ms.date: 10/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -47,10 +47,10 @@ Preferably use passwordless methods or opt for modern password methods.
 Block legacy protocols and authentication methods.
 
 ### Azure batch security 
-Follow the best practices to enable security for [Azure batch](https://learn.microsoft.com/en-us/azure/batch/security-best-practices)
+Follow the best practices to enable security for [Azure batch](/azure/batch/security-best-practices)
 
 ### Azure CycleCloud security
-Follow the best practices to enable security for [Azure CycleCloud](https://learn.microsoft.com/en-us/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8)
+Follow the best practices to enable security for [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices)
 
 
 ## Cost optimization
