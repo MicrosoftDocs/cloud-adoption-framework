@@ -4,8 +4,10 @@ items:
     pdf_name: Department of Defense - Microsoft Cloud Adoption Framework for Azure
   - name: Mission
     items:
-    - name: Strategy and plan
-      href: strategy-and-plan.md
+    - name: Strategy
+      href: strategy.md
+    - name: Plan
+      href: plan.md
     - name: Organize
       href: organize.md
   - name: Platform
