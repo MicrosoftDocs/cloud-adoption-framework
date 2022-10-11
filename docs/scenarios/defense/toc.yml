@@ -20,5 +20,7 @@ items:
     items:
       - name: Adopt
         href: adopt.md
-      - name: Secure and manage
-        href: secure-and-manage.md
+      - name: Secure
+        href: secure.md
+      - name: Manage
+        href: manage.md
