@@ -456,8 +456,6 @@ items:
             href: ready/enterprise-scale/index.md
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
-          - name: Testing approach for enterprise-scale
-            href: ready/enterprise-scale/testing-approach.md
           - name: Scenario-specific enterprise-scale landing zones
             href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
 
@@ -497,6 +495,8 @@ items:
           href: ready/considerations/index.md
         - name: Improve landing zone operations
           href: ready/considerations/landing-zone-operations.md
+        - name: Testing approach for Azure landing zones
+          href: ready/enterprise-scale/testing-approach.md
         - name: Improve landing zone governance
           items:
           - name: Overview
