@@ -42,7 +42,7 @@ If contracts are a component of operations, foster contract relationships that r
 
 ## Next step
 
-The the logical next step well-architected framework. It provides best practices for cloud workloads.
+The logical next step well-architected framework. It provides best practices for cloud workloads.
 
 > [!div class="nextstepaction"]
 > [Well-architected framework](/azure/architecture/framework/)
