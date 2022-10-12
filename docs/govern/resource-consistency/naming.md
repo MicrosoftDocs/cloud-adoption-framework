@@ -10,5 +10,51 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-# Resource naming overview
+# Naming overview
 
+Well-defined naming conventions  provide consistency, prevent naming clashes and, along with [resource tagging](tagging.md), allow administrators to quickly locate and manage resources. [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) notes that an effective naming convention composes resource names from important information about each resource, such as the resource's type, the workload, the environment, or the Azure region hosting it. For example, a public IP resource for a production SharePoint workload in the West US region might be pip-sharepoint-prod-westus-001.
+
+![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
+
+*Diagram 1: Components of an Azure resource name from [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).*
+
+Naming rules and restrictions, such as scope, name length, or valid characters, differ by resource type in Azure. The example in the table below illustrates how resources have differing constraints. 
+
+| Entity | Scope | Length | Valid Characters |
+| --- | --- | --- | --- |
+| Microsoft.Storage.storageAccounts | global | 3-24 | Lowercase letters and numbers. |
+| Microsoft.Network.virtualNetworks | resource group | 2-64 | Alphanumerics, underscores, periods, and hyphens. <br />Start with alphanumeric. End alphanumeric or underscore. |
+
+*Table 1: Example resource rules and restrictions*
+
+TODO: Is the below true? Or is tagging alone sufficient for cost tracking purposes?<br/>
+Accurately representing and naming your resources is essential for management and cost tracking purposes. Resources with well-defined naming can quickly be identified and associated with cloud usage costs via chargeback and show back accounting mechanisms.
+
+Accurate naming is critical when responding to security incidents. The logs and alerts from security services such as Microsoft Defender for Cloud and Microsoft Sentinel reference resources by their resource name. A well-defined resource name will allow administrators to quickly identify the affected system, determine whether it is production or not, and assess the associated business impact.
+
+## Guidance
+
+Establish a comprehensive naming convention before you begin any large cloud deployment. Define your naming strategy as early as possible, because changing resource names can be difficult. The naming convention should take into account the unique naming rules and restrictions for different resource types.
+
+Use the following resources to understand the components of a good naming convention, determine abbreviations for resource types, understand naming constraints for resources, and naming resources.
+
+- Read [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) to learn about the important components of a well-defined naming convention, as well as see some example names for common Azure resource types.
+- Read or reference [Abbreviation examples for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to help determine the abbreviations you will use for the Azure resources you are using.
+- Read or reference [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules) to understand the rules and restrictions on names for the Azure resources you are using.
+- Install and configure the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) with the organizational standards you determined above. Use the tool to generate names for resources.
+
+## Enforce
+
+Azure Policy can be used to enforce and audit compliance of your naming standards. Because there are no pre-defined standards for naming, there are no built-in policies to enforce naming. You can create custom policies to enforce the standards you determine. The following is a snippet from a [custom policy example in Azure Samples (TODO: Add link after policy is added to Azure Samples)]() that denies an Azure virtual machine deployment based on a naming standard:
+
+``` bash
+# TODO: Jason Masten to add snippet here
+```
+
+## Audit
+
+Write custom graph queries to identify resources that are not properly named. The following is an example of a graph query that...
+
+```bash
+# TODO: Write example graph query to find improperly named resources.
+```
