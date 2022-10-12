@@ -20,13 +20,13 @@ With AKS, we offer multiple integrated native options to store state. These incl
 
 ## How to select the right storage service
 
-Picking the right storage solution can be hard, and will require some testing on your side. However, consider the following high level guidelines when selecting a storage solution in AKS:
+Choosing the right SKUs and sizes to start with requires some evaluations and potentially a proof or concept or test environment. Below are the high-level guidelines to help you kickstart with storage for AKS:
 
-- For structured application data, a managed datastore is recommended.
-- For high performance storage that is going to be used by a database platform running on Kubernetes, use disks. Consider using either premium or ultra disks for the best performance.
-- For unstructured data like photos, videos and text documents use blob storage. Consider reading/writing to blob directly from within your application.
+- For structured application data which can use a specific managed database (e.g., AzureSQL) available on the platform, this is the recommended option.
+- If your application needs low consistent latency coupled with high IOPS and throughput to run your own databases, messaging applications on Kubernetes, use disks. Consider using either Premium SSD, Premium SSD v2 or Ultra Disks for the best performance.
+- For shared application data with high performance needs, use either Azure Files premium or Azure NetApp Files. - - Ensure your nodes have sufficient network bandwidth to handle application requests and storage requests (given SMB or NFS traffic goes over the network stack).
 - For shared configuration data with limited performance requirement, use Azure Files standard.
-- For shared application data with high performance requirements, use either Azure Files premium or Azure NetApp Files. Ensure your nodes have sufficient network bandwidth to handle application requests and storage requests (given SMB or NFS traffic goes over the network stack).
+- For unstructured data like photos, videos and text documents use blob storage. This can be done using blobs mounted as files via NFS or blobfuse or by reading/writing to blob directly from within your application.
 
 ## Design considerations
 
