@@ -1,6 +1,6 @@
 ---
-title: Strategy for defense 
-description: 
+title: Strategy for defense cloud adoption
+description: Recommendations for developing a cloud adoption strategy in a defense organization
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
@@ -9,22 +9,9 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
-# Defense strategy
+# Strategy for defense cloud adoption
 
-The strategy methodology is a part of the mission phase of cloud adoption.
-
-:::image type="content" source="./images/mission.png" alt-text="Graphic showing we're in the mission phase of cloud adoption." border="false":::
-
-Strategy is about alignment. It’s where you identify what you need to fulfill your mission objectives and ensure this plan aligns with any broader defense strategies.
-
-Without strategy, your cloud journey could face setbacks that require rework. The challenges might not surface immediately. It’s about ensuring capability with other digital transformation initiatives and keeping the project within allotted budgets.
-
-To help you navigate the strategy and plan methodologies, you should consider the following recommendations:
-
-- Align with broader defense strategy
-- Identify stakeholders
-
-Let’s unpack these recommendations:
+:::image type="content" source="./images/mission.png" alt-text="Graphic showing the mission domain of cloud adoption." border="false":::
 
 ## Align with defense strategy
 
@@ -39,7 +26,7 @@ The cloud is a force multiplier for defense scenarios, and many defense organiza
 There are some practical steps you can take when identifying stakeholders:
 
 - *Create a RACI chart of stakeholders* - RACI charts ensure you identify all stakeholders and know how to involvement them role in the cloud adoption process.
-- *Identify Data Owners and Data Stewards* - Data owners and data stewards will be important stakeholders in your cloud adoption journey. You should identify and collaborate with both as early as possible. 
+- *Identify Data Owners and Data Stewards* - Data owners and data stewards will be important stakeholders in your cloud adoption journey. You should identify and collaborate with both as early as possible.
 - *Identify App Owners* - Application owners control applications and might have a separate roadmap for their application. You need to develop a strategy that supports the mission objectives of application owners.
 
 ## Next step

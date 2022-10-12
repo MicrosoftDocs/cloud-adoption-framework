@@ -11,6 +11,8 @@ ms.subservice: organize
 ---
 # Govern for defense cloud adoption
 
+:::image type="content" source="./images/platform.png" alt-text="Graphic showing the platform domain of cloud adoption." border="false":::
+
 ## Next steps
 
 > [!div class="nextstepaction"]

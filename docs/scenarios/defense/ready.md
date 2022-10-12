@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Ready for defense
+description: Recommendations for preparing your cloud platform in a defense organization
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
@@ -9,9 +9,11 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ---
-# 
+# Ready for defense cloud adoption
+
+:::image type="content" source="./images/platform.png" alt-text="Graphic showing the platform domain of cloud adoption." border="false":::
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [](.md)
+> [](govern.md)

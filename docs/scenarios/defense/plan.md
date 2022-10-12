@@ -1,6 +1,6 @@
 ---
 title: Plan for defense cloud adoption
-description: Plan for defense cloud adoption
+description: Recommendations for planning a cloud adoption strategy in a defense organization
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
@@ -13,7 +13,7 @@ ms.subservice: plan
 
 The plan methodology is the second step in the mission phase of cloud adoption.
 
-:::image type="content" source="./images/mission.png" alt-text="Graphic showing we're in the mission phase of cloud adoption." border="false":::
+:::image type="content" source="./images/mission.png" alt-text="Graphic showing the mission domain of cloud adoption." border="false":::
 
 The plan methodology is where you prepare your organization for cloud adoption. You need to make decisions that help you meet your objectives and share your vision with the right stakeholders. The plans you set determine the personnel need and the management of your platform. You need to get buy-in from stakeholders and decide on a cloud broker strategy that meets your mission objectives.
 
