@@ -46,7 +46,7 @@ Create a separate environment for your security management tools. At a minimum, 
 
 Mission owners should designate a single member of their personnel to own landing zone security. This person should be responsible for coordinating with the cloud broker, managing identity and access, and restricting elevated privileges.
 
-## Next steps
+## Next step
 
 The ready methodology is about building a platform. The govern methodology provides insights on governing the platform.
 

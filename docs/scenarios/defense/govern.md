@@ -86,7 +86,7 @@ Here are a few considerations around cost governance:
 
 - **Trend analysis** - Conduct trend analysis to drive transparency and allows visibility into active resources and consumption. Anomalous spikes in resource spend and should be brought to the technical team for explanation. It could signal a new phase in operations or a governance gap. Flag and review any new charges or spikes in trends. This form of active cost management helps avoid waste and mitigates risk. Trend analysis can also help manage infrastructure and determine future priorities. Mission owners can see how much money is spent on a given capability. If the money spent doesn’t help meet mission objectives, the future of this resource or workload needs reevaluation.
 
-## Next steps
+## Next step
 
 After governance, cloud adoption moves into the workload domain and focuses on the adopt methodology.
 

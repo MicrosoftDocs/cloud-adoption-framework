@@ -40,7 +40,7 @@ Security teams can create reports that detail how many resources follow security
 
 If contracts are a component of operations, foster contract relationships that require and incentivize transparency. Fixed-price contracts, for example, minimize mission-owner visibility. While they limit the risk of overrunning budget, they offer little visibility into the daily operations of the environment supporting your mission. Mission owners should review costs. Costs are transparent. They reflect the underlying technology and identify priorities. They reveal security concerns and help with business forecasts.
 
-## Next steps
+## Next step
 
 The the logical next step well-architected framework. It provides best practices for cloud workloads.
 

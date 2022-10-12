@@ -89,7 +89,7 @@ The factors listed below will help you determine if the multiple cloud broker ap
 
 The multi-cloud-broker strategy can be used at different levels in a defense organization. A broker can be assigned to individual military branches (naval, air, ground) or groups of applications. The choice depends on the needs of your defense organization around ownership, isolation, management, and security.
 
-## Next steps
+## Next step
 
 Planning prepares defense organizations for execution. The organize methodology uses this plan and starts completing the non-technical prerequisites.
 

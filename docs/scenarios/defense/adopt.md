@@ -75,7 +75,7 @@ Here are a few DevOps recommendations:
 
 - ***DevOps tools*** - The adoption of DevOps tools is needed to make DevOps work at any level. Have someone create a list of DevOps tools with their impact-level authorizations mapped to their DevOps process. This mapping might be a good requirement for proposals and will help determine how much DevOps can be adopted.
 
-## Next steps
+## Next step
 
 The secure methodology is next, and the cloud offers security professional useful tools for protecting workloads.
 

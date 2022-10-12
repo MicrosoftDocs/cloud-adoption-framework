@@ -67,7 +67,7 @@ Currently Azure allows mission owners to automate compliance for:
 
 The Azure SIEM (Sentinel) can create a visual report all non-compliant resources against a given security standard. When prompted, it generates remediation suggestions for any security controls that aren’t compliant with the standard. The SIEM tool also lets security professionals download compliance assessment reports that can serve as point-in-time security baseline and improve transparency.
 
-## Next steps
+## Next step
 
 The last methodology in the workload domain is the manage methodology. The manage methodology has recommendations for driving operational efficiency.
 

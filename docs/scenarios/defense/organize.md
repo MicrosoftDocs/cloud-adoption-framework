@@ -44,7 +44,7 @@ The mission owner won't manage the cloud solutions as a single unit. Other cloud
 
 For more information, see [required cloud functions for cloud adoption](/azure/cloud-adoption-framework/organize/#understand-required-cloud-functions).
 
-## Next steps
+## Next step
 
 The organize methodology is the last step in the mission domain. The ready methodology of the platform domain is next.
 
