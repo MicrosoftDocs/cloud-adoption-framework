@@ -3,7 +3,7 @@ title: Assessment and migration planning with Azure Migrate for servers
 description: Learn how Tailwind Traders sets up an Azure Migrate for discovery and assessment of existing estate.
 author: akasnik
 ms.author: akasnik
-ms.date: 10/06/2022
+ms.date: 10/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -131,7 +131,7 @@ Based on the Azure offer associated with Tailwind's subscription, they select th
 After the company saves its assessment properties, Tailwind must select servers to assess. Tailwind creates a new [server group](/azure/migrate/how-to-create-a-group) that includes all discovered servers from all discovery appliances and creates assessments for each specific environment. Although Tailwind considered creating a server group and assessment for each specific application, they went with another path. The company decided to create server groups at a later stage, closer to wave migration planning, because they needed more time to analyze dependencies between servers.
 
 > [!NOTE]
-> Tailwind can create multiple assessments. Each assessment can have different properties and a different group of servers. Tailwind can fun multiple assessments against the same set of servers or groups. All assessments are stored in the Azure Migrate project. This allows Tailwind to compare different assessments and decide what migration options are best for their needs and business case (such as VM sizing, storage type, and reserved capacity). They can also estimate the monthly cost.
+> Tailwind can create multiple assessments. Each assessment can have different properties and a different group of servers. Tailwind can run multiple assessments against the same set of servers or groups. All assessments are stored in the Azure Migrate project. This allows Tailwind to compare different assessments and decide what migration options are best for their needs and business case (such as VM sizing, storage type, and reserved capacity). They can also estimate the monthly cost.
 
 ### Azure readiness
 
@@ -227,7 +227,7 @@ Based on the interviews and dependency mapping data, Tailwind continues to refin
 
 ### Migration wave planning
 
-Tailwind plans to start with smaller migration waves, which include standalone servers and workloads that aren't business critical. Starting with single-instance servers as part of the initial migration wave, makes it easier to resolve any issues, verify migration process end-to-end, and build confidence in the migration strategy. During subsequent migration waves, Tailwind plans to include multiple nonproduction workloads. Once the company finalizes the nonproduction details, its migration waves will include production workloads. The most complex production workloads are left until the end within the last migration wave schedules.
+Tailwind plans to start with smaller migration waves, which include standalone servers and workloads that aren't business critical. Starting with single-instance servers as part of the initial migration wave makes it easier to resolve any issues, verify migration process end-to-end, and build confidence in the migration strategy. During subsequent migration waves, Tailwind plans to include multiple nonproduction workloads. Once the company finalizes the nonproduction details, its migration waves will include production workloads. The most complex production workloads are left until the end within the last migration wave schedules.
 
 A migration wave can be a single large business application running on multiple web, application, and database servers or a few smaller, independent workloads. In tightly coupled environments, server groups might need to be split into different migration waves, such as a server group of 100+ servers. Since it contains shared servers across multiple applications (such as shared databases, shared web servers, or shared file servers) the number of interdependent servers is large.
 
