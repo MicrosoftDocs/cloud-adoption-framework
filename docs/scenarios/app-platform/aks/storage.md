@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 Your organization or enterprise needs to design suitable AKS platform-level capabilities to run specific workloads. These application workloads likely have different storage requirements. There are multiple considerations when choosing the right storage for your application workloads such as performance, availability, recoverability, security, and cost.
 
-Kubernetes can be used for both stateless and stateful workloads. Stateful workloads need a storage solution to store their state onto. Within the Azure Kubernetes Service (AKS) multiple storage solutions exist. Picking the right solution for your storage needs can be a challenge, and the goal of this document is to provide you with guidance in making the right choice.
+Kubernetes can be used for both stateless and stateful workloads. Stateful workloads often require a storage solution for storing state. With Azure Kubernetes Service (AKS) we support multiple integrated native storage options. Selecting the right storage option requires careful consideration, and the goal of this document is to guide you to choose the right option or combination of options for your workload.
 
 Multiple storage solutions exist for AKS. Solutions range from managed databases, to disks, files and blob storage. Within each solution there are also different options to consider. In the design considerations and design recommendations sections, you'll learn more about the different solutions and options available.
 
