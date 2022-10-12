@@ -31,7 +31,7 @@ The cloud is a force multiplier for defense scenarios, and many defense organiza
 
 **Know your broader cloud strategy** - We recommend collaborating with all other cloud strategy activities within the chain of command to minimize conflicting projects or to find similar projects that can be mutually beneficial to the Mission objectives. Any documentation resulting from these projects should align to the overall cloud adoption goals. New terminology and advances in technology can make publications appear out of sync. Crosscheck and get clarification on the future vision.
 
-**Understand the data strategy** – The cloud transforms how you manage data in Defense scenarios. Defense organizations have some of the most complex data requirements and need to define data strategies to account for this complexity. The broader command strategy should inform your cloud adoption strategy because it affects how you architect your data solutions. Again, the goal is awareness and compatibility. You need to be aware of any broader data strategies which will inform your decision model.
+**Understand the data strategy** – The cloud transforms how you manage data in Defense scenarios. Defense organizations have some of the most complex data requirements and need to define data strategies to account for this complexity. The broader command strategy should inform your cloud adoption strategy because it affects how you architect your data solutions. Again, the goal is awareness and compatibility. You need to be aware of any broader data strategies that will inform your decision model.
 
 However, if rework is required, the cloud is ideal for refactoring and rationalizing workloads. Without the need to acquire, provision, or retire hardware, the on-demand access to cloud virtualization increases the speed changes occur at a fraction of the cost.
 
@@ -39,9 +39,9 @@ However, if rework is required, the cloud is ideal for refactoring and rationali
 
 Here are some recommendations to considerations:
 
-- *Create a chart of those Responsible, Accountable, Consulted, & Informed (RACI)* - Use a RACI chart to organize project stakeholders and to drive awareness of shared responsibilities
-- *Identify Data Owners and Data Stewards* - Data owners and data stewards will be important stakeholders in your cloud adoption journey. Identify and collaborate with both as early as possible.
-- *Identify App Owners* - Application owners manage and control services and workloads that will be adopted in the cloud. They might have a separate roadmap for their applications. It’s critical to align the goals of the application owners with the cloud adoption plan. If not possible, mission owners should develop a strategy that accommodates the mission objectives of application owners
+- ***Create a chart of responsible, accountable, consulted, and informed (RACI) stakeholders*** - Use a RACI chart to organize project stakeholders and to drive awareness of shared responsibilities
+- ***Identify Data Owners and Data Stewards*** - Data owners and data stewards will be important stakeholders in your cloud adoption journey. Identify and collaborate with both as early as possible.
+- ***Identify App Owners*** - Application owners manage and control services and workloads that will be adopted in the cloud. They might have a separate roadmap for their applications. It’s critical to align the goals of the application owners with the cloud adoption plan. If not possible, mission owners should develop a strategy that accommodates the mission objectives of application owners
 
 For useful templates, see:
 

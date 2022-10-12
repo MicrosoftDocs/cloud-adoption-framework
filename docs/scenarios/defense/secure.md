@@ -42,22 +42,22 @@ RBAC and ABAC are the core features of least privilege enforcement. People chang
 
 Azure simplifies access reviews. RBAC and ABAC automate aspects of access control. Conditional access policies can be tied to roles, departments, projects, and locations of defense personnel. As people change roles or locations, their access to resources will change when updated in their Azure identify profile. Security teams can perform manual reviews of any resource in Azure at any time. Azure lets users see resources from multiple angles, making manual review easier.
 
-Granting elevated privilege for a defined period is a security best-practice. Azure AD simplifies this with Privileged Identity Management (PIM). PIM grants elevated privileges when requested by a legitimate user and only grants those privileges for a defined period. This exhibits just-in-time-access and restricts privileged user access-based need.  This further reduces dormant accounts having privileged access.
+Granting elevated privilege for a defined period is a security best-practice. Azure AD simplifies the use of elevated privileges with Privileged Identity Management (PIM). PIM grants elevated privileges when requested by a legitimate user and only grants those privileges for a defined period. This process represents just-in-time-access and restricts privileged user access-based need.  It also reduces the number of dormant accounts that have privileged access.
 
 - For more information on PIM, see [PIM for just-in-time access](/azure/active-directory/roles/best-practices#2-use-privileged-identity-management-to-grant-just-in-time-access).
-- For more on identity, see [Azure government identity](/azure/azure-government/documentation-government-plan-identity).
+- For more on identity, see [Azure Government identity](/azure/azure-government/documentation-government-plan-identity).
 
-**Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. To do this, defense security teams should monitor, scan, and improve cloud environment to mitigate risks. Defense organizations often have required security tools that you can supplement with cloud-native tooling for comprehensive security detection and analysis.
+**Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. Defense security teams should monitor, scan, and improve cloud environment to mitigate risks. Defense organizations often have required security tools that you can supplement with cloud-native tooling for comprehensive security detection and analysis.
 
 Here are a few tools that add value to defense deployments:
 
 - ***Threat intelligence***: Cloud environments should have a persistent threat detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects.
 - ***Distributed denial of service (DDoS)***: Security tools should protect against malicious or non-malicious distributed denial-of-service attacks.
-- ***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyzes, aggregates, and detects threats in logs generated throughout a cloud environment.
+- ***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyze, aggregates, and detects threats in logs generated throughout a cloud environment.
 
-For a list of security tools, see [Azure government security](/azure/azure-government/documentation-government-plan-security).
+For a list of security tools, see [Azure Government security](/azure/azure-government/documentation-government-plan-security).
 
-**Automate security compliance** - Defense security standards require defense security professionals to maintain hundreds of security controls. The manual execution of this process is labor intensive and prone to human error. It is possible to automate compliance with leading security standards and automate the remediation of cloud resources to align with those standards.
+**Automate security compliance** - Defense security standards require defense security professionals to maintain hundreds of security controls. The manual execution of this process is labor intensive and prone to human error. It's possible to automate compliance with leading security standards and automate the remediation of cloud resources to align with those standards.
 
 Currently Azure allows mission owners to automate compliance for:
 
@@ -65,11 +65,11 @@ Currently Azure allows mission owners to automate compliance for:
 - CMMC
 - NIST 800-53
 
-The Azure SIEM (Sentinel) can create a visualize report all non-compliant resources against a given security standard. When prompted, it generates remediation suggestions for any security controls that aren’t compliant with the standard. The SIEM tool also lets security professionals download compliance assessment reports that can serve as point-in-time security baseline and improve transparency.
+The Azure SIEM (Sentinel) can create a visual report all non-compliant resources against a given security standard. When prompted, it generates remediation suggestions for any security controls that aren’t compliant with the standard. The SIEM tool also lets security professionals download compliance assessment reports that can serve as point-in-time security baseline and improve transparency.
 
 ## Next steps
 
-The last methodology in the workload domain is manage. Find recommendations on driving operational efficiency.
+The last methodology in the workload domain is the manage methodology. The manage methodology has recommendations for driving operational efficiency.
 
 > [!div class="nextstepaction"]
 > [](manage.md)

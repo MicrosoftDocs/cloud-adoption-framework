@@ -11,14 +11,14 @@ ms.subservice: manage
 ---
 # Manage for defense cloud adoption
 
-The manage methodology is in the workload domain of cloud adoption. It is the last methodology covered, but it isn't the end of cloud adoption.
+The manage methodology is in the workload domain of cloud adoption. It's the last methodology covered, but it isn't the end of cloud adoption.
 
 :::image type="content" source="./images/workload.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Workload is highlighted to show we're in the workload domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - workload domain*
 
-The manage methodology is about operational efficiency. Operational efficiency is doing more with less and in the right direction. This means the operations team must learn and drive toward mission objectives or risk steering workloads in a direction that doesn’t support the warfighter.
+The manage methodology is about operational efficiency. Operational efficiency is doing more with less and in the right direction. The operations team must learn and drive toward mission objectives or risk steering workloads in a direction that doesn’t support the war fighter.
 
-In a defense context, the technical and non-technical aspect of operations are equally important. It’s worth focusing on these recommendations here:
+In a defense context, the technical and non-technical aspects of operations are equally important. It’s worth focusing on these recommendations here:
 
 ## Create resource baselines
 
@@ -26,7 +26,7 @@ There are several strategies defense organizations can adopt to improve operatio
 
 ## Choose a product owner
 
-Communication is the key to getting the deliverables mission owners need. A product owner is a key asset in driving workload enhancements in the right direction. A product owner is a defense personnel who serves as the single point of contact for the workload technical team. The product owner represents the interests of the stakeholders and handles stakeholder input. The product owner uses this input to identify the highest priority tasks for the technical team to focus on. The product owner should meet regularly with stakeholders and the workload technical team to set priorities and receive feedback.
+Communication is the key to getting the deliverables mission owners need. A product owner is a key asset in driving workload enhancements in the right direction. A product owner is a defense individual who serves as the single point of contact for the workload technical team. The product owner represents the interests of the stakeholders and handles stakeholder input. The product owner uses this input to identify the highest priority tasks for the technical team to focus on. The product owner should meet regularly with stakeholders and the workload technical team to set priorities and receive feedback.
 
 If the stakeholders change the functional requirements of a workload, the product owner needs to update the existing requirements in writing and discuss the affected technical requirements with the technical team. Without bi-directional communication, the pace of innovation will slow, and the workload will drift from the requirements.
 

@@ -11,11 +11,11 @@ ms.subservice: general
 ---
 # Introduction to the defense scenario
 
-The CAF Defense scenario is cloud adoption guidance tailored for defense organizations. Defense organizations coordinate and supervise armed forces in the interest of national security. This means data must be current, secure, and available from the tactical edge to headquarters distributed around the globe.
+The CAF Defense scenario is cloud adoption guidance tailored for defense organizations. Defense organizations coordinate and supervise armed forces in the interest of national security. Data must be current, secure, and available from the tactical edge to headquarters distributed around the globe.
 
 The defense scenario addresses the challenges mission owners face in cloud adoption and offers recommendations to navigate those challenges. The goal is to help accelerate the digital transformation efforts of defense organizations.
 
-The defense scenario is divided into three domains: mission, platform, and workload. It’ll be helpful to outline each domain:
+The defense scenario is divided into three domains: mission, platform, and workload. It will be helpful to outline each domain:
 
 :::image type="content" source="./images/caf-dod.png" alt-text="Figure that shows the mission domains of cloud adoption in a defense context with CAF methodologies underneath them. Strategy, plan, and organize are in the mission domain. Ready and govern are in the platform domain. Adopt, secure, and manage are in the workload domain." border="false":::
 *Figure 1: Overview of cloud adoption domains and methodologies*
@@ -34,7 +34,7 @@ The platform domain focuses on establishing a foundation for your defense worklo
 
 ## Workload
 
-The workload domain focuses on the iterative process of developing cloud solutions. The domain covers technology adoption and how to use those technologies to secure and manage defense workloads. Whether migrating or rearchitecting an application using cloud native services, architectural decisions need to be made that align with mission objectives. The workload domain provides guidance on these topics.
+The workload domain focuses on the iterative process of developing cloud solutions. The domain covers technology adoption and how to use those technologies to secure and manage defense workloads. Whether migrating or rearchitecting an application using cloud native services, architectural decisions need to be made that align with mission objectives, and the workload domain provides guidance in this areas.
 
 ## Next step
 

@@ -11,7 +11,7 @@ ms.subservice: organize
 ---
 # Govern for defense cloud adoption
 
-The govern methodology focuses on the platform domain but affects your workload cost management, security baseline, identity access roles, and resource consistency parameters.
+The govern methodology focuses on the platform domain. It affects your workload cost management, security baseline, identity access roles, and resource consistency parameters.
 
 :::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - platform domain*
@@ -24,7 +24,7 @@ To avoid some of these issues, it’s worth considering some of the following be
 
 ## Evaluate roles and responsibilities
 
-Before committing to a governance strategy, mission owners need the proper responsibility model to account for every resource in the cloud. If available, mission owners should coordinate roles and responsibilities with the cloud broker strategy. If the cloud broker does not provide roles and responsibilities model, mission owners will need establish governance functions. For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance).
+Mission owners need a responsibility model that accounts for every resource in the cloud before committing to a governance strategy. If available, mission owners should coordinate roles and responsibilities with the cloud broker strategy. If the cloud broker doesn't provide roles and responsibilities model, mission owners will need to establish governance functions. For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance).
 
 Cloud adoption can change aspects of IT operations. These changes require a reevaluation of roles and responsibilities. The goal of the reevaluation is to avoid having multiple groups/personnel responsible for the same service while ensuring there are no responsibility gaps.
 
@@ -35,13 +35,13 @@ These two steps can help avoid governance redundancies or gaps:
 
 ## Automate compliance
 
-Defense organizations have layers of compliance requirements to protect sensitive data and secrets. Governance is necessary to protect these assets, but it creates management burdens. Governance requires precision, repetition, and consistency. These are tasks that automation does better than humans. Defense organizations should automate as many governance processes as possible. It will improve operational efficiency and security and free defense personnel to focus on other priorities.
+Defense organizations have layers of compliance requirements to protect sensitive data and secrets. Governance is necessary to protect these assets, but it creates management burdens. Governance requires precision, repetition, and consistency. Automation performs these tasks better than humans. Defense organizations should automate governance processes. It will improve operational efficiency and security and free defense personnel to focus on other priorities.
 
 Azure simplifies many aspects of defense governance. Azure has an automated governance tool called Azure policy that is built into the platform. This tool keeps cloud environments in alignment with available policies, standards, and compliance requirements. It allows teams to automate compliance assessments and even remediation against pre-defined compliance standards.  
 
-There are many built-in policies available in Azure that make this easy. These built-in policies meet many government compliance requirements and include NIST 800-53, NIST 800-171, CMMC III, Impact Level 4, Impact Level 5, ISO 27001:2013, FedRAMP High, and others. Governance teams can use policies to enforce governance across cloud resources. Users select the desired policies and assign them to the proper scope of resources. Azure Policy allows users to create and modify policies that meet the governance requirements.
+There are many built-in policies available in Azure that make governance automation easier. These built-in policies meet many government compliance requirements. They include NIST 800-53, NIST 800-171, CMMC III, Impact-Level 4, Impact-Level 5, ISO 27001:2013, FedRAMP High, and others. Governance teams can use policies to enforce governance across cloud resources. Users select the desired policies and assign them to the proper scope of resources. Azure Policy allows users to create and modify policies that meet the governance requirements.
 
-These policies check the compliance of new deployments and existing resources against the policies put in place. New deployments that don’t meet a policy requirement will not deploy. Existing deployments that don’t meet governance policies will also be identified so teams can enforce compliance on every resource.
+These policies check the compliance of new deployments and existing resources against the policies put in place. New deployments that don’t meet a policy requirement won't deploy. Existing deployments that don’t meet governance policies will also be identified so teams can enforce compliance on every resource.
 
 Policies in Azure create a firm guardrail and automate the bulk of governance tasks. In doing so, they mitigate risk and increase efficiency, helping mission owners achieve their mission objectives faster.
 
@@ -70,23 +70,19 @@ To calculate the ROI of the cloud, mission owners need to determine the Total Co
 
 Not all variables require entry, and some services can be difficult to estimate. Mission owners should determine the level of accuracy required to establish this baseline. Once a TCO estimate is created, mission owners should document this data for later analysis.
 
-***Step 2. Estimate monthly costs for required services*** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services.
-
-Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in your organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation.
-
-The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the Mission Owner should document this data into a repository or other tracking resource for later analysis. This should be the same location as the TCO estimate was saved.
+***Step 2. Estimate monthly costs for required services*** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in your organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate.
 
 ## Actively manage costs
 
-Cost and governance are closely related and are in many ways reflections of each other. Costs reflect governance in a way that everyone understands. Costs are more tangible to broader audiences in ways that some underlying cloud services are not. Cost management is about getting the most out of the resources needed and preventing the deployment of those that are not.
+Cost and governance are closely related and are in many ways reflections of each other. Costs reflect governance in a way that everyone understands. Costs are more tangible to broader audiences in ways that some underlying cloud services aren't. Cost management is about getting the most out of the resources needed and preventing resource deployments that aren't.
 
 Here are a few considerations around cost governance:
 
-- **Know cost responsibility** - Resource consumption needs governance to optimize costs, avoid waste, and adhere to the allocated budget. Cost governance provides cost management techniques that allow you to predict, control, and correctly assign costs. Cost governance often has associated legal requirements. It is backed by laws that will initiate budget oversight committees to investigate and punish if there are infringements.
+- **Know cost responsibility** - Resource consumption needs governance to optimize costs, avoid waste, and adhere to the allocated budget. Cost governance provides cost management techniques that allow you to predict, control, and correctly assign costs. Cost governance often has associated legal requirements. It's backed by laws that will initiate budget oversight committees to investigate and punish if there are infringements.
 
-- **Review billing** - Costs should be reviewed every billing cycle. More frequent reviews will yield better cost control. Regular cost reviews will help identify governance early on issues. It is recommended that cloud brokers and mission owners implement budgets and alerts based on the scope of interest. Budgets will assist in tracking spend and send alerts if spending thresholds are exceeding. Multiple thresholds can be set to ensure that budgets are informed in time.The rest of this section will touch on two important topics: budget forecasting and security.
+- **Review billing** - Costs should be reviewed every billing cycle. More frequent reviews will yield better cost control. Regular cost reviews will help identify governance early on issues. It's recommended that cloud brokers and mission owners implement budgets and alerts based on the scope of interest. Budgets will help tracking spend and send alerts if spending thresholds are exceeding. Multiple thresholds can be set to ensure that budgets are informed in time.
 
-- **Cost security** - Poor cost governance creates security risks and limits your ability to meet mission objectives. Without cost governance, anyone could provision services. Services provisioned in this way are easily overlooked and not monitored. Anything added to an environment increases its attack surface. Spending on unnecessary services steals not only creates risk, but it also steals money from other priorities. Unexpected charges can be an indication of incorrect governance and require a review of the organization’s governance discipline.
+- **Cost security** - Poor cost governance creates security risks and limits your ability to meet mission objectives. Without cost governance, anyone could add extra cost to a bill by provisioning resources without permission. Services provisioned this way are easily overlooked and forgotten. Anything added to an environment increases its attack surface. Spending on unnecessary services steals not only creates risk, but it also steals money from other priorities. Unexpected charges can be an indication of incorrect governance and require a review of the organization’s governance discipline.
 
 - **Trend analysis** - Conduct trend analysis to drive transparency and allows visibility into active resources and consumption. Anomalous spikes in resource spend and should be brought to the technical team for explanation. It could signal a new phase in operations or a governance gap. Flag and review any new charges or spikes in trends. This form of active cost management helps avoid waste and mitigates risk. Trend analysis can also help manage infrastructure and determine future priorities. Mission owners can see how much money is spent on a given capability. If the money spent doesn’t help meet mission objectives, the future of this resource or workload needs reevaluation.
 
