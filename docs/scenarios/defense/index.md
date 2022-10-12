@@ -34,7 +34,7 @@ The platform domain focuses on establishing a foundation for your defense worklo
 
 ## Workload
 
-The workload domain focuses on the iterative process of developing cloud solutions. The domain covers technology adoption and how to use those technologies to secure and manage defense workloads. Whether migrating or rearchitecting an application using cloud native services, architectural decisions need to be made that align with mission objectives, and the workload domain provides guidance in this areas.
+The workload domain focuses on the iterative process of developing cloud solutions. The domain covers technology adoption and how to use those technologies to secure and manage defense workloads. Whether migrating or rearchitecting an application using cloud native services, architectural decisions need to be made that align with mission objectives, and the workload domain provides guidance in this area.
 
 ## Next step
 

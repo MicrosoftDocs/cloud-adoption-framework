@@ -13,7 +13,7 @@ ms.subservice: organize
 
 The ready methodology is the first step in the platform domain of cloud adoption.
 
-:::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domaidn of cloud adoption." border="false":::
+:::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - platform domain*
 
 The ready methodology focuses on building landing zones. Landing zones enable application migration, modernization, and innovation at enterprise-scale. They provide a home for cloud workloads and from the foundation of the resource management system.
