@@ -2,7 +2,7 @@
 title: Organize for defense cloud adoption
 description: Recommendations for organizing a defense organization for cloud adoption
 author: stephen-sumner
-ms.author: wayne.meyer
+ms.author: wayneme
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual
@@ -49,4 +49,4 @@ For more information, see [required cloud functions for cloud adoption](/azure/c
 The organize methodology is the last step in the mission domain. The ready methodology of the platform domain is next.
 
 > [!div class="nextstepaction"]
-> [](ready.md)
+> [Ready](ready.md)

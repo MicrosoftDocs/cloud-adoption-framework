@@ -51,4 +51,4 @@ Mission owners should designate a single member of their personnel to own landin
 The ready methodology is about building a platform. The govern methodology provides insights on governing the platform.
 
 > [!div class="nextstepaction"]
-> [](govern.md)
+> [Govern](govern.md)

@@ -2,7 +2,7 @@
 title: Defense cloud adoption scenario
 description: Cloud adoption guidance for defense organizations
 author: stephen-sumner
-ms.author: wayne.meyer
+ms.author: wayneme
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual

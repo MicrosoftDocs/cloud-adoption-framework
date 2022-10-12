@@ -2,7 +2,7 @@
 title: Plan for defense cloud adoption
 description: Recommendations for planning a cloud adoption strategy in a defense organization
 author: stephen-sumner
-ms.author: wayne.meyer
+ms.author: wayneme
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual

@@ -80,4 +80,4 @@ Here are a few DevOps recommendations:
 The secure methodology is next, and the cloud offers security professional useful tools for protecting workloads.
 
 > [!div class="nextstepaction"]
-> [](secure.md)
+> [Secure](secure.md)

@@ -72,4 +72,4 @@ The Azure SIEM (Sentinel) can create a visual report all non-compliant resources
 The last methodology in the workload domain is the manage methodology. The manage methodology has recommendations for driving operational efficiency.
 
 > [!div class="nextstepaction"]
-> [](manage.md)
+> [Manage](manage.md)

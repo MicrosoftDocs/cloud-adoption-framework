@@ -2,7 +2,7 @@
 title: Govern for defense cloud adoption
 description: Recommendations for cloud platform governance in a defense organization
 author: stephen-sumner
-ms.author: michael.mcKanna
+ms.author: Michael.McKanna
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual
@@ -91,4 +91,4 @@ Here are a few considerations around cost governance:
 After governance, cloud adoption moves into the workload domain and focuses on the adopt methodology.
 
 > [!div class="nextstepaction"]
-> [](adopt.md)
+> [Adopt](adopt.md)
