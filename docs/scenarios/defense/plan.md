@@ -43,7 +43,7 @@ Cloud brokers provided the following benefits:
 
 It's important to note that the term landing zone can refer to the entire platform or the area that a mission owner will maintain. A landing zone includes all the foundational components defense workloads needed for secure, reliable, and cost-effective cloud operations. Below is a generalized landing zone architecture for defense scenarios.
 
-:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." lightbox=".image/cloud-broker-landing-zone-lightbox.png":::
+:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png" border="false":::
 *Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
 
 Without a cloud broker, mission owners are responsible for the entire landing zone architecture and associated services. But with a cloud broker, mission owners shift the compliance and management responsibilities to the broker and focus on meeting mission objectives.
