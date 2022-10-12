@@ -16,7 +16,7 @@ Your organization or enterprise needs to design suitable AKS platform-level capa
 
 Kubernetes can be used for both stateless and stateful workloads. Stateful workloads often require a storage solution for storing state. With Azure Kubernetes Service (AKS) we support multiple integrated native storage options. Selecting the right storage option requires careful consideration, and the goal of this document is to guide you to choose the right option or combination of options for your workload.
 
-Multiple storage solutions exist for AKS. Solutions range from managed databases, to disks, files and blob storage. Within each solution there are also different options to consider. In the design considerations and design recommendations sections, you'll learn more about the different solutions and options available.
+With AKS, we offer multiple integrated native options to store state. These include managed databases, and storage options like disks (or block), files and blob (or object) storage. Each of these options offer different SKUs, sizes and performance characteristics. In the design considerations and design recommendations sections, you'll learn more about the different types of storage and SKUs available for your workloads.
 
 ## How to select the right storage service
 
