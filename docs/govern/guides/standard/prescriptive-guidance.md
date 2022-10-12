@@ -3,7 +3,7 @@ title: 'Standard enterprise governance: Best practices explained'
 description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a standard enterprise.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/07/2022
+ms.date: 10/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -18,7 +18,7 @@ This article describes the high-level strategies that are required to create a g
 
 ## Governance MVP (initial governance foundation)
 
-You can achieve rapid adoption of governance and corporate policy thanks to a few principles and cloud-based governance tooling. The following disciplines are the first three to use in any governance process. Each discipline is then explored further on in this article.
+You can achieve rapid adoption of governance and corporate policy thanks to a few principles and cloud-based governance tooling. The following disciplines are the first three to use in any governance process. Each discipline is then explored further in this article.
 
 To establish the starting point, you'll learn about the high-level strategies behind the Security Baseline, Identity Baseline, and Deployment Acceleration disciplines that are required to create a governance MVP. These disciplines serve as the foundation for all adoption.
 
@@ -47,7 +47,7 @@ The cloud governance team is responsible for the following decisions and impleme
 
 The decision on what subscription design to use determines how Azure subscriptions are structured and how to use Azure management groups to efficiently manage the access, policies, and compliance for the subscriptions. In this narrative, the governance team has established subscriptions for production and nonproduction workloads. For more information, see the [production and nonproduction](../../../ready/azure-best-practices/initial-subscriptions.md) subscription design pattern.
 
-- Departments aren't likely required, given the current focus. Constrain deployments within a single billing unit. At this stage of adoption, there might not even be an Enterprise Agreement to centralize billing. It's likely that this level of adoption is being managed by a single pay-as-you-go Azure subscription.
+- Departments aren't likely required, given the current focus. You typically constrain your deployments within a single billing unit. At this stage of adoption, there might not even be an Enterprise Agreement to centralize billing. It's likely that this level of adoption is being managed by a single pay-as-you-go Azure subscription.
 - Whether you use the EA portal or have an Enterprise Agreement in place, define and agree on a subscription model to minimize administrative overheard beyond just billing.
 - A common naming convention should be agreed on as part of the subscription design, based on the previous two points.
 
