@@ -1,37 +1,46 @@
 ---
-title: Defense cloud adoption framework
-description: A cloud adoption framework for a defense organization
+title: Defense cloud adoption scenario
+description: Cloud adoption guidance for defense organizations
 author: stephen-sumner
-ms.author: wayneme
+ms.author: wayne.meyer, michael.mcKanna
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
 ---
-# Defense cloud adoption framework
+# Introduction to the defense scenario
 
-The CAF Defense scenario is a cloud adoption framework tailored for defense organizations. The content focuses on the challenges that many defense mission owners face in cloud adoption and offers recommendations to navigate those challenges. The goal of this framework is to accelerate the digital transformation efforts of defense organizations.
+The CAF Defense scenario is cloud adoption guidance tailored for defense organizations. Defense organizations coordinate and supervise armed forces in the interest of national security. This means data must be current, secure, and available from the tactical edge to headquarters distributed around the globe.
 
-:::image type="content" source="./images/caf-dod.png" alt-text="Diagram of an Azure landing zone." border="false":::
+The defense scenario addresses the challenges mission owners face in cloud adoption and offers recommendations to navigate those challenges. The goal is to help accelerate the digital transformation efforts of defense organizations.
 
-We’ve divided the defense cloud adoption framework into three phases. The phases are mission, platform, and workload. The defense framework helps ensure you reach the objective in each phase of your cloud adoption journey:
+The defense scenario is divided into three domains: mission, platform, and workload. It’ll be helpful to outline each domain:
+
+:::image type="content" source="./images/caf-dod.png" alt-text="Figure that shows the mission domains of cloud adoption in a defense context with CAF methodologies underneath them. Strategy, plan, and organize are in the mission domain. Ready and govern are in the platform domain. Adopt, secure, and manage are in the workload domain." border="false":::
+*Figure 1: Overview of cloud adoption domains and methodologies*
 
 ## Mission
 
-The mission phase focuses on preparing your organization for cloud adoption. It’s where you define mission goals and plot a roadmap to achieve those goals. Organization is about ensuring you have the right people to develop, execute, and maintain your cloud solution.
+The mission domain focuses on preparing defense organizations for cloud adoption so that they can achieve their mission. This mission domain is where mission owners:
+
+- Identify mission goals and motivators
+- Define a roadmap to achieve those identified goals
+- Involve the right people to develop, execute, and maintain your cloud solution
 
 ## Platform
 
-The platform phase focuses on establishing a foundation for your defense workloads to run in the cloud. We recommend using a cloud broker to build and maintain the platform. They establish connectivity, identity, and governance for the defense platform.
+The platform domain focuses on establishing a foundation for your defense workloads to run in the cloud. The high priority in this domain is aligning with a cloud broker approach. The preferred way to build a cloud platform is with a cloud broker. A cloud broker builds and maintains the platform while establishing connectivity, identity, and governance for the platform. The platform domain provides guidance on how to align to a cloud broker approach.
 
 ## Workload
 
-The workload phase focuses on the cyclical process of adopting cloud technologies then securing and managing your defense workloads. Whether you are migrating an application or rethinking that app and using cloud native services to innovate, you will need to make architectural decisions that connect to your mission objectives.
+The workload domain focuses on the iterative process of developing cloud solutions. The domain covers technology adoption and how to use those technologies to secure and manage defense workloads. Whether migrating or rearchitecting an application using cloud native services, architectural decisions need to be made that align with mission objectives. The workload domain provides guidance on these topics.
 
 ## Next step
 
-Strategy alignment is the first step in cloud adoption for a defense organization.
+The defense scenario helps ensure defense organizations reach the objective in each domain of your cloud adoption journey.
+
+The mission domain is the first step in the defense scenario. It starts with building a strategy to meet broader.
 
 > [!div class="nextstepaction"]
 > [Strategy](strategy.md)

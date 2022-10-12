@@ -2,7 +2,7 @@
 title: Secure for defense cloud adoption
 description: Recommendations for securing cloud workloads in a defense organization
 author: stephen-sumner
-ms.author: wayneme
+ms.author: wayne.meyer, michael.mcKanna
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual
@@ -11,9 +11,65 @@ ms.subservice: organize
 ---
 # Secure for defense cloud adoption
 
-:::image type="content" source="./images/platform.png" alt-text="Graphic showing the workload domain of cloud adoption." border="false":::
+The secure methodology is a critical step in the workload domain of cloud adoption.
+
+:::image type="content" source="./images/workload.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Workload is highlighted to show we're in the workload domain of cloud adoption." border="false":::
+*Figure 1: Domain tracker - workload domain*
+
+Security refers to the cybersecurity triad of confidentiality, integrity, and availability. Even though security falls within the workload domain, it’s an important consideration at every stage in the cloud adoption journey. Security fails without proper strategy and plan. Landing zones and governance falter without proper security considerations. Modernizations weaken security posture if not built into the development and operations processes.
+
+Security is no less important for a workload. They inherit security controls from the platform but must adhere to security best practices. Here are a few recommendations to consider when building and managing defense workloads.
+
+## Implement zero trust
+
+Zero Trust is a security methodology, not a product. Implementations of Zero Trust principles will differ, but they’re all attempting to work backwards from a single concept: eliminate trust.
+
+Three main principles of zero trust touched on here are:
+
+- Verify every session explicitly
+- Enforce the least privilege on every identity
+- Monitor, search, and secure continuously
+
+**Verify every session explicitly** - Verify refers to authentication and authorization. You need to authenticate and authorize every device regardless of location. Multifactor authentication is a common defense standard. The use of a security token often supplements credentials.
+
+We recommend you use an attribute-based access control (ABAC) system. ABAC builds on role-based access control (RBAC) and requires devices to meet extra conditions before gaining access to a resource. Security professionals configure the conditions to limit access and minimize the number of roles assignments you need to manage. Azure Active Directory provides native ABAC capabilities so users and resource identities only access information they need.
+
+For more information, see [attribute-based access control](/azure/role-based-access-control/conditions-overview).
+
+**Enforce least privileges on every identity** - The concept of least privilege access is a familiar concept in defense environments. It’s visible at the macro-level in the mandatory access control system many defense organizations use. Data receives classification labels based on its sensitivity (confidential, secret, top secret), and individuals receive access to data needed to complete a task.  Once the task is completed, access is removed.   Access to sensitive data when not needed is a violation of the least privileged model.
+
+RBAC and ABAC are the core features of least privilege enforcement. People change roles and architecture changes, so it’s important to review access regularly to avoid privilege-creep.  RBAC and ABAC allow teams to create a fine-grained access control system that meets the needs of an environment as access requirements change overtime.
+
+Azure simplifies access reviews. RBAC and ABAC automate aspects of access control. Conditional access policies can be tied to roles, departments, projects, and locations of defense personnel. As people change roles or locations, their access to resources will change when updated in their Azure identify profile. Security teams can perform manual reviews of any resource in Azure at any time. Azure lets users see resources from multiple angles, making manual review easier.
+
+Granting elevated privilege for a defined period is a security best-practice. Azure AD simplifies this with Privileged Identity Management (PIM). PIM grants elevated privileges when requested by a legitimate user and only grants those privileges for a defined period. This exhibits just-in-time-access and restricts privileged user access-based need.  This further reduces dormant accounts having privileged access.
+
+- For more information on PIM, see [PIM for just-in-time access](/azure/active-directory/roles/best-practices#2-use-privileged-identity-management-to-grant-just-in-time-access).
+- For more on identity, see [Azure government identity](/azure/azure-government/documentation-government-plan-identity).
+
+**Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. To do this, defense security teams should monitor, scan, and improve cloud environment to mitigate risks. Defense organizations often have required security tools that you can supplement with cloud-native tooling for comprehensive security detection and analysis.
+
+Here are a few tools that add value to defense deployments:
+
+- ***Threat intelligence***: Cloud environments should have a persistent threat detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects.
+- ***Distributed denial of service (DDoS)***: Security tools should protect against malicious or non-malicious distributed denial-of-service attacks.
+- ***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyzes, aggregates, and detects threats in logs generated throughout a cloud environment.
+
+For a list of security tools, see [Azure government security](/azure/azure-government/documentation-government-plan-security).
+
+**Automate security compliance** - Defense security standards require defense security professionals to maintain hundreds of security controls. The manual execution of this process is labor intensive and prone to human error. It is possible to automate compliance with leading security standards and automate the remediation of cloud resources to align with those standards.
+
+Currently Azure allows mission owners to automate compliance for:
+
+- Zero Trust
+- CMMC
+- NIST 800-53
+
+The Azure SIEM (Sentinel) can create a visualize report all non-compliant resources against a given security standard. When prompted, it generates remediation suggestions for any security controls that aren’t compliant with the standard. The SIEM tool also lets security professionals download compliance assessment reports that can serve as point-in-time security baseline and improve transparency.
 
 ## Next steps
+
+The last methodology in the workload domain is manage. Find recommendations on driving operational efficiency.
 
 > [!div class="nextstepaction"]
 > [](manage.md)
