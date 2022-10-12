@@ -170,5 +170,5 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - Learn about [Management and monitoring for Azure Arc-enabled Kubernetes](./eslz-arc-kubernetes-management-disciplines.md).
 - Learn [About service meshes](/azure/aks/servicemesh-about).
 - Experience Azure Arc-enabled Kubernetes with the Open Service Mesh extension from [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_osm_extension/#integrate-open-service-mesh-osm-with-cluster-api-as-an-azure-arc-connected-cluster-using-kubernetes-extensions).
-- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

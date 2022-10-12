@@ -7,7 +7,7 @@ ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, ignite-2022
 ---
 
 # Business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance

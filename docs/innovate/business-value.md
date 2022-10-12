@@ -68,9 +68,9 @@ It's fairly common for the answers to questions one and two to be misaligned. Du
 - **Hypothesis opportunity:** It's common for various stakeholders and development teams to have too many expectations for a solution. Unrealistic expectations can be a sign that the hypothesis is too vague. Follow the guidance on [building with customer empathy](./considerations/build.md) to construct a clearer hypothesis.
 - **Build opportunity:** Teams might be misaligned because they disagree on the way to solve the customer need. Such disagreement typically indicates that the team is being [delayed by a premature technical spike](./considerations/build.md#reduce-complexity-and-delay-technical-spikes). To keep the team focused on the customer, start the first iteration and build a small minimum viable product (MVP) to address part of the hypothesis. For more information, see [Develop digital inventions](./considerations/invention.md).
 - **Training opportunity:** Either team can be misaligned because they need deep technical requirements and extensive functional requirements. This need can lead to an opportunity for training in agile methodologies. When the team culture isn't ready for agile processes, you might find innovation and keeping pace with the market to be a challenge. For training resources about DevOps and agile practices, see:
-  - [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/)
-  - [Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/)
-  - [Deploy applications with Azure DevOps](/learn/paths/deploy-applications-with-azure-devops/)
+  - [Evolve your DevOps practices](/training/paths/evolve-your-devops-practices/)
+  - [Build applications with Azure DevOps](/training/paths/build-applications-with-azure-devops/)
+  - [Deploy applications with Azure DevOps](/training/paths/deploy-applications-with-azure-devops/)
 
 By following the Innovate methodology and the backlog management tools in each section of this article, you can help create solution alignment.
 

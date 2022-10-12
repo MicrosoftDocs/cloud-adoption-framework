@@ -95,5 +95,5 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - Learn how to [Upgrade Azure Arc-enabled Kubernetes agents](/azure/azure-arc/kubernetes/agent-upgrade).
 - Learn how to [Use Cluster Connect to connect to Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/cluster-connect) for cluster management.
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
-- Learn about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

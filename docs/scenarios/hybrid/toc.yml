@@ -309,32 +309,32 @@ items:
     - name: Hybrid cloud
       items:
       - name: Introduction to Azure hybrid cloud services
-        href: /learn/modules/intro-to-azure-hybrid-services/
+        href: /training/modules/intro-to-azure-hybrid-services/
       - name: Design a hybrid network architecture on Azure
-        href: /learn/modules/design-a-hybrid-network-architecture/
+        href: /training/modules/design-a-hybrid-network-architecture/
       - name: Implement hybrid network infrastructure
-        href: /learn/modules/implement-hybrid-network-infrastructure/
+        href: /training/modules/implement-hybrid-network-infrastructure/
     - name: Azure Arc
       items:
       - name: Intro to Azure Arc
-        href: /learn/modules/intro-to-azure-arc/
+        href: /training/modules/intro-to-azure-arc/
       - name: Azure Arc for servers
-        href: /learn/modules/intro-to-arc-for-servers/
+        href: /training/modules/intro-to-arc-for-servers/
       - name: Azure Arc for Kubernetes
-        href: /learn/modules/intro-to-arc-enabled-kubernetes/
+        href: /training/modules/intro-to-arc-enabled-kubernetes/
       - name: Azure Arc for hybrid infrastructure
-        href: /learn/paths/manage-hybrid-infrastructure-with-azure-arc/
+        href: /training/paths/manage-hybrid-infrastructure-with-azure-arc/
       - name: Azure Arc for hybrid workloads
-        href: /learn/modules/manage-hybrid-workloads-azure-arc/
+        href: /training/modules/manage-hybrid-workloads-azure-arc/
     - name: Azure Stack
       items:
       - name: Intro to Azure Stack
-        href: /learn/modules/intro-to-azure-stack/
+        href: /training/modules/intro-to-azure-stack/
       - name: Azure Stack HCI foundations
-        href: /learn/paths/azure-stack-hci-foundations/
+        href: /training/paths/azure-stack-hci-foundations/
       - name: Azure Stack HCI deployment
-        href: /learn/modules/azure-stack-hci-plan-deploy/
+        href: /training/modules/azure-stack-hci-plan-deploy/
       - name: Azure Stack HCI technologies
-        href: /learn/modules/azure-stack-hci-technologies/
+        href: /training/modules/azure-stack-hci-technologies/
       - name: Azure Stack HCI - Azure Arc integration
-        href: /learn/modules/stack-hci-arc-integration/
+        href: /training/modules/stack-hci-arc-integration/
