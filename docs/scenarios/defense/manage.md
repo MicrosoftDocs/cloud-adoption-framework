@@ -2,7 +2,7 @@
 title: Manage for defense cloud adoption
 description: Recommendations for managing cloud workloads in a defense organization
 author: stephen-sumner
-ms.author: wayne.meyer, michael.mcKanna
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual

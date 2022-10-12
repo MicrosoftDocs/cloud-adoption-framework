@@ -2,7 +2,7 @@
 title: Ready for defense
 description: Recommendations for building a landing zone in a defense organization
 author: stephen-sumner
-ms.author: wayne.meyer, michael.mcKanna
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual
@@ -13,10 +13,10 @@ ms.subservice: organize
 
 The ready methodology is the first step in the platform domain of cloud adoption.
 
-:::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domain of cloud adoption." border="false":::
+:::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domaidn of cloud adoption." border="false":::
 *Figure 1: Domain tracker - platform domain*
 
-The ready methodology focuses on building landing zones. Landing zones enable application migration, modernization, and innovation at enterprise-scale. They provide a home for cloud workloads and form the foundation of the resource management system.
+The ready methodology focuses on building landing zones. Landing zones enable application migration, modernization, and innovation at enterprise-scale. They provide a home for cloud workloads and from the foundation of the resource management system.
 
 A secure architecture is key for your cloud security posture. Architecture refers to the components of an environment and the traffic flows between them. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards.
 

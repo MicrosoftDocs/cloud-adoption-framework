@@ -2,7 +2,7 @@
 title: Organize for defense cloud adoption
 description: Recommendations for organizing a defense organization for cloud adoption
 author: stephen-sumner
-ms.author: wayne.meyer, michael.mcKanna
+ms.author: wayne.meyer
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual
