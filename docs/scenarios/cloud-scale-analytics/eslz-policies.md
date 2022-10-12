@@ -87,7 +87,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 | Deny-PublicIp|Network Isolation|Restrict deployment of public IPs.|
 |Deny-PrivateEndpoint-PrivateLinkServiceConnections|Network Isolation| Deny private endpoints to resources outside of the aad tenant and subscription.|
 |Deploy-DNSZoneGroup-{Service}-PrivateEndpoint|Network Isolation|Deploys the configurations of a Private DNS Zone Group by a parameter for service's private endpoint. Used to enforce the configuration to a single Private DNS Zone.|
-|DiagnosticSettings-{Service}-LogAnalytics|Logging|Send diagnostic settings for cosmos db to log analytics workspace.|
+|DiagnosticSettings-{Service}-LogAnalytics|Logging|Send diagnostic settings for Azure Cosmos DB to log analytics workspace.|
 
 ## Storage
 
@@ -234,11 +234,11 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-Cosmos-DenyCosmosKeyBasedMetadataWriteAccess|Authentication|Deny key based metadata write access for Cosmos DB accounts.|
-|Append-Cosmos-PublicNetworkAccess|Network Isolation|Enforces no public network access for Cosmos DB accounts.|
-|Audit-Cosmos-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Cosmos DB.|
-|Deny-Cosmos-Cors|Network Isolation|Denies CORS rules for Cosmos DB accounts."|
-|Deny-Cosmos-PublicNetworkAccess|Network Isolation|Denies public network access for Cosmos DB accounts.|
+|Append-Cosmos-DenyCosmosKeyBasedMetadataWriteAccess|Authentication|Deny key based metadata write access for Azure Cosmos DB accounts.|
+|Append-Cosmos-PublicNetworkAccess|Network Isolation|Enforces no public network access for Azure Cosmos DB accounts.|
+|Audit-Cosmos-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Azure Cosmos DB.|
+|Deny-Cosmos-Cors|Network Isolation|Denies CORS rules for Azure Cosmos DB accounts."|
+|Deny-Cosmos-PublicNetworkAccess|Network Isolation|Denies public network access for Azure Cosmos DB accounts.|
 
 ## Azure Container Registry
 

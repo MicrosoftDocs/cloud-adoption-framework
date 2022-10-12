@@ -66,7 +66,6 @@ The first time you use Azure Database Migration Service, you must register the r
 
 ::: zone target="chromeless"
 
-
 ::: zone-end
 
 <!-- docutune:casing "Create Migration Service wizard" -->
@@ -79,7 +78,6 @@ After you register the resource provider, create an instance of Azure Database M
 The service is now ready to migrate the supported source databases to target platforms such as SQL Server, MySQL, PostgreSQL, or MongoDB.
 
 ::: zone target="chromeless"
-
 
 ::: zone-end
 
@@ -171,7 +169,7 @@ For more information, see [Overview of Database Experimentation Assistant](/sql/
 
 ### Azure Cosmos DB data migration tool
 
-Azure Cosmos DB data migration imports data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table Storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. You can also use the data migration tool when migrating from a single partition collection to a multipartition collection for the SQL API.
+Azure Cosmos DB data migration imports data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table Storage, Amazon DynamoDB, and even Azure Cosmos DB for NoSQL collections. You can also use the data migration tool when migrating from a single partition collection to a multipartition collection in Azure Cosmos DB for NoSQL.
 
 For more information, see [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data).
 
