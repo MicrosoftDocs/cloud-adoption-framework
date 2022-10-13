@@ -18,7 +18,7 @@ The strategy methodology falls within the mission domain of cloud adoption (*see
 
 Building a strategy for the cloud adoption is an important step to drive awareness of the transformation vision. Without a clear vision, a transformation can break down into conflicting activities and prevent the defense organization from advancing the transformation. The strategy should contain key milestones that stakeholders can monitor for analytic interests or performance control needs.
 
-The challenges might not surface immediately. Strategy about ensuring the short- and long-term success of cloud adoption. It aligns mission owner vision with other digital transformation initiatives and helps the project within allotted budgets.
+The challenges might not surface immediately. Strategy about ensuring the short and long-term success of cloud adoption. It aligns the mission owner's vision with overarching digital transformation initiatives and helps cloud adoption succeed within allotted budgets.
 
 The following recommendations can help build a solid cloud strategy:
 
