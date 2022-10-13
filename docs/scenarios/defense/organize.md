@@ -24,7 +24,7 @@ A decentralized cloud empowers groups to build their own autonomous solutions an
 
 ## Define new roles
 
-Mission owners should define role and responsibilities with the cloud broker. As mission owner workloads move to the cloud, cloud brokers should take on more responsibility from the mission owner. It’s tempting for mission owners to map on-premises roles and responsibilities in the cloud, but the two operating models make it an ineffective approach. It’s important to remember that cloud brokers work on the cloud platform for months before mission owners show up. Mission owners should recall their familiarity with the platform when defining new roles and responsibilities. Mission owners need to enable cloud brokers to build while protecting key assets.
+Mission owners should define role and responsibilities with the cloud broker. As mission owner workloads move to the cloud, cloud brokers should take on more responsibility from the mission owner. It’s tempting for mission owners to map on-premises roles and responsibilities in the cloud, but the two operating models make it an ineffective approach. It’s important to remember that cloud brokers work on the cloud platform for months before mission owners gain access. Mission owners should recall their familiarity with the platform when defining new roles and responsibilities. Mission owners need to enable cloud brokers to build while protecting key assets.
 
 ## Define platform responsibilities
 
@@ -40,7 +40,7 @@ A frequent area of concern in cloud adoption is financial oversight. Mission own
 
 ## Identify other cloud functions
 
-The mission owner won't manage the cloud solutions as a single unit. Other cloud functions focused on governance, operations, security, automation, and data might be required to perform specific activities in the cloud platform.
+The mission owner shouldn't manage the cloud solution as a single unit. Other cloud functions focused on governance, operations, security, automation, and data might be required to perform specific activities in the cloud platform.
 
 For more information, see [required cloud functions for cloud adoption](/azure/cloud-adoption-framework/organize/#understand-required-cloud-functions).
 
