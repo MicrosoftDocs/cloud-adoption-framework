@@ -28,7 +28,7 @@ There are several strategies defense organizations can adopt to improve operatio
 
 Communication is the key to getting the deliverables mission owners need. A product owner is a key asset in driving workload enhancements in the right direction. A product owner is a defense individual who serves as the single point of contact for the workload technical team. The product owner represents the interests of the stakeholders and handles stakeholder input. The product owner uses this input to identify the highest priority tasks for the technical team to focus on. The product owner should meet regularly with stakeholders and the workload technical team to set priorities and receive feedback.
 
-If the stakeholders change the functional requirements of a workload, the product owner should to update the existing requirements in writing and discuss the new technical requirements with the technical team. Without bi-directional communication, the pace of innovation will slow, and the workload will drift from the requirements.
+If the stakeholders change the functional requirements of a workload, the product owner should update the existing requirements in writing and discuss the new technical requirements with the technical team. Without bi-directional communication, the pace of innovation will slow, and the workload will drift from the requirements.
 
 ## Incentivize transparency
 

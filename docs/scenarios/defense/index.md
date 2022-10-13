@@ -20,7 +20,7 @@ The defense scenario is divided into three domains: mission, platform, and workl
 
 ## Mission domain
 
-The mission domain focuses on preparing defense organizations for cloud adoption so that they can achieve their mission. Here mission mission owners take the following action:
+The mission domain focuses on preparing defense organizations for cloud adoption so that they can achieve their mission. Here mission owners take the following action:
 
 - Identify mission goals and motivators
 - Define a roadmap to achieve those identified goals

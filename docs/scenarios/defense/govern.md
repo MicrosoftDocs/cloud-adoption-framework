@@ -42,7 +42,7 @@ The following techniques can help avoid governance redundancies or gaps:
 
 ## Automate compliance
 
-Defense organizations have layers of compliance requirements to protect sensitive data and secrets. Governance is necessary to protect these assets, but it creates management burdens. Governance requires precision, repetition, and consistency, and these tasks automation performs much than humans. Defense organizations should automate governance processes. It will improve operational efficiency and security and free defense personnel to focus on other priorities.
+Defense organizations have layers of compliance requirements to protect sensitive data and secrets. Governance is necessary to protect these assets, but it creates management burdens. Governance requires precision, repetition, and consistency, and these tasks automation performs much better than humans. Defense organizations should automate governance processes. It will improve operational efficiency and security and free defense personnel to focus on other priorities.
 
 Azure simplifies many aspects of defense governance. Azure has an automated governance tool called Azure Policy that is built into the Azure platform. This tool keeps cloud environments in alignment with available policies, standards, and compliance requirements. It allows teams to automate compliance assessments and even remediation against pre-defined compliance standards.  
 
