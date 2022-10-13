@@ -56,8 +56,32 @@ Azure Policy can be used to enforce and audit compliance of your naming standard
 
 The following snippet from a [custom policy example in Azure Samples (TODO: Add link after policy is added to Azure Samples)]() denies an Azure virtual machine deployment based on a naming standard.
 
-```azurecli
-# TODO: Jason Masten to add snippet here
+```json
+{
+    "if": {
+        "allOf": [
+            {
+                "field": "name",
+                "notMatch": "[concat('vm', parameters('Application'), parameters('DataCenterCountry'), parameters('DataCenterLocation'), parameters('Environment'), parameters('WebTier'), '#')]"
+            },
+            {
+                "field": "name",
+                "notMatch": "[concat('vm', parameters('Application'), parameters('DataCenterCountry'), parameters('DataCenterLocation'), parameters('Environment'), parameters('LogicTier'), '#')]"
+            },
+            {
+                "field": "name",
+                "notMatch": "[concat('vm', parameters('Application'), parameters('DataCenterCountry'), parameters('DataCenterLocation'), parameters('Environment'), parameters('DataTier'), '#')]"
+            },
+            {
+                "field": "type",
+                "equals": "Microsoft.Compute/virtualMachines"
+            }
+        ]
+    },
+    "then": {
+        "effect": "deny"
+    }
+}
 ```
 
 ## Audit
