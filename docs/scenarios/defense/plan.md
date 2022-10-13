@@ -18,9 +18,7 @@ The plan methodology falls within the mission domain of cloud adoption (*see ima
 
 Any transformation requires a plan, and cloud adoption is no exception. The plan methodology is where mission owners prepare for cloud adoption. They need to make decisions that will help meet mission objectives and align the project with the right stakeholders. These plans will determine personnel and platform management needs. Proper planning helps ensure the project receives buy-in from stakeholders.
 
-Mission owners have to determine the right cloud broker approach. Cloud brokers provide defense organizations with distinct benefits. Using a cloud broker a best practice in defense organizations. Some defense organizations mandate the use of a specific cloud broker in the chain of command. The planning phase of cloud adoption is where mission owners need to pick the right cloud broker approach.
-
-Given the importance and benefits of cloud brokers, it’s worth exploring cloud broker benefits and approaches.
+The planning phase of cloud adoption is where mission owners pick the right cloud broker approach. Using a cloud broker is a best practice in defense organizations because of the many benefits the relationship provides. Some defense organizations mandate the use of a specific cloud broker in the chain of command. Given the importance and benefits of cloud brokers, it’s worth exploring cloud broker benefits and approaches.
 
 ## Cloud broker benefits
 
@@ -33,7 +31,9 @@ Cloud brokers provided the following benefits:
 - Platform authorization to operate (ATO)
 - Improved efficiency
 
-**Governed landing zone** - Cloud brokers build and maintain platforms that meet compliance requirements. The services, solutions, and workloads hosted in a Defense environment require governed architecture. These governed architectures are referred to as landing zones. Landing zones feature design decisions in the following disciplines:
+Let's address each of these benefits:
+
+**(1) Governed landing zone** - The services, solutions, and workloads hosted in a defense environment require governed architecture. Cloud brokers build and maintain governed architectures that meet compliance requirements. These governed architectures are referred to as landing zones. Landing zone build features design decisions that include the following disciplines:
 
 - Cost Management
 - Security Baseline Management
@@ -46,45 +46,41 @@ It's important to note that the term landing zone can refer to the entire platfo
 :::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png" border="false":::
 *Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
 
-Without a cloud broker, mission owners are responsible for the entire landing zone architecture and associated services. But with a cloud broker, mission owners shift the compliance and management responsibilities to the broker and focus on meeting mission objectives.
+Without a cloud broker, a mission owner would be responsible for the entire landing zone architecture and its associated services. But with a cloud broker, the mission owner shift compliance and management responsibilities to the broker and can focus on meeting mission objectives.
 
-**Core services** - Cloud brokers implement and manage core services. such as identity, networking, and compliance. In most instances, a cloud broker securely connects the new cloud environment to on-premises networks, builds operational environments, and establishes an identity access management (IAM) solution with policy enforcement based on mission requirements.
+**(2) Core services** - Cloud brokers implement and manage core services such as identity, networking, and compliance. In most instances, a cloud broker securely connects the new cloud environment to on-premises networks, builds operational environments, and establishes an identity access management (IAM) solution with policy enforcement based on mission requirements.
 
-**Platform authorization to operate (ATO)** - Experienced cloud brokers can help achieve a platform-level ATO quicker. A platform-level ATO directly affects the speed at which mission owners can deploy critical applications and workloads.
+**(3) Platform authorization to operate (ATO)** - Experienced cloud brokers can help achieve a platform-level ATO quicker than mission owners on their own. A platform-level ATO directly affects the speed at which mission owners can deploy critical applications and workloads.
 
-**Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data points or documents. This automation enables timely and accurate routing to approval authorities for workload deployment, providing traceability and accountability. Without a cloud broker, mission owners have a lot more do. They've to:
+**(4) Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data points or documents. This automation enables timely and accurate routing to approval authorities for workload deployment, providing traceability and accountability. Without a cloud broker, mission owners have to navigate the following hurdles:
 
-- Obtain and allocate funds
-- Comply with oversight requirements
-- Obtain approval from security teams
-- hand-off to technical teams for application build
+- Obtaining and allocating funds
+- Complying with oversight requirements
+- Obtaining approval from security teams
+- Handing off the project to technical teams for application build
 
-These activities can last weeks or months, and in some cases years. The cloud broker simplifies and expedites this process.
+These activities can last weeks or months, and in some cases years. The cloud broker simplifies and expedites the process for mission owners.
 
 ## Cloud broker approaches
 
-There are different approaches for mission owners to consider when using cloud broker. Mission owners can use a single cloud broker or multiple cloud brokers. The right approach depends on mission needs.
+There are different approaches for mission owners to consider when using a cloud broker. Mission owners can use a single cloud broker or multiple cloud brokers, and the right approach depends on mission needs.
 
-**Single cloud broker approach:**
-
-In a single cloud broker strategy, mission owners contract cloud services with a single entity. There might be various support models, but the cloud broker is the single point-of-contact. A single cloud broker would provide a single cloud identity solution referred to as a tenant. A single tenant offers the following benefits:
+**(1) Single cloud broker approach** - In a single cloud broker approach, mission owners contract cloud services with a single entity. There might be various support models, but the cloud broker is the single point-of-contact. A single cloud broker provides a single cloud identity solution referred to as a tenant. There are some distinct advantages to single tenancy. A single tenant offers the following benefits:
 
 - Reduces identity and access management complexity by improving visibility and transparency across all cloud environments
 - Improves security while facilitating compliant information sharing
 - Simplifies building a zero-trust architecture
 - Increases data transfer efficiency between war fighters in austere conditions
 
-If these benefits meet the needs of mission owners, then a single broker might be the preferred approach.
+If these benefits meet the needs of mission owners, then a single broker is likely the better approach.
 
-**Multiple cloud broker approach:**
-
-A multiple-cloud-brokers approach uses two or more cloud brokers to provide managed cloud services. Multiple cloud brokers appeal to complex organizations, and defense environments often have enough complexity to warrant a multiple cloud broker strategy. But this scenario can add more risk to the cloud adoption plan and add more communication lines for the organization to manage.
+**(2) Multiple cloud broker approach** - A multiple-cloud-brokers approach uses two or more cloud brokers to provide managed cloud services. Multiple cloud brokers are better in complex organizations, and defense environments often have enough complexity to warrant a multiple cloud broker strategy. But there's a caveat. Multiple cloud brokers can add more risk to the cloud adoption plan and add more communication lines for the organization to manage.
 
 The factors listed below will help you determine if the multiple cloud broker approach is the right one:
 
 - ***Ownership*** – Mission owners might need their own cloud brokers. Decision-making groups often need their own tenant to meet mission-objectives and avoid delays due to dependencies.
 - ***Isolation*** – Mission owners might need isolated environments for compliance, governance, or identity reasons. Each tenant (instance of Azure Active Directory) represents an isolated identity environment and can create a firm isolation barrier when needed.
-- ***Management*** – Separating complex environments might be ideal for managing and modernizing your cloud workloads. There's increased complexity higher up in the command chain as it is difficult to have a single view of all cloud assets.
+- ***Management*** – Separating complex environments might be ideal for managing and modernizing your cloud workloads. But this management separation creates increased complexity higher in the command chain. It becomes more difficult to have a single view of all cloud assets.
 - ***Security*** – Data compliance for varying impact levels might require multiple tenants and multiple cloud brokers authorized and with the experience to manage those impact levels.
 
 The multi-cloud-broker strategy can be used at different levels in a defense organization. A broker can be assigned to individual military branches (naval, air, ground) or groups of applications. The choice depends on the needs of your defense organization around ownership, isolation, management, and security.
