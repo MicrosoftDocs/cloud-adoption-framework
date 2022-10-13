@@ -2,7 +2,7 @@
 title: Govern for defense cloud adoption
 description: Recommendations for cloud platform governance in a defense organization
 author: stephen-sumner
-ms.author: wayneme
+ms.author: mimckann
 ms.reviewer: ssumner
 ms.date: 10/12/2022
 ms.topic: conceptual
@@ -24,8 +24,8 @@ To avoid some of these issues, it’s worth considering the following best pract
 
 - Evaluate roles and responsibilities
 - Automate compliance
-- Calculate workload estimates
-- Actively manage costs
+- Create a cost governance strategy
+- Create cost baselines
 
 Let's address each best practice:
 
