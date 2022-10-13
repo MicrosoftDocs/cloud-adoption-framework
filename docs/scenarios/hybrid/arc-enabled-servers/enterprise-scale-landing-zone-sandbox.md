@@ -21,10 +21,10 @@ Azure Arc-enabled servers allow you to manage:
 
 This management experience is designed to be consistent with how you manage native Azure Virtual Machines.
 
-To practice your skills in an Azure Arc-enabled servers environment, use ArcBox a sandbox solution for features that are:
-    - Powered by Azure Arc Jumpstart.
-    - entirely self-contained within a single Azure subscription and resource group.
-    - Easy for a user to get hands-on with the Azure Arc-enabled servers technology, with an Azure subscription.
+To practice your skills in an Azure Arc-enabled servers environment, use ArcBox, a sandbox solution for features that are:
+- Powered by Azure Arc Jumpstart.
+- Entirely self-contained within a single Azure subscription and resource group.
+- Easy to get hands-on experience with by using Azure Arc-enabled servers technology.
 
 ## Azure landing zone sandbox subscription
 
