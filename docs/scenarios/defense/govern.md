@@ -59,7 +59,7 @@ For more on governance automation, see
 - [Azure compliance standards](/azure/compliance/).
 - [Governance visualization tool](https://github.com/microsoft/CloudAdoptionframework/tree/master/govern/AzureGovernanceVisualizer)
 
-## Create cost governance strategy
+## Create a cost governance strategy
 
 Costs are a tangible indication of governance effectiveness. Charges should align with expectations and surprises on a bill mean the governance approach in place has gaps. Cost governance is about getting the most out of the resources needed and preventing resource deployments that aren't authorized.
 
@@ -79,8 +79,7 @@ Workload cost governance begins with baseline estimates. Defense teams should pe
 
 Here are some practical steps to creating workload estimates:
 
-***Step 1. Start with the Return on Investment (ROI) of moving to the cloud*** -
-To calculate the ROI of the cloud, mission owners need to determine the Total Cost of Ownership (TCO) for each individual workload transitioning to the cloud. Azure has a [TCO Calculator](https://azure.microsoft.com/pricing/tco/calculator/) that allows the Mission Owner to estimate cost per instance with several variables:
+**(1) Start with the Return on Investment (ROI) of moving to the cloud** - To calculate the ROI of the cloud, mission owners need to determine the Total Cost of Ownership (TCO) for each individual workload transitioning to the cloud. Azure has a [TCO Calculator](https://azure.microsoft.com/pricing/tco/calculator/) that allows the Mission Owner to estimate cost per instance with several variables:
 
 - Facilities (building, real estate)
 - Electricity and cooling charges
@@ -91,7 +90,7 @@ To calculate the ROI of the cloud, mission owners need to determine the Total Co
 
 Not all variables require entry, and some services can be difficult to estimate. Mission owners should determine the level of accuracy required to establish this baseline. Once a TCO estimate is created, mission owners should document this data for later analysis.
 
-***Step 2. Estimate monthly costs for required services*** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate.
+**(2) Estimate monthly costs for required services** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate.
 
 ## Next step
 
