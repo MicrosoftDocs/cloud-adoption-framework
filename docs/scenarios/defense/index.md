@@ -30,7 +30,7 @@ The mission domain focuses on preparing defense organizations for cloud adoption
 
 ## Platform
 
-The platform domain focuses on establishing a foundation for your defense workloads to run in the cloud. The high priority in this domain is aligning with a cloud broker approach. The preferred way to build a cloud platform is with a cloud broker. A cloud broker builds and maintains the platform while establishing connectivity, identity, and governance for the platform. The platform domain provides guidance on how to align to a cloud broker approach.
+The platform domain focuses on establishing a foundation for your defense workloads to run in the cloud. The high priority in this domain is aligning with a cloud broker approach. The preferred way to build a cloud platform is with a cloud broker. A cloud broker builds and maintains the platform while establishing connectivity, identity, and governance for the platform. The platform domain provides guidance on how to prepare and execute with a cloud broker.
 
 ## Workload
 
