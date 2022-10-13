@@ -52,9 +52,11 @@ Use the following resources to understand the components of a good naming conven
 
 ## Enforce
 
-Azure Policy can be used to enforce and audit compliance of your naming standards. Because there are no pre-defined standards for naming, there are no built-in policies to enforce naming. You can create custom policies to enforce the standards you determine. The following snippet from a [custom policy example in Azure Samples (TODO: Add link after policy is added to Azure Samples)]() denies an Azure virtual machine deployment based on a naming standard:
+Azure Policy can be used to enforce and audit compliance of your naming standards. Because there are no pre-defined standards for naming, there are no built-in policies to enforce naming. You can create custom policies to enforce the standards you determine.
 
-``` bash
+The following snippet from a [custom policy example in Azure Samples (TODO: Add link after policy is added to Azure Samples)]() denies an Azure virtual machine deployment based on a naming standard.
+
+```azurecli
 # TODO: Jason Masten to add snippet here
 ```
 
@@ -64,6 +66,6 @@ Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to
 
 The following Azure Resource Graph example query identifies ...
 
-```bash
+```azurecli
 # TODO: Write example graph query to find improperly named resources.
 ```
