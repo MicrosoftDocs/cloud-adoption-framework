@@ -21,10 +21,10 @@ Azure Arc-enabled servers allow you to manage:
 
 This management experience is designed to be consistent with how you manage native Azure Virtual Machines.
 
-To practice your skills in an Azure Arc-enabled servers environment, use ArcBox a sandbox solution for features that are:
-    - Powered by Azure Arc Jumpstart.
-    - entirely self-contained within a single Azure subscription and resource group.
-    - Easy for a user to get hands-on with the Azure Arc-enabled servers technology, with an Azure subscription.
+To practice your skills in an Azure Arc-enabled servers environment, use ArcBox, a sandbox solution for features that are:
+- Powered by Azure Arc Jumpstart.
+- Entirely self-contained within a single Azure subscription and resource group.
+- Easy to get hands-on experience with by using Azure Arc-enabled servers technology.
 
 ## Azure landing zone sandbox subscription
 
@@ -45,10 +45,10 @@ The ArcBox solution is deployed using one of the four methods:
 - Azure Resource Manager (ARM) template using the Azure CLI.
 - Azure Resource Manager (ARM) template using the Azure portal.
 
-Based on the desired deployment method install either [Azure CLI](/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
+Based on the desired deployment method, install either [Azure CLI](/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Next steps
 
 The Azure Arc-enabled servers landing zone accelerator sandbox implementation is based on the fully automated Jumpstart ArcBox solution.
 
-For more information and guidance on how to get started, refer to [Jumpstart ArcBox](https://aka.ms/JumpstartArcBox).
+For more information and guidance on how to get started, see [Jumpstart ArcBox](https://aka.ms/JumpstartArcBox).
