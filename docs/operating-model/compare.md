@@ -205,4 +205,4 @@ Learn the terminology associated with operating models. The terminology helps yo
 Learn how a landing zone provides the basic building block of any cloud adoption environment.
 
 > [!div class="nextstepaction"]
-> [Compare common cloud operating models](../ready/landing-zone/index.md)
+> [What is a landing zone?](../ready/landing-zone/index.md)
