@@ -34,9 +34,11 @@ The tags you need to apply will vary according to workload and organizational re
 
 Your tags should include context about the resource's associated workload or application, operational requirements, and ownership. Only use tags when Azure resource graph or Azure Resource Manager can't provide the data.
 
-Apply the [minimum suggested tags](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging#minimum-suggested-tags) listed in the ready methodology. Additionally, use an owner tag to capture the owner of the resource.
+Use the following resources to help define your tagging strategy:
 
-Consider implementing relevant [other common tagging examples](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging#other-common-tagging-examples) from the ready methodology.
+- Apply the [minimum suggested tags](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging#minimum-suggested-tags) listed in the ready methodology.
+- Use an owner tag to capture the owner of the resource.
+- Consider implementing relevant [other common tagging examples](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging#other-common-tagging-examples) from the ready methodology.
 
 ## Enforce
 
@@ -46,7 +48,7 @@ You can use [Azure Policy](/azure/governance/policy/overview) to enforce complia
 
 Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to identify resources that aren't compliant with your tagging standards.
 
-The following Azure Resource Graph query example looks for resources that are missing the environment tag.
+The following Azure Resource Graph example query identifies resources that are missing the environment tag.
 
 ```azurecli
 Resources

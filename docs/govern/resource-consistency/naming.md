@@ -60,7 +60,9 @@ Azure Policy can be used to enforce and audit compliance of your naming standard
 
 ## Audit
 
-Write custom graph queries to identify resources that aren't properly named. The following query identifies ...
+Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to identify resources that aren't compliant with your naming standards. Because there are no predefined naming standards, you will custom graph queries. 
+
+The following Azure Resource Graph example query identifies ...
 
 ```bash
 # TODO: Write example graph query to find improperly named resources.
