@@ -40,7 +40,7 @@ The workload domain focuses on the iterative process of developing cloud solutio
 
 The defense scenario helps ensure defense organizations reach the objective in each domain of your cloud adoption journey.
 
-The mission domain is the first step in the defense scenario. It starts with building a strategy to meet broader.
+The mission domain is the first step in the defense scenario. It starts with building a strategy to meet broader defense initiatives.
 
 > [!div class="nextstepaction"]
 > [Strategy](strategy.md)
