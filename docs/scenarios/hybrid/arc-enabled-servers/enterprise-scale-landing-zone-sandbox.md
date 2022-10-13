@@ -45,10 +45,10 @@ The ArcBox solution is deployed using one of the four methods:
 - Azure Resource Manager (ARM) template using the Azure CLI.
 - Azure Resource Manager (ARM) template using the Azure portal.
 
-Based on the desired deployment method install either [Azure CLI](/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
+Based on the desired deployment method, install either [Azure CLI](/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Next steps
 
 The Azure Arc-enabled servers landing zone accelerator sandbox implementation is based on the fully automated Jumpstart ArcBox solution.
 
-For more information and guidance on how to get started, refer to [Jumpstart ArcBox](https://aka.ms/JumpstartArcBox).
+For more information and guidance on how to get started, see [Jumpstart ArcBox](https://aka.ms/JumpstartArcBox).
