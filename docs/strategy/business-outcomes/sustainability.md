@@ -68,6 +68,8 @@ Common considerations for building a sustainability strategy could include:
 
 ## Sustainability for your company's brand
 
+There is a demand that customers, their executives and stakeholders, and their investors provide greater transparency into the environmental impact for the company from an operational point of view. Proactively working toward sustainability helps you establish a healthy brand for your company.
+
 A sustainable business model can improve reputation, build trust and attract new talent/partners/investors.
 You can also see the benefits of sustainability as part of your business signature, combining your sustainability exercises with the capability to communicate the reasoning behind your green journey further.
 
