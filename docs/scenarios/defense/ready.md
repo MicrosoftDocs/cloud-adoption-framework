@@ -1,5 +1,5 @@
 ---
-title: Ready for defense
+title: Ready for defense cloud adoption
 description: Recommendations for building a landing zone in a defense organization
 author: stephen-sumner
 ms.author: ssumner
