@@ -18,13 +18,12 @@ The ready methodology is the first step in the platform domain of cloud adoption
 
 The ready methodology focuses on building landing zones. Landing zones enable application migration, modernization, and innovation at enterprise-scale. They provide a home for cloud workloads and are the foundation of the resource management system.
 
-A secure landing zone architecture is key for a robust security posture. Architecture refers to the components of an environment and the traffic flows between them. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards. Microsoft has made a secure landing zone build easier. We developed mission landing zone called the Secure Azure Cloud Architecture (SACA). It aligns with the U.S. Secure Cloud Computing Architecture (SCCA) standard and can be deployed with the click-of-a-button implementation options with a few configuration selections.
+A secure landing zone architecture is key for a robust security posture. Architecture refers to the components of an environment and the traffic flows between them. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards. Microsoft has made building a secure landing zone easier with the Secure Azure Cloud Architecture (SACA). SACA aligns with the U.S. Secure Cloud Computing Architecture (SCCA) standard and can be deployed with the click-of-a-button and a few configuration selections.
 
 For information on the mission landing zone, see:
 
 - [Introduction to landing zones](/azure/cloud-adoption-framework/ready/landing-zone/)
-- [Secure Cloud Computing Architecture (SACA) overview](/azure/azure-government/compliance/secure-azure-computing-architecture)
-- [Deployable mission landing zone template](https://github.com/Azure/missionlz)
+- [Secure Azure Cloud Architecture (SACA) overview](/azure/azure-government/compliance/secure-azure-computing-architecture)
 
 Here are a few general architecture recommendations for landing zone deployments:
 
