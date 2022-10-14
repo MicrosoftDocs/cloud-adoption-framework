@@ -11,7 +11,7 @@ ms.subservice: plan
 ---
 # Plan for defense cloud adoption
 
-The plan methodology falls within the mission domain of cloud adoption (*see image*).
+The plan methodology falls within the mission domain of cloud adoption.
 
 :::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - mission domain*
