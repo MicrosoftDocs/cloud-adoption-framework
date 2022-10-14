@@ -52,7 +52,7 @@ Customers can also benefit from taking the [Strategic Migration Assessment](/ass
 
 Identifying the first workload targeted for migration from sustainability standpoint can be performed using the 80:20 rule – 80% of the emissions that derive from 20% of the workload. This is a generic suggestion, of course, as a customer needs to perform their own assessment based on the unique needs of its landscape and desired business outcomes.
 
-Learn more about [building a sustainable IT Infrastructure](https://learn.microsoft.com/en-gb/industry/sustainability/build-it-infrastructure)
+Learn more about [building a sustainable IT Infrastructure](/industry/sustainability/build-it-infrastructure)
 
 ## Get the most out of your investment
 
