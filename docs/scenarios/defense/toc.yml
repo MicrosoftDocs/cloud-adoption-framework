@@ -1,7 +1,7 @@
 items:
-  - name: Department of Defense - Microsoft Cloud Adoption Framework for Azure
+  - name: Defense cloud adoption - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: Department of Defense - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Defense cloud adoption - Microsoft Cloud Adoption Framework for Azure
   - name: Mission
     items:
     - name: Strategy
