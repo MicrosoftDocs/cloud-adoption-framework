@@ -15,7 +15,7 @@ The CAF Defense scenario is cloud adoption guidance tailored for defense organiz
 
 The defense scenario is divided into three domains: mission, platform, and workload. It will be helpful to outline each domain:
 
-:::image type="content" source="./images/caf-dod.png" alt-text="Figure that shows the mission domains of cloud adoption in a defense context with CAF methodologies underneath them. Strategy, plan, and organize are in the mission domain. Ready and govern are in the platform domain. Adopt, secure, and manage are in the workload domain." border="false":::
+:::image type="content" source="./images/defense-scenario-large.png" alt-text="Figure that shows the mission domains of cloud adoption in a defense context with CAF methodologies underneath them. Strategy, plan, and organize are in the mission domain. Ready and govern are in the platform domain. Adopt, secure, and manage are in the workload domain." border="false":::
 *Figure 1: Overview of cloud adoption domains and methodologies*
 
 ## Mission domain
