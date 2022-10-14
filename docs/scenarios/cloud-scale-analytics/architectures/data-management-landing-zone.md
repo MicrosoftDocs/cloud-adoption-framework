@@ -32,7 +32,7 @@ Use this architecture as a starting point. Download the [Visio file](https://www
 
 [!INCLUDE [data-catalog](../../cloud-scale-analytics/includes/data-catalog.md)]
 
-For more information, see [Data catalog](../../cloud-scale-analytics/govern-data-catalog.md) and [Azure Purview deployment best practices for cloud-scale analytics](../best-practices/purview-deployment.md).
+For more information, see [Data catalog](../../cloud-scale-analytics/govern-data-catalog.md) and [Microsoft Purview deployment best practices for cloud-scale analytics](../best-practices/purview-deployment.md).
 
 ## Data quality management
 
@@ -77,7 +77,7 @@ An API catalog can help standardize your documentation and offers a place for in
 *Resource group: governance-rg2*
 
 Cloud-scale analytics uses
-[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Azure Purview policies](../secure-data-privacy.md) to control access to data sharing. Even so, you might still require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
+[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. Even so, you might still require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
 
 Your contracts should provide information on data validation, models, and security policies.
 
