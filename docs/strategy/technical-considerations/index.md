@@ -19,7 +19,9 @@ This guidance will help you discover the technical flexibility, efficiencies, an
 
 ### Scalability
 
-Scalability, or the ability to scale out your resources depending on usage, utilization, and demand is one of the main technical benefits of moving to the cloud.
+Scalability, or the ability to scale out your resources depending on usage, utilization, and demand, is one of the foremost technical benefits of moving to the cloud.
+
+Right-sizing resources and utilizing auto-scaling, matching the scalability needs, turning off workloads outside of business hours and scaling only when necessary have the added benefit of driving more sustainable workloads. Read more about the [right-sizing recommendations](/azure/architecture/framework/sustainability/sustainability-application-platform#right-sizing) in the Azure Well-Architected Framework Sustainability workload guidance.
 
 ### Availability
 
@@ -50,7 +52,7 @@ Customers can also benefit from taking the [Strategic Migration Assessment](/ass
 
 Identifying the first workload targeted for migration from sustainability standpoint can be performed using the 80:20 rule – 80% of the emissions that derive from 20% of the workload. This is a generic suggestion, of course, as a customer needs to perform their own assessment based on the unique needs of its landscape and desired business outcomes.
 
-Learn more about [building a sustainable IT Infrastructure](https://learn.microsoft.com/en-gb/industry/sustainability/build-it-infrastructure)
+Learn more about [building a sustainable IT Infrastructure](/industry/sustainability/build-it-infrastructure)
 
 ## Get the most out of your investment
 
