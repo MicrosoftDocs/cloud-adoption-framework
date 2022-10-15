@@ -86,7 +86,7 @@ The following snippet from a [custom policy example in Azure Samples (TODO: Add 
 
 ## Audit
 
-Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to identify resources that aren't compliant with your naming standards. Because there are no predefined naming standards, you will custom graph queries. 
+Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to identify resources that aren't compliant with your naming standards. Because there are no predefined naming standards, you will custom graph queries.
 
 The following Azure Resource Graph example query identifies ...
 
