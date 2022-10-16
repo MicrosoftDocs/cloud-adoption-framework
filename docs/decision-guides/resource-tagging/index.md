@@ -16,7 +16,7 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
 
 - **Resource management:** Your IT teams need to quickly locate resources that are associated with specific workloads, environments, ownership groups, or other important information. Organizing resources is critical to assigning organizational roles and access permissions for resource management.
 
-- **Cost management and optimization:** Making business groups aware of the consumption of cloud resources requires IT to understand the resources and workloads that each team uses. The following topics are supported by cost-related tags:
+- **Cost management and optimization:** Making business groups aware of the consumption of cloud resources requires IT to understand the resources and workloads that each team uses. Cost-related tags support the following types of information:
 
   - [Cloud accounting models](../../strategy/cloud-accounting.md)
   - [ROI calculations](../../strategy/cloud-migration-business-case.md)
@@ -29,13 +29,13 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
 
 - **Operations management:** Visibility on business commitments and SLAs is an important aspect of ongoing operations for the operations management team. Managing operations well requires tagging for [mission criticality](../../manage/considerations/criticality.md).
 
-- **Security:** Classification of data and security impact is vital for the team when breaches or other security issues arise. Operating securely requires tagging for [data classification](../../govern/policy-compliance/data-classification.md).
+- **Security:** Classification of data and determining the security impact are vital when breaches or other security issues arise. Operating securely requires tagging for [data classification](../../govern/policy-compliance/data-classification.md).
 
 - **Governance and regulatory compliance:** Maintaining consistency across resources helps with identifying divergence from policies. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) demonstrates how one of the tagging patterns that are described in [Resource tagging patterns](#resource-tagging-patterns), later in this article, can help with deployment of governance practices. Similar patterns are available to evaluate regulatory compliance by using tags.
 
-- **Automation:** A proper organizational scheme allows you to take advantage of automation as part of creating resources, monitoring operations, and creating DevOps processes. Automation also makes resources easier for IT to manage.
+- **Automation:** A proper organizational scheme enables you to take advantage of automation as part of creating resources, monitoring operations, and creating DevOps processes. Automation also makes resources easier for IT to manage.
 
-- **Workload optimization:** Tagging can help with identifying patterns and resolving broad issues. Tagging can also help with identifying the assets that are required to support a single workload. Tagging all assets that are associated with each workload enables deeper analysis of your mission-critical workloads, which helps you to make sound architectural decisions.
+- **Workload optimization:** Tagging can help with identifying patterns and resolving broad issues. Tagging can also help with identifying the assets that a single workload requires. Tagging all assets that are associated with each workload enables deeper analysis of your mission-critical workloads, which helps you to make sound architectural decisions.
 
 ## Tagging decision guide
 
@@ -62,7 +62,7 @@ Tagging schemes that align with business, like accounting, business ownership, o
 
 ## Baseline naming conventions
 
-A standardized naming convention is the starting point for organizing your cloud-hosted resources. A properly structured naming system allows you to quickly identify resources for both management and accounting purposes. You might have existing IT-aligned naming conventions in other parts of your organization. If so, consider whether your cloud naming conventions should align with them, or if you should establish separate cloud-based standards.
+A standardized naming convention is the starting point for organizing your cloud-hosted resources. A properly structured naming system enables you to quickly identify resources for both management and accounting purposes. You might have existing IT-aligned naming conventions in other parts of your organization. If so, consider whether your cloud naming conventions should align with them, or if you should establish separate cloud-based standards.
 
 > [!NOTE]
 > [Naming rules and restrictions](/azure/azure-resource-manager/management/resource-name-rules) vary by Azure resource. Your naming conventions must comply with these rules.
@@ -77,19 +77,19 @@ As part of your planning process, use the following questions to determine the k
 
 - Do your naming and tagging policies need to integrate with existing policies within your company?
 
-- Will you implement a chargeback or showback accounting system? Will you need to associate resources with accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown allows?
+- Will you implement a chargeback or showback accounting system? Do you need to associate resources with accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown provides?
 
-- Does tagging need to represent details for a resource, such as regulatory compliance requirements? What about operational details such as uptime requirements, patching schedules, or security requirements?
+- Should tags represent details for a resource, such as regulatory compliance requirements? What about operational details such as uptime requirements, patching schedules, or security requirements?
 
-- What tags will be required for all resources based on centralized IT policy? What tags will be optional? Are individual teams allowed to implement their own custom tagging schemes?
+- What tags are required for all resources based on centralized IT policy? What tags are optional? Are individual teams allowed to implement their own custom tagging schemes?
 
-The following tagging patterns are examples of how you can use tagging to organize cloud assets. These patterns aren't meant to be exclusive, and they can be used in parallel. They provide multiple ways of organizing assets based on your company's needs.
+The following tagging patterns are examples of how you can use tagging to organize cloud assets. These patterns aren't meant to be exclusive, and you can use them in parallel. They provide multiple ways of organizing assets based on your company's needs.
 
 | Tag type | Examples | Description |
 |--|--|--|
 | Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorizes resources by their purposes within a workload, the environment they've been deployed to, or other functionality and operational details. |
 | Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it's used and the policies that apply to it. |
-| Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Allows a resource to be associated with specific groups within an organization for billing purposes. |
+| Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Associates a resource with specific groups within an organization for billing purposes. |
 | Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about who (outside of IT) is related to or otherwise affected by the resource. |
 | Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
 
@@ -97,7 +97,7 @@ The following tagging patterns are examples of how you can use tagging to organi
 
 For more information about naming and tagging in Azure, see:
 
-- [Develop your naming and tagging strategy for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md). Refer to this guidance for recommended naming conventions for Azure resources.
+- [Develop your naming and tagging strategy for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md). For recommended naming conventions for Azure resources, see this guidance.
 
 - [Use tags to organize your Azure resources and management hierarchy](/azure/azure-resource-manager/management/tag-resources). You can apply tags in Azure at the levels of both the resource group and individual resources, giving you flexibility in the granularity of any accounting reports that are based on applied tags.
 
