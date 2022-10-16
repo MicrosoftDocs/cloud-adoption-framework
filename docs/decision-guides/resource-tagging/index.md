@@ -39,13 +39,14 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
 
 ## Tagging decision guide
 
-Your approach to tagging can be simple or complex. It can support IT teams who manage cloud workloads or integrate information that's related to all aspects of the business.
+Your approach to tagging can be simple or complex. It can support IT teams who manage cloud workloads or integrate information that's related to all aspects of the business.  
 
 :::image type="content" alt-text="Diagram that shows plotting tagging options from least complex to most complex." source="../../_images/decision-guides/decision-guide-resource-tagging.png" lightbox="../../_images/decision-guides/decision-guide-resource-tagging.png":::
 
+The following table describes the qualities and alignments that are shown in the diagram.
+
 |   | Description | Example |
 |---|-------------|---------|
-| **Primary design considerations** | Baseline operations requirements, supplemented by additive business requirements. |   |
 | **Baseline naming conventions**   | Resource naming is required for deployment. A standardized naming schema is the minimum tag. |   |
 | **Functional**                    | Tags that describe the function of the virtual machine for easy identification. | Workload; function in the workload (app, data, and so on); environment (such as development, staging, production). |
 | **Classification**                | Tags that classify the value of an asset can aid in making decisions. | Data classification (public, private, confidential, and so on); criticality; SLA. |
