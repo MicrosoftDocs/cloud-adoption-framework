@@ -45,14 +45,15 @@ Your approach to tagging can be simple or complex. It can support IT teams who m
 
 The following table describes the qualities and alignments that are shown in the diagram.
 
-|   | Description | Example |
-|---|-------------|---------|
-| **Baseline naming conventions**   | Resource naming is required for deployment. A standardized naming schema is the minimum tag. |   |
-| **Functional**                    | Tags that describe the function of the virtual machine for easy identification. | Workload; function in the workload (app, data, and so on); environment (such as development, staging, production). |
-| **Classification**                | Tags that classify the value of an asset can aid in making decisions. | Data classification (public, private, confidential, and so on); criticality; SLA. |
-| **Accounting**                    | Tags that help to track costs that are associated with asset operations. | Department, project, region, and so on. |
-| **Partnership**                   | Tags that align partners that count on this asset, outside of IT. | Owner, owner alias, stakeholder, power user, executive. |
-| **Purpose**                       | Tags that align an asset to a business function can be valuable in making investment decisions. | Business process, business criticality, revenue impact. |
+|   | Description |
+|---|-------------|
+| **Primary design considerations** | Baseline operations requirements, supplemented by additive business requirements. |
+| **Baseline naming conventions**   | Resource naming is required for deployment. A standardized naming schema is the minimum tag. |
+| **Functional**                    | Tags that describe the function of the virtual machine for easy identification.<br/>Example: workload; function in the workload (app, data, and so on); environment (such as development, staging, production). |
+| **Classification**                | Tags that classify the value of an asset can aid in making decisions.<br/>Example: data classification (public, private, confidential, and so on); criticality; SLA. |
+| **Accounting**                    | Tags that help to track costs that are associated with asset operations.<br/>Example: department, project, region, and so on. |
+| **Partnership**                   | Tags that align partners that count on this asset, outside of IT.<br/>Example: owner, owner alias, stakeholder, power user, executive. |
+| **Purpose**                       | Tags that align an asset to a business function can be valuable in making investment decisions.<br/>Example: business process, business criticality, revenue impact. |
 
 A tagging scheme that aligns with IT, such as tagging based on workload, application, or environment, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
 
