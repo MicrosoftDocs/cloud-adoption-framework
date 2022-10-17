@@ -4,7 +4,7 @@ description: Recommendations for planning a cloud adoption strategy in a defense
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 10/12/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -41,14 +41,21 @@ Let's address each of these benefits:
 - Resources Consistency
 - Deployment Acceleration
 
-It's important to note that the term landing zone can refer to the entire platform or the area that a mission owner will maintain. A landing zone includes all the foundational components defense workloads needed for secure, reliable, and cost-effective cloud operations. Below is a generalized landing zone architecture for defense scenarios.
+A landing zone includes all the foundational components defense workloads needed for secure, reliable, and cost-effective cloud operations. Below is a generalized landing zone architecture for defense scenarios. We recommend using subscriptions to demarcate service and workload environments.
 
 :::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png" border="false":::
 *Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
 
-Without a cloud broker, a mission owner would be responsible for the entire landing zone architecture and its associated services. But with a cloud broker, the mission owner shift compliance and management responsibilities to the broker and can focus on meeting mission objectives.
+Landing zone components can be divided into two major categories: platform environments and workload environments.
 
-**(2) Core services** - Cloud brokers implement and manage core services such as identity, networking, and compliance. In most instances, a cloud broker securely connects the new cloud environment to on-premises networks, builds operational environments, and establishes an identity access management (IAM) solution with policy enforcement based on mission requirements.
+- The platform environments provide core services used by multiple workloads. Cloud brokers build and manage the platform environments.
+- The workload environments are for workloads and application. The red box in the image above outlines an application landing zone.
+
+Without a cloud broker mission owner would be responsible for the entire architecture and core services. Cloud brokers take technical responsibility for the core services. With a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives.
+
+For more on this topic, see [platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
+
+**(2) Core services** - Cloud brokers implement and manage core services such as identity, networking, and management. In most instances, a cloud broker securely connects the new cloud environment to on-premises networks, builds operational environments, and establishes an identity access management (IAM) solution with policy enforcement based on mission requirements.
 
 **(3) Platform authorization to operate (ATO)** - Experienced cloud brokers can help achieve a platform-level ATO quicker than mission owners on their own. A platform-level ATO directly affects the speed at which mission owners can deploy critical applications and workloads.
 
