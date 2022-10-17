@@ -3,7 +3,7 @@ title: Migrate SQL Server databases to Azure
 description: Learn how Contoso migrates their on-premises SQL databases to Azure.
 author: deltadan
 ms.author: abuck
-ms.date: 10/11/2022
+ms.date: 10/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Migrate SQL Server databases to Azure
 
-This article demonstrates how a fictional company, Contoso assesses, plans and migrates their various on-premises SQL Server databases to Azure.
+This article demonstrates how fictional company Contoso assesses, plans, and migrates their various on-premises SQL Server databases to Azure.
 
 As Contoso considers migrating to Azure, the company needs a technical and financial assessment to determine whether its on-premises workloads are good candidates for cloud migration. In particular, the Contoso team wants to assess machine and database compatibility for migration. Additionally, it wants to estimate capacity and costs for running Contoso's resources in Azure.
 
@@ -114,7 +114,7 @@ The assessment determines that Contoso uses mainly .NET-based applications. But 
 
 As Azure Migrate discovers each database, the Data Migration Assistant (DMA) runs and determines which features the team uses. DMA helps Contoso assess their database migrations to Azure by detecting compatibility issues that can affect database functionality in a new version of SQL Server or Azure SQL Database.
 
-Contoso follows these steps to assess their databases and then upload the results data to Azure Migrate:
+Contoso follows these steps to assess their databases and then uploads the results data to Azure Migrate:
 
 1. Download DMA.
 1. Create an assessment project.
@@ -193,7 +193,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 #### Backups
 
-- Ensure that they back up the Azure databases using geo-restore. Backing up the databases supports using the backups in a paired region if there's a regional outage.
+- Contoso needs to ensure that they back up the Azure databases using geo-restore. Backing up the databases supports using the backups in a paired region if there's a regional outage.
 - **Important:** Ensure that the Azure resource has a [resource lock](/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers can't be restored.
 
 #### Licensing and cost optimization
