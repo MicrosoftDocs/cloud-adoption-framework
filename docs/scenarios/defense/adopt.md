@@ -4,7 +4,7 @@ description: Recommendations for adopting cloud technologies in a defense organi
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 10/12/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -45,7 +45,7 @@ Azure has a migration tool that can migrate defense workloads. For more informat
 
 For more information, see [using Azure Import/Export](/azure/import-export/storage-import-export-service).
 
-## Incentive modernization
+## Incentivize modernization
 
 Modernization is all about maximizing value and should be a priority for mission owners. Without modernization, it’s difficult to experience the true benefits of the cloud, more capabilities for less work and money.
 
@@ -71,9 +71,11 @@ Here are a few DevOps recommendations:
 
 **(2) Improve quickly** - The ability to iterate through tasks multiple times with reviews allows technical teams to improve development and operations quickly. Teams should work on developing a minimum viable product and a proof-of-concept and improve them until they meet mission objectives.
 
-**(3) Use continuous integration and continuous deployment (CI/CD)** - CI/CD is a standard DevOps concept. It’s an automated approach to constantly improve and deploy code. This approach needs to be modified for defense scenarios. Rarely is it a good idea to deploy code changes on mission critical workloads directly into production. Two separate CI/CD pipelines are recommended for mission-critical workloads. The first CI/CD pipeline should create a stage deployment that can be rigorously tested. Code can be deployed to production only after passing all required tests. Development teams will need to fine tune the process to ensure tests can be completed on staged deliverables as quickly as they arrive.
+**(3) Use continuous integration and continuous deployment (CI/CD)** - CI/CD is a standard DevOps concept. It’s an automated approach to constantly improve and deploy code into production. Rarely is it a good idea to deploy code changes on mission critical workloads directly into production, so this approach needs to be modified for defense scenarios. We recommend two CI/CD pipelines for mission-critical workloads. The first CI/CD pipeline should create a stage deployment that can be rigorously tested. Code can be deployed to production only after passing all required tests. Development teams will need to fine tune the process to ensure tests can be completed on staged deliverables as quickly as they arrive.
 
 **(4) DevOps tools** - The adoption of DevOps tools is needed to make DevOps work at any level. Create a list of DevOps tools with their impact-level authorizations mapped to their DevOps process. This mapping might be a good requirement for proposals and will help determine how much DevOps can be adopted.
+
+For more information on DevOps, see [process modernization](/azure/cloud-adoption-framework/modernize/modernize-strategies/process-modernization).
 
 ## Next step
 

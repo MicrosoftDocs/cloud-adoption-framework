@@ -4,7 +4,7 @@ description: Recommendations for cloud platform governance in a defense organiza
 author: stephen-sumner
 ms.author: mimckann
 ms.reviewer: ssumner
-ms.date: 10/12/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
