@@ -45,8 +45,8 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure policies and remediation tasks.
 - **Data residency:** Consider which Azure region you wish your Azure Arc-enabled servers to be provisioned into, and understand the [metadata that is collected](/azure/azure-arc/servers/data-residency) from these machines.
 - **Secure public key:** Secure the Azure connected machine agent public key authentication to communicate with the Azure service.
-- **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery) guidance for enterprise-scale landing zones to determine whether your enterprise requirements are met.
-- Review the [security, governance, and compliance design area](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) of Azure landing zone enterprise-scale, to assess the impact of Azure Arc-enabled servers on your overall security and governance model.
+- **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery) guidance for enterprise-scale landing zones to determine whether your enterprise requirements are met.
+- Review the [security, governance, and compliance design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) of Azure landing zone enterprise-scale, to assess the impact of Azure Arc-enabled servers on your overall security and governance model.
 
 ### Management disciplines
 
