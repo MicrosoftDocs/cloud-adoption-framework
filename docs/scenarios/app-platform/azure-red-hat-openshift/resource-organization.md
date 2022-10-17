@@ -37,7 +37,7 @@ For example, if you have public and private applications, separate them into dif
     You might need to add landing zone subscriptions if segmentation is required to separate workloads based on region, business unit, environment, criticality, or other external constraints.
 
       > [!TIP]
-      > Review the [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) before creating any additional Management Groups.
+      > Review the [Tailor the Azure landing zone architecture to meet requirements](../../../ready/landing-zone/tailoring-alz.md) before creating any additional Management Groups.
 
   - **Centrally operated, single tenant:** For hostile or regulated workloads that are still centrally operated, it's common to have dedicated hosts for the workloads. You might still experience operational efficiency by consolidating supporting landing zones.
 

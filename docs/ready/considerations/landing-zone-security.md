@@ -99,7 +99,7 @@ Add security to each stage of continuous integration and continuous delivery (CI
 
 ## Test-driven development cycle
 
-Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development) and [test-driven development in Azure](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development).
+Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./development-strategy-test-driven-development.md) and [test-driven development in Azure](./development-strategy-test-driven-development.md).
 
 
 ## Next steps

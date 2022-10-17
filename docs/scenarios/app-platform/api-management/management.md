@@ -19,7 +19,7 @@ This article provides design considerations and recommendations for operations m
 - Managing APIs
 - Preparing for business continuity and disaster recovery
 
-Learn more about the [management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management) design area.
+Learn more about the [management](../../../ready/landing-zone/design-area/management.md) design area.
 
 ## Management and monitoring
 

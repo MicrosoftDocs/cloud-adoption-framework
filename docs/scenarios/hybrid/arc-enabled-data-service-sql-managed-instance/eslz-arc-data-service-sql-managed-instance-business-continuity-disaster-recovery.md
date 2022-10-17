@@ -38,11 +38,11 @@ The following architecture diagram shows how Arc-enabled SQL Managed Instance re
 
 ## Design considerations
 
-To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall BCDR model, review the BCDR recommendations for landing zones in [Business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery). Note that the focus of [Business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery) is on design recommendations for business continuity only, but the high availability and resiliency of your instance is also dependent on the availability of the underlying Kubernetes infrastructure.
+To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall BCDR model, review the BCDR recommendations for landing zones in [Business continuity and disaster recovery](../../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Note that the focus of [Business continuity and disaster recovery](../../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md) is on design recommendations for business continuity only, but the high availability and resiliency of your instance is also dependent on the availability of the underlying Kubernetes infrastructure.
 
 ### Point-in-time restore
 
-- Define your targets for [recovery point objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-point-objectives-rpo) (RPO) and [recovery time objective](/azure/cloud-adoption-framework/manage/considerations/protect#recovery-time-objectives-rto) (RTO).
+- Define your targets for [recovery point objective](../../../manage/considerations/protect.md#recovery-point-objectives-rpo) (RPO) and [recovery time objective](../../../manage/considerations/protect.md#recovery-time-objectives-rto) (RTO).
 
 - Determine how long you want to retain and restore your backups within the supported retention limits.
 
@@ -147,6 +147,6 @@ For more information on your hybrid and multicloud cloud journey, see the follow
 - [What are Azure Arc-enabled data services?](/azure/azure-arc/data/overview)
 - [Overview: Azure Arc-enabled SQL Managed Instance business continuity](/azure/azure-arc/data/managed-instance-business-continuity-overview)
 - [Azure Arc-enabled data services Kubernetes validation](/azure/azure-arc/data/validation-program)
-- [Manage your portfolio across hybrid and multicloud operations](/azure/cloud-adoption-framework/scenarios/hybrid/manage)
+- [Manage your portfolio across hybrid and multicloud operations](../manage.md)
 - [Azure Arc-enabled data services](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/) for automated scenarios with Azure Arc Jumpstart
 - [Bring Azure innovation to your hybrid environments with Azure Arc](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/), a learning path from Microsoft Learn
