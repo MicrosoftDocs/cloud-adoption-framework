@@ -4,7 +4,7 @@ description: Recommendations for building a landing zone in a defense organizati
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 10/12/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -16,36 +16,48 @@ The ready methodology is the first step in the platform domain of cloud adoption
 :::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - platform domain*
 
-The ready methodology focuses on building landing zones. Landing zones enable application migration, modernization, and innovation at enterprise-scale. They provide a home for cloud workloads and are the foundation of the resource management system.
+The ready methodology focuses on building the cloud platform. We call this cloud platform a landing zone. Landing zones are home to core services, workloads, and application. They provide a foundation for security and resource management. They enable application migration, modernization, and innovation at enterprise-scale. The landing zone is where services, applications, and workloads are deployed.
 
-A secure landing zone architecture is key for a robust security posture. Architecture refers to the components of an environment and the traffic flows between them. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards. Microsoft has made building a secure landing zone easier with the Secure Azure Cloud Architecture (SACA). SACA aligns with the U.S. Secure Cloud Computing Architecture (SCCA) standard and can be deployed with the click-of-a-button and a few configuration selections.
+Here are key considerations for the landing build:
 
-For information on the mission landing zone, see:
+## Build a secure landing zone
+
+Within the landing zone, the cloud broker builds the platform environments, and the mission owner manages the workload environments. These workload environments inherit the security controls of the platform. Landing zones are the foundation of workload security and must be secure. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards. Microsoft has made building a secure landing zone easier with the Secure Azure Cloud Architecture (SACA). SACA aligns with the U.S. Secure Cloud Computing Architecture (SCCA) standard and can be deployed with the click-of-a-button and a few configuration selections.
+
+For information on landing zones, see:
 
 - [Introduction to landing zones](/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Secure Azure Cloud Architecture (SACA) overview](/azure/azure-government/compliance/secure-azure-computing-architecture)
 
 Here are a few general architecture recommendations for landing zone deployments:
 
-## Place a firewall between cloud and defense network
+**(1) Place a firewall between cloud and defense network** - The architecture should use a firewall/IDS/IPS to protect the defense network from attacks originating in the cloud. It should sit in the defense network and inspect and filter all traffic heading into the defense network from the cloud. This placement will provide a barrier between the two environments.
 
-The architecture should use a firewall/IDS/IPS to protect the defense network from attacks originating in the cloud. It should sit in the defense network and inspect and filter all traffic heading into the defense network from the cloud. This placement will provide a barrier between the two environments.
+**(2) Inspect all inbound traffic** - Route all inbound traffic through your security stack before sending to applications. The security stack should be in its own environment and should inspect and filter traffic before routing to cloud applications.
 
-## Inspect all inbound traffic
+**(3) Isolate security management tools** - Create a separate environment for your security management tools. At a minimum, the security management environment should include vulnerability scanning, host scanning, endpoint protection, and centralized logging.
 
-Route all inbound traffic through your security stack before sending to applications. The security stack should be in its own environment and should inspect and filter traffic before routing to cloud applications.
+**(4) Designate an architecture owner** - Mission owners should designate a single member of their personnel to own landing zone security. This person should be responsible for coordinating with the cloud broker, managing identity and access, and restricting elevated privileges.
 
-## Isolate security management tools
+## Define operations and management expectations
 
-Create a separate environment for your security management tools. At a minimum, the security management environment should include vulnerability scanning, host scanning, endpoint protection, and centralized logging.
+Mission owners and cloud brokers should define the expectations for operations and management during the landing zone build period. Workloads will depend heavily on the platform throughout their lifecycle. Changes in the platform identity, management, or connectivity configurations will affect the hosted workloads. It’s important to synchronize expectations and priorities during the platform build so that mission owners and cloud brokers have a common understanding of success. Having a solid working relationship before production environments go live will help mitigate risks.
 
-## Designate an architecture owner
+We have the following recommendations for operations and management:
 
-Mission owners should designate a single member of their personnel to own landing zone security. This person should be responsible for coordinating with the cloud broker, managing identity and access, and restricting elevated privileges.
+**(1) Establish communication channels** - Mission owners should establish communication channels for the cloud broker to use. Communications should be frequent, consistent, and clear. Mission owners should also have availability for field communications for any urgent matters outside the regular meetings. Communication will minimize risk and technical drift from mission objectives. Expectations should be written down, explained, and accessible to the cloud brokers. Regular synchronizations between the cloud broker and mission owner will help ensure the cloud broker understands the security, performance, and financial requirements of mission owners and their workloads.
+
+**(2) Pick operational measurements** – Establish how operational measures will be reviewed. The mission owner and cloud broker should determine how feedback will be received and improvements made.
+
+**(3) Share core services** - The cloud broker in most instances should offer shared services for mission owners to use. Shared services include Azure Virtual Desktops for secure client computing and a shared DevOps toolset such as Azure DevOps. Cloud brokers can also share a common data platform with governance or a shared container platform. Sharing common services saves money and improves compliance.
+
+**(4) Discuss infrastructure automation** - A high-functioning cloud broker will build infrastructure as code (IaC) templates to build secure workload environments consistently and rapidly. These IaC templates can build hardened VMs, functions, storage and more. The broker could even build out the entire mission owner landing zone through code to ensure consistency and compliance.
+
+**(5) Establish change management process** - Change is necessary in the cloud. In fact, a major benefit of the cloud is the ability to accelerate change. Accelerating positive changes is the goal of digital transformation. It’s vital that mission owners and cloud brokers establish a change management process. Change management process should have processes for standard, normal, and emergency change requests. These processes should be optimized and streamlined for consistency, speed, and security.
 
 ## Next step
 
-The ready methodology is about building a platform. The govern methodology provides insights on governing the platform.
+The ready methodology focuses on building a cloud platform. The govern methodology focuses on regulating the platform for security, cost, and management.
 
 > [!div class="nextstepaction"]
 > [Govern](govern.md)
