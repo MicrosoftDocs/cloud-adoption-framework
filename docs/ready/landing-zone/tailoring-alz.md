@@ -49,7 +49,7 @@ More processes and tooling might be required to ensure a landing zone has the re
 - Linking of virtual networks to a distributed denial of service (DDoS) standard plan.
 
 > [!NOTE]
-> In the Azure landing zone reference implementations, Azure policies with the `DeployIfNotExists` and `Modify` [effects](/azure/governance/policy/concepts/effects) are used to achieve the deployment of some of the preceding resources. They follow the [policy-driven governance](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) design principle.
+> In the Azure landing zone reference implementations, Azure policies with the `DeployIfNotExists` and `Modify` [effects](/azure/governance/policy/concepts/effects) are used to achieve the deployment of some of the preceding resources. They follow the [policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) design principle.
 >
 > For more information, see [Adopt policy-driven guardrails](../enterprise-scale/dine-guidance.md).
 
@@ -58,7 +58,7 @@ More processes and tooling might be required to ensure a landing zone has the re
 The conceptual architecture includes example landing zone archetypes for application workloads such as *corp* and *online*. These archetypes might apply to your organization and meet your requirements. You might want to make changes to these archetypes or create new ones. Your decision depends on your organization's needs and requirements.
 
 > [!TIP]
-> To review the landing zone archetypes in the Azure landing zone accelerator, see [Management groups in the Azure landing zone accelerator](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator).
+> To review the landing zone archetypes in the Azure landing zone accelerator, see [Management groups in the Azure landing zone accelerator](./design-area/resource-org-management-groups.md).
 
 You might also want to create changes elsewhere in the resource hierarchy. When you plan the hierarchy for your implementation of Azure landing zones for your organization, follow the guidelines in the [design areas](./design-areas.md).
 
