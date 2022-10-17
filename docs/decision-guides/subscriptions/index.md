@@ -42,7 +42,6 @@ To address your business priorities, consider the following design strategies fo
 - Functional
 - Business unit
 - Geographic
-- Mixed subscription
 
 ### Workload separation strategy
 
