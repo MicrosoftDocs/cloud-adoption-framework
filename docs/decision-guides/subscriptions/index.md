@@ -3,7 +3,7 @@ title: Subscription decision guide
 description: Learn about subscription design strategies and management group hierarchy to organize your Azure assets.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 10/12/2021
+ms.date: 10/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Subscription decision guide
 
-Effective subscription design helps organizations establish a structure to organize and manage assets in Azure during cloud adoption. This guide will help you decide when to create more subscriptions. It will also help you expand your management group hierarchy to support your business priorities.
+Effective subscription design helps organizations establish a structure to organize and manage assets in Azure during cloud adoption. This guide will help you decide when to create more subscriptions. It will also help you expand the hierarchy of your management group to support your business priorities.
 
 ## Prerequisites
 
@@ -20,15 +20,15 @@ To start your Azure adoption:
 
 - [Create your initial subscriptions](../../ready/azure-best-practices/initial-subscriptions.md).
 - [Create more subscriptions](../../ready/azure-best-practices/scale-subscriptions.md) to scale your Azure environment.
-- [Organize and manage your subscriptions](../../ready/azure-best-practices/organize-subscriptions.md) using Azure management groups.
+- [Organize and manage your subscriptions](../../ready/azure-best-practices/organize-subscriptions.md) by using Azure management groups.
 
 For an overview of these concepts, see [Azure fundamental concepts](../../ready/considerations/fundamental-concepts.md).
 
 ## Model your organization
 
-Because every organization is different, Azure management groups are designed to be flexible. For example, you can model your cloud estate to reflect your organization's hierarchy. This method helps you define and apply policies at higher levels of the hierarchy. You can then rely on inheritance to ensure that those policies are automatically applied to management groups lower in the hierarchy. Although subscriptions can be moved between different management groups, it's helpful to design an initial management group hierarchy that reflects your expected organizational needs.
+Because every organization is different, Azure management groups are designed to be flexible. For example, you can model your cloud estate to reflect your organization's hierarchy. This method helps you define and apply policies at higher levels of the hierarchy. You can then rely on inheritance to ensure that those policies are automatically applied to management groups that are lower in the hierarchy. Although you can move subscriptions from one management groups to another, it's helpful to design an initial hierarchy for management groups that reflects your expected organizational needs.
 
-Before completing your subscription design, also consider how [resource consistency](../resource-consistency/index.md) considerations might influence your design choices.
+Before completing your subscription design, consider how [resource consistency](../resource-consistency/index.md) considerations might influence your design choices.
 
 > [!NOTE]
 > With an Azure Enterprise Agreement (EA), you can define another organizational hierarchy for billing purposes. This hierarchy is distinct from your management group hierarchy, which focuses on providing an inheritance model for easily applying suitable policies and access control to your resources.
@@ -47,7 +47,7 @@ An organization often adds new workloads to the cloud. Different ownership of su
 
 As an organization's cloud footprint grows, more subscriptions are typically created to support applications. These applications have fundamental differences in business criticality, compliance requirements, access controls, or data protection needs. Built from the initial production and nonproduction subscriptions, the subscriptions that support these application categories are organized under either the production or nonproduction management group as applicable. These subscriptions are typically owned and administered by the operations staff of a central IT team.
 
-:::image type="content" source="../../_images/decision-guides/decision-guide-subscriptions-hierarchy.png" alt-text="Diagram that shows the application category strategy.":::
+:::image type="content" alt-text="Diagram that shows the application category strategy."source="../../_images/decision-guides/decision-guide-subscriptions-hierarchy.png" lightbox="../../_images/decision-guides/decision-guide-subscriptions-hierarchy.png":::
 
 Each organization categorizes their applications differently. They often separate subscriptions based on specific applications or services, or by application archetypes. This categorization is designed to support workloads that are likely to consume most of the resource limits of a subscription. It might also separate mission-critical workloads to ensure they don't compete with other workloads under these limits. Some workloads that might justify a separate subscription include:
 
@@ -71,7 +71,7 @@ For organizations with global operations, the geographic strategy groups subscri
 
 Management group hierarchies can be up to six levels deep. This depth gives you the flexibility to create a hierarchy that combines several of these strategies to meet your organizational needs. For example, the following diagram shows an organizational hierarchy that combines a business unit strategy with a geographic strategy.
 
-:::image type="content" source="../../_images/decision-guides/decision-guide-subscriptions-hierarchy-mixed.png" alt-text="Diagram that shows the mixed subscription strategy.":::
+:::image type="content" alt-text="Diagram that shows the mixed subscription strategy." source="../../_images/decision-guides/decision-guide-subscriptions-hierarchy-mixed.png" lightbox="../../_images/decision-guides/decision-guide-subscriptions-hierarchy-mixed.png":::
 
 ## Related resources
 
@@ -81,7 +81,7 @@ Management group hierarchies can be up to six levels deep. This depth gives you 
 
 ## Next steps
 
-Subscription design is just one infrastructure component that requires architectural decisions during cloud adoption. Visit the architectural decision guides overview to learn about other strategies used when making design decisions for other types of infrastructure.
+Subscription design is just one infrastructure component that requires architectural decisions during cloud adoption. To learn about other strategies to use when designing other types of infrastructure, see the overview in the architectural decision guides.
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)
