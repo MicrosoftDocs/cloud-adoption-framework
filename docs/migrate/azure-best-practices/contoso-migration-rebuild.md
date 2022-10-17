@@ -396,7 +396,7 @@ Contoso admins provision an Azure Cosmos DB database to be used for pet informat
     ![Screenshot showing the creation of an Azure Cosmos DB database in Azure Marketplace.](./media/contoso-migration-rebuild/cosmos1.png)
     *Figure 43: Creating an Azure Cosmos DB database.*
 
-2. They specify a name `contososmarthotel`, select the SQL API, and place it in the production resource group `ContosoRG` in the main region `East US 2`.
+2. They specify a name `contososmarthotel`, select **Azure Cosmos DB for NoSQL**, and place it in the production resource group `ContosoRG` in the main region `East US 2`.
 
     ![Screenshot of the Azure Cosmos DB database name and other settings.](./media/contoso-migration-rebuild/cosmos2.png)
     *Figure 44: Naming an Azure Cosmos DB database.*
