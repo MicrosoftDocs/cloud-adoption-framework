@@ -48,7 +48,7 @@ Apply the following considerations to both Azure Landing Zones and Azure Workloa
 
 ## Workloads
 
-To learn how to manage environments for Workloads refer to [Enterprise-scale FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+To learn how to manage environments for Workloads refer to [Enterprise-scale FAQ](../enterprise-scale/faq.md).
 
 ## Azure Landing Zones
 
