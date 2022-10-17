@@ -116,7 +116,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - Keep address spaces different to avoid overlapping IP addresses between the two sites. For example, you can use `192.168.0.0/16` for region 1 and `10.0.0.0/16` for region 2. 
 
-- Use ExpressRoute Global Reach connectivity between the primary and secondary Azure VMware Solution private clouds in differnt regions. See more networking considerations and recommendations in the [relevant design area](./eslz-network-topology-connectivity.md).
+- Use ExpressRoute Global Reach connectivity between the primary and secondary Azure VMware Solution private clouds in different regions. See more networking considerations and recommendations in the [relevant design area](./eslz-network-topology-connectivity.md).
 
 ## Next steps
 
