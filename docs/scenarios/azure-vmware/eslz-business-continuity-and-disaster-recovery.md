@@ -3,7 +3,7 @@ title: Enterprise-scale BCDR for Azure VMware Solution
 description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery (BCDR) of Azure VMware Solution.
 author: sonmitt
 ms.author: janet
-ms.date: 09/28/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -14,10 +14,11 @@ ms.custom: think-tank, e2e-azure-vmware
 
 [Azure VMware Solution](/azure/azure-vmware/) provides you with [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain VMware vSphere clusters built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. All provisioned private clouds have VMware vCenter Server, VMware vSAN, VMware vSphere, and VMware NSX-T Data Center. Azure VMware management tools (vCenter Server and NSX Manager) will be available at least 99.9% of the time. To learn about the SLA for Azure VMware Solution, see [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). You'll still want to consider other business continuity and disaster recovery factors because whether it’s on-premises or Azure VMware Solution, one must maintain business continuity and have systems in place to be prepared for a disaster. A robust BCDR plan aims to protect a company from data loss, financial loss or downtime if there is a disruptive event. It helps an organization to minimize the overall outage and get back on its feet again.
 
-:::image type="content" source="../_images/eslz-bcdr-1-2.png" alt-text="Diagram that shows a BCDR flow chart." border="false" Lightbox="../_images/eslz-bcdr-1-2.png":::
+:::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a BCDR flow chart." border="false" Lightbox="../_images/eslz-bcdr-1.png":::
 
  > [!NOTE]
- > For disaster recovery of compute and memory intensive Azure VMware solution workloads, the storage for pilot light environment should be equal to primary site.
+ >The Pilot light environment is set up with a minimal configuration. The setup has only the necessary hosts running to support only a minimal and critical set of applications. But can scale out and spawn more hosts to take bulk of the load if a failover occurs.
+ > For disaster recovery of compute and memory intensive Azure VMware solution workloads, same amount of storage is required as primary site.
 
 ## Business continuity design considerations
 
@@ -52,23 +53,25 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - For information on the supported features of the partner backup solutions, please refer to respective partner documentation.
 
-- Azure VMware Solution platform components such as vCenter Server, NSX-T Manager, or HCX Manager are managed services for which backup is managed by Azure. If you face any issues [Create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+- Azure VMware Solution platform components such as vCenter Server, NSX-T Manager, or HCX Manager are managed services for which backup is managed by Azure. To restore from a backup for Azure VMware Solution platform components, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 ## Disaster recovery design considerations
 
-- Align business requirements with recovery time objectives (RTO), capacity, and recovery point objectives (RPO) for applications. Plan and design accordingly to achieve these objectives using the most appropriate replication technology. For example, natively replicate SQL Database using SQL Always On availability group, or non-native like VMware Site Recovery Manager (SRM).
+- Align business requirements with recovery time objectives (RTO), capacity, and recovery point objectives (RPO) for applications. Plan and design accordingly to achieve these objectives using the most appropriate replication technology. For example, natively replicate SQL Database using SQL Always On availability group, or you can use disaster recovery tool such as VMware Site Recovery Manager (SRM).
 
-- Make a decision as to what the target disaster recovery site for the protected Azure VMware Solution private cloud will be. This site influences which disaster recovery tooling is suitable to the environment.
+- Determine the target disaster recovery site for the protected Azure VMware Solution private cloud. This site influences which disaster recovery tooling is suitable to the environment. For example, If you want to recover Azure VMware Solution workloads to Azure native IaaS virtual machines, Zerto is the only possible solution.
 
 - An analysis and decision should be made to determine which subset of AVS workloads require protection if there is a DR event. Consider categorizing the workloads based on priority, P0 for Business Critical workload and P1, P2, P3 for other workloads, which are important but not so critical for business to be operational (this is usually defined in the customer Business Continuity Plan with well defined SLAs). It will help to control the costs associated with the DR implementation. 
 
-- In most of the cases it's not required to fail over non-production environments (dev, test, UAT, etc.) to secondary site. Hence, it's advised to run pilot light AVS private cloud at the secondary site with reduced capacity for production and critical workloads to save on costs. For additional capacity, you can scale out to add hosts during the DR event. 
+- In most of the cases it's not required to fail over non-production environments (dev, test, UAT, etc.) to secondary site. Hence, it's advised to run pilot light AVS private cloud at the secondary site with reduced capacity for production and critical workloads to save on costs. For additional capacity, you can scale out to add ESXi hosts to the cluster during the DR event. 
+
+- Especially for pilot light deployments, ensure that you have already secured all the host quota needed for Azure VMware Solution in the secondary site so that during full scale out you don't have to wait for the required capacity. See [Request host quota for Azure VMware Solution](/azure/azure-vmware/request-host-quota-azure-vmware-solution).
 
 - Set up functional domain roles, like Active Directory domain controllers, in the secondary environment.
 
 - Partner Solutions like JetStream Software and Zerto are GA and validated on Azure VMware Solution. They support most of the disaster recovery scenarios and can provide faster recovery with near zero RPO (recovery point objective). 
 
-- Migration from third-party locations into Azure VMware Solution has support through VMware Site Recovery Manager, Jetstream and Zerto through scale.
+- Migration from third-party locations into Azure VMware Solution has support through VMware Site Recovery Manager, Jetstream and Zerto at scale.
 
 - [VMware HCX](/azure/azure-vmware/deploy-disaster-recovery-using-vmware-hcx) is also a cost-effective disaster recovery solution. But due to manual orchestration HCX isn't recommended for large and production workloads. 
 
@@ -95,13 +98,13 @@ ms.custom: think-tank, e2e-azure-vmware
 
 ## Disaster recovery design recommendations
 
-- Use VMware Site Recovery Manager when working with Azure VMware Solution in both primary and secondary sites. Primary and secondary sites are also known as protected and recovery sites, respectively. The first diagram shows a high-level overview of continuous vSphere replication. The second diagram shows the primary and secondary site components in detail.
+- Use [VMware Site Recovery Manager](/azure/azure-vmware/disaster-recovery-using-vmware-site-recovery-manager) when working with Azure VMware Solution in both primary and secondary sites. Primary and secondary sites are also known as protected and recovery sites, respectively. The first diagram shows a high-level overview of continuous vSphere replication. The second diagram shows the primary and secondary site components in detail.
 
   :::image type="content" source="../_images/eslz-bcdr-5.png" alt-text="Diagram that shows a high-level example of continuous vSphere replication between two Azure VMware Solution sites.":::
 
   :::image type="content" source="../_images/eslz-bcdr-6.png" alt-text="Diagram that shows a detailed example of continuous vSphere replication between two Azure VMware Solution sites." border="false":::
 
-- For mission critical applications [Zerto](/azure/azure-vmware/deploy-zerto-disaster-recovery#scenario-3-azure-vmware-solution-to-iaas-vms-cloud-disaster-recovery) and [JetStream](/azure/azure-vmware/deploy-disaster-recovery-using-jetstream) are available as disaster recovery solution for AVS private cloud. JetStream and Zerto are built on the foundation of Continuous Data Protection (CDP), using VMware vSphere API for I/O filtering (VAIO) framework, which enables minimal or close to no data loss.  It also enables cost-effective DR by using minimal resources at the DR site.
+- For business critical applications [Zerto](/azure/azure-vmware/deploy-zerto-disaster-recovery#scenario-3-azure-vmware-solution-to-iaas-vms-cloud-disaster-recovery) and [JetStream](/azure/azure-vmware/deploy-disaster-recovery-using-jetstream) are available as disaster recovery solution for AVS private cloud. JetStream and Zerto are built on the foundation of Continuous Data Protection (CDP), using VMware vSphere API for I/O filtering (VAIO) framework, which enables minimal or close to no data loss.  It also enables cost-effective DR by using minimal resources at the DR site.
 
 - Use [Zerto](/azure/azure-vmware/deploy-zerto-disaster-recovery#scenario-3-azure-vmware-solution-to-iaas-vms-cloud-disaster-recovery) if Azure IaaS virtual machines are the disaster recovery target for the Azure VMware Solution private cloud.
 
@@ -113,7 +116,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - Keep address spaces different to avoid overlapping IP addresses between the two sites. For example, you can use `192.168.0.0/16` for region 1 and `10.0.0.0/16` for region 2. 
 
-- Use ExpressRoute Global Reach connectivity between the primary and secondary Azure VMware Solution private clouds. See more networking considerations and recommendations in the [relevant design area](./eslz-network-topology-connectivity.md).
+- Use ExpressRoute Global Reach connectivity between the primary and secondary Azure VMware Solution private clouds in differnt regions. See more networking considerations and recommendations in the [relevant design area](./eslz-network-topology-connectivity.md).
 
 ## Next steps
 
