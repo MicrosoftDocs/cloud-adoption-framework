@@ -3,7 +3,7 @@ title: Subscription decision guide
 description: Learn about subscription design strategies and management group hierarchy to organize your Azure assets.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 10/17/2022
+ms.date: 10/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -12,11 +12,11 @@ ms.custom: internal
 
 # Subscription decision guide
 
-Effective subscription design helps organizations establish a structure to organize and manage assets in Azure while migrating to the cloud. This guide will help you decide when to create more subscriptions. It will also help you expand the hierarchy of your management group to support your business priorities.
+Effective subscription design helps organizations to establish a structure to organize and manage assets in Azure while migrating to the cloud. The purpose of this guide is to help you decide when to create more subscriptions, and also to help you expand the hierarchy of your management group to support your business priorities.
 
 ## Prerequisites
 
-To start your Azure adoption:
+To start your adoption of Azure cloud:
 
 - [Create your initial subscriptions](../../ready/azure-best-practices/initial-subscriptions.md).
 - [Create more subscriptions](../../ready/azure-best-practices/scale-subscriptions.md) to scale your Azure environment.
@@ -26,12 +26,12 @@ For an overview of these concepts, see [Azure fundamental concepts](../../ready/
 
 ## Model your organization
 
-Because every organization is different, Azure management groups are designed to be flexible. For example, you can model your cloud estate on your organization's hierarchy. This method helps you define and apply policies at higher levels of the hierarchy. You can then rely on inheritance to ensure that those policies are automatically applied to management groups that are lower in the hierarchy. Although you can move subscriptions from one management groups to another, it's helpful to design an initial hierarchy for management groups that reflects your expected organizational needs.
+Because every organization is different, Azure management groups are designed to be flexible. For example, you can model your cloud estate on your organization's hierarchy. This method helps you define and apply policies at higher levels of the hierarchy. You can then rely on inheritance to ensure that those policies are automatically applied to management groups that are lower in the hierarchy. Although you can move subscriptions from one management group to another, it's helpful to design an initial hierarchy for management groups that reflects your expected organizational needs.
 
-Before completing your subscription design, consider how considerations of [resource consistency](../resource-consistency/index.md) might influence your design choices.
+Before completing your subscription design, consider how [resource consistency](../resource-consistency/index.md) might influence your design choices.
 
 > [!NOTE]
-> With an Azure Enterprise Agreement (EA), you can define another organizational hierarchy for billing purposes. This hierarchy is distinct from your management group hierarchy, which focuses on providing an inheritance model for easily applying suitable policies and access control to your resources.
+> With an Azure Enterprise Agreement (EA), you can define another organizational hierarchy for billing purposes. This hierarchy is distinct from the hierarchy of your management groups, which focuses on providing an inheritance model for easily applying suitable policies and access control to your resources.
 
 ## Subscription design strategies
 
@@ -39,9 +39,9 @@ To address your business priorities, consider the following design strategies fo
 
 - Workload separation
 - Application category
-- Functional
+- Functional role
 - Business unit
-- Geographic
+- Geographic location
 
 ### Workload separation strategy
 
@@ -51,11 +51,11 @@ An organization often adds new workloads to the cloud. Varying ownership of subs
 
 ### Application category strategy
 
-As their cloud footprints grow, organizations typically create more subscriptions to support more applications. These applications usually have fundamental differences in business criticality, compliance requirements, access controls, or data protection needs. Built from the initial production and nonproduction subscriptions, these application categories are organized under either the production or nonproduction management group as applicable. These subscriptions are typically owned and administered by the operations staff of a central IT team.
+As the size of their cloud footprint grows, organizations typically create more subscriptions to support more applications. These applications usually have fundamental differences in business criticality, compliance requirements, access controls, and data protection needs. These application categories depend on subscriptions that are typically built from the initial production and nonproduction subscriptions, and they're organized under either the production or nonproduction management group as applicable. These subscriptions are typically owned and administered by the operations staff of a central IT team.
 
 :::image type="content" alt-text="Diagram that shows the application category strategy."source="../../_images/decision-guides/decision-guide-subscriptions-hierarchy.png" lightbox="../../_images/decision-guides/decision-guide-subscriptions-hierarchy.png":::
 
-How organizations categorize their applications varies. Organizations often separate subscriptions based on specific applications or services, or by application archetypes. This categorization is designed to support workloads that are likely to consume most of the resource limits of a subscription. It might also separate mission-critical workloads to ensure they don't compete with other workloads under these limits. Some workloads that might justify a separate subscription include:
+How organizations categorize their applications varies. Organizations often separate subscriptions based on specific applications or services, or by application archetypes. This categorization is designed to support workloads that are likely to consume most of the resource limits of a subscription. It might also separate mission-critical workloads to ensure that they don't compete with other workloads under these limits. Some workloads that might justify a separate subscription include:
 
 - Mission-critical workloads.
 
