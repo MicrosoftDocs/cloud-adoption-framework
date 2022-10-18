@@ -4,11 +4,13 @@ description: Use the Cloud Adoption Framework for Azure to understand the busine
 author: mpvenables
 ms.author: brblanch
 ms.reviewer: tozimmergren
-ms.date: 10/06/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: 
+- internal
+- engagement-fy23
 ---
 
 # What business outcomes are associated with transformation journeys?
@@ -72,7 +74,7 @@ Performance and reliability are assumed. When either falters, reputation damage 
 
 Learn more about [performance outcomes](./performance-outcomes.md).
 
-### Sustainability goals
+### Sustainability outcomes
 
 Organizations are increasingly discussing environmental goals and sustainability targets. Environmental sustainability is quickly moving from a "nice to have" function of Corporate Social Responsibility (CSR) to a centerpiece of business strategy, increasingly embedded into everything a company does.
 
