@@ -59,7 +59,7 @@ For more information, see [platform vs. application landing zones](/azure/cloud-
 
 **(3) Platform authorization to operate (ATO)** - Experienced cloud brokers can help achieve a platform-level ATO quicker than mission owners on their own. A platform-level ATO directly affects the speed at which mission owners can deploy critical applications and workloads.
 
-For more information, see [accelerating ATO](/azure/azure-government/compliance/documentation-accelerate-compliance)
+For more information, see [accelerating ATO](/azure/azure-government/compliance/documentation-accelerate-compliance).
 
 **(4) Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data points or documents. This automation enables timely and accurate routing to approval authorities for workload deployment, providing traceability and accountability. Without a cloud broker, mission owners have to navigate the following hurdles:
 
