@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Introduction to the Azure high-performance computing (HPC) scenario
 
-This article focuses on modernizing your machine learning, visualization, and rendering workloads in Azure at any scale with HPC + AI through the Cloud Adoption Framework.
+This scenario focuses on modernizing your machine learning, visualization, and rendering workloads in Azure at any scale with HPC + AI through the Cloud Adoption Framework.
 
 ## Defining HPC
 
