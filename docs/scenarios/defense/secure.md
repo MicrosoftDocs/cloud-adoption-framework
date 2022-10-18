@@ -53,7 +53,7 @@ Granting elevated privilege for a defined period is a security best-practice. Az
 
 Here are a few tools that add value to defense deployments:
 
-- ***Threat intelligence***: Cloud environments should have a persistent threat intelligence and detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects. For more information, see [linking to threat intelligence feeds](/azure/sentinel/connect-threat-intelligence-tip)
+- ***Threat intelligence***: Cloud environments should have a persistent threat intelligence and detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects. For more information, see [linking to threat intelligence feeds](/azure/sentinel/connect-threat-intelligence-tip).
 - ***Distributed denial of service (DDoS)***: Security tools should protect against malicious or non-malicious distributed denial-of-service attacks.
 - ***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyze, aggregates, and detects threats in logs generated throughout a cloud environment.
 
