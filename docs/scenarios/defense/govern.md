@@ -81,7 +81,7 @@ Here are a few considerations when building a cost governance strategy:
 
 **(4) Trend analysis** - Conduct trend analysis to drive transparency and allows visibility into active resources and consumption. Anomalous spikes in resource spend and should be brought to the technical team for explanation. It could signal a new phase in operations or a governance gap. Flag and review any new charges or spikes in trends. This form of active cost management helps avoid waste and mitigates risk. Trend analysis can also help manage infrastructure and determine future priorities. Mission owners can see how much money is spent on a given capability. If the money spent doesn’t help meet mission objectives, the future of this resource or workload needs reevaluation.
 
-For more information, see [cost governance](/azure/cloud-adoption-framework/govern/cost-management/)
+For more information, see [cost governance](/azure/cloud-adoption-framework/govern/cost-management/).
 
 ## Create cost baselines
 
@@ -102,7 +102,7 @@ Not all variables require entry, and some services can be difficult to estimate.
 
 **(2) Estimate monthly costs for required services** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate.
 
-For more information, see [cost tools](/azure/cloud-adoption-framework/govern/cost-management/toolchain)
+For more information, see [cost tools](/azure/cloud-adoption-framework/govern/cost-management/toolchain).
 
 ## Next step
 
