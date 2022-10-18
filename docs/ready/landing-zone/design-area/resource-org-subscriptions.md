@@ -19,6 +19,9 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 - organizational structure
 - application portfolios
 
+> [!TIP]
+> We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+
 ## Subscriptions considerations
 
 The following sections contain considerations to help you plan and create subscriptions for Azure.
