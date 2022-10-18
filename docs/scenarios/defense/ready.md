@@ -39,7 +39,7 @@ Here are a few general architecture recommendations for landing zone deployments
 
 **(4) Designate an architecture owner** - Mission owners should designate a single member of their personnel to own landing zone security. This person should be responsible for coordinating with the cloud broker, managing identity and access, and restricting elevated privileges.
 
-For more information see:
+For more information, see:
 
 - [Landing zone principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles)
 - [Landing zone design](/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
