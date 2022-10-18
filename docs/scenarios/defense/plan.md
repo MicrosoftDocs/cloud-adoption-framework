@@ -59,6 +59,8 @@ For more information, see [platform vs. application landing zones](/azure/cloud-
 
 **(3) Platform authorization to operate (ATO)** - Experienced cloud brokers can help achieve a platform-level ATO quicker than mission owners on their own. A platform-level ATO directly affects the speed at which mission owners can deploy critical applications and workloads.
 
+For more information, see [accelerating ATO](/azure/azure-government/compliance/documentation-accelerate-compliance)
+
 **(4) Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data points or documents. This automation enables timely and accurate routing to approval authorities for workload deployment, providing traceability and accountability. Without a cloud broker, mission owners have to navigate the following hurdles:
 
 - Obtaining and allocating funds
@@ -91,6 +93,11 @@ The factors listed below will help you determine if the multiple cloud broker ap
 - ***Security*** – Data compliance for varying impact levels might require multiple tenants and multiple cloud brokers authorized and with the experience to manage those impact levels.
 
 The multi-cloud-broker strategy can be used at different levels in a defense organization. A broker can be assigned to individual military branches (naval, air, ground) or groups of applications. The choice depends on the needs of your defense organization around ownership, isolation, management, and security.
+
+For more information, see:
+
+- [Planning overview](/azure/cloud-adoption-framework/plan/plan-intro)
+- [On-premises assessment](/azure/cloud-adoption-framework/plan/contoso-migration-assessment)
 
 ## Next step
 
