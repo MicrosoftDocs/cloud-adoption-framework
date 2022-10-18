@@ -240,4 +240,4 @@ Azure Security Benchmark is focused on Azure technical controls. Objective areas
 
 [Financial Institution Risk Assessment Overview](https://servicetrust.microsoft.com/ViewPage/RiskAssessmentOverview)
 
-[Service Level Agreement](/support/legal/sla/)
+[Service Level Agreement](https://azure.microsoft.com/support/legal/sla/)
