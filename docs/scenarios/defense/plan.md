@@ -53,7 +53,7 @@ Landing zone components can be divided into two major categories: platform envir
 
 Without a cloud broker mission owner would be responsible for the entire architecture and core services. Cloud brokers take technical responsibility for the core services. With a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives.
 
-For more on this topic, see [platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
+For more information, see [platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
 
 **(2) Core services** - Cloud brokers implement and manage core services such as identity, networking, and management. In most instances, a cloud broker securely connects the new cloud environment to on-premises networks, builds operational environments, and establishes an identity access management (IAM) solution with policy enforcement based on mission requirements.
 
