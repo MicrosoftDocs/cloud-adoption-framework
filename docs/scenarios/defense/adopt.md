@@ -24,9 +24,9 @@ During the adopt phase, defense workloads start their journey in the cloud and i
 
 There are a few important considerations to be aware of in the adopt phase. It's best practice for defense organizations to:
 
-- Create a tailored migration plan
-- Incentivize modernization
-- Use DevOps where possible
+- Create a tailored migration plan.
+- Incentivize modernization.
+- Use DevOps where possible.
 
 ## Create a tailored migration plan
 
