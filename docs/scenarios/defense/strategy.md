@@ -33,7 +33,16 @@ The cloud is a force multiplier for defense scenarios, and many defense organiza
 
 However, if rework is required, the cloud is ideal for refactoring and rationalizing workloads. Without the need to acquire, provision, or retire hardware, the on-demand access to cloud virtualization increases the speed changes occur at a fraction of the cost.
 
-**(3) Identify stakeholders** - Identifying and collaborating with stakeholders is essential. The cloud adoption journey creates dependencies within the chain of command that delay digital transformation if not addressed early. The structure of defense organizations will determine ‘who’ the stakeholders are and ‘what’ dependencies they create for cloud adoption. Stakeholders in different branches and agencies might have alternative priorities and different ideas of success. Early identification of stakeholders that are critical to approval processes can aid project timelines. The approval process tends to be longer in defense environments because of the risk mitigation requirements. Continuous engagement with stakeholders will keep mission owners aware of shifting priorities and challenges that could affect cloud adoption goals and timelines.
+For for information, see:
+
+- [Strategy assessment](/azure/cloud-adoption-framework/strategy/cloud-adoption-strategy-evaluator)
+- [Global deployments](/azure/cloud-adoption-framework/strategy/global-markets)
+- [Define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy)
+- [Recommended skills](/azure/cloud-adoption-framework/strategy/suggested-skills)
+
+## Identify stakeholders
+
+Identifying and collaborating with stakeholders is essential. The cloud adoption journey creates dependencies within the chain of command that delay digital transformation if not addressed early. The structure of defense organizations will determine ‘who’ the stakeholders are and ‘what’ dependencies they create for cloud adoption. Stakeholders in different branches and agencies might have alternative priorities and different ideas of success. Early identification of stakeholders that are critical to approval processes can aid project timelines. The approval process tends to be longer in defense environments because of the risk mitigation requirements. Continuous engagement with stakeholders will keep mission owners aware of shifting priorities and challenges that could affect cloud adoption goals and timelines.
 
 Here are some recommendations to consider:
 
@@ -41,8 +50,9 @@ Here are some recommendations to consider:
 - ***Identify data owners and data stewards*** - Data owners and data stewards will be important stakeholders in your cloud adoption journey. Identify and collaborate with both as early as possible.
 - ***Identify application owners*** - Application owners manage and control services and workloads that will be adopted in the cloud. They might have a separate roadmap for their applications. It’s critical to align the goals of the application owners with the cloud adoption plan. If not possible, mission owners should develop a strategy that accommodates the mission objectives of application owners
 
-For useful templates, see:
+For more information, see:
 
+- [Balancing priorities](/azure/cloud-adoption-framework/strategy/balance-competing-priorities)
 - [Strategy resources](/azure/cloud-adoption-framework/resources/tools-templates#strategy)
 - [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)
 
