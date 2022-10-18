@@ -43,6 +43,7 @@ For more information see:
 
 - [Landing zone principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles)
 - [Landing zone design](/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
+- [Landing zone security](/azure/cloud-adoption-framework/ready/considerations/landing-zone-security)
 
 ## Define operations and management expectations
 
@@ -60,7 +61,10 @@ We have the following recommendations for operations and management:
 
 **(5) Establish change management process** - Change is necessary in the cloud. In fact, a major benefit of the cloud is the ability to accelerate change. Accelerating positive changes is the goal of digital transformation. It’s vital that mission owners and cloud brokers establish a change management process. Change management should account for standard, normal, and emergency change requests. Each request type should have its own process that is optimized and streamlined for consistency, speed, and security.
 
-For more information, see [improve landing zone operations](/azure/cloud-adoption-framework/ready/considerations/landing-zone-operations)
+For more information, see:
+
+- [Improve landing zone operations](/azure/cloud-adoption-framework/ready/considerations/landing-zone-operations)
+- [Landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance)
 
 ## Next step
 
