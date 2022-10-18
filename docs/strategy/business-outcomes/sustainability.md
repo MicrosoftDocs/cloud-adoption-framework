@@ -4,11 +4,13 @@ description: Learn how the Cloud Adoption Framework and cloud computing can supp
 author: mpvenables
 ms.author: brblanch
 ms.reviewer: tozimmergren
-ms.date: 10/06/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: 
+- internal
+- engagement-fy23
 ---
 
 # Sustainability outcomes and benefits for business
