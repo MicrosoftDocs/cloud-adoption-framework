@@ -54,6 +54,7 @@ For more information, see:
 
 - [Balancing priorities](/azure/cloud-adoption-framework/strategy/balance-competing-priorities)
 - [Strategy resources](/azure/cloud-adoption-framework/resources/tools-templates#strategy)
+- [RACI alignment](/azure/cloud-adoption-framework/organize/raci-alignment)
 - [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)
 
 ## Next step
