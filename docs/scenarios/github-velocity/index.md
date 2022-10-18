@@ -149,7 +149,7 @@ For more information, see:
 
 The following links provide more information about GitHub.
 
-- [GitHub modules in Microsoft Learn](/learn/browse/?products=github)
+- [Learn modules for GitHub](/training/browse/?products=github)
 - [GitHub Learning Lab](https://lab.github.com/)
 - [GitHub Docs](https://docs.github.com/en)
 - [Tips for getting started with GitHub DevSecOps](https://resources.github.com/whitepapers/Architects-guide-to-DevOps/)

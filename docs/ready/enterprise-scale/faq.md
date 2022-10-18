@@ -1,20 +1,20 @@
 ---
-title: Enterprise-scale FAQ
-description: The Enterprise-scale FAQ provides answers to common questions asked about the Enterprise-scale architecture.
+title: Azure landing zone frequently asked questions (FAQ)
+description: The Azure landing zone frequently asked questions (FAQ) provides answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
 ms.author: doalle
-ms.date: 10/20/2021
+ms.date: 04/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Enterprise-scale FAQ
+# Azure landing zone frequently asked questions (FAQ)
 
-This article answers frequently asked questions about enterprise-scale architecture.
+This article answers frequently asked questions about Azure landing zone architecture.
 
-For FAQs about **implementing enterprise-scale architecture**, see [Enterprise-scale implementation FAQ](https://github.com/Azure/Enterprise-Scale/wiki/FAQ).
+For FAQs about **implementing Azure landing zone architecture**, see [Enterprise-scale implementation FAQ](https://github.com/Azure/Enterprise-Scale/wiki/FAQ).
 
 <!-- GENERAL -->
 
@@ -26,9 +26,9 @@ The Azure landing zone accelerator is an Azure portal-based deployment experienc
 
 The Azure landing zone conceptual architecture represents scale and maturity decisions. It's based on lessons learned and feedback from customers who have adopted Azure as part of their digital estate. This conceptual architecture can help your organization set a direction for designing and implementing a landing zone.
 
-## What does a landing zone map to in Azure in the context of enterprise-scale architecture?
+## What does a landing zone map to in Azure in the context of Azure landing zone architecture?
 
-From an enterprise-scale point of view, landing zones are individual Azure subscriptions.
+From an Azure landing zone point of view, landing zones are individual Azure subscriptions.
 
 ## What does policy-driven governance mean, and how does it work?
 
@@ -40,7 +40,7 @@ Some examples of policy-driven governance are:
 
 - `Deny` effect: Prevents subnets from being created or updated to have no Network Security Groups associated with them.
 
-- `DeployIfNotExists` effect: A new subscription (landing zone) is created and placed into a management group within your enterprise-scale deployment. Azure Policy ensures that Microsoft Defender for Cloud (formerly known as Azure Security Center) is enabled on the subscription. It also configures the diagnostic settings for Activity Log to send logs to the Log Analytics workspace in the Management subscription.
+- `DeployIfNotExists` effect: A new subscription (landing zone) is created and placed into a management group within your Azure landing zone deployment. Azure Policy ensures that Microsoft Defender for Cloud (formerly known as Azure Security Center) is enabled on the subscription. It also configures the diagnostic settings for Activity Log to send logs to the Log Analytics workspace in the Management subscription.
 
   Instead of repeating code or manual activities when a new subscription is created, the `DeployIfNotExists` policy definition automatically deploys and configures them for you.
 
@@ -58,16 +58,16 @@ In short, **no**. Use Azure Policy to control, govern, and keep your workloads a
 
 Review the following documentation sections:
 
-- [Transition existing Azure environments to enterprise-scale - "Policy" section](./transition.md#policy)
+- [Transition existing Azure environments to the Azure landing zone conceptual architecture - "Policy" section](./transition.md#policy)
 - [Quickstart: Create a policy assignment to identify non-compliant resources - "Identify non-compliant resources"
  section](/azure/governance/policy/assign-policy-portal#identify-non-compliant-resources)
 
 <!-- IMPLEMENTATION -->
 
-## How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?
+## How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?
 
 > [!NOTE]
-> This is for workload landing zones only. For testing and environment segregation for the enterprise-scale platform itself, review the [testing approach for enterprise-scale](./testing-approach.md).
+> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](./testing-approach.md).
 
 If an application or service workload requires segregation of "dev/test/production" landing zones, use a separate subscription for each landing zone in the workload. It's important to work with the application or service workload owners to determine if separate subscriptions is the best way for them to build, manage, operate, and deliver their workload. It shouldn't be mandatory for all workloads.
 
@@ -77,19 +77,23 @@ We suggest working with each application or service workload team (landing zone 
 
 ### What about our management group hierarchy?
 
-With enterprise-scale architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in enterprise-scale architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](../landing-zone/design-area/resource-org.md).
+With Azure landing zone architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in Azure landing zone architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](../landing-zone/design-area/resource-org.md).
 
 *Archetype-aligned* means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services). However, all environments ("dev/test/production"), whether split across separate subscriptions or in a single subscription, are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
 
-The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: *(N apps) x (N+3) = Total management groups*
+The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: *N workloads x Z management groups  = total management groups*.
 
 So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production", you're left with:
 
-> **30** (no. of workloads) X **4** (no. of management groups per workload) = **120** management groups
+> N = number of workloads/apps = 30
+>
+> Z = number of management groups for workload and environments (1 per workload + 3 for envs) = 4
+
+> N (30) x Z (4) = 120 total management groups
 
 #### Example of a suboptimal management group hierarchy
 
-![Diagram of an example of a sub-optimal management group hierarchy for enterprise-scale architecture when handling dev/test/production landing zones.](./media/eslz-dev-test-prod-bad.png)
+[ ![Diagram of an example of a sub-optimal management group hierarchy for Azure landing zone architecture when handling dev/test/production landing zones.](./media/eslz-dev-test-prod-bad.png) ](./media/eslz-dev-test-prod-bad.png#lightbox)
 
 To summarize, there should be no difference in policies applied between "dev/test/production" environments if you develop and build them to production standard from the start. There's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for landing zone users and owners. You might also consider using "sandbox" subscriptions for true development purposes where a less restricted environment is required, such as when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
 
@@ -104,20 +108,20 @@ A common challenge to this approach is that you might need some policies to appl
 - For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](../landing-zone/design-area/platform-automation-devops.md).)
 - Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
 
-#### Example of an optimal management group hierarchy aligned to enterprise-scale architecture
+#### Example of an optimal management group hierarchy aligned to Azure landing zone architecture
 
-:::image type="content" source="./media/eslz-dev-test-prod-good.png" alt-text="Screenshot that shows an example of a optimal management group hierarchy for enterprise-scale architecture when handling development, test, and production landing zones":::
+[ ![Diagram of an example of a of a optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones](./media/eslz-dev-test-prod-good.png) ](./media/eslz-dev-test-prod-good.png#lightbox)
 
 *Some management groups have been removed for illustration clarity purposes.*
 
-> [!NOTE]
-> We discussed this topic in our enterprise-scale community call in August 2021. You can find the recording on [YouTube.](https://youtu.be/Zx_gHevekm0?t=1954)
+> [!TIP]
+> We discussed this topic in a recent YouTube video: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA)
 
 ## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
 
-When you deploy enterprise-scale architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name).
+When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name).
 
-Management groups, Azure Policies, and Azure RBAC are all stored at either a tenant or management group level within enterprise-scale architecture, so these resources aren't "deployed" to a particular region. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
+Management groups, Azure Policies, and Azure RBAC are all stored at either a tenant or management group level within Azure landing zone architecture, so these resources aren't "deployed" to a particular region. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
 
 The region selector on the **Deployment location** tab is also used to select which Azure region the following resources are deployed to (if enabled):
 
@@ -136,20 +140,77 @@ If you deploy a networking topology on the **Network topology and connectivity**
 - Azure Private DNS zones for Azure Private Link
 - Resource groups (for these resources)
 
-## How do we enable more Azure regions when we use enterprise-scale architecture?
+## How do we enable more Azure regions when we use Azure landing zone architecture?
 
-Enterprise-scale architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy enterprise-scale architecture. For more information, see [Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for](#why-are-we-asked-to-specify-azure-regions-during-the-azure-landing-zone-accelerator-deployment-and-what-are-they-used-for).
+Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy Azure landing zone architecture. For more information, see [Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for](#why-are-we-asked-to-specify-azure-regions-during-the-azure-landing-zone-accelerator-deployment-and-what-are-they-used-for).
 
-You might want to expand into or use more Azure regions once you've completed the initial deployment of enterprise-scale architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within enterprise-scale architecture, consider the following areas and recommendations:
+You might want to expand into or use more Azure regions once you've completed the initial deployment of Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
 
 | Area | Recommendation |
 | ---- | -------------- |
 | Management groups | No action necessary. Management groups aren't tied to a region. |
 | Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments must be updated to allow resource deployments to the new region you want to enable. |
 | Role-based access control | No action necessary. Azure RBAC isn't tied to a region. |
-| Logging | No action necessary. Keep sending and storing logs in the central Log Analytics Workspace in the Management subscription. See the recommendations in the enterprise-scale critical design area for [Management and monitoring](../landing-zone/design-area/management.md). |
+| Logging | No action necessary. Keep sending and storing logs in the central Log Analytics Workspace in the Management subscription. See the recommendations in the Azure landing zone critical design area for [Management and monitoring](../landing-zone/design-area/management.md). |
 | Networking | If you deployed a networking topology, [Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or [traditional hub and spoke](../azure-best-practices/traditional-azure-networking-topology.md), expand the networking to the new Azure region. Create another networking hub by deploying the required networking resources into the existing Connectivity subscription in the new Azure region. From a DNS perspective, you might also want to deploy forwarders, if used, into the new Azure region. Use forwarders for spoke VNETs in the new region for resolution. Remember that Azure DNS Zones are global resources and not tied to a single Azure region, so nothing needs to be done to them. |
 | Identity | If you deployed Active Directory Domain Services or Azure Active Directory Domain Services into your Identity subscription/spoke, expand the service into the new Azure region. |
 
 > [!NOTE]
 > You might be able to use [Availability Zones](/azure/availability-zones/az-overview#availability-zones) instead of deploying into an additional Azure region. Review and assess whether this is possible based on your requirements and whether [Availability Zones are supported](/azure/availability-zones/az-region) in your region and for the services you want to use.
+
+### High-level approach
+
+The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure landing zone for Networking & Identity:
+
+1. Decide on new Azure Region to expand into
+
+#### Networking
+
+##### Traditional Hub & Spoke Architecture
+
+> [!TIP]
+> Review the Azure landing zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md)
+
+1. Decide on whether a new platform landing zone subscription is needed or not
+   - The same existing subscription is generally recommended to use for most customers across multiple regions for connectivity
+2. Create new Resource Group in subscription in the new target region
+3. Create new hub Virtual Network in the new target region
+4. (optional) Deploy Azure Firewall or Network Virtual Appliances (NVA) into your new hub Virtual Network
+5. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections
+6. Establish Virtual Network Peering between the new hub Virtual Network and the other hub Virtual Networks
+7. Create and configure any required routing: Azure Route Server, User-Defined Routes etc.
+8. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
+   - Some customers might do this on their Active Directory Domain Controllers which might be part of the Identity platform landing zone subscription
+
+You can now connect application landing zone spokes via Virtual Network Peering to the new hub Virtual Network in the new region, to host your workloads.
+
+##### Virtual WAN Architecture
+
+> [!TIP]
+> Review the Azure landing zone design area for [Virtual WAN architecture](../azure-best-practices/virtual-wan-network-topology.md)
+
+1. Create new Virtual Hub in the existing Virtual WAN in the new target region
+2. (optional) Deploy Azure Firewall or supported Network Virtual Appliances (NVA) into your new Virtual Hub
+3. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity in the new Virtual Hub and establish connections
+4. (optional) Create and configure any additionally required routing: Virtual Hub Static Routes, etc.
+5. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
+   - Some customers might do this on their Active Directory Domain Controllers which might be part of the Identity platform landing zone subscription
+   - In Virtual WAN deployments, today, this must be in a spoke Virtual Network that is connected to the Virtual Hub via a Virtual Network Connection
+
+You can now connect application landing zone spokes via Virtual Network Connections to the new Virtual Hub in Virtual WAN in the new region, to host your workloads.
+
+#### Identity
+
+> [!TIP]
+> Review the Azure landing zone design area for [identity and access management](../landing-zone/design-area/identity-access.md)
+
+1. Decide on whether a new platform landing zone subscription is needed or not
+   - The same existing subscription is generally recommended to use for most customers across multiple regions for identity
+2. Create new Resource Group in subscription in the new target region
+3. Create new Virtual Network in the new target region
+4. Establish Virtual Network Peering back to the hub Virtual Network in the connectivity subscription
+5. Deploy identity workloads, like Active Directory Domain Controller Virtual Machines into new Virtual Network
+    - You might need to perform additional setup and configuration of the workloads once provisioned, like:
+      - Promoting the Active Directory Domain Controller Virtual Machines to the existing Active Directory Domain
+      - Create new Active Directory sites & subnets
+      - Configuring DNS Server settings like Conditional Forwarders

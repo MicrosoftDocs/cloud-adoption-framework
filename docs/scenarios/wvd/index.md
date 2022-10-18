@@ -21,7 +21,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 - **Cloud Adoption Framework:** These articles walk through the considerations and recommendations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Azure Virtual Desktop as a central part of your technology strategy.
 - **Reference architectures:** These reference solutions aid in accelerating deployment of Azure Virtual Desktop.
 - **Featured Azure products:** Learn more about the products that support your virtual desktop strategy in Azure.
-- **Microsoft Learn modules:** Gain the hands-on skills required to implement, maintain, and support a virtual desktop environment.
+- **Learn modules:** Gain the hands-on skills required to implement, maintain, and support a virtual desktop environment.
 
 ## Common customer journeys
 

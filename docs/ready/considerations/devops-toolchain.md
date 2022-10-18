@@ -27,7 +27,7 @@ The tools a DevOps toolchain includes operate as an integrated unit for planning
 
 ### Planning
 
-- Consider adopting a tool that supports [Continuous Planning](/learn/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning) practices:
+- Consider adopting a tool that supports [Continuous Planning](/training/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning) practices:
   - Release planning
   - Epic and feature identification
   - Prioritization

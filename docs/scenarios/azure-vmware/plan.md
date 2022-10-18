@@ -3,7 +3,7 @@ title: Plan for Azure VMware Solution
 description: Learn about business and technical considerations for architectural design, evaluation, and deployment of Azure VMware Solution
 author: mhenry
 ms.author: jaalmond
-ms.date: 08/30/2021
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,13 +12,13 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Plan for Azure VMware Solution
 
-[Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include Azure VMware Solution into your overall cloud adoption plan.
+The [Plan methodology](../../plan/index.md) of the Cloud Adoption Framework helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include Azure VMware Solution into your overall cloud adoption plan.
 
 Application of the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
 
 ## Azure VMware Solution estate
 
-Azure VMware Solution is dedicated infrastructure packaged with VMware vSphere clusters, provisioned as a private cloud on Azure. The minimum initial deployment is three hosts, but more hosts can be added one at a time, up to a maximum of 16 hosts per cluster. All provisioned private clouds include vCenter Server, vSAN, vSphere, and NSX-T. As a result, you can seamlessly migrate or extend workloads from your on-premises VMware environments to Azure VMware Solution. Your Azure VMware Solution estate can extend on-premises resources, private cloud resources, and other Azure public cloud resources. For more information on connectivity between environments and across virtual networks, see[Integrate Azure VMware Solution in a hub and spoke architecture](/azure/azure-vmware/concepts-hub-and-spoke).
+Azure VMware Solution is dedicated infrastructure packaged with VMware vSphere clusters, provisioned as a private cloud on Azure. The minimum initial deployment is three hosts, but more hosts can be added one at a time, up to a maximum of 16 hosts per cluster. All provisioned private clouds include vCenter Server, vSAN, ESXi, and NSX-T Data Center. As a result, you can seamlessly migrate or extend workloads from your on-premises VMware vSphere environments to Azure VMware Solution. Your Azure VMware Solution estate can extend on-premises resources, private cloud resources, and other Azure public cloud resources. For more information on connectivity between environments and across virtual networks, see [Integrate Azure VMware Solution in a hub and spoke architecture](/azure/azure-vmware/concepts-hub-and-spoke).
 
 :::image type="content" source="./media/running-vmware-natively-on-azure.png" alt-text="Diagram of running VMware natively on Azure." lightbox="./media/running-vmware-natively-on-azure.png":::
 
@@ -28,15 +28,15 @@ When you plan your adoption of Azure VMware Solution, there are many business an
 
 Objectives of the project are in support of the business goals and are aligned to initial motivations for Azure VMware Solution.
 
-- **For a datacenter evacuation**, often you'll need to define a timeline objective that achieves the fixed date that datacenter needs to be closed by. An example might be "migration must be completed from the datacenter by x date".
-- **For increasing infrastructure scale, capacity, and disaster recovery**, you'll require to know things like ability to burst capacity on Azure VMware Solution and locations of disaster recovery sites. An example objective related to this might be "ability to increase capacity by x number of nodes (or via storage integrations), and ability to establish disaster recovery site in within x region or geographic radius.
+- **For a data center evacuation**, often you'll need to define a timeline objective that achieves the fixed date that datacenter needs to be closed by. An example might be "migration must be completed from the datacenter by x date".
+- **For increasing infrastructure scale, capacity, and disaster recovery**, you'll be required to know things like the ability to burst capacity on Azure VMware Solution and locations of disaster recovery sites. An example objective related to this might be "ability to increase capacity by x number of nodes (or via storage integrations), and ability to establish disaster recovery site in within x region or geographic radius.
 - **For hardware/software end of support**, you'll need to establish how many licenses and what is the License Mobility across current on-premises environments and the cloud. An example might be ability to gain extended security updates for x number of Windows Server and x number of SQL Server virtual machines on Azure VMware Solution.
 
 Similarly, defining success criteria for the Azure VMware Solution project is aligned to the outcomes your organization is looking for:
 
-- **Realize cost efficiencies and reduction of TCO.** Often this is the measurement between lowering the datacenter footprint and optimizing costs through cloud economics and Azure Reservations. Whether this is at a macro level or goals specific to the Azure VMware Solution project, you should create clear success measure on reduction in TCO for VMware workloads.
-- **Realize ease of implementation and change management.** By using existing VMware skills and processes with Azure VMware Solution, define success measures related to resourcing in hours. Include requirements for in-house project support, any re-skilling of IT professionals, or new skill acquisition required.
-- **Realize minimal downtime and business continuity impact.** Defines success measures related to acceptable system downtime if any, and other factors that may affect continuity of business such as latency for system communication, and process reengineering.
+- **Realize cost efficiencies and reduction of TCO.** Often this is the measurement between lowering the datacenter footprint and optimizing costs through cloud economics and Azure Reservations. Whether this is at a macro level or goals specific to the Azure VMware Solution project, you should create clear success measure on reduction in TCO for VMware vSphere workloads.
+- **Realize ease of implementation and change management.** By using existing VMware solution skills and processes with Azure VMware Solution, define success measures related to resourcing in hours. Include requirements for in-house project support, any re-skilling of IT professionals, or new skill acquisition required.
+- **Realize minimal downtime and business continuity impact.** Define success measures related to acceptable system downtime if any, and other factors that may affect continuity of business such as latency for system communication, and process re-engineering.
 
 ## Adoption stages
 
@@ -45,15 +45,16 @@ Similarly, defining success criteria for the Azure VMware Solution project is al
 - Business requirements
   - Timeline for migration
   - Successfully migrate an application
+  - Committed Service Level Agreements (SLAs)
 - Technical requirements
-  - Migrate a set number of virtual machines from a datacenter
+  - Migrate a set number of virtual machines from a data center
   - Estimated number of Azure VMware Solution nodes in which Azure regions
 
 **Architectural design:** Following the scoping and requirements, you will be able to construct an architectural design in conjunction and with support from Microsoft and a partner. Typically, in this process the following topics will be addressed and evaluated as a "discovery phase and technical review".
 
 - **Azure VMware Solution overview**
   - Licensing requirements
-  - Azure Reserved VM Instances
+  - Azure Reserved bare-metal Instances
   - Private clouds, clusters, and host
   - Storage
   - High-level networking and connectivity
@@ -65,6 +66,7 @@ Similarly, defining success criteria for the Azure VMware Solution project is al
   - L2 stretching
   - Firewall
   - Azure topology integration
+  - Necessary network flows
 - **Migration and operational**
   - Typical migration toolchain
   - Typical process and runbook for migrations

@@ -47,9 +47,6 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-### Action
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview]" submitText="Explore Azure Monitor" :::
 
 ::: zone-end
 
@@ -77,7 +74,6 @@ To set up a Service Health alert:
 2. Select **Health alerts**.
 3. Create a Service Health alert.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts]" submitText="Go to Service Health" :::
 
 ::: zone-end
 
@@ -105,9 +101,6 @@ Recommendations in Advisor are based on the resources you deploy and the actions
 
 ::: zone target="chromeless"
 
-### Action
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Expert/AdvisorBlade]" submitText="Explore Azure Advisor" :::
 
 ::: zone-end
 
@@ -137,7 +130,6 @@ Defender for Cloud is offered in two tiers: free and standard. Features like sec
 
 After you turn on and set up security policies for a subscription's resources, you can view the security state of your resources and any issues in the **Prevention** section. You can also view a list of those issues on the **Recommendations** tile.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0]" submitText="Explore Azure Security Center" :::
 
 ::: zone-end
 

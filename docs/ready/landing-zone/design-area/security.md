@@ -1,9 +1,9 @@
 ---
 title: Security design in Azure
 description: Learn about design area guidance to establish a foundation for security in Azure, hybrid, or multicloud environments.
-author: DominicAllen
-ms.author: doalle
-ms.date: 12/7/2021
+author: timwarner-msft
+ms.author: timwarner
+ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Design area: Security
 
-This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Cloud Adoption Framework's Secure methodology](../../../secure/index.md).
+This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework.
 
 ## Design area review
 
@@ -26,7 +26,21 @@ This design area creates a foundation for security across your Azure, hybrid, an
 
 Security is a core consideration for all customers, in every environment. When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
 
-The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/index.md) in the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
+The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
+
+**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
+
+**Existing (brownfield) cloud environment:** Consider using the following [Microsoft Entra](https://www.microsoft.com/security/business/microsoft-entra) identity and access services if you are interested in applying the principles from security design area to existing Azure environments:
+
+- Make use of Microsoft's [top 10 Azure security best practices](../../../secure/security-top-10.md). This guidance summarizes field-proven guidance from Microsoft cloud solution architects (CSAs) as well as Microsoft Partners.
+- Deploy [Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Azure AD-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Azure Multi-Factor Authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Azure AD Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to further protect these identities
+- Consider [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview) to provided secure authentication to your cloud apps and Azure resources.
+- Implement [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
+- Make use of the recommendations, alerting, and remediation capabilities of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Your security team can also integrate Microsoft Defender for Cloud into [Microsoft Sentinel](/azure/sentinel/overview) if they need a more robust, centrally managed hybrid and multicloud Security Information Event Management (SIEM)/Security Orchestration and Response (SOAR) solution.
+
+The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice security guidance integrated within them.
+
+For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
 
 ### Azure Security Benchmark
 

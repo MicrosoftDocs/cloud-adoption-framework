@@ -121,7 +121,6 @@ Any managed applications you're servicing are displayed.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Appliance/ManagedAppsHubBlade/browseServiceCatalog]" submitText="Go to Virtual Machines" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -136,7 +135,6 @@ Any managed applications you're servicing are displayed.
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Appliance/ManagedAppsHubBlade/serviceServiceCatalogApps]" submitText="Go to Virtual Machines" :::
 
 ::: zone-end
 

@@ -38,7 +38,7 @@ Also consider the sensitive data that is sent to the Azure Monitor Log Analytics
 
 The following diagram shows a reference architecture that demonstrates the roles, permissions, and flow of actions for Azure Arc-enabled servers:
 
-[ ![Diagram that shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)
+[![Diagram that shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)
 
 ## Design considerations
 
@@ -62,9 +62,9 @@ The following diagram shows a reference architecture that demonstrates the roles
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey, review the following articles:
+For more guidance for your hybrid cloud adoption journey, review the following resources:
 
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
-- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
-- To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

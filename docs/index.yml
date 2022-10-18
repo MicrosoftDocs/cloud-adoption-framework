@@ -15,7 +15,6 @@ metadata:
   ms.topic: hub-page
   ms.service: cloud-adoption-framework
   ms.subservice: overview
-
 # Maximum of 8 items
 
 highlightedContent:
@@ -211,7 +210,7 @@ conceptualContent:
 # tools section (optional)
 
 tools:
-  title: Build your skills with Microsoft Learn
+  title: Build your skills with Microsoft Learn training
 
  # < 60 Chars (optional)
   summary: Learn more about Azure and the Cloud Adoption Framework by completing these learning paths.
@@ -222,17 +221,17 @@ tools:
 
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./_images/learn-caf-logo.svg
-      url: /learn/paths/cloud-adoption-framework/
+      url: /training/paths/cloud-adoption-framework/
 
     # Card
     - title: Azure Fundamentals
       imageSrc: ./_images/learn-azure-fundamentals-logo.svg
-      url: /learn/paths/az-900-describe-cloud-concepts/
+      url: /training/paths/az-900-describe-cloud-concepts/
 
     # Card
     - title: Learn the business value of Azure
       imageSrc: ./_images/learn-business-value-of-azure-logo.svg
-      url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/
+      url: /training/modules/microsoft-cloud-adoption-framework-for-azure/
 
 # additionalContent section (optional)
 

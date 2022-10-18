@@ -87,7 +87,7 @@ To get more experience migrating VMware vSphere with Azure VMware Solution, try 
 More resources:
 
 - [Azure VMware Solution documentation](/azure/azure-vmware/)
-- Microsoft Learn path: [Run VMware workloads on Azure VMware Solution](/learn/paths/run-vmware-workloads-azure-vmware-solution/)
+- Learning path: [Run VMware workloads on Azure VMware Solution](/training/paths/run-vmware-workloads-azure-vmware-solution/)
 
 ## Azure VMware Solution workload specific activities
 

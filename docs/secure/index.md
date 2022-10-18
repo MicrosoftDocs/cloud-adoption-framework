@@ -105,6 +105,9 @@ All security activities should be aligned to and shaped by a dual focus on
 The Secure methodology is part of a comprehensive set of security guidance that also includes:
 
 - [Azure Well-Architected Framework](/azure/architecture/framework/security/overview): Guidance on securing your workloads on Azure.
+- [Security architecture design](/azure/architecture/guide/security/security-start-here): Implementation-level journey of our security architectures.
+  - [Browse our security architectures](/azure/architecture/browse/?azure_categories=security)
 - [Azure security benchmarks](/security/benchmark/azure/): Prescriptive best practices and controls for Azure security.
 - [Enterprise-scale landing zone](../ready/landing-zone/design-area/governance.md): Azure reference architecture and implementation with integrated security.
 - [Top 10 security best practices for Azure](./security-top-10.md): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
+- [Microsoft Cybersecurity Architectures](/security/cybersecurity-reference-architecture/mcra): The diagrams describe how Microsoft security capabilities integrate with Microsoft platforms and 3rd-party platforms.
