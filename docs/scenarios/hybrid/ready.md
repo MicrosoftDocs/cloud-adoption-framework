@@ -20,7 +20,7 @@ If you need help with choosing the right landing zone to deploy for your organiz
 
 ## Hybrid and multicloud in landing zones
 
-[Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) are the output of a multisubscription Azure environment that accounts for:
+[Azure landing zones](../../ready/landing-zone/index.md) are the output of a multisubscription Azure environment that accounts for:
 
 - Scale
 - Security governance
@@ -96,7 +96,7 @@ Azure Arc extends Azure Resource Manager (ARM) APIs so you can represent any wor
 
 For each cloud mix, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework provides a few steps to help you prepare your environment:
 
-- Review [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
+- Review [What is an Azure landing zone?](../../ready/landing-zone/index.md)
 - Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) and properly evaluate your technical requirements.
 - Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template for your configuration.
 - Learn how to [Transition existing Azure environments to the Azure landing zone conceptual architecture](../../ready/enterprise-scale/transition.md).
@@ -111,7 +111,7 @@ Azure Arc resources can be part of any application. Examples include:
 
 Application landing zone subscriptions can also contain both Azure Arc resources and regular Azure resources.
 
-Since Azure Arc resources are located outside of Azure, you can consider them considered a *metadata resource* in the way they're represented in Azure. Treat Azure Arc resources as any other Azure resource that can be part of your landing zone. It doesn't matter if it's a platform or application, and it follows the [subscription democratization and application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
+Since Azure Arc resources are located outside of Azure, you can consider them considered a *metadata resource* in the way they're represented in Azure. Treat Azure Arc resources as any other Azure resource that can be part of your landing zone. It doesn't matter if it's a platform or application, and it follows the [subscription democratization and application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) design principles.
 
 [![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
 
