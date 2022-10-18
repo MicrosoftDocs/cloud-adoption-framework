@@ -53,7 +53,7 @@ We have the following recommendations for operations and management:
 
 **(4) Discuss infrastructure automation** - A high-functioning cloud broker will build infrastructure as code (IaC) templates to build secure workload environments consistently and rapidly. These IaC templates can build hardened VMs, functions, storage and more. The broker could even build out the entire mission owner landing zone through code to ensure consistency and compliance.
 
-**(5) Establish change management process** - Change is necessary in the cloud. In fact, a major benefit of the cloud is the ability to accelerate change. Accelerating positive changes is the goal of digital transformation. It’s vital that mission owners and cloud brokers establish a change management process. Change management process should have processes for standard, normal, and emergency change requests. These processes should be optimized and streamlined for consistency, speed, and security.
+**(5) Establish change management process** - Change is necessary in the cloud. In fact, a major benefit of the cloud is the ability to accelerate change. Accelerating positive changes is the goal of digital transformation. It’s vital that mission owners and cloud brokers establish a change management process. Change management should account for standard, normal, and emergency change requests. Each request type should have its own process that is optimized and streamlined for consistency, speed, and security.
 
 ## Next step
 
