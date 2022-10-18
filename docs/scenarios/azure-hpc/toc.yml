@@ -95,7 +95,7 @@ items:
   - name: Modernize with HPC on Azure
     href: modernize.md
   - name: Innovate with HPC on Azure
-    href: migrate.md
+    href: innovate.md
   - name: Govern HPC in Azure
     href: govern.md
   - name: Manage HPC platform and workloads
