@@ -24,7 +24,7 @@ In a defense context, the technical and non-technical aspects of operations are 
 
 There are several strategies defense organizations can adopt to improve operations. Technical teams need to know what cloud resources they have (inventory) and know what each resource is doing (visibility). Visibility requires baselines. Baselines make cloud resources measurable, which is critical to security and modernization. Operations teams need to create baselines so that progress and regression can be measured.
 
-For more information, see [resource baselines](/azure/cloud-adoption-framework/manage/azure-management-guide/inventory)
+For more information, see [resource baselines](/azure/cloud-adoption-framework/manage/azure-management-guide/inventory).
 
 ## Choose a product owner
 
@@ -39,6 +39,11 @@ Mission owners should incentivize management transparency. Regular communication
 Azure allows operations teams to easily generate both reports. Security teams can create reports that detail how many resources follow security standards such as NIST SP 800-53. The first report received creates a management baseline, and subsequent reports should show improvements over time. We recommend asking the operations teams how much progress they expect to make and where they anticipate focusing their efforts.  
 
 If contracts are a component of defense operations, foster contract relationships that require and incentivize transparency. Fixed-price contracts, for example, minimize mission-owner visibility. While they limit the risk of overrunning the budget, they offer little visibility into the daily operations of the environment supporting the mission. Mission owners should be able to review costs. Costs are transparent. They identify priorities, reveal security concerns, and help with business forecasts.
+
+For more information, see:
+
+- [Management guide](/azure/cloud-adoption-framework/manage/azure-management-guide/)
+- [Management considerations](/azure/cloud-adoption-framework/manage/considerations/)
 
 ## Next step
 
