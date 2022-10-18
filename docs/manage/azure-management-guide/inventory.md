@@ -66,7 +66,6 @@ To set up a Service Health alert:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts]" submitText="Go to Service Health" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -93,11 +92,9 @@ A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) is
 
 ::: zone target="chromeless"
 
-### Action
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.OperationalInsights%2FWorkspaces]" submitText="Explore Azure Monitor" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -128,9 +125,6 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ::: zone target="chromeless"
 
-### Action
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview]" submitText="Explore Azure Monitor" :::
 
 ::: zone-end
 

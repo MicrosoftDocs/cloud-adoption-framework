@@ -94,7 +94,7 @@ Azure Arc extends Azure Resource Manager (ARM) APIs so you can represent any wor
 
 ## Configure your initial Azure environment
 
-For each cloud mix, you'll need an Azure environment to support, govern, and manage your cloud resources. The Cloud Adoption Framework's Ready methodology provides a few steps to help you prepare your environment:
+For each cloud mix, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework provides a few steps to help you prepare your environment:
 
 - Review [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
 - Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) and properly evaluate your technical requirements.

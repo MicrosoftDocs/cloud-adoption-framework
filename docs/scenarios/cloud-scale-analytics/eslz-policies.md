@@ -16,7 +16,7 @@ Before considering a deployment, it's important for your organization to put gua
 
 ## Background
 
-A core principle of cloud-scale analytics  is to make it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance. This governance is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
+A core principle of cloud-scale analytics is to make it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance. This governance is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
 
 The [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md) already uses this concept. Cloud-scale analytics adds [Custom Azure policies](#azure-policies-for-cloud-scale-analytics) to build on these standards. The standards are then applied to our data management landing zones and data landing zones.
 
@@ -26,7 +26,7 @@ Azure Policy is important when ensuring security and compliance within cloud-sca
 
 ## Design considerations
 
-Azure policies in cloud-scale analytics  were developed with the following design considerations in mind:
+Azure policies in cloud-scale analytics were developed with the following design considerations in mind:
 
 - Use Azure policies to implement governance and enforce rules for resource consistency, regulatory compliance, security, cost, and management.
 - Use available prebuilt policies to save time.
@@ -87,7 +87,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 | Deny-PublicIp|Network Isolation|Restrict deployment of public IPs.|
 |Deny-PrivateEndpoint-PrivateLinkServiceConnections|Network Isolation| Deny private endpoints to resources outside of the aad tenant and subscription.|
 |Deploy-DNSZoneGroup-{Service}-PrivateEndpoint|Network Isolation|Deploys the configurations of a Private DNS Zone Group by a parameter for service's private endpoint. Used to enforce the configuration to a single Private DNS Zone.|
-|DiagnosticSettings-{Service}-LogAnalytics|Logging|Send diagnostic settings for cosmos db to log analytics workspace.|
+|DiagnosticSettings-{Service}-LogAnalytics|Logging|Send diagnostic settings for Azure Cosmos DB to log analytics workspace.|
 
 ## Storage
 
@@ -234,11 +234,11 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-Cosmos-DenyCosmosKeyBasedMetadataWriteAccess|Authentication|Deny key based metadata write access for Cosmos DB accounts.|
-|Append-Cosmos-PublicNetworkAccess|Network Isolation|Enforces no public network access for Cosmos DB accounts.|
-|Audit-Cosmos-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Cosmos DB.|
-|Deny-Cosmos-Cors|Network Isolation|Denies CORS rules for Cosmos DB accounts."|
-|Deny-Cosmos-PublicNetworkAccess|Network Isolation|Denies public network access for Cosmos DB accounts.|
+|Append-Cosmos-DenyCosmosKeyBasedMetadataWriteAccess|Authentication|Deny key based metadata write access for Azure Cosmos DB accounts.|
+|Append-Cosmos-PublicNetworkAccess|Network Isolation|Enforces no public network access for Azure Cosmos DB accounts.|
+|Audit-Cosmos-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Azure Cosmos DB.|
+|Deny-Cosmos-Cors|Network Isolation|Denies CORS rules for Azure Cosmos DB accounts."|
+|Deny-Cosmos-PublicNetworkAccess|Network Isolation|Denies public network access for Azure Cosmos DB accounts.|
 
 ## Azure Container Registry
 

@@ -4,6 +4,7 @@ description: Explore recommended connectivity models for inbound and outbound co
 author: JefferyMitchell
 ms.author: brblanch
 ms.date: 06/22/2022
+ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

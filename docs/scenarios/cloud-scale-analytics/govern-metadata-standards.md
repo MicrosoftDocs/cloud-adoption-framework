@@ -63,9 +63,9 @@ There's a growing trend in the industry to bring data insights closer to data an
 
 A data insight solution must describe how data is used and the relations between entities like source data and data products and between data products from one domain and dependent products from another domain. You can use a graph database or custom user interface to model these relations.
 
-To build a unified view of your organization's data with custom user experience, look at Azure Cosmos DB. Azure Cosmos DB is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via Gremlin API to store massive graphs with billions of vertices and edges.
+To build a unified view of your organization's data with custom user experience, look at Azure Cosmos DB. Azure Cosmos DB is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via Azure Cosmos DB for Apache Gremlin to store massive graphs with billions of vertices and edges.
 
-The end result of Azure Cosmos DB's architecture is organization-wide graph that provides a unified view of all data in your organization using end-to-end context. The metadata lake isn't only about storing information. It also actively organizes your metadata as a graph by connecting it with other services and tools. This organized graph allows you cross-correlate many subject areas, including:
+The end result of the Azure Cosmos DB architecture is an organization-wide graph that provides a unified view of all data in your organization using end-to-end context. The metadata lake isn't only about storing information. It also actively organizes your metadata as a graph by connecting it with other services and tools. This organized graph allows you cross-correlate many subject areas, including:
 
 - domains
 - data quality

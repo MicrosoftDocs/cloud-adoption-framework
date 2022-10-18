@@ -1,6 +1,6 @@
 ---
 title: Cloud adoption plan for the retail industry
-description: Develop a cloud adoption plan for the retail industry by using the Plan methodology in the Cloud Adoption Framework.
+description: Develop a cloud adoption plan for the retail industry by using the Plan methodology of the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/01/2021
