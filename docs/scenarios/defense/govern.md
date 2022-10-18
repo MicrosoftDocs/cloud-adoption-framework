@@ -45,7 +45,7 @@ The following techniques can help avoid governance redundancies or gaps:
 - ***Create a service dependency map*** - A service dependency map is a document that lists all your IT services and the people responsible for them. To create a service dependency map, you should outline all the services that your organization provides and then identify the teams or individuals that are responsible for each of those services.
 - ***Create a matrix to track those responsible, accountable, consulted, and informed (RACI)*** - A RACI matrix defines levels of responsibility for a given service.  You should list who is responsible and accountable for each service and who should be consulted and informed in the decision-making process.
 
-For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance)
+For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance).
 
 ## Automate compliance
 
