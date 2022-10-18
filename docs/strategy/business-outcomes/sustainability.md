@@ -138,6 +138,12 @@ Migrate and modernize your apps, data, and infrastructure using proven cloud mig
 
 The [Emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) enables you to define your on-premises infrastructure workloads and then uses the information to report your current on-premises footprint and comparable Azure footprint.
 
+### Emissions Impact Dashboard
+
+Once you migrate or create resources within Microsoft Azure, you will need a reliable way of monitoring those emissions as well. The [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) provides transparency into greenhouse gas emissions associated with using Microsoft cloud services and enables a better understanding of the root causes of emissions changes. Organizations can measure the impact of Microsoft cloud usage on their carbon footprint, and they can drill down into emissions by month, service, and datacenter region.
+
+Microsoft’s emissions reports are determined via a methodology that was validated by Stanford University in 2018 which aligns to ISO standards for measuring greenhouse gas emissions. These calculations are inclusive of Microsoft’s scopes 1, 2, and 3, which means that they include emissions from Microsoft’s extended network of vendors and suppliers. Reports reflect Microsoft’s investments in renewables as well as the fuel energy mix in the regions where your computing takes place alongside other factors.
+
 ## Examples of sustainability outcomes
 
 Focusing on sustainability and protecting limited environmental resources is key to our future, and this focus also benefits business. Today, companies can draw from a broad range of assets and resources that can help them to expand into new geographic areas and develop innovative resource management solutions.
@@ -150,15 +156,15 @@ These customer stories demonstrate how prioritizing sustainability and environme
 
 ## Next steps
 
-An intentional approach can help organizations to navigate their sustainability journey. These four steps can influence outcomes for your company:
+An intentional approach can help organizations to navigate their sustainability journey. These five steps can influence outcomes for your company:
 
-**Step 1:** Record and understand your company's carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. The [Microsoft sustainability calculator](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can assist you with this task.
+**Step 1:** Record and understand your company's current carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. 
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
 **Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
 
-**Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
+**Step 4:** Seek out teams in your business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 
 **Step 5:**  Assess ways to incorporate [Green Software Development](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) principles into your company's sustainability goals. How can you work towards designing sustainable software applications that can be  reused and has extended  longevity of use and minimal computational and memory resource requirements?
 
