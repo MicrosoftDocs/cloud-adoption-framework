@@ -28,9 +28,9 @@ Zero Trust is a security methodology, not a product. Implementations of zero tru
 
 Three main principles of zero trust addressed here:
 
-- Verify every session explicitly
-- Enforce the least privilege on every identity
-- Monitor, search, and secure continuously
+- Verify every session explicitly.
+- Enforce the least privilege on every identity.
+- Monitor, search, and secure continuously.
 
 **(1) Verify every session explicitly** - Verify refers to authentication and authorization. You need to authenticate and authorize every device regardless of location. Multifactor authentication is a common defense standard where the use of a security token supplements authentication process.
 
@@ -73,8 +73,8 @@ The Azure SIEM (Sentinel) can create a visual report all non-compliant resources
 
 For more information, see:
 
--[Zero trust automation](/security/zero-trust/integrate/sentinel-solution)
--[Use built-in workbooks](/azure/sentinel/monitor-your-data)
+- [Zero trust automation](/security/zero-trust/integrate/sentinel-solution)
+- [Use built-in workbooks](/azure/sentinel/monitor-your-data)
 
 ## Next step
 
