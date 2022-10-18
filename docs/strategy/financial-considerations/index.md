@@ -3,11 +3,14 @@ title: Understand financial considerations
 description: Understand cloud economics and the financial considerations to help you build a business case to migrate to the cloud
 author: WendyRing
 ms.author: wering
-ms.date: 05/17/2021
+ms.reviewer: tozimmergren
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: 
+ - internal
+ - engagement-fy23
 ---
 
 # Understand financial considerations
@@ -34,9 +37,9 @@ How can the cloud help your team be more productive? It's critical to consider h
 
 ## Sustainability
 
-Migrating to the cloud can [reduce your carbon footprint](https://azure.microsoft.com/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/) and your organization immediately benefits from a sustainability perspective. Data centers hosting cloud services, such as Azure, are done at such a scale that you benefit from overall sustainability with the most negligible environmental impact.
+Migrating to the cloud can [reduce your carbon footprint](https://azure.microsoft.com/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/), and your organization immediately benefits from a sustainability perspective. Cloud providers continuously invest in new green technologies at a dynamic scale that an organization can benefit from and decreases its environmental impact.
 
-Cost can be used as a carbon proxy. The ability to track your carbon footprint across your cloud environments can sometimes be a challenge. You don't always get much visibility of the underlying infrastructure you deploy, and you can have third parties controlling some of your deployments. At some level, all your compute's embodied carbon and electricity costs are factored into the cost of all your services.
+You can [use cost as a carbon proxy](/azure/architecture/framework/sustainability/sustainability-design-methodology#use-a-proxy-solution-to-measure-emissions). The ability to track your carbon footprint across your cloud environments can sometimes be a challenge. You don't always get much visibility of the underlying infrastructure you deploy, and you can have third parties controlling some of your deployments. At some level, all your compute's embodied carbon and electricity costs are factored into the cost of all your services.
 
 Given this, optimizing the OPEX spend can be a way of optimizing carbon efficiency.
 
