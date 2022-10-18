@@ -20,6 +20,11 @@ Governance is a framework that aligns personnel, deployments, and budgets to a c
 
 Defense organizations need governance to mitigate risks. Effective cost, security, and policy governance can streamline platform operations and provide a means to inherit these guardrails at the workload level. Without proper governance, significant management burdens and productivity limits will occur. A lack of governance also creates responsibility gaps, introduces security risks, and delays return on investments (ROIs) due to excessive deployment delays and rework.
 
+For more information, see:
+
+- [Governance guide](/azure/cloud-adoption-framework/govern/guides/complex/)
+- [Governance disciplines](/azure/cloud-adoption-framework/govern/governance-disciplines)
+
 To avoid some of these issues, it’s worth considering the following best practices:
 
 - Evaluate roles and responsibilities
@@ -31,7 +36,7 @@ Let's address each best practice:
 
 ## Evaluate roles and responsibilities
 
-Mission owners need a responsibility model that accounts for every resource in the cloud before committing to a governance strategy. If available, mission owners should coordinate roles and responsibilities with the cloud broker strategy. If the cloud broker doesn't provide roles and responsibilities model, mission owners will need to establish governance functions. For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance).
+Mission owners need a responsibility model that accounts for every resource in the cloud before committing to a governance strategy. If available, mission owners should coordinate roles and responsibilities with the cloud broker strategy. If the cloud broker doesn't provide roles and responsibilities model, mission owners will need to establish governance functions.
 
 Cloud adoption can change aspects of IT operations. These changes require a reevaluation of roles and responsibilities. The goal of the reevaluation is to avoid having multiple groups/personnel responsible for the same service while ensuring there are no responsibility gaps.
 
@@ -39,6 +44,8 @@ The following techniques can help avoid governance redundancies or gaps:
 
 - ***Create a service dependency map*** - A service dependency map is a document that lists all your IT services and the people responsible for them. To create a service dependency map, you should outline all the services that your organization provides and then identify the teams or individuals that are responsible for each of those services.
 - ***Create a matrix to track those responsible, accountable, consulted, and informed (RACI)*** - A RACI matrix defines levels of responsibility for a given service.  You should list who is responsible and accountable for each service and who should be consulted and informed in the decision-making process.
+
+For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance)
 
 ## Automate compliance
 
@@ -73,6 +80,8 @@ Here are a few considerations when building a cost governance strategy:
 
 **(4) Trend analysis** - Conduct trend analysis to drive transparency and allows visibility into active resources and consumption. Anomalous spikes in resource spend and should be brought to the technical team for explanation. It could signal a new phase in operations or a governance gap. Flag and review any new charges or spikes in trends. This form of active cost management helps avoid waste and mitigates risk. Trend analysis can also help manage infrastructure and determine future priorities. Mission owners can see how much money is spent on a given capability. If the money spent doesn’t help meet mission objectives, the future of this resource or workload needs reevaluation.
 
+For more information, see [cost governance](/azure/cloud-adoption-framework/govern/cost-management/)
+
 ## Create cost baselines
 
 Workload cost governance begins with baseline estimates. Defense teams should perform a TCO estimate for each individual workload expected to be migrated to the cloud. Mission Owners need to monitor those cloud resources costs and manage their services appropriately to reach the desired outcomes. One benefit of the cloud is lower shared services fees. They tend to be a fraction of on-premises datacenter service fees.
@@ -91,6 +100,8 @@ Here are some practical steps to creating workload estimates:
 Not all variables require entry, and some services can be difficult to estimate. Mission owners should determine the level of accuracy required to establish this baseline. Once a TCO estimate is created, mission owners should document this data for later analysis.
 
 **(2) Estimate monthly costs for required services** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate.
+
+For more information, see [cost tools](/azure/cloud-adoption-framework/govern/cost-management/toolchain)
 
 ## Next step
 
