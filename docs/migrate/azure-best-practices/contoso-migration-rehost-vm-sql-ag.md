@@ -3,33 +3,33 @@ title: Rehost an application by migrating it to Azure VMs and SQL Server Always 
 description: Learn how Contoso rehosts an on-premises application by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: deltadan
 ms.author: abuck
-ms.date: 07/01/2020
+ms.date: 10/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-# Rehost an on-premises application with Azure VMs and SQL Server Always On availability groups
+# Rehost an application by migrating it to Azure VMs and SQL Server Always On availability groups
 
-This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET application running on VMware virtual machines (VMs) as part of a migration to Azure. Contoso migrates the application front-end VM to an Azure VM, and the application database to another Azure VM with SQL Server, running in a Windows Server failover cluster with SQL Server Always On availability groups.
+This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET application running on VMware virtual machines (VMs) as part of a migration to Azure. Contoso migrates the application front-end VM to an Azure VM. It migrates the application database to another Azure VM with SQL Server, running in a Windows Server failover cluster with SQL Server Always On availability groups.
 
 The SmartHotel360 application used in this example is provided as open-source software. If you want to use it for your own testing purposes, download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
 ## Business drivers
 
-The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration. They want to:
+The IT leadership team worked closely with business partners to understand what they want to achieve with this migration. Partners want to:
 
-- **Address business growth.** Contoso is growing, and as a result there's pressure on on-premises systems and infrastructure.
-- **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money to deliver faster on customer requirements.
+- **Address business growth.** Contoso is growing. As a result, there's pressure on the on-premises systems and infrastructure.
+- **Increase efficiency.** Contoso wants to remove unnecessary procedures and streamline processes for developers and users. The company needs its IT to be fast and effective and not waste time or money in delivering on customer requirements.
 - **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must react faster than the changes in the marketplace to enable success in a global economy. IT mustn't get in the way or become a business blocker.
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that grow at the same pace.
 
 ## Migration goals
 
-The Contoso cloud team has pinned down goals for this migration. These goals were used to determine the best migration method:
+The Contoso cloud team pinned down its goals for this migration. The company uses the following goals to determine the best migration method:
 
-- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it's been on-premises.
+- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application must remain as critical in the cloud as it's been on-premises.
 - Contoso doesn't want to invest in this application. It's important to the business, but in its current form, Contoso simply wants to move it safely to the cloud.
 - The on-premises database for the application has had availability issues. Contoso want to deploy it in Azure as a high-availability cluster with failover capabilities.
 - Contoso wants to upgrade from its current SQL Server 2008 R2 platform to SQL Server 2017.
@@ -37,7 +37,7 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 
 ## Solution design
 
-After pinning down the company's goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process. The Azure services that it will use for the migration also are identified.
+After Contoso pins down its goals and requirements, it designs and reviews a deployment solution and identifies the migration process. And the company identifies the Azure services that it wants to use for the migration.
 
 ### Current architecture
 
@@ -50,27 +50,27 @@ After pinning down the company's goals and requirements, Contoso designs and rev
 
 In this scenario:
 
-- Contoso will migrate the application front end `WEBVM` to an Azure infrastructure as a service (IaaS) VM.
-  - The front-end VM in Azure will be deployed in the `ContosoRG` resource group (used for production resources).
-  - It will be located in the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
-- The application database will be migrated to an Azure VM running SQL Server.
-  - It will be located in Contoso's Azure database network (`PROD-DB-EUS2`) in the primary region (`East US 2`).
-  - It will be placed in a Windows Server failover cluster with two nodes that uses SQL Server Always On availability groups.
-  - In Azure, the two SQL Server VM nodes in the cluster will be deployed in the `ContosoRG` resource group.
-  - The VM nodes will be located in the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
-  - VMs will run Windows Server 2016 with SQL Server 2017 Enterprise edition. Contoso doesn't have licenses for this operating system. It will use an image in Azure Marketplace that provides the license as a charge to the company's Azure Enterprise Agreement commitment.
+- Contoso migrates the application front end `WEBVM` to an Azure infrastructure as a service (IaaS) VM.
+  - The front-end VM in Azure deploys in the `ContosoRG` resource group (used for production resources).
+  - It's located in the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+- The application database is migrated to an Azure VM running SQL Server.
+  - It's located in Contoso's Azure database network (`PROD-DB-EUS2`) in the primary region (`East US 2`).
+  - It's placed in a Windows Server failover cluster (with two nodes) that uses SQL Server Always On availability groups.
+  - In Azure, the two SQL Server VM nodes in the cluster are deployed in the `ContosoRG` resource group.
+  - The VM nodes are located in the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+  - VMs run Windows Server 2016 with SQL Server 2017 Enterprise edition. Contoso doesn't have licenses for this operating system. It uses an image in Azure Marketplace that provides the license as a charge to the company's Azure Enterprise Agreement commitment.
   - Apart from unique names, both VMs use the same settings.
-- Contoso will deploy an internal load balancer that listens for traffic on the cluster and directs it to the appropriate cluster node.
-  - The internal load balancer will be deployed in `ContosoNetworkingRG` (used for networking resources).
-- The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
+- Contoso deploys an internal load balancer that listens for traffic on the cluster and directs it to the appropriate cluster node.
+  - The internal load balancer deploys in `ContosoNetworkingRG` (used for networking resources).
+- The on-premises VMs in the Contoso datacenter are decommissioned after the migration finishes.
 
     ![Screenshot that shows a diagram of the scenario architecture.](./media/contoso-migration-rehost-vm-sql-ag/architecture.png)
 
 ### Database considerations
 
-As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server. The following considerations helped the company to decide to use an Azure IaaS VM running SQL Server:
+As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server. The following considerations helped the company decide to use an Azure IaaS VM running SQL Server:
 
-- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system or the database server, or if it might want to colocate and run third-party applications on the same VM.
+- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system or the database server. This solution also works if Contoso might want to colocate and run third-party applications on the same VM.
 
 ### Solution review
 
@@ -78,28 +78,28 @@ Contoso evaluates its proposed design by putting together a list of pros and con
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | `WEBVM` will be moved to Azure without changes, which makes the migration simple. <br><br> The SQL Server tier will run on SQL Server 2017 and Windows Server 2016, which retires the current Windows Server 2008 R2 operating system. Running SQL Server 2017 supports Contoso's technical requirements and goals. IT provides 100 percent compatibility while moving away from SQL Server 2008 R2. <br><br> Contoso can take advantage of its investment in Software Assurance by using the Azure Hybrid Benefit. <br><br> A high-availability SQL Server deployment in Azure provides fault tolerance so that the application data tier is no longer a single point of failover. |
-| **Cons** | `WEBVM` is running Windows Server 2008 R2. The operating system is supported by Azure for specific roles (July 2018). To learn more, see [Microsoft server software support for Azure Virtual Machines](/troubleshoot/azure/virtual-machines/server-software-support). <br><br> The web tier of the application remains a single point of failover. <br><br> Contoso needs to continue supporting the web tier as an Azure VM rather than moving to a managed service such as Azure App Service. <br><br> With the chosen solution, Contoso will need to continue managing two SQL Server VMs rather than moving to a managed platform, such as Azure SQL Managed Instance. In addition, with Software Assurance, Contoso could exchange its existing licenses for discounted rates on Azure SQL Managed Instance. |
+| **Pros** | `WEBVM` is moved to Azure without changes, which makes the migration simple. <br><br> The SQL Server tier runs on SQL Server 2017 and Windows Server 2016, which retires the current Windows Server 2008 R2 operating system. Running SQL Server 2017 supports Contoso's technical requirements and goals. IT provides 100 percent compatibility while moving away from SQL Server 2008 R2. <br><br> Contoso takes advantage of its investment in Software Assurance by using the Azure Hybrid Benefit. <br><br> A high-availability SQL Server deployment in Azure provides fault tolerance so that the application data tier is no longer a single point of failover. |
+| **Cons** | `WEBVM` runs Windows Server 2008 R2. The operating system is supported by Azure for specific roles (July 2018). To learn more, see [Microsoft server software support for Azure Virtual Machines](/troubleshoot/azure/virtual-machines/server-software-support). <br><br> The web tier of the application remains a single point of failover. <br><br> Contoso needs to continue supporting the web tier as an Azure VM rather than moving to a managed service such as Azure App Service. <br><br> With the chosen solution, Contoso needs to continue managing two SQL Server VMs rather than moving to a managed platform, such as Azure SQL Managed Instance. In addition, with Software Assurance, Contoso could exchange its existing licenses for discounted rates on Azure SQL Managed Instance. |
 
 ### Azure services
 
 | Service | Description | Cost |
 | --- | --- | --- |
 | [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. They might incur charges depending on the tools (first-party or independent software vendor) they decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate/). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no extra charge. The company might incur charges depending on the tools (first-party or independent software vendor) that they decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate/). |
 
 ## Migration process
 
-The Contoso admins will migrate the application VMs to Azure.
+The Contoso admins migrate the application VMs to Azure.
 
 - They'll migrate the front-end VM to Azure VM by using Azure Migrate:
-  - As a first step, they'll prepare and set up Azure components and prepare the on-premises VMware infrastructure.
-  - With everything prepared, they can start replicating the VM.
-  - After replication is enabled and working, they migrate the VM by using Azure Migrate.
-- After they've verified the database, they'll migrate the database to a SQL Server cluster in Azure by using Azure Database Migration Service.
+  - As a first step, they admins prepare and set up Azure components and prepare the on-premises VMware infrastructure.
+  - With everything prepared, the team can start replicating the VM.
+  - After the team enables replication and it's working, they migrate the VM by using Azure Migrate.
+- After the admins verify the database, they'll migrate the database to a SQL Server cluster in Azure by using Azure Database Migration Service.
   - As a first step, they'll need to provision SQL Server VMs in Azure, set up the cluster and an internal load balancer, and configure Always On availability groups.
-  - With this in place, they can migrate the database.
-- After the migration, they'll enable Always On availability groups for the database.
+  - With these measures in place, the team can migrate the database.
+- After the migration, they enable Always On availability groups for the database.
 
     ![Screenshot that shows a diagram of the migration process.](./media/contoso-migration-rehost-vm-sql-ag/migration-process.png)
 
@@ -109,44 +109,44 @@ Here's what Contoso needs to do for this scenario.
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso already created a subscription in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> |
+| **Azure subscription** | Contoso already created a subscription in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription. You can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to get Owner or Contributor permissions. <br><br> |
 | **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) requirements for Azure Migrate: Server Migration. |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, 6.5, or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5, or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux machines](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
 
 ## Scenario steps
 
-Here's how Contoso will run the migration:
+Here's how Contoso runs the migration:
 
 > [!div class="checklist"]
 >
 > - **Step 1: Prepare a SQL Server Always On availability group cluster.** Create a cluster for deploying two SQL Server VM nodes in Azure.
-> - **Step 2: Deploy and set up the cluster.** Prepare a SQL Server cluster in Azure. Databases are migrated into this existing cluster.
+> - **Step 2: Deploy and set up the cluster.** Prepare a SQL Server cluster in Azure. Databases migrate into this existing cluster.
 > - **Step 3: Deploy Azure Load Balancer.** Deploy a load balancer to balance traffic to the SQL Server nodes.
 > - **Step 4: Prepare Azure for Azure Migrate.** Create an Azure Storage account to hold replicated data.
 > - **Step 5: Prepare on-premises VMware for Azure Migrate.** Prepare accounts for VM discovery and agent installation. Prepare on-premises VMs so that users can connect to Azure VMs after migration.
 > - **Step 6: Replicate the on-premises VMs to Azure.** Enable VM replication to Azure.
 > - **Step 7: Migrate the database via Azure Database Migration Service.** Migrate the database to Azure by using Azure Database Migration Service.
 > - **Step 8: Protect the database with SQL Server Always On.** Create an Always On availability group for the cluster.
-> - **Step 9: Migrate the VM with Azure Migrate.** Run a test migration to make sure everything's working as expected. Then run a migration to Azure.
+> - **Step 9: Migrate the VM with Azure Migrate.** Run a test migration to make sure everything's working as expected. Then, run a migration to Azure.
 
 ## Step 1: Prepare a SQL Server Always On availability group cluster
 
 To set up the cluster, the Contoso admins:
 
-1. Create two SQL Server VMs by selecting SQL Server 2017 Enterprise Windows Server 2016 image in the Azure Marketplace.
+1. Create two SQL Server VMs by selecting the SQL Server 2017 Enterprise Windows Server 2016 image in the Azure Marketplace.
 
     ![Screenshot that shows a SQL VM SKU.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-sku.png)
 
-1. In **Create Virtual Machine Wizard** > **Basics**, they configure:
+1. In **Create Virtual Machine Wizard** > **Basics**, configure:
 
     - Names for the VMs: `SQLAOG1` and `SQLAOG2`.
     - Because machines are business-critical, enable SSD for the VM disk type.
     - Specify machine credentials.
-    - They deploy the VMs in the primary region (`East US 2`) in the `ContosoRG` resource group.
+    - Deploy the VMs in the primary region (`East US 2`) in the `ContosoRG` resource group.
 
-1. In **Size**, they start with `D2S v3` instances for both VMs. They'll scale later as needed.
-1. In **Settings**, they do the following actions:
+1. In **Size**, start with `D2S v3` instances for both VMs. Scale later as needed.
+1. In **Settings**, the admins do the following actions:
 
     - Because these VMs are critical databases for the application, they use managed disks.
     - They place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
@@ -154,7 +154,7 @@ To set up the cluster, the Contoso admins:
 
       ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
-1. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, they use the same credentials as used on-site (`contosoadmin`).
+1. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, they use the same credentials as they use on-site (`contosoadmin`).
 
     ![Screenshot that shows SQL Server settings.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-db.png)
 
@@ -327,7 +327,7 @@ Azure Migrate needs access to VMware servers to:
 
 - Automatically discover VMs.
 - Orchestrate replication and migration.
-- At least a read-only account is required. They need an account that can run operations such as creating and removing disks and turning on VMs.
+- Run operations such as creating disks, removing disks, and turning on VMs. These capabilities require a read-only account at the least.
 
 To set up the account, the Contoso admins:
 
@@ -336,7 +336,7 @@ To set up the account, the Contoso admins:
 
 ### Prepare to connect to Azure VMs after migration
 
-After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. To do this, the Contoso admins do the following tasks before migration:
+After migration, Contoso wants to connect to the Azure VMs and let Azure manage the VMs. So the company admins do the following tasks before migration:
 
 1. For access over the internet, they:
 
@@ -358,7 +358,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 1. Miscellaneous
 
    - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, the Contoso admins won't be able to sign in to the VM until the update completes.
-   - After migration, they can check **Boot diagnostics** to view a screenshot of the VM. If it doesn't work, they should verify that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+   - After migration, they can check **Boot diagnostics** to view a screenshot of the VM. If it doesn't work, the admins should verify that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
@@ -418,7 +418,7 @@ The Contoso admins migrate the database via Azure Database Migration Service by 
 As a summary, they must perform the following tasks:
 
 - Use the Premium pricing tier to create an Azure Database Migration Service instance that connects to the virtual network.
-- Ensure that the instance can access the remote SQL Server via the virtual network. Ensure that all incoming ports are allowed from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
+- Ensure that the instance can access the remote SQL Server via the virtual network. Ensure that all incoming ports are allowed: from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
 - Configure the instance:
   - Create a migration project.
   - Add a source (on-premises database).
@@ -521,8 +521,8 @@ As the final step in the migration process, the Contoso admins update the connec
 
     ![Screenshot that shows the FQDN of the Always On availability group.](./media/contoso-migration-rehost-vm-sql-ag/failover4.png)
 
-1. After updating the file and saving it, they restart IIS on `WEBVM`. They use `iisreset /restart` from a command prompt.
-1. After IIS is restarted, the application now uses the database running on the managed instance.
+1. After the admin updates and then saves the file, they restart IIS on `WEBVM`. They use `iisreset /restart` from a command prompt.
+1. After IIS restarts, the application now uses the database running on the managed instance.
 
 **Need more help?**
 
