@@ -51,6 +51,8 @@ Additionally, there are four main drivers contributing to a lowered energy and c
 
 Read more about how Microsoft's [commitment to a planet-sized challenge](https://www.microsoft.com/sustainability/approach) has helped us plan and achieve sustainability goals.
 
+Additionally, read how Microsoft [measures datacenter water and energy use to improve Azure Cloud sustainability](https://azure.microsoft.com/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/).
+
 ## Building a Sustainability Strategy
 
 Sustainability continues to gain importance as a performance indicator for organizations. As the sustainability transformation is making its mark on companies across industries, adding pressure from new types of stakeholders and challenging existing profit pools while creating opportunities to open new ones, companies are increasingly forced to respond effectively with new types of solutions and tech-enabled approaches.
@@ -79,13 +81,10 @@ Sustainability is critical to ensure long-term success as a player in the dynami
 
 Sustainability is an approach beyond a marketing play, with a conscious business purpose that can be part of a customer's brand identity. See [Improve customer experience and engagement](/azure/cloud-adoption-framework/strategy/motivations#innovation) in the Cloud Adoption Framework.
 
-Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices.
-
-Additionally, you should evaluate the end-to-end supply chain to ensure [Scope 3 is also measured](/industry/sustainability/calculate-scope3).
-
-Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/corporate-responsibility/sustainability/report).
-
-Be consistent in the communication of promoting your green efforts, thus ensuring maintaining consistent brand integrity.
+- Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices.
+- Additionally, you should evaluate the end-to-end supply chain to ensure [Scope 3 is also measured](/industry/sustainability/calculate-scope3).
+- Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/corporate-responsibility/sustainability/report).
+- Be consistent in the communication of promoting your green efforts, thus ensuring maintaining consistent brand integrity.
 
 ## Regulatory Compliance
 
@@ -101,13 +100,13 @@ A few governmental sustainability goals include:
 
 As defined by the Greenhouse Gas (GHG) Protocol, the operational boundaries of a carbon emissions inventory are broken down into three "scopes" (both direct and indirect) of emissions data, each further broken down into distinct emission sources:
 
-- **Scope 1:** Emissions that your organization produces directly (such as by using carbon-based fuels).
-- **Scope 2:** Emissions that your organization incurs indirectly through the purchase of electricity, heat, or steam.
+- **Scope 1:** Emissions that your organization produces directly (such as using carbon-based fuels).
+- **Scope 2:** Emissions that your organization incurs indirectly through purchasing electricity, heat, or steam.
 - **Scope 3:** Emissions that your organization incurs indirectly beyond Scope 2 emissions (for example, emissions related to your supply chain, waste disposal, business travel, and employee commuting).
 
-You'll need a way to understand and track those scopes.
+Your sustainability journey starts with working towards understanding the factors contributing to the three scopes, followed by measuring and tracking the organization's progress with each category.
 
-- Read Microsoft's additional information about [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) learn about and account for your organization's emissions.
+- Read additional information about [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) to gain insights into the contributors to your organization's emissions.
 - Read about [measuring and tracking carbon impact in the Azure Well-Architected Framework](/azure/architecture/framework/sustainability/sustainability-operational-procedures#measure-and-track-carbon-impact).
 
 ## Sustainability tools and resources
@@ -158,7 +157,7 @@ These customer stories demonstrate how prioritizing sustainability and environme
 
 An intentional approach can help organizations to navigate their sustainability journey. These five steps can influence outcomes for your company:
 
-**Step 1:** Record and understand your company's current carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. 
+**Step 1:** Record and understand your company's current carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus.
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
