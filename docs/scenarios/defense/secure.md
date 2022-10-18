@@ -53,19 +53,28 @@ Granting elevated privilege for a defined period is a security best-practice. Az
 
 Here are a few tools that add value to defense deployments:
 
-- ***Threat intelligence***: Cloud environments should have a persistent threat intelligence and detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects.
+- ***Threat intelligence***: Cloud environments should have a persistent threat intelligence and detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects. For more information, see [linking to threat intelligence feeds](/azure/sentinel/connect-threat-intelligence-tip)
 - ***Distributed denial of service (DDoS)***: Security tools should protect against malicious or non-malicious distributed denial-of-service attacks.
 - ***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyze, aggregates, and detects threats in logs generated throughout a cloud environment.
 
 For a list of available security tools, see [Azure Government security](/azure/azure-government/documentation-government-plan-security).
 
-**(4) Automate security compliance** - Defense security standards require defense security professionals to maintain hundreds of security controls. The manual execution of this process is labor intensive and prone to human error. It's possible to automate compliance with leading security standards and automate the remediation of cloud resources to align with those standards. Azure allows mission owners to automate compliance for:
+For more information, see [zero trust in Azure](/azure/security/fundamentals/zero-trust).
+
+## Automate security compliance
+
+Defense security standards require defense security professionals to maintain hundreds of security controls. The manual execution of this process is labor intensive and prone to human error. It's possible to automate compliance with leading security standards and automate the remediation of cloud resources to align with those standards. Azure allows mission owners to automate compliance for:
 
 - Zero Trust
 - CMMC
 - NIST 800-53
 
 The Azure SIEM (Sentinel) can create a visual report all non-compliant resources against a given security standard. When prompted, it generates remediation suggestions for any security controls that aren’t compliant with the standard. The SIEM tool also lets security professionals download compliance assessment reports that can serve as point-in-time security baseline and improve transparency.
+
+For more information, see:
+
+-[Zero trust automation](/security/zero-trust/integrate/sentinel-solution)
+-[Use built-in workbooks](/azure/sentinel/monitor-your-data)
 
 ## Next step
 

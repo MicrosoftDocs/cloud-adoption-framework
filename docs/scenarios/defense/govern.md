@@ -61,9 +61,10 @@ Policies in Azure create a firm guardrail and automate the bulk of governance ta
 
 For more on governance automation, see
 
+- [Security governance](/azure/cloud-adoption-framework/secure/security-governance)
 - [Overview of Azure Policy](/azure/governance/policy/overview)
 - [Compliance in Azure](/azure/azure-government/documentation-government-plan-compliance)
-- [Azure compliance standards](/azure/compliance/).
+- [Azure compliance standards](/azure/compliance/)
 - [Governance visualization tool](https://github.com/microsoft/CloudAdoptionframework/tree/master/govern/AzureGovernanceVisualizer)
 
 ## Create a cost governance strategy

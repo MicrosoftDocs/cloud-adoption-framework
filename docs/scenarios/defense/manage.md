@@ -24,6 +24,8 @@ In a defense context, the technical and non-technical aspects of operations are 
 
 There are several strategies defense organizations can adopt to improve operations. Technical teams need to know what cloud resources they have (inventory) and know what each resource is doing (visibility). Visibility requires baselines. Baselines make cloud resources measurable, which is critical to security and modernization. Operations teams need to create baselines so that progress and regression can be measured.
 
+For more information, see [resource baselines](/azure/cloud-adoption-framework/manage/azure-management-guide/inventory)
+
 ## Choose a product owner
 
 Communication is the key to getting the deliverables mission owners need. A product owner is a key asset in driving workload enhancements in the right direction. A product owner is a defense individual who serves as the single point of contact for the workload technical team. The product owner represents the interests of the stakeholders and handles stakeholder input. The product owner uses this input to identify the highest priority tasks for the technical team to focus on. The product owner should meet regularly with stakeholders and the workload technical team to set priorities and receive feedback.
