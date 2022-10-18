@@ -18,6 +18,8 @@ Watch the following video to get a quick overview of the lift and shift approach
 
 <!-- markdownlint-disable MD034 -->
 
+<br/>
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWDup6]
 
 <!-- markdownlint-enable MD034 -->
@@ -56,6 +58,8 @@ The following bullets provide an overview of the phases of this process (picture
   Watch this video to get a quick overview about completing a comprehensive assessment.
 
   <!-- markdownlint-disable MD034 -->
+ 
+  <br/>
 
   > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWDpel]
 
