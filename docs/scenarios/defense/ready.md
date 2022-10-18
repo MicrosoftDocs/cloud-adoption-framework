@@ -39,6 +39,11 @@ Here are a few general architecture recommendations for landing zone deployments
 
 **(4) Designate an architecture owner** - Mission owners should designate a single member of their personnel to own landing zone security. This person should be responsible for coordinating with the cloud broker, managing identity and access, and restricting elevated privileges.
 
+For more information see:
+
+- [Landing zone principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles)
+- [Landing zone design](/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
+
 ## Define operations and management expectations
 
 Mission owners and cloud brokers should define the expectations for operations and management during the landing zone build period. Workloads will depend heavily on the platform throughout their lifecycle. Changes in the platform identity, management, or connectivity configurations will affect the hosted workloads. It’s important to synchronize expectations and priorities during the platform build so that mission owners and cloud brokers have a common understanding of success. Having a solid working relationship before production environments go live will help mitigate risks.
@@ -54,6 +59,8 @@ We have the following recommendations for operations and management:
 **(4) Discuss infrastructure automation** - A high-functioning cloud broker will build infrastructure as code (IaC) templates to build secure workload environments consistently and rapidly. These IaC templates can build hardened VMs, functions, storage and more. The broker could even build out the entire mission owner landing zone through code to ensure consistency and compliance.
 
 **(5) Establish change management process** - Change is necessary in the cloud. In fact, a major benefit of the cloud is the ability to accelerate change. Accelerating positive changes is the goal of digital transformation. It’s vital that mission owners and cloud brokers establish a change management process. Change management should account for standard, normal, and emergency change requests. Each request type should have its own process that is optimized and streamlined for consistency, speed, and security.
+
+For more information, see [improve landing zone operations](/azure/cloud-adoption-framework/ready/considerations/landing-zone-operations)
 
 ## Next step
 
