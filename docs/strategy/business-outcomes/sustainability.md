@@ -123,11 +123,11 @@ To help you build your strategy Microsoft has a range of tooling and resources a
 
 The [Microsoft Sustainability Manager](/industry/sustainability/sustainability-manager-overview) is an extensible solution that unifies data intelligence and provides comprehensive, integrated, and automated sustainability management for organizations at any stage of their sustainability journey. It automates manual processes, enabling organizations to more efficiently record, report, and reduce their emissions.
 
+Microsoft Sustainability Manager covers data input from sources beyond just Azure workloads. For example, you can connect to AWS, GCP, SAP, and more.
+
 ### Cloud migration
 
 Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption and costs and reduce the physical footprints of their datacenters. Transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options, depending on specific server usage, renewable energy purchases, and other factors.
-
-Microsoft provides solutions for [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure#workload-migration-to-the-cloud) to help you understand the emissions-related usage of Microsoft Cloud services and an estimator to give you some idea of how much you could save by migrating to Azure.
 
 Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
@@ -136,6 +136,8 @@ Migrate and modernize your apps, data, and infrastructure using proven cloud mig
 ### Emissions savings estimator for Microsoft Cloud
 
 The [Emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) enables you to define your on-premises infrastructure workloads and then uses the information to report your current on-premises footprint and comparable Azure footprint.
+
+Using the emissions savings estimator will help you understand the emissions-related usage of Microsoft Cloud services and estimate how much you could save by migrating to Azure.
 
 ### Emissions Impact Dashboard
 
