@@ -26,11 +26,9 @@ While the computation of their data is being orchestrated, each industry custome
 
 ## HPC narrative
 
-As customers from different industries have specific needs that require HPC investment, there's also the concern of sustainability goals and risk management. Compared to deploying huge on-premise infrastructure, having your HPC workloads in the cloud helps to use minimal computing resources as needed, and when only when needed with flexible scalability to support sustainability goals.
+As customers from different industries have specific needs that require HPC investment, there's also the concern of sustainability. Compared to deploying huge on-premise infrastructure, having your HPC workloads in the cloud helps to use minimal computing resources as needed, and when only when needed with flexible scalability to support sustainability goals.
 
-HPC in Azure also offers competitive price and performance compared to on-premises options, robust global regulatory compliance, and next-generation machine-learning tools to drive smarter simulations and empower intelligent decision making.
-
-
+HPC in Azure also offers competitive pricing and performance compared to on-premises options, robust global regulatory compliance, and next-generation machine-learning tools to drive smarter simulations and empower intelligent decision making.
 
 When choosing the relevant Azure HPC solution for their specialized computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
 
@@ -51,6 +49,6 @@ Get started with the below list of guidance found at specific points throughout 
 - [Govern HPC](./govern.md)
 - [Manage HPC](./manage.md)
 
-When ready to automate deployments for your HPC environment, refer to the [landing zone accelerator](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelator?branch=release-hpc-scenario) for additional guidance.
+When ready to automate deployments for your HPC environment, refer to the [landing zone accelerator](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelator?branch=release-hpc-scenario) for additional information.
 
-[Design guidelines](../azure-hpc/azure-hpc-landing-zone-accelator.md#design-guidelines) are also available to provide guidance on landing zone creation for your HPC billing, identity and access management, network topology/connectivity, platform automation, management group and subscription organization, governance disciplines, and security disciplines.
+[Design guidelines](../azure-hpc/azure-hpc-landing-zone-accelator.md#design-guidelines) are also available to provide guidance on creating landing zones for your HPC billing, identity and access management, network topology/connectivity, platform automation, management group and subscription organization, governance disciplines, and security disciplines.
