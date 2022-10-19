@@ -30,7 +30,7 @@ Consider the following factors:
 The following are proven practices for your design:
 
 - If stateful workloads are considered, prepare the dynamic storage Azure disks or Azure Files.
-- If multiple pods need to read or write to the same storage, support Azure Files or third-party services like Azure NetApp Files.
+- If multiple pods need to read or write to the same storage, support Azure Files or [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-solution-architectures#azure-kubernetes-services-and-kubernetes).
 - In most cases, Premium SSD storage is recommended.
 - Use node pools for different workloads requiring different storage and performance characteristics.
 - Create storage classes.

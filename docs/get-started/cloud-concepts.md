@@ -41,7 +41,7 @@ Everyone involved in implementing of your organization's Azure technology strate
 
 ## Step 3: Review the portfolio
 
-All cloud hosting and environment decisions require you to first with understand of the portfolio of workloads. Microsoft's Cloud Adoption Framework includes tools to help you understand and evaluate the portfolio.
+All cloud hosting and environment decisions require you to first understand the portfolio of workloads. Microsoft's Cloud Adoption Framework includes tools to help you understand and evaluate the portfolio.
 
 **Deliverables:**
 
