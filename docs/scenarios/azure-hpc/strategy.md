@@ -16,9 +16,11 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 ## HPC motivations
 
-When building your own HPC solution, there is significant investment required in specifying the right supercomputer specs and clusters. There are also financial concerns for investing in capital for continually upgrading computing hardware to meet high demanding workloads.
+When building your own on-premise HPC solution, there is significant investment required in specifying the right supercomputer specs and clusters, which will incentivize cost savings and optimization of computational needs.
 
-There are other concerns with time, as scheduling can take from days to months to run an on-premise HPC workload which will heavily affect optimization of internal operations.
+As you migrate your HPC environment, there will be a push for cost savings. Investing in HPC capital has financial concerns due to continually upgrading computing hardware to meet high demanding workloads. 
+
+There will also be a drive reduce how long on-premise HPC workloads typically take to run HPC workloads. These time consuming workloads could take months and will heavily affect optimization of internal operations.
 
 ## HPC outcomes
 
