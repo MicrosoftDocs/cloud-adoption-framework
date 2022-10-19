@@ -76,7 +76,7 @@ The following architecture diagram shows secure access using SQL authentication.
 
 ## Design considerations
 
-Review the [identity and access management critical design area](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) of Azure landing zones to assess the effect of Azure Arc-enabled data services on your overall identity and access model.
+Review the [identity and access management critical design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) of Azure landing zones to assess the effect of Azure Arc-enabled data services on your overall identity and access model.
 
 ### Arc-enabled data services deployment
 
@@ -98,7 +98,7 @@ Arc-enabled SQL Managed Instance access controls are fully independent of underl
 
 ## Design recommendations
 
-In addition to the following design recommendations, review the [identity and access management design recommendations](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management#design-recommendations) for Azure Arc-enabled Kubernetes since Arc-enabled SQL Managed Instance is deployed on the Arc-enabled Kubernetes cluster.
+In addition to the following design recommendations, review the [identity and access management design recommendations](../arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md#design-recommendations) for Azure Arc-enabled Kubernetes since Arc-enabled SQL Managed Instance is deployed on the Arc-enabled Kubernetes cluster.
 
 ### Arc-enabled data services deployment
 
