@@ -13,7 +13,7 @@ ms.subservice: plan
 
 The plan methodology falls within the mission domain of cloud adoption.
 
-:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
+:::image type="content" source="./images/command.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - mission domain*
 
 Any transformation requires a plan, and cloud adoption is no exception. The plan methodology is where mission owners prepare for cloud adoption. They need to make decisions that will help meet mission objectives and align the project with the right stakeholders. These plans will determine personnel and platform management needs. Proper planning helps ensure the project receives buy-in from stakeholders.
@@ -43,7 +43,7 @@ Let's address each of these benefits:
 
 A landing zone includes all the foundational components defense workloads needed for secure, reliable, and cost-effective cloud operations. Below is a generalized landing zone architecture for defense scenarios. We recommend using subscriptions to demarcate service and workload environments.
 
-:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png" border="false":::
+:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." border="false":::
 *Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
 
 Landing zone components can be divided into two major categories: platform environments and workload environments.

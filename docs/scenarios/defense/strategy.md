@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 The strategy methodology falls within the mission domain of cloud adoption.
 
-:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
+:::image type="content" source="./images/command.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - mission domain*
 
 Strategy about ensuring the short and long-term success of cloud adoption. It aligns the mission owner's vision with overarching digital transformation initiatives and helps cloud adoption succeed within allotted budgets. Building a strategy for the cloud adoption is an important step to drive awareness of the transformation vision. Without a clear vision, a transformation can break down into conflicting activities and prevent the defense organization from advancing the transformation. The strategy should contain key milestones that stakeholders can monitor for analytic interests or performance control needs.

@@ -13,7 +13,7 @@ ms.subservice: organize
 
 The secure methodology is a critical step in the workload domain of cloud adoption.
 
-:::image type="content" source="./images/workload.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Workload is highlighted to show we're in the workload domain of cloud adoption." border="false":::
+:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Workload is highlighted to show we're in the workload domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - workload domain*
 
 Security refers to the cybersecurity triad of confidentiality, integrity, and availability. Even though security falls within the workload domain, it’s an important consideration at every stage in the cloud adoption journey. Security fails without a proper strategy and plan. Landing zones and governance falter without proper security considerations. Modernizations weaken security posture if security isn't built into the development and operations processes.

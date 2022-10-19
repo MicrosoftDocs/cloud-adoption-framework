@@ -13,7 +13,7 @@ ms.subservice: organize
 
 The organize methodology falls within the mission domain of cloud adoption.
 
-:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
+:::image type="content" source="./images/command.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - mission domain*
 
 One of the biggest cloud adoption challenges in a defense organization isn't the technology but organizing the groups, teams, and roles to support the technology. Traditional IT operations differ from cloud operations. The traditional model is centralized, and a central authority builds and maintains the technology stack. The cloud challenges this model.
