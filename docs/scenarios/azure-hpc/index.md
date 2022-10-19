@@ -30,6 +30,15 @@ As customers from different industries have specific needs that require HPC inve
 
 When choosing the relevant Azure HPC solution for their specialized computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
 
+### Common Customer HPC Journeys
+
+- **Automotive industry organizations** are able to simulate all aspects of vehicle engineering in cost effective, high performing, and highly secure infrastructure without concerns over traditional costs and maintenance responsibilities. HPC in Azure includes AI tools to find insights from 30 to 50 billion data points for complex data analyses such as racing strategies or autonomous driving.
+- **Energy industry organizations** such as oil and gas benefit from an up-scaled, end-to-end AI ecosystem that provides nurturing new ideas into safety operations and taking vast data repositories into AI solutions that promote operational advances such as predictive maintenance, simulation workloads, and automating completion reports to reduce data extraction times from months to hours.
+- **Health and life sciences** industries take advantage of HPC to create the next generation of healthcare breakthroughs in evaluating and treating diseases by using Azure data services. The HPC tools  assist in identifying health risk data, running benchmarks to optimize drug screening, and research underlying biology to better understand medical conditions.
+- **For silicon industry** organizations, HPC boosts productivity, optimizes resources, and speed up time to produce and market finely tuned manufacturing and design solutions.
+- **Finance organizations** use HPC to modernizing approaches to risk management, portfolio optimization, and implementing effective compliance and governance practices to protect consumer data. Computationally intensive workloads in Azure HPC have reduced costs and increased/instantaneous scalability for on-demand pricing model calculations.
+- **Manufacturing organizations** utilize HPC to fuel real-time product simulations that reduce time to market and improve product quality. Thousands of on-demand simulation jobs are executed to deliver faster solutions and more improved insights for following health and safety regulations.  
+
 ## Next step: Integrate HPC into your cloud adoption journey
 
 Get started with the below list of guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for your HPC environment.
