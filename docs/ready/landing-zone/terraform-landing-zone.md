@@ -119,7 +119,7 @@ Although as a first approach it might seem more natural and simple to use Terraf
 
 - **Docker container**:
   - Allows a consistent developer experience on PC, Mac, and Linux, including the right tools, Git hooks, and DevOps tools.
-  - Natively integrates with [Visual Studio Code](https://code.visualstudio.com/docs/remote/containers) ad [GitHub Codespaces](https://github.com/features/codespaces).
+  - Natively integrates with [Visual Studio Code](https://code.visualstudio.com/docs/remote/containers) and [GitHub Codespaces](https://github.com/features/codespaces).
   - Contains the versioned toolset that you need for applying landing zones.
   - Helps you switch component versions fast by separating the run environment and the configuration environment.
   - Ensures pipeline ubiquity and abstraction. You can run the rover everywhere, whichever pipeline technology you're using.
