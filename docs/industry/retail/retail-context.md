@@ -48,7 +48,7 @@ If there's one thing to be learned following COVID-19, it's that agility is key.
 
 - 68 percent of United States shoppers expect to buy essential goods online after the health threats of COVID-19 have subsided. For more information, see [COVID-19 has permanently changed shopping behavior](https://www.zdnet.com/article/covid-19-has-permanently-changed-shopping-behavior/).
 
-- 79 percent of worldwide respondents say they're using contactless payments, according to Mastercard consumer polling data. Online interviews of 17,000 consumers in 19 countries worldwide conducted April 10-12, 2020.
+- 79 percent of worldwide respondents say they're using contactless payments, according to Mastercard consumer polling data. Online interviews of 17,000 consumers in 19 countries/regions worldwide conducted April 10-12, 2020.
 
 - 75 percent of United States companies' supply chain affected by China's production halt. For more information, see [Cascading economic impacts of the COVID-19 outbreak in China](https://www.uscc.gov/sites/default/files/2020-04/Cascading_Economic_Impacts_of_the_Novel_Coronavirus_April_21_2020.pdf).
 
