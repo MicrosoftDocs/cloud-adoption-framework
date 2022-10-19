@@ -11,12 +11,12 @@ ms.subservice: organize
 ---
 # Secure for defense cloud adoption
 
-The secure methodology is a critical step in the workload domain of cloud adoption.
+The secure methodology is a critical step in the mission domain of cloud adoption.
 
-:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Workload is highlighted to show we're in the workload domain of cloud adoption." border="false":::
-*Figure 1: Domain tracker - workload domain*
+:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows command, platform, and mission. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
+*Figure 1: Domain tracker - mission domain*
 
-Security refers to the cybersecurity triad of confidentiality, integrity, and availability. Even though security falls within the workload domain, it’s an important consideration at every stage in the cloud adoption journey. Security fails without a proper strategy and plan. Landing zones and governance falter without proper security considerations. Modernizations weaken security posture if security isn't built into the development and operations processes.
+Security refers to the cybersecurity triad of confidentiality, integrity, and availability. Even though security falls within the mission domain, it’s an important consideration at every stage in the cloud adoption journey. Security fails without a proper strategy and plan. Landing zones and governance falter without proper security considerations. Modernizations weaken security posture if security isn't built into the development and operations processes.
 
 Security is no less important for a workload. Workloads inherit security controls from the platform but must still apply security controls above the platform level.
 
@@ -78,7 +78,7 @@ For more information, see:
 
 ## Next step
 
-The last methodology in the workload domain is the manage methodology. The manage methodology has recommendations for driving operational efficiency.
+The last methodology in the mission domain is the manage methodology. The manage methodology has recommendations for driving operational efficiency.
 
 > [!div class="nextstepaction"]
 > [Manage](manage.md)

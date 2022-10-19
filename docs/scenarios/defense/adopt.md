@@ -11,10 +11,10 @@ ms.subservice: organize
 ---
 # Adopt for defense cloud adoption
 
-The adopt methodology focuses on defense workloads and falls in the workload domain of cloud adoption. Workloads are collections of resources that support a specific capability. The workload domain is cyclical. The domain iterates through the adopt, secure, and manage methodologies throughout the lifecycle of a workload.
+The adopt methodology focuses on defense workloads and falls in the mission domain of cloud adoption. Workloads are collections of resources that support a specific capability. The mission domain is cyclical. The domain iterates through the adopt, secure, and manage methodologies throughout the lifecycle of workloads.
 
-:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Workload is highlighted to show we're in the workload domain of cloud adoption." border="false":::
-*Figure 1: Domain tracker - workload domain*
+:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows command, platform, and mission. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
+*Figure 1: Domain tracker - mission domain*
 
 During the adopt phase, defense workloads start their journey in the cloud and iterative capitalize on cloud benefits over time. Adopt encompasses migration, modernization, and innovation:
 

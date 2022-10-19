@@ -11,10 +11,10 @@ ms.subservice: manage
 ---
 # Manage for defense cloud adoption
 
-The manage methodology is in the workload domain of cloud adoption. It's the last methodology covered, but it isn't the end of cloud adoption.
+The manage methodology is in the mission domain of cloud adoption. It's the last methodology covered, but it isn't the end of cloud adoption.
 
-:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Workload is highlighted to show we're in the workload domain of cloud adoption." border="false":::
-*Figure 1: Domain tracker - workload domain*
+:::image type="content" source="./images/mission.png" alt-text="Figure that shows a domain tracker. It shows command, platform, and mission. Mission is highlighted to show we're in the mission domain of cloud adoption." border="false":::
+*Figure 1: Domain tracker - mission domain*
 
 The manage methodology is about operational efficiency. Operational efficiency is doing more with less and in the right direction. The operations team must learn and drive toward mission objectives or risk steering workloads in a direction that doesn’t support the war fighter.
 
