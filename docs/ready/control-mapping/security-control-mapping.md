@@ -34,7 +34,7 @@ The following diagram shows the process flow of control mapping:
 5. Implement guardrails with policy initiatives using Azure landing zone tooling, native tooling, or third-party tooling.
 
 > [!TIP]
-> You should review the guidance for how to [tailor the Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) to support your control mapping requirements.
+> You should review the guidance for how to [tailor the Azure landing zone architecture](../landing-zone/tailoring-alz.md) to support your control mapping requirements.
 
 ### 1. Identify the controls required
 
@@ -132,7 +132,7 @@ After the approval from your internal security/audit team that the platform and 
 The following sections describe the process of identifying, mapping, and implementing regulatory compliance-related controls as part of Azure landing zone deployment. Deployment covers policies that are aligned with Azure Security Benchmark for platform-level security controls.
 
 > [!TIP]
-> As part of the Azure landing zone accelerators ([Portal](/azure/cloud-adoption-framework/ready/landing-zone/), [Bicep](https://aka.ms/alz/bicep) & [Terraform](https://aka.ms/alz/tf)), we assign the Azure Security Benchmark policy initiative to Intermediate Root Management Group by default.
+> As part of the Azure landing zone accelerators ([Portal](../landing-zone/index.md), [Bicep](https://aka.ms/alz/bicep) & [Terraform](https://aka.ms/alz/tf)), we assign the Azure Security Benchmark policy initiative to Intermediate Root Management Group by default.
 
 You can learn about [policies assigned as part of an Azure landing zone Accelerator deployment](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
 
@@ -240,4 +240,4 @@ Azure Security Benchmark is focused on Azure technical controls. Objective areas
 
 [Financial Institution Risk Assessment Overview](https://servicetrust.microsoft.com/ViewPage/RiskAssessmentOverview)
 
-[Service Level Agreement](/support/legal/sla/)
+[Service Level Agreement](https://azure.microsoft.com/support/legal/sla/)

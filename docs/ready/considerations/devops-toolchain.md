@@ -86,7 +86,7 @@ DevOps toolchains for Azure Landing Zone implementation should consider all prev
 - Operations
 - Collaborations and feedback
 
-Review guidance for landing zone deployment and considerations for choosing an implementation option in [Choosing landing zone adoption](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option#deployment-considerations).
+Review guidance for landing zone deployment and considerations for choosing an implementation option in [Choosing landing zone adoption](../landing-zone/choose-landing-zone-option.md#deployment-considerations).
 
 Regardless of selected methodology (start small and expand or enterprise-scale), there are a few common topologies that enterprises tend to follow as they design their DevOps workflows and toolchains.
 

@@ -37,7 +37,7 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - Azure provides support for IaC for Landing Zones through:
   - [Bicep](https://github.com/Azure/ALZ-Bicep)
-  - [Terraform](/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform)
+  - [Terraform](../landing-zone/deploy-landing-zones-with-terraform.md)
 
 ### Design recommendations
 

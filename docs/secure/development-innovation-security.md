@@ -20,9 +20,9 @@ Each organization's enterprise risk appetite is variable. To calculate it, you h
 
 Some organizations stress rapid innovation to stay competitive. Others are intolerant of brand damage - even from an otherwise minor test application that could be compromised.
 
-Balance your organization's security and speed of innovation. You can use the [Azure landing zone policy-driven governance design](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance), which provides guardrails for your organization's platform (and applications deployed on it). For more information, see [Adopt policy-driven rails in your resource organization](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance).
+Balance your organization's security and speed of innovation. You can use the [Azure landing zone policy-driven governance design](../ready/landing-zone/design-principles.md#policy-driven-governance), which provides guardrails for your organization's platform (and applications deployed on it). For more information, see [Adopt policy-driven rails in your resource organization](../ready/enterprise-scale/dine-guidance.md).
 
-Learn about the [hierarchy of management groups and subscriptions](/azure/governance/management-groups/overview) and how to create [top-level sandbox management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-group-recommendations).
+Learn about the [hierarchy of management groups and subscriptions](/azure/governance/management-groups/overview) and how to create [top-level sandbox management groups](../ready/landing-zone/design-area/resource-org-management-groups.md#management-group-recommendations).
 
 ## Incremental and continuous improvements
 
