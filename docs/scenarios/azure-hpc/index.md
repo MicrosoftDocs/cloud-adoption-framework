@@ -26,12 +26,13 @@ While the computation of their data is being orchestrated, each industry custome
 
 ## HPC narrative
 
-As customers choose the relevant HPC solution for their specialized computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
+As customers from different industries have specific needs that require HPC investment, there's also the concern of sustainability goals and risk management. HPC in Azure offers competitive price and performance compared to on-premises options, robust global regulatory compliance, and next-generation machine-learning tools to drive smarter simulations and empower intelligent decision making.
+
+When choosing the relevant Azure HPC solution for their specialized computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
 
 ## Next step: Integrate HPC into your cloud adoption journey
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
+Get started with the below list of guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for your HPC environment.
 - [Strategy for HPC](./strategy.md)
 - [Plan for HPC](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
@@ -39,3 +40,7 @@ The following list of articles will take you to guidance found at specific point
 - [Innovate with HPC](./innovate.md)
 - [Govern HPC](./govern.md)
 - [Manage HPC](./manage.md)
+
+When ready to automate deployments for your HPC environment, refer to the [landing zone accelerator](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelator?branch=release-hpc-scenario) for additional guidance.
+
+[Design guidelines](../azure-hpc/azure-hpc-landing-zone-accelator.md#design-guidelines) are also available to provide guidance on landing zone creation for your HPC billing, identity and access management, network topology/connectivity, platform automation, management group and subscription organization, governance disciplines, and security disciplines.
