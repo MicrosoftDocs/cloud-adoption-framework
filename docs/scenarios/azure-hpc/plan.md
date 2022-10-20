@@ -35,17 +35,15 @@ Once your team gaps have been identified, the next steps are further developing 
 
 ## HPC readiness plan
 
-While identifying gaps is important to adopting Azure HPC services, it is also crucial to [build a readiness plan](../../plan/adapt-roles-skills-processes.md) as IT staff members will likely have role changes and have concerns to new job duties in the adoption efforts. Capturing these concerns might involve executive leadership to help drive the relevant training needed to support expanding functions.
+While identifying gaps is important to adopting Azure HPC services, it is also crucial to [build a readiness plan](../../plan/adapt-roles-skills-processes.md) as IT staff members will likely have role changes and have concerns to new job duties in the adoption efforts. Role changes might include datacenter technicians replaced with cloud administrators or even new cloud architects to oversee the HPC cloud deployments.
+
+There is also the possibility that the IT job titles won't change, but the daily work of these roles has changed significantly such from managing and maintaining physical infrastructure to expanding into virtualization specialization through cloud platforms such as Azure. As the duties change, there will be a different set of skills to support cloud solutions.
+
+Capturing these cloud skilling concerns might involve executive leadership to help drive the relevant training needed to support expanding functions. It is also necessary to document your IT staff concerns when noting resistance to change, the impact if resistance concerns are not addressed, and addressing reluctance on acquiring new IT skills to support the expanded functions and new duties.
 
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+After planning your HPC environment for cloud adoption, understand the [governance](./govern.md) decisions made by your cloud platform team.
 
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern HPC](./govern.md)
-- [Secure HPC](./secure.md)
-- [Organize team members for HPC in Azure](./organize.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
+Review [governance recommendations](../../ready/landing-zone/design-area/governance.md) when designing your governance landing zone.
