@@ -30,7 +30,7 @@ As customers from different industries have specific needs that require HPC inve
 
 HPC in Azure also offers competitive pricing and performance compared to on-premises options, robust global regulatory compliance, and next-generation machine-learning tools to drive smarter simulations and empower intelligent decision making.
 
-When choosing the relevant Azure HPC solution for their specialized computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption.
+When customers choose the relevant Azure HPC solution for their specialized computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](../../overview.md) to prepare decision makers and central IT for successful cloud adoption. See below for common customer HPC journeys.
 
 ### Common Customer HPC Journeys
 
@@ -49,6 +49,6 @@ Get started with the below list of guidance found at specific points throughout 
 - [Govern HPC](./govern.md)
 - [Manage HPC](./manage.md)
 
-When ready to automate deployments for your HPC environment, refer to the [landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelator.md) for additional information.
+For more information, refer to the [landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelator.md) for additional information.
 
 [Design guidelines](../azure-hpc/azure-hpc-landing-zone-accelator.md#design-guidelines) are also available to provide guidance on creating landing zones for your HPC billing, identity and access management, network topology/connectivity, platform automation, management group and subscription organization, governance disciplines, and security disciplines.
