@@ -716,11 +716,6 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/govern/resource-consistency/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
-         "redirect_document_id": false
-      },
-      {
          "source_path": "docs/govern/resource-consistency/metrics-tolerance.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
          "redirect_document_id": false

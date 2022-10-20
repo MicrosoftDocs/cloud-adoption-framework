@@ -1531,7 +1531,7 @@ items:
       - name: Resource consistency
         items:
         - name: Overview of resource consistency
-          href: govern/resource-consistency/overview.md
+          href: govern/resource-consistency/index.md
         - name: Management groups guidance
           href: govern/resource-consistency/management-group-structure.md
         - name: Resource naming guidance
