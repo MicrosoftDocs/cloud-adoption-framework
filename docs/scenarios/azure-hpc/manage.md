@@ -45,12 +45,7 @@ Determine if some HPC workloads are critical to where the management baseline an
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+- After outlining the management path for your HPC resources, [secure](./secure.md) your environment with a single centralized strategy.
+- Learn how [managing virtual machine compliance](/azure/architecture/example-scenario/security/virtual-machine-compliance) is practiced in Azure.
 
-- [Plan for HPC](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern HPC](./govern.md)
-- [Secure HPC](./secure.md)
-- [Organize team members for HPC in Azure](./organize.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
+
