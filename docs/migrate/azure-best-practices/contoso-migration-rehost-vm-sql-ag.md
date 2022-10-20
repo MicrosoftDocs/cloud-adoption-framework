@@ -3,7 +3,7 @@ title: Rehost an application by migrating it to Azure VMs and SQL Server Always 
 description: Learn how Contoso rehosts an on-premises application by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: deltadan
 ms.author: abuck
-ms.date: 10/17/2022
+ms.date: 10/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -138,19 +138,21 @@ To set up the cluster, the Contoso admin:
 
     ![Screenshot that shows a SQL VM SKU.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-sku.png)
 
-1. In **Create Virtual Machine Wizard** > **Basics**, configure:
+1. In **Create a virtual machine** > **Basics**, they:
 
-    - Names for the VMs: `SQLAOG1` and `SQLAOG2`.
-    - Because machines are business-critical, enable SSD for the VM disk type.
+    - Name the VMs: `SQLAOG1` and `SQLAOG2`.
     - Specify machine credentials.
     - Deploy the VMs in the primary region (`East US 2`) in the `ContosoRG` resource group.
 
-1. In **Size**, start with `D2S v3` instances for both VMs. Scale later as needed.
-1. In **Settings**, the admin does the following actions:
+1. In **Size**, they start with `D2S v3` instances for both VMs. They can scale later as needed.
+1. In **Disks**, they enable SSD for the VM disk type, because these machines are business-critical.
 
-    - Because these VMs are critical databases for the application, they use managed disks.
-    - They place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
-    - They create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
+   - They also use managed disks because these VMs are critical databases for the application.
+
+1. In **Networking**, they:
+
+    - Place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+    - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
 
       ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
@@ -524,7 +526,7 @@ As the final step in the migration process, the Contoso admin updates the connec
 1. After the admin updates and then saves the file, they restart IIS on `WEBVM`. They use `iisreset /restart` from a command prompt.
 1. After IIS restarts, the application now uses the database running on the managed instance.
 
-**Need more help?**
+**Learn more**
 
 - Learn how to [run a test failover](/azure/site-recovery/tutorial-dr-drill-azure).
 - Learn how to [create a recovery plan](/azure/site-recovery/site-recovery-create-recovery-plans).
@@ -532,7 +534,7 @@ As the final step in the migration process, the Contoso admin updates the connec
 
 ### Clean up after migration
 
-After migration, the SmartHotel360 application is running on an Azure VM. The `SmartHotel360` database is located in the SQL Server cluster in Azure.
+After migration, the SmartHotel360 application runs on an Azure VM. The `SmartHotel360` database is located in the SQL Server cluster in Azure.
 
 Now, Contoso needs to finish these cleanup steps:
 
@@ -560,15 +562,15 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 For business continuity and disaster recovery, Contoso takes the following actions:
 
-- To keep data safe, Contoso backs up the data on the `WEBVM`, `SQLAOG1`, and `SQLAOG2` VMs via [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
-- Contoso will also learn about how to use Azure Storage to back up SQL Server directly to Azure Blob Storage. Learn more about how to [use Azure Storage for SQL Server backup and restore](/azure/azure-sql/virtual-machines/windows/azure-storage-sql-server-backup-restore-use).
-- To keep applications up and running, Contoso replicates the application VMs in Azure to a secondary region by using Site Recovery. Learn more about how to [set up disaster recovery to a secondary Azure region for an Azure VM](/azure/site-recovery/azure-to-azure-quickstart).
+- Backs up the the data on the `WEBVM`, `SQLAOG1`, and `SQLAOG2` VMs via [Azure VM backup](/azure/backup/backup-azure-vms-introduction) to keep their data safe.
+- Learns about how to use Azure Storage to back up SQL Server directly to Azure Blob Storage. Learn more about how to [use Azure Storage for SQL Server backup and restore](/azure/azure-sql/virtual-machines/windows/azure-storage-sql-server-backup-restore-use).
+- Replicates the application VMs in Azure to a secondary region by using Site Recovery to keep their applications up and running. Learn more about how to [set up disaster recovery to a secondary Azure region for an Azure VM](/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 
-- Contoso has existing licensing for its `WEBVM` and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs to take advantage of this pricing.
-- Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
+- Contoso has existing licensing for its `WEBVM` and plans to take advantage of the Azure Hybrid Benefit. Contoso converts the existing Azure VMs to take advantage of this pricing.
+- Contoso uses [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
 
 ## Conclusion
 
-In this article, Contoso rehosted the SmartHotel360 application in Azure by migrating the application front-end VM to Azure by using Azure Migrate. Contoso migrated the application database to a SQL Server cluster provisioned in Azure by using Azure Database Migration Service and protected it in a SQL Server Always On availability group.
+In this article, Contoso rehosted the SmartHotel360 application in Azure by migrating the application front-end VM to Azure with Azure Migrate. Contoso migrated the application database to a SQL Server cluster provisioned in Azure by using Azure Database Migration Service and protected it in a SQL Server Always On availability group.
