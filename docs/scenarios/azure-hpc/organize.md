@@ -34,7 +34,7 @@ For more information, see [Mature Team Structures](../../organize/organization-s
 
 ## Deployment and operations
 
-Establish coordination with your organization IT leaders and research teams to identify strong use cases only possible for HPC cloud when it comes to cost and needed performance. Use cases could be studying variations of a genetic disease in life and health sciences, automotive designers simulating the forces and stresses that impact vehicle safety operations, or the continual growing demands of AI computation.
+Establish coordination with your organization IT leaders and research teams to identify strong use cases only possible for HPC cloud when it comes to costing and needed performance. Use cases could be studying variations of a genetic disease in life and health sciences, automotive designers simulating the forces and stresses that impact vehicle safety operations, or the continual growing demands of AI computation.
 
 Align responsibilities for your HPC environment by developing a cross-team matrix to identify responsibility, accountability, consultancy, and informed parties.
 
