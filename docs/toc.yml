@@ -1560,21 +1560,10 @@ items:
         items:
         - name: Overview of deployment acceleration
           href: govern/deployment-acceleration/index.md
-        - name: Download the template
-          href: govern/deployment-acceleration/template.md
-        - name: Understand business risks
-          href: govern/deployment-acceleration/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/deployment-acceleration/metrics-tolerance.md
-        - name: Sample Deployment Acceleration policies
-          href: govern/deployment-acceleration/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/deployment-acceleration/compliance-processes.md
-        - name: Improve deployment acceleration
-          href: govern/deployment-acceleration/discipline-improvement.md
-        - name: Azure tools for deployment acceleration
-          href: govern/deployment-acceleration/toolchain.md
-
+        - name: Visibility in deployments
+          href: govern/deployment-acceleration/visibility-in-deployment.md
+        - name: Consistency and repeatability
+          href: govern/deployment-acceleration/consistency-repeatability.md
     - name: Govern antipatterns
       href: antipatterns/govern-antipatterns.md
 
