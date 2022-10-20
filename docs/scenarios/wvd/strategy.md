@@ -3,7 +3,7 @@ title: Outline a strategy for an Azure Virtual Desktop environment
 description: Explore the strategic benefits of an Azure Virtual Desktop environment.
 author: DominicAllen
 ms.author: doalle
-ms.date: 05/18/2021
+ms.date: 10/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
