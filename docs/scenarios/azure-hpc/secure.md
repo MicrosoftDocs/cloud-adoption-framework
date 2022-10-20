@@ -33,12 +33,5 @@ It is also recommended to follow the security baseline recommendations for the f
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Plan for HPC](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern HPC](./govern.md)
-- [Organize team members for HPC in Azure](./organize.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
+- After creating your HPC cloud adoption security strategy, look into [organizing team members](./organize.md) to align the teams and roles supporting your organization's cloud adoption efforts.
+- For additional security information, refer to best practices defined in the Azure [HPC Well-architected framework.](../azure-hpc/well-architected-framework.md#security)
