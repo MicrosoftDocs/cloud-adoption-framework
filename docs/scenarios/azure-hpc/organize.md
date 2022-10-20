@@ -42,12 +42,5 @@ For more information, see [Align responsibilities across teams.](../../organize/
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Plan for HPC](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern HPC](./govern.md)
-- [Secure HPC](./secure.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
+- After devising your organizing strategy for your team members, you can refer back to the [HPC Landing Zone(s)](./ready.md) and map to your overall HPC environment's cloud adoption readiness.
+- See how HPC is different in the [cloud](/azure/architecture/topics/high-performance-computing#how-is-hpc-different-on-the-cloud) when comparing to on-premise deployments.
