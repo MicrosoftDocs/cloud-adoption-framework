@@ -3,7 +3,7 @@ title: Rehost an application by migrating it to Azure VMs and SQL Server Always 
 description: Learn how Contoso rehosts an on-premises application by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: deltadan
 ms.author: abuck
-ms.date: 10/19/2022
+ms.date: 10/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -134,15 +134,18 @@ Here's how Contoso runs the migration:
 
 To set up the cluster, the Contoso admin:
 
-1. Creates two SQL Server VMs by selecting the SQL Server 2017 Enterprise Windows Server 2016 image in the Azure Marketplace.
+1. Selects the SQL Server 2017 Enterprise Windows Server 2016 image in the Azure Marketplace to create two SQL Server VMs.
 
     ![Screenshot that shows a SQL VM SKU.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-sku.png)
 
 1. In **Create a virtual machine** > **Basics**, they:
 
-    - Name the VMs: `SQLAOG1` and `SQLAOG2`.
-    - Specify machine credentials.
-    - Deploy the VMs in the primary region (`East US 2`) in the `ContosoRG` resource group.
+    - Create a new resource group named `ContosoRG`.
+    - Name the first VM: `SQLAOG1`.
+    - Select the primary region of `East US 2`.
+    - Choose **Availability zone** from **Availability options**.
+    - Select zones 1 and 2, which automatically creates a second VM with the name of `SQLAOG2`.
+    - Specify the machine credentials under Administrator account.
 
 1. In **Size**, they start with `D2S v3` instances for both VMs. They can scale later as needed.
 1. In **Disks**, they enable SSD for the VM disk type, because these machines are business-critical.
