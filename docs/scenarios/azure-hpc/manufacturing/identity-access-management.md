@@ -32,7 +32,7 @@ Depending on the chosen HPC Compute Resource Orchestrator, different types of au
 
 ***Figure 1: Reference Architecture with Azure CycleCloud***
 
-:::image type="content" source="../media/reference-architecture-azure-batch.png" alt-text="Manufacturing Reference Architecture design with Azure Batch.":::
+:::image type="content" source="../media/reference-architecture-with-azure-batch.png" alt-text="Manufacturing Reference Architecture design with Azure Batch.":::
 
 ***Figure 2: Reference Architecture with Azure Batch***
 
