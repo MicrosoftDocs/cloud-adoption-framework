@@ -44,6 +44,5 @@ Capturing these cloud skilling concerns might involve executive leadership to he
 
 ## Next steps
 
-After planning your HPC environment for cloud adoption, understand the [governance](./govern.md) decisions made by your cloud platform team.
-
-Review [governance recommendations](../../ready/landing-zone/design-area/governance.md) when designing your governance landing zone.
+- After planning your HPC environment for cloud adoption, understand the [governance](./govern.md) decisions made by your cloud platform team.
+- Review [governance recommendations](../../ready/landing-zone/design-area/governance.md) when designing your governance landing zone.
