@@ -12,26 +12,26 @@ ms.custom: think-tank
 
 # Strategic impact of Azure high-performance computing (HPC)
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-plan-template.docx) to record your cloud adoption strategy. This article will help expose a number of technical considerations regarding HPC that may have an impact on your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-plan-template.docx) to record your cloud adoption strategy. This article will help expose many technical considerations regarding HPC that may have an impact on your strategy.
 
 ## HPC motivations
 
-When building your own on-premise HPC solution, there is significant investment required in specifying the right supercomputer specs and clusters, which will incentivize cost savings and optimization of computational needs.
+When building your own on-premises HPC solution, there's significant investment required in specifying the right supercomputer specs and clusters, which will incentivize cost savings and optimization of computational needs.
 
 As you migrate your HPC environment, there will be a push for cost savings. Investing in HPC capital has financial concerns due to continually upgrading computing hardware to meet high demanding workloads. 
 
-There will also be a drive reduce how long on-premise HPC workloads typically take to run HPC workloads. These time consuming workloads could take months and will heavily affect optimization of internal operations.
+There will also be a drive reduce how long on-premises HPC workloads typically take to run HPC workloads. These time consuming workloads could take months and will heavily affect optimization of internal operations.
 
 ## HPC outcomes
 
-With HPC in Azure, there is less concern in building and owning your own expensive hardware and more focus on aligning your tools and processes to get the data you need for simulation and modeling results.
+With HPC in Azure, there's less concern in building and owning your own expensive hardware and more focus on aligning your tools and processes to get the data you need for simulation and modeling results.
 
-As geographical and market HPC demands require scaling out the compute resources, an Azure HPC system allows flexibility by adding dynamic resources as they are needed and remove them as demand falls to ensure a cost effective and high performing solution.
+As geographical and market HPC demands require scaling out the compute resources, an Azure HPC system allows flexibility by adding dynamic resources as they're needed, and remove them as demand falls to ensure a cost effective and high performing solution.
 
 
 ## HPC business justification
 
-When configuring your HPC environment to the cloud, you will want to consider forecasting what your on-premises HPC costs would be if no cloud migration is planned versus the costs of migrating to the cloud to determine how much spending is done to run your environment today, in an average year, and what the migration timeline will look like.
+When configuring your HPC environment to the cloud, you'll want to consider forecasting what your on-premises HPC costs would be if no cloud migration is planned versus the costs of migrating to the cloud to determine how much spending is done to run your environment today, in an average year, and what the migration timeline will look like.
 
 [Create a business case](../../strategy/cloud-migration-business-case.md) to help foster support from your finance team and other areas of the business to accelerate your cloud migration timeline and promote business agility. Also look into the different types of [cloud savings](../../strategy/cloud-migration-business-case.md#cloud-savings) to determine which billing model will be most cost effective for your HPC environment.
 
