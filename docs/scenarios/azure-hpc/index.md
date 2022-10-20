@@ -49,6 +49,6 @@ Get started with the below list of guidance found at specific points throughout 
 - [Govern HPC](./govern.md)
 - [Manage HPC](./manage.md)
 
-When ready to automate deployments for your HPC environment, refer to the [landing zone accelerator](https://review.learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelator?branch=release-hpc-scenario) for additional information.
+When ready to automate deployments for your HPC environment, refer to the [landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelator.md) for additional information.
 
 [Design guidelines](../azure-hpc/azure-hpc-landing-zone-accelator.md#design-guidelines) are also available to provide guidance on creating landing zones for your HPC billing, identity and access management, network topology/connectivity, platform automation, management group and subscription organization, governance disciplines, and security disciplines.
