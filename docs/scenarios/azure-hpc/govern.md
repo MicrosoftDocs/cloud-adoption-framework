@@ -43,11 +43,6 @@ Banking organizations will also have [data security considerations](/azure/archi
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+- After extending your governance approach for your HPC environment, outline your [management](./manage.md) path for implementing an operations baseline.
+- Review and understand additional [governance recommendations](../../ready/landing-zone/design-area/governance.md) decisions made by your cloud platform team.
 
-- [Plan for HPC](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Secure HPC](./secure.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
