@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 10/03/2022
+ms.date: 10/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -99,7 +99,7 @@ With Azure Monitor, you can take advantage of existing workbooks that are includ
 
 ## Monitoring disciplines
 
-The following figure shows the Observe discipline on the left, and later in this section we discuss how Microsoft Azure plays a central role here.
+The following figure shows the Monitor discipline on the left, and later in this section we discuss how Microsoft Azure plays a central role here.
 
 ![Monitoring disciplines](./media/observability/monitoring-and-control-disciplines.png)
 
