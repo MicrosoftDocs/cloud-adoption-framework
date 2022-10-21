@@ -3,7 +3,7 @@ title: Cloud monitoring observability
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 07/12/2022
+ms.date: 10/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -14,6 +14,8 @@ ms.subservice: manage
 This article is intended to help organizations implement a consistent monitoring strategy quicker by ensuring *observability* is established in the [Azure landing zone](../../ready/landing-zone/index.md) (that is, in every minimum viable product) for each monitoring solution. As a planner, you develop a monitoring plan for a service and include some monitoring objectives. One desirable objective is for the monitoring consumers within the IT organization to reach a level of comfort or confidence with the solution you're planning for them, as soon as possible. The other objective is to continuously evaluate the Service Level Objectives (SLOs) and corresponding Service Level Indicators (SLIs) for that service, and strive to optimize through planning iterations. This is necessary so IT can reach SLO targets, make the service more reliable cost-effectively, and better meet the needs and expectations of the business.
 
 We call this *adoption*.
+
+While observability and monitoring complement each other, there is a notable distinction. Monitoring collects information and informs you that it detected an issue based on you configuring it to monitor for those conditions. Simply stated, you're monitoring for known or predictable failures. Observability is focused on combing through all the data collected by your monitoring tool(s) and looking for opportunities to understand the behavior of those systems. In turn, you use that knowledge to further tune monitoring to detect these symptoms or conditions.
 
 The goal of this article is to take the [monitoring strategy](../../strategy/monitoring-strategy.md) recommendations, and create a monitoring plan to support the goal of modernizing and evolving your organizations IT operations strategy. The second goal is to drive operational maturity by being observant and constantly iterating to improve how you monitor those services.
 
@@ -97,7 +99,7 @@ With Azure Monitor, you can take advantage of existing workbooks that are includ
 
 ## Monitoring disciplines
 
-The following figure shows the Observe discipline on the left, and later in this section we discuss how Microsoft Azure plays a central role here.
+The following figure shows the Monitor discipline, which is discussed in [monitoring strategy](../../strategy/monitoring-strategy.md). Later in this section we discuss how Microsoft Azure plays a central role here.
 
 ![Monitoring disciplines](./media/observability/monitoring-and-control-disciplines.png)
 
