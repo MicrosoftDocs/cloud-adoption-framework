@@ -99,7 +99,7 @@ With Azure Monitor, you can take advantage of existing workbooks that are includ
 
 ## Monitoring disciplines
 
-The following figure shows the Monitor discipline on the left, and later in this section we discuss how Microsoft Azure plays a central role here.
+The following figure shows the Monitor discipline, which is discussed in [monitoring strategy](../../strategy/monitoring-strategy.md). Later in this section we discuss how Microsoft Azure plays a central role here.
 
 ![Monitoring disciplines](./media/observability/monitoring-and-control-disciplines.png)
 
