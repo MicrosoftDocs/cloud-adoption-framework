@@ -2,7 +2,7 @@ items:
   - name: Defense cloud adoption - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Defense cloud adoption - Microsoft Cloud Adoption Framework for Azure
-  - name: Mission domain
+  - name: Command domain
     items:
     - name: Strategy
       href: strategy.md
@@ -16,7 +16,7 @@ items:
         href: ready.md
       - name: Govern
         href: govern.md
-  - name: Workload domain
+  - name: Mission domain
     items:
       - name: Adopt
         href: adopt.md
