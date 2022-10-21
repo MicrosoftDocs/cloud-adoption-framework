@@ -15,13 +15,13 @@ This article is intended to help organizations implement a consistent monitoring
 
 We call this *adoption*.
 
+While observability and monitoring complement each other, there is a notable distinction. Monitoring collects information and informs you that it detected an issue based on you configuring it to monitor for those conditions. Simply stated, you're monitoring for known or predictable failures. Observability is focused on combing through all the data collected by your monitoring tool(s) and looking for opportunities to understand the behavior of those systems. In turn, you use that knowledge to further tune monitoring to detect these symptoms or conditions.
+
 The goal of this article is to take the [monitoring strategy](../../strategy/monitoring-strategy.md) recommendations, and create a monitoring plan to support the goal of modernizing and evolving your organizations IT operations strategy. The second goal is to drive operational maturity by being observant and constantly iterating to improve how you monitor those services.
 
 > [!NOTE]
 > In this article, a *monitoring solution* is the unit of production doing the monitoring of a service in the cloud, and a *monitoring target* is the service or thing that is being monitored. A monitoring solution encompasses all aspects of monitoring: the tool, the monitoring data, alerts, type of response, recovery actions, type of visualization, role-based access, and so on.
 
-While observability and monitoring complement each other, there is a notable distinction. Monitoring collects information and informs you that it detected an issue based on you configuring it to monitor for those conditions. Simply stated, you're monitoring for known or predictable failures. Observability is focused on combing through all the data collected by your monitoring tool(s) and looking for opportunities to understand the behavior of those systems. In turn, you use that knowledge to further tune monitoring to detect these symptoms or conditions.
-  
 ## Terminology
 
 Before we go into details on observability, we need to highlight several monitoring-related terms we'll be using:
