@@ -186,7 +186,7 @@ As part of the learning cycle, you'll get monitoring data and insights into the 
 
 The DIKW model is often used for learning. Actions and decisions move from *data* to *information*, *knowledge*, and *wisdom*.
 
-![Chart that shows monitoring and control strategy principles and modes.](./media/monitoring-strategy/monitoring-and-control-disciplines.png)
+![Chart that shows monitoring and control strategy principles and modes.](../manage/monitor/media/observability/monitoring-and-control-disciplines.png)
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these five disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
