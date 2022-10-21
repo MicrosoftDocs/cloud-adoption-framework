@@ -18,9 +18,9 @@ The [Ready methodology](../../ready/index.md) of the Microsoft Azure Cloud Adopt
 
 When preparing any environment for sustained cloud adoption, we use the Azure landing zones conceptual architecture to represent what a target end state should look like in Azure. For HPC, we have included multiple conceptual architecture references based on the three industries that the cloud adoption framework currently addresses.
 
-- [Energy (Oil & Gas)](./compute.md#use-case-and-reference-architecture-for-seismic-processing)
-- [Finance](.azure-hpc-landing-zone-accelator.md#example-conceptual-energy-reference-architecture)
-- [Manufacturing](./azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
+- [Energy (Oil & Gas)](../azure-hpc/energy/compute.md#use-case-and-reference-architecture-for-seismic-processing)
+- [Finance](../azure-hpc/azure-hpc-landing-zone-accelator.md#example-conceptual-energy-reference-architecture)
+- [Manufacturing](../azure-hpc/azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
 
 When developing a long-term vision for landing zones, consider the designs above. Note that these references will act as a starting point, and based on your organization's business requirements and end-user needs, you may have to modify these as required.
 
@@ -50,12 +50,6 @@ The [Azure HPC OnDemand Platform Accelerator](https://azure.github.io/az-hop/) d
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Plan for HPC](./plan.md)
-- [Govern HPC](./govern.md)
-- [Secure HPC](./secure.md)
-- [Organize team members for HPC in Azure](./organize.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
+	- After preparing your HPC environment for planned cloud changes, determine if [migrating or modernizing](../../adopt/migrate-or-modernize.md) is the best approach for your HPC workloads.
+	- Review the [HPC migration](./migrate.md) framework.
+ - Review the [HPC modernization](./modernize.md) framework.
