@@ -1560,10 +1560,10 @@ items:
         items:
         - name: Overview of deployment acceleration
           href: govern/deployment-acceleration/index.md
-        - name: Visibility in deployments
-          href: govern/deployment-acceleration/visibility-in-deployment.md
-        - name: Consistency and repeatability
-          href: govern/deployment-acceleration/consistency-repeatability.md
+        - name: Consistency and repeatability in deployments
+          href: govern/deployment-acceleration/deployment-consistency-repeatability.md
+        - name: Policy visibility in deployments
+          href: govern/deployment-acceleration/policy-visibility-in-deployment.md
     - name: Govern antipatterns
       href: antipatterns/govern-antipatterns.md
 
