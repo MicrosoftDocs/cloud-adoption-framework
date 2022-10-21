@@ -23,7 +23,7 @@ You should implement policy compliance checks in DevOps pipelines at the beginni
 Use the following resources as a guide to implement compliance checks within your deployment pipelines.
 
 - [Implement Azure Policy as Code with GitHub](/azure/governance/policy/tutorials/policy-as-code-github)
-- [Implement Azure Policy with Azure DevOps release pipelines](/azure/governance/policy/tutorials/policy-devops-pipelines?view=azure-devops&viewFallbackFrom=azure-devops%2F)
+- [Implement Azure Policy with Azure DevOps release pipelines](/azure/governance/policy/tutorials/policy-devops-pipelines)
 - Use the [GitHub Action for Azure Policy Compliance Scan](https://github.com/marketplace/actions/azure-policy-compliance-scan) to continue or fail the workflow based on the compliance state of resources.
 
 ## Auditing
