@@ -33,25 +33,23 @@ Cloud brokers provided the following benefits:
 
 Let's address each of these benefits:
 
-**(1) Governed landing zone** - The services, solutions, and workloads hosted in a defense environment require governed architecture. Cloud brokers build and maintain governed architectures that meet compliance requirements. These governed architectures are referred to as landing zones. Landing zone build features design decisions that include the following disciplines:
+**(1) Governed platform landing zone** - The services, solutions, and workloads hosted in a defense environment require governed environments. Cloud brokers build and maintain governed environments that meet compliance requirements. These environments are comprised of multiple landing zones. A landing zone includes all the foundational components defense workloads needed for secure, reliable, and cost-effective cloud operations. There are two types of landing zones in a defense environment: platform landing zone and workload landing zone.
+
+- The platform landing zone provides core services used by multiple workloads.
+- The workload environments are for workloads and application. The red box outlines the workload landing zone.
+
+:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." border="false":::
+*Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
+
+Without a cloud broker mission owner would be responsible for the workload landing zone and platform landing zone. Cloud brokers take technical responsibility for the core services in the platform landing zone. With a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives.
+
+Landing zone build features design decisions that include the following disciplines:
 
 - Cost Management
 - Security Baseline Management
 - Identity Baseline Management
 - Resources Consistency
 - Deployment Acceleration
-
-A landing zone includes all the foundational components defense workloads needed for secure, reliable, and cost-effective cloud operations. Below is a generalized landing zone architecture for defense scenarios. We recommend using subscriptions to demarcate service and workload environments.
-
-:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." border="false":::
-*Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
-
-Landing zone components can be divided into two major categories: platform environments and workload environments.
-
-- The platform environments provide core services used by multiple workloads. Cloud brokers build and manage the platform environments.
-- The workload environments are for workloads and application. The red box in the image above outlines an application landing zone.
-
-Without a cloud broker mission owner would be responsible for the entire architecture and core services. Cloud brokers take technical responsibility for the core services. With a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives.
 
 For more information, see [platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
 
