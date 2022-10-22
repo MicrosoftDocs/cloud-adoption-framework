@@ -3,7 +3,7 @@ title: Rehost an application by migrating it to Azure VMs and SQL Server Always 
 description: Learn how Contoso rehosts an on-premises application by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: deltadan
 ms.author: abuck
-ms.date: 10/20/2022
+ms.date: 10/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -144,8 +144,11 @@ To set up the cluster, the Contoso admin:
     - Name the first VM: `SQLAOG1`.
     - Select the primary region of `East US 2`.
     - Choose **Availability zone** from **Availability options**.
-    - Select zones 1 and 2, which automatically creates a second VM with the name of `SQLAOG2`.
-    - Specify the machine credentials under Administrator account.
+    - Select **Zone 1** and **Zone 2** under **Availability zone**. Choosing the zones automatically creates a second VM with the name of `SQLAOG2`.
+    - Specify the machine credentials under **Administrator account**.
+    - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
+
+   ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
 1. In **Size**, they start with `D2S v3` instances for both VMs. They can scale later as needed.
 1. In **Disks**, they enable SSD for the VM disk type, because these machines are business-critical.
@@ -155,9 +158,6 @@ To set up the cluster, the Contoso admin:
 1. In **Networking**, they:
 
     - Place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
-    - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
-
-      ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
 1. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, they use the same credentials as they use on-site (`contosoadmin`).
 
