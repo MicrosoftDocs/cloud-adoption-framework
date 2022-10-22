@@ -24,7 +24,7 @@ Follow the principle of least privilege by using role-based access control (RBAC
 - [Azure AD Single Sign-On (SSO) integration with GitHub Enterprise Cloud](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
 - [Azure DevOps security best practices](/azure/devops/organizations/security/security-best-practices)
 
-After you establish Azure AD as your identity management plane, follow best practices to manage Azure DevOps role assignments with [Azure AD group memberships](/azure/cloud-adoption-framework/secure/best-practices/end-to-end-governance#single-identity-management-plane-with-azure-ad-groups). You can [assign Azure DevOps roles to Azure AD groups](/azure/cloud-adoption-framework/secure/best-practices/end-to-end-governance#mirror-rbac-model-with-role-assignments), and adjust a user's Azure AD membership to change or remove their Azure DevOps access.
+After you establish Azure AD as your identity management plane, follow best practices to manage Azure DevOps role assignments with [Azure AD group memberships](../../secure/best-practices/end-to-end-governance.md#single-identity-management-plane-with-azure-ad-groups). You can [assign Azure DevOps roles to Azure AD groups](../../secure/best-practices/end-to-end-governance.md#mirror-rbac-model-with-role-assignments), and adjust a user's Azure AD membership to change or remove their Azure DevOps access.
 
 - Use Azure AD [entitlement management](/azure/active-directory/governance/entitlement-management-overview) to create access packages that allow Azure AD users time-bound access to required resources to complete their tasks.
 
@@ -56,7 +56,7 @@ Whenever possible, use a [service connection](/azure/devops/pipelines/library/se
 
 ## Use a secret store
 
-Never hard-code secrets in code or auxiliary documentation in your repositories. Adversaries scan repositories, searching for exposed confidential data to exploit. Set up a secret store such as [Azure Key Vault](/azure/key-vault/general/basic-concepts), and reference the store in Azure Pipelines to securely retrieve keys, secrets, or certificates. For more information, see [Secure the pipeline and CI/CD workflow](/azure/cloud-adoption-framework/secure/best-practices/secure-devops). You can also [use Key Vault secrets in GitHub Actions workflows](/azure/developer/github/github-key-vault).
+Never hard-code secrets in code or auxiliary documentation in your repositories. Adversaries scan repositories, searching for exposed confidential data to exploit. Set up a secret store such as [Azure Key Vault](/azure/key-vault/general/basic-concepts), and reference the store in Azure Pipelines to securely retrieve keys, secrets, or certificates. For more information, see [Secure the pipeline and CI/CD workflow](../../secure/best-practices/secure-devops.md). You can also [use Key Vault secrets in GitHub Actions workflows](/azure/developer/github/github-key-vault).
 
 ## Use hardened DevOps workstations to build and deploy code
 
@@ -66,7 +66,7 @@ Use hardened [secure admin workstations (SAWs)](https://www.microsoft.com/inside
 
 ## Do security scanning and testing
 
-Whether you deploy application code or infrastructure as code, implement [DevSecOps best practices and controls](/azure/cloud-adoption-framework/secure/devsecops-controls) in your pipelines. Integrate security early in your CI/CD journey to prevent costly security breaches later on. Create a strategy to implement static code analysis, unit testing, secret scanning, and package/dependency scanning in your pipelines.
+Whether you deploy application code or infrastructure as code, implement [DevSecOps best practices and controls](../../secure/devsecops-controls.md) in your pipelines. Integrate security early in your CI/CD journey to prevent costly security breaches later on. Create a strategy to implement static code analysis, unit testing, secret scanning, and package/dependency scanning in your pipelines.
 
 Enterprise security tools such as [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) can integrate with DevOps tools. For example, Defender for Cloud can [identify vulnerable container images in your CI/CD workflows](/azure/defender-for-cloud/defender-for-container-registries-cicd). For GitHub Actions and repositories, use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) for code and secret scanning and dependency review.
 

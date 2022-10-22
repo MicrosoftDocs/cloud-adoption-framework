@@ -14,7 +14,7 @@ ms.custom: internal
 
 This article provides design considerations and recommendations for governance when using the Azure App Service landing zone accelerator. Azure governance establishes the tooling needed to support cloud governance, compliance auditing, and automated guardrails.
 
-Learn more about the [Azure governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) design area.
+Learn more about the [Azure governance](../../../ready/landing-zone/design-area/governance.md) design area.
 
 ## Design considerations
 

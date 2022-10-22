@@ -20,7 +20,7 @@ Below we provide an overview of this guidance with links to the details.
 
 ## Methodology
 
-Understand the pieces of the methodology and how they fit into the design as an ongoing exercise. Evaluate corporate policies and processes and how they will align with the overall governance strategy of your existing deployment. For more information about the govern methodology in the Cloud Adoption Framework, see [Governance in the Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/govern/).
+Understand the pieces of the methodology and how they fit into the design as an ongoing exercise. Evaluate corporate policies and processes and how they will align with the overall governance strategy of your existing deployment. For more information about the govern methodology in the Cloud Adoption Framework, see [Governance in the Microsoft Cloud Adoption Framework for Azure](../../govern/index.md).
 
 ## Benchmark
 
@@ -34,7 +34,7 @@ During your cloud adopting plan implementation, risks will emerge from approache
 
 The following is additional guidance that can be used when risks surface during your ongoing cloud adoption and implementation:
 
-- [Maturity vectors](/azure/cloud-adoption-framework/govern/foundation-improvements#maturity-vectors): Best practices that can be applied to the initial governance foundation to address a risk or need.
+- [Maturity vectors](../../govern/foundation-improvements.md#maturity-vectors): Best practices that can be applied to the initial governance foundation to address a risk or need.
 
 ## Governance considerations
 
@@ -42,27 +42,27 @@ Changes to business processes or technology platforms introduce risk to the busi
 
 The guidance in the following examples can help to develop your corporate policies.
 
-- [Business risk](/azure/cloud-adoption-framework/govern/policy-compliance/business-risk): Investigate current cloud adoption plans and data classification to identify risks to the business. Work with the business to balance risk tolerance and mitigation costs.
+- [Business risk](../../govern/policy-compliance/business-risk.md): Investigate current cloud adoption plans and data classification to identify risks to the business. Work with the business to balance risk tolerance and mitigation costs.
 
-- [Policy and compliance](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition): Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and manage risks. In some industries, third-party compliance affects initial policy creation.
+- [Policy and compliance](../../govern/policy-compliance/policy-definition.md): Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and manage risks. In some industries, third-party compliance affects initial policy creation.
 
-- [Processes](/azure/cloud-adoption-framework/govern/policy-compliance/processes): The pace of adoption and innovation activities will naturally create policy violations. Executing relevant processes will aid in monitoring and enforcing adherence to policies.
+- [Processes](../../govern/policy-compliance/processes.md): The pace of adoption and innovation activities will naturally create policy violations. Executing relevant processes will aid in monitoring and enforcing adherence to policies.
 
 ## Disciplines of Cloud Governance
 
 There are common governance disciplines that inform policies and align toolchains with any cloud platform. The disciplines guide decisions about the level of automation and enforcement of corporate policy across cloud platforms.
 
-The following is additional guidance on the [Five Disciplines of Cloud Governance](/azure/cloud-adoption-framework/govern/governance-disciplines#disciplines-of-cloud-governance).
+The following is additional guidance on the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md#disciplines-of-cloud-governance).
 
-- [Cost Management](/azure/cloud-adoption-framework/govern/cost-management/): Cost is a primary concern for cloud adoption. Develop policies for cost control for all cloud platforms.
+- [Cost Management](../../govern/cost-management/index.md): Cost is a primary concern for cloud adoption. Develop policies for cost control for all cloud platforms.
 
-- [Security Baseline](/azure/cloud-adoption-framework/govern/security-baseline/): Security is a complex subject, unique to each company. Once security requirements are established, cloud governance policies and enforcement apply those requirements across network, data, and asset configurations.
+- [Security Baseline](../../govern/security-baseline/index.md): Security is a complex subject, unique to each company. Once security requirements are established, cloud governance policies and enforcement apply those requirements across network, data, and asset configurations.
 
-- [Identity Baseline](/azure/cloud-adoption-framework/govern/identity-baseline/): Inconsistencies in the application of identity requirements can increase the risk of breach. The Identity Baseline discipline focuses on ensuring that identity is consistently applied across cloud adoption efforts.
+- [Identity Baseline](../../govern/identity-baseline/index.md): Inconsistencies in the application of identity requirements can increase the risk of breach. The Identity Baseline discipline focuses on ensuring that identity is consistently applied across cloud adoption efforts.
 
-- [Resource Consistency](/azure/cloud-adoption-framework/govern/resource-consistency/): Cloud operations depend on consistent resource configuration. Through governance tooling, resources can be configured consistently to manage risks related to onboarding, drift, discoverability, and recovery.
+- [Resource Consistency](../../govern/resource-consistency/index.md): Cloud operations depend on consistent resource configuration. Through governance tooling, resources can be configured consistently to manage risks related to onboarding, drift, discoverability, and recovery.
 
-- [Deployment Acceleration](/azure/cloud-adoption-framework/govern/deployment-acceleration/): Centralization, standardization, and consistency in approaches to deployment and configuration improve governance practices. When provided through cloud-based governance tooling, they create a cloud factor that can accelerate deployment activities.
+- [Deployment Acceleration](../../govern/deployment-acceleration/index.md): Centralization, standardization, and consistency in approaches to deployment and configuration improve governance practices. When provided through cloud-based governance tooling, they create a cloud factor that can accelerate deployment activities.
 
 ## Landing zone governance best practices
 

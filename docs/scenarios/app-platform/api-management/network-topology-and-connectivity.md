@@ -14,7 +14,7 @@ ms.custom: internal
 
 This article provides design considerations and recommendations for network topology and connectivity when using the API Management landing zone accelerator. Networking is central to almost everything inside a landing zone. It enables connectivity to other Azure services, external users, and internal and external APIs.
 
-Learn more about the [network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) design area.
+Learn more about the [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) design area.
 
 ## Design considerations
 

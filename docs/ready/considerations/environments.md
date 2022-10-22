@@ -48,13 +48,13 @@ Apply the following considerations to both Azure Landing Zones and Azure Workloa
 
 ## Workloads
 
-To learn how to manage environments for Workloads refer to [Enterprise-scale FAQ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+To learn how to manage environments for Workloads refer to [Enterprise-scale FAQ](../enterprise-scale/faq.md).
 
 ## Azure Landing Zones
 
 Adopting multiple environments for an Azure Landing Zone deployment is common when a customer wants to test the effects and results of new Azure Policy Assignments, Azure RBAC role assignments, Azure AD group memberships, Azure resources' creation, and more.
 
-[Testing approach for enterprise-scale](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) describes two different adoption approaches:
+[Testing approach for enterprise-scale](../enterprise-scale/testing-approach.md) describes two different adoption approaches:
 
 - Replication of management group hierarchy in Canary and Production environment
 - Sandbox subscriptions
