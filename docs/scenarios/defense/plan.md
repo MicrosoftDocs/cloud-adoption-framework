@@ -41,9 +41,9 @@ Let's address each of these benefits:
 :::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." border="false":::
 *Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
 
-Without a cloud broker mission owner would be responsible for the workload landing zone and platform landing zone. Cloud brokers take technical responsibility for the core services in the platform landing zone. With a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives.
+Without a cloud broker, mission owners would be responsible for the workload landing zone and platform landing zone. But with a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives. Cloud brokers bear the technical responsibility for the core services in the platform landing zone.
 
-Landing zone build features design decisions that include the following disciplines:
+Platform landing zones feature design decisions that include the following disciplines:
 
 - Cost Management
 - Security Baseline Management
