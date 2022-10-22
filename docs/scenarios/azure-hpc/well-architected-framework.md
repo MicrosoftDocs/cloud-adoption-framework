@@ -54,7 +54,7 @@ Follow the best practices to enable security for [Azure CycleCloud](/azure/cycle
 
 ## Cost optimization
 
-To make the most out of running you environment in Azure, you must first prioritize cost management and upfront planning exercises. These are the most pivotal for a successful cloud migration and journey for almost any organization. [Azure Cost Management](azure/cost-management-billing) gives you the tools to plan for, analyze and reduce your spending to maximize your cloud investment. An extensive list of ways you can optimize and plan your cloud spent can be found [here](/azure/cost-management-billing/costs/cost-mgt-best-practices) But, for the purposes of discussion, let’s call out a few important ones
+To make the most out of running you environment in Azure, you must first prioritize cost management and upfront planning exercises. These are the most pivotal for a successful cloud migration and journey for almost any organization. [Azure Cost Management](/azure/cost-management-billing) gives you the tools to plan for, analyze and reduce your spending to maximize your cloud investment. An extensive list of ways you can optimize and plan your cloud spent can be found [here](/azure/cost-management-billing/costs/cost-mgt-best-practices) But, for the purposes of discussion, let’s call out a few important ones
 here:
 
 The following measures would be helpful in cost optimization of the HPC workloads
