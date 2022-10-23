@@ -30,7 +30,7 @@ When this function is properly structured and supported, the participants can ac
 
 When successful, a CCoE model creates a significant shift in IT. In a CCoE approach, IT serves as a broker, partner, or representative to the business. This model is a paradigm shift away from the traditional view of IT as an operations unit or abstraction layer between the business and IT assets.
 
-The following image provides an analogy for this change. Without a CCoE approach, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. When the CCoE is successful, IT's role resembles a roundabout at an intersection where the focus is on freedom and delegated responsibility.
+The following image provides an analogy (Author:Paul Fijnvandraat) for this change. Without a CCoE approach, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. When the CCoE is successful, IT's role resembles a roundabout at an intersection where the focus is on freedom and delegated responsibility.
 
 ![Diagram that shows an analogy for a C C o E paradigm shift.](../_images/ready/ccoe-paradigm-shift.png)
 
@@ -43,7 +43,7 @@ The primary duty of the CCoE team is to accelerate cloud adoption through cloud-
 The objective of the CCoE is to:
 
 - Help build a modern IT organization by using agile approaches to capture and implement business requirements.
-- Use reusable deployment packages that align with security, compliance, and management policies.
+- Create, share and use reusable deployment automation artefacts that align with security, compliance, and management policies (preferably via inner-source)
 - Maintain a functional Azure platform in alignment with operational procedures.
 - Review and approve the use of cloud-native tools.
 - Standardize and automate commonly needed platform components and solutions over time.
