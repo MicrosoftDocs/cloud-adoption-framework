@@ -30,7 +30,7 @@ A reduced data center footprint is another benefit of a shift to the cloud. On-p
 
 ## Increased productivity and service delivery
 
-How can the cloud help your team be more productive? It's critical to consider how DevOps the cloud can improve and drive efficiency in your organization. The cloud can help unlock better DevOps processes, resulting in faster time to market, increased revenue, increased employee productivity, and the ability to deploy products more quickly.
+How can the cloud help your team be more productive? It's critical to consider how DevOps and the cloud can improve and drive efficiency in your organization. The cloud can help unlock better DevOps processes, resulting in faster time to market, increased revenue, increased employee productivity, and the ability to deploy products more quickly.
 
 ## Sustainability
 

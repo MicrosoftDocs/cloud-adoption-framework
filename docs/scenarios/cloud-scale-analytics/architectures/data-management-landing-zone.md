@@ -32,7 +32,7 @@ Use this architecture as a starting point. Download the [Visio file](https://www
 
 [!INCLUDE [data-catalog](../../cloud-scale-analytics/includes/data-catalog.md)]
 
-For more information, see [Data catalog](../../cloud-scale-analytics/govern-data-catalog.md) and [Azure Purview deployment best practices for cloud-scale analytics](../best-practices/purview-deployment.md).
+For more information, see [Data catalog](../../cloud-scale-analytics/govern-data-catalog.md) and [Microsoft Purview deployment best practices for cloud-scale analytics](../best-practices/purview-deployment.md).
 
 ## Data quality management
 
