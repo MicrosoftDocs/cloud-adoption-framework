@@ -12,6 +12,8 @@ ms.custom: internal
 
 # Get started: Build a cloud adoption team
 
+Enterprises employ cloud adoption as a method to increase the flexibility of their services while lowering cost and risk. Companies do this by using cloud computing which allows them to store, manage and process large amount of data on remote computers housed in the internet
+
 Cloud adoption teams are the modern-day equivalent of technical implementation teams or project teams. The nature of the cloud might require more fluid team structures.
 
 Some cloud adoption teams focus exclusively on cloud migration, and others focus on innovations that take advantage of cloud technologies. Some teams include the broad technical expertise that's required to complete large adoption efforts, such as a full datacenter migration, and others have a tighter technical focus.
