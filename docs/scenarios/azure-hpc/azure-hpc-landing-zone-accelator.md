@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Azure high-performance computing (HPC) landing zone accelerator
 
-The HPC  landing zone accelerator is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting HPC. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+The HPC  landing zone accelerator is an open-source collection of scripts & templates that you can use to automate the deployment of an environment that can provide you a base framework on which you can make further customizations to suit your business needs. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
 
 Customers adopt HPC in various ways. The  landing zone accelerator can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
@@ -23,7 +23,7 @@ The HPC  landing zone accelerator assumes that an enterprise-scale landing zone 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
-## What the AKS  landing zone accelerator provides
+## What the HPC landing zone accelerator provides
 
 The  landing zone accelerator approach to landing zones provides these assets to support your project:
 
