@@ -31,7 +31,7 @@ When it comes to security and compliance, Microsoft is continually expanding our
 
 ### Capacity optimization
 
-Capacity optimization, where you only for the resources you utilize over time, is another technical benefit of the cloud. The core concept to consider is how elasticity and on-demand resources help you deploy, provision, or deprovision resources more dynamically.
+Capacity optimization, where you pay only for the resources you use over time, is another technical benefit of the cloud. The core concept to consider is how elasticity and on-demand resources help you deploy, provision, or deprovision resources more dynamically.
 
 ## Get the most out of your investment
 
