@@ -3,6 +3,7 @@ title: 'Manufacturing HPC Network topology and connectivity | Microsoft Docs'
 description: 'This guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
