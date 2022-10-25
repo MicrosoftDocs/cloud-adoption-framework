@@ -156,7 +156,7 @@ Azure Spatial Anchors enables developers to work with mixed-reality platforms to
 
 **Add context to the real world:** Give your users a better understanding of their data, where they need it, and when they need it by placing and connecting your digital content to physical points of interest.
 
-**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
+**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial Anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
 
 **Engaging experiences:** Connect spatial anchors by creating relationships between them, and deliver a user experience that might include two or more points of interest that a user must interact with to complete a task. Your application can let a user place a virtual artifact in the real world. In an industrial setting, a user could receive contextual information about a machine by pointing a supported device camera at it.
 
