@@ -22,7 +22,7 @@ items:
         - name: Compute
           href: energy/compute.md
         - name: Storage
-          href: energy/starage.md
+          href: energy/storage.md
         - name: Resource organization
           href: energy/resource-organization.md
         - name: Security
