@@ -7,7 +7,9 @@ ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom:
+  - internal
+  - engagement-fy23
 ---
 
 <!-- docutune:ignore "CAF Foundation blueprint" -->
