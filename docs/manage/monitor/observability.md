@@ -176,7 +176,7 @@ Again, cloud service monitoring is much more flexible and dynamical with faster 
 
 You create a monitoring plan to describe the goals and objectives, requirements, and other important details. Then work to solicit an agreement between all of the relevant stakeholders in the organization. A monitoring plan should explain how to develop and operate one or more monitoring solutions. Begin develop your monitoring plans early during the strategy and planning phases of the project.
 
-While creating the plan, it's important to keep in mind the five disciplines of modern monitoring: observe, measure, respond, learn, and improve.
+While creating the plan, it's important to keep in mind the five disciplines of modern monitoring: monitor, measure, respond, learn, and improve.
 
 The following provides a recommended outline and are considered to be the primary considerations for an individual plan for services or when standardizing cloud service features such as Azure resource types or Microsoft 365 services. The essence of the plan is to define the line of visibility between service provider (who will field solutions) and consumers (who will operate or derive value).
 
