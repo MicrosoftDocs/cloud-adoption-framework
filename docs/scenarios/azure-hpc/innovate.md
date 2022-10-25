@@ -29,14 +29,14 @@ When adopting HPC to the cloud, machine learning in Azure enables quick and easy
 As you adopt your HPC environment to the cloud, consider how your defined innovation will impact the five [digital invention disciplines](../../innovate/index.md#innovation-summary):
 
 - **Democratize data**: For delegating access to your HPC environment's digital information, you can manage specific access on [Batch](/azure/batch/public-network-access) or [CycleCloud](/azure/cyclecloud/concepts/user-management) users. Depending on which other Azure services used in your environment, refer each HPC supported technology choice's [documentation](/azure/architecture/guide/technology-choices/compute-decision-tree#understand-the-basic-features) on access management.
-- **Engage via apps**: When modernizing your existing on-premise applications with cloud-native tooling, consider the available custom or commercial HPC applications in the Azure marketplace.
+- **Engage via apps**: When modernizing your existing on-premises applications with cloud-native tooling, consider the available custom or commercial HPC applications in the Azure Marketplace.
 - **Empower adoption (DevOps) processes**: Drive constant value generation for your HPC environment by supporting your developers with desire to accelerate digital transformation. Follow the [Azure HPC](https://github.com/Azure/azurehpc) GitHub repo to follow and collaborate on simplifying deployment and setup for HPC environments in Azure.  
-- **Device interactions**: While HPC in Azure doesn't have specific guidance for innovating Internet of things (IoT), you can refer to the overview of [IoT reference architectures](/azure/architecture/reference-architectures/iot/industry-iot-hub-page) for more information.
+- **Device interactions**: While HPC in Azure doesn't have specific guidance for innovating Internet of things (IoT), you can refer to the overview of [IoT reference architectures](/azure/architecture/reference-architectures/iot/industry-iot-hub-page).
 - **Predict & influence (ML/AI)**: Innovate with AI in Azure HPC by training with [CNTK or configure Batch Shipyard recipes](/azure/architecture/topics/high-performance-computing#ai-and-deep-learning).
 
 ## Next steps
 
 - After innovating your HPC environment for your cloud adoption journey, look into implementing best [security](./secure.md) practices.
-- For more information on Azure Batch, refer to the [Batch documentation](/azure/batch/).
-- For more details on CycleCloud, refer to the [CycleCloud documentation](/azure/cyclecloud/overview).
-- Check out the [application solutions](/azure/architecture/topics/high-performance-computing#marketplace-solutions) available in the Azure marketplace.
+- For more information on Azure Batch, see the [Batch documentation](/azure/batch/).
+- For more details on CycleCloud, see the [CycleCloud documentation](/azure/cyclecloud/overview).
+- Check out the [application solutions](/azure/architecture/topics/high-performance-computing#marketplace-solutions) available in the Azure Marketplace.
