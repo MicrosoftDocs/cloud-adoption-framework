@@ -108,4 +108,4 @@ Learn more and download a reference sample of the CAF Foundation blueprint for d
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample](/azure/governance/blueprints/samples/caf-foundation/deploy)
 
-When you're ready to exand this foundation into your your first landing zone, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md).
+When you're ready to exand this foundation into your first landing zone, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md).
