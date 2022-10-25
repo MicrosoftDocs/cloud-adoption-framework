@@ -124,7 +124,7 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 **Spatial operations:** Enhance your location intelligence with a library of common geospatial mathematical calculations, including geofencing, closest point, great circle distance, and buffers.
 
-**Geolocation:** Look up the country of an IP address. Customize content and services based on user location, and gain insight on customer geographic distribution.
+**Geolocation:** Look up the country/region of an IP address. Customize content and services based on user location, and gain insight on customer geographic distribution.
 
 ::: zone target="docs"
 
