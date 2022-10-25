@@ -149,6 +149,6 @@ The following list of articles will take you to guidance found at specific point
 - [Resource Organization](./resource-organization.md)
 - [Security Governance Compliance](./security-governance-compliance.md)
 - [Security](./security.md)
-- [Storage](./starage.md)
+- [Storage](./storage.md)
 - Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
 
