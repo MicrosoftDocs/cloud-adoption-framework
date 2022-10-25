@@ -38,4 +38,4 @@ When configuring your HPC environment to the cloud, you'll want to consider fore
 
 - Start [planning](./plan.md) your cloud adoption journey for your HPC environment.
 - [Classify](../../strategy/motivations.md#classify-your-motivations) your motivations for your cloud adoption strategy
-- Check out what accelerating [HPC in the cloud](https://azure.microsoft.com/en-us/resources/accelerating-ai-and-hpc-in-the-cloud/) looks like.
+- Check out what accelerating [HPC in the cloud](https://azure.microsoft.com/resources/accelerating-ai-and-hpc-in-the-cloud/) looks like.
