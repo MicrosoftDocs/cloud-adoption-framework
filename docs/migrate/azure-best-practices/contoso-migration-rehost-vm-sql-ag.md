@@ -3,7 +3,7 @@ title: Rehost an application by migrating it to Azure VMs and SQL Server Always 
 description: Learn how Contoso rehosts an on-premises application by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: deltadan
 ms.author: abuck
-ms.date: 10/21/2022
+ms.date: 10/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -146,20 +146,21 @@ To set up the cluster, the Contoso admin:
     - Choose **Availability zone** from **Availability options**.
     - Select **Zone 1** and **Zone 2** under **Availability zone**. Choosing the zones automatically creates a second VM with the name of `SQLAOG2`.
     - Specify the machine credentials under **Administrator account**.
-    - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
-
-   ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
+    <!--- - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains. Note to FTE author: This bullet step from the original article that used to be under the Networking step below no longer works if one is creating two VMs at once. I replaced the screenshot anyway in case you need it when doing a deeper edit on this content.
+   ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png) -->
 
 1. In **Size**, they start with `D2S v3` instances for both VMs. They can scale later as needed.
 1. In **Disks**, they enable SSD for the VM disk type, because these machines are business-critical.
 
-   - They also use managed disks because these VMs are critical databases for the application.
+   - They also use managed disks because these VMs are critical databases for the application and using the Availability zone option requires it.
 
 1. In **Networking**, they:
 
-    - Place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+    - Place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`). 
+    - They create an internal load balancer (`ILB-PROD-DB-EUS2-SQLAOG`) that listens for traffic and directs it to the appropriate node.
+     ![Screenshot that shows a new load balancer.](./media/contoso-migration-rehost-vm-sql-ag/load-balancer-settings.png)
 
-1. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, they use the same credentials as they use on-site (`contosoadmin`).
+1. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, they use the same credentials as the on-site credentials (`contosoadmin`).
 
     ![Screenshot that shows SQL Server settings.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-db.png)
 
@@ -234,7 +235,7 @@ The Contoso admin can now enable Always On availability groups:
 
 1. They restart the service for changes to take effect.
 
-With Always On availability groups enabled, Contoso can set up the Always On availability group that protect the `SmartHotel360` database.
+With Always On availability groups enabled, Contoso can set up the Always On availability group that protects the `SmartHotel360` database.
 
 **Learn more**
 
@@ -244,20 +245,20 @@ With Always On availability groups enabled, Contoso can set up the Always On ava
 
 ## Step 3: Deploy Azure Load Balancer
 
-The Contoso admin must now deploy an internal load balancer that sits in front of the cluster nodes. The load balancer listens for traffic and directs it to the appropriate node.
+The Contoso admin must now deploy the internal load balancer they created (`ILB-PROD-DB-EUS2-SQLAOG`) when setting up the VMs. The load balancer sits in front of the cluster nodes, listens for traffic, and directs traffic to the appropriate node.
 
 ![Diagram that shows load balancing.](./media/contoso-migration-rehost-vm-sql-ag/architecture-lb.png)
 
-To create the load balancer, the Contoso admin:
+To deploy the load balancer, the Contoso admin:
 
-1. Opens the Azure portal and goes to **Networking** > **Load balancer**, to set up a new internal load balancer: `ILB-PROD-DB-EUS2-SQLAOG`.
-1. Places the load balancer in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`).
-1. Assigns it a static IP address (`10.245.40.100`).
-1. Deploys the load balancer as a networking element in the networking resource group `ContosoNetworkingRG`.
+1. Opens **Networking** > **Load balancing**, in Azure portal. 
+1. Places the (`ILB-PROD-DB-EUS2-SQLAOG`) load balancer in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`). <!---This step does not work. The UI doesn't show this ability.-->
+1. Assigns it a static IP address (`10.245.40.100`). <!---This step does not work. The UI doesn't show this ability.-->
+1. Deploys the load balancer as a networking element in the networking resource group `ContosoNetworkingRG`. <!---This step does not work. The UI doesn't show this ability.-->
 
     ![Screenshot that shows the **Create load balancer** pane.](./media/contoso-migration-rehost-vm-sql-ag/lb-create.png)
 
-After the admin deploys the internal load balancer, they need to set it up. They create a back-end address pool, set up a health probe, and configure a load-balancing rule.
+After the admin deploys the internal load balancer, they need to create a back-end address pool, set up a health probe, and configure a load-balancing rule.
 
 ### Add a back-end pool
 
