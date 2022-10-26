@@ -6,6 +6,7 @@ ms.author: rajanaki
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
+ms.topic: conceptual
 ms.date: 09/23/2022
 ---
 
