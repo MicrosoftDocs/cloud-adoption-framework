@@ -29,7 +29,7 @@ One benefit of moving to the cloud is that it shifts how you pay for capacity, f
 
 ## Reduced data center footprint
 
-A reduced data center footprint is another benefit of a shift to the cloud. On-premises data centers are frequently overbuilt for peaks, resulting in excess capacity and excess spend. In the cloud, you can spin up resources quickly with the flexibility of scalability, where you can scale up and down as needed. Azure operates in many different geographic regions, giving you flexibility to choose where to build your applications. Amortized facilities or co-lo or hosting agreements that you that you have in place are no longer required.
+A reduced data center footprint is another benefit of a shift to the cloud. On-premises data centers are frequently overbuilt for peaks, resulting in excess capacity and excess spend. In the cloud, you can spin up resources quickly with the flexibility of scalability, where you can scale up and down as needed. Azure operates in many different geographic regions, giving you flexibility to choose where to build your applications. Amortized facilities or co-lo or hosting agreements that you have in place are no longer required.
 
 ## Increased productivity and service delivery
 
