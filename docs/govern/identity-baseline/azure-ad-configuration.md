@@ -14,9 +14,19 @@ ms.custom: internal
 
 The architecture and configuration of Microsoft Azure Active Directory (Azure AD) is a key element in identity governance in the Azure cloud.  Azure AD is Azure's identity and authentication management service, and it acts as the foundation for other practices.
 
-This article provides guidance about using Azure AD as the centralized identity and authentication system for your applications. The article provides suggested configurations and guidance on enforcing and auditing those configurations.
+This article recommends using Azure AD as the centralized identity and authentication system for your applications. The article provides suggested configurations and guidance on enforcing and auditing those configurations.
+
+| Guidance | Enforce | Audit | Description |
+| --- | --- | ---| --- |
+| [Centralized identity and authentication](#guidance---centralized-identity-and-authentication-system) | enforce | [audit](#enforce---centralized-identity-and-authentication-system) | - |
+| [Default user permissions](#guidance---default-user-permissions) | [enforce](#enforce---default-user-permissions) | [audit](#enforce---default-user-permissions) | - |
+| [Password management](#guidance---password-management) | [enforce](#enforce---password-management) | [audit](#enforce---password-management) | - |
+| [Legacy authentication](#guidance---legacy-authentication) | [enforce](#enforce---legacy-authentication) | [audit](#enforce---legacy-authentication) | - |
+| [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | [enforce](#enforce---sign-in-and-user-risk-policies) | [audit](#enforce---sign-in-and-user-risk-policies) | - |
 
 ## Guidance - Centralized identity and authentication system
+
+Standardize on Azure AD as your organization's identity and authentication platform for Microsoft cloud resources, application, and organizational identities. In addition, you should synchronize Windows Server Active Directory identities to Azure AD to ensure centralized management.
 
 - Standardize on Azure AD as the central identity platform.
 - Use Azure AD for authentication for new applications.
@@ -29,9 +39,7 @@ N/A
 
 ## Audit - Centralized identity and authentication system
 
-Add a tag to virtual machines and Azure App Services called "IdentityProvider". Set the tag to the name of the identity provider. Use "AzureAD" for Azure AD,
-
-Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications.
+Add a tag to virtual machines and Azure App Services called "IdentityProvider". Set the tag to the name of the identity provider. Use "AzureAD" for Azure AD. Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications.
 
 ```bash
 resources
@@ -55,7 +63,7 @@ Maintain a configuration management database (CMDB) for applications and review 
   - Migration date
   - Migration steps
 
-## Guidance - Default User Permissions
+## Guidance - Default user permissions
 
 Restrict default user permissions to remove unneeded access granted in default settings.
 
@@ -67,9 +75,9 @@ Restrict default user permissions to remove unneeded access granted in default s
   - Guests have limited visibility in to the environment.
   - Guest invitations can only be sent to specific, pre-approved domain.
 
-## Enforce - Default User Permissions
+## Enforce - Default user permissions
 
-TODO: Should we suggest the use of [authorization policies](https://learn.microsoft.com/graph/api/resources/authorizationpolicy?view=graph-rest-1.0) for enforcement?
+TODO: Should we suggest the use of [authorization policies](https://learn.microsoft.com/graph/api/resources/authorizationpolicy) for enforcement?
 
 Configure the following Azure AD user settings:
 
@@ -82,21 +90,25 @@ Configure the following Azure AD user settings:
   - Set **Collaboration Restrictions** to **Allow invitations only to the specified domains (most restrictive)**.
   - Select the domains that you'll allow collaboration with.
 
-## Audit - Default User Permissions
+## Audit - Default user permissions
 
 TODO: Is there an automated way to review user settings in Azure AD? Graph query?
 
-## Guidance - password management
+## Guidance - Password management
 
-Enable self-service password reset and don't expire passwords. Enabling self-service eases the management of passwords. Expiring passwords leads users to creating weak and predictable passwords.
+Central management of password reset causes a management burden and can lead users to delay updating passwords. Expiring passwords leads users to creating weak and predictable passwords.
 
-## Enforce - password management
+- Enable self-service password reset.
+- Don't expire passwords.
 
-- Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr)
+## Enforce - Password management
+
+- Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr).
 - TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.
 
-## Audit - password management
+## Audit - Password management
 
+TODO: Is there a graph query to accomplish the same?
 Use the following Azure PowerShell code to audit the password expiry state.
 
 ```powershell
@@ -108,15 +120,19 @@ $passwordExpyAudit = $auditPath + "/password-expiration.csv"
 Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E={$_.PasswordPolicies -contains "DisablePasswordExpiration"}} | export-csv -path  $passwordExpyAudit
 ```
 
-## Guidance - legacy authentication
+## Guidance - Legacy authentication
 
-Disable legacy authentication to limit exposure to attacks. Many legacy authentication systems don't enforce multifactor authentication.
+Legacy authentication doesn't support multifactor authentication (MFA). MFA improves the security posture in organizations.
 
-## Enforce - legacy authentication
+- Determine if your organization currently supports legacy authentication.
+- Disable legacy authentication to limit exposure to attacks.
 
-Follow the guidance in [Directly blocking legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication#directly-blocking-legacy-authentication) to create a conditional access policy to block legacy authentication.
+## Enforce - Legacy authentication
 
-## Audit - legacy authentication
+- [Identify legacy authentication use](/azure/active-directory/conditional-access/block-legacy-authentication#identify-legacy-authentication-use)
+- Follow the guidance in [Directly blocking legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication#directly-blocking-legacy-authentication) to create a conditional access policy to block legacy authentication.
+
+## Audit - Legacy authentication
 
 TODO: Should we suggest creating an alert for changes to Conditional Access Policies such as the following query suggested in [geeksforgeeks blog post](https://www.geeksforgeeks.org/microsoft-azure-create-alert-for-conditional-access-policy-changes/):
 
@@ -130,9 +146,9 @@ TODO: Should we include guidance from sources like:
 
 [Troubleshooting Conditional Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log)
 
-## Guidance - sign-in and user risk policies
+## Guidance - Sign-in and user risk policies
 
-Enable sign in and user risk policies to enable you to measure and review risk scenarios.
+Enable sign-in and user risk policies to enable you to measure and review risk scenarios. These policies can be configured to require MFA or a password reset for risky users.
 
 - Follow the [guidance to configure and enable risk policies](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies)
 - Configure the user risk policy to:
@@ -140,11 +156,13 @@ Enable sign in and user risk policies to enable you to measure and review risk s
   - Require Azure AD MFA before the user can create a new password with Self-Service Password Reset to remediate their risk.
 - Configure the sign-in risk policy to require Azure AD multifactor authentication when sign-in risk level is medium or high.
 
-## Enforce - sign in and user risk policies
+## Enforce - Sign-in and user risk policies
 
 N/A
 
-## Audit - sign in and user risk policies
+## Audit - Sign-in and user risk policies
+
+Use the following resources to audit user risk and investigate past risky users.
 
 - Audit [user risk](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#risky-users) every three months.
 - Use the [investigation framework](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#investigation-framework) to investigate users that have had risks, and the details about the detections and risk history.

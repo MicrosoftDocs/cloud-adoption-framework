@@ -9,3 +9,5 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: internal
 ---
+
+# Business user access governance
