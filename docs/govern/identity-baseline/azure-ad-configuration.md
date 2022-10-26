@@ -14,7 +14,6 @@ ms.custom: internal
 
 The architecture and configuration of Microsoft Azure Active Directory (Azure AD) is a key element in identity governance in the Azure cloud.  Azure AD is Azure's identity and authentication management service, and it acts as the foundation for other practices.
 
-<<<<<<< HEAD
 This article recommends using Azure AD as the centralized identity and authentication system for your applications. The article provides suggested configurations and guidance on enforcing and auditing those configurations.
 
 | Guidance | Enforce | Audit |
@@ -30,12 +29,6 @@ This article recommends using Azure AD as the centralized identity and authentic
 
 Standardize on Azure AD as your organization's identity and authentication platform for Microsoft cloud resources, application, and organizational identities. In addition, you should synchronize Windows Server Active Directory identities to Azure AD to ensure centralized management.
 
-=======
-This article provides guidance about using Azure AD as the centralized identity and authentication system for your applications. The article provides suggested configurations and guidance on enforcing and auditing those configurations.
-
-## Guidance - Centralized identity and authentication system
-
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
 - Standardize on Azure AD as the central identity platform.
 - Use Azure AD for authentication for new applications.
 - Build a roadmap to migrate existing applications to Azure AD for authentication.
@@ -43,7 +36,6 @@ This article provides guidance about using Azure AD as the centralized identity 
 
 ## Enforce - Centralized identity and authentication system
 
-<<<<<<< HEAD
 Due to the nature of identity authentication in workloads, there's no comprehensive option to enforce the use of a specific identity system.  However, one option is to ensure resources are tagged with the identity system in use.
 
 Assign the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy with the tag name set to "IdentityProvider" and the tag value set to "Undefined". This policy will only set the tag value to be "Undefined" if the tag isn't provided.
@@ -59,18 +51,6 @@ Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query l
 ```bash
 resources
 | where type == "Microsoft.Compute/virtualMachines" or type contains "Microsoft.Web/sites"
-=======
-N/A
-
-## Audit - Centralized identity and authentication system
-
-Add a tag to virtual machines and Azure App Services called "IdentityProvider". Set the tag to the name of the identity provider. Use "AzureAD" for Azure AD,
-
-Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications.
-
-```bash
-resources
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
 | where tags.IdentityProvider != "AzureAD"
 | extend IdentityProvider = tags.IdentityProvider
 | extend ResourceOwner = tags.Owner
@@ -83,11 +63,7 @@ resources
     SubscriptionId = subscriptionId
 ```
 
-<<<<<<< HEAD
 You should also maintain a configuration management database (CMDB) for applications and review it quarterly. Meet with application owners of applications still in migration to review timeline and requirements. The CMDB should contain the following information about each application:
-=======
-Maintain a configuration management database (CMDB) for applications and review it quarterly. Meet with application owners of applications still in migration to review timeline and requirements. The CMDB should contain the following information about each application:
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
 
 - Application owner
 - Uses Azure AD or Azure AD single sign-on?
@@ -95,11 +71,7 @@ Maintain a configuration management database (CMDB) for applications and review 
   - Migration date
   - Migration steps
 
-<<<<<<< HEAD
-## Guidance - Default user permissions
-=======
 ## Guidance - Default User Permissions
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
 
 Restrict default user permissions to remove unneeded access granted in default settings.
 
@@ -111,7 +83,6 @@ Restrict default user permissions to remove unneeded access granted in default s
   - Guests have limited visibility in to the environment.
   - Guest invitations can only be sent to specific, pre-approved domain.
 
-<<<<<<< HEAD
 ## Enforce - Default user permissions
 
 ### Graph API
@@ -141,13 +112,6 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
 ```
 
 ### Azure Portal
-=======
-## Enforce - Default User Permissions
-
-TODO: Should we suggest the use of [authorization policies](https://learn.microsoft.com/graph/api/resources/authorizationpolicy?view=graph-rest-1.0) for enforcement?
-
-Configure the following Azure AD user settings:
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
 
 - Set [Users can register applications](/azure/active-directory/roles/delegate-app-roles#restrict-who-can-create-applications) to No.
 - Set [default Azure Active Directory](/azure/active-directory/fundamentals/users-default-permissions) user permission **Restrict access to Azure AD administration portal** to Yes.
@@ -158,33 +122,9 @@ Configure the following Azure AD user settings:
   - Set **Collaboration Restrictions** to **Allow invitations only to the specified domains (most restrictive)**.
   - Select the domains that you'll allow collaboration with.
 
-<<<<<<< HEAD
-## Audit - Default user permissions
+## Audit - Default User Permissions
 
-Use an [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
-
-```http
-GET https://graph.microsoft.com/v1.0/policies/authorizationPolicy
-```
-
-Then confirm the settings of specific items in the response:
-
-```http
-    "allowInvitesFrom": "adminsAndGuestInviters",
-```
-
-```http
-
-    "defaultUserRolePermissions": {
-        "allowedToCreateApps": false,
-        "allowedToCreateSecurityGroups": true,
-        "allowedToReadOtherUsers": false,
-        "permissionGrantPoliciesAssigned": []
-    }
-
-```
-
-Alternatively, you can review the user permissions by checking the portal configuration above.
+TODO: Is there an automated way to review user settings in Azure AD? Graph query?
 
 ## Guidance - Password management
 
@@ -196,60 +136,20 @@ Central management of password reset causes a management burden and can lead use
 ## Enforce - Password management
 
 - Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr).
-- Set passwords not to expire through the [Password Expiration Policy](/microsoft-365/admin/manage/set-password-expiration-policy?source=recommendations):
-  - Navigate to: Setup - Microsoft 365 admin center
-  - Select Set passwords to never expire
-  - Select Get Started and follow the wizard's instructions.
-
-> TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.  
-> FINDING: The Password Policies determine the contents of the password, but the Expiration policy appears to be a different setting.
-> We can still plan for if we want to give a default password complexity policy.
+- TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.
 
 ## Audit - Password management
 
-### Graph API
-
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit password expiration.
-
-```http
-GET https://graph.microsoft.com/v1.0/users?$select=userPrincipalName,lastPasswordChangeDateTime,passwordPolicies
-```
-
-The resulting `passwordPolicies` setting should be set to `DisablePasswordExpiration`.
-
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit if self-service password is enabled.
-
-```http
-GET /policies/authorizationPolicy
-```
-
-The resulting `allowedToUseSSPR` property should be set to `True`.
-
-### PowerShell
-
-Use the following script to produce a CSV file that contains an audit of whether user passwords are set to never expire.
+TODO: Is there a graph query to accomplish the same?
+Use the following Azure PowerShell code to audit the password expiry state.
 
 ```powershell
-$auditPath = "./Audits/"
-
+$auditFolder = "./AuditResults"
+$date = get-Date -Format "yyyy-MM-dd-HH-mm-ss"
+$auditPath = $auditFolder + '-' + $date
 New-Item -Path $auditPath -ItemType Directory
-
-$passwordExpyAudit = $auditPath + "/password-expiration" + "$date" + ".csv"
-
-Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E={$_.PasswordPolicies -contains "DisablePasswordExpiration"}} | export-csv -path  "$passwordExpyAudit"
-
-```
-
-Use the following script to produce a CSV file that contains an audit of whether self-service password reset is enabled.
-
-```powershell
-$auditPath = "./Audits/"
-
-New-Item -Path $auditPath -ItemType Directory
-
-$passwordResetAudit = $auditPath + "/password-reset" + "$date" + ".csv"
-
-Get-MgPolicyAuthorizationPolicy |  export-csv -path  "$passwordResetAudit"
+$passwordExpyAudit = $auditPath + "/password-expiration.csv"
+Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E={$_.PasswordPolicies -contains "DisablePasswordExpiration"}} | export-csv -path  $passwordExpyAudit
 ```
 
 ## Guidance - Legacy authentication
@@ -266,46 +166,7 @@ Legacy authentication doesn't support multifactor authentication (MFA). MFA impr
 
 ## Audit - Legacy authentication
 
->TODO: Should we suggest creating an alert for changes to Conditional Access Policies such as the following query suggested in [geeksforgeeks blog post](https://www.geeksforgeeks.org/microsoft-azure-create-alert-for-conditional-access-policy-changes/):
-=======
-## Audit - Default User Permissions
-
-TODO: Is there an automated way to review user settings in Azure AD? Graph query?
-
-## Guidance - password management
-
-Enable self-service password reset and don't expire passwords. Enabling self-service eases the management of passwords. Expiring passwords leads users to creating weak and predictable passwords.
-
-## Enforce - password management
-
-- Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr)
-- TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.
-
-## Audit - password management
-
-Use the following Azure PowerShell code to audit the password expiry state.
-
-```powershell
-$auditFolder = "./AuditResults"
-$date = get-Date -Format "yyyy-MM-dd-HH-mm-ss"
-$auditPath = $auditFolder + '-' + $date
-New-Item -Path $auditPath -ItemType Directory
-$passwordExpyAudit = $auditPath + "/password-expiration.csv"
-Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E={$_.PasswordPolicies -contains "DisablePasswordExpiration"}} | export-csv -path  $passwordExpyAudit
-```
-
-## Guidance - legacy authentication
-
-Disable legacy authentication to limit exposure to attacks. Many legacy authentication systems don't enforce multifactor authentication.
-
-## Enforce - legacy authentication
-
-Follow the guidance in [Directly blocking legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication#directly-blocking-legacy-authentication) to create a conditional access policy to block legacy authentication.
-
-## Audit - legacy authentication
-
 TODO: Should we suggest creating an alert for changes to Conditional Access Policies such as the following query suggested in [geeksforgeeks blog post](https://www.geeksforgeeks.org/microsoft-azure-create-alert-for-conditional-access-policy-changes/):
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
 
 ```bash
 AuditLogs
@@ -313,7 +174,6 @@ AuditLogs
 | project ActivityDateTime, InitiatedBy.user.userPrincipalName, TargetResources[0].displayName, ActivityDisplayName
 ```
 
-<<<<<<< HEAD
 ## Guidance - Sign-in and user risk policies
 
 Enable sign-in and user risk policies to enable you to measure and review risk scenarios. These policies can be configured to require MFA or a password reset for risky users.
@@ -322,63 +182,18 @@ Enable sign-in and user risk policies to enable you to measure and review risk s
 
 Follow the [guidance to configure and enable risk policies](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies):
 
-=======
-TODO: Should we include guidance from sources like:
-
-[Troubleshooting Conditional Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log)
-
-## Guidance - sign-in and user risk policies
-
-Enable sign in and user risk policies to enable you to measure and review risk scenarios.
-
-- Follow the [guidance to configure and enable risk policies](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies)
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
 - Configure the user risk policy to:
   - Require a secure password reset when user risk level is High
   - Require Azure AD MFA before the user can create a new password with Self-Service Password Reset to remediate their risk.
 - Configure the sign-in risk policy to require Azure AD multifactor authentication when sign-in risk level is medium or high.
 
-<<<<<<< HEAD
+## Enforce - sign in and user risk policies
+
+N/A
+
 ## Audit - Sign-in and user risk policies
 
 Use the following resources to audit user risk and investigate past risky users.
 
 - Audit [user risk](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#risky-users) every three months.
 - Use the [investigation framework](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#investigation-framework) to investigate users that have had risks, and the details about the detections and risk history.
-
-## Guidance - Conditional Access
-
-Conditional access policies are one of the best methods for protecting identities from compromise.  By requiring specific access conditions, such as location and device security, and checking for things like high-risk login patterns or impossible travel, they provide an excellent mechanism to secure and protect identities.
-
-The organization should deploy out conditional access policies to protect identities from misuse in their organization.
-
-## Enforce - Conditional Access
-
-Review the lists of [Common Conditional Access policies](https://learn.microsoft.com/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) for recommended patterns.
-
-In addition to the "Block legacy authentication" policy, above, it is strongly recommended to implement:
-
-- The MFA scenarios
-- Require password change for risky users
-- Require compliant or hybrid joined devices
-- Block access for unknow or unsupported device platforms
-- Block access by location
-- Require authentication strength for external users
-
-## Audit - Conditional Access
-
-To audit conditional access, use the Azure Active Directory Audit logs for policy changes.  The article [Troubleshooting Condition Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log) provides guidance for creating alerts to notify operators if a policy has been changed.
-
-Conditional access audit logs should be be kept for 60 days to provide for a monthly audit cycle.
-
-To audit actual conditional access activities, use the method described in [Condition Access insights and reporting](https://learn.microsoft.com/azure/active-directory/conditional-access/howto-conditional-access-insights-reporting)
-=======
-## Enforce - sign in and user risk policies
-
-N/A
-
-## Audit - sign in and user risk policies
-
-- Audit [user risk](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#risky-users) every three months.
-- Use the [investigation framework](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#investigation-framework) to investigate users that have had risks, and the details about the detections and risk history.
->>>>>>> 81d6e4a60 (initial commit - aad guidance)
