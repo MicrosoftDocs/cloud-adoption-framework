@@ -124,7 +124,7 @@ You have several options for publishing and sharing Terraform modules:
 
   - If taking a declarative approach, specify your desired outcome rather than how you want it done.
 
-- Consider deployment scopes. Have a good understanding of [Azure management levels and hierarchy](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources). Each IaC deployment must know the scope at which Azure resources are deployed.
+- Consider deployment scopes. Have a good understanding of [Azure management levels and hierarchy](../azure-setup-guide/organize-resources.md). Each IaC deployment must know the scope at which Azure resources are deployed.
 
 - Determine whether you should use an Azure native or Azure non-native IaC tool. Some points to consider:
 
@@ -158,7 +158,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Publish and use IaC modules from public registries in the following scenarios:
 
-  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/terraform-module).
+  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](../landing-zone/terraform-module.md).
 
   - You want to use modules that are maintained, updated, and supported by Microsoft, Terraform, or other module providers.
 

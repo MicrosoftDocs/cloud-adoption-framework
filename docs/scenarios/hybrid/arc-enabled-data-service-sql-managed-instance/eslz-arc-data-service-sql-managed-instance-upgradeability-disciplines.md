@@ -66,7 +66,7 @@ The following diagrams display the upgrade process for Arc-enabled SQL Managed I
 
 - Determine if the Azure Arc Data Controller upgrade in Directly connected mode should be implemented using the Azure portal, the Azure CLI, or [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio).
 - Review the prerequisites for upgrades using the [Azure portal](/azure/azure-arc/data/upgrade-data-controller-direct-portal#prerequisites) and the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#prerequisites).
-- Review the [extensions management critical design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management) in the [Azure Arc-enabled Kubernetes landing zone accelerator](/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone).
+- Review the [extensions management critical design area](../arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) in the [Azure Arc-enabled Kubernetes landing zone accelerator](../enterprise-scale-landing-zone.md).
 
 #### Indirectly connected mode
 
@@ -161,6 +161,6 @@ For more information about the hybrid cloud and multicloud journey, see the foll
 - Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-enabled data services.
 - Review the upgrade process of Azure Arc in [Directly](/azure/azure-arc/data/upgrade-data-controller-direct-cli) and [Indirectly](/azure/azure-arc/data/upgrade-data-controller-indirect-cli) connected modes.
 - Review the upgrade process of the Azure Arc SQL Managed Instance in [directly](/azure/azure-arc/data/upgrade-sql-managed-instance-direct-cli) and [indirectly](/azure/azure-arc/data/upgrade-sql-managed-instance-cli) connected modes.
-- Manage [hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Manage [hybrid and multicloud environments](../manage.md).
 - Experience Arc-enabled SQL Managed Instance automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).

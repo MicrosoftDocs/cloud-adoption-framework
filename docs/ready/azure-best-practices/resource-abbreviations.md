@@ -220,6 +220,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms` |
 | Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv` |
 
+
 ## Deprecated product names
 
 | Resource | Resource provider namespace | Abbreviation |

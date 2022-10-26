@@ -36,9 +36,9 @@ The following scenario diagram shows an example of various consumer services sec
 
 ## Design considerations
 
-* Review the [network topology and connectivity design area](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity) of the Azure landing zones to align Arc-enabled data services network connectivity with your organization's adopted landing zone design.
+* Review the [network topology and connectivity design area](../../../ready/enterprise-scale/network-topology-and-connectivity.md) of the Azure landing zones to align Arc-enabled data services network connectivity with your organization's adopted landing zone design.
 
-* Review the [Network connectivity for Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity) for understanding network architecture and recommendations to make right design decisions for deploying and operating Arc-enabled data services on Arc-enabled Kubernetes cluster. Arc-enabled data services use Azure Arc-enabled Kubernetes network connectivity for service deployment and operations.
+* Review the [Network connectivity for Azure Arc-enabled Kubernetes](../arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) for understanding network architecture and recommendations to make right design decisions for deploying and operating Arc-enabled data services on Arc-enabled Kubernetes cluster. Arc-enabled data services use Azure Arc-enabled Kubernetes network connectivity for service deployment and operations.
 
 * Review the [Arc-enabled data services feature availability by connectivity-mode](/azure/azure-arc/data/connectivity#feature-availability-by-connectivity-mode) and [network requirements](/azure/azure-arc/data/connectivity) for Azure Arc-enabled data services. Decide if directly connected mode or indirectly connected mode aligns best with your organization network security policies of on-premises network or other cloud providers.
 
@@ -56,7 +56,7 @@ The following scenario diagram shows an example of various consumer services sec
 
 ## Design recommendations
 
-* Review Azure [Arc-enabled Kubernetes networking design recommendations](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity#design-recommendations) as Arc-enabled SQL Managed Instance deployed on an existing Arc-enabled Kubernetes cluster.
+* Review Azure [Arc-enabled Kubernetes networking design recommendations](../arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md#design-recommendations) as Arc-enabled SQL Managed Instance deployed on an existing Arc-enabled Kubernetes cluster.
 
 * Use Direct connectivity mode instead of Indirect connectivity mode deployment of your Arc-enabled data services and Arc-enabled SQL Managed Instance to gain the [feature benefits](/azure/azure-arc/data/connectivity#feature-availability-by-connectivity-mode) of directly connected mode deployment.
 
@@ -80,6 +80,6 @@ For more information about your hybrid cloud and multicloud journey, see the fol
 
 * Review [Azure Arc-enabled data services connectivity modes and requirements](/azure/azure-arc/data/connectivity).
 * Review [Active Directory authentication](/azure/azure-arc/data/active-directory-introduction).
-* Review the [Network connectivity for Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity).
+* Review the [Network connectivity for Azure Arc-enabled Kubernetes](../arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md).
 * Use Arc-enabled SQL Managed Instance automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 * Review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).

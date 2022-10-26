@@ -19,6 +19,9 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 - organizational structure
 - application portfolios
 
+> [!TIP]
+> We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+
 ## Subscriptions considerations
 
 The following sections contain considerations to help you plan and create subscriptions for Azure.
@@ -137,7 +140,7 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Avoid a rigid subscription model. Instead, use a set of flexible criteria to group subscriptions across your organization. This flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions, and what works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription, while others might require their own subscription.
 
-  - For more information, see [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
+  - For more information, see [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
 
 ### Quota and capacity recommendations
 

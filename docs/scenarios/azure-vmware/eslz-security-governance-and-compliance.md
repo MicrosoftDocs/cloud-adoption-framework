@@ -155,7 +155,7 @@ Consider and implement the following recommendations when planning for Azure VMw
 
 - **Workload VM backup compliance:** Track and monitor Azure VMware Solution workload VM backup compliance to ensure that the VMs are being backed up. Use an [Azure VMware Solution certified partner solution](/azure/azure-vmware/ecosystem-back-up-vms) that provides at-scale perspective, drill-down analysis, and an actionable interface for tracking and monitoring workload VM backup.
 
-- **Country or industry-specific regulatory compliance:** Ensure Azure VMware Solution workload VM compliance with country and industry-specific regulations to avoid costly legal actions and fines. Understand the cloud [shared responsibility](https://azure.microsoft.com/resources/shared-responsibility-for-cloud-computing/) model for industry or region-based regulatory compliance. Use the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3) to view or download Azure VMware Solution and Azure Audit reports that support the whole compliance story.
+- **Compliance that's specific to country/region or industry:** To avoid costly legal actions and fines, ensure compliance of Azure VMware Solution workloads with regulations that are specific to the country/region and industry. Understand the cloud [shared responsibility](https://azure.microsoft.com/resources/shared-responsibility-for-cloud-computing/) model for industry or region-based regulatory compliance. Use the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3) to view or download Azure VMware Solution and Azure Audit reports that support the whole compliance story.
 
   Implement firewall audit reporting on HTTP/S and non-HTTP/S endpoints to comply with regulatory requirements.
 
@@ -171,7 +171,7 @@ Consider and implement the following recommendations when planning for Azure VMw
 
 This article is based on the Cloud Adoption Framework enterprise-scale landing zone architectural design principles and guidelines. For more information, see:
 
-- [Azure landing zone design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles)
+- [Azure landing zone design principles](../../ready/landing-zone/design-principles.md)
 - [Azure landing zone design guidelines](../../ready/landing-zone/design-areas.md)
 
 The article is part of a series that applies enterprise-scale landing zone principles and recommendations to Azure VMware Solution deployments. Other articles in the series include:
