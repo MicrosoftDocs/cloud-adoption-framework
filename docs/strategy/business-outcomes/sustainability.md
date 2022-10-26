@@ -17,13 +17,11 @@ ms.custom:
 
 Though the impact and benefits of the cloud have been traditionally measured with financial and efficiency metrics, it's become more common for customers to seek to understand how the cloud can help them to achieve their sustainability and environmental goals. Cloud computing can support your organization to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 
-Watch the following video to learn more about sustainability and how cloud migration opens the door to sustainable solutions that are good for the planet and good for your business.
+Actively working toward an increased sustainability can help increase your revenue, reduce the operating costs, and improve your brand trust. Driving sustainability in your organization have several benefits:
 
-<!-- markdownlint-disable MD034 -->
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWx4po]
-
-<!-- markdownlint-enable MD034 -->
+- **Track and control carbon emissions:** Use the [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track carbon emissions. Reveal insights that can justify a data center migration. Use the [Azure Migration and Modernization Program](https://www.microsoft.com/azure/partners/ammp) to get expert help needed to set up the cloud environments.
+- **Migrate to reduce the carbon footprint:** Migrating to the cloud can be up to [98% more carbon efficient](https://azure.microsoft.com/explore/global-infrastructure/sustainability/#carbon-benefits). Additionally, use the Azure Well-Architected Framework [Sustainability workload guidance](/azure/architecture/framework/sustainability/) to further enhance your workloads and reduce the environmental footprint.
+- **Drive sustainable innovation in the cloud:** Meet customer demands for clean energy solutions and sustainable products.
 
 Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
 
@@ -72,7 +70,7 @@ Common considerations for building a sustainability strategy could include:
 
 ## Sustainability for your company's brand
 
-There is a demand that customers, their executives and stakeholders, and their investors provide greater transparency into the environmental impact for the company from an operational point of view. Proactively working toward sustainability helps you establish a healthy brand for your company.
+There's a demand that customers, their executives and stakeholders, and their investors provide greater transparency into the environmental impact for the company from an operational point of view. Proactively working toward sustainability helps you establish a healthy brand for your company.
 
 A sustainable business model can improve reputation, build trust and attract new talent/partners/investors.
 You can also see the benefits of sustainability as part of your business signature, combining your sustainability exercises with the capability to communicate the reasoning behind your green journey further.
@@ -129,7 +127,7 @@ Microsoft Sustainability Manager covers data input from sources beyond just Azur
 
 Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption and costs and reduce the physical footprints of their datacenters. Transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options, depending on specific server usage, renewable energy purchases, and other factors.
 
-Leverage the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
+Use the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
 Migrate and modernize your apps, data, and infrastructure using proven cloud migration tools and patterns.
 
@@ -141,9 +139,9 @@ Using the emissions savings estimator will help you understand the emissions-rel
 
 ### Emissions Impact Dashboard
 
-Once you migrate or create resources within Microsoft Azure, you will need a reliable way of monitoring those emissions as well. The [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) provides transparency into greenhouse gas emissions associated with using Microsoft cloud services and enables a better understanding of the root causes of emissions changes. Organizations can measure the impact of Microsoft cloud usage on their carbon footprint, and they can drill down into emissions by month, service, and datacenter region.
+Once you migrate or create resources within Microsoft Azure, you'll need a reliable way of monitoring those emissions as well. The [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) provides transparency into greenhouse gas emissions associated with using Microsoft cloud services and enables a better understanding of the root causes of emissions changes. Organizations can measure the impact of Microsoft cloud usage on their carbon footprint, and they can drill down into emissions by month, service, and datacenter region.
 
-Microsoft’s emissions reports are determined via a methodology that was validated by Stanford University in 2018 which aligns to ISO standards for measuring greenhouse gas emissions. These calculations are inclusive of Microsoft’s scopes 1, 2, and 3, which means that they include emissions from Microsoft’s extended network of vendors and suppliers. Reports reflect Microsoft’s investments in renewables as well as the fuel energy mix in the regions where your computing takes place alongside other factors.
+Microsoft’s emissions reports are determined via a methodology that was validated by Stanford University in 2018, which aligns to ISO standards for measuring greenhouse gas emissions. These calculations are inclusive of Microsoft’s scopes 1, 2, and 3, which means that they include emissions from Microsoft’s extended network of vendors and suppliers. Reports reflect Microsoft’s investments in renewables and the fuel energy mix in the regions where your computing takes place alongside other factors.
 
 ## Examples of sustainability outcomes
 
