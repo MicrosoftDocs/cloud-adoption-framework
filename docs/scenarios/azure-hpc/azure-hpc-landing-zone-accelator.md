@@ -93,7 +93,7 @@ The following conceptual reference architecture is an example that shows design 
 
 ## Obtain the HPC landing zone accelerator
 
-The HPC landing zone accelerator is available here...
+The [Azure HPC OnDemand Platform Accelerator](https://azure.github.io/az-hop/) helps to create an end to end deployment mechanism for a complete HPC cluster solution in Azure. Based on the business specific requirements, you can build on top of this and make updates as required.
 
 ## Next steps
 
