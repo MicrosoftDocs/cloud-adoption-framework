@@ -1,6 +1,6 @@
 ---
 title: Business user access governance guidance
-description: 
+description: This article provides guidance to minimize the risk of business users accessing applications along with auditing guidance.
 author: RobBagby
 ms.author: robbag
 ms.date: 10/26/2022
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Business user access
 
-Risks related to governing Business Users are largely related to the complexity of your organization's identity infrastructure. If all your users and groups are managed using a single directory or cloud-native identity provider using minimal integration with other services, your risk level will likely be small. The following sections provide guidance, and auditing that can be used to minimize the risk surrounding business users.
+Risks related to governing business users are largely related to the complexity of your organization's identity infrastructure. If all your users and groups are managed using a single directory or cloud-native identity provider using minimal integration with other services, your risk level will likely be small. The following sections provide guidance, and auditing that can be used to minimize the risk surrounding business users.
 
 ## Guidance
 
