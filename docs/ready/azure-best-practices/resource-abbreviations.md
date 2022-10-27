@@ -147,7 +147,8 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
-| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `vault` |
+| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
+| Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
 | File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
 | Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
