@@ -1,5 +1,5 @@
 ---
-title: Strategic benefits of an Azure Virtual Desktop
+title: Strategic benefits of Azure Virtual Desktop
 description: Explore the strategic benefits of an Azure Virtual Desktop environment.
 author: DominicAllen
 ms.author: doalle
@@ -23,14 +23,18 @@ Virtual desktop migrations are motivated by a few common target outcomes:
 ![List of motivations for virtual desktop migration.](../../_images/migrate/wvd/motivations.png)
 
 - **Productivity**. Organizations want to extend productivity to PCs, phones, tablets, or browsers that might not be under the direct control of the IT team.
+
 - **Safe access**. Employees need access to corporate data and applications from their devices.
+
 - **Support end users**. As workloads are migrated to the cloud, employees need more support for a low-latency, optimized experience.
+
 - **Optimize costs**. The costs of current or proposed virtual desktop experiences need to be optimized to help organizations scale their remote work more effectively.
+
 - **Empower IT**. The IT team wants to transform the workplace, which often starts with transforming employees' user experience.
 
 You can support realization of these outcomes by virtualizing desktops in the cloud for your end users.
 
-## The strategic impact of Azure Virtual Desktop
+## Strategic impact of Azure Virtual Desktop
 
 Azure Virtual Desktop is a mission-critical platform for many organizations. When Azure Virtual Desktop is foundational to an organization's business processes, services throughout the organization's cloud portfolio depend on it. The adoption plan for Azure Virtual Desktop can directly and indirectly affect cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically an organization's first platform in the cloud, it can be the most important. Understanding the strategy for migrating to Azure Virtual Desktop and how to achieve the outcomes that you want in the future is critical to the success of all your plans for cloud adoption.
 
@@ -40,17 +44,17 @@ This article uses the [strategy and plan template](https://raw.githubusercontent
 
 An organization's strategic objectives are often the basis for adopting Azure Virtual Desktop and might include the following:
 
-- **Critical business events:** An organization often adopts Azure Virtual Desktop to mitigate risks that are related to contracts, regulations, compliance, or sovereignty.
+- **Critical business events**. An organization often adopts Azure Virtual Desktop to mitigate risks that are related to contracts, regulations, compliance, or sovereignty.
 
-- **Migration motivations:** If migration of other assets depends on Azure Virtual Desktop, then an organization tends to focus on reducing costs, complexities, or operational overhead.
+- **Migration motivations**. If migration of other assets depends on Azure Virtual Desktop, then an organization tends to focus on reducing costs, complexities, or operational overhead.
 
-- **Innovation motivations:** Azure Virtual Desktop in the cloud supports delivery of transformative products and services.
+- **Innovation motivations**. Azure Virtual Desktop in the cloud supports delivery of transformative products and services.
 
-- **Infrastructure scale flexibility requirements:** By using cloud services, an organization can seamlessly scale up and down with infrastructure.
+- **Infrastructure scale flexibility requirements**. By using cloud services, an organization can seamlessly scale up and down with infrastructure.
 
-- **Choice and flexibility:** An organization can choose from many virtual machine families and sizes that are optimized for a variety of compute requirements.
+- **Choice and flexibility**. An organization can choose from many virtual machine families and sizes that are optimized for a variety of compute requirements.
 
-- **Potential cost savings:** An organization can consider Azure to be an operational cost rather than an upfront cost, because pricing is based on consumption. For example, the charge for using a virtual machine is based on the time that it is active, which can realize cost savings for the organization.
+- **Potential cost savings**. An organization can consider Azure to be an operational cost rather than an upfront cost, because pricing is based on consumption. For example, the charge for using a virtual machine is based on the time that it is active, which can realize cost savings for the organization.
 
 Customers often have motivations in all of the preceding categories. To successfully implement Azure Virtual Desktop, it's imperative for your cloud strategy team—including your business and IT leaders—to review and prioritize the motivations that are identified in [Why are we moving to the cloud?](../../strategy/motivations.md) Having your priorities documented helps your cloud adoption team to make informed decisions throughout implementation.
 
