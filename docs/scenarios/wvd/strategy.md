@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Strategic benefits of an Azure Virtual Desktop
 
-When planning your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
+When you plan your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
 The guidance in this article can help to expose several considerations about virtual desktops that could affect your strategy.
 
@@ -42,7 +42,7 @@ This article uses the [strategy and plan template](https://raw.githubusercontent
 
 ## Reasons to move to Azure Virtual Desktop
 
-An organization's strategic objectives are often the basis for adopting Azure Virtual Desktop and might include the following:
+An organization's strategic objectives are often the basis for adopting Azure Virtual Desktop and might include the following goals:
 
 - **Critical business events**. An organization often adopts Azure Virtual Desktop to mitigate risks that are related to contracts, regulations, compliance, or sovereignty.
 
@@ -52,9 +52,9 @@ An organization's strategic objectives are often the basis for adopting Azure Vi
 
 - **Infrastructure scale flexibility requirements**. By using cloud services, an organization can seamlessly scale up and down with infrastructure.
 
-- **Choice and flexibility**. An organization can choose from many virtual machine families and sizes that are optimized for a variety of compute requirements.
+- **Choice and flexibility**. An organization can choose from many virtual machine families and sizes that are optimized for various compute requirements.
 
-- **Potential cost savings**. An organization can consider Azure to be an operational cost rather than an upfront cost, because pricing is based on consumption. For example, the charge for using a virtual machine is based on the time that it is active, which can realize cost savings for the organization.
+- **Potential cost savings**. An organization can consider Azure to be an operational cost rather than an upfront cost, because pricing is based on consumption. For example, the charge for using a virtual machine is based on the time that it's active, which can realize cost savings for the organization.
 
 Customers often have motivations in all of the preceding categories. To successfully implement Azure Virtual Desktop, it's imperative for your cloud strategy team—including your business and IT leaders—to review and prioritize the motivations that are identified in [Why are we moving to the cloud?](../../strategy/motivations.md) Having your priorities documented helps your cloud adoption team to make informed decisions throughout implementation.
 
@@ -83,13 +83,11 @@ Understand that your initial business justification is a directional estimate th
 
 ## Approach: Azure Virtual Desktop refactor and modernization
 
-In the approach outlined in this article series, the existing Citrix, VMware, or Remote Desktop Services farms are modernized and replaced with a platform as a service (PaaS) solution called Azure Virtual Desktop.
-
-In this scenario, desktop images are either migrated to Azure or new images are generated. Similarly, user profiles are either migrated to Azure or new profiles are created. Usually, the client solution is enabled and largely unchanged by this migration effort.
+In the approach outlined in this article series, the existing Citrix, VMware, or Remote Desktop Services farms are modernized and replaced with Azure Virtual Desktop. In this scenario, desktop images are either migrated to Azure or new images are generated. Similarly, user profiles are either migrated to Azure or new profiles are created. Usually, the client solution is enabled and largely unchanged by this migration effort.
 
 ![Diagram of the virtual desktop migration scenario.](../../_images/migrate/wvd/scenario-solution.png)
 
-When your organization's migration to the cloud is complete, the overhead and costs of managing a virtual desktop farm are replaced by a cloud-native solution that manages the virtual desktop experience for your team. The team will only be responsible for support of the desktop images, available applications, Azure Active Directory, and user profiles.
+When your organization's migration to the cloud is complete, the overhead and costs of managing a virtual desktop farm are eliminated. They're replaced by a cloud-native solution that manages the virtual desktop experience for you. Your team will only be responsible for support of the desktop images, available applications, Azure Active Directory, and user profiles.
 
 ## How to measure progress on adopting Azure Virtual Desktop
 
