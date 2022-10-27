@@ -28,5 +28,5 @@ Risks and governance policies addressing the risk will differ between organizati
 TODO: Can we take the links from the OneNote below and create some prescriptive audit guidance around it? Remember, we are telling the reader what to audit, how and when. We should add context to the links we are providing.
 
 - [Microsoft.Graph.Identity.Governance](/powershell/module/microsoft.graph.identity.governance/)
-- [Azure AD access reviews](/graph/api/resources/accessreviewsv2-overview?view=graph-rest-1.0)
+- [Azure AD access reviews](/graph/api/resources/accessreviewsv2-overview)
 - [Working with the Azure AD entitlement management API](/graph/api/resources/entitlementmanagement-overview)
