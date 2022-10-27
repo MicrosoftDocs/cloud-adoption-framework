@@ -7,9 +7,9 @@ items:
     href: plan.md
   - name: Prepare your environment
     items: 
-    - name: Azure landing zone for HPC (overall)
+    - name: Azure landing zone for HPC
       href: ready.md
-    - name: Energy (oil & gas)
+    - name: Energy
       items:
       - name: Design areas
         items:
