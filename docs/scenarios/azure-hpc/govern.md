@@ -16,7 +16,7 @@ The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to 
 
 ## HPC policies
 
-While HPC in Azure does not have any specific considerations or recommendations which would impact governance related decisions, it is important to understand any decisions previously made by the cloud platform team to be aware of existing governance recommendations [for corporate policies](../../govern/corporate-policy.md).
+While HPC in Azure doesn't have any specific considerations or recommendations which would impact governance related decisions, it's important to understand any decisions previously made by the cloud platform team to be aware of existing governance recommendations [for corporate policies](../../govern/corporate-policy.md).
 
 Define the corporate policy by identifying and mitigating business risks regardless of the cloud platform. Follow the three-step process of defining corporate policies by developing:
 - [**Business risks:**](../../govern/policy-compliance/business-risk.md) to scope and uniquely define the minimum viable product (MVP) for your HPC environment.
@@ -43,11 +43,6 @@ Banking organizations will also have [data security considerations](/azure/archi
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+- After extending your governance approach for your HPC environment, outline your [management](./manage.md) path for implementing an operations baseline.
+- Review and understand additional [governance recommendations](../../ready/landing-zone/design-area/governance.md) decisions made by your cloud platform team.
 
-- [Plan for HPC](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Secure HPC](./secure.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)

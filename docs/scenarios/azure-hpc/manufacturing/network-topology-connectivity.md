@@ -3,6 +3,7 @@ title: 'Manufacturing HPC Network topology and connectivity | Microsoft Docs'
 description: 'This guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
@@ -23,6 +24,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
  - The virtual network (VNet) contains the right address space.
  - Proper planning for subnet configuration happens in advance.
  - Sufficient excess addressing is considered for future expansion or other services
+
 
 ## HPC manufacturing design considerations:
 
@@ -68,7 +70,7 @@ InfiniBand connection is possible only between VMs allocated within the same [pl
 
 **Azure ExpressRoute**
 
- - In the case of a burst application like a hybrid setup for reservoir simulation and modeling, where the  on-premises data sets. are shared and the Azure compute becomes an extension, Express Route will help you to connect your on-premises environment into the Microsoft cloud over a private connection with the help of a connectivity provider.  It provides enterprise-grade resiliency and availability, and the advantage of a Global ExpressRoute partner ecosystem. For information on how to connect your network to Microsoft using ExpressRoute, see ExpressRoute connectivity models.
+ - In the case of a burst application like a hybrid setup for reservoir simulation and modeling, where the  on-premises data sets are shared and the Azure compute becomes an extension, Express Route will help you to connect your on-premises environment into the Microsoft cloud over a private connection with the help of a connectivity provider.  It provides enterprise-grade resiliency and availability, and the advantage of a Global ExpressRoute partner ecosystem. For information on how to connect your network to Microsoft using ExpressRoute, see ExpressRoute connectivity models.
  - ExpressRoute connections don't go over the public internet, and they offer more reliability, faster speeds, and lower latencies than typical internet connections. For point-to-site VPN and site-to-site VPN, you can connect on-premises devices or networks to a virtual network using any combination of these VPN options and Azure ExpressRoute.
 
 ## Define an Azure network topology
