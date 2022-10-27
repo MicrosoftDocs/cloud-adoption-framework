@@ -1,5 +1,5 @@
 ---
-title: Outline a strategy for an Azure Virtual Desktop environment
+title: Strategic benefits of an Azure Virtual Desktop
 description: Explore the strategic benefits of an Azure Virtual Desktop environment.
 author: DominicAllen
 ms.author: doalle
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Strategic benefits of an Azure Virtual Desktop environment
+# Strategic benefits of an Azure Virtual Desktop
 
-When planning your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
+When planning your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
 The guidance in this article can help to expose several considerations about virtual desktops that could affect your strategy.
 
@@ -28,23 +28,23 @@ Virtual desktop migrations are motivated by a few common target outcomes:
 - **Optimize costs**. The costs of current or proposed virtual desktop experiences need to be optimized to help organizations scale their remote work more effectively.
 - **Empower IT**. The IT team wants to transform the workplace, which often starts with transforming employees' user experience.
 
-Virtualization of your end users' desktops in the cloud can help to realize these outcomes.
+You can support realization of these outcomes by virtualizing desktops in the cloud for your end users.
 
-## The strategic impact of Azure Virtual Desktop in the cloud
+## The strategic impact of Azure Virtual Desktop
 
-Azure Virtual Desktop products are a mission-critical platform for many organizations. When Azure Virtual Desktop is foundational to an organization's business processes, the dependencies on it can be seen throughout the organization's cloud portfolio. The cloud adoption plan for Azure Virtual Desktop can directly and indirectly affect cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically an organization's first platform in the cloud, it can be the most important. Understanding the strategy for migrating to Azure Virtual Desktop and how to achieve the outcomes that you want in the future is critical to the success of all your plans for cloud adoption.
+Azure Virtual Desktop is a mission-critical platform for many organizations. When Azure Virtual Desktop is foundational to an organization's business processes, services throughout the organization's cloud portfolio depend on it. The adoption plan for Azure Virtual Desktop can directly and indirectly affect cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically an organization's first platform in the cloud, it can be the most important. Understanding the strategy for migrating to Azure Virtual Desktop and how to achieve the outcomes that you want in the future is critical to the success of all your plans for cloud adoption.
 
-This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of adopting Azure Virtual Desktop.
+This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx), and other resources from the Cloud Adoption Framework, to capture the strategic impact of adopting Azure Virtual Desktop.
 
-## Reasons to move to Azure Virtual Desktop in the cloud
+## Reasons to move to Azure Virtual Desktop
 
-When an organization considers a strategy for adopting Azure Virtual Desktop, the following motivations tend to shape their plans:
+An organization's strategic objectives are often the basis for adopting Azure Virtual Desktop and might include the following:
 
 - **Critical business events:** An organization often adopts Azure Virtual Desktop to mitigate risks that are related to contracts, regulations, compliance, or sovereignty.
 
 - **Migration motivations:** If migration of other assets depends on Azure Virtual Desktop, then an organization tends to focus on reducing costs, complexities, or operational overhead.
 
-- **Innovation motivations:** The cloud offers new opportunities for an organization's use of Azure Virtual Desktop to expand and transform their products and services.
+- **Innovation motivations:** Azure Virtual Desktop in the cloud supports delivery of transformative products and services.
 
 - **Infrastructure scale flexibility requirements:** By using cloud services, an organization can seamlessly scale up and down with infrastructure.
 
@@ -52,19 +52,19 @@ When an organization considers a strategy for adopting Azure Virtual Desktop, th
 
 - **Potential cost savings:** An organization can consider Azure to be an operational cost rather than an upfront cost, because pricing is based on consumption. For example, the charge for using a virtual machine is based on the time that it is active, which can realize cost savings for the organization.
 
-Customers often have motivations in all of the preceding categories. To successfully implement Azure Virtual Desktop, it's imperative for your cloud strategy team—including your business and IT leaders—to review and prioritize the motivations that are identified in [Why are we moving to the cloud?](../../strategy/motivations.md) Having your priorities documented will help the cloud adoption team to make informed decisions throughout implementation.
+Customers often have motivations in all of the preceding categories. To successfully implement Azure Virtual Desktop, it's imperative for your cloud strategy team—including your business and IT leaders—to review and prioritize the motivations that are identified in [Why are we moving to the cloud?](../../strategy/motivations.md) Having your priorities documented helps your cloud adoption team to make informed decisions throughout implementation.
 
-Motivations to adopt Azure Virtual Desktop are often based on an organization's strategic objectives. The following topics are applicable for your organization if your team is reviewing this adoption scenario:
+When deciding whether to adopt Azure Virtual Desktop, your cloud strategy should consider the following factors:
 
-1. Refreshing on-premises virtual desktop infrastructure requires significant capital expenditures. If it's time to refresh your virtual desktop infrastructure, cloud adoption can be a timely strategy to reduce costs.
+- Refreshing on-premises virtual desktop infrastructure requires significant capital expenditures. If it's time to refresh your virtual desktop infrastructure, cloud adoption can be a timely strategy to reduce costs.
 
-2. Infrastructure hosting contracts lock in vendors for multiple years. If your contracts for hosting, managed services, or maintenance are nearing renewal, consider migrating to Azure services for greater agility, innovation opportunities, and streamlined operation of your mission-critical platforms.
+- Infrastructure hosting contracts lock in vendors for multiple years. If your contracts for hosting, managed services, or maintenance are nearing renewal, consider migrating to Azure services for greater agility, innovation opportunities, and streamlined operation of your mission-critical platforms.
 
-3. Refresh and contract renewals can be triggered by upgrade cycles of on-premises virtual desktop services or a business driver to adopt Azure Virtual Desktop. Cloud adoption provides opportunities to reduce costs, innovate, optimize, and be more agile.
+- Refresh and contract renewals can be triggered by upgrade cycles of on-premises virtual desktop services or a business driver to adopt Azure Virtual Desktop. Cloud adoption provides opportunities to reduce costs, innovate, optimize, and be more agile.
 
 ## Build a business justification for cloud migration
 
-[Create a business case for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts that are associated with Azure Virtual Desktop.
+[Creating a business case for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts that are associated with Azure Virtual Desktop.
 
 A study by Forrester Consulting, [The Total Economic Impact of Microsoft Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/), offers an analysis in which the following justifications are typically defendable:
 
@@ -75,7 +75,7 @@ A study by Forrester Consulting, [The Total Economic Impact of Microsoft Azure V
 
 Actual returns are likely to vary for individual customers. However, the tables in the Forrester study can capture your organization's financial data for validation and business justification.
 
-Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to gather inventory and develop a plan, as described in [Azure Virtual Desktop planning](./plan.md). After your digital estate is cataloged and assessed, you can refine your business case and present clear plans for financial returns.
+Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. You can create transparency between your cloud strategy team and other stakeholders by affirming that the business justification might change significantly during planning stages. Look for consensus that there's enough value to gather inventory and develop a plan, as described in [Azure Virtual Desktop planning](./plan.md). After your digital estate is cataloged and assessed, you can refine your business case and present clear plans for financial returns.
 
 ## Approach: Azure Virtual Desktop refactor and modernization
 
@@ -89,13 +89,13 @@ When your organization's migration to the cloud is complete, the overhead and co
 
 ## How to measure progress on adopting Azure Virtual Desktop
 
-When your stakeholders have identified the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. For examples of common business outcomes for organizations that pursue cloud adoption, see [What business outcomes are associated with transformation journeys?](../../strategy/business-outcomes/index.md)
+When your stakeholders have identified the top motivations for this scenario, your cloud strategy team can define measurable outcomes to further guide adoption activities. For examples of common business outcomes for organizations that pursue cloud adoption, see [What business outcomes are associated with transformation journeys?](../../strategy/business-outcomes/index.md)
 
 Given the impact of Azure Virtual Desktop, you need to create many defined objectives and key results (OKRs). These can help you to break down adoption into manageable efforts. To understand OKRs in more detail, see [Measure business outcomes using objectives and key results](../../strategy/business-outcomes/okr.md).
 
 ## Next step: Plan for a virtual desktop environment
 
-The following resources provide guidance for specific points throughout the cloud adoption journey to help you be successful in the adoption of Azure Virtual Desktop as part of your cloud environment.
+The following resources provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting Azure Virtual Desktop as part of your cloud environment.
 
 - [Plan for Azure Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
