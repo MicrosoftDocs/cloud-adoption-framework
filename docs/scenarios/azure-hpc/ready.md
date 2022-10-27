@@ -22,14 +22,14 @@ When preparing any environment for sustained cloud adoption, we use the Azure la
 - [Finance](../azure-hpc/azure-hpc-landing-zone-accelator.md#example-conceptual-energy-reference-architecture).
 - [Manufacturing](./azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
 
-When developing a long-term vision for landing zones, consider the designs above. Note that these references will act as a starting point, and based on your organization's business requirements and end-user needs, you may have to modify these as required.
+When developing a long-term vision for landing zones, consider the designs above. Note that the conceptual architecture references will act as a starting point, and based on your organization's business requirements and end-user needs, you may have to modify these as required.
 
 ## HPC evaluation
 
 The decisions made during Strategic impact assessment and technical planning will have the most impact on the landing zone configuration that you choose for your HPC deployments in Azure. We recommend that the following are considered
 
 - What is the maturity of your environment in Azure? Depending on whether it is in POC stage, or a matured application serving end users - you can include or omit governance, security or resource organization.
-- Is the application you're building on Azure a short lived one, or are you looking at a long standing project - depending on this you can choose your compute or storage options.
+- Is the application you're building on Azure a short lived one, or are you looking at a long standing project - depending on the application, you can choose your compute or storage options.
 - Does your organization require multiple people at different levels of access to use the Azure resources?
 
 The above are guiding questions and expected to help you understand that the deployment models chosen will vary across business, industries, and application usage.
@@ -49,12 +49,5 @@ The [Azure HPC OnDemand Platform Accelerator](https://azure.github.io/az-hop/) d
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Plan for HPC](./plan.md)
-- [Govern HPC](./govern.md)
-- [Secure HPC](./secure.md)
-- [Organize team members for HPC in Azure](./organize.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
+- After preparing your HPC landing zones, start looking into what your [migration](./migrate.md) will look like.
+- See the overall [HPC landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelator.md).
