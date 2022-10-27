@@ -14,11 +14,11 @@ ms.custom: internal
 
 Management groups are a key construct for managing resource consistency. Management groups are logical containers for subscriptions that are arranged hierarchically. You can apply policies and manage access at the management group level and all child management groups and subscriptions inherit the policies and role assignments.
 
-:::image type="complex" source="../../_images/govern/management-group-tree.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
-Diagram of a root management group holding both management groups and subscriptions. Some child management groups hold management groups, some hold subscriptions, and some hold both. One of the examples in the sample hierarchy is four levels of management groups with the child level being all subscriptions.
+:::image type="complex" source="../../ready/landing-zone/design-area/media/sub-org.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
+Diagram of a root management group holding both management groups and subscriptions. Some child management groups hold management groups, some hold subscriptions, and some hold both.
 :::image-end:::
 
-*Diagram 1: Hierarchy of management groups and subscriptions from [Define your naming convention](/azure/governance/management-groups/overview).*
+*Diagram 1: Hierarchy of management groups and subscriptions from [management groups in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).*
 
 Management groups help ensure consistency. When you apply policies at the management group level, you ensure all subscriptions under that management group have those policies applied. There's no risk of subscriptions under the same management group having differing policies.
 
