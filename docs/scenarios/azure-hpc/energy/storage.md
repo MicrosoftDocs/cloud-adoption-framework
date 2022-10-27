@@ -71,7 +71,7 @@ Multiple storage devices and multiple paths to data are utilized to provide a hi
 
 Energy MPI workloads have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and are not very amenable to sharing with other workloads. MPI applications leverage the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect. Lustre/BeeGFS is typically used to handle the large throughput requirements of primarily seismic processing (but also reservoir simulation).
 
-Parallel file systems such as Lustre is used for HPC Energy workloads that require access to large files, simultaneous access from multiple compute nodes, and massive amounts of data. The implementation of parallel file systems makes it easy to scale in terms of capability and performance. Such file systems take advantage of RDMA transfers with large bandwidth and reduced CPU usage. The parallel file system is usually used as scratch space and intended for work that requires optimized I/O. Examples include workload setup, pre-processing, running, and post-processing.
+Parallel file systems such as Lustre are used for HPC Energy workloads that require access to large files, simultaneous access from multiple compute nodes, and massive amounts of data. The implementation of parallel file systems makes it easy to scale in terms of capability and performance. Such file systems take advantage of RDMA transfers with large bandwidth and reduced CPU usage. The parallel file system is usually used as scratch space and intended for work that requires optimized I/O. Examples include workload setup, pre-processing, running, and post-processing.
 
 When using an orchestrated parallel file service, such as Lustre or BeeGFS, works for up to 50,000 cores, with read/write rates up to 50 GiB/s, and 500 TB storage. For even larger clusters, a bare-metal approach may be more cost-effective. For example, Cray ClusterStor is a managed HPC storage solution with the flexibility to support larger elastic clusters on the fly with more than 50,000 cores, read/write rates more than 30 GiB/s and more than 500 TB data storage.
 
@@ -84,7 +84,7 @@ For more information on Parallel Virtual file system on Azure, see [Parallel Vir
  - HPC Cache is also very useful in the hybrid scenario, when there is a requirement to sync data between on premises and the cloud, with a ready-heavy or high-read I/O pattern for energy workloads.
  - Standard or Premium Blob is a cost effective being the lowest cost cloud offering. provides exabyte scale, high throughput, low latency access where necessary, familiar file system and multi-protocol access (REST, HDFS, NFS). You can make use of the NFS v3.0 at the blob service endpoint for high throughput and read heavy workloads.  You can optimize costs by moving to cooler tiers with the ability to perform lifecycle management with last update/ last access time, intelligent tiering with customizable policies.
 
- - The Oil and Gas Energy workloads may also require large data size and volumes transfer mechanism from On-Prem to Cloud and vice versa that can be achieved by
+ - The Oil and Gas Energy workloads may also require large data size and volumes transfer mechanism from on-premises to Cloud and vice versa that can be achieved by
      - Offline - device based migration (DataBox)
      - Online - over the network (ExpressRoute) based migration.
 
