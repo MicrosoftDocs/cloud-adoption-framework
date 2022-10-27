@@ -38,7 +38,7 @@ When it comes to security and compliance, Microsoft is continually expanding our
 
 Capacity optimization, where you only pay for the resources you utilize over time, is another technical benefit of the cloud. The core concept to consider is how elasticity and on-demand resources help you deploy, provision, or deprovision resources more dynamically.
 
-### Sustainable IT Infrastructure
+### Sustainable IT infrastructure
 
 Building a sustainable IT infrastructure is tightly connected to moving workloads from on-premises to the cloud. So how do we select the first project to migrate based on its potential sustainability impact?
 

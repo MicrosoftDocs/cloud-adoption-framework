@@ -27,7 +27,7 @@ Microsoft has been leading in many of these areas. The company has been operatin
 
 [Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
-## Emerging Software Design Principles
+## Emerging software design principles
 
 More opportunities have arisen recently to design software that is more sustainable. [Green Software](https://learn.greensoftware.foundation/practitioner/introduction) is an emerging discipline with principles, patterns, philosophies, practices, and competencies to define, develop and run sustainable software applications. The sooner this discipline is adopted into your sustainability journey, the better, as it will help to reduce the carbon emissions consumed by applications.
 
@@ -51,7 +51,7 @@ Read more about how Microsoft's [commitment to a planet-sized challenge](https:/
 
 Additionally, read how Microsoft [measures datacenter water and energy use to improve Azure Cloud sustainability](https://azure.microsoft.com/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/).
 
-## Building a Sustainability Strategy
+## Building a sustainability strategy
 
 Sustainability continues to gain importance as a performance indicator for organizations. As the sustainability transformation is making its mark on companies across industries, adding pressure from new types of stakeholders and challenging existing profit pools while creating opportunities to open new ones, companies are increasingly forced to respond effectively with new types of solutions and tech-enabled approaches.
 
@@ -84,7 +84,7 @@ Sustainability is an approach beyond a marketing play, with a conscious business
 - Ensure transparency on your commitments and progress through publicly exposing annual sustainability reports. Read more in Microsoft's [2021 Environmental Sustainability Report](https://www.microsoft.com/corporate-responsibility/sustainability/report).
 - Be consistent in the communication of promoting your green efforts, thus ensuring maintaining consistent brand integrity.
 
-## Regulatory Compliance
+## Regulatory compliance
 
 Customers are responsible for ensuring they're up to date with regulatory compliance regulations across their industry. Additionally, consider how government regulations or policies for your region might influence your organization's motivations for migrating to the cloud.
 
