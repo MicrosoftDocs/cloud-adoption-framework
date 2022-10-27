@@ -130,7 +130,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
      - Burst Jobs
          - Scheduler setup network considerations which submit the jobs in the cloud
          - Azure Batch network considerations  
-     - Parallel Workflows (both on-prem and in the cloud)
+     - Parallel Workflows (both on-premises and in the cloud)
      - Hybrid
          - HPC Cache
      - Cloud Native

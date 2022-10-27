@@ -20,7 +20,7 @@ When building your own on-premises HPC solution, there's significant investment 
 
 As you migrate your HPC environment, there will be a push for cost savings. Investing in HPC capital has financial concerns rising due to continually upgrading IT infrastructure to meet high demanding workloads. The goal will be reducing computing operational costs while still optimizing and scaling up the performance of your HPC workloads for on-demand usage.
 
-There will also be a drive to reduce how long on-premises HPC workloads typically take to run HPC workloads for faster decision making when computing large amounts of data. These time consuming on-premise workloads could take months and will heavily affect internal operations in terms of cost and scaling.
+There will also be a drive to reduce how long on-premises HPC workloads typically take to run HPC workloads for faster decision making when computing large amounts of data. These time consuming on-premises workloads could take months and will heavily affect internal operations in terms of cost and scaling.
 
 ## HPC outcomes
 

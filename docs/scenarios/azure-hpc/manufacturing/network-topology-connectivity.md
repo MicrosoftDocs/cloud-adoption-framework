@@ -119,7 +119,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
 
 ## Define and throughput latency bandwidth network requirements
 
- - Both HPC in the Cloud Only and HPC Cloud Hybrid deployment model will have their own networking and connectivity latency /throughput needs depending on how the Manufacturing workflow / workload jobs are submitted and executed in the OnPrem vs Cloud. The users can submit HPC jobs in many deployment modes (from on-premises or in the cloud)
+ - Both HPC in the Cloud Only and HPC Cloud Hybrid deployment model will have their own networking and connectivity latency /throughput needs depending on how the Manufacturing workflow / workload jobs are submitted and executed in the on-premises vs Cloud. The users can submit HPC jobs in many deployment modes (from on-premises or in the cloud)
      - Single Jobs
          - On-premises to Azure connectivity considerations if remote visualization desktop is used
      - Burst Jobs
