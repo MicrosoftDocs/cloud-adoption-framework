@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Application access governance
 
-Identity management tools offer capabilities and features that greatly assist user management and access control within a cloud deployment. They also require well-considered processes and policies to support your organization's goals.  The following sections provides guidance, controls, and auditing that can be used.
+Identity management tools offer capabilities and features that greatly assist user management and access control within a cloud deployment. They also require well-considered processes and policies to support your organization's goals.  The following sections provide guidance, controls, and auditing that can be used.
 
 ## Guidance
 
