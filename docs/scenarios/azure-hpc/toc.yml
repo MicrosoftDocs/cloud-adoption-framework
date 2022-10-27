@@ -7,9 +7,9 @@ items:
     href: plan.md
   - name: Prepare your environment
     items: 
-    - name: Azure landing zone for HPC (overall)
+    - name: Azure landing zone for HPC
       href: ready.md
-    - name: Energy (oil & gas)
+    - name: Energy
       items:
       - name: Design areas
         items:
@@ -22,7 +22,7 @@ items:
         - name: Compute
           href: energy/compute.md
         - name: Storage
-          href: energy/starage.md
+          href: energy/storage.md
         - name: Resource organization
           href: energy/resource-organization.md
         - name: Security
@@ -79,7 +79,7 @@ items:
           href: manufacturing/platform-automation-devops.md
     - name: Implementation options
       items:
-      - name: Enterprise-scale for Azure high-performance computing (HPC)
+      - name: HPC landing zone accelerator
         href: azure-hpc-landing-zone-accelator.md
       - name: Compute manufacturing architecture
         href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview
@@ -95,7 +95,7 @@ items:
   - name: Modernize with HPC on Azure
     href: modernize.md
   - name: Innovate with HPC on Azure
-    href: migrate.md
+    href: innovate.md
   - name: Govern HPC in Azure
     href: govern.md
   - name: Manage HPC platform and workloads
@@ -110,16 +110,12 @@ items:
     items:
     - name: Overview
       href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
-
     - name: Energy example architecture
       href: energy/compute.md#hpc-reference-architecture
     - name: Finance example architecture
       href: azure-hpc-landing-zone-accelator.md#example-conceptual-finance-reference-architecture
     - name: Manufacturing example architecture
       href: azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture
-
-
-      maintainContext: true
     - name: 3D video rendering
       href: /azure/architecture/example-scenario/infrastructure/video-rendering
       maintainContext: true
@@ -150,7 +146,6 @@ items:
     - name: Run reservoir simulations
       href: /azure/architecture/example-scenario/infrastructure/reservoir-simulation
       maintainContext: true
-
   - name: Azure product documentation
     items:
     - name: Azure HPC Product documentation
@@ -163,8 +158,6 @@ items:
       href: /powershell/high-performance-computing/overview/
     - name: HPC VMs (N & H)
       href: /azure/virtual-machines/workloads/hpc/overview/
-
-
   - name: Build skills on Learn
     items:
     - name: Learning path for running HPC applications

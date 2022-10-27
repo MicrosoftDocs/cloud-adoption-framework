@@ -27,18 +27,11 @@ The focus of HPC is based on key management principles:
 | **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
 It is also recommended to follow the security baseline recommendations for the following HPC services:
-- [Azure HPC Cache:](https://learn.microsoft.com/security/benchmark/azure/baselines/hpc-cache-security-baseline) Ensure that network security, identity management, privileged access, data protection, asset management, logging/threat detection, posture/vulnerability management, and backup/recovery is in place.
+- [Azure HPC Cache:](/security/benchmark/azure/baselines/azure-hpc-cache-security-baseline) Ensure that network security, identity management, privileged access, data protection, asset management, logging/threat detection, posture/vulnerability management, and backup/recovery is in place.
 - [Azure CycleCloud:](/azure/cyclecloud/concepts/security-best-practices) Have your HPC administrator setup SSL, configure networking and secret management, and create a secure locked-down environment.
 - [Azure Batch:](/azure/batch/security-controls-policy) Use the latest Azure Security Benchmarks available to implement recommendations on securing your Batch nodes based on the appropriate compliance standard.
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Plan for HPC](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern HPC](./govern.md)
-- [Organize team members for HPC in Azure](./organize.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
+- After creating your HPC cloud adoption security strategy, look into [organizing team members](./organize.md) to align the teams and roles supporting your organization's cloud adoption efforts.
+- For additional security information, refer to best practices defined in the Azure [HPC Well-architected framework.](../azure-hpc/well-architected-framework.md#security)

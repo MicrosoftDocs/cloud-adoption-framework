@@ -1,6 +1,6 @@
 ---
 title: 'Azure Identity and Access Management| Microsoft Docs'
-description: 'This HPC energy scenarior article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
+description: 'This HPC energy scenario article builds on a number of considerations and recommendations defined in the Azure landing zone article Azure landing zone design area for identity and access management.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -28,7 +28,7 @@ Both HPC in the Cloud Only and HPC Cloud Hybrid model may have their own unique 
 
 Such workloads in the Cloud Only deployment model will leverage Azure Active Directory (Azure AD) for Azure fabric authentication, while HPC hybrid deployment model will leverage Microsoft [Azure AD Hybrid solution](/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json) for authentication need based on decision made by cloud team. Independently on the type of deployment, Linux clients and POSIX compliant storage solutions require legacy AD support through Azure Active Directory Domain Services.
 
-A typical HPC setup includes a front-end for submitting jobs, a job scheduler or orchestrator, a compute cluster, and shared storage. The jobs can be submitted from on-prem and/or in the cloud.   IAM considerations for users and visualization devices may vary depending on the enterprise standards.
+A typical HPC setup includes a front-end for submitting jobs, a job scheduler or orchestrator, a compute cluster, and shared storage. The jobs can be submitted from on-premises and/or in the cloud.   IAM considerations for users and visualization devices may vary depending on the enterprise standards.
 
 Review the Azure administration and management activities you require your teams to do. Consider your HPC on Azure landscape. Determine the best possible distribution of responsibilities within your organization.
 
@@ -50,6 +50,6 @@ The following list of articles will take you to guidance found at specific point
 - [Resource Organization](./resource-organization.md)
 - [Security Governance Compliance](./security-governance-compliance.md)
 - [Security](./security.md)
-- [Storage](./starage.md)
+- [Storage](./storage.md)
 - Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
 

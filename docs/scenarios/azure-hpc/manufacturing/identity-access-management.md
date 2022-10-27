@@ -26,11 +26,13 @@ Depending on the chosen HPC Compute Resource Orchestrator, different types of au
  - [Azure Batch](/azure/batch/batch-technical-overview) - Batch account access supports [two methods of authentication](/azure/batch/security-best-practices): Shared Key and Azure Active Directory (Azure AD).
  - Microsoft [HPC Pack](/azure/cyclecloud/hpcpack?view=cyclecloud-8&preserve-view=true) - Currently all HPC Pack nodes must be joined into an Active Directory Domain. If you are deploying the HPC Pack cluster in a virtual network which has a Site-to-Site VPN or ExpressRoute connection with your corporate network, typically there is already an existing Active Directory Domain. If you don't have an AD domain in your virtual network yet, you can choose to create a new AD domain by promoting the head node as domain controller.
 
-:::image type="content" alt-text="Manufacturing Reference Architecture design with Azure CycleCloud" source="../media/reference-architecture-with-azure-cycle-cloud.png" lightbox="../media/reference-architecture-with-azure-cycle-cloud.png":::
+
+
+:::image type="content" source="../media/reference-architecture-with-azure-cycle-cloud.png" alt-text=" Diagram that shows Manufacturing Reference Architecture design with Azure CycleCloud.":::
 
 ***Figure 1: Reference Architecture with Azure CycleCloud***
 
-:::image type="content" alt-text="Manufacturing Reference Architecture design with Azure Batch" source="../media/reference-architecture-with-azure-batch.png" lightbox="../media/reference-architecture-with-azure-batch.png":::
+:::image type="content" source="../media/reference-architecture-with-azure-batch.png" alt-text="Diagram showing Manufacturing Reference Architecture design with Azure Batch.":::
 
 ***Figure 2: Reference Architecture with Azure Batch***
 
