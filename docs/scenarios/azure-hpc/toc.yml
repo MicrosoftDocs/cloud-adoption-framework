@@ -22,7 +22,7 @@ items:
         - name: Compute
           href: energy/compute.md
         - name: Storage
-          href: energy/starage.md
+          href: energy/storage.md
         - name: Resource organization
           href: energy/resource-organization.md
         - name: Security
@@ -79,7 +79,7 @@ items:
           href: manufacturing/platform-automation-devops.md
     - name: Implementation options
       items:
-      - name: Enterprise-scale for Azure high-performance computing (HPC)
+      - name: HPC landing zone accelerator
         href: azure-hpc-landing-zone-accelator.md
       - name: Compute manufacturing architecture
         href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview

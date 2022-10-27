@@ -12,22 +12,21 @@ ms.custom: think-tank
 
 # Strategic impact of Azure high-performance computing (HPC)
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-plan-template.docx) to record your cloud adoption strategy. This article will help expose many technical considerations regarding HPC that may have an impact on your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-plan-template.docx) to record your cloud adoption strategy. This article will help expose many technical considerations regarding HPC that have an impact on your strategy.
 
 ## HPC motivations
 
 When building your own on-premises HPC solution, there's significant investment required in specifying the right supercomputer specs and clusters, which will incentivize cost savings and optimization of computational needs.
 
-As you migrate your HPC environment, there will be a push for cost savings. Investing in HPC capital has financial concerns due to continually upgrading computing hardware to meet high demanding workloads. 
+As you migrate your HPC environment, there will be a push for cost savings. Investing in HPC capital has financial concerns rising due to continually upgrading IT infrastructure to meet high demanding workloads. The goal will be reducing computing operational costs while still optimizing and scaling up the performance of your HPC workloads for on-demand usage.
 
-There will also be a drive reduce how long on-premises HPC workloads typically take to run HPC workloads. These time consuming workloads could take months and will heavily affect optimization of internal operations.
+There will also be a drive to reduce how long on-premises HPC workloads typically take to run HPC workloads for faster decision making when computing large amounts of data. These time consuming on-premises workloads could take months and will heavily affect internal operations in terms of cost and scaling.
 
 ## HPC outcomes
 
 With HPC in Azure, there's less concern in building and owning your own expensive hardware and more focus on aligning your tools and processes to get the data you need for simulation and modeling results.
 
 As geographical and market HPC demands require scaling out the compute resources, an Azure HPC system allows flexibility by adding dynamic resources as they're needed, and remove them as demand falls to ensure a cost effective and high performing solution.
-
 
 ## HPC business justification
 
@@ -37,13 +36,6 @@ When configuring your HPC environment to the cloud, you'll want to consider fore
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Plan for HPC](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Govern HPC](./govern.md)
-- [Secure HPC](./secure.md)
-- [Organize team members for HPC in Azure](./organize.md)
-- [Migrate HPC](./migrate.md)
-- [Innovate with HPC](./innovate.md)
-- [Manage HPC](./manage.md)
+- Start [planning](./plan.md) your cloud adoption journey for your HPC environment.
+- [Classify](../../strategy/motivations.md#classify-your-motivations) your motivations for your cloud adoption strategy
+- Check out what accelerating [HPC in the cloud](https://azure.microsoft.com/resources/accelerating-ai-and-hpc-in-the-cloud/) looks like.

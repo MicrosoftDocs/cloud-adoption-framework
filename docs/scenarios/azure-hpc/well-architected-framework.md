@@ -28,6 +28,8 @@ On top of these environmental controls, the workload team should consider:
 
 ## Security
 
+Apply security principles to your HPC environment to provide assurances against deliberate attacks and abuse of your valuable data and systems. Look into securing your user operating system images, user access, and follow Batch and CycleCloud security guidelines. For more suggestions, see [Principles of the security pillar](/azure/architecture/framework/security/security-principles).
+
 ### Operating system images
 
 Azure Marketplace provides Linux based HPC images to use in the cluster. These images come packed with popular InfiniBand-based MPI libraries, Mellanox OFED, Preconfigured IP over InfiniBand, Communication Runtimes, Intel/AMD Optimized libraries, Azure HPC diagnostic tools, etc. Users can start with these images and then apply their organization's security hardening policies to strengthen software images against vulnerabilities and cyber threats. Upon hardening, the new image can be saved in Azure's Image Gallery to be utilized to create the Virtual Machines within Azure's HPC Cluster orchestrator service, Azure CycleCloud and Azure HPC Service, Azure Batch.
@@ -81,7 +83,11 @@ Azure CycleCloud allows you to set budgets per cluster and can send notification
 
 ## Operational excellence
 
-### Infrastructure as a Code
+When keeping your HPC applications running in production, deployments must be reliable and predictable. Reliable and predictable deployments consist of automating HPC workloads with Infrastructure as a Code (IaC) solutions. You must also perform node health checks for analyzing and monitoring your HPC workloads.
+
+ For more deployment suggestions, see [repeatable infrastructure](/azure/architecture/framework/devops/automation-infrastructure). For more monitoring suggestions, see the recommended [checklist](/azure/architecture/framework/devops/checklist).
+
+### Infrastructure as Code
 
 HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Storage, Visualization Nodes, License Servers, etc. To automate the deployment, it's recommended to use industry standard tools like Terraform, Ansible and Packer to simplify the process.
 
@@ -90,6 +96,10 @@ HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Stora
 [Azure Managed Grafana](https://azure.microsoft.com/services/managed-grafana/#overview) is a fully managed service for analytics and monitoring solutions. It's supported by Grafana Enterprise, which provides extensible data visualizations. This can be integrated in the HPC workloads and an example is shown in Azure HPC OnDemand platform like [AzHop](https://azure.github.io/az-hop/).
 
 ## Performance Efficiency
+
+Ensure that your HPC environment is able to scale in order to meet the demands placed on it by users in an efficient manner. Choose the right platform for your HPC applications based on application vendor recommendations, invest in capacity planning if extra infrastructure is needed to meet demand, and monitor the HPC infrastructure performance as users use your system.
+
+For more information, see [performance efficiency topics](/azure/architecture/framework/scalability/overview#topics).
 
 ### Choosing the right platform for the HPC application
 
@@ -114,4 +124,4 @@ Based on the type of the application and its license conditions, investigate whe
 
 ## Next steps
 
-[Introduction to architectures for HPC](./index.md)
+- See [Introduction to architectures for HPC](./index.md)
