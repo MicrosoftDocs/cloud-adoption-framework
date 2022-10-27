@@ -20,7 +20,7 @@ When preparing any environment for sustained cloud adoption, we use the Azure la
 
 - [Energy (Oil & Gas)](../azure-hpc/energy/compute.md#use-case-and-reference-architecture-for-seismic-processing).
 - [Finance](../azure-hpc/azure-hpc-landing-zone-accelator.md#example-conceptual-energy-reference-architecture).
-- [Manufacturing](./azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
+- [Manufacturing](./azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture).
 
 When developing a long-term vision for landing zones, consider the designs above. Note that the conceptual architecture references will act as a starting point, and based on your organization's business requirements and end-user needs, you may have to modify these as required.
 
@@ -38,14 +38,14 @@ The above are guiding questions and expected to help you understand that the dep
 
 The [Azure HPC OnDemand Platform Accelerator](https://azure.github.io/az-hop/) delivers an end to end deployment mechanism for a complete HPC cluster solution in Azure. Industry standard tools like Terraform, Ansible and Packer are used to provision and configure this environment containing:
 
-- An OpenOn Demand Portal for a unified user access, remote shell access, remote visualization access, job submission, file access and more
-- An Active Directory for user authentication and domain control
-- An Open PBS or SLURM Job Scheduler
-- Azure Cycle Cloud to handle autoscaling of nodes through job scheduler integration
-- A Jumpbox to provide admin access
-- Azure Netapp Files for home directory and data storage
-- A Lustre cluster for the scratch storage with HSM capabilities to Azure Blobs through a RobinHood integration
-- Grafana dashboards to monitor your cluster
+- An OpenOn Demand Portal for a unified user access, remote shell access, remote visualization access, job submission, file access and more.
+- An Active Directory for user authentication and domain control.
+- An Open PBS or SLURM Job Scheduler.
+- Azure Cycle Cloud to handle autoscaling of nodes through job scheduler integration.
+- A Jumpbox to provide admin access.
+- Azure Netapp Files for home directory and data storage.
+- A Lustre cluster for the scratch storage with HSM capabilities to Azure Blobs through a RobinHood integration.
+- Grafana dashboards to monitor your cluster.
 
 ## Next steps
 
