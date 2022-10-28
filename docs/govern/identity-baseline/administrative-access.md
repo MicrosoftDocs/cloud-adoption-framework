@@ -28,15 +28,20 @@ To manage Privileged Identity Management, follow these steps:
 1. Select the Role you wish to modify.
 1. Select **Settings** and then **Edit**. Edit the following settings:
 
-   - Set **Activation maximum duration (hours)** to be between 30 minutes to 24 hours.
+   - Set **Activation maximum duration (hours)** to be between 30 minutes to 24 hours based on the duration of tasks with that role.
    - Check the **Require justification on activation** checkbox.
    - Check the **Require ticket information on activation** checkbox.
-   - Check the **Require approval to activate** checkbox.
+   - Check the **Require approval to activate** checkbox if the role is not used daily.
 
 TODO: The OneNote states: "You can choose whether the assignment is allowed to be permanent eligible or permanent active. You can even set the assignment to expire, thereby forcing audits on specific roles.
 The final pane is Notification. You can set notifications to be triggered when actions are being taken to assign or use roles in your environment." Do we want to add this to the guidance and change any "cans" to "shoulds"?
 
-TODO: I removed the management group guidance, as it's covered in Resource consistency. Is that okay?
+> ✅I think what you have is the right format.  I would say we would want to include the following for notification:
+
+- Define a notification list for role activiations.
+- Assign it in the notification pane.
+
+> ❓TODO: I removed the management group guidance, as it's covered in Resource consistency. Is that okay?  ✅ Good from my side
 
 ## Audit
 

@@ -162,9 +162,9 @@ Central management of password reset causes a management burden and can lead use
 
 - Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr).
 - Set passwords not to expire through the [Password Expiration Policy](https://learn.microsoft.com/microsoft-365/admin/manage/set-password-expiration-policy?source=recommendations&view=o365-worldwide):
-    - 	Navigate to: Setup - Microsoft 365 admin center
-    - Select Set passwords to never expire
-    - Select Get Started and follow the wizard's instructions.
+  - Navigate to: Setup - Microsoft 365 admin center
+  - Select Set passwords to never expire
+  - Select Get Started and follow the wizard's instructions.
 
 > TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.  
 > FINDING: The Password Policies determine the contents of the password, but the Expiration policy appears to be a different setting.
