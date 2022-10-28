@@ -38,14 +38,39 @@ The  landing zone accelerator approach to landing zones provides these assets to
 
 These articles provide guidelines for creating your landing zone:
 
-- [Azure billing and HPC - Energy landing zone accelerator](./energy/azure-billing-active-directory-tenant.md)
-- [Identity and access management for HPC - Energy landing zone accelerator](./energy/identity-access-management.md)
-- [Management for HPC - Energy landing zone accelerator](./energy/management.md)
-- [Network topology and connectivity for HPC - Energy landing zone accelerator](./energy/network-topology-connectivity.md)
-- [Platform automation and devops for HPC - Energy landing zone accelerator](./energy/platform-automation-devops.md)
-- [Management group and subscription organization for HPC - Energy landing zone accelerator](./energy/resource-organization.md)
-- [Governance disciplines for HPC - Energy](./energy/security-governance-compliance.md)
-- [Security disciplines for HPC - Energy](./energy/security.md)
+- Energy (Oil and Gas)
+
+    - [Azure billing and HPC - Energy landing zone accelerator](./energy/azure-billing-active-directory-tenant.md)
+    - [Identity and access management for HPC - Energy landing zone accelerator](./energy/identity-access-management.md)
+    - [Management for HPC - Energy landing zone accelerator](./energy/management.md)
+    - [Network topology and connectivity for HPC - Energy landing zone accelerator](./energy/network-topology-connectivity.md)
+    - [Platform automation and devops for HPC - Energy landing zone accelerator](./energy/platform-automation-devops.md)
+    - [Management group and subscription organization for HPC - Energy landing zone accelerator](./energy/resource-organization.md)
+    - [Governance disciplines for HPC - Energy](./energy/security-governance-compliance.md)
+    - [Security disciplines for HPC - Energy](./energy/security.md)
+    - [Storage](./energy/storage.md)
+  
+- Manufacturing 
+    - [Azure billing and HPC - Energy landing zone accelerator](./manufacturing/azure-billing-active-directory-tenant.md)
+    - [Identity and access management for HPC - Energy landing zone accelerator](./manufacturing/identity-access-management.md)
+    - [Management for HPC - Energy landing zone accelerator](./manufacturing/management.md)
+    - [Network topology and connectivity for HPC - Energy landing zone accelerator](./manufacturing/network-topology-connectivity.md)
+    - [Platform automation and devops for HPC - Energy landing zone accelerator](./manufacturing/platform-automation-devops.md)
+    - [Management group and subscription organization for HPC - Energy landing zone accelerator](./manufacturing/resource-organization.md)
+    - [Governance disciplines for HPC - Energy](./manufacturing/security-governance-compliance.md)
+    - [Security disciplines for HPC - Energy](./manufacturing/security.md)
+    - [Storage](./manufacturing/storage.md)
+
+- Finance
+    - [Azure billing and HPC - Energy landing zone accelerator](./finance/azure-billing-active-directory-tenant.md)
+    - [Identity and access management for HPC - Energy landing zone accelerator](./manufacturing/identity-access-management.md)
+    - [Management for HPC - Energy landing zone accelerator](./finance/identity-access-management.md)
+    - [Network topology and connectivity for HPC - Energy landing zone accelerator](./finance/network-topology-connectivity.md)
+    - [Platform automation and devops for HPC - Energy landing zone accelerator](./finance/platform-automation-devops.md)
+    - [Management group and subscription organization for HPC - Energy landing zone accelerator](./finance/management.md)
+    - [Governance disciplines for HPC - Energy](./finance/security-governance-compliance.md)
+    - [Security disciplines for HPC - Energy](./finance/security.md)
+    - [Storage](./finance/storage.md)
 
 ## Example conceptual energy reference architecture
 
@@ -68,7 +93,7 @@ The following conceptual reference architecture is an example that shows design 
 
 ## Obtain the HPC landing zone accelerator
 
-The HPC landing zone accelerator is available here...
+The [Azure HPC OnDemand Platform Accelerator](https://azure.github.io/az-hop/) helps to create an end to end deployment mechanism for a complete HPC cluster solution in Azure. Based on the business specific requirements, you can build on top of this and make updates as required.
 
 ## Next steps
 

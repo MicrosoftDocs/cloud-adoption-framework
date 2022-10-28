@@ -22,7 +22,8 @@ It's vital to plan for IP addressing in Azure to ensure that:
  - Future VNet peering to existing or planned VNets is possible
  - The virtual network (VNet) contains the right address space.
  - Proper planning for subnet configuration happens in advance.
- - Sufficient excess addressing is considered for future expansion or additional services
+ - Sufficient excess addressing is considered for future expansion or other services
+
 
 ## HPC manufacturing design considerations:
 
@@ -31,7 +32,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
     2.	Storage
     3.	Infrastructure
     4.	Visualization
-    5.	Login
+    5.	Sign-in
     6.	ANF
     7.	HPC Cache
 2.	Several services like Azure NetApp Files, Azure HPC Cache and future storage offerings, require dedicated delegated subnets for proper operation. Ensure that appropriate addressing space is planned if any of these services are under consideration.
@@ -54,7 +55,7 @@ Use case:
 
 **Accelerated Networking**
 
-Many HPC workloads (e.g. Seismic Processing) require the processing of large amount of data that is stored in large shared file systems like Azure Blob, Azure NetApp Files, Lustre ClusterStor and other custom storage solutions that are accessed through the network. It becomes paramount to rely on a high performance network to reduce the time for data transfers.
+Many HPC workloads (for example, Seismic Processing) require the processing of large amount of data that is stored in large shared file systems like Azure Blob, Azure NetApp Files, Lustre ClusterStor and other custom storage solutions that are accessed through the network. It becomes paramount to rely on a high performance network to reduce the time for data transfers.
 
 Enabling [Accelerated Networking](/azure/virtual-network/accelerated-networking-overview) provides the VMs a high-throughput and low latency connection between them and to/from Azure services together with reduced jitter and minimal CPU utilization. 
 
@@ -68,8 +69,8 @@ InfiniBand connection is possible only between VMs allocated within the same [pl
 
 **Azure ExpressRoute**
 
- - In the case of a burst application like a hybrid setup for reservoir simulation and modeling, where the  on-premises data sets. are shared and the Azure compute becomes an extension, Express Route will help you to connect your on-premises environment into the Microsoft cloud over a private connection with the help of a connectivity provider.  It provides enterprise-grade resiliency and availability, and the advantage of a Global ExpressRoute partner ecosystem. For information on how to connect your network to Microsoft using ExpressRoute, see ExpressRoute connectivity models.
- - ExpressRoute connections do not go over the public internet, and they offer more reliability, faster speeds, and lower latencies than typical internet connections. For point-to-site VPN and site-to-site VPN, you can connect on-premises devices or networks to a virtual network using any combination of these VPN options and Azure ExpressRoute.
+ - In the case of a burst application like a hybrid setup for reservoir simulation and modeling, where the  on-premises data sets are shared and the Azure compute becomes an extension, Express Route will help you to connect your on-premises environment into the Microsoft cloud over a private connection with the help of a connectivity provider.  It provides enterprise-grade resiliency and availability, and the advantage of a Global ExpressRoute partner ecosystem. For information on how to connect your network to Microsoft using ExpressRoute, see ExpressRoute connectivity models.
+ - ExpressRoute connections don't go over the public internet, and they offer more reliability, faster speeds, and lower latencies than typical internet connections. For point-to-site VPN and site-to-site VPN, you can connect on-premises devices or networks to a virtual network using any combination of these VPN options and Azure ExpressRoute.
 
 ## Define an Azure network topology
 
@@ -123,7 +124,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
      - Single Jobs
          - On-premises to Azure connectivity considerations if remote visualization desktop is used
      - Burst Jobs
-         - Scheduler setup network considerations which submit the jobs in the cloud
+         - Scheduler setup network considerations, which submit the jobs in the cloud
          - Azure Batch network considerations
      - Parallel Workflows (both on-premises and in the cloud)
      - Hybrid
@@ -131,7 +132,7 @@ It's vital to plan for IP addressing in Azure to ensure that:
      - Cloud Native
          - KS Containers
          - Functions
- - MPI environments are dedicated as they have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and are not very amenable to sharing with other workloads. MPI applications leverage the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect.
+ - MPI environments are dedicated as they have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and aren't amenable to sharing with other workloads. MPI applications use the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect.
 
 :::image type="content" alt-text="Infini Band" source="../media/infiniband.png" lightbox="../media/infiniband.png":::
 
