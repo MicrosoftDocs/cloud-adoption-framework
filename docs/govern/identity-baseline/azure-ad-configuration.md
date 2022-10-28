@@ -35,11 +35,22 @@ Standardize on Azure AD as your organization's identity and authentication platf
 
 ## Enforce - Centralized identity and authentication system
 
-N/A
+Due to the nature of identity authentication in workloads, there is no comprehensive option to enforce the identity system used by a given system.  However, one option is to tag resources based on the identity system in use.
+
+By assigning the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy, you can specify behavior for if a tag is not provided on resources in the policy's assignment scope.
+
+![Tag Policy GUI](./media/Tagpolicy.png)
+
+By assigning it with the with the tag name of "IdentityProvider" and tag value of "Undefined", you will create the following behavior:
+
+- If a tag for IdentityProvider is added, it will be used.
+- Otherwise, it will be marked as Undefined.
+
+Resources that use Azure AD as the centralized identity system should be tagged with *AzureAD*.  All others should be reviewed.
 
 ## Audit - Centralized identity and authentication system
 
-Add a tag to virtual machines and Azure App Services called "IdentityProvider". Set the tag to the name of the identity provider. Use "AzureAD" for Azure AD. Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications.
+Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for resources.
 
 ```bash
 resources
