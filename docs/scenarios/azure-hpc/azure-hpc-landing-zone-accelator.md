@@ -97,4 +97,4 @@ The [Azure HPC OnDemand Platform Accelerator](https://azure.github.io/az-hop/) h
 
 ## Next steps
 
-- Review the HPC  landing zone accelerator critical design areas to make complete considerations and recommendations for your HPC  landing zone accelerator architecture. See [HPC {{Insert-accelerator-name}} landing zone accelerator](./energy/identity-access-management.md).
+- Review the HPC  landing zone accelerator critical design areas to make complete considerations and recommendations for your HPC landing zone accelerator architecture. See the [HPC identity access management landing zone accelerator](./energy/identity-access-management.md).
