@@ -50,7 +50,7 @@ Resources that use Azure AD as the centralized identity system should be tagged 
 
 ## Audit - Centralized identity and authentication system
 
-Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications leveraging Application Services or Virtual Machines.
+Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications, such as those using Application Services or Virtual Machines.
 
 ```bash
 resources
@@ -89,9 +89,31 @@ Restrict default user permissions to remove unneeded access granted in default s
 
 ## Enforce - Default user permissions
 
-TODO: Should we suggest the use of [authorization policies](https://learn.microsoft.com/graph/api/resources/authorizationpolicy) for enforcement?
+>Below needs to be QCed from the email discussion.
 
-Configure the following Azure AD user settings:
+You can update the Authorization Policy to enforce these settings via the Microsoft Graph REST API with the following [authorizationPolicy](https://learn.microsoft.com/en-us/graph/api/resources/authorizationpolicy?view=graph-rest-1.0):
+
+``` json
+{
+  "id": "String (identifier)",
+  "description": "String",
+  "displayName": "String",
+  "blockMsolPowerShell": true,
+  "defaultUserRolePermissions": {
+      "allowedToCreateApps": false,
+      "allowedToCreateSecurityGroups": false,
+      "allowedToReadOtherUsers": false,
+      "permissionGrantPoliciesAssigned": []
+},
+  "allowedToUseSSPR": true,
+  "allowedToSignUpEmailBasedSubscriptions": true,
+  "allowEmailVerifiedUsersToJoinOrganization": true,
+  "allowInvitesFrom": "adminsAndGuestInviters",
+  "guestUserRoleId": "Guid"
+}
+```
+
+Alternatively you can configure the following Azure AD user settings from the portal:
 
 - Set [Users can register applications](/azure/active-directory/roles/delegate-app-roles#restrict-who-can-create-applications) to No.
 - Set [default Azure Active Directory](/azure/active-directory/fundamentals/users-default-permissions) user permission **Restrict access to Azure AD administration portal** to Yes.
@@ -104,7 +126,30 @@ Configure the following Azure AD user settings:
 
 ## Audit - Default user permissions
 
-TODO: Is there an automated way to review user settings in Azure AD? Graph query?
+Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0) API call like the following to audit the default user settings.
+
+```http
+GET https://graph.microsoft.com/v1.0/policies/authorizationPolicy
+```
+
+Then confirm the settings of specific items in the response:
+
+```http
+    "allowInvitesFrom": "adminsAndGuestInviters",
+```
+
+```http
+
+    "defaultUserRolePermissions": {
+        "allowedToCreateApps": false,
+        "allowedToCreateSecurityGroups": true,
+        "allowedToReadOtherUsers": false,
+        "permissionGrantPoliciesAssigned": []
+    }
+
+```
+
+Alternatively, you can review the user permissions by checking the portal configuration above.
 
 ## Guidance - Password management
 
@@ -116,12 +161,26 @@ Central management of password reset causes a management burden and can lead use
 ## Enforce - Password management
 
 - Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr).
-- TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.
+- Set passwords not to expire through the [Password Expiration Policy](https://learn.microsoft.com/microsoft-365/admin/manage/set-password-expiration-policy?source=recommendations&view=o365-worldwide):
+    - 	Navigate to: Setup - Microsoft 365 admin center
+    - Select Set passwords to never expire
+    - Select Get Started and follow the wizard's instructions.
+
+> TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.  
+> FINDING: The Password Policies determine the contents of the password, but the Expiration policy appears to be a different setting.
+> We can still plan for if we want to give a default password complexity policy.
 
 ## Audit - Password management
 
-TODO: Is there a graph query to accomplish the same?
-Use the following Azure PowerShell code to audit the password expiry state.
+Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0) API call like the following to audit the default user settings.
+
+```http
+GET https://graph.microsoft.com/v1.0/users?$select=userPrincipalName,lastPasswordChangeDateTime,passwordPolicies
+```
+
+The resulting `passwordPolicies` setting should be set to "DisablePasswordExpiration"
+
+Use can also use the following Graph PowerShell code to audit the password expiry state and export to a CSV:
 
 ```powershell
 $auditFolder = "./AuditResults"
@@ -146,7 +205,7 @@ Legacy authentication doesn't support multifactor authentication (MFA). MFA impr
 
 ## Audit - Legacy authentication
 
-TODO: Should we suggest creating an alert for changes to Conditional Access Policies such as the following query suggested in [geeksforgeeks blog post](https://www.geeksforgeeks.org/microsoft-azure-create-alert-for-conditional-access-policy-changes/):
+>TODO: Should we suggest creating an alert for changes to Conditional Access Policies such as the following query suggested in [geeksforgeeks blog post](https://www.geeksforgeeks.org/microsoft-azure-create-alert-for-conditional-access-policy-changes/):
 
 ```bash
 AuditLogs
@@ -154,9 +213,11 @@ AuditLogs
 | project ActivityDateTime, InitiatedBy.user.userPrincipalName, TargetResources[0].displayName, ActivityDisplayName
 ```
 
-TODO: Should we include guidance from sources like:
+> TODO: Should we include guidance from sources like:
 
-[Troubleshooting Conditional Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log)
+> [Troubleshooting Conditional Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log)
+
+> I think it makes sense to include it in an additional resource below, but I'm not sure the best way.
 
 ## Guidance - Sign-in and user risk policies
 
