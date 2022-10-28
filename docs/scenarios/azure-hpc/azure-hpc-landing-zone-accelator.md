@@ -48,7 +48,7 @@ These articles provide guidelines for creating your landing zone:
     - [Management group and subscription organization for HPC - Energy landing zone accelerator](./energy/resource-organization.md)
     - [Governance disciplines for HPC - Energy](./energy/security-governance-compliance.md)
     - [Security disciplines for HPC - Energy](./energy/security.md)
-    - [Storage](./energy/starage.md)
+    - [Storage](./energy/storage.md)
   
 - Manufacturing 
     - [Azure billing and HPC - Energy landing zone accelerator](./manufacturing/azure-billing-active-directory-tenant.md)
