@@ -113,6 +113,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
 | Container apps | `Microsoft.App/containerApps` | `ctap` |
+| Container apps environment | `Microsoft.App/containerApps` | `ctae` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
