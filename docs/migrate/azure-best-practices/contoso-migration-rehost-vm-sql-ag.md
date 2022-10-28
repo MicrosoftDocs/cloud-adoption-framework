@@ -3,7 +3,7 @@ title: Rehost an application by migrating it to Azure VMs and SQL Server Always 
 description: Learn how Contoso rehosts an on-premises application by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: deltadan
 ms.author: abuck
-ms.date: 10/26/2022
+ms.date: 10/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -157,7 +157,7 @@ To set up the cluster:
 1. In **Networking**:
 
     - Place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`). 
-    - Create an internal load balancer (`ILB-PROD-DB-EUS2-SQLAOG`) that listens for traffic and directs it to the appropriate node.
+    - Create an internal load balancer (`ILB-PROD-DB-EUS2-SQLAOG`) that listens for traffic and directs it to the appropriate node. <!---Note to FTE: this step needed to move up to this spot from Step three "Deploy load balancer" below because the UI now mandates a load balancer be selected before it can create the two VMs. -->
 
      ![Screenshot that shows a new load balancer.](./media/contoso-migration-rehost-vm-sql-ag/load-balancer-settings.png)
 
@@ -254,9 +254,9 @@ The Contoso admin must now deploy the internal load balancer they created (`ILB-
 To deploy the load balancer:
 
 1. Open **Networking** > **Load balancing**, in Azure portal. 
-1. Place the (`ILB-PROD-DB-EUS2-SQLAOG`) load balancer in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`). <!---This step doesn't work. The UI doesn't show this ability.-->
-1. Assign it a static IP address (`10.245.40.100`). <!---This step doesn't work. The UI doesn't show this ability.-->
-1. Deploy the load balancer as a networking element in the networking resource group `ContosoNetworkingRG`. <!---This step doesn't work. The UI doesn't show this ability.-->
+1. Place the (`ILB-PROD-DB-EUS2-SQLAOG`) load balancer in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`). <!---This step doesn't seem to work. The UI doesn't show this ability.-->
+1. Assign it a static IP address (`10.245.40.100`). <!--- The UI doesn't show this ability to assign an IP address to the load balancer.-->
+1. Deploy the load balancer as a networking element in the networking resource group `ContosoNetworkingRG`. <!---This step doesn't seem to work. The UI doesn't show this ability.-->
 
     ![Screenshot that shows the **Create load balancer** pane.](./media/contoso-migration-rehost-vm-sql-ag/lb-create.png)
 
