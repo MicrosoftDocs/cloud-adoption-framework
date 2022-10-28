@@ -91,7 +91,7 @@ Restrict default user permissions to remove unneeded access granted in default s
 
 >Below needs to be QCed from the email discussion.
 
-You can update the Authorization Policy to enforce these settings via the Microsoft Graph REST API with the following [authorizationPolicy](https://learn.microsoft.com/en-us/graph/api/resources/authorizationpolicy?view=graph-rest-1.0):
+You can update the Authorization Policy to enforce these settings via the Microsoft Graph REST API with the following [authorizationPolicy](https://learn.microsoft.com/graph/api/resources/authorizationpolicy?view=graph-rest-1.0):
 
 ``` json
 {
@@ -214,9 +214,7 @@ AuditLogs
 ```
 
 > TODO: Should we include guidance from sources like:
-
 > [Troubleshooting Conditional Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log)
-
 > I think it makes sense to include it in an additional resource below, but I'm not sure the best way.
 
 ## Guidance - Sign-in and user risk policies
