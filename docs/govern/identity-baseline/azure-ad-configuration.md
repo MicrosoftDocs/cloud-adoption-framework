@@ -46,14 +46,15 @@ By assigning it with the with the tag name of "IdentityProvider" and tag value o
 - If a tag for IdentityProvider is added, it will be used.
 - Otherwise, it will be marked as Undefined.
 
-Resources that use Azure AD as the centralized identity system should be tagged with *AzureAD*.  All others should be reviewed.
+Resources that use Azure AD as the centralized identity system should be tagged with AzureAD.  All others should be reviewed and defined.
 
 ## Audit - Centralized identity and authentication system
 
-Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for resources.
+Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications leveraging Application Services or Virtual Machines.
 
 ```bash
 resources
+| where type == "Microsoft.Compute/virtualMachines" or type contains "Microsoft.Web/sites"
 | where tags.IdentityProvider != "AzureAD"
 | extend IdentityProvider = tags.IdentityProvider
 | extend ResourceOwner = tags.Owner
