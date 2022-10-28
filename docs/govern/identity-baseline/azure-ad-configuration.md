@@ -18,11 +18,11 @@ This article recommends using Azure AD as the centralized identity and authentic
 
 | Guidance | Enforce | Audit | Description |
 | --- | --- | ---| --- |
-| [Centralized identity and authentication](#guidance---centralized-identity-and-authentication-system) | enforce | [audit](#enforce---centralized-identity-and-authentication-system) | - |
+| [Centralized identity and authentication](#guidance---centralized-identity-and-authentication-system) | - | [audit](#enforce---centralized-identity-and-authentication-system) | - |
 | [Default user permissions](#guidance---default-user-permissions) | [enforce](#enforce---default-user-permissions) | [audit](#enforce---default-user-permissions) | - |
 | [Password management](#guidance---password-management) | [enforce](#enforce---password-management) | [audit](#enforce---password-management) | - |
 | [Legacy authentication](#guidance---legacy-authentication) | [enforce](#enforce---legacy-authentication) | [audit](#enforce---legacy-authentication) | - |
-| [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | [enforce](#enforce---sign-in-and-user-risk-policies) | [audit](#enforce---sign-in-and-user-risk-policies) | - |
+| [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | - | [audit](#enforce---sign-in-and-user-risk-policies) | - |
 
 ## Guidance - Centralized identity and authentication system
 
