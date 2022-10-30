@@ -31,12 +31,16 @@ Your organization or enterprise needs to design suitable security settings to me
 
 ## Design recommendations
 
-- **Cluster identities**
+- Cluster identities
   - Use your own [managed identity](/azure/aks/use-managed-identity) for your AKS cluster.
   - Define custom Azure RBAC roles for your AKS landing zone to simplify the management of required permissions for cluster-managed identity.
-- **Cluster access**
+- Cluster access
   - Use Kubernetes RBAC with Azure AD to [limit privileges](/azure/aks/azure-ad-rbac) and minimize granting administrator privileges to protect configuration and secrets access.
   - Use [AKS-managed Azure AD integration](/azure/aks/managed-aad) to use Azure AD for authentication and operator and developer access.
 - Define required RBAC roles and role bindings in Kubernetes.
   - Use [Kubernetes roles and role bindings](/azure/aks/concepts-identity#kubernetes-role-based-access-control-kubernetes-rbac) to Azure AD groups for site reliability engineering (SRE), SecOps, and developer access.
-- SRE full access should be granted just in time as needed. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
+  - Consider using [Azure RBAC for Kubernetes](https://docs.microsoft.com/en-us/azure/aks/manage-azure-rbac) that allows for the unified management and access control across Azure Resources, AKS, and Kubernetes resources. This feature frees you from having to separately manage user identities and credentials for Kubernetes. When enabled, Azure AD principals will be validated exclusively by Azure RBAC while regular Kubernetes users and service accounts are exclusively validated by Kubernetes RBAC.
+- SRE full access should be granted just in time as needed.
+  - Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
+- Workload identities
+  - [Azure AD workload identity for Kubernetes.](https://docs.microsoft.com/en-ca/azure/active-directory/develop/workload-identity-federation) With this federation, developers can use native Kubernetes concepts of service accounts and federation to access Azure AD protected resources, such as Azure and Microsoft Graph. 
