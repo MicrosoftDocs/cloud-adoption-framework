@@ -89,12 +89,18 @@ Like any Vagrant deployment, a [vagrantfile](https://github.com/microsoft/azure_
 - Execute the Azure Arc installation script
 
 After editing the `scripts/vars.ps1` script to match your environment, from the `Vagrantfile` folder, run `vagrant up`. As this is the first time you are creating the VM, the first run will be **much slower** than the ones to follow. This is because the deployment is downloading the Windows 10 box for the first time.
-
+ 
 ![A screenshot of running the `vagrant up` command.](./media/local-vagrant/vagrant-windows-cmd.png)
 
 Once the download is complete, the actual provisioning will start. As shown in the following screenshot, the process takes can take somewhere between 7 to 10 minutes.
 
 ![A screenshot of a completed `vagrant up` command.](./media/local-vagrant/vagrant-windows-complete.png)
+
+> [!NOTE]
+> If you see an error about the checking revocation for the certificate, add this config to `Vagrantfile`:
+> 
+> `config.vm.box_download_insecure = true`
+> 
 
 Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure Arc-enabled server inside a new resource group.
 

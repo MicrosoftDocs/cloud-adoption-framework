@@ -25,7 +25,7 @@ In the previous phase of this narrative, IT had retired 100% of the DR datacente
 Since then, some things have changed that will affect governance:
 
 - The migration team has begun migrating VMs out of the production datacenter.
-- The application development teams is actively pushing production applications to the cloud through CI/CD pipelines. Those applications can reactively scale with user demands.
+- The application development teams are actively pushing production applications to the cloud through CI/CD pipelines. Those applications can reactively scale with user demands.
 - The business intelligence team within IT has delivered several predictive analytics tools in the cloud. The volumes of data aggregated in the cloud continues to grow.
 - All of this growth supports committed business outcomes. Costs have begun to balloon. Projected budgets are growing faster than expected. The CFO needs improved approaches to managing costs.
 

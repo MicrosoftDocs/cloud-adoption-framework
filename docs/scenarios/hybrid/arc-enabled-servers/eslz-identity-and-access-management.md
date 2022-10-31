@@ -45,7 +45,7 @@ The following diagram shows a reference architecture that demonstrates the roles
 - Decide who from your organization should have access to onboarding servers to set up required permissions on the servers and in Azure.
 - Decide who should manage Azure Arc-enabled servers. Then, decide who can view their data from Azure services and other cloud environments.
 - Decide how many service principal accounts you need. These accounts are used to onboard servers that are owned by different business functions or units in an enterprise that is based on operational responsibility and ownership.
-- Review the [identity and access management design area](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) of Azure landing zone enterprise-scale. Review the area to assess the impact of Azure Arc-enabled servers on your overall identity and access model.
+- Review the [identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) of Azure landing zone enterprise-scale. Review the area to assess the impact of Azure Arc-enabled servers on your overall identity and access model.
 
 ## Design recommendations
 

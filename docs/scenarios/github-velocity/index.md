@@ -26,7 +26,7 @@ GitHub provides a range of features that can help companies to:
 
 Companies can take advantage of GitHub's connectedness to the open-source community and find thousands of reiterated, enhanced, and ready-to-deploy cloud solution examples from organizations that have successfully adopted Azure services. They can easily borrow from and iterate on these solutions to tailor them to their business needs.
 
-GitHub makes it easy for organizations to share within their teams, which makes it faster to modernize and deploy the next application or workload. Companies can look to *innersource*, a key tenet of innovation, to borrow best practices like sharing and reuse, collaboration and communication, and more from the open-source community and apply them within their organization.
+GitHub makes it easy for organizations to share within their teams, which makes it faster to modernize and deploy the next application or workload. Companies can look to *InnerSource*, a key tenet of innovation, to borrow best practices like sharing and reuse, collaboration and communication, and more from the open-source community and apply them within their organization.
 
 From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type flexibility.
 
@@ -54,7 +54,7 @@ The following architecture diagram highlights the security checks that run in th
 
 ![An architecture diagram highlighting the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
 
-- [GitHub](https://docs.github.com/en) provides a code-hosting platform that developers can use for collaborating on open-source and innersource projects.
+- [GitHub](https://docs.github.com/en) provides a code-hosting platform that developers can use for collaborating on open-source and InnerSource projects.
 
 - [Codespaces](https://docs.github.com/codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Microsoft Visual Studio Code, this tool provides a complete development solution in the cloud.
 
@@ -72,19 +72,19 @@ The following architecture diagram highlights the security checks that run in th
 
 - [Azure Monitor](/azure/azure-monitor/overview) collects and analyzes performance metrics, activity logs, and other application telemetry. This service alerts applications and personnel when it identifies irregular conditions.
 
-## Innersource
+## InnerSource
 
-### Innersource overview
+### InnerSource overview
 
-Many companies use the term *innersource* to describe how their engineering teams work together on code. Innersource is a development methodology where engineers build proprietary software with best practices from large-scale open-source projects like Kubernetes or Visual Studio Code.
+Many companies use the term *InnerSource* to describe how their engineering teams work together on code. InnerSource is a development methodology where engineers build proprietary software with best practices from large-scale open-source projects like Kubernetes or Visual Studio Code.
 
-Large-scale open-source projects require coordination and teamwork across thousands of contributors. The most successful projects are driven by a vision for their future and daily user needs: speed, reliability, and functionality. The scale at which these projects operate provides some lessons and can help companies build better software more quickly with innersource.
+Large-scale open-source projects require coordination and teamwork across thousands of contributors. The most successful projects are driven by a vision for their future and daily user needs: speed, reliability, and functionality. The scale at which these projects operate provides some lessons and can help companies build better software more quickly with InnerSource.
 
 With GitHub's pull requests and issues, collaboration and code review are built into the development process. Internal and outsourced teams can share work, discuss changes, and get feedback all in one place. This helps organizations share expertise internally and avoid reinventing field-tested solutions developed for other projects.
 
-### The anatomy of an innersource project
+### The anatomy of an InnerSource project
 
-The right mix of individuals, teams, and resources can ensure a project's success. Many open-source projects follow a similar organizational structure that can help organizations to set up cross-functional teams to manage innersource projects. A typical open-source project has the following types of people:
+The right mix of individuals, teams, and resources can ensure a project's success. Many open-source projects follow a similar organizational structure that can help organizations to set up cross-functional teams to manage InnerSource projects. A typical open-source project has the following types of people:
 
 - **Maintainers:** These contributors are responsible for driving the vision and managing the organizational aspects of the project. They might not be the original owners or authors of the code.
 
@@ -92,7 +92,7 @@ The right mix of individuals, teams, and resources can ensure a project's succes
 
 - **Community members:** These are people who use the project. They might be active in conversations or express their opinion on the project's direction.
 
-Bigger projects could also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation. Innersource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across an organization can help to rally the expertise necessary to solve problems faster.
+Bigger projects could also have subcommittees or working groups focused on different tasks like tooling, triage, and community moderation. InnerSource projects are likely to follow a similar structure. Many engineering organizations sort developers into teams like application engineering, platform engineering, and web development. Structuring organizations this way can leave blind spots that exclude qualified people. Organizing a core decision-making group supported by teams across an organization can help to rally the expertise necessary to solve problems faster.
 
 Within an enterprise, contributors are developers across the company, and maintainers are a project's leaders and key decision-makers.
 
@@ -100,7 +100,7 @@ Within an enterprise, contributors are developers across the company, and mainta
 
 - **Contributors:** Developers, data scientists, product managers, marketers, and other roles within a company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
 
-For more information, see the white paper [An introduction to innersource](https://resources.github.com/whitepapers/introduction-to-innersource/).
+For more information, see the white paper [An introduction to InnerSource](https://resources.github.com/whitepapers/introduction-to-InnerSource/).
 
 ## Automation
 

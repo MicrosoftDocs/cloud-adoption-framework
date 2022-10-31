@@ -33,7 +33,7 @@ The choice of which remote access solution is most appropriate depends on factor
 - [Azure Bastion](/azure/bastion/bastion-overview) provides an extra layer of control. It enables secure and seamless RDP/SSH connectivity to your VMs directly from the Azure portal or [native client](/azure/bastion/connect-native-client-windows) in preview over a secure TLS channel. Azure Bastion also negates the need for hybrid connectivity.
 - Consider the appropriate Azure Bastion SKU to use based on your requirements as described in [About Azure Bastion configuration settings](/azure/bastion/configuration-settings).
 - Review the [Azure Bastion FAQ](/answers/products/) for answers to common questions you might have about the service.
-- Azure Bastion can be used in [Azure Virtual WAN topology](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) however there are some limitations:
+- Azure Bastion can be used in [Azure Virtual WAN topology](./virtual-wan-network-topology.md) however there are some limitations:
   - Azure Bastion cannot be deployed inside of a Virtual WAN virtual hub.
   - Azure Bastion must use the `Standard` SKU and also the `IP based connection` feature must be enabled on the Azure Bastion resource, see the [Azure Bastion IP based connection documentation](/azure/bastion/connect-ip-address)
   - Azure Bastion can be deployed in any spoke virtual network connected in a Virtual WAN, for accessing Virtual Machines, in its own or, other virtual networks that are connected to the same Virtual WAN, via its associated hubs, through Virtual WAN virtual network connections; providing [routing](/azure/virtual-wan/about-virtual-hub-routing) is configured correctly.
@@ -67,4 +67,4 @@ The choice of which remote access solution is most appropriate depends on factor
 :::image type="content" source="./media/azure-standalone-bastion.png" alt-text="Diagram that shows Azure standalone virtual network topology." lightbox="./media/azure-standalone-bastion.png":::
 
    *Figure 3: Azure standalone virtual network topology.*
-   
+
