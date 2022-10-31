@@ -3,7 +3,7 @@ title: Abbreviation examples for Azure resources
 description: Abbreviation examples for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 9/23/2022
+ms.date: 9/30/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -17,9 +17,10 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 
 ## Azure Naming Tool
 
-If you use the abbreviations listed below, you should check out the Azure Naming Tool. It uses the abbreviations below to generate Azure-compliant names and could help you standardize your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
+The Azure Naming Tool generates Azure-compliant names and can help you standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
+<!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
 
 ## General
 
@@ -28,7 +29,7 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
-| Policy definition | `Microsoft.Authorization/policyDefinitions` | `policy` |
+| Policy definition | `Microsoft.Authorization/policyDefinitions` | \<*optional*> |
 | Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 
 ## Networking
@@ -41,8 +42,8 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
-| DNS | `Microsoft.Network/dnsZones` | `dnsz` |
-| DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz` |
+| DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
@@ -57,12 +58,14 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
 | Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |
-| Private Link | `"Microsoft.Network/privateLinkServices` | `pl` |
+| Private Link | `Microsoft.Network/privateLinkServices` | `pl` |
+| Private endpoint | `Microsoft.Network/privateEndpoints` | `pep` |
 | Public IP address | `Microsoft.Network/publicIPAddresses` | `pip`|
 | Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre`|
 | Route filter | `Microsoft.Network/routeFilters` | `rf` |
+| Route server | `Microsoft.Network/virtualHubs` | `rtserv` |
 | Route table | `Microsoft.Network/routeTables` | `rt` |
-| Service endpoint | `Microsoft.serviceEndPointPolicies` | `se` |
+| Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
@@ -81,14 +84,18 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Service environment | `Microsoft.Web/sites` | `ase` |
-| App Service plan | `Microsoft.Web/serverFarms` | `plan` |
+| App Service plan | `Microsoft.Web/serverFarms` | `asp` |
+| Azure Load Testing instance | `Microsoft.LoadTestService/loadTests` | `lt` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
+| Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
 | Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
 | Function app | `Microsoft.Web/sites` | `func` |
 | Gallery | `Microsoft.Compute/galleries` | `gal` |
+| Hosting environment | `Microsoft.Web/hostingEnvironments` | `host` |
+| Image template | `Microsoft.VirtualMachineImages/imageTemplates` | `it` |
 | Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
@@ -105,6 +112,7 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
+| Container apps | `Microsoft.App/containerApps` | `ctap` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
@@ -114,9 +122,17 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos` |
+| Azure Cosmos DB for Apache Cassandra account | `Microsoft.DocumentDB/databaseAccounts` | `coscas`|
+| Azure Cosmos DB for MongoDB account | `Microsoft.DocumentDB/databaseAccounts` | `cosmon`|
+| Azure Cosmos DB for NoSQL account | `Microsoft.DocumentDb/databaseAccounts` | `cosno`|
+| Azure Cosmos DB for Table account | `Microsoft.DocumentDb/databaseAccounts` |`costab`|
+| Azure Cosmos DB for Apache Gremlin account | `Microsoft.DocumentDb/databaseAccounts` | `cosgrm`|
+| Azure Cosmos DB PostgreSQL cluster | `Microsoft.DBforPostgreSQL/serverGroupsv2` | `cospos`|
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
+| Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
+| Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
 | Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
@@ -130,8 +146,12 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
+| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
+| Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
+| File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
+| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
+| Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
 
 ## AI and Machine Learning
 
@@ -151,6 +171,7 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
+| Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -158,6 +179,7 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
+| Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
 | HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
 | HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
@@ -184,6 +206,7 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
+| Maps account | `Microsoft.Maps/accounts` | `map` |
 
 ## Integration
 
@@ -207,6 +230,8 @@ If you use the abbreviations listed below, you should check out the Azure Naming
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Key vault | `Microsoft.KeyVault/vaults` | `kv` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
+| Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
+| Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
 ## Migration
 

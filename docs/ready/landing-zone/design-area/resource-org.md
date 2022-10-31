@@ -35,7 +35,15 @@ The following assumptions are the basis for workload subscription design pattern
 - You need cloud management, security, and governance tooling to manage Azure, hybrid, or multicloud solutions.
 - Management or platform deployments are in separate subscriptions and management groups from workload or application resources.
 
-To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md).
+**New cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md).
+
+**Existing cloud environment:** Consider the following if you are interested in applying the principles from the resource organization design area to existing Azure environments:
+
+- If your current environment does not use management groups, consider them. Management groups are key to managing policies, access, and compliance across subscriptions at scale. [Management groups](resource-org-management-groups.md) can help guide your implementation.
+- If your current environment does use management groups, consider using the guidance in [management groups](resource-org-management-groups.md) when evaluating your implementation.
+- If you have existing subscriptions in your current environment, consider using the guidance in [subscriptions](resource-org-subscriptions.md) to see if you are using them effectively. Subscriptions act as policy and management boundaries and are scale units.
+- If you have existing resources in your current environment, consider using the guidance in [naming and tagging](../../azure-best-practices/naming-and-tagging.md) to influence your tagging strategy and your naming conventions going forward.
+- [Azure Policy](/azure/azure-resource-manager/management/tag-policies) is useful in establishing and enforcing consistency with regard to taxonomic tags.
 
 ## Design area overview
 

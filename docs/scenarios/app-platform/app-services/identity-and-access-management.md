@@ -14,7 +14,7 @@ ms.custom: internal
 
 This article provides design considerations and recommendations for identity and access management when using the Azure App Service landing zone accelerator. Identity and access management covers multiple aspects including authentication and app configuration.
 
-Learn more about the [identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) design area.
+Learn more about the [identity and access management](../../../ready/landing-zone/design-area/identity-access.md) design area.
 
 ## Design considerations
 
