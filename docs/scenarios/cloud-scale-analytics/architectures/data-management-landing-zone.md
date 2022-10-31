@@ -77,7 +77,7 @@ An API catalog can help standardize your documentation and offers a place for in
 *Resource group: governance-rg2*
 
 Cloud-scale analytics uses
-[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Azure Purview policies](../secure-data-privacy.md) to control access to data sharing. Even so, you might still require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
+[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. Even so, you might still require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
 
 Your contracts should provide information on data validation, models, and security policies.
 
