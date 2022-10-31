@@ -128,7 +128,7 @@ Tools:
 
 - Microsoft Defender for Cloud, standard or free tier
 - Microsoft Sentinel
-- Azure DDoS standard protection plan (optional)
+- Azure DDoS network protection plan (optional)
 - Azure Firewall
 - Web Application Firewall (WAF)
 - Privileged Identity Management (PIM)
