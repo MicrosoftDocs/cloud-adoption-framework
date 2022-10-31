@@ -12,6 +12,10 @@ ms.custom: think-tank
 
 # Traditional Azure networking topology
 
+> [!IMPORTANT]
+> Try the new [Topology](/azure-docs-pr/articles/network-watcher/network-insights-topology.md) experience which offers visualization of Azure resources for ease of inventory management and monitoring network at scale. Leverage it to visualize resources and their dependencies across subscriptions, regions and locations. [Click](https://ms.portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/overview) to navigate to the experience.
+
+
 Explore key design considerations and recommendation surrounding network topologies in Microsoft Azure.
 
 ![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
