@@ -47,7 +47,7 @@ A naming and tagging strategy includes business and operational details as compo
 
 ## Next steps
 
-Learn about the considerations for defining your naming convention your Azure resources and assets, and review example names for resources and assets in Azure.
+Learn about the considerations for defining your naming convention for your Azure resources and assets, and review example names for resources and assets in Azure.
 
 > [!div class="nextstepaction"]
 > [Name your Azure resources and assets](./resource-naming.md)
