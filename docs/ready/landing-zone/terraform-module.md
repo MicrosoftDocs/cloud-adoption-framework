@@ -169,7 +169,7 @@ For more information about how to use this capability, see the [Deploy Virtual W
 
 #### DDoS Protection plan
 
-The module can optionally deploy [DDoS Network Protection][about_ddos_protection_standard], and link Virtual Networks to the plan if needed.
+The module can optionally deploy [DDoS Network Protection][about_ddos_network_protection], and link Virtual Networks to the plan if needed.
 
 > [!NOTE]
 > Due to platform limitations, DDoS Protection plans can only be enabled for traditional virtual networks. Virtual Hub support is not currently available.
@@ -337,7 +337,7 @@ Learn how to [deploy the Azure landing zones Terraform module][hcl-deploy-es] th
 [tf_install]:   https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started "Install Terraform."
 [azurerm_auth]: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure "Authenticate to Azure when using the AzureRM provider."
 
-[about_ddos_protection_standard]: /azure/ddos-protection/ddos-protection-overview
+[about_ddos_network_protection] : /azure/ddos-protection/ddos-protection-overview
 [about_dns_for_private_endpoint]: /azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
 
 [arm_management_group]:                      /azure/templates/microsoft.management/managementgroups
