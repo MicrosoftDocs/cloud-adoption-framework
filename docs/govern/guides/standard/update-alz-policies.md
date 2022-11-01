@@ -3,7 +3,7 @@ title: 'Standard enterprise governance: Update ALZ deployed policies'
 description: Use the guidance provided to migrate already deploy ALZ policies to Azure built-in policies.
 author: Jfaurskov
 ms.author: Janfaurs
-ms.date: 09/28/2022
+ms.date: 11/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -80,4 +80,19 @@ There are the following authoritative options for determining that one or more A
 ### Migration steps
 
 The ALZ Terraform module provides update guidance when deploying breaking changes. Follow the upgrade guidance available for your specific version [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki), look under Upgrade Guides in the sidebar.
+
+
+## Update steps for Azure Landing Zone Bicep deployments
+
+### Detect updates
+
+There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
+- You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
+- You follow [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases) and note that one or more policies are indicated as being superseded
+- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as obsolete. For more details on how this can be determined refer to [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+
+### Migration steps
+
+ALZ Bicep provides generic guidance for migrating policies from ALZ custom policies to Azure built-in policies. For more details refer to [How to migrate ALZ custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+
 
