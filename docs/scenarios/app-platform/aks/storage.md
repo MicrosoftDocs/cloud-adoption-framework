@@ -12,11 +12,11 @@ ms.custom: think-tank, e2e-aks
 
 # Storage considerations for Azure Kubernetes Service
 
-Your organization or enterprise needs to design suitable Azure Kubernetes Service (AKS) platform-level capabilities to run specific workloads. These application workloads likely have different storage requirements. There are multiple considerations when choosing the right storage for your application workloads such as performance, availability, recoverability, security, and cost.
+To run specific application workloads, your organization or enterprise needs to design suitable Azure Kubernetes Service (AKS) platform-level capabilities. These workloads likely have different storage requirements. When choosing the right storage solution for your application, you have multiple considerations, including performance, availability, recoverability, security, and cost. The goal of this article is to guide you to choose the right option or combination of options for your workload.
 
-Kubernetes can run both stateless and stateful workloads. Stateful workloads often require a storage solution for storing state. AKS supports multiple integrated, native storage options. Selecting the right storage option requires careful consideration, and the goal of this article is to guide you to choose the right option or combination of options for your workload.
+Kubernetes can run both stateless and stateful workloads. Stateful workloads often require a storage solution for storing state. AKS supports multiple, integrated options for native storage, which include managed databases, disks (or blocks), and files and blob (or object) storage. Each of these options offer different SKUs, sizes, and performance characteristics. Selecting the right option requires careful consideration.
 
-Integrated, native options to store state from AKS include managed databases, disks (or block), and files and blob (or object) storage. Each of these options offer different SKUs, sizes, and performance characteristics. This article describes the types of storage and SKUs that are available for your workloads in [Design considerations](#design-considerations) and [Design recommendations](#design-recommendations).
+This article describes the types of storage and SKUs that are available for your workloads in [Design considerations](#design-considerations) and [Design recommendations](#design-recommendations). 
 
 ## How to select the right storage service
 
