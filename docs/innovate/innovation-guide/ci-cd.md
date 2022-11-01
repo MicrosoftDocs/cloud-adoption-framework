@@ -72,7 +72,6 @@ To create a DevOps project:
 2. Select **Create DevOps project**.
 3. Select **Runtime, Framework, and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
 ::: zone-end
 

@@ -32,10 +32,10 @@ Azure Arc-enabled Kubernetes provides two types of services:
   - [Microsoft Sentinel](/azure/sentinel/overview)
   - [Azure Key Vault](/azure/key-vault/general/basic-concepts)
 
->[!Note]
+>[!NOTE]
 > Billing for Azure services used in conjunction with Azure Arc-enabled Kubernetes is the same as billing for the Azure Kubernetes Service.
 
-> [!Note]
+> [!NOTE]
 > If your Azure Arc-enabled Kubernetes cluster is on AKS on Azure Stack HCI, Kubernetes GitOps configuration is included at no extra charge.
 
 ## Design considerations
@@ -130,9 +130,9 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
 - Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
 - Review the [Security, governance, and compliance critical design area](./eslz-arc-kubernetes-management-disciplines.md) to learn best practices and recommendations for implementing Azure Policy for Kubernetes. These best practices include:
-    - Enforcing tagging for better cost visibility across clusters
-    - Enforcing Kubernetes GitOps configuration
-    - Controlling the enablement of Azure services.
+  - Enforcing tagging for better cost visibility across clusters
+  - Enforcing Kubernetes GitOps configuration
+  - Controlling the enablement of Azure services.
 
 ### Microsoft Sentinel
 
@@ -167,8 +167,8 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
-- Learn more about Azure Arc in the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
-- Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Review the Cloud Adoption Framework [best practices and recommendations](../../../get-started/manage-costs.md) to efficiently manage your cloud costs.
 - See the [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

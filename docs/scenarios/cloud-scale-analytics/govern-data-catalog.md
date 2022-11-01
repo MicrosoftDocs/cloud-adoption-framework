@@ -32,11 +32,11 @@ With automated discovery of your data estate to populate the catalog, you can:
 
 ## Data classification
 
-Azure Purview allows you to apply system or custom data classifications on file, table, or column assets.
+Microsoft Purview allows you to apply system or custom data classifications on file, table, or column assets.
 
-Data classifications are like subject tags. Azure Purview marks and identifies the content of specific data types found within your data estate during scanning. You use sensitivity labels to identify the categories of classification types within your organizational data. You can also use sensitivity labels to group the policies you wish to apply to each category. Azure Purview makes use of the same sensitive information types as Microsoft 365, allowing you to stretch your existing security policies and protections across your entire content and data estate.
+Data classifications are like subject tags. Microsoft Purview marks and identifies the content of specific data types found within your data estate during scanning. You use sensitivity labels to identify the categories of classification types within your organizational data. You can also use sensitivity labels to group the policies you wish to apply to each category. Microsoft Purview makes use of the same sensitive information types as Microsoft 365, allowing you to stretch your existing security policies and protections across your entire content and data estate.
 
-Azure Purview can scan and automatically classify documents. For example, if you have a file named `multiple.docx` and it has a national ID number in its content, Azure Purview adds a classification such as `EU National Identification Number` in the asset detail page.
+Microsoft Purview can scan and automatically classify documents. For example, if you have a file named `multiple.docx` and it has a national ID number in its content, Microsoft Purview adds a classification such as `EU National Identification Number` in the asset detail page.
 
 [Microsoft Defender for SQL](/azure/azure-sql/database/azure-defender-for-sql) is a feature available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. It includes functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. Microsoft Defender for SQL provides a single go-to location for enabling and managing these capabilities.
 

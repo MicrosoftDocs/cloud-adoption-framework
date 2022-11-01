@@ -45,7 +45,7 @@ MLOps improves the quality and consistency of your machine learning solutions. T
 Learn more by reading and exploring the following resources:
 
 - [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment)
-- How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where)
+- How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-managed-online-endpoints)
 - Tutorial: [deploy an image classification model in Azure Container Instances](/azure/machine-learning/tutorial-deploy-models-with-aml)
 - [End-to-end MLOps examples repo](https://github.com/microsoft/MLOps)
 - [CI/CD of machine learning models with Azure Pipelines](/azure/devops/pipelines/targets/azure-machine-learning)

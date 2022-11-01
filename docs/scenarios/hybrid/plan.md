@@ -45,7 +45,7 @@ Hybrid and multicloud adoption efforts will change your rationalization criteria
 - **Replatform** assets to other cloud platforms.
 - **Rehost portability** allowing workloads to move smoothly between hybrid and multicloud platforms.
 
-These changes will affect the work required to reach your hybrid and multicloud strategy. This article outlines a number of impacts to the plans currently defined in the [Cloud Adoption Framework's Plan methodology](../../plan/index.md).
+These changes will affect the work required to reach your hybrid and multicloud strategy. This article outlines a number of impacts to the plans currently defined in the [Plan methodology](../../plan/index.md) of the Cloud Adoption Framework.
 
 ## Planning your cloud mix
 

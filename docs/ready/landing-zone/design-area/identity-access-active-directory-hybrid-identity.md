@@ -26,7 +26,7 @@ When evaluating which type of Active Directory solution to adopt, understand the
 
 - Applications that rely on domain services and use older protocols might be able to use [Azure AD Domain Services (Azure AD DS)](/azure/active-directory-domain-services).
 
-- Evaluate your application needs by understanding and documenting the authentication provider that each application uses. Use the reviews to help plan the type of Active Directory your organization should use. For more information, see [Compare Active Directory to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide](/azure/cloud-adoption-framework/decision-guides/identity).
+- Evaluate your application needs by understanding and documenting the authentication provider that each application uses. Use the reviews to help plan the type of Active Directory your organization should use. For more information, see [Compare Active Directory to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide](../../../decision-guides/identity/index.md).
 
 - Evaluate scenarios that involve setting up external users, customers, or partners to secure access to resources. Determine whether these scenarios involve [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) or [Azure AD B2C](/azure/active-directory-b2c/overview) configurations. For more information, see [Azure AD External Identities](/azure/active-directory/external-identities/external-identities-overview).
 
@@ -62,7 +62,7 @@ For hosting infrastructure as a service (IaaS) hybrid identity solutions, evalua
 
 - For options to meet organizational requirements when integrating on-premises Active Directory with Azure, see [Integrate on-premises AD with Azure](/azure/architecture/reference-architectures/identity).
 
-- Authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the authentication methods Azure AD offers. For more information, see [Authentication for Azure AD hybrid identity solutions](/azure/active-directory/hybrid/choose-ad-authn?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json).
+- Authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the authentication methods Azure AD offers. For more information, see [Authentication for Azure AD hybrid identity solutions](/azure/active-directory/hybrid/choose-ad-authn?toc=/azure/architecture/toc.json&bc=/azure/architecture/bread/toc.json).
 
 - If you have Active Directory Federation Services (AD FS) federation with Azure AD, you can use password hash synchronization as a backup. AD FS doesn't support seamless single sign-on (SSO).
 

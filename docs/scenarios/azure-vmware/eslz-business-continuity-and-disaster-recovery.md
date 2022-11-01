@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 [Azure VMware Solution](/azure/azure-vmware/) provides one or more [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain VMware vSphere clusters. These clusters are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can run in one private cloud. vCenter Server, vSAN, ESXi, and NSX-T Data Center are all provided as part of the private cloud solution. To learn about the SLA for Azure VMware Solution, see [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). You'll still want to consider other BCDR factors.
 
-:::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a BCDR flow chart." border="false" Lightbox="../_images/eslz-bcdr-1.png":::
+:::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a BCDR flow chart." border="false" lightbox="../_images/eslz-bcdr-1.png":::
 
 ## Business continuity design considerations
 
@@ -29,7 +29,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 ## Business continuity design recommendations
 
-- Use Microsoft Azure Backup Server(MABS) to back up the Azure VMware Solution private cloud. For more information, see [Back up VMware vSphere VMs with MABS](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context). Familiarize with supported deployment topologies with MABS (e.g. [MARS Agent](https://docs.microsoft.com/azure/backup/backup-architecture#architecture-direct-backup-of-on-premises-windows-server-machines-or-azure-vm-files-or-folders), [DPM](https://docs.microsoft.com/azure/backup/backup-architecture#architecture-back-up-to-dpmmabs), etc.). Each deployment topology has it's own support matrix, constraints and limitations.
+- Use Microsoft Azure Backup Server(MABS) to back up the Azure VMware Solution private cloud. For more information, see [Back up VMware vSphere VMs with MABS](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context). Familiarize with supported deployment topologies with MABS (e.g. [MARS Agent](/azure/backup/backup-architecture#architecture-direct-backup-of-on-premises-windows-server-machines-or-azure-vm-files-or-folders), [DPM](/azure/backup/backup-architecture#architecture-back-up-to-dpmmabs), etc.). Each deployment topology has it's own support matrix, constraints and limitations.
 
 - Deploy the Microsoft Azure Backup Server(MABS) in the same Azure region as the Azure VMware Solution private cloud. This deployment method reduces traffic costs, eases administration, and keeps the primary/secondary topology. See the [Azure regions decision guide](../../migrate/azure-best-practices/multiple-regions.md) for Azure region deployment best practices.
 
@@ -41,9 +41,9 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - To restore from a backup for Azure VMware Solution platform components like vCenter Server, NSX-T Manager, or HCX Manager, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
-- Use [Application performance requirements checklist](https://docs.microsoft.com/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at right disk type (HDD, SSD, Ultra, etc.) and capacity. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](https://docs.microsoft.com/azure/virtual-machines/disks-performance) for backup operations. Use [MABS Capacity Planner](https://www.microsoft.com/download/details.aspx?id=54301) for determining number, storage and IOPS requirements for MABS server.
+- Use [Application performance requirements checklist](/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at right disk type (HDD, SSD, Ultra, etc.) and capacity. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](/azure/virtual-machines/disks-performance) for backup operations. Use [MABS Capacity Planner](https://www.microsoft.com/download/details.aspx?id=54301) for determining number, storage and IOPS requirements for MABS server.
 
-- Use [Storage Pools](https://docs.microsoft.com/azure/backup/backup-mabs-add-storage) with MABS Server for enhanced disk IOPS/throughput. Use [Tiered Storage](https://techcommunity.microsoft.com/t5/system-center-blog/achieve-faster-backups-using-tiered-storage-with-dpm-and-mabs/ba-p/1596069) on MABS server for enhanced backup operations.
+- Use [Storage Pools](/azure/backup/backup-mabs-add-storage) with MABS Server for enhanced disk IOPS/throughput. Use [Tiered Storage](https://techcommunity.microsoft.com/t5/system-center-blog/achieve-faster-backups-using-tiered-storage-with-dpm-and-mabs/ba-p/1596069) on MABS server for enhanced backup operations.
 
 ## Disaster recovery design considerations
 

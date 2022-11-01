@@ -18,7 +18,7 @@ items:
         href: eslz-network-topology-connectivity.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
-      - name: Operations baseline
+      - name: Management and monitoring
         href: eslz-management-and-monitoring.md
       - name: Business continuity and disaster recovery
         href: eslz-business-continuity-and-disaster-recovery.md
@@ -58,4 +58,4 @@ items:
   - name: Learn modules
     items:
     - name: Run VMware workloads on Azure VMware Solution
-      href: /learn/paths/run-vmware-workloads-azure-vmware-solution/
+      href: /training/paths/run-vmware-workloads-azure-vmware-solution/

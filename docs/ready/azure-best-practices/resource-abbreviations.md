@@ -1,226 +1,253 @@
 ---
-title: Recommended abbreviations for Azure resource types
-description: Review recommended abbreviations to use for various Azure resource types when naming your resources and assets.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 4/14/2021
+title: Abbreviation examples for Azure resources
+description: Abbreviation examples for Azure resources
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 9/30/2022
+ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
-# Recommended abbreviations for Azure resource types
+# Abbreviation examples for Azure resources
 
-Azure workloads are typically composed of multiple resources and services. Including a naming component in your resource names that represents the type of the Azure resource makes it easier to visually recognize application or service components.
+This page gives you abbreviation examples for many of the resources in Azure. Below you'll find *abbreviations* mapped to *resource* and *resource provider namespace*.
 
-This list provides recommended abbreviations for various Azure resource types to include in your naming conventions. These abbreviations are often used as prefixes in resource names, so each abbreviation is shown below followed by a hyphen (`-`), except for resource types that disallow hyphens in the resource name. Your naming convention might place the resource type abbreviation in a different location of the name if it's more suitable for your organization's needs.
+## Azure Naming Tool
+
+The Azure Naming Tool generates Azure-compliant names and can help you standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
+<!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
 
 ## General
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| API management service instance | `Microsoft.ApiManagement/service` | `apim-` |
-| Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id-` |
-| Management group | `Microsoft.Management/managementGroups` | `mg-` |
-| Policy definition | `Microsoft.Authorization/policyDefinitions` | `policy-` |
-| Resource group | `Microsoft.Resources/resourceGroups` | `rg-` |
+| API management service instance | `Microsoft.ApiManagement/service` | `apim` |
+| Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
+| Management group | `Microsoft.Management/managementGroups` | `mg` |
+| Policy definition | `Microsoft.Authorization/policyDefinitions` | \<*optional*> |
+| Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 
 ## Networking
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Application gateway | `Microsoft.Network/applicationGateways` | `agw-` |
-| Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg-` |
-| Bastion | `Microsoft.Network/bastionHosts` | `bas-` |
-| CDN profile | `Microsoft.Cdn/profiles` | `cdnp-` |
-| CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne-` |
-| Connections | `Microsoft.Network/connections`| `con-` |
-| DNS | `Microsoft.Network/dnsZones` | `dnsz-` |
-| DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
-| Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
-| Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp-` |
-| ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
-| Front Door instance | `Microsoft.Network/frontDoors` | `fd-` |
-| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
-| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-`|
-| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-`|
-| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule-`|
-| Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw-` |
-| NAT gateway | Microsoft.Network/natGateways | `ng-` |
-| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-`|
-| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
-| Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr-` |
-| Network Watcher | `Microsoft.Network/networkWatchers` | `nw-` |
-| Private Link | `Microsoft.Network/privateLinkServices` | `pl-` |
-| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-`|
-| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre-`|
-| Route filter | `Microsoft.Network/routeFilters` | `rf-` |
-| Route table | `Microsoft.Network/routeTables` | `rt-` |
-| Service endpoint | `Microsoft.serviceEndPointPolicies` | `se-` |
-| Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf-` |
-| User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr-` |
-| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet-`|
-| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-`|
-| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
-| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-`|
-| VPN Gateway | `Microsoft.Network/vpnGateways` | `vpng-`|
-| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn-` |
-| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst-` |
-| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
+| Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
+| Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
+| Bastion | `Microsoft.Network/bastionHosts` | `bas` |
+| CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
+| CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
+| Connections | `Microsoft.Network/connections`| `con` |
+| DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
+| Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
+| Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
+| ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
+| Front Door instance | `Microsoft.Network/frontDoors` | `fd` |
+| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
+| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
+| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
+| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
+| Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw` |
+| NAT gateway | Microsoft.Network/natGateways | `ng` |
+| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic`|
+| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
+| Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
+| Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |
+| Private Link | `Microsoft.Network/privateLinkServices` | `pl` |
+| Private endpoint | `Microsoft.Network/privateEndpoints` | `pep` |
+| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip`|
+| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre`|
+| Route filter | `Microsoft.Network/routeFilters` | `rf` |
+| Route server | `Microsoft.Network/virtualHubs` | `rtserv` |
+| Route table | `Microsoft.Network/routeTables` | `rt` |
+| Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
+| Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
+| User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
+| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
+| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer`|
+| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
+| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
+| VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
+| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
+| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst` |
+| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
 | Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
 | Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
 
 ## Compute and Web
 
-| Asset type | Resource provider namespace/entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| App Service environment | `Microsoft.Web/sites` | `ase-` |
-| App Service plan | `Microsoft.Web/serverFarms` | `plan-` |
-| Availability set | `Microsoft.Compute/availabilitySets` | `avail-` |
-| Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs-` |
+| App Service environment | `Microsoft.Web/sites` | `ase` |
+| App Service plan | `Microsoft.Web/serverFarms` | `asp` |
+| Azure Load Testing instance | `Microsoft.LoadTestService/loadTests` | `lt` |
+| Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
+| Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
-| Cloud service | `Microsoft.Compute/cloudServices` | `cld-` |
+| Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
+| Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
 | Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
-| Function app | `Microsoft.Web/sites` | `func-` |
+| Function app | `Microsoft.Web/sites` | `func` |
 | Gallery | `Microsoft.Compute/galleries` | `gal` |
+| Hosting environment | `Microsoft.Web/hostingEnvironments` | `host` |
+| Image template | `Microsoft.VirtualMachineImages/imageTemplates` | `it` |
 | Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
-| Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf-` |
-| Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns-` |
-| Snapshot | `Microsoft.Compute/snapshots` | `snap-` |
-| Static web app | `Microsoft.Web/staticSites` | `stapp-` |
+| Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
+| Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns` |
+| Snapshot | `Microsoft.Compute/snapshots` | `snap` |
+| Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
-| Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss-` |
+| Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
 | VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
-| Web app | `Microsoft.Web/sites` | `app-` |
+| Web app | `Microsoft.Web/sites` | `app` |
 
 ## Containers
 
-| Asset type | Resource provider namespace/entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks-` |
+| AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
+| Container apps | `Microsoft.App/containerApps` | `ca` |
+| Container apps environment | `Microsoft.App/managedEnvironments` | `cae` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
-| Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf-` |
+| Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
 
 ## Databases
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos-` |
-| Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis-` |
-| Azure SQL Database server | `Microsoft.Sql/servers` | `sql-` |
-| Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb-` |
+| Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos` |
+| Azure Cosmos DB for Apache Cassandra account | `Microsoft.DocumentDB/databaseAccounts` | `coscas`|
+| Azure Cosmos DB for MongoDB account | `Microsoft.DocumentDB/databaseAccounts` | `cosmon`|
+| Azure Cosmos DB for NoSQL account | `Microsoft.DocumentDb/databaseAccounts` | `cosno`|
+| Azure Cosmos DB for Table account | `Microsoft.DocumentDb/databaseAccounts` |`costab`|
+| Azure Cosmos DB for Apache Gremlin account | `Microsoft.DocumentDb/databaseAccounts` | `cosgrm`|
+| Azure Cosmos DB PostgreSQL cluster | `Microsoft.DBforPostgreSQL/serverGroupsv2` | `cospos`|
+| Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
+| Azure SQL Database server | `Microsoft.Sql/servers` | `sql` |
+| Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
+| Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
+| Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
 | Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
-| MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
-| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
-| SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb-` |
-| SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi-` |
+| MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
+| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
+| SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |
+| SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi` |
 
 ## Storage
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
+| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
+| Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
+| File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
+| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
+| Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
 
 ## AI and Machine Learning
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch-` |
-| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog-` |
-| Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw-` |
+| Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
+| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
+| Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 
 ## Analytics and IoT
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
-| Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw-` |
-| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa-` |
+| Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
+| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
-| Azure Data Factory | `Microsoft.DataFactory/factories` | `adf-` |
+| Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
+| Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
-| Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns-` |
-| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh-` |
-| Event Grid domain | `Microsoft.EventGrid/domains` | `evgd-` |
-| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs-` |
-| Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt-` |
-| HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop-` |
-| HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase-` |
-| HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka-` |
-| HDInsight - Spark cluster | `Microsoft.HDInsight/clusters` | `spark-` |
-| HDInsight - Storm cluster | `Microsoft.HDInsight/clusters` | `storm-` |
-| HDInsight - ML Services cluster | `Microsoft.HDInsight/clusters` | `mls-` |
-| IoT hub | `Microsoft.Devices/IotHubs` | `iot-` |
-| Provisioning services | `Microsoft.Devices/provisioningServices` | `provs-` |
-| Provisioning services certificate | `Microsoft.Devices/provisioningServices/certificates` | `pcert-` |
-| Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi-` |
-| Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi-` |
+| Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
+| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh` |
+| Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
+| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
+| Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
+| Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
+| HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
+| HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
+| HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
+| HDInsight - Spark cluster | `Microsoft.HDInsight/clusters` | `spark` |
+| HDInsight - Storm cluster | `Microsoft.HDInsight/clusters` | `storm` |
+| HDInsight - ML Services cluster | `Microsoft.HDInsight/clusters` | `mls` |
+| IoT hub | `Microsoft.Devices/IotHubs` | `iot` |
+| Provisioning services | `Microsoft.Devices/provisioningServices` | `provs` |
+| Provisioning services certificate | `Microsoft.Devices/provisioningServices/certificates` | `pcert` |
+| Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi` |
+| Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi` |
 
 ## Azure Virtual Desktop
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Virtual desktop host pool | | `vdpool-` |
-| Virtual desktop application group | | `vdag-` |
-| Virtual desktop workspace | | `vdws-` |
+| Virtual desktop host pool | | `vdpool` |
+| Virtual desktop application group | | `vdag` |
+| Virtual desktop workspace | | `vdws` |
 
 ## Developer tools
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs-` |
+| App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
+| Maps account | `Microsoft.Maps/accounts` | `map` |
 
 ## Integration
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Integration account | `Microsoft.Logic/integrationAccounts` | `ia-` |
-| Logic apps | `Microsoft.Logic/workflows` | `logic-` |
-| Service Bus | `Microsoft.ServiceBus/namespaces` | `sb-` |
-| Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq-` |
-| Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt-` |
-| API Connection | `Microsoft.Web/connections` | `apic-` |
+| Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
+| Logic apps | `Microsoft.Logic/workflows` | `logic` |
+| Service Bus | `Microsoft.ServiceBus/namespaces` | `sb` |
+| Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq` |
+| Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt` |
+| API Connection | `Microsoft.Web/connections` | `apic` |
 
 ## Management and governance
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Automation account | `Microsoft.Automation/automationAccounts` | `aa-` |
-| Application Insights | `Microsoft.Insights/components` | `appi-` |
-| Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag-` |
-| Azure Purview instance | `Microsoft.Purview/accounts` | `pview-` |
-| Blueprint | `Microsoft.Blueprint/blueprints` | `bp-` |
-| Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa-` |
-| Key vault | `Microsoft.KeyVault/vaults` | `kv-` |
-| Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log-` |
+| Automation account | `Microsoft.Automation/automationAccounts` | `aa` |
+| Application Insights | `Microsoft.Insights/components` | `appi` |
+| Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
+| Azure Purview instance | `Microsoft.Purview/accounts` | `pview` |
+| Blueprint | `Microsoft.Blueprint/blueprints` | `bp` |
+| Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
+| Key vault | `Microsoft.KeyVault/vaults` | `kv` |
+| Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
+| Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
+| Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
 ## Migration
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr-` |
-| Database Migration Service instance | `Microsoft.DataMigration/services` | `dms-` |
-| Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv-` |
-| Recovery Services vault backup policy | `Microsoft.RecoveryServices/vaults/backupPolicies` | `rsvbp-` |
-| Backup vault | `Microsoft.DataProtection/BackupVaults` | `bv-` |
+| Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr` |
+| Database Migration Service instance | `Microsoft.DataMigration/services` | `dms` |
+| Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv` |
 
 ## Deprecated product names
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw-` |
+| Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw` |
 
 ## Next steps
 

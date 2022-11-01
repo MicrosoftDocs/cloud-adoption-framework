@@ -16,14 +16,14 @@ An [Azure landing zone](./index.md) provides cloud adoption teams with a well-ma
 
 ## Environment development approaches
 
-There are two primary approaches. The choice will depend on how fast your teams can develop the required skills.     
+There are two primary approaches. The choice will depend on how fast your teams can develop the required skills.
 
 - **Start with the Azure landing zone accelerator:** If your business requirements call for a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start. If you need to, you can modify using Infrastructure-as-Code (IaC) to set up and configure an environment per your requirements. For IaC, your organization will require skills in Azure Resource Manager templates and GitHub.
 
 - **Customize:** If it's more important to build your environment to meet specific requirements, or develop internal skills. In this approach, focus on the basic landing zones considerations required to start cloud adoption. All technical and business requirements are considered complete when your environment configuration aligns with Azure landing zone conceptual architecture. You can then focus on enhancing your landing zone.
 
 > [!IMPORTANT]
-> Of the two approaches, the Azure landing zone accelerator is recommended because it's the quickest way to achieve a scaled-out and mature environment. 
+> Of the two approaches, the Azure landing zone accelerator is recommended because it's the quickest way to achieve a scaled-out and mature environment.
 >
 > [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
@@ -32,9 +32,9 @@ Beside the use of the Azure landing zone accelerator, there are use cases where 
 To address the customization use cases, consider the [implementation options](#implementation-options) given in this article. The options are intended for users with strong skills in technologies such as Azure Resource Manager, Azure Policy, DevOps tools, and third-party deployment tools. Those technologies are required for a solid foundation on which to build a landing zone.
 
 > [!CAUTION]
-> The best practices used for customization will ultimately be aligned with the [Azure landing zone](./index.md). However, there's added investment in time and effort which might be justified to  to fit specific business requirements.
+> The best practices used for customization will ultimately be aligned with the [Azure landing zone](./index.md). However, there's added investment in time and effort which might be justified to fit specific business requirements.
 
-Finally, guidance in the [Govern](/azure/cloud-adoption-framework/govern/) and [Manage](/azure/cloud-adoption-framework/manage/) methodologies will build on top of your initial landing zones. The design of any Azure landing zone outline will likely require refactoring over time.
+Finally, guidance in the [Govern](../../govern/index.md) and [Manage](../../manage/index.md) methodologies will build on top of your initial landing zones. The design of any Azure landing zone outline will likely require refactoring over time.
 
 ## Implementation options
 
@@ -44,7 +44,7 @@ Here are some implementation options for landing zones keeping in mind the devel
 
 | Implementation option | Description | Deployment instructions |
 |---|---|---|
-| [Enterprise-scale foundation](../enterprise-scale/index.md) | Enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, where connectivity can be added later as needed. </br></br> [Design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) </br> [Design areas](design-areas.md) | [![Dta-button]][DTA-WingTip]</br> [Readme: foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)</br> [Readme: Network topology (Virtual WAN) ](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md)</br> [Readme: Network topology (hub-spoke)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) |
+| [Enterprise-scale foundation](../enterprise-scale/index.md) | Enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, where connectivity can be added later as needed. </br></br> [Design principles](./design-principles.md) </br> [Design areas](design-areas.md) | [![Dta-button]][DTA-WingTip]</br> [Readme: foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)</br> [Readme: Network topology (Virtual WAN)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md)</br> [Readme: Network topology (hub-spoke)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) |
 |[Azure landing zones modular](https://github.com/Azure/ALZ-Bicep/blob/main/docs/wiki/Home.md)|Modular approach using Bicep for deploying the core platform capabilities. | [Readme: Bicep modules](https://github.com/Azure/ALZ-Bicep)
 | Enterprise-scale for small enterprises| This reference implementation is meant for organizations that don't have a large IT team and do not require fine grained administration delegation models. | [![Dta-button]][DTA-small-enterprises]</br>[Readme](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) |
 | Enterprise-scale for Azure Government|Reference implementation that can be deployed to Azure Government Cloud. | [![Dta-button]][DTA-AzureGov] </br>[Readme](https://github.com/Azure/Enterprise-Scale#readme)|
@@ -58,7 +58,7 @@ Here are some implementation options for landing zones keeping in mind the devel
 | [Migration landing zone](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets. </br>[Design areas](./migrate-landing-zone.md#design-areas)| [Deploy](/azure/governance/blueprints/samples/caf-foundation/deploy) |
 | [Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. </br>[Design areas](./foundation-blueprint.md#design-areas) | [Deploy](./foundation-blueprint.md) |
 | [CAF Terraform modules](terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | [Readme](https://github.com/Azure/caf-terraform-landingzones-platform-starter) |
-| [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. </br>[Design principles](partner-landing-zone.md#design-principles) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
+| [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. </br>[Design principles](partner-landing-zone.md) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
 
 ## Next steps
 

@@ -39,12 +39,12 @@ Consider the following before you onboard Azure Arc-enabled Kubernetes clusters 
 
 ### Cluster Extensions
 
-- Determine which Azure capabilities you want to have on your Azure Arc-enabled Kubernetes cluster. Some services require a cluster extension to be deployed. 
+- Determine which Azure capabilities you want to have on your Azure Arc-enabled Kubernetes cluster. Some services require a cluster extension to be deployed.
   - For more information specific to extensions, see the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md).
 
 ### Network Connectivity
 
-- Your cluster has connectivity from your on-premises network or third-party cloud providers to Azure, directly connected via a proxy server or private endpoint. 
+- Your cluster has connectivity from your on-premises network or third-party cloud providers to Azure, directly connected via a proxy server or private endpoint.
   - For specific design considerations and recommendations, see the [Network connectivity for Azure Arc-enabled Kubernetes critical design area](./eslz-arc-kubernetes-network-connectivity.md).
 
 ### Agent lifecycle automation
@@ -80,7 +80,7 @@ During the onboarding process, Azure Arc-enabled Kubernetes provisions agents in
 - Enable the auto-upgrade feature for Azure Arc agents running inside your cluster, which is the default behavior when onboarding a cluster to Azure Arc. 
   - For more information on the auto-upgrade feature and version support policy, review the [Upgrade Agents guidance](/azure/azure-arc/kubernetes/agent-upgrade) and the [extensions management design area](./eslz-arc-kubernetes-extensions-management.md).
 
-- Extensions also require updates in your cluster. For any extension installed on your cluster, we recommend that you leave the default behavior to automatically upgrade the extension minor version enabled during provisioning. For major version upgrades, a migration path is documented to move to the extension major release. 
+- Extensions also require updates in your cluster. For any extension installed on your cluster, we recommend that you leave the default behavior to automatically upgrade the extension minor version enabled during provisioning. For major version upgrades, a migration path is documented to move to the extension major release.
   - For more information, review the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md).
 
 ## Next steps
@@ -89,9 +89,9 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Learn about [GitHub Actions for Azure](/azure/developer/github/github-actions) to understand how you can use GitHub Actions to automate Azure resource deployments.
 - Learn about [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) to understand you can use Azure Pipelines for automation.
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
-- Learn about Azure Arc in the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

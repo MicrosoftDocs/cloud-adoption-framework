@@ -224,7 +224,7 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
   Microsoft has published guidance to help you build your security baselines:
   - [Azure security standards for strategy and architecture](/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
   - [Azure security benchmarks](/security/benchmark/azure/introduction): Specific configuration recommendations for securing Azure environments.
-  - [Azure security baseline training](/learn/modules/create-security-baselines/).
+  - [Azure security baseline training](/training/modules/create-security-baselines/).
 
 - **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
 

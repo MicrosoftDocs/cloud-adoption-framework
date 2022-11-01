@@ -21,7 +21,7 @@ Development lifecycle strategy provides key design considerations and recommenda
 - Consider adopting a version control system like Git to provide your team with flexibility in code sharing and management.
   - [Git](/azure/devops/repos/git) is the industry-standard version control system. It's a distributed version control system, where your local copy of the code is a complete version of the repository.
 
-- Understand mono-repo versus multirepo [Repository structure](/learn/modules/structure-your-git-repo/).
+- Understand mono-repo versus multirepo [Repository structure](/training/modules/structure-your-git-repo/).
   - In mono-repo structures, all source code lives in a single repository.
   - In multirepo structures, all projects are organized into separate repositories.
 
@@ -37,7 +37,7 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - Azure provides support for IaC for Landing Zones through:
   - [Bicep](https://github.com/Azure/ALZ-Bicep)
-  - [Terraform](/docs/ready/landing-zone/deploy-landing-zones-with-terraform)
+  - [Terraform](../landing-zone/deploy-landing-zones-with-terraform.md)
 
 ### Design recommendations
 

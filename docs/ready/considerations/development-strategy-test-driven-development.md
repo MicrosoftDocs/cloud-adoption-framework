@@ -116,11 +116,11 @@ You can easily integrate these Azure tools and features into TDD for landing zon
 
 Depending on your preferred approach, you can also use the following tools:
 
-- [Deploy landing zones using Terraform](/docs/ready/landing-zone/deploy-landing-zones-with-terraform).
+- [Deploy landing zones using Terraform](../landing-zone/deploy-landing-zones-with-terraform.md).
 - [Deploy landing zones using Bicep](https://github.com/Azure/ALZ-Bicep).
 - [Manage landing zones using AzOps](https://github.com/Azure/AzOps), a PowerShell module that pushes resource templates and Bicep files at all Azure scope levels, and pulls and exports Azure resource hierarchies.
 
 ## Next steps
 
 - [Security considerations for DevOps platforms](./security-considerations-overview.md)
-- [Landing zone implementation options](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options)
+- [Landing zone implementation options](../landing-zone/implementation-options.md)

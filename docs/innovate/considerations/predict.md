@@ -73,7 +73,7 @@ After a pattern is built and trained, you can apply it through APIs, which can m
 
 [Azure Cognitive Services](/azure/cognitive-services/) is an example of a predictive API built by a cloud vendor. This service includes predictive APIs for content moderation, anomaly detection, and suggestions to personalize content. These APIs are ready to use and are based on well-known content patterns, which Microsoft has used to train models. The APIs make predictions based on the data you feed into the API.
 
-[Azure Machine Learning](/azure/machine-learning/) lets you deploy custom-built algorithms, which you can create and train based solely on your own data. For information about deploying predictions with Azure Machine Learning, see [Deploy machine learning models to Azure](/azure/machine-learning/how-to-deploy-and-where).
+[Azure Machine Learning](/azure/machine-learning/) lets you deploy custom-built algorithms, which you can create and train based solely on your own data. For information about deploying predictions with Azure Machine Learning, see [Deploy machine learning models to Azure](/azure/machine-learning/how-to-deploy-managed-online-endpoints).
 
 For information about the processes for exposing predictions developed for ML Services on Azure HDInsight, see [Set up HDInsight clusters](/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters).
 
