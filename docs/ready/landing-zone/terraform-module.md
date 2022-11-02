@@ -120,7 +120,7 @@ This capability enables deployment of multiple hub networks based on any combina
 
 The module can also create and link [DDoS Protection](#ddos-protection-plan) Network Protection to Virtual Networks, and manage centralized public and private [DNS zones](#dns).
 > [!NOTE]
-> We don't currently recommend DDoS IP Protection and only recommend using this option in specific circumstances.
+> We don't currently recommend DDoS IP Protection in Azure Landing Zones and recommend using this option in specific circumstances. Review the product documentation [About Azure DDoS Protection SKU Comparison](/azure/ddos-protection/ddos-protection-sku-comparison)
 
 
 #### Traditional Azure networking topology (hub and spoke)
