@@ -102,29 +102,29 @@ The following considerations are for designing storage for AKS. Consider where s
 
 ## Design recommendations
 
-- For OS disks, ephemeral disks are recommended. In order to benefit from this feature, make sure to select a VM size with an adequately sized temporary disk.
+- For OS disks, we recommend ephemeral disks. To benefit from this feature, select a VM size that has an adequately sized temporary disk.
 
-- For application data, managed databases are recommended.
+- For application data, we recommend managed databases.
 
-- For all storage solutions that support this, Private Link is the recommended solution to access storage.
+- For all storage solutions that support this, we recommend Private Link for access to storage.
 
 - For Azure disks:
 
-  - In most cases, Premium or Ultra disks are recommended to ensure adequate performance.
+  - In most cases, we recommend Premium or Ultra disks to ensure adequate performance.
 
-  - Ensure your Kubernetes node size is large enough to support the amount of disks and aggregate throughput.
+  - Ensure that your Kubernetes node size is large enough to support the number of disks and the amount of aggregate throughput.
 
-  - Consider taking snapshots of persistent volumes either to provision a new volume (pre-populated with the snapshot data) or to restore the existing volume to a previous state using the Azure Disks CSI driver snapshot capability.
+  - Consider taking snapshots of persistent volumes either to provision a new volume (which are pre-populated with the snapshot data) or to restore the existing volume to a previous state by using the snapshot capability of the Azure Disks CSI driver.
 
   - Avoid striping across multiple disks in Kubernetes.
 
-  - Use PVC/PV in Kubernetes to dynamically create disks where required.
+  - Use persistent volumes (PV) and persistent volume claims (PVC) in Kubernetes to dynamically create disks where required.
 
 - For Azure Files:
 
-  - In case performance is critical, the premium tier is recommended.
+  - If performance is critical, we recommend the premium tier.
 
-  - Have dedicated storage accounts for your file shares.
+  - Provide dedicated storage accounts for your file shares.
 
   - Consider carefully whether you want Kubernetes to create the file shares or if you want to create them statically outside of Kubernetes.
 
@@ -134,6 +134,6 @@ The following considerations are for designing storage for AKS. Consider where s
 
   - Use AAD-integrated authorization for blob storage. Avoid using the shared storage account key.
 
-  - Use lifecycle management policies to tier infrequently accessed data to a cooler access tier.
+  - Use lifecycle management policies to move infrequently accessed data to a cooler access tier.
 
-  - If you can't use an application-level SDK to interface with blob, consider using the NFSv3 option in the blob CSI driver.
+  - If you can't use an application-level SDK to interface with blob storage, consider using the NFSv3 option in the blob CSI driver.
