@@ -16,7 +16,7 @@ This enterprise-scale scenario helps improve business continuity and disaster re
 
 Whether you have an on-premises or Azure VMware Solution, you should consider various BCDR factors to prepare for a disaster. A robust BCDR plan aims to protect a company from data loss, financial loss, and downtime if there's a disruptive event. The following decision tree shows various BCDR options available for Azure VMware Solution.
 
-:::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a flow chart for business continuity and disaster recovery." border="false" Lightbox="../_images/eslz-bcdr-1.png":::
+:::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a flow chart for business continuity and disaster recovery." Lightbox="../_images/eslz-bcdr-1.png":::
 
  > [!NOTE]
  >A pilot light environment is set up with a minimal configuration, with only core components to support a critical set of applications. However, it can scale out and spawn more hosts to take the bulk of the load if a failover occurs.
@@ -112,7 +112,7 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
   *Detailed example of continuous vSphere replication between primary and secondary sites.*
 
-  :::image type="content" source="../_images/eslz-bcdr-6.png" alt-text="Diagram that shows a detailed example of continuous vSphere replication between two Azure VMware Solution sites." border="false":::
+  :::image type="content" source="../_images/eslz-bcdr-6.png" alt-text="Diagram that shows a detailed example of continuous vSphere replication between two Azure VMware Solution sites.":::
 
 - For business-critical applications, Zerto and JetStream are available as disaster recovery solutions for Azure VMware Solution private cloud. JetStream and Zerto are built on the foundation of continuous data protection (CDP), using VMware vSphere API for I/O filtering (VAIO) framework, which enables minimal or close to no data loss. It also enables cost-effective disaster recovery by using minimal resources.
 
