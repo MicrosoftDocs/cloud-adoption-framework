@@ -27,7 +27,7 @@ Your organization or enterprise needs to design suitable security settings to me
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
   - Decide what permissions are needed for the application teams to deploy into the cluster.
-- Decide whether you need workload identities ([Azure AD pod identities](/azure/aks/use-azure-ad-pod-identity)). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
+- Decide whether you need workload identities ([Azure AD workload identities](/azure/aks/workload-identity-overview)). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
 
 ## Design recommendations
 
