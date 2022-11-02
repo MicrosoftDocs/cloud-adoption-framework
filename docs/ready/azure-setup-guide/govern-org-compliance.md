@@ -40,7 +40,6 @@ To create a blueprint:
 1. Select **Next : Artifacts**, then review the artifacts included in the blueprint.
 1. Select **Save Draft**.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
 
 ::: zone-end
 
@@ -66,7 +65,6 @@ To publish blueprint artifacts to your subscription:
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. Provide a **Version** (such as `1.0`) and any **Change notes**, then select **Publish**.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints]" submitText="Blueprint definitions" :::
 
 ::: zone-end
 
@@ -108,7 +106,6 @@ Use common policies to:
 
 Assign a built-in policy to a management group, subscription, or resource group.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/PolicyMenuBlade/GettingStarted]" submitText="Assign Policy" :::
 
 ::: zone-end
 
@@ -161,8 +158,5 @@ For more information, see the following resources:
 
 ::: zone target="chromeless"
 
-### Action
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0]" submitText="Explore Azure Security Center" :::
 
 ::: zone-end

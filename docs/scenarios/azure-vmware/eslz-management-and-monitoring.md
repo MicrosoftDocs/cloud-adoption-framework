@@ -14,7 +14,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 Proper management and monitoring are critical to the success of [Azure VMware Solution](https://azure.microsoft.com/services/azure-vmware/). This enterprise-scale scenario outlines important recommendations for the design of your environment. More guidance is available in the Azure enterprise-scale [landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
 
-As you plan your management and monitoring environment for Azure VMware Solution, it's critical to understand the [shared responsibility matrix](/azure/cloud-adoption-framework/scenarios/azure-vmware/manage). The matrix shows which components Microsoft is responsible for, and which ones that you're responsible for managing and monitoring. Microsoft takes care of the ongoing maintenance, security, and management of cloud resources, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
+As you plan your management and monitoring environment for Azure VMware Solution, it's critical to understand the [shared responsibility matrix](./manage.md). The matrix shows which components Microsoft is responsible for, and which ones that you're responsible for managing and monitoring. Microsoft takes care of the ongoing maintenance, security, and management of cloud resources, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
 
 > [!IMPORTANT]
 > To support Azure VMware Solution, it's important to follow the recommendations below to configure service health alerts.

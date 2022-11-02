@@ -1,6 +1,6 @@
 ---
 title: Building your DevOps practice
-description: Use the Azure Cloud Adoption Framework to understand the motivations behind cloud migration that can help produce more successful business outcomes.
+description: Use the Cloud Adoption Framework to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 author: wayneme
 ms.author: brblanch
 ms.date: 05/13/2022
@@ -45,7 +45,7 @@ It's not wrong to use VMs and infrastructure as a service. However, you can redu
 
 ## Evolve traditional functions to make them cloud aligned
 
-The Organize section of the Azure Cloud Adoption Framework describes the functions necessary for your cloud practice. It also offers guidance on data silo avoidance and how you can empower users and tap into resources across your entire organization. Even small IT teams can accomplish a lot by removing barriers and enabling self-service for others within your organization. As you build your cloud capabilities, you'll see operations teams embracing infrastructure-as-code and traditional network, security, and system admins writing scripts to drive greater consistency.
+The Organize methodology of the Cloud Adoption Framework describes the functions necessary for your cloud practice. It also offers guidance on data silo avoidance and how you can empower users and tap into resources across your entire organization. Even small IT teams can accomplish a lot by removing barriers and enabling self-service for others within your organization. As you build your cloud capabilities, you'll see operations teams embracing infrastructure-as-code and traditional network, security, and system admins writing scripts to drive greater consistency.
 
 As an example, imagine that the fictional organization Contoso Corporation acquires a new company. They need to incorporate this company, and all its applications and data, into Contoso's Azure environment. Contoso has fully scripted a new landing zone deployment. In it, they provision a subscription with appropriate permissions, network peering that connects it back to their hub network, and policies that comply with Contoso's corporate governance. The entire process takes no longer than 10 minutes before the new company can begin to migrate their applications into the new landing zone Contoso created.
 
@@ -75,7 +75,7 @@ Even if DevOps is critical for your strategy, not every workload is a good candi
 
 Listening and learning from your customers is a key to your DevOps practice. As you build and maintain your organization's DevOps practice, get feedback from your users, incorporate it into your backlog, and use it as a source for continuous improvement.
 
-As an example, one of the places in our own DevOps process where we provide customers to give us direct feedback is in our documentation articles on docs.microsoft.com. Each article on the website has an edit button at the top. Readers are able to edit the article, initiating a pull request that goes to a specific document's owner. The owner can then review and incorporate suggestions directly from a reader. Through this process, Microsoft is able to apply skills and expertise from our entire user base in addition to the expertise within our organization.
+As an example, one area in our own DevOps process where customers can provide direct feedback is in our technical documentation. Each published article has an edit button at the top. Readers can edit the article, initiating a pull request that goes to a specific document's owner. The owner can then review and incorporate suggestions directly from a reader. Through this process, Microsoft is able to apply skills and expertise from our entire user base in addition to the expertise within our organization.
 
 DevOps is more than just developers building a specific product. It's an approach involving multiple key elements of the product lifecycle–a practice known as *everything as code*.
 

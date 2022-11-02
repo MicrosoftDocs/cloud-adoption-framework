@@ -44,7 +44,6 @@ Begin server discovery, assessment, and migration by using the following steps f
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Discover, assess and migrate" :::
 
 ::: zone-end
 

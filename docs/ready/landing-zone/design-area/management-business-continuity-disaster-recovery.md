@@ -70,6 +70,6 @@ The following design practices support BCDR for application workloads:
 
   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity if an outage affects an Azure region or peering provider location.
 
-- Avoid using overlapping IP address ranges for production and DR sites.
+- Avoid using overlapping IP address ranges in production and DR networks.
 
-  Production DR networks that use the same classless interdomain routing blocks require a failover process that can complicate and delay application failover. When possible, plan for a BCDR network architecture that provides concurrent connectivity to all sites.
+  Production and DR networks that have overlapping IP addresses require a failover process that can complicate and delay application failover. When possible, plan for a BCDR network architecture that provides concurrent connectivity to all sites.

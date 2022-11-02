@@ -24,9 +24,9 @@ The various options differ in speed, latency, reliability, service-level agreeme
 - We consider the following options to connect Azure to another cloud:
   - **Option 1:** Connect Azure ExpressRoute and the other cloud provider's equivalent private connection. The customer manages routing.
   - **Option 2:** Connect ExpressRoute and the other cloud provider's equivalent private connection. A cloud exchange provider handles routing.
-  - **Option 3:** Use Site-to-Site VPN over the internet. For more information, see [Connect on-premises networks to Azure by using Site-to-Site VPN gateways (Learn)](/learn/modules/connect-on-premises-network-with-vpn-gateway/2-connect-on-premises-networks-to-azure-using-site-to-site-vpn-gateways).
+  - **Option 3:** Use Site-to-Site VPN over the internet. For more information, see [Connect on-premises networks to Azure by using Site-to-Site VPN gateways (Learn)](/training/modules/connect-on-premises-network-with-vpn-gateway/2-connect-on-premises-networks-to-azure-using-site-to-site-vpn-gateways).
 
-   You can use the following cross-cloud connectivity flow chart as an aid to choosing an option:
+    You can use the following cross-cloud connectivity flow chart as an aid to choosing an option:
 
     ![Diagram of cross-cloud connectivity flow chart](./media/cloud-interconnect-decision-tree.png)
 

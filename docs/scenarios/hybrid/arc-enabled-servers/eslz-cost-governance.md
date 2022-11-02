@@ -63,9 +63,9 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 ### Governance
 
-- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](../../../ready/azure-best-practices/naming-and-tagging.md).
 - Use least privilege Azure RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who onboards Azure Arc-enabled servers to avoid unnecessary costs.
-- Use least privilege Azure RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete, and reonboard Azure connected machines.
+- Use least privilege Azure RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete, and re-onboard Azure connected machines.
 
 ### Azure Monitor
 
@@ -73,13 +73,13 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Decide on the [required logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for Azure Arc-enabled Windows and Linux servers, to be collected in the Log Analytics workspace.
 - Use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to estimate Azure Arc-enabled servers monitoring costs, for Azure Log Analytics ingestion, alerts, and notifications.
 
-[ ![Screenshot that shows the Azure pricing calculator.](./media/pricing-calculator.png)](./media/pricing-calculator.png#lightbox)
+[![Screenshot that shows the Azure pricing calculator.](./media/pricing-calculator.png)](./media/pricing-calculator.png#lightbox)
 
-[ ![Screenshot that shows Azure pricing calculator for Azure Monitor.](./media/pricing-calculator-azure-monitor.png)](./media/pricing-calculator-azure-monitor.png#lightbox)
+[![Screenshot that shows Azure pricing calculator for Azure Monitor.](./media/pricing-calculator-azure-monitor.png)](./media/pricing-calculator-azure-monitor.png#lightbox)
 
 - Use [Azure Cost Management + Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
 
-[ ![Screenshot that shows Azure Cost Management and Billing.](./media/cost-management-billing-azure.png)](./media/cost-management-billing-azure.png#lightbox)
+[![Screenshot that shows Azure Cost Management and Billing.](./media/cost-management-billing-azure.png)](./media/cost-management-billing-azure.png#lightbox)
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
 
@@ -146,8 +146,8 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 
 For more guidance for your hybrid cloud adoption journey, review the following resources:
 
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
-- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
-- Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
-- To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
+- Review the Cloud Adoption Framework [best practices and recommendations](../../../get-started/manage-costs.md) to efficiently manage your cloud costs.
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

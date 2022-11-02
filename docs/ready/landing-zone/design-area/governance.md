@@ -1,9 +1,9 @@
 ---
 title: Azure governance design area guidance
 description: Design area guidance for governing your Azure environment
-author: DominicAllen
-ms.author: doalle
-ms.date: 01/04/2022
+author: timwarner-msft
+ms.author: timwarner
+ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -22,6 +22,22 @@ Azure governance establishes the tooling needed to support cloud governance, com
 
 **Out of scope:** Azure governance establishes the foundation for networking. However, it doesn't address compliance-related articles such as advanced network security or automated guardrails to enforce networking decisions. These networking decisions might be addressed when reviewing compliance design areas related to [security](./security.md) and [governance](./governance.md). Delaying the discussions might allow the cloud platform team to address initial networking requirements before addressing more complex articles.
 
+**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your new Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
+
+**Existing (brownfield) cloud environment:** Consider the following if you are interested in applying proven-practice Azure governance principles to existing Azure environments:
+
+- Review our guidance for establishing a [management baseline](./management.md) for your hybrid or multicloud environment
+- Implement [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) features like billing scopes, budgets, and alerts to ensure your Azure spend stays within prescribed bounds
+- Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments, and trigger remediation tasks to bring existing Azure resources into a compliant state
+- Consider [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration
+- Leverage [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
+
+The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice governance guidance integrated within them.
+
+For instance, consider using the [ALZ Default Policy Assignments](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults) Bicep module to get a head start on ensuring compliance for your Azure environments.
+
+For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
+
 ## Design area overview
 
 An organizations cloud adoption journey starts with strong controls to government environments.
@@ -32,7 +48,7 @@ Governance provides mechanisms and processes for maintaining control over platfo
 
 The design area review explores the considerations and recommendations that help you make informed decisions as you plan your landing zone.
 
-The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](../../../govern/index.md) in the Cloud Adoption Framework gives guidance for governance processes and tools.
+The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](../../../govern/index.md) of the Cloud Adoption Framework gives guidance for governance processes and tools.
 
 The Govern methodology consists of five disciplines:
 

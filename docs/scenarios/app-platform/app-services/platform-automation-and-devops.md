@@ -14,7 +14,7 @@ ms.custom: internal
 
 This article provides design considerations and recommendations for platform automation and DevOps when using the Azure App Service landing zone accelerator. Platform automation and DevOps provide opportunities to modernize your approach to environmental deployment with infrastructure-as-code options.
 
-Learn more about the [platform automation and DevOps](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops) design area.
+Learn more about the [platform automation and DevOps](../../../ready/landing-zone/design-area/platform-automation-devops.md) design area.
 
 ## Design considerations
 
@@ -41,4 +41,4 @@ The following is a bulleted list of best practices that should be included in an
 - Store secrets and other sensitive artifacts in the relevant secret store (eg Azure Key Vault or GitHub secrets), allowing actions and other workflow parts to read them if needed while executing.
 -  Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings.
 -  Embrace [shift left](/azure/devops/learn/devops-at-microsoft/shift-left-make-testing-fast-reliable) security by adding vulnerability and secret scanning tools like container scanning early in the pipeline.
-- Leverage blue/green deployment using deployment slots to validate application changes and minimize downtime. 
+- Leverage blue/green deployment using deployment slots to validate application changes and minimize downtime.

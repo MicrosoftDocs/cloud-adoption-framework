@@ -92,9 +92,9 @@ Read more:
 - [Azure Synapse Analytics](/azure/synapse-analytics/)
 - [Azure Kubernetes Service](/azure/aks/)
 - [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml)
-- [Azure Synapse content on Microsoft Learn](/learn/browse/?terms=synapse)
-- [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
-- [Data scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)
+- [Learn modules for Azure Synapse](/training/browse/?terms=synapse)
+- [Learn modules for Azure Kubernetes](/training/browse/?terms=kubernetes)
+- [Data scientist learning path](/training/browse/?roles=data-scientist)
 
 For comprehensive technical guidance, including a deployment guide, see the [Retail Recommender Solution Accelerator GitHub page](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator).
 

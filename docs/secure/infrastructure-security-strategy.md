@@ -24,7 +24,7 @@ Align and improve your organization and people processes in incremental steps. D
 
 Align your initial MVP and incremental progress priorities with established best practices and your organization's specific business and security requirements. Make adjustments as needed over time for processes, people (training and readiness), and technical implementations.
 
-The Cloud Adoption Framework's strategy approach also includes considerations that help you modernize strategies, architectures, and technology end-to-end on your organization's cloud adoption path. For more information, see [Defining security strategies](/azure/cloud-adoption-framework/strategy/define-security-strategy).
+The Cloud Adoption Framework's strategy approach also includes considerations that help you modernize strategies, architectures, and technology end-to-end on your organization's cloud adoption path. For more information, see [Defining security strategies](../strategy/define-security-strategy.md).
 
 ## Next steps
 

@@ -27,7 +27,7 @@ The tools a DevOps toolchain includes operate as an integrated unit for planning
 
 ### Planning
 
-- Consider adopting a tool that supports [Continuous Planning](/learn/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning) practices:
+- Consider adopting a tool that supports [Continuous Planning](/training/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning) practices:
   - Release planning
   - Epic and feature identification
   - Prioritization
@@ -45,7 +45,7 @@ The tools a DevOps toolchain includes operate as an integrated unit for planning
   - Version Control Systems. Everything in your project must be checked in to a single version control repository like Git: code, tests, database scripts, build and deployment scripts, and anything else needed to create, install, run and test your application.
   - [Branching strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy).
   - [Automated builds](../considerations/development-strategy-development-lifecycle.md#automated-builds).
-- Note that your choice of repository is also influenced by data sovereignty/residency requirements. If you need your data to be hosted locally in countries other than US, you'll need Azure DevOps repositories when GitHub Repos can't be used.
+- Note that your choice of repository is also influenced by data sovereignty/residency requirements. If you need your data to be hosted locally in country/region other than US, you'll need Azure DevOps repositories when GitHub Repos can't be used.
 - To minimize the amount of manual configuration required to provision resources, consider adopting [Infrastructure as Code (IaC)](/azure/architecture/checklist/dev-ops#management). [IaC](/dotnet/architecture/cloud-native/infrastructure-as-code) lets you apply software engineering practices like testing and versioning, which make infrastructure and deployments automated, consistent, and repeatable. Keep scripts and templates under source control like any other code you maintain.
 - Adopt [code scanning tools](/devops/devsecops/enable-devsecops-azure-github#secure-your-code-with-github) to help you detect code defects as soon as possible. Include pre-deployment checks to validate and confirm changes before any deployment (Example: ["what-if"](../considerations/development-strategy-development-lifecycle.md#deployment-strategy)) function.
 - CI/CD tools speed up the time to market for your product. Tools that allow you to parallelize tasks and take advantage of elastic scalability on cloud-hosted infrastructure enhance the performance of your CI/CD process.
@@ -86,7 +86,7 @@ DevOps toolchains for Azure Landing Zone implementation should consider all prev
 - Operations
 - Collaborations and feedback
 
-Review guidance for landing zone deployment and considerations for choosing an implementation option in [Choosing landing zone adoption](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option#deployment-considerations).
+Review guidance for landing zone deployment and considerations for choosing an implementation option in [Choosing landing zone adoption](../landing-zone/choose-landing-zone-option.md#deployment-considerations).
 
 Regardless of selected methodology (start small and expand or enterprise-scale), there are a few common topologies that enterprises tend to follow as they design their DevOps workflows and toolchains.
 
