@@ -70,6 +70,8 @@ Watch this video to get an overview of common team structures at various stages 
 
 <!-- markdownlint-disable MD034 -->
 
+<br/>
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wvTS]
 
 <!-- markdownlint-enable MD034 -->
