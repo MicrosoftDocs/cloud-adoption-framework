@@ -36,19 +36,19 @@ Choosing the right SKUs and sizes for your initial deployments requires some eva
 
 ## Design considerations
 
-The following is a list of design considerations when it comes to storage in AKS. Consider where storage is required in your AKS environment, and determine the best solution for each requirement.
+The following considerations are for designing storage for AKS. Consider where storage is required in your AKS environment, and determine the best solution for each requirement.
 
-- **Operating system disks**: Each virtual machine (VM) in Azure requires a disk for its operating system. Because Kubernetes nodes are ephemeral, AKS defaults to using [ephemeral OS drives](/azure/aks/cluster-configuration#ephemeral-os) on supported VM sizes.
+- **Operating system (OS) disks**: Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using [ephemeral OS drives](/azure/aks/cluster-configuration#ephemeral-os) on supported VM sizes.
 
-  - If required, you can use regular managed disks instead for the nodes in your AKS cluster, in case you need to persist certain data that you store on the OS drive.
+  - If required, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports applications that need persistent data on the OS drive.
 
-  - If you select a [managed disk](/azure/virtual-machines/disks-types) as the operating system disk, ensure that it's sized appropriately to support the requirements of the operating system, Kubernetes system and your workload.
+  - If you select a [managed disk](/azure/virtual-machines/disks-types) as the OS disk, ensure that it's sized appropriately to support the requirements of the OS, the Kubernetes system, and your workload.
 
 - **Application data**: Some applications need a consistent data store for storage of application data. If your application requires a database, consider exploring the managed database options in Azure, such as [Azure SQL](/products/azure-sql/), [Azure Database by MySQL](/services/mysql/), [Azure Database for PostGres](/services/postgresql/), and [Cosmos DB](/services/cosmos-db/).
 
-- **Storage solutions in AKS**: If a managed database doesn't meet the needs of your application, AKS has multiple storage options available to store consistent data:
+- **Storage solutions in AKS**: If a managed database doesn't meet the needs of your application, use another storage option that's available to AKS to store consistent data:
 
-  - **Disk-based solutions**: Disks, or block storage, are ideal for storing data directly on a raw block-based device, which is ideal for storing data for databases you would host in your Kubernetes cluster. In Azure, managed disks are the solution to get block-based storage.
+  - **Disk-based solutions**: Disks, or block storage, are ideal for storing data directly on a raw, block-based device. Disk-based storage is ideal for storing data for databases that your Kubernetes cluster hosts. In Azure, managed disks are the solution to get block-based storage.
 
     - Consider whether you want to use a [static disk created outside of AKS](/azure/aks/azure-disk-volume), or if you want [AKS to dynamically create the disk on your behalf](/azure/aks/azure-disks-dynamic-pv).
 
@@ -58,25 +58,25 @@ The following is a list of design considerations when it comes to storage in AKS
 
     - Ensure that your [Kubernetes node size](/azure/virtual-machines/sizes) is large enough to support both the number of disks and the aggregate throughput requirements.
 
-    - Ensure that your [managed disk](/azure/virtual-machines/disks-types) is sized appropriately for your workload's performance requirements. For standard HDD, standard SSD, and premium v1 disks, the performance increases as the disk size increases.
+    - Ensure that your [managed disk](/azure/virtual-machines/disks-types) is sized appropriately for your workload's performance requirements. For Standard HDD, Standard SSD, and Premium SSD v1, performance increases as the disk size increases.
 
-  - **Ephemeral disks solutions**: There are cases where you need either a non-persistent temporary storage location or where you want to use the high-performance drives in the [storage-optimized VM-series](/azure/virtual-machines/sizes-storage). To connect to an ephemeral volume, you can either use the `emptydir` [option](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) in Kubernetes, or use the [CSI ephemeral local volume](https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes) driver. `emptydir` is recommended for ephemeral data such as a scratch space, whereas the CSI ephemeral local volume is recommended for storage on the storage-optimized VM-series.
+  - **Ephemeral disks solutions**: There are cases where you need either non-persistent, temporary storage or where you want to use the high-performance drives in the [storage-optimized VM-series](/azure/virtual-machines/sizes-storage). To connect to an ephemeral volume, you can use either the `emptydir` [option](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) in Kubernetes or the driver for a [CSI ephemeral local volume](https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes). We recommend `emptydir` for ephemeral data, such as a scratch space. For storage on the storage-optimized VM-series, we recommend a CSI ephemeral local volume.
 
-  - **Files-based solutions**: File storage exposes a shared file-system either via NFS or via SMB/CIFS, which is ideal for shared application data and configuration data that is read by multiple pods in your Kubernetes cluster. Azure has two solutions for file based storage: 
+  - **Files-based solutions**: File storage exposes a shared file system via either NFS or SMB/CIFS. A shared file system is ideal for application and configuration data that is read and shared by multiple pods in your Kubernetes cluster. Azure has two solutions for file-based storage: 
 
     - Azure Files:
 
-      - Consider whether you want to use a [static file share created outside of AKS](/azure/aks/azure-files-volume), or if you want [AKS to create the file share dynamically on your behalf](/azure/aks/azure-files-dynamic-pv).
+      - Consider whether you want to use a [static file share that's created outside of AKS](/azure/aks/azure-files-volume), or if you want [AKS to create the file share dynamically on your behalf](/azure/aks/azure-files-dynamic-pv).
 
-      - Evaluate if standard performance is sufficient, or if you need premium performance from Azure Files.
+      - Evaluate if standard performance is sufficient or if you need premium performance from Azure Files.
 
-      - Evaluate whether you want to use the default SMB/CIFS API to access Azure Files, or if you need NFS support.
+      - Evaluate whether you want to use the default SMB/CIFS API to access Azure Files or if you need NFS support.
 
-      - Consider the network model you want to use to access Azure Files: either via direct public IP address, via a service endpoint or via private link.
+      - Consider the network model that you want to use to access Azure Files: access via direct public IP address, a service endpoint, or a private link.
 
     - Azure NetApp Files (ANF):
 
-      - Consider whether you want to use a [static ANF share created outside of AKS](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-statically), or if you want [AKS to create the file share dynamically](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-dynamically) on your behalf via Astra Control.
+      - Consider whether you want to use a [static ANF share that's created outside of AKS](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-statically), or if you want [AKS to create the file share dynamically](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-dynamically) on your behalf via Astra Control.
 
       - Evaluate which performance tier is required for your workload.
 
@@ -84,21 +84,21 @@ The following is a list of design considerations when it comes to storage in AKS
 
   - **Blob**: Azure blob storage is Microsoft's object storage platform. It's accessible via an HTTP API or through the SDKs. Mounting Azure Blob storage as a file system into a container or pod is ideal for application workloads that have massive amounts of unstructured data, such as log files, images, documents, streaming media, and disaster-recovery data.
 
-    - Evaluate which [data redundancy](/azure/storage/common/storage-redundancy) (defined at storage account level) is required and which [performance tier](/azure/storage/blobs/access-tiers-overview) of blob storage is needed.
+    - Evaluate which [data redundancy](/azure/storage/common/storage-redundancy) that your application requires. Data redundancy is defined at the level of the storage account. Also evaluate which [performance tier](/azure/storage/blobs/access-tiers-overview) of blob storage your application requires.
 
-    - Consider which [authentication method](/azure/storage/common/authorize-data-access) to blob you want to use: storage key, SAS or AAD-integrated.
+    - Consider which [authentication method](/azure/storage/common/authorize-data-access) for access to blob storage that you want to use: storage key, SAS, or Azure Active Directory.
 
-    - Typically, applications accessing blob storage make use of the API in the application through [one of the SDKs](/azure/storage/blobs/storage-blobs-introduction); making the interaction with blob abstracted from the Kubernetes cluster.
+    - Typically, applications that access blob storage use the API in the application through [one of the SDKs](/azure/storage/blobs/storage-blobs-introduction), which abstracts the interaction with blob storage from the Kubernetes cluster.
 
-    - Consider whether you want to use a [static blob storage container created outside of AKS](/azure/aks/azure-csi-blob-storage-static?tabs=secret) or if you want [AKS to create the blob storage container dynamically on your behalf](/azure/aks/azure-csi-blob-storage-dynamic).
+    - Consider whether you want to use a [static blob storage container that's created outside of AKS](/azure/aks/azure-csi-blob-storage-static?tabs=secret) or if you want [AKS to create the blob storage container dynamically on your behalf](/azure/aks/azure-csi-blob-storage-dynamic).
 
-    - If you want to access blob storage like a file system, you can use the [blob CSI driver](https://github.com/kubernetes-sigs/blob-csi-driver) in Kubernetes. This driver will allow you to access blob through either an [NFSv3 protocol](/azure/storage/blobs/network-file-system-protocol-support) or through a [fuse driver](https://github.com/Azure/azure-storage-fuse).
+    - If you want to access blob storage as a file system, you can use the [blob CSI driver](https://github.com/kubernetes-sigs/blob-csi-driver) in Kubernetes. This driver allows access to blob storage through either the [NFSv3 protocol](/azure/storage/blobs/network-file-system-protocol-support) or through a [fuse driver](https://github.com/Azure/azure-storage-fuse).
 
-  - **Other**: There are multiple specialized storage solutions in Azure that can also be integrated with Kubernetes, which won't be explored in depth in this document.
+  - **Other**: There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article does not cover those in depth, but the following list identifies possible solutions:
 
     - [HPC cache](/azure/aks/azure-hpc-cache): Azure HPC Cache speeds access to your data for high-performance computing (HPC) tasks. By caching files in Azure, Azure HPC Cache brings the scalability of cloud computing to your existing workflow.
 
-    - [ADLS Gen 2](/azure/storage/blobs/data-lake-storage-introduction): A special type of Azure blob storage optimized for big data workloads like Hadoop and Spark.
+    - [ADLS Gen 2](/azure/storage/blobs/data-lake-storage-introduction): A special type of Azure blob storage that's optimized for big data workloads like Hadoop and Spark.
 
 ## Design recommendations
 
