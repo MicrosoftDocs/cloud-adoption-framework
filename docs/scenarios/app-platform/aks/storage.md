@@ -24,11 +24,11 @@ Choosing the right SKUs and sizes for your initial deployments requires some eva
 
 - **Structured data**. For structured data that your application can store in a managed database that is available on the platform (for example, [AzureSQL](/azure/azure-sql/database/)), we recommend using a managed database.
 
-- **Unstructured data**. For unstructured data—such as photos, videos, and text documents—use blob storage. Your application can do this by using blobs that are mounted as files via NFS or accessed as a virtual file system by using [BlobFuse](/azure/storage/blobs/blobfuse2-what-is). Alternatively, your application can read from and write to blob storage directly.
+- **Unstructured data**. For unstructured data—such as photos, videos, and text documents—use blob storage. Your application can do this by using blobs that are mounted as files via Network File System (NFS) or accessed as a virtual file system by using [BlobFuse](/azure/storage/blobs/blobfuse2-what-is). Alternatively, your application can read from and write to blob storage directly.
 
 - **Shared application data**. For shared application data that requires high performance, use either [Azure NetApp Files](/azure/azure-netapp-files/) or the *premium* tier of [Azure Files](/azure/storage/files/). For shared configuration data that requires only limited performance, use the *standard* tier of [Azure Files](/azure/storage/files/).
 
-- **Bandwidth for application & storage**. Ensure that your nodes have sufficient network bandwidth to handle both application requests and storage requests. Storage traffic goes over the network stack, whether the transfers use SMB or NFS.
+- **Bandwidth for application & storage requests**. Ensure that your nodes have sufficient network bandwidth to handle both application requests and storage requests. Storage traffic goes over the network stack, whether the transfers use SMB or NFS.
 
 - **Low latency, high IOPS**. If your application needs consistently low latency that's coupled with high I/O operations per second (IOPS) and high throughput to run your own databases and messaging applications on Kubernetes, use disks for storage. Consider using either [Azure Premium SSD](/azure/virtual-machines/disks-types#premium-ssds), [Azure Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2), or [Azure Ultra Disk Storage](/azure/virtual-machines/disks-types#ultra-disks) for the best performance.
 
@@ -98,7 +98,7 @@ Azure blob storage is Microsoft's object storage platform. It's accessible via a
 
 - Evaluate which [data redundancy](/azure/storage/common/storage-redundancy) that your application requires. Data redundancy is defined at the level of the storage account. Also evaluate which [performance tier](/azure/storage/blobs/access-tiers-overview) of blob storage your application requires.
 
-- Consider which [authentication method](/azure/storage/common/authorize-data-access) for access to blob storage that you want to use: storage key, SAS, or Azure Active Directory.
+- Consider which [authentication method](/azure/storage/common/authorize-data-access) for access to blob storage that you want to use: storage key, SAS, or Azure Active Directory (Azure AD).
 
 - Typically, applications that access blob storage use the API in the application through [one of the SDKs](/azure/storage/blobs/storage-blobs-introduction), which abstracts the interaction with blob storage from the Kubernetes cluster.
 
@@ -116,11 +116,13 @@ There are multiple specialized storage solutions in Azure that can integrate wit
 
 ## Design recommendations
 
-- For OS disks, we recommend ephemeral disks. To benefit from this feature, select a VM size that has an adequately sized temporary disk.
+For security, we recommend using Azure Private Link for all storage solutions that support it. Azure Private Link enables access to Azure Services, such as Azure Storage and SQL Database, and Azure-hosted services over a private endpoint in your virtual network. For more information, see [What is Azure Private Link?](/azure/private-link/private-link-overview)
 
-- For application data, we recommend managed databases.
+For OS disks, we recommend using ephemeral disks. To benefit from this feature, select a VM size that has an adequately sized temporary disk. For more information, see [Ephemeral OS disks for Azure VMs](/azure/virtual-machines/ephemeral-os-disks).
 
-- For all storage solutions that support this, we recommend Private Link for access to storage.
+For application data, we recommend using managed databases. For a list of database options, see [Types of Databases on Azure](https://azure.microsoft.com/en-us/products/category/databases/).
+
+The following sections describe additional recommendations for Azure disks, Azure Files, and blob storage.
 
 ### Azure disks
 
@@ -136,18 +138,18 @@ There are multiple specialized storage solutions in Azure that can integrate wit
 
 ### Azure Files
 
-  - If performance is critical, we recommend the premium tier.
+  - If performance is critical, we recommend using the Premium tier.
 
   - Provide dedicated storage accounts for your file shares.
 
   - Consider carefully whether you want Kubernetes to create the file shares or if you want to create them statically outside of Kubernetes.
 
-### For Azure Blob
+### Blob storage
 
   - Use an application-level SDK to interface with blob storage.
 
-  - Use AAD-integrated authorization for blob storage. Avoid using the shared storage account key.
+  - Use Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
 
-  - Use lifecycle management policies to move infrequently accessed data to a cooler access tier.
+  - Use lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview).
 
-  - If you can't use an application-level SDK to interface with blob storage, consider using the NFSv3 option in the blob CSI driver.
+  - If you can't use an application-level SDK to interface with blob storage, consider using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
