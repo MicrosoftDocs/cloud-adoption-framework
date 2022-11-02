@@ -18,6 +18,8 @@ A landing zone is an environment for hosting your workloads, pre-provisioned thr
 
 <!-- markdownlint-disable MD034 -->
 
+<br/>
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xdvm]
 
 <!-- markdownlint-enable MD034 -->
@@ -72,5 +74,3 @@ At the foundation of the architecture is a set of core design principles that se
 
 > [!div class="nextstepaction"]
 > [Design principles](./design-principles.md)
-
-
