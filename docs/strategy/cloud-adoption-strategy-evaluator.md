@@ -16,6 +16,8 @@ The Cloud Adoption Framework provides the Cloud Adoption Strategy Evaluator to h
 
 Watch the following video to learn how the Cloud Adoption Strategy Evaluator can help your cloud adoption efforts.
 
+<br/>
+
 <iframe src="/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=9fa04265-f18a-4184-a63c-735fff0c6c52" width="640" height="370"></iframe>
 
 ## Cloud Adoption Strategy Evaluator

@@ -18,6 +18,8 @@ Following best practices for the Cloud Adoption Framework allows your organizati
 
 <!-- markdownlint-disable MD034 -->
 
+<br/>
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tyzr]
 
 <!-- markdownlint-enable MD034 -->

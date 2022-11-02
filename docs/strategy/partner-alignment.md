@@ -80,6 +80,8 @@ Watch this short video to get an overview of how the Azure Migration and Moderni
 
 <!-- markdownlint-disable MD034 -->
 
+<br/>
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4D1vH]
 
 <!-- markdownlint-enable MD034 -->
