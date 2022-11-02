@@ -24,3 +24,11 @@ items:
         href: secure.md
       - name: Manage
         href: manage.md
+  - name: Additional resources
+    items:
+      - name: Azure Government documentation
+        href: /azure/azure-government/
+      - name: Azure Government solutions 
+        href: /azure/architecture/industries/government
+      - name: Azure Government learn modules 
+        href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
