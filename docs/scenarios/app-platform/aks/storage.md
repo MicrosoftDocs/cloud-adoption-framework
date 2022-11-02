@@ -20,19 +20,19 @@ This article describes the types of storage and SKUs that are available for your
 
 ## How to select the right storage service
 
-Choosing the right SKUs and sizes to start with requires some evaluations and potentially a proof-of-concept or test environment. Following are the high-level guidelines to help you kickstart with storage for AKS:
+Choosing the right SKUs and sizes for your initial deployments requires some evaluations and, potentially, a proof-of-concept or test environment. Following are the high-level guidelines to help you get started with storage for AKS:
 
-- For structured application data that can use a specific managed database (for example, AzureSQL) available on the platform, this is the recommended option.
+- For structured data that your application can store in a managed database that is available on the platform (for example, [AzureSQL](/azure/azure-sql/database/?view=azuresql)), we recommend using a managed database.
 
-- If your application needs low consistent latency coupled with high IOPS and throughput to run your own databases, messaging applications on Kubernetes, use disks. Consider using either Premium SSD, Premium SSD v2 or Ultra Disks for the best performance.
+- If your application needs consistently low latency that is coupled with high I/O operations per second and high throughput to run your own databases and messaging applications on Kubernetes, use disks for storage. Consider using either [Azure Premium SSD](/azure/virtual-machines/disks-types#premium-ssds), [Azure Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2), or [Azure Ultra Disk Storage](/azure/virtual-machines/disks-types#ultra-disks) for the best performance.
 
-- For shared application data with high performance needs, use either Azure Files premium or Azure NetApp Files. 
+- For shared application data that requires high performance, use either [Azure NetApp Files](/azure/azure-netapp-files/) or the *premium* tier of [Azure Files](/azure/storage/files/). 
 
-- Ensure your nodes have sufficient network bandwidth to handle application requests and storage requests (given SMB or NFS traffic goes over the network stack).
+- Ensure that your nodes have sufficient network bandwidth to handle both application requests and storage requests. Storage traffic goes over the network stack, whether the transfers use SMB or NFS.
 
-- For shared configuration data with limited performance requirement, use Azure Files standard.
+- For shared configuration data that requires only limited performance, use the *standard* tier of [Azure Files](/azure/storage/files/).
 
-- For unstructured data like photos, videos, and text documents, use blob storage. You can do this by using blobs that are mounted as files via NFS or blobfuse or by reading/writing to blob directly from within your application.
+- For unstructured data—such as photos, videos, and text documents—use blob storage. Your application can do this by using blobs that are mounted as files via NFS or accessed as a virtual file system by using [BlobFuse](/azure/storage/blobs/blobfuse2-what-is). Alternatively, your application can read from and write to blob storage directly.
 
 ## Design considerations
 
