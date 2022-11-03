@@ -162,11 +162,11 @@ For Azure disks, we recommend the following design options:
 
   - **Size the node for disks and throughput**. We recommend ensuring that the size of your Kubernetes node is large enough to support the number of disks and the amount of aggregate throughput. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-  - **Snapshots of persistent volumes**. We recommend taking snapshots of persistent volumes, either to provision new volumes that are pre-populated with the snapshot data or to restore an existing volume to a previous state by using the snapshot capability of the Azure Disks CSI driver. For more information, see [Volume snapshots](/azure/aks/azure-disk-csi#volume-snapshots).
+  - **Create snapshots of persistent volumes**. We recommend taking snapshots of persistent volumes, either to provision new volumes that are pre-populated with the snapshot data or to restore an existing volume to a previous state by using the snapshot capability of the Azure Disks CSI driver. For more information, see [Volume snapshots](/azure/aks/azure-disk-csi#volume-snapshots).
 
-  - **Disk striping**. We recommend that you avoid striping across multiple disks in Kubernetes.
+  - **Avoid disk striping across disks**. We recommend that you avoid striping across multiple disks in Kubernetes.
 
-  - **Persistent storage**. We recommend using persistent volumes (PV) and persistent volume claims (PVC) in Kubernetes to dynamically create disks where required. For more information about persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
+  - **Use PV/PVC**. We recommend using PV and PVC in Kubernetes to dynamically create disks where required. For more information about persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
 ### Azure Files
 
@@ -174,19 +174,19 @@ For Azure Files, we recommend the following design options:
 
   - **Choose Premium**. If performance is critical, we recommend using the Premium tier.
 
-  - **Dedicated storage accounts**. We recommend providing dedicated storage accounts for your file shares.
+  - **Create dedicated storage accounts**. We recommend providing dedicated storage accounts for your file shares.
 
-  - **Static or dynamically created file shares**. We recommend careful consideration of whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. Storage that is created dynamically can also be deleted dynamically. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files](/azure/aks/azure-files-dynamic-pv).
+  - **Choose static or dynamically created file shares**. We recommend careful consideration of whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. Storage that is created dynamically can also be deleted dynamically. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files](/azure/aks/azure-files-dynamic-pv).
 
 ### Blob storage
 
 For blob storage, we recommend the following design options:
 
-  - **SDK to interface with storage**. We recommend using an application-level SDK to interface with blob storage.
+  - **Use an SDK to interface with storage**. We recommend using an application-level SDK to interface with blob storage.
 
-  - **CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
+  - **Use CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
 
-  - **Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
+  - **Use Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
 
   - **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
