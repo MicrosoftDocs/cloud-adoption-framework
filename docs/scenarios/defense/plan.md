@@ -4,7 +4,7 @@ description: Recommendations for planning a cloud adoption strategy in a defense
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -33,10 +33,13 @@ Cloud brokers provided the following benefits:
 
 Let's address each of these benefits:
 
-**(1) Governed platform landing zone** - The services, solutions, and workloads hosted in a defense environment require governed environments. Cloud brokers build and maintain governed environments that meet compliance requirements. These environments are comprised of multiple landing zones. A landing zone includes all the foundational components defense workloads needed for secure, reliable, and cost-effective cloud operations. There are two types of landing zones in a defense environment: platform landing zone and workload landing zone.
+**(1) Governed platform landing zone** - The services, solutions, and workloads hosted in a defense environment require governed environments. Cloud brokers build and maintain governed environments that meet compliance requirements, and these environments consist of multiple landing zones.
 
-- The platform landing zone provides core services used by multiple workloads.
-- The workload landing zones are for workloads. The red box outlines the workload landing zone.
+A landing zone includes all the components defense workloads need for secure, reliable, and cost-effective cloud operations. There are two types of landing zones, platform landing zones and workload landing zones.
+
+***Platform landing zone*** - The platform landing zone provides core services used by multiple workloads. The three subscriptions outlined in yellow form the platform landing zone. Together they provide shared identity, management, and connectivity solutions to the workloads in this tenant.
+
+***Workload landing zone*** - The workload landing zones are for workloads, applications and their supporting components. The red box outlines the workload landing zone.
 
 :::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." border="false":::
 *Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*

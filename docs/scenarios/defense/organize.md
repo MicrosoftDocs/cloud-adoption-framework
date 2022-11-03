@@ -4,7 +4,7 @@ description: Recommendations for organizing a defense organization for cloud ado
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -32,9 +32,11 @@ For more information, see [required cloud functions](/azure/cloud-adoption-frame
 
 The mission owner and cloud broker share responsibility for the platform. It’s best practice to define platform responsibilities along the following lines:
 
-- ***Cloud service provider (Azure)*** – At a minimum, the cloud service provider maintains the physical infrastructure and secures the resources in the data center. This responsibility level corresponds to an infrastructure-as-a-service (IaaS) deployment. The responsibility changes with platform-as-a-service (PaaS) and software-as-a-service (SaaS) solutions.
-- ***Cloud broker*** – The cloud broker manages most of the platform. It ensures connectivity to the on-premises defense network, manages the identity solution (tenant), and most supporting services.
-- ***Mission owner*** – The mission owner builds, migrates, and manages applications on top of the platform. Responsibilities include code security, application reliability, data protection, and modernization.
+***Cloud service provider (Azure)*** – At a minimum, the cloud service provider maintains the physical infrastructure and secures the resources in the data center. This responsibility level corresponds to an infrastructure-as-a-service (IaaS) deployment. The responsibility changes with platform-as-a-service (PaaS) and software-as-a-service (SaaS) solutions.
+
+***Cloud broker*** – The cloud broker manages most of the platform. It ensures connectivity to the on-premises defense network, manages the identity solution (tenant), and most supporting services.
+
+***Mission owner*** – The mission owner builds, migrates, and manages applications on top of the platform. Responsibilities include code security, application reliability, data protection, and modernization.
 
 ## Assign financial oversight
 

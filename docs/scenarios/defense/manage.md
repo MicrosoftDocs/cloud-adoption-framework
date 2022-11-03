@@ -4,7 +4,7 @@ description: Recommendations for managing cloud workloads in a defense organizat
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -44,6 +44,7 @@ For more information, see:
 
 - [Management guide](/azure/cloud-adoption-framework/manage/azure-management-guide/)
 - [Management considerations](/azure/cloud-adoption-framework/manage/considerations/)
+- [Service health](/azure/service-health/service-health-overview)
 
 ## Next step
 

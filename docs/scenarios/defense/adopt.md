@@ -4,7 +4,7 @@ description: Recommendations for adopting cloud technologies in a defense organi
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -22,11 +22,7 @@ During the adopt phase, defense workloads start their journey in the cloud and i
 - Modernization lowers the total cost of ownership (TCO) while driving security, performance, and efficiency.
 - Innovation is where defense organizations start building cloud native solutions to meet data needs.
 
-There are a few important considerations to be aware of in the adopt phase. It's best practice for defense organizations to:
-
-- Create a tailored migration plan.
-- Incentivize modernization.
-- Use DevOps where possible.
+There are a few important considerations to be aware of in the adopt phase.
 
 ## Create a tailored migration plan
 
@@ -47,11 +43,9 @@ For more information, see [using Azure Import/Export](/azure/import-export/stora
 
 ## Incentivize modernization
 
-Modernization is all about maximizing value and should be a priority for mission owners. Without modernization, it’s difficult to experience the true benefits of the cloud, more capabilities for less work and money.
+Modernization is all about maximizing value and should be a priority for mission owners. Without modernization, it’s difficult to experience the true benefits of the cloud, more capabilities for less work and money. Two best practices related to requirements and technology are relevant here.
 
-Two best practices are relevant to defense organizations:
-
-**(1) Modernization requirements** - The way cloud services are acquired can affect the pace of modernization. It’s common for defense organizations to operate the landing zone separately from the workloads that sit on top of it. The best model is to have the cloud-broker build and manage the landing zone while other teams manage the workloads on the platform. The separation of duties creates necessary security boundaries but can also stifle modernization. It’s important that mission owners incentivize technical teams to adopt new technologies so that defense workloads can meet current and future demands. Building modernization into requirements and setting milestones against modernization goals is an effective approach. Require proposals for technical solutions to outline how modernization efforts aligned to process improvements, application enhancement, and database configurations. These efforts should align with mission objectives.
+**(1) Modernization requirements** - The way cloud services are acquired can affect the pace of modernization. It’s common for defense organizations to operate the landing zone separately from the workloads that sit on top of it, and the best model is to have the cloud-broker build and manage the landing zone while mission owner teams manage the workloads on the platform. However, this separation of duties creates security boundaries but can also stifle modernization, so it’s important that mission owners incentivize technical teams to adopt new technologies so that defense workloads can meet current and future demands. Building modernization into requirements and setting milestones against modernization goals is an effective approach. Require proposals for technical solutions to outline how modernization efforts align to process improvements, application enhancement, and database configurations. The proposed solutions should align with mission objectives.
 
 For more information, see [modernization alignment](/azure/cloud-adoption-framework/modernize/business-alignment/).
 
@@ -67,19 +61,20 @@ For more information, see [PaaS adoption](/azure/cloud-adoption-framework/modern
 
 DevOps is an Agile methodology that focuses on delivering value. DevOps synchronizes development and operations into an iterative process that aims to generate value fast. Prioritization of tasks is the key mechanism. When worked is prioritized, teams finish the highest priority tasks first. Work is also time-bound to create a feedback loop that accelerates learning and speeds up delivery.
 
-Defense standards and risk mitigation processes tend to limit the extent that defense organizations can implement true DevOps. Protocols, regulations, and contracting lifecycles force defense development and operations into waterfall framework. However, it’s possible to apply DevOps principles within the confines of these regulations.
+Defense standards and risk mitigation processes tend to limit the extent that defense organizations can implement true DevOps. Protocols, regulations, and contracting lifecycles force defense development and operations into waterfall framework. However, it’s possible to apply DevOps principles within the confines of these regulations. Here are a few DevOps recommendations:
 
-Here are a few DevOps recommendations:
-
-**(1) Align to existing process** - DevOps shouldn’t break existing structure. It should align to it. It's worth considering how a full adoption of DevOps can enhance workloads, but until that time, DevOps should work within the confines of existing operations. If current operations are more waterfall, DevOps strategies can work between those sequential milestones. DevOps implementations should account for the mandatory handoffs and sequential checkpoints many defense risk management processes are founded on. An approach that disregards the current system is destined to fail.
+**(1) Align to existing process** - DevOps shouldn’t break existing structure. It should align to it. It's worth considering how a full adoption of DevOps can enhance workloads, but until that time, DevOps should work within existing operations. If current operations are more waterfall, DevOps strategies can work between those sequential milestones. DevOps implementations should account for the mandatory handoffs and sequential checkpoints many defense risk management processes are founded on. An approach that disregards the current system is destined to fail.
 
 **(2) Improve quickly** - The ability to iterate through tasks multiple times with reviews allows technical teams to improve development and operations quickly. Teams should work on developing a minimum viable product and a proof-of-concept and improve them until they meet mission objectives.
 
-**(3) Use continuous integration and continuous deployment (CI/CD)** - CI/CD is a standard DevOps concept. It’s an automated approach to constantly improve and deploy code into production. Rarely is it a good idea to deploy code changes on mission critical workloads directly into production, so this approach needs to be modified for defense scenarios. We recommend two CI/CD pipelines for mission-critical workloads. The first CI/CD pipeline should create a stage deployment that can be rigorously tested. Code can be deployed to production only after passing all required tests. Development teams will need to fine tune the process to ensure tests can be completed on staged deliverables as quickly as they arrive.
+**(3) Use continuous integration and continuous deployment (CI/CD)** - CI/CD is a standard DevOps concept. It’s an automated approach to constantly improve and deploy code into production. Rarely is it a good idea to deploy code changes on mission critical workloads directly into production, so this approach needs to be modified for defense scenarios. We recommend two CI/CD pipelines for mission-critical workloads. The first CI/CD pipeline should create a stage deployment that can be rigorously tested. Code can be deployed to production only after passing all required tests. Development teams will need to fine tune the process to ensure tests can be completed on staged deliverables as quickly as they arrive. For more information our CI/CD capabilities, see [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines).
 
-**(4) DevOps tools** - The adoption of DevOps tools is needed to make DevOps work at any level. Create a list of DevOps tools with their impact-level authorizations mapped to their DevOps process. This mapping might be a good requirement for proposals and will help determine how much DevOps can be adopted.
+**(4) DevOps tools** - The adoption of DevOps tools is needed to make DevOps work. Create a list of needed DevOps tools with their impact-level authorizations mapped to their DevOps process. This mapping might be a good requirement for proposals and will help determine how much DevOps can be adopted.
 
-For more information on DevOps, see [process modernization](/azure/cloud-adoption-framework/modernize/modernize-strategies/process-modernization).
+For more information on DevOps, see:
+
+- [Process modernization](/azure/cloud-adoption-framework/modernize/modernize-strategies/process-modernization)
+- [Azure DevOps](/azure/devops/)
 
 ## Next step
 

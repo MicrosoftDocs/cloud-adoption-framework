@@ -4,7 +4,7 @@ description: Cloud adoption guidance for defense organizations
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -20,19 +20,15 @@ The defense scenario is divided into three domains: command, platform, and missi
 
 ## Command domain
 
-The command domain focuses on preparing defense organizations for cloud adoption so that they can achieve their objectives. Here mission owners take the following action:
-
-- Identify goals and motivators
-- Define a roadmap to achieve those identified goals
-- Involve the right people to develop, execute, and maintain your cloud solution
+The command domain focuses on preparing defense organizations for cloud adoption so that they can achieve their objectives. Here mission owners (1) identify goals and motivators, (2) define a roadmap to achieve those identified goals, and (3) involve the right people to develop, execute, and maintain the cloud solution.
 
 ## Platform domain
 
-The platform domain focuses on establishing a foundation for defense workloads to run in the cloud. The high priority in this domain is aligning with a cloud broker approach. The preferred way to build a cloud platform is with a cloud broker. A cloud broker builds and maintains the platform while establishing connectivity, identity, and governance for the platform. The platform domain provides guidance on how to prepare and execute with a cloud broker.
+The platform domain focuses on establishing a foundation for Mission applications and services to run in the cloud. The high priority in this domain is aligning with a cloud broker approach. The preferred way to build a cloud platform is with a cloud broker. A cloud broker builds and maintains the platform while establishing connectivity, identity, and governance for the platform. The platform domain provides guidance on how to prepare and execute with a cloud broker.
 
 ## Mission domain
 
-The workload domain focuses on the iterative process of developing cloud solutions. The domain covers technology adoption and how to use those technologies to secure and manage defense workloads. Whether migrating or rearchitecting an application using cloud native services, architectural decisions need to be made that align with mission objectives, and the workload domain provides guidance in this area.
+The mission domain focuses on the iterative process of developing cloud solutions. The domain covers technology adoption and how to use those technologies to secure and manage defense workloads. Whether migrating or rearchitecting an application using cloud native services, architectural decisions need to be made that align with mission objectives, and the workload domain provides guidance in this area.
 
 ## Next step
 

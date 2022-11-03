@@ -4,7 +4,7 @@ description: Recommendations for building a landing zone in a defense organizati
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -28,6 +28,7 @@ For information on landing zones, see:
 
 - [Introduction to landing zones](/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Secure Azure Cloud Architecture (SACA) overview](/azure/azure-government/compliance/secure-azure-computing-architecture)
+- [SACA landing zone accelerator](https://github.com/Azure/missionlz)
 
 Here are a few general architecture recommendations for landing zone deployments:
 

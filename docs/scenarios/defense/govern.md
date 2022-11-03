@@ -4,7 +4,7 @@ description: Recommendations for cloud platform governance in a defense organiza
 author: stephen-sumner
 ms.author: mimckann
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -20,19 +20,7 @@ Governance is a framework that aligns personnel, deployments, and budgets to a c
 
 Defense organizations need governance to mitigate risks. Effective cost, security, and policy governance can streamline platform operations and provide a means to inherit these guardrails at the workload level. Without proper governance, significant management burdens and productivity limits will occur. A lack of governance also creates responsibility gaps, introduces security risks, and delays return on investments (ROIs) due to excessive deployment delays and rework.
 
-For more information, see:
-
-- [Governance guide](/azure/cloud-adoption-framework/govern/guides/complex/)
-- [Governance disciplines](/azure/cloud-adoption-framework/govern/governance-disciplines)
-
-To avoid some of these issues, it’s worth considering the following best practices:
-
-- Evaluate roles and responsibilities
-- Automate compliance
-- Create a cost governance strategy
-- Create cost baselines
-
-Let's address each best practice:
+To avoid some of these issues, it’s worth considering the following governance best practices.
 
 ## Evaluate roles and responsibilities
 
@@ -62,7 +50,7 @@ Policies in Azure create a firm guardrail and automate the bulk of governance ta
 For more on governance automation, see
 
 - [Security governance](/azure/cloud-adoption-framework/secure/security-governance)
-- [Overview of Azure Policy](/azure/governance/policy/overview)
+- [Overview of Azure Policy](/azure/governance/policy/)
 - [Compliance in Azure](/azure/azure-government/documentation-government-plan-compliance)
 - [Azure compliance standards](/azure/compliance/)
 - [Governance visualization tool](https://github.com/microsoft/CloudAdoptionframework/tree/master/govern/AzureGovernanceVisualizer)
@@ -81,7 +69,7 @@ Here are a few considerations when building a cost governance strategy:
 
 **(4) Trend analysis** - Conduct trend analysis to drive transparency and allows visibility into active resources and consumption. Anomalous spikes in resource spend and should be brought to the technical team for explanation. It could signal a new phase in operations or a governance gap. Flag and review any new charges or spikes in trends. This form of active cost management helps avoid waste and mitigates risk. Trend analysis can also help manage infrastructure and determine future priorities. Mission owners can see how much money is spent on a given capability. If the money spent doesn’t help meet mission objectives, the future of this resource or workload needs reevaluation.
 
-For more information, see [cost governance](/azure/cloud-adoption-framework/govern/cost-management/).
+For more information, see [cost governance](/azure/cloud-adoption-framework/govern/cost-management/) and [cost management & billing](/azure/cost-management-billing/cost-management-billing-overview).
 
 ## Create cost baselines
 
@@ -100,9 +88,12 @@ Here are some practical steps to creating workload estimates:
 
 Not all variables require entry, and some services can be difficult to estimate. Mission owners should determine the level of accuracy required to establish this baseline. Once a TCO estimate is created, mission owners should document this data for later analysis.
 
-**(2) Estimate monthly costs for required services** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate.
+**(2) Estimate monthly costs for required services** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate. For more information, see [cost tools](/azure/cloud-adoption-framework/govern/cost-management/toolchain).
 
-For more information, see [cost tools](/azure/cloud-adoption-framework/govern/cost-management/toolchain).
+For more information on governance, see:
+
+- [Governance guide](/azure/cloud-adoption-framework/govern/guides/complex/)
+- [Governance disciplines](/azure/cloud-adoption-framework/govern/governance-disciplines)
 
 ## Next step
 
