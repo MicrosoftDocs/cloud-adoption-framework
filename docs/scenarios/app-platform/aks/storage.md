@@ -40,9 +40,9 @@ The following considerations are for designing storage for AKS. Consider where s
 
 Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Emphemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
 
-- If your application requires them, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports applications that require persistent data on the OS drive. For more information about options for persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
+If your application requires them, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports applications that require persistent data on the OS drive. For more information about options for persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
-- If you select a managed disk as the OS disk, ensure that it's sized appropriately to support the requirements of the OS, the Kubernetes system, and your workload. For more information about options and differences, see [Azure managed disk types](/azure/virtual-machines/disks-types).
+If you select a managed disk as the OS disk, ensure that it's sized appropriately to support the requirements of the OS, the Kubernetes system, and your workload. For more information about options and differences, see [Azure managed disk types](/azure/virtual-machines/disks-types).
 
 ### Application data
 
@@ -61,21 +61,21 @@ If a managed database doesn't meet the needs of your application, use another st
 
 Disks, or block storage, are ideal for storing data directly on a raw, block-based device. Disk-based storage is ideal for storing data for databases that your Kubernetes cluster hosts. In Azure, managed disks are the solution to get block-based storage.
 
-- Consider whether you want to use a static disk created outside of AKS, or if you want AKS to dynamically create the disk storage as a pod or pods requires it. For more information, see:
+- **Static or dynamically created storage**. Consider whether you want to use a static disk created outside of AKS, or if you want AKS to dynamically create the disk storage as a pod or pods require it. Storage that is created dynamically can also be deleted dynamically. For more information, see:
 
   - [Create a static volume with Azure disks in Azure Kubernetes Service (AKS)](/azure/aks/azure-disk-volume)
-  - [Dynamically create and use a persistent volume with Azure Disks in Azure Kubernetes Service (AKS)](/azure/aks/azure-disks-dynamic-pv).
+  - [Dynamically create and use a persistent volume with Azure Disks in Azure Kubernetes Service (AKS)](/azure/aks/azure-disks-dynamic-pv)
 
-- Consider the storage redundancy and performance that your workload requires. For more information, see:
+- **Redundancy and performance**. Consider the storage redundancy and performance that your workload requires. For more information, see:
 
   - [Redundancy options for managed disks](/azure/virtual-machines/disks-redundancy)
   - [Azure disk performance type and size](/azure/virtual-machines/disks-scalability-targets)
 
-- Consider whether you need a [shared disk](/azure/virtual-machines/disks-shared-enable).
+- **Shared disk**. Consider whether you need a shared disk. For more information about options, see [Share an Azure managed disk](/azure/virtual-machines/disks-shared).
 
-- Ensure that your [Kubernetes node size](/azure/virtual-machines/sizes) is large enough to support both the number of disks and the aggregate throughput requirements.
+- **Size the node for disks and throughput**. Ensure that your the size of your Kubernetes node is large enough to support both the number of disks and the aggregate throughput requirements. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-- Ensure that your [managed disk](/azure/virtual-machines/disks-types) is sized appropriately for your workload's performance requirements. For Standard HDD, Standard SSD, and Premium SSD v1, performance increases as the disk size increases.
+- **Size of managed disk**. Ensure that your managed disk is sized appropriately for your workload's performance requirements. For Standard HDD, Standard SSD, and Premium SSD v1, performance increases as the disk size increases. For more information about managed disks, see [Azure managed disk types](/azure/virtual-machines/disks-types).
 
 #### Ephemeral disks solutions
 
@@ -87,33 +87,33 @@ File storage exposes a shared file system via either NFS or SMB/CIFS. A shared f
 
 ##### Azure Files
 
-- Consider whether you want to use a [static file share that's created outside of AKS](/azure/aks/azure-files-volume), or if you want [AKS to create the file share dynamically on your behalf](/azure/aks/azure-files-dynamic-pv).
+- **Static or dynamically created storage**. Consider whether you want to use a [static file share that's created outside of AKS](/azure/aks/azure-files-volume), or if you want [AKS to create the file share dynamically on your behalf](/azure/aks/azure-files-dynamic-pv).
 
-- Evaluate if standard performance is sufficient or if you need premium performance from Azure Files.
+- **Standard or premium performance**. Evaluate if standard performance is sufficient or if you need premium performance from Azure Files.
 
-- Evaluate whether you want to use the default SMB/CIFS API to access Azure Files or if you need NFS support.
+- **SMB/CIFS or NFS**. Evaluate whether you want to use the default SMB/CIFS API to access Azure Files or if you need NFS support.
 
-- Consider the network model that you want to use to access Azure Files: access via direct public IP address, a service endpoint, or a private link.
+- **Network model for access**. Consider the network model that you want to use to access Azure Files: access via direct public IP address, a service endpoint, or a private link.
 
 ##### Azure NetApp Files
 
-- Consider whether you want to use a [static Azure NetApp Files share that's created outside of AKS](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-statically), or if you want [AKS to create the file share dynamically](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-dynamically) on your behalf via Astra Control.
+- **Static or dynamically created storage**. Consider whether you want to use a [static Azure NetApp Files share that's created outside of AKS](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-statically), or if you want [AKS to create the file share dynamically](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-dynamically) on your behalf via Astra Control.
 
-- Evaluate which performance tier is required for your workload.
+- **Evaluate for performance**. Evaluate which performance tier is required for your workload.
 
-- Explore the [networking recommendations for ANF](/azure/azure-netapp-files/azure-netapp-files-network-topologies).
+- Explore the networking recommendations for Azure NetApp Files. For more information, see [Guidelines for Azure NetApp Files network planning](/azure/azure-netapp-files/azure-netapp-files-network-topologies).
 
 #### Blob
 
 Azure blob storage is Microsoft's object storage platform. It's accessible via an HTTP API or through the SDKs. Mounting Azure Blob storage as a file system into a container or pod is ideal for application workloads that have massive amounts of unstructured data, such as log files, images, documents, streaming media, and disaster-recovery data.
 
-- Evaluate which [data redundancy](/azure/storage/common/storage-redundancy) that your application requires. Data redundancy is defined at the level of the storage account. Also evaluate which [performance tier](/azure/storage/blobs/access-tiers-overview) of blob storage your application requires.
+- **Redundancy and performance**. Evaluate which [data redundancy](/azure/storage/common/storage-redundancy) that your application requires. Data redundancy is defined at the level of the storage account. Also evaluate which [performance tier](/azure/storage/blobs/access-tiers-overview) of blob storage your application requires.
 
-- Consider which [authentication method](/azure/storage/common/authorize-data-access) for access to blob storage that you want to use: storage key, SAS, or Azure Active Directory (Azure AD).
+- **Authentication for access**. Consider which [authentication method](/azure/storage/common/authorize-data-access) for access to blob storage that you want to use: storage key, SAS, or Azure Active Directory (Azure AD).
 
-- Typically, applications that access blob storage use the API in the application through [one of the SDKs](/azure/storage/blobs/storage-blobs-introduction), which abstracts the interaction with blob storage from the Kubernetes cluster.
+- **API to abstract blob storage**. Typically, applications that access blob storage use the API in the application through [one of the SDKs](/azure/storage/blobs/storage-blobs-introduction), which abstracts the interaction with blob storage from the Kubernetes cluster.
 
-- Consider whether you want to use a [static blob storage container that's created outside of AKS](/azure/aks/azure-csi-blob-storage-static?tabs=secret) or if you want [AKS to create the blob storage container dynamically on your behalf](/azure/aks/azure-csi-blob-storage-dynamic).
+- **Static or dynamically created storage**. Consider whether you want to use a [static blob storage container that's created outside of AKS](/azure/aks/azure-csi-blob-storage-static?tabs=secret) or if you want [AKS to create the blob storage container dynamically on your behalf](/azure/aks/azure-csi-blob-storage-dynamic).
 
 - If you want to access blob storage as a file system, you can use the [blob CSI driver](https://github.com/kubernetes-sigs/blob-csi-driver) in Kubernetes. This driver allows access to blob storage through either the [NFSv3 protocol](/azure/storage/blobs/network-file-system-protocol-support) or through a [fuse driver](https://github.com/Azure/azure-storage-fuse).
 
@@ -121,9 +121,9 @@ Azure blob storage is Microsoft's object storage platform. It's accessible via a
 
 There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article does not cover those in depth, but the following list identifies possible solutions:
 
-- [HPC cache](/azure/aks/azure-hpc-cache): Azure HPC Cache speeds access to your data for high-performance computing (HPC) tasks. By caching files in Azure, Azure HPC Cache brings the scalability of cloud computing to your existing workflow.
+- **Azure HPC cache**. HPC Cache speeds access to your data for high-performance computing (HPC) tasks. By caching files in Azure, Azure HPC Cache brings the scalability of cloud computing to your existing workflow. For more information, see [Integrate Azure HPC Cache with Azure Kubernetes Service](/azure/aks/azure-hpc-cache).
 
-- [ADLS Gen 2](/azure/storage/blobs/data-lake-storage-introduction): A special type of Azure blob storage that's optimized for big data workloads like Hadoop and Spark.
+- **Azure Data Lake Storage Gen2**. Data Lake Storage Gen2 is a special type of blob storage that's optimized for big data workloads like Hadoop and Spark. For more information, see [Introduction to Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction).
 
 ## Design recommendations
 
@@ -131,36 +131,42 @@ For security, we recommend using Azure Private Link for all storage solutions th
 
 For OS disks, we recommend using ephemeral disks. To benefit from this feature, select a VM size that has an adequately sized temporary disk. For more information, see [Ephemeral OS disks for Azure VMs](/azure/virtual-machines/ephemeral-os-disks).
 
-For application data, we recommend using managed databases. For a list of database options, see [Types of Databases on Azure](https://azure.microsoft.com/en-us/products/category/databases/).
+For application data, we recommend using managed databases. For a list of database options, see [Types of Databases on Azure](https://azure.microsoft.com/products/category/databases/).
 
 The following sections describe additional recommendations for Azure disks, Azure Files, and blob storage.
 
 ### Azure disks
 
-  - In most cases, we recommend Premium or Ultra disks to ensure adequate performance.
+For Azure disks, we recommend the following design options:
 
-  - Ensure that your Kubernetes node size is large enough to support the number of disks and the amount of aggregate throughput.
+  - **Use Premium or Ultra disks**. In most cases, use Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](/products/storage/disks/)
 
-  - Consider taking snapshots of persistent volumes either to provision a new volume (which are pre-populated with the snapshot data) or to restore the existing volume to a previous state by using the snapshot capability of the Azure Disks CSI driver.
+  - **Size the node for disks and throughput**. Ensure that the size of your Kubernetes node is large enough to support the number of disks and the amount of aggregate throughput. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-  - Avoid striping across multiple disks in Kubernetes.
+  - **Snapshots of persistent volumes**. Consider taking snapshots of persistent volumes, either to provision new volumes that are pre-populated with the snapshot data or to restore an existing volume to a previous state by using the snapshot capability of the Azure Disks CSI driver. For more information, see [Volume snapshots](/azure/aks/azure-disk-csi#volume-snapshots).
 
-  - Use persistent volumes (PV) and persistent volume claims (PVC) in Kubernetes to dynamically create disks where required.
+  - **Striping**. Avoid striping across multiple disks in Kubernetes.
+
+  - **Persistent storage**. Use persistent volumes (PV) and persistent volume claims (PVC) in Kubernetes to dynamically create disks where required. For more information about persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
 ### Azure Files
 
-  - If performance is critical, we recommend using the Premium tier.
+For Azure Files, we recommend the following design options:
 
-  - Provide dedicated storage accounts for your file shares.
+  - **Choose Premium**. If performance is critical, we recommend using the Premium tier.
 
-  - Consider whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files in Azure Kubernetes Service (AKS)](/azure/aks/azure-files-dynamic-pv).
+  - **Dedicated storage accounts**. Provide dedicated storage accounts for your file shares.
+
+  - **Static or dynamically created storage**. Consider whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. Storage that is created dynamically can also be deleted dynamically. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files in Azure Kubernetes Service (AKS)](/azure/aks/azure-files-dynamic-pv).
 
 ### Blob storage
 
-  - Use an application-level SDK to interface with blob storage.
+For blob storage, we recommend the following design options:
 
-  - Use Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
+  - **SDK**. Use an application-level SDK to interface with blob storage.
 
-  - Use lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview).
+  - **Authentication for access**. Use Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
 
-  - If you can't use an application-level SDK to interface with blob storage, consider using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
+  - **Adjust tier levels**.Use lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
+
+  - **CSI with NFS**. If you can't use an application-level SDK to interface with blob storage, consider using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
