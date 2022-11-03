@@ -30,7 +30,7 @@ Choosing the right SKUs and sizes for your initial deployments requires some eva
 
 - **Bandwidth for application & storage requests**. Ensure that your nodes have sufficient network bandwidth to handle both application requests and storage requests. Storage traffic goes over the network stack, whether the protocol for transfers is Server Message Block (SMB) or NFS.
 
-- **Low latency, high IOPS**. If your application needs consistently low latency that's coupled with high I/O operations per second (IOPS) and high throughput to run your own databases and messaging applications on Kubernetes, use disks for storage. For the best performance, consider using [Azure Premium SSD](/azure/virtual-machines/disks-types#premium-ssds), [Azure Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2), or [Azure Ultra Disk Storage](/azure/virtual-machines/disks-types#ultra-disks).
+- **Low latency, high IOPS**. Use disks for storage if your application needs consistently low latency for messaging applications and high I/O operations per second (IOPS) and high throughput to run your own databases on Kubernetes. For the best performance, consider using [Azure Premium SSD](/azure/virtual-machines/disks-types#premium-ssds), [Azure Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2), or [Azure Ultra Disk Storage](/azure/virtual-machines/disks-types#ultra-disks).
 
 ## Design considerations
 
@@ -63,7 +63,7 @@ If a managed database doesn't meet the needs of your application, consider using
 
 Disks, or block storage, are ideal for storing data directly on a raw, block-based device. Disk-based storage is ideal for storing data for databases that your Kubernetes cluster hosts. In Azure, managed disks are the solution to get block-based storage.
 
-- **Static or dynamically created disk storage**. Consider whether you want to use a static disk created outside of AKS, or if you want AKS to dynamically create the disk storage as a pod or pods require it. Storage that is created dynamically can also be deleted dynamically. For more information, see:
+- **Static or dynamically created disk storage**. Consider whether you want to use a static disk that's created outside of AKS, or if you want AKS to dynamically create the disk storage as a pod or pods require it. Storage that is created dynamically can also be deleted dynamically. For more information, see:
 
   - [Create a static volume with Azure disks](/azure/aks/azure-disk-volume)
   - [Dynamically create and use a persistent volume with Azure Disks](/azure/aks/azure-disks-dynamic-pv)
@@ -111,7 +111,7 @@ For Azure NetApp Files, consider the following options:
   - [Provision Azure NetApp Files volumes statically](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-statically)
   - [Provision Azure NetApp Files volumes dynamically](/azure/aks/azure-netapp-files#provision-azure-netapp-files-volumes-dynamically)
 
-- **Evaluate for performance**. Evaluate which performance tier is required for your workload.
+- **Evaluate for performance**. Evaluate which performance tier is required for your workload. For more information, see [Performance considerations for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-performance-considerations).
 
 - **Plan your network**. Explore the networking recommendations for Azure NetApp Files. For more information, see [Guidelines for Azure NetApp Files network planning](/azure/azure-netapp-files/azure-netapp-files-network-topologies).
 
@@ -132,11 +132,11 @@ Consider the amount of unstructured data that your application needs to store. A
   - [Create and use a static volume with Azure Blob storage](/azure/aks/azure-csi-blob-storage-static)
   - [Dynamically create and use a persistent volume with Azure Blob storage](/azure/aks/azure-csi-blob-storage-dynamic)
 
-- Consider how your application should access blob storage. To access it as a file system, you can use the [blob CSI driver](https://github.com/kubernetes-sigs/blob-csi-driver) in Kubernetes. This driver allows access to blob storage through either the [NFSv3 protocol](/azure/storage/blobs/network-file-system-protocol-support) or through a [fuse driver](https://github.com/Azure/azure-storage-fuse).
+- **Driver for accessing storage**. Consider how your application should access blob storage. To access it as a file system, you can use the [blob CSI driver](https://github.com/kubernetes-sigs/blob-csi-driver) in Kubernetes. This driver allows access to blob storage through either the [NFSv3 protocol](/azure/storage/blobs/network-file-system-protocol-support) or through a [fuse driver](https://github.com/Azure/azure-storage-fuse).
 
 #### Other storage solutions
 
-Consider additoonal types of storage if your application requires something that's not described in this article. There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article doesn't cover those, but the following list identifies possible solutions:
+Consider additional types of storage if your application requires something that's not described in this article. There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article doesn't cover those, but the following list identifies possible solutions:
 
 - **Azure HPC cache**. HPC Cache speeds access to your data for high-performance computing (HPC) tasks. By caching files in Azure, Azure HPC Cache brings the scalability of cloud computing to your existing workflow. For more information, see [Integrate Azure HPC Cache with Azure Kubernetes Service](/azure/aks/azure-hpc-cache).
 
@@ -158,7 +158,7 @@ The following sections describe more recommendations for Azure disks, Azure File
 
 For Azure disks, we recommend the following design options:
 
-  - **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](/products/storage/disks/)
+  - **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](/products/storage/disks/).
 
   - **Size the node for disks and throughput**. We recommend ensuring that the size of your Kubernetes node is large enough to support the number of disks and the amount of aggregate throughput. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
