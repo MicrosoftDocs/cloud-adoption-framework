@@ -83,7 +83,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| App Service environment | `Microsoft.Web/sites` | `ase` |
+| App Service environment | `Microsoft.Web/hostingEnvironments` | `ase` |
 | App Service plan | `Microsoft.Web/serverFarms` | `asp` |
 | Azure Load Testing instance | `Microsoft.LoadTestService/loadTests` | `lt` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
@@ -112,7 +112,8 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
-| Container apps | `Microsoft.App/containerApps` | `ctap` |
+| Container apps | `Microsoft.App/containerApps` | `ca` |
+| Container apps environment | `Microsoft.App/managedEnvironments` | `cae` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
