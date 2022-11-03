@@ -27,12 +27,28 @@ items:
   - name: Additional resources
     items:
       - name: Compliance
-        href: https://learn.microsoft.com/en-us/azure/compliance/
+        href: /azure/compliance/
+      - name: Isolation
+        href: /azure/azure-government/azure-secure-isolation-guidance
       - name: U.S. DoD documentation
         items: 
           - name: Azure Government documentation
-            href: /azure/azure-government/
-          - name: Azure Government solutions 
-            href: /azure/architecture/industries/government
-          - name: Azure Government learn modules 
+            href: /azure/azure-government/documentation-government-overview-dod
+          - name: SCCA
+            href: /azure/azure-government/compliance/secure-azure-computing-architecture
+          - name: Security 
+            href: azure/azure-government/documentation-government-plan-security
+          - name: Compliance
+            href: /azure/azure-government/documentation-government-plan-compliance
+          - name: Identity
+            href: /azure/azure-government/documentation-government-plan-identity
+          - name: Monitor
+            href: /azure/azure-government/documentation-government-manage-oms
+          - name: Development
+            href: /azure/azure-government/documentation-government-developer-guide
+          - name: DISA STIGs
+            href: /azure/azure-government/documentation-government-stig-linux-vm
+          - name: IL5 isolation
+            href: /azure/azure-government/documentation-government-impact-level-5
+          - name: Learn modules
             href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
