@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Storage considerations for Azure Kubernetes Service
+# Storage considerations for Azure Kubernetes Service (AKS)
 
 To run specific application workloads, your organization or enterprise needs to design suitable Azure Kubernetes Service (AKS) platform-level capabilities. These workloads likely have different storage requirements. When choosing the right storage solution for your application, you have multiple considerations, including performance, availability, recoverability, security, and cost. The goal of this article is to guide you to choose the right option or combination of options for your workload.
 
@@ -144,7 +144,7 @@ Consider other types of storage if your application requires something that's no
 
 ## Design recommendations
 
-The following recommendations are based on what has proven to be effective for Azure customers.
+This section provides recommendations that are based on what has proven to be effective for Azure customers.
 
 For security, we recommend using Azure Private Link for all storage solutions that support it. Azure Private Link enables access to Azure Services, such as Azure Storage and SQL Database, and Azure-hosted services over a private endpoint in your virtual network. For more information, see [What is Azure Private Link?](/azure/private-link/private-link-overview)
 
@@ -164,7 +164,7 @@ For Azure disks, we recommend the following design options:
 
   - **Snapshots of persistent volumes**. We recommend taking snapshots of persistent volumes, either to provision new volumes that are pre-populated with the snapshot data or to restore an existing volume to a previous state by using the snapshot capability of the Azure Disks CSI driver. For more information, see [Volume snapshots](/azure/aks/azure-disk-csi#volume-snapshots).
 
-  - **Striping**. We recommend that you avoid striping across multiple disks in Kubernetes.
+  - **Disk striping**. We recommend that you avoid striping across multiple disks in Kubernetes.
 
   - **Persistent storage**. We recommend using persistent volumes (PV) and persistent volume claims (PVC) in Kubernetes to dynamically create disks where required. For more information about persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
@@ -182,13 +182,14 @@ For Azure Files, we recommend the following design options:
 
 For blob storage, we recommend the following design options:
 
-  - **SDK**. We recommend using an application-level SDK to interface with blob storage.
+  - **SDK to interface with storage**. We recommend using an application-level SDK to interface with blob storage.
 
-  - **Authentication for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
+  - **CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
+
+  - **Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
 
   - **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
-  - **CSI with NFS**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
 
 ## Next steps
 
