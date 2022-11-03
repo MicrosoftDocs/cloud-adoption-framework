@@ -136,7 +136,7 @@ Consider the amount of unstructured data that your application needs to store. A
 
 #### Other storage solutions
 
-Consider additional types of storage if your application requires something that's not described in this article. There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article doesn't cover those, but the following list identifies possible solutions:
+Consider other types of storage if your application requires something that's not described in this article. There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article doesn't cover those, but the following list identifies possible solutions:
 
 - **Azure HPC cache**. HPC Cache speeds access to your data for high-performance computing (HPC) tasks. By caching files in Azure, Azure HPC Cache brings the scalability of cloud computing to your existing workflow. For more information, see [Integrate Azure HPC Cache with Azure Kubernetes Service](/azure/aks/azure-hpc-cache).
 
