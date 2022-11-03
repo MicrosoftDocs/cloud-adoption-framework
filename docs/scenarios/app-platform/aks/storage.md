@@ -189,3 +189,10 @@ For blob storage, we recommend the following design options:
   - **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
   - **CSI with NFS**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
+
+## Next steps
+
+Learn how to scope cost allocation to a deployment, a service, a label, a pod, or a namespace in AKS by using Kubecost.
+
+> [!div class="nextstepaction"]
+> [Cost governance with Kubecost](./cost-governance-with-kubecost.md)
