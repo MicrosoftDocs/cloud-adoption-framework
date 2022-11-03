@@ -32,7 +32,7 @@ items:
         href: /azure/azure-government/azure-secure-isolation-guidance
       - name: U.S. DoD documentation
         items: 
-          - name: Azure Government documentation
+          - name: Overview
             href: /azure/azure-government/documentation-government-overview-dod
           - name: SCCA
             href: /azure/azure-government/compliance/secure-azure-computing-architecture
