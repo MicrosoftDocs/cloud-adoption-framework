@@ -22,15 +22,15 @@ This article describes the types of storage and SKUs that are available for your
 
 Choosing the right SKUs and sizes for your initial deployments requires some evaluations and, potentially, a proof-of-concept or test environment. Following are the high-level guidelines to help you get started with storage for AKS:
 
-- **Structured data**. For structured data that your application can store in a managed database that is available on the platform (for example, [AzureSQL](/azure/azure-sql/database/)), we recommend using a managed database.
+- **Structured data**. For structured data that your application can store in a managed database that is available on the platform (for example, [Azure SQL](/azure/azure-sql/database/)), we recommend using a managed database.
 
 - **Unstructured data**. For unstructured data—such as photos, videos, and text documents—use blob storage. Your application can do this by using blobs that are mounted as files via Network File System (NFS) or accessed as a virtual file system by using [BlobFuse](/azure/storage/blobs/blobfuse2-what-is). Alternatively, your application can read from and write to blob storage directly.
 
-- **Shared application data**. For shared application data that requires high performance, use either [Azure NetApp Files](/azure/azure-netapp-files/) or the *premium* tier of [Azure Files](/azure/storage/files/). For shared configuration data that requires only limited performance, use the *standard* tier of [Azure Files](/azure/storage/files/).
+- **Shared application data**. For shared application data that requires high performance, use either [Azure NetApp Files](/azure/azure-netapp-files/) or the *premium* tier of [Azure Files](/azure/storage/files/). For shared configuration data that requires only limited performance, use the *standard* tier of Azure Files.
 
 - **Bandwidth for application & storage requests**. Ensure that your nodes have sufficient network bandwidth to handle both application requests and storage requests. Storage traffic goes over the network stack, whether the transfers use SMB or NFS.
 
-- **Low latency, high IOPS**. If your application needs consistently low latency that's coupled with high I/O operations per second (IOPS) and high throughput to run your own databases and messaging applications on Kubernetes, use disks for storage. Consider using either [Azure Premium SSD](/azure/virtual-machines/disks-types#premium-ssds), [Azure Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2), or [Azure Ultra Disk Storage](/azure/virtual-machines/disks-types#ultra-disks) for the best performance.
+- **Low latency, high IOPS**. If your application needs consistently low latency that's coupled with high I/O operations per second (IOPS) and high throughput to run your own databases and messaging applications on Kubernetes, use disks for storage. For the best performance, consider using [Azure Premium SSD](/azure/virtual-machines/disks-types#premium-ssds), [Azure Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2), or [Azure Ultra Disk Storage](/azure/virtual-machines/disks-types#ultra-disks).
 
 ## Design considerations
 
@@ -38,27 +38,38 @@ The following considerations are for designing storage for AKS. Consider where s
 
 ### Operating system (OS) disks
 
-Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using [ephemeral OS drives](/azure/aks/cluster-configuration#ephemeral-os) on supported VM sizes.
+Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Emphemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
 
-- If required, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports applications that need persistent data on the OS drive.
+- If your application requires them, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports applications that require persistent data on the OS drive. For more information about options for persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
-- If you select a [managed disk](/azure/virtual-machines/disks-types) as the OS disk, ensure that it's sized appropriately to support the requirements of the OS, the Kubernetes system, and your workload.
+- If you select a managed disk as the OS disk, ensure that it's sized appropriately to support the requirements of the OS, the Kubernetes system, and your workload. For more information about options and differences, see [Azure managed disk types](/azure/virtual-machines/disks-types).
 
 ### Application data
 
-Some applications need a consistent data store for storage of application data. If your application requires a database, consider exploring the managed database options in Azure, such as [Azure SQL](/products/azure-sql/), [Azure Database by MySQL](/services/mysql/), [Azure Database for PostGres](/services/postgresql/), and [Cosmos DB](/services/cosmos-db/).
+Some applications need a consistent data store for storage of application data. If your application requires a database, consider exploring the managed databases in Azure, which include the following options: 
+
+- [Azure SQL](/products/azure-sql/)
+- [Azure Database by MySQL](/services/mysql/)
+- [Azure Database for PostGres](/services/postgresql/)
+- [Cosmos DB](/services/cosmos-db/).
 
 ### Storage solutions in AKS
 
-If a managed database doesn't meet the needs of your application, use another storage option that's available to AKS to store consistent data:
+If a managed database doesn't meet the needs of your application, use another storage option that's available to AKS to store consistent data. Options include disk-based solutions, ephemeral disks, files-based solutions, blob storage, and other options that aren't covered in this article.
 
 #### Disk-based solutions
 
 Disks, or block storage, are ideal for storing data directly on a raw, block-based device. Disk-based storage is ideal for storing data for databases that your Kubernetes cluster hosts. In Azure, managed disks are the solution to get block-based storage.
 
-- Consider whether you want to use a [static disk created outside of AKS](/azure/aks/azure-disk-volume), or if you want [AKS to dynamically create the disk on your behalf](/azure/aks/azure-disks-dynamic-pv).
+- Consider whether you want to use a static disk created outside of AKS, or if you want AKS to dynamically create the disk storage as a pod or pods requires it. For more information, see:
 
-- Consider [data redundancy](/azure/virtual-machines/disks-redundancy) and which [Azure disk performance type and size](/azure/virtual-machines/disks-scalability-targets) is required for your workload.
+  - [Create a static volume with Azure disks in Azure Kubernetes Service (AKS)](/azure/aks/azure-disk-volume)
+  - [Dynamically create and use a persistent volume with Azure Disks in Azure Kubernetes Service (AKS)](/azure/aks/azure-disks-dynamic-pv).
+
+- Consider the storage redundancy and performance that your workload requires. For more information, see:
+
+  - [Redundancy options for managed disks](/azure/virtual-machines/disks-redundancy)
+  - [Azure disk performance type and size](/azure/virtual-machines/disks-scalability-targets)
 
 - Consider whether you need a [shared disk](/azure/virtual-machines/disks-shared-enable).
 
@@ -68,7 +79,7 @@ Disks, or block storage, are ideal for storing data directly on a raw, block-bas
 
 #### Ephemeral disks solutions
 
-There are cases where you need either non-persistent, temporary storage or where you want to use the high-performance drives in the [storage-optimized VM-series](/azure/virtual-machines/sizes-storage). To connect to an ephemeral volume, you can use either the `emptydir` [option](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) in Kubernetes or the driver for a [CSI ephemeral local volume](https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes). We recommend `emptydir` for ephemeral data, such as a scratch space. For storage on the storage-optimized VM-series, we recommend a CSI ephemeral local volume.
+There are cases where you need either non-persistent, temporary storage or where you want to use the high-performance drives in the [storage-optimized VMs](/azure/virtual-machines/sizes-storage). To connect to an ephemeral volume, you can use either the [**emptyDir** option](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) in Kubernetes or the driver for a [CSI ephemeral local volume](https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes). We recommend **emptyDir** for ephemeral data, such as a scratch space. For storage on the storage-optimized VM series, we recommend using CSI with an ephemeral local volume. For more information about CSI drivers, see [Container Storage Interface (CSI) drivers on Azure Kubernetes Service (AKS)](/azure/aks/csi-storage-drivers).
 
 #### Files-based solutions
 
@@ -142,7 +153,7 @@ The following sections describe additional recommendations for Azure disks, Azur
 
   - Provide dedicated storage accounts for your file shares.
 
-  - Consider carefully whether you want Kubernetes to create the file shares or if you want to create them statically outside of Kubernetes.
+  - Consider whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files in Azure Kubernetes Service (AKS)](/azure/aks/azure-files-dynamic-pv).
 
 ### Blob storage
 
