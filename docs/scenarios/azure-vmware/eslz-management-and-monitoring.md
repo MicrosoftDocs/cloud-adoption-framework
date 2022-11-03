@@ -1,7 +1,7 @@
 ---
 title: Management and monitoring for Azure VMware Solution
 description: Learn how to improve management and monitoring of Azure VMware Solution with this enterprise-scale scenario.
-author: matdavi
+author: Prasad3017
 ms.author: janet
 ms.date: 08/04/2022
 ms.topic: conceptual
@@ -93,11 +93,17 @@ Review the following recommendations for guest management and for monitoring of 
     | [Azure Update Management](/azure/automation/update-management/overview)             | Manages operating system updates for Windows and Linux machines on-premises and in cloud environments.                                 |
     | [Azure Monitor](/azure/azure-monitor/overview)                                      | Comprehensive monitoring solution for collecting, analyzing, and acting upon telemetry from cloud and on-premises environments.                                                                         |
 
+## Storage considerations
+
+- To help with storage-heavy workloads that need more storage capacity than vSAN provides based on the CPU and memory requirements, consider using [Azure NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
+
+Azure VMware Solution supports attaching Network File System (NFS) datastores as a persistent storage option. You can create NFS datastores with Azure NetApp Files volumes and attach them to clusters of your choice. By using NFS datastores backed by Azure NetApp Files, you can extend your storage instead of scaling the clusters. You can also use Azure NetApp Files volumes to replicate data from on-premises or primary VMware environments to a secondary site.
+
+For more information read [Azure NetApp Files datastores for Azure VMware Solution](/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts).
+
 ## Other considerations
 
 - If you use a network virtual appliance, consider monitoring trace logs between on-premises and Azure resources. Ensure monitoring is in place between Azure and Azure VMware Solution.
-
-- To help with storage concerns on the vSAN, consider using [Azure disk pools (preview)](/azure/virtual-machines/disks-pools-deploy) or [Azure NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
 
 ## Next steps
 
