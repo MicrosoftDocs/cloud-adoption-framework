@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 To run specific application workloads, your organization or enterprise needs to design suitable Azure Kubernetes Service (AKS) platform-level capabilities. These workloads likely have different storage requirements. When choosing the right storage solution for your application, you have multiple considerations, including performance, availability, recoverability, security, and cost. The goal of this article is to guide you to choose the right option or combination of options for your workload.
 
-Kubernetes can run both stateless and stateful workloads. Stateful workloads often require a storage solution for storing state. AKS supports multiple, integrated options for native storage, which include managed databases, disks (or blocks), and files and blob (or object) storage. Each of these options offer different SKUs, sizes, and performance characteristics. Selecting the right option requires careful consideration.
+Kubernetes can run both stateless and stateful workloads. Stateful workloads often require a storage solution for storing state. AKS supports multiple, integrated options for native storage, which include managed databases, disks (or blocks), and files and blob (or object) storage. Each of these options offers different SKUs, sizes, and performance characteristics. Selecting the right option requires careful consideration.
 
 This article describes the types of storage and SKUs that are available for your workloads in [Design considerations](#design-considerations) and [Design recommendations](#design-recommendations). 
 
@@ -38,7 +38,7 @@ The following considerations are for designing storage for AKS. Consider where s
 
 ### Operating system (OS) disks
 
-Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Emphemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
+Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Ephemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
 
 If your application requires them, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports applications that require persistent data on the OS drive. For more information about options for persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
@@ -73,7 +73,7 @@ Disks, or block storage, are ideal for storing data directly on a raw, block-bas
 
 - **Shared disk**. Consider whether you need a shared disk. For more information about options, see [Share an Azure managed disk](/azure/virtual-machines/disks-shared).
 
-- **Size the node for disks and throughput**. Ensure that your the size of your Kubernetes node is large enough to support both the number of disks and the aggregate throughput requirements. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
+- **Size the node for disks and throughput**. Ensure that the size of your Kubernetes node is large enough to support both the number of disks and the aggregate throughput requirements. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
 - **Size of managed disk**. Ensure that your managed disk is sized appropriately for your workload's performance requirements. For Standard HDD, Standard SSD, and Premium SSD v1, performance increases as the disk size increases. For more information about managed disks, see [Azure managed disk types](/azure/virtual-machines/disks-types).
 
@@ -119,7 +119,7 @@ Azure blob storage is Microsoft's object storage platform. It's accessible via a
 
 #### Other
 
-There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article does not cover those in depth, but the following list identifies possible solutions:
+There are multiple specialized storage solutions in Azure that can integrate with Kubernetes. This article doesn't cover those in depth, but the following list identifies possible solutions:
 
 - **Azure HPC cache**. HPC Cache speeds access to your data for high-performance computing (HPC) tasks. By caching files in Azure, Azure HPC Cache brings the scalability of cloud computing to your existing workflow. For more information, see [Integrate Azure HPC Cache with Azure Kubernetes Service](/azure/aks/azure-hpc-cache).
 
@@ -133,7 +133,7 @@ For OS disks, we recommend using ephemeral disks. To benefit from this feature, 
 
 For application data, we recommend using managed databases. For a list of database options, see [Types of Databases on Azure](https://azure.microsoft.com/products/category/databases/).
 
-The following sections describe additional recommendations for Azure disks, Azure Files, and blob storage.
+The following sections describe more recommendations for Azure disks, Azure Files, and blob storage.
 
 ### Azure disks
 
