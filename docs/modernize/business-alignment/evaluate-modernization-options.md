@@ -12,12 +12,12 @@ keywords: evaluate, technical, financial indicators, workloads, modernize, cloud
 ---
 # Evaluate cloud modernization readiness
 
-Once you've envisioned your cloud modernization possibilities, evaluate whether you're ready to modernize in the cloud.
+Once you've envisioned your cloud modernization possibilities, you can evaluate whether you're ready to modernize in the cloud.
 
-Evaluating your readiness for modernization has two components. You need to assess your financial readiness and technical readiness.
+Evaluating your readiness for modernization has two components. You should assess your financial readiness and then your technical readiness.
 
-- *Financial readiness assessment* - helps you determine if you need more time to review your applications.
-- *Technical readiness assessment* - helps you determine if you need to choose a different adoption path other than modernize.
+- *Financial readiness* - helps you determine if you need more time to review your applications.
+- *Technical readiness* - helps you determine if you're ready to modernize or need to explore a different path.
 
 ## Step 1 - Evaluate the financial readiness of each workload
 
@@ -32,7 +32,7 @@ For each workload you want to modernize, answer the following questions to asses
 
 Answering *yes* to all questions means you're likely ready to modernize. If you answered *no* to any of the questions, we recommend you conduct an [Azure Well-Architected Review](/assessments/?mode=pre-assessment&session=local) of your workload
 
-The next step, [technical readiness evaluation](#step-2---evaluate-the-technical-readiness-of-each-workload), will help you determine if you're ready to modernize or find another adoption path.
+Step 2 will help you determine if you're ready to modernize or need to explore another adoption path.
 
 ## Step 2 - Evaluate the technical readiness of each workload
 

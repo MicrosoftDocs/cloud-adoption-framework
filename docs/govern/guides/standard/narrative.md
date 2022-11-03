@@ -24,7 +24,7 @@ In the past, the company's CIO has been excluded from these strategic conversati
 
 The company has the following business profile:
 
-- All sales and operations reside in a single country, with a low percentage of global customers.
+- All sales and operations reside in a single country/region, with a low percentage of global customers.
 
 - The business operates as a single business unit, with budget aligned to functions, including sales, marketing, operations, and IT.
 

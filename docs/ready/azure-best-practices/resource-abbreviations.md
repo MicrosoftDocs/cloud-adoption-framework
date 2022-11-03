@@ -63,6 +63,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Public IP address | `Microsoft.Network/publicIPAddresses` | `pip`|
 | Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre`|
 | Route filter | `Microsoft.Network/routeFilters` | `rf` |
+| Route server | `Microsoft.Network/virtualHubs` | `rtserv` |
 | Route table | `Microsoft.Network/routeTables` | `rt` |
 | Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
@@ -82,15 +83,19 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| App Service environment | `Microsoft.Web/sites` | `ase` |
-| App Service plan | `Microsoft.Web/serverFarms` | `plan` |
+| App Service environment | `Microsoft.Web/hostingEnvironments` | `ase` |
+| App Service plan | `Microsoft.Web/serverFarms` | `asp` |
+| Azure Load Testing instance | `Microsoft.LoadTestService/loadTests` | `lt` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
+| Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
 | Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
 | Function app | `Microsoft.Web/sites` | `func` |
 | Gallery | `Microsoft.Compute/galleries` | `gal` |
+| Hosting environment | `Microsoft.Web/hostingEnvironments` | `host` |
+| Image template | `Microsoft.VirtualMachineImages/imageTemplates` | `it` |
 | Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
@@ -107,6 +112,8 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
+| Container apps | `Microsoft.App/containerApps` | `ca` |
+| Container apps environment | `Microsoft.App/managedEnvironments` | `cae` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
@@ -116,9 +123,17 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos` |
+| Azure Cosmos DB for Apache Cassandra account | `Microsoft.DocumentDB/databaseAccounts` | `coscas`|
+| Azure Cosmos DB for MongoDB account | `Microsoft.DocumentDB/databaseAccounts` | `cosmon`|
+| Azure Cosmos DB for NoSQL account | `Microsoft.DocumentDb/databaseAccounts` | `cosno`|
+| Azure Cosmos DB for Table account | `Microsoft.DocumentDb/databaseAccounts` |`costab`|
+| Azure Cosmos DB for Apache Gremlin account | `Microsoft.DocumentDb/databaseAccounts` | `cosgrm`|
+| Azure Cosmos DB PostgreSQL cluster | `Microsoft.DBforPostgreSQL/serverGroupsv2` | `cospos`|
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
+| Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
+| Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
 | Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
@@ -132,8 +147,12 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
+| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
+| Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
+| File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
+| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
+| Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
 
 ## AI and Machine Learning
 
@@ -153,6 +172,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
+| Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -160,6 +180,7 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
+| Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
 | HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
 | HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
@@ -210,6 +231,8 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Key vault | `Microsoft.KeyVault/vaults` | `kv` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
+| Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
+| Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
 ## Migration
 

@@ -34,7 +34,7 @@ Ensure your organization's developers use consistent tooling and focus on the se
 
 ## DevSecOps controls
 
-Learn how you to [integrate security processes and tools](/azure/cloud-adoption-framework/secure/devsecops-controls) into your DevOps development process.
+Learn how you to [integrate security processes and tools](./devsecops-controls.md) into your DevOps development process.
 
 Learn how to implement secure and rapid innovation for your organization:
 
