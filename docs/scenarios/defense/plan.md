@@ -26,13 +26,6 @@ Cloud brokers are centralized groups that build and manage cloud platforms. Clou
 
 Cloud brokers provided the following benefits:
 
-- Govern landing zones
-- Core services
-- Platform authorization to operate (ATO)
-- Improved efficiency
-
-Let's address each of these benefits:
-
 **(1) Governed platform landing zone** - The services, solutions, and workloads hosted in a defense environment require governed environments. Cloud brokers build and maintain governed environments that meet compliance requirements, and these environments consist of multiple landing zones.
 
 A landing zone includes all the components defense workloads need for secure, reliable, and cost-effective cloud operations. There are two types of landing zones, platform landing zones and workload landing zones.
@@ -88,10 +81,13 @@ If these benefits meet the needs of mission owners, then a single broker is like
 
 The factors listed below will help you determine if the multiple cloud broker approach is the right one:
 
-- ***Ownership*** – Mission owners might need their own cloud brokers. Decision-making groups often need their own tenant to meet mission-objectives and avoid delays due to dependencies.
-- ***Isolation*** – Mission owners might need isolated environments for compliance, governance, or identity reasons. Each tenant (instance of Azure Active Directory) represents an isolated identity environment and can create a firm isolation barrier when needed.
-- ***Management*** – Separating complex environments might be ideal for managing and modernizing your cloud workloads. But this management separation creates increased complexity higher in the command chain. It becomes more difficult to have a single view of all cloud assets.
-- ***Security*** – Data compliance for varying impact levels might require multiple tenants and multiple cloud brokers authorized and with the experience to manage those impact levels.
+***Ownership*** – Mission owners might need their own cloud brokers. Decision-making groups often need their own tenant to meet mission-objectives and avoid delays due to dependencies.
+
+***Isolation*** – Mission owners might need isolated environments for compliance, governance, or identity reasons. Each tenant (instance of Azure Active Directory) represents an isolated identity environment and can create a firm isolation barrier when needed.
+
+***Management*** – Separating complex environments might be ideal for managing and modernizing your cloud workloads. But this management separation creates increased complexity higher in the command chain. It becomes more difficult to have a single view of all cloud assets.
+
+***Security*** – Data compliance for varying impact levels might require multiple tenants and multiple cloud brokers authorized and with the experience to manage those impact levels.
 
 The multi-cloud-broker strategy can be used at different levels in a defense organization. A broker can be assigned to individual military branches (naval, air, ground) or groups of applications. The choice depends on the needs of your defense organization around ownership, isolation, management, and security.
 

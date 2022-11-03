@@ -20,7 +20,7 @@ The defense scenario is divided into three domains: command, platform, and missi
 
 ## Command domain
 
-The command domain focuses on preparing defense organizations for cloud adoption so that they can achieve their objectives. Here mission owners (1) identify goals and motivators, (2) define a roadmap to achieve those identified goals, and (3) involve the right people to develop, execute, and maintain the cloud solution.
+The command domain focuses on preparing defense organizations for cloud adoption so that they can achieve their objectives. Here mission owners identify goals and motivators and define a roadmap to achieve those identified goals. They also involve the right people to develop, execute, and maintain the cloud solution.
 
 ## Platform domain
 

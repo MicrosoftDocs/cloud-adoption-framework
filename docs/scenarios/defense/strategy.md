@@ -4,7 +4,7 @@ description: Recommendations for developing a cloud adoption strategy in a defen
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 10/18/2022
+ms.date: 11/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy

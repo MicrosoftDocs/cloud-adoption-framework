@@ -24,7 +24,7 @@ Security is no less important for a workload. Workloads inherit security control
 
 Zero Trust is a security methodology, not a product. Implementations of zero trust will differ, but the commonality is an attempt to eliminate trust.
 
-Three main principles of zero trust addressed are (1) verify every session explicitly, (2) enforce the least privilege on every identity, and (3) monitor, search, and secure continuously. Let's dig into these further.
+Three main principles of zero trust addressed are (1) verify every session explicitly, (2) enforce the least privilege on every identity, and (3) monitor, search, and secure continuously. Let's dig into these principles further.
 
 **(1) Verify every session explicitly** - Verify refers to authentication and authorization. You need to authenticate and authorize every device regardless of location. Multifactor authentication is a common defense standard where the use of a security token supplements authentication process.
 
