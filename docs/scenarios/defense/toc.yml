@@ -28,7 +28,7 @@ items:
     items:
       - name: Compliance
         href: /azure/compliance/
-      - name: Isolation
+      - name: Secure isolation
         href: /azure/azure-government/azure-secure-isolation-guidance
       - name: U.S. DoD documentation
         items: 
@@ -37,7 +37,7 @@ items:
           - name: SCCA
             href: /azure/azure-government/compliance/secure-azure-computing-architecture
           - name: Security 
-            href: azure/azure-government/documentation-government-plan-security
+            href: /azure/azure-government/documentation-government-plan-security
           - name: Compliance
             href: /azure/azure-government/documentation-government-plan-compliance
           - name: Identity
