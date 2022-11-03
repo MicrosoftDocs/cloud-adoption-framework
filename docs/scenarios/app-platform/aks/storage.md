@@ -75,9 +75,9 @@ Disks, or block storage, are ideal for storing data directly on a raw, block-bas
 
 - **Shared disk**. Consider whether you need a shared disk. For more information about options, see [Share an Azure managed disk](/azure/virtual-machines/disks-shared).
 
-- **Size the node for disks and throughput**. Consider the size of your Kubernetes node. It must be large enough to support both the number of disks and the aggregate throughput requirements. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
+- **Size of node for disks and throughput**. Consider the size of your Kubernetes node. It must be large enough to support both the number of disks and the aggregate throughput requirements. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-- **Size the disk for performance**. Consider whether your managed disk is sized appropriately for your workload's performance requirements. Performance increases as the disk size increases for Standard *HDD*, Standard SSD, and Premium SSD v1. For more information about managed disks, see [Azure managed disk types](/azure/virtual-machines/disks-types).
+- **Disk size and required performance**. Consider whether your managed disk is sized appropriately for your workload's performance requirements. Performance increases as the disk size increases for Standard *HDD*, Standard SSD, and Premium SSD v1. For more information about managed disks, see [Azure managed disk types](/azure/virtual-machines/disks-types).
 
 #### Ephemeral disks solutions
 
@@ -121,9 +121,9 @@ Consider the amount of unstructured data that your application needs to store. A
 
 - **Data redundancy**. Consider which data redundancy suits your application. For more information, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy). Data redundancy is selected at the level of the storage account. 
 
-- **Performance**. Consider which performance tier of blob storage your application requires. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
+- **Performance tier**. Consider which performance tier of blob storage your application requires. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
-- **Authentication for access**. Consider which authentication method that your application should use for access to blob storage: storage key, SAS, or Azure Active Directory (Azure AD). For more information, see [Authorize access to data in Azure Storage](/azure/storage/common/authorize-data-access).
+- **Authentication method for access**. Consider which authentication method that your application should use for access to blob storage: storage key, SAS, or Azure Active Directory (Azure AD). For more information, see [Authorize access to data in Azure Storage](/azure/storage/common/authorize-data-access).
 
 - **API to abstract blob storage**. Consider which API to use. Typically, applications that access blob storage use the API in the application through one of the SDKs, which abstracts the interaction with blob storage from the Kubernetes cluster. For more information about libraries for various programming languages, see [Introduction to Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction).
 
