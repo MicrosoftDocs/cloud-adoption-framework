@@ -38,13 +38,13 @@ The following considerations are for designing storage for AKS. Consider where s
 
 ### Operating system (OS) disks
 
-For OS disks, consider the following factors:
+For operating system (OS) disks, consider the following factors:
 
-- Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Ephemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
+- **Ephemeral disks for OS**. Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Ephemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
 
-- If your workload requires them, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports workloads that require persistent data on the OS drive. For more information about options for persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
+- **Managed disks for OS**. If your workload requires them, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports workloads that require persistent data on the OS drive. For more information about options for persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
-- If you select a managed disk as the OS disk, ensure that it's sized appropriately to support the requirements of the OS, the Kubernetes system, and your workload. For more information about options and differences, see [Azure managed disk types](/azure/virtual-machines/disks-types).
+- **Sizing managed disks**. If you select a managed disk as the OS disk, ensure that it's sized appropriately to support the requirements of the OS, the Kubernetes system, and your workload. For more information about options and differences, see [Azure managed disk types](/azure/virtual-machines/disks-types).
 
 ### Application data
 
@@ -146,11 +146,11 @@ Consider other types of storage if your application requires something that's no
 
 This section provides recommendations that are based on what has proven to be effective for Azure customers.
 
-For security, we recommend using Azure Private Link for all storage solutions that support it. Azure Private Link enables access to Azure Services, such as Azure Storage and SQL Database, and Azure-hosted services over a private endpoint in your virtual network. For more information, see [What is Azure Private Link?](/azure/private-link/private-link-overview)
+- **Use Azure Private Link**. For security, we recommend using Azure Private Link for all storage solutions that support it. Azure Private Link enables access to Azure Services, such as Azure Storage and SQL Database, and Azure-hosted services over a private endpoint in your virtual network. For more information, see [What is Azure Private Link?](/azure/private-link/private-link-overview)
 
-For OS disks, we recommend using ephemeral disks. To benefit from this feature, select a VM size that has an adequately sized temporary disk. For more information, see [Ephemeral OS disks for Azure VMs](/azure/virtual-machines/ephemeral-os-disks).
+- **Use ephemeral disks for OS**. For OS disks, we recommend using ephemeral disks. To benefit from this feature, select a VM size that has an adequately sized temporary disk. For more information, see [Ephemeral OS disks for Azure VMs](/azure/virtual-machines/ephemeral-os-disks).
 
-For application data, we recommend using managed databases. For a list of database options, see [Types of Databases on Azure](https://azure.microsoft.com/products/category/databases/).
+- **Use managed databases**. For application data, we recommend using managed databases. For a list of database options, see [Types of Databases on Azure](https://azure.microsoft.com/products/category/databases/).
 
 The following sections describe more recommendations for Azure disks, Azure Files, and blob storage.
 
