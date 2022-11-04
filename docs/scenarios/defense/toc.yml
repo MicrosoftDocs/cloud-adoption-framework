@@ -24,7 +24,7 @@ items:
         href: secure.md
       - name: Manage
         href: manage.md
-  - name: Additional resources
+  - name: Best practices
     items:
       - name: Compliance
         href: /azure/compliance/
@@ -50,5 +50,12 @@ items:
             href: /azure/azure-government/documentation-government-stig-linux-vm
           - name: IL5 isolation
             href: /azure/azure-government/documentation-government-impact-level-5
-          - name: Learn modules
-            href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
+  - name: Microsoft products
+    items:
+      - name: Service compliance
+        href: /azure/compliance/offerings/
+      - name: Services by audit scope
+        href: /azure/azure-government/compliance/azure-services-in-fedramp-auditscope#azure-government-services-by-audit-scope 
+
+  - name: Learn modules
+    href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
