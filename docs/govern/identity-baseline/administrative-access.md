@@ -32,16 +32,8 @@ To manage Privileged Identity Management, follow these steps:
    - Check the **Require justification on activation** checkbox.
    - Check the **Require ticket information on activation** checkbox.
    - Check the **Require approval to activate** checkbox if the role is not used daily.
-
-TODO: The OneNote states: "You can choose whether the assignment is allowed to be permanent eligible or permanent active. You can even set the assignment to expire, thereby forcing audits on specific roles.
-The final pane is Notification. You can set notifications to be triggered when actions are being taken to assign or use roles in your environment." Do we want to add this to the guidance and change any "cans" to "shoulds"?
-
-> ✅I think what you have is the right format.  I would say we would want to include the following for notification:
-
-- Define a notification list for role activiations.
-- Assign it in the notification pane.
-
-> ❓TODO: I removed the management group guidance, as it's covered in Resource consistency. Is that okay?  ✅ Good from my side
+   - Under the **Assignment** tab, choose whether you want **Allow permanent eligible assignment** to be yes or no and whether you want to set the assignment to expire, thereby forcing audits on specific roles.
+   - Under the **Notification** tab, configure an alert to send to a notification list when eligible members activate the role.
 
 ## Audit
 

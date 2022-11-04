@@ -35,18 +35,13 @@ Standardize on Azure AD as your organization's identity and authentication platf
 
 ## Enforce - Centralized identity and authentication system
 
-Due to the nature of identity authentication in workloads, there is no comprehensive option to enforce the identity system used by a given system.  However, one option is to tag resources based on the identity system in use.
+Due to the nature of identity authentication in workloads, there's no comprehensive option to enforce the use of a specific identity system.  However, one option is to ensure resources are tagged with the identity system in use.
 
-By assigning the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy, you can specify behavior for if a tag is not provided on resources in the policy's assignment scope.
+Assign the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy with the **Tag Name** set to "IdentityProvider" and the **Tag Value** set to "Undefined". This policy will only set the **Tag Value** to be "Undefined" if the tag isn't provided.
 
 ![Tag Policy GUI](./media/Tagpolicy.png)
 
-By assigning it with the with the tag name of "IdentityProvider" and tag value of "Undefined", you will create the following behavior:
-
-- If a tag for IdentityProvider is added, it will be used.
-- Otherwise, it will be marked as Undefined.
-
-Resources that use Azure AD as the centralized identity system should be tagged with AzureAD.  All others should be reviewed and defined.
+Resources that use Azure AD as the centralized identity system should be tagged with AzureAD.  All others should be reviewed and defined in the audit process.
 
 ## Audit - Centralized identity and authentication system
 
@@ -89,9 +84,9 @@ Restrict default user permissions to remove unneeded access granted in default s
 
 ## Enforce - Default user permissions
 
->Below needs to be QCed from the email discussion.
+>TODO: Below needs to be QCed from the email discussion.
 
-You can update the Authorization Policy to enforce these settings via the Microsoft Graph REST API with the following [authorizationPolicy](https://learn.microsoft.com/graph/api/resources/authorizationpolicy?view=graph-rest-1.0):
+Update the Authorization Policy to enforce the above settings via the Microsoft Graph REST API with the following [authorizationPolicy](https://learn.microsoft.com/graph/api/resources/authorizationpolicy?view=graph-rest-1.0):
 
 ``` json
 {
@@ -213,9 +208,9 @@ AuditLogs
 | project ActivityDateTime, InitiatedBy.user.userPrincipalName, TargetResources[0].displayName, ActivityDisplayName
 ```
 
-> TODO: Should we include guidance from sources like:
+> TODO: Should we include guidance from sources like?:
 > [Troubleshooting Conditional Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log)
-> I think it makes sense to include it in an additional resource below, but I'm not sure the best way.
+> (Brandon) I think it makes sense to include it in an additional resource below, but I'm not sure the best way.
 
 ## Guidance - Sign-in and user risk policies
 
