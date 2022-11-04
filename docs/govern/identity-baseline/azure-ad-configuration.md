@@ -86,7 +86,7 @@ Restrict default user permissions to remove unneeded access granted in default s
 
 >TODO: Below needs to be QCed from the email discussion.
 
-Update the Authorization Policy to enforce the above settings via the Microsoft Graph REST API with the following [authorizationPolicy](https://learn.microsoft.com/graph/api/resources/authorizationpolicy?view=graph-rest-1.0):
+Update the Authorization Policy to enforce the above settings via the Microsoft Graph REST API with the following [authorizationPolicy](/graph/api/resources/authorizationpolicy):
 
 ``` json
 {
@@ -121,7 +121,7 @@ Alternatively you can configure the following Azure AD user settings from the po
 
 ## Audit - Default user permissions
 
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0) API call like the following to audit the default user settings.
+Use an [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
 
 ```http
 GET https://graph.microsoft.com/v1.0/policies/authorizationPolicy
@@ -156,7 +156,7 @@ Central management of password reset causes a management burden and can lead use
 ## Enforce - Password management
 
 - Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr).
-- Set passwords not to expire through the [Password Expiration Policy](https://learn.microsoft.com/microsoft-365/admin/manage/set-password-expiration-policy?source=recommendations&view=o365-worldwide):
+- Set passwords not to expire through the [Password Expiration Policy](/microsoft-365/admin/manage/set-password-expiration-policy?source=recommendations):
   - Navigate to: Setup - Microsoft 365 admin center
   - Select Set passwords to never expire
   - Select Get Started and follow the wizard's instructions.
@@ -167,7 +167,7 @@ Central management of password reset causes a management burden and can lead use
 
 ## Audit - Password management
 
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0) API call like the following to audit the default user settings.
+Use an [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
 
 ```http
 GET https://graph.microsoft.com/v1.0/users?$select=userPrincipalName,lastPasswordChangeDateTime,passwordPolicies
