@@ -30,7 +30,7 @@ items:
         href: /azure/compliance/
       - name: Secure isolation
         href: /azure/azure-government/azure-secure-isolation-guidance
-      - name: U.S. DoD documentation
+      - name: DoD documentation
         items: 
           - name: Overview
             href: /azure/azure-government/documentation-government-overview-dod
