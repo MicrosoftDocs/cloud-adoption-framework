@@ -28,7 +28,6 @@ For information on landing zones, see:
 
 - [Introduction to landing zones](/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Secure Azure Cloud Architecture (SACA) overview](/azure/azure-government/compliance/secure-azure-computing-architecture)
-- [SACA landing zone accelerator](https://github.com/Azure/missionlz)
 
 Here are a few general architecture recommendations for landing zone deployments:
 
