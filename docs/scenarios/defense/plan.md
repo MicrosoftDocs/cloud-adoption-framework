@@ -30,12 +30,12 @@ Cloud brokers provided the following benefits:
 
 A landing zone includes all the components defense workloads need for secure, reliable, and cost-effective cloud operations. There are two types of landing zones, platform landing zones and workload landing zones.
 
-***Platform landing zone*** - The platform landing zone provides core services used by multiple workloads. The three subscriptions outlined in yellow form the platform landing zone. Together they provide shared identity, management, and connectivity solutions to the workloads in this tenant.
+***Platform landing zone*** - The platform landing zone provides core services used by multiple workloads. In the sample architecture below, the components and subscriptions outlined in black comprise the platform landing zone. Together they provide shared services, such as identity, management, and connectivity, to the workloads in this tenant.
 
-***Workload landing zone*** - The workload landing zones are for workloads, applications and their supporting components. The red box outlines the workload landing zone.
+***Workload landing zone*** - The workload landing zones are for workloads. The red boxes outline the workload landing zones. There are two workload landing zone subscriptions in the diagram below("Landing zone A1" and "Landing Zone A2"), but only one is shown in detail.
 
-:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A red box around the landing zone subscription outlines mission owner responsibilities with a cloud broker. The cloud broker handles the rest of the architecture." border="false":::
-*Diagram 2: Azure landing zone architecture with mission owner responsibilities outlined in red*
+:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A sample architecture showing the platform landing zone and workload landing zones. It shows the Azure Active Directory tenant with management groups underneath. The management groups divide into platform, landing zones, decommissioned, and sandbox. Under these management groups and children management groups with subscriptions beneath them. The architecture shows the contents of these subscriptions. The platform landing zone management group contains identity, management, and connectivity subscriptions. There are black boxes around the platform landing zone subscriptions. The workload landing zone management group contains two workload landing zone subscriptions. The contents of one is shown in detail. There are red boxes around the workload landing zone subscriptions.  " border="false":::
+*Diagram 2: Sample architecture showing the platform landing zone and workload landing zones*
 
 Without a cloud broker, mission owners would be responsible for the workload landing zone and platform landing zone. But with a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives. Cloud brokers bear the technical responsibility for the core services in the platform landing zone.
 
