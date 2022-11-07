@@ -29,9 +29,9 @@ The cloud is a force multiplier for defense scenarios, and many defense organiza
 
 **(1) Know your broader cloud strategy** - We recommend collaborating with all other cloud strategy activities within the chain of command to minimize conflicting projects and to discover similar projects that could be beneficial to mission objectives. Any documentation resulting from these projects should align to the overall cloud adoption goals. New terminology and advances in technology can make publications appear out of sync. Crosscheck and get clarification on the future vision.
 
-**(2) Understand the data strategy** – The cloud transforms how you manage data in defense scenarios. Defense organizations have some of the most complex data requirements and need to define data strategies to account for this complexity. The broader command strategy should inform any cloud adoption strategy because it affects the architecture of data solutions. The goal here's awareness and compatibility. An awareness of broader data strategies will improve decision models.
+**(2) Understand the data strategy** – The cloud transforms how you manage data in defense scenarios. Defense organizations have some of the most complex data requirements and need to define data strategies to account for this complexity. The broader command strategy should inform any cloud adoption strategy because it affects the architecture of data solutions. The goal is awareness and compatibility. An awareness of broader data strategies will improve decision models.
 
-However, if rework is required, the cloud is ideal for refactoring and rationalizing workloads. Without the need to acquire, provision, or retire hardware, the on-demand access to cloud virtualization increases the speed changes occur at a fraction of the cost.
+However, if rework is required, the cloud is ideal for refactoring and rationalizing workloads. Without the need to acquire, provision, or retire hardware, the on-demand access to cloud virtualization increases the speed of change and at a fraction of the cost.
 
 For for information, see:
 
