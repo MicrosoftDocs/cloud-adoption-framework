@@ -42,7 +42,7 @@ items:
             href: /azure/azure-government/documentation-government-plan-compliance
           - name: Identity
             href: /azure/azure-government/documentation-government-plan-identity
-          - name: Monitor
+          - name: Monitoring
             href: /azure/azure-government/documentation-government-manage-oms
           - name: Development
             href: /azure/azure-government/documentation-government-developer-guide
