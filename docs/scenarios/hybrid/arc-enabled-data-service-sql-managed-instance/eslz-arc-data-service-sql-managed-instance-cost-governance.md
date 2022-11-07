@@ -23,7 +23,7 @@ Azure Arc-enabled SQL Managed Instance (MI) provides two types of service tiers:
 
 Both tiers are priced per vCore and like many other Azure services, offer reserved instances and Azure Hybrid Benefit for more savings.  
 
-The costs of Arc-enabled SQL MI are in addition to any extra functionality deployed to your Azure Arc-enabled Kubernetes cluster. For more information on design considerations and recommendations for the Kubernetes cluster, see [Kubernetes cost governance](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance).
+The costs of Arc-enabled SQL MI are in addition to any extra functionality deployed to your Azure Arc-enabled Kubernetes cluster. For more information on design considerations and recommendations for the Kubernetes cluster, see [Kubernetes cost governance](../arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md).
 
 ## Cost of High Availability Infrastructure
 
@@ -39,7 +39,7 @@ While not a direct cost of Arc-enabled SQL MI, when you deploy an instance in th
 
 - **Azure Hybrid Benefit** For SQL Server, Azure Hybrid Benefits offers savings on both service tiers of Arc-enabled SQL MI.
 
-Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit). Also, [Dev/Test pricing](/pricing/dev-test/) is available for both service tiers, though it's only for development use. Review the [cost management considerations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance#cost-management-considerations) of Azure landing zones to understand broad cost-related considerations. Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
+Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit). Also, [Dev/Test pricing](https://azure.microsoft.com/pricing/dev-test/) is available for both service tiers, though it's only for development use. Review the [cost management considerations](../../../ready/landing-zone/design-area/governance.md#cost-management-considerations) of Azure landing zones to understand broad cost-related considerations. Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
 
 ## Design recommendations
 
@@ -60,7 +60,7 @@ If you're using the directly connected mode, no further action is needed. The ne
 
 ### Reserved instances
 
-Based on the expected duration of the Arc-enabled SQL MI deployment, choose a one-year or three-year reserved instance if it results in savings for your organization. For more information on reserved VM instances, see the [Cloud Adoption Framework](/azure/cloud-adoption-framework/govern/cost-management/best-practices#best-practice-use-azure-reserved-vm-instances) best practices.
+Based on the expected duration of the Arc-enabled SQL MI deployment, choose a one-year or three-year reserved instance if it results in savings for your organization. For more information on reserved VM instances, see the [Cloud Adoption Framework](../../../govern/cost-management/best-practices.md#best-practice-use-azure-reserved-vm-instances) best practices.
 
 :::image type="content" source="./media/arc-enabled-data-svc-sql-mi-cost-02.png" alt-text="A screenshot of a reserved instance purchase overview." lightbox="./media/arc-enabled-data-svc-sql-mi-cost-02.png":::
 
@@ -70,7 +70,7 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 
 ### Governance
 
-- Review the recommendations in the [resource organization](eslz-arc-data-service-sql-managed-instance-resource-organization.md) and [governance disciplines](eslz-arc-data-service-sql-managed-instance-governance-disciplines.md) critical design areas. The recommendations help you implement a governance strategy, organize your resources for better cost control and visibility, and avoid unnecessary costs by using the least privileged access model for onboarding and management. Also, review the broader recommendations for Azure Arc-enabled Kubernetes [resource organization](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization) and [governance discipline](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines) to understand governance principles outside of a data services context.
+- Review the recommendations in the [resource organization](eslz-arc-data-service-sql-managed-instance-resource-organization.md) and [governance disciplines](eslz-arc-data-service-sql-managed-instance-governance-disciplines.md) critical design areas. The recommendations help you implement a governance strategy, organize your resources for better cost control and visibility, and avoid unnecessary costs by using the least privileged access model for onboarding and management. Also, review the broader recommendations for Azure Arc-enabled Kubernetes [resource organization](../arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md) and [governance discipline](../arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md) to understand governance principles outside of a data services context.
 
 - Use [Azure cost management and billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) to understand Arc-enabled SQL MI costs.
 
@@ -87,8 +87,8 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 
 For more information about your hybrid and multicloud journey, see the following articles:
 
-- Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Explore Azure Arc-enabled data services automated scenarios with [Azure Arc Jumpstart Project](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - Learn more about Azure Arc in the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
-- Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
+- Review the Cloud Adoption Framework [best practices and recommendations](../../../get-started/manage-costs.md) to efficiently manage your cloud costs.
 - See the [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to the most common questions.

@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank, ignite-2022
 
 # Governance and security for Azure Arc-enabled SQL Managed Instance
 
-This article provides key design considerations and best practices for governance, security, and compliance to help you plan and implement Azure Arc-enabled SQL Managed Instance deployments. While the enterprise-scale landing zone documentation covers [governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) and [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) as separate topics, these critical design areas are consolidated into a single topic for Arc-enabled SQL Managed Instance.
+This article provides key design considerations and best practices for governance, security, and compliance to help you plan and implement Azure Arc-enabled SQL Managed Instance deployments. While the enterprise-scale landing zone documentation covers [governance](../../../ready/landing-zone/design-area/governance.md) and [security](../../../ready/landing-zone/design-area/security.md) as separate topics, these critical design areas are consolidated into a single topic for Arc-enabled SQL Managed Instance.
 
 ## Architecture
 
@@ -24,7 +24,7 @@ The following diagram shows a conceptual reference architecture that depicts the
 
 This section contains design considerations you should keep in mind while planning the security and governance of your Arc-enabled SQL Managed Instance.
 
-Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) and [governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) design areas of the Azure landing zones to assess the effect of Arc-enabled SQL Managed Instance on your overall governance and security models.
+Review the [security](../../../ready/landing-zone/design-area/security.md) and [governance](../../../ready/landing-zone/design-area/governance.md) design areas of the Azure landing zones to assess the effect of Arc-enabled SQL Managed Instance on your overall governance and security models.
 
 ### Governance disciplines
 
@@ -42,7 +42,7 @@ Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-
 ### Cluster security
 
 - Your Arc-enabled SQL Managed Instance can reside on hybrid or multicloud Kubernetes clusters. Review the security and governance considerations for your chosen cloud provider and Kubernetes distribution.
-- Review the design considerations in the Azure Arc-enabled Kubernetes [governance and security disciplines design area](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines).
+- Review the design considerations in the Azure Arc-enabled Kubernetes [governance and security disciplines design area](../arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md).
 
 ### Network security
 
@@ -55,7 +55,7 @@ Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-
 
 - Review the [identity and access management for Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-identity-access-management.md) for best practices and guidance.
 - While considering your organization's separation of duties and least-privileged access requirements, define cluster administration, operations, database administration, and developer roles within your organization. Mapping each team to actions and responsibilities determines Azure role-based access control (RBAC) roles or the Kubernetes _ClusterRoleBinding_ and _RoleBinding_ depending on the connectivity mode used.
-- Consider using a [responsible, accountable, consulted, and informed (RACI) parties](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort. Build controls into the management scope hierarchy that you define based on [resource consistency](/azure/cloud-adoption-framework/govern/resource-consistency/) and [inventory management](/azure/cloud-adoption-framework/manage/considerations/inventory) guidance.
+- Consider using a [responsible, accountable, consulted, and informed (RACI) parties](../../../organize/raci-alignment.md) matrix to support this effort. Build controls into the management scope hierarchy that you define based on [resource consistency](../../../govern/resource-consistency/index.md) and [inventory management](../../../manage/considerations/inventory.md) guidance.
 - Deploying the Azure Arc Data Controller requires some permissions that can be considered high privilege, such as creating a Kubernetes namespace or creating a cluster role. Understand the [permissions](/azure/azure-arc/data/least-privilege) needed to prevent excessive privileges.
 - Decide on the authentication model to be used within your Arc-enabled SQL Managed Instance, whether it's Azure Active Directory (Azure AD) authentication or SQL authentication. Review the [identity and access management design area](./eslz-arc-data-service-sql-managed-instance-identity-access-management.md) for design considerations and recommendations to choose the right authentication mode.
 - Consider the differences between *system-managed keytab* and *customer-managed keytab* to deploy Azure Arc AD connector to support Azure AD authentication in Arc-enabled SQL Managed Instance. Both methods have the benefit of simplified operations compared to full customer control of managing service accounts and keytab for Azure AD authentication support.
@@ -113,7 +113,7 @@ For more information on your hybrid and multicloud cloud journey, see the follow
 
 - Review the capabilities of [Azure Arc-enabled Data Services](/azure/azure-arc/data/overview).
 - Review the [validated Kubernetes distributions](/azure/azure-arc/data/validation-program) for Azure Arc-enabled data services.
-- Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Review [Manage hybrid and multicloud environments](../manage.md).
 - Learn more about operating [Arc-enabled SQL Managed Instance with least privilege](/azure/azure-arc/data/least-privilege).
 - Experience Arc-enabled SQL Managed Instance automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).

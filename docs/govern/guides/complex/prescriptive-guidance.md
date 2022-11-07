@@ -45,7 +45,7 @@ The cloud governance team is responsible for the following decisions and impleme
 
 ### Subscription design
 
-The decision on what subscription design to use determines how Azure subscriptions are structured and how to use Azure management groups to efficiently manage the access, policies, and compliance for the subscriptions. In this narrative, the governance team has chosen a [mixed subscription strategy](../../../decision-guides/subscriptions/index.md#mix-subscription-strategies).
+The decision on what subscription design to use determines how Azure subscriptions are structured and how to use Azure management groups to efficiently manage the access, policies, and compliance for the subscriptions. In this narrative, the governance team has chosen a [mixed subscription strategy](../../../decision-guides/subscriptions/index.md#mixed-subscription-strategies).
 
 - As new requests for Azure resources arise, establish a *department* for each major business unit in each operating geography. Within each of the departments, create *subscriptions* for each application archetype.
 - An application archetype is a means of grouping applications with similar needs. Common examples include:

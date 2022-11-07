@@ -16,6 +16,8 @@ Azure is Microsoft's public cloud platform. Azure offers a large collection of s
 
 <!-- markdownlint-disable MD034 -->
 
+<br/>
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2ixGo]
 
 <!-- markdownlint-enable MD034 -->

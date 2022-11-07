@@ -16,13 +16,13 @@ This article provides key design considerations and recommendations for managing
 
 ## Architecture
 
-To build the right architecture for your organization to onboard Kubernetes clusters on-premises or in the public cloud, you need a broad understanding of [Azure Arc-enabled Kubernetes network architecture](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity) and [network connectivity for Azure Arc-enabled data services](./eslz-arc-data-service-sql-managed-instance-network-connectivity.md), specifically concerning the two connectivity modes.
+To build the right architecture for your organization to onboard Kubernetes clusters on-premises or in the public cloud, you need a broad understanding of [Azure Arc-enabled Kubernetes network architecture](../arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) and [network connectivity for Azure Arc-enabled data services](./eslz-arc-data-service-sql-managed-instance-network-connectivity.md), specifically concerning the two connectivity modes.
 
 :::image type="content" alt-text="A diagram that shows architecture of Azure Arc-enabled data services." source="./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png" lightbox="./media/arc-enabled-data-svc-sql-mi-data-services-architecture.png":::
 
 ### Cluster management
 
-To understand cluster management principles for the underlying Kubernetes cluster, review the [Cloud Adoption Framework (CAF)](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines) design considerations and recommendations for [Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines) before you deploy Azure Arc-enabled SQL Managed Instance.
+To understand cluster management principles for the underlying Kubernetes cluster, review the [Cloud Adoption Framework (CAF)](../arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md) design considerations and recommendations for [Azure Arc-enabled Kubernetes](../arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md) before you deploy Azure Arc-enabled SQL Managed Instance.
 
 ### Cluster monitoring
 
@@ -33,7 +33,7 @@ To understand the connectivity modes, see [Network connectivity for Azure Arc-en
 
 ## Design considerations
 
-To understand the role of Azure Arc-enabled Kubernetes on your overall management design, and the considerations and recommendations for the design of landing zones, see [Design area: Management for Azure environments](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management).
+To understand the role of Azure Arc-enabled Kubernetes on your overall management design, and the considerations and recommendations for the design of landing zones, see [Design area: Management for Azure environments](../../../ready/landing-zone/design-area/management.md).
 
 ### Cluster monitoring
 
@@ -71,7 +71,7 @@ When you deploy Arc-enabled SQL Managed Instance indirectly connected mode, ther
 
 - To receive notifications from Azure Monitor about the cluster, enable [recommended metric alerts from Container insights](/azure/azure-monitor/containers/container-insights-metric-alerts).
 
-- Use [Azure Policy](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines#policy-management-and-reporting) to ensure that Container Insights is deployed automatically.
+- Use [Azure Policy](../arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md#policy-management-and-reporting) to ensure that Container Insights is deployed automatically.
 
 - For an easy, out-of-the-box experience for monitoring, use the workbooks that are available in Container insights to view performance and health information about your cluster and components such as nodes, pods, and persistent volumes. When you're familiar with the workbooks, design a custom workbook that illustrates the data in a way that's most useful to your operations. For more information about workbooks, see [Reports in Container insights](/azure/azure-monitor/containers/container-insights-reports).
 

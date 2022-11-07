@@ -26,7 +26,7 @@ When evaluating which type of Active Directory solution to adopt, understand the
 
 - Applications that rely on domain services and use older protocols might be able to use [Azure AD Domain Services (Azure AD DS)](/azure/active-directory-domain-services).
 
-- Evaluate your application needs by understanding and documenting the authentication provider that each application uses. Use the reviews to help plan the type of Active Directory your organization should use. For more information, see [Compare Active Directory to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide](/azure/cloud-adoption-framework/decision-guides/identity).
+- Evaluate your application needs by understanding and documenting the authentication provider that each application uses. Use the reviews to help plan the type of Active Directory your organization should use. For more information, see [Compare Active Directory to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad) and [Identity decision guide](../../../decision-guides/identity/index.md).
 
 - Evaluate scenarios that involve setting up external users, customers, or partners to secure access to resources. Determine whether these scenarios involve [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) or [Azure AD B2C](/azure/active-directory-b2c/overview) configurations. For more information, see [Azure AD External Identities](/azure/active-directory/external-identities/external-identities-overview).
 
