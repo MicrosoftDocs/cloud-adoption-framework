@@ -46,9 +46,9 @@ Identifying and collaborating with stakeholders is essential. The cloud adoption
 
 Here are some recommendations to consider:
 
-- ***Create a chart of responsible, accountable, consulted, and informed (RACI) stakeholders*** - Use a RACI chart to organize project stakeholders and to drive awareness of shared responsibilities
+- ***Create a chart of responsible, accountable, consulted, and informed (RACI) stakeholders*** - Use a RACI chart to organize project stakeholders and to create awareness of shared responsibilities.
 - ***Identify data owners and data stewards*** - Data owners and data stewards will be important stakeholders in your cloud adoption journey. Identify and collaborate with both as early as possible.
-- ***Identify application owners*** - Application owners manage and control services and workloads that will be adopted in the cloud. They might have a separate roadmap for their applications. It’s critical to align the goals of the application owners with the cloud adoption plan. If not possible, mission owners should develop a strategy that accommodates the mission objectives of application owners
+- ***Identify application owners*** - Application owners manage and control services and workloads that will be adopted in the cloud. They might have a separate roadmap for their applications. It’s critical to align the goals of the application owners with the cloud adoption plan. If not possible, mission owners should develop a strategy that accommodates the mission objectives of application owners.
 
 For more information, see:
 
