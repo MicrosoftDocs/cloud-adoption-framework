@@ -16,7 +16,7 @@ Enterprises are currently building and running applications across various ecosy
 
 [Azure landing zones](../../ready/landing-zone/index.md) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
 
-:::image type="content" source="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png":::
+:::image type="content" source="../../ready/enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
 Azure landing zones was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two additions:
 
