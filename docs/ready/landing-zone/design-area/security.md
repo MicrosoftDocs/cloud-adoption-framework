@@ -97,7 +97,27 @@ Modern security boundaries are more complex than boundaries in a traditional dat
 | Define network encryption requirements | [Explores key recommendations to achieve network encryption between on-premises and Azure and across Azure regions](../../azure-best-practices/define-network-encryption-requirements.md). |
 |Plan for traffic inspection | [Explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network](../../azure-best-practices/plan-for-traffic-inspection.md). |
 
-#### Zero trust
+## Zero trust
+Zero Trust is a security strategy. It is not a product or a service, but an approach in designing and implementing the following set of security principles:
+
+- Verify explicitly
+- Use least privilege access
+- Assume breach
+
+For more information, see [What is Zero Trust?](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)
+
+### Zero trust for infrastructure 
+How to apply the principles of Zero Trust to your workloads in Azure based on a multi-disciplinary approach by applying the Zero Trust principles to common IT business scenario based on infrastructure services like:
+
+- Azure Storage
+- Virtual machines (VMs)
+- Spoke Vnet for VM-based workloads
+- Hub Vnet to support access to many workloads in Azure
+- Securing web applications
+
+For more information, see [Zero Trust principles to Azure infrastructure](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview) and [Zero trust for web applications](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/gateway/application-gateway-before-azure-firewall)
+
+### Zero trust for identity
 
 - Which teams or individuals require access to services within the landing zone? What roles are they doing?
 - Who should authorize the access requests?
