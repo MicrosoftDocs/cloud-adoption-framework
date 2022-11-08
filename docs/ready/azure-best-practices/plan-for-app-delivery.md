@@ -26,7 +26,15 @@ This section explores key recommendations to deliver internal-facing and externa
 
 **Design recommendations:**
 
-- Perform application delivery within landing zones for both internal-facing and external-facing applications.
+- Perform application delivery within landing zones for both internal-facing and external-facing applications. 
+  - Treat the Application Gateway as an application component and deploy it in a spoke virtual network not as a shared resource in the hub.
+
+  - It can be difficult to troubleshoot Web Application Firewall alerts. You generally need in-depth knowledge of the application to decide whether the messages that trigger those alarms are legitimate. 
+
+  - You might face role-based access control problems if you deploy Application Gateway in the hub when teams manage different applications but use the same instance of Application Gateway. Each team then has access to the entire Application Gateway configuration.
+
+  - If you treat Application Gateway as a shared resource, you might exceed [Azure Application Gateway limits](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#application-gateway-limits)
+  - Read more about this in [Zero-trust network for web applications](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/gateway/application-gateway-before-azure-firewall)
 
 - For secure delivery of HTTP/S applications, use Application Gateway v2 and ensure that WAF protection and policies are enabled.
 
