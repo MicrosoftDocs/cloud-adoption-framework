@@ -146,8 +146,7 @@ To set up the cluster:
     - Choose **Availability zone** from **Availability options**.
     - Select **Zone 1** and **Zone 2** under **Availability zone**. Choosing the zones automatically creates a second VM with the name of `SQLAOG2`.
     - Specify the machine credentials under **Administrator account**.
-    <!--- - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains. Note to FTE author: This bullet step from the original article that used to be under the Networking step below no longer works if one is creating two VMs at once. I replaced the screenshot anyway in case you need it when doing a deeper edit on this content.
-   ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png) -->
+    <!--- - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains. Note to FTE author: This bullet step from the original article that used to appear under the Networking step below no longer works. There was a screenshot here originally, too. I updated the screenshot anyway (per the latest Azure UI) in case you need it later. The original screenshot was named sql-vm-settings.png. I've updated that screenshot to match the new UI, but it's not currently being used here because creating a new availability set no longer works when creating two VMs at one time.-->
 
 1. In **Size**, start with `D2S v3` instances for both VMs. You can scale later as needed.
 1. In **Disks**, enable SSD for the VM disk type, because these machines are business-critical.
