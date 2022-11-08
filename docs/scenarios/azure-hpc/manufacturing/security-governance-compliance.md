@@ -1,5 +1,5 @@
 ---
-title: 'Manufacturing HPC Azure governance | Microsoft Docs'
+title: Manufacturing HPC Azure governance | Microsoft Docs
 description: 'Governance is an important part of planning for HPC workload performance.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
