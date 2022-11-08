@@ -152,8 +152,13 @@ Azure offers a backup SaaS service, [Azure Backup](/azure/backup/backup-overview
 ### Design recommendations for backup and restore
 
 - You can use Azure Backup to back up SAP application server and central-services VMs.
+
 - You can use an SAP HANA backup for HANA deployments up to 8 TB. For more information, explore the support matrix for [backing up SAP HANA databases on Azure VMs](/azure/backup/sap-hana-backup-support-matrix).
-- Test the backup and recovery times to verify if they meet your RTO.
+
+- If you are using IaaS backup solution, size the backup infrastructure sufficiently to ensure it can back up all production sized systems simultaneously or like a real life scenario, within expected timelines and using production or production-like setup in terms networking, security, etc.
+
+- Test the backup and recovery times to verify if they meet your RTO requirements when it comes to restoring all systems simultaneously after a disaster.
+
 - Ideally, avoid pulling your backups from Azure into your on-premises backup infrastructure, especially with large databases. This option impacts how much bandwidth the ExpressRoute circuits consume.
 
 ## Disaster recovery
