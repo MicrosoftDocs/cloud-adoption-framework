@@ -28,6 +28,13 @@ Your organization or enterprise must design platform-level capabilities that hel
 
 Your architecture must factor in many principles and tasks to address on-premises business continuity and disaster recovery (BCDR) scenarios. These principles and tasks also apply in Azure. The main difference is that Azure might have more hardware capacity than your organization to compensate for a host failure. You can service-heal even the largest Azure VMs by setting them up to restart on another server. Set up your Azure deployments to use the same conditions as your on-premises deployments. If you deployed on-premises systems or bare-metal hardware by using automatic failover cluster configurations, deploy them the same way in Azure.
 
+> [!TIP]
+> Agree a high availability and disaster recovery solution for each of the archetypes in your SAP landscape early on and ensure that all SAP components are covered with an appropriate solution.
+> 
+> Configure high availability and disaster recovery in Azure early in the project on at least one landscape and keep it running there. This will allow your teams time and opportunity required to acquire the knowledge and experience on various technologies involved which may be different to as-is and also help develop and to mature your standard operating procedures (SOP).
+> 
+> Plan to have the full high availability and disaster recovery and backup protection for production workloads from day one of go-live.
+
 This article covers the following aspects of BCDR for an enterprise-scale SAP scenario:
 
 - High availability within an Azure region.
@@ -69,6 +76,12 @@ Before you deploy your high availability infrastructure and depending on the reg
 
 One advantage of deploying your high availability architecture across different availability zones is that your service level agreement (SLA) for the VMs can be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. Read through [SAP workload configurations with Azure availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones) for more information about SAP workload deployments across different availability zones.
 
+If you choose zonal deployment approach, consider the effects of cross-zone latency for the chosen Azure region - between application server and database as well as between the two database nodes - on performance and architecture design choices.
+
+If you choose active/passive zonal deployment approach for application server tier (application servers must connect to the database in the same availability zone), build automation and standard operating procedure (SOP) to enable quick and automated recovery in case of a database fail over.
+
+If you are using availability zones in your SAP solution, design all other Azure services and infrastructure components in your SAP landscape for zone redundancy too in order to achieve true zone redundancy. Some examples of such services and components are: Azure ExpressRoute gateways, Azure Load Balancers, Azure Files, Azure NetApp Files, reverse proxy, firewalls, anti-virus and backup infrastructure.
+
 ### Design recommendations for high availability
 
 - Azure offers several options to help you meet your applications infrastructure SLAs. You should choose the same option for all the three SAP components: central services, application server, and database.
@@ -76,6 +89,10 @@ One advantage of deploying your high availability architecture across different 
   - A single VM SLA offers 99.9 percent.
   - Availability set deployment offers 99.95 percent.
   - Availability zones offer 99.99 percent.
+
+- Where two VMs are deployed in an availability set, the alignment with fault and update domains prevents both the VMs ending up on the same host hardware, thereby providing protection against hardware failure. Where VMs are deployed through availability zones and choosing different zones, the VMs are created across different physical locations, thereby providing additional protection from power, cooling or networking issues that affect the dataceter(s) of the zone as a whole. However, you can't deploy Azure availability sets within an Azure availability zone unless you use [Azure Proximity Placement Group](https://learn.microsoft.com/azure/virtual-machines/co-location). If you choose zonal deployment approach, the SAP DBMS, central services and application layers will be running in different availability zones, however each availability zone will most likely have multiple application servers. In this scenario, the application servers in each zone won't automatically benefit from fault domains and update domains. However, you can achieve it using Availability Sets as documented in the article [Azure Proximity Placement Groups for optimal network latency with SAP](https://learn.microsoft.com/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
+
+- When creating availability sets, use the maximum number of fault domains and update domains available. For example: If you are going to deploy more than 2 VMs in one availability set, use the maximum number of fault domains, i.e. 3, and high-enough number of update domains at the time of creating availability set to limit the impact of potential physical hardware failures, network outages, or power interruptions as well as Azure planned maintenance. The default number of fault domains is 2 and it isn't possible to change it online later. 
 
 - In an availability set deployment, each component of an SAP system has to be in its own availability set. SAP central services, database, and application VMs should be grouped in their availability sets.
 
