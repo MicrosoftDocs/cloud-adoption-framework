@@ -113,9 +113,9 @@ items:
     - name: Energy example architecture
       href: energy/compute.md#hpc-reference-architecture
     - name: Finance example architecture
-      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-finance-reference-architecture
+      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance
     - name: Manufacturing example architecture
-      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-manufacturing-reference-architecture
+      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-manufacturing
     - name: 3D video rendering
       href: /azure/architecture/example-scenario/infrastructure/video-rendering
       maintainContext: true
