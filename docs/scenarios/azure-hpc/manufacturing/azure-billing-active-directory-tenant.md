@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 11/08/2022
+ms.date: 11/09/2022
 ---
 
 # Manufacturing HPC Azure Billing and Active Directory Tenants
@@ -20,7 +20,7 @@ You might also want to review the [identity and access management considerations
 
 ## Next steps
 
-The following list of articles point to guidance at specific points throughout the cloud adoption journey. These articles help you succeed in the cloud adoption scenario for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
 - [Identity Access Management](./identity-access-management.md)
 - [Management](./management.md)
