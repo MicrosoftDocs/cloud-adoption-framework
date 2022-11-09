@@ -34,9 +34,9 @@ The approach to landing zones of the HPC landing zone accelerator provides the f
   - A deployable reference capable of creating the environment for your HPC deployment
   - A Microsoft-approved HPC reference implementation to test the deployed environment
 
-## Design guidelines
+## Design guidelines for energy, manufacturing, and finance
 
-The architectures of landing zones vary by industrial sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
+The architectures of landing zones vary by business sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
 
 - Energy (Oil and Gas)
 
