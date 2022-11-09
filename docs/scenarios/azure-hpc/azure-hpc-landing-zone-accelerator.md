@@ -18,7 +18,7 @@ Customers adopt HPC in various ways to suit their business needs, and you can ad
 
 ## Implement an enterprise-scale landing zone
 
-The HPC landing zone accelerator assumes that you are starting with an enterprise-scale landing zone that's been successfully implemented. For more information on this prerequisite, see the following articles:
+The HPC landing zone accelerator assumes that you're starting with an enterprise-scale landing zone that's been successfully implemented. For more information on this prerequisite, see the following articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
@@ -36,7 +36,7 @@ The approach to landing zones of the HPC landing zone accelerator provides the f
 
 ## Design guidelines
 
-The architecture of landing zones vary by industrial sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
+The architectures of landing zones vary by industrial sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
 
 - Energy (Oil and Gas)
 
@@ -82,7 +82,7 @@ The following conceptual reference architecture is an example that shows design 
 
 The following conceptual reference architecture is an example that shows design areas and best practices for *finance* environments.
 
-:::image type="content" alt-text="Diagram that shows an example architecture for a finance environment, including on-premesis resources, virtual network, subnets, and network security groups." source="./media/hpc-finance-architecture-example.png" lightbox="./media/hpc-finance-architecture-example.png":::
+:::image type="content" alt-text="Diagram that shows an example architecture for a finance environment, including on-premises resources, virtual network, subnets, and network security groups." source="./media/hpc-finance-architecture-example.png" lightbox="./media/hpc-finance-architecture-example.png":::
 
 
 ## Example: conceptual reference architecture for manufacturing
