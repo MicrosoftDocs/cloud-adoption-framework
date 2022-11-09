@@ -565,5 +565,10 @@
          "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development",
          "redirect_document_id": false
       }
+      {
+         "source_path": "docs/scenarios/azure-hpc/azure-hpc-landing-zone-accelator.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelerator",
+         "redirect_document_id": false
+      },
    ]
 }
