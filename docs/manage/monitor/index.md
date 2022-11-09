@@ -19,11 +19,9 @@ Although the cloud offers nearly unlimited flexibility in design choices, enterp
 
 ![Diagram of cloud adoption strategies](./media/monitoring-management-guidance-cloud-and-on-premises/introduction-cloud-adoption.png)
 
-This digital transformation also enables an opportunity to modernize your infrastructure, workloads, and applications. Depending on business strategy and objectives, adopting a hybrid cloud model is likely part of the migration journey from on-premises to operating entirely in the cloud. During this journey, IT teams are challenged to adopt and realize rapid value from the cloud. IT must also understand how to monitor the application or service migrating to Azure effectively and continue to deliver effective IT operations and DevOps.
+This digital transformation also enables an opportunity to modernize your infrastructure, workloads, and applications. Depending on business strategy and objectives, adopting a hybrid cloud model is likely part of the migration journey from on-premises to operating entirely in the cloud. IT must also understand how to effectively monitor the application or service migrating to Azure and continue to deliver efficient IT operations and DevOps.
 
-Stakeholders want to use cloud-based software as a service (SaaS) monitoring and management tools. They need to understand what services and solutions deliver to achieve end-to-end visibility, reduce costs, and focus less on infrastructure and maintenance of traditional software-based IT operations tools.
-
-However, IT often prefers to use the tools they've already invested in significantly. This approach supports their service operations processes to monitor both cloud models, with the eventual goal of transitioning to a SaaS-based offering. IT prefers this approach not only because it takes time, planning, resources, and funding to switch. It's also because of confusion about which products or Azure services are appropriate or applicable to achieve the transition.
+Stakeholders often want to use cloud-based software as a service (SaaS) monitoring and management tools. They need to understand what services and solutions exist to achieve end-to-end visibility, reduce costs, and focus less on infrastructure and maintenance of traditional software-based IT operations tools.
 
 The goal of this guide is to provide a detailed reference to help enterprise IT managers, business decision-makers, application architects, and application developers understand:
 
