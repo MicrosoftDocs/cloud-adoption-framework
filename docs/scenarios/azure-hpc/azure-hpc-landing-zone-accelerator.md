@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale support for Azure high-performance computing (HPC)
+title: Azure high-performance computing (HPC) landing zone accelerator
 description: Describe how enterprise-scale can accelerate adoption of HPC.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
