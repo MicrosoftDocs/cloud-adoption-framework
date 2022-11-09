@@ -3,7 +3,7 @@ title: Azure high-performance computing (HPC) landing zone accelerator
 description: The HPC landing zone accelerator is a set of open-source scripts and templates that help you create a deployment solution for customized HPC landing zones that adhere to best practices.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
-ms.date: 09/28/2022
+ms.date: 11/23/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
