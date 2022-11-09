@@ -38,9 +38,11 @@ Azure simplifies access reviews with RBAC and ABAC automating aspects of access 
 
 Granting elevated privilege for a defined period is a security best-practice. Azure AD simplifies the use of elevated privileges with Privileged Identity Management (PIM). PIM grants elevated privileges when requested by a legitimate user and only grants those privileges for a defined period. This process represents just-in-time-access and reduces the number of dormant accounts that have privileged access. For more information on PIM, see [PIM for just-in-time access](/azure/active-directory/roles/best-practices#2-use-privileged-identity-management-to-grant-just-in-time-access).
 
-For more information on identity, see [Azure Government identity](/azure/azure-government/documentation-government-plan-identity).
+For more information on best practices for securing identity, see [Azure Identity Management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices).
 
-**(3) Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. Defense security teams should monitor, scan, and improve cloud environments to mitigate risks. Defense organizations often have required security tools that cloud-native tooling can supplement for comprehensive security detection and analysis. We recommend Azure Monitor as a baseline monitoring tool. For more information, see [Azure Monitor](/azure/azure-monitor/overview).
+For more information on securing identity with zero trust, see [Securing identity with zero trust](/security/zero-trust/deploy/identity)
+
+**(3) Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. Defense security teams should monitor, scan, and improve cloud environments to mitigate risks. Defense organizations often have required security tools that cloud-native tooling can supplement for comprehensive security detection and analysis. We recommend Microsoft Defender for Cloud as a baseline cloud security posture management tool that continually assesses the environment's security posture. For more information, see [What is Microsoft Defender for Cloud?](/azure/defender-for-cloud/defender-for-cloud-introduction).
 
 Here are a few tools that add value to defense deployments:
 
