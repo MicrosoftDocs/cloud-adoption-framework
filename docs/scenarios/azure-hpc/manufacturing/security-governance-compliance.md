@@ -36,4 +36,4 @@ The following list of articles will take you to guidance found at specific point
 - [Resource Organization](./resource-organization.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
