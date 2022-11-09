@@ -14,7 +14,7 @@ ms.date: 11/08/2022
 
 Governance is an important part of planning for HPC workloads. Organizations in the manufacturing and automotive industries often rely on compliance and regulation assessments, like [Trusted Information Security Assessment Exchange (TISAX)](/azure/compliance/offerings/offering-tisax).
 
-Note that it could be important to understand any decisions previously made by the cloud platform team so that you're aware of existing  governance recommendations.
+Keep in mind that it could be important to understand any decisions previously made by the cloud platform team so that you're aware of existing  governance recommendations.
 
 ## Azure governance in the Azure HPC landing zone accelerator
 
