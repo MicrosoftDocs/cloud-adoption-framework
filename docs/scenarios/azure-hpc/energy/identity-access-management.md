@@ -14,23 +14,23 @@ ms.date: 11/09/2022
 
 The guidance in this article can help you examine design considerations and recommendations that relate to identity and access management for high-performance computing (HPC). This scenario is specific to the deployment of an HPC application for the energy industry. For more information about design considerations and recommendations, see the [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
-[Azure Active Directory Domain Services](/azure/active-directory-domain-services/overview) (Azure AD DS) can make use of managed domain services such as domain join, group policy, and access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Azure AD DS integrates with your existing Azure AD tenant, so users can sign into services and applications connected to the managed domain using their existing Azure AD credentials. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for a hybrid environment.
+[Azure Active Directory Domain Services](/azure/active-directory-domain-services/overview) (Azure AD DS) can make use of managed domain services such as domain join, group policy, and access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Azure AD DS integrates with your existing Azure AD tenant, so users can sign into services and applications connected to the managed domain using their Azure AD credentials. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for a hybrid environment.
 
 For more information, see [design recommendations for platform access](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-platform-access#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones).
 
 ## Design considerations
 
-HPC deployment uses the Azure landing zone infrastructure setup for its security identity and access management needs.
+HPC deployment uses the Azure landing zone infrastructure setup for security identity and access management needs.
 
 Two common deployment types in oil and gas industry workloads are *cloud only* and *hybrid cloud* models. While it's less complex to have all of your compute, storage, and visualization resources in the cloud, our customers sometimes use a hybrid model due to multiple business constraints for seismic and reservoir-simulation HPC workloads.
 
 Both the cloud only and hybrid cloud models might have their own unique identity and access needs that affect which type of active directory solution to adopt.
 
-Workloads in the cloud only deployment model use Azure AD for Azure fabric authentication, while the HPC hybrid cloud model uses the [Azure AD Hybrid solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication based on decisions made by the cloud team. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy active directory support through Azure AD DS.
+Workloads in the cloud only deployment model use Azure AD for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Azure AD hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication based on decisions made by the cloud team. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy active directory support through Azure AD DS.
 
 A typical HPC setup includes a frontend for submitting jobs, a job scheduler or orchestrator, a compute cluster, and shared storage. The jobs can be submitted from on-premises and/or in the cloud. Identity and access management considerations for users and visualization devices might vary depending on the enterprise standards.
 
-Review the Azure administration and management activities you require from your teams. Consider your HPC needs on Azure resources. Determine the best possible distribution of responsibilities within your organization.
+Review the Azure administration and management activities that you require from your teams. Consider your HPC needs on Azure resources. Determine the best possible distribution of responsibilities within your organization.
 
 ## Design recommendations
 
