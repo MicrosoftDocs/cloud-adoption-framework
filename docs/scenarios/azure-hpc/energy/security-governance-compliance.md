@@ -1,5 +1,5 @@
 ---
-title: Energy HPC Governance
+title: Energy HPC governance
 description: Azure landing zones for HPC in Energy have no specific considerations or recommendations that affect decisions about governance.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
