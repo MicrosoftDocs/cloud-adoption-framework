@@ -48,3 +48,10 @@ Queries
 - [Query to return secure score per management group](/azure/governance/management-groups/resource-graph-samples?tabs=azure-cli#secure-score-per-management-group)
 
 TODO: Add valuable graph queries here - ? policy assignments per management group ?
+
+The following Azure Resource Graph query lists policy assignments at the management group level.
+
+```bash
+PolicyResources
+| where type == 'microsoft.authorization/policyassignments' and properties.scope has '/providers/Microsoft.Management/managementGroups'
+```
