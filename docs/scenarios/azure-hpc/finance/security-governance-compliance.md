@@ -1,6 +1,6 @@
 ---
-title: 'Finance HPC Governance | Microsoft Docs'
-description: 'Azure landing zones for HPC in finance do not have any specific considerations or recommendations which would impact governance related decisions.'
+title: Governance for finance HPC 
+description: Learn about governance for HPC workloads in the finance sector. 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -17,7 +17,9 @@ ms.date: 11/10/2022
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [governance recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
 
 ## Next steps
+
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+
 - [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
 - [Identity Access Management](./identity-access-management.md)
 - [Management](./management.md)
