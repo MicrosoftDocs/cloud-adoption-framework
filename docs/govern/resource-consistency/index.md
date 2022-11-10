@@ -44,7 +44,8 @@ The following two Azure Resource Graph query lists disks and network cards not c
 ```bash
 resources
 | where type =~ 'Microsoft.Compute/disks'
-| where properties.diskState == "Unattached"
+| where managedBy == "" and diskState != 'ActiveSAS'
+or (diskState == 'Unattached' or diskState != 'ActiveSAS')
 | project name, resourceGroup, subscriptionId, tenantId, properties.diskState
 
 resources
