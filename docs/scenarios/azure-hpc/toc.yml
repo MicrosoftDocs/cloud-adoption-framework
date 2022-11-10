@@ -7,7 +7,7 @@ items:
     href: plan.md
   - name: Prepare your environment
     items: 
-    - name: Azure landing zone for HPC
+    - name: Azure landing zones for HPC
       href: ready.md
     - name: Energy
       items:
