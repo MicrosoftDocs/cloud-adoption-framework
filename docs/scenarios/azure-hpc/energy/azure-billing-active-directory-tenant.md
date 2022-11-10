@@ -1,6 +1,6 @@
 ---
-title: Azure billing and Azure Active Directory tenants| Microsoft Docs
-description: Azure landing zones for energy HPC environments don't have any specific considerations or recommendations that affect billing offer decisions, enterprise enrollment, or Active Directory tenant decisions.
+title: Azure billing and Azure Active Directory tenants for energy HPC
+description: Learn about Azure billing and Azure Active Directory tenants for energy HPC.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/08/2022
 ---
 
-# Azure billing and Azure Active Directory tenants
+# Azure billing and Azure Active Directory tenants for energy HPC
 
 Azure landing zones for HPC don't have any specific considerations or recommendations that affect billing offer decisions, enterprise enrollment, or Active Directory tenant decisions.
 
@@ -31,4 +31,4 @@ The following articles provide guidance that you might find helpful at various p
 - [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
