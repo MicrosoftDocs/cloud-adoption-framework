@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Azure landing zones for HPC
 
-The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure can guide you through the process of preparing your environment for cloud adoption. During the readiness phase, you can use Azure landing zones. Landing zones are technical accelerators that provide the basic building block for any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practices guidance from the Cloud Adoption Framework. In the process of preparing for high-performance computing (HPC), you'll encounter environment configurations that might differ slightly, depending on the industry use case and requirements.
+The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure can guide you through the process of preparing your environment for cloud adoption. During the readiness phase, you can use Azure landing zones. Landing zones are technical accelerators that provide the basic building block for any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practice guidance from the Cloud Adoption Framework. In the process of preparing for high-performance computing (HPC), you might encounter environment configurations that depend on your industry use case and requirements.
 
 ## Azure landing zone conceptual architecture
 
@@ -22,14 +22,14 @@ As you prepare your environment for sustained cloud adoption, you can use an Azu
 - [Finance](../azure-hpc/azure-hpc-landing-zone-accelator.md#example-conceptual-energy-reference-architecture)
 - [Manufacturing](./azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
 
-As you develop a long-term vision for landing zones, consider the preceding designs. The conceptual architecture references provide a starting point. Based on your organization's business requirements and the needs of your end users, you might need to modify them.
+As you develop a long-term vision for landing zones, consider these architecture references. These references provide a starting point. Based on your organization's business requirements and the needs of your end users, you might need to modify them.
 
 ## Evaluation for HPC
 
 The decisions you make during strategic impact assessment and technical planning have the most influence on the landing zone configuration that you choose for your HPC deployments on Azure. We recommend that you consider the following questions:
 
 - How mature is your environment on Azure? Depending on what stage it's in, ranging from proof of concept to a mature application that serves users, you can include or omit governance, security, or resource organization.
-- Is the application you're building on Azure a short-lived one or a long-standing project? This consideration can help you choose your compute and storage options.
+- Is the application you're building on Azure a short-lived one or a long-standing project? The answer to this question can help you choose your compute and storage options.
 - Does your organization require that people access Azure resources at various levels?
 
 As you can see from these questions, the deployment model will vary depending on your business, industry, and application usage.
@@ -40,7 +40,7 @@ As you can see from these questions, the deployment model will vary depending on
 
 The environment contains:
 
-- An OpenOn Demand portal for a unified user access, remote shell access, remote visualization access, job submission, file access, and more.
+- An OpenOn Demand portal for unified user access, remote shell access, remote visualization access, job submission, file access, and more.
 - Active Directory, for user authentication and domain control.
 - An OpenPBS or Slurm job scheduler.
 - Azure CycleCloud, to handle autoscaling of nodes through job scheduler integration.
