@@ -1,6 +1,6 @@
 ---
 title: Azure identity and access management for HPC
-description: Learn about identity and access management for high-performance computing (HPC) using this energy scenario that builds on the Azure landing zone design area.
+description: Learn about identity and access management for high-performance computing (HPC) using this energy industry scenario that builds on the Azure landing zone design area.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
