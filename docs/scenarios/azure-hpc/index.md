@@ -51,4 +51,4 @@ Get started with the below list of guidance found at specific points throughout 
 
 For more information, refer to the [landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelerator.md) for additional information.
 
-[Design guidelines](../azure-hpc/azure-hpc-landing-zone-accelerator.md#design-guidelines) are also available to provide guidance on creating landing zones for your HPC billing, identity and access management, network topology/connectivity, platform automation, management group and subscription organization, governance disciplines, and security disciplines.
+[Design guidelines](../azure-hpc/azure-hpc-landing-zone-accelerator.md#design-guidelines-for-energy-manufacturing-and-finance) are also available to provide guidance on creating landing zones for your HPC billing, identity and access management, network topology/connectivity, platform automation, management group and subscription organization, governance disciplines, and security disciplines.
