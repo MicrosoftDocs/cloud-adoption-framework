@@ -1,5 +1,5 @@
 ---
-title: Azure governance for manufacturing HPC | Microsoft Docs
+title: Azure governance for manufacturing HPC 
 description: Learn about governance for HPC workloads.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
