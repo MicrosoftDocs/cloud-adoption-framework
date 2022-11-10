@@ -1,6 +1,6 @@
 ---
 title: Management for energy HPC
-description: Learn about management considerations in the Azure landing zone for high-performance computing (HPC) in energy.
+description: Learn about management considerations in the Azure landing zone for high-performance computing (HPC) in the energy sector.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -18,7 +18,7 @@ However, it's important to understand any decisions that were previously made by
 
 ## Next steps
 
-The following articles take you to guidance found at specific points in the cloud adoption journey.
+The following articles provide guidance for specific steps in the cloud adoption journey for energy HPC environments.
 
 - [Azure billing for HPC](./azure-billing-active-directory-tenant.md)
 - [Compute for HPC](./compute.md)
