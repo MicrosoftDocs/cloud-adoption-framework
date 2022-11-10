@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
+ms.date: 11/10/2022
 ---
 
 # Governance for finance HPC
