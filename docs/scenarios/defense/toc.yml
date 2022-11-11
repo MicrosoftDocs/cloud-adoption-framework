@@ -55,7 +55,7 @@ items:
       - name: Service compliance
         href: /azure/compliance/offerings/
       - name: Services by audit scope
-        href: /azure/azure-government/compliance/azure-services-in-fedramp-auditscope#azure-government-services-by-audit-scope 
+        href: https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-in-fedramp-auditscope
 
   - name: Learn modules
     href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
