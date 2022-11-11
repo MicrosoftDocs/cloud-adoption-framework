@@ -84,6 +84,8 @@ Restrict default user permissions to remove unneeded access granted in default s
 
 ## Enforce - Default user permissions
 
+### Set Default User Permissions via Graph API
+
 >TODO: Below needs to be QCed from the email discussion.
 
 Update the Authorization Policy to enforce the above settings via the Microsoft Graph REST API with the following [authorizationPolicy](/graph/api/resources/authorizationpolicy):
@@ -107,6 +109,10 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
   "guestUserRoleId": "Guid"
 }
 ```
+
+### Set Default User Permissions via Portal
+
+Alternatively you can configure the following Azure AD user settings from the portal:
 
 Alternatively you can configure the following Azure AD user settings from the portal:
 
@@ -167,31 +173,62 @@ Central management of password reset causes a management burden and can lead use
 
 ## Audit - Password management
 
-Use an [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
+### Graph API
+
+#### Use Graph API to Audit Password Expiration
+
+Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0) API call like the following to audit the default user settings.
 
 ```http
 GET https://graph.microsoft.com/v1.0/users?$select=userPrincipalName,lastPasswordChangeDateTime,passwordPolicies
 ```
 
-The resulting `passwordPolicies` setting should be set to "DisablePasswordExpiration"
+The resulting passwordPolicies setting should be set to "DisablePasswordExpiration"
 
-Use can also use the following Graph PowerShell code to audit the password expiry state and export to a CSV:
+#### Use Graph API to Audit Self-Service Password Reset
 
-```powershell
-$auditFolder = "./AuditResults"
-$date = get-Date -Format "yyyy-MM-dd-HH-mm-ss"
-$auditPath = $auditFolder + '-' + $date
-New-Item -Path $auditPath -ItemType Directory
-$passwordExpyAudit = $auditPath + "/password-expiration.csv"
-Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E={$_.PasswordPolicies -contains "DisablePasswordExpiration"}} | export-csv -path  $passwordExpyAudit
+Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0) API call like the following to audit the default user settings.
+
+```http
+???
 ```
 
-## Guidance - Legacy authentication
+The resulting ??? setting should be set to "???"
 
-Legacy authentication doesn't support multifactor authentication (MFA). MFA improves the security posture in organizations.
+### PowerShell
 
-- Determine if your organization currently supports legacy authentication.
-- Disable legacy authentication to limit exposure to attacks.
+#### Use Microsoft Graph PowerShell to Audit Password Expiration
+
+Use the following script to produce a CSV file that contains an audit of if users are set for their password to never expire.
+
+```powershell
+$auditPath = "./Audits/"
+
+New-Item -Path $auditPath -ItemType Directory
+
+$passwordExpyAudit = $auditPath + "/password-expiration" + "$date" + ".csv"
+
+Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E={$_.PasswordPolicies -contains "DisablePasswordExpiration"}} | export-csv -path  "$passwordExpyAudit"
+
+```
+
+By changing the audit path variable, you can save this to audit to different locations.
+
+#### Use Microsoft Graph PowerShell to Audit Self-Service Password Reset
+
+Use the following script to produce a CSV file that contains an audit if Self-Service Password Reset is enabled.
+
+```powershell
+$auditPath = "./Audits/"
+
+New-Item -Path $auditPath -ItemType Directory
+
+$passwordResetAudit = $auditPath + "/password-reset" + "$date" + ".csv"
+
+Get-MgPolicyAuthorizationPolicy |  export-csv -path  "$passwordResetAudit"
+```
+
+By changing the audit path variable, you can save this to audit to different locations.
 
 ## Enforce - Legacy authentication
 
