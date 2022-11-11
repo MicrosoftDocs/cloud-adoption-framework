@@ -20,15 +20,13 @@ However, it's important to understand any decisions that were previously made by
 
 The following articles provide guidance for specific steps in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing for HPC](./azure-billing-active-directory-tenant.md)
-- [Compute for HPC](./compute.md)
-- [Identity access management for HPC](./identity-access-management.md)
-- [Network topology connectivity for HPC](./network-topology-connectivity.md)
-- [Platform automation DevOps for HPC](./platform-automation-devops.md)
-- [Resource organization for HPC](./resource-organization.md)
-- [Governance for HPC](./security-governance-compliance.md)
-- [Security for HPC](./security.md)
-- [Storage for HPC](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
-
-
+- [Azure billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Compute](./compute.md)
+- [Identity and access management](./identity-access-management.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps](./platform-automation-devops.md)
+- [Resource organization](./resource-organization.md)
+- [Governance and compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
