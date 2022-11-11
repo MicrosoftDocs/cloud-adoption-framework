@@ -7,14 +7,14 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 11/09/2022
+ms.date: 11/11/2022
 ---
 
 # Finance HPC Azure identity and access management
 
 This article builds on considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Following the guidance in this article helps you use the identity and access management design considerations and recommendations to deploy an HPC application on Microsoft Azure for the financial industry.
 
-## Design considerations:
+## Design considerations
 
 The following are design considerations for deploying your HPC application.
 
@@ -53,12 +53,12 @@ For more information, see [design recommendations for platform access](/azure/cl
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
+- [Azure billing offers and Active Directory tenants for finance HPC](./azure-billing-active-directory-tenant.md)
+- [Management for manufacturing HPC](./management.md)
+- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
+- [Resource organization for manufacturing HPC](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
+- [Security for manufacturing HPC](./security.md)
+- [Storage for manufacturing HPC](./storage.md)
 - Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
