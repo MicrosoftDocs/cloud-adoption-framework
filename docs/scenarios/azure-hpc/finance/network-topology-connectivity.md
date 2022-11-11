@@ -12,7 +12,7 @@ ms.date: 11/11/2022
 
 # Network topology and connectivity for HPC in the finance sector
 
-This article builds on considerations and recommendations that are described in the Azure landing zone article for network topology and connectivity. The guidance in this article can help you examine key design considerations and best practices for networking and connectivity to, from, and within Azure and HPC deployments.
+This article builds on considerations and recommendations that are described in the Azure landing zone article for [network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity). The guidance in this article can help you examine key design considerations and best practices for networking and connectivity to, from, and within Azure and HPC deployments.
 
 ## Plan for IP addressing
 
@@ -25,18 +25,18 @@ It's important to plan for IP addressing on Azure to ensure that:
 ### Design considerations and recommendations
 
  - Delegated subnets are required if you want to implement Azure NetApp Files, which is used frequently in HPC deployments with shared file systems. You can [dedicate](/azure/virtual-network/virtual-network-for-azure-services#services-that-can-be-deployed-into-a-virtual-network) and delegate subnets to certain services and then create instances of those services within subnets. Although Azure helps you create multiple delegated subnets in a virtual network, only one delegated subnet can exist in a virtual network for Azure NetApp Files. Attempts to create a new volume will fail if you use more than one delegated subnet for Azure NetApp Files.
- - You need to create a dedicated subnet if you use Azure HPC Cache for storage. For more information about the subnet prerequisite, see [Cache subnet](/azure/hpc-cache/hpc-cache-prerequisites#cache-subnet). To learn more about how to create a subnet, see [Add a virtual network subnet](/azure/virtual-network/virtual-network-manage-subnet).
+ - You need to create a dedicated subnet if you use Azure HPC Cache for storage. For more information about this subnet prerequisite, see [Cache subnet](/azure/hpc-cache/hpc-cache-prerequisites#cache-subnet). To learn more about how to create a subnet, see [Add a virtual network subnet](/azure/virtual-network/virtual-network-manage-subnet).
 
 ## Configure DNS and name resolution for on-premises and Azure resources
 
-Domain Name System (DNS) is a critical design element in the Azure landing zone architecture. Some organizations might prefer to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
+Domain Name System (DNS) is a critical design element in the Azure landing zone architecture. Some organizations prefer to use their existing investments in DNS. Others see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
 
 ### Design recommendations
 
-The following recommendations are for scenarios in which a virtual machine's DNS or virtual name doesn't change during migration.
+The following recommendations apply to scenarios in which a virtual machine's DNS or virtual name doesn't change during migration.
 
  - Background DNS and virtual names connect many system interfaces in HPC environments. You might not be aware of all the interfaces that developers define over time. Connection challenges arise between various systems when virtual machine or DNS names change after migrations. We recommend that you retain DNS aliases to prevent these difficulties.
- - Use different DNS zones to distinguish each environment (sandbox, development, preproduction, and production) from each other. The exception is for HPC deployments that have their own virtual networks. In these deployments, private DNS zones might not be necessary.
+ - Use different DNS zones to distinguish the environments (sandbox, development, preproduction, and production) from each other. The exception is for HPC deployments that have their own virtual networks. In these deployments, private DNS zones might not be necessary.
  - DNS support is required when you use HPC Cache. DNS enables it to access storage and other resources.
  - DNS and name resolution are critical in the finance sector when you use resource location and SRV records. We recommend that you use the DNS resolution provided by the Azure Active Directory Domain Services (Azure AD DS) domain controller. For more information, see [Deploy Azure AD DS in an Azure virtual network](/azure/architecture/reference-architectures/identity/adds-extend-domain).
 
@@ -48,7 +48,7 @@ The following recommendations are for scenarios in which a virtual machine's DNS
 
 ### Azure ExpressRoute
 
- - For hybrid applications like risk grid computing solutions, where your on-premises trading systems and analytics are functional and Azure becomes an extension, ExpressRoute can help you to connect your on-premises environment to Azure over a private connection with the help of a connectivity provider. It provides enterprise-grade resiliency and availability and the advantage of a global ExpressRoute partner ecosystem. For information on how to connect your network to Azure by using ExpressRoute, see [ExpressRoute connectivity models](/azure/expressroute/expressroute-connectivity-models).
+ - For hybrid applications like risk grid computing solutions, where your on-premises trading systems and analytics are functional and Azure becomes an extension, you can use ExpressRoute to connect your on-premises environment to Azure over a private connection, with the help of a connectivity provider. ExpressRoute provides enterprise-grade resiliency and availability and the advantage of a global ExpressRoute partner ecosystem. For information on how to connect your network to Azure by using ExpressRoute, see [ExpressRoute connectivity models](/azure/expressroute/expressroute-connectivity-models).
  - ExpressRoute connections don't use the public internet, and they provide more reliability, faster speeds, and lower latencies than typical internet connections. For point-to-site VPN and site-to-site VPN, you can connect on-premises devices or networks to a virtual network by using any combination of these VPN options and ExpressRoute.
 
 ## Define an Azure network topology
@@ -79,12 +79,12 @@ This section describes recommended connectivity models for inbound and outbound 
 ### Design considerations and recommendations
 
  - If your organization has a global footprint, [Azure Front Door](/azure/frontdoor/front-door-overview) can be helpful in your HPC deployment. Azure Front Door uses [Azure Web Application Firewall policies](/azure/web-application-firewall/ag/policy-overview) to deliver and help protect global HTTP(S) applications across Azure regions.
- - Take advantage of [Web Application Firewall policies](/azure/web-application-firewall/ag/create-waf-policy-ag) in Azure Front Door when you're using Azure Front Door and Application Gateway to protect HTTP(S) applications. Lock down Application Gateway to receive traffic only from Azure Front Door. For more information, see [How do I lock down access](/azure/frontdoor/front-door-faq#how-do-i-lock-down-the-access-to-my-backend-to-only-azure-front-door-).
+ - Take advantage of [Web Application Firewall policies](/azure/web-application-firewall/ag/create-waf-policy-ag) in Azure Front Door when you're using Azure Front Door and Application Gateway to help protect HTTP(S) applications. Lock down Application Gateway to receive traffic only from Azure Front Door. For more information, see [How do I lock down access?](/azure/frontdoor/front-door-faq#how-do-i-lock-down-the-access-to-my-backend-to-only-azure-front-door-).
  - Use local and global virtual network peering connectivity. These are the preferred methods for ensuring connectivity between landing zones for HPC deployments across multiple Azure regions.
 
 ## Define network encryption requirements
 
-This section provides key recommendations for encrypting networks between on-premises and Azure, and across Azure regions.
+This section provides key recommendations for encrypting networks between on-premises environments and Azure, and across Azure regions.
 
 ### Design considerations and recommendations
 
@@ -92,7 +92,7 @@ This section provides key recommendations for encrypting networks between on-pre
 
 ## Next steps
 
-The following articles provide guidance that you might find helpful at various points during the cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC environments in the finance sector.
+The following articles provide guidance that you might find helpful during various stages of the cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC environments in the finance sector.
 
 - [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
