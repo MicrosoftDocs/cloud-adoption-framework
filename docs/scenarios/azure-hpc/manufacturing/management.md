@@ -1,5 +1,5 @@
 ---
-title: 'Manufacturing HPC Management | Microsoft Docs'
+title: Management for HPC in the manufacturing industry 
 description: 'Azure landing zones for HPC in Manufacturing do not have any specific considerations or recommendations which would impact management related decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Management for manufacturing HPC
+# Management for HPC in the manufacturing industry
 
 Azure landing zones for HPC in Manufacturing do not have any specific considerations or recommendations which would impact management related decisions.
 
