@@ -29,7 +29,7 @@ For example:
 
 The following articles provide guidance that you might find helpful at various points during the cloud adoption process. They can help you succeed in your cloud adoption scenario for manufacturing HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
+- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
 - [Network topology and connectivity](./network-topology-connectivity.md)
