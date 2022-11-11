@@ -1,5 +1,5 @@
 ---
-title: Azure identity and access management for HPC
+title: Azure identity and access management for energy HPC
 description: Learn about identity and access management for high-performance computing (HPC) using this energy industry scenario that builds on the Azure landing zone design area.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/09/2022
 ---
 
-# Azure identity and access management for HPC
+# Azure identity and access management for energy HPC
 
 The guidance in this article can help you examine design considerations and recommendations that relate to identity and access management for high-performance computing (HPC). This scenario is specific to the deployment of an HPC application for the energy industry. For more information about design considerations and recommendations, see the [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
@@ -26,7 +26,7 @@ Two common deployment types in oil and gas industry workloads are *cloud only* a
 
 Both the cloud only and hybrid cloud models might have their own unique identity and access needs that affect which type of active directory solution to adopt.
 
-Workloads in the cloud only deployment model use Azure AD for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Azure AD hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication based on decisions made by the cloud team. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy active directory support through Azure AD DS.
+Workloads in the cloud only deployment model use Azure AD for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Azure AD hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy active directory support through Azure AD DS.
 
 A typical HPC setup includes a frontend for submitting jobs, a job scheduler or orchestrator, a compute cluster, and shared storage. The jobs can be submitted from on-premises and/or in the cloud. Identity and access management considerations for users and visualization devices might vary depending on the enterprise standards.
 
@@ -36,21 +36,21 @@ Review the Azure administration and management activities that you require from 
 
 Depending on the HPC compute resource orchestrator that you choose, different types of authentication methods are supported:
 
- - [Azure CycleCloud](/azure/cyclecloud/overview) offers three methods of authentication: a built-in database with encryption, active directory, or LDAP.
- - [Azure Batch](/azure/batch/batch-technical-overview) supports two methods of authentication: shared key and Azure AD.
- - [Microsoft HPC Pack](/powershell/high-performance-computing/overview-of-microsoft-hpc-pack): Currently all HPC Pack nodes must be joined into an active directory domain. If you deploy the HPC Pack cluster in a virtual network that has a site-to-site VPN or ExpressRoute connection with your corporate network, there's usually an existing active directory domain. If you don't have an active directory domain in your virtual network yet, you can choose to create one by promoting the head node as domain controller.
+- [Azure CycleCloud](/azure/cyclecloud/overview) offers three methods of authentication: a built-in database with encryption, active directory, or LDAP.
+- [Azure Batch](/azure/batch/batch-technical-overview) supports two methods of authentication: shared key and Azure AD.
+- [Microsoft HPC Pack](/powershell/high-performance-computing/overview-of-microsoft-hpc-pack): Currently all HPC Pack nodes must be joined into an active directory domain. If you deploy the HPC Pack cluster in a virtual network that has a site-to-site VPN or ExpressRoute connection with your corporate network, there's usually an existing active directory domain. If you don't have an active directory domain in your virtual network yet, you can choose to create one by promoting the head node as domain controller.
 
 ## Next steps
 
 The following articles provide guidance for specific steps in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing for HPC](./azure-billing-active-directory-tenant.md)
-- [Compute for HPC](./compute.md)
-- [Management for HPC](./management.md)
-- [Network topology connectivity for HPC](./network-topology-connectivity.md)
-- [Platform automation DevOps for HPC](./platform-automation-devops.md)
-- [Resource organization for HPC](./resource-organization.md)
-- [Governance and compliance for HPC](./security-governance-compliance.md)
-- [Security for HPC](./security.md)
-- [Storage for HPC](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [Azure billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Compute](./compute.md)
+- [Management](./management.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps](./platform-automation-devops.md)
+- [Resource organization](./resource-organization.md)
+- [Governance and compliance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
