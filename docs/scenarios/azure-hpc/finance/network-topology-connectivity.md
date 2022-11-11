@@ -1,5 +1,5 @@
 ---
-title: 'Finance HPC Network topology and connectivity | Microsoft Docs'
+title: Finance HPC Network topology and connectivity 
 description: 'This finance HPC guidance builds on considerations and recommendations defined in the Azure landing zone article for network topology and connectivity.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
