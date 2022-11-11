@@ -1,13 +1,13 @@
 ---
 title: Compute 
-description: Learn about the Azure VM instances that are ideal for large-scale HPC application workloads in the oil and gas industry, HPC use cases, design considerations, and design recommendations.
+description: Learn about the Azure VM instances that are ideal for large-scale HPC application workloads in the oil and gas industry, plus HPC use cases, reference architecture, design considerations, and design recommendations.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 11/10/2022
+ms.date: 11/11/2022
 ---
 
 # Compute
@@ -22,7 +22,7 @@ The following are typical characteristics of big compute applications:
 - For some applications, tasks are independent and can run in parallel. In other cases, tasks are tightly coupled, meaning they must interact or exchange intermediate results. In that case, consider using high-speed networking technologies such as InfiniBand and remote direct memory access (RDMA).
 - Depending on your workload, you might use compute-intensive VM sizes (H16r, H16mr, and A9).
 
-:::image type="content" alt-text="Azure tasks" source="../media/tasks.png" lightbox="../media/tasks.png":::
+:::image type="content" source="../media/tasks.png" alt-text="Azure tasks." lightbox="../media/tasks.png":::
 
 Azure offers a range of VM instances that are optimized for both CPU- and GPU-intensive workloads (both compute and visualization). The VMs are ideal for running oil and gas workloads.
 
@@ -106,13 +106,13 @@ For more information on reference architecture or cookbooks for relevant HPC ISV
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Identity Access Management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
+- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
+- [Management for manufacturing HPC](./management.md)
+- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
+- [Resource organization for manufacturing HPC](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
+- [Security for manufacturing HPC](./security.md)
+- [Storage for manufacturing HPC](./storage.md)
 - Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
