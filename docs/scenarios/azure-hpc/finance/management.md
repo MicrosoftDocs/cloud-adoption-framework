@@ -1,5 +1,5 @@
 ---
-title: 'Finance HPC Management | Microsoft Docs'
+title: Management for HPC in the finance sector
 description: 'Azure landing zones for HPC in finance do not have any specific considerations or recommendations which would impact management related decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 
-# Management for finance HPC
+# Management for HPC in the finance sector
 
 Azure landing zones for HPC in finance do not have any specific considerations or recommendations which would impact management related decisions.
 
