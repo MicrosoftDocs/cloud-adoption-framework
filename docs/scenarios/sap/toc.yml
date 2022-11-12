@@ -41,7 +41,7 @@ items:
   - name: Manage SAP platform and workloads
     href: manage.md
   - name: Well-architected considerations
-    href: /azure/architecture/framework/sap/overview
+    href: /azure/architecture/framework/sap/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
   - name: SAP architectures
     items:
     - name: SAP HANA on Azure (Large Instances)
