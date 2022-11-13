@@ -10,6 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
+
 # Azure fundamental concepts
 
 In this article, learn about fundamental concepts, terms used in Microsoft Azure, and how the concepts relate to one another.
@@ -19,7 +20,7 @@ In this article, learn about fundamental concepts, terms used in Microsoft Azure
 It's helpful to know the following definitions as you begin your Azure cloud adoption journey:
 
 - **Resource:** An entity that's managed by Azure. Examples include Azure Virtual Machines, virtual networks, and storage accounts.
-- **Subscription:** A logical container for your resources. Each Azure resource is associated with only one subscription. Creating a subscription is the first step in adopting Azure.
+- **Subscription:** A Billing and Access control boundary. Azure Subscription works as logical container for your resources. Each Azure resource is associated with only one subscription. Creating a subscription is the first step in adopting Azure.
 - **Azure account:** The email address that you provide when you create an Azure subscription is the Azure account for the subscription. The party that's associated with the email account is responsible for the monthly costs incurred by the resources in the subscription. When you create an Azure account, you provide contact information and billing details, like a credit card. You can use the same Azure account for multiple subscriptions. Each subscription is associated with only one Azure account.
 - **Account administrator:** The party associated with the email address that's used to create an Azure subscription. The account administrator is responsible for paying for all costs that incur by the subscription's resources.
 - **Azure Active Directory (Azure AD):** The Microsoft cloud-based identity and access management service. Azure AD lets your employees sign in and access resources.
