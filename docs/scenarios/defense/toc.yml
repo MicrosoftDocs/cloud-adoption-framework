@@ -57,7 +57,7 @@ items:
       - name: Services by audit scope
         href: /azure/azure-government/compliance/azure-services-in-fedramp-auditscope
 
-  - name: Learn modules
+  - name: Learn
     items:
       - name: U.S. Government learn modules
         href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
