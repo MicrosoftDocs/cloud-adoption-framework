@@ -20,7 +20,7 @@ Keep in mind that it could be important to understand any decisions made previou
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in the cloud adoption scenario for HPC in the manufacturing industry.
 
-- [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
 - [Network topology and connectivity](./network-topology-connectivity.md)
