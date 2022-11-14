@@ -1,5 +1,5 @@
 ---
-title: 'Manufacturing HPC platform automation and DevOps| Microsoft Docs'
+title: Manufacturing HPC platform automation and DevOps
 description: 'Azure landing zones for HPC in manufacturing do not have any specific considerations or recommendations which would impact DevOps related decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
