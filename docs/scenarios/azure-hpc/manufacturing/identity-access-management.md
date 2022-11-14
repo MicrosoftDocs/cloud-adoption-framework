@@ -1,5 +1,5 @@
 ---
-title: Azure identity and access management for manufacturing HPC | Microsoft Docs
+title: Azure identity and access management for HPC in manufacturing  
 description: This article describes considerations and provides recommendations for identity and access management in manufacturing HPC environments.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/09/2022
 ---
 
-# Azure identity and access management for manufacturing HPC
+# Azure identity and access management for HPC in manufacturing 
 
 This article builds on considerations and recommendations that are described in the article [Azure identity and access management design](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). It can help you examine design considerations for identity and access management that are specific to the deployment, on Azure, of HPC applications designed for the manufacturing industry.
 
