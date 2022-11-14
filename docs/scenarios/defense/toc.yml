@@ -27,41 +27,41 @@ items:
   - name: Best practices
     items:
       - name: Zero Trust
-        href: /security/zero-trust/zero-trust-overview
+        href: /security/zero-trust/zero-trust-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Compliance
-        href: /azure/compliance/
+        href: /azure/compliance/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Secure isolation
-        href: /azure/azure-government/azure-secure-isolation-guidance
+        href: /azure/azure-government/azure-secure-isolation-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Trusted internet connection
-        href: /azure/azure-government/compliance/compliance-tic
+        href: /azure/azure-government/compliance/compliance-tic?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: DoD documentation
         items: 
           - name: Overview
-            href: /azure/azure-government/documentation-government-overview-dod
+            href: /azure/azure-government/documentation-government-overview-dod?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Secure cloud computing architecture
-            href: /azure/azure-government/compliance/secure-azure-computing-architecture
+            href: /azure/azure-government/compliance/secure-azure-computing-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Security 
-            href: /azure/azure-government/documentation-government-plan-security
+            href: /azure/azure-government/documentation-government-plan-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Compliance
-            href: /azure/azure-government/documentation-government-plan-compliance
+            href: /azure/azure-government/documentation-government-plan-compliance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Identity
-            href: /azure/azure-government/documentation-government-plan-identity
+            href: /azure/azure-government/documentation-government-plan-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Monitoring
-            href: /azure/azure-government/documentation-government-manage-oms
+            href: /azure/azure-government/documentation-government-manage-oms?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Development
-            href: /azure/azure-government/documentation-government-developer-guide
+            href: /azure/azure-government/documentation-government-developer-guide?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: IL5 isolation
-            href: /azure/azure-government/documentation-government-impact-level-5
+            href: /azure/azure-government/documentation-government-impact-level-5?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
   - name: Microsoft products
     items:
       - name: Service compliance
-        href: /azure/compliance/offerings/
+        href: /azure/compliance/offerings/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Services by audit scope
-        href: /azure/azure-government/compliance/azure-services-in-fedramp-auditscope
+        href: /azure/azure-government/compliance/azure-services-in-fedramp-auditscope?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
 
   - name: Learn
     items:
       - name: U.S. Government learn modules
-        href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
+        href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: CISO workshops
-        href: /security/ciso-workshop/ciso-workshop
+        href: /security/ciso-workshop/ciso-workshop?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
