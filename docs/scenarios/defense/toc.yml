@@ -34,7 +34,7 @@ items:
         items: 
           - name: Overview
             href: /azure/azure-government/documentation-government-overview-dod
-          - name: SCCA
+          - name: Secure cloud computing architecture
             href: /azure/azure-government/compliance/secure-azure-computing-architecture
           - name: Security 
             href: /azure/azure-government/documentation-government-plan-security
