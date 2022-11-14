@@ -56,7 +56,7 @@ There are two built-in policies to support this function. Use either and customi
 - The [Allowed resource types policy](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa08ec900-254a-4555-9bf5-e42af04b5c5c) ensures your organization can only deploy the specified resource types.
 - The [Not allowed resource types policy](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749) ensures your organization doesn't deploy specified resource types.
 
-Use the [Service enablement framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/service-enablement-framework) to help assess the enterprise security, governance and compliance readiness of Azure resource types and services before it's approved in your organization.
+Use the [Service enablement framework](/azure/cloud-adoption-framework/ready/landing-zone/design-area/service-enablement-framework) to help assess the enterprise security, governance and compliance readiness of Azure resource types and services before it's approved in your organization.
 
 ## Monitoring
 
