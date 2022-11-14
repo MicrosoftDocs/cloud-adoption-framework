@@ -1,5 +1,5 @@
 ---
-title: Azure landing zones for HPC
+title: Azure landing zone for HPC
 description: This article describes the HPC scenario's effect on Azure landing zone design.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank
 ---
 
-# Azure landing zones for HPC
+# Azure landing zone for HPC
 
-The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure can guide you through the process of preparing your environment for cloud adoption. During the readiness phase, you can use Azure landing zones. Landing zones are technical accelerators that provide the basic building block for any cloud adoption environment. Landing zones automate the configuration of your Azure environment, aligning with best practice guidance from the Cloud Adoption Framework. In the process of preparing for high-performance computing (HPC), you might encounter environment configurations that depend on your industry use case and requirements.
+The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure can guide you through the process of preparing your environment for cloud adoption. During the readiness phase, you can use an Azure landing zone. A landing zone is a technical accelerator that provides the basic building block for any cloud adoption environment. A landing zone can automate the configuration of your Azure environment, aligning with best practice guidance from the Cloud Adoption Framework. In the process of preparing for high-performance computing (HPC), you might encounter environment configurations that depend on your industry use case and requirements.
 
 ## Azure landing zone conceptual architecture
 
@@ -22,7 +22,7 @@ As you prepare your environment for sustained cloud adoption, you can use an Azu
 - [Finance](../azure-hpc/azure-hpc-landing-zone-accelator.md#example-conceptual-energy-reference-architecture)
 - [Manufacturing](./azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
 
-As you develop a long-term vision for landing zones, consider these architecture references. These references provide a starting point. Based on your organization's business requirements and the needs of your end users, you might need to modify them.
+As you develop a long-term vision for your landing zone, consider these architecture references. These references provide a starting point. Based on your organization's business requirements and the needs of your end users, you might need to modify them.
 
 ## Evaluation for HPC
 
@@ -51,5 +51,5 @@ The environment contains:
 
 ## Next steps
 
-- After you prepare your HPC landing zones, start looking into what your [migration](./migrate.md) will look like.
+- After you prepare your HPC landing zone, start looking into what your [migration](./migrate.md) will look like.
 - See the overall [HPC landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelator.md).
