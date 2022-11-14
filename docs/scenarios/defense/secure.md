@@ -36,7 +36,7 @@ RBAC and ABAC are the core features of least privilege enforcement. People chang
 
 Azure simplifies access reviews with RBAC and ABAC automating aspects of access control. Conditional access policies can be tied to roles, departments, projects, and locations of defense personnel. As people change roles or locations, their access to resources will change when updated in their identity. Security teams can perform manual reviews of any resource in Azure at any time. Azure lets users see resources from multiple levels, making manual review easier.
 
-Granting elevated privilege for a defined period is a security best-practice. Azure AD simplifies the use of elevated privileges with Privileged Identity Management (PIM). PIM grants elevated privileges when requested by a legitimate user and only grants those privileges for a defined period. This process represents just-in-time-access and reduces the number of dormant accounts that have privileged access. For more information, see: 
+Granting elevated privilege for a defined period is a security best-practice. Azure AD simplifies the use of elevated privileges with Privileged Identity Management (PIM). PIM grants elevated privileges when requested by a legitimate user and only grants those privileges for a defined period. This process represents just-in-time-access and reduces the number of dormant accounts that have privileged access. For more information, see:
 
 - [PIM for just-in-time access](/azure/active-directory/roles/best-practices#2-use-privileged-identity-management-to-grant-just-in-time-access)
 - [Azure identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices)

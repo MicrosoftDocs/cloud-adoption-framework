@@ -32,6 +32,8 @@ items:
         href: /azure/compliance/
       - name: Secure isolation
         href: /azure/azure-government/azure-secure-isolation-guidance
+      - name: Trusted internet connection
+        href: /azure/azure-government/compliance/compliance-tic
       - name: DoD documentation
         items: 
           - name: Overview
