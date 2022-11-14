@@ -26,6 +26,8 @@ items:
         href: manage.md
   - name: Best practices
     items:
+      - name: Zero Trust
+        href: /security/zero-trust/zero-trust-overview
       - name: Compliance
         href: /azure/compliance/
       - name: Secure isolation
@@ -46,8 +48,6 @@ items:
             href: /azure/azure-government/documentation-government-manage-oms
           - name: Development
             href: /azure/azure-government/documentation-government-developer-guide
-          - name: DISA STIGs
-            href: /azure/azure-government/documentation-government-stig-linux-vm
           - name: IL5 isolation
             href: /azure/azure-government/documentation-government-impact-level-5
   - name: Microsoft products
@@ -58,4 +58,8 @@ items:
         href: /azure/azure-government/compliance/azure-services-in-fedramp-auditscope
 
   - name: Learn modules
-    href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
+    items:
+      - name: U.S. Government learn modules
+        href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us
+      - name: CISO workshops
+        href: /security/ciso-workshop/ciso-workshop
