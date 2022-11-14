@@ -197,9 +197,10 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Virtual desktop host pool | | `vdpool` |
-| Virtual desktop application group | | `vdag` |
-| Virtual desktop workspace | | `vdws` |
+| Virtual desktop host pool | `Microsoft.DesktopVirtualization/hostPools` | `vdpool` |
+| Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
+| Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
+| Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
 
 ## Developer tools
 
