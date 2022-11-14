@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 11/11/2022
+ms.date: 11/14/2022
 ---
 
 # Compute
@@ -22,7 +22,7 @@ The following are typical characteristics of big compute applications:
 - For some applications, tasks are independent and can run in parallel. In other cases, tasks are tightly coupled, meaning they must interact or exchange intermediate results. In that case, consider using high-speed networking technologies such as InfiniBand and remote direct memory access (RDMA).
 - Depending on your workload, you might use compute-intensive VM sizes (H16r, H16mr, and A9).
 
-:::image type="content" source="../media/tasks.png" alt-text="Azure tasks." lightbox="../media/tasks.png":::
+:::image type="content" source="../media/tasks.png" alt-text="Diagram of Azure tasks." lightbox="../media/tasks.png":::
 
 Azure offers a range of VM instances that are optimized for both CPU- and GPU-intensive workloads (both compute and visualization). The VMs are ideal for running oil and gas workloads.
 
@@ -33,8 +33,6 @@ Azure VMs have many different options, known as VM sizes. There are different se
 Not all Azure products are available in all Azure regions. For more information, see the current [list of products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/).
 
 For best practices on your choices in Azure compute, see the [Azure compute blog](https://techcommunity.microsoft.com/t5/azure-compute-blog/bg-p/AzureCompute) or see the[Azure compute service](/azure/architecture/guide/technology-choices/compute-decision-tree) content to choose a service.
-
-Azure offers a range of sizes that are optimized for both CPU- and GPU-intensive workloads.
 
 **CPU-based virtual machines**
 
@@ -52,7 +50,7 @@ HPC SKUs are built specially for high-performance scenarios. But Azure also offe
 
 ## HPC design considerations
 
-[Job Scheduler](/azure/logic-apps/logic-apps-overview) Azure offers specialized services to schedule compute-intensive work to run on a managed pool of virtual machines. You can automatically scale compute resources to meet the needs of your jobs.
+[Job Scheduler](/azure/logic-apps/logic-apps-overview) is a specialized service for scheduling compute-intensive work to run on a managed pool of virtual machines. You can automatically scale compute resources to meet the needs of your jobs.
 
 [Azure Batch](/azure/batch/) is a managed service for running large-scale HPC applications. Using Azure Batch, you configure a VM pool, and then you upload the applications and data files. Then the Batch service configures the VMs, assigns tasks to the VMs, runs the tasks, and monitors the progress. Batch can automatically scale VMs up and down in response to changing workloads. Batch also provides a job-scheduling functionality.
 
@@ -83,9 +81,9 @@ The quality of the subsurface model and the quality and resolution of the data i
 
 This job is data- and compute-intensive. The company needs to process terabytes of data, requiring massive and fast computation power, which includes fast networking. Due to the data- and computing-intensive nature of seismic imaging, companies use parallel computing to process data and reduce the time compilation and completion. Companies relentlessly process large volumes of seismic acquisition data to locate, accurately quantify, and qualify the hydrocarbon content in reservoirs discovered in the subsurface before recovery operations commence. As acquisition data is unstructured and can easily reach petabyte levels for one potential oil and gas field, seismic processing activity can only be completed within a meaningful timescale by using HPC and appropriate data management strategies.
 
-:::image type="content" source="../media/network-interconnect.png" alt-text="Network interconnect compute and storage - seismic interpretation and modeling." lightbox="../media/network-interconnect.png":::
+:::image type="content" source="../media/network-interconnect.png" alt-text="Diagram of network interconnect compute and storage - seismic interpretation and modeling." lightbox="../media/network-interconnect.png":::
 
-:::image type="content" source="../media/network-reference-architecture-seismic-processing.png" alt-text="Network reference architecture - seismic processing." lightbox="../media/network-reference-architecture-seismic-processing.png":::
+:::image type="content" source="../media/network-reference-architecture-seismic-processing.png" alt-text="Diagram of network reference architecture - seismic processing." lightbox="../media/network-reference-architecture-seismic-processing.png":::
 
 ### Use case and reference architecture for reservoir simulation and modeling
 
@@ -93,9 +91,9 @@ Reservoir modeling also places values on physical subsurface characteristics suc
 
 A reservoir modeling workload is also an area of reservoir engineering. The workload combines physics, mathematics, and computer programming in a reservoir model to analyze and predict fluid behavior in the reservoir over time. This analysis requires high computation power and typically big compute workload demands including fast networking.
 
-:::image type="content" source="../media/network-reference-architecture-reservoir-simulation.png" alt-text="Network reference architecture - reservoir simulation." lightbox="../media/network-reference-architecture-reservoir-simulation.png":::
+:::image type="content" source="../media/network-reference-architecture-reservoir-simulation.png" alt-text="Diagram of network reference architecture - reservoir simulation." lightbox="../media/network-reference-architecture-reservoir-simulation.png":::
 
-:::image type="content" source="../media/network-interconnect-compute-and-storage-seismic-analysis.png" alt-text="Network interconnect compute and storage seismic analysis." lightbox="../media/network-interconnect-compute-and-storage-seismic-analysis.png":::
+:::image type="content" source="../media/network-interconnect-compute-and-storage-seismic-analysis.png" alt-text="Diagram of network interconnect compute and storage seismic analysis." lightbox="../media/network-interconnect-compute-and-storage-seismic-analysis.png":::
 
 For more information on reference architecture or cookbooks for relevant HPC ISV applications that support HPC for energy use cases, see:
 
@@ -115,4 +113,4 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for manufacturing HPC](./security.md)
 - [Storage for manufacturing HPC](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
