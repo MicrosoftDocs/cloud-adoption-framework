@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
+ms.date: 11/14/2022
 ---
 
 # Resource Organization
