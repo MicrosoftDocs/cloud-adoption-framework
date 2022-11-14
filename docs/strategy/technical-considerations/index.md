@@ -47,7 +47,7 @@ Moving the first workload is usually [aligned with the business goals](../motiva
 Although sustainability is a key concept, in reality, it might be idealistic to believe it will be the primary decision factor for cloud migration.
 However, it is a significant added benefit and part of the continuous environment optimization efforts that align with the green strategy of a business.
 
-Projected business outcomes can be synchronized with the [sustainability benefits](../business-outcomes/index.md#sustainability-goals) brought by the migration.
+Projected business outcomes can be synchronized with the [sustainability benefits](../business-outcomes/index.md) brought by the migration.
 
 Resource-intensive workloads can be discovered using [Azure Migrate](/azure/migrate/migrate-services-overview).
 
