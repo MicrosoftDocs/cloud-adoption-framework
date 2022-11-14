@@ -12,7 +12,7 @@ ms.date: 11/14/2022
 
 # Platform automation and DevOps for HPC in the finance sector
 
- Azure [landing zones for HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/ready) in the finance sector don't have any specific considerations or recommendations that affect decisions related to platform automation and DevOps. Platform automation and DevOps is one of several design areas considered in this documentation.
+ Azure [landing zones for HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/ready) in the finance sector don't have any specific considerations or recommendations that affect decisions related to platform automation and DevOps. Platform automation and DevOps are two of several design areas considered in this documentation.
 
 Keep in mind that it could be important to understand any decisions made previously by the cloud platform team so you know about existing recommendations for [platform automation and DevOps](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
 
