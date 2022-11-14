@@ -1,5 +1,5 @@
 ---
-title: 'Finance HPC Platform automation and DevOps | Microsoft Docs'
+title: Finance HPC platform automation and DevOps 
 description: 'Azure landing zones for HPC in finance do not have any specific considerations or recommendations which would impact devops related decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
