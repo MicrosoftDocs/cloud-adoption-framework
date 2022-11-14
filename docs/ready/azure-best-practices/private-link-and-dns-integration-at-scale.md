@@ -436,8 +436,8 @@ If an application owner deletes the private endpoint, the corresponding records 
 
 ## Next steps
 
-Review [DNS for on-premises and Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources).
-Review [Plan for virtual machine remote access](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-virtual-machine-remote-access).
+Review [DNS for on-premises and Azure resources](./dns-for-on-premises-and-azure-resources.md).
+Review [Plan for virtual machine remote access](./plan-for-virtual-machine-remote-access.md).
 
 > [!IMPORTANT]
 > This article outlines DNS and Private link integration at scale using DINE (DeployIfNotExists) policies assigned to the Management Group. Which means there is no need to handle the DNS integration in code when creating Private Endpoints with this approach, as it is handled by the policies. It is also unlikely that the application teams have RBAC access to the centralized Private DNS Zones also.

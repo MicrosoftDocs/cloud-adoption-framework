@@ -42,12 +42,12 @@ Capacity optimization, where you only pay for the resources you utilize over tim
 
 Building a sustainable IT infrastructure is tightly connected to moving workloads from on-premises to the cloud. So how do we select the first project to migrate based on its potential sustainability impact?
 
-Moving the first workload is usually [aligned with the business goals](/azure/cloud-adoption-framework/strategy/motivations#motivations), depending on how the migration aligns with an array of factors that lead to this decision.
+Moving the first workload is usually [aligned with the business goals](../motivations.md#motivations), depending on how the migration aligns with an array of factors that lead to this decision.
 
 Although sustainability is a key concept, in reality, it might be idealistic to believe it will be the primary decision factor for cloud migration.
 However, it is a significant added benefit and part of the continuous environment optimization efforts that align with the green strategy of a business.
 
-Projected business outcomes can be synchronized with the [sustainability benefits](/azure/cloud-adoption-framework/strategy/business-outcomes/#sustainability-goals) brought by the migration.
+Projected business outcomes can be synchronized with the [sustainability benefits](../business-outcomes/index.md#sustainability-goals) brought by the migration.
 
 Resource-intensive workloads can be discovered using [Azure Migrate](/azure/migrate/migrate-services-overview).
 

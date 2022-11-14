@@ -34,7 +34,7 @@ The Azure landing zones help you choose a direction for your overall Azure envir
 * Your organization's operating model separates the roles of your corporate IT team and your SaaS product teams. Your organization's corporate IT team might manage resources like Microsoft Office 365 and Microsoft Teams, and your SaaS product team might be responsible for building and operating your SaaS product (including its central platform and identity components).
 
 > [!NOTE]
-> Sometimes, ISVs want to start with just a single Azure subscription that includes both platform "shared services" aspects and actual workload resources. Although this is technically possible, you'll face challenges later on when you need to move resources between subscriptions and find that not all [resource types can be moved](../enterprise-scale/transition.md#moving-resources-in-azure). Review the [impact of design deviations](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#impact-of-design-deviations) to understand what deviations are possible and their various levels of risk.
+> Sometimes, ISVs want to start with just a single Azure subscription that includes both platform "shared services" aspects and actual workload resources. Although this is technically possible, you'll face challenges later on when you need to move resources between subscriptions and find that not all [resource types can be moved](../enterprise-scale/transition.md#moving-resources-in-azure). Review the [impact of design deviations](./design-principles.md#impact-of-design-deviations) to understand what deviations are possible and their various levels of risk.
 
 ## ISV deployment models
 
