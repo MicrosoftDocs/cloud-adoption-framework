@@ -56,7 +56,10 @@ For more information on zero trust, see [zero trust in Azure](/security/zero-tru
 
 Defense security standards require defense security professionals to maintain hundreds of security controls. The manual execution of this process is labor intensive and prone to human error. It's possible to automate compliance with leading security standards and automate the remediation of cloud resources to align with those standards. Azure allows mission owners to automate compliance for, Zero Trust, CMMC, and NIST 800-53
 
-The Azure SIEM (Sentinel) can create a visual report all non-compliant resources against a given security standard. When prompted, it generates remediation suggestions for any security controls that aren’t compliant with the standard. The SIEM tool also lets security professionals download compliance assessment reports that can serve as point-in-time security baseline and improve transparency. For more information, see, [zero trust automation](/security/zero-trust/integrate/sentinel-solution) and [built-in compliance workbooks](/azure/sentinel/monitor-your-data).
+Microsoft Defender for Cloud can create a visual report all non-compliant resources against a given security standard. It can generate remediation suggestions for security controls that aren’t compliant with the standard. Microsoft Defender for Cloud also lets security professionals download compliance assessment reports that serve as security baselines. For more information, see:
+
+- [Automate compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard)
+- [Visualize compliance](/azure/defender-for-cloud/custom-dashboards-azure-workbooks)
 
 For general security information, see:
 
