@@ -51,6 +51,44 @@ The following architecture diagram is an example that shows design areas and bes
 
 [![Azure VMware Solution landing zone accelerator architecture](./media/azure-vmware-eslz-architecture.png)](./media/azure-vmware-eslz-architecture.png#lightbox)
 
+## Deploy Azure VMware Solution (AVS) resources and dependent services for establishing the baseline
+
+The AVS Accelerator can be used as initial deployment of Azure VMware Solution in the enterprise environment. You can develop and customize the code to expand its functionality and/or adapt to your Enterprise-Scale Azure Landing Zones environment.
+
+The Azure VMware Solution Accelerator is designed to deploy an Azure VMware Solution private cloud and it is recommended to couple it with an Enterprise-Scale landing zone deployment. See [Deploying Enterprise-Scale Architecture in your own environment](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment).
+
+### Deployment options for AVS
+
+#### AVS Greenfield Deployment
+
+This deployment is best suited to those looking to provision a new AVS Private Cloud, the automation will let you choose and deploy the following:
+
+- AVS Private Cloud
+- Choose New or Existing virtual network (VNet)
+- [Optional]: Deploy Azure Route Server for VPN Connections
+- [Optional]: Deploy AVS Monitoring
+- [Optional]: Deploy HCX and SRM
+
+
+|Greenfield deployment options:          |                           |
+|:-------------------------------------|:------------------------: |
+|Azure portal UI          |[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2FPortalUI%2FARM%2FESLZDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2FPortalUI%2FARM%2FESLZdeploy.PortalUI.json)      |
+|Command line (Bicep/ARM)              |[![Powershell/Azure CLI](./media/powershell.png)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Bicep)          |
+|Terraform                             |[![Terraform](./media/terraform.png)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)                  |
+
+#### AVS Greenfield Lite Deployment
+
+This deployment is a lite version of the full AVS Greenfield Deployment and will deploy the following:
+
+- New AVS Private Cloud - Allows for a custom resource group name and Private Cloud Name
+- or Choose an existing AVS Private Cloud
+- [Optional]: Deploy AVS Monitoring
+- [Optional]: Deploy HCX and SRM
+
+|Greenfield Lite deployment:          |                           |
+|:-------------------------------------|:------------------------: |
+|Azure portal UI          |[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)      |
+
 ## Next steps
 
 Review design considerations and recommendations related to identity and access management specific to the deployment of Azure VMware Solution.
