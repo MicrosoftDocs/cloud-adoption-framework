@@ -29,3 +29,4 @@ The following list of articles will take you to guidance found at specific point
 - [Resource Organization](./resource-organization.md)
 - [Security for energy HPC](./security.md)
 - [Storage for HPC energy environments](./storage.md)
+- [HPC Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
