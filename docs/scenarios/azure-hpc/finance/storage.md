@@ -1,6 +1,6 @@
 ---
-title: 'Finance HPC Storage | Microsoft Docs'
-description: 'Large-scale HPC workloads in finance have demands for data storage and access that exceed the capabilities of traditional cloud file systems.'
+title: Storage for HPC in the finance sector   
+description: This article provides recommendations for implementing storage in HPC environments for the finance sector.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -10,57 +10,61 @@ ms.custom: think-tank
 ms.date: 11/15/2022
 ---
 
-# Storage for finance HPC
+# Storage for HPC in the finance sector
 
-Large-scale HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.
+This article provides recommendations for implementing storage in HPC environments for the finance sector. Large-scale HPC workloads in finance environments create demands for data storage and access that exceed the capabilities of traditional cloud file systems.
 
-## Design considerations:
+## Design considerations
 
-Below are the factors you would need to consider and identify about your application requirement to decide on what storage solution to use
+To decide which storage solution to use, you need to take into account the following considerations regarding your application requirements.
 
- - Latency,
- - IOPS,
- - Throughput,
- - File sizes and count,
- - Job run time
- - Cost associated
- - Affinity for storage location – on-premises vs Azure
+ - Latency
+ - IOPS
+ - Throughput
+ - File sizes and number
+ - Job runtime
+ - Associated costs
+ - Affinity for storage location: on-premises versus Azure
 
-## Design recommendations:
+## Design recommendations
 
-[Standard or premium blob storage](/azure/storage/blobs/storage-blobs-introduction) for high throughput /low latency storage.
+- Use [Standard or Premium Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) for high-throughput, low-latency storage. It provides these benefits: 
 
- - It provides exabyte scale, high throughput, low latency access where necessary, familiar file system and multi-protocol access (REST, HDFS, NFS)
- - It is cost effective being the lowest cost cloud offering.
- - You can mount the blob storage as a file system using [Blobfuse driver](/azure/storage/blobs/storage-how-to-mount-container-linux) making it easy to allow multiple nodes to mount the same container for read-only scenarios.
- - You can make use of the NFS v3.0 at the blob service endpoint for high throughput and read heavy workloads.
- - You can optimize costs by moving to cooler tiers with the ability to perform lifecycle management with last update/ last access time, intelligent tiering with customizable policies
+   - Exabyte-scale, high-throughput, low-latency access where necessary, a familiar file system, and multi-protocol access (REST, HDFS, NFS).
+   - Cost effective.
+   - Ability to mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). Doing so makes it easy to allow multiple nodes to mount the same container for read-only scenarios.
+   - Ability to use NFS 3.0 at the blob service endpoint for high-throughput, read-heavy workloads.
+   - Ability to optimize costs by moving data to cooler tiers by taking advantage of the ability to perform lifecycle management with last update/access time intelligent tiering, with customizable policies.
 
-[Azure NetApp Files](/azure/azure-netapp-files/) for Read/write-many (unique), Write-once, read-once applications
+- Use [Azure NetApp Files](/azure/azure-netapp-files) for ReadWriteMany (unique), write-once, read-once applications. It provides these benefits: 
 
- - Provides the widest choice of file protocols (NFSv3, NFSv4.1, SMB3) in the public cloud.
- - On-premises class performance with multiple tiers (Ultra, Premium, Standard).
- - Deploys in minutes and offers wide range of tiers and flexibility.
- - You can use it when you require flexible capacity pool types and performance, where the QoS per volume is automatically assigned based on the Tier of the Pool and the volume quota.
+   - A wide choice of file protocols (NFSv3, NFSv4.1, SMB3).
+   - Performance that's comparable with on-premises performance, with multiple tiers (Ultra, Premium, Standard).
+   - Deploys in minutes and offers a wide range of tiers and flexibility.
+   - Flexible capacity pool types and performance, where the QoS per volume is automatically assigned based on the tier of the pool and the volume quota.
 
-| Category | Azure Blob Storage | Azure Files | Azure NetApp Files |
+The following table provides a comparison of Blob Storage, Azure NetApp Files, and Azure Files. 
+
+|  | Blob Storage | Azure Files | Azure NetApp Files |
 | -- | -- | -- | -- |
-| Use cases | Blob Storage is best suited for large scale read-heavy sequential access workloads where data is ingested once and minimally modified further. <br><br> Blob Storage offers the lowest total cost of ownership, if there is little or no maintenance. | Azure Files is a highly available service best suited for random access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support and can easily be used from container platforms like Azure Container Instance (ACI) and Azure Kubernetes Service (AKS) with the built-in CSI driver, in addition to VM-based platforms. | Fully managed file service in the cloud, powered by NetApp, with advanced management capabilities. <br><br> NetApp Files is suited for workloads that require random access and provides broad protocol support and data protection capabilities. |
-| Available protocols | NFS 3.0 <br><br>REST <br><br>Data Lake Storage Gen2 | SMB <br><br> NFS 4.1 <br><br>(No interoperability between either protocol) | NFS 3.0 and 4.1 <br><br> SMB <br><br><br> |
-| Key features | Integrated with HPC cache for low latency workloads. <br><br> Integrated management, including lifecycle, immutable blobs, data failover, and metadata index. | Zonally redundant for high availability. <br><br> Consistent single-digit millisecond latency. <br><br> Predictable performance and cost that scales with capacity. | Extremely low latency (as low as sub-ms). <br><br> Rich NetApp ONTAP management capability such as SnapMirror in cloud. <br><br> Consistent hybrid cloud experience. |
-| Performance (Per volume) | Up to 20,000 IOPS, up to 100 Gib/s throughput. | Up to 100,000 IOPS, up to 80 Gib/s throughput. | Up to 460,000 IOPS, up to 36 Gib/s throughput. |
-| Scale | Up to 2 PiB for a single volume. <br><br> Up to ~4.75 TiB max for a single file. <br><br> No minimum capacity requirements. | Up to 100 TiB for a single file share. <br><br> Up to 4 TiB for a single file. <br><br> 100 GiB min capacity. | Up to 100 TiB for a single volume. <br><br> Up to 16 TiB for a single file. <br><br> Consistent hybrid cloud experience. |
-| Pricing | [Azure Blob Storage pricing](https://azure.microsoft.com/pricing/details/storage/blobs/) | [Azure Files pricing](https://azure.microsoft.com/pricing/details/storage/files/) | [Azure NetApp Files pricing](https://azure.microsoft.com/pricing/details/netapp/) |
+| Use cases | Best suited for large-scale read-heavy sequential access workloads where data is ingested once and minimally modified. <br><br> Low total cost of ownership, if there's little or no maintenance. | A highly available service best suited for random access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. In addition to VM-based platforms, the built-in CSI driver enables you to easily use it from container platforms like Azure Container Instances and Azure Kubernetes Service (AKS). | A fully managed file service in the cloud, powered by NetApp, with advanced management capabilities. <br><br> Azure NetApp Files is suited for workloads that require random access. It provides broad protocol support and improved data protection. |
+| Available protocols | NFS 3.0 <br><br>REST <br><br>Azure Data Lake Storage  | SMB <br><br> NFS 4.1 <br><br>(No interoperability between either protocol.) | NFS 3.0 and 4.1 <br><br> SMB <br><br><br> |
+| Key features | Integrated with Azure HPC Cache for low-latency workloads. <br><br> Integrated management, including lifecycle management, immutable blobs, data failover, and metadata index. | Zonally redundant for high availability. <br><br> Consistent single-digit millisecond latency. <br><br> Predictable performance and cost that scales with capacity. | Extremely low latency (as low as sub-millisecond). <br><br> Rich NetApp ONTAP management capability, like SnapMirror Cloud. <br><br> Consistent hybrid cloud experience. |
+| Performance (per volume) | As much as 20,000 IOPS. As much as 100 GiBps throughput. | As much as 100,000 IOPS. As much as 80 GiBps throughput. | As much as 460,000 IOPS. As much as 36 GiBps throughput. |
+| Scale | As much as 2 PiB for a single volume. <br><br> As much as ~4.75 TiB for a single file. <br><br> No minimum capacity requirements. | As much as 100 TiB for a single file share. <br><br> As much as 4 TiB for a single file. <br><br> 100 GiB minimum capacity. | Up to 100 TiB for a single volume. <br><br> Up to 16 TiB for a single file. <br><br> Consistent hybrid cloud experience. |
+| Pricing | [Azure Blob Storage pricing](https://azure.microsoft.com/pricing/details/storage/blobs) | [Azure Files pricing](https://azure.microsoft.com/pricing/details/storage/files) | [Azure NetApp Files pricing](https://azure.microsoft.com/pricing/details/netapp) |
 
 
 ## Next steps
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Identity Access Management](./identity-access-management.md)
+
+The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC in the finance sector.
+
+- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps](./platform-automation-devops.md)
+- [Resource organization](./resource-organization.md)
+- [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
