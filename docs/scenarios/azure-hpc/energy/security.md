@@ -40,4 +40,4 @@ The following articles provide guidance for each step in the cloud adoption jour
 - [Resource organization](./resource-organization.md)
 - [Governance](./security-governance-compliance.md)
 - [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
