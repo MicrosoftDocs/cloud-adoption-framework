@@ -34,7 +34,7 @@ You can define and apply security rules and policies that are based on environme
 
 ## Next steps
 
-The following articles provide guidance for specific points in cloud adoption of HPC in energy industries.
+The following articles provide guidance for specific points in cloud adoption of HPC in manufacturing industries.
 
 - [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
 - [Identity Access Management](./identity-access-management.md)
