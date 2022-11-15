@@ -55,8 +55,6 @@ The following architecture diagram is an example that shows design areas and bes
 
 The AVS Accelerator can be used as initial deployment of Azure VMware Solution in the enterprise environment. You can develop and customize the code to expand its functionality and/or adapt to your Enterprise-Scale Azure Landing Zones environment.
 
-The Azure VMware Solution Accelerator is designed to deploy an Azure VMware Solution private cloud and it is recommended to couple it with an Enterprise-Scale landing zone deployment. See [Deploying Enterprise-Scale Architecture in your own environment](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment).
-
 ### Deployment options for AVS
 
 Here are some deployment options for AVS. There are two deployment options.
