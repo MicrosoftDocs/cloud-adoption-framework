@@ -1,6 +1,6 @@
 ---
-title: 'Manufacturing HPC platform automation and DevOps| Microsoft Docs'
-description: 'Azure landing zones for HPC in manufacturing do not have any specific considerations or recommendations which would impact DevOps related decisions.'
+title: Manufacturing HPC platform automation and DevOps
+description: 'Azure landing zones for HPC in manufacturing don't have any specific considerations or recommendations that would affect DevOps related decisions.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.date: 09/23/2022
 
 # Platform automation and DevOps for manufacturing HPC
 
-Azure landing zones for HPC in manufacturing do not have any specific considerations or recommendations which would impact DevOps related decisions.
+Azure landing zones for HPC in manufacturing don't have any specific considerations or recommendations that would affect DevOps related decisions.
 
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [platform automation and DevOps recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
 
