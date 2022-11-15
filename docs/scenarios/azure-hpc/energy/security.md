@@ -12,7 +12,7 @@ ms.date: 11/15/2022
 
 # Security for energy HPC
 
-The Azure landing zone for high-performance computing (HPC) doesn't have any specific considerations or recommendations that affect security-related decisions in the energy industry.
+The Azure landing zone for high-performance computing (HPC) doesn't have any specific recommendations that affect security-related decisions in the energy industry.
 
 However, it might be important to understand any decisions that were previously made by the cloud platform team regarding security recommendations.
 
@@ -24,7 +24,7 @@ Security rules and policies can be defined and applied based on environment, wor
 
 For CycleCloud deployments, extra security practices should be followed:
 - CycleCloud should be installed on a drive with only admin-group access, which prevents non-admin users from accessing non-encrypted data. Non-admin users shouldn't be included in this group. Ideally, access to the CycleCloud installation should be limited to only administrators.
-- Don't share CycleCloud installation across trust boundaries.
+- CycleCloud installations shouldn't be shared across trust boundaries.
 - The role-based access control within a single CycleCloud installation might not be sufficient in a true multi-tenant environment. Use separate and isolated CycleCloud installations for each tenant with critical data.
 
 ## Next steps
