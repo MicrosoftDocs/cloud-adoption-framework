@@ -1,22 +1,22 @@
 ---
-title: 'Manufacturing HPC Security | Microsoft Docs'
-description: 'Azure landing zones for HPC in Manufacturing do not have any specific considerations or recommendations which would impact security related decisions.'
+title: Security for HPC in manufacturing industries
+description: Azure landing zones in manufacturing industries do not have any specific considerations or recommendations that affect decisions about security.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
+ms.date: 11/23/2022
 ---
 
-# Security for manufacturing HPC
+# Security for HPC in manufacturing industries
 
 Azure landing zones for HPC in Manufacturing do not have any specific considerations or recommendations which would impact security related decisions.
 
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [security recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security).
 
-## HPC Design consideration:
+## HPC Design consideration
 
  - Security rules and policies can be defined and applied based on environment, workflow, VM, physical server, and operator, including:
      - Actions controlled via user permissions and logged for audit reporting. For example, root access privileges are only granted as needed and based on the specified VMs, preventing compromise of other HPC workflows. 
@@ -27,7 +27,9 @@ However, it could be important to understand any decisions previously made by th
          - The RBAC controls within a single CycleCloud installation may not be sufficient in a true multi-tenant environment. Use separate and isolated CycleCloud installations for each tenant with critical data.
 
 ## Next steps
+
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
+
 - [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
 - [Identity Access Management](./identity-access-management.md)
 - [Management](./management.md)
@@ -36,4 +38,4 @@ The following list of articles will take you to guidance found at specific point
 - [Resource Organization](./resource-organization.md)
 - [Security Governance Compliance](./security-governance-compliance.md)
 - [Storage](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
