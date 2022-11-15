@@ -42,14 +42,14 @@ The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-B
 
 For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
 
-### Azure Security Benchmark
+### Microsoft Cloud Security Benchmark
 
-The Azure Security Benchmark includes high-impact security recommendations to help you secure most of the services you use in Azure. You can think of these recommendations as *general* or *organizational*, as they're applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service. This customized guidance is contained in service recommendations articles.
+The Microsoft Cloud Security Benchmark includes high-impact security recommendations to help you secure most of the services you use in Azure. You can think of these recommendations as *general* or *organizational*, as they're applicable to most Azure services. The Microsoft Cloud Security Benchmark recommendations are then customized for each Azure service. This customized guidance is contained in service recommendations articles.
 
-The Azure Security Benchmark documentation specifies security controls and service recommendations.
+The Microsoft Cloud Security Benchmark documentation specifies security controls and service recommendations.
 
-- [Security controls](/security/benchmark/azure/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
-- [Service recommendations](/security/benchmark/azure/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
+- [Security controls](/security/benchmark/azure/overview): The Microsoft Cloud Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
+- [Service recommendations](/security/benchmark/azure/security-baselines-overview): When available, benchmark recommendations for Azure services will include Microsoft Cloud Security Benchmark recommendations that are tailored specifically for that service.
 
 ## Security design considerations
 
