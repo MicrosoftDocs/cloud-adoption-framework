@@ -20,7 +20,7 @@ As you prepare your environment for sustained cloud adoption, you can use an Azu
 
 - [Energy (oil and gas)](../azure-hpc/energy/compute.md#use-case-and-reference-architecture-for-seismic-processing)
 - [Finance](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-energy)
-- [Manufacturing](./azure-hpc-landing-zone-accelerator.md#example-conceptual-manufacturing-reference-architecture)
+- [Manufacturing](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance)
 
 As you develop a long-term vision for your landing zone, consider these architecture references. These references provide a starting point. Based on your organization's business requirements and the needs of your end users, you might need to modify them.
 
