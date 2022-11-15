@@ -30,5 +30,5 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for manufacturing HPC](./security.md)
 - [Storage for manufacturing HPC](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
 
