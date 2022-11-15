@@ -12,11 +12,11 @@ ms.date: 11/15/2022
 
 # Resource organization for HPC in the finance sector 
 
-This article provides recommendations that can help you align with the [Ready methodology](/azure/cloud-adoption-framework/ready) of the Cloud Adoption Framework for Azure.
+This article provides recommendations that can help you align HPC implementations in the finance sector with the [Ready methodology](/azure/cloud-adoption-framework/ready) of the Cloud Adoption Framework for Azure.
 
 ## Single vs. multiple Azure subscriptions
 
-In Azure Active Directory (Azure AD), a tenant represents an organization. It's a dedicated instance of Azure AD that an organization receives and owns when it signs up to use Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions, and each subscription can use the same Azure AD.
+In Azure Active Directory (Azure AD), a tenant represents an organization. It's a dedicated instance of Azure AD that an organization receives and owns when it signs up to use Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions, and each subscription can use the same Azure AD instance.
 
 The needs of your organization determine whether you should use a single subscription or multiple subscriptions:
 
@@ -31,7 +31,7 @@ We also recommend that you consider ARM throttling limits when you make decision
 
 Implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
 
-The business side of this strategy ensures that resource names and tags include the organizational information that you need to identify the teams. Include the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams can use to identify the workload, application, environment, criticality, and other information that's useful for managing resources.
+The business side of this strategy ensures that resource names and tags include the organizational information that you need to identify the associated teams. Include the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams can use to identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
 Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, Azure ExpressRoute, NSGs, application security groups, tags, route tables, managed disks, and public IPs. For example, you could label all development VMs with the tag `Dev`. Doing so makes it easier to pull billing reports and other reports for development VMs. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
