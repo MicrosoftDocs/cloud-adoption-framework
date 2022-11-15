@@ -1,5 +1,5 @@
 ---
-title: 'Finance HPC Resource organization | Microsoft Docs'
+title: Finance HPC Resource organization 
 description: 'To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of Finance HPC resource names and metadata tags.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
