@@ -20,9 +20,9 @@ However, it might be important to understand any decisions that your cloud platf
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
 
-- [Azure Billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
 - [Compute for HPC in energy industries](./compute.md)
-- [Azure Identity and Access Management](./identity-access-management.md)
+- [Azure Identity and access management](./identity-access-management.md)
 - [Management for HPC in energy industries](./management.md)
 - [Network topology and connectivity for HPC in energy industries](./network-topology-connectivity.md)
 - [Platform automation and DevOps for HPC in energy industries](./platform-automation-devops.md)
