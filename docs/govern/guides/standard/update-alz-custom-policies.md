@@ -103,27 +103,28 @@ If an outdated ALZ custom policy initiative is fully updated, and is assigned at
 
 ## Update steps for Azure Landing Zone Terraform module deployments
 
-### Detect updates
+### Terraform Detect updates
 
-There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
-- You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
-- You follow [ALZ Terraform release guidance](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Module-Releases) and note that one or more policies are indicated as being superseded
-- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as obsolete. For more details on how this can be determined refer to [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+There are the following authoritative options for determining that one or more ALZ policies have been updated as follows:
 
-### Migration steps
+- You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being updated. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
+- You follow [ALZ Terraform release guidance](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Module-Releases) and note that one or more policies are indicated as being updated
+- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outDated. For more details on how this can be determined refer to [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+
+### Terraform Migration steps
 
 The ALZ Terraform module provides update guidance when deploying breaking changes. Follow the upgrade guidance available for your specific version [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki), look under Upgrade Guides in the sidebar.
 
-
 ## Update steps for Azure Landing Zone Bicep deployments
 
-### Detect updates
+### Bicep Detect updates
 
 There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
-- You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
-- You follow [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases) and note that one or more policies are indicated as being superseded
-- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as obsolete. For more details on how this can be determined refer to [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
 
-### Migration steps
+- You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being updated. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
+- You follow [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases) and note that one or more policies are indicated as being updated
+- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outDated. For more details on how this can be determined refer to [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
 
-ALZ Bicep provides generic guidance for migrating policies from ALZ custom policies to Azure built-in policies. For more details refer to [How to migrate ALZ custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+### Bicep Migration steps
+
+ALZ Bicep provides generic guidance for updating policies from ALZ custom policies to updated policies. `need to update for updated policies` For more details refer to [How to migrate ALZ custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
