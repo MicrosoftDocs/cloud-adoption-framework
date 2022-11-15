@@ -4,7 +4,7 @@ description: Learn about Azure Monitor, System Center Operations Manager, and th
 author: MGoedtel
 ms.author: brblanch
 ms.reviewer: tozimmergren
-ms.date: 11/09/2022
+ms.date: 11/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -21,7 +21,7 @@ Although the cloud offers nearly unlimited flexibility in design choices, enterp
 
 This digital transformation also enables an opportunity to modernize your infrastructure, workloads, and applications. Depending on business strategy and objectives, adopting a hybrid cloud model is likely part of the migration journey from on-premises to operating entirely in the cloud. IT must also understand how to effectively monitor the application or service migrating to Azure and continue to deliver efficient IT operations and DevOps.
 
-Stakeholders often want to use cloud-based software as a service (SaaS) monitoring and management tools. They need to understand what services and solutions exist to achieve end-to-end visibility, reduce costs, and focus less on infrastructure and maintenance of traditional software-based IT operations tools.
+Stakeholders often want cloud-based software as a service (SaaS) monitoring and management tools. They need to understand what services and solutions exist to achieve end-to-end visibility, reduce costs, and focus less on infrastructure and maintenance of traditional software-based IT operations tools.
 
 The goal of this guide is to provide a detailed reference to help enterprise IT managers, business decision-makers, application architects, and application developers understand:
 
@@ -31,7 +31,7 @@ The goal of this guide is to provide a detailed reference to help enterprise IT 
 
 This guide isn't a how-to article for using or configuring individual Azure services and solutions, but it does reference those sources when they're applicable or available. After you've read it, you'll understand how to successfully operate a workload by following best practices and patterns.
 
-If you're unfamiliar with Azure Monitor and System Center Operations Manager, and you want to better understand what makes them unique and how they compare to each other, review the [overview of our monitoring platforms](./platform-overview.md).
+Review the [monitoring platforms overview](./platform-overview.md) page to learn how Azure Monitor and System Center Operations Manager work, and how they compare.
 
 ## Audience
 
@@ -53,8 +53,8 @@ This article is part of a series. The following articles are meant to be read to
 
 A few software and services are available to help you monitor and manage various resources that are hosted in Azure, your corporate network, or other cloud providers. They are:
 
-- [System Center Operations Manager](/system-center/scom/welcome)
 - [Azure Monitor](/azure/azure-monitor/overview) (includes Log Analytics and Application Insights)
+- [System Center Operations Manager](/system-center/scom/welcome)
 - [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview)
 - [Azure Arc](/azure/azure-arc/)
 - [Azure Automation](/azure/automation/automation-intro)
