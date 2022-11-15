@@ -19,7 +19,7 @@ It's important to understand the previous [security recommendations](/azure/clou
 We also recommend that you consider security baseline recommendations for various services that are used in HPC environments, including:
 
  - [Azure HPC Cache](/security/benchmark/azure/baselines/hpc-cache-security-baseline)
- - [Azure CycelCloud](/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8&preserve-view=true)
+ - [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8&preserve-view=true)
  - [Azure Batch](/azure/batch/security-controls-policy)
 
 ## Next steps
