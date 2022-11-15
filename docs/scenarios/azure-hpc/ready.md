@@ -19,8 +19,8 @@ The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework fo
 As you prepare your environment for sustained cloud adoption, you can use an Azure landing zone conceptual architecture, which represents a target end state. For HPC, there are multiple conceptual architecture references, based on the three industries that the Cloud Adoption Framework currently addresses:
 
 - [Energy (oil and gas)](../azure-hpc/energy/compute.md#use-case-and-reference-architecture-for-seismic-processing)
-- [Finance](../azure-hpc/azure-hpc-landing-zone-accelator.md#example-conceptual-energy-reference-architecture)
-- [Manufacturing](./azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
+- [Finance](/azure-hpc-landing-zone-accelerator.md#example-conceptual-energy-reference-architecture)
+- [Manufacturing](/azure-hpc-landing-zone-accelator.md#example-conceptual-manufacturing-reference-architecture)
 
 As you develop a long-term vision for your landing zone, consider these architecture references. These references provide a starting point. Based on your organization's business requirements and the needs of your end users, you might need to modify them.
 
@@ -52,4 +52,4 @@ The environment contains:
 ## Next steps
 
 - After you prepare your HPC landing zone, start looking into what your [migration](./migrate.md) will look like.
-- See the overall [HPC landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelator.md).
+- See the overall [HPC landing zone accelerator](/azure-hpc/azure-hpc-landing-zone-accelator.md).
