@@ -12,7 +12,7 @@ ms.date: 09/23/2022
 
 # Governance for HPC in energy industries
 
-Azure landing zones for high-performance computing (HPC) in Energy don't have any specific considerations or recommendations that affect decisions about governance.
+Azure landing zones for high-performance computing (HPC) in energy industries don't have any specific considerations or recommendations that affect decisions about governance.
 
 However, it might be important to understand any decisions that your cloud platform team has made so that you're aware of existing recommendations. For more information, see [Design area: Azure governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
 
