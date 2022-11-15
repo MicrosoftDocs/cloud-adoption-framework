@@ -53,4 +53,4 @@ The following articles provide guidance for specific steps in the cloud adoption
 - [Governance and compliance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
