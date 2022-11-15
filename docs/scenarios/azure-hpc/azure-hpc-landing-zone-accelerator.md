@@ -46,7 +46,7 @@ The architectures of landing zones vary by business sector, in addition to varyi
   - [Network Topology and Connectivity for Energy HPC](./energy/network-topology-connectivity.md)
   - [Platform automation and DevOps for energy HPC](./energy/platform-automation-devops.md)
   - [Resource Organization](./energy/resource-organization.md)
-  - [Governance for energy HPC](./energy/security-governance-compliance.md)
+  - [Governance for HPC in energy industries](./energy/security-governance-compliance.md)
   - [Security for energy HPC](./energy/security.md)
   - [Storage for HPC energy environments](./energy/storage.md)
   

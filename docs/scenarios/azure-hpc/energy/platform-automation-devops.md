@@ -25,7 +25,7 @@ The following list of articles will take you to guidance found at specific point
 - [Management](./management.md)
 - [Network Topology Connectivity](./network-topology-connectivity.md)
 - [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
+- [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
 - Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
