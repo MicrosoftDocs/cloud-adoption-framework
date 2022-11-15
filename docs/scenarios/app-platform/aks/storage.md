@@ -182,14 +182,14 @@ For Azure Files, we recommend the following design options:
 
 For Azure NetApp Files, we recommend the following design options:
 
-  - **Choose a performance tier based on the application requirements.** Azure NetApp Files offers 3 performance tiers that offer varying classes of performance.
+  - **Choose a performance tier based on the application requirements.** Azure NetApp Files offers 3 performance tiers that offer varying classes of performance. For more information, see [Performance considerations for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-performance-considerations).
   
-  - **Create capacity pools in the same Azure region as the AKS cluster.**
+  - **Create capacity pools in the same Azure region as the AKS cluster.** For more informatoin, see [Create a capacity pool for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool).
 
   - **Use the Auto QoS type for capacity pools.** 
 
-  - Two options exist for network design: 
-    1. If you use the same VNet for AKS and Azure NetApp Files, create a dedicated subnet for Azure NetApp Files and delegate the subnet to Microsoft.NetApp/Volumes.
+  - **Plan your network.** Two options exist for network design: 
+    1. If you use the same VNet for AKS and Azure NetApp Files, create a dedicated subnet for Azure NetApp Files and [delegate the subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) to Microsoft.NetApp/Volumes.
     2. If you use different VNets, establish VNet peering between them.
 
 ### Blob storage
