@@ -25,7 +25,7 @@ Security rules and policies can be defined and applied based on environment, wor
 For CycleCloud deployments, extra security practices should be followed:
 - CycleCloud should be installed on a drive with only admin-group access, which prevents non-admin users from accessing non-encrypted data. Non-admin users shouldn't be included in this group. Ideally, access to the CycleCloud installation should be limited to only administrators.
 - CycleCloud installations shouldn't be shared across trust boundaries.
-- The role-based access control within a single CycleCloud installation might not be sufficient in a true multi-tenant environment. Use separate and isolated CycleCloud installations for each tenant with critical data.
+- The role-based access controls within a single CycleCloud installation might not be sufficient in a true multi-tenant environment. Use separate and isolated CycleCloud installations for each tenant with critical data.
 
 ## Next steps
 
