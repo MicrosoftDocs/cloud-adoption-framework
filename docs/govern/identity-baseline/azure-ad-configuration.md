@@ -38,7 +38,7 @@ Standardize on Azure AD as your organization's identity and authentication platf
 
 Due to the nature of identity authentication in workloads, there's no comprehensive option to enforce the use of a specific identity system.  However, one option is to ensure resources are tagged with the identity system in use.
 
-Assign the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy with the **Tag Name** set to "IdentityProvider" and the **Tag Value** set to "Undefined". This policy will only set the **Tag Value** to be "Undefined" if the tag isn't provided.
+Assign the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy with the tag name set to "IdentityProvider" and the tag value set to "Undefined". This policy will only set the tag value to be "Undefined" if the tag isn't provided.
 
 :::image type="content" source="./media/Tagpolicy.png" alt-text="A picture of the portal page where you add a tag policy.":::
 
@@ -186,16 +186,18 @@ The resulting passwordPolicies setting should be set to "DisablePasswordExpirati
 
 Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
 
+>TODO: Add a graph query below
+
 ```http
 ???
 ```
 
-The resulting ??? setting should be set to "???"
+
 
 ### PowerShell
 
 
-Use the following script to produce a CSV file that contains an audit of if users are set for their password to never expire.
+Use the following script to produce a CSV file that contains an audit of whether user passwords are set to never expire.
 
 ```powershell
 $auditPath = "./Audits/"
@@ -208,9 +210,7 @@ Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E=
 
 ```
 
-
-
-Use the following script to produce a CSV file that contains an audit if Self-Service Password Reset is enabled.
+Use the following script to produce a CSV file that contains an audit of whether self-service password reset is enabled.
 
 ```powershell
 $auditPath = "./Audits/"
