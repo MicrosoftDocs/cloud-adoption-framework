@@ -184,7 +184,7 @@ The resulting passwordPolicies setting should be set to "DisablePasswordExpirati
 
 #### Use Graph API to Audit Self-Service Password Reset
 
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0) API call like the following to audit the default user settings.
+Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
 
 ```http
 ???
