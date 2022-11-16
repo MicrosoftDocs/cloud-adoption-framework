@@ -16,22 +16,19 @@ The ready methodology is the first step in the platform domain of cloud adoption
 :::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - platform domain*
 
-The ready methodology focuses on building the cloud platform. We call this cloud platform a landing zone. Landing zones are home to core services, workloads, and application. They provide a foundation for security and resource management. They enable application migration, modernization, and innovation at enterprise-scale. The landing zone is where services, applications, and workloads are deployed.
-
-Here are key considerations for the landing build:
+The ready methodology focuses on building the cloud platform. We call this cloud platform a landing zone. Landing zones are home to core services, workloads, and application. They provide a foundation for security and resource management. They enable application migration, modernization, and innovation at enterprise-scale. The landing zone is where services, applications, and workloads are deployed. Here are key considerations for the landing zone build that the cloud broker should follow.
 
 ## Build a secure landing zone
 
-Within the landing zone, the cloud broker builds the platform environments, and the mission owner manages the workload environments. These workload environments inherit the security controls of the platform. Landing zones are the foundation of workload security and must be secure. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards. Microsoft has made building a secure landing zone easier with the Secure Azure Cloud Architecture (SACA). SACA aligns with the U.S. Secure Cloud Computing Architecture (SCCA) standard and can be deployed with the click-of-a-button and a few configuration selections.
+Within the landing zone, the cloud broker builds the platform environments, and the mission owner manages the workload environments. These workload environments inherit the security controls of the platform. Landing zones are the foundation of workload security and must be secure. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards.
 
 For information on landing zones, see:
 
 - [Introduction to landing zones](/azure/cloud-adoption-framework/ready/landing-zone/)
-- [Secure Azure Cloud Architecture (SACA) overview](/azure/azure-government/compliance/secure-azure-computing-architecture)
 
 Here are a few general architecture recommendations for landing zone deployments:
 
-**(1) Place a firewall between cloud and defense network** - The architecture should use a firewall/IDS/IPS to protect the defense network from attacks originating in the cloud. It should sit in the defense network and inspect and filter all traffic heading into the defense network from the cloud. This placement will provide a barrier between the two environments.
+**(1) Place a firewall between cloud and defense network** - The architecture should use a firewall, intrusion detection system (IDS), and/or intrusion prevention system (IPS) to protect the defense network from attacks originating in the cloud. It should sit in the defense network and inspect and filter all traffic heading into the defense network from the cloud. This placement will provide a barrier between the two environments.
 
 **(2) Inspect all inbound traffic** - Route all inbound traffic through your security stack before sending to applications. The security stack should be in its own environment and should inspect and filter traffic before routing to cloud applications.
 
