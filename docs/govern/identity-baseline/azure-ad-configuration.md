@@ -110,7 +110,7 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
 }
 ```
 
-### Set Default User Permissions via Portal
+### Azure Portal
 
 Alternatively you can configure the following Azure AD user settings from the portal:
 
