@@ -16,7 +16,7 @@ This article provides recommendations for implementing storage in HPC environmen
 
 ## Design considerations
 
-To decide which storage solution to use, you need to take into account the following considerations regarding your application requirements.
+To decide which storage solution to use, you need to take into account the following application requirements.
 
  - Latency
  - IOPS
@@ -28,7 +28,7 @@ To decide which storage solution to use, you need to take into account the follo
 
 ## Design recommendations
 
-- Use [Standard or Premium Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) for high-throughput, low-latency storage. It provides these benefits: 
+- Use [Standard or Premium Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) for high-throughput, low-latency storage. It offers these benefits: 
 
    - It provides exabyte-scale, high-throughput, low-latency access where necessary, a familiar file system, and multi-protocol access (REST, HDFS, NFS).
    - It's cost effective.
