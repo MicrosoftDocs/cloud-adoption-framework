@@ -18,7 +18,7 @@ Over time Azure Landing Zone (ALZ) custom policies and policy initiatives, may b
 
 The following infographic provides a frame of reference for the update process flow.
 
-![Diagram showing policy update process flow going from ALZ to built-in policies.](../../../_images/govern/alz-policy_to_builtin_update.jpg)
+:::image type="content" source="../../../_images/govern/alz-policy_to_builtin_update.jpg" lightbox="../../../_images/govern/alz-policy_to_builtin_update.jpg" alt-text="Diagram showing policy update process flow going from ALZ custom policies to built-in policies.":::
 
 
 ## Manual update steps for Azure Landing Zone environments
