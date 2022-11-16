@@ -60,7 +60,7 @@ Use this architecture as a starting point. Download the [Visio file](https://raw
 
 For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone portal accelerator**.
 
-Accelerators are Infrastructure as Code implementations of platform and application landing zones. This accelerator is an Azure-portal-based deployment for those who plan to manage their enviorment with the Azure portal tools. The Azure landing zone portal accelerator will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
+Accelerators are Infrastructure as Code implementations that deploy both platform and application landing zones. This accelerator is an Azure portal-based deployment for those who plan to manage their environment with the Azure portal. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
 
 Deploying the Azure landing zone accelerator requires permissions to create resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
