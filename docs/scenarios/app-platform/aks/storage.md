@@ -3,7 +3,7 @@ title: Storage considerations for AKS
 description: Storage considerations for Azure Kubernetes Service (AKS)
 author: nillsf
 ms.author: brblanch
-ms.date: 11/03/2022
+ms.date: 11/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -177,6 +177,20 @@ For Azure Files, we recommend the following design options:
   - **Create dedicated storage accounts**. We recommend providing dedicated storage accounts for your file shares.
 
   - **Choose static or dynamically created file shares**. We recommend careful consideration of whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. Storage that is created dynamically can also be deleted dynamically. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files](/azure/aks/azure-files-dynamic-pv).
+
+### Azure NetApp Files
+
+For Azure NetApp Files, we recommend the following design options:
+
+  - **Choose a performance tier based on the application requirements.** Azure NetApp Files offers 3 performance tiers that offer varying classes of performance. For more information, see [Performance considerations for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-performance-considerations).
+  
+  - **Create capacity pools in the same Azure region as the AKS cluster.** For more informatoin, see [Create a capacity pool for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool).
+
+  - **Use the Auto QoS type for capacity pools.** 
+
+  - **Plan your network.** Two options exist for network design: 
+    1. If you use the same VNet for AKS and Azure NetApp Files, create a dedicated subnet for Azure NetApp Files and [delegate the subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) to Microsoft.NetApp/Volumes.
+    2. If you use different VNets, establish VNet peering between them.
 
 ### Blob storage
 
