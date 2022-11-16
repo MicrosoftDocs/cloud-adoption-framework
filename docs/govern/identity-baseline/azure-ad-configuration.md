@@ -208,7 +208,6 @@ Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E=
 
 ```
 
-By changing the audit path variable, you can save this to audit to different locations.
 
 #### Use Microsoft Graph PowerShell to Audit Self-Service Password Reset
 
