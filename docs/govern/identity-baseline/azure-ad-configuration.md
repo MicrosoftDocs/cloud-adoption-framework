@@ -84,7 +84,7 @@ Restrict default user permissions to remove unneeded access granted in default s
 
 ## Enforce - Default user permissions
 
-### Set Default User Permissions via Graph API
+### Graph API
 
 >TODO: Below needs to be QCed from the email discussion.
 
