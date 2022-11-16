@@ -112,10 +112,6 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
 
 ### Azure Portal
 
-Alternatively you can configure the following Azure AD user settings from the portal:
-
-Alternatively you can configure the following Azure AD user settings from the portal:
-
 - Set [Users can register applications](/azure/active-directory/roles/delegate-app-roles#restrict-who-can-create-applications) to No.
 - Set [default Azure Active Directory](/azure/active-directory/fundamentals/users-default-permissions) user permission **Restrict access to Azure AD administration portal** to Yes.
 - Set [LinkedIn account connections](/azure/active-directory/enterprise-users/linkedin-integration#enable-linkedin-account-connections-in-the-azure-portal) to No.
