@@ -18,7 +18,7 @@ Over time Azure Landing Zone (ALZ) custom policies and policy initiatives, may b
 
 The following infographic provides a frame of reference for the update process flow.
 
-![Diagram showing policy update process flow going from ALZ to built-in policies.](../../../_images/govern/alz-policy_to_builtin_update.jpg)
+:::image type="content" source="../../../_images/govern/alz-policy_to_builtin_update.jpg" lightbox="../../../_images/govern/alz-policy_to_builtin_update.jpg" alt-text="Diagram showing policy update process flow going from ALZ custom policies to built-in policies.":::
 
 
 ## Manual update steps for Azure Landing Zone environments
@@ -27,12 +27,12 @@ The following infographic provides a frame of reference for the update process f
 
 There are the following authoritative options for determining that one or more ALZ policies has been superseded by built-in Azure policies as follows:
 - You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being superseded. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
-- You are leveraging the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as obsolete. For more details on how this can be determined refer to [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+- You use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as obsolete. For more details on how this can be determined refer to [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
 
 ### Migration steps
 
-- Determine if the ALZ policies in scope for migration are currently assigned at any scope in your Azure estate. If leveraging the [AzGovViz tool]() this can be determined by checking the tenant summary as shown [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
-- Determine if any ALZ policies to be migrated are part of an ALZ custom policy initiative which should be updated 
+- Determine if the ALZ policies in scope for migration are currently assigned at any scope in your Azure estate. If using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), this can be determined by checking the **TenantSummary**.
+- Determine if any ALZ policies to be migrated are part of an ALZ custom policy initiative which should be updated.
 - Determine if ALZ custom policy initiatives in scope for migration are currently assigned at any scope in your Azure estate. 
 
 Depending on the result of the above investigations the following actions should be taken.
@@ -79,7 +79,7 @@ There are the following authoritative options for determining that one or more A
 
 ### Migration steps
 
-The ALZ Terraform module provides update guidance when deploying breaking changes. Follow the upgrade guidance available for your specific version [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki), look under Upgrade Guides in the sidebar.
+The ALZ Terraform module provides update guidance when deploying breaking changes. Follow the upgrade guidance available for your specific version [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki), look under **Upgrade Guides** in the sidebar.
 
 
 ## Update steps for Azure Landing Zone Bicep deployments
