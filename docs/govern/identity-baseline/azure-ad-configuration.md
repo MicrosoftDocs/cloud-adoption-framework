@@ -16,13 +16,13 @@ The architecture and configuration of Microsoft Azure Active Directory (Azure AD
 
 This article recommends using Azure AD as the centralized identity and authentication system for your applications. The article provides suggested configurations and guidance on enforcing and auditing those configurations.
 
-| Guidance | Enforce | Audit | Description |
-| --- | --- | ---| --- |
-| [Centralized identity and authentication](#guidance---centralized-identity-and-authentication-system) | - | [audit](#enforce---centralized-identity-and-authentication-system) | - |
-| [Default user permissions](#guidance---default-user-permissions) | [enforce](#enforce---default-user-permissions) | [audit](#enforce---default-user-permissions) | - |
-| [Password management](#guidance---password-management) | [enforce](#enforce---password-management) | [audit](#enforce---password-management) | - |
-| [Legacy authentication](#guidance---legacy-authentication) | [enforce](#enforce---legacy-authentication) | [audit](#enforce---legacy-authentication) | - |
-| [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | - | [audit](#enforce---sign-in-and-user-risk-policies) | - |
+| Guidance | Enforce | Audit |
+| --- | --- | ---|
+| [Centralized identity and authentication](#guidance---centralized-identity-and-authentication-system) | [enforce](#enforce---centralized-identity-and-authentication-system) | [audit](#enforce---centralized-identity-and-authentication-system) |
+| [Default user permissions](#guidance---default-user-permissions) | [enforce](#enforce---default-user-permissions) | [audit](#enforce---default-user-permissions) |
+| [Password management](#guidance---password-management) | [enforce](#enforce---password-management) | [audit](#enforce---password-management) |
+| [Legacy authentication](#guidance---legacy-authentication) | [enforce](#enforce---legacy-authentication) | [audit](#enforce---legacy-authentication) |
+| [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | - | [audit](#enforce---sign-in-and-user-risk-policies) |
 
 ## Guidance - Centralized identity and authentication system
 
@@ -37,15 +37,15 @@ Standardize on Azure AD as your organization's identity and authentication platf
 
 Due to the nature of identity authentication in workloads, there's no comprehensive option to enforce the use of a specific identity system.  However, one option is to ensure resources are tagged with the identity system in use.
 
-Assign the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy with the **Tag Name** set to "IdentityProvider" and the **Tag Value** set to "Undefined". This policy will only set the **Tag Value** to be "Undefined" if the tag isn't provided.
+Assign the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy with the tag name set to "IdentityProvider" and the tag value set to "Undefined". This policy will only set the tag value to be "Undefined" if the tag isn't provided.
 
-![Tag Policy GUI](./media/Tagpolicy.png)
+:::image type="content" source="./media/Tagpolicy.png" alt-text="A picture of the portal page where you add a tag policy.":::
 
 Resources that use Azure AD as the centralized identity system should be tagged with AzureAD.  All others should be reviewed and defined in the audit process.
 
 ## Audit - Centralized identity and authentication system
 
-Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications, such as those using Application Services or Virtual Machines.
+Use an [Azure Resource Graph](/azure/governance/resource-graph/overview) query like the following to audit the state of identity providers for applications, such as those using Microsoft Web Sites or Virtual Machines.
 
 ```bash
 resources
@@ -62,7 +62,7 @@ resources
     SubscriptionId = subscriptionId
 ```
 
-Maintain a configuration management database (CMDB) for applications and review it quarterly. Meet with application owners of applications still in migration to review timeline and requirements. The CMDB should contain the following information about each application:
+You should also maintain a configuration management database (CMDB) for applications and review it quarterly. Meet with application owners of applications still in migration to review timeline and requirements. The CMDB should contain the following information about each application:
 
 - Application owner
 - Uses Azure AD or Azure AD single sign-on?
@@ -185,16 +185,18 @@ The resulting passwordPolicies setting should be set to "DisablePasswordExpirati
 
 Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
 
+>TODO: Add a graph query below
+
 ```http
 ???
 ```
 
-The resulting ??? setting should be set to "???"
+
 
 ### PowerShell
 
 
-Use the following script to produce a CSV file that contains an audit of if users are set for their password to never expire.
+Use the following script to produce a CSV file that contains an audit of whether user passwords are set to never expire.
 
 ```powershell
 $auditPath = "./Audits/"
@@ -207,9 +209,7 @@ Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E=
 
 ```
 
-
-
-Use the following script to produce a CSV file that contains an audit if Self-Service Password Reset is enabled.
+Use the following script to produce a CSV file that contains an audit of whether self-service password reset is enabled.
 
 ```powershell
 $auditPath = "./Audits/"
