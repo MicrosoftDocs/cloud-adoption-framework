@@ -57,16 +57,12 @@ If the policy to be migrated to built-in is assigned to any scope in your Azure 
 #### Policies assigned through Azure Landing Zone custom policy initiative
 
 If the policy to be migrated to built-in is part of an ALZ custom policy initiative and is assigned through that at any scope in your Azure estate, do the following:
-- Delete existing ALZ custom policy initiative assignments at all relevant scopes
-  - Before deleting the assignments, record the assignment scope, location and parameter values if different from the ALZ default custom policy initiative values
 - Update the ALZ custom policy initiative definition with the appropriate policy references. Updated initiatives are available [here](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions) with a generic *contoso* scope for custom policies. When doing this, remember to change the *contoso* scope for policy definition ids to your management group hierarchy pseudo root name. Also remember to update the metadata information on the ALZ custom policy initiative
-- Re-assign the updated ALZ custom policy initiative
 
 If an ALZ custom policy initiative is fully superseded by a built-in policy initiative, and the ALZ custom policy initiative is assigned at any scope in your Azure estate, do the following:
-- Delete existing ALZ custom policy initiative assignments at all relevant scopes
-  - Before deleting the assignments, record the assignment scope, location and parameter values if different from the ALZ default custom policy initiative values
+- Create new policy initiative assignments at the same scopes leveraging the Azure built-in policy initiative with matching settings as per the assignment of the previous ALZ custom policy initiative
+- Delete existing ALZ policy initiative assignment at all scopes, where assigned
 - Delete the ALZ custom policy initiative from the ALZ intermediate root Management Group (for example `Contoso`)
-- Assign the built-in initiative with appropriate settings
 
 ## Update steps for Azure Landing Zone Terraform module deployments
 
