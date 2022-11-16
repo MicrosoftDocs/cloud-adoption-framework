@@ -38,8 +38,6 @@ items:
         items: 
           - name: Overview
             href: /azure/azure-government/documentation-government-overview-dod?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
-          - name: Secure cloud computing architecture
-            href: /azure/azure-government/compliance/secure-azure-computing-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Security 
             href: /azure/azure-government/documentation-government-plan-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
           - name: Compliance
