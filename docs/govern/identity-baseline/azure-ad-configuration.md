@@ -209,7 +209,6 @@ Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E=
 ```
 
 
-#### Use Microsoft Graph PowerShell to Audit Self-Service Password Reset
 
 Use the following script to produce a CSV file that contains an audit if Self-Service Password Reset is enabled.
 
