@@ -222,6 +222,12 @@ $passwordResetAudit = $auditPath + "/password-reset" + "$date" + ".csv"
 Get-MgPolicyAuthorizationPolicy |  export-csv -path  "$passwordResetAudit"
 ```
 
+## Guidance - Legacy authentication
+
+Legacy authentication doesn't support multifactor authentication (MFA). MFA improves the security posture in organizations.
+
+- Determine if your organization currently supports legacy authentication.
+- Disable legacy authentication to limit exposure to attacks.
 
 ## Enforce - Legacy authentication
 
