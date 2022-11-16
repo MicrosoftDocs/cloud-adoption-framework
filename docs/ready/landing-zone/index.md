@@ -68,7 +68,7 @@ Deploying the Azure landing zone accelerator requires permissions to create reso
 
 There are other deployment options available for platform landing zones, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md).
 
-Application landing zones also have [Cloud adoption scenarios](azure/cloud-adoption-framework/scenarios/overview) for desing considerations and reccomendations best practices. Each cloud adoption scenario includes [Infrastructure as Code implementations or accelerators](/azure/architecture/landing-zones/landing-zone-deploy.md#Application) that are customizable and modular.
+The Microsoft Cloud Adoption Framework outlines [Cloud adoption scenarios](azure/cloud-adoption-framework/scenarios/overview) to help you further refine accelerate your cloud adoption journey. There is an [Infrastructure as Code implementations or accelerators](/azure/architecture/landing-zones/landing-zone-deploy.md#Application) for each of these scenarios.
 
 ## Next steps
 
