@@ -31,7 +31,7 @@ There are the following authoritative options for determining that one or more A
 
 ### Migration steps
 
-- Determine if the ALZ policies in scope for migration are currently assigned at any scope in your Azure estate. If leveraging the [AzGovViz tool]() this can be determined by checking the tenant summary as shown [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+- Determine if the ALZ policies in scope for migration are currently assigned at any scope in your Azure estate. If using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), this can be determined by checking the **TenantSummary**.
 - Determine if any ALZ policies to be migrated are part of an ALZ custom policy initiative which should be updated 
 - Determine if ALZ custom policy initiatives in scope for migration are currently assigned at any scope in your Azure estate. 
 
