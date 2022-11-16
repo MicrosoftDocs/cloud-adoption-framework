@@ -194,7 +194,6 @@ The resulting ??? setting should be set to "???"
 
 ### PowerShell
 
-#### Use Microsoft Graph PowerShell to Audit Password Expiration
 
 Use the following script to produce a CSV file that contains an audit of if users are set for their password to never expire.
 
