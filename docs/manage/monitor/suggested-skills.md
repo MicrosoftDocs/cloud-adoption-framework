@@ -23,24 +23,30 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how to use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Microsoft Defender for Cloud, deploy diagnostic settings, audit guest configuration settings, and more.
 
-- Introduction to [Azure CLI](/cli/azure/get-started-with-azure-cli), our cross-platform command-line experience for managing Azure resources. Also, review the introduction to [Azure PowerShell](/powershell/azure/). As part of their beginner-level course, [`Learning Azure Management Tools`](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
+- Introduction to [Azure CLI](/cli/azure/get-started-with-azure-cli), our cross-platform command-line experience for managing Azure resources. Also, review the introduction to [Azure PowerShell](/powershell/azure/get-started-azureps). As part of their beginner-level course, [`Learning Azure Management Tools`](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
 
   - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
   - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
 
 - Learn how to secure resources using policy, Azure role-based access control, and other Azure services by viewing [implement resource management security in Azure](/training/paths/implement-resource-mgmt-security/).
 
-- [`Monitoring Microsoft Azure Resources and Workloads`](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update) helps you learn how to use Azure monitoring tools to monitor Azure network resources and resources located on-premises.
+- [Monitor the usage, performance, and availability of resources with Azure Monitor](/training/paths/monitor-usage-performance-availability-resources-azure-monitor/) is a Microsoft Learn path walking you through how to monitor the usage, performance, and availability of resources using Azure Monitor.
 
 - Learn about planning and designing your monitoring deployments at scale and automating actions by viewing [Azure Monitor best practices and recommendations](https://www.youtube.com/watch?list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6&v=IWkqqahX_Ck).
 
+- Review the [Azure Monitor best practices - Planning your monitoring strategy and configuration](/azure/azure-monitor/best-practices-plan) documentation to strengthen your understanding of designing Azure Monitor strategies.
+
 ## Infrastructure monitoring
 
-- [`Design a Monitoring Strategy for Infrastructure in Microsoft Azure`](https://www.pluralsight.com/courses/microsoft-azure-monitoring-strategy-infrastructure-design-update) helps you learn foundational knowledge of monitoring capabilities and solutions in Azure.
+- The Microsoft Learn module [Design a holistic monitoring strategy on Azure](/training/modules/design-monitoring-strategy-on-azure/) teaches you to use monitoring services on Azure to bring operational excellence to your applications and infrastructure.
 
-- [How to monitor your Kubernetes clusters](https://www.youtube.com/watch?feature=emb_logo&v=RjsNmapggPU) provides an intermediate-level deep dive to help you learn about monitoring your Kubernetes cluster with Azure Monitor for containers.
+- For a larger scope of instrumentation, you can take the Microsoft Learn Path [Develop an instrumentation strategy](/training/paths/az-400-develop-instrumentation-strategy/), which teaches you about logging, telemetry, and monitoring to give you full visibility into what's happening in your environment.
 
-- Learn with Azure Monitor how to monitor data from [`Azure Storage and HDInsight`](https://www.pluralsight.com/courses/microsoft-azure-data-storage-monitoring).
+- In the [Instrument a cloud-native ASP.NET Core microservice](/training/modules/microservices-logging-aspnet-core/) Microsoft Learn module, you'll learn how to instrument your cloud-native ASP.NET Core microservice apps to diagnose problems and monitor performance. This module includes how to enable Azure Monitor for Containers in a Kubernetes cluster.
+
+- Learn how to [Analyze your Azure infrastructure by using Azure Monitor logs](/training/modules/analyze-infrastructure-with-azure-monitor-logs). This Microsoft Learn module walks you through using Azure Monitor logs to extract valuable information about your infrastructure from log data.
+
+- Review the documentation on [Monitoring your storage service with Azure Monitor Storage insights](/azure/storage/common/storage-insights-overview).
 
 - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities used to gain insight and actionable steps for Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
@@ -54,21 +60,21 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Understand how [Azure Monitor](/azure/azure-monitor/overview) helps you view the availability and performance of your applications and services together from one place. Pluralsight offers the following courses to help:
 
-  - [`Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms`](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights, to monitor and optimize your web applications.
+- The Microsoft Learn module [Monitor the health and performance of your web apps](/training/modules/monitor-health-performance-of-your-web-applications/) teaches you how to monitor your solution for performance and issues using Application Insights.
 
-  - [Capture and view page load times in your Azure web app](/training/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your application's components running in Azure.
+- Learn to [Instrument server-side web application code with Application Insights](/training/modules/instrument-web-app-code-with-application-insights/) with Microsoft Learn.
 
-  - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use the monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
+- [Capture and view page load times in your Azure web app](/training/modules/capture-page-load-times-application-insights/). Get started with this course on using Azure Monitor Application Insights for end-to-end monitoring of your application's components running in Azure.
 
-  - [`Instrument Applications with Azure Monitor Application Insights`](https://www.pluralsight.com/courses/microsoft-azure-application-insights-web-application-instrument) is a deep-dive course on using the Application Insights SDK to collect telemetry and events from an application with Angular and Node.js components.
-
-  - [`Application Debugging and Profiling`](https://www.pluralsight.com/courses/devintersection-azureai-session-31) is a recording from a Microsoft conference session on using and interpreting data provided by Application Insights Snapshot Debugger and Application Insights Profiler.
+- [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use the monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
 ## Data analysis
 
-- Learn how to write [log queries in Azure Monitor](/training/modules/analyze-infrastructure-with-azure-monitor-logs/). The Kusto Query Language is the primary resource for writing Azure Monitor log queries to explore and analyze log data between the collected data from Azure and hybrid resource application dependencies, including the live application.
+- To learn how to dive deeper into data analytics, review the course [write your first query with Kusto Query Language](/training/modules/write-first-query-kusto-query-language/).
 
-- [`Kusto Query Language (KQL) from Scratch`](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch), is a comprehensive course that includes detailed examples covering a wide range of use-cases and techniques for log analysis in Azure Monitor Logs.
+- View the course [analyze query results using KQL](/training/modules/analyze-results-kusto-query-language/) and learn how to summarize and visualize data with KQL.
+
+- [Data analysis in Azure Data Explorer with Kusto Query Language](/training/paths/data-analysis-data-explorer-kusto-query-language/) is a learning path where you will learn how to analyze data in Azure Data Explorer using the Kusto Query Language (KQL).
 
 ## Deeper skills exploration
 
