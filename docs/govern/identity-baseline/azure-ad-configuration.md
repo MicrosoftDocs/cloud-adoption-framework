@@ -223,7 +223,6 @@ $passwordResetAudit = $auditPath + "/password-reset" + "$date" + ".csv"
 Get-MgPolicyAuthorizationPolicy |  export-csv -path  "$passwordResetAudit"
 ```
 
-By changing the audit path variable, you can save this to audit to different locations.
 
 ## Enforce - Legacy authentication
 
