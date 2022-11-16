@@ -1,5 +1,5 @@
 ---
-title: 'Standard enterprise governance: Update ALZ deployed policies'
+title: 'Standard enterprise governance: migrate ALZ custom policies to Azure built-in policies'
 description: Use the guidance provided to migrate already deploy ALZ policies to Azure built-in policies.
 author: Jfaurskov
 ms.author: Janfaurs
