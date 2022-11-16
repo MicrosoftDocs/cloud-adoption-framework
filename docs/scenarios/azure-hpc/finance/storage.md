@@ -67,4 +67,4 @@ The following articles provide guidance that you might find helpful at various p
 - [Resource organization](./resource-organization.md)
 - [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

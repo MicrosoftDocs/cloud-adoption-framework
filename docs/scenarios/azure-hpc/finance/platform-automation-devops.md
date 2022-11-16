@@ -1,29 +1,31 @@
 ---
-title: 'Finance HPC Platform automation and DevOps | Microsoft Docs'
-description: 'Azure landing zones for HPC in finance do not have any specific considerations or recommendations which would impact devops related decisions.'
+title: Platform automation and DevOps for HPC in the finance sector
+description: Azure landing zones for HPC in finance don't have any specific considerations or recommendations that affect platform automation and DevOps decisions.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
+ms.date: 11/14/2022
 ---
 
-# Platform automation and DevOps for finance HPC
+# Platform automation and DevOps for HPC in the finance sector
 
- Azure landing zones for HPC in finance do not have any specific considerations or recommendations which would impact devops related decisions.
+ Azure [landing zones for HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/ready) in the finance sector don't have any specific considerations or recommendations that affect decisions related to platform automation and DevOps. Platform automation and DevOps are two of several design areas considered in this documentation.
 
-However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [platform automation and devops recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
+Keep in mind that it could be important to understand any decisions made previously by the cloud platform team so you know about existing recommendations for [platform automation and DevOps](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
 
 ## Next steps
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Identity Access Management](./identity-access-management.md)
+
+The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in the cloud adoption scenario for HPC environments in the finance sector.
+
+- [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Resource organization](./resource-organization.md)
+- [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
