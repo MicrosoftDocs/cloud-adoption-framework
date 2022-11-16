@@ -1373,8 +1373,6 @@ items:
           href: govern/guides/standard/cost-management-improvement.md
         - name: Multicloud scenarios
           href: govern/guides/standard/multicloud-improvement.md
-        - name: Migrate Azure Landing Zone policies to Azure Built-in policies
-          href: govern/guides/standard/update-alz-policies.md
       - name: Governance guide for complex enterprises
         items:
         - name: Overview
@@ -1513,6 +1511,8 @@ items:
           href: govern/resource-consistency/governance-simple-workload.md
         - name: Governance design for multiple teams
           href: govern/resource-consistency/governance-multiple-teams.md
+        - name: Migrate Azure Landing Zone policies to Azure Built-in policies
+          href: govern/resource-consistency/update-alz-policies.md
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration
