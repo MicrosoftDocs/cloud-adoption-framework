@@ -28,7 +28,7 @@ The following list gives an overview of network design considerations for Azure 
 
 - **Define the agent's connectivity method:** Review your existing infrastructure, security requirements, and decide how the connected machine agent will [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud providers. This connection can go directly over the internet, through a proxy server, or you can [implement Private Link](/azure/azure-arc/servers/private-link-security) for a private connection.
 - **Manage access to Azure service tags:** Create an automated process to keep the firewall and proxy network rules updated according to the [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements).
-- **Secure your network connectivity to Azure Arc:** Configure the machine to use Transport Layer Security (TLS) version 1.2. Older versions are not recommended due to known vulnerabilities.
+- **Secure your network connectivity to Azure Arc:** Configure the machine to use Transport Layer Security (TLS) version 1.2. Older versions aren't recommended due to known vulnerabilities.
 - **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server also need to communicate with other Azure services. This connectivity can go directly using public networks, through a firewall, or through a proxy server. To further secure the extension connectivity, you can [implement private endpoints](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
 - **Review your overall connectivity architecture:** Review the [network topology and connectivity design area](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) of Azure landing zone enterprise-scale to assess the impact of Azure Arc-enabled servers on your overall connectivity.
 
@@ -53,7 +53,7 @@ If the machine uses a firewall or a proxy server to communicate over the interne
 
 If outbound connectivity is restricted by your firewall or a proxy server, make sure to allow the IP ranges as per the [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements). When you only allow the required IP ranges or domain names for the agent to communicate with the service, use [service tags and URLs](/azure/azure-arc/servers/network-requirements#service-tags) to configure your firewall or proxy server.
 
-Be aware that if you deploy extensions on your Azure Arc-enabled servers, every extension has its own endpoint, and you must also allow all corresponding URLs in the firewall or proxy. Adding these endpoints will ensure granular secured network traffic to meet principle of least privilege (PoLP).
+If you deploy extensions on your Azure Arc-enabled servers, every extension has its own endpoint, and you must also allow all corresponding URLs in the firewall or proxy. Adding these endpoints will ensure granular secured network traffic to meet principle of least privilege (PoLP).
 
 #### Private Link
 
@@ -61,7 +61,7 @@ Azure Arc-enabled servers let you deploy VM extensions to centrally manage your 
 
 [![Diagram that shows Azure Arc-enabled servers Private Link topology.](./media/arc-enabled-servers-private-link-topology.png)](./media/arc-enabled-servers-private-link-topology.png#lightbox)
 
-This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should be familiar with. When you enable any of Azure Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support.
+This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should be familiar with. When you enable any of the Azure Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support.
 
 > [!TIP]
 > Review [Azure Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works) for more information.
@@ -72,15 +72,15 @@ We recommend implementing an automated process for keeping the firewall and prox
 
 ### Secure your network connectivity to Azure Arc
 
-We recommend using [Transport Layer Security 1.2 protocol](/azure/azure-arc/servers/network-requirements#transport-layer-security-12-protocol) to ensure the security of data in transit to Azure. Older versions of TLS/Secure Sockets Layer (SSL) were found to be vulnerable and are not recommended.
+We recommend using [Transport Layer Security 1.2 protocol](/azure/azure-arc/servers/network-requirements#transport-layer-security-12-protocol) to ensure the security of data in transit to Azure. Older versions of TLS/Secure Sockets Layer (SSL) were found to be vulnerable and aren't recommended.
 
 ### Define extensions connectivity method
 
 When you enable any of the Azure Arc-enabled servers supported VM extensions, those extensions connect to other Azure services. It's important to determine the connectivity method for those extensions: either directly, behind a proxy server/firewall, or using Azure Private Link.
 
-If your Azure Arc-enabled-servers use a proxy or a firewall, you must also allow all URLs required for the extensions, as they will communicate with their own endpoints.
+If your Azure Arc-enabled-servers use a proxy or a firewall, you must also allow all URLs required for the extensions, as they'll communicate with their own endpoints.
 
-If you are using Private Link, you must configure [Private Link for each service](/azure/azure-arc/servers/private-link-security#how-it-works).
+If you're using Private Link, you must configure [Private Link for each service](/azure/azure-arc/servers/private-link-security#how-it-works).
 
 ## Next steps
 
