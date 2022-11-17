@@ -1,7 +1,7 @@
 ---
 title: Security integration
 description: Integrate security insights and practices. Learn how security teams should work with other stakeholders to IT and business operations.
-author: NaomiOooo
+author: martinekuan
 ms.author: martinek
 ms.date: 05/14/2021
 ms.topic: conceptual

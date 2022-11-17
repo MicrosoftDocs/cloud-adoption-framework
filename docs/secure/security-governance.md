@@ -1,7 +1,7 @@
 ---
 title: Security governance, risk, and compliance
 description: Learn about security governance, risk, and compliance. Includes topics like architecture and standards, and security posture management.
-author: NaomiOooo
+author: martinekuan
 ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual

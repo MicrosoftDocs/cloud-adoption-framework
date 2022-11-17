@@ -1,7 +1,7 @@
 ---
 title: Business resilience
 description: Learn what your organization should do before, during, and after an attack to keep services and products online and available.
-author: NaomiOooo
+author: martinekuan
 ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
