@@ -261,4 +261,4 @@ We recommend that you assign the policy to the top-level management group and us
 It's important to understand the recommended connectivity models for inbound and outbound connectivity to and from the public internet. The next article reviews design considerations, design recommendations, and recommended content for further reading.
 
 > [!div class="nextstepaction"]
-> [Inbound and outbound connectivity](../enterprise-scale/network-topology-and-connectivity.md)
+> [Inbound and outbound connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
