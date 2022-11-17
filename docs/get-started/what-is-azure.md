@@ -2,7 +2,7 @@
 title: How does Azure work?
 description: Learn the basics about the internal structure and functioning of the Azure cloud platform and cloud virtualization.
 author: alexbuckgit
-ms.author: abuck
+ms.author: martinek
 ms.date: 01/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

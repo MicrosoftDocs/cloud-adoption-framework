@@ -2,7 +2,7 @@
 title: Motivations and business risks in the Deployment Acceleration discipline
 description: Use the Cloud Adoption Framework for Azure to understand business risks of the Deployment Acceleration discipline, which can be used in governance strategy.
 author: alexbuckgit
-ms.author: abuck
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

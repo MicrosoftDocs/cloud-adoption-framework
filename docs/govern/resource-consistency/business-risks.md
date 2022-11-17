@@ -2,7 +2,7 @@
 title: Motivations and business risks in the Resource Consistency discipline
 description: Use the Cloud Adoption Framework for Azure to understand typical customer adoption of a Resource Consistency discipline within a cloud governance strategy.
 author: alexbuckgit
-ms.author: abuck
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Multiple team governance design in Azure
 description: Find guidance for configuring Azure governance controls for multiple teams, multiple workloads, and multiple environments.
 author: alexbuckgit
-ms.author: abuck
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Deployment Acceleration discipline template
 description: Use this template as a starting point for documenting and communicating policy statements for governing configuration and deployment issues in the cloud.
 author: alexbuckgit
-ms.author: abuck
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
