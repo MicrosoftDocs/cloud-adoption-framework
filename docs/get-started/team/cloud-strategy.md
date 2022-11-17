@@ -2,7 +2,7 @@
 title: 'Get started: Build a cloud strategy team'
 description: Establish a cloud strategy team to ensure that cloud adoption efforts progress in alignment with business outcomes and you're prepared for a successful cloud adoption journey.
 author: JanetCThomas
-ms.author: janet
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

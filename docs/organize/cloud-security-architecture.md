@@ -2,7 +2,7 @@
 title: Cloud security architecture functions
 description: Understand cloud security architecture functions.
 author: JanetCThomas
-ms.author: janet
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

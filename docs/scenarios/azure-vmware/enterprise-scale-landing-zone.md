@@ -2,7 +2,7 @@
 title: Enterprise-scale for Microsoft Azure VMware Solution
 description: Learn how enterprise-scale can accelerate the adoption of Microsoft Azure VMware Solution.
 author: pgandham
-ms.author: janet
+ms.author: martinek
 ms.date: 06/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

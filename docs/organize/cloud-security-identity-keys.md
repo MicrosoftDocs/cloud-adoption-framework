@@ -2,7 +2,7 @@
 title: Function of identity and key management in the cloud
 description: Understand the function of identity and key management in the cloud.
 author: JanetCThomas
-ms.author: janet
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

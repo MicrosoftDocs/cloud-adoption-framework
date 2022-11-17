@@ -2,7 +2,7 @@
 title: 'Get started: Ensure consistent performance across a portfolio'
 description: Learn the basics of managing performance across a portfolio, including maintaining performance, setting expectations, and creating organizational alignment.
 author: JanetCThomas
-ms.author: janet
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

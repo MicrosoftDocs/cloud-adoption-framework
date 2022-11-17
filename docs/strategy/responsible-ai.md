@@ -2,7 +2,7 @@
 title: Responsible AI
 description: Learn more about how Microsoft views the development of ethical AI, including principles, guidelines, and tools for accomplishing this.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Function of cloud threat intelligence
 description: Understand the function of cloud threat intelligence.
 author: JanetCThomas
-ms.author: janet
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

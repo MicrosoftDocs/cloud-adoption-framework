@@ -2,7 +2,7 @@
 title: People security functions in the cloud
 description: Understand people security functions in the cloud.
 author: JanetCThomas
-ms.author: janet
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Azure landing zone review for Microsoft Azure VMware Solution
 description: Learn about how Microsoft Azure VMware Solution affects your Azure landing zone design.
 author: WendyRing
-ms.author: janet
+ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
