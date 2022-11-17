@@ -3,7 +3,7 @@ title: Abbreviation examples for Azure resources
 description: Abbreviation examples for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 9/30/2022
+ms.date: 11/16/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -47,7 +47,8 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
-| Front Door instance | `Microsoft.Network/frontDoors` | `fd` |
+| Front Door (Standard/Premium) | `Microsoft.Cdn/profiles` | `fd` |
+| Front Door (classic) | `Microsoft.Network/frontDoors` | `fd` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
