@@ -21,7 +21,7 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 - **Monitor and visualize metrics.** Metrics are numerical values available from Azure resources that help you understand the health of your systems. You can customize charts for your dashboards and use workbooks for reporting.
 
-- **Query and analyze logs.** Log Analytics provides a central repository to aggregate data from Azure's activity and diagnostic logs. You can run queries from there to help troubleshoot issues or visualize data. You can also collect logs from other monitoring and management solutions for your cloud or on-premises resources. 
+- **Query and analyze logs.** Log Analytics provides a central repository to aggregate data from Azure's activity and diagnostic logs. You can run queries from there to help troubleshoot issues or visualize data. You can also collect logs from other monitoring and management solutions for your cloud or on-premises resources.
 
 - **Set up alerts and actions.** Alerts proactively notify you of critical conditions so that you can take corrective actions based on triggers from metrics, logs, or service health issues. You can set up different notifications and actions and send data to your IT service management tools.
 
@@ -47,7 +47,6 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
-
 
 ::: zone-end
 
@@ -75,7 +74,6 @@ To set up a Service Health alert:
 2. Select **Health alerts**.
 3. Create a Service Health alert.
 
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -101,7 +99,6 @@ Azure Advisor is a free, personalized cloud consultant that helps you follow and
 Recommendations in Azure Advisor are based on the resources you deploy and your actions in Azure. You can check Advisor regularly for the latest recommendations.
 
 ::: zone target="chromeless"
-
 
 ::: zone-end
 
@@ -139,6 +136,38 @@ To explore Microsoft Defender for Cloud, go to the [Azure portal](https://portal
 
 ### Learn more
 
-See [Microsoft Defender for Cloud documentation](/azure/security-center/) to learn more.
+See [Microsoft Defender for Cloud documentation](/azure/defender-for-cloud/) to learn more.
+
+::: zone-end
+
+## [Microsoft Sentinel](#tab/MicrosoftSentinel)
+
+Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise. You can use the capabilities from Microsoft Sentinel to monitor security events at scale. Utilize sophisticated workbooks to build customized reports and dashboards with the correct data at your fingertips.
+
+Microsoft Sentinel provides two critical cloud-native solutions:
+
+- Security information and event management (SIEM)
+- Security orchestration, automation, and response (SOAR)
+
+By connecting data sources to Microsoft Sentinel using the built-in connectors, you can widen your monitoring lens to a broader security and application ecosystem for non-Microsoft solutions.
+
+::: zone target="chromeless"
+
+### Action
+
+1. Review the [Microsoft Sentinel pricing](/pricing/details/microsoft-sentinel/) to understand the cost impact.
+1. Learn how to [onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and set up data connectors to monitor and protect your environment.
+
+After you've connected data sources using the data connectors, you can immediately start using the platform's capabilities.
+
+::: zone-end
+
+::: zone target="docs"
+
+To explore Microsoft Defender for Cloud, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
+
+### Learn more
+
+See [Microsoft Sentinel documentation](/azure/sentinel/) to learn more.
 
 ::: zone-end
