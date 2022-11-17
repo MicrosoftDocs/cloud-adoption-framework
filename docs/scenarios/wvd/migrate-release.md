@@ -2,7 +2,7 @@
 title: Azure Virtual Desktop post-deployment and release tasks
 description: Use the Cloud Adoption Framework best practices to learn about the release process for the migration or deployment of Azure Virtual Desktop instances.
 author: DominicAllen
-ms.author: doalle
+ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
