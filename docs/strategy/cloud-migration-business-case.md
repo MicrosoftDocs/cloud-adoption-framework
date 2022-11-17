@@ -2,7 +2,7 @@
 title: Create a business case for cloud migration
 description: Learn how to create a cloud-migration business case that forecasts cost savings compared to on-premises resources.
 author: WendyRing
-ms.author: wering
+ms.author: martinek
 ms.date: 08/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

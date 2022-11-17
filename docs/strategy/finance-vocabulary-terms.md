@@ -2,7 +2,7 @@
 title: Common finance vocabulary terms
 description: Learn about common finance vocabulary terms to use when creating a cloud migration business case or financial model.
 author: wering
-ms.author: wering
+ms.author: martinek
 ms.date: 4/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
