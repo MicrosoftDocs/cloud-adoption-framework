@@ -1,7 +1,7 @@
 ---
 title: Cloud Adoption Framework migration model
 description: Learn about the Cloud Adoption Framework migration model. Understand the motivations behind migrations and learn why the process is incremental.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 12/28/2021
 ms.topic: conceptual

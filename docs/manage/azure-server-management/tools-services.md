@@ -1,7 +1,7 @@
 ---
 title: Azure server management services
 description: Use the Cloud Adoption Framework for Azure to learn about areas within the suite of Azure server management services.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual

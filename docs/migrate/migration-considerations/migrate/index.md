@@ -1,7 +1,7 @@
 ---
 title: Executing a migration
 description: Get an overview of the articles that explain the various activities that may be involved in migrating a workload in Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 12/17/2021
 ms.topic: conceptual

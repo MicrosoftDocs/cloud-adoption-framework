@@ -1,7 +1,7 @@
 ---
 title: Managing the cloud in the retail industry
 description: Managing a portfolio of retail applications in the cloud. Use these questions to create a baseline from which to work.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/28/2021
 ms.topic: conceptual

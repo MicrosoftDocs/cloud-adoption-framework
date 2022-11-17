@@ -1,7 +1,7 @@
 ---
 title: Automate onboarding
 description: Use the onboarding sample files to help you consider automating your Azure server management services deployment to improve efficiency.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual

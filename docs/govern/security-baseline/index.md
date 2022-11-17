@@ -1,7 +1,7 @@
 ---
 title: Security Baseline discipline overview
 description: Understand the approach to developing a Security Baseline discipline as part of a cloud governance strategy.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual

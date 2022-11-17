@@ -1,7 +1,7 @@
 ---
 title: A strategic option for running Azure in your datacenter - Azure Stack
 description: Deploy Azure in your datacenter by using Azure Stack Hub.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual

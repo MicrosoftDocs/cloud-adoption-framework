@@ -1,7 +1,7 @@
 ---
 title: 'Standard enterprise governance: Initial corporate policy'
 description: Use the Cloud Adoption Framework for Azure to define initial standard governance position, early-stage risks, initial policy statements, and early enforcement processes.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/05/2019
 ms.topic: conceptual

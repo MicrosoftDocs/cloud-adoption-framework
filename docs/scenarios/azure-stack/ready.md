@@ -1,7 +1,7 @@
 ---
 title: Ready your cloud environment for Azure Stack Hub migration
 description: Ready your cloud environment for Azure Stack Hub migration.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual

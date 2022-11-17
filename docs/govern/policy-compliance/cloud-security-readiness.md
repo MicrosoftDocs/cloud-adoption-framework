@@ -1,7 +1,7 @@
 ---
 title: CISO cloud security readiness guide
 description: Prepare the chief information security office (CISO) for cloud transformation and incremental governance.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual

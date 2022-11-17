@@ -1,7 +1,7 @@
 ---
 title: Operations management process
 description: Establish an operational fitness review to support the ongoing operations management process
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2018
 ms.topic: conceptual

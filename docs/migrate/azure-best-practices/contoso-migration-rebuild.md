@@ -1,7 +1,7 @@
 ---
 title: Rebuild an on-premises application in Azure
 description: Learn how Contoso rebuilds an application in Azure by using Azure App Service, Azure Kubernetes Service (AKS), Azure Cosmos DB, Azure Functions, and Azure Cognitive Services.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 7/1/2020
 ms.topic: conceptual

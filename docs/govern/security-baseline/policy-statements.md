@@ -1,7 +1,7 @@
 ---
 title: Security Baseline sample policy statements
 description: Refer to these sample Security Baseline policy statements to help draft policy statements to address your organization's needs.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual

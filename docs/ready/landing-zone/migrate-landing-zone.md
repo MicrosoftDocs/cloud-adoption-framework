@@ -1,7 +1,7 @@
 ---
 title: Deploy a migration landing zone in Azure
 description: Learn how to deploy a migration landing zone in Azure. Use this landing zone to move an on-premises environment into Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 12/10/2021
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Scale a migration to Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to plan for and perform a migration at scale to Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Balance competing priorities
 description: Discover strategies for balancing competing priorities.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 03/04/2020
 ms.topic: conceptual

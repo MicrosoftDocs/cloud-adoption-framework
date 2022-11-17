@@ -1,7 +1,7 @@
 ---
 title: Mature team structures
 description: Use these examples of common team structures, to find the organizational structure that best aligns with your operational needs during cloud adoption.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 02/18/2022
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Track costs across business units, environments, or projects
 description: Learn how to create tracking mechanisms to monitor costs using the Cloud Adoption Framework for Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 08/24/2022
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Review and compare common cloud operating models
 description: Learn how other companies have implemented their cloud operating model and review guidance to support your efforts.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/16/2022
 ms.topic: conceptual

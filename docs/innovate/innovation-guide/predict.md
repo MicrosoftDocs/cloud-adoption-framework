@@ -1,7 +1,7 @@
 ---
 title: Innovate with AI in Azure
 description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual

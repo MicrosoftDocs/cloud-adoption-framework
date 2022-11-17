@@ -1,7 +1,7 @@
 ---
 title: Manage organization alignment
 description: Learn how to establish and maintain your organization's alignment by using the Cloud Adoption Framework for Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 01/07/2022
 ms.topic: conceptual

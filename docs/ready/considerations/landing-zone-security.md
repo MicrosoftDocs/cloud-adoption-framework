@@ -1,7 +1,7 @@
 ---
 title: Improve landing zone security
 description: Improve landing zone security.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual

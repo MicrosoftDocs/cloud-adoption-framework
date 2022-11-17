@@ -1,7 +1,7 @@
 ---
 title: Best practices to secure and manage Azure workloads
 description: Learn about best practices to operate, manage, and secure workloads migrated to Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 08/30/2022
 ms.topic: conceptual

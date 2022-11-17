@@ -1,7 +1,7 @@
 ---
 title: Design workload architectures before migration
 description: Use the Cloud Adoption Framework for Azure to learn how to define the new architecture before cloud migration begins.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 12/18/2021
 ms.topic: conceptual

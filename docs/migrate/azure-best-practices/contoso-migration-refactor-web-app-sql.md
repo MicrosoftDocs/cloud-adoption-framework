@@ -1,7 +1,7 @@
 ---
 title: Migrate an application to Azure App Service and SQL Database
 description: Use the Cloud Adoption Framework for Azure to learn how to refactor an application by migrating it to Azure App Service and Azure SQL Database.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual

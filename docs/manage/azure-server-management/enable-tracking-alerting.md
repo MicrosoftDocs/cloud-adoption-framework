@@ -1,7 +1,7 @@
 ---
 title: Tracking and alerts for critical changes
 description: Enable tracking and alerting for critical changes in your hybrid environment with Azure Change Tracking and Inventory.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual

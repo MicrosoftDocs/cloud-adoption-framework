@@ -1,7 +1,7 @@
 ---
 title: Operational compliance in cloud management
 description: Use the Cloud Adoption Framework for Azure to learn how to maintain compliance with operational commitments.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual

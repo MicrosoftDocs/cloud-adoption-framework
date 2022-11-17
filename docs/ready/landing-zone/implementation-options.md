@@ -1,7 +1,7 @@
 ---
 title: Landing zone implementation options
 description: Determine which landing zone implementation option best fits your requirements.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 03/31/2022
 ms.topic: conceptual

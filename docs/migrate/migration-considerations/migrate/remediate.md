@@ -1,7 +1,7 @@
 ---
 title: Remediating assets prior to migration
 description: Learn how to remediate any assets that you determine to be incompatible with your chosen cloud provider before migration begins.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 12/22/2021
 ms.topic: conceptual

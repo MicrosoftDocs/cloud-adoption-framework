@@ -1,7 +1,7 @@
 ---
 title: Onboard Azure server management services
 description: Onboard Azure server management services with information for virtual machines in Azure and on-premises servers.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Design principles and advanced operations
 description: Learn to apply design principles and advanced options to create an offering that provides a minimum level of business commitment for all supported workloads.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual

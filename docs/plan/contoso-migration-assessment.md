@@ -1,7 +1,7 @@
 ---
 title: Assess on-premises workloads for Azure migration
 description: Learn through an illustrative example how to assess an on-premises application for migration to Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 02/25/2020
 ms.topic: conceptual

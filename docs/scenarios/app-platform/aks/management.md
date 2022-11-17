@@ -1,7 +1,7 @@
 ---
 title: Operations management considerations for Azure Kubernetes Service
 description: Learn about considerations for your operations management for Azure Kubernetes Service.
-author: BrianBlanchard
+author: martinekuan
 ms.author: pidebrui
 ms.date: 03/01/2021
 ms.topic: conceptual

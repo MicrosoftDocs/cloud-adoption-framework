@@ -1,7 +1,7 @@
 ---
 title: Organizational structures in the retail industry
 description: Understand organizational structures in the retail industry for cloud adoption. Create a cloud strategy team and understand common growth patterns.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual

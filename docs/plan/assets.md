@@ -1,7 +1,7 @@
 ---
 title: Align assets to prioritized workloads
 description: Use the Cloud Adoption Framework for Azure to learn how to align assets to your prioritized workloads.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 07/01/2019
 ms.topic: conceptual

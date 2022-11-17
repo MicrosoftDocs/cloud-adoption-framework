@@ -1,7 +1,7 @@
 ---
 title: Governance or compliance strategy
 description: Governance or compliance strategy
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual

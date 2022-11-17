@@ -1,7 +1,7 @@
 ---
 title: Governance guide for complex enterprises
 description: Follow a fictional complex enterprise through various stages of governance maturity, as it defines a minimum viable product (MVP) based on best practices.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 06/08/2022
 ms.topic: conceptual

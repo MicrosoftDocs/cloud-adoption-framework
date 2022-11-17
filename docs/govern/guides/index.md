@@ -1,7 +1,7 @@
 ---
 title: Cloud governance guides
 description: Review cloud governance guides that illustrate best practices for an incremental approach to any governance scenario.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 02/11/2022
 ms.topic: conceptual

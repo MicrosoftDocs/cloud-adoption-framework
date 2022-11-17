@@ -1,7 +1,7 @@
 ---
 title: The One Migrate approach to Azure adoption
 description: Follow the One Migrate approach of Azure Migrate to migrate and modernize entire IT portfolios.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 07/21/2020
 ms.topic: conceptual

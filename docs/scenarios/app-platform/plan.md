@@ -1,7 +1,7 @@
 ---
 title: Plan for modern application platforms
 description: Develop a plan for cloud adoption with a focus on modern application platform data points and activities.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Motivations and business risks in the Security Baseline discipline
 description: Understand and see samples of typical customer adoption of a Security Baseline discipline within a cloud governance strategy.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual

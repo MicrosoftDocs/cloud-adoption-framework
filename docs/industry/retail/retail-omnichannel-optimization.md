@@ -1,7 +1,7 @@
 ---
 title: Omnichannel optimization in the retail industry
 description: Learn about omnichannel optimization in the retail industry by using Azure services to integrate channels that sell goods and services.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 06/07/2021
 ms.topic: conceptual

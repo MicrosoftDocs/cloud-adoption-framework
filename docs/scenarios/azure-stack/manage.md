@@ -1,7 +1,7 @@
 ---
 title: Manage workloads that run on Azure Stack Hub
 description: Learn how to manage workloads running on Azure Stack Hub.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual

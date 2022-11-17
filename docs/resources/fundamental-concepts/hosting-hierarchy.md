@@ -1,7 +1,7 @@
 ---
 title: Portfolio hierarchy
 description: Learn how workloads, resources, and supporting services fit together in your portfolio hierarchy.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 08/26/2022
 ms.topic: conceptual

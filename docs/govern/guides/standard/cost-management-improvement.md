@@ -1,7 +1,7 @@
 ---
 title: 'Standard enterprise governance: Improve the Cost Management discipline'
 description: Use the Cloud Adoption Framework for Azure to learn about adding cost controls to a simple governance minimum viable product (MVP).
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/05/2019
 ms.topic: conceptual

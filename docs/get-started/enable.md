@@ -1,7 +1,7 @@
 ---
 title: Enable customer success with a sound operating model and organizational alignment
 description: Use the free, self-service Cloud Adoption Framework and other tools to help you make cloud adoption decisions that enable customer success.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual

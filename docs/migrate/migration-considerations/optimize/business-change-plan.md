@@ -1,7 +1,7 @@
 ---
 title: Develop a business change plan
 description: Use the Cloud Adoption Framework for Azure to learn about how a business change plan can help you implement a broader user adoption plan.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual

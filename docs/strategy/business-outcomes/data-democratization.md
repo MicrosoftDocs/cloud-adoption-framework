@@ -1,7 +1,7 @@
 ---
 title: Support business with data innovation
 description: Support business with data innovation by using a centralized data repository.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/22/2020
 ms.topic: conceptual

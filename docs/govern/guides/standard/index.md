@@ -1,7 +1,7 @@
 ---
 title: Standard enterprise governance guide
 description: Follow a fictional standard enterprise through various stages of governance maturity, as it defines a minimum viable product (MVP) based on best practices.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 06/02/2022
 ms.topic: conceptual

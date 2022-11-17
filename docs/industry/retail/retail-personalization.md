@@ -1,7 +1,7 @@
 ---
 title: Personalization in the retail industry
 description: Learn about personalization in the retail industry, including how to address personalization challenges with Microsoft Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual

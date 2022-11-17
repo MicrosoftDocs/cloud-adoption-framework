@@ -1,7 +1,7 @@
 ---
 title: Azure landing zones for modern application platforms
 description: Learn about Azure landing zones for modern application platforms.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual

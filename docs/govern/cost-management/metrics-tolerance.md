@@ -1,7 +1,7 @@
 ---
 title: Risk tolerance metrics and indicators in the Cost Management discipline
 description: Use the Cloud Adoption Framework for Azure to quantify risk tolerance metrics and indicators for cost management in cloud governance.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual

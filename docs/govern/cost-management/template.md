@@ -1,7 +1,7 @@
 ---
 title: Cost Management discipline template
 description: Use this template to define Cost Management policy statements that capture business risks, risk tolerance, compliance processes, and tooling.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual

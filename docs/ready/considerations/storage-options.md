@@ -1,7 +1,7 @@
 ---
 title: Review your storage options
 description: Use the Cloud Adoption Framework for Azure to learn how to review your storage options for Azure workloads.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 10/04/2022
 ms.topic: conceptual

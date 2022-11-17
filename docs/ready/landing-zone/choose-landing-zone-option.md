@@ -1,7 +1,7 @@
 ---
 title: Choose the landing zone for your organization
 description: Learn how to choose the right landing zone for your organization. You can start small and expand or implement an enterprise-scale option.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 02/17/2022
 ms.topic: conceptual

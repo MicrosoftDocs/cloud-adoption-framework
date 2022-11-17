@@ -1,7 +1,7 @@
 ---
 title: Best practices to set up networking for migrated Azure workloads
 description: Use the Cloud Adoption Framework for Azure to learn best practices that help you set up networking for your migrated workloads.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 12/29/2021
 ms.topic: conceptual

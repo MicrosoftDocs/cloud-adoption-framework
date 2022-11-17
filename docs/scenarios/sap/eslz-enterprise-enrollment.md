@@ -1,7 +1,7 @@
 ---
 title: Enterprise enrollment considerations for SAP
 description: SAP guidelines for enterprise enrollment
-author: brianblanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual

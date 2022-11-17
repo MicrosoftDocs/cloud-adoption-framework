@@ -1,7 +1,7 @@
 ---
 title: Resource organization considerations for AKS
 description: AKS guidelines for resource organization
-author: brianblanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual

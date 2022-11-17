@@ -1,7 +1,7 @@
 ---
 title: Business priorities during a transformation process
 description: Use the Cloud Adoption Framework for Azure to learn to maintain business alignment during long-term transformation process.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 12/20/2021
 ms.topic: conceptual

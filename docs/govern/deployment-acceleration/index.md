@@ -1,7 +1,7 @@
 ---
 title: Deployment Acceleration discipline overview
 description: Use the Cloud Adoption Framework for Azure to understand a Deployment Acceleration discipline in relation to cloud governance.
-author: BrianBlanchard
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
