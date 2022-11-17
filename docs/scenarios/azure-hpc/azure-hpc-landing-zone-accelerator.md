@@ -91,7 +91,7 @@ The following conceptual reference architecture is an example that shows design 
 
 :::image type="content" alt-text="Diagram that shows an example architecture for a manufacturing environment, including on-premises and cloud resources and an HPC landing zone." source="./media/hpc-manufacturing-architecture-example.png" lightbox="./media/hpc-manufacturing-architecture-example.png":::
 
-This diagram is also available in a large version: [Example diagram for manufacturing](./media/./media/hpc-manufacturing-architecture-example-large.png)
+This diagram is also available in a large version: [Example diagram for manufacturing](./media/hpc-manufacturing-architecture-example-large.png)
 
 ## Obtain the HPC landing zone accelerator
 
