@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 11/14/2022
+ms.date: 11/17/2022
 ---
 
-# Manufacturing HPC Network topology and connectivity
+# Manufacturing HPC network topology and connectivity
 
 This guidance builds on considerations and recommendations defined in the Azure landing zone article for [network topology and connectivity](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity). Following the guidance in this article helps you examine key design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
 
@@ -36,7 +36,7 @@ Consider creating separate subnets to assign IP addresses across functional comp
 * ANF
 * HPC Cache
 
-Several services like Azure NetApp Files, Azure HPC Cache, and future storage offerings, require dedicated delegated subnets for proper operation. Ensure that you plan appropriate addressing space if you're considering any of these services.
+Several services like Azure NetApp Files, Azure HPC Cache, and future storage offerings require dedicated delegated subnets for proper operation. Ensure that you plan appropriate addressing space if you're considering any of these services.
 
 ## Configure DNS and name resolution for on-premises and Azure resources
 
