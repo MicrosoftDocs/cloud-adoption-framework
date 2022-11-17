@@ -1,31 +1,37 @@
 ---
-title: 'Finance HPC Security | Microsoft Docs'
-description: 'It would be important to understand any decisions previously made by the cloud platform team to be aware of existing security recommendations for your finance HPC environment.'
+title: Security for HPC in the finance sector 
+description: This article provides recommendations for implementing security in HPC environments for the finance sector.  
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
+ms.date: 11/15/2022
 ---
 
-# Security for finance HPC
+# Security for HPC in the finance sector
 
-It would be important to understand any decisions previously made by the cloud platform team to be aware of existing [security recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security).
-We also recommend that you consider Azure security baseline recommendations provided for various services used in HPC environment including
+This article provides recommendations for implementing security in HPC environments for the finance sector.  
+
+It's important to understand the previous [security recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) outlined by the Microsoft cloud platform team.
+
+We also recommend that you consider security baseline recommendations for various services that are used in HPC environments, including:
+
  - [Azure HPC Cache](/security/benchmark/azure/baselines/hpc-cache-security-baseline)
- - [Azure Cycelcloud](/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8&preserve-view=true)
+ - [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices?view=cyclecloud-8&preserve-view=true)
  - [Azure Batch](/azure/batch/security-controls-policy)
 
 ## Next steps
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Identity Access Management](./identity-access-management.md)
+
+The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC in the finance sector.
+
+- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps](./platform-automation-devops.md)
+- [Resource organization](./resource-organization.md)
+- [Governance](./security-governance-compliance.md)
 - [Storage](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
