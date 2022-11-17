@@ -3,7 +3,7 @@ title: Security for Azure Red Hat OpenShift
 description: Learn how to implement security for Azure Red Hat OpenShift deployments.
 author: UmarMohamedUsman
 ms.author: umarm
-ms.date: 08/17/2022
+ms.date: 11/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -47,9 +47,9 @@ Here are some design considerations for security governance and compliance:
 
 - Monitor and enforce configuration by using the [Azure Policy Extension](/azure/governance/policy/concepts/policy-for-kubernetes#install-azure-policy-extension-for-azure-arc-enabled-kubernetes).
 
-- Use [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction) to secure clusters, containers, and applications. Also scan your images for vulnerabilities with Microsoft Defender or any other image scanning solution.
-
 - Connect [Azure Red Hat OpenShift clusters to Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+
+- Use [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction) supported via [Arc enabled Kubernetes](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-containers?tabs=iaas-arc) to secure clusters, containers, and applications. Also scan your images for vulnerabilities with Microsoft Defender or any other image scanning solution.
 
 - Deploy a dedicated and private instance of [Azure Container Registry](/azure/container-registry/) to each landing zone subscription.
 
