@@ -1,7 +1,7 @@
 ---
 title: Design guidance for Azure Virtual Desktop
 description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation.
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 04/19/2022
 ms.topic: conceptual

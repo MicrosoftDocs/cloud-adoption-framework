@@ -1,7 +1,7 @@
 ---
 title: Innovation and Azure Virtual Desktop
 description: Explore how organizations can innovate with Azure Virtual Desktop
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual

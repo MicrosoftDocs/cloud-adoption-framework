@@ -1,7 +1,7 @@
 ---
 title: Security operations
 description: Learn about best practice guidance for establishing a security operations function. This function helps limit damage from attackers.
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual

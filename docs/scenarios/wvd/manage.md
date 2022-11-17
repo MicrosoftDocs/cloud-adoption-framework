@@ -1,7 +1,7 @@
 ---
 title: Manage an Azure Virtual Desktop environment
 description: Explore management best practices for Azure Virtual Desktop
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual

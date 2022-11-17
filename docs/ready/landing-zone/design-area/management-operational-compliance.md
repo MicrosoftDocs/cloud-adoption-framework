@@ -1,7 +1,7 @@
 ---
 title: Operational compliance considerations
 description: Overview of operational compliance design considerations and recommendations.
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 06/21/2022
 ms.topic: conceptual

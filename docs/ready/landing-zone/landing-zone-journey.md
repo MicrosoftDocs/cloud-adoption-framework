@@ -1,7 +1,7 @@
 ---
 title: Journey toward the target architecture
 description: Explore the journey toward the target architecture for Azure landing zones.
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 12/30/2021
 ms.topic: conceptual

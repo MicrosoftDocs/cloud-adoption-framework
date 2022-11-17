@@ -1,7 +1,7 @@
 ---
 title: Business continuity and disaster recovery
 description: Design area guidance for business continuity and disaster recovery
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 01/04/2022
 ms.topic: conceptual

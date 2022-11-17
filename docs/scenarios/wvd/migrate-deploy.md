@@ -1,7 +1,7 @@
 ---
 title: Deploy Azure Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to deploy Azure Virtual Desktop using best practices that reduce complexity and standardize the migration process.
-author: DominicAllen
+author: martinekuan
 ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
