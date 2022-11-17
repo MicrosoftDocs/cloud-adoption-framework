@@ -1,7 +1,7 @@
 ---
 title: Organize and manage multiple Azure subscriptions
 description: Use the Cloud Adoption Framework for Azure to learn about creating a management group hierarchy to simplify managing your subscriptions and resources.
-author: alexbuckgit
+author: martinekuan
 ms.author: martinek
 ms.date: 10/12/2021
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Deployment Acceleration sample policy statements
 description: Use the Cloud Adoption Framework for Azure to get sample Deployment Acceleration policy statements to help you draft policy statements.
-author: alexbuckgit
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual

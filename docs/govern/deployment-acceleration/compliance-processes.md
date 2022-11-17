@@ -1,7 +1,7 @@
 ---
 title: Deployment Acceleration policy compliance processes
 description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support a Deployment Acceleration discipline.
-author: alexbuckgit
+author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
