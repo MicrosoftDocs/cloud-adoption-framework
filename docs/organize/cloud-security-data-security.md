@@ -1,7 +1,7 @@
 ---
 title: Function of cloud data security
 description: Understand the function of cloud data security.
-author: JanetCThomas
+author: martinekuan
 ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: 'Get started: Improve reliability with the right controls'
 description: Learn the basics of improving reliability through governance controls and a management baseline.
-author: JanetCThomas
+author: martinekuan
 ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual

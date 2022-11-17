@@ -1,7 +1,7 @@
 ---
 title: 'Get started: Build a cloud adoption team'
 description: Establish a cloud adoption team's scope, deliverables, and the capabilities to prepare for successful cloud adoption.
-author: JanetCThomas
+author: martinekuan
 ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual

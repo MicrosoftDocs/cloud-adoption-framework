@@ -1,7 +1,7 @@
 ---
 title: Get started with the Cloud Adoption Framework
 description: Find the most relevant getting started guide for your cloud adoption needs
-author: JanetCThomas
+author: martinekuan
 ms.author: martinek
 ms.date: 07/29/2021
 ms.topic: conceptual
