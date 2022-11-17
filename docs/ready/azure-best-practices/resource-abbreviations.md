@@ -47,9 +47,10 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
-| Front Door (Standard/Premium) | `Microsoft.Cdn/profiles` | `fd` |
-| Front Door (classic) | `Microsoft.Network/frontDoors` | `fd` |
+| Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `fd` |
+| Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
+| Front Door (classic) | `Microsoft.Network/frontDoors` | `fd` |
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
