@@ -98,6 +98,8 @@ Azure Advisor is a free, personalized cloud consultant that helps you follow and
 
 Recommendations in Azure Advisor are based on the resources you deploy and your actions in Azure. You can check Advisor regularly for the latest recommendations.
 
+Additionally, the five categories in Azure Advisor are in direct relation to the pillars of the [Azure Well-Architected Framework](/azure/architecture/framework/).
+
 ::: zone target="chromeless"
 
 ::: zone-end
@@ -151,20 +153,16 @@ Microsoft Sentinel provides two critical cloud-native solutions:
 
 By connecting data sources to Microsoft Sentinel using the built-in connectors, you can widen your monitoring lens to a broader security and application ecosystem for non-Microsoft solutions.
 
-::: zone target="chromeless"
-
-### Action
+**Get started:**
 
 1. Review the [Microsoft Sentinel pricing](/pricing/details/microsoft-sentinel/) to understand the cost impact.
 1. Learn how to [onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and set up data connectors to monitor and protect your environment.
 
 After you've connected data sources using the data connectors, you can immediately start using the platform's capabilities.
 
-::: zone-end
-
 ::: zone target="docs"
 
-To explore Microsoft Defender for Cloud, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
+To explore Microsoft Sentinel, go to the [Azure portal](https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/microsoft.securityinsightsarg%2Fsentinel).
 
 ### Learn more
 
