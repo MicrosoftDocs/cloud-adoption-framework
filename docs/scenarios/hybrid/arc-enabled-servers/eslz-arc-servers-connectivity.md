@@ -30,7 +30,7 @@ The following list gives an overview of network design considerations for Azure 
 - **Manage access to Azure service tags:** Create an automated process to keep the firewall and proxy network rules updated according to the [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements).
 - **Secure your network connectivity to Azure Arc:** Configure the machine to use Transport Layer Security (TLS) version 1.2. Older versions aren't recommended due to known vulnerabilities.
 - **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server also need to communicate with other Azure services. This connectivity can go directly using public networks, through a firewall, or through a proxy server. To further secure the extension connectivity, you can [implement private endpoints](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
-- **Review your overall connectivity architecture:** Review the [network topology and connectivity design area](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) of Azure landing zone enterprise-scale to assess the impact of Azure Arc-enabled servers on your overall connectivity.
+- **Review your overall connectivity architecture:** Review the [network topology and connectivity design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) of Azure landing zone enterprise-scale to assess the impact of Azure Arc-enabled servers on your overall connectivity.
 
 ## Design recommendations
 
