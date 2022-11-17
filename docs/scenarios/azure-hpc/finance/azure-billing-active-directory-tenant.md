@@ -30,4 +30,5 @@ The following articles provide guidance that you might find helpful at various p
 - [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+
