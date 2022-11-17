@@ -32,7 +32,7 @@ The following diagram shows a manufacturing reference architecture that uses Cyc
 
 This diagram shows a manufacturing architecture that uses Batch: 
 
-:::image type="content" source="./media/reference-architecture-with-azure-batch.png" alt-text="Diagram that shows a manufacturing reference architecture that uses Azure Batch." lightbox="./media/reference-architecture-with-azure-batch.png":::
+:::image type="content" source="./media/reference-architecture-azure-batch.svg" alt-text="Diagram that shows a manufacturing reference architecture that uses Azure Batch." lightbox="./media/reference-architecture-azure-batch.svg":::
 
 ## Next steps
 
