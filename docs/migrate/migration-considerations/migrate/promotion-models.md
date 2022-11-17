@@ -2,7 +2,7 @@
 title: Promotion model types
 description: Learn about three common promotion models that are used in cloud migrations. Also, learn how your choice of model affects activities within the migrate and optimize processes.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

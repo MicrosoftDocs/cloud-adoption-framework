@@ -2,7 +2,7 @@
 title: Skills readiness path during the readiness phase of a migration journey
 description: Use the Cloud Adoption Framework for Azure to learn how to build the skills necessary to complete your migration journey.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/19/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

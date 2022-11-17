@@ -2,7 +2,7 @@
 title: Build a digital transformation timeline
 description: Use the Cloud Adoption Framework to consider the impact of time on your digital transformation objectives.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

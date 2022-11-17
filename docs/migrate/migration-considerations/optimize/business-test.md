@@ -2,7 +2,7 @@
 title: Business testing guidance during migration
 description: Learn how business testing is used to solicit validation that solution performance is in line with expectations and doesn't impede business processes.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Security for Azure Kubernetes Service (AKS)
 description: Learn more about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

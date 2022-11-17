@@ -2,7 +2,7 @@
 title: Sustainability outcomes and benefits for business
 description: Learn how the Cloud Adoption Framework and cloud computing can support you to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/18/2022
 ms.topic: conceptual

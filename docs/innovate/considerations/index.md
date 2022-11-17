@@ -2,7 +2,7 @@
 title: Innovation in the digital economy
 description: Build your innovation processes. Focus on understanding customer needs and rapidly building cloud innovations. Shape the digital economy and interact with customers.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Cloud migration
 description: Prepare for a successful migration to Azure using an iterative process to assess, migrate, optimize, secure, and manage workloads.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Set up basic alerts
 description: Learn how to use Azure server management services to set up alerts and notifications that help keep your IT teams aware of any problems.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

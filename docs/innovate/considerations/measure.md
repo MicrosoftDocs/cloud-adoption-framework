@@ -2,7 +2,7 @@
 title: How to measure customer impact and business metrics
 description: Learn about business metrics and how to measure customer impact and strategic metric goals. Establish learning metrics to measure customer behavior and adoption.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

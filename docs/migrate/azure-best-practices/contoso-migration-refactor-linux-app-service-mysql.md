@@ -2,7 +2,7 @@
 title: Refactor a Linux application to Azure App Service, Traffic Manager, and Azure Database for MySQL
 description: Use the Cloud Adoption Framework for Azure to learn how to refactor a Linux service desk application to Azure App Service and Azure Database for MySQL.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

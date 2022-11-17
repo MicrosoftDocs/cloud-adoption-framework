@@ -2,7 +2,7 @@
 title: Azure landing zones for the retail industry
 description: Learn how to prepare Microsoft Azure environments for retail industry cloud adoption using Azure landing zones.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

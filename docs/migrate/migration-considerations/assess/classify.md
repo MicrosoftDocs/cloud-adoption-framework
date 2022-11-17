@@ -2,7 +2,7 @@
 title: Workload classification before migration
 description: Classify your workloads during a pre-migration assessment.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

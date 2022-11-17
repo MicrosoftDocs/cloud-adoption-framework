@@ -2,7 +2,7 @@
 title: Govern modern application platform solutions
 description: Extend governance practices to modern application platform instances
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

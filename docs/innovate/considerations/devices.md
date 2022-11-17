@@ -2,7 +2,7 @@
 title: Ambient user experiences with interactive devices
 description: Learn about advanced approaches for ambient user experiences using interactive devices, rather than applications, for digital innovation.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

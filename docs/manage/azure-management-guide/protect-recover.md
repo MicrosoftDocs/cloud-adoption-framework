@@ -2,7 +2,7 @@
 title: Protect and recover in Azure
 description: Learn how to ensure business stability by reducing recovery time and the likelihood of business interruption.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

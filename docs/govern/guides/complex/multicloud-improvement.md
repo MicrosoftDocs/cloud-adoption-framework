@@ -2,7 +2,7 @@
 title: 'Complex enterprise governance: Multicloud improvement'
 description: Use the Cloud Adoption Framework for Azure to learn about multiple clouds and how to integrate multicloud organizations for complex enterprises.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

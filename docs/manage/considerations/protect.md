@@ -2,7 +2,7 @@
 title: Protect and recover in cloud management
 description: Learn the importance of preparing for a potential workload outage. This preparation allows your team to detect failures sooner and recover more quickly.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

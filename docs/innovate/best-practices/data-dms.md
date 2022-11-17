@@ -2,7 +2,7 @@
 title: Collect data and migrate
 description: Learn about Azure Database Migration Service and other data migration tools for data modernization for cloud inventions and innovations.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

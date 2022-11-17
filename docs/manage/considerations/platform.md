@@ -2,7 +2,7 @@
 title: Platform operations in cloud management
 description: Build an understanding of the dependency within your organization for common platform operations in cloud management.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

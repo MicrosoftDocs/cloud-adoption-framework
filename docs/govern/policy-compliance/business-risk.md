@@ -2,7 +2,7 @@
 title: Understand business risk during cloud migration
 description: Use the Cloud Adoption Framework for Azure to learn risk management processes that help you assess, understand, balance, and remediate migration risks.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Enterprise enrollment and Azure Active Directory tenants for cloud-scale analytics
 description: Learn how cloud-scale analytics can improve enterprise enrollment and Azure Active Directory tenant decisions.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

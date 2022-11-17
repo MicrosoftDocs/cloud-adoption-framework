@@ -2,7 +2,7 @@
 title: Assess workloads for Azure Stack Hub migration
 description: Assess workloads for Azure Stack Hub migration.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

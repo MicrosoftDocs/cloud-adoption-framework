@@ -2,7 +2,7 @@
 title: Decisions that affect migration
 description: Use the Cloud Adoption Framework for Azure to make appropriate decisions and choose execution activities that will support a successful migration.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

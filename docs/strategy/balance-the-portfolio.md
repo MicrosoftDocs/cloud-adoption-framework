@@ -2,7 +2,7 @@
 title: Balance the portfolio
 description: Discover strategies for balancing migration, innovation, and experimentation to get the most out of your cloud migration efforts.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

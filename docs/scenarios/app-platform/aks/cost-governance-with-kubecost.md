@@ -2,7 +2,7 @@
 title: Cost governance with Kubecost
 description: Learn about cost governance for Azure Kubernetes Service.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: 'Standard enterprise governance: Improve the Security Baseline discipline'
 description: Use the Cloud Adoption Framework to learn about adding security controls that support moving protected data to the cloud.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Cloud-native Security Baseline policy
 description: See a sample cloud-native policy for the Security Baseline discipline, in which Azure tools and platforms are sufficient to manage business risks.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

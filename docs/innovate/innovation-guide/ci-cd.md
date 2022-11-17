@@ -2,7 +2,7 @@
 title: Empower digital transformation
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation. Get digital transformation services on Azure.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

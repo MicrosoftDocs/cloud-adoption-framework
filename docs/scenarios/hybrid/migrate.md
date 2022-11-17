@@ -2,7 +2,7 @@
 title: Hybrid and multicloud migration
 description: Understand migration to a hybrid and multicloud environment.
 author: brianblanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

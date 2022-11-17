@@ -2,7 +2,7 @@
 title: Inventory and visibility in Azure
 description: Learn the tools that provide both an inventory and visibility into the inventory's run state to collect operational data.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

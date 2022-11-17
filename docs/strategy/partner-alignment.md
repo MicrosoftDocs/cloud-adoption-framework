@@ -2,7 +2,7 @@
 title: Partner alignment strategy
 description: Use the Cloud Adoption Framework for Azure to include partner alignment in your strategy
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

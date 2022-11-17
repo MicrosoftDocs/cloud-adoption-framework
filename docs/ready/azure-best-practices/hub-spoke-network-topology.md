@@ -2,7 +2,7 @@
 title: Hub-and-spoke network topology
 description: Learn about hub-and-spoke network topologies to manage common communication or security requirements more efficiently.
 author: tracsman
-ms.author: brblanch
+ms.author: martinek
 manager: rossort
 ms.date: 06/22/2022
 ms.topic: conceptual

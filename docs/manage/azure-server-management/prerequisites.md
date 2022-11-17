@@ -2,7 +2,7 @@
 title: Planning for Azure server management services
 description: Learn about the tools and prepare for the resources needed to manage Azure server management services.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

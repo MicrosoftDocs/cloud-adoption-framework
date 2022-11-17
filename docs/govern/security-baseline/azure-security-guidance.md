@@ -2,7 +2,7 @@
 title: Azure security guidance
 description: Use the Microsoft Service Trust Portal and Compliance Manager to help meet complex compliance obligations and improve data protection.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

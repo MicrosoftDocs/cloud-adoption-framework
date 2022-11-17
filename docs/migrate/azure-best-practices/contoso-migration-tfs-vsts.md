@@ -2,7 +2,7 @@
 title: Refactor a Team Foundation Server deployment to Azure DevOps Services
 description: Use the Cloud Adoption Framework for Azure to learn how to refactor your on-premises Team Foundation Server deployment by migrating it to Azure DevOps Services.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

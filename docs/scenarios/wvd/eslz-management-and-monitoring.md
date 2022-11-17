@@ -2,7 +2,7 @@
 title: Management baseline for Azure Virtual Desktop
 description: Learn how the management baseline can improve the management and monitoring of Azure Virtual Desktop.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

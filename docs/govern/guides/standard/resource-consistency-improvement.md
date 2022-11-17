@@ -2,7 +2,7 @@
 title: 'Standard enterprise governance: Improve the Resource Consistency discipline'
 description: Use the Cloud Adoption Framework for Azure to learn about improving governance baseline and adding recovery, sizing, and monitoring controls to remediate risks.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

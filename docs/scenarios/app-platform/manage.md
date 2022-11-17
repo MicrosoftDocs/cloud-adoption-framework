@@ -2,7 +2,7 @@
 title: Manage modern application platform solutions
 description: Learn how to manage modern application platform clusters.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

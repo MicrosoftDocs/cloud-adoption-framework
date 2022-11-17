@@ -2,7 +2,7 @@
 title: Prepare for agile change management complexity
 description: Use the Cloud Adoption Framework for Azure to prepare cloud architects for a conversation with project management to explain the concept of change management.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/27/2022
 ms.reviewer: ssumner
 ms.topic: conceptual

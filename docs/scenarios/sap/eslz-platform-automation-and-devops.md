@@ -2,7 +2,7 @@
 title: Deployment options for SAP in Azure
 description: Learn more about the dependencies between SAP systems, environments, and landscapes to automate application deployments and management.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

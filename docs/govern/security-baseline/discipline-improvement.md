@@ -2,7 +2,7 @@
 title: Security Baseline discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Security Baseline discipline in each phase of cloud adoption.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

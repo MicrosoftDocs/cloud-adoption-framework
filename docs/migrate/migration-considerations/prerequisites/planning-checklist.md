@@ -2,7 +2,7 @@
 title: Migration environment planning checklist
 description: Use the migration environment planning checklist to validate environmental readiness prior to migration.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

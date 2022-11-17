@@ -2,7 +2,7 @@
 title: Platform automation and DevOps for a cloud-scale analytics scenario
 description: Learn how this cloud-scale analytics scenario can improve platform automation and DevOps of cloud-scale analytics.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

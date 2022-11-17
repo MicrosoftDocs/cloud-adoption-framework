@@ -2,7 +2,7 @@
 title: Approve architecture changes before migration
 description: Learn to classify the architectural changes when they are required and also establish proper approval activities.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 06/09/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

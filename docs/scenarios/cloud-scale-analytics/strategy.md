@@ -2,7 +2,7 @@
 title: Integrate cloud-scale analytics into your cloud adoption strategy
 description: Understand how to integrate cloud-scale analytics into your cloud adoption strategy.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Introduction to hybrid and multicloud
 description: Learn about hybrid and multicloud.
 author: brianblanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Define your cloud operating model
 description: Learn how the Cloud Adoption Framework helps you define your operating model.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 06/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

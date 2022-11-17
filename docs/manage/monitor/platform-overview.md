@@ -2,7 +2,7 @@
 title: Cloud monitoring platforms overview
 description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: mgoedtel
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/31/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

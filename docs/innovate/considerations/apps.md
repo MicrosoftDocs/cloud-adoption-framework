@@ -2,7 +2,7 @@
 title: Application development for innovative applications
 description: Learn how to use citizen developers in your application development. Create applications that shape data and create experiences that engage customers and support innovation.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

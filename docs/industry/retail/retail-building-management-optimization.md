@@ -2,7 +2,7 @@
 title: Building management optimization in the retail industry
 description: Learn about optimizing your building management in the retail industry using Azure services and the challenges you might face.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 06/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

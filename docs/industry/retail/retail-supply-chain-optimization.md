@@ -2,7 +2,7 @@
 title: Supply chain optimization in the retail industry
 description: Learn how to use Azure for supply chain optimization in the retail industry. Gain visibility into the bottlenecks between procurement, logistics, and delivery.
 author: BrianBlanchard
-ms.author: brblanch
+ms.author: martinek
 ms.date: 06/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
