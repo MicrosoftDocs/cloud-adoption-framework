@@ -81,7 +81,8 @@ Enterprise-scale landing zones support two network topologies: one based on Azur
   - Doesn't need a global, interconnected network.
   - Has few remote or branch locations per region and needs fewer than 30 IP security (IPsec) tunnels.
   - Requires full control and granularity to manually configure your Azure network.
-  - Local and global VNet peering provide connectivity and are the preferred approaches to ensure connectivity between landing zones for HPC deployments across multiple Azure regions.
+  
+  Local and global VNet peering provide connectivity and are the preferred approaches to ensure connectivity between landing zones for HPC deployments across multiple Azure regions.
 
 ## Inbound and outbound internet connectivity
 
