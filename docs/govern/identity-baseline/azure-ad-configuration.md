@@ -23,6 +23,7 @@ This article recommends using Azure AD as the centralized identity and authentic
 | [Password management](#guidance---password-management) | [enforce](#enforce---password-management) | [audit](#enforce---password-management) |
 | [Legacy authentication](#guidance---legacy-authentication) | [enforce](#enforce---legacy-authentication) | [audit](#enforce---legacy-authentication) |
 | [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | - | [audit](#enforce---sign-in-and-user-risk-policies) |
+| [Conditional access](#guidance---conditional-access) | [enforce](#enforce---conditional-access) | [audit](#audit---conditional-access)
 
 ## Guidance - Centralized identity and authentication system
 
@@ -243,10 +244,6 @@ AuditLogs
 | project ActivityDateTime, InitiatedBy.user.userPrincipalName, TargetResources[0].displayName, ActivityDisplayName
 ```
 
-> TODO: Should we include guidance from sources like?:
-> [Troubleshooting Conditional Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log)
-> (Brandon) I think it makes sense to include it in an additional resource below, but I'm not sure the best way.
-
 ## Guidance - Sign-in and user risk policies
 
 Enable sign-in and user risk policies to enable you to measure and review risk scenarios. These policies can be configured to require MFA or a password reset for risky users.
@@ -267,3 +264,30 @@ Use the following resources to audit user risk and investigate past risky users.
 
 - Audit [user risk](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#risky-users) every three months.
 - Use the [investigation framework](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#investigation-framework) to investigate users that have had risks, and the details about the detections and risk history.
+
+## Guidance - Conditional Access
+
+Conditional access policies are one of the best methods for protecting identities from compromise.  By requiring specific access conditions, such as location and device security, and checking for things like high-risk login patterns or impossible travel, they provide an excellent mechanism to secure and protect identities.
+
+The organization should deploy out conditional access policies to protect identities from misuse in their organization.
+
+## Enforce - Conditional Access
+
+Review the lists of [Common Conditional Access policies](https://learn.microsoft.com/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) for recommended patterns.
+
+In addition to the "Block legacy authentication" policy, above, it is strongly recommended to implement:
+
+- The MFA scenarios
+- Require password change for risky users
+- Require compliant or hybrid joined devices
+- Block access for unknow or unsupported device platforms
+- Block access by location
+- Require authentication strength for external users
+
+## Audit - Conditional Access
+
+To audit conditional access, use the Azure Active Directory Audit logs for policy changes.  The article [Troubleshooting Condition Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log) provides guidance for creating alerts to notify operators if a policy has been changed.
+
+Conditional access audit logs should be be kept for 60 days to provide for a monthly audit cycle.
+
+To audit actual conditional access activities, use the method described in [Condition Access insights and reporting](https://learn.microsoft.com/azure/active-directory/conditional-access/howto-conditional-access-insights-reporting)
