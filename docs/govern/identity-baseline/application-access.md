@@ -16,7 +16,7 @@ In addition to user access, application identities are a critical part of worklo
 
 ## Guidance - Centralize Application Identities on Azure AD
 
-While migrated workloads may continue to use Active Directory identities, or existing identity platforms such as custom LDAP directories, modernization of these workloads should leverage Azure AD.
+While migrated workloads might continue to use Active Directory identities, or existing identity platforms such as custom LDAP directories, modernization of these workloads should leverage Azure AD.
 
 Centralizing application identity management with Azure AD provides a unified solution that improves security, reduces cost, and helps ensure compliance.
 
@@ -32,15 +32,19 @@ See the audit for [Centralized identity and authentication systems](azure-ad-con
 
 ## Guidance - Use Managed Identities
 
-...
+[Managed Identities](azure/active-directory/managed-identities-azure-resources/overview) provide a way for Azure to manage secrets without having to manage credentials for Azure services.  By using managed identities, you can enable services to have an identity object distinct from users, and receive Azure AD tokens without needing to manage credentials.
+
+Applications made up of Azure services should use managed identities instead of service accounts or other identity records.
 
 ## Enforce - Use Managed Identities
 
-...
+Each Azure resource type has its own guidance for using managed identities for it.  See the [Managed Identity How-to Guides](azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm) for instructions on how to deploy and managed identities
 
 ## Audit - Use Managed Identities
 
-...
+Use Azure Activity Logs to review activities for managed identities, following the guide for [View managed identity activity](azure/active-directory/managed-identities-azure-resources/how-to-view-managed-identity-activity).
+
+Create an alert to generate when a new managed identity is created or assigned a new role, so that you are able to have visibility to access adds.
 
 ## Guidance - Use Service Principles with Certificates
 
