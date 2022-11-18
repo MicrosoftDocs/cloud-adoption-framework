@@ -172,30 +172,23 @@ Central management of password reset causes a management burden and can lead use
 
 ### Graph API
 
-#### Use Graph API to Audit Password Expiration
-
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
+Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit password expiration.
 
 ```http
 GET https://graph.microsoft.com/v1.0/users?$select=userPrincipalName,lastPasswordChangeDateTime,passwordPolicies
 ```
 
-The resulting passwordPolicies setting should be set to "DisablePasswordExpiration"
+The resulting `passwordPolicies` setting should be set to `DisablePasswordExpiration`.
 
-#### Use Graph API to Audit Self-Service Password Reset
-
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
-
->TODO: Add a graph query below
+Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit if self-service password is enabled.
 
 ```http
-???
+GET /policies/authorizationPolicy
 ```
 
-
+The resulting `allowedToUseSSPR` property should be set to `True`.
 
 ### PowerShell
-
 
 Use the following script to produce a CSV file that contains an audit of whether user passwords are set to never expire.
 
