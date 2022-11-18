@@ -26,9 +26,11 @@ Follow the guidance in [Five steps for integrating all your apps with Azure AD](
 
 Follow the guidance in [govern access for applications in your environment](/azure/active-directory/governance/identity-governance-applications-prepare).
 
-## Audit
+## Audit - Centralize Application Identities on Azure AD
 
 See the audit for [Centralized identity and authentication systems](azure-ad-configuration.md#audit---centralized-identity-and-authentication-system) for audit mechanisms.
+
+Resources should be flagged as being centralized in Azure AD if they are using either Managed Identities or Service Principals, below.
 
 ## Guidance - Use Managed Identities
 
@@ -46,14 +48,18 @@ Use Azure Activity Logs to review activities for managed identities, following t
 
 Create an alert to generate when a new managed identity is created or assigned a new role, so that you are able to have visibility to access adds.
 
-## Guidance - Use Service Principles with Certificates
+To audit alignment of applications to Azure AD, refer to the [audit guidance above](#audit---centralize-application-identities-on-azure-ad).
 
-...
+## Guidance - Use Service Principals
 
-## Enforce - Use Service Principles with Certificates
+[Service Principals](azure/active-directory/develop/app-objects-and-service-principals) provide a way to provide a non-user identity to applications.  These applications can be outside of Azure, or be used to assign access to managed identities or user objects.  By using this option instead of user objects, you can govern application identities with less effort.
 
-...
+Applications that are not able to use managed identities should use app registration/service principals for their access.  Where possible, these service principals should use certificates for authentication instead of passwords.
 
-## Audit - Use Service Principles with Certificates
+## Enforce - Use Service Principals
 
-...
+To create a service principal with a certificate, follow [these instructions](azure/create-azure-service-principal-azureps?view=azps-9.1.0).  These instructions provide methods for deploying service principals in a variety of configuration.
+
+## Audit - Use Service Principals
+
+To audit alignment of applications to Azure AD, refer to the [audit guidance above](#audit---centralize-application-identities-on-azure-ad).
