@@ -98,7 +98,7 @@ Azure Advisor is a free, personalized cloud consultant that helps you follow and
 
 Recommendations in Azure Advisor are based on the resources you deploy and your actions in Azure. You can check Advisor regularly for the latest recommendations.
 
-Additionally, the five categories in Azure Advisor are in direct relation to the pillars of the [Azure Well-Architected Framework](/azure/architecture/framework/).
+Additionally, the five categories in Azure Advisor directly relate to the pillars of the [Azure Well-Architected Framework](/azure/architecture/framework/), a set of guiding tenets to optimize and improve the quality of your workloads.
 
 ::: zone target="chromeless"
 
@@ -120,7 +120,10 @@ Microsoft Defender for Cloud also plays an integral part in your monitoring stra
 
 When Defender for Cloud identifies a threat, it triggers a security alert with steps you need to take to respond to an attack. It also provides a report with information about the threat that was detected.
 
-Defender for Cloud is offered in two tiers: free and standard. Features like security recommendations are available for free. The standard tier provides more protection, like advanced threat detection and protection across hybrid cloud workloads.
+Microsoft Defender for Cloud is offered in two flavors:
+
+- **Free**. Offers the secure score and related tools.
+- **Enhanced security features**. Enables all of the Microsoft Defender plans to provide a range of security benefits for all your resources in Azure, hybrid, and multicloud environments.
 
 ::: zone target="chromeless"
 
@@ -151,7 +154,7 @@ Microsoft Sentinel provides two critical cloud-native solutions:
 - Security information and event management (SIEM)
 - Security orchestration, automation, and response (SOAR)
 
-By connecting data sources to Microsoft Sentinel using the built-in connectors, you can widen your monitoring lens to a broader security and application ecosystem for non-Microsoft solutions.
+By connecting data sources to Microsoft Sentinel using the built-in connectors, you can also widen your monitoring lens to a broader security and application ecosystem for non-Microsoft solutions.
 
 **Get started:**
 
