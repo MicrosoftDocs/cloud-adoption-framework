@@ -22,7 +22,7 @@ This article recommends using Azure AD as the centralized identity and authentic
 | [Default user permissions](#guidance---default-user-permissions) | [enforce](#enforce---default-user-permissions) | [audit](#enforce---default-user-permissions) |
 | [Password management](#guidance---password-management) | [enforce](#enforce---password-management) | [audit](#enforce---password-management) |
 | [Legacy authentication](#guidance---legacy-authentication) | [enforce](#enforce---legacy-authentication) | [audit](#enforce---legacy-authentication) |
-| [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | - | [audit](#enforce---sign-in-and-user-risk-policies) |
+| [Sign-in and user risk policies](#guidance---sign-in-and-user-risk-policies) | [enforce](#enforce---sign-in-and-user-risk-policies) | [audit](#enforce---sign-in-and-user-risk-policies) |
 | [Conditional access](#guidance---conditional-access) | [enforce](#enforce---conditional-access) | [audit](#audit---conditional-access)
 
 ## Guidance - Centralized identity and authentication system
@@ -241,15 +241,14 @@ AuditLogs
 
 Enable sign-in and user risk policies to enable you to measure and review risk scenarios. These policies can be configured to require MFA or a password reset for risky users.
 
-- Follow the [guidance to configure and enable risk policies](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies)
+## Enforce - Sign-in and user risk policies
+
+Follow the [guidance to configure and enable risk policies](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies):
+
 - Configure the user risk policy to:
   - Require a secure password reset when user risk level is High
   - Require Azure AD MFA before the user can create a new password with Self-Service Password Reset to remediate their risk.
 - Configure the sign-in risk policy to require Azure AD multifactor authentication when sign-in risk level is medium or high.
-
-## Enforce - Sign-in and user risk policies
-
-N/A
 
 ## Audit - Sign-in and user risk policies
 
