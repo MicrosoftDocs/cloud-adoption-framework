@@ -20,7 +20,7 @@ Azure Red Hat OpenShift works with other Azure services like Azure Active Direct
 
 Here are some design considerations for security governance and compliance:
 
-- If you deploy an Azure Red Hat OpenShift cluster using Azure landing zone best practices, get familiar with the [policies that will be inherited by the clusters](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+- If you deploy an Azure Red Hat OpenShift cluster using Azure landing zone best practices, get familiar with the [policies that will be inherited by the clusters](https://github.com/Azure/Enterprise-Scale/blob/main/docs/wiki/ALZ-Policies.md).
 
 - Decide whether the cluster's control plane should be accessible via the internet, which is the default. If so, IP restrictions are recommended. If the cluster control plane will be accessible only from within your private network, either in Azure or on-premises, then deploy [Azure Red Hat OpenShift private cluster](/azure/openshift/howto-create-private-cluster-4x).
 
