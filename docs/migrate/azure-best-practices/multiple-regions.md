@@ -3,11 +3,12 @@ title: Azure regions decision guide
 description: Learn about cloud platform regions and the factors and characteristics that might affect your Azure region selections.
 author: doodlemania2
 ms.author: dermar
-ms.date: 07/05/2022
+ms.reviewer: tozimmergren
+ms.date: 11/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: internal
+ms.custom: internal, engagement-fy23
 ---
 
 # Azure regions decision guide
@@ -15,15 +16,13 @@ ms.custom: internal
 When you design your strategy to migrate to Azure, you can choose from many Azure regions around the world. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics that make choosing the correct region for your Azure resources essential. Considerations include available services, capacity, constraints, and sovereignty:
 
 - **Available services**: The Azure services you can deploy in each region differ depending on various factors. Select a region for the service you need for your workload. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
-- **Capacity**: Each region has a maximum capacity. A region's maximum capacity might affect what types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a large-scale datacenter migration to Azure, you might want to consult with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale you need.
+- **Capacity**: Each region has a maximum capacity. A region's maximum capacity might affect what types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a large-scale datacenter migration to Azure, you might want to consult with your local Azure field team, or your Azure account manager to confirm that you can deploy at the scale you need.
 - **Constraints**: Certain constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/resources/achieving-compliant-data-residency-and-security-with-azure/).
 - **Sovereignty**: Certain regions are dedicated to specific sovereign entities. Although all regions are Azure regions, these sovereign regions are isolated from the rest of Azure. They aren't necessarily managed by Microsoft, and they might be restricted to certain types of customers. These sovereign regions are:
   - [Azure China 21Vianet](https://azure.microsoft.com/global-infrastructure/services/?regions=china-east-2%2cchina-non-regional&products=all)
   - [Azure Germany](https://azure.microsoft.com/global-infrastructure/services/?regions=germany-north,germany-west-central&products=all&rar=true)  
      Azure Germany is being deprecated in favor of standard nonsovereign Azure regions in Germany.
   - [Azure Government - US](/azure/azure-government/documentation-government-welcome)
-  - [Australia](https://azure.microsoft.com/global-infrastructure/services/?regions=australia-central%2cnon-regional&products=all)  
-     Two regions in Australia are managed by Microsoft but are provided for the Australian government and its customers and contractors. Therefore, these regions carry client constraints similar to other sovereign clouds.
 
 ## Operate in multiple geographic regions
 
