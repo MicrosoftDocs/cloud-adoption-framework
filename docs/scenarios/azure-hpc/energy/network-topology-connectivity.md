@@ -135,7 +135,7 @@ The following articles provide guidance for each step in the cloud adoption jour
 - [Management](./management.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
 - [Resource organization](./resource-organization.md)
-- [Governance](./security-governance-compliance.md)
+- [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

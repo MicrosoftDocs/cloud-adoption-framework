@@ -30,7 +30,7 @@ The following articles provide guidance that you might find helpful at various p
 - [Management](./management.md)
 - [Network topology and connectivity](./network-topology-connectivity.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
-- [Governance](./security-governance-compliance.md)
+- [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

@@ -100,17 +100,18 @@ For more information on reference architecture or cookbooks for relevant HPC ISV
 - [Azure HPC certification.github.io](https://azurehpc-certification.github.io/)
 - [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). Standalone reference architecture might not be compliant with the ALZ paradigm.
 
+
 ## Next steps
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
 - [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
-- [Management for manufacturing HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization for manufacturing HPC](./resource-organization.md)
-- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
-- [Security for manufacturing HPC](./security.md)
-- [Storage for manufacturing HPC](./storage.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
+- [Azure identity and access management for HPC in energy industries](./identity-access-management.md)
+- [Management for HPC in energy industries](./management.md)
+- [Network topology and connectivity for energy industries](./network-topology-connectivity.md)
+- [Platform automation and DevOps for in energy industries](./platform-automation-devops.md)
+- [Resource organization](./resource-organization.md)
+- [Governance for HPC in energy industries](./security-governance-compliance.md)
+- [Security for HPC in energy industries](./security.md)
+- [Storage for HPC in energy industries](./storage.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
