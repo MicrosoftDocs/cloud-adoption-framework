@@ -43,4 +43,4 @@ Your organization or enterprise needs to design suitable security settings to me
 - SRE full access should be granted just in time as needed.
   - Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
 - Workload identities
-  - [Azure AD workload identity for Kubernetes.](/azure/active-directory/develop/workload-identity-federation) With this federation, developers can use native Kubernetes concepts of service accounts and federation to access Azure AD protected resources, such as Azure and Microsoft Graph. 
+  - [Azure AD workload identity for Kubernetes.](/azure/active-directory/develop/workload-identity-federation) With this federation, developers can use native Kubernetes concepts of service accounts and federation to access Azure AD protected resources, such as Azure and Microsoft Graph.
