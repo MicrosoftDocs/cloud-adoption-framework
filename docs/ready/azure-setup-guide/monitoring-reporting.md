@@ -19,32 +19,19 @@ Azure offers many services that together provide a comprehensive solution for co
 
 Azure Monitor provides a single unified hub for all monitoring and diagnostics data in Azure. You can use it to get visibility across your resources. With Azure Monitor, you can find and fix problems, optimize performance, and understand customer behavior.
 
-### Data collection
+- **Data collection**: Azure Monitor collects data from [various data sources](/azure/azure-monitor/overview#what-data-can-azure-monitor-collect), including: Application, Container, Guest operating system, Azure resource, Azure subscription, Azure tenant, and Azure resource changes. Additionally, Azure Monitor can collect log data from any REST client using the [Data Collector API](/azure/azure-monitor/logs/data-collector-api).
 
-Azure Monitor collects data from [various data sources](/azure/azure-monitor/overview#what-data-can-azure-monitor-collect), including: Application, Container, Guest operating system, Azure resource, Azure subscription, Azure tenant, and Azure resource changes.
+- **Insights**: Availability, performance, usage, and health of your web applications are monitored using [Application Insights](/azure/azure-monitor/app/app-insights-overview). Further, you can use the insights features of Azure Monitor to monitor your:
 
-Additionally, Azure Monitor can collect log data from any REST client using the [Data Collector API](/azure/azure-monitor/logs/data-collector-api).
+  - [Applications](/azure/azure-monitor/app/app-insights-overview)
+  - [Containers](/azure/azure-monitor/containers/container-insights-overview)
+  - [Virtual machines](/azure/azure-monitor/vm/vminsights-overview)
+  - [Networks](/azure/networking/network-monitoring-overview)
 
-### Insights
+- **Visualization**: Visualizing your monitoring data will greatly help you get an overview of the current posture of your cloud real estate. Make use of visualizations with built-in or custom charts and tables, workbooks, dashboards, or Power BI.
+  - Read more about [best practices for analyzing and visualizing data](/azure/azure-monitor/best-practices-analysis).
 
-Availability, performance, usage, and health of your web applications are monitored using [Application Insights](/azure/azure-monitor/app/app-insights-overview).
-
-Further, you can use the insights features of Azure Monitor to monitor your:
-
-- [Applications](/azure/azure-monitor/app/app-insights-overview)
-- [Containers](/azure/azure-monitor/containers/container-insights-overview)
-- [Virtual machines](/azure/azure-monitor/vm/vminsights-overview)
-- [Networks](/azure/networking/network-monitoring-overview)
-
-### Visualization
-
-Visualizing your monitoring data will greatly help you get an overview of the current posture of your cloud real estate. Make use of visualizations with built-in or custom charts and tables, workbooks, dashboards, or Power BI.
-
-Read more about [best practices for analyzing and visualizing data](/azure/azure-monitor/best-practices-analysis).
-
-### Response
-
-An effective monitoring strategy often requires an actionable response to critical events in the collected data. You can automate actions by using the built-in [Alerts](/azure/azure-monitor/overview#alerts) or [Autoscale](/azure/azure-monitor/overview#autoscale) capabilities.
+- **Response**: An effective monitoring strategy often requires an actionable response to critical events in the collected data. You can automate actions by using the built-in [Alerts](/azure/azure-monitor/overview#alerts) or [Autoscale](/azure/azure-monitor/overview#autoscale) capabilities.
 
 ::: zone target="docs"
 
