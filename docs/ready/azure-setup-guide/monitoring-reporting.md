@@ -35,14 +35,7 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ::: zone target="docs"
 
-Start monitoring your:
-
-- [Applications](/azure/azure-monitor/app/app-insights-overview)
-- [Containers](/azure/azure-monitor/containers/container-insights-overview)
-- [Virtual machines](/azure/azure-monitor/vm/vminsights-overview)
-- [Networks](/azure/networking/network-monitoring-overview)
-
-To monitor other resources, find more solutions in the Azure Marketplace.
+Find more solutions in the Azure Marketplace for monitoring other resource types.
 
 To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview).
 
