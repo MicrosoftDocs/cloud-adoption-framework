@@ -1,42 +1,50 @@
 ---
-title: 'Finance HPC Resource organization | Microsoft Docs'
-description: 'To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of Finance HPC resource names and metadata tags.'
+title: Resource organization for HPC in the finance sector 
+description: This article provides recommendations to help you align HPC implementations in the finance sector with Cloud Adoption Framework methodologies.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
+ms.date: 11/15/2022
 ---
 
-# Resource organization for finance HPC
+# Resource organization for HPC in the finance sector 
 
-To align with the [Ready methodology](/azure/cloud-adoption-framework/ready/) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
+This article provides recommendations that can help you align HPC implementations in the finance sector with the [Ready methodology](/azure/cloud-adoption-framework/ready) of the Cloud Adoption Framework for Azure.
 
-## Use single vs multiple Azure subscriptions.
+## Single vs. multiple Azure subscriptions
 
- - In Azure Active Directory (Azure AD), a tenant is representative of an organization. It is a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for using Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Azure AD.
- - You can choose single vs multiple subscription based on the organizations needs.
-     - Multiple Subscriptions allow for easy view billing for each subscription and limit who can access the Microsoft Azure services associated with that subscription – for example production vs non-production subscriptions, internal vs external etc.
-     - Having multiple subscriptions helps in planning for [subscriptions limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
-     - You can learn more about the decision making process for subscriptions [here](/azure/cloud-adoption-framework/decision-guides/subscriptions/).
-     - We also recommend that you consider ARM throttling limits while choosing to go with multiple vs single subscription, you can learn more about it [here](/azure/azure-resource-manager/management/request-limits-and-throttling).
+In Azure Active Directory (Azure AD), a tenant represents an organization. It's a dedicated instance of Azure AD that an organization receives and owns when it signs up to use Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions, and each subscription can use the same Azure AD instance.
+
+The needs of your organization determine whether you should use a single subscription or multiple subscriptions:
+
+- Multiple subscriptions enable you to easily view billing for each subscription. They also allow you to limit who can access the Azure services associated with each subscription. For example, you could have production and non-production subscriptions, or internal and external subscriptions.
+- Using multiple subscriptions can help you plan for [subscriptions limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+
+For more information about the decision-making process, see [Subscription decision guide](/azure/cloud-adoption-framework/decision-guides/subscriptions).
+
+We also recommend that you consider ARM throttling limits when you make decisions about subscriptions. For more information, see [Throttling Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling).
 
 ## Use Azure resource naming and tagging conventions
 
-The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
+Implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
 
-Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags, route tables, managed disks, and public IPs. A sample use case could be to tag all Azure development VMs with the tag Dev. This eases reporting and billing operations to pull a report for all things Dev. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+The business side of this strategy ensures that resource names and tags include the organizational information that you need to identify the associated teams. Include the business owners who are responsible for resource costs. The operational side ensures that names and tags include information that IT teams can use to identify the workload, application, environment, criticality, and other information that's useful for managing resources.
+
+Resources to name include VMs, load balancers, DNS labels, availability sets, virtual networks, subnets, Azure ExpressRoute, NSGs, application security groups, tags, route tables, managed disks, and public IPs. For example, you could label all development VMs with the tag `Dev`. Doing so makes it easier to pull billing reports and other reports for development VMs. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
 ## Next steps
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Identity Access Management](./identity-access-management.md)
+
+The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC environments in the finance sector.
+
+- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps](./platform-automation-devops.md)
+- [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
