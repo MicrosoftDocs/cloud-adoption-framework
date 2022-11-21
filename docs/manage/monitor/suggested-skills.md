@@ -23,10 +23,9 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how to use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Microsoft Defender for Cloud, deploy diagnostic settings, audit guest configuration settings, and more.
 
-- Introduction to [Azure CLI](/cli/azure/get-started-with-azure-cli), our cross-platform command-line experience for managing Azure resources. Also, review the introduction to [Azure PowerShell](/powershell/azure/get-started-azureps). As part of their beginner-level course, [`Learning Azure Management Tools`](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
-
-  - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
-  - [Get started with Azure PowerShell](https://www.linkedin.com/learning/learning-azure-management-tools/understand-azure-powershell)
+- Introduction to [Azure CLI](/cli/azure/get-started-with-azure-cli), our cross-platform command-line experience for managing Azure resources. Also, review the introduction to [Azure PowerShell](/powershell/azure/get-started-azureps). Extend your skills with the Azure CLI and Azure PowerShell further by taking these Microsoft Learn courses:
+  - [Control Azure services with the CLI](/training/modules/control-azure-services-with-cli/) and [Create Azure resources by using Azure CLI](/training/modules/create-azure-resources-by-using-azure-cli/).
+  - [Review Azure PowerShell module](/training/modules/review-azure-powershell-module/) and [Manage Azure resources with Windows PowerShell](/training/modules/manage-azure-resources-windows-powershell/).
 
 - Learn how to secure resources using policy, Azure role-based access control, and other Azure services by viewing [implement resource management security in Azure](/training/paths/implement-resource-mgmt-security/).
 
