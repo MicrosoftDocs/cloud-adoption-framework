@@ -17,7 +17,7 @@ This article describes some considerations for collecting monitoring data in a c
 
 To observe the health and availability of your cloud solution, you must configure the monitoring tools to collect a level of signals based on predictable failure states. These signals are the symptoms of the failure, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
 
-Plan for monitoring and migration carefully. Start by including the monitoring service owner, operations manager, and other related personnel during the planning phase, and continue engaging them throughout the development and release cycle. Their focus will be to develop a monitoring configuration on the following criteria:
+Plan for monitoring and migration carefully. Start by including the monitoring service owner, manager of operations, and other related personnel during the planning phase, and continue engaging them throughout the development and release cycle. Their focus will be to develop a monitoring configuration on the following criteria:
 
 - What is the composition of the service? Are those dependencies monitored today? If so, are there multiple tools involved? Is there an opportunity to consolidate without introducing risks?
 - What is the SLA of the service, and how will I measure and report it?
