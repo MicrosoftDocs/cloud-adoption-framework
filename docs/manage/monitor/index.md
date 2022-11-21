@@ -61,7 +61,7 @@ A few software and services are available to help you monitor and manage various
 - [Azure Logic Apps](/azure/logic-apps/logic-apps-overview)
 - [Azure Event Hubs](/azure/event-hubs/event-hubs-about)
 
-The guide covers our current monitoring platforms: Azure Monitor and System Center Operations Manager. It also outlines our recommended strategy for monitoring each cloud deployment model. Additionally, it includes a set of monitoring recommendations, starting with data collection, observability, and alerting.
+The guide covers mainly our current monitoring platform, Azure Monitor, and will also guide you through how System Center Operations Manager fit in for hybrid and migration scenarios. It also outlines our recommended strategy for monitoring each cloud deployment model. Additionally, it includes a set of monitoring recommendations, starting with data collection, observability, and alerting.
 
 ## Next steps
 
