@@ -56,10 +56,14 @@ If the policy to be migrated to built-in is assigned to any scope in your Azure 
 - Delete existing ALZ policy assignment at all scopes, where assigned
 - Delete the ALZ policy definition from the ALZ intermediate root Management Group (for example `Contoso`).
 
+For detailed guidance on how to achieve the above, please refer to [this article](https://github.com/Azure/Enterprise-Scale/wiki/migrate-alz-policies-to-builtin#migrate-single-alz-custom-policy-to-built-in-policy). 
+
 #### Policies assigned through Azure Landing Zone custom policy initiative
 
 If the policy to be migrated to built-in is part of an ALZ custom policy initiative and is assigned through that at any scope in your Azure estate, do the following:
 - Update the ALZ custom policy initiative definition with the appropriate policy references. Updated initiatives are available [here](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions) with a generic *contoso* scope for custom policies. When doing this, remember to change the *contoso* scope for policy definition ids to your management group hierarchy pseudo root name. Also remember to update the metadata information on the ALZ custom policy initiative
+
+For detailed guidance on how to achieve the above, please refer to [this article](https://github.com/Azure/Enterprise-Scale/wiki/migrate-alz-policies-to-builtin#how-to-update-child-definitions-in-alz-custom-initiatives). 
 
 If an ALZ custom policy initiative is fully superseded by a built-in policy initiative, and the ALZ custom policy initiative is assigned at any scope in your Azure estate, do the following:
 - Create new policy initiative assignments at the same scopes leveraging the Azure built-in policy initiative with matching settings as per the assignment of the previous ALZ custom policy initiative
