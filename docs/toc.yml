@@ -345,6 +345,8 @@ items:
             href: ready/landing-zone/design-area/resource-org-management-groups.md
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
+          - name: Tailoring the Azure landing zones architecture
+            href: ready/landing-zone/tailoring-alz.md
           - name: Adopt policy-driven guardrails
             href: ready/enterprise-scale/dine-guidance.md
           - name: Additional information
@@ -448,16 +450,12 @@ items:
         items:
         - name: Choose a landing zone option
           href: ready/landing-zone/choose-landing-zone-option.md
-        - name: Tailoring the Azure landing zones architecture
-          href: ready/landing-zone/tailoring-alz.md
         - name: Start with enterprise scale
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
-          - name: Testing approach for enterprise-scale
-            href: ready/enterprise-scale/testing-approach.md
           - name: Scenario-specific enterprise-scale landing zones
             href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
 
@@ -497,6 +495,8 @@ items:
           href: ready/considerations/index.md
         - name: Improve landing zone operations
           href: ready/considerations/landing-zone-operations.md
+        - name: Testing approach for Azure landing zones
+          href: ready/enterprise-scale/testing-approach.md
         - name: Improve landing zone governance
           items:
           - name: Overview
@@ -784,9 +784,9 @@ items:
               href: /azure/dms/tutorial-postgresql-azure-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Amazon RDS PostgreSQL to Azure Database for PostgreSQL online
               href: /azure/dms/tutorial-rds-postgresql-server-azure-db-for-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB offline
+            - name: Migrate MongoDB to Azure Cosmos DB for MongoDB offline
               href: /azure/dms/tutorial-mongodb-cosmos-db?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB online
+            - name: Migrate MongoDB to Azure Cosmos DB for MongoDB online
               href: /azure/dms/tutorial-mongodb-cosmos-db-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Oracle to Azure Database for PostgreSQL online
               href: /azure/postgresql/howto-migrate-from-oracle?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json

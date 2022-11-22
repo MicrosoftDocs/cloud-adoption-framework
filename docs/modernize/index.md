@@ -13,9 +13,9 @@ keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption fram
 
 # Modernize in the cloud
 
-Modernization is when you enhance your workloads and the processes to support those workloads. It's all about maximizing value and adopting cloud technologies that allow you to unlock more benefits of the cloud. The goal of modernization is to make the cloud work for you. Modernization can improve operational efficiency. It can reduce management overhead and optimize costs. Cloud modernization allows your business or organization to be more productive with less. Efficiency at this scale should be a priority.
+Modernization is when you enhance workloads and the processes to support those workloads. It's all about maximizing value and adopting cloud technologies that allow you to unlock more benefits of the cloud. The goal of modernization is to make the cloud work for you. It can improve operational efficiency, reduce management overhead, and optimize costs. Modernization allows your business or organization to be more productive with less. Efficiency at this scale should be a priority.
 
-Modernization isn't complicated. We recommend modernizing in two phases:
+We recommend modernizing in two phases:
 
 - **Phase 1. Business alignment**
 - **Phase 2. Modernization strategies**

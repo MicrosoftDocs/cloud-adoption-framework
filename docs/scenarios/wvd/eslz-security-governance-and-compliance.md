@@ -106,7 +106,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Use Azure Tags](/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. To identify Azure Virtual Desktop's associated compute cost, tag all your host pools and virtual machines. Tag Azure Files or Azure NetApp Files resources to track the storage cost associated with FSLogix User Profile Containers, custom OS images, and MSIX app attach (if used).
 
-- Define the [minimum suggested tags](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules.
+- Define the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules.
 
 - [Set budget(s) in Azure Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
 

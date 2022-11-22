@@ -24,14 +24,14 @@ However, being proactive still requires you to have data quality experts who can
 
 ### Data quality metrics
 
-Data quality metrics are key to assessing and increasing the quality of your data products. At a global and domain level, you need to decide upon your quality metrics. At a minimum, we recommend the following metrics:
+Data quality metrics are key to assessing and increasing the quality of your data products. At a global and domain level, you need to decide upon your quality metrics. At a minimum, we recommend the following metrics.
 
 |Metrics  |Metrics definitions  |
 |---------|---------|
 | Completeness = % total of non-nulls + non-blanks | Measures data availability, fields in the dataset that aren't empty, and default values that were changed. For example, if a record includes 01/01/1900 as a data of birth, it's highly likely that the field was never populated.|
 | Uniqueness = % of non-duplicate values | Measures distinct values in a given column compared to the number of rows in the table. For example, given four distinct color values (red, blue, yellow, and green) in a table with five rows, that field is 80% (or 4/5) unique. |
 | Consistency = % of data having patterns | Measures compliance within a given column to its expected data type or format. For example, an email field containing formatted email addresses, or a name field with numeric values. |
-| Validity= % of reference matching | Measures successful data matching to its domain reference set. For example, given a country field (complying with taxonomy values) in a transactional records system, the country value of "US of A" isn't valid. |
+| Validity= % of reference matching | Measures successful data matching to its domain reference set. For example, given a *country/region* field (complying with taxonomy values) in a transactional records system, the value of "US of A" isn't valid. |
 | Accuracy= % of unaltered values | Measures successful reproduction of the intended values across multiple systems. For example, if an invoice itemizes a SKU and extended price that differs from the original order, the invoice line item is inaccurate. |
 |Linkage = % of well-integrated data | Measures successful association to its companion reference details in another system. For example, if an invoice itemizes an incorrect SKU or product description, the invoice line item isn't linkable. |
 

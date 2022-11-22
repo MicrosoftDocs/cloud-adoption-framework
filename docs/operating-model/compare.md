@@ -200,9 +200,9 @@ Advantages and disadvantages of this approach are purposefully blank. After you 
 Learn the terminology associated with operating models. The terminology helps you understand how an operating model fits into the bigger theme of corporate planning.
 
 > [!div class="nextstepaction"]
-> [Operating model terminology](./compare.md)
+> [Operating model terminology](./terms.md)
 
 Learn how a landing zone provides the basic building block of any cloud adoption environment.
 
 > [!div class="nextstepaction"]
-> [Compare common cloud operating models](../ready/landing-zone/index.md)
+> [What is a landing zone?](../ready/landing-zone/index.md)

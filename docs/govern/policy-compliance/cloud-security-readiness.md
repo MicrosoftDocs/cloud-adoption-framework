@@ -56,7 +56,7 @@ Knowledge about the cloud is fundamental to approaching a [policy review](./clou
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center)
 - [Common controls hub](https://www.microsoft.com/trust-center/compliance/compliance-overview)
 - [Cloud Services Due Diligence Checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist)
-- [Regional and country compliance](https://www.microsoft.com/trust-center/compliance/regional-country-compliance)
+- [Regional and country-specific compliance](https://www.microsoft.com/trust-center/compliance/regional-country-compliance)
 
 **Transparency:**
 

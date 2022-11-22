@@ -3,11 +3,12 @@ title: Azure regions decision guide
 description: Learn about cloud platform regions and the factors and characteristics that might affect your Azure region selections.
 author: doodlemania2
 ms.author: dermar
-ms.date: 07/05/2022
+ms.reviewer: tozimmergren
+ms.date: 11/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: internal
+ms.custom: internal, engagement-fy23
 ---
 
 # Azure regions decision guide
@@ -15,15 +16,13 @@ ms.custom: internal
 When you design your strategy to migrate to Azure, you can choose from many Azure regions around the world. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics that make choosing the correct region for your Azure resources essential. Considerations include available services, capacity, constraints, and sovereignty:
 
 - **Available services**: The Azure services you can deploy in each region differ depending on various factors. Select a region for the service you need for your workload. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
-- **Capacity**: Each region has a maximum capacity. A region's maximum capacity might affect what types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a large-scale datacenter migration to Azure, you might want to consult with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale you need.
+- **Capacity**: Each region has a maximum capacity. A region's maximum capacity might affect what types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a large-scale datacenter migration to Azure, you might want to consult with your local Azure field team, or your Azure account manager to confirm that you can deploy at the scale you need.
 - **Constraints**: Certain constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/resources/achieving-compliant-data-residency-and-security-with-azure/).
 - **Sovereignty**: Certain regions are dedicated to specific sovereign entities. Although all regions are Azure regions, these sovereign regions are isolated from the rest of Azure. They aren't necessarily managed by Microsoft, and they might be restricted to certain types of customers. These sovereign regions are:
   - [Azure China 21Vianet](https://azure.microsoft.com/global-infrastructure/services/?regions=china-east-2%2cchina-non-regional&products=all)
   - [Azure Germany](https://azure.microsoft.com/global-infrastructure/services/?regions=germany-north,germany-west-central&products=all&rar=true)  
      Azure Germany is being deprecated in favor of standard nonsovereign Azure regions in Germany.
   - [Azure Government - US](/azure/azure-government/documentation-government-welcome)
-  - [Australia](https://azure.microsoft.com/global-infrastructure/services/?regions=australia-central%2cnon-regional&products=all)  
-     Two regions in Australia are managed by Microsoft but are provided for the Australian government and its customers and contractors. Therefore, these regions carry client constraints similar to other sovereign clouds.
 
 ## Operate in multiple geographic regions
 
@@ -71,10 +70,10 @@ Any robust cloud deployment requires a well-considered network that takes into a
 After you consider network topology, determine whether more documentation and process alignment is required. The following approach can help you assess potential challenges and establish a general course of action:
 
 - Consider a more robust readiness and governance implementation.
-- Inventory the affected geographies. Compile a list of the regions and countries that are affected.
-- Document data sovereignty requirements. Do the countries identified have compliance requirements that govern data sovereignty?
-- Document the user base. Will employees, partners, or customers in the identified country be affected by the cloud migration?
-- Document datacenters and assets. Are there assets in the identified country that might be included in the migration effort?
+- Inventory the affected geographies. Compile a list of the countries/regions that are affected.
+- Document data sovereignty requirements. Do the identified countries/regions have compliance requirements that govern data sovereignty?
+- Document the user base. Will employees, partners, or customers in the identified country/region be affected by the cloud migration?
+- Document datacenters and assets. Are there assets in the identified country/region that might be included in the migration effort?
 - Document regional SKU availability and failover requirements.
 
 Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings:
@@ -88,17 +87,17 @@ Align changes throughout the migration process to address the initial inventory.
 
 ## Know data sovereignty requirements
 
-Around the world, government organizations have begun to establish data sovereignty and data privacy regulations. These types of compliance requirements often require localization in a specific region, or even in a specific country, to protect the region's or country's citizens. In some cases, data that pertains to customers, employees, or partners must be stored on a cloud platform in the same region as the user.
+Around the world, government organizations have begun to establish data sovereignty and data privacy regulations. These types of compliance requirements often require localization in a specific country/region to protect the citizens in that location. In some cases, data that pertains to customers, employees, or partners must be stored on a cloud platform in the same region as the user.
 
 Addressing this challenge has been a significant motivation for cloud migrations for organizations that operate on a global scale. To maintain data sovereignty compliance, some organizations have chosen to deploy duplicate IT assets to cloud providers in the region. In the preceding table, the Germany scenario is a good example. The scenario includes customers, partners, and employees, but not current IT assents in Germany. This organization might choose to deploy some assets to a datacenter within a data sovereignty regulation area, potentially using the German Azure datacenters. An understanding of the data that's affected by regional data sovereignty regulations would help the cloud adoption team understand the best migration approach for the organization.
 
 ### Why is the location of users relevant?
 
-Organizations that support users in multiple countries have developed technical solutions that address user traffic. In some cases, solutions involve localization of assets. In other scenarios, the organization might choose to implement global wide area network (WAN) solutions to address disparate user bases through network-focused solutions. In either case, the migration strategy might be affected by the usage profiles of disparate users.
+Organizations that support users in multiple countries/regions have developed technical solutions that address user traffic. In some cases, solutions involve localization of assets. In other scenarios, the organization might choose to implement global wide area network (WAN) solutions to address disparate user bases through network-focused solutions. In either case, the migration strategy might be affected by the usage profiles of disparate users.
 
-If an organization supports employees, partners, and customers in Germany without currently having datacenters in Germany, the organization probably implemented a leased-line solution. This type of solution routes traffic to datacenters in other countries. This existing routing presents a significant risk to the perceived performance of migrated applications. Injecting more hops in an established and tuned global WAN can create the perception of underperforming applications after migration. Finding and fixing those issues can add significant delays to a project.
+If an organization supports employees, partners, and customers in Germany without currently having datacenters in Germany, the organization probably implemented a leased-line solution. This type of solution routes traffic to datacenters in other countries/regions. This existing routing presents a significant risk to the perceived performance of migrated applications. Injecting more hops in an established and tuned global WAN can create the perception of underperforming applications after migration. Finding and fixing those issues can add significant delays to a project.
 
-In each of the following processes, guidance for addressing this complexity is included across prerequisites and assess, migrate, and optimize processes. Understanding user profiles in each country is critical to properly manage this complexity.
+In each of the following processes, guidance for addressing this complexity is included across prerequisites and processes of assessing, migrating, and optimizing. Understanding user profiles in each country/region is critical to properly manage this complexity.
 
 ### Why is the location of datacenters relevant?
 
@@ -120,7 +119,7 @@ The following approach uses a data-driven model to address global migration comp
 When the team is comfortable with the baseline approach and readiness is aligned, consider a few data-driven prerequisites:
 
 - **Complete general discovery**: Complete the table in [Document complexity](#document-your-scenario-complexity) to evaluate the complexity of your cloud adoption strategy.
-- **Perform a user profile analysis on each affected country**: It's important to understand general user routing early in the migration process. Changing global lease lines and adding connections like ExpressRoute to a cloud datacenter can require months of networking delays. Address user routing as early in the process as possible.
+- **Analyze user profiles on each affected country/region**: It's important to understand general user routing early in the migration process. Changing global lease lines and adding connections like ExpressRoute to a cloud datacenter can require months of networking delays. Address user routing as early in the process as possible.
 - **Complete an initial digital estate rationalization**: When complexity is introduced in a migration strategy, you should complete an initial digital estate rationalization. For more information, see [What is a digital estate?](../../digital-estate/index.md)
 - **Use tagging for digital estate requirements**: Establish tagging policies to identify any workload that's affected by data sovereignty requirements. Required tags should begin in digital estate rationalization and carry through to migrated assets.
 - **Evaluate a hub-spoke model**: Distributed systems often share common dependencies. Often, you can address shared dependencies by implementing a hub-spoke model. Although implementing a hub-spoke model is out of scope for the migration process, flag the model for consideration during future iterations of the [ready processes](../../ready/index.md).
