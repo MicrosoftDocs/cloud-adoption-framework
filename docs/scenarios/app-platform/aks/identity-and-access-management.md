@@ -16,14 +16,14 @@ This article provides design considerations and recommendations for identity and
 
 ## Design considerations
 
-- Decide which cluster identity is being used ([managed identity](/azure/aks/use-managed-identity) or [service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli)).
+- Decide which cluster identity to use ([managed identity](/azure/aks/use-managed-identity) or [service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli)).
 - Decide how to authenticate cluster access (based on client certificates or via [Azure Active Directory](/azure/aks/managed-aad)).
 - Decide on a [multitenancy cluster](/azure/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
-  - Decide on a method for isolation. Methods include namespace, network policy, compute (node pool), or and cluster.
+  - Choose a method for isolation. Methods include namespace, network policy, compute (node pool), and cluster.
   - Determine the Kubernetes RBAC roles and compute allocation per application team, for isolation.
   - Decide whether application teams can read other workloads in their clusters or in other clusters.
 - Determine the permissions for custom Azure RBAC roles for your [AKS landing zone](../../../ready/landing-zone/design-area/identity-access.md).
-  - Decide what permissions are needed for the site reliability engineering (SRE) role so that role can administer and troubleshoot the whole cluster.
+  - Decide what permissions are needed for the site reliability engineering (SRE) role to enable that role to administer and troubleshoot the whole cluster.
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
   - Decide what permissions the application teams will need to deploy into the cluster.
@@ -39,7 +39,7 @@ This article provides design considerations and recommendations for identity and
   - Use [AKS-managed Azure AD integration](/azure/aks/managed-aad) so you can use Azure AD for authentication and operator and developer access.
 - Define required RBAC roles and role bindings in Kubernetes.
   - Use [Kubernetes roles and role bindings](/azure/aks/concepts-identity#kubernetes-role-based-access-control-kubernetes-rbac) to Azure AD groups for site reliability engineering (SRE), SecOps, and developer access.
-  - Consider using [Azure RBAC for Kubernetes](/azure/aks/manage-azure-rbac), which enables unified management and access control across Azure resources, AKS, and Kubernetes resources. When you use it, you don't need to separately manage user identities and credentials for Kubernetes. When Azure RBAC for Kubernetes is enabled, Azure AD principals are exclusively validated by Azure RBAC, but regular Kubernetes users and service accounts are exclusively validated by Kubernetes RBAC.
+  - Consider using [Azure RBAC for Kubernetes](/azure/aks/manage-azure-rbac), which enables unified management and access control across Azure resources, AKS, and Kubernetes resources. When Azure RBAC for Kubernetes is enabled, you don't need to separately manage user identities and credentials for Kubernetes. Azure AD principals will be exclusively validated by Azure RBAC, but regular Kubernetes users and service accounts will be exclusively validated by Kubernetes RBAC.
 - Grant SRE full access just-in-time, as needed.
   - Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
 - Use [Azure AD workload identity for Kubernetes.](/azure/active-directory/develop/workload-identity-federation) When you implement this federation, developers can use native Kubernetes service accounts and federation to access resources managed by Azure AD, like Azure and Microsoft Graph.
