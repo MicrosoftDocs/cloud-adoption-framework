@@ -1,9 +1,9 @@
 ---
 title: Identity and access management considerations for AKS
-description: Describes how to improve identity and access management for the Azure Kubernetes Service.
+description: This article provides design considerations and recommendations for identity and access management when you use Azure Kubernetes Service.
 author: xuhongl
 ms.author: xuhliu
-ms.date: 10/31/2022
+ms.date: 11/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,21 +12,21 @@ ms.custom: think-tank, e2e-aks
 
 # Identity and access management considerations for AKS
 
-Your organization or enterprise needs to design suitable security settings to meet their requirements. Identity and access management covers multiple aspects like cluster identities, workload identities, and operator access.
+This article provides design considerations and recommendations for identity and access management when you use Azure Kubernetes Service (AKS). There are multiple aspects of identity and access management, including cluster identities, workload identities, and operator access.
 
 ## Design considerations
 
-- Decide what cluster identity is being used ([managed identity](/azure/aks/use-managed-identity) and [service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli)).
-- Decide how to authenticate cluster access (client certificate-based or [Azure Active Directory](/azure/aks/managed-aad)).
+- Decide which cluster identity is being used ([managed identity](/azure/aks/use-managed-identity) or [service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli)).
+- Decide how to authenticate cluster access (based on client certificates or via [Azure Active Directory](/azure/aks/managed-aad)).
 - Decide on a [multitenancy cluster](/azure/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
-  - Decide on a method for isolation (namespace, network policy, compute (node pool), or cluster).
-  - Decide about Kubernetes RBAC roles and compute allocation per application team for isolation.
-  - Decide whether application teams can read other workloads in their cluster or in other clusters.
-- Decide about custom Azure RBAC roles for your [AKS landing zone](../../../ready/landing-zone/design-area/identity-access.md).
-  - Decide what permissions are needed for the site reliability engineering (SRE) role to administer/troubleshoot the whole cluster.
+  - Decide on a method for isolation. Methods include namespace, network policy, compute (node pool), or and cluster.
+  - Determine the Kubernetes RBAC roles and compute allocation per application team, for isolation.
+  - Decide whether application teams can read other workloads in their clusters or in other clusters.
+- Determine the permissions for custom Azure RBAC roles for your [AKS landing zone](../../../ready/landing-zone/design-area/identity-access.md).
+  - Decide what permissions are needed for the site reliability engineering (SRE) role so that role can administer and troubleshoot the whole cluster.
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
-  - Decide what permissions are needed for the application teams to deploy into the cluster.
+  - Decide what permissions the application teams will need to deploy into the cluster.
 - Decide whether you need workload identities ([Azure AD workload identities](/azure/aks/workload-identity-overview)). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
 
 ## Design recommendations
