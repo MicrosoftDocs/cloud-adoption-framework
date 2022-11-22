@@ -27,16 +27,16 @@ This article provides design considerations and recommendations for identity and
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
   - Decide what permissions the application teams will need to deploy into the cluster.
-- Decide whether you need workload identities ([Azure AD workload identities](/azure/aks/workload-identity-overview)). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
+- Decide whether you need workload identities ([Azure AD workload identities](/azure/aks/workload-identity-overview)). You might need them for services like Azure Key Vault integration and Azure Cosmos DB.
 
 ## Design recommendations
 
-- Cluster identities
+- Cluster identities.
   - Use your own [managed identity](/azure/aks/use-managed-identity) for your AKS cluster.
   - Define custom Azure RBAC roles for your AKS landing zone to simplify the management of required permissions for cluster-managed identity.
-- Cluster access
-  - Use Kubernetes RBAC with Azure AD to [limit privileges](/azure/aks/azure-ad-rbac) and minimize granting administrator privileges to protect configuration and secrets access.
-  - Use [AKS-managed Azure AD integration](/azure/aks/managed-aad) to use Azure AD for authentication and operator and developer access.
+- Cluster access.
+  - Use Kubernetes RBAC with Azure Active Directory (Azure AD) to [limit privileges](/azure/aks/azure-ad-rbac) and minimize administrator privileges. Doing so helps to protect configuration and secrets access.
+  - Use [AKS-managed Azure AD integration](/azure/aks/managed-aad) so you can use Azure AD for authentication and operator and developer access.
 - Define required RBAC roles and role bindings in Kubernetes.
   - Use [Kubernetes roles and role bindings](/azure/aks/concepts-identity#kubernetes-role-based-access-control-kubernetes-rbac) to Azure AD groups for site reliability engineering (SRE), SecOps, and developer access.
   - Consider using [Azure RBAC for Kubernetes](/azure/aks/manage-azure-rbac) that allows for the unified management and access control across Azure Resources, AKS, and Kubernetes resources. This feature frees you from having to separately manage user identities and credentials for Kubernetes. When enabled, Azure AD principals will be validated exclusively by Azure RBAC while regular Kubernetes users and service accounts are exclusively validated by Kubernetes RBAC.
