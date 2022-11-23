@@ -69,7 +69,7 @@ Review the following *recommendations* for platform management and monitoring of
 - In a hybrid environment, you can use [Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to monitor communication between on-premises and Azure resources.
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
   - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connection over ExpressRoute Direct and also over ExpressRoute Global Reach.
-  - You can also send your logs to Log Analytics. 
+- Send your logs to Log Analytics. 
 For more information, see [Send Logs to Log Analytics](/azure/azure-vmware/send-logs-to-log-analytics)
 
 ### VMware tooling recommendations
