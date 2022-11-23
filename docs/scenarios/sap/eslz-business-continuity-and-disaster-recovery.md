@@ -54,7 +54,7 @@ To learn more about how Azure supports SAP, see [Supported scenarios for SAP wor
 
 For the DBMS layer, the common architecture pattern is to replicate databases at the same time and with different storage stacks than the ones that the primary and secondary VMs are using. Azure doesn't support architectures where the primary and secondary VM share storage for DBMS data. Nor does Azure support transaction and redo logs. The guiding principle is to use two independent storage stacks, even if they're based on Network File System (NFS) shares. But this approach is the main limitation when compared to what's possible with on-premises.
 
-Azure provides other options, as it supports either NFS or Server Message Block sharing. You can use [Azure shared disk](/azure/virtual-machines/disks-shared) in Windows for ASCS/SCS components and specific high availability scenarios. Set up your failover clusters separately for SAP application layer components and the DBMS layer. Azure doesn't support high availability architectures that combine SAP application layer components and the DBMS layer into one failover cluster.
+Azure provides other options, as it supports either NFS or Server Message Block sharing. You can use [Azure shared disk](/azure/virtual-machines/disks-shared) in Windows for ASCS/SCS components and specific high availability scenarios. Set up your failover clusters separately for SAP application layer components and the DBMS layer. As of now Azure doesn't support high availability architectures that combine SAP application layer components and the DBMS layer into one failover cluster.
 
 Most failover clusters for SAP application layer components and the DBMS layer require a virtual IP address for a failover cluster. One common exception is with Oracle Data Guard. It doesn't require a virtual IP address. [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) should handle the virtual IP address for all other cases. As a design principle, use one Load Balancer per cluster configuration. We recommend using the standard version of the load balancer. For more information, see [Public endpoint connectivity for virtual machines using Azure Standard Load Balancer in SAP high availability scenarios](/azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections).
 
@@ -88,8 +88,8 @@ One advantage of deploying your high availability architecture across different 
 - Azure doesn't currently support combining ASCS and db high availability in the same Linux Pacemaker cluster; separate them into individual clusters. But you can combine up to five [multiple central-services clusters](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid) into a pair of VMs.
 
 - Use a Standard Load Balancer SKU in front of ASCS and database clusters.
-- All production systems should run on premium-managed SSDs and use Azure NetApp Files or Ultra Disk Storage. At least the OS disk should be Premium tier to achieve better performance and the best SLA.
-- Both VMs in the high availability pair should be deployed in an availability set, or availability zones should be the same size and have the same storage configuration.
+- All production systems must run on premium-managed SSDs and use Azure NetApp Files or Ultra Disk Storage. At least the OS disk should be Premium tier to achieve better performance and the best SLA.
+- Both VMs in the high availability pair should be deployed in an availability set, or availability zones. These VMs should be of the same size and have the same storage configuration.
 - Native database replication technology should be used to synchronize the database in a high availability pair.
 - One of the following services should be selected for running SAP central-services clusters on different operating systems:
 
