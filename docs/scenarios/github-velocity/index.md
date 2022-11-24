@@ -100,7 +100,7 @@ Within an enterprise, contributors are developers across the company, and mainta
 
 - **Contributors:** Developers, data scientists, product managers, marketers, and other roles within a company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
 
-For more information, see the white paper [An introduction to InnerSource](https://resources.github.com/whitepapers/introduction-to-InnerSource/).
+For more information, see the white paper [An introduction to InnerSource](https://resources.github.com/innersource/fundamentals/).
 
 ## Automation
 
