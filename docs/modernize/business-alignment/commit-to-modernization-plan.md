@@ -20,8 +20,8 @@ Modernization requires commitment. It takes time and money to modernize. Creatin
 
 For more information, see:
 
-- [Business conversations](/azure/cloud-adoption-framework/strategy/business-outcomes/)
-- [Business outcomes template](/azure/cloud-adoption-framework/strategy/business-outcomes/business-outcome-template)
+- [Business conversations](../../strategy/business-outcomes/index.md)
+- [Business outcomes template](../../strategy/business-outcomes/business-outcome-template.md)
 
 Here are steps you can follow to prepare for and gain modernization commitment.
 

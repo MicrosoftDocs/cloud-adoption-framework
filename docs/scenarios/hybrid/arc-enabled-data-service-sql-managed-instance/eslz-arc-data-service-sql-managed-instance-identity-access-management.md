@@ -76,7 +76,7 @@ The following architecture diagram shows secure access using SQL authentication.
 
 ## Design considerations
 
-Review the [identity and access management critical design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) of Azure landing zones to assess the effect of Azure Arc-enabled data services on your overall identity and access model.
+Review the [identity and access management critical design area](../../../ready/landing-zone/design-area/identity-access.md) of Azure landing zones to assess the effect of Azure Arc-enabled data services on your overall identity and access model.
 
 ### Arc-enabled data services deployment
 

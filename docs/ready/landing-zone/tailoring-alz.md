@@ -49,7 +49,7 @@ More processes and tooling might be required to ensure a landing zone has the re
 - Linking of virtual networks to a distributed denial of service (DDoS) standard plan.
 
 > [!NOTE]
-> In the Azure landing zone reference implementations, Azure policies with the `DeployIfNotExists` and `Modify` [effects](/azure/governance/policy/concepts/effects) are used to achieve the deployment of some of the preceding resources. They follow the [policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) design principle.
+> In the Azure landing zone reference implementations, Azure policies with the `DeployIfNotExists` and `Modify` [effects](/azure/governance/policy/concepts/effects) are used to achieve the deployment of some of the preceding resources. They follow the [policy-driven governance](./design-principles.md#policy-driven-governance) design principle.
 >
 > For more information, see [Adopt policy-driven guardrails](../enterprise-scale/dine-guidance.md).
 

@@ -138,7 +138,7 @@ Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/ov
 
 [![Diagram showing Azure Arc-enabled Kubernetes Policy.](./media/arc-enabled-kubernetes-policy.png)](./media/arc-enabled-kubernetes-policy.png#lightbox)
 
-Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where you can apply it (management group, subscription, resource group or individual resource level). Use [Azure Policy's built-in library](/azure/governance/policy/samples/built-in-policies#kubernetes) for Azure Arc-enabled Kubernetes. Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise scale guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org).
+Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where you can apply it (management group, subscription, resource group or individual resource level). Use [Azure Policy's built-in library](/azure/governance/policy/samples/built-in-policies#kubernetes) for Azure Arc-enabled Kubernetes. Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise scale guidance](../../../ready/landing-zone/design-area/resource-org.md).
 
 - Determine what Azure policies you need in order to meet your organization's business, regulatory, and security requirements for Azure Arc-enabled Kubernetes at scale.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
@@ -151,7 +151,7 @@ Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) 
 
 Design and plan your Log Analytics Workspace deployment, which is the storage where data is collected, aggregated, and later analyzed. Since the Log Analytics workspace represents a geographical location of your data, to support a level of isolation and scope for configurations like data retention, you must determine the number of workspaces needed and how they map to your organizational structure.
 
-Use a single Azure Monitor Log Analytics workspace to manage centralized RBAC, visibility, and reporting, as described in the [Management and monitoring best practices of Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management).
+Use a single Azure Monitor Log Analytics workspace to manage centralized RBAC, visibility, and reporting, as described in the [Management and monitoring best practices of Cloud Adoption Framework](../../../ready/landing-zone/design-area/management.md).
 
 For more information, review the best practices for [designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 

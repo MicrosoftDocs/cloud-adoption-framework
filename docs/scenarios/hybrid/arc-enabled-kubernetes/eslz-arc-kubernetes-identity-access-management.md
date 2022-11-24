@@ -44,7 +44,7 @@ The following diagram displays [Azure Arc-enabled Kubernetes cluster access from
 
 ## Design considerations
 
-Review the [identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) of Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your overall identity and access model.
+Review the [identity and access management design area](../../../ready/landing-zone/design-area/identity-access.md) of Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your overall identity and access model.
 
 **For Kubernetes cluster onboarding:**
 
