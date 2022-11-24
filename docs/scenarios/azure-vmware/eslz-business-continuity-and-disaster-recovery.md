@@ -55,9 +55,13 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
   :::image type="content" source="../_images/eslz-bcdr-3.png" alt-text="Diagram that shows Azure Backup Server deployed as an Azure VMware Solution VM.":::
 
-- Use the [application performance requirements checklist](/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at the right capacity and disk type, such as HDD, SSD, or Ultra. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](/azure/virtual-machines/disks-performance) for backup operations. Use [Azure Backup Server capacity planner](https://www.microsoft.com/download/details.aspx?id=54301) to determine number, storage, and IOPS requirements.
+- Use the [application performance requirements checklist](/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at the right capacity and disk type, such as HDD, SSD, or Ultra. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](/azure/virtual-machines/disks-performance) for backup operations. Use [Azure Backup Server capacity planner](https://www.microsoft.com/download/details.aspx?id=54301) to determine number of servers, storage, and IOPS requirements for each of them.
 
 - Use [storage pools](/azure/backup/backup-mabs-add-storage) with Azure Backup Server for enhanced disk IOPS/throughput. Use [tiered storage](https://techcommunity.microsoft.com/t5/system-center-blog/achieve-faster-backups-using-tiered-storage-with-dpm-and-mabs/ba-p/1596069) on Backup Server for enhanced operations.
+
+- Identify the number of parallel backup jobs and restore operations to run on Azure Backup server. Currently, 8 parallel backup jobs are supported. Measure the amount of time taken to backup and restore mission-critical workloads over multiple runs. Ensure than AVS vSAN datastore has enough capacity to hold restored backup. Validate that backup and restore times meet RPO and RTO requirements for Azure Backup server.
+
+- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server.
 
 - Currently, Azure Backup Server doesn't support cross-region restore for Azure VMware Solution private cloud. Refer to [partner backup solutions](/azure/azure-vmware/ecosystem-back-up-vms) and [disaster recovery section](./eslz-business-continuity-and-disaster-recovery.md#disaster-recovery-design-considerations) when cross-region Azure VMware Solution recovery is required.
 
