@@ -77,7 +77,7 @@ You can also see the benefits of sustainability as part of your business signatu
 
 Sustainability is critical to ensure long-term success as a player in the dynamic business space. Transforming the company towards a green model can also enable people's intrinsic motivation and attract new talent with an active interest in sustainability in the end.
 
-Sustainability is an approach beyond a marketing play, with a conscious business purpose that can be part of a customer's brand identity. See [Improve customer experience and engagement](/azure/cloud-adoption-framework/strategy/motivations#innovation) in the Cloud Adoption Framework.
+Sustainability is an approach beyond a marketing play, with a conscious business purpose that can be part of a customer's brand identity. See [Improve customer experience and engagement](../motivations.md#innovation) in the Cloud Adoption Framework.
 
 - Add sustainability and environmental responsibility to the mission statement, ensuring that brand value alignment with the business activities and practices.
 - Additionally, you should evaluate the end-to-end supply chain to ensure [Scope 3 is also measured](/industry/sustainability/calculate-scope3).
@@ -127,7 +127,7 @@ Microsoft Sustainability Manager covers data input from sources beyond just Azur
 
 Many businesses understand that [migrating workloads to the cloud](/industry/sustainability/build-it-infrastructure) can cut energy consumption and costs and reduce the physical footprints of their datacenters. Transitioning workloads to Microsoft Azure can produce up to 98 percent more carbon efficiency and up to 93 percent more energy efficiency than on-premises options, depending on specific server usage, renewable energy purchases, and other factors.
 
-Use the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
+Use the [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/#overview) to apply best practices based on the proven [Microsoft Cloud Adoption Framework](../../index.yml) for Azure and [Well-Architected Framework](/azure/architecture/framework/) at every stage of your cloud adoption journey.
 
 Migrate and modernize your apps, data, and infrastructure using proven cloud migration tools and patterns.
 
@@ -161,7 +161,7 @@ An intentional approach can help organizations to navigate their sustainability 
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
-**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
+**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/en-us/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
 
 **Step 4:** Seek out teams in your business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 

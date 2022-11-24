@@ -45,8 +45,8 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure policies and remediation tasks.
 - **Data residency:** Consider which Azure region you wish your Azure Arc-enabled servers to be provisioned into, and understand the [metadata that is collected](/azure/azure-arc/servers/data-residency) from these machines.
 - **Secure public key:** Secure the Azure connected machine agent public key authentication to communicate with the Azure service.
-- **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery) guidance for enterprise-scale landing zones to determine whether your enterprise requirements are met.
-- Review the [security, governance, and compliance design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) of Azure landing zone enterprise-scale, to assess the impact of Azure Arc-enabled servers on your overall security and governance model.
+- **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](../../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md) guidance for enterprise-scale landing zones to determine whether your enterprise requirements are met.
+- Review the [security, governance, and compliance design area](../../../ready/landing-zone/design-area/governance.md) of Azure landing zone enterprise-scale, to assess the impact of Azure Arc-enabled servers on your overall security and governance model.
 
 ### Management disciplines
 
@@ -99,7 +99,7 @@ Policy-driven governance is a foundational principle of cloud-native operations 
 
 Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure resource management layer, and also within the individual server machine using [guest configuration policies](/azure/governance/policy/concepts/guest-configuration).
 
-Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where it can be applied (management group, subscription, resource group, or individual resource level). Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise-scale](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
+Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where it can be applied (management group, subscription, resource group, or individual resource level). Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise-scale](../../../ready/landing-zone/design-area/resource-org.md)
 
 - Determine what Azure policies are required by defining business, regulatory, and security requirements for Azure Arc-enabled servers.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
@@ -118,7 +118,7 @@ The following image displays conceptual reference architecture that demonstrates
 
 ### Log management strategy
 
-Design and plan your Log Analytics workspace deployment. It will be the container where data is collected, aggregated, and later analyzed. A Log Analytics workspace represents a geographical location of your data, data isolation, and scope for configurations like data retention. You'll have to identify the number of workspaces needed and how it maps to your organizational structure. It's recommended you use a single Azure Monitor Log Analytics workspace to manage RBAC centrally, for visibility, and reporting, as described in the [management and monitoring best practices of Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management).
+Design and plan your Log Analytics workspace deployment. It will be the container where data is collected, aggregated, and later analyzed. A Log Analytics workspace represents a geographical location of your data, data isolation, and scope for configurations like data retention. You'll have to identify the number of workspaces needed and how it maps to your organizational structure. It's recommended you use a single Azure Monitor Log Analytics workspace to manage RBAC centrally, for visibility, and reporting, as described in the [management and monitoring best practices of Cloud Adoption Framework](../../../ready/landing-zone/design-area/management.md).
 
 Review the best practices in [Designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 
