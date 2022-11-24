@@ -49,6 +49,12 @@ A modern approach might have a frequency of detected conditions that are much mo
 |-----|-----|-----|
 |<li>Performance metric - high memory utilization.</li> <li> Security threat - detected suspicious network activity.</li> <li>Availability fault - Azure blob storage requests are failing.</li> | Alert and notify, webhook, push notification, playbook, auto-scale |Query logs to identify the offending component and trigger automation to correct the problem with the offending component. |
 
+Here's a list of relevant resources for alerting and automation capabilities in Azure:
+
+* [What are Azure Monitor Alerts?](/azure/azure-monitor/alerts/alerts-overview)
+* [Integrate Azure Monitor with supported IT Service Management (ITSM) Integration products](/azure/azure-monitor/alerts/itsmc-overview).
+* [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started) using Azure Monitor.
+
 ## Cloud monitoring
 
 Compared to monitoring platforms and related tools that were available in the past, cloud computing offers:
