@@ -53,7 +53,6 @@ Here's a list of relevant resources for alerting and automation capabilities in 
 
 * [What are Azure Monitor Alerts?](/azure/azure-monitor/alerts/alerts-overview)
 * [Integrate Azure Monitor with supported IT Service Management (ITSM) Integration products](/azure/azure-monitor/alerts/itsmc-overview).
-* [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started) using Azure Monitor.
 
 ## Cloud monitoring
 
@@ -72,6 +71,10 @@ And consider the following modes for the range of automated action, whether that
 |**Manual**|An operator selects an automation example or playbook from a curated library.|
 
 Alerting depends on the instrumented data based on security events, performance metrics, availability information, and logs. Data-driven actions result from analyzing holistic, end-to-end perspectives of each monitored resource by aggregating and processing different collected data types to determine the impact and what responsive action to take.
+
+Expand your reading with these resources to learn more about automation based on metric alerts and security events:
+
+* [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started) using Azure Monitor.
 
 ## Cost efficiency
 
@@ -97,6 +100,11 @@ The role of automation then provides a sort of *playbook* that reduces costs and
 * The detection-to-correction cycle could be in seconds or minutes versus hours.
 
 Next, your team needs to build a list or library of automation examples that can be flexibly used - either from raw material found on public websites or internally curated and stored in a source control repository.
+
+Here's a list of suggested reading for additional automation based on identity- or security events:
+
+* [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
+* [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
 
 ## Agile work management
 
