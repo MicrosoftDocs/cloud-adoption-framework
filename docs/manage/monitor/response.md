@@ -101,7 +101,7 @@ The role of automation then provides a sort of *playbook* that reduces costs and
 
 Next, your team needs to build a list or library of automation examples that can be flexibly used - either from raw material found on public websites or internally curated and stored in a source control repository.
 
-Here's a list of suggested reading for additional automation based on identity- or security events:
+Here's a list of suggested reading for more automation based on identity- or security events:
 
 * [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
 * [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
@@ -157,14 +157,17 @@ Ask these questions when you're initially developing a monitoring configuration.
 
 After the release of your monitoring configuration, you can learn a lot about what's working and what's not. Consider high alert volume, issues unnoticed by monitoring but noticed by end users or the cloud provider (through their tools), and what were the best actions to have taken as part of this evaluation. Identify changes to implement to improve service delivery as part of an ongoing, continuous monitoring improvement process. It's not just about evaluating alert noise or missed alerts but also the effectiveness of how you're monitoring the workload. It's about the effectiveness of your alert policies, process, and overall culture to determine whether you're improving.
 
-System Center Operations Manager and Azure Monitor support alerts based on static or even dynamic thresholds, and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Both of these services also support IT service management (ITSM) integration to automate the creation of incident records and escalate to the right support team or any other alert management system that uses a webhook.
+[Azure Monitor](/azure/azure-monitor/overview) support alerts based on static or even dynamic thresholds, and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Azure Monitor also [integrates with various IT service management (ITSM) solutions](/azure/azure-monitor/alerts/itsmc-overview) to automate the creation of incident records and escalate to the right support team or any other alert management system that uses a webhook.
 
-You can, for example, use the following Azure services or service-related features to automate recovery actions or any combination thereof. These include:
+If you are in a hybrid scenario or are migrating resources directly to the cloud, you can still utilize [System Center Operations Manager](/system-center/scom/welcome) (SCOM), which has similar capabilities for alert automation. However, for cloud-native workloads and the more modern monitoring needs, Azure Monitor usually covers the common use cases.
 
-* Azure Automation
-* Azure Logic Apps
-* Azure Functions
-* Azure Kubernetes Service using the Kubernetes container orchestration engine supporting containerized microservices
-* Azure or autoscaling in the case of elastic workloads
+You can also, as an example, use the following Azure services or service-related features to help automate response and recovery actions:
+
+* [Azure Automation](/azure/automation/overview).
+* [Azure Logic Apps](/en-us/azure/logic-apps/logic-apps-overview).
+* [Azure Functions](/azure/azure-functions/functions-overview).
+* Azure Kubernetes Service using the [Kubernetes container orchestration](/azure/architecture/microservices/design/orchestration) engine supporting containerized microservices.
+* [Security Orchestration, Automation, and Response (SOAR)](/azure/sentinel/automation) in Microsoft Sentinel.
+* Further, learn more about [best practices for Autoscaling](/azure/architecture/best-practices/auto-scaling) various services in Azure.
 
 While notifying the responsible teams is the most common action for alerting, automating corrective actions is often appropriate. This automation can help streamline the entire incident management process, and automating these recovery tasks can also reduce the risk of human error.
