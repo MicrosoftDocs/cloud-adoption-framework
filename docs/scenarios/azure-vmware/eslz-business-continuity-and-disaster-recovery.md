@@ -61,7 +61,7 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - Identify the number of parallel backup jobs and restore operations to run on Azure Backup server. Currently, 8 parallel backup jobs are supported. Measure the amount of time taken to backup and restore mission-critical workloads over multiple runs. Ensure than AVS vSAN datastore has enough capacity to hold restored backup. Validate that backup and restore times meet RPO and RTO requirements for Azure Backup server.
 
-- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](https://learn.microsoft.com/system-center/dpm/run-antivirus-server?view=sc-dpm-2022) if any Antivirus/Antimalware software runs on Azure Backup Server.
+- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server.
 
 - Currently, Azure Backup Server doesn't support cross-region restore for Azure VMware Solution private cloud. Refer to [partner backup solutions](/azure/azure-vmware/ecosystem-back-up-vms) and [disaster recovery section](./eslz-business-continuity-and-disaster-recovery.md#disaster-recovery-design-considerations) when cross-region Azure VMware Solution recovery is required.
 
