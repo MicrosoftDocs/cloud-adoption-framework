@@ -16,7 +16,7 @@ This article provides recommendations for implementing security in HPC environme
 
 It's important to understand the previous [security recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) outlined by the Microsoft cloud platform team.
 
-# Security baseline recommendations 
+## Security baseline recommendations 
 
 We also recommend that you consider security baseline recommendations for various services that are used in HPC environments, including:
 
