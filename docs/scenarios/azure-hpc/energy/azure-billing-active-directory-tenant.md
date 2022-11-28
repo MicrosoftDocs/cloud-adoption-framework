@@ -12,6 +12,8 @@ ms.date: 11/08/2022
 
 # Azure billing and Azure Active Directory tenants for energy HPC
 
+## Recommendations
+
 Azure landing zones for HPC don't have any specific considerations or recommendations that affect billing offer decisions, enterprise enrollment, or Active Directory tenant decisions.
 
 It could, however, be important to understand any decisions made previously by the cloud platform team so you know about existing [enterprise enrollment or Azure Active Directory tenant decisions](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant).
