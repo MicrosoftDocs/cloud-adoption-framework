@@ -148,7 +148,7 @@ items:
       maintainContext: true
   - name: Azure product documentation
     items:
-    - name: Azure HPC Product documentation
+    - name: Azure HPC product documentation
       href: /azure/architecture/topics/high-performance-computing/
     - name: CycleCloud
       href: /azure/cyclecloud/overview/

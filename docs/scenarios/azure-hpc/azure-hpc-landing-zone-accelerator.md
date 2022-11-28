@@ -84,13 +84,11 @@ The following conceptual reference architecture is an example that shows design 
 
 :::image type="content" alt-text="Diagram that shows an example architecture for a finance environment, including on-premises resources, virtual network, subnets, and network security groups." source="./media/hpc-finance-architecture-example.png" lightbox="./media/hpc-finance-architecture-example.png":::
 
-
 ## Example: conceptual reference architecture for manufacturing
 
 The following conceptual reference architecture is an example that shows design areas and best practices for *manufacturing* environments.
 
 :::image type="content" alt-text="Diagram that shows an example architecture for a manufacturing environment, including on-premises and cloud resources and an HPC landing zone." source="./media/hpc-manufacturing-architecture-example.png" lightbox="./media/hpc-manufacturing-architecture-example.png":::
-
 
 ## Obtain the HPC landing zone accelerator
 

@@ -67,7 +67,7 @@ Linux has been the dominant operating system for HPC workloads. Linux is open-so
 
 ### Autoscaling
 
-Autoscaling is a capability to provision and utilize the VMs only when the job is submitted/active. Once the job is complete the nodes turn off automatically. Using Autoscaling allows you to adjust compute resources used by your application, potentially saving you time and money. Azure CycleCloud has built in autoscaling turned on in its schedulers by default. The default time limit to switch off the nodes is 15 minutes and can be customized. This ensures that the users pay only for what they use. Azure batch, on the other hand, provides the user a mechanism to integrate an autoscaling formula with the choice of parameters.   For more details, see [here](/azure/azure-monitor/autoscale/autoscale-get-started). \
+Autoscaling is a capability to provision and utilize the VMs only when the job is submitted/active. Once the job is complete the nodes turn off automatically. Using Autoscaling allows you to adjust compute resources used by your application, potentially saving you time and money. Azure CycleCloud has built in autoscaling turned on in its schedulers by default. The default time limit to switch off the nodes is 15 minutes and can be customized. This ensures that the users pay only for what they use. Azure batch, on the other hand, provides the user a mechanism to integrate an autoscaling formula with the choice of parameters.   For more details, see [here](/azure/azure-monitor/autoscale/autoscale-get-started).
 
 ### PAYG vs Reserved vs Spot Instance
 
@@ -95,7 +95,7 @@ HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Stora
 
 [Azure Managed Grafana](https://azure.microsoft.com/services/managed-grafana/#overview) is a fully managed service for analytics and monitoring solutions. It's supported by Grafana Enterprise, which provides extensible data visualizations. This can be integrated in the HPC workloads and an example is shown in Azure HPC OnDemand platform like [AzHop](https://azure.github.io/az-hop/).
 
-## Performance Efficiency
+## Performance efficiency
 
 Ensure that your HPC environment is able to scale in order to meet the demands placed on it by users in an efficient manner. Choose the right platform for your HPC applications based on application vendor recommendations, invest in capacity planning if extra infrastructure is needed to meet demand, and monitor the HPC infrastructure performance as users use your system.
 
