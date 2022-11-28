@@ -1,32 +1,32 @@
 ---
-title: 'Energy HPC Governance | Microsoft Docs'
-description: 'Azure landing zones for HPC in Energy do not have any specific considerations or recommendations which would impact governance related decisions.'
+title: Governance for HPC in energy industries
+description: Azure landing zones for HPC in Energy have no specific considerations or recommendations that affect decisions about governance.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 09/23/2022
+ms.date: 11/23/2022
 ---
 
-# Governance for energy HPC
+# Governance for HPC in energy industries
 
-Azure landing zones for HPC in Energy do not have any specific considerations or recommendations which would impact governance related decisions.
+Azure landing zones for high-performance computing (HPC) in energy industries don't have any specific considerations or recommendations that affect decisions about governance.
 
-However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [governance recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
+However, it might be important to understand any decisions that your cloud platform team has made so that you're aware of existing recommendations. For more information, see [Design area: Azure governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
 
 ## Next steps
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Compute](./compute.md)
-- [Identity Access Management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelator.md)
 
+The following articles provide guidance for specific points in cloud adoption of HPC in energy industries.
 
+- [Azure billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Compute for HPC in energy industries](./compute.md)
+- [Azure Identity and access management](./identity-access-management.md)
+- [Management for HPC in energy industries](./management.md)
+- [Network topology and connectivity for HPC in energy industries](./network-topology-connectivity.md)
+- [Platform automation and DevOps for HPC in energy industries](./platform-automation-devops.md)
+- [Resource organization](./resource-organization.md)
+- [Security for HPC in energy industries](./security.md)
+- [Storage for HPC in energy industries](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

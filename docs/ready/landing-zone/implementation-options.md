@@ -34,7 +34,7 @@ To address the customization use cases, consider the [implementation options](#i
 > [!CAUTION]
 > The best practices used for customization will ultimately be aligned with the [Azure landing zone](./index.md). However, there's added investment in time and effort which might be justified to fit specific business requirements.
 
-Finally, guidance in the [Govern](/azure/cloud-adoption-framework/govern/) and [Manage](/azure/cloud-adoption-framework/manage/) methodologies will build on top of your initial landing zones. The design of any Azure landing zone outline will likely require refactoring over time.
+Finally, guidance in the [Govern](../../govern/index.md) and [Manage](../../manage/index.md) methodologies will build on top of your initial landing zones. The design of any Azure landing zone outline will likely require refactoring over time.
 
 ## Implementation options
 
@@ -44,7 +44,7 @@ Here are some implementation options for landing zones keeping in mind the devel
 
 | Implementation option | Description | Deployment instructions |
 |---|---|---|
-| [Enterprise-scale foundation](../enterprise-scale/index.md) | Enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, where connectivity can be added later as needed. </br></br> [Design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) </br> [Design areas](design-areas.md) | [![Dta-button]][DTA-WingTip]</br> [Readme: foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)</br> [Readme: Network topology (Virtual WAN)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md)</br> [Readme: Network topology (hub-spoke)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) |
+| [Enterprise-scale foundation](../enterprise-scale/index.md) | Enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, where connectivity can be added later as needed. </br></br> [Design principles](./design-principles.md) </br> [Design areas](design-areas.md) | [![Dta-button]][DTA-WingTip]</br> [Readme: foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)</br> [Readme: Network topology (Virtual WAN)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md)</br> [Readme: Network topology (hub-spoke)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) |
 |[Azure landing zones modular](https://github.com/Azure/ALZ-Bicep/blob/main/docs/wiki/Home.md)|Modular approach using Bicep for deploying the core platform capabilities. | [Readme: Bicep modules](https://github.com/Azure/ALZ-Bicep)
 | Enterprise-scale for small enterprises| This reference implementation is meant for organizations that don't have a large IT team and do not require fine grained administration delegation models. | [![Dta-button]][DTA-small-enterprises]</br>[Readme](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) |
 | Enterprise-scale for Azure Government|Reference implementation that can be deployed to Azure Government Cloud. | [![Dta-button]][DTA-AzureGov] </br>[Readme](https://github.com/Azure/Enterprise-Scale#readme)|
@@ -87,4 +87,5 @@ To proceed, choose one of the implementation options shown in the preceding tabl
 [DTA-hub-spoke]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
 [DTA-small-enterprises]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
 [DTA-AzureGov]: https://portal.azure.us/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
+[DTA-21Vianet]: https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md
 [DTA-21Vianet]: https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md
