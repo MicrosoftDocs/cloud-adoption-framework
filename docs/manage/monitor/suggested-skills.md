@@ -53,7 +53,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage virtual machines running in Azure.
 
-- [How to monitor your VMs](https://www.youtube.com/watch?t=0s&list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6&v=O7scXPrsM_0) provides an intermediate level deep dive to help you learn about monitoring your hybrid machines or servers, and Azure VM or Virtual Machine Scale Sets with Azure Monitor for VMs.
+- Read the [overview of VM insights](/azure/azure-monitor/vm/vminsights-overview) to learn how monitor the performance and health of your virtual machines and virtual machine scale sets.
 
 ## Application monitoring
 
