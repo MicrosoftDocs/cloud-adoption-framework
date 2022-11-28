@@ -1,5 +1,5 @@
 ---
-title: Platform automation and DevOps for HPC in the manufacturing industry
+title: Platform automation and DevOps for Azure HPC in the manufacturing industry
 description: Azure landing zones for HPC in manufacturing don't have any specific considerations or recommendations that affect platform automation and DevOps decisions.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki

@@ -1,5 +1,5 @@
 ---
-title: Security for HPC in the finance sector 
+title: Security for Azure HPC in the finance sector 
 description: This article provides recommendations for implementing security in HPC environments for the finance sector.  
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
