@@ -12,11 +12,11 @@ ms.date: 11/10/2022
 
 # Governance for finance HPC
 
-## Recommendations 
-
 Azure landing zones for HPC in finance don't have any specific considerations or recommendations that influence governance-related decisions.
 
-However, it could be important to understand any decisions made previously by the cloud platform team so that you're aware of existing [governance recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
+## Previous recommendations 
+
+It might be important to be aware of existing [governance recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
 
 ## Next steps
 
