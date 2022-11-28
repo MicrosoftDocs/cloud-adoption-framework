@@ -81,7 +81,7 @@ One advantage of deploying your high availability architecture across different 
 
 - When you're using Azure proximity placement groups in an availability set deployment, all three SAP components (central services, application server, and database) should be in the same proximity placement group.
 
-- Use one proximity placement group per SAP SID. Groups don't span across availability zones or Azure regions.
+- If you use proximity placement group then place it per SAP SID. Groups don't span across availability zones or Azure regions.
 
 - When you're using Azure proximity placement groups in an availability zones deployment, the two SAP components (central services and application server) should be in the same proximity placement group. The database VMs in the two zones are no longer a part of the proximity placement groups. The proximity placement groups per zone are now scoped with the deployment of the VM running the SAP ASCS/SCS instances. The advantage of this new configuration is that you have more flexibility in resizing VMs. It's also easier to move to new VM types with either the DBMS layer or the application layer of the SAP system.
 
@@ -109,7 +109,18 @@ One advantage of deploying your high availability architecture across different 
 
 - SAP HANA on Azure should be run on only the types of storage that are certified by SAP. Please take note that certain volumes must be run on certain disk configurations, including enable Write Accelerator and choosing Premium storage, where applicable. Another consideration is to ensure that the filesystem that will run on the chosen storage needs to be compatible with the DBMS that will run on the machine. In order to understand the different types of storage configurations for SAP HANA please read [Storage Configurations for SAP HANA](/azure/virtual-machines/workloads/sap/hana-vm-operations-storage) for more information.
 
-- An option for NFS shares when running SAP Workloads on Azure is to use Azure NetApp Files. ANF has its own throughput and sizing considerations. Please see the information regarding [Azure NetApp Files for SAP virtual machine](/azure/virtual-machines/workloads/sap/hana-vm-operations-netapp).
+- In addition to Azure managed data disks attached to VMs, different Azure native shared storage solutions are used to run SAP application on Azure. Depends on your high availability configuration may differ, as not all storage services available in Azure are supported with Azure Site Recovery. Below are the list of storage type that is typically used for SAP workload.
+
+  | Storage type                    | High Availabiliy configuration support                                   |
+  | :------------------------------ | :----------------------------------------------------------- |
+  | Azure Shared disk (LRS or ZRS)  | Windows Server Failover Cluster. Consult [Design SAP HA with WSFC](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk) for configuration details | |
+  | NFS on Azure files (LRS or ZRS) | Pacemaker based cluster on Linux environments. Please check the [Availability of NFS File service in different region](https://azure.microsoft.com/global-infrastructure/services/?products=storage&regions=all) |
+  | NFS on Azure NetApp Files       | Pacemaker based cluster on Linux environments. Please see the information regarding [Azure NetApp Files for SAP virtual machine](/azure/virtual-machines/workloads/sap/hana-vm-operations-netapp)  |
+  | SMB on Azure files (LRS or ZRS) | Windows Server Failover Cluster. Consult [High availability for SAP NetWeaver on Azure VMs on Windows with Azure Files Premium SMB for SAP applications](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-azure-files-smb) for configuration details |
+  | SMB on Azure NetApp Files       | Windows Server Failover Cluster. Consult [High availability for SAP NetWeaver on Azure VMs on Windows with Azure NetApp Files(SMB) for SAP applications](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb) for configuration details. |
+
+- Beside Azure native shared storage services, traditional NFS cluster (Based on DRBD Replication), Gluster FS or Clusterd Shared Disk with Storage Space Direct could be utilized used as an alternative shared storage solution to run SAP workload on Azure. Specially when Azure native shared storage services are either not available in the targeted Azure region or does not support target architecture. Please check [Azure Products by Region](https://azure.microsoft.com/global-infrastructure/services/) to find the available storage services in different Azure Region.
+- Please follow [Storage recommendation and guidelines for setting up Disater Recovery](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/disaster-recovery-overview-guide#storage) to learn different storage options available for SAP Workload on Azure. 
 
 ### Backup/restore
 
