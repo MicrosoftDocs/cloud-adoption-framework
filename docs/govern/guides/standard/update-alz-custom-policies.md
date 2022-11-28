@@ -27,11 +27,11 @@ The following infographic provides a frame of reference for the update process f
 There are the following authoritative options for determining that one or more custom ALZ policies has been updated as follows:
 
 - You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being outdated. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
-- You're using the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outDated. For more information on how this can be determined, see [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+- You're using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outDated. For more information on how this can be determined, see [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
 
 ### Updating steps
 
-- Determine if the ALZ policies in scope for update are currently assigned at any scope in your Azure estate. If using the [AzGovViz tool](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) this can be determined by checking the tenant summary as shown [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+- Determine if the ALZ policies in scope for update are currently assigned at any scope in your Azure estate. If using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) this can be determined by checking the **TenantSummary** as shown [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
 - Determine if any ALZ policies to be updated are part of an ALZ custom policy initiative
 - Determine if ALZ custom policy initiatives in scope for update are currently assigned at any scope in your Azure estate.
 
