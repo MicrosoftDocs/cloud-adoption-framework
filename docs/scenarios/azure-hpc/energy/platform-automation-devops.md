@@ -14,7 +14,9 @@ ms.date: 11/10/2022
 
 The Azure landing zone for high-performance computing (HPC) doesn't have any specific considerations or recommendations that impact platform automation or DevOps-related decisions in the energy industry.
 
-However, it's important to understand any decisions that were previously made by the cloud platform team regarding [platform automation and DevOps](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
+## General recommendations
+
+It's important to understand any decisions that were previously made by the cloud platform team regarding [platform automation and DevOps](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
 
 ## Next steps
 

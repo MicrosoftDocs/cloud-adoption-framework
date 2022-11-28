@@ -14,7 +14,9 @@ ms.date: 11/09/2022
 
 The Azure landing zone for high-performance computing (HPC) doesn't have any specific considerations or recommendations that impact management-related decisions in the energy industry.
 
-However, it's important to understand any decisions that were previously made by the cloud platform team regarding [management recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management).
+## General recommendations
+
+It's important to understand any decisions that were previously made by the cloud platform team regarding [management recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management).
 
 ## Next steps
 
