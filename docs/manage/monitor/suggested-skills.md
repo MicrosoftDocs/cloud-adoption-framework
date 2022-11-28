@@ -67,6 +67,8 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use the monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
+- Learn more about the [Application Insights Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger) to automatically collect a debug snapshot from your live web applications. Further, learn how to use the [Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview) to capture and view performance traces for apps running in the cloud.
+
 ## Data analysis
 
 - To learn how to dive deeper into data analytics, review the course [write your first query with Kusto Query Language](/training/modules/write-first-query-kusto-query-language/).
