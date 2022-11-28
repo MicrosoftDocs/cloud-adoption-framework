@@ -80,7 +80,7 @@ In addition to the methods described in [Detect updates](#detect-updates) on how
 
 ### Migration steps
 
-The ALZ Terraform module provides update guidance when deploying breaking changes. Follow the upgrade guidance available for your specific version [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/User-Guide) shown at the bottom of the page.
+The ALZ Terraform module provides update guidance when deploying breaking changes. Follow the upgrade guidance available for your specific version [here](https://aka.ms/alz/tf/upgrade) shown at the bottom of the page.
 
 
 ## Update steps for Azure Landing Zone Bicep deployments
