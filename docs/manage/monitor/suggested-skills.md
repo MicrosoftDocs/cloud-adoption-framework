@@ -53,7 +53,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage virtual machines running in Azure.
 
-- Read the [overview of VM insights](/azure/azure-monitor/vm/vminsights-overview) to learn how monitor the performance and health of your virtual machines and virtual machine scale sets.
+- Read the [overview of VM insights](/azure/azure-monitor/vm/vminsights-overview) to learn how to monitor the performance and health of your virtual machines and Virtual Machine Scale Sets.
 
 ## Application monitoring
 
@@ -75,7 +75,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - View the course [analyze query results using KQL](/training/modules/analyze-results-kusto-query-language/) and learn how to summarize and visualize data with KQL.
 
-- [Data analysis in Azure Data Explorer with Kusto Query Language](/training/paths/data-analysis-data-explorer-kusto-query-language/) is a learning path where you will learn how to analyze data in Azure Data Explorer using the Kusto Query Language (KQL).
+- [Data analysis in Azure Data Explorer with Kusto Query Language](/training/paths/data-analysis-data-explorer-kusto-query-language/) is a learning path where you'll learn how to analyze data in Azure Data Explorer using the Kusto Query Language (KQL).
 
 ## Deeper skills exploration
 
