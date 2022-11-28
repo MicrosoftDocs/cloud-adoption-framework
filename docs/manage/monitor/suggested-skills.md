@@ -57,7 +57,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Application monitoring
 
-- Understand how [Azure Monitor](/azure/azure-monitor/overview) helps you view the availability and performance of your applications and services together from one place. Pluralsight offers the following courses to help:
+- Understand how [Azure Monitor](/azure/azure-monitor/overview) helps you view the availability and performance of your applications and services together from one place. The following courses can help:
 
 - The Microsoft Learn module [Monitor the health and performance of your web apps](/training/modules/monitor-health-performance-of-your-web-applications/) teaches you how to monitor your solution for performance and issues using Application Insights.
 
