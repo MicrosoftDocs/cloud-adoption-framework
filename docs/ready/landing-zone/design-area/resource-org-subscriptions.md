@@ -70,7 +70,7 @@ The Azure AD tenant linked to your Azure subscription can be changed by any user
 - [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription)
 
 > [!NOTE]
-> Transferring to another Azure AD tenant is not supported or Azure Cloud Solution Provider (CSP) subscriptions.
+> Transferring to another Azure AD tenant is not supported for Azure Cloud Solution Provider (CSP) subscriptions.
 
 With Azure landing zones, you can set requirements to prevent users from transferring subscriptions to your organization's Azure AD tenant. Review the process in [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
 
