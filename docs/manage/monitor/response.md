@@ -13,7 +13,7 @@ ms.custom: think-tank, engagement-fy23
 
 # Cloud monitoring guide: Response
 
-We discussed the five monitoring disciplines in the [Observability](observability.md) article. In this article, we focus on the response discipline. Response is the result of defining one or more *actions* based on data-driven decisions from monitoring that let service consumers:
+In the [Observability](observability.md) article, you learned about the five monitoring principles. In this article, the focus is on the response discipline. Response is the result of defining one or more *actions* based on data-driven decisions from monitoring that let service consumers:
 
 * Act smart, based on the good use of well-tuned monitoring data.
 * Apply monitoring throughout incident/problem activities.
@@ -21,7 +21,7 @@ We discussed the five monitoring disciplines in the [Observability](observabilit
 
 ## Overview
 
-The principle of *significance* applies here as a sort of process flow decision or policy for action, which is also valuable for tuning and optimizing alerts, notifications, and report digests. Cloud monitoring can now do much more than notify humans that something is wrong, and we need monitoring to play a critical role in a wide range of scenarios:
+The principle of *significance* applies here as a sort of process flow decision or policy for action, which is also valuable for tuning and optimizing alerts, notifications, and report digests. Cloud monitoring can now do much more than notify humans that something is wrong, and monitoring plays a critical role in a wide range of scenarios:
 
 * Dynamic control of service/system behavior to avoid and eliminate incidents.
 * Inform or provide routine signaling or telemetry for dynamic processes, compliance, automatic scaling, and visualizations.
@@ -41,7 +41,7 @@ A more primitive role of monitoring was to raise alerts for a reactionary respon
 |----|----|
 |<li>Cluster is down</li> <li>Database is full</li> <li>High CPU utilization</li> <li>Security threat</li> |Alert and notify, or raise an incident record. |
 
-We consider this approach outdated and conflicting with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of cloud efficiency through agility, minimum cost, and optimization.
+This approach is considered outdated and conflicting with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of cloud efficiency through agility, minimum cost, and optimization.
 
 A modern approach might have a frequency of detected conditions that are much more informative and automated, for example:
 
@@ -84,7 +84,7 @@ Every reported incident has a cost. Suppose the organization invests in orchestr
 
 ## Automation
 
-Cloud automation offers significant advantages for security and health monitoring. Speed, flexibility, and precision are three archetypes that cloud automation bring to responsive operations. Often we call this orchestration, and the Microsoft cloud offers several services.
+Cloud automation offers significant advantages for security and health monitoring. Speed, flexibility, and precision are three archetypes that cloud automation bring to responsive operations. Often this is called orchestration, and the Microsoft cloud offers several services.
 
 For example:
 
@@ -108,7 +108,7 @@ Here's a list of suggested reading for more automation based on identity- or sec
 
 ## Agile work management
 
-Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud, for the reasons that we cited above, but it's still vital for traditional incident-significant service disruption events.
+Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud, for the reasons that were cited above, but it's still vital for traditional incident-significant service disruption events.
 
 Agile and DevOps processes are now needed:
 
