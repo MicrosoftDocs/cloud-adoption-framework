@@ -1,5 +1,5 @@
 ---
-title: Platform automation and DevOps for energy HPC
+title: Platform automation and DevOps for Azure HPC in energy
 description: Learn about platform automation considerations in the Azure landing zone for high-performance computing (HPC) in the energy industry.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/10/2022
 ---
 
-# Platform automation and DevOps for energy HPC
+# Platform automation and DevOps for Azure HPC in energy
 
 The Azure landing zone for high-performance computing (HPC) doesn't have any specific considerations or recommendations that impact platform automation or DevOps-related decisions in the energy industry.
 
