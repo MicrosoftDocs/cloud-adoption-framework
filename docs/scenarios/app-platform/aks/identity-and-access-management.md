@@ -17,7 +17,7 @@ This article provides design considerations and recommendations for identity and
 ## Design considerations
 
 - Decide which cluster identity to use ([managed identity](/azure/aks/use-managed-identity) or [service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli)).
-- Decide how to authenticate cluster access (based on client certificates or via [Azure Active Directory](/azure/aks/managed-aad)).
+- Decide how to authenticate cluster access: based on client certificates or via [Azure Active Directory (Azure AD)](/azure/aks/managed-aad).
 - Decide on a [multitenancy cluster](/azure/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
   - Choose a method for isolation. Methods include namespace, network policy, compute (node pool), and cluster.
   - Determine the Kubernetes RBAC roles and compute allocation per application team, for isolation.
@@ -35,7 +35,7 @@ This article provides design considerations and recommendations for identity and
   - Use your own [managed identity](/azure/aks/use-managed-identity) for your AKS cluster.
   - Define custom Azure RBAC roles for your AKS landing zone to simplify the management of required permissions for cluster-managed identity.
 - Cluster access.
-  - Use Kubernetes RBAC with Azure Active Directory (Azure AD) to [limit privileges](/azure/aks/azure-ad-rbac) and minimize administrator privileges. Doing so helps to protect configuration and secrets access.
+  - Use Kubernetes RBAC with Azure AD to [limit privileges](/azure/aks/azure-ad-rbac) and minimize administrator privileges. Doing so helps to protect configuration and secrets access.
   - Use [AKS-managed Azure AD integration](/azure/aks/managed-aad) so you can use Azure AD for authentication and operator and developer access.
 - Define required RBAC roles and role bindings in Kubernetes.
   - Use [Kubernetes roles and role bindings](/azure/aks/concepts-identity#kubernetes-role-based-access-control-kubernetes-rbac) to Azure AD groups for site reliability engineering (SRE), SecOps, and developer access.
