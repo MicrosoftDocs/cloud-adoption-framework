@@ -14,7 +14,7 @@ ms.custom: internal
 
 # Azure Landing Zone governance guide: Updating Azure Landing Zone custom policies to newer versions of ALZ custom policies
 
-Over time Azure Landing Zone (ALZ) custom policies and policy initiatives, may become outdated and should be removed or updated. This article describes how to update ALZ custom policies and policy initiatives when newer versions are released. The guidance provided in this document describes manual high-level steps for performing the update, and how to handle the process for implementations managed through the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [ALZ Bicep module(s)](https://aka.ms/alz/bicep).
+Over time Azure Landing Zone (ALZ) custom policies and policy initiatives, may become outdated and should be removed or updated. This article describes how to update ALZ custom policies and policy initiatives when newer versions are released. The guidance provided in this document describes manual high-level steps for performing the update, as well as references on how to handle the process for implementations managed through the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [ALZ Bicep module(s)](https://aka.ms/alz/bicep).
 
 The following infographic provides a frame of reference for the update process flow.
 
@@ -27,7 +27,7 @@ The following infographic provides a frame of reference for the update process f
 There are the following authoritative options for determining that one or more custom ALZ policies has been updated as follows:
 
 - You periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note that one or more policies are indicated as being outdated. An example can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13)
-- You're using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outDated. For more information on how this can be determined, see [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
+- You're using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as **outDated** under *TenantSummary / Policy / Azure Landing Zones (ALZ) Policy Version Checker* as shown [here](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#screenshots)
 
 ### Updating steps
 
