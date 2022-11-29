@@ -1,5 +1,5 @@
 ---
-title: 'Manufacturing HPC Network topology and connectivity'
+title: 'Manufacturing HPC network topology and connectivity'
 description: Learn about the key design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -140,7 +140,7 @@ It's vital to plan for IP address needs in Azure to ensure that:
          - Functions
  - MPI environments are dedicated as they have unique requirements with a need for low latency communications between nodes. The nodes connect via high-speed interconnect and aren't amenable to sharing with other workloads. MPI applications use the entire high-performance interconnects by way of pass-through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre that's also accessed via the high-speed interconnect.
 
-:::image type="content" alt-text="Diagram that shows InfiniBand" source="../media/infiniband.png" lightbox="../media/infiniband.png":::
+:::image type="content" alt-text="Diagram that shows InfiniBand." source="../media/infiniband.png" lightbox="../media/infiniband.png":::
 
 ## Next steps
 
