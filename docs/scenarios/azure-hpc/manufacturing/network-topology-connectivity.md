@@ -1,5 +1,5 @@
 ---
-title: 'Manufacturing HPC network topology and connectivity'
+title: 'Manufacturing HPC network topology and connectivity in Azure'
 description: Learn about the key design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -155,4 +155,3 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Security for manufacturing HPC](./security.md)
 - [Security for HPC in manufacturing industries](./storage.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-

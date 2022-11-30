@@ -1,5 +1,5 @@
 ---
-title: 'Manufacturing HPC storage'
+title: 'Manufacturing HPC storage in Azure' 
 description: Learn about storage access, various storage solution capabilities, and how to streamline your storage decision process as a part of planning for HPC workload performance.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -107,4 +107,3 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Security governance compliance](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-

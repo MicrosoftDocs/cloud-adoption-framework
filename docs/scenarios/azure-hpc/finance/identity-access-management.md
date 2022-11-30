@@ -1,5 +1,5 @@
 ---
-title: Finance HPC Azure identity and access management | Microsoft Docs
+title: 'Finance HPC Azure identity and access management'
 description: Learn how to use the identity and access management design considerations and recommendations to deploy an HPC application on Microsoft Azure for the financial industry.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -61,5 +61,4 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for manufacturing HPC](./security.md)
 - [Storage for manufacturing HPC](./storage.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
