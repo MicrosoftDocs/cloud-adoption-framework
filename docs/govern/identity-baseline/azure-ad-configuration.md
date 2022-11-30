@@ -111,7 +111,7 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
 }
 ```
 
-### Azure Portal
+### Azure portal
 
 - Set [Users can register applications](/azure/active-directory/roles/delegate-app-roles#restrict-who-can-create-applications) to No.
 - Set [default Azure Active Directory](/azure/active-directory/fundamentals/users-default-permissions) user permission **Restrict access to Azure AD administration portal** to Yes.
@@ -170,7 +170,7 @@ Central management of password reset causes a management burden and can lead use
 
 ## Audit - Password management
 
-### Graph API
+### Graph API to audit password expiration
 
 #### Use Graph API to Audit Password Expiration
 
@@ -193,8 +193,7 @@ Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizati
 ```
 
 
-
-### PowerShell
+### PowerShell to audit that passwords don't expire
 
 
 Use the following script to produce a CSV file that contains an audit of whether user passwords are set to never expire.
@@ -207,8 +206,9 @@ New-Item -Path $auditPath -ItemType Directory
 $passwordExpyAudit = $auditPath + "/password-expiration" + "$date" + ".csv"
 
 Get-MGUser -All | Select-Object UserPrincipalName, @{N="PasswordNeverExpires";E={$_.PasswordPolicies -contains "DisablePasswordExpiration"}} | export-csv -path  "$passwordExpyAudit"
-
 ```
+
+### PowerShell to audit that self-service password reset is enabled
 
 Use the following script to produce a CSV file that contains an audit of whether self-service password reset is enabled.
 
@@ -237,6 +237,8 @@ Legacy authentication doesn't support multifactor authentication (MFA). MFA impr
 ## Audit - Legacy authentication
 
 >TODO: Should we suggest creating an alert for changes to Conditional Access Policies such as the following query suggested in [geeksforgeeks blog post](https://www.geeksforgeeks.org/microsoft-azure-create-alert-for-conditional-access-policy-changes/):
+
+Use the following Log Analytics query to audit conditional access policy changes. 
 
 ```bash
 AuditLogs
