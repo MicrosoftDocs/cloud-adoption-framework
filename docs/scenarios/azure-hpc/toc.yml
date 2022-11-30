@@ -29,7 +29,7 @@ items:
           href: energy/security.md
         - name: Management
           href: energy/management.md
-        - name: Governance discipline
+        - name: Governance
           href: energy/security-governance-compliance.md
         - name: Platform automation and DevOps
           href: energy/platform-automation-devops.md
@@ -51,7 +51,7 @@ items:
           href: finance/security.md
         - name: Management
           href: finance/management.md
-        - name: Governance discipline
+        - name: Governance
           href: finance/security-governance-compliance.md
         - name: Platform automation and DevOps
           href: finance/platform-automation-devops.md
@@ -73,7 +73,7 @@ items:
           href: manufacturing/security.md
         - name: Management
           href: manufacturing/management.md
-        - name: Governance discipline
+        - name: Governance
           href: manufacturing/security-governance-compliance.md
         - name: Platform automation and DevOps
           href: manufacturing/platform-automation-devops.md
