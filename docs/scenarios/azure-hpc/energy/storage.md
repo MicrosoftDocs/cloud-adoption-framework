@@ -28,9 +28,9 @@ For further understanding of the factors that influence HPC storage selected in 
 
 Decision tree for specific HPC storage system choice.
 
-:::image type="content" alt-text="HPC storage system" source="../media/hpc-storage.png" lightbox="../media/hpc-storage.png":::
+:::image type="content" alt-text="HPC storage system." source="../media/hpc-storage.png" lightbox="../media/hpc-storage.png":::
 
-## HPC Design considerations:
+## HPC Design considerations
 
 Oil and gas companies must be able to effectively manage and store exabytes of seismic data, well data, maps, leases, and more. To put this data to use, they need a high-performance infrastructure that can process and deliver real-time analytics to help optimize production, reduce environmental risks, and enhance operational safety.
 

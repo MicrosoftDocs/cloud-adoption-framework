@@ -7756,11 +7756,11 @@
 				<title>Sheet.4206</title>
 				<g id="shape4207-2291" v:mID="4207" v:groupContext="shape" transform="translate(0,-22.6575)">
 					<title>Sheet.4207</title>
-					<desc>Git repositoriy</desc>
+					<desc>Git repository</desc>
 					<v:textBlock v:margins="rect(4,4,4,4)"/>
 					<v:textRect cx="37.3771" cy="1444.77" width="74.76" height="18.2332"/>
 					<rect x="0" y="1435.66" width="74.7543" height="18.2332" class="st6"/>
-					<text x="6.12" y="1447.77" class="st68" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Git repositoriy</text>				</g>
+					<text x="6.12" y="1447.77" class="st68" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Git repository</text>				</g>
 				<g id="shape4208-2294" v:mID="4208" v:groupContext="shape" transform="translate(25.0037,0)">
 					<title>Sheet.4208</title>
 					<path d="M24.13 1440.43 L13.46 1429.76 C12.85 1429.14 11.85 1429.14 11.24 1429.76 L9.02 1431.97 L11.83 1434.79

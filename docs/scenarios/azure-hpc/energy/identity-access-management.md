@@ -1,5 +1,5 @@
 ---
-title: Azure identity and access management for energy HPC
+title: Identity and access management for Azure HPC in energy
 description: Learn about identity and access management for high-performance computing (HPC) using this energy industry scenario that builds on the Azure landing zone design area.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/09/2022
 ---
 
-# Azure identity and access management for energy HPC
+# Identity and access management for Azure HPC in energy
 
 The guidance in this article can help you examine design considerations and recommendations that relate to identity and access management for high-performance computing (HPC). This scenario is specific to the deployment of an HPC application for the energy industry. For more information about design considerations and recommendations, see the [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
