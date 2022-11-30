@@ -267,3 +267,26 @@ Use the following resources to audit user risk and investigate past risky users.
 
 - Audit [user risk](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#risky-users) every three months.
 - Use the [investigation framework](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk#investigation-framework) to investigate users that have had risks, and the details about the detections and risk history.
+
+## Guidance - Conditional Access
+
+Deploy conditional access policies to protect identities from compromise. Consider requiring specific access conditions, such as location and device security. Check for things like high-risk sign-in patterns or impossible travel.
+
+## Enforce - Conditional Access
+
+Review the lists of [Common Conditional Access policies](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) for recommended patterns.
+
+In addition to the "Block legacy authentication" policy, above, it's recommended to implement:
+
+- The MFA scenarios
+- Require password change for risky users
+- Require compliant or hybrid joined devices
+- Block access for unknown or unsupported device platforms
+- Block access by location
+- Require authentication strength for external users
+
+## Audit - Conditional Access
+
+- To audit conditional access, use the Azure Active Directory Audit logs for policy changes.  The article [Troubleshooting Condition Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log) provides guidance for creating alerts to notify operators if a policy has been changed.
+- Keep conditional access audit logs for 60 days to provide for a monthly audit cycle.
+- To audit actual conditional access activities, use the method described in [Condition Access insights and reporting](/azure/active-directory/conditional-access/howto-conditional-access-insights-reporting)
