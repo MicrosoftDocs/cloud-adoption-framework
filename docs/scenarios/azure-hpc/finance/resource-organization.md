@@ -1,5 +1,5 @@
 ---
-title: Resource organization for HPC in the finance sector 
+title: Resource organization for Azure HPC in the finance sector 
 description: This article provides recommendations to help you align HPC implementations in the finance sector with Cloud Adoption Framework methodologies.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki

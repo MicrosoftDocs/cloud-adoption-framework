@@ -1,5 +1,5 @@
 ---
-title: Resource organization for HPC in the energy industry
+title: Resource organization for Azure HPC in the energy industry
 description: This article provides naming and tagging recommendations to help you align HPC implementations in the energy industry with Cloud Adoption Framework methodologies. 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki

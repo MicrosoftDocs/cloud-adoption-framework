@@ -1,5 +1,5 @@
 ---
-title: Security for energy HPC
+title: Security for Azure HPC in energy
 description: Learn about security considerations in the Azure landing zone for high-performance computing (HPC) in the energy sector.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/15/2022
 ---
 
-# Security for energy HPC
+# Security for Azure HPC in energy
 
 The Azure landing zone for high-performance computing (HPC) doesn't have any specific recommendations that affect security-related decisions in the energy industry.
 

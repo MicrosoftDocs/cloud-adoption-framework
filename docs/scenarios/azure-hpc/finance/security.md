@@ -1,5 +1,5 @@
 ---
-title: Security for HPC in the finance sector 
+title: Security for Azure HPC in the finance sector 
 description: This article provides recommendations for implementing security in HPC environments for the finance sector.  
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -15,6 +15,8 @@ ms.date: 11/15/2022
 This article provides recommendations for implementing security in HPC environments for the finance sector.  
 
 It's important to understand the previous [security recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) outlined by the Microsoft cloud platform team.
+
+## Security baseline recommendations 
 
 We also recommend that you consider security baseline recommendations for various services that are used in HPC environments, including:
 

@@ -1,5 +1,5 @@
 ---
-title: Network topology and connectivity for HPC in the finance sector
+title: Network topology and connectivity for Azure HPC in the finance sector
 description: This finance HPC guidance builds on considerations and recommendations described in the Azure landing zone article for network topology and connectivity.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki

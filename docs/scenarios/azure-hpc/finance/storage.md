@@ -1,5 +1,5 @@
 ---
-title: Storage for HPC in the finance sector   
+title: Storage for Azure HPC in the finance sector   
 description: This article provides recommendations for implementing storage in HPC environments for the finance sector.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
