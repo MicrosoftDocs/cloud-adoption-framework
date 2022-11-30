@@ -82,7 +82,7 @@ The following conceptual reference architecture is an example that shows design 
 
 The following conceptual reference architecture is an example that shows design areas and best practices for *finance* environments.
 
-:::image type="content" alt-text="Diagram that shows an example architecture for a finance environment, including on-premises resources, virtual network, subnets, and network security groups." source="./media/hpc-finance-architecture-example.png" lightbox="./media/hpc-finance-architecture-example.png":::
+[ ![Diagram that shows an example architecture for a finance environment, including on-premises resources, virtual network, subnets, and network security groups.](./media/hpc-finance-architecture-example.png)](./media/hpc-finance-architecture-example.png#lightbox)
 
 ## Example: conceptual reference architecture for manufacturing
 
