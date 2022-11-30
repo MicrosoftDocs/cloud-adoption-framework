@@ -1,8 +1,8 @@
 ---
 title: Cloud adoption strategy for the retail industry
 description: Learn how to develop a cloud adoption strategy with specific considerations for the retail industry.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

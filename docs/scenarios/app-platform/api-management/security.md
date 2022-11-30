@@ -1,8 +1,8 @@
 ---
 title: Security considerations for Azure API Management
 description: Learn about design considerations and recommendations for security in the Azure API Management landing zone accelerator
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

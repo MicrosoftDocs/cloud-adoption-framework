@@ -1,8 +1,8 @@
 ---
 title: Assess workloads and validate assessment assumptions before migration
 description: Use the Cloud Adoption Framework for Azure to learn how to validate assessment assumptions before beginning migration to the cloud.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

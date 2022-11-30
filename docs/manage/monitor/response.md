@@ -2,7 +2,7 @@
 title: Cloud monitoring and response
 description: Gain an understanding of the response discipline in observability and recommended approaches to acting on significant events detected.
 author: MGoedtel
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

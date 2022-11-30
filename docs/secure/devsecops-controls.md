@@ -2,7 +2,7 @@
 title: DevSecOps controls
 description: Learn about DevSecOps controls and how to integrate security processes and tools into the DevOps development cycle.
 author: texnokot
-ms.author: brblanch
+ms.author: martinek
 ms.date: 08/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

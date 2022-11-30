@@ -1,8 +1,8 @@
 ---
 title: Define cloud governance corporate policy
 description: Use the Cloud Adoption Framework for Azure to learn to establish policy that addresses known risks and risk tolerances during your cloud transformation journey.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

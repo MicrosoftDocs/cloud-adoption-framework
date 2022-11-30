@@ -2,7 +2,7 @@
 title: Azure Synapse Analytics migration for Netezza
 description: Use the Cloud Adoption Framework for Azure to learn about analytics solutions for Netezza and migrating to Azure Synapse Analytics.
 author: v-hanki
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

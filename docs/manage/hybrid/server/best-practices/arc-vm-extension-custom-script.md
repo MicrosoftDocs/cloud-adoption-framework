@@ -2,7 +2,7 @@
 title: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
 description: Learn how to execute custom scripts to Azure Arc-enabled servers by using virtual machine extensions that provide post-deployment configuration and automation tasks.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
