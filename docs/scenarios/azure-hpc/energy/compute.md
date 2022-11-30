@@ -1,5 +1,5 @@
 ---
-title: Compute 
+title: 'Compute large-scale HPC application workloads in Azure VMs'
 description: Learn about the Azure VM instances that are ideal for large-scale HPC application workloads in the oil and gas industry, plus HPC use cases, reference architecture, design considerations, and design recommendations.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/14/2022
 ---
 
-# Compute
+# Compute large-scale HPC application workloads in Azure VMs
 
 The term big compute (used in reference to HPC) describes large-scale workloads that require a large number of cores, often numbering in the hundreds or thousands. Scenarios include image rendering, fluid dynamics, financial risk modeling, oil exploration, drug design, and engineering stress analysis, among others.
 
@@ -99,7 +99,6 @@ For more information on reference architecture or cookbooks for relevant HPC ISV
 
 - [Azure HPC certification.github.io](https://azurehpc-certification.github.io/)
 - [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). Standalone reference architecture might not be compliant with the ALZ paradigm.
-
 
 ## Next steps
 

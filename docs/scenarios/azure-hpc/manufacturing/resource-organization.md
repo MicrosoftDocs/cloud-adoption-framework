@@ -1,5 +1,5 @@
 ---
-title: 'Manufacturing HPC Resource organization'
+title: 'Manufacturing HPC Resource organization in Azure'
 description: Learn how to align with the Ready methodology of the Cloud Adoption Framework by using a naming and tagging strategy that includes business and operations details.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
