@@ -71,11 +71,15 @@ Developing the necessary skills can be accelerated with the following learning p
 
 ## Data analysis
 
-- To learn how to dive deeper into data analytics, review the course [write your first query with Kusto Query Language](/training/modules/write-first-query-kusto-query-language/).
+While collecting data is a foundational piece of any environment operating in the cloud, analyzing that information is imperative to understand more about the health of your workloads and infrastructure. Review the following resources to dive in and analyze logs using Kusto Query Language (KQL).
 
-- View the course [analyze query results using KQL](/training/modules/analyze-results-kusto-query-language/) and learn how to summarize and visualize data with KQL.
+- Learn how to [write your first query with Kusto Query Language](/training/modules/write-first-query-kusto-query-language/). This module gets you started by writing simple queries in KQL to explore and gain insights from your data.
 
-- [Data analysis in Azure Data Explorer with Kusto Query Language](/training/paths/data-analysis-data-explorer-kusto-query-language/) is a learning path where you'll learn how to analyze data in Azure Data Explorer using the Kusto Query Language (KQL).
+- Explore how to write more advanced queries in KQL with the Learn Module [Gain insights from your data by using Kusto Query Language](/training/modules/gain-insights-data-kusto-query-language/).
+
+- The Microsoft Learn module [Write multi-table queries by using Kusto Query Language](/training/modules/multi-table-queries-with-kusto-query-language/) teaches you how to retrieve data from multiple tables in a single query.
+
+- Expand your learning with the [guided project - Analyze logs in Azure Monitor with KQL](/training/modules/analyze-logs-with-kql/) learn module to understand how to write log queries to find answers to operational and business questions. Further, this module will teach you to use KQL to extract insights from logs in Azure Monitor.
 
 ## Deeper skills exploration
 
