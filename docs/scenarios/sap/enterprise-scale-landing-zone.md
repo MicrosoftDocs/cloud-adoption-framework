@@ -198,7 +198,7 @@ In the workflow diagram, *ERP* represents a legacy SAP ECC system or a next-gene
 
 ## Implementation
 
-The [SAP deployment automation framework on Azure](https://github.com/Azure/sap-hana) is a collection of processes combined with a flexible workflow. The framework repository contains code to deploy SAP landscapes in Azure Cloud Services automatically. Templates are separated into the following categories:
+The [SAP deployment automation framework on Azure](https://github.com/azure/sap-automation) is a collection of processes combined with a flexible workflow. The framework repository contains code to deploy SAP landscapes in Azure Cloud Services automatically. Templates are separated into the following categories:
 
 - **Terraform on Azure modules.** Use Terraform modules to deploy infrastructure components in Azure, including:
   - Virtual machines
