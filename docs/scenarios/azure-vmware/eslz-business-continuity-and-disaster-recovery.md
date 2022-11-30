@@ -59,10 +59,12 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - Use [storage pools](/azure/backup/backup-mabs-add-storage) with Azure Backup Server for enhanced disk IOPS/throughput. Use [tiered storage](https://techcommunity.microsoft.com/t5/system-center-blog/achieve-faster-backups-using-tiered-storage-with-dpm-and-mabs/ba-p/1596069) on Backup Server for enhanced operations.
 
-- Identify the number of parallel backup jobs and restore operations to run on Azure Backup server. Currently, 8 parallel backup jobs are supported. Measure the amount of time taken to backup and restore mission-critical workloads over multiple runs. Ensure than AVS vSAN datastore has enough capacity to hold restored backup. Validate that backup and restore times meet RPO and RTO requirements for Azure Backup server.
+- Identify the number of parallel backup jobs and restore operations to run on Azure Backup server. Currently, 8 parallel backup jobs are supported. Measure the amount of time taken to backup and restore mission-critical workloads over multiple runs. Validate that backup and restore times meet RPO and RTO requirements for Azure Backup server. Ensure than AVS vSAN datastore has enough capacity to hold restored backup.
 
-- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server.
+- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server. When using DPM protection agent on any Azure VMware Solution VM for application backup(e.g. SQL, Sharepoint, etc.), disable realtime monitoring of *dpmra.exe*.  
 
+- Configure appropriate NSG (Network Security Group) rules on subnet hosting Azure Backup Server to allow network communication from DPM protection agent running on protected VM in Azure VMware Solution. DPM protection agent communicates with Azure Backup Server on any dynamic port [between 1024 and 65535](/system-center/dpm/configure-firewall-settings-for-dpm).
+  
 - Currently, Azure Backup Server doesn't support cross-region restore for Azure VMware Solution private cloud. Refer to [partner backup solutions](/azure/azure-vmware/ecosystem-back-up-vms) and [disaster recovery section](./eslz-business-continuity-and-disaster-recovery.md#disaster-recovery-design-considerations) when cross-region Azure VMware Solution recovery is required.
 
 ## Disaster recovery design considerations
