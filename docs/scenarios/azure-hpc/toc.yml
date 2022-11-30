@@ -1,5 +1,5 @@
 items:
-  - name: Azure high-performance computing (HPC)
+  - name: Azure high-performance computing (HPC) - Microsoft Cloud Adoption Framework for Azure
     href: index.md
   - name: Strategic impact
     href: strategy.md
