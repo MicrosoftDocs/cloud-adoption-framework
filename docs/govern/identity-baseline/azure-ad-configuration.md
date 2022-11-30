@@ -236,9 +236,7 @@ Legacy authentication doesn't support multifactor authentication (MFA). MFA impr
 
 ## Audit - Legacy authentication
 
->TODO: Should we suggest creating an alert for changes to Conditional Access Policies such as the following query suggested in [geeksforgeeks blog post](https://www.geeksforgeeks.org/microsoft-azure-create-alert-for-conditional-access-policy-changes/):
-
-Use the following Log Analytics query to audit conditional access policy changes. 
+Use the following Log Analytics query to audit conditional access policy changes.
 
 ```bash
 AuditLogs
