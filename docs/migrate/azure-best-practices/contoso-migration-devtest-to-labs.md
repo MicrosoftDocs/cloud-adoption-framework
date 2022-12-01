@@ -2,7 +2,7 @@
 title: Migrate a dev/test environment to Azure DevTest Labs
 description: Learn how Contoso moves its on-premises dev/test environment to Azure by using Azure DevTest Labs.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

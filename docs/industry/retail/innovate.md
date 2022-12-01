@@ -2,7 +2,7 @@
 title: Innovation in the retail industry
 description: Learn how to drive innovation as you implement analytics-driven and intelligent techniques. Reach retail maturity and improve your results.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

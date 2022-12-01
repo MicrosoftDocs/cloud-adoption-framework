@@ -1,8 +1,8 @@
 ---
 title: Introduction to regulatory compliance
 description: Learn about compliance regulations in various industries and geographies that may affect cloud governance.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

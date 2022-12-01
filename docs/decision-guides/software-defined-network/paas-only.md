@@ -1,8 +1,8 @@
 ---
 title: 'Software Defined Networking: PaaS-only'
 description: Learn about the advantages and limitations of a PaaS-only architectural model in Software Defined Networking in the cloud.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

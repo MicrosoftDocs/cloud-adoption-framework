@@ -2,7 +2,7 @@
 title: Manage Azure VMware Solution
 description: Learn about how Microsoft manages and maintains the private cloud infrastructure and software on behalf of a customer for Azure VMware Solution.
 author: sbkuehn
-ms.author: janet
+ms.author: martinek
 ms.date: 08/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

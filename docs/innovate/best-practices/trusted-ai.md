@@ -2,7 +2,7 @@
 title: Responsible and trusted AI
 description: Understand the six guiding Microsoft principles for responsible AI-accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security.
 author: msteller-Ai
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

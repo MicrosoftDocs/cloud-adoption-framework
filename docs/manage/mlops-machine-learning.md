@@ -2,7 +2,7 @@
 title: MLOps with Azure Machine Learning
 description: Learn about MLOps principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

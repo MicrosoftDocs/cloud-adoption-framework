@@ -1,8 +1,8 @@
 ---
 title: Migrate workloads for modern application platforms
 description: Reduce cloud platform dependency and potentially reduce infrastructure footprint by migrating multiple web applications to a container solution
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

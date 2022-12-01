@@ -2,7 +2,7 @@
 title: Private Link and DNS integration at scale
 description: Private Link and DNS integration at scale
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/30/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

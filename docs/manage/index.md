@@ -1,8 +1,8 @@
 ---
 title: Cloud management
 description: Use the Cloud Adoption Framework for Azure to learn how to develop the business and technical approaches you need for effective cloud management.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

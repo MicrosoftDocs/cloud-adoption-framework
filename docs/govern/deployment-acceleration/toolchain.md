@@ -1,8 +1,8 @@
 ---
 title: Deployment Acceleration tools in Azure
 description: See how Azure native tools can help mature policies and processes that support the Deployment Acceleration discipline.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
