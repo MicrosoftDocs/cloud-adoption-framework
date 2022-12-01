@@ -105,7 +105,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 - What tools and guardrails need to be enforced across the environment as part of a security baseline?
 - Who might be notified when deviations are found?
 - Consider using Azure Policy to enforce tools (such as Microsoft Defender for Cloud, Microsoft Defender for Cloud).
-- Consider using Azure Policy to enforce guardrails (such as the Microsoft Cloud Security Benchmark).
+- Consider using Azure Policy to enforce guardrails (such as the Microsoft cloud security benchmark).
 
 ### Identity management considerations
 
