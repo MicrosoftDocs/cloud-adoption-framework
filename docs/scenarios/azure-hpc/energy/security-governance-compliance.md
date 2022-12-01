@@ -1,5 +1,5 @@
 ---
-title: Governance for HPC in energy industries
+title: Governance for Azure HPC in energy industries
 description: Azure landing zones for HPC in Energy have no specific considerations or recommendations that affect decisions about governance.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
