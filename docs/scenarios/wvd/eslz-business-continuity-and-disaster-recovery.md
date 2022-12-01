@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Business continuity and disaster recovery considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. The service is free of charge. Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
+Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. Costs for the service are included as part of eligible licenses, see [Azure Virtual Desktop Pricing](https://azure.microsoft.com/pricing/details/virtual-desktop/). Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
@@ -125,7 +125,11 @@ We recommend that you incorporate these best practices into your infrastructure 
 For most scenarios, we recommend that you use Azure Files or Azure NetApp Files to store FSLogix user profile and Office containers.
 
 - Split user profile and Office containers.
-- We recommend these options for container storage types, in this order: Azure Files Premium tier, Azure NetApp Files Standard tier, and Azure NetApp Files Premium tier.
+- We recommend these options for container storage types, in this order: 
+
+   1. Azure Files Premium tier
+   1. Azure NetApp Files Standard tier
+   1. Azure NetApp Files Premium tier
 - The optimum storage type depends on the resources and latency that your workload requires.
 - For optimal performance, place FSLogix containers in storage that's close to the VM the user is signed in to. It's best to keep the containers in the same datacenter.
 
