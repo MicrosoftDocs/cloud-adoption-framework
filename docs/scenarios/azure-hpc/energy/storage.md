@@ -45,7 +45,7 @@ Additionally, in Azure HPC clusters, compute nodes are virtual machines that can
  - One set of data to many compute nodes - In this scenario, there is a single data source on the network that all the compute nodes access for working data. While structurally simple, any I/O operations are limited by the I/O capacity of the storage location.
  - Many sets of data to many compute nodes - In this scenario, there is a single data source on the network that all the compute nodes access for working data. While structurally simple, any I/O operations are limited by the I/O capacity of the storage location.
 
-## HPC Design Recommendations:
+## HPC Design Recommendations
 
 Choose the solution best suited to your unique I/O and capacity requirements.
 
