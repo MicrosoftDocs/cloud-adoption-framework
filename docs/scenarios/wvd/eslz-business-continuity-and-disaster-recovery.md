@@ -125,7 +125,11 @@ We recommend that you incorporate these best practices into your infrastructure 
 For most scenarios, we recommend that you use Azure Files or Azure NetApp Files to store FSLogix user profile and Office containers.
 
 - Split user profile and Office containers.
-- We recommend these options for container storage types, in this order: Azure Files Premium tier, Azure NetApp Files Standard tier, and Azure NetApp Files Premium tier.
+- We recommend these options for container storage types, in this order: 
+
+   1. Azure Files Premium tier
+   1. Azure NetApp Files Standard tier
+   1. Azure NetApp Files Premium tier
 - The optimum storage type depends on the resources and latency that your workload requires.
 - For optimal performance, place FSLogix containers in storage that's close to the VM the user is signed in to. It's best to keep the containers in the same datacenter.
 
