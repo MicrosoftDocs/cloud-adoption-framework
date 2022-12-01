@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Migrate Azure high-performance computing (HPC)
 
-Azure HPC offers sustainability, efficiency, and flexibility with various digital solutions to not only supplement on-premise infrastructure but also reduces reliance on persistent cycles concerning hardware refreshes for higher demanding computation. 
+Azure HPC offers sustainability, efficiency, and flexibility with various digital solutions to not only supplement on-premises infrastructure but also reduces reliance on persistent cycles concerning hardware refreshes for higher demanding computation. 
 
 See how your HPC environment will [migrate](../../migrate/index.md) to the cloud and determine which approach best fits your environment.
 

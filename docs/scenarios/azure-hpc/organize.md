@@ -43,4 +43,4 @@ For more information, see [Align responsibilities across teams.](../../organize/
 ## Next steps
 
 - After devising your organizing strategy for your team members, you can refer back to the [HPC Landing Zone(s)](./ready.md) and map to your overall HPC environment's cloud adoption readiness.
-- See how HPC is different in the [cloud](/azure/architecture/topics/high-performance-computing#how-is-hpc-different-on-the-cloud) when comparing to on-premise deployments.
+- See how HPC is different in the [cloud](/azure/architecture/topics/high-performance-computing#how-is-hpc-different-on-the-cloud) when comparing to on-premises deployments.

@@ -1,5 +1,5 @@
 ---
-title: 'Storage HPC Energy | Microsoft Docs'
+title: Storage for Azure HPC in the energy industry
 description: 'Large-scale HPC energy workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.'
 author: Rajani-Janaki-Ram
 ms.author: rajanaki

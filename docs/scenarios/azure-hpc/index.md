@@ -26,7 +26,7 @@ While the computation of their data is being orchestrated, each industry custome
 
 ## HPC narrative
 
-As customers from different industries have specific needs that require HPC investment, there's also the concern of sustainability. Compared to deploying huge on-premise infrastructure, having your HPC workloads in the cloud helps to use minimal computing resources only as and when is needed with flexible scalability to support sustainability goals.
+As customers from different industries have specific needs that require HPC investment, there's also the concern of sustainability. Compared to deploying huge on-premises infrastructure, having your HPC workloads in the cloud helps to use minimal computing resources only as and when is needed with flexible scalability to support sustainability goals.
 
 HPC in Azure also offers competitive pricing and performance compared to on-premises options, robust global regulatory compliance, and next-generation machine-learning tools to drive smarter simulations and empower intelligent decision making.
 
