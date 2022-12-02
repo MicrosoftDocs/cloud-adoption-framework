@@ -71,7 +71,7 @@ You should also maintain a configuration management database (CMDB) for applicat
   - Migration date
   - Migration steps
 
-## Guidance - Default User Permissions
+## Guidance - Default user permissions
 
 Restrict default user permissions to remove unneeded access granted in default settings.
 
@@ -122,7 +122,7 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
   - Set **Collaboration Restrictions** to **Allow invitations only to the specified domains (most restrictive)**.
   - Select the domains that you'll allow collaboration with.
 
-## Audit - Default User Permissions
+## Audit - Default user permissions
 
 Use an [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
 
@@ -168,29 +168,25 @@ Central management of password reset causes a management burden and can lead use
 
 ### Graph API to audit password expiration
 
-#### Use Graph API to Audit Password Expiration
-
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
+Use a [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
 
 ```http
 GET https://graph.microsoft.com/v1.0/users?$select=userPrincipalName,lastPasswordChangeDateTime,passwordPolicies
 ```
 
-The resulting passwordPolicies setting should be set to "DisablePasswordExpiration"
+The resulting **passwordPolicies** setting should be set to "DisablePasswordExpiration"
 
-#### Use Graph API to Audit Self-Service Password Reset
+### Graph API to audit self-Service password reset
 
-Use an [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
-
->TODO: Add a graph query below
+Use a [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit if self-service password is enabled.
 
 ```http
-???
+GET /policies/authorizationPolicy
 ```
 
+The resulting **allowedToUseSSPR** property should be set to "True".
 
 ### PowerShell to audit that passwords don't expire
-
 
 Use the following script to produce a CSV file that contains an audit of whether user passwords are set to never expire.
 
@@ -252,10 +248,6 @@ Follow the [guidance to configure and enable risk policies](/azure/active-direct
   - Require a secure password reset when user risk level is High
   - Require Azure AD MFA before the user can create a new password with Self-Service Password Reset to remediate their risk.
 - Configure the sign-in risk policy to require Azure AD multifactor authentication when sign-in risk level is medium or high.
-
-## Enforce - sign in and user risk policies
-
-N/A
 
 ## Audit - Sign-in and user risk policies
 
