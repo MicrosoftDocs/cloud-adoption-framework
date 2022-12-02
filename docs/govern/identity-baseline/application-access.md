@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-TODO: This article seems light on the overview, guidance and audit guidance.
-
 # Application access governance
 
 Application identities are a critical part of workloads operating in Azure. This document provides guidance on implementing governance for application entities to ensure application identities  these identities in a secure and scalable fashion.
