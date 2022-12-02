@@ -168,15 +168,15 @@ Central management of password reset causes a management burden and can lead use
 
 ### Graph API to audit password expiration
 
-Use a [Microsoft Graph Query](https://learn.microsoft.com/graph/api/authorizationpolicy-get) API call like the following to audit the default user settings.
+Use a [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit password expiration.
 
 ```http
 GET https://graph.microsoft.com/v1.0/users?$select=userPrincipalName,lastPasswordChangeDateTime,passwordPolicies
 ```
 
-The resulting **passwordPolicies** setting should be set to "DisablePasswordExpiration"
+The resulting **passwordPolicies** setting should be set to "DisablePasswordExpiration".
 
-### Graph API to audit self-Service password reset
+### Graph API to audit if self-service password is enabled
 
 Use a [Microsoft Graph Query](/graph/api/authorizationpolicy-get) API call like the following to audit if self-service password is enabled.
 
