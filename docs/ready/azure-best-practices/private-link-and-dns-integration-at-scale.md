@@ -305,7 +305,7 @@ In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privat
         ]
       },
        "then": {
-         "effect": "deployIfNotExists",
+         "effect": "[parameters('effect')]",
          "details": {
            "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
            "roleDefinitionIds": [
@@ -364,14 +364,33 @@ In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privat
        }
      },
      "parameters": {
-       "privateDnsZoneId": {
-         "type": "String",
-         "metadata": {
-           "displayName": "Private Dns Zone Id",
-           "description": "The private DNS zone to deploy in a new private DNS zone group and link to the private endpoint",
-           "strongType": "Microsoft.Network/privateDnsZones"
-         }
-       }
+        "privateDnsZoneId": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Private Dns Zone Id",
+            "description": "The private DNS zone to deploy in a new private DNS zone group and link to the private endpoint",
+            "strongType": "Microsoft.Network/privateDnsZones"
+          }
+        },
+        "privateEndpointGroupId": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Private Endpoint Group Id",
+            "description": "A group Id for the private endpoint"
+          }
+        },
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "DeployIfNotExists",
+            "Disabled"
+          ],
+          "defaultValue": "DeployIfNotExists"
+        }
      }
    }
    ```
