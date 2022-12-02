@@ -164,10 +164,6 @@ Central management of password reset causes a management burden and can lead use
   - Select Set passwords to never expire
   - Select Get Started and follow the wizard's instructions.
 
-> TODO: Validate whether we should suggest the following guidance: Use [Azure Active Directory password policies](/azure/active-directory/authentication/concept-sspr-policy) to ensure password expiry is false.  
-> FINDING: The Password Policies determine the contents of the password, but the Expiration policy appears to be a different setting.
-> We can still plan for if we want to give a default password complexity policy.
-
 ## Audit - Password management
 
 ### Graph API to audit password expiration
