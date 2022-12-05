@@ -2,7 +2,7 @@
 title: Monitoring and reporting in Azure
 description: Learn how to use the Cloud Adoption Framework to set up monitoring, reporting, and alerts in Azure.
 author: timleyden
-ms.author: brblanch
+ms.author: martinek
 ms.date: 08/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -91,7 +91,7 @@ For more information, see [Azure Service Health documentation](/azure/service-he
 
 Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. Advisor analyzes your resource configuration and usage telemetry, and then recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
 
-- **High availability:** To improve the continuity of your business-critical applications. Recommendations might include adding virtual machines to an availability set or adding geo-redundant endpoints.
+- **Reliability:** To improve the continuity of your business-critical applications. Recommendations might include adding virtual machines to an availability set or adding geo-redundant endpoints.
 - **Security:** To detect threats and vulnerabilities that might lead to security breaches. Recommendations might include applying Azure Disk Encryption or enabling network security groups.
 - **Performance:** To improve the speed of your applications. Recommendations might include boosting SQL query performance by creating indexes or reconfiguring your Traffic Manager settings.
 - **Cost:** To optimize and reduce your overall Azure spending. Recommendations might include resizing or shutting down underused virtual machines or switching to Azure Reservations to lower total cost of ownership.

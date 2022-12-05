@@ -1,9 +1,9 @@
 ---
-title: Recommended abbreviations for Azure resources
-description: Recommended abbreviations for Azure resources
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 9/20/2022
+title: Abbreviation examples for Azure resources
+description: Abbreviation examples for Azure resources
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 9/30/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -11,27 +11,30 @@ ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
-# Recommended abbreviations for Azure resources
+# Abbreviation examples for Azure resources
 
-Here you'll find recommended abbreviations for naming Azure resources. The tables below list Azures resource, the resource provider namespace or entity, and the recommended abbreviation for that resource.
+This page gives you abbreviation examples for many of the resources in Azure. Below you'll find *abbreviations* mapped to *resource* and *resource provider namespace*.
 
-You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) to help automate and scale your naming strategy.
+## Azure Naming Tool
+
+The Azure Naming Tool generates Azure-compliant names and can help you standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
+<!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
 
 ## General
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
-| Policy definition | `Microsoft.Authorization/policyDefinitions` | `policy` |
+| Policy definition | `Microsoft.Authorization/policyDefinitions` | \<*optional*> |
 | Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 
 ## Networking
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
 | Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
@@ -39,8 +42,8 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
-| DNS | `Microsoft.Network/dnsZones` | `dnsz` |
-| DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz` |
+| DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
@@ -55,12 +58,14 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
 | Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |
-| Private Link | `"Microsoft.Network/privateLinkServices` | `pl` |
+| Private Link | `Microsoft.Network/privateLinkServices` | `pl` |
+| Private endpoint | `Microsoft.Network/privateEndpoints` | `pep` |
 | Public IP address | `Microsoft.Network/publicIPAddresses` | `pip`|
 | Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre`|
 | Route filter | `Microsoft.Network/routeFilters` | `rf` |
+| Route server | `Microsoft.Network/virtualHubs` | `rtserv` |
 | Route table | `Microsoft.Network/routeTables` | `rt` |
-| Service endpoint | `Microsoft.serviceEndPointPolicies` | `se` |
+| Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
@@ -76,17 +81,21 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Compute and Web
 
-| Azure resource | Resource provider namespace/entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| App Service environment | `Microsoft.Web/sites` | `ase` |
-| App Service plan | `Microsoft.Web/serverFarms` | `plan` |
+| App Service environment | `Microsoft.Web/hostingEnvironments` | `ase` |
+| App Service plan | `Microsoft.Web/serverFarms` | `asp` |
+| Azure Load Testing instance | `Microsoft.LoadTestService/loadTests` | `lt` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
+| Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
 | Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
 | Function app | `Microsoft.Web/sites` | `func` |
 | Gallery | `Microsoft.Compute/galleries` | `gal` |
+| Hosting environment | `Microsoft.Web/hostingEnvironments` | `host` |
+| Image template | `Microsoft.VirtualMachineImages/imageTemplates` | `it` |
 | Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
@@ -100,21 +109,31 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Containers
 
-| Azure resource | Resource provider namespace/entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
+| Container apps | `Microsoft.App/containerApps` | `ca` |
+| Container apps environment | `Microsoft.App/managedEnvironments` | `cae` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
 
 ## Databases
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos` |
+| Azure Cosmos DB for Apache Cassandra account | `Microsoft.DocumentDB/databaseAccounts` | `coscas`|
+| Azure Cosmos DB for MongoDB account | `Microsoft.DocumentDB/databaseAccounts` | `cosmon`|
+| Azure Cosmos DB for NoSQL account | `Microsoft.DocumentDb/databaseAccounts` | `cosno`|
+| Azure Cosmos DB for Table account | `Microsoft.DocumentDb/databaseAccounts` |`costab`|
+| Azure Cosmos DB for Apache Gremlin account | `Microsoft.DocumentDb/databaseAccounts` | `cosgrm`|
+| Azure Cosmos DB PostgreSQL cluster | `Microsoft.DBforPostgreSQL/serverGroupsv2` | `cospos`|
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
+| Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
+| Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
 | Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
@@ -126,14 +145,18 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Storage
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
+| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
+| Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
+| File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
+| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
+| Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
 
 ## AI and Machine Learning
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
 | Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
@@ -141,7 +164,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Analytics and IoT
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
@@ -149,6 +172,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
+| Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -156,6 +180,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
+| Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
 | HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
 | HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
@@ -170,22 +195,24 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Azure Virtual Desktop
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Virtual desktop host pool | | `vdpool` |
-| Virtual desktop application group | | `vdag` |
-| Virtual desktop workspace | | `vdws` |
+| Virtual desktop host pool | `Microsoft.DesktopVirtualization/hostPools` | `vdpool` |
+| Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
+| Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
+| Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
 
 ## Developer tools
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
+| Maps account | `Microsoft.Maps/accounts` | `map` |
 
 ## Integration
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
 | Logic apps | `Microsoft.Logic/workflows` | `logic` |
@@ -195,7 +222,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Management and governance
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Automation account | `Microsoft.Automation/automationAccounts` | `aa` |
 | Application Insights | `Microsoft.Insights/components` | `appi` |
@@ -205,10 +232,12 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Key vault | `Microsoft.KeyVault/vaults` | `kv` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
+| Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
+| Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
 ## Migration
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr` |
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms` |
@@ -216,7 +245,7 @@ You can use the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFr
 
 ## Deprecated product names
 
-| Azure resource | Resource provider namespace/Entity | Abbreviation |
+| Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw` |
 

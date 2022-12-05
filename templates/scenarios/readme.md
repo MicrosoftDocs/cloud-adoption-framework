@@ -61,10 +61,8 @@ The following table contains the tokens that reappear throughout the templates u
 
 ## CAF work to finalize the scenarios
 
-- For each ALZ page, the headers and metadata need to look more like the corresponding file in the AKS scenario
 - CAF team to review the articles and identify any additional requirements for each page
 - CAF team to review the articles for quality to ensure we don't start with known errors
-- CAF team to update the Ready article to match AKS scenario flow
 
 ## ThinkTank team steps to use this template
 

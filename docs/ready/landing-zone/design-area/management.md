@@ -1,8 +1,8 @@
 ---
 title: Management for Azure environments
 description: Learn about some design considerations and recommendations for managing your Azure environment.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 12/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -46,5 +46,5 @@ Use the following advanced operations items as discussion points within your clo
 
 |Scope|Context|
 |-|-|
-|[**Platform management**](./management-platform.md)|When evaluating supported workloads, it's common for those workloads to have dependencies on shared platforms, like SAP, WVD, AVS, SQL, and so on. When technology platforms are used by multiple workloads, advanced operations can't be delegated to a single workload team. In these instances, centralized operations teams need a plan for the ongoing operations of those shared technology platforms. These responsibilities.require extra tooling beyond the operations baseline that supports the overall cloud environment. |
+|[**Platform management**](./management-platform.md)|When evaluating supported workloads, it's common for those workloads to have dependencies on shared platforms, like SAP, WVD, AVS, SQL, and so on. When technology platforms are used by multiple workloads, advanced operations can't be delegated to a single workload team. In these instances, centralized operations teams need a plan for the ongoing operations of those shared technology platforms. These responsibilities require extra tooling beyond the operations baseline that supports the overall cloud environment. |
 |[**Workload management**](./management-workloads.md)| Workloads built on top of the landing zone platform might have specific management requirements in addition to the tools and processes put in place for the platform services. <br> These requirements should be considered in the context of the platform management to ensure that additions or exceptions are known and documented. <br> It's also important to look at these requirements in the broader context. Often, what is thought to be a requirement for a single workload can become a common pattern. Consider these situations as part of the overall platform toolset to avoid unnecessary duplication of effort. <br> For further information on considerations for workload-specific management, review the [operational excellence](/azure/architecture/framework/#operational-excellence) of the Azure Well-Architected Framework.|

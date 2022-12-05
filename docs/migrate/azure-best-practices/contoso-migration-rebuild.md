@@ -1,8 +1,8 @@
 ---
 title: Rebuild an on-premises application in Azure
 description: Learn how Contoso rebuilds an application in Azure by using Azure App Service, Azure Kubernetes Service (AKS), Azure Cosmos DB, Azure Functions, and Azure Cognitive Services.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 7/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -396,7 +396,7 @@ Contoso admins provision an Azure Cosmos DB database to be used for pet informat
     ![Screenshot showing the creation of an Azure Cosmos DB database in Azure Marketplace.](./media/contoso-migration-rebuild/cosmos1.png)
     *Figure 43: Creating an Azure Cosmos DB database.*
 
-2. They specify a name `contososmarthotel`, select the SQL API, and place it in the production resource group `ContosoRG` in the main region `East US 2`.
+2. They specify a name `contososmarthotel`, select **Azure Cosmos DB for NoSQL**, and place it in the production resource group `ContosoRG` in the main region `East US 2`.
 
     ![Screenshot of the Azure Cosmos DB database name and other settings.](./media/contoso-migration-rebuild/cosmos2.png)
     *Figure 44: Naming an Azure Cosmos DB database.*

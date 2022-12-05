@@ -2,7 +2,7 @@
 title: Azure landing zone frequently asked questions (FAQ)
 description: The Azure landing zone frequently asked questions (FAQ) provides answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
-ms.author: doalle
+ms.author: martinek
 ms.date: 04/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -81,11 +81,15 @@ With Azure landing zone architecture, you want to avoid complicated and volatile
 
 *Archetype-aligned* means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services). However, all environments ("dev/test/production"), whether split across separate subscriptions or in a single subscription, are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
 
-The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: *(N apps) x (N+3) = Total management groups*
+The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: *N workloads x Z management groups  = total management groups*.
 
 So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production", you're left with:
 
-> **30** (no. of workloads) X **4** (no. of management groups per workload) = **120** management groups
+> N = number of workloads/apps = 30
+>
+> Z = number of management groups for workload and environments (1 per workload + 3 for envs) = 4
+
+> N (30) x Z (4) = 120 total management groups
 
 #### Example of a suboptimal management group hierarchy
 

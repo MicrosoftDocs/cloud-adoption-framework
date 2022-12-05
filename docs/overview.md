@@ -1,8 +1,8 @@
 ---
 title: Microsoft Cloud Adoption Framework for Azure documentation
 description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes during your cloud adoption journey.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/26/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -17,6 +17,8 @@ The Microsoft Cloud Adoption Framework for Azure is a full lifecycle framework t
 Following best practices for the Cloud Adoption Framework allows your organization to better align business and technical strategies and ensure success. Watch the following video to learn more.
 
 <!-- markdownlint-disable MD034 -->
+
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tyzr]
 

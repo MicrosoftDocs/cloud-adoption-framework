@@ -2,7 +2,7 @@
 title: Improve the retail experience with retail recommender solution accelerator
 description: Improve the retail experience by using the retail recommender solution in Azure. This article shows you how to build out the solution accelerator.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

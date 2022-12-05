@@ -1,8 +1,8 @@
 ---
 title: Azure server management services overview
 description: Understand the prescriptive plan in the Cloud Adoption Framework that provides for deploying server management services in your environment.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,8 +1,8 @@
 ---
 title: Partner alignment strategy
 description: Use the Cloud Adoption Framework for Azure to include partner alignment in your strategy
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -79,6 +79,8 @@ The program uses FastTrack for Azure and Azure solution providers to improve cus
 Watch this short video to get an overview of how the Azure Migration and Modernization Program (AMMP) can help you.
 
 <!-- markdownlint-disable MD034 -->
+
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4D1vH]
 

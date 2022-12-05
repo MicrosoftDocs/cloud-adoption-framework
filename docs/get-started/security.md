@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Secure the enterprise environment'
 description: Get started integrating security at critical points during your cloud adoption efforts and operations.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -145,7 +145,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
     Microsoft provides reference architectures and technology capabilities to help you as you build your architecture and roadmap, including:
 
-    - [Azure components and reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
+    - Learn about the [Azure components and reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
 
       ![Azure administration model](../_images/security/azure-administration-model.png)
 

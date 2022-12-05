@@ -2,7 +2,7 @@
 title: Ubiquitous computing and device management
 description: Learn about ubiquitous computing and Azure's framework for building immersive and effective business solutions through connected devices and perceptive edge devices.
 author: umarmohamedusman
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,7 +15,7 @@ keywords: Connected devices, ubiquitous computing, device management, edge devic
 
 Innovate through intermittently connected devices and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
 
-Ubiquitous computing is the processing of information that connects devices and processors to have constant availability, so that computing and processing is made to appear anytime and everywhere needed, using any connected device or perceptive edge device. Examples of ubiquitous computing include any system that sends information to another system to complete a task seamlessly, like a fitness watch that alerts that there is an incoming call from a cell phone and allows completion of the call through the watch, or systems that learn and adjust such as a thermostat or smart speakers.
+Ubiquitous computing is the processing of information that connects devices and processors to have constant availability, so that computing and processing are made to appear anytime and everywhere needed, using any connected device or perceptive edge device. Examples of ubiquitous computing include any system that sends information to another system to complete a task seamlessly, like a fitness watch that alerts that there is an incoming call from a cell phone and allows completion of the call through the watch, or systems that learn and adjust such as a thermostat or smart speakers.
 
 Azure customers employ a continually expanding set of connected systems and devices that gather and analyze data (close to their users, the data, or both), with complete device management. Users get real-time insights and experiences, delivered by highly responsive and contextually aware applications. By moving parts of the workload to the edge, these connected devices can spend less time sending messages to the cloud and react more quickly to spatial events.
 
@@ -124,7 +124,7 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 **Spatial operations:** Enhance your location intelligence with a library of common geospatial mathematical calculations, including geofencing, closest point, great circle distance, and buffers.
 
-**Geolocation:** Look up the country of an IP address. Customize content and services based on user location, and gain insight on customer geographic distribution.
+**Geolocation:** Look up the country/region of an IP address. Customize content and services based on user location, and gain insight on customer geographic distribution.
 
 ::: zone target="docs"
 
@@ -156,7 +156,7 @@ Azure Spatial Anchors enables developers to work with mixed-reality platforms to
 
 **Add context to the real world:** Give your users a better understanding of their data, where they need it, and when they need it by placing and connecting your digital content to physical points of interest.
 
-**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
+**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial Anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
 
 **Engaging experiences:** Connect spatial anchors by creating relationships between them, and deliver a user experience that might include two or more points of interest that a user must interact with to complete a task. Your application can let a user place a virtual artifact in the real world. In an industrial setting, a user could receive contextual information about a machine by pointing a supported device camera at it.
 

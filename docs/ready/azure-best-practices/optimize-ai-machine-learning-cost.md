@@ -47,15 +47,7 @@ To get the best VM size for your scenario, it might consist of trial and error. 
   - Use a [memory optimized](/azure/virtual-machines/sizes-memory) VM if you're training on large datasets.
   - Use a [compute optimized](/azure/virtual-machines/sizes-compute) VM if you're doing real-time inferencing or other latency sensitive tasks.
   - Use a VM with more cores and RAM in order to speed up training times.
-- If you need a GPU:
-  - Use a VM with a faster GPU in order to speed up training times. Here's the list of GPU-enabled VM families in order of speed:
-    - [NC-series](/azure/virtual-machines/nc-series) (Nvidia Tesla K80)
-    - [NV-series](/azure/virtual-machines/nv-series) (Nvidia Tesla M80)
-    - [ND-series](/azure/virtual-machines/nd-series) (Nvidia Tesla P40)
-    - [NCv2-series](/azure/virtual-machines/ncv2-series) (Nvidia Tesla P100)
-    - [NCv3-series](/azure/virtual-machines/ncv3-series) (Nvidia Tesla V100)
-    - [NDv2-series](/azure/virtual-machines/ndv2-series) (Nvidia Tesla V100 with NVLink connections)
-    - [NCasT4\_v3-series](/azure/virtual-machines/nct4-v3-series) (Nvidia Tesla T4)
+- If you need a GPU, see the [GPU optimized VM sizes](/azure/virtual-machines/sizes-gpu) for information on selecting a VM.
   - If you're doing distributed training, use VM sizes that have multiple GPUs.
   - If you're doing distributed training on multiple nodes, use GPUs that have NVLink connections.
 

@@ -98,16 +98,16 @@ Define and align your DevOps implementation journey with your organization's [cl
   - What [technical skills](../suggested-skills.md) your team has.
   - Which [cloud operations model](../../operating-model/define.md) your team currently follows.
 - Use your organization's cloud adoption plan to define a desired model for your team.
-- Establish an iterative roadmap for implementing the desired model in an iterative and incremental mode that aligns with your organization's [transformation timeline](/azure/cloud-adoption-framework/strategy/digital-transformation-timeline).
+- Establish an iterative roadmap for implementing the desired model in an iterative and incremental mode that aligns with your organization's [transformation timeline](../../strategy/digital-transformation-timeline.md).
 
 ### Implement desired DevOps metrics
 
-Identify which metrics you'll use to measure your team's DevOps performance. Use metrics to drive desired habits in your team that connect with [business outcomes](/azure/cloud-adoption-framework/strategy/learning-metrics). Establish metrics to let your team measure impact over activities. Make key metrics visible to all, since transparency promotes trust and drives alignment with organizational objectives.
+Identify which metrics you'll use to measure your team's DevOps performance. Use metrics to drive desired habits in your team that connect with [business outcomes](../../strategy/learning-metrics.md). Establish metrics to let your team measure impact over activities. Make key metrics visible to all, since transparency promotes trust and drives alignment with organizational objectives.
 
 Examples of metrics that measure DevOps performance to improve business impact include:
 
 - Business Outcomes:
-  - Use [Objectives and Key Results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an "output" mindset and toward an "outcome" mindset. For example, you might use the number of workloads that improved their compliance rating over the number of policies deployed to Azure.
+  - Use [Objectives and Key Results](../../strategy/business-outcomes/okr.md) as a tool to move your teams away from an "output" mindset and toward an "outcome" mindset. For example, you might use the number of workloads that improved their compliance rating over the number of policies deployed to Azure.
   - Customer or end user satisfaction. Examples include Net Promoter Score (NPS), surveys, interviews.
   - Business growth. Examples include increased profitability, increased revenue, and new revenue source acquirements.
   - People metrics. Examples include the Employee Net Promoter Score (eNPS), utilization, retention, and satisfaction.

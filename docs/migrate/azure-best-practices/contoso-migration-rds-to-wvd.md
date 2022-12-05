@@ -2,7 +2,7 @@
 title: Move on-premises Remote Desktop Services to Azure Virtual Desktop
 description: Learn how to migrate an on-premises Remote Desktop Services environment to Azure Virtual Desktop in the cloud.
 author: benstegink
-ms.author: abuck
+ms.author: martinek
 ms.date: 09/07/2021
 ms.review: ssumner
 ms.topic: conceptual

@@ -1,8 +1,8 @@
 ---
 title: Review and compare common cloud operating models
 description: Learn how other companies have implemented their cloud operating model and review guidance to support your efforts.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -200,9 +200,9 @@ Advantages and disadvantages of this approach are purposefully blank. After you 
 Learn the terminology associated with operating models. The terminology helps you understand how an operating model fits into the bigger theme of corporate planning.
 
 > [!div class="nextstepaction"]
-> [Operating model terminology](./compare.md)
+> [Operating model terminology](./terms.md)
 
 Learn how a landing zone provides the basic building block of any cloud adoption environment.
 
 > [!div class="nextstepaction"]
-> [Compare common cloud operating models](../ready/landing-zone/index.md)
+> [What is a landing zone?](../ready/landing-zone/index.md)
