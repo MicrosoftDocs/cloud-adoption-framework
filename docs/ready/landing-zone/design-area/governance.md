@@ -83,6 +83,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 - Are there groups of resources that should share common access constraints (such as Role-based access control)?
 - Are there standard resource configurations within your organization that might be used to ensure a consistent baseline configuration?
 - Explore how [tools in Azure can support resource consistency](../../../govern/resource-consistency/toolchain.md) in your landing zone.
+- Are you following guidance in [Why update Azure Landing Zone environments](../../../govern/resource-consistency/why-update-alz.md) to ensure that your Azure Landing Zone environment is up-to-date?
 
 ### Security baseline considerations
 
