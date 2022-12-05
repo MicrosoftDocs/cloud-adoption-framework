@@ -4,7 +4,7 @@ description: Recommendations for managing cloud workloads in a defense organizat
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 11/14/2022
+ms.date: 12/6/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage

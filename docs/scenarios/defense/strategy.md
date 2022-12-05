@@ -4,7 +4,7 @@ description: Recommendations for developing a cloud adoption strategy in a defen
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 11/14/2022
+ms.date: 12/6/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -16,9 +16,7 @@ The strategy methodology falls within the command domain of cloud adoption.
 :::image type="content" source="./images/command.png" alt-text="Figure that shows a domain tracker. It shows command, platform, and mission. Command is highlighted to show we're in the command domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - command domain*
 
-Strategy about ensuring the short and long-term success of cloud adoption. It aligns the mission owner's vision with overarching digital transformation initiatives and helps cloud adoption succeed within allotted budgets. Building a strategy for the cloud adoption is an important step to drive awareness of the transformation vision. Without a clear vision, a transformation can break down into conflicting activities and prevent the defense organization from advancing the transformation. The strategy should contain key milestones that stakeholders can monitor for analytic interests or performance control needs.
-
-The following recommendations can help build a solid cloud adoption strategy.
+Strategy is about ensuring the short and long-term success of cloud adoption. Mission owner must align their vision to overarching digital transformation initiatives. We've seen alignment help cloud adoption succeed within allotted budgets. Aligning to a broader strategy is an important step to drive awareness of the transformation vision. Many choose the cloud to optimize costs and enhance security, but without a clear understanding of the command, cloud transformation can fragment. Mission owners should align their mission to the broader strategy and engage stakeholders early to avoid blockers. Below are our recommendations for execution.
 
 ## Align with defense strategy
 

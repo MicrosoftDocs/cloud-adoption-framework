@@ -4,7 +4,7 @@ description: Cloud adoption guidance for defense organizations
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 11/14/2022
+ms.date: 12/6/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general

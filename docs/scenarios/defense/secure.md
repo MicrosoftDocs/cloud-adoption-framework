@@ -4,7 +4,7 @@ description: Recommendations for securing cloud workloads in a defense organizat
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 11/14/2022
+ms.date: 12/6/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -67,7 +67,9 @@ For general security information, see:
 
 - [Security documentation](/security/)
 - [Security fundamentals](/azure/security/fundamentals/)
-- [Operational security checklist](/azure/security/fundamentals/operational-checklist).
+- [Operational security checklist](/azure/security/fundamentals/operational-checklist)
+- [Cybersecurity reference architectures](/security/cybersecurity-reference-architecture/mcra)
+- [CAF security](/azure/cloud-adoption-framework/secure/)
 
 ## Next step
 

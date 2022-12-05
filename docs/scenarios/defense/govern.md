@@ -4,7 +4,7 @@ description: Recommendations for cloud platform governance in a defense organiza
 author: stephen-sumner
 ms.author: mimckann
 ms.reviewer: ssumner
-ms.date: 11/14/2022
+ms.date: 12/6/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -41,7 +41,7 @@ Defense organizations have layers of compliance requirements to protect sensitiv
 
 Azure simplifies many aspects of defense governance. Azure has an automated governance tool called Azure Policy that is built into the Azure platform. This tool keeps cloud environments in alignment with available policies, standards, and compliance requirements. It allows teams to automate compliance assessments and even remediation against pre-defined compliance standards.  
 
-There are many built-in policies available in Azure that make governance automation easier. These built-in policies meet many government compliance requirements. They include NIST 800-53, NIST 800-171, CMMC III, Impact-Level 4, Impact-Level 5, ISO 27001:2013, FedRAMP High, and others. Governance teams can use policies to enforce governance across cloud resources. Users select the desired policies and assign them to the proper scope of resources. Azure Policy also allows users to create and modify policies to meet different governance requirements.
+There are many built-in policies available in Azure that make governance automation easier. These built-in policies meet many government compliance requirements. They include NIST 800-53, NIST 800-171, CMMC 2.0, Impact-Level 4, Impact-Level 5, ISO 27001:2013, FedRAMP High, and others. There are also workbooks in Microsoft Sentinel that help you visualize compliance. Governance teams can use policies to enforce governance across cloud resources. Users select the desired policies and assign them to the proper scope of resources. Azure Policy also allows users to create and modify policies to meet different governance requirements.
 
 These policies check the compliance of new deployments and existing resources against the policies put in place. New deployments that don’t meet a policy requirement won't deploy. Existing deployments that don’t meet governance policies will also be identified so teams can enforce compliance on every resource.
 
@@ -54,6 +54,7 @@ For more on governance automation, see
 - [Compliance in Azure](/azure/azure-government/documentation-government-plan-compliance)
 - [Azure compliance standards](/azure/compliance/)
 - [Governance visualization tool](https://github.com/microsoft/CloudAdoptionframework/tree/master/govern/AzureGovernanceVisualizer)
+- [Microsoft Sentinel workbooks](/azure/sentinel/top-workbooks)
 
 ## Create a cost governance strategy
 

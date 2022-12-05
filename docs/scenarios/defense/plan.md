@@ -4,7 +4,7 @@ description: Recommendations for planning a cloud adoption strategy in a defense
 author: stephen-sumner
 ms.author: wayneme
 ms.reviewer: ssumner
-ms.date: 11/14/2022
+ms.date: 12/6/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -55,10 +55,10 @@ For more information, see [platform vs. application landing zones](/azure/cloud-
 
 For more information, see [accelerating ATO](/azure/azure-government/compliance/documentation-accelerate-compliance).
 
-**(4) Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data points or documents. This automation enables timely and accurate routing to approval authorities for workload deployment, providing traceability and accountability. Without a cloud broker, mission owners have to navigate the following hurdles:
+**(4) Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data, and manage platform compliance requirements. This automation enables timely and accurate routing to approval authorities for workload deployment, providing traceability and accountability. Without a cloud broker, mission owners have to navigate the following hurdles:
 
 - Obtaining and allocating funds
-- Complying with oversight requirements
+- Managing oversight and compliance requirements
 - Obtaining approval from security teams
 - Handing off the project to technical teams for application build
 
