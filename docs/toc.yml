@@ -1546,6 +1546,8 @@ items:
           href: govern/resource-consistency/governance-simple-workload.md
         - name: Governance design for multiple teams
           href: govern/resource-consistency/governance-multiple-teams.md
+        - name: Why update Azure Landing Zone
+          href: govern/resource-consistency/why-update-alz.md
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration
