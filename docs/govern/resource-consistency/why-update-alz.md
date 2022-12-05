@@ -26,7 +26,7 @@ Any of the following reasons could be relevant to your decision to update your A
 
 To determine if there are changes to ALZ that require you to take action, you should follow [What's New](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) on the ALZ repo on a regular basis. In addition to the information posted there, a list of deprecated services is posted [here](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deprecated-Services) as well for historical purposes.
 
-# Next steps
+## Next steps
 For details on how to update your ALZ implementation, please refer to the following sections.
 
 - [Migrate ALZ custom policies to Azure built-in policies](./update-alz-policies.md)
