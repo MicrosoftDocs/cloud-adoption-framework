@@ -16,9 +16,9 @@ The plan methodology falls within the command domain of cloud adoption.
 :::image type="content" source="./images/command.png" alt-text="Figure that shows a domain tracker. It shows command, platform, and mission. Command is highlighted to show we're in the command domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - command domain*
 
-Any transformation requires a plan, and cloud adoption is no exception. The plan methodology is where mission owners prepare for cloud adoption. They need to make decisions that will help meet mission objectives and align the project with the right stakeholders. These plans will determine personnel and platform management needs. Proper planning helps ensure the project receives buy-in from stakeholders.
+The plan methodology is where mission owners prepare for cloud adoption. They need to define requirements, make decisions that will help meet mission objectives, and engage the right stakeholders. These plans will determine personnel and platform management needs. Proper planning helps ensure the project receives buy-in from stakeholders.
 
-The planning phase of cloud adoption is where mission owners pick the right cloud broker approach. Using a cloud broker is a best practice in defense organizations because of the many benefits the relationship provides. Some defense organizations mandate the use of a specific cloud broker in the chain of command. Given the importance and benefits of cloud brokers, it’s worth exploring cloud broker benefits and approaches.
+We recommend using a cloud broker, and planning is where mission owners select an approach to using cloud broker services. We assume mission owners have defined technical requirements to meet their objectives. If not, it's a prerequisite that must be in place before deciding the cloud broker strategy. Using a cloud broker is a best practice in defense organizations because of the many benefits the relationship provides. Some defense organizations mandate the use of a specific cloud broker in the chain of command. Given the importance and benefits of cloud brokers, it’s worth exploring cloud broker benefits and approaches.
 
 ## Cloud broker benefits
 
