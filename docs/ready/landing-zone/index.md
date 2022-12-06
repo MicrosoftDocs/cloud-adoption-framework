@@ -60,13 +60,13 @@ Use this architecture as a starting point. Download the [Visio file](https://raw
 
 For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone portal accelerator**.
 
-Accelerators are Infrastructure as Code implementations that deploy both platform and application landing zones. This accelerator is an Azure portal-based deployment for those who plan to manage their environment with the Azure portal. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
+Accelerators are Infrastructure as Code implementations that deploy both platform and application landing zones. This accelerator is an Azure portal-based deployment for those who plan to manage their environment with the Azure portal. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies. 
 
 Deploying the Azure landing zone accelerator requires permissions to create resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
-There are other deployment options available for platform landing zones, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md).
+There are other accelerators available for platform landing zones, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md). Application landing zone accelerators are listed in [Archtecture Center](azure/architecture/landing-zones/landing-zone-deploy)
 
 The Microsoft Cloud Adoption Framework outlines [Cloud adoption scenarios](azure/cloud-adoption-framework/scenarios/overview) to help you further refine accelerate your cloud adoption journey. There is an [Infrastructure as Code implementations or accelerators](/azure/architecture/landing-zones/landing-zone-deploy.md#Application) for each of these scenarios.
 
