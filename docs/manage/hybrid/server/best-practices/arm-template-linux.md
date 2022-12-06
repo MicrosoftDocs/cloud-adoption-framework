@@ -109,7 +109,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     az deployment group create \
     --resource-group <Name of the Azure resource group> \
     --name <The name of this deployment> \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
     --parameters <The `azuredeploy.parameters.json` parameters file location>
     ```
 
@@ -123,7 +123,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     az deployment group create \
     --resource-group Arc-Servers-Linux-Demo \
     --name arclinuxdemo \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
     --parameters azuredeploy.parameters.json
     ```
 
