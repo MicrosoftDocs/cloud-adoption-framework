@@ -31,6 +31,7 @@ Azure server management services offer the following benefits:
 - **Windows and Linux:** Windows and Linux machines get the same consistent management experience.
 - **Hybrid:** The server management services cover Azure IaaS virtual machines as well as physical and virtual servers that are hosted on-premises or in other hosting environments.
 - **Security:** Microsoft devotes substantial resources to all forms of security. This investment not only protects the Azure infrastructure but also extends the resulting technologies and expertise to protect customers' resources wherever they reside.
+- **Windows Server and Azure:** Windows Server together with Microsoft Azure cloud management capabilities allows you to get even more out of your Windows Server investments. You can learn more on [Better together Windows Server and Azure Management](/windows-server/administration/azure).
 
 ## Next steps
 
