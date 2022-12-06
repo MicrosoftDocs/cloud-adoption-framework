@@ -1,6 +1,6 @@
 ---
-title: Azure Synapse Analytics solutions and migration for Teradata
-description: Use the Cloud Adoption Framework for Azure to learn about migrating legacy Netezza systems to Azure Synapse Analytics.
+title: Azure Synapse Analytics solutions and migration for Netezza
+description: Learn about migrating legacy Netezza systems to Azure Synapse Analytics using the Cloud Adoption Framework.
 author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
@@ -10,13 +10,13 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-# Azure Synapse Analytics solutions and migration for Teradata
+# Azure Synapse Analytics solutions and migration for Netezza
 
 Many organizations that currently use IBM Netezza data warehouse systems are looking at newer environments like Azure to take advantage of innovative cloud, infrastructure as a service, and platform as a service offerings. Organizations can shift expensive tasks like infrastructure maintenance and platform development to a cloud provider.
 
-This article provides guidance for migrating a legacy Netezza system to Azure Synapse. Azure Synapse Analytics is a limitless analytics service that brings together enterprise data warehousing and big data analytics. It gives you the freedom to query data at scale by using either serverless on-demand or provisioned resources.
+This article provides guidance for migrating legacy Netezza systems to an Azure environment. Azure Synapse Analytics is a limitless analytics service that brings together enterprise data warehousing and big data analytics. It gives you the freedom to query data at scale by using either serverless on-demand or provisioned resources.
 
-Netezza and Azure Synapse are similar in that both are SQL databases designed to use massively parallel processing techniques to achieve high query performance on large data volumes. But the two platforms are different in key aspects:
+Netezza and Azure Synapse are similar in that both are SQL databases designed to use massively parallel processing techniques to achieve high query performance on large data volumes. However, the two platforms are different in key aspects:
 
 - Legacy Netezza systems are installed on-premises, and they use proprietary hardware. Azure Synapse is cloud-based and uses Azure compute and storage resources.
 - Upgrading a Netezza configuration is a major task that involves extra physical hardware and a potentially lengthy database reconfiguration or dump and reload. In Azure Synapse, storage and compute resources are separate. You can use the elastic scalability of Azure to independently scale resources up or down.
@@ -28,7 +28,7 @@ At a high level, the migration process includes the following steps:
 
 | Preparation        | Migration                             | Post-migration |
 | :----------------- | :----------------------------- | :---------------- |
-| <li> Define scope: what do we want to migrate? <li> Build an inventory of data and processes to migrate. <li> Define any data model changes. <li> Identify the best Azure and third-party tools and features to use. <li> Train staff early on the new platform. <li> Set up the Azure target platform.</li> | <li> Start small and simple. <li> Automate where possible. <li> Use Azure built-in tools and features to reduce the migration effort. <li> Migrate metadata for tables and views. <li> Migrate relevant historical data. <li> Migrate or refactor stored procedures and business processes. <li> Migrate or refactor ETL or ELT incremental load processes.</li> | <li> Monitor and document all stages of the migration process. <li> Use experience gained to build a template for future migrations. <li> Re-engineer the data model, if necessary, by using the new platform's performance and scalability. <li> Test applications and query tools. <li> Benchmark and optimize query performance.</li> |
+| <li> Define scope: what do you want to migrate? <li> Build an inventory of data and processes to migrate. <li> Define any data model changes. <li> Identify the best Azure and third-party tools and features to use. <li> Train staff early on the new platform. <li> Set up the Azure target platform.</li> | <li> Start small and simple. <li> Automate where possible. <li> Use Azure built-in tools and features to reduce the migration effort. <li> Migrate metadata for tables and views. <li> Migrate relevant historical data. <li> Migrate or refactor stored procedures and business processes. <li> Migrate or refactor ETL or ELT incremental load processes.</li> | <li> Monitor and document all stages of the migration process. <li> Use experience gained to build a template for future migrations. <li> Re-engineer the data model, if necessary, by using the new platform's performance and scalability. <li> Test applications and query tools. <li> Benchmark and optimize query performance.</li> |
 
 In addition to the general subjects described in the Netezza documentation, you need to consider specific factors when migrating from a legacy Netezza environment to Azure Synapse.
 
@@ -44,7 +44,7 @@ A good candidate for an initial migration from a Netezza environment that suppor
 
 For size, it's important that the data volume you migrate in the initial exercise is large enough to demonstrate the capabilities and benefits of the Azure Synapse environment with a short time-to-demonstrate value. The size that typically meets the requirements is in the range of 1 terabyte (TB) to 10 TB.
 
-To minimize risk and implementation time, confine the scope of the initial migration to data marts. An initial migration of only data marts doesn't address broader concerns like how to migrate ETL and historical data. You must address these areas in later phases and backfill the migrated data mart layer with the data and processes that are required to build them.
+To minimize risk and implementation time, confine the scope of the initial migration to data marts without addressing broader concerns like how to migrate ETL and historical data. You must address these areas in later phases and backfill the migrated data mart layer with the data and processes that are required to build them.
 
 ## Lift-and-shift approach vs. phased approach
 
@@ -72,7 +72,7 @@ As you plan your migration from a legacy Netezza environment to Azure Synapse, i
 
 In a Netezza environment, you might have multiple, separate databases for different parts of the overall environment. For example, you might have a separate database for data ingestion and staging tables, a database for core warehouse tables, and another database for data marts, sometimes called a *semantic layer*. Processing separate databases as ETL/ELT pipelines in Azure Synapse might require implementing cross-database joins and moving data between the separate databases.
 
-The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. We recommend that you use a set of schemas in the target Azure Synapse to mimic any separate databases that you migrate from Netezza. If you use schemas in the Netezza environment, you might need to use a new naming convention to move the existing Netezza tables and views to the new environment. For example, you might concatenate the existing Netezza schema and table names into the new Azure Synapse table name, and then use schema names in the new environment to maintain the original separate database names.
+The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. It's recommended that you use a set of schemas in the target Azure Synapse to mimic any separate databases that you migrate from Netezza. If you use schemas in the Netezza environment, you might need to use a new naming convention to move the existing Netezza tables and views to the new environment. For example, you might concatenate the existing Netezza schema and table names into the new Azure Synapse table name, and then use schema names in the new environment to maintain the original separate database names.
 
 Another option is to use SQL views over the underlying tables to maintain the logical structures. There are some potential downsides to using SQL views:
 
