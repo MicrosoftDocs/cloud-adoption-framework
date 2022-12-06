@@ -113,42 +113,42 @@ Netezza implements some database objects that aren't directly supported in Azure
 
 <!-- docutune:disable -->
 
-    | IBM Netezza data type | Azure Synapse SQL v2 data type |
-    | :-------------------- | :----------------------------- |
-    | bigint (int8) | bigint |
-    | binary varying(n) (alias varbinary(n)) | varbinary(n) |
-    | binary(n) | binary(n) |
-    | boolean (bool) | bit |
-    | bpchar(n) | varchar(n) |
-    | byteint (int1) | smallint |
-    | character varying (n) (alias varchar(n)) | varchar(n) |
-    | character(n) (alias char(n)) | char(n) |
-    | dataslice | *Not supported* |
-    | date | date |
-    | datetime | datetime |
-    | decimal | decimal(18,0) |
-    | decimal(p,s) | decimal(p,s) |
-    | double | float(53) |
-    | float | float |
-    | float(p) | float(p) |
-    | float4 | float(53) |
-    | float8 | float(53) |
-    | integer (alias int, int4) | int |
-    | interval (alias timespan) | *Not supported* |
-    | national bpchar(n) | nvarchar(n) |
-    | national character(n) (alias nchar(n)) | nchar(n) |
-    | number(p,s) | decimal(p,s) |
-    | numeric | decimal(18,0) |
-    | numeric(p,s) | numeric (p,s)|
-    | national character varying(n) (alias nvarchar(n)) | nvarchar(n) |
-    | real | real |
-    | rowid | *Not supported* |
-    | smallint (alias int2) | smallint |
-    | st_geometry(n) | *Not supported* |
-    | time | time |
-    | time with time zone (alias timetz) | datetimeoffset |
-    | timestamp(p) | datetime2(p) |
-    | transactionid | *Not supported* |
+| IBM Netezza data type | Azure Synapse SQL v2 data type |
+| :-------------------- | :----------------------------- |
+| bigint (int8) | bigint |
+| binary varying(n) (alias varbinary(n)) | varbinary(n) |
+| binary(n) | binary(n) |
+| boolean (bool) | bit |
+| bpchar(n) | varchar(n) |
+| byteint (int1) | smallint |
+| character varying (n) (alias varchar(n)) | varchar(n) |
+| character(n) (alias char(n)) | char(n) |
+| dataslice | *Not supported* |
+| date | date |
+| datetime | datetime |
+| decimal | decimal(18,0) |
+| decimal(p,s) | decimal(p,s) |
+| double | float(53) |
+| float | float |
+| float(p) | float(p) |
+| float4 | float(53) |
+| float8 | float(53) |
+| integer (alias int, int4) | int |
+| interval (alias timespan) | *Not supported* |
+| national bpchar(n) | nvarchar(n) |
+| national character(n) (alias nchar(n)) | nchar(n) |
+| number(p,s) | decimal(p,s) |
+| numeric | decimal(18,0) |
+| numeric(p,s) | numeric (p,s)|
+| national character varying(n) (alias nvarchar(n)) | nvarchar(n) |
+| real | real |
+| rowid | *Not supported* |
+| smallint (alias int2) | smallint |
+| st_geometry(n) | *Not supported* |
+| time | time |
+| time with time zone (alias timetz) | datetimeoffset |
+| timestamp(p) | datetime2(p) |
+| transactionid | *Not supported* |
 
 <!-- docutune:enable -->
 
