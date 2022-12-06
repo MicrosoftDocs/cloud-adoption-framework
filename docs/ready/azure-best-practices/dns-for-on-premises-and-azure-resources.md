@@ -20,7 +20,7 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
 
 - You might require the use of existing DNS solutions across on-premises and Azure.
 
-- The maximum number of private DNS zones a virtual network can get linked to with auto-registration enabled is one.
+- The maximum number of private DNS zones a virtual network can be linked to with auto-registration enabled is one.
 
 - Familiarize yourself with [Azure Private DNS zone limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-dns-limits).
 
@@ -34,7 +34,9 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
 
 - Use DNS Private Resolver service for cross-premises DNS resolution with Azure Private DNS.
 
-- You can link an Azure Private DNS zone to the virtual networks and use DNS Private Resolver service with DNS forwarding rule set also associated with the virtual networks. For DNS queries generated in the Azure virtual network to resolve on-premises DNS names such as `corporate.contoso.com`, the DNS query is forwarded to the IP address of on-premises DNS servers specified in the rule set. For DNS queries generated in the on-premises network to resolve DNS records in Azure Private DNS Zones, you can configure on-premises DNS servers with conditional forwarders to DNS Private Resolver service's inbound endpoint IP address in Azure to forward the request to the Azure Private DNS zone (for example, `azure.contoso.com`).
+- You can link an Azure Private DNS zone to the virtual networks and use DNS Private Resolver service with DNS forwarding rule set also associated with the virtual networks:
+  - For DNS queries generated in the Azure virtual network to resolve on-premises DNS names such as `corporate.contoso.com`, the DNS query is forwarded to the IP address of on-premises DNS servers specified in the rule set. 
+  - For DNS queries generated in the on-premises network to resolve DNS records in Azure Private DNS Zones, you can configure on-premises DNS servers with conditional forwarders pointing to DNS Private Resolver service's inbound endpoint IP address in Azure, to forward the request to the Azure Private DNS zone (for example, `azure.contoso.com`).
 
 - Special workloads that require and deploy their own DNS (such as Red Hat OpenShift) should use their preferred DNS solution.
 
