@@ -25,14 +25,14 @@ This article lists considerations and recommendations for inbound and outbound c
 
 ## Design recommendations
 
-Use Azure Virtual Network NAT (NAT gateway) for direct outbound connectivity to the internet. NAT gateway is a fully managed, high resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
+- Use Azure Virtual Network NAT (NAT gateway) for direct outbound connectivity to the internet. NAT gateway is a fully managed, high resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
 
-- Use a NAT gateway for:
+  - Use a NAT gateway for:
 
-  - Dynamic or large workloads sending traffic to the internet.
-  - Static and predictable public IP addresses for outbound connectivity. NAT gateway can be associated with up to 16 public IP addresses or a /28 public IP prefix.
-  - Mitigation of issues with SNAT port exhaustion commonly experienced with [Load balancer outbound rules](/azure/load-balancer/troubleshoot-outbound-connection#use-a-nat-gateway-for-outbound-connectivity-to-the-internet), [Azure Firewall](/azure/firewall/integrate-with-nat-gateway), or [Azure App Services](/azure/app-service/networking/nat-gateway-integration).
-  - Security and privacy of resources within your network. Only outbound and return traffic can pass through NAT gateway.
+    - Dynamic or large workloads sending traffic to the internet.
+    - Static and predictable public IP addresses for outbound connectivity. NAT gateway can be associated with up to 16 public IP addresses or a /28 public IP prefix.
+    - Mitigation of issues with SNAT port exhaustion commonly experienced with [Load balancer outbound rules](/azure/load-balancer/troubleshoot-outbound-connection#use-a-nat-gateway-for-outbound-connectivity-to-the-internet), [Azure Firewall](/azure/firewall/integrate-with-nat-gateway), or [Azure App Services](/azure/app-service/networking/nat-gateway-integration).
+    - Security and privacy of resources within your network. Only outbound and return traffic can pass through NAT gateway.
 
 - Use Azure Firewall to govern:
 
