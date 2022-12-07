@@ -87,8 +87,6 @@ Restrict default user permissions to remove unneeded access granted in default s
 
 ### Graph API
 
->TODO: Below needs to be QCed from the email discussion.
-
 Update the Authorization Policy to enforce the above settings via the Microsoft Graph REST API with the following [authorizationPolicy](/graph/api/resources/authorizationpolicy):
 
 ``` json
@@ -102,7 +100,7 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
       "allowedToCreateSecurityGroups": false,
       "allowedToReadOtherUsers": false,
       "permissionGrantPoliciesAssigned": []
-},
+  },
   "allowedToUseSSPR": true,
   "allowedToSignUpEmailBasedSubscriptions": true,
   "allowEmailVerifiedUsersToJoinOrganization": true,
