@@ -25,7 +25,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
 ## Design recommendations
 
-- Use Azure Virtual Network NAT (NAT gateway) for direct outbound connectivity to the internet. NAT gateway is a fully managed, high resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
+- Use Azure Virtual Network NAT (NAT gateway) for direct outbound connectivity to the internet. NAT gateway is a fully managed, highly resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
 
   - Use a NAT gateway for:
 
