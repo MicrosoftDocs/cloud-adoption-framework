@@ -20,15 +20,15 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### HPC landing zone accelerator
 
-High-performance computing (HPC) on Azure is the complete set of compute, networking, and storage resources integrated with workload orchestration services for applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. Industries such as manufacturing, energy, and finance typically use HPC for running complex simulations. 
+High-performance computing (HPC) on Azure is the complete set of Azure resources—compute, networking, and storage—integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in many industries, such as manufacturing, energy, and finance. 
 
-The HPC landing zone accelerator includes modernizing HPC workloads in Azure by offering global regulatory compliance, next-generation machine-learning tools, and a well-architected framework for best practices, architecture references per industry along with automation solutions that will help bootstrap your HPC journey in Azure.
+The HPC landing zone accelerator includes modernizing HPC workloads in Azure by offering global regulatory compliance, next-generation machine-learning tools, and a well-architected framework for best practices. The landing zone accelerator also provides industry-specific architecture references and automation solutions that help you start your HPC journey in Azure.
 
-Use the following links to get started with the HPC scenario overview, landing zone accelerator, and well-architected framework for your HPC environment's cloud adoption journey:
+Use the following links to get started with the HPC scenario:
 
-- [Azure HPC scenario overview](../scenarios/azure-hpc/index.md)
-- [HPC landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md)
-- [Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md)
+- [Introduction to the Azure HPC scenario](../scenarios/azure-hpc/index.md)
+- [Azure HPC landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md)
+- [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md)
 
 ## October 2022
 
