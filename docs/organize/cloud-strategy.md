@@ -1,8 +1,8 @@
 ---
 title: Understand the function of cloud strategy
 description: Understand how cloud strategy functions provide alignment between business outcomes and cloud adoption efforts.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 08/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

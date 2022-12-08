@@ -2,7 +2,7 @@
 title: Azure Active Directory and hybrid identity
 description: Understand Azure Active Directory (Azure AD) and hybrid identity considerations and recommendations.
 author: anlucen
-ms.author: doalle
+ms.author: martinek
 ms.date: 06/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

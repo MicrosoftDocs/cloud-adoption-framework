@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Align your organization'
 description: Recommended steps for aligning your organization so that you're ready for successful cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

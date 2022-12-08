@@ -2,7 +2,7 @@
 title: Move on-premises Remote Desktop Services to Azure Virtual Desktop
 description: Learn how to migrate an on-premises Remote Desktop Services environment to Azure Virtual Desktop in the cloud.
 author: benstegink
-ms.author: abuck
+ms.author: martinek
 ms.date: 09/07/2021
 ms.review: ssumner
 ms.topic: conceptual
@@ -227,13 +227,13 @@ After Contoso imports the FSLogixMigration module, it runs the following PowerSh
 A UDP conversion:
 
 ```powershell
-Convert-RoamingProfile -ParentPath "C:\Users\" -Target "\\Server\FSLogixProfiles$" -MaxVHDSize 20 -VHDLogicalSectorSize 512
+Convert-RoamingProfile -ParentPath "C:\Users\" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512
 ```
 
 A roaming profile conversion:
 
 ```powershell
-Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -MaxVHDSize 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
+Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
 ```
 
 At this point, the migration has enabled using pooled resources with Windows 10 Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows 10 Enterprise multi-session.

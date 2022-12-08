@@ -1,8 +1,8 @@
 ---
 title: Innovation application development tools
 description: Find out about Azure application development tools that align to the Innovate methodology of the Cloud Adoption Framework.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

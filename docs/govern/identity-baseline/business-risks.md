@@ -1,8 +1,8 @@
 ---
 title: Motivations and business risks in the Identity Baseline discipline
 description: Understand and see samples of typical customer adoption of an Identity Baseline discipline within a cloud governance strategy.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

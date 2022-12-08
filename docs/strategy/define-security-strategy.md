@@ -2,7 +2,7 @@
 title: Define a security strategy
 description: Use the Cloud Adoption Framework for Azure to learn to build a business justification for cloud migration.
 author: MarkSimos
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

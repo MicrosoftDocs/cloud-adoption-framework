@@ -1,8 +1,8 @@
 ---
 title: Replication options
 description: Replicate on-premises assets to the cloud.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.reviewer: ssumner
 ms.date: 1/04/2021
 ms.topic: conceptual

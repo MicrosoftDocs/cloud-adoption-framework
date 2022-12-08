@@ -2,7 +2,7 @@
 title: Collect monitoring data in the cloud
 description: Learn to observe the health and availability of your cloud solution to collect the right monitoring data.
 author: MGoedtel
-ms.author: brblanch
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 11/15/2022
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Examples of fiscal outcomes
 description: Use the Cloud Adoption Framework to understand fiscal outcomes in the context of a cloud transformation.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 06/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,8 +1,8 @@
 ---
 title: Establish policy adherence processes
 description: Create a strategy and processes for ensuring your cloud deployment stays in compliance with your policy requirements.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,8 +1,8 @@
 ---
 title: 'Complex enterprise governance: Best practices explained'
 description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a complex enterprise.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
