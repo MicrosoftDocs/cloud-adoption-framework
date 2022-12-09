@@ -13,7 +13,7 @@ keywords: approaches, strategy, cloud migration, cloud modernization, cloud adop
 ---
 # Migrate or modernize first?
 
-Figuring out if you should migrate an on-premises application first ("rehost") or modernize first ("replatform") is a common question. The answer depends on your migration goals, and aligning your goals to an approach can be difficult. To help, we created a short assessment to help you find the right path.
+Figuring out if you should migrate an on-premises application first ("rehost") or modernize first ("replatform") is a common question. The answer depends on your migration goals, but aligning your goals to an approach can be difficult. To help, we created a short assessment to help you find the right path.
 
 We define each approach and outline their benefits. If the benefits described match your goals, then you've likely found the answer to your question.
 
@@ -21,7 +21,7 @@ We define each approach and outline their benefits. If the benefits described ma
 
 ## Migrate ("Rehost")
 
-Migrate or rehost your applications first. This approach is often called "lift-and-shift." You move an existing application to the cloud as it is and modernize later. There are four benefits of the rehost approach.
+Migrate or rehost your applications first. This is the "lift-and-shift" approach. With this approach, you move an existing application to the cloud as it is and modernize it later. Rehosting has four major benefits.
 
 *Immediate sustainability:* The lift-and-shift approach is the fastest way to reduce your data center footprint.
 
@@ -33,7 +33,7 @@ Migrate or rehost your applications first. This approach is often called "lift-a
 
 ## Modernize ("Replatform")
 
-Modernize or replatform your applications first. In this approach, you change parts of an application during the migration process. It takes a little more work to get to the cloud, but your applications have better cost and performance efficiency in the cloud. There are four benefits of modernizing before the migration.
+Modernize or replatform your applications first. In this approach, you change parts of an application during the migration process. It takes a little more work to get to the cloud, but your applications have better cost and performance efficiency in the cloud. There are four benefits of modernizing before migration.
 
 *Faster time-to-market:* Use PaaS technologies to speed up deployment.
 

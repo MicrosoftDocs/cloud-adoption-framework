@@ -39,9 +39,9 @@ Most organizations replace about 15% of their applications with software-as-a-se
 
 ## Migrate (rehost or replatform) (50%)
 
-A typical business will migrate about half of its existing workloads. Within these workloads, there are normally three tiers of difficulty. About 35% are easy to move. The next 10% are more difficult because of they're more complex or more important, and the only last 5% require extra planning to execute.
+A typical business will migrate about half of its existing workloads. Within these workloads, there are normally three tiers of difficulty. About 35% are easy to move. The next 10% are more difficult because they're more complex or more important, and only the last 5% require extra planning to execute.
 
-There are many migration approaches. Rehosting ("lift-and-shift") and replatforming ("modernize") are the most common, and what we recommend for cloud adoption. It can be difficult to decide which approach to take, so we have guidance on deciding which approach is right for you. For more information, see [migrate or modernize?](migrate-or-modernize.md).
+There are many migration approaches. Rehosting ("lift-and-shift") and replatforming ("modernize") are the most common, and our recommended approaches for cloud adoption. But it can be difficult to decide which one meets your needs, so we have guidance on deciding which approach is right for you. For more information, see [migrate or modernize?](migrate-or-modernize.md).
 
 ### First to move (35%)
 
