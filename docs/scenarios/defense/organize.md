@@ -42,7 +42,7 @@ The mission owner and cloud broker share responsibility for the platform. It’s
 
 A frequent area of concern in cloud adoption is financial oversight. Mission owners should assign personnel to manage, monitor, and forecast costs. Financial oversight that performs these duties will help avoid overspending. Mission owners should consider how often they receive debriefs on cloud spend. A briefing at least twice monthly provides the necessary oversight to make changes that prevent overspending. For more information, see:
 
-- [Cloud accounting](https://learn.microsoft.com/en-us)/azure/cloud-adoption-framework/strategy/cloud-accounting)
+- [Cloud accounting](/azure/cloud-adoption-framework/strategy/cloud-accounting)
 - [Cost management strategy](./govern.md#create-a-cost-governance-strategy)
 
 ## Identify other cloud functions
