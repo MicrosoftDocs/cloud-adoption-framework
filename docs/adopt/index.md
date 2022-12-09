@@ -47,7 +47,7 @@ The modernize approach is where you enhance existing applications to improve ope
 
 The innovate approach is where you adopt cloud-native technologies to create customer-focused solutions that rapidly transform business outcomes.
 
-***Goals:***** Reposition your business, reposition technical solutions, and find innovative data plays.
+***Goals:*** Reposition your business, reposition technical solutions, and find innovative data plays.
 
 ***Solutions:*** Adopt data and application capabilities to empower adoption and build predictive tools.
 
