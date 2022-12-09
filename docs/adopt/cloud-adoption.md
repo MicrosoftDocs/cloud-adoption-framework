@@ -48,33 +48,33 @@ There are many migration approaches. Rehosting ("lift-and-shift") and replatform
 
 We recommend picking easy wins for the first workloads to move. This strategy lets you evaluate your adoption plan on easier applications before tackling more complex workloads. As you work, you should document your successes and revise your strategy if needed. Apply these insights to your more complicated moves. Two examples of workloads you could include in your first move are basic web apps and advanced portals.
 
-*Basic web apps:* We recommend rehosting your basic web applications and waiting to move your more complicated workloads until you've moved your basic web apps. Azure App Service is a flexible application platform that can host most applications. We recommend this solution for basic web applications. For more information, see [Azure App Service](/azure/app-service/overview).
+***Basic web apps:*** We recommend rehosting your basic web applications and waiting to move your more complicated workloads until you've moved your basic web apps. Azure App Service is a flexible application platform that can host most applications. We recommend this solution for basic web applications. For more information, see [Azure App Service](/azure/app-service/overview).
 
-*Advanced portals:* You should migrate your portals to [Power Apps portals](/power-apps/maker/portals/overview) to increase productivity.
+***Advanced portals:*** You should migrate your portals to [Power Apps portals](/power-apps/maker/portals/overview) to increase productivity.
 
 ### Next to move (10%)
 
 You should apply lessons-learned from your first moves to tackle more challenging or more important workloads. We have some examples to give you a sense of the workload types.
 
-*High Business Impact:* Workloads that drive revenue or are mission-critical.
+***High Business Impact:*** Workloads that drive revenue or are mission-critical.
 
-*High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:* These workloads record business transactions and have elevated processing requirements.
+***High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:*** These workloads record business transactions and have elevated processing requirements.
 
-*Regulated Information:* These workloads must follow legal and industry standards such as HIPAA, PCI DSS, and others. We recommend using Azure Policy to ensure compliance with these standards. For more information, see [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance).
+***Regulated Information:*** These workloads must follow legal and industry standards such as HIPAA, PCI DSS, and others. We recommend using Azure Policy to ensure compliance with these standards. For more information, see [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance).
 
 ### Hard or costly to move (5%)
 
 Move the most difficult and costly workloads last. The following systems might need more thought to move efficiently.
 
-*High Value Asset (HVA):* Disruption or corruption of this workload would disrupt all business operations.
+***High Value Asset (HVA):*** Disruption or corruption of this workload would disrupt all business operations.
 
-*Public Key Infrastructure (PKI) systems:* Workloads that manage x509 digital certificates, network encryption, and authentication.
+***Public Key Infrastructure (PKI) systems:*** Workloads that manage x509 digital certificates, network encryption, and authentication.
 
-*Legacy source control:* Source control systems that aren't easily replaced with GitHub.
+***Legacy source control:*** Source control systems that aren't easily replaced with GitHub.
 
-*Can't be modernized:* Legacy or proprietary technology that can't be modernized.
+***Can't be modernized:*** Legacy or proprietary technology that can't be modernized.
 
-*Deep architectural change:* Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) rather than the CAF modernize approach.
+***Deep architectural change:*** Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) rather than the CAF modernize approach.
 
 ### More resources
 
