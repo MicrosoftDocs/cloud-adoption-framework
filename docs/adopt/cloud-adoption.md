@@ -30,6 +30,7 @@ We recommend retiring any workloads your organization doesn't need. You'll need 
 Most organizations replace about 15% of their applications with software-as-a-service (SaaS) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").
 
 *Table 1 - Examples of replacing workloads with SaaS and low-code solutions*
+
 | From | To |
 | --- | --- |
 |Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)|
