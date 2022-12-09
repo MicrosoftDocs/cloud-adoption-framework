@@ -50,10 +50,10 @@ For operating system (OS) disks, consider the following factors:
 
 Some workloads need a consistent data store for storage of application data. If your application requires a database, consider exploring the managed databases in Azure, which include the following options: 
 
-- [Azure SQL](/products/azure-sql/)
-- [Azure Database by MySQL](/services/mysql/)
-- [Azure Database for PostGres](/services/postgresql/)
-- [Cosmos DB](/services/cosmos-db/)
+- [Azure SQL](https://azure.microsoft.com/products/azure-sql/)
+- [Azure Database by MySQL](https://azure.microsoft.com/products/mysql/)
+- [Azure Database for PostGres](https://azure.microsoft.com/products/postgresql/)
+- [Cosmos DB](https://azure.microsoft.com/products/cosmos-db/)
 
 ### Storage solutions in AKS
 
@@ -158,7 +158,7 @@ The following sections describe more recommendations for Azure disks, Azure File
 
 For Azure disks, we recommend the following design options:
 
-  - **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](/products/storage/disks/).
+  - **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](https://azure.microsoft.com/products/storage/disks/).
 
   - **Size the node for disks and throughput**. We recommend ensuring that the size of your Kubernetes node is large enough to support the number of disks and the amount of aggregate throughput. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
@@ -200,7 +200,7 @@ For blob storage, we recommend the following design options:
 
   - **Use CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
 
-  - **Use Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
+  - **Use Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/azure/storage/blobs/authorize-access-azure-active-directory).
 
   - **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
