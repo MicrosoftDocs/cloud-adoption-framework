@@ -30,9 +30,9 @@ Cloud brokers provided the following benefits:
 
 A landing zone includes all the components defense workloads need for secure, reliable, and cost-effective cloud operations. There are two types of landing zones, platform landing zones and workload landing zones.
 
-- ***Platform landing zone*** - The platform landing zone provides core services used by multiple workloads. In the sample architecture below, the components and subscriptions outlined in teal comprise the platform landing zone. Together, they provide shared services, such as identity, management, and connectivity, to the workloads in this tenant.
+- ***Platform landing zone*** - The platform landing zone provides core services used by multiple workloads. In the sample architecture, the components and subscriptions outlined in teal comprise the platform landing zone. Together, they provide shared services, such as identity, management, and connectivity, to the workloads in this tenant.
 
-- ***Workload landing zone*** - The workload landing zones are for workloads. The gray boxes outline the workload landing zones. There are two workload landing zone subscriptions in the diagram below (Landing zone A1 and Landing Zone A2). The image only shows one workload landing zone in detail (Landing Zone A2).
+- ***Workload landing zone*** - The workload landing zones are for workloads. The gray boxes outline the workload landing zones. There are two workload landing zone subscriptions in the diagram  (Landing zone A1 and Landing Zone A2). The image only shows one workload landing zone in detail (Landing Zone A2).
 
 :::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A sample architecture showing the platform landing zone and workload landing zones. It shows the Azure Active Directory tenant with management groups underneath. The management groups divide into platform, landing zones, decommissioned, and sandbox. Under these management groups and children management groups with subscriptions beneath them. The architecture shows the contents of these subscriptions. The platform landing zone management group contains identity, management, and connectivity subscriptions. There are black boxes around the platform landing zone subscriptions. The workload landing zone management group contains two workload landing zone subscriptions. The contents of one subscription is shown in detail. There are red boxes around the workload landing zone subscriptions." lightbox="./images/cloud-broker-landing-zone.png" border="false":::
 *Diagram 2: Sample architecture showing the platform landing zone and workload landing zones*
@@ -79,7 +79,7 @@ If these benefits meet the needs of mission owners, then a single broker is like
 
 **Multiple cloud broker approach** - A multiple-cloud-brokers approach uses two or more cloud brokers to provide managed cloud services. Multiple cloud brokers are better in complex organizations, and defense environments often have enough complexity to warrant a multiple cloud broker strategy. But there's a caveat. Multiple cloud brokers can add more risk to the cloud adoption plan and add more communication lines for the organization to manage.
 
-The factors listed below will help you determine if the multiple cloud broker approach is the right one:
+The factors listed will help you determine if the multiple cloud broker approach is the right one.
 
 - ***Ownership*** – Mission owners might need their own cloud brokers. Decision-making groups often need their own tenant to meet mission-objectives and avoid delays due to dependencies.
 
