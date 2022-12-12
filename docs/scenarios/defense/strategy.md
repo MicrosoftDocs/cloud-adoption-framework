@@ -16,7 +16,7 @@ The strategy methodology falls within the command domain of cloud adoption.
 :::image type="content" source="./images/command.png" alt-text="Figure that shows a domain tracker. It shows command, platform, and mission. Command is highlighted to show we're in the command domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - command domain*
 
-Strategy is about ensuring the short and long-term success of cloud adoption. Mission owner must align their vision to overarching digital transformation initiatives. Aligning to a broader strategy is an important step to drive awareness of the transformation vision. Many choose the cloud to optimize costs and enhance security, but without a clear understanding of the command, cloud transformation can fragment. Mission owners should align their mission to the broader strategy and engage stakeholders early to avoid blockers. Below are our recommendations for execution.
+Strategy is about ensuring the short and long-term success of cloud adoption. Mission owner must align their vision to overarching digital transformation initiatives. Aligning to a broader strategy is an important step to drive awareness of the transformation vision. Many choose the cloud to optimize costs and enhance security, but without a clear understanding of the command, cloud transformation can fragment. Mission owners should align their mission to the broader strategy and engage stakeholders early to avoid blockers. Here are our recommendations for execution.
 
 ## Align with defense strategy
 
