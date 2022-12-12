@@ -28,13 +28,13 @@ For information on landing zones, see:
 
 Here are a few general architecture recommendations for landing zone deployments:
 
-**(1) Place a firewall between cloud and defense network** - The architecture should use a firewall, intrusion detection system (IDS), and/or intrusion prevention system (IPS) to protect the defense network from attacks originating in the cloud. It should sit in the defense network and inspect and filter all traffic heading into the defense network from the cloud. This placement will provide a barrier between the two environments.
+**Place a firewall between cloud and defense network** - The architecture should use a firewall, intrusion detection system (IDS), and/or intrusion prevention system (IPS) to protect the defense network from attacks originating in the cloud. It should sit in the defense network and inspect and filter all traffic heading into the defense network from the cloud. This placement will provide a barrier between the two environments.
 
-**(2) Inspect all inbound traffic** - Route all inbound traffic through your security stack before sending to applications. The security stack should be in its own environment and should inspect and filter traffic before routing to cloud applications.
+**Inspect all inbound traffic** - Route all inbound traffic through your security stack before sending to applications. The security stack should be in its own environment and should inspect and filter traffic before routing to cloud applications.
 
-**(3) Isolate security management tools** - Create a separate environment for your security management tools. At a minimum, the security management environment should include vulnerability scanning, host scanning, endpoint protection, and centralized logging.
+**Isolate security management tools** - Create a separate environment for your security management tools. At a minimum, the security management environment should include vulnerability scanning, host scanning, endpoint protection, and centralized logging.
 
-**(4) Designate an architecture owner** - Mission owners should designate a single member of their personnel to own landing zone security. This person should be responsible for coordinating with the cloud broker, managing identity and access, and restricting elevated privileges.
+**Designate an architecture owner** - Mission owners should designate a single member of their personnel to own landing zone security. This person should be responsible for coordinating with the cloud broker, managing identity and access, and restricting elevated privileges.
 
 For more information, see:
 
@@ -48,15 +48,15 @@ Mission owners and cloud brokers should define the expectations for operations a
 
 We have the following recommendations for operations and management:
 
-**(1) Establish communication channels** - Mission owners should establish communication channels for the cloud broker to use. Communications should be frequent, consistent, and clear. Mission owners should also have availability for field communications for any urgent matters outside the regular meetings. Communication will minimize risk and technical drift from mission objectives. Expectations should be written down, explained, and accessible to the cloud brokers. Regular synchronizations between the cloud broker and mission owner will help ensure the cloud broker understands the security, performance, and financial requirements of mission owners and their workloads.
+**Establish communication channels** - Mission owners should establish communication channels for the cloud broker to use. Communications should be frequent, consistent, and clear. Mission owners should also have availability for field communications for any urgent matters outside the regular meetings. Communication will minimize risk and technical drift from mission objectives. Expectations should be written down, explained, and accessible to the cloud brokers. Regular synchronizations between the cloud broker and mission owner will help ensure the cloud broker understands the security, performance, and financial requirements of mission owners and their workloads.
 
-**(2) Pick operational measurements** – Establish how operational measures will be reviewed. The mission owner and cloud broker should determine how feedback will be received and improvements made.
+**Pick operational measurements** – Establish how operational measures will be reviewed. The mission owner and cloud broker should determine how feedback will be received and improvements made.
 
-**(3) Share core services** - The cloud broker in most instances should offer shared services for mission owners to use. Shared services include Azure Virtual Desktops for secure client computing and a shared DevOps toolset such as Azure DevOps. Cloud brokers can also share a common data platform with governance or a shared container platform. Sharing common services saves money and improves compliance.
+**Share core services** - The cloud broker in most instances should offer shared services for mission owners to use. Shared services include Azure Virtual Desktops for secure client computing and a shared DevOps toolset such as Azure DevOps. Cloud brokers can also share a common data platform with governance or a shared container platform. Sharing common services saves money and improves compliance.
 
-**(4) Discuss infrastructure automation** - A high-functioning cloud broker will build infrastructure as code (IaC) templates to build secure workload environments consistently and rapidly. These IaC templates can build hardened VMs, functions, storage and more. The broker could even build out the entire mission owner landing zone through code to ensure consistency and compliance.
+**Discuss infrastructure automation** - A high-functioning cloud broker will build infrastructure as code (IaC) templates to build secure workload environments consistently and rapidly. These IaC templates can build hardened VMs, functions, storage and more. The broker could even build out the entire mission owner landing zone through code to ensure consistency and compliance.
 
-**(5) Establish change management process** - Change is necessary in the cloud. In fact, a major benefit of the cloud is the ability to accelerate change. Accelerating positive changes is the goal of digital transformation. It’s vital that mission owners and cloud brokers establish a change management process. Change management should account for standard, normal, and emergency change requests. Each request type should have its own process that is optimized and streamlined for consistency, speed, and security.
+**Establish change management process** - Change is necessary in the cloud. In fact, a major benefit of the cloud is the ability to accelerate change. Accelerating positive changes is the goal of digital transformation. It’s vital that mission owners and cloud brokers establish a change management process. Change management should account for standard, normal, and emergency change requests. Each request type should have its own process that is optimized and streamlined for consistency, speed, and security.
 
 For more information, see:
 

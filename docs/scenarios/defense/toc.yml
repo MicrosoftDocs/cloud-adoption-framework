@@ -26,7 +26,7 @@ items:
         href: manage.md
   - name: Best practices
     items:
-      - name: Zero Trust
+      - name: Zero trust
         href: /security/zero-trust/zero-trust-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Compliance
         href: https://www.microsoft.com/security/business/zero-trust?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json

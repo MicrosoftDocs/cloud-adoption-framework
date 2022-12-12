@@ -26,11 +26,11 @@ Zero Trust is a security methodology, not a product. Implementations of zero tru
 
 Three main principles of zero trust addressed are (1) verify every session explicitly, (2) enforce the least privilege on every identity, and (3) monitor, search, and secure continuously. Let's dig into these principles further.
 
-**(1) Verify every session explicitly** - Verify refers to authentication and authorization. You need to authenticate and authorize every device regardless of location. Multifactor authentication is a common defense standard where the use of a security token supplements authentication process.
+**Verify every session explicitly** - Verify refers to authentication and authorization. You need to authenticate and authorize every device regardless of location. Multifactor authentication is a common defense standard where the use of a security token supplements authentication process.
 
 We recommend you use an attribute-based access control (ABAC) system. ABAC builds on role-based access control (RBAC) and requires devices to meet extra conditions before gaining access to a resource. Security professionals configure the conditions to limit access and minimize the number of roles assignments needing to be managed. Azure Active Directory provides native ABAC capabilities so cloud identities only access authorized information. For more information, see [attribute-based access control](/azure/role-based-access-control/conditions-overview).
 
-**(2) Enforce least privileges on every identity** - The concept of least privilege access is a familiar concept in defense environments. It’s visible at the macro-level in the mandatory access control system many defense organizations use. Data receives classification labels based on its sensitivity (confidential, secret, top secret), and individuals receive access to data needed to complete a task.  Once the task is completed, access is removed. Access to sensitive data when not needed is a violation of the least privileged model.
+**Enforce least privileges on every identity** - The concept of least privilege access is a familiar concept in defense environments. It’s visible at the macro-level in the mandatory access control system many defense organizations use. Data receives classification labels based on its sensitivity (confidential, secret, top secret), and individuals receive access to data needed to complete a task.  Once the task is completed, access is removed. Access to sensitive data when not needed is a violation of the least privileged model.
 
 RBAC and ABAC are the core features of least privilege enforcement. People change roles and architecture changes, so it’s important to review access regularly to avoid privilege-creep. RBAC and ABAC allow teams to create a fine-grained access control system that meets the needs of an environment as access requirements change overtime.
 
@@ -42,15 +42,15 @@ Granting elevated privilege for a defined period is a security best-practice. Az
 - [Azure identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices)
 - [Securing identity with zero trust](/security/zero-trust/deploy/identity)
 
-**(3) Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. Defense security teams should monitor, scan, and improve cloud environments to mitigate risks. Defense organizations often have required security tools that cloud-native tooling can supplement for comprehensive security detection and analysis. We recommend Microsoft Defender for Cloud as a baseline cloud security posture management tool that continually assesses the environment's security posture. For more information, see [What is Microsoft Defender for Cloud?](/azure/defender-for-cloud/defender-for-cloud-introduction).
+**Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. Defense security teams should monitor, scan, and improve cloud environments to mitigate risks. Defense organizations often have required security tools that cloud-native tooling can supplement for comprehensive security detection and analysis. We recommend Microsoft Defender for Cloud as a baseline cloud security posture management tool that continually assesses the environment's security posture. For more information, see [What is Microsoft Defender for Cloud?](/azure/defender-for-cloud/defender-for-cloud-introduction).
 
 Here are a few tools that add value to defense deployments:
 
-***Threat intelligence***: Cloud environments should have a persistent threat intelligence feed and detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects. For more information, see [threat intelligence feeds](/azure/sentinel/connect-threat-intelligence-tip).
+- ***Threat intelligence***: Cloud environments should have a persistent threat intelligence feed and detection tool that evaluates network security posture. This tool should scan your environment and generate alerts for the vulnerabilities it detects. For more information, see [threat intelligence feeds](/azure/sentinel/connect-threat-intelligence-tip).
 
-***Distributed denial of service (DDoS)***: Security tools should protect against malicious or non-malicious distributed denial-of-service attacks.
+- ***Distributed denial of service (DDoS)***: Security tools should protect against malicious or non-malicious distributed denial-of-service attacks.
 
-***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyze, aggregates, and detects threats in logs generated throughout a cloud environment. For a list of available security tools, see [Azure Government security](/azure/azure-government/documentation-government-plan-security).
+- ***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyze, aggregates, and detects threats in logs generated throughout a cloud environment. For a list of available security tools, see [Azure Government security](/azure/azure-government/documentation-government-plan-security).
 
 For more information on zero trust, see [zero trust in Azure](/security/zero-trust/).
 
