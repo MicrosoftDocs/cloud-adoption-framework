@@ -48,9 +48,9 @@ There are many migration approaches. Rehosting ("lift-and-shift") and replatform
 
 We recommend picking easy wins for the first workloads to move. This strategy lets you evaluate your adoption plan on easier applications before tackling more complex workloads. As you work, you should document your successes and revise your strategy if needed. Apply these insights to your more complicated moves. Two examples of workloads you could include in your first move are basic web apps and advanced portals.
 
-***Basic web apps:*** We recommend rehosting your basic web applications and waiting to move your more complicated workloads until you've moved your basic web apps. Azure App Service is a flexible application platform that can host most applications. We recommend this solution for basic web applications. For more information, see [Azure App Service](/azure/app-service/overview).
+- ***Basic web apps:*** We recommend rehosting your basic web applications and waiting to move your more complicated workloads until you've moved your basic web apps. Azure App Service is a flexible application platform that can host most applications. We recommend this solution for basic web applications. For more information, see [Azure App Service](/azure/app-service/overview).
 
-***Advanced portals:*** You should migrate your portals to [Power Apps portals](/power-apps/maker/portals/overview) to increase productivity.
+- ***Advanced portals:*** You should migrate your portals to [Power Apps portals](/power-apps/maker/portals/overview) to increase productivity.
 
 ### Next to move (10%)
 
