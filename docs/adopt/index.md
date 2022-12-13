@@ -3,7 +3,7 @@ title: Adopt the cloud
 description: Cloud adoption has three paths (migration, modernization, and innovation). Learn about each cloud adoption approach. Discover its goals, solutions, and benefits.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 12/09/2022
+ms.date: 12/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -23,35 +23,35 @@ Here's a brief overview of each approach to get you started. Focus on the goals 
 
 The migrate approach is where you move your workloads to the cloud. Different forms of migration exist, but we'll focus on rehosting. Rehosting is also known as the "lift-and-shift" approach. In this approach, you move an existing workload to comparable solutions in the cloud without spending modifying the workload.
 
-***Goals:*** Quickly exit on-premises, enhance security, and improve operations.
+- ***Goals:*** Quickly exit on-premises, enhance security, and improve operations.
 
-***Solutions:*** Adopt comparable solutions in the cloud.
+- ***Solutions:*** Adopt comparable solutions in the cloud.
 
-***Key benefits:*** Cost, security, availability, visibility, performance. You don't have to worry about acquiring, managing, and securing hardware.
+- ***Key benefits:*** Cost, security, availability, visibility, performance. You don't have to worry about acquiring, managing, and securing hardware.
 
-***Example:*** Migrate applications from on-premises to Azure virtual machines (infrastructure-as-a-service) or Azure App Service (platform-as-a-service).
+- ***Example:*** Migrate applications from on-premises to Azure virtual machines (infrastructure-as-a-service) or Azure App Service (platform-as-a-service).
 
 ## Modernize
 
 The modernize approach is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. Modernizing uses more managed platform-as-a-service solutions (PaaS) to improve your business at scale.
 
-***Goals:*** Reduce technical debt, modernize applications, and modernize data platforms.
+- ***Goals:*** Reduce technical debt, modernize applications, and modernize data platforms.
 
-***Solutions:*** Adopt more platform-as-a-service (PaaS) solutions across workload clusters.
+- ***Solutions:*** Adopt more platform-as-a-service (PaaS) solutions across workload clusters.
 
-***Key benefits:*** Cost, security, availability, visibility, performance, and operations. You don't have to manage the underlying infrastructure and can focus on scaling your business.
+- ***Key benefits:*** Cost, security, availability, visibility, performance, and operations. You don't have to manage the underlying infrastructure and can focus on scaling your business.
 
-***Examples:*** Move to managed services. Move from SQL database to Azure SQL database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Container Apps.
+- ***Examples:*** Move to managed services. Move from SQL database to Azure SQL database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Container Apps.
 
 ## Innovate
 
 The innovate approach is where you adopt cloud-native technologies to create customer-focused solutions that rapidly transform business outcomes.
 
-***Goals:*** Reposition your business, reposition technical solutions, and find innovative data plays.
+- ***Goals:*** Reposition your business, reposition technical solutions, and find innovative data plays.
 
-***Solutions:*** Adopt data and application capabilities to empower adoption and build predictive tools.
+- ***Solutions:*** Adopt data and application capabilities to empower adoption and build predictive tools.
 
-***Key benefits:*** Predictive analytics, performance, and adaptability.
+- ***Key benefits:*** Predictive analytics, performance, and adaptability.
 
 ## Next steps
 

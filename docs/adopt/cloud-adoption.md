@@ -3,7 +3,7 @@ title: Cloud adoption journey
 description: Understand the cloud adoption journey
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 12/09/2022
+ms.date: 12/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -56,11 +56,11 @@ We recommend picking easy wins for the first workloads to move. This strategy le
 
 You should apply lessons-learned from your first moves to tackle more challenging or more important workloads. We have some examples to give you a sense of the workload types.
 
-***High Business Impact:*** Workloads that drive revenue or are mission-critical.
+- ***High Business Impact:*** Workloads that drive revenue or are mission-critical.
 
-***High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:*** These workloads record business transactions and have elevated processing requirements.
+- ***High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:*** These workloads record business transactions and have elevated processing requirements.
 
-***Regulated Information:*** These workloads must follow legal and industry standards such as HIPAA, PCI DSS, and others. We recommend using Azure Policy to ensure compliance with these standards. For more information, see [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance).
+- ***Regulated Information:*** These workloads must follow legal and industry standards such as HIPAA, PCI DSS, and others. We recommend using Azure Policy to ensure compliance with these standards. For more information, see [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance).
 
 ### Hard or costly to move (5%)
 
