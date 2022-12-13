@@ -2,7 +2,7 @@
 title: Why are we moving to the cloud?
 description: Use the Cloud Adoption Framework for Azure to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/18/2022
 ms.topic: conceptual

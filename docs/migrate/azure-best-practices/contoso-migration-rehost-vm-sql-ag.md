@@ -2,7 +2,7 @@
 title: Rehost an application by migrating it to Azure VMs and SQL Server Always On availability groups
 description: Learn how Contoso rehosts an on-premises application by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 11/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

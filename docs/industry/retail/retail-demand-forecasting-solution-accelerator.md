@@ -2,7 +2,7 @@
 title: Retail demand forecasting solution accelerator
 description: Learn how to implement better demand forecasting to create meaningful gains in your retail environment
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

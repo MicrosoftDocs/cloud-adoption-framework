@@ -1,8 +1,8 @@
 ---
 title: Replication and the migration process
 description: Understand the role that replication plays in the migration process, as well as how to plan for the prerequisites and risks of replication activities.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Govern antipatterns
 description: When adopting the cloud, understand company responsibilities, cloud provider responsibilities, and cloud governance and security standards.
 author: lpassig
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

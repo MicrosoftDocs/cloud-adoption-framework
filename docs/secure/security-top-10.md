@@ -1,8 +1,8 @@
 ---
 title: Azure security best practices
 description: Learn about Azure security best practices based on lessons learned by customers and from experience in our own environments.
-author: JanetCThomas
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

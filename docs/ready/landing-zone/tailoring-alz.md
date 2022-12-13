@@ -46,7 +46,7 @@ More processes and tooling might be required to ensure a landing zone has the re
 - Diagnostic settings to send activity log data to a Log Analytics workspace.
 - Continuous export settings for Microsoft Defender for Cloud.
 - Virtual network with managed IP address spaces for application workloads.
-- Linking of virtual networks to a distributed denial of service (DDoS) standard plan.
+- Linking of virtual networks to a distributed denial of service (DDoS) Network Protection.
 
 > [!NOTE]
 > In the Azure landing zone reference implementations, Azure policies with the `DeployIfNotExists` and `Modify` [effects](/azure/governance/policy/concepts/effects) are used to achieve the deployment of some of the preceding resources. They follow the [policy-driven governance](./design-principles.md#policy-driven-governance) design principle.

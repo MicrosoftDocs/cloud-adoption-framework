@@ -1,8 +1,8 @@
 ---
 title: Understand financial considerations
 description: Understand cloud economics and the financial considerations to help you build a business case to migrate to the cloud
-author: WendyRing
-ms.author: wering
+author: martinekuan
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/18/2022
 ms.topic: conceptual

@@ -1,8 +1,8 @@
 ---
 title: Develop your naming and tagging strategy for Azure resources
 description: Read an overview of resource naming and tagging strategy for enterprise cloud adoption efforts.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 12/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -47,7 +47,7 @@ A naming and tagging strategy includes business and operational details as compo
 
 ## Next steps
 
-Learn about the considerations for defining your naming convention your Azure resources and assets, and review example names for resources and assets in Azure.
+Learn about the considerations for defining your naming convention of your Azure resources and assets, and review example names for resources and assets in Azure.
 
 > [!div class="nextstepaction"]
 > [Name your Azure resources and assets](./resource-naming.md)

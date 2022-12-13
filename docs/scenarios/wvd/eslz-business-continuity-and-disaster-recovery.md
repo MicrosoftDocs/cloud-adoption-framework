@@ -2,7 +2,7 @@
 title: Business continuity and disaster recovery for Azure Virtual Desktop
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for an Azure Virtual Desktop environment.
 author: igorpag
-ms.author: brblanch
+ms.author: martinek
 ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Business continuity and disaster recovery considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. The service is free of charge. Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
+Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. Costs for the service are included as part of eligible licenses, see [Azure Virtual Desktop Pricing](https://azure.microsoft.com/pricing/details/virtual-desktop/). Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
@@ -59,9 +59,6 @@ For host pool VM resiliency, consider these factors:
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
 - Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
-
-  > [!NOTE]
-  > You must use an Azure Resource Manager template (ARM template) to specify zones. Currently, this option isn't available in the Azure portal.
 
 Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications that your organization accesses via Azure Virtual Desktop are critical to your business. You might want to separate critical applications from non-critical applications so that you can provision multiple host pools by using different disaster recovery approaches and capabilities.
 
@@ -125,7 +122,11 @@ We recommend that you incorporate these best practices into your infrastructure 
 For most scenarios, we recommend that you use Azure Files or Azure NetApp Files to store FSLogix user profile and Office containers.
 
 - Split user profile and Office containers.
-- We recommend these options for container storage types, in this order: Azure Files Premium tier, Azure NetApp Files Standard tier, and Azure NetApp Files Premium tier.
+- We recommend these options for container storage types, in this order: 
+
+   1. Azure Files Premium tier
+   1. Azure NetApp Files Standard tier
+   1. Azure NetApp Files Premium tier
 - The optimum storage type depends on the resources and latency that your workload requires.
 - For optimal performance, place FSLogix containers in storage that's close to the VM the user is signed in to. It's best to keep the containers in the same datacenter.
 

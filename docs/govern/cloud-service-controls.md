@@ -2,7 +2,7 @@
 title: Cloud service review process
 description: Learn about the process for implementing governing rules and standards into the cloud on individual services.
 author: phduf
-ms.author: janet
+ms.author: martinek
 ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
