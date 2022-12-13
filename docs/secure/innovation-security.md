@@ -1,8 +1,8 @@
 ---
 title: Innovation security
 description: Explore the key themes of consideration for integrating security best practices into innovation areas
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

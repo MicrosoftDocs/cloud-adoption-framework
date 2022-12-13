@@ -1,8 +1,8 @@
 ---
 title: Introduction to the hybrid and multicloud scenario
 description: Learn about the hybrid and multicloud scenario.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Migrate applications from mainframes to Azure
 description: Get technical guidance for making the switch from a mainframe platform to Azure hyperscale compute and storage in a high availability environment.
 author: njray
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/26/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

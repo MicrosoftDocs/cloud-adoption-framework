@@ -1,8 +1,8 @@
 ---
 title: Specialized platforms for cloud management
 description: Use the Cloud Adoption Framework for Azure to improve platform-specific cloud management operations, including improving the system design and automated remediation.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

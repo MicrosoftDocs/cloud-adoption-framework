@@ -2,7 +2,7 @@
 title: Apply inventory tagging to Azure Arc-enabled servers
 description: Learn how to use Azure Arc-enabled servers to provide server inventory management capabilities across hybrid multicloud and on-premises environments
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

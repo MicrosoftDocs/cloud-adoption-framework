@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Manage cloud costs'
 description: Learn the basics of managing costs associated with cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

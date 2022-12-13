@@ -2,7 +2,7 @@
 title: What are AI applications?
 description: What are AI applications? Learn how you can integrate AI applications and capabilities with your applications using Azure Cognitive Services.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
