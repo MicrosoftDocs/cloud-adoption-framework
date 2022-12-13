@@ -21,7 +21,7 @@ We define each approach and outline their benefits. If the benefits described ma
 
 ## Migrate ("Rehost")
 
-Migrate or rehost your applications first. This is the "lift-and-shift" approach. With this approach, you move an existing application to the cloud as it is and modernize it later. Rehosting has four major benefits.
+Migrate your applications first using the rehosting approach ("lift-and-shift"). With rehosting, you move an existing application to the cloud as it is and modernize it later. Rehosting has four major benefits.
 
 - ***Immediate sustainability:*** The lift-and-shift approach is the fastest way to reduce your data center footprint.
 
