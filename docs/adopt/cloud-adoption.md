@@ -66,15 +66,15 @@ You should apply lessons-learned from your first moves to tackle more challengin
 
 Move the most difficult and costly workloads last. The following systems might need more thought to move efficiently.
 
-***High Value Asset (HVA):*** Disruption or corruption of this workload would disrupt all business operations.
+- ***High Value Asset (HVA):*** Disruption or corruption of this workload would disrupt all business operations.
 
-***Public Key Infrastructure (PKI) systems:*** Workloads that manage x509 digital certificates, network encryption, and authentication.
+- ***Public Key Infrastructure (PKI) systems:*** Workloads that manage x509 digital certificates, network encryption, and authentication.
 
-***Legacy source control:*** Source control systems that aren't easily replaced with GitHub.
+- ***Legacy source control:*** Source control systems that aren't easily replaced with GitHub.
 
-***Can't be modernized:*** Legacy or proprietary technology that can't be modernized.
+- ***Can't be modernized:*** Legacy or proprietary technology that can't be modernized.
 
-***Deep architectural change:*** Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) rather than the CAF modernize approach.
+- ***Deep architectural change:*** Legacy architectures that require a complete redesign of the architecture. Use the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) rather than the CAF modernize approach.
 
 ### More resources
 
