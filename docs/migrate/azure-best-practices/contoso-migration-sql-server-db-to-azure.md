@@ -2,7 +2,7 @@
 title: Migrate SQL Server databases to Azure
 description: Learn how Contoso migrates their on-premises SQL databases to Azure.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 10/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

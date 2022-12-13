@@ -2,7 +2,7 @@
 title: Migration execution with Azure Migrate for servers
 description: Learn how Tailwind Traders sets up an Azure Migrate server replication.
 author: alejandra8481
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/09/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,8 +1,8 @@
 ---
 title: Architectural decision guides
 description: Use these core cloud deployment infrastructure component guides to support your specific cloud deployment scenarios.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 02/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

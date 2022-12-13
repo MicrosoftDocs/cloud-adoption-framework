@@ -2,7 +2,7 @@
 title: Business outcomes from transformation journeys
 description: Use the Cloud Adoption Framework for Azure to understand the business outcomes associated with cloud transformations.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/18/2022
 ms.topic: conceptual

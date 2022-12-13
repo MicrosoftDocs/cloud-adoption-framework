@@ -1,8 +1,8 @@
 ---
 title: Retail industry context
 description: Establish Microsoft view of the retail industry and what roles Azure and other technologies play in modern retail.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 06/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Refactor an on-premises application to an Azure App Service web app and a SQL managed instance
 description: Learn how Contoso rehosts an on-premises application by migrating it to an Azure App Service web app and a SQL managed instance.
 author: givenscj
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

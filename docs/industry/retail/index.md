@@ -1,8 +1,8 @@
 ---
 title: Introduction to cloud adoption for the retail industry
 description: Find out what guidance is available for you to learn about the cloud, and about planning a cloud-adoption journey for a retail company.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
