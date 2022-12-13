@@ -208,7 +208,7 @@ You can now connect application landing zone spokes via Virtual Network Connecti
    - The same existing subscription is generally recommended to use for most customers across multiple regions for identity
 2. Create new Resource Group in subscription in the new target region
 3. Create new Virtual Network in the new target region
-4. Establish Virtual Network Peering back to the hub Virtual Network in the connectivity subscription
+4. Establish Virtual Network Peering back to the newly created regional hub Virtual Network in the connectivity subscription
 5. Deploy identity workloads, like Active Directory Domain Controller Virtual Machines into new Virtual Network
     - You might need to perform additional setup and configuration of the workloads once provisioned, like:
       - Promoting the Active Directory Domain Controller Virtual Machines to the existing Active Directory Domain
