@@ -1,8 +1,8 @@
 ---
 title: 'Standard enterprise governance: Multicloud improvement'
 description: Use the Cloud Adoption Framework for Azure to learn about multiple clouds and how to integrate multiple clouds into existing operations.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

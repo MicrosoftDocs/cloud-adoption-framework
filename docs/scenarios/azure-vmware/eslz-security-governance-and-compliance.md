@@ -2,7 +2,7 @@
 title: Security, governance, and compliance disciplines for Azure VMware Solution
 description: Understand security, governance, and compliance considerations for Azure VMware Solution, and design recommendations and best practices to mitigate risks.
 author: Mahesh-MSFT
-ms.author: janet
+ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

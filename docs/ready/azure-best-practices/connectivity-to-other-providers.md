@@ -2,7 +2,7 @@
 title: Connectivity to other cloud providers
 description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
 author: daltondhcp
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

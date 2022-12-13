@@ -2,7 +2,7 @@
 title: What is Azure Cognitive Search?
 description: Formerly Azure Search, Azure Cognitive Search is a cognitive search engine that helps you apply AI processes while indexing. Learn more about Azure Cognitive Services.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Introduction to Azure Arc landing zone accelerator for hybrid and multicloud
 description: Learn how Azure Arc can accelerate your adoption of a hybrid or multicloud architecture.
 author: likamrat
-ms.author: doalle
+ms.author: martinek
 ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

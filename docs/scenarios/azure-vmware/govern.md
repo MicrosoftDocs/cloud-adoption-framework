@@ -2,7 +2,7 @@
 title: Govern Azure VMware Solution
 description: Learn about how to extend your governance approach across the Azure VMware Solution.
 author: mpvenables
-ms.author: janet
+ms.author: martinek
 ms.date: 04/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

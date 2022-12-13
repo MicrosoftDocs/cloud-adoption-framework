@@ -2,7 +2,7 @@
 title: What is machine learning?
 description: Get started with Azure Machine Learning, MLOps, and machine learning deployment tools.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

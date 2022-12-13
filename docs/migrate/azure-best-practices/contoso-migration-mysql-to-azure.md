@@ -2,7 +2,7 @@
 title: Migrate MySQL databases to Azure
 description: Learn how Contoso migrated its on-premises MySQL databases to Azure.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

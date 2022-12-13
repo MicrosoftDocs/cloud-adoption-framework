@@ -2,7 +2,7 @@
 title: Manage costs and billing for your Azure resources
 description: Use the Cloud Adoption Framework for Azure to understand invoices and learn how to set up budgets and payments for your Azure resources.
 author: dchimes
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

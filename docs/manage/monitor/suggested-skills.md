@@ -1,10 +1,10 @@
 ---
 title: Skills readiness for cloud monitoring
 description: Skills readiness for cloud monitoring
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.reviewer: tozimmergren
-ms.date: 11/16/2022
+ms.date: 12/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
