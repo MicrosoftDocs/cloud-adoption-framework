@@ -60,9 +60,6 @@ For host pool VM resiliency, consider these factors:
 
 - Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
 
-  > [!NOTE]
-  > You must use an Azure Resource Manager template (ARM template) to specify zones. Currently, this option isn't available in the Azure portal.
-
 Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications that your organization accesses via Azure Virtual Desktop are critical to your business. You might want to separate critical applications from non-critical applications so that you can provision multiple host pools by using different disaster recovery approaches and capabilities.
 
 ### Optimal storage for profile and Office containers
