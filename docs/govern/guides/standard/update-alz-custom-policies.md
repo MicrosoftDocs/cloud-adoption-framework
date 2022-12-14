@@ -12,7 +12,7 @@ ms.custom: internal
 
 
 
-# Azure Landing Zone governance guide: Overview of updating Azure Landing Zone custom policies to newer versions of ALZ custom policies
+# Azure Landing Zone governance guide: Overview of updating Azure Landing Zone custom policies
 
 Over time Azure Landing Zone (ALZ) custom policies and policy initiatives, may become outdated and should be removed or updated. This article describes how to update ALZ custom policies and policy initiatives when newer versions are released. The guidance provided in this document describes manual high-level steps for performing the update, as well as references on how to handle the process for implementations managed through the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [ALZ Bicep module(s)](https://aka.ms/alz/bicep).
 
