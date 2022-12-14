@@ -60,6 +60,6 @@ items:
   - name: Learn
     items:
       - name: U.S. Government learn modules
-        href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&products=azure-sovereign-us?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+        href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fdefense%2Ftoc.json&filter-products=gover&products=azure-sovereign-us
       - name: CISO workshops
         href: /security/ciso-workshop/ciso-workshop?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
