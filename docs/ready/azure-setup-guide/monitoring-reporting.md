@@ -159,7 +159,7 @@ By connecting data sources to Microsoft Sentinel using the built-in connectors, 
 
 **Get started:**
 
-1. Review the [Microsoft Sentinel pricing](/pricing/details/microsoft-sentinel/) to understand the cost impact.
+1. Review the [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/microsoft-sentinel/) to understand the cost impact.
 1. Learn how to [onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and set up data connectors to monitor and protect your environment.
 
 After you've connected data sources using the data connectors, you can immediately start using the platform's capabilities.
