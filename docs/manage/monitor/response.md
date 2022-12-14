@@ -159,12 +159,12 @@ After the release of your monitoring configuration, you can learn a lot about wh
 
 [Azure Monitor](/azure/azure-monitor/overview) support alerts based on static or even dynamic thresholds, and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Azure Monitor also [integrates with various IT service management (ITSM) solutions](/azure/azure-monitor/alerts/itsmc-overview) to automate the creation of incident records and escalate to the right support team or any other alert management system that uses a webhook.
 
-If you are in a hybrid scenario or are migrating resources directly to the cloud, you can still utilize [System Center Operations Manager](/system-center/scom/welcome) (SCOM), which has similar capabilities for alert automation. However, for cloud-native workloads and the more modern monitoring needs, Azure Monitor usually covers the common use cases.
+If you are in a hybrid scenario or are migrating resources directly to the cloud, you can still utilize [System Center Operations Manager](/system-center/scom/welcome), which has similar capabilities for alert automation. However, for cloud-native workloads and the more modern monitoring needs, Azure Monitor usually covers the common use cases.
 
 You can also, as an example, use the following Azure services or service-related features to help automate response and recovery actions:
 
 * [Azure Automation](/azure/automation/overview).
-* [Azure Logic Apps](/en-us/azure/logic-apps/logic-apps-overview).
+* [Azure Logic Apps](/azure/logic-apps/logic-apps-overview).
 * [Azure Functions](/azure/azure-functions/functions-overview).
 * Azure Kubernetes Service using the [Kubernetes container orchestration](/azure/architecture/microservices/design/orchestration) engine supporting containerized microservices.
 * [Security Orchestration, Automation, and Response (SOAR)](/azure/sentinel/automation) in Microsoft Sentinel.
