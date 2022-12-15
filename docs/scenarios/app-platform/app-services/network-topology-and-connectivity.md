@@ -21,9 +21,9 @@ The network topology and connectivity considerations for this architecture will 
 
 The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service:
 
-- Decide on The Networking requirements of your Application:
+- Decide on The Networking requirements of your application:
     - Your app may need to be able to receive incoming traffic from the internet. This is commonly necessary for apps that provide web-based services, such as a website or API. In this case, you will need to ensure that your app is able to accept incoming connections on the appropriate ports. 
-    - Your app may need to be able to access resources in other Azure servies deployed inside Azure Virtual Network address space or other Azure Service such as  storage accounts or databases using its private endpoint.
+    - Your app may need to be able to access resources in other Azure services deployed within an Azure Virtual Network address space or other Azure Service such as storage accounts or databases using its private endpoint.
     - You need to enable SSL/TLS for your app to encrypt traffic between your app and its users.
     - You may need to enable access to your app from specific IP addresses or address ranges, or block access from certain IPs.
     
@@ -32,7 +32,7 @@ The following is a bulleted list of things you must think about when preparing f
 
 ### Multi-Tenant App Service
 
-- Multi-Tenant App Service share a single inbound IP Address and multiple outbound IP addresses with other App Service resources in the same deployment unit.  These IP addresses can change for a [variety of reasons](/azure/app-service/overview-inbound-outbound-ips#how-ip-addresses-work-in-app-service). If consistent outbound IP addresses are needed for multi-tenant App Service, a [NAT gateway](/azure/app-service/networking/nat-gateway-integration#:~:text=%20Set%20up%20NAT%20gateway%20through%20the%20portal%3A,Basics%20information%20and%20pick%20the%20region...%20More%20) can be configured, or [VNet Integration](/azure/app-service/web-sites-integrate-with-vnet) can be used.
+- Multi-Tenant App Service shares a single inbound IP Address and multiple outbound IP addresses with other App Service resources in the same deployment unit.  These IP addresses can change for a [variety of reasons](/azure/app-service/overview-inbound-outbound-ips#how-ip-addresses-work-in-app-service). If consistent outbound IP addresses are needed for multi-tenant App Service, a [NAT gateway](/azure/app-service/networking/nat-gateway-integration#:~:text=%20Set%20up%20NAT%20gateway%20through%20the%20portal%3A,Basics%20information%20and%20pick%20the%20region...%20More%20) can be configured, or [VNet Integration](/azure/app-service/web-sites-integrate-with-vnet) can be used.
 - If a dedicated IP address is required by which to address your App Service, you can make use of [App-assigned addresses](/azure/app-service/networking/app-gateway-with-service-endpoints), or you could front your App Service with an [Application Gateway](/azure/app-service/networking/app-gateway-with-service-endpoints) (which is assigned a static IP address), or you can use IP-Based ssl certificate to get a dedicated IP address assigned to your app by the app service platform.
 
 - When there's a need to connect from an App Service to on-prem, private, or IP-restricted services, consider that:
@@ -65,3 +65,4 @@ The following is a bulleted list of best practices that should be included in an
 - Avoid [SNAT port exhaustion](/azure/app-service/troubleshoot-intermittent-outbound-connection-errors) by utilizing connection pools.  The creation of new connections repetitively to the same host and port can cause slow response times, intermittent 5xx errors, timeouts, or external endpoint connection issues.
 - Review and follow the recommendations outlined in the [Network Security section](/security/benchmark/azure/baselines/app-service-security-baseline?toc=/azure/app-service/toc.json#network-security) of the Azure security baseline for App Service.
 
+Overall, the goal of network topology and connectivity considerations for the Azure App Service landing zone accelerator is to provide a high-level blueprint for implementing a secure, scalable, and resilient environment for deploying Azure App Services. This blueprint helps organizations to quickly and efficiently set up a landing zone in Azure for hosting their App Services, with a focus on network architecture and connectivity. 
