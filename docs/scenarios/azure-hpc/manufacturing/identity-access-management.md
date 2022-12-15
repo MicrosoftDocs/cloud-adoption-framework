@@ -28,11 +28,11 @@ Depending on the HPC compute resource orchestrator that you use, various authent
 
 The following diagram shows a manufacturing reference architecture that uses CycleCloud:
 
-:::image type="content" source="./media/hpc-identity-access-management-cyclecloud.svg" alt-text="Diagram that shows a manufacturing reference architecture that uses Azure CycleCloud." lightbox="./media/hpc-identity-access-management-cyclecloud.svg":::
+:::image type="content" source="./media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="./media/hpc-identity-access-management-cyclecloud.png":::
 
 This diagram shows a manufacturing architecture that uses Batch: 
 
-:::image type="content" source="./media/hpc-identity-access-management-batch.svg" alt-text="Diagram that shows a manufacturing reference architecture that uses Azure Batch." lightbox="./media/hpc-identity-access-management-batch.svg":::
+:::image type="content" source="./media/hpc-identity-access-management-batch.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure Batch." lightbox="./media/hpc-identity-access-management-batch.png":::
 
 ## Next steps
 
