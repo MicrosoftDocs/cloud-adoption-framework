@@ -21,7 +21,7 @@ Learn more about the [identity and access management](../../../ready/landing-zon
 When preparing for deployment on Azure App Service, there are several considerations to keep in mind when it comes to identity and access management (IAM) for the landing zone accelerator. Here are some key points to consider:
 
 - Decide on The level of security and isolation required for the app and its data. Public access allows anyone with the app URL to access the app, while private access restricts access to only authorized users and networks.
-- Decide on the type of authentication and authorization required for your App Service: anonymous, internal corporate users, social accounts, other [identity provider](/azure/app-service/overview-managed-identity?tabs=dotnet), or a mixture of these.
+- Decide on the type of authentication and authorization needed for your App Service: anonymous, internal corporate users, social accounts, other [identity provider](/azure/app-service/overview-managed-identity?tabs=dotnet), or a mixture of these.
 - Decide on whether to use system-assigned or user-assigned [managed identities](/azure/app-service/overview-managed-identity?tabs=dotnet) for your App Service when connecting to AAD-protected backend resources.
 - Consider creating [custom roles](/azure/active-directory/roles/custom-create) following the principle of least privilege when out-of-box roles require modifications on existing permissions. 
 - Choosing secure store for keys, secrets, certificates and Application Configuration 
@@ -46,7 +46,7 @@ The following is a bulleted list of best practices that should be included in an
     unauthorized access or changes, and to take appropriate action.
 - Utilize system-assigned [managed identities](/azure/app-service/overview-managed-identity?tabs=dotnet) to securely access AAD-protected backend resources, This allows you to control which resources the app service has access to and what permissions it has for those resources.
 - For automated deployment purposes, set up a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) that has the minimum required permissions to deploy from the CI/CD pipeline.
-- Enable diagnostic logging "AppServiceHTTPLogs" access logs for Azure App Service. This will provide detailed logs that can be used to diagnose issues with your app and monitor access request, in addtion to Azure Monitor activity log that provides insight into subscription-level events.
+- Enable diagnostic logging "AppServiceHTTPLogs" access logs for Azure App Service. This will provide detailed logs that can be used to diagnose issues with your app and monitor access request, in addition to Azure Monitor activity log that provides insight into subscription-level events.
 - Review and follow the recommendations outlined in the [Identity and Access Control section](/security/benchmark/azure/baselines/app-service-security-baseline?toc=/azure/app-service/toc.json#identity-and-access-control) of the Azure security baseline for App Service.
 
 Overall, the goal of identity and access management for the landing zone accelerator is to ensure that the deployed app and its associated resources are secure and can be accessed only by authorized users. This can help protect sensitive data and prevent unauthorized access or misuse of the app and its resources.
