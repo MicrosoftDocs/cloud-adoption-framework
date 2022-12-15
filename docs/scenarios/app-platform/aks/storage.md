@@ -184,7 +184,7 @@ For Azure NetApp Files, we recommend the following design options:
 
   - **Choose a performance tier based on the application requirements.** Azure NetApp Files offers 3 performance tiers that offer varying classes of performance. For more information, see [Performance considerations for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-performance-considerations).
   
-  - **Create capacity pools in the same Azure region as the AKS cluster.** For more informatoin, see [Create a capacity pool for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool).
+  - **Create capacity pools in the same Azure region as the AKS cluster.** For more information, see [Create a capacity pool for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool).
 
   - **Use the Auto QoS type for capacity pools.** 
 
