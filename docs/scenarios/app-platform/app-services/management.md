@@ -36,6 +36,11 @@ The following is a bulleted list of things you must think about when preparing f
 - Backup of App Gateway configuration – Only ARM Template? Where is it stored and how it’ll be utilized – Manually or through automation e.g., ADO pipelines?
 - Consider the [information that can be backed up](/azure/app-service/manage-backup#what-gets-backed-up) and the [requirements and restrictions](/azure/app-service/manage-backup#requirements-and-restrictions)
 
+- Monitoring and diagnostics: Azure App Service provides built-in monitoring and diagnostic tools to help you track the performance and availability of your app. This includes metrics, logs, and alerts, as well as the ability to view live stream logs and run custom queries on the data.
+- Deployment and scaling: Azure App Service enables you to deploy your app quickly and easily, using a variety of methods such as continuous deployment from popular source code repositories like GitHub and Azure DevOps. You can also scale your app up or down based on its current usage, using built-in auto-scaling capabilities or by manually adjusting the number of instances.
+- Security and compliance: Azure App Service provides a secure environment for your app, with features such as built-in authentication and authorization, SSL/TLS certificates, and network isolation. It also meets a wide range of compliance standards, including HIPAA, PCI DSS, and ISO 27001.
+- Management and troubleshooting: Azure App Service includes a rich set of management and troubleshooting tools, such as the Azure portal, Azure PowerShell, and the Azure CLI. These tools allow you to manage your app's settings, view its performance data, and diagnose and fix any issues that may arise.
+
 ### Multi-Tenanted
 
 - If your application needs to be redundant across regions, deploy the solution in more than one region and use Traffic Manager or Azure Front Door to balance load between these deployments.
@@ -51,6 +56,13 @@ The following is a bulleted list of things you must think about when preparing f
 
 The following is a bulleted list of best practices that should be included in any deployment of App Service.
 
+- One key aspect of operations management in Azure App Service is monitoring and diagnostics. This allows you to track the performance and availability of your app in real time, using a variety of built-in metrics, logs, and alerts. For example, you can view live stream logs to see incoming requests to your app, and run custom queries on log data to diagnose issues or identify trends. You can also set up alerts to notify you of any potential issues or performance degradation, so that you can take action to resolve them quickly.
+
+- Another important aspect of operations management in Azure App Service is deployment and scaling. Azure App Service makes it easy to deploy your app, using a variety of methods such as continuous deployment from popular source code repositories like GitHub and Azure DevOps. You can also scale your app up or down based on its current usage, using built-in auto-scaling capabilities or by manually adjusting the number of instances. This ensures that your app can handle varying levels of traffic and workload, without compromising performance or availability.
+
+- In addition to monitoring, deployment, and scaling, Azure App Service also provides robust security and compliance capabilities. This includes features such as built-in authentication and authorization, SSL/TLS certificates, and network isolation, to help protect your app and its data from unauthorized access or attack. Azure App Service also meets a wide range of compliance standards, including HIPAA, PCI DSS, and ISO 27001, so you can trust that your app is compliant with relevant regulations and industry standards.
+-  Azure App Service includes a rich set of management and troubleshooting tools, such as the Azure portal Metrics and Diagnoase and Solve Problem blade, Azure PowerShell, and the Azure CLI. These tools allow you to manage your app's settings, view its performance data, and diagnose and fix any issues that may arise. This makes it easy to maintain and troubleshoot your app in the cloud, so that you can keep it running smoothly and reliably.
+
 ### Multi-Tenanted
 
 - Deploy your App Service solution to at least two regions, and possibly to multiple geographies, if required.
@@ -64,3 +76,6 @@ The following is a bulleted list of best practices that should be included in an
 - Where your ASE instances are deployed across Availability Zones in the same region, use Azure Application Gateway to provide load balancing and WAF capabilities between the instances.
 - Where cross-regional high availability is required, utilize Azure Front Door to provide load balancing and WAF capabilities between the different instances.
 - Modify your CI/CD processes so that changes to the solution are deployed to each target ASE instance.
+
+
+Overall, Azure App Service provides a comprehensive set of operations management capabilities, enabling you to monitor, deploy, secure, and manage your app effectively in the cloud.
