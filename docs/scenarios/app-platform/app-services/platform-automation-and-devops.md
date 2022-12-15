@@ -57,6 +57,4 @@ The following is a bulleted list of best practices that should be included in an
 
 - Collaboration and communication: Successful platform automation, DevOps, and CI/CD processes rely on effective collaboration and communication among team members. This means implementing tools and processes that facilitate communication and collaboration, such as agile development methodologies and tools for tracking and managing tasks and dependencies.
 
-
-
 Overall, the key to successful platform automation, DevOps, and CI/CD with the Azure App Service is to design and implement processes and systems that are scalable, secure, well-monitored, and collaborative. By keeping these considerations in mind, IT and cloud engineers can ensure that their apps and APIs are able to deliver the best possible performance and user experience.
