@@ -18,6 +18,12 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## December 2022
 
+### Defense cloud adoption scenario
+
+The Defense cloud adoption scenario provides universal guidance to help mission owners accelerate digital transformation. It’s impartial to country and collects best practices we’ve developed working with defense organizations around the world. Mission owners face challenges uncommon in other sectors. The Defense cloud adoption scenario provides recommendations to navigate unique defense challenges so mission owners can focus on meeting mission objectives.
+
+We invite you to explore Defense cloud adoption scenario and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result is a secure, scalable, and governed environment that is tailored to mission needs.
+
 ### HPC landing zone accelerator
 
 High-performance computing (HPC) on Azure is the complete set of Azure resources—compute, networking, and storage—integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries, such as manufacturing, energy, and finance. 
