@@ -4,7 +4,7 @@ description: Learn how the management baseline can improve the management and mo
 author: Zimmergren
 ms.author: martinek
 ms.reviewer: tozimmergren
-ms.date: 12/13/2022
+ms.date: 12/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -34,7 +34,7 @@ Review the following considerations and recommendations for platform management 
 
 - Explore how to [Use Azure Virtual Desktop Insights](/azure/virtual-desktop/insights) to monitor your Azure Virtual Desktop deployment.
 - Review the guidance for [designing a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design) to make informed decisions on how you set up your Log Analytics workspaces.
-- Read [Use Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics#push-diagnostics-data-to-your-workspace) to see how activity logs for user and administrative activities are categorized.
+- Read [Use Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics) to see how activity logs for user and administrative activities are categorized.
 - Configure diagnostic settings to [send monitoring data to a storage account](/azure/azure-monitor/essentials/resource-logs#send-to-azure-storage) if there's a need to go beyond the two-year retention period.
 - You should consider collecting the following performance counters with Log Analytics for Azure Virtual Desktop monitoring to measure performance, which can help troubleshoot performance issues on specific environments:
 
@@ -65,7 +65,7 @@ Review the following considerations and recommendations for platform management 
 
   <!-- docutune:enable -->
 
-- Collect the following Windows event logs into the Azure Monitor Log Analytics workspace.
+- For additional troubleshooting insights, collect the following Windows event logs into the Azure Monitor Log Analytics workspace.
 
    **Windows Event Log name**
 
@@ -90,15 +90,18 @@ Review the following considerations and recommendations for infrastructure manag
 
 ### Design considerations: Infrastructure
 
-- Use the same Log Analytics workspace that's used for the Azure Virtual Desktop platform.
+- Consider what Log Analytics workspace you use for Azure Virtual Desktop.
 - The session host performance counters are collected and logged.
 - Use network performance monitoring for user experience management.
 - Set up an alerting model around the collected logs and metrics.
 - Use Windows Update Management for the session hosts between feature updates.
+- Consider relying on Azure Policy for your governance and security monitoring needs.
 
 ### Design recommendations: Infrastructure
 
+- Use the same Log Analytics workspace that's used for the Azure Virtual Desktop platform.
 - Use a centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
-- Set up the performance counters according to the [documentation](/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
+- Set up the performance counters according to the [documentation](/azure/virtual-desktop/insights#workspace-performance-counters).
 - Set up the Network Performance Monitor in the same region as your Azure Virtual Network and session hosts.
 - Incorporate Azure policies and governance for enterprise-scale into the Azure Virtual Desktop landing zone.
+- The [security baseline for Azure Virtual Desktop](/security/benchmark/azure/baselines/virtual-desktop-security-baseline#data-protection) has relevant Azure Policy Definitions listed, helping you measure compliance to the Azure Security Benchmark.
