@@ -27,6 +27,8 @@ items:
       href: scenarios/wvd/index.md
     - name: Retail industry
       href: industry/retail/index.md
+    - name: Defense
+      href: scenarios/defense/index.md
 
   - name: Adoption journeys
     items:
