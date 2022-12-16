@@ -26,7 +26,7 @@ We invite you to explore Defense cloud adoption scenario and return to this cont
 
 ### HPC landing zone accelerator
 
-High-performance computing (HPC) on Azure is the complete set of Azure resources—compute, networking, and storage—integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries, such as manufacturing, energy, and finance. 
+High-performance computing (HPC) on Azure is the complete set of Azure resources—compute, networking, and storage—integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries, such as manufacturing, energy, and finance.
 
 The HPC landing zone accelerator modernizes HPC workloads on Azure by offering global regulatory compliance, next-generation machine-learning tools, and a well-architected framework for best practices. The landing zone accelerator also provides industry-specific architecture references and automation solutions that help you start your HPC journey on Azure.
 
@@ -155,7 +155,7 @@ Use the following table of article links to get started with this scenario.
 
 The new App Service landing zone accelerator provides recommendations and considerations that help accelerate your App Service adoption. You can use its architectural approach as a set of design guidelines in greenfield scenarios and as an assessment in brownfield scenarios. This scenario covers both multi-tenanted App Service and App Service Environment deployments. Its reference implementation covers an architecture that uses an internal App Service Environment v3 for line of business applications.
 
-Use the following links to get started with this landing zone accelerator: 
+Use the following links to get started with this landing zone accelerator:
 
 - [Identity and access management](../scenarios/app-platform/app-services/identity-and-access-management.md)
 - [Network topology and connectivity](../scenarios/app-platform/app-services/network-topology-and-connectivity.md)
@@ -181,7 +181,7 @@ Use the following links to get started with this landing zone accelerator:
 
 ### Cloud-scale analytics
 
-This Cloud Adoption Framework release provides a considerable update to the Data Management and Analytics scenario. Based on feedback and lessons from many of our customers, we've renamed this scenario "cloud-scale analytics" and updated all the articles within it.  The following table provides links to the highlights. 
+This Cloud Adoption Framework release provides a considerable update to the Data Management and Analytics scenario. Based on feedback and lessons from many of our customers, we've renamed this scenario "cloud-scale analytics" and updated all the articles within it.  The following table provides links to the highlights.
 
 | Article | Description |
 |--|--|
