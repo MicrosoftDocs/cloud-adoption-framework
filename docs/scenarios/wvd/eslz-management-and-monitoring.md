@@ -1,41 +1,42 @@
 ---
 title: Management baseline for Azure Virtual Desktop
 description: Learn how the management baseline can improve the management and monitoring of Azure Virtual Desktop.
-author: martinekuan
+author: Zimmergren
 ms.author: martinek
-ms.date: 05/18/2021
+ms.reviewer: tozimmergren
+ms.date: 12/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+ms.custom: think-tank, e2e-avd, engagement-fy23
 ---
 
 # Management baseline considerations for an Azure Virtual Desktop
 
-Achieve operational excellence and customer success by properly designing your Azure Virtual Desktop environment with management and monitoring in mind.
+Achieve operational excellence and customer success by correctly designing your Azure Virtual Desktop environment with management and monitoring in mind.
 
 ## Platform management and monitoring
 
-Review the following considerations and recommendation for platform management and monitoring of Azure Virtual Desktop.
+Review the following considerations and recommendations for platform management and monitoring of Azure Virtual Desktop.
 
 ### Design considerations
 
-- Use Azure Monitor Log Analytics workspaces as the administrative boundary of logs.
+- Consider how you use Azure Monitor Log Analytics workspaces across your Azure Virtual Desktop deployments.
 - Collect telemetry from the following platform services:
   - Workspaces
   - Host pools
-- Performance counters should be collected.
-- Azure event logs should be collected.
+- Both user and administrative activities are logged using Log Analytics.
+- Collect performance counters to enable performance measurement of the Azure Virtual Desktop environment.
 - Create a dashboard from the platform logs to centralize visuals for reporting operations.
 - Learn to [use Azure Monitor for Azure Virtual Desktop to monitor your deployment](/azure/virtual-desktop/azure-monitor).
 
 ### Design recommendations
 
-- Use a separate dedicated Azure Monitor Log Analytics workspace for Azure Virtual Desktop.
-- Centralize your Azure Monitor Log Analytics workspace in the region of your Azure Virtual Desktop deployment.
-- Export diagnostic settings to a storage account if there's a need to go beyond the two-year retention period.
-- Enable the platform service diagnostic telemetry stated in the considerations to go to the Azure Monitor Log Analytics workspace.
-- The following Windows performance counters should be collected by Log Analytics for Azure Virtual Desktop monitoring:
+- Explore how to [Use Azure Virtual Desktop Insights](/azure/virtual-desktop/insights) to monitor your Azure Virtual Desktop deployment.
+- Review the guidance for [designing a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design) to make informed decisions on how you set up your Log Analytics workspaces.
+- Read [Use Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics#push-diagnostics-data-to-your-workspace) to see how activity logs for user and administrative activities are categorized.
+- Configure diagnostic settings to [send monitoring data to a storage account](/azure/azure-monitor/essentials/resource-logs#send-to-azure-storage) if there's a need to go beyond the two-year retention period.
+- You should consider collecting the following performance counters with Log Analytics for Azure Virtual Desktop monitoring to measure performance, which can help troubleshoot performance issues on specific environments:
 
   <!-- docutune:disable -->
 
@@ -81,11 +82,11 @@ Review the following considerations and recommendation for platform management a
 
 - Application groups can be segregated in many ways. We recommend separating them based on which department or user type (for example, power, engineering, or general) the user is a part of.
 
-For a glossary, data storage cost estimations, and additional troubleshooting guidance, see [Azure Monitor next steps](/azure/virtual-desktop/azure-monitor#next-steps).
+For a glossary, data storage cost estimations, and more troubleshooting guidance, see [Azure Monitor next steps](/azure/virtual-desktop/azure-monitor#next-steps).
 
 ## Infrastructure management and monitoring
 
-Review the following considerations and recommendation for infrastructure management and monitoring of Azure Virtual Desktop.
+Review the following considerations and recommendations for infrastructure management and monitoring of Azure Virtual Desktop.
 
 ### Design considerations: Infrastructure
 
