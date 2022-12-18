@@ -28,7 +28,6 @@ There are several key considerations for operations management when using the Az
 
 By considering these operations management considerations and following the guidance provided by the Azure App Service landing zone accelerator, you can set up a secure and scalable environment for hosting your applications on Azure.
 
-
 ## Design recommendations
 
 The following is a bulleted list of best practices that should be included in any deployment of App Service.
