@@ -28,16 +28,6 @@ There are several key considerations for operations management when using the Az
 
 By considering these operations management considerations and following the guidance provided by the Azure App Service landing zone accelerator, you can set up a secure and scalable environment for hosting your applications on Azure.
 
-### Multi-Tenanted
-
-- If your application needs to be redundant across regions, deploy the solution in more than one region and use Traffic Manager or Azure Front Door to balance load between these deployments.
-- If your application spans geographies, consider deploying to a single region in each applicable geography and use Traffic Manager or Azure Front Door to provide geography-based routing.  This will provide enhanced performance and increased redundancy.
-- If you need to recover from a disaster, consider if redeploying the application from a CI/CD process would be adequate.  Also consider that a web app is a component in a larger solution, and you will need to consider the DR processes for the other components in the solution.
-
-### App Service Environment
-
-- Guidance on designing an [ASE-based solution for high availability within a region](/azure/architecture/reference-architectures/enterprise-integration/ase-high-availability-deployment)
-- Guidance on [geographic redundancy](/azure/app-service/environment/app-service-app-service-environment-geo-distributed-scale)
 
 ## Design recommendations
 
