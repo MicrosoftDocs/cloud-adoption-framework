@@ -18,13 +18,18 @@ Learn more about the [Azure governance](../../../ready/landing-zone/design-area/
 
 ## Design considerations
 
+Governance is an important aspect to consider when using Azure App Service. It involves establishing policies and procedures to ensure that the platform is used in a consistent, secure, and compliant manner.
+
 The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service:
-- Security: The security of the Azure App Service landing zone is of utmost importance, as it will be hosting sensitive business-critical applications. Ensure that the landing zone is configured with the appropriate security controls and access policies to protect against unauthorized access.
+- Security and Access control: Azure App Service supports secure connections using SSL/TLS, as well as Azure Active Directory integration for authentication and authorization. It is important to ensure that all communication between the app and the client 
 - Compliance: Depending on the industry and regulatory requirements, the Azure App Service landing zone may need to be configured to meet certain compliance standards. This could include implementing specific security controls, as well as regularly monitoring and auditing the environment to ensure compliance.
 - Resource management: Proper resource management is essential for ensuring the efficient and cost-effective operation of the Azure App Service landing zone. This includes monitoring and controlling the allocation of resources such as storage, network bandwidth, and compute capacity.
+- Cost management: Azure App Service is a pay-as-you-go service, which means that you are charged based on your usage. It is important to establish policies and procedures for cost management to ensure that you are only paying for the resources you actually need and to avoid overspending.
 - Monitoring and logging: To ensure the availability and performance of the Azure App Service landing zone, it is important to implement monitoring and logging solutions. This will enable the team to quickly identify and address any issues that may arise, as well as to track the performance and usage of the environment over time.
-- Change management: To maintain the stability and integrity of the Azure App Service landing zone, it is important to implement a robust change management process. This should include controls for planning, testing, and implementing changes to the environment, as well as mechanisms for tracking and documenting changes.
 - Monitoring and Alerting: The Azure App Service landing zone accelerator should be monitored and alerted on in order to ensure that it is operating efficiently and effectively. This can be achieved through the use of Azure Monitor for performance monitoring and alerts, as well as implementing custom monitoring and alerting solutions as needed.
+- Data management: Azure App Service supports various options for storing and managing data, including Azure SQL Database, Azure Cosmos DB, and Azure Blob Storage. It is important to carefully consider your data management strategy to ensure that your data is stored in a secure and scalable manner.
+- Deployment strategy: Azure App Service supports various deployment options, including continuous deployment from source control and deployment slots for staging and testing. It is important to establish a deployment strategy that ensures that your app is deployed in a consistent and reliable manner.
+
 
 Overall, effective governance of the Azure App Service landing zone is crucial for ensuring the security, compliance, and performance of the environment. This will enable the team to deliver high-quality services to end users, while also mitigating risk and reducing costs.
 
