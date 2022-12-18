@@ -12,34 +12,21 @@ ms.custom: internal
 
 # Operations management considerations for the Azure App Service landing zone accelerator
 
-This article provides design considerations and recommendations for operations management when using the Azure App Service landing zone accelerator. Operations management covers multiple aspects including:
-
-- Application Gateway
-- Traffic Manager
-- Geographic Redundancy
-- Preparing for business continuity and disaster recovery
+This article provides design considerations and recommendations for operations management when using the Azure App Service landing zone accelerator. Operations management is a critical aspect of any cloud-based application, and the Azure App Service landing zone accelerator is no exception. This accelerator provides a set of pre-configured Azure resources and guidance for setting up a secure and scalable environment for hosting web, mobile, and API applications on Azure.
 
 Learn more about the [management](../../../ready/landing-zone/design-area/management.md) design area.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service.
+There are several key considerations for operations management when using the Azure App Service landing zone accelerator:
 
-- If an Application Gateway is used along with [App Service](/azure/app-service/networking/app-gateway-with-service-endpoints) or [App Service Environment](/azure/app-service/environment/integrate-with-application-gateway#:~:text=The%20integration%20of%20the%20application%20gateway%20with%20the,specific%20apps%20in%20your%20ILB%20App%20Service%20Environment.), consider Recovery Point Objective (RPO) and Recovery Time Objective(RTO) requirements, as those will dictate if App Gateway needs to be deployed in:
-  - Single region or multiregion
-  - Active-Active or Active-Standby Configuration
-
-- Consider whether a single point of entry or multiple entry points is required based on where the requests are coming from. This will facilitate decision for [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) or [Azure Front Door](/azure/frontdoor/front-door-overview)
-  - Is cost a concern?
-  - Is latency or an extra hop a concern?
-  - Any third-party solution used to direct traffic to App Gateway?
-- Backup of App Gateway configuration – Only ARM Template? Where is it stored and how it’ll be utilized – Manually or through automation e.g., ADO pipelines?
-- Consider the [information that can be backed up](/azure/app-service/manage-backup#what-gets-backed-up) and the [requirements and restrictions](/azure/app-service/manage-backup#requirements-and-restrictions)
-
-- Monitoring and diagnostics: Azure App Service provides built-in monitoring and diagnostic tools to help you track the performance and availability of your app. This includes metrics, logs, and alerts, as well as the ability to view live stream logs and run custom queries on the data.
-- Deployment and scaling: Azure App Service enables you to deploy your app quickly and easily, using a variety of methods such as continuous deployment from popular source code repositories like GitHub and Azure DevOps. You can also scale your app up or down based on its current usage, using built-in auto-scaling capabilities or by manually adjusting the number of instances.
-- Security and compliance: Azure App Service provides a secure environment for your app, with features such as built-in authentication and authorization, SSL/TLS certificates, and network isolation. It also meets a wide range of compliance standards, including HIPAA, PCI DSS, and ISO 27001.
 - Management and troubleshooting: Azure App Service includes a rich set of management and troubleshooting tools, such as the Azure portal, Azure PowerShell, and the Azure CLI. These tools allow you to manage your app's settings, view its performance data, and diagnose and fix any issues that may arise.
+- Security and compliance: Azure App Service provides a secure environment for your app, with features such as built-in authentication and authorization, SSL/TLS certificates, and network isolation. It also meets a wide range of compliance standards, including HIPAA, PCI DSS, and ISO 27001.
+- Monitoring, Alerting and Diagnostics: Azure App Service provides built-in monitoring, Alerting and diagnostic tools to help you track the performance and setting up alerts for key performance indicators such as response time and error rates. availability of your app. This includes metrics, logs, and alerts, as well as the ability to view live stream logs and run custom queries on the data.
+- Deployment and scaling: Azure App Service enables you to deploy your app quickly and easily, using a variety of methods such as continuous deployment from popular source code repositories like GitHub and Azure DevOps. You can also scale your app up or down based on its current usage, using built-in auto-scaling capabilities or by manually adjusting the number of instances.
+- Cost management: It's important to carefully manage costs in the Azure cloud, as it can be easy to rack up significant expenses if you're not careful. Make sure to consider cost management best practices, such as using reserved instances and properly sizing your resources.
+
+By considering these operations management considerations and following the guidance provided by the Azure App Service landing zone accelerator, you can set up a secure and scalable environment for hosting your applications on Azure.
 
 ### Multi-Tenanted
 
@@ -63,19 +50,19 @@ The following is a bulleted list of best practices that should be included in an
 - In addition to monitoring, deployment, and scaling, Azure App Service also provides robust security and compliance capabilities. This includes features such as built-in authentication and authorization, SSL/TLS certificates, and network isolation, to help protect your app and its data from unauthorized access or attack. Azure App Service also meets a wide range of compliance standards, including HIPAA, PCI DSS, and ISO 27001, so you can trust that your app is compliant with relevant regulations and industry standards.
 -  Azure App Service includes a rich set of management and troubleshooting tools, such as the Azure portal Metrics and Diagnoase and Solve Problem blade, Azure PowerShell, and the Azure CLI. These tools allow you to manage your app's settings, view its performance data, and diagnose and fix any issues that may arise. This makes it easy to maintain and troubleshoot your app in the cloud, so that you can keep it running smoothly and reliably.
 
-### Multi-Tenanted
 
-- Deploy your App Service solution to at least two regions, and possibly to multiple geographies, if required.
-- Utilize Azure Front Door to provide load balancing and WAF capabilities between the different deployments.
-- Modify your CI/CD processes so that changes to the solution are deployed to each target region.
-- Ensure that your CI/CD processes are set up to redeploy the solution in case a disaster impacts one or more of the deployments.
+Operations management is a crucial consideration when working with Azure App Service, whether you choose a multi-tenant App Service or a single tenant App Service Environment (ASE). Both options offer a range of benefits, and the right choice for your organization will depend on your specific needs and priorities.
 
-### App Service Environment
+### Multi-tenant App Service 
 
-- Deploy one instance of the ASE in two separate Availability Zones in the same region, or in two different regions if cross-regional high availability is required.
-- Where your ASE instances are deployed across Availability Zones in the same region, use Azure Application Gateway to provide load balancing and WAF capabilities between the instances.
-- Where cross-regional high availability is required, utilize Azure Front Door to provide load balancing and WAF capabilities between the different instances.
-- Modify your CI/CD processes so that changes to the solution are deployed to each target ASE instance.
+When designing and managing a multi-tenant App Service, there are several key considerations to keep in mind:
 
+- Cost: Multi-tenant App Service is generally more cost-effective than ASE, as it is shared among multiple tenants and does not require dedicated resources. This can make it a good choice for organizations on a tight budget.
+- Security and Networking: Multi-tenant App Service offers a secure hosting environment, but it may not offer the same level of security as an ASE. If security is a top priority, you may want to consider using an ASE instead, as it provies Network-isolated application hosting.
+
+
+### App Service Environment (Single-tenant)
+- Cost: ASEs are generally more expensive than multi-tenant App Service, as they offer a dedicated, single-tenant environment. It's important to carefully consider your budget and ensure that an ASE is the right choice for your organization.
+- Security and Networking: ASEs offer additional security features such as the ability to configure custom firewall rules, making them a good choice for organizations with stringent security requirements.
 
 Overall, Azure App Service provides a comprehensive set of operations management capabilities, enabling you to monitor, deploy, secure, and manage your app effectively in the cloud.
