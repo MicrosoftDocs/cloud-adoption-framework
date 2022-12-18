@@ -19,16 +19,15 @@ The network topology and connectivity considerations for this architecture will 
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service:
+Deploying an App Service in Azure requires careful consideration of networking requirements to ensure that your application is able to function properly. There are several key factors to consider when planning for a deployment:
 
 - Decide on The Networking requirements of your application:
-    - Your app may need to be able to receive incoming traffic from the internet. This is commonly necessary for apps that provide web-based services, such as a website or API. In this case, you will need to ensure that your app is able to accept incoming connections on the appropriate ports. 
-    - Your app may need to be able to access resources in other Azure services deployed within an Azure Virtual Network address space or other Azure Service such as storage accounts or databases using its private endpoint.
-    - You need to enable SSL/TLS for your app to encrypt traffic between your app and its users.
-    - You may need to enable access to your app from specific IP addresses or address ranges, or block access from certain IPs.
+    - Incoming traffic: If your app provides web-based services such as a website or API, it will likely need to be able to receive incoming traffic from the internet. To ensure that your app is able to accept incoming connections, you will need to configure it to listen on the appropriate ports.
+    - Access to other Azure resources: Your app may need to be able to access resources within Azure, such as storage accounts or databases, using its private endpoint. These resources may be located within an Azure Virtual Network or other Azure services.
+    - SSL/TLS: To secure the communication between your app and its users, it is important to enable SSL/TLS encryption. This will ensure that all traffic between your app and its users is encrypted, protecting sensitive information from being intercepted by third parties.
+    - IP restrictions: Depending on your requirements, you may need to allow or block access to your app from specific IP addresses or ranges. This can be useful for security purposes or to limit access to your app to specific users or locations.
     
-
-- App Service Plan tier required to support networking requirements would depend on the specific networking requirements of your application. It's best to review the different App Service Plan tiers and their features to determine which one would be most suitable for your need
+- App Service Plan tier: The tier of your App Service Plan should be chosen based on the networking requirements of your application. It is a good idea to review the different App Service Plan tiers and their features in order to determine which one will be the most suitable for your needs.
 
 ### Multi-Tenant App Service
 
@@ -36,9 +35,9 @@ The following is a bulleted list of things you must think about when preparing f
 - If a dedicated IP address is required by which to address your App Service, you can make use of [App-assigned addresses](/azure/app-service/networking/app-gateway-with-service-endpoints), or you could front your App Service with an [Application Gateway](/azure/app-service/networking/app-gateway-with-service-endpoints) (which is assigned a static IP address), or you can use IP-Based ssl certificate to get a dedicated IP address assigned to your app by the app service platform.
 
 - When there's a need to connect from an App Service to on-prem, private, or IP-restricted services, consider that:
-  - When running in the multi-tenanted environment, the App Service call can originate from a wide range of IP addresses, and [VNet Integration](/azure/app-service/web-sites-integrate-with-vnet) may be needed.
-  - Services like [API Management (APIM)](/azure/api-management/api-management-key-concepts) could be used to proxy calls between networking boundaries and can provide a static IP if needed.
-- App Services in the multi-tenanted environment can be deployed with a private or a public endpoint.  When deployed with a [Private Endpoint](/azure/app-service/networking/private-endpoint), public exposure of the App Service is eliminated.  If there's a requirement for the private endpoint of the App Service to also be reachable via the Internet, consider the use of App Gateway to expose the app service.
+  - When running in a Multi-Tenant App Service environment, the App Service call can originate from a wide range of IP addresses, and [VNet Integration](/azure/app-service/web-sites-integrate-with-vnet) may be needed.
+  - Services like [API Management (APIM)](/azure/api-management/api-management-key-concepts) and Application Gateway could be used to proxy calls between networking boundaries and can provide a static IP if needed.
+- Multi-Tenant App Service environment can be deployed with a private or a public endpoint.  When deployed with a [Private Endpoint](/azure/app-service/networking/private-endpoint), public exposure of the App Service is eliminated.  If there's a requirement for the private endpoint of the App Service to also be reachable via the Internet, consider the use of App Gateway to expose the app service.
 - Multi-Tenant App Service exposes [a set of ports](/azure/app-service/networking-features#app-service-ports). There's no way to block or control access to these ports in the Multi-Tenant App Service
 - Plan your subnets correctly for outbound VNET integration and consider the number of IP addresses that are required. VNet Integration depends on a dedicated subnet. When you provision a subnet, the Azure subnet loses five IPs from the start. One IP address is used from the integration subnet for each App Service Plan instance. When you scale your app to X number instances, then X number of IP addresses are used. When you scale up or down in size, the required address space is doubled for a short period of time. This affects the real, available supported instances for a given subnet size.
 - Since subnet size can't be changed after assignment, use a subnet that's large enough to accommodate whatever scale your app might reach. To avoid any issues with subnet capacity, you should use a /26 with 64 addresses for Vnet integration.
