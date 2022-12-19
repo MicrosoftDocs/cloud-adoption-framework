@@ -16,7 +16,7 @@ Encrypting data protects it against unauthorized access. Properly implemented en
 
 Jump to: [Key management](#key-management) | [Data encryption](#data-encryption) | [Learn more](#learn-more)
 
-Cloud encryption strategy focuses on corporate policy and compliance mandates. Encrypting resources is important. Many Azure services, such as Azure Storage and Azure SQL Database enable encryption by default. But encryption has costs that can increase latency and overall resource usage.
+Cloud encryption strategy focuses on corporate policy and compliance mandates. Encrypting resources is important. Many Azure services, such as Azure Storage and Azure SQL Database, enable encryption by default. But encryption has costs that can increase latency and overall resource usage.
 
 For demanding workloads, striking the correct balance between encryption and performance, and determining how to encrypt data and traffic is essential. Encryption mechanisms vary in cost and complexity. Both technical and policy requirements can influence your decisions on how to apply encryption and how you store and manage critical secrets and keys.
 
@@ -112,7 +112,7 @@ Encrypting data at rest assumes the following conditions:
 
 ### Data in use
 
-Encryption for data in use involves securing data in nonpersistent storage, such as RAM or CPU caches. And using technologies, such as full memory encryption and enclave technologies, such as Intel's Secure Guard Extensions (SGX). This approach also includes cryptographic techniques, such as homomorphic encryption that you can use to create secure, trusted execution environments.
+Encryption for data in use involves securing data in nonpersistent storage, such as RAM or CPU caches. And if you use technologies like full memory encryption and enclave solutions, such as Intel's Secure Guard Extensions (SGX). This approach also includes cryptographic techniques, such as homomorphic encryption that you can use to create secure, trusted execution environments.
 
 **Assumptions about encrypting data in use:** Encrypting data in use assumes the following condition:
 
