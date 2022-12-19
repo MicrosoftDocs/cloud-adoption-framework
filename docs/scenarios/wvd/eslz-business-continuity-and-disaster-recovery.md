@@ -39,6 +39,7 @@ For an Azure Virtual Desktop host pool, you can use either an *active-active* or
 - For virtual machines (VMs) in each region, invert the Cloud Cache registry entry that specifies locations to give precedence to the local cache registry.
 - Load balancing incoming user connections can't take proximity into account. All hosts are equal, and users might be directed to a remote (and not optimal) Azure Virtual Desktop host pool VM.
 - This configuration is limited to a *pooled* (shared) host pool type. For a *personal* (dedicated) type, when a desktop is assigned to a user on a certain session host VM, the desktop doesn't change, even if the VM isn't available.
+- Cloud Cache doesn't improve the users' sign-on and sign out experience when using poor performing storage. It's common for environments using Cloud Cache to have slightly slower sign-on and sign out times, relative to using traditional VHDLocations, using the same storage. [Review the FSLogix Cloud Cache documenation for recommendation regarding local cache storage.](/fslogix/cloud-cache-resiliency-availability-cncpt)
 - The active-active host pool configuration often is complex. It isn't considered a performance optimization or a cost optimization.
 
 #### Active-passive host pool
