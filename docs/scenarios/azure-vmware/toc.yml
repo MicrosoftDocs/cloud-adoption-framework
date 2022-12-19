@@ -29,8 +29,8 @@ items:
       - name: Azure VMware Solution landing zone accelerator
         href: enterprise-scale-landing-zone.md
         items: 
-        - name: Reference Architectures
-          href: reference-architectures.md
+        - name: Reference Architecture
+          href: reference-architecture.md
 
   - name: Migrate Azure VMware Solution to Azure
     href: migrate.md
