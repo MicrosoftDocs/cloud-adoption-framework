@@ -14,7 +14,7 @@ ms.custom: internal
 
 # Azure Landing Zone governance guide: Update Azure Landing Zone custom policies
 
-Over time Azure Landing Zone (ALZ) custom policies and policy initiatives will be updated to newer versions that you'll want to incorporate into your Azure environment. This article describes how to update ALZ custom policies and policy initiatives when newer versions are released. Refer to [this article](update-alz-policies.md) if you are wanting to migrate custom policies to built-in policies. The guidance provided in this document describes manual high-level steps for performing the update, and references on how to handle the process for implementations managed through the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [ALZ Bicep module(s)](https://aka.ms/alz/bicep).
+Over time Azure Landing Zone (ALZ) custom policies and policy initiatives will be updated to newer versions that you'll want to incorporate into your Azure environment. This article describes how to update ALZ custom policies and policy initiatives when newer versions are released. Refer to [this article](update-alz-policies.md) if you're wanting to migrate custom policies to built-in policies. The guidance provided in this document describes manual high-level steps for performing the update, and references on how to handle the process for implementations managed through the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [ALZ Bicep module(s)](https://aka.ms/alz/bicep).
 
 The following infographic provides a frame of reference for the update process flow.
 
@@ -36,7 +36,7 @@ There are the following authoritative options for determining that one or more c
 
 ### Updating steps
 
-- Determine if the ALZ policies in scope for update are currently assigned at any scope in your Azure estate. If using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) this can be determined by checking the **TenantSummary**.
+- Determine if the ALZ policies in scope for update are currently assigned at any scope in your Azure estate. If using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), currently assigned policies can be determined by checking the **TenantSummary**.
 - Determine if any ALZ policies to be updated are part of an ALZ custom policy initiative.
 - Determine if ALZ custom policy initiatives in scope for update are currently assigned at any scope in your Azure estate.
 
@@ -54,18 +54,18 @@ If the ALZ custom policy initiative is outdated by an updated ALZ custom policy 
 
 #### Policies assigned and not part of Azure Landing Zone custom policy initiative
 
-If the outdated ALZ policy to be updated is assigned to any scope in your Azure estate, and isn't part of an existing ALZ custom policy initiative, and the number of parameters and their names hasn't changed, do the following:
+If the outdated ALZ policy to be updated is assigned to any scope in your Azure estate, isn't part of an existing ALZ custom policy initiative, and the number of parameters and their names hasn't changed, do the following:
 
 - Replace the existing ALZ custom policy definition contents with the updated ALZ custom policy definition contents at the ALZ intermediate root Management Group (for example, `Contoso`)
 
-For detailed guidance on how to achieve the above, refer to [this article](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, refer to [this article](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with changed parameters assigned and not part of Azure Landing Zone custom policy initiative
 
-If the outdated ALZ policy to be updated is assigned to any scope in your Azure estate, and isn't part of an existing ALZ custom policy initiative, and the number of parameters and/or their names have changed, do the following:
+If the outdated ALZ policy to be updated is assigned to any scope in your Azure estate, isn't part of an existing ALZ custom policy initiative, and the number of parameters and/or their names have changed, do the following:
 
 - Capture all policy assignment(s), where assigned, and parameter value(s) for the outdated ALZ policy
-- If there is more than one policy definition included in the policy assignment:
+- If there's more than one policy definition included in the policy assignment:
   - Update the existing policy assignments at all scopes, where assigned, by removing the outdated ALZ policy
     - Before removing the outdated ALZ policy, record the parameter value(s)
 - If the policy assignment only contains the outdated ALZ policy:
@@ -76,20 +76,20 @@ If the outdated ALZ policy to be updated is assigned to any scope in your Azure 
 - Update the existing policy assignment(s) or create new policy assignments at the pre-recorded scopes by including the updated ALZ policy
 - Review the Policy Compliance section to validate resources are in a healthy state after reassigning the updated ALZ custom policy initiative.
 
-For detailed guidance on how to achieve the above, refer to [this article](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, refer to [this article](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies assigned through Azure Landing Zone custom policy initiative
 
-If the outdated policy to be updated is part of an ALZ custom policy initiative, and is assigned at any scope in your Azure estate, and the number of parameters and their names hasn't changed, do the following:
+If the outdated policy to be updated is part of an ALZ custom policy initiative, is assigned at any scope in your Azure estate, and the number of parameters and their names hasn't changed, do the following:
 
 - Replace the existing ALZ custom policy definition contents with the updated ALZ custom policy definition contents
   - No further changes need to be made to the ALZ custom policy initiative or assignments since there weren't any changes to the number parameters or their names
 
-For detailed guidance on how to achieve the above, refer to [this article](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, refer to [this article](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with changed parameters assigned through Azure Landing Zone custom policy initiative
 
-If the outdated policy to be updated is part of an ALZ custom policy initiative, and is assigned at any scope in your Azure estate, and the number of parameters and/or their names have changed, do the following:
+If the outdated policy to be updated is part of an ALZ custom policy initiative, is assigned at any scope in your Azure estate, and the number of parameters and/or their names have changed, do the following:
 
 - Capture all policy assignment(s), where assigned, and parameter value(s) for the ALZ custom policy initiative
 - Delete the existing policy assignments at all scopes, where assigned
@@ -104,7 +104,7 @@ If the outdated policy to be updated is part of an ALZ custom policy initiative,
 - Reassign the updated ALZ custom policy initiative
 - Review the Policy Compliance section to validate resources are in a healthy state after reassigning the updated ALZ custom policy initiative.
 
-For detailed guidance on how to achieve the above, refer to [this article](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, refer to [this article](https://aka.ms/alz/custompolicyupdate).
 
 #### Assigned outdated Azure Landing Zone custom policy initiative
 
@@ -120,15 +120,15 @@ If an outdated ALZ custom policy initiative is fully updated, and is assigned at
 - Reassign the updated ALZ custom policy initiative
 - Review the Policy Compliance section to validate resources are in a healthy state after reassigning the updated ALZ custom policy initiative.
 
-For detailed guidance on how to achieve the above, refer to [this article](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, refer to [this article](https://aka.ms/alz/custompolicyupdate).
 
 ## Update steps for Azure Landing Zone Terraform module deployments
 
-If you are using the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) to manage you ALZ deployment, this section references resources on how to update ALZ custom policies and initiatives to newer policies.
+If you're using the [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) to manage your ALZ deployment, this section references resources on how to update ALZ custom policies and initiatives to newer policies.
 
 ### Terraform Detect updates
 
-In addition to the methods described in [Detect updates](#detect-updates) on how to determine whether policies has changed, in the Terraform Module, you will also be able to see changes to policies in the [ALZ Terraform releases page](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases). An example can be seen [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
+In addition to the methods described in [Detect updates](#detect-updates) on how to determine whether policies have changed, in the Terraform Module, you'll also be able to see changes to policies in the [ALZ Terraform releases page](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases). An example can be seen [here](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
 
 ### Terraform Updating steps
 
@@ -136,11 +136,11 @@ The ALZ Terraform module provides update guidance when deploying breaking change
 
 ## Update steps for Azure Landing Zone Bicep deployments
 
-If you are using the [ALZ Bicep](https://github.com/Azure/alz-bicep) to manage you ALZ deployment, this section references resources on how to update ALZ custom policies and initiatives to newer policies.
+If you're using the [ALZ Bicep](https://github.com/Azure/alz-bicep) to manage your ALZ deployment, this section references resources on how to update ALZ custom policies and initiatives to newer policies.
 
 ### Bicep Detect updates
 
-In addition to the methods described in [Detect updates](#detect-updates) on how to determine whether policies has changed, in ALZ Bicep, you will also be able to see changes to policies in the [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
+In addition to the methods described in [Detect updates](#detect-updates) on how to determine whether policies have changed, in ALZ Bicep, you'll also be able to see changes to policies in the [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
 
 ### Bicep Updating steps
 
@@ -148,4 +148,4 @@ ALZ Bicep provides generic guidance for updating policies from ALZ custom polici
 
 ## Next steps
 
-Regardless of whether you use Azure Portal, Bicep or Terraform to manage your ALZ infrastructure, policies will change over time and will need to be managed. Use the flow described in this article as a starting point to develop processes around policy management for your specific ALZ implementation.
+Regardless of whether you use Azure portal, Bicep or Terraform to manage your ALZ infrastructure, policies will change over time and will need to be managed. Use the flow described in this article as a starting point to develop processes around policy management for your specific ALZ implementation.
