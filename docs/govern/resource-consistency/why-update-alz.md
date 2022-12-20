@@ -28,7 +28,8 @@ Here are a few reasons why keeping your Azure Landing Zone up to date is crucial
 In summary; Not staying up-to-date with ALZ could reduce your security posture as well as the benefits you are currently leveraging from ALZ. To protect your investment in Azure, you are encouraged to regularly review and update your Azure Landing Zone estate as required. In the following section are provided links to guidance on how to do so. 
 
 ## Next steps
-For details on how to update your ALZ implementation, please refer to the following sections.
+For current details and guidance on how to update your ALZ implementation, please refer to the following sections.
 
+- [Azure Landing Zone What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new)
 - [Migrate ALZ custom policies to Azure built-in policies](./update-alz-policies.md)
 - [Updating Azure Landing Zone custom policies to new versions](./update-alz-custom-policies.md)
