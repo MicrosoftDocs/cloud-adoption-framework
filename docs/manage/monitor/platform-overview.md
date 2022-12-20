@@ -1,26 +1,26 @@
 ---
 title: Cloud monitoring platforms overview
 description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
-author: mgoedtel
+author: Zimmergren
 ms.author: martinek
-ms.date: 07/31/2019
+ms.date: 12/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank
+ms.custom: think-tank, engagement-fy23
 ---
 
 # Cloud monitoring guide: Monitoring platforms overview
 
 Microsoft provides a range of monitoring capabilities from two products: System Center Operations Manager, designed for on-premises and then extended to the cloud, and Azure Monitor, designed for the cloud but can also monitor on-premises systems. These two offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
 
-Many organizations are embracing the latest practices for DevOps agility and cloud innovations to manage their heterogenous environments. Yet they are also concerned about their ability to make appropriate and responsible decisions about how to monitor those workloads.
+Many organizations are embracing the latest practices for DevOps agility and cloud innovations to manage their heterogenous environments. Yet they're also concerned about their ability to make appropriate and responsible decisions about how to monitor those workloads.
 
 This article provides a high-level overview of our monitoring platforms to help you understand how each delivers core monitoring functionality.
 
 ## The story of System Center Operations Manager
 
-In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a reengineered version of the product, System Center Operations Manager. It moved beyond simple monitoring of Windows Server instances and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
+In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a re-engineered version of the product, System Center Operations Manager. It moved beyond simple monitoring of Windows Server instances and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
 
 ## The story of Azure Monitor
 
@@ -143,7 +143,7 @@ Operations Manager provides four basic ways to analyze data after it has been co
 
 - **Views:** Offers predefined visualizations of collected data, such as a graph of performance data or a list of monitored components and their current health state. Diagram views visually present the service model of an application.
 
-- **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. However, there is no feature to allow for complex or interactive analysis of collected data.
+- **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. However, there's no feature to allow for complex or interactive analysis of collected data.
 
 - **Operations Manager command shell:** Extends Windows PowerShell with another set of cmdlets, and can query and visualize collected data. This includes graphs and other visualizations, natively with PowerShell, or with the Operations Manager HTML-based web console.
 
