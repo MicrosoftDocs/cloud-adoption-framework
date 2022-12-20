@@ -30,7 +30,7 @@ items:
         href: enterprise-scale-landing-zone.md
         items: 
         - name: Example Architectures for Azure VMWare Solution
-          href: eslz-avs-network-architectures.md
+          href: example-architectures.md
 
   - name: Migrate Azure VMware Solution to Azure
     href: migrate.md

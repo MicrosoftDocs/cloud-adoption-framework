@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale reference architectures connectivity to Azure VMware Solution
+title: Enterprise-scale example architectures connectivity to Azure VMware Solution
 description: Examine example for scenarios for implementing networking and connectivity for Azure VMware Solution deployments.
 author: sablair
 ms.author: janet
@@ -11,7 +11,7 @@ ms.custom: think-tank, e2e-azure-vmware
 ---
 
 
-# Reference Architecture
+# Example architectures for **Azure VMWare Solutions**
 
 
 
