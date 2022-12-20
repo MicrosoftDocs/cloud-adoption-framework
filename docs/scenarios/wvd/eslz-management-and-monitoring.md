@@ -50,7 +50,7 @@ Review the following considerations and recommendations for platform management 
     - `Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin`
     - `Microsoft-FSLogix-Apps/Admin`
 
-- Use [Azure Monitor for Azure Virtual Desktop](/azure/virtual-desktop/azure-monitor) for ease of configuration.
+- Use [Azure Virtual Desktop Insights](/azure/virtual-desktop/insights) for ease of configuration.
 
 - Assign application groups to user groups to ease your administration overhead.
 
