@@ -112,7 +112,7 @@ Encrypting data at rest assumes the following conditions:
 
 ### Data in use
 
-Encryption for data in use involves securing data in nonpersistent storage, such as RAM or CPU caches. And if you use technologies like full memory encryption and enclave solutions, such as Intel's Secure Guard Extensions (SGX). This approach also includes cryptographic techniques, such as homomorphic encryption that you can use to create secure, trusted execution environments.
+Encryption for data in use involves securing data in nonpersistent storage, such as RAM or CPU caches. Encryption for data in transit also includes securing the data when you use technologies like full memory encryption and enclave solutions, such as Intel's Secure Guard Extensions (SGX). This approach also includes cryptographic techniques, such as homomorphic encryption that creates secure, trusted run environments.
 
 **Assumptions about encrypting data in use:** Encrypting data in use assumes the following condition:
 
