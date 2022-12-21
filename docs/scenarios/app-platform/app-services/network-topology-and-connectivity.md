@@ -22,6 +22,7 @@ The following is a bulleted list of things you must think about when preparing f
 - Use cases
 - Exposed to internal users, external users, or both
 - App Service Plan tier required to support networking requirements
+- Access Restrictions
 
 ### Multi-tenanted
 
@@ -60,7 +61,7 @@ The following is a bulleted list of best practices that should be included in an
 
 ### Multi-tenanted
 
-- If you need a dedicated outbound address when connecting to a multi-tenanted App Service, use a [NAT Gateway](/azure/app-service/networking/nat-gateway-integration).
+- If you need a dedicated outbound Public IP address when connecting to a multi-tenanted App Service, use a [NAT Gateway](/azure/app-service/networking/nat-gateway-integration).
 - Since subnet size can't be changed after assignment, use a subnet that's large enough to accommodate whatever scale your app might reach. To avoid any issues with subnet capacity, you should use a /26 with 64 addresses for Vnet integration.
 
 ### App Service Environment
