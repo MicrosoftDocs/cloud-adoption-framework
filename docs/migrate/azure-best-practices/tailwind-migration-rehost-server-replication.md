@@ -12,31 +12,31 @@ ms.custom: azure-fast-track, think-tank
 
 # Migration execution with Azure Migrate for servers
 
-This article shows how the fictional company Tailwind Traders prepares its deployment plan for on-premises infrastructure migration using the server replication features of Azure Migrate.
+This article shows how the fictional company Tailwind Traders prepares its deployment plan for the migration of on-premises infrastructure by using the server replication features of Azure Migrate.
 
-When you use this example to help plan your own infrastructure migration efforts, keep in mind that the provided sample plan and deployment is specific to Tailwind. Review your organization's business needs, structure, and technical requirements when making important infrastructure migration decisions.
+When you use this example to help plan the migration of your own infrastructure, remember that the sample plan and deployment that are described in this article are specific to Tailwind. Be sure to review your organization's business needs, structure, and technical requirements when making important decisions about migrating your own infrastructure.
 
-Whether you need all the elements described in this article depends on your migration strategy and needs. For example, you might prefer to redeploy a VM in Azure and redeploy the application instead of replicating the on-premises server to Azure.
+Whether you need all the elements that are described in this article depends on your migration strategy and needs. For example, you might prefer to redeploy a VM in Azure and redeploy the application instead of replicating the on-premises server to Azure.
 
 ## Overview
 
-In order for Tailwind to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Tailwind needs to think about 3 areas:
+For Tailwind to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Tailwind needs to think about 3 areas:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Tooling and replication.** How many replication appliances will you need? What are best practices to enable replication?
+> - **Step 1: Tooling and replication.** How many replication appliances are required? What are best practices to enable replication?
 >
-> - **Step 2: Migration cutover preparation.** What activities will resources need to execute before and after the migration? What value is provided, and when should I plan for a test migration? What are the constraints when testing in an isolated VNet?
+> - **Step 2: Migration cutover preparation.** What activities must resources execute before and after the migration? What value do they provide, and when should a test migration occur? What constraints apply when testing in an isolated virtual network?
 >
-> - **Step 3: Migration cutover execution.** How does cutover look like? What happens after cutover?
+> - **Step 3: Migration cutover execution.** What does cutting over look like? What happens afterward?
 
 ## Before you start
 
-Before we start diving deep in infrastructure migration planning and deployment, consider reading some background information relevant to Azure Migrate server replication:
+Before diving deeply into planning your migration of infrastructure and its deployment, consider reading background information that's relevant to server replication with Azure Migrate:
 
-- Review the [Azure Migrate: Server Migration tool overview](/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
+- Review [Azure Migrate: Server Migration tool overview](/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
 - Review the differences between the [Azure Migrate appliance](/azure/migrate/common-questions-appliance), [replication appliance](/azure/migrate/migrate-replication-appliance), and [Hyper-V migration architecture](/azure/migrate/hyper-v-migration-architecture).
-- Optionally, complete the learning path, [Migrate virtual machines and applications using Azure Migrate](/training/paths/m365-azure-migrate-virtual-machine/) training.
+- Complete [Migrate virtual machines and applications using Azure Migrate](/training/paths/m365-azure-migrate-virtual-machine/), a learning path.
 
 ## Step 1: Tooling and replication
 
