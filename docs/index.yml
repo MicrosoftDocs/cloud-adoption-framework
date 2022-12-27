@@ -196,7 +196,7 @@ conceptualContent:
     # Card
     - title: Strategic Migration Assessment and Readiness
       links:
-        - url: /assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment
+        - url: /assessments/Strategic-Migration-Assessment/
           itemType: deploy
           text: Drive business success by unblocking migration efforts and improving processes.
 
