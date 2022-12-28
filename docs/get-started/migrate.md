@@ -21,7 +21,7 @@ Proper alignment of business and IT stakeholders helps overcome migration roadbl
 
 This article also helps you implement proper governance and management processes. Use this guide to streamline the processes and materials required to align an overall migration effort.
 
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). Use it to identify the guidance that best aligns to your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/Strategic-Migration-Assessment/). Use it to identify the guidance that best aligns to your current needs.
 
 ## Get started
 
@@ -246,4 +246,4 @@ The Cloud Adoption Framework is a lifecycle solution that helps you begin a migr
 | Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
 | Cloud operations team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |
 
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). The answers you provide help identify which guidance aligns best with your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/Strategic-Migration-Assessment/). The answers you provide help identify which guidance aligns best with your current needs.
