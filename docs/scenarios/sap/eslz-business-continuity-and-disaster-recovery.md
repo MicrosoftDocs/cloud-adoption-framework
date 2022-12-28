@@ -64,9 +64,9 @@ Following are the Platform level SLAs based on different High availability deplo
 
 | Tier | HA scenarios | Platform SLA |
 |---|---|---|
-| Tier 1 | Availability Zone | 99.99 |
-| Tier 2 | Availability Set | 99.95 |
-| Tier 3 | Single VM (Self Healing) | 99.9 |
+| Tier 1 | Availability Zone | 99.99 % |
+| Tier 2 | Availability Set | 99.95 % |
+| Tier 3 | Single VM (Self Healing) | 99.9 % |
 
 Please see the details in the following section
 
