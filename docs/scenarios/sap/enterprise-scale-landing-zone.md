@@ -214,7 +214,7 @@ Deploy and install Ansible playbook components on your infrastructure using Terr
 
 :::image type="content" source="./media/overview-automation.png" border="false" alt-text="Diagram that shows an overview of an SAP reference implementation.":::
 
-2. [Azure Center for SAP solutions (ACSS)](https://learn.microsoft.com/azure/center-sap-solutions/overview) brings together a set of Azure services to power a single unified experience to deploy and manage SAP workloads end to end by bringing new services, tools, and frameworks together at one place. 
+2. [Azure Center for SAP solutions (ACSS)](/azure/center-sap-solutions/overview) brings together a set of Azure services to power a single unified experience to deploy and manage SAP workloads end to end by bringing new services, tools, and frameworks together at one place. 
 
 The foundation of Azure Center for SAP solutions is Microsoft Azure Virtual Instance for SAP solutions. The Virtual Instance for SAP solutions allows you to create and manage SAP systems in a way that makes sense to you, at the SID level or the individual components.
 
@@ -239,8 +239,8 @@ Whether you’re creating a new SAP system or registering an existing system, th
 - Ability to view the SAP system status and health across multiple SAP systems in a single pane of glass. This increases the visibility and the ability to quickly identify problems impacting the SAP systems and its components.
 - Ability to stop and start the SAP system directly from within Azure.
 - Ability to view post-deployment cost at SAP SID level. 
-- Integration with [Microsoft Azure Monitor for SAP solutions](https://learn.microsoft.com/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) for technical monitoring and to correlate telemetry of the SAP system with the telemetry of the OS, DBMS and underlying Azure infrastructure.
-- Ability to search across your SAP systems based on the SID using [Azure Resource Graph](https://learn.microsoft.com/azure/governance/resource-graph/overview). This makes it easier to discover which Azure resources are part of the SAP landscape. Azure Resource Graph is an Azure service that provides efficient and performant resource exploration with the ability to query at scale across subscriptions driving deeper insights into Azure resources.
+- Integration with [Microsoft Azure Monitor for SAP solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) for technical monitoring and to correlate telemetry of the SAP system with the telemetry of the OS, DBMS and underlying Azure infrastructure.
+- Ability to search across your SAP systems based on the SID using [Azure Resource Graph](/azure/governance/resource-graph/overview). This makes it easier to discover which Azure resources are part of the SAP landscape. Azure Resource Graph is an Azure service that provides efficient and performant resource exploration with the ability to query at scale across subscriptions driving deeper insights into Azure resources.
 
 ## Next steps
 
