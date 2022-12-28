@@ -2,7 +2,7 @@
 title: What are AI agents?
 description: Learn more about AI agents, conversational interfaces, bot frameworks and how to build a bot with AI functionality using Azure Bot Service.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

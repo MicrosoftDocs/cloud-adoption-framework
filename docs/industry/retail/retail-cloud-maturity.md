@@ -1,8 +1,8 @@
 ---
 title: Cloud maturity model for retail
 description: Learn about the cloud maturity model for retail organizations. Knowing what stage your organization's at helps guide your cloud adoption journey.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

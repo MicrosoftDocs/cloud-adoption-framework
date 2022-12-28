@@ -3,7 +3,7 @@ title: Abbreviation examples for Azure resources
 description: Abbreviation examples for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 9/30/2022
+ms.date: 12/7/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -47,8 +47,10 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
-| Front Door instance | `Microsoft.Network/frontDoors` | `fd` |
+| Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
+| Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
+| Front Door (classic) | `Microsoft.Network/frontDoors` | `afd` |
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
@@ -197,9 +199,10 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Virtual desktop host pool | | `vdpool` |
-| Virtual desktop application group | | `vdag` |
-| Virtual desktop workspace | | `vdws` |
+| Virtual desktop host pool | `Microsoft.DesktopVirtualization/hostPools` | `vdpool` |
+| Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
+| Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
+| Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
 
 ## Developer tools
 

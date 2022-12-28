@@ -2,7 +2,7 @@
 title: Cloud readiness antipatterns
 description: Avoid cloud adoption readiness antipatterns like using preview services, assuming built-in resiliency and availability, and assuming IT is ready for the cloud.
 author: lpassig
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

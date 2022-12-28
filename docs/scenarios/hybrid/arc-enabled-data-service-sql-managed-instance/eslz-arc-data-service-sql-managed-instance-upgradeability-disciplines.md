@@ -140,7 +140,7 @@ The following diagrams display the upgrade process for Arc-enabled SQL Managed I
     >[!NOTE]
     >You can also [poll the Microsoft Artifact Registry](https://mcr.microsoft.com) for new container image versions.
 
-- Create a process to monitor the upgrade status using the [Azure CLI](/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status).
+- Create a process to monitor the upgrade status using the [Azure CLI](/azure/azure-arc/data/upgrade-data-controller-direct-cli#monitor-the-upgrade-status) or [Kubernetes tools](/azure/azure-arc/data/upgrade-data-controller-indirect-kubernetes-tools#monitor-the-upgrade-status).
 - Review the [corresponding versions](/azure/azure-arc/data/version-log) of the different components before performing an upgrade to validate that the correct versions of the components are in place.
 
 #### General Purpose service tier

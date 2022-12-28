@@ -2,7 +2,7 @@
 title: Schema migration and Data Definition Language (DDL) commands
 description: Learn about design considerations and performance options for Data Definition Language (DDL) commands when you're migrating schemas to Azure Synapse Analytics.
 author: v-hanki
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

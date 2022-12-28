@@ -2,7 +2,7 @@
 title: Rehost an on-premises Linux application to Azure VMs
 description: Learn how Contoso rehosts an on-premises Linux application by migrating to Azure VMs.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

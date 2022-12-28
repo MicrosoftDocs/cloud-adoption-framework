@@ -1,8 +1,8 @@
 ---
 title: Business continuity and disaster recovery for an SAP migration
-description: Learn business continuity and disaster recovery for an SAP migration.
-author: JeffreyMitchell
-ms.author: brblanch
+description: Learn about business continuity and disaster recovery for SAP migrations.
+author: pankajmeshramCSA
+ms.author: pameshra
 ms.date: 12/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,7 +15,7 @@ ms.custom: think-tank, e2e-sap
 
 # Business continuity and disaster recovery for an SAP migration
 
-This article builds on some of the considerations and recommendations defined in [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). This article helps you understand the unique constraints on any landing zone that supports an SAP platform. But because SAP is a mission-critical platform, you should refer to the guidance on the Azure landing zone design areas and include them in your design.
+This article builds on some of the considerations and recommendations that are defined in [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). The article can help you understand the unique constraints on any landing zone that supports an SAP platform. But because SAP is a mission-critical platform, you should refer to the guidance on the Azure landing zone design areas and include them in your design.
 
 ## Scenario and scope
 
