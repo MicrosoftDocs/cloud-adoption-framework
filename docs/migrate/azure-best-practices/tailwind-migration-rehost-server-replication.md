@@ -34,7 +34,7 @@ For Tailwind to migrate to Azure, it's critical to plan for the migration toolse
 
 Before diving deeply into planning your migration of infrastructure and its deployment, consider reading background information that's relevant to server replication with Azure Migrate:
 
-- Review [Azure Migrate: Server Migration tool overview](/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
+- Review [Migration and modernization tool](/azure/migrate/migrate-services-overview#migration-and-modernization-tool).
 - Review the differences between the [Azure Migrate appliance](/azure/migrate/common-questions-appliance), [replication appliance](/azure/migrate/migrate-replication-appliance), and [Hyper-V migration architecture](/azure/migrate/hyper-v-migration-architecture).
 - Complete [Migrate virtual machines and applications using Azure Migrate](/training/paths/m365-azure-migrate-virtual-machine/), a learning path.
 
