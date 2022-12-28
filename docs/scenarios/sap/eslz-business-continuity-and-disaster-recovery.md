@@ -183,7 +183,9 @@ The main challenges of pairing Azure regions for SAP workloads are:
 - The pairs aren't always consistent with M-series or Mv2-series VM services. Many customers who deploy their SAP systems don't follow Azure paired regions. Instead, they follow the service availability of required VM families.
 - You can replicate standard storage between paired regions, but you can't use standard storage to store your databases or virtual hard disks. You can replicate backups only between paired regions that you use. For all your other data, run your own replications with native DBMS features like SQL Server Always On, SAP HANA System Replication, and other services. Use a combination of Azure Site Recovery, `rsync` or `robocopy`, and other third-party software for the SAP application layer.
 
-Another consideration is to place your recovery region in a separate Azure region or national major power grid to minimize the risk of impact.  
+- During the event of a disaster multiple affected customers in a Azure region would like to failover to the corresponding paired DR region. This situation leads to competition of resources to bring up dormant VMs in the DR region. The work around is to run non-prod systems in DR region and use the same resources to host DR replicas of production systems. This dual purpose use of Azure infrastructures in the DR region helps avoid resource capacity constraints. 
+
+Another important consideration is to secure the required operating capacity in the disaster region. In the event of a disaster you might need to run SAP application for a minimal window of time with minimal IT capacity and by critical human resources only while working diligently to recover normal operation in the primary region. This requires to have minimal IT infrastructure in available the DR region.  
 
 After you define your Azure regions, your organization must choose one of these deployment patterns:
 
@@ -210,6 +212,7 @@ Another factor to consider when choosing your disaster recovery region is the RP
 - Set up ExpressRoute connections from on-premises to the primary and secondary Azure disaster recovery region.
 - An alternative to using ExpressRoute is to set up VPN connections from on-premises to the primary and secondary Azure disaster recovery region.
 - Use Site Recovery to replicate an application server to a disaster recovery site. Site Recovery also helps with replicating central-services cluster VMs to the disaster recovery site. When you invoke disaster recovery, you'll need to reconfigure the Linux Pacemaker cluster on the disaster recovery site. For example, you replace the VIP or SBD, run `corosync.conf`, and so on).
+- Replication of keyvault contents like certificates, secrets or keys across regions to be able to un-encrypt data in the DR region.
 - Use [cross-region replication in Azure NetApp Files](/azure/azure-netapp-files/cross-region-replication-introduction) (currently in public preview) to synchronize file volumes between the primary region and the disaster recovery region.
 - Use native database replication to synchronize data to the disaster recovery site, rather than Azure Site Recovery.
 - Peer the primary and disaster recovery virtual networks. For example, for HANA System Replication, an SAP HANA DB virtual network needs to be peered to the disaster recovery site's SAP HANA DB virtual network.
