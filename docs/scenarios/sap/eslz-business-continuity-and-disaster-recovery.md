@@ -69,7 +69,7 @@ For more information and options, see [High-availability architecture and scenar
 
 ### Azure availability sets vs. availability zones
 
-Before you deploy your high-availability infrastructure, and depending on the region you choose, determine whether to deploy with an [Azure availability set](/azure/virtual-machines/availability) or an availability zone. The main differences for VMs deployed with an availability set are:
+Before you deploy your high-availability infrastructure, and depending on the region you choose, determine whether to deploy with an [Azure availability set or an availability zone](/azure/virtual-machines/availability). The main differences for VMs deployed with an availability set are:
 
 - The VMs aren't spread across different availability zones.
 - The type of VMs that you can deploy through a single availability set are restricted because the host is defined by the first VM that's deployed in the set. One example result is that you won't be able to combine M-series and E-series VMs into one availability set.
