@@ -22,7 +22,7 @@ This article builds on some of the considerations and recommendations that are d
 Your organization needs to design platform-level capabilities that can help application workloads meet their requirements. SAP applications that run an organization's most critical business processes require:
 
 - Service and business process availability.
-- Recovery time objectives (RTOs) for failure or disaster scenarios. For example, you might encounter a failure scenario that's limited to a component of the SAP system or a widespread failure that affects a datacenter or Azure region.
+- Recovery time objectives (RTOs) for failure or disaster scenarios. For example, you should have an RTO for a failure scenario that's limited to a component of the SAP system and another for a widespread failure that affects a datacenter or Azure region.
 - Recovery point objectives (RPOs) for a failure scenario that's limited to a component of an SAP system or a widespread failure that affects a datacenter or an Azure region.
 - Operational and lifecycle management tasks, with technology that fills gaps during failure scenarios. These management tasks include patching guest operating systems and database management systems, cloning, and refreshing the SAP systems.
 
