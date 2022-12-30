@@ -27,13 +27,14 @@ Each of the following links takes you to questions that are typically asked when
 
 ## Cloud adoption scenarios
 
-Your organization's cloud adoption effort should support long-term strategic goals for your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, preparing for Kubernetes and container integration into your cloud strategy, or designing a cloud adoption journey for a retail business, we have updated guidance for these scenarios and more.
+Your organization's cloud adoption effort should support long-term strategic goals for your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, preparing for Kubernetes and container integration into your cloud strategy, or designing a cloud adoption journey for a retail business or defense organization, we have updated guidance for these scenarios and more.
 
-- [Hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md)
-- [Modern application platform scenario](../scenarios/app-platform/index.md)
-- [SAP adoption scenario](../scenarios/sap/index.md)
+- [Hybrid and multicloud](../scenarios/hybrid/scenario-overview.md)
+- [Modern application platform](../scenarios/app-platform/index.md)
+- [SAP](../scenarios/sap/index.md)
 - [Desktop virtualization](../scenarios/wvd/index.md)
-- [Cloud adoption for the retail industry](../industry/retail/index.md)
+- [Retail industry](../industry/retail/index.md)
+- [Defense](../scenarios/defense/index.md)
 
 ## Cloud adoption antipatterns
 
