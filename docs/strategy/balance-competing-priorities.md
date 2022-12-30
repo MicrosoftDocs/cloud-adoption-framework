@@ -1,6 +1,6 @@
 ---
 title: Balance competing priorities
-description: Discover strategies for balancing competing priorities.
+description: Learn strategies for balancing competing priorities.
 author: martinekuan
 ms.author: martinek
 ms.date: 03/04/2020
