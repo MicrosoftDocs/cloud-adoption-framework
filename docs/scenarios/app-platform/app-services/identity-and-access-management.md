@@ -26,7 +26,7 @@ When preparing for deployment on Azure App Service, there are several considerat
 - Consider creating [custom roles](/azure/active-directory/roles/custom-create) following the principle of least privilege when out-of-box roles require modifications on existing permissions. 
 - Choosing secure store for keys, secrets, certificates and Application Configuration 
     - Utilize [App Configuration](/azure/architecture/solution-ideas/articles/appconfig-key-vault) to share common configuration values between applications, microservices, and serverless applications that are not passwords, secrets, or keys.
-    - Utilize Azure Key Vault. It provides secure storage of secrets, such as passwords, connection strings, keys, secrets and certificates. You can use Azure Key Vault to securely store your secrets and then access them from your Azure App Service application by App Service Managed identity. This way, you can keep your secrets safe and secure, while still being able to access them from your application when needed.
+    - Utilize [Azure Key Vault](/azure/key-vault/general/overview). It provides secure storage of secrets, such as passwords, connection strings, keys, secrets and certificates. You can use Azure Key Vault to securely store your secrets and then access them from your Azure App Service application by App Service Managed identity. This way, you can keep your secrets safe and secure, while still being able to access them from your application when needed.
 
 
 ## Design recommendations
