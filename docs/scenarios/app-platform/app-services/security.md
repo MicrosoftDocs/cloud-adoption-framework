@@ -39,7 +39,7 @@ The following is a bulleted list of things you must think about when preparing f
 - Enable [Azure Defender for App Service](/azure/security-center/defender-for-app-service-introduction) to assess the security of your web applications, detect threats, and alert when potential threats are detected so action can be taken to protect your Azure resources.
 - Use [Private Endpoint](/azure/private-link/private-endpoint-overview) to privately access [Azure services](/azure/private-link/availability) through your VNet.
 - Secure data transfer: When working with sensitive data, it's important to ensure that the data is transferred securely between the app and its clients. Azure App Service supports secure HTTPS connections, which encrypt the data in transit and prevent third parties from intercepting it.
-- Managed SSL certificates: Azure App Service also offers managed SSL certificates, which provide a convenient way to secure the app with a trusted SSL certificate. This allows the app to use HTTPS to encrypt the data in transit and ensures that users can trust that the app is secure.
+- Managed SSL certificates: Azure App Service also offers managed SSL certificates, which provide a convenient way to secure the app with a trusted SSL certificate. This allows the app to use HTTPS to encrypt the data in transit and ensures that users can trust that data is transferred securely.
 - Use a Web Application Firewall (WAF) such as Azure Front Door and Azure Application Gateway to provide protection for your web apps from common web vulnerabilities such as SQL injection and cross-site scripting (XSS) attacks. By implementing a WAF, you can help protect your apps from these types of threats and improve the security of your Azure App Service resources.
 
 
