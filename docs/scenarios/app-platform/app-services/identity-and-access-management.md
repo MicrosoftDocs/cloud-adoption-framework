@@ -20,7 +20,7 @@ Learn more about the [identity and access management](../../../ready/landing-zon
 
 When preparing for deployment on Azure App Service, there are several considerations to keep in mind when it comes to identity and access management (IAM) for the landing zone accelerator. Here are some key points to consider:
 
-- Decide on The level of security and isolation required for the app and its data. Public access allows anyone with the app URL to access the app, while private access restricts access to only authorized users and networks.
+- Decide on the level of security and isolation required for the app and its data. Public access allows anyone with the app URL to access the app, while private access restricts access to only authorized users and networks.
 - Decide on the type of authentication and authorization needed for your App Service: anonymous, internal corporate users, social accounts, other [identity provider](/azure/app-service/overview-managed-identity?tabs=dotnet), or a mixture of these.
 - Decide on whether to use system-assigned or user-assigned [managed identities](/azure/app-service/overview-managed-identity?tabs=dotnet) for your App Service when connecting to AAD-protected backend resources.
 - Consider creating [custom roles](/azure/active-directory/roles/custom-create) following the principle of least privilege when out-of-box roles require modifications on existing permissions. 
