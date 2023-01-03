@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Measuring and quantifying business outcomes is a crucial part of any cloud adoption strategy. Understanding an application's performance and user experience is key to measuring those business outcomes. However, accurately measuring the correlation between application performance, user experience, and business impact is often difficult and time consuming.
 
-AppDynamics can provide business insights for most use cases. Many organizations start a comprehensive cloud adoption strategy with these use cases:
+AppDynamics can provide business insights for most metrics. Many organizations start a comprehensive cloud adoption strategy with these metrics:
 
 - A pre-migration and post-migration comparison
 - Business health
@@ -28,7 +28,7 @@ This article describes how to measure the business outcomes of a cloud adoption 
 
 ## How AppDynamics works
 
-Prior to migration, you deploy a small, lightweight agent alongside your applications. Agents are built for various languages, like .NET, Java, and Node.js. The agent collects performance and diagnostic data during the migration and sends it to a controller to correlate and analyze the information. Controllers can reside in a fully managed AppDynamics environment, or you can manage them in Azure. Key user experiences are identified as *business transactions*, which help you discover the baseline for normal application or business performance. Whether they're traditional server infrastructure, databases, middleware components, on-premises, or in the cloud, all application components and dependencies are identified in real time for the entire application and each business transaction.
+To use AppDynamics, you deploy a small, lightweight agent alongside your applications before your migration. Agents support various languages, like .NET, Java, and Node.js. The agent collects performance and diagnostic data during the migration and sends it to a controller that correlates and analyzes the information. Controllers can reside in a fully managed AppDynamics environment, or you can manage them in Azure. Key user experiences are identified as *business transactions*, which help you discover the baseline for normal application or business performance. Whether they're traditional server infrastructure, databases, middleware components, on-premises, or in the cloud, all application components and dependencies are identified in real time for the entire application and each business transaction.
 
 :::image type="content" source="./media/app-dynamics-flow-map.jpg" alt-text="Screenshot that shows an AppDynamics flow map." lightbox="./media/app-dynamics-flow-map.jpg":::
 
@@ -72,17 +72,17 @@ The [strategy](../strategy/index.md) and [business outcomes](../strategy/busines
 
 ## Pre-migration and post-migration comparison
 
-The cloud offers extensive benefits and potential, but the first steps of a migration are often unclear and full of risk. You need use more criteria, beyond the success of the deployment, to evaluate a migration. Understanding the user experience and business performance before and after cloud migration helps you to adjust and stabilize both as needed. Those adjustments help you produce successful business outcomes while reinforcing the value that Azure provides throughout your migration.
+The cloud offers extensive benefits and potential, but the first steps of a migration are often unclear and risky. You need to use more criteria, beyond the success of the deployment, to evaluate a migration. Understanding the user experience and business performance before and after cloud migration helps you to adjust and stabilize both as needed. Those adjustments help you produce successful business outcomes while reinforcing the value that Azure provides throughout your migration.
 
 To build on the foundation that AppDynamics provides, compare business and application metrics before and after a migration to evaluate whether the target business outcomes are met.
 
 **Example:**
 
-Movie Tickets Online, a fictional online ticket vendor, is retiring its existing datacenters and moving its workloads to Azure. Capacity problems have led to poor business transaction performance, and the company anticipates the performance optimizations and capacity provided by Azure.
+Movie Tickets Online, a fictional online ticket vendor, is retiring its existing datacenters and moving its workloads to Azure. Capacity problems have led to poor business transaction performance, and the company looks forward to the performance optimizations and capacity provided by Azure.
 
 In addition to improving performance, the company wants to ensure that the business outcome goals of improving sales funnels and growing revenue are met. As part of the migration, the company deployed AppDynamics to its existing on-premises environments to clearly understand the current performance. As part of the cloud deployment, the company can use the AppDynamics native integration with Azure to understand post-migration performance and business outcomes.
 
-Movie Tickets Online experienced an increase in conversion rates from 48 to 79 percent and improvements to underlying performance, response time, and ticket sales volume.
+Movie Tickets Online experienced an increase in conversion rates from 48 to 79 percent and improvements to performance, response time, and ticket sales volume.
 
 :::image type="content" source="./media/app-dynamics-migration-comparison.jpg" alt-text="Screenshot that shows a migration comparison." lightbox="./media/app-dynamics-migration-comparison.jpg":::
 
