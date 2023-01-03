@@ -89,7 +89,7 @@ During migration, adoption teams commonly assume that workloads will be rehosted
 
 ## Balance during the innovation phase
 
-True customer-facing innovation frequently creates conflicting priorities between the need to deliver on a planned feature set and a implementing customer-empathy development process.
+True customer-facing innovation frequently creates conflicting priorities between the need to deliver on a planned feature set and implementing a customer-empathy development process.
 
 **Competing priorities:**
 
