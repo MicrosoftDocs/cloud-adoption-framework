@@ -26,7 +26,7 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Strategic Migration Assessment and Readiness Tool](/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment) | From business planning to training-to security and governance - prepare for your Microsoft Azure migration using the Strategic Migration Assessment and Readiness Tool (SMART). |
+| [Strategic Migration Assessment and Readiness Tool](/assessments/Strategic-Migration-Assessment/) | From business planning to training-to security and governance - prepare for your Microsoft Azure migration using the Strategic Migration Assessment and Readiness Tool (SMART). |
 | [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document your decisions as you execute your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize your processes using a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |

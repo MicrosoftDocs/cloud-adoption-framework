@@ -162,6 +162,12 @@ To understand where the budget is going, it's critical to know where Azure Machi
 - When an Azure Machine Learning workspace is created, there are also a few other resources created to enable Azure Machine Learning: Key Vault, Application Insights, Azure Storage, and Azure Container Registry. These resources are used in Azure Machine Learning and you'll pay for these resources.
 - There are costs associated with managed compute such as training clusters, compute instances, and managed inferencing endpoints. With these managed compute resources, there are the following infrastructure costs to account for: virtual machines, virtual network, load balancer, bandwidth, and storage.
 
+### Track spending patterns and achieve better reporting with tagging
+
+Administrators often want to be able to track costs on different resources in Azure Machine Learning. Tagging is a natural solution to this problem and aligns with the general approach used by Azure and many other cloud service providers. With tags support, you can now see cost breakdown at the compute level, therefore granting you access to a more granular view to assist with better cost monitoring, improved reporting and greater transparency.
+
+Tagging enables you to place customized tags on your workspaces and computes to further filter on these resources in Azure Cost Management based on these tags to observe spend patterns. This functionality can be best utilized for internal charge-back scenarios. In addition, tags can be useful for capturing metadata or details associated with the compute, for e.g. a project, a team, certain billing code, etc. This makes tagging very beneficial for measuring how much money you are spending on different resources and therefore, gaining deeper insights into your cost and spend patterns across teams or projects.
+
 ### Govern and restrict compute usage by policy
 
 When you manage an Azure environment with many workloads, it can be a challenge to keep the overview on resource spend. [Azure Policy](/azure/governance/policy/overview) can help control and govern resource spend, by restricting particular usage patterns across the Azure environment.
