@@ -69,7 +69,7 @@ Regardless of the service model, strive to provide a secure environment for all 
 
 #### Impact of deviation
 
-- **Increased complexity in governance policies**&mdash;Segmenting workloads in a way that differs from the [implementation options](implementation-options.md) for management group hierarchy, can create a complex policy and access control structure to govern your environment. For example deviation from the organizational hierarchy structure or grouping by Azure service.
+- **Increased complexity in governance policies**&mdash;Segmenting workloads in a way that differs from the [implementation options](implementation-options.md) for management group hierarchy can create a complex policy and access control structure to govern your environment. For example deviation from the organizational hierarchy structure or grouping by Azure service.
 
 - **Increased operational overhead**&mdash;This trade off introduces the risk of unintentional policy duplication and thereby exceptions, which add to operational and management overheads.
 
