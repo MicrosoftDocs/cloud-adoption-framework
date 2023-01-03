@@ -34,9 +34,6 @@ Consider the following Azure Policies to enforce compliance with data redundancy
 
 - [Geo-redundant storage should be enabled for Storage Accounts](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fbf045164-79ba-4215-8f95-f8048dc1780b) ensures geo redundant replication is configured for Azure Storage Accounts.
 
-TODO: Are there more policies/use cases?
-TODO: Are we just referring to data redundancy, or component redundancy? If so, are there policies?
-
 ## Backup and disaster recovery
 
 Azure offers [end-to-end backup and disaster recovery solutions](https://azure.microsoft.com/solutions/backup-and-disaster-recovery/#overview) you can use to recover your business services in a timely manner when an incident occurs.

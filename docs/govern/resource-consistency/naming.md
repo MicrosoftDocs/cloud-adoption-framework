@@ -34,9 +34,6 @@ Naming rules and restrictions, such as scope, name length, or valid characters, 
 
 *Table 1: Example resource rules and restrictions*
 
-TODO: Is the below true? Or is tagging alone sufficient for cost tracking purposes?<br/>
-Accurately representing and naming your resources is essential for management and cost tracking purposes. Resources with well-defined naming can quickly be identified and associated with cloud usage costs via chargeback and show back accounting mechanisms.
-
 Accurate naming is critical when responding to security incidents. The logs and alerts from security services such as Microsoft Defender for Cloud and Microsoft Sentinel reference resources by their resource name. A well-defined resource name will allow administrators to quickly identify the affected system, determine whether it's production or not, and assess the associated business impact.
 
 ## Guidance
@@ -54,7 +51,7 @@ Use the following resources to understand the components of a good naming conven
 
 Azure Policy can be used to enforce and audit compliance of your naming standards. Because there are no pre-defined standards for naming, there are no built-in policies to enforce naming. You can create custom policies to enforce the standards you determine.
 
-The following snippet from a [custom policy example in Azure Samples (TODO: Add link after policy is added to Azure Samples)]() denies an Azure virtual machine deployment based on a naming standard.
+The following snippet from a [custom policy example in Azure Samples](https://github.com/Azure-Samples/Governance/blob/master/src/policy/naming-convention/policy.json) denies an Azure virtual machine deployment based on a naming standard.
 
 ```json
 {
@@ -88,8 +85,12 @@ The following snippet from a [custom policy example in Azure Samples (TODO: Add 
 
 Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to identify resources that aren't compliant with your naming standards. Because there are no predefined naming standards, you will custom graph queries.
 
-The following Azure Resource Graph example query identifies ...
+The following Azure Resource Graph example query identifies improperly named virtual networks as per [resource naming guidance](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 ```azurecli
-# TODO: Write example graph query to find improperly named resources.
+Resources
+| where type == 'microsoft.network/virtualnetworks'
+| project name, id
+| extend valid = name matches regex @"(^vnet-\w+-(prod|dev)-\w+-\d\d\d$)"
+| where valid == false
 ```
