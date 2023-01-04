@@ -2,9 +2,9 @@
 title: Management baseline for Azure Virtual Desktop
 description: Learn how the management baseline can improve the management and monitoring of Azure Virtual Desktop.
 author: Zimmergren
-ms.author: martinek
+ms.author: martinekuan
 ms.reviewer: tozimmergren
-ms.date: 12/19/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -49,6 +49,8 @@ Review the following considerations and recommendations for platform management 
     - `Microsoft-FSLogix-Apps/Operational`
     - `Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin`
     - `Microsoft-FSLogix-Apps/Admin`
+
+Read more about [creating data collection rules](/azure/azure-monitor/agents/data-collection-rule-azure-monitor-agent#create-a-data-collection-rule) in Azure Monitor.
 
 - Use [Azure Virtual Desktop Insights](/azure/virtual-desktop/insights) for ease of configuration.
 
