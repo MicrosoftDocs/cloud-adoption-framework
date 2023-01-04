@@ -2,7 +2,7 @@
 title: Introduction to Azure Arc landing zone accelerator for hybrid and multicloud
 description: Learn how Azure Arc can accelerate your adoption of a hybrid or multicloud architecture.
 author: likamrat
-ms.author: doalle
+ms.author: martinek
 ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -16,9 +16,9 @@ Enterprises are currently building and running applications across various ecosy
 
 [Azure landing zones](../../ready/landing-zone/index.md) provides a specific architectural approach, reference architecture, and set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
 
-:::image type="content" source="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.png":::
+:::image type="content" source="../../ready/enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
-Azure landing zones was designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two additions:
+Azure landing zones were designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two additions:
 
 - **Hybrid and multicloud connectivity:** Understand key network design considerations and recommendations for working with Azure Arc.
 - **Unified operations:** Include Azure Arc-enabled resources to extend your governance and operations support with consistent tooling.

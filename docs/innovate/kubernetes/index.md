@@ -2,7 +2,7 @@
 title: Kubernetes in the Cloud Adoption Framework
 description: Learn about Kubernetes in the Cloud Adoption Framework.
 author: sabbour
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/16/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

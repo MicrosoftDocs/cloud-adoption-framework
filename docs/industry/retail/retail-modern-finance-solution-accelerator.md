@@ -2,7 +2,7 @@
 title: Retail modern finance solution accelerator
 description: Learn how to build a solution that identifies top factors for revenue growth in your organization
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Azure landing zones Terraform module
 description: Learn how to use the official Terraform module to deploy Azure landing zones.
 author: krowlandson
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -63,7 +63,7 @@ Packaging these capabilities into a single Terraform module makes it easier to b
 
 These resources align with the [Azure landing zones conceptual architecture](index.md#azure-landing-zone-conceptual-architecture):
 
-:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="Diagram of the Azure landing zone conceptual architecture." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.png":::
+:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="Diagram of the Azure landing zone conceptual architecture." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
 You can deploy these resources, by capability, across multiple subscriptions by using the [Provider Configuration][wiki_provider_configuration] on the module block.
 
@@ -118,7 +118,10 @@ The module provides an option to enable deployment of [network topology and conn
 
 This capability enables deployment of multiple hub networks based on any combination of [traditional Azure networking topology (hub and spoke)](#traditional-azure-networking-topology-hub-and-spoke), and [Virtual WAN network topology (Microsoft-managed)](#virtual-wan-network-topology-microsoft-managed).
 
-The module can also create and link [DDoS Protection](#ddos-protection-plan) Standard to Virtual Networks, and manage centralized public and private [DNS zones](#dns).
+The module can also create and link [DDoS Network Protection](#ddos-protection-plan) to Virtual Networks, and manage centralized public and private [DNS zones](#dns).
+> [!NOTE]
+> We don't currently recommend DDoS IP Protection in Azure Landing Zones and recommend using this option in specific circumstances. Review the product documentation [About Azure DDoS Protection SKU Comparison](/azure/ddos-protection/ddos-protection-sku-comparison)
+
 
 #### Traditional Azure networking topology (hub and spoke)
 
@@ -169,14 +172,14 @@ For more information about how to use this capability, see the [Deploy Virtual W
 
 #### DDoS Protection plan
 
-The module can optionally deploy [DDoS Protection Standard][about_ddos_protection_standard], and link Virtual Networks to the plan if needed.
+The module can optionally deploy [DDoS Network Protection][about_ddos_network_protection], and link Virtual Networks to the plan if needed.
 
 > [!NOTE]
 > Due to platform limitations, DDoS Protection plans can only be enabled for traditional virtual networks. Virtual Hub support is not currently available.
 
 <!-- markdownlint-disable-next-line no-blanks-blockquote-->
 > [!IMPORTANT]
-> The Azure landing zones guidance recommends enabling DDoS Protection Standard to increase protection of your Azure platform. To prevent unexpected costs in non-production and MVP deployments, this capability is disabled in the Azure landing zones Terraform module due to the cost associated with this resource.
+> The Azure landing zones guidance recommends enabling DDoS Network Protection to increase protection of your Azure platform. To prevent unexpected costs in non-production and MVP deployments, this capability is disabled in the Azure landing zones Terraform module due to the cost associated with this resource.
 >
 > For production environments, we strongly recommend enabling this capability.
 
@@ -337,7 +340,7 @@ Learn how to [deploy the Azure landing zones Terraform module][hcl-deploy-es] th
 [tf_install]:   https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started "Install Terraform."
 [azurerm_auth]: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure "Authenticate to Azure when using the AzureRM provider."
 
-[about_ddos_protection_standard]: /azure/ddos-protection/ddos-protection-overview
+[about_ddos_network_protection] : /azure/ddos-protection/ddos-protection-overview
 [about_dns_for_private_endpoint]: /azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration
 
 [arm_management_group]:                      /azure/templates/microsoft.management/managementgroups

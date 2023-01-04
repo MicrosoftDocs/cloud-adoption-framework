@@ -2,7 +2,7 @@
 title: Assess your cloud adoption strategy
 description: Learn how the Cloud Adoption Strategy Evaluator can help you the overall state of your cloud adoption strategy, build a robust business case, and enable a successful cloud adoption.
 author: mpvenables
-ms.author: janet
+ms.author: martinek
 ms.date: 06/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,6 +15,8 @@ ms.custom: internal
 The Cloud Adoption Framework provides the Cloud Adoption Strategy Evaluator to help you assess your overall cloud adoption strategy. This assessment offers recommendations based on the cloud economics principles that can help your organization create a robust business case and enable a successful cloud adoption.
 
 Watch the following video to learn how the Cloud Adoption Strategy Evaluator can help your cloud adoption efforts.
+
+<br/>
 
 <iframe src="/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=9fa04265-f18a-4184-a63c-735fff0c6c52" width="640" height="370"></iframe>
 

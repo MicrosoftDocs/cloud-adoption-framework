@@ -1,7 +1,7 @@
 ---
 title: Define your naming convention
 description: Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
-author: BrianBlanchard
+author: martinekuan
 ms.author: ssumner
 ms.date: 09/28/2022
 ms.topic: conceptual

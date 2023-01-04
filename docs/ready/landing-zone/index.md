@@ -1,8 +1,8 @@
 ---
 title: What is an Azure landing zone?
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -17,6 +17,8 @@ An Azure landing zone is the output of a multi-subscription Azure environment th
 A landing zone is an environment for hosting your workloads, pre-provisioned through code. Watch the following video to learn more.
 
 <!-- markdownlint-disable MD034 -->
+
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xdvm]
 
@@ -52,7 +54,7 @@ While your specific implementation might vary, as a result of specific business 
 
 Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) and modify it to fit your specific business and technical requirements when planning your landing zone implementation.
 
-:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.png":::
+:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
 ## Azure landing zone accelerator
 
@@ -60,7 +62,7 @@ For organizations where this conceptual architecture fits with the operating mod
 
 The accelerator is an Azure-portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
 
-Deploying the Azure landing zone accelerator requires permissions for creating resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
+Deploying the Azure landing zone accelerator requires permissions to create resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
@@ -72,5 +74,3 @@ At the foundation of the architecture is a set of core design principles that se
 
 > [!div class="nextstepaction"]
 > [Design principles](./design-principles.md)
-
-

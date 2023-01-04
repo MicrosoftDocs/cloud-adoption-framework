@@ -2,7 +2,7 @@
 title: Use a Terraform plan to deploy a Google Cloud Platform Windows instance and connect it to Azure Arc
 description: Use a Terraform plan to deploy a Google Cloud Platform Windows instance and connect it to Azure Arc.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

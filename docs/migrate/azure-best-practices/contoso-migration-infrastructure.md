@@ -2,7 +2,7 @@
 title: Deploy a migration infrastructure
 description: Learn how Contoso sets up an Azure infrastructure for migration to Azure.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

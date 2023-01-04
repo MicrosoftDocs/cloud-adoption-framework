@@ -2,7 +2,7 @@
 title: Plan for inbound and outbound internet connectivity
 description: Explore recommended connectivity models for inbound and outbound connectivity to and from the public internet.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 06/22/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
@@ -21,9 +21,18 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - If your organization prefers to use non-Azure network virtual appliance (NVAs), or for situations where native services don't satisfy specific requirements, the Azure landing zone architecture is fully compatible with partner NVAs.
 
-- Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
+- Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [NAT gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 ## Design recommendations
+
+- Use Azure Virtual Network NAT (NAT gateway) for direct outbound connectivity to the internet. NAT gateway is a fully managed, highly resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
+
+  - Use a NAT gateway for:
+
+    - Dynamic or large workloads sending traffic to the internet.
+    - Static and predictable public IP addresses for outbound connectivity. NAT gateway can be associated with up to 16 public IP addresses or a /28 public IP prefix.
+    - Mitigation of issues with SNAT port exhaustion commonly experienced with [Load balancer outbound rules](/azure/load-balancer/troubleshoot-outbound-connection#use-a-nat-gateway-for-outbound-connectivity-to-the-internet), [Azure Firewall](/azure/firewall/integrate-with-nat-gateway), or [Azure App Services](/azure/app-service/networking/nat-gateway-integration).
+    - Security and privacy of resources within your network. Only outbound and return traffic can pass through NAT gateway.
 
 - Use Azure Firewall to govern:
 
@@ -56,7 +65,11 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - If you need partner NVAs for inbound HTTP/S connections, deploy them within a landing-zone virtual network, together with the applications that they protect and expose to the internet.
 
-- For outbound access, don't use Azure's default internet outbound access for any scenario.
+- For outbound access, don't use Azure's default internet outbound access for any scenario. Issues experienced with default outbound access include:
+
+  - Increased risk of SNAT port exhaustion.
+  - Insecure by default.
+  - Can't depend on default access IPs. They aren't owned by the customer and subject to change.
 
 - Use a NAT gateway for online landing zones, or landing zones not connected to the hub virtual network. Compute resources that need outbound internet access and don't need the security of Azure Firewall standard or premium, or a third-party NVA, can use online landing zones.
 

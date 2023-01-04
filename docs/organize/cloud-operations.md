@@ -1,8 +1,8 @@
 ---
 title: Understand cloud operation functions
 description: Understand the formation of cloud operations functionality and staff your team appropriately.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

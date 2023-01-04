@@ -2,7 +2,7 @@
 title: Deploy a local Windows Server instance hosted by Vagrant and connect it to Azure Arc
 description: Deploy a local Windows Server instance hosted by Vagrant and connect it to Azure Arc.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

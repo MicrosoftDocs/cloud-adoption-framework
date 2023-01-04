@@ -1,8 +1,8 @@
 ---
 title: Understand technical considerations
 description: Understand cloud economics and the technical considerations to help you build a business case to migrate to the cloud
-author: WendyRing
-ms.author: wering
+author: martinekuan
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/18/2022
 ms.topic: conceptual
@@ -42,16 +42,16 @@ Capacity optimization, where you only pay for the resources you utilize over tim
 
 Building a sustainable IT infrastructure is tightly connected to moving workloads from on-premises to the cloud. So how do we select the first project to migrate based on its potential sustainability impact?
 
-Moving the first workload is usually [aligned with the business goals](/azure/cloud-adoption-framework/strategy/motivations#motivations), depending on how the migration aligns with an array of factors that lead to this decision.
+Moving the first workload is usually [aligned with the business goals](../motivations.md#motivations), depending on how the migration aligns with an array of factors that lead to this decision.
 
 Although sustainability is a key concept, in reality, it might be idealistic to believe it will be the primary decision factor for cloud migration.
 However, it is a significant added benefit and part of the continuous environment optimization efforts that align with the green strategy of a business.
 
-Projected business outcomes can be synchronized with the [sustainability benefits](/azure/cloud-adoption-framework/strategy/business-outcomes/#sustainability-goals) brought by the migration.
+Projected business outcomes can be synchronized with the [sustainability benefits](../business-outcomes/index.md) brought by the migration.
 
 Resource-intensive workloads can be discovered using [Azure Migrate](/azure/migrate/migrate-services-overview).
 
-Customers can also benefit from taking the [Strategic Migration Assessment](/assessments/?id=Strategic-Migration-Assessment), analyzing the diversity of their workloads and the potential Azure destination mapping. Depending on the results and underlying complexity, one can define migration waves. Assess the carbon intensity using the [Emissions savings estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html), which supports comparing the existing footprint of a workload compared to one in Azure, based on [The Carbon Benefits of Cloud Computing: a Study of the Microsoft Cloud](https://www.microsoft.com/download/details.aspx?id=56950).
+Customers can also benefit from taking the [Strategic Migration Assessment](/assessments/Strategic-Migration-Assessment/), analyzing the diversity of their workloads and the potential Azure destination mapping. Depending on the results and underlying complexity, one can define migration waves. Assess the carbon intensity using the [Emissions savings estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html), which supports comparing the existing footprint of a workload compared to one in Azure, based on [The Carbon Benefits of Cloud Computing: a Study of the Microsoft Cloud](https://www.microsoft.com/download/details.aspx?id=56950).
 
 Identifying the first workload targeted for migration from a sustainability standpoint can be performed using the 80:20 rule – 80% of the emissions derive from 20% of the workload. This is a generic suggestion, of course, as a customer needs to perform their assessment based on the unique needs of its landscape and desired business outcomes.
 

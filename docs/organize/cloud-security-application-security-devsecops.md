@@ -1,8 +1,8 @@
 ---
 title: Understand application security and DevSecOps functions
 description: Understand application security and DevSecOps functions.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: Enterprise-scale identity and access management - Azure VMware Solution
 description: This article examines the design considerations and recommendations related to identity and access management specific to Azure VMware Solution.
 author: E-G-C
-ms.author: janet
+ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

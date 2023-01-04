@@ -2,7 +2,7 @@
 title: How to obtain assistance
 description: Learn how to obtain assistance during your Azure migration process. The right assistance can help accelerate your migration efforts.
 author: matticusau
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
