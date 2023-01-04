@@ -14,8 +14,6 @@ ms.custom: think-tank, e2e-sap, engagement-fy23
 
 This article builds on several considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for management and monitoring](../../ready/landing-zone/design-area/management.md). Following the guidance in this article will help explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents critical recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Since SAP is a mission-critical platform, you should include guidance on the Azure landing zone design areas in your design.
 
-## Design recommendations
-
 Here are some key design recommendations for monitoring and managing SAP on Azure.
 
 - Use [Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) to monitor your SAP workloads on Azure. The solution architecture includes a centralized Azure Log Analytics workspace for establishing a platform and application-layer monitoring. Consider supplementing Azure Monitor for SAP Solutions with SAP Solution Manager. You can add Application Insights to extract all necessary telemetry data while generating alerts and support tickets when telemetry indicates a potential error.
