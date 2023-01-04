@@ -17,7 +17,7 @@ items:
       - name: Network topology and connectivity
         href: eslz-network-topology-connectivity.md
         items:
-          - name: Example Architectures for Azure VMWare Solution
+          - name: Example Architectures for Azure VMware Solution
             href: example-architectures.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
