@@ -20,7 +20,7 @@ Whether you need all the elements that are described in this article depends on 
 
 ## Overview
 
-For Tailwind Traders to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Tailwind needs to think about 3 areas:
+For Tailwind Traders to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Tailwind needs to think about the following areas:
 
 > [!div class="checklist"]
 >
@@ -56,7 +56,7 @@ By using the following workflow, Tailwind can identify the tools that are requir
 
 *Figure 1: Replication appliances and agents workflow.*
 
-For more information, see these Azure Migrate topics:
+For more information, see these Azure Migrate articles:
 
 - [Support matrix for VMware migration](/azure/migrate/migrate-support-matrix-vmware-migration#vm-requirements-agentless).
 - [Migrate VMware VMs to Azure (agent-based)](/azure/migrate/tutorial-migrate-vmware-agent).
@@ -99,7 +99,7 @@ Migrations are an orchestration of both business and technical groups. Therefore
 In order to prepare the business and its stakeholders for the migration activities, Tailwind Traders defines the following items:
 
 - A maintenance window for each of the migrated applications.
-- Communications on application downtime and impact to business.
+- Communications on application downtime and effects on business.
 - Points of contact (POCs) who can provide support for key areas during migration testing and cutover:
   - Network administrators
   - Backup administrators
@@ -108,7 +108,7 @@ In order to prepare the business and its stakeholders for the migration activiti
   - Application owners (frontend and backend applications)
   - Microsoft Support
   - Partners (if available)
-- A soak test after the cutover of the application to Azure. During the soak period, if any issues arise, then Tailwind must execute the rollback plan. After the soak period has expired, rollback of the application cannot be performed.
+- A soak test after the cutover of the application to Azure. During the soak period, if any issues arise, then Tailwind must execute the rollback plan. After the soak period has expired, rollback of the application can't be performed.
 
 ### Technical: Pre-migration
 
@@ -143,7 +143,7 @@ Tailwind Traders identifies the following activities for execution after the mig
   - Validate sign-in with local credentials or keys for RDP or SSH.
   - Verify that DNS servers are configured in TCP/IP settings for the OS and that name resolution works correctly.
   - Verify that an IP address is assigned to the server via DHCP in TCP/IP settings for the OS.
-  - Verify that access to OS licensing is activated and that there is access to cloud-based licensing endpoints (such as Azure endpoints for key management services).
+  - Verify that access to OS licensing is activated and that there's access to cloud-based licensing endpoints (such as Azure endpoints for key management services).
   - Validate sign-in with domain credentials.
   - Verify that the application has access to dependencies (such as target URLs or connection strings).
   - Verify installation or update required Azure agents:
@@ -165,7 +165,7 @@ Tailwind Traders seeks to understand the need for a test migration, what test ca
 
 ##### Define a smoke test
 
-As a first step, Tailwind Traders performs a smoke test to validate that servers that are identified for migration boot in Azure. An isolated virtual network should be the context for the smoke test of all the servers that are migrated. Tailwind follows this recommendation and is especially focused on the smoke test for servers that are legacy, highly customized, or contain hardened operating systems. Additionally, Tailwind runs a smoke test for servers that have been marked as *Conditionally Ready* by their Azure Migrate assessments.
+As a first step, Tailwind Traders performs a smoke test to validate that the servers that are identified for migration boot correctly in Azure. An isolated virtual network should be the context for the smoke test of all the servers that are migrated. Tailwind follows this recommendation and is especially focused on the smoke test for servers that are legacy, highly customized, or contain hardened operating systems. Additionally, Tailwind runs a smoke test for servers that have been marked as *Conditionally Ready* by their Azure Migrate assessments.
 
 Tailwind defines a smoke test to be successful when basic server functionality and properties are validated. For example, smoke testing might include:
 
@@ -192,11 +192,11 @@ Typically, application owners lead UAT.
 
 After defining test cases, Tailwind Traders develops the following workflow to encompass the various scenarios it might encounter based on the needs of each application or server.
 
-The majority of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as *Ready with Conditions*, which might not boot in Azure. Therefore, Tailwind tests those servers in an isolated virtual network to ensure that each server passes a smoke test. For this, Tailwind performs a test migration in Azure Migrate, which allows for automated clean up of created resources, such as VMs and network interfaces.
+Most Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as *Ready with Conditions*, which might not boot in Azure. Therefore, Tailwind tests those servers in an isolated virtual network to ensure that each server passes a smoke test. For this, Tailwind performs a test migration in Azure Migrate, which allows for automated clean-up of created resources, such as VMs and network interfaces.
 
 Further, Tailwind's environment is tightly coupled. It has a large number of servers that are interdependent with one another, which results in large migration waves. Tailwind decides to split their large migration waves and to migrate servers together that have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind determines that it should migrate directly into the production virtual network, since that network already has connectivity to their on-premises dependencies. In this path, Tailwind performs the necessary smoke tests in an isolated virtual network and perform UAT in the production virtual network. If successful, Tailwind concludes the migration as a final cutover for the servers.
 
-Tailwind finds value in considering the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT, or where UAT is not enforced.
+Tailwind finds value in considering the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT, or where UAT isn't enforced.
 
 [![Diagram of the migration workflow.](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)](./media/tailwind-migration-rehost-server-replication/migration-workflow.png#lightbox)
 
