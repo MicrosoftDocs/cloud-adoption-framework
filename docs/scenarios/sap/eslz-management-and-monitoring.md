@@ -18,9 +18,9 @@ Here are some key design recommendations for monitoring and managing SAP on Azur
 
 - Use [Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) to monitor your SAP workloads on Azure. The solution architecture includes a centralized Azure Log Analytics workspace for establishing a platform and application-layer monitoring. Consider supplementing Azure Monitor for SAP Solutions with SAP Solution Manager. You can add Application Insights to extract all necessary telemetry data while generating alerts and support tickets when telemetry indicates a potential error.
 
-- Implement threat protection with [Microsoft Sentinel Solution for SAP](/Azure/sentinel/sap/deployment-overview).
+- Implement threat protection with [Microsoft Sentinel Solution for SAP](/Azure/sentinel/sap/deployment-overview). Use Microsoft Sentinel Solution for SAP to monitor your SAP systems and detect sophisticated threats throughout the business logic and application layers.
 
-- Run a VM Extension for SAP check. VM Extension for SAP uses the assigned managed identity of a virtual machine to access VM monitoring and configuration data. The check ensures that all performance metrics inside your SAP application come from the underlying [Azure Extension for SAP](/azure/virtual-machines/workloads/sap/deployment-guide).
+- Run a VM Extension for SAP check. VM Extension for SAP uses the assigned managed identity of a virtual machine to access VM monitoring and configuration data. The check ensures that all performance metrics inside your SAP application come from the underlying [Azure Extension for SAP](/azure/virtual-machines/workloads/sap/vm-extension-for-sap).
 
 - Protect your HANA database with [Azure Backup](/azure/backup/sap-hana-db-about) service. If you deploy Azure NetApp Files (ANF) for your HANA database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots. Consider using AzAcSnap from a central VM rather than on individual VMs.
 
@@ -28,9 +28,9 @@ Here are some key design recommendations for monitoring and managing SAP on Azur
 
 - Use inter-virtual machine (VM) latency monitoring for latency-sensitive applications.
 
-- Use Network Watcher [Connection Monitor](/azure/network-watcher/connection-monitor) to monitor SAP database and application server latency metrics or collect and display network latency measurements with [Azure Monitor](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/collecting-and-displaying-niping-network-latency-measurements/ba-p/1833979).
+- Use Network Watcher [Connection Monitor](/azure/network-watcher/connection-monitor-overview) to monitor SAP database and application server latency metrics or [collect and display network latency measurements with Azure Monitor](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/collecting-and-displaying-niping-network-latency-measurements/ba-p/1833979).
 
-- Use [Azure Site Recovery](/azure/site-recovery/monitoring-common-questions) monitoring to maintain disaster recovery service health for SAP application servers.
+- Use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) monitoring to maintain disaster recovery service health for SAP application servers.
 
 - Optimize and manage SAP Basis operations by using [SAP Landscape Management (LaMa)](https://www.sap.com/products/landscape-management.html). Use the [SAP LaMa connector for Azure](/azure/virtual-machines/workloads/sap/lama-installation) to relocate, copy, clone, and refresh SAP systems.
 
