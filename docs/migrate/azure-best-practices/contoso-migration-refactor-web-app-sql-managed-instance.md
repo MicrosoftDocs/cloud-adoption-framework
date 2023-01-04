@@ -18,80 +18,79 @@ The SmartHotel360 application that we use in this example is provided as open-so
 
 ## Business drivers
 
-The Contoso IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
+The Contoso IT leadership team worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Address business growth.** Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
+- **Address business growth.** Contoso is growing, and there's pressure on the company's on-premises systems and infrastructure.
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. Reaction time must not get in the way, or become a business blocker.
-- **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
+- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. To succeed in a global economy, the company needs to be able to react faster than the changes in the marketplace. Reaction time must not get in the way or become a business blocker.
+- **Scale.** As the business grows, Contoso IT must provide systems that can grow at the same pace.
 - **Reduce costs.** Contoso wants to minimize licensing costs.
 
 ## Migration goals
 
-To help determine the best migration method, the Contoso cloud team pinned down the following goals:
+To help determine the best migration method, the Contoso cloud team created these goals:
 
-| Requirements | Details |
+| Requirement domain | Details |
 | --- | --- |
-| **Application** | The application in Azure will remain as critical as it is today on-premises. <br><br> It should have the same performance capabilities as it currently does in VMware. <br><br> The team doesn't want to invest in the application. For now, admins will simply move the application safely to the cloud. <br><br> The team wants to stop supporting Windows Server 2008 R2, which the application currently runs on. <br><br> The team also wants to move away from SQL Server 2008 R2 to a modern platform as a service (PaaS) database, which will minimize the need for management. <br><br> Contoso wants to take advantage of its investment in SQL Server licensing and Software Assurance where possible. <br><br> In addition, Contoso wants to mitigate the single point of failure on the web tier. |
-| **Limitations** | The application consists of an ASP.NET application and a Windows Communication Foundation (WCF) service running on the same VM. They want to spread these components across two web apps using the Azure App Service. |
+| **Application** | The application in Azure will remain as critical as it is today on-premises. <br><br> It should have the same performance capabilities that it currently has on VMware. <br><br> The team doesn't want to invest in the application. For now, admins will simply move the application safely to the cloud. <br><br> The team wants to stop supporting Windows Server 2008 R2, which the application currently runs on. <br><br> The team also wants to move from SQL Server 2008 R2 to a modern platform as a service (PaaS) database, which will minimize the need for management. <br><br> Contoso wants to take advantage of its investment in SQL Server licensing and Software Assurance when possible. <br><br> Contoso wants to mitigate the single point of failure on the web tier. <br><br>The application consists of an ASP.NET application and a Windows Communication Foundation (WCF) service running on a single VM. Contoso wants to spread these components across two web apps using App Service.|
 | **Azure** | Contoso wants to move the application to Azure, but they don't want to run it on VMs. Contoso wants to use Azure PaaS services for both the web and data tiers. |
 | **DevOps** | Contoso wants to move to a DevOps model that uses Azure DevOps for their builds and release pipelines. |
 
 ## Solution design
 
-After pinning down their goals and requirements, Contoso designs and reviews a deployment solution. They also identify the migration process, including the Azure services that they'll use for the migration.
+After determining goals and requirements, Contoso designs and reviews a deployment solution. The team also identifies a migration process, including the Azure services that they'll use for the migration.
 
 ### Current application
 
 - The SmartHotel360 on-premises application is tiered across two VMs, `WEBVM` and `SQLVM`.
-- The VMs are located on VMware ESXi host `contosohost1.contoso.com` version 6.5.
+- The VMs are located on VMware ESXi 6.5 host `contosohost1.contoso.com`.
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), which runs on a VM.
-- Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
+- Contoso has an on-premises datacenter (`contoso-datacenter`) with an on-premises domain controller (`contosodc1`).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
 ### Proposed solution
 
-- For the application web tier, Contoso has decided to use Azure App Service. This PaaS service enables them to deploy the application with just a few configuration changes. Contoso will use Visual Studio to make the change, and they'll deploy two web apps, one for the website and one for the WCF service.
-- To meet requirements for a DevOps pipeline, Contoso will use Azure DevOps for source code management with Git repos. They'll use automated builds and release to build the code and deploy it to the Azure App Service.
+- For the application web tier, Contoso will use App Service. This PaaS service enables them to deploy the application with just a few configuration changes. Contoso will use Visual Studio to make the change, and they'll deploy two web apps, one for the website and one for the WCF service.
+- To meet requirements for a DevOps pipeline, Contoso will use Azure DevOps for source code management with Git repos. They'll use automated builds and release to build the code and deploy it to App Service.
 
 ### Database considerations
 
-As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Managed Instance. They decided to use SQL Managed Instance based on the following considerations:
+During the solution design process, Contoso compares the features of Azure SQL Database with those of SQL Managed Instance. The team decides to use SQL Managed Instance, based on these considerations:
 
-- SQL Managed Instance aims to deliver almost 100 percent compatibility with the latest on-premises SQL Server version. Microsoft recommends SQL Managed Instance for customers who are running SQL Server on-premises or on infrastructure as a service (IaaS) VMs who want to migrate their applications to a fully managed service with minimal design changes.
-- Contoso is planning to migrate a large number of applications from on-premises to IaaS VMs. Many of these VMs are provided by independent software vendors. Contoso realizes that using SQL Managed Instance will help ensure database compatibility for these applications. They'll use SQL Managed Instance rather than SQL Database, which might not be supported.
-- Contoso can simply do a lift and shift migration to SQL Managed Instance by using the fully automated Azure Database Migration Service. With this service in place, Contoso can reuse it for future database migrations.
-- SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 application. Contoso needs this compatibility; otherwise, they'll have to redesign the maintenance plans required by the application.
-- With Software Assurance, Contoso can exchange their existing licenses for discounted rates on a SQL managed instance by using the Azure Hybrid Benefit for SQL Server. This allows Contoso to save up to 30 percent by using SQL Managed Instance.
-- The SQL managed instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso's data. Contoso can get the benefits of the public cloud, while keeping the environment isolated from the public internet.
-- SQL Managed Instance supports many security features, including always-encrypted, dynamic data masking, row-level security, and threat detection.
+- SQL Managed Instance aims to deliver almost 100 percent compatibility with the latest on-premises SQL Server version. Microsoft recommends SQL Managed Instance for organizations that are running SQL Server on-premises or on infrastructure as a service (IaaS) VMs and that want to migrate their applications to a fully managed service with minimal design changes.
+- Contoso plans to migrate a large number of applications from on-premises to IaaS VMs. Many of these VMs are provided by independent software vendors. Contoso realizes that using SQL Managed Instance can help ensure database compatibility for these applications. They'll use SQL Managed Instance rather than SQL Database, which might not be supported.
+- Contoso can simply do a lift-and-shift migration to SQL Managed Instance by using the fully automated Azure Database Migration Service. Contoso can also reuse this service for future database migrations.
+- SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 application. Contoso needs this compatibility. Otherwise, they'd have to redesign the maintenance plans required by the application.
+- With Software Assurance, Contoso can exchange its current licenses for discounted rates on a SQL managed instance by using the Azure Hybrid Benefit for SQL Server. This enables Contoso to save as much as 30 percent by using SQL Managed Instance.
+- The SQL managed instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso's data. Contoso can get the benefits of the public cloud while keeping the environment isolated from the public internet.
+- SQL Managed Instance supports many security features, including Always Encrypted, dynamic data masking, Row-Level Security, and threat detection.
 
 ### Solution review
 
-Contoso evaluates their proposed design by putting together a pros and cons list, as shown in the following table:
+Contoso evaluates their proposed design by compiling a pros and cons list:
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | The SmartHotel360 application code doesn't require changes for migration to Azure. <br><br> Contoso can take advantage of their investment in Software Assurance by using the Azure Hybrid Benefit for both SQL Server and Windows Server. <br><br> After the migration, Windows Server 2008 R2 won't need to be supported. For more information, see the [Microsoft Lifecycle Policy](/lifecycle/). <br><br> Contoso can configure the web tier of the application with multiple instances, so that the web tier is no longer a single point of failure. <br><br> The database will no longer depend on the aging SQL Server 2008 R2. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> The SQL managed instance will provide 100 percent compatibility with their current deployment, while moving them away from SQL Server 2008 R2. <br><br> Contoso can take advantage of their investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> They can reuse Azure Database Migration Service for additional future migrations. <br><br> The SQL managed instance has built-in fault tolerance that Contoso doesn't need to configure. This ensures that the data tier is no longer a single point of failover. |
-| **Cons** | Azure App Service supports only one application deployment for each web app. This means that two web apps must be provisioned, one for the website and one for the WCF service. <br><br> For the data tier, SQL Managed Instance might not be the best solution if Contoso wants to customize the operating system or the database server, or if they want to run third-party applications along with SQL Server. Running SQL Server on an IaaS VM could provide this flexibility. |
+| **Pros** | The SmartHotel360 application code doesn't require changes for migration to Azure. <br><br> Contoso can take advantage of its investment in Software Assurance by using the Azure Hybrid Benefit for both SQL Server and Windows Server. <br><br> After the migration, Contoso won't need to support Windows Server 2008 R2. For more information, see the [Microsoft Lifecycle Policy](/lifecycle). <br><br> Contoso can configure the web tier of the application with multiple instances, so that the web tier is no longer a single point of failure. <br><br> The database will no longer depend on the aging SQL Server 2008 R2. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> The SQL managed instance will provide 100 percent compatibility with the current deployment, while moving away from SQL Server 2008 R2. <br><br> Contoso can take advantage of its investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> Contoso can reuse Database Migration Service for future migrations. <br><br> The SQL managed instance has built-in fault tolerance that Contoso doesn't need to configure. This fault tolerance ensures that the data tier is no longer a single point of failover. |
+| **Cons** | App Service supports only one application deployment for each web app. So two web apps must be provisioned, one for the website and one for the WCF service. <br><br> For the data tier, SQL Managed Instance might not be the best solution if Contoso wants to customize the operating system or the database server, or if they want to run third-party applications along with SQL Server. Running SQL Server on an IaaS VM could provide this flexibility. |
 
 ## Proposed architecture
 
-![Diagram of the proposed architecture.](./media/contoso-migration-refactor-web-app-sql-managed-instance/architecture.png)
+:::image type="content" source="./media/contoso-migration-refactor-web-app-sql-managed-instance/architecture.png" alt-text="Diagram that shows the proposed architecture." lightbox="./media/contoso-migration-refactor-web-app-sql-managed-instance/architecture.png" border="false":::
 
 ### Migration process
 
-1. Contoso provisions an Azure SQL managed instance and then migrates the SmartHotel360 database to it by using Azure Database Migration Service.
+1. Contoso provisions an Azure SQL managed instance and then migrates the SmartHotel360 database to it by using Database Migration Service.
 1. Contoso provisions and configures web apps and deploys the SmartHotel360 application to them.
 
-    ![Diagram of the migration process.](./media/contoso-migration-refactor-web-app-sql-managed-instance/migration-process.png)
+:::image type="content" source="./media/contoso-migration-refactor-web-app-sql-managed-instance/migration-process.png" alt-text="Diagram that shows the migration process." lightbox="./media/contoso-migration-refactor-web-app-sql-managed-instance/migration-process.png" border="false":::
 
 ### Azure services
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure App Service Migration Assistant](/training/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
-| [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
+| [App Service migration assistant](/training/paths/migrate-dotnet-apps-azure) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
+| [Database Migration Service](/azure/dms/dms-overview) | Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
 | [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in Azure. It uses the same code as the latest version of SQL Server Database Engine, and has the latest features, performance improvements, and security patches. | Using a SQL managed instance that runs in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/). |
 | [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
 | [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for application development. The pipeline starts with a Git repository for managing application code, a build system for producing packages and other build artifacts, and a release management system to deploy changes in dev, test, and production environments. |
