@@ -2,7 +2,7 @@
 title: Govern Azure VMware Solution
 description: Learn about how to extend your governance approach across the Azure VMware Solution.
 author: mpvenables
-ms.author: janet
+ms.author: martinek
 ms.date: 04/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -68,7 +68,7 @@ Azure Resource Manager (ARM) is the operating system of Azure that, stretching a
 - [Back up VMware VMs with Azure Backup Server](/azure/backup/backup-azure-backup-server-vmware)
 - [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](/azure/site-recovery/avs-tutorial-prepare-azure?context=/azure/azure-vmware/context/context)
 
-To learn more about how Azure VMware Solution integrates with native Azure services, see [What is Azure VMware Solution](/learn/modules/intro-azure-vmware-solution/2-what-is-azure-vmware-solution)
+To learn more about how Azure VMware Solution integrates with native Azure services, see [What is Azure VMware Solution](/training/modules/intro-azure-vmware-solution/2-what-is-azure-vmware-solution)
 
 ## Governance MVP for hybrid workloads
 

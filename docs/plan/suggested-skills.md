@@ -1,8 +1,8 @@
 ---
 title: Get started on a skills readiness path
 description: Explore a skills readiness path so you can help your organization understand and adopt cloud services.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 08/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -32,18 +32,18 @@ You can also explore certification paths. The [Azure Certification Deck](https:/
 
 ## Microsoft Learn
 
-[Microsoft Learn](/learn/) can help you develop valuable IT skills at your own pace. With hands-on learning and customizable paths, Microsoft Learn offers a rewarding approach to online training. Earn points and levels, and achieve more!
+[Microsoft Learn](/training/) can help you develop valuable IT skills at your own pace. With hands-on learning and customizable paths, Microsoft training offers a rewarding approach to online training. Earn points and levels, and achieve more!
 
 Examples of tailored learning paths that align to the Cloud Adoption Framework include:
 
 <!-- docutune:ignore "on premises" -->
 
-- [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/): DevOps is the union of people, process, and products to enable continuous delivery of value to your end users. Azure DevOps is a set of services that gives you the tools you need to do just that. With Azure DevOps, you can build, test, and deploy any application, either in the cloud or on premises.
+- [Evolve your DevOps practices](/training/paths/evolve-your-devops-practices/): DevOps is the union of people, process, and products to enable continuous delivery of value to your end users. Azure DevOps is a set of services that gives you the tools you need to do just that. With Azure DevOps, you can build, test, and deploy any application, either in the cloud or on premises.
 
-- [Azure for the data engineer](/learn/paths/azure-for-the-data-engineer/): Explore how the world of data has evolved and how the advent of cloud technologies provides new opportunities for business to explore. You'll learn about various data platform technologies, and how a data engineer can take advantage of this technology to an organization's benefit.
+- [Azure for the data engineer](/training/paths/azure-for-the-data-engineer/): Explore how the world of data has evolved and how the advent of cloud technologies provides new opportunities for business to explore. You'll learn about various data platform technologies, and how a data engineer can take advantage of this technology to an organization's benefit.
 
 ## Learn more
 
-To discover more learning paths, browse the [Microsoft Learn catalog](/learn/browse/). Use the roles filter to align learning paths with your role.
+To discover more learning paths, browse the [Microsoft Learn training catalog](/training/browse/). Use the roles filter to align learning paths with your role.
 
 Learn about paths to [Microsoft Certifications](/certifications/).

@@ -2,7 +2,7 @@
 title: Move on-premises VMware infrastructure to Azure
 description: Learn how fictional company Contoso moves on-premises VMware VMs to Azure.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

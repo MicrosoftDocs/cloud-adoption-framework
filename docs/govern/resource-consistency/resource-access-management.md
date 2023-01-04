@@ -1,8 +1,8 @@
 ---
 title: Resource access management in Azure
 description: Understand Azure resource access management concepts like Azure Resource Manager, subscriptions, resource groups, and resources.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -32,7 +32,7 @@ Recommended best practice is to associate resource groups, and the resources the
 
 ## What is an Azure subscription?
 
-An Azure subscription is similar to a resource group in that it's a logical container that associates resource groups and their respective resources. An Azure subscription is also associated with Azure Resource Manager controls. Learn about [Azure Resource Manager](/learn/modules/use-azure-resource-manager/) and its relationship to Azure subscriptions.
+An Azure subscription is similar to a resource group in that it's a logical container that associates resource groups and their respective resources. An Azure subscription is also associated with Azure Resource Manager controls. Learn about [Azure Resource Manager](/training/modules/use-azure-resource-manager/) and its relationship to Azure subscriptions.
 
 ![Diagram of an Azure subscription.](../../_images/govern/design/governance-1-11.png)
 

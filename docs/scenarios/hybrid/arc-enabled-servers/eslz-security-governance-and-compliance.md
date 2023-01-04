@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 
 # Governance, security, and compliance baseline for Azure Arc-enabled servers
 
-This article covers the key design considerations and best practices when implementing security, governance, and compliance for Azure Arc-enabled servers deployments. While the enterprise-scale landing zone documentation covers "[Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)" and "[Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)" as separate topics, for Azure Arc-enabled servers, these critical design areas are consolidated as a single topic.
+This article covers the key design considerations and best practices when implementing security, governance, and compliance for Azure Arc-enabled servers deployments. While the enterprise-scale landing zone documentation covers "[Governance](../../../ready/landing-zone/design-area/governance.md)" and "[Security](../../../ready/landing-zone/design-area/security.md)" as separate topics, for Azure Arc-enabled servers, these critical design areas are consolidated as a single topic.
 
 Defining and applying the proper control mechanisms is key in any cloud implementation, as it's the foundational element to stay secured and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls. However, the cloud has introduced a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
 
@@ -32,7 +32,7 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 
 - **Agent security permissions:** Secure access to the Azure connected machine agent by reviewing users with local administrator privileges on the server.
 - **Managed identity:** Use [managed identities with Azure Arc-enabled servers](/azure/azure-arc/servers/managed-identity-authentication). Define a strategy for identifying which applications running on Azure Arc-enabled servers can use an Azure Active Directory (Azure AD) token.
-- **Azure role-based access control (RBAC):** Define administrative, operations, and engineering roles within the organization. This will help allocate day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will determine Azure RBAC roles and configuration. Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix, to support this effort and build controls into the management scope hierarchy you define, while following the resource consistency and inventory management guidance. For more information, review [identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md).
+- **Azure role-based access control (RBAC):** Define administrative, operations, and engineering roles within the organization. This will help allocate day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will determine Azure RBAC roles and configuration. Consider using a [RACI](../../../organize/raci-alignment.md) matrix, to support this effort and build controls into the management scope hierarchy you define, while following the resource consistency and inventory management guidance. For more information, review [identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md).
 
 ### Resource organization
 
@@ -45,8 +45,8 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure policies and remediation tasks.
 - **Data residency:** Consider which Azure region you wish your Azure Arc-enabled servers to be provisioned into, and understand the [metadata that is collected](/azure/azure-arc/servers/data-residency) from these machines.
 - **Secure public key:** Secure the Azure connected machine agent public key authentication to communicate with the Azure service.
-- **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/enterprise-scale/business-continuity-and-disaster-recovery) guidance for enterprise-scale landing zones to determine whether your enterprise requirements are met.
-- Review the [security, governance, and compliance design area](/azure/cloud-adoption-framework/ready/enterprise-scale/security-governance-and-compliance) of Azure landing zone enterprise-scale, to assess the impact of Azure Arc-enabled servers on your overall security and governance model.
+- **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](../../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md) guidance for enterprise-scale landing zones to determine whether your enterprise requirements are met.
+- Review the [security, governance, and compliance design area](../../../ready/landing-zone/design-area/governance.md) of Azure landing zone enterprise-scale, to assess the impact of Azure Arc-enabled servers on your overall security and governance model.
 
 ### Management disciplines
 
@@ -99,7 +99,7 @@ Policy-driven governance is a foundational principle of cloud-native operations 
 
 Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure resource management layer, and also within the individual server machine using [guest configuration policies](/azure/governance/policy/concepts/guest-configuration).
 
-Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where it can be applied (management group, subscription, resource group, or individual resource level). Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise-scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
+Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where it can be applied (management group, subscription, resource group, or individual resource level). Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise-scale](../../../ready/landing-zone/design-area/resource-org.md)
 
 - Determine what Azure policies are required by defining business, regulatory, and security requirements for Azure Arc-enabled servers.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
@@ -118,7 +118,7 @@ The following image displays conceptual reference architecture that demonstrates
 
 ### Log management strategy
 
-Design and plan your Log Analytics workspace deployment. It will be the container where data is collected, aggregated, and later analyzed. A Log Analytics workspace represents a geographical location of your data, data isolation, and scope for configurations like data retention. You'll have to identify the number of workspaces needed and how it maps to your organizational structure. It's recommended you use a single Azure Monitor Log Analytics workspace to manage RBAC centrally, for visibility, and reporting, as described in the [management and monitoring best practices of Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
+Design and plan your Log Analytics workspace deployment. It will be the container where data is collected, aggregated, and later analyzed. A Log Analytics workspace represents a geographical location of your data, data isolation, and scope for configurations like data retention. You'll have to identify the number of workspaces needed and how it maps to your organizational structure. It's recommended you use a single Azure Monitor Log Analytics workspace to manage RBAC centrally, for visibility, and reporting, as described in the [management and monitoring best practices of Cloud Adoption Framework](../../../ready/landing-zone/design-area/management.md).
 
 Review the best practices in [Designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 
@@ -141,7 +141,7 @@ Centralizing logs drives reports that can be used as additional layers of securi
 
 With Azure Arc-enabled servers, you can manage your enterprise estate with centralized management and monitoring at-scale. More specifically, it provides alerts and recommendations to IT teams, with full operational visibility that includes managing the updates of your Windows and Linux VMs.
 
-Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations to all VMs, including your [Azure Arc-enabled servers](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management).
+Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations to all VMs, including your [Azure Arc-enabled servers](../../../manage/hybrid/server/best-practices/arc-update-management.md).
 
 You can also use [Azure Automanage](/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Azure Arc resources.
 
@@ -171,4 +171,4 @@ For more guidance for your hybrid cloud adoption journey,  review the following:
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
 - Understand how to [manage hybrid and multicloud environments](../manage.md)
-- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

@@ -2,7 +2,7 @@
 title: Introduction to the Azure VMware Solution adoption scenario
 description: Learn about the Azure VMware Solution adoption scenario
 author: mpvenables
-ms.author: janet
+ms.author: martinek
 ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -32,7 +32,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 - **Cloud Adoption Framework:** These articles walk through the [considerations and recommendations of each CAF methodology](../../overview.md). Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Azure VMware Solution.
 - **Reference architectures:** These [reference solutions](/azure/architecture/browse/) help to accelerate the deployment of Azure VMware Solution.
 - **Featured Azure products:** Learn more about the [products that support your VMware vSphere strategy](/azure/azure-vmware/integrate-azure-native-services) in Azure.
-- **Learn modules:** Get the [hands-on skilling required](/learn/paths/run-vmware-workloads-azure-vmware-solution/) to implement, maintain, and support Azure VMware Solution.
+- **Learn modules:** Get the [hands-on skilling required](/training/paths/run-vmware-workloads-azure-vmware-solution/) to implement, maintain, and support Azure VMware Solution.
 
 ## Next steps
 

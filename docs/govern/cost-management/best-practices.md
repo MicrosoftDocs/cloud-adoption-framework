@@ -1,8 +1,8 @@
 ---
 title: Costing and sizing Azure resources
 description: Use the Cloud Adoption Framework for Azure to learn best practices for costing and sizing resources in Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -127,7 +127,7 @@ Azure provides different types of storage data.
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access and connections to file data. |
 | **Disks** | Based on page blobs. <br><br> Disk type (speed): Standard HDD, Standard SSD, Premium SSD, or Ultra Disk Storage. <br><br> Disk management: Unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queuing. |
-| **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
+| **Tables** | Store tables. | Now part of Azure Cosmos DB for Table. |
 
 ### Access tiers
 

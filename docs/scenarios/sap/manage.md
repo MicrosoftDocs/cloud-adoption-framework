@@ -2,7 +2,7 @@
 title: Manage SAP in Azure
 description: Operations management considerations when managing SAP on Azure
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/01/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

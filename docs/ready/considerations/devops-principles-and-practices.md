@@ -66,19 +66,19 @@ To establish your DevOps framework, consider using the frameworks that are alrea
 
 - [Microsoft DevOps Dojo](https://devblogs.microsoft.com/devops/intro-of-devops-dojo/) establishes a DevOps taxonomy built on four foundational pillars and eight capabilities:
   - Pillars:
-    - [Culture](/learn/modules/introduce-foundation-pillars-devops/3-explore-first-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Lean Product](/learn/modules/introduce-foundation-pillars-devops/4-explore-second-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Architecture](/learn/modules/define-foundation-pillars/2-explore-third-foundation-pillar?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Technology](/learn/modules/define-foundation-pillars/3-explore-last-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Culture](/training/modules/introduce-foundation-pillars-devops/3-explore-first-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Lean Product](/training/modules/introduce-foundation-pillars-devops/4-explore-second-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Architecture](/training/modules/define-foundation-pillars/2-explore-third-foundation-pillar?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Technology](/training/modules/define-foundation-pillars/3-explore-last-foundation?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
   - Capabilities:
-    - [Continuous Planning](/learn/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Integration](/learn/modules/analyze-devops-continuous-planning-intergration/3-analyze-continuous-integration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Delivery](/learn/modules/explain-devops-continous-delivery-quality/2-use-continuous-delivery-release-faster?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Operations](/learn/modules/explore-devops-continuous-security-operations/3-explore-continuous-operations?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Security](/learn/modules/explore-devops-continuous-security-operations/2-explore-continuous-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Quality](/learn/modules/explain-devops-continous-delivery-quality/3-explore-continuous-quality?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Improvement](/learn/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
-    - [Continuous Collaboration](/learn/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Planning](/training/modules/analyze-devops-continuous-planning-intergration/2-explore-continuous-planning?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Integration](/training/modules/analyze-devops-continuous-planning-intergration/3-analyze-continuous-integration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Delivery](/training/modules/explain-devops-continous-delivery-quality/2-use-continuous-delivery-release-faster?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Operations](/training/modules/explore-devops-continuous-security-operations/3-explore-continuous-operations?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Security](/training/modules/explore-devops-continuous-security-operations/2-explore-continuous-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Quality](/training/modules/explain-devops-continous-delivery-quality/3-explore-continuous-quality?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Improvement](/training/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
+    - [Continuous Collaboration](/training/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
 
 ### Define DevOps practices for your Azure Landing Zones management
 
@@ -98,16 +98,16 @@ Define and align your DevOps implementation journey with your organization's [cl
   - What [technical skills](../suggested-skills.md) your team has.
   - Which [cloud operations model](../../operating-model/define.md) your team currently follows.
 - Use your organization's cloud adoption plan to define a desired model for your team.
-- Establish an iterative roadmap for implementing the desired model in an iterative and incremental mode that aligns with your organization's [transformation timeline](/azure/cloud-adoption-framework/strategy/digital-transformation-timeline).
+- Establish an iterative roadmap for implementing the desired model in an iterative and incremental mode that aligns with your organization's [transformation timeline](../../strategy/digital-transformation-timeline.md).
 
 ### Implement desired DevOps metrics
 
-Identify which metrics you'll use to measure your team's DevOps performance. Use metrics to drive desired habits in your team that connect with [business outcomes](/azure/cloud-adoption-framework/strategy/learning-metrics). Establish metrics to let your team measure impact over activities. Make key metrics visible to all, since transparency promotes trust and drives alignment with organizational objectives.
+Identify which metrics you'll use to measure your team's DevOps performance. Use metrics to drive desired habits in your team that connect with [business outcomes](../../strategy/learning-metrics.md). Establish metrics to let your team measure impact over activities. Make key metrics visible to all, since transparency promotes trust and drives alignment with organizational objectives.
 
 Examples of metrics that measure DevOps performance to improve business impact include:
 
 - Business Outcomes:
-  - Use [Objectives and Key Results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr) as a tool to move your teams away from an "output" mindset and toward an "outcome" mindset. For example, you might use the number of workloads that improved their compliance rating over the number of policies deployed to Azure.
+  - Use [Objectives and Key Results](../../strategy/business-outcomes/okr.md) as a tool to move your teams away from an "output" mindset and toward an "outcome" mindset. For example, you might use the number of workloads that improved their compliance rating over the number of policies deployed to Azure.
   - Customer or end user satisfaction. Examples include Net Promoter Score (NPS), surveys, interviews.
   - Business growth. Examples include increased profitability, increased revenue, and new revenue source acquirements.
   - People metrics. Examples include the Employee Net Promoter Score (eNPS), utilization, retention, and satisfaction.

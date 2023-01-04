@@ -78,16 +78,16 @@ items:
   - name: Learn modules
     items:
     - name: Introduction to Azure Virtual Desktop in Microsoft Azure
-      href: /learn/modules/m365-wvd-intro/
+      href: /training/modules/m365-wvd-intro/
     - name: Prepare for Azure Virtual Desktop in Microsoft Azure
-      href: /learn/modules/m365-prepare-for-wvd/
+      href: /training/modules/m365-prepare-for-wvd/
     - name: Deploy Azure Virtual Desktop in Microsoft Azure
-      href: /learn/modules/m365-deploy-wvd/
+      href: /training/modules/m365-deploy-wvd/
     - name: Deliver remote desktops and applications from Azure with Azure Virtual Desktop
-      href: /learn/paths/m365-wvd/
+      href: /training/paths/m365-wvd/
     - name: Optimize Azure Virtual Desktop in Microsoft Azure
-      href: /learn/modules/m365-optimize-wvd/
+      href: /training/modules/m365-optimize-wvd/
     - name: Deploy applications by using MSIX app attach for Azure Virtual Desktop
-      href: /learn/modules/m365-wvd-application-management/
+      href: /training/modules/m365-wvd-application-management/
     - name: Secure an Azure Virtual Desktop deployment
-      href: /learn/modules/m365-wvd-security/
+      href: /training/modules/m365-wvd-security/

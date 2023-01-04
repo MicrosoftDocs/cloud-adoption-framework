@@ -1,8 +1,8 @@
 ---
 title: Understand cloud operation functions
 description: Understand the formation of cloud operations functionality and staff your team appropriately.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -29,8 +29,8 @@ The skills needed to provide cloud operations functions can be provided by:
 
 ## Preparation
 
-- [Manage resources in Azure](/learn/paths/manage-resources-in-azure/): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
-- [Azure network services](/learn/modules/azure-networking-fundamentals/): Learn Azure networking basics and how to improve resiliency and reduce latency.
+- [Manage resources in Azure](/training/paths/manage-resources-in-azure/): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
+- [Azure network services](/training/modules/azure-networking-fundamentals/): Learn Azure networking basics and how to improve resiliency and reduce latency.
 
 Review the following:
 

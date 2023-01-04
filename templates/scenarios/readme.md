@@ -2,7 +2,7 @@
 
 The files in this folder are designed to start a new tech platform scenario with minimum necessary requirements in place.
 
-For the procedure for contributing a scenario to the Cloud Adoption Framework, see [CAF contributor workflow overview](https://review.docs.microsoft.com/help/contribute/cloud-adoption-framework/caf-contribution-overview?branch=main).
+For the procedure for contributing a scenario to the Cloud Adoption Framework, see [CAF contributor workflow overview](https://review.learn.microsoft.com/help/contribute/cloud-adoption-framework/caf-contribution-overview?branch=main).
 
 You can review recently published scenarios in the [Cloud Adoption Framework docs](/azure/cloud-adoption-framework/scenarios/overview).
 
@@ -42,9 +42,9 @@ The following table lists the structure and parts of the technical platform scen
 | L1 | {{Token-Name}} architectures |  | NA | Table of contents section. |
 |  | Example |  | NA | Provide a title and link in the table of contents for one or more supporting [Azure reference architectures](/azure/architecture/browse/). |
 | L1 | Azure product documentation |  | NA | Table of contents section. |
-|  | Example |  | NA | Provide a title and link in the table of contents for one or more supporting [Technical documentation](/documentation/). |
+|  | Example |  | NA | Provide a title and link in the table of contents for one or more supporting [Technical documentation](/docs/). |
 | L1 | Build skills on Learn |   | NA | Table of contents section. |
-|  | Example |  | NA | Provide a title and link in the table of contents for one or more supporting [Learn modules](/learn/). |
+|  | Example |  | NA | Provide a title and link in the table of contents for one or more supporting [Learn modules](/training/). |
 
 ## Token used in the templates
 
@@ -61,10 +61,8 @@ The following table contains the tokens that reappear throughout the templates u
 
 ## CAF work to finalize the scenarios
 
-- For each ALZ page, the headers and metadata need to look more like the corresponding file in the AKS scenario
 - CAF team to review the articles and identify any additional requirements for each page
 - CAF team to review the articles for quality to ensure we don't start with known errors
-- CAF team to update the Ready article to match AKS scenario flow
 
 ## ThinkTank team steps to use this template
 
@@ -76,4 +74,4 @@ The following table contains the tokens that reappear throughout the templates u
 
 ## For more information
 
-See [CAF contributor workflow overview](https://review.docs.microsoft.com/help/contribute/cloud-adoption-framework/caf-contribution-overview?branch=main)
+See [CAF contributor workflow overview](https://review.learn.microsoft.com/help/contribute/cloud-adoption-framework/caf-contribution-overview?branch=main)

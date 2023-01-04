@@ -2,7 +2,7 @@
 title: Retail modern finance solution accelerator
 description: Learn how to build a solution that identifies top factors for revenue growth in your organization
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -83,6 +83,6 @@ Read more:
 - [Azure Synapse Analytics](/azure/synapse-analytics/)
 - [Azure Kubernetes Service](/azure/aks/)
 - [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml)
-- [Learn modules for Azure Synapse](/learn/browse/?terms=synapse)
-- [Learn modules for Azure Kubernetes](/learn/browse/?terms=kubernetes)
-- [Data scientist learning path](/learn/browse/?roles=data-scientist)
+- [Learn modules for Azure Synapse](/training/browse/?terms=synapse)
+- [Learn modules for Azure Kubernetes](/training/browse/?terms=kubernetes)
+- [Data scientist learning path](/training/browse/?roles=data-scientist)

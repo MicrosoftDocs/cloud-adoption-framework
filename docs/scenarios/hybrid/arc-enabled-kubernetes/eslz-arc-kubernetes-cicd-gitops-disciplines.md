@@ -206,12 +206,12 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - To learn more about GitOps with Azure Arc-enabled Kubernetes:
   - Review [Conceptual GitOps with Flux v2](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2).
   - Learn how to [Use GitOps with Flux v2](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
   - Review the [Conceptual GitOps Flux v2 CI/CD Process](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2-ci-cd).
   - Follow the [Tutorial to implement Flux v2 CI/CD](/azure/azure-arc/kubernetes/tutorial-Gitops-flux2-ci-cd).
 - Experience Azure Arc-enabled Kubernetes with a GitOps flow from [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_gitops_basic/#deploy-gitops-configurations-and-perform-basic-gitops-flow-on-cluster-api-as-an-azure-arc-connected-cluster-flux-v2).
-- Learn about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

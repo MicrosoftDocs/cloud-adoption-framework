@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, event-tier1-build-2022
 
 # Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes
 
-This article provides key design considerations and best practices for security, governance, and compliance that you should use when building your Azure Arc-enabled Kubernetes deployment. While the enterprise-scale landing zone documentation covers [Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) and [Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) as separate topics, these critical design areas are consolidated into a single topic for Azure Arc-enabled Kubernetes.
+This article provides key design considerations and best practices for security, governance, and compliance that you should use when building your Azure Arc-enabled Kubernetes deployment. While the enterprise-scale landing zone documentation covers [Governance](../../../ready/landing-zone/design-area/governance.md) and [Security](../../../ready/landing-zone/design-area/security.md) as separate topics, these critical design areas are consolidated into a single topic for Azure Arc-enabled Kubernetes.
 
 [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow you to implement implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion at scale. By combining them with Azure Arc-enabled Kubernetes, you can extend governance policies and security checks to any Kubernetes cluster in your on-premises and/or multicloud environment.
 
@@ -26,7 +26,7 @@ The following diagram shows a conceptual reference architecture depicting the se
 
 As your hybrid and multicloud resources become part of Azure Resource Manager, you can manage and govern them from Azure. This section contains design considerations you should keep in mind while planning the security and governance of your Azure Arc-enabled Kubernetes cluster resources.
 
-Review the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) and [governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance) design areas of the Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your overall governance and security models.
+Review the [security](../../../ready/landing-zone/design-area/security.md) and [governance](../../../ready/landing-zone/design-area/governance.md) design areas of the Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your overall governance and security models.
 
 ### Agent provisioning
 
@@ -40,7 +40,7 @@ Azure Arc-enabled Kubernetes agents play a critical role in the hybrid operation
 
 Define administrative, operations, and developer roles within your organization that are responsible for day-to-day operations in your hybrid clusters. Mapping each team to actions and responsibilities determines Azure role-based access control (RBAC) roles and Kubernetes ClusterRoleBinding and RoleBinding.
 
-Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define based on resource consistency and inventory management guidance.
+Consider using a [RACI](../../../organize/raci-alignment.md) matrix to support this effort and build controls into the management scope hierarchy that you define based on resource consistency and inventory management guidance.
 
 For more information, see [Identity and access management for Azure Arc-enabled Kubernetes](./eslz-arc-kubernetes-identity-access-management.md).
 
@@ -138,7 +138,7 @@ Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/ov
 
 [![Diagram showing Azure Arc-enabled Kubernetes Policy.](./media/arc-enabled-kubernetes-policy.png)](./media/arc-enabled-kubernetes-policy.png#lightbox)
 
-Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where you can apply it (management group, subscription, resource group or individual resource level). Use [Azure Policy's built-in library](/azure/governance/policy/samples/built-in-policies#kubernetes) for Azure Arc-enabled Kubernetes. Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise scale guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization).
+Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where you can apply it (management group, subscription, resource group or individual resource level). Use [Azure Policy's built-in library](/azure/governance/policy/samples/built-in-policies#kubernetes) for Azure Arc-enabled Kubernetes. Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise scale guidance](../../../ready/landing-zone/design-area/resource-org.md).
 
 - Determine what Azure policies you need in order to meet your organization's business, regulatory, and security requirements for Azure Arc-enabled Kubernetes at scale.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
@@ -151,7 +151,7 @@ Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) 
 
 Design and plan your Log Analytics Workspace deployment, which is the storage where data is collected, aggregated, and later analyzed. Since the Log Analytics workspace represents a geographical location of your data, to support a level of isolation and scope for configurations like data retention, you must determine the number of workspaces needed and how they map to your organizational structure.
 
-Use a single Azure Monitor Log Analytics workspace to manage centralized RBAC, visibility, and reporting, as described in the [Management and monitoring best practices of Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
+Use a single Azure Monitor Log Analytics workspace to manage centralized RBAC, visibility, and reporting, as described in the [Management and monitoring best practices of Cloud Adoption Framework](../../../ready/landing-zone/design-area/management.md).
 
 For more information, review the best practices for [designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 
@@ -199,12 +199,12 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Learn how to [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli).
 - Learn about [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_keyvault_extension/).
 - Learn about [Threat protection and cloud security posture management](/azure/defender-for-cloud/).
 - Learn how to [Apply GitOps configurations on GKE as an Azure Arc Connected Cluster using Azure Policy for Kubernetes](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/gke/gke_policy/).
 - Learn how to [Integrate Azure Defender with Cluster API as an Azure Arc Connected Cluster using Kubernetes extensions](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_defender_extension/).
 - Learn how to [Integrate Open Service Mesh (OSM) with Cluster API as an Azure Arc Connected Cluster using Kubernetes extensions](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_osm_extension/).
-- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

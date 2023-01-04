@@ -1,8 +1,8 @@
 ---
 title: Empower digital transformation
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation. Get digital transformation services on Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -72,7 +72,6 @@ To create a DevOps project:
 2. Select **Create DevOps project**.
 3. Select **Runtime, Framework, and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
 ::: zone-end
 

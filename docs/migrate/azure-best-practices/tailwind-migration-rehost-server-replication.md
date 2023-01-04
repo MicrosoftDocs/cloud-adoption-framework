@@ -2,7 +2,7 @@
 title: Migration execution with Azure Migrate for servers
 description: Learn how Tailwind Traders sets up an Azure Migrate server replication.
 author: alejandra8481
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/09/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -36,7 +36,7 @@ Before we start diving deep in infrastructure migration planning and deployment,
 
 - Review the [Azure Migrate: Server Migration tool overview](/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
 - Review the differences between the [Azure Migrate appliance](/azure/migrate/common-questions-appliance), [replication appliance](/azure/migrate/migrate-replication-appliance), and [Hyper-V migration architecture](/azure/migrate/hyper-v-migration-architecture).
-- Optionally, complete the learning path, [Migrate virtual machines and applications using Azure Migrate](/learn/paths/m365-azure-migrate-virtual-machine/) training.
+- Optionally, complete the learning path, [Migrate virtual machines and applications using Azure Migrate](/training/paths/m365-azure-migrate-virtual-machine/) training.
 
 ## Step 1: Tooling and replication
 
@@ -167,7 +167,7 @@ Moving forward, Tailwind now looks to understand the need for a test migration, 
 
 As a first step, Tailwind realizes there's a need to perform a smoke test to validate that servers identified to migrate will boot in Azure. You should perform this smoke test in an isolated VNet for all servers to be migrated. Tailwind will follow this recommendation and is especially focused on the smoke test for servers which are legacy, highly customized, or contain hardened operating systems. Additionally, Tailwind is also eager to run a smoke test for servers that have been marked as **Conditionally Ready** by their Azure Migrate assessments.
 
-Tailwind defines a smoke test to be successful when basic server functionality and properties are validated. For example, smoke testing may include:
+Tailwind defines a smoke test to be successful when basic server functionality and properties are validated. For example, smoke testing might include:
 
 - The server boots in Azure.
 - The administrator can sign in to the server using local credentials.
@@ -178,9 +178,9 @@ Typically this test is led by the server administrators or the migration partner
 
 ##### Define user acceptance testing
 
-As a second step, Tailwind now looks to perform user acceptance testing (UAT) to ensure that the applications are functional and accessible by expected users. Tailwind is aware that UAT will help find missed configuration changes necessary for a successful migration which may include hardcoded IP addresses.
+As a second step, Tailwind now looks to perform user acceptance testing (UAT) to ensure that the applications are functional and accessible by expected users. Tailwind is aware that UAT will help find missed configuration changes necessary for a successful migration which might include hardcoded IP addresses.
 
-Tailwind defines UAT to be successful when application functionality and access to dependencies is validated. For example, UAT may include:
+Tailwind defines UAT to be successful when application functionality and access to dependencies is validated. For example, UAT might include:
 
 - Validate sign-in with domain credentials.
 - Verify that the application has access to dependencies (such as target URLs or connection strings).

@@ -2,7 +2,7 @@
 title: Start with Cloud Adoption Framework enterprise-scale landing zones
 description: Start with enterprise-scale landing zones using the Microsoft Cloud Adoption Framework for Azure.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

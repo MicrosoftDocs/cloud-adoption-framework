@@ -1,8 +1,8 @@
 ---
 title: Protect and recover in Azure
 description: Learn how to ensure business stability by reducing recovery time and the likelihood of business interruption.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -54,7 +54,6 @@ Review the following section to see how easily you can enable backup for Azure V
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Compute%2FVirtualMachines]" submitText="Go to Virtual Machines" :::
 
 ::: zone-end
 
@@ -93,7 +92,6 @@ The following steps outline the process to use Site Recovery for Azure-to-Azure 
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Compute%2FVirtualMachines]" submitText="Go to Virtual Machines" :::
 
 ::: zone-end
 
@@ -106,7 +104,6 @@ After the replication job has finished, you can check the replication status, ve
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Compute%2FVirtualMachines]" submitText="Go to Virtual Machines" :::
 
 ::: zone-end
 

@@ -1,0 +1,164 @@
+items:
+  - name: Azure high-performance computing (HPC) - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environment
+    items: 
+    - name: Azure landing zone for HPC
+      href: ready.md
+    - name: Energy
+      items:
+      - name: Design areas
+        items:
+        - name: Billing and Active Directory tenant
+          href: energy/azure-billing-active-directory-tenant.md
+        - name: Identity and access management
+          href: energy/identity-access-management.md
+        - name: Network topology and connectivity
+          href: energy/network-topology-connectivity.md
+        - name: Compute
+          href: energy/compute.md
+        - name: Storage
+          href: energy/storage.md
+        - name: Resource organization
+          href: energy/resource-organization.md
+        - name: Security
+          href: energy/security.md
+        - name: Management
+          href: energy/management.md
+        - name: Governance
+          href: energy/security-governance-compliance.md
+        - name: Platform automation and DevOps
+          href: energy/platform-automation-devops.md
+    - name: Finance  
+      items:
+      - name: Design areas
+        items:
+        - name: Billing and Active Directory tenant
+          href: finance/azure-billing-active-directory-tenant.md
+        - name: Identity and access management
+          href: finance/identity-access-management.md
+        - name: Network topology and connectivity
+          href: finance/network-topology-connectivity.md
+        - name: Storage
+          href: finance/storage.md
+        - name: Resource organization
+          href: finance/resource-organization.md
+        - name: Security
+          href: finance/security.md
+        - name: Management
+          href: finance/management.md
+        - name: Governance
+          href: finance/security-governance-compliance.md
+        - name: Platform automation and DevOps
+          href: finance/platform-automation-devops.md
+    - name: Manufacturing  
+      items:
+      - name: Design areas
+        items:
+        - name: Billing and Active Directory tenant
+          href: manufacturing/azure-billing-active-directory-tenant.md
+        - name: Identity and access management
+          href: manufacturing/identity-access-management.md
+        - name: Network topology and connectivity
+          href: manufacturing/network-topology-connectivity.md
+        - name: Storage
+          href: manufacturing/storage.md
+        - name: Resource organization
+          href: manufacturing/resource-organization.md
+        - name: Security
+          href: manufacturing/security.md
+        - name: Management
+          href: manufacturing/management.md
+        - name: Governance
+          href: manufacturing/security-governance-compliance.md
+        - name: Platform automation and DevOps
+          href: manufacturing/platform-automation-devops.md
+    - name: Implementation options
+      items:
+      - name: HPC landing zone accelerator
+        href: azure-hpc-landing-zone-accelerator.md
+      - name: Compute manufacturing architecture
+        href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview
+        maintainContext: true
+      - name: Condition monitoring architecture
+        href: /azure/architecture/solution-ideas/articles/condition-monitoring
+        maintainContext: true
+      - name: Video rendering architecture
+        href: /azure/architecture/example-scenario/infrastructure/video-rendering
+        maintainContext: true
+  - name: Migrate HPC to Azure
+    href: migrate.md
+  - name: Modernize with HPC on Azure
+    href: modernize.md
+  - name: Innovate with HPC on Azure
+    href: innovate.md
+  - name: Govern HPC in Azure
+    href: govern.md
+  - name: Manage HPC platform and workloads
+    href: manage.md
+  - name: Secure HPC
+    href: secure.md
+  - name: Organize HPC
+    href: organize.md
+  - name: Well-architected considerations
+    href: well-architected-framework.md
+  - name: HPC architectures
+    items:
+    - name: Overview
+      href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
+    - name: Energy example architecture
+      href: energy/compute.md#hpc-reference-architecture
+    - name: Finance example architecture
+      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance
+    - name: Manufacturing example architecture
+      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-manufacturing
+    - name: 3D video rendering
+      href: /azure/architecture/example-scenario/infrastructure/video-rendering
+      maintainContext: true
+    - name: Computer-aided engineering
+      href: /azure/architecture/example-scenario/apps/hpc-saas
+      maintainContext: true
+    - name: Digital image-based modeling
+      href: /azure/architecture/example-scenario/infrastructure/image-modeling
+      maintainContext: true
+    - name: HPC cluster deployed in the cloud
+      href: /azure/architecture/solution-ideas/articles/hpc-cluster
+      maintainContext: true
+    - name: HPC media rendering
+      href: /azure/architecture/solution-ideas/articles/azure-batch-rendering
+      maintainContext: true
+    - name: HPC risk analysis
+      href: /azure/architecture/solution-ideas/articles/hpc-risk-analysis
+      maintainContext: true
+    - name: HPC system and big compute
+      href: /azure/architecture/solution-ideas/articles/big-compute-with-azure-batch
+      maintainContext: true
+    - name: Hybrid HPC in Azure with HPC Pack
+      href: /azure/architecture/solution-ideas/articles/hybrid-hpc-in-azure-with-hpc-pack
+      maintainContext: true
+    - name: Run CFD simulations
+      href: /azure/architecture/example-scenario/infrastructure/hpc-cfd
+      maintainContext: true
+    - name: Run reservoir simulations
+      href: /azure/architecture/example-scenario/infrastructure/reservoir-simulation
+      maintainContext: true
+  - name: Azure product documentation
+    items:
+    - name: Azure HPC product documentation
+      href: /azure/architecture/topics/high-performance-computing/
+    - name: CycleCloud
+      href: /azure/cyclecloud/overview/
+    - name: Batch
+      href: /azure/batch/
+    - name: HPC Pack
+      href: /powershell/high-performance-computing/overview/
+    - name: HPC VMs (N & H)
+      href: /azure/virtual-machines/workloads/hpc/overview/
+  - name: Build skills on Learn
+    items:
+    - name: Learning path for running HPC applications
+      href: /learn/paths/run-high-performance-computing-applications-azure

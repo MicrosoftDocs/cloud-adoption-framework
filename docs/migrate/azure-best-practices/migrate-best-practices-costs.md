@@ -1,8 +1,8 @@
 ---
 title: Best practices to cost and size workloads migrated to Azure
 description: Use the Cloud Adoption Framework for Azure to learn best practices to cost and size workloads migrated to Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -40,9 +40,7 @@ The best practices in this section help you:
 
 You can use several tools to forecast your monthly bill for migrated workloads.
 
-<!-- TODO: Change "input costs" -->
-
-- *Azure pricing calculator:* Select the products you want to estimate, such as VMs and storage. Then, input costs into the calculator to build an estimate.
+- *Azure pricing calculator:* Select the products you want to estimate, such as VMs and storage. Then, enter costs into the calculator to build an estimate.
 
   ![Screenshot of the Azure pricing calculator.](./media/migrate-best-practices-costs/pricing.png)
     *Figure 1: Azure pricing calculator.*
@@ -89,11 +87,12 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 - Review a [sample assessment for the fictional Contoso company](../../plan/contoso-migration-assessment.md).
 
 ## Best practice: Select the right storage
+
 Having to tune and maintain on-premises storage (SAN or NAS), and the networks to support them, can be costly and time-consuming. File (storage) data is commonly migrated to the cloud to help alleviate operational and management headaches. Microsoft provides several options for moving data to Azure, and you need to make decisions about those options. Picking the right storage type for data can save your organization several thousands of dollars every month. Here are a few considerations:
 
 - Data that isn't accessed much and isn't business-critical doesn't need to be placed on the most expensive storage.
 - Conversely, important business-critical data should be located on higher-tier storage options.
-- During migration planning, take an inventory of data and classify it by importance, to map it to the most suitable storage. 
+- During migration planning, take an inventory of data and classify it by importance, to map it to the most suitable storage.
 - Consider budget and costs and performance. Cost shouldn't necessarily be the main factor. Picking the least expensive option might expose the workload to performance and availability risks.
 
 ### Storage data types
@@ -106,7 +105,7 @@ Azure provides different types of storage data.
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares and to provide multiple access and connections to file data. |
 | **Disks** | Based on page blobs. <br><br> Disk type: Standard HDD/SSD or Premium SSD. <br><br> Disk management: Unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queuing. |
-| **Tables** | Store tables. | This data type is part of Azure Cosmos DB Table API. |
+| **Tables** | Store tables. | This data type is part of Azure Cosmos DB for Table. |
 
 ### Access tiers
 

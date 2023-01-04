@@ -1,13 +1,15 @@
 ---
 title: Deploy a CAF Foundation blueprint in Azure
 description: Learn how to deploy a CAF Foundation blueprint in Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom:
+  - internal
+  - engagement-fy23
 ---
 
 <!-- docutune:ignore "CAF Foundation blueprint" -->
@@ -99,16 +101,11 @@ This initial blueprint assumes that the team is committed to maturing governance
 
 If these assumptions align with your current adoption needs, then this blueprint might be a starting point for building your landing zone.
 
-## Customize or deploy this blueprint
+## Next steps
 
 Learn more and download a reference sample of the CAF Foundation blueprint for deployment or customization from the Azure blueprint samples.
 
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample](/azure/governance/blueprints/samples/caf-foundation/deploy)
 
-## Next steps
-
-After deploying your first landing zone, you're ready to expand your landing zone.
-
-> [!div class="nextstepaction"]
-> [Expand your landing zone](../considerations/index.md)
+When you're ready to exand this foundation into your first landing zone, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md).

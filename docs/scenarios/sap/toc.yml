@@ -41,7 +41,7 @@ items:
   - name: Manage SAP platform and workloads
     href: manage.md
   - name: Well-architected considerations
-    href: /azure/architecture/reference-architectures/sap/sap-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    href: /azure/architecture/framework/sap/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
   - name: SAP architectures
     items:
     - name: SAP HANA on Azure (Large Instances)
@@ -392,8 +392,8 @@ items:
   - name: Build skills on Learn
     items:
     - name: Plan for SAP on Azure
-      href: /learn/paths/plan-azure-sap-workloads/
+      href: /training/paths/plan-azure-sap-workloads/
     - name: Run SAP on Azure
-      href: /learn/paths/running-azure-sap-workloads/
+      href: /training/paths/running-azure-sap-workloads/
     - name: SAP certified offerings for Azure
-      href: /learn/paths/sap-certified-offerings/
+      href: /training/paths/sap-certified-offerings/

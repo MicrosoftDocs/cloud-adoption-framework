@@ -2,7 +2,7 @@
 title: Refactor an on-premises application to an Azure App Service web app and a SQL managed instance
 description: Learn how Contoso rehosts an on-premises application by migrating it to an Azure App Service web app and a SQL managed instance.
 author: givenscj
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -90,7 +90,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure App Service Migration Assistant](/learn/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
+| [Azure App Service Migration Assistant](/training/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
 | [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
 | [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in Azure. It uses the same code as the latest version of SQL Server Database Engine, and has the latest features, performance improvements, and security patches. | Using a SQL managed instance that runs in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/). |
 | [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
@@ -120,7 +120,7 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure](/learn/paths/migrate-dotnet-apps-azure/) learning path as a guide during the process. In brief, the admins perform the following actions:
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure](/training/paths/migrate-dotnet-apps-azure/) learning path as a guide during the process. In brief, the admins perform the following actions:
 
 - They use the Azure [App Service migration assessment](https://azure.microsoft.com/services/app-service/migration-assistant/) tool to evaluate any dependencies between their web apps and to determine whether there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 

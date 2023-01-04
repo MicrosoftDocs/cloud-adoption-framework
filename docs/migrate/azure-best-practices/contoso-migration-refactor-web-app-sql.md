@@ -1,8 +1,8 @@
 ---
 title: Migrate an application to Azure App Service and SQL Database
 description: Use the Cloud Adoption Framework for Azure to learn how to refactor an application by migrating it to Azure App Service and Azure SQL Database.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -84,7 +84,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure App Service Migration Assistant](/learn/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
+| [Azure App Service Migration Assistant](/training/paths/migrate-dotnet-apps-azure/) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
 | [Data Migration Assistant](/sql/dma/dma-overview) | Contoso will use Data Migration Assistant to assess and detect compatibility issues that might affect database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets, and it recommends performance and reliability improvements. | It's a downloadable tool, free of charge. |
 | [Azure Database Migration Service](/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
 | [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | An intelligent, fully managed relational cloud database service. | Cost is based on features, throughput, and size. [Learn more](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/). |
@@ -115,7 +115,7 @@ Here's how Contoso will run the migration:
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET applications to Azure learning path](/learn/paths/migrate-dotnet-apps-azure/) as a guide during the process. The admins perform these actions:
+Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET applications to Azure learning path](/training/paths/migrate-dotnet-apps-azure/) as a guide during the process. The admins perform these actions:
 
 - They use the Azure [App Service migration assessment](https://azure.microsoft.com/services/app-service/migration-assistant/) tool to evaluate any dependencies between their web apps and to determine whether there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
 

@@ -1,8 +1,8 @@
 ---
 title: Assess workloads and validate assessment assumptions before migration
 description: Use the Cloud Adoption Framework for Azure to learn how to validate assessment assumptions before beginning migration to the cloud.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Assess workloads and validate assumptions before migration
 
-Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/technical-complexity.md#migration-backlog-aligning-business-priorities-and-timing) of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
+Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/technical-complexity.md#migration-backlog) of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
 
 As a result, before migrating a workload to the cloud it's critical to assess the individual assets associated with that workload for their migration suitability. Your cloud adoption team should evaluate technical compatibility, required architecture, performance/sizing expectations, and dependencies. Use this information to ensure the migrated workload can be deployed to the cloud effectively.
 
@@ -27,8 +27,8 @@ The *assess* process is the first of four incremental activities that occur with
 
 This process is complete when the following are known about a single migration candidate:
 
-- The path from on-premises to cloud, including production promotion approach decision, has been defined.
-- Any required approvals, changes, cost estimates, or validation processes have been completed to allow the cloud adoption team to execute the migration.
+* The path from on-premises to cloud, including production promotion approach decision, has been defined.
+* Any required approvals, changes, cost estimates, or validation processes have been completed to allow the cloud adoption team to execute the migration.
 
 ## Accountability during assessment
 
@@ -38,13 +38,13 @@ The cloud adoption team is accountable for the entire assessment process. Howeve
 
 Along with the high-level accountability, there are actions that an individual or group needs to be directly responsible for. The following are a few activities that require assignments to responsible parties:
 
-- **Business priority.** The team understands the purpose for migrating this workload, including any intended impact to the business.
+- **Business priority.** The team understands the purpose for migrating this workload, including any intended effects on the business.
   - A member of the cloud strategy team should carry final responsibility for this activity, under the direction of the cloud adoption team.
 - **Stakeholder alignment.** The team aligns expectations and priorities with internal stakeholders, identifying success criteria for the migration. What does success look like post-migration?
 - **Refined rationalization.** Evaluate the initial assumptions about rationalization. Should a different [rationalization approach](../../../digital-estate/rationalize.md) be used to migrate this specific workload?
 - **Modernization decisions.** Whatever the rationalization decision, should the team modernize various assets in the workload to use PaaS-based solutions?
 - **Cost.** Estimate the cost of the target architecture, and adjust the overall budget.
-- **Migration support.** The team decides how they will complete the technical work of the migration, including decisions about partner or Microsoft support.
+- **Migration support.** The team decides how they'll complete the technical work of the migration, including decisions about partner or Microsoft support.
 - **Evaluation.** The team evaluates the workload for compatibility and dependencies.
   - Assign this activity to a subject matter expert who is familiar with the architecture and operations of the candidate workload.
 - **Architect.** The team agrees on the final state architecture for the migrated workload.
