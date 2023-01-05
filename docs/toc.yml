@@ -1847,8 +1847,6 @@ items:
       items:
       - name: Overview
         href: decision-guides/index.md
-      - name: Subscriptions
-        href: decision-guides/subscriptions/index.md
       - name: Identity
         items:
         - name: Identity decision guide
