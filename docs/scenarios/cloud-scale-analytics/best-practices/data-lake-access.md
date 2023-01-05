@@ -1,6 +1,6 @@
 ---
 title: Access control and data lake configurations in Azure Data Lake Storage Gen2
-description: Learn about access control and data lake configurations in Azure Data Lake Storage Gen2. This article describes using role-based access control and access control lists.
+description: Learn about access control and data lake configurations in Azure Data Lake Storage Gen2 and how to use role-based access control and access control lists.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
@@ -10,29 +10,29 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Access control and data lake configurations in Azure Data Lake Storage
+# Access control and data lake configurations in Azure Data Lake Storage Gen2
 
-Use this article is to help assess and understand the access control mechanisms in Azure Data Lake Storage Gen2. These mechanisms include Azure role-based access control (RBAC) and access control lists (ACLs). This article addresses:
+This article helps you assess and understand the access control mechanisms in Azure Data Lake Storage Gen2. These mechanisms include Azure role-based access control (RBAC) and access control lists (ACLs). You learn:
 
-- How access is evaluated between Azure RBAC and ACLs.
+- How to evaluate access between Azure RBAC and ACLs.
 - How to configure access control using one or both of these mechanisms.
-- How to apply these access control mechanisms to data lake implementation patterns.
+- How to apply the access control mechanisms to data lake implementation patterns.
 
 You need a basic knowledge of storage containers, security groups, Azure RBAC, and ACLs. To frame the discussion, we reference a generic data lake structure of raw, enriched, and curated zones.
 
-This document can be used in conjunction with [Data Access Management](../security-provisioning.md).
+Use this document with [Data access management](../security-provisioning.md).
 
-## Using the built-in Azure RBAC roles
+## Use the built-in Azure RBAC roles
 
-Azure Storage has two layers of access: service management and data. Subscriptions and storage accounts are accessed through the service management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want a list of storage accounts from Azure, send a request to the management endpoint. If you want a list of file systems, folders, or files in a storage account, send a request to a service endpoint.
+Azure Storage has two layers of access: service management and data. You can access subscriptions and storage accounts through the service management layer. Access containers, blobs, and other data resources through the data layer. For example, if you want a list of storage accounts from Azure, send a request to the management endpoint. If you want a list of file systems, folders, or files in a storage account, send a request to a service endpoint.
 
 Roles can contain permissions for management or data layer access. The Reader role grants read-only access to management layer resources but not read access to data.
 
-Roles such as owner, contributor, reader, and Storage Account Contributor permit a security principal to manage a storage account. They don't provide access to the data in that account. Only roles explicitly defined for data access permit a security principal to access data. These roles, except for reader, can obtain access to the storage keys to access data.
+Roles such as Owner, Contributor, Reader, and Storage Account Contributor, permit a security principal to manage a storage account. But they don't provide access to the data in that account. Only roles explicitly defined for data access permit a security principal to access the data. These roles, except for Reader, can get access to the storage keys to access data.
 
 ### Built-in management roles
 
-The following are the built-in management roles.
+Following are the built-in management roles.
 
 - [Owner](/azure/role-based-access-control/built-in-roles#owner): Manage everything, including access to resources. This role provides key access.
 - [Contributor](/azure/role-based-access-control/built-in-roles#contributor): Manage everything, except access to resources. This role provides key access.
@@ -41,20 +41,20 @@ The following are the built-in management roles.
 
 ### Built-in data roles
 
-The following are the built-in data roles.
+Following are the built-in data roles.
 
-- [Storage Blob Data Owner](/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data, including setting of ownership and managing POSIX access control.
+- [Storage Blob Data Owner](/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data, including setting ownership and managing POSIX access control.
 - [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor): Read, write, and delete Azure Storage containers and blobs.
 - [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles#storage-blob-data-reader): Read and list Azure Storage containers and blobs.
 
-Storage Blob Data Owner is a super-user and is granted full access to all mutating operations. These operations include setting the owner of a directory or file and ACLs for directories and files for which they aren't the owner. Super-user access is the only authorized manner to change the owner of a resource.
+The Storage Blob Data Owner is a super-user role that's granted full access to all mutating operations. These operations include setting the owner of a directory or file and ACLs for directories and files for which they aren't the owner. Super-user access is the only authorized manner to change the owner of a resource.
 
 > [!NOTE]
 > Azure RBAC assignments can take up to five minutes to propagate and take effect.
 
 ## How access is evaluated
 
-During security principal-based authorization, permissions are evaluated in the following order. See the following diagram for more detail.
+During security principal-based authorization, the system evaluates permissions in the following order. See the following diagram for more detail.
 
 - Azure RBAC is evaluated first and takes priority over any ACL assignments.
 - If the operation is fully authorized based on RBAC, ACLs aren't evaluated at all.
@@ -63,11 +63,11 @@ During security principal-based authorization, permissions are evaluated in the 
 For more information, see [How permissions are evaluated](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated).
 
 > [!NOTE]
-> This permission model applies to Azure Data Lake Storage only. It doesn't apply to general purpose, or blob, storage without hierarchical namespace enabled.
-> This description excludes shared key and SAS authentication methods. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role, which provides super-user access.
-> We recommend you set `allowSharedKeyAccess` to false so that access can be audited by identity.
+> This permission model applies to Azure Data Lake Storage only. It doesn't apply to general purpose or blob storage without hierarchical namespace enabled.
+> This description excludes shared key and SAS authentication methods. It also excludes scenarios in which the security principal is assigned the Storage Blob Data Owner built-in role, which provides super-user access.
+> Set `allowSharedKeyAccess` to false so that access is audited by identity.
 
-:::image type="content" source="../images/how-access-evaluated.png" alt-text="This diagram provides a flow chart that describes how access is evaluated." lightbox="../images/how-access-evaluated.png":::
+:::image type="content" source="../images/how-access-evaluated.png" alt-text="Diagram of a flow chart that shows and describes how access is evaluated." lightbox="../images/how-access-evaluated.png":::
 
 For more information about what ACL-based permissions are required for a given operation, see [Access control lists in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions).
 
@@ -79,7 +79,7 @@ For more information about what ACL-based permissions are required for a given o
 
 ## Configure access to Azure Data Lake Storage
 
-Implement access control in Azure Data Lake Storage using Azure RBAC, ACLs, or a combination of both.
+Set up access control in Azure Data Lake Storage using Azure RBAC, ACLs, or a combination of both.
 
 ### Configure access using Azure RBAC only
 
@@ -97,7 +97,7 @@ Even using groups, you could have many access control entries at top levels of t
 
 ### Configure access using both Azure RBAC and access control lists
 
-The Storage Blob Data Contributor and Storage Blob Data Reader permissions provide access to the data and not the storage account. It can be granted at the storage account level or container level. If Storage Blob Data Contributor is assigned, ACLs cannot be used to manage access. Where Storage Blob Data Reader is assigned, elevated write permissions can be granted using ACLs. For more information, see [How access is evaluated](#how-access-is-evaluated).
+The Storage Blob Data Contributor and Storage Blob Data Reader permissions provide access to the data and not the storage account. It can be granted at the storage account level or container level. If Storage Blob Data Contributor is assigned, ACLs can't be used to manage access. Where Storage Blob Data Reader is assigned, elevated write permissions can be granted using ACLs. For more information, see [How access is evaluated](#how-access-is-evaluated).
 
 This approach favors scenarios where most users need read access but only a few users need write access. The data lake zones could be different storage accounts and data assets could be different containers. The data lake zones could be represented by containers and data assets represented by folders.
 
@@ -119,7 +119,7 @@ The recommended approach is to use the ACL other entry set at the container or r
 
 ![Screen capture shows the manage access dialog box with other highlighted, access, and default selected.](../images/acl-other-root.png)
 
-This run permission propagates down any added child folders. The permission propagates to the depth where the intended access group needs permissions to read and run. This level is in the lowest part of the chain, as shown image below. This approach grants group access to read the data. The approach works similarly for write access.
+This run permission propagates down any added child folders. The permission propagates to the depth where the intended access group needs permissions to read and run. This level is in the lowest part of the chain, as shown in the following screen. This approach grants group access to read the data. The approach works similarly for write access.
 
 ![Screen capture shows the manage access dialog box with `businessgrp 1` highlighted and access and default selected.](../images/acl-other-lowest.png)
 
@@ -145,7 +145,7 @@ To enable these activities, create a `LogsWriter` group and a `LogsReader` group
 
 If a user in the service engineering team transfers to a different team, just remove that users from the `LogsWriter` group.
 
-If you didn't add that user to a group, but instead, added a dedicated ACL entry for that user, you will need to remove that ACL entry from the `/LogData` directory. You will also need to remove the entry from all subdirectories and files in the entire directory hierarchy of the `/LogData` directory.
+If you didn't add that user to a group, but instead, added a dedicated ACL entry for that user, you'll need to remove that ACL entry from the `/LogData` directory. You'll also need to remove the entry from all subdirectories and files in the entire directory hierarchy of the `/LogData` directory.
 
 ## Azure Synapse Analytics data access control
 
@@ -155,13 +155,13 @@ During the workspace deployment through the [Azure portal](/azure/azure-portal/)
 
 If you deploy the workspace outside of the Azure portal, add Azure Synapse Analytics workspace identity to the **Storage Blob Data Contributor** role manually. We recommend you assign the role **Storage Blob Data Contributor** on the container level to follow the least privilege principle.
 
-When running pipelines, workflows, and notebooks through jobs, the workspace identity permission context is used. If any of the jobs read or write to the workspace primary storage, the workspace identity uses the read/write permissions granted through the **Storage Blog Data Contributor**.
+When you run pipelines, workflows, and notebooks through jobs, the workspace identity permission context is used. If any of the jobs read or write to the workspace primary storage, the workspace identity uses the read/write permissions granted through the **Storage Blog Data Contributor**.
 
 When users sign in to the workspace to run scripts or for development, the user's context permissions are used to allow read/write access on the primary storage.
 
 ### Azure Synapse Analytics fine-grained data access control using access control lists
 
-When setting-up data lake access control, some organizations require granular level access. They may have sensitive data that cannot be seen by some groups in the organization. Azure RBAC allows read or write at the storage account and container level only. With ACLs, you can set up fine-grained access control at the folder and file level to allow read/write on subset of data for specific groups.
+When setting-up data lake access control, some organizations require granular level access. They might have sensitive data that can't be seen by some groups in the organization. Azure RBAC allows read or write at the storage account and container level only. With ACLs, you can set up fine-grained access control at the folder and file level to allow read/write on subset of data for specific groups.
 
 #### Considerations when using Spark tables
 
