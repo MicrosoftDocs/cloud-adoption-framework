@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Data governance overview
 
-The key to successful data governance is to break down structured data into data entities and data subject areas. You can then use a data governance solution to augment your specific data entities and data subject areas with people, processes, policies, and technology. This solution helps you govern your data entities' lifecycles. Establishing a common business vocabulary in a glossary within your data catalog also helps you govern your data.
+The key to successful data governance is to break down structured data into data entities and data subject areas. You can then use a data governance solution to surround your specific data entities and data subject areas with people, processes, policies, and technology. The solution helps you govern your data entities' lifecycles. Establishing a common business vocabulary in a glossary within your data catalog also helps you govern your data.
 
-Your data catalog technology is critical. You can't govern your data if you don't know where it is or what it means. Data catalog software provides automatic data discovery, automatic profiling that determines data quality, and automatic sensitive data detection. Data catalog technology also helps you map disparate data to the common vocabulary data names and definitions in your business glossary to understand what the data means.
+Your data catalog technology is critical. You can't govern your data if you don't know where it is or what it means. Data catalog software provides automatic data discovery, automatic profiling that determines data quality, and automatic sensitive data detection. Data catalog technology also helps you map disparate data to the common vocabulary data names and definitions in your catalog's business glossary to understand what the data means.
 
 Data classification categorizes data assets by assigning them unique logical labels or classes based on business context. Examples of classification labels or classes include:
 
@@ -24,7 +24,7 @@ Data classification categorizes data assets by assigning them unique logical lab
 - SWIFT code.
 - Individual's name.
 
-You can define data classification schemes such as the [data confidentiality classification scheme](./govern-requirements.md#data-confidentiality-classification-scheme) in your data catalog. To define the scheme, you associate policies and rules in your catalog with different classification levels.
+You can define data classification schemes such as a [data confidentiality classification scheme](./govern-requirements.md#data-confidentiality-classification-scheme) in your data catalog. To define the scheme, you associate policies and rules in your catalog with different classification levels.
 
 A [data lifecycle retention classification scheme](govern-requirements.md#data-lifecycle-retention-classification-scheme) provides different retention classifications for data lifecycle management. A custom microservice lifecycle application can use this scheme to maintain the data lifecycle within your environment.
 
@@ -55,7 +55,7 @@ The data governance maturity model describes the maturity of your ability to cov
 | No one accountable for data privacy | No one accountable for data privacy | Chief privacy officer accountable for privacy, no tools | Chief privacy officer accountable for privacy with tools |
 | No one accountable for access security | IT accountable for access security | IT security accountable for access security | IT security accountable for access security and responsible for privacy enforcement |
 | No trusted data asset producer | Data publisher identified and accountable for producing trusted data | Data publisher identified and accountable for producing trusted data | Data publisher identified and accountable for producing trusted data |
-| No SMEs identified for data entities | Some SMEs identified, but not engaged | SMEs identified and in data governance working groups | SMEs identified and in data governance working groups |
+| No subject-matter experts (SMEs) identified for data entities | Some SMEs identified, but not engaged | SMEs identified and in data governance working groups | SMEs identified and in data governance working groups |
 
 ### Process
 
@@ -65,7 +65,7 @@ The data governance maturity model describes the maturity of your ability to cov
 | No way to know data location, quality or sensitivity | Data catalog auto data discovery, profiling, and sensitive data detection on some systems | Data catalog auto data discovery, profiling, and sensitive data detection on all structured data | Data catalog auto data discovery, profiling, and sensitive data detection on structured and unstructured data in all systems with full auto-tagging |
 | No process to govern authoring or maintenance of policies and rules | Governance of data access security, policy authoring, and maintenance on some systems | Governance of data access security, privacy, and retention policy authoring and maintenance | Governance of data access security, privacy, and retention policy authoring and maintenance |
 | No way to enforce policies and rules | Piecemeal enforcement of data access security policies and rules across systems with no catalog integration | Enforcement of data access security and privacy policies and rules across systems with catalog integration | Enforcement of data access security, privacy, and retention policies and rules across all systems |
-| No process to monitor data quality, data privacy, or data access security | Some ability to monitor data quality, some ability to monitor privacy, such as queries | Monitoring and stewardship of data quality and data privacy on core systems with database management system (DBMS0 masking | Monitoring and stewardship of data quality and data privacy on all systems with dynamic masking |
+| No process to monitor data quality, data privacy, or data access security | Some ability to monitor data quality, some ability to monitor privacy, such as queries | Monitoring and stewardship of data quality and data privacy on core systems with database management system (DBMS) masking | Monitoring and stewardship of data quality and data privacy on all systems with dynamic masking |
 | No availability of fully trusted data assets | Development started for a small set of trusted data assets using data fabric software | Several core trusted data assets created using data fabric | Continuous delivery of trusted data assets through enterprise data marketplace |
 | No way to know whether a policy violation occurs or process if one occurs | Data access security violation detection in some systems | Data access security violation detection in all systems | Data access security violation detection in all systems |
 | No vulnerability testing process | Limited vulnerability testing process | Vulnerability testing process for all systems | Vulnerability testing process for all systems |
