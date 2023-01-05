@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 The key to successful data governance is to break down structured data into data entities and data subject areas. You can then use a data governance solution to surround your specific data entities and data subject areas with people, processes, policies, and technology. The solution helps you govern your data entities' lifecycles. Establishing a common business vocabulary in a glossary within your data catalog also helps you govern your data.
 
-Your data catalog technology is critical. You can't govern your data if you don't know where it is or what it means. Data catalog software provides automatic data discovery, automatic profiling that determines data quality, and automatic sensitive data detection. Data catalog technology also helps you map disparate data to the common vocabulary data names and definitions in your catalog's business glossary to understand what the data means.
+Your data catalog technology is critical. You can't govern your data if you don't know where the data is or what it means. Data catalog software provides automatic data discovery, automatic profiling that determines data quality, and automatic sensitive data detection. Data catalog technology also helps you map disparate data to the common vocabulary data names and definitions in your catalog's business glossary to understand what the data means.
 
 Data classification categorizes data assets by assigning them unique logical labels or classes based on business context. Examples of classification labels or classes include:
 
@@ -34,7 +34,7 @@ You can integrate multiple technologies with your data catalog to access these a
 
 Master data entities are important because their data is widely shared. Master data entities are often associated with documents. Customer and invoice, supplier and contract, and asset and operating manual are example master data entity and document pairings. By using this type of connection, you can tag related documents with master data values, such as a supplier name, and preserve relationships between structured and unstructured data.
 
-You can create pipelines that create trusted data assets by using the common vocabulary data entities from your data catalog. You can then publish these assets to share in a data marketplace.
+You can create pipelines that create trusted data assets by using the common vocabulary data entities from your data catalog. You can then publish these assets in a data marketplace to share.
 
 The key takeaway is that you can use available data governance methods to get your data under control. Once your data is trusted, you can use the data to drive value. How well you organize and coordinate your data governance determines your level of success.
 
@@ -62,7 +62,7 @@ The data governance maturity model describes the maturity of your ability to cov
 | Ungoverned | Stage 1 | Stage 2 | Fully governed |
 |--|--|--|--|
 | No common business vocabulary | Common business vocabulary begun in a glossary | Common business vocabulary established | Common business vocabulary complete |
-| No way to know data location, quality or sensitivity | Data catalog auto data discovery, profiling, and sensitive data detection on some systems | Data catalog auto data discovery, profiling, and sensitive data detection on all structured data | Data catalog auto data discovery, profiling, and sensitive data detection on structured and unstructured data in all systems with full auto-tagging |
+| No way to know data location, quality or sensitivity | Data catalog auto data discovery, profiling, and sensitive data detection on some systems | Data catalog auto data discovery, profiling, and sensitive data detection on all structured data | Data catalog auto data discovery, profiling, and sensitive data detection on structured and unstructured data in all systems, with full auto-tagging |
 | No process to govern authoring or maintenance of policies and rules | Governance of data access security, policy authoring, and maintenance on some systems | Governance of data access security, privacy, and retention policy authoring and maintenance | Governance of data access security, privacy, and retention policy authoring and maintenance |
 | No way to enforce policies and rules | Piecemeal enforcement of data access security policies and rules across systems with no catalog integration | Enforcement of data access security and privacy policies and rules across systems with catalog integration | Enforcement of data access security, privacy, and retention policies and rules across all systems |
 | No process to monitor data quality, data privacy, or data access security | Some ability to monitor data quality, some ability to monitor privacy, such as queries | Monitoring and stewardship of data quality and data privacy on core systems with database management system (DBMS) masking | Monitoring and stewardship of data quality and data privacy on all systems with dynamic masking |
