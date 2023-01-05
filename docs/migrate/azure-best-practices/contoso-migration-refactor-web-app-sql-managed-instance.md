@@ -89,20 +89,20 @@ Contoso evaluates their proposed design by compiling a pros and cons list:
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [App Service migration assistant](/training/paths/migrate-dotnet-apps-azure) | A free and simple path to seamlessly migrate .NET web applications from on-premises to the cloud with minimal to no code changes. | It's a downloadable tool, free of charge. |
-| [Database Migration Service](/azure/dms/dms-overview) | Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/). |
-| [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in Azure. It uses the same code as the latest version of SQL Server Database Engine, and has the latest features, performance improvements, and security patches. | Using a SQL managed instance that runs in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/). |
-| [Azure App Service](/azure/app-service/overview) | Helps create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
-| [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for application development. The pipeline starts with a Git repository for managing application code, a build system for producing packages and other build artifacts, and a release management system to deploy changes in dev, test, and production environments. |
+| [App Service migration assistant](/training/paths/migrate-dotnet-apps-azure) | A free, easy-to-use tool that can help you migrate .NET web applications from on-premises to the cloud with minimal or no code changes. | It's a downloadable tool, free of charge. |
+| [Database Migration Service](/azure/dms/dms-overview) | An Azure service that you can use to migrate from multiple database sources to Azure data platforms with minimal downtime. | See [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration/) and [supported regions](/azure/dms/dms-overview#regional-availability).  |
+| [SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | A managed database service that represents a fully managed SQL Server instance on Azure. It uses the same code as the latest version of SQL Server database engine, and it has the latest features, performance improvements, and security patches. | Using a SQL managed instance on Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/). |
+| [Azure App Service](/azure/app-service/overview) | A service that can help you create powerful cloud applications that use a fully managed platform. | Pricing is based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows/). |
+| [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) | A service that provides a continuous integration and continuous delivery (CI/CD) pipeline for application development. The pipeline starts with a Git repository for managing application code, a build system for producing packages and other build artifacts, and a release management system for deploying changes to dev, test, and production environments. | Learn about [Azure Pipelines pricing](https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services).
 
 ## Prerequisites
 
 To run this scenario, Contoso must meet the following prerequisites:
 
-| Requirements | Details |
+| Requirement | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
-| **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
+| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, the admin needs to assign you Owner or Contributor permissions. |
+| **Azure infrastructure** | Contoso set up an Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 
 ## Scenario steps
 
@@ -110,59 +110,59 @@ Here's how Contoso will run the migration:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Assess and migrate the web apps.**. Contoso uses the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool to run pre-migration compatibility checks and migrate their web apps to Azure App Service.
+> - **Step 1: Assess and migrate the web apps.**. Contoso uses the [App Service migration assistant](https://azure.microsoft.com/migration/web-applications/) to run pre-migration compatibility checks and migrate the web apps to App Service.
 > - **Step 2: Set up a SQL managed instance**. Contoso needs an existing managed instance to which the on-premises SQL Server database will migrate.
-> - **Step 3: Migrate via Azure Database Migration Service**. Contoso migrates the application database via Azure Database Migration Service.
+> - **Step 3: Migrate by using Database Migration Service**. Contoso migrates the application database by using Database Migration Service.
 > - **Step 4: Set up Azure DevOps**. Contoso creates a new Azure DevOps project and imports the Git repo.
 > - **Step 5: Configure connection strings**. Contoso configures connection strings so that the web tier web app, the WCF service web app, and the SQL managed instance can communicate.
 > - **Step 6: Set up build and release pipelines in Azure DevOps**. As a final step, Contoso sets up build and release pipelines in Azure DevOps to create the application. The team then deploys the pipelines to two separate web apps.
 
 ## Step 1: Assess and migrate the web apps
 
-Contoso admins assess and migrate their web app using the [Azure App Service Migration Assistant](https://azure.microsoft.com/migration/web-applications/) tool. They use the [Migrate ASP.NET Apps to Azure](/training/paths/migrate-dotnet-apps-azure/) learning path as a guide during the process. In brief, the admins perform the following actions:
+Contoso admins assess and migrate their web apps by using the [App Service migration assistant](https://azure.microsoft.com/migration/web-applications). They use the [Migrate ASP.NET Apps to Azure](/training/paths/migrate-dotnet-apps-azure) learning path as a guide during the process. The admins perform these actions:
 
-- They use the Azure [App Service migration assessment](https://azure.microsoft.com/services/app-service/migration-assistant/) tool to evaluate any dependencies between their web apps and to determine whether there are any incompatibilities between their on-premises web apps and what's supported on Azure App Service.
+- They use the [App Service migration assessment](https://azure.microsoft.com/services/app-service/migration-assistant) tool to evaluate any dependencies between their web apps and to determine whether there are any incompatibilities between their on-premises web apps and what's supported by App Service.
 
-- They download the Azure App Service Migration Assistant and sign in to their Azure account.
+- They download the App Service migration assistant and sign in to their Azure account.
 
 - They choose a subscription, a resource group, and the website's domain name.
 
 ## Step 2: Set up a SQL managed instance
 
-To set up an Azure SQL managed instance, Contoso needs a subnet that meets the following requirements:
+To set up an Azure SQL managed instance, Contoso needs a subnet that meets these requirements:
 
-- The subnet must be dedicated. It must be empty, and it can't contain any other cloud service. The subnet can't be a gateway subnet.
-- After the managed instance is created, Contoso should not add resources to the subnet.
+- The subnet must be dedicated. It must be empty. It can't contain any other cloud service. The subnet can't be a gateway subnet.
+- After creating the managed instance, Contoso shouldn't add resources to the subnet.
 - The subnet can't have a network security group associated with it.
 - The subnet must have a user-defined route table. The only route assigned should be `0.0.0.0/0` next-hop internet.
-- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. Learn how to [configure a custom DNS for an Azure SQL managed instance](/azure/azure-sql/managed-instance/custom-dns-configure).
+- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers on Azure must be added to the list. Learn how to [configure a custom DNS for an Azure SQL managed instance](/azure/azure-sql/managed-instance/custom-dns-configure).
 - The subnet must not have a service endpoint (storage or SQL) associated with it. Service endpoints should be disabled on the virtual network.
-- The subnet must have a minimum of 16 IP addresses. Learn how to [size the managed instance subnet](/azure/azure-sql/managed-instance/vnet-existing-add-subnet).
+- The subnet must have at least 16 IP addresses. Learn how to [size the managed instance subnet](/azure/azure-sql/managed-instance/vnet-existing-add-subnet).
 - In Contoso's hybrid environment, custom DNS settings are required. Contoso configures DNS settings to use one or more of the company's Azure DNS servers. Learn more about [DNS customization](/azure/azure-sql/managed-instance/custom-dns-configure).
 
 ### Set up a virtual network for the managed instance
 
 Contoso admins set up the virtual network as follows:
 
-1. They create a new virtual network (`VNET-SQLMI-EU2`) in the primary region (`East US 2`). It adds the virtual network to the `ContosoNetworkingRG` resource group.
-1. They assign an address space of `10.235.0.0/24`. They ensure that the range doesn't overlap with any other networks in its enterprise.
+1. They create a virtual network (`VNET-SQLMI-EUS2`) in the primary region (`East US 2`). They create the virtual network in the `ContosoNetworkingRG` resource group.
+1. They assign an address space of `10.235.0.0/24`. They make sure that the range doesn't overlap with any other networks in the enterprise.
 1. They add two subnets to the network:
-    - `SQLMI-DS-EUS2` (`10.235.0.0/25`).
+    - `SQLMI-DB-EUS2` (`10.235.0.0/25`).
     - `SQLMI-SAW-EUS2` (`10.235.0.128/29`). This subnet is used to attach a directory to the managed instance.
 
-      ![Screenshot of the **Create virtual network** pane for the managed instance.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
+      ![Screenshot that shows the values for creating the managed instance.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
 
 1. After the virtual network and subnets are deployed, they peer networks as follows:
 
-    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).
+    - Peer `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).
 
-    - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
+    - Peer `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
 
-      ![Screenshot of the peered networks.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
+      ![Screenshot that shows the peered networks.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
 1. They set custom DNS settings. The DNS settings point first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the `PROD-DC-EUS2` subnet of the production network (`VNET-PROD-EUS2`) in the `East US 2` region.
+    - They're located in the `PROD-DC-EUS2` subnet of the production network (`VNET-PROD-EUS2`) in the `East US 2` region.
 
     - `CONTOSODC3` address: `10.245.42.4`
 
@@ -170,7 +170,7 @@ Contoso admins set up the virtual network as follows:
 
     - Azure DNS resolver: `168.63.129.16`
 
-    ![Screenshot of network DNS servers list.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
+    ![Screenshot that shows the network DNS servers.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
 
 **Need more help?**
 
@@ -181,28 +181,28 @@ Contoso admins set up the virtual network as follows:
 
 ### Set up routing
 
-The managed instance is placed in a private virtual network. Contoso needs a route table for the virtual network to communicate with the Azure management service. If the virtual network can't communicate with the service that manages it, the virtual network becomes inaccessible.
+The managed instance is placed in a private virtual network. Contoso needs a route table to enable the virtual network to communicate with the Azure management service. If the virtual network can't communicate with the service that manages it, the virtual network becomes inaccessible.
 
 Contoso considers these factors:
 
 - The route table contains a set of rules (routes) that specify how packets that are sent from the managed instance should be routed in the virtual network.
 - The route table is associated with subnets where managed instances are deployed. Each packet that leaves a subnet is handled based on the associated route table.
 - A subnet can be associated with only one route table.
-- There are no additional charges for creating route tables in Microsoft Azure.
+- There are no additional charges for creating route tables on Azure.
 
 To set up routing, Contoso admins do the following:
 
 1. They create a user-defined route table in the `ContosoNetworkingRG` resource group.
 
-    ![Screenshot of the **Create route table** pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table.png)
+    ![Screenshot that shows the Create route table dialog.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table.png)
 
-1. To comply with SQL Managed Instance requirements, after the route table (`MIRouteTable`) is deployed, the admins add a route with an address prefix of `0.0.0.0/0`. The **Next hop type** option is set to **Internet**.
+1. To comply with SQL Managed Instance requirements, after the route table (`MIRouteTable`) is deployed, the admins add a route with an address prefix of **0.0.0.0/0**. They set the **Next hop type** value to **Internet**.
 
-    ![Screenshot of the **Add route** pane for adding an address prefix.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
+    ![Screenshot that shows the Add route dialog.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
 
-1. They associate the route table with the `SQLMI-DB-EUS2` subnet (in the `VNET-SQLMI-EUS2` network).
+1. They associate the route table with the `SQLMI-DB-EUS2` subnet in the `VNET-SQLMI-EUS2` network.
 
-    ![Screenshot of the **Associate subnet** pane for routing the table subnet.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-subnet.png)
+    ![Screenshot that shows the Associate subnet dialog.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-subnet.png)
 
 **Need more help?**
 
@@ -229,7 +229,7 @@ Now, Contoso admins provision a SQL managed instance by doing the following:
 
 Learn how to [provision a managed instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
-## Step 3: Migrate via Azure Database Migration Service
+## Step 3: Migrate by using Database Migration Service
 
 Contoso admins migrate the managed instance via Azure Database Migration Service by following the instructions in the [step-by-step migration tutorial](/azure/dms/tutorial-sql-server-to-azure-sql). They can perform online, offline, and hybrid (preview) migrations.
 
