@@ -33,7 +33,7 @@ To help determine the best migration method, the Contoso cloud team created thes
 | Requirement domain | Details |
 | --- | --- |
 | **Application** | The application in Azure will remain as critical as it is today on-premises. <br><br> The application should have the same performance capabilities that it currently has on VMware. <br><br> The team doesn't want to invest in the application. For now, admins will just move the application safely to the cloud. <br><br> The team wants to stop supporting Windows Server 2008 R2, which the application currently runs on. <br><br> The team also wants to move from SQL Server 2008 R2 to a modern platform as a service (PaaS) database, which will minimize the need for management. <br><br> Contoso wants to take advantage of its investment in SQL Server licensing and Software Assurance when possible. <br><br> Contoso wants to mitigate the single point of failure on the web tier. <br><br>The application consists of an ASP.NET application and a Windows Communication Foundation (WCF) service running on a single VM. Contoso wants to spread these components across two web apps using App Service.|
-| **Azure** | Contoso wants to move the application to Azure, but they don't want to run it on VMs. Contoso wants to use Azure PaaS services for both the web and data tiers. |
+| **Azure** | Contoso wants to move the application to Azure, but they don't want to run it on VMs. Contoso wants to use Azure PaaS services for the web and data tiers. |
 | **DevOps** | Contoso wants to move to a DevOps model that uses Azure DevOps for builds and release pipelines. |
 
 ## Solution design
@@ -42,15 +42,15 @@ After determining goals and requirements, Contoso designs and reviews a deployme
 
 ### Current application
 
-- The SmartHotel360 on-premises application is tiered across two VMs, `WEBVM` and `SQLVM`.
-- The VMs are located on VMware ESXi 6.5 host `contosohost1.contoso.com`.
-- The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), which runs on a VM.
-- Contoso has an on-premises datacenter (`contoso-datacenter`) with an on-premises domain controller (`contosodc1`).
+- The SmartHotel360 on-premises application is tiered across two VMs, WEBVM and SQLVM.
+- The VMs are located on VMware ESXi 6.5 host contosohost1.contoso.com.
+- The VMware environment is managed by vCenter Server 6.5 (vcenter.contoso.com), which runs on a VM.
+- Contoso has an on-premises datacenter (contoso-datacenter) with an on-premises domain controller (contosodc1).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
 ### Proposed solution
 
-- For the application web tier, Contoso will use App Service. Contoso can use this PaaS service to deploy the application with just a few configuration changes. Contoso will use Visual Studio to make the change, and they'll deploy two web apps, one for the website and one for the WCF service.
+- For the application web tier, Contoso will use App Service. Contoso can use this PaaS service to deploy the application with just a few configuration changes. Contoso will use Visual Studio to make the changes, and they'll deploy two web apps, one for the website and one for the WCF service.
 - To meet requirements for a DevOps pipeline, Contoso will use Azure DevOps for source code management with Git repos. They'll use automated builds and release to build the code and deploy it to App Service.
 
 ### Database considerations
@@ -62,7 +62,7 @@ During the solution design process, Contoso compares the features of Azure SQL D
 - Contoso can do a lift-and-shift migration to SQL Managed Instance by using the fully automated Azure Database Migration Service. Contoso can also reuse this service for future database migrations.
 - SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 application. Contoso needs this compatibility. Otherwise, they'd have to redesign the maintenance plans required by the application.
 - With Software Assurance, Contoso can exchange its current licenses for discounted rates on a SQL managed instance by using the Azure Hybrid Benefit for SQL Server. This enables Contoso to save as much as 30 percent by using SQL Managed Instance.
-- The SQL managed instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso's data. Contoso can get the benefits of the public cloud while keeping the environment isolated from the public internet.
+- The SQL managed instance is fully contained in the virtual network, so it provides better isolation and security for Contoso's data. Contoso can get the benefits of the public cloud while keeping the environment isolated from the public internet.
 - SQL Managed Instance supports many security features, including Always Encrypted, dynamic data masking, Row-Level Security, and threat detection.
 
 ### Solution review
@@ -115,7 +115,7 @@ Here's how Contoso will run the migration:
 > - **Step 3: Migrate by using Database Migration Service**. Contoso migrates the application database by using Database Migration Service.
 > - **Step 4: Set up Azure DevOps**. Contoso creates a new Azure DevOps project and imports the Git repo.
 > - **Step 5: Configure connection strings**. Contoso configures connection strings so that the web tier web app, the WCF service web app, and the SQL managed instance can communicate.
-> - **Step 6: Set up build and release pipelines in Azure DevOps**. As a final step, Contoso sets up build and release pipelines in Azure DevOps to create the application. The team then deploys the pipelines to two separate web apps.
+> - **Step 6: Set up build and release pipelines in Azure DevOps**. In the final step, Contoso sets up build and release pipelines in Azure DevOps to create the application. The team then deploys the pipelines to two separate web apps.
 
 ## Step 1: Assess and migrate the web apps
 
@@ -402,7 +402,7 @@ After the resources are migrated to Azure, Contoso needs to fully operationalize
 
 ### Security
 
-- Contoso provides security for the new `SmartHotel-Registration` database. For more information, see [Azure SQL Database and SQL Managed Instance security](/azure/azure-sql/database/security-overview).
+- Contoso provides security for the new SmartHotel-Registration database. For more information, see [Azure SQL Database and SQL Managed Instance security](/azure/azure-sql/database/security-overview).
 - In particular, Contoso updates the web apps to use SSL with certificates.
 
 ### Backups
