@@ -571,7 +571,7 @@
          "redirect_document_id": false
       },  
       {
-         "source_path": "/docs/decision-guides/subscriptions/index.md",
+         "source_path": "docs/decision-guides/subscriptions/index.md",
          "redirect_url": "/azure/cloud-adoption-framework//ready/landing-zone/design-area/resource-org-subscriptions",
          "redirect_document_id": false 
       }
