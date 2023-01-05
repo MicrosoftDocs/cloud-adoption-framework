@@ -251,4 +251,4 @@ Not every step described in this article is required for migration of a server. 
 If you're still exploring migration to Azure, read about other migration scenarios.
 
 > [!div class="nextstepaction"]
-> [Migration scenarios](../../scenarios/)
+> [Migration scenarios](../../scenarios/index.md)
