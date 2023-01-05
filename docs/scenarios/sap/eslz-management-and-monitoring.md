@@ -22,7 +22,7 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - Run a VM Extension for SAP check. VM Extension for SAP uses the assigned managed identity of a virtual machine to access VM monitoring and configuration data. The check ensures that all performance metrics inside your SAP application come from the underlying [Azure Extension for SAP](/azure/virtual-machines/workloads/sap/vm-extension-for-sap).
 
-- Protect your HANA database with [Azure Backup](/azure/backup/sap-hana-db-about) service. If you deploy Azure NetApp Files (ANF) for your HANA database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots. Consider using AzAcSnap from a central VM rather than on individual VMs.
+- Protect your HANA database or with [Azure Backup](/azure/backup/sap-hana-db-about) service. If you deploy Azure NetApp Files (ANF) for your HANA, Oracle or DB2 database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots. AzAcSnap also supports Oracle databases. Consider using AzAcSnap from a central VM rather than on individual VMs.
 
 - Create a monitoring platform using [SAP telemetry tools](https://github.com/microsoft/saptelemetry) to provide business process insights.
 
