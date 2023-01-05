@@ -3,7 +3,7 @@ title: Enterprise-scale network topology and connectivity considerations for Azu
 description: Learn about design considerations and recommendations for network topology and connectivity in the Azure App Service landing zone accelerator
 author: martinekuan
 ms.author: martinek
-ms.date: 03/23/2022
+ms.date: 01/05/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
