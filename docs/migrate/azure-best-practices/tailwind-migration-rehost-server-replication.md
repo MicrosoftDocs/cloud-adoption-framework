@@ -47,7 +47,7 @@ Tailwind Traders must decide on the number of appliances that are required for r
 
 ### Capacity planning for vCPU quotas
 
-To actively ensure that the Azure subscriptions for the target migration are able to host the virtual machines that are created during the migration (both test and production), the vCPU quotas of the subscriptions must be available for the target VM SKUs. Ensure that vCPU quotas for specific VM SKUs are increased for the specific target region. For more information, see [Increase VM-family vCPU quotas](/azure/azure-portal/supportability/per-vm-quota-requests).
+To ensure that the Azure subscriptions for the target migration are able to host the virtual machines that Azure Migrate creates during the migration (both test and production), the vCPU quotas of the subscriptions must be high enough for the target VM SKUs. Ensure that vCPU quotas for specific VM SKUs are increased for the specific target region. For more information, see [Increase VM-family vCPU quotas](/azure/azure-portal/supportability/per-vm-quota-requests).
 
 ### Server migration tooling planning and implementation
 
@@ -70,7 +70,7 @@ For more information, see these Azure Migrate articles:
   - [Discover, assess, and migrate Amazon Web Services (AWS) VMs to Azure](/azure/migrate/tutorial-migrate-aws-virtual-machines)
   - [Discover, assess, and migrate Google Cloud Platform (GCP) VMs to Azure](/azure/migrate/tutorial-migrate-gcp-virtual-machines)
 
-As a best practice, Tailwind works closely with their virtualization administrators to ensure careful monitoring of key performance counters for CPU, memory, and storage space of the deployed appliances and hypervisor hosts. This ensures that the virtualization infrastructure has enough resources to handle additional load from replication appliances and agents.
+As a best practice, Tailwind works closely with their virtualization administrators to ensure careful monitoring of key performance counters for CPU, memory, and storage space of the deployed appliances and hypervisor hosts. This monitoring helps to ensure that the virtualization infrastructure has enough resources to handle additional load from replication appliances and agents.
 
 ### Replication
 
@@ -200,11 +200,11 @@ Typically, application owners lead UAT.
 
 After defining test cases, Tailwind Traders develops the following workflow to encompass the various scenarios it might encounter based on the needs of each application or server.
 
-Most of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as *Ready with Conditions*, which might not boot in Azure. Therefore, Tailwind tests those servers in an isolated virtual network to ensure that each server passes a smoke test. For this, Tailwind performs a test migration in Azure Migrate, which allows for automated clean-up of created resources, such as VMs and network interfaces.
+Most of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as *Ready with Conditions*, which might not boot in Azure. Therefore, Tailwind tests those servers in an isolated virtual network to ensure that each server passes a smoke test. For the smoke test, Tailwind performs a test migration in Azure Migrate, which allows for automated clean-up of created resources, such as VMs and network interfaces.
 
 Further, Tailwind's environment is tightly coupled—it has a large number of servers that are interdependent with one another, which results in large migration waves. Tailwind decides to split their large migration waves and to migrate servers together that have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind determines that it should migrate directly into the production virtual network, since that network already has connectivity to their on-premises dependencies. In this path, Tailwind performs the necessary smoke tests in an isolated virtual network and perform UAT in the production virtual network. If successful, Tailwind concludes the migration as a final cutover for the servers.
 
-Tailwind finds value in considering the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT, or where UAT isn't enforced.
+Tailwind considers the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT, or for scenarios that don't require UAT.
 
 :::image type="content" alt-text="Diagram of the migration workflow." source="./media/tailwind-migration-rehost-server-replication/migration-workflow.png" lightbox="./media/tailwind-migration-rehost-server-replication/migration-workflow.png":::
 
@@ -220,7 +220,7 @@ With the migration activities and workflow defined, Tailwind Traders irons out t
 
 - Identify a more specific cutover window, which is planned for a Friday evening or weekend. Each cutover window will last for a minimum for 4 hours.
 
-- Notify the business and those affected by the migration of the maintenance window. The maintenance window includes a meeting invitation that includes the migration plan and a conference bridge to discuss any open items during the migration.
+- Notify the business and those users who are affected by the migration of the maintenance window. The maintenance window includes a meeting invitation that includes the migration plan and a conference bridge to discuss any open items during the migration.
 
 - Contact the following parties to ensure that each is available during cutover:
   - Network administrators
@@ -235,7 +235,7 @@ With the migration activities and workflow defined, Tailwind Traders irons out t
 
 - Ensure that the rollback plan is defined and ready for execution if needed.
 
-- Set the expectations of the operations team that day-2 operations must commence for Azure server backup, patching, monitoring, and so on, to ensure the migration handover.
+- To ensure the migration handover, set the expectations of the operations team that day-2 operations must commence for backup, patching, monitoring, and so on, of Azure servers.
 
 ### Post-go-live
 
@@ -245,7 +245,7 @@ After each migration wave, Tailwind also conducts a brief retrospective to discu
 
 ## Conclusion
 
-In this article, Tailwind Traders set up [Migration and modernization tool](/azure/migrate/migrate-services-overview#migration-and-modernization-tool) and plans for their infrastructure migration activities and workflow.
+In this article, Tailwind Traders set up the [Migration and modernization tool](/azure/migrate/migrate-services-overview#migration-and-modernization-tool) and plans for their infrastructure migration activities and workflow.
 
 Not every step described in this article is required for migration of a server. In this case, Tailwind planned for a migration workflow, test plans and pre-migration and post-migration activities, which can be accomplished by proactive and reliable replication.
 
