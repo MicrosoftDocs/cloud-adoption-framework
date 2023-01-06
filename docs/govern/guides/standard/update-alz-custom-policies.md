@@ -46,7 +46,7 @@ Depending on the result of the above investigations, take the following actions:
 
 #### Policies not assigned
 
-- If the outdated policy isn't assigned in your Azure estate, and isn't part of an existing custom policy initiative, replace the outdated policy definition from the Azure landing zone Intermediate Root Management Group, such as `Contoso`, with the updated policy definition.
+- If the outdated policy isn't assigned in your Azure estate, and isn't part of an existing custom policy initiative, replace the outdated policy definition with the updated policy definition at the Azure landing zone Intermediate Root Management Group, such as `Contoso`.
 
 - If a custom policy initiative is updated, but isn't assigned in your Azure estate, replace the outdated custom policy initiative with the updated custom policy initiative at the Azure landing zone Intermediate Root Management Group, for example `Contoso`.
 
@@ -58,8 +58,7 @@ If the outdated Azure landing zone policy is assigned to any scope in your Azure
 
 #### Policies with changed parameters and not part of a custom policy initiative
 
-If the outdated Azure landing zone policy:
-If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names and number have changed, do the following steps:
+If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names and number have changed:
 
 1. Capture all outdated policy assignments, where they're assigned, and their parameter values.
 1. Take one of these actions:
@@ -67,7 +66,7 @@ If the outdated Azure landing zone policy is assigned to any scope in your Azure
    - If the policy assignment contains only the outdated policy, delete the existing policy assignment at all scopes where assigned.
 1. Delete the outdated policy from the Azure landing zone Intermediate Root Management Group, for example `Contoso`.
 1. Import the updated policy to the Azure landing zone Intermediate Root Management Group.
-1. Update the existing policy assignments or create new policy assignments at the prerecorded scopes by including the updated policy.
+1. Update the existing policy assignments or create new policy assignments by including the updated policy at the prerecorded scopes.
 1. After you reassign the updated custom policy, review the policy Compliance section to validate that resources are in a healthy state.
 
 For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
@@ -80,7 +79,7 @@ If the outdated Azure landing zone policy is part of an existing Azure landing z
 
 #### Policies with changed parameters assigned through a custom policy initiative
 
-If the outdated policy is part of an existing custom policy initiative, is assigned to any scope in your Azure estate, and has changed parameter names and numbers, take the following actions:
+If the outdated policy is part of an existing custom policy initiative, is assigned to any scope in your Azure estate, and has changed parameter names and numbers:
 
 1. Capture all policy assignments, where they're assigned, and their parameter values for the custom policy initiative.
 1. Delete the existing policy assignments at all scopes where assigned.
@@ -100,7 +99,7 @@ For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/a
 
 #### Updated assigned custom policy initiative
 
-If an Azure landing zone custom policy initiative is completely updated, and is assigned at any scope in your Azure estate, take the following steps:
+If an Azure landing zone custom policy initiative is completely updated, and is assigned at any scope in your Azure estate:
 
 1. Capture all policy assignments, where they're assigned, and their parameter values for the Azure landing zone custom policy initiative.
 1. Delete the existing policy assignments at all scopes where assigned.
@@ -139,4 +138,4 @@ Azure landing zone-Bicep provides generic guidance for updating Azure landing zo
 
 ## Next steps
 
-Regardless of whether you use the Azure portal, Bicep, or Terraform to manage your Azure landing zone infrastructure, policies change over time and need to be managed. Use the flow in this article as a starting point to develop processes around policy management for your Azure landing zone implementation.
+Regardless of whether you use the Azure portal, Bicep, or Terraform to manage your Azure landing zone infrastructure, you need to manage policy changes over time. Use the flow in this article as a starting point to develop processes around policy management for your Azure landing zone implementation.
