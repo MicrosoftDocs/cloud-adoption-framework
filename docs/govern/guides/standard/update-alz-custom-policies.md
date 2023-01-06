@@ -31,7 +31,7 @@ This section describes the general high-level steps to update Azure landing zone
 
 Use the following authoritative options to determine that one or more Azure landing zone custom policies are updated:
 
-- Periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new), and note that one or more policies are updated. For an example, see [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-11).
+- Periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new), and note that one or more policies are updated, such as [this example](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-11).
 - Use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked **outDated**.
 
 ### Apply updates
@@ -52,15 +52,16 @@ Depending on the result of the above investigations, take the following actions:
 
 #### Policies with unchanged parameters and not part of a custom policy initiative
 
-If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names and number haven't changed, replace the existing custom policy definition contents with the updated custom policy definition contents at the Azure landing zone Intermediate Root Management Group, for example `Contoso`.
+If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names and number haven't changed:
 
-For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+- Replace the existing custom policy definition contents with the updated custom policy definition contents at the Azure landing zone Intermediate Root Management Group, for example `Contoso`. For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with changed parameters and not part of a custom policy initiative
 
-If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names or number have changed, do the following steps:
+If the outdated Azure landing zone policy:
+If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names and number have changed, do the following steps:
 
-1. Capture all policy assignments, where they're assigned, and their parameter values for the outdated policy.
+1. Capture all outdated policy assignments, where they're assigned, and their parameter values.
 1. Take one of these actions:
    - If the policy assignment includes more than one policy definition, update the policy assignment by removing the outdated policy at all scopes where assigned.
    - If the policy assignment contains only the outdated policy, delete the existing policy assignment at all scopes where assigned.
@@ -73,13 +74,13 @@ For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/a
 
 #### Policies with unchanged parameters assigned through a custom policy initiative
 
-If the outdated policy is part of an Azure landing zone custom policy initiative, is assigned at any scope in your Azure estate, and the parameter names and number haven't changed, replace the existing custom policy definition contents with the updated custom policy definition contents. No further changes need to be made to the custom policy initiative or assignments, because the parameter number and names are unchanged.
+If the outdated Azure landing zone policy is part of an existing Azure landing zone custom policy initiative, is assigned to any scope in your Azure estate, and has unchanged parameter names and numbers:
 
-For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+- Replace the existing custom policy definition contents with the updated custom policy definition contents. No further changes need to be made to the custom policy initiative or assignments, because the parameter number and names are unchanged. For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with changed parameters assigned through a custom policy initiative
 
-If the outdated policy to be updated is part of an Azure landing zone custom policy initiative, is assigned at any scope in your Azure estate, and the parameter names or number have changed, take the following actions:
+If the outdated policy is part of an existing custom policy initiative, is assigned to any scope in your Azure estate, and has changed parameter names and numbers, take the following actions:
 
 1. Capture all policy assignments, where they're assigned, and their parameter values for the custom policy initiative.
 1. Delete the existing policy assignments at all scopes where assigned.
@@ -130,11 +131,11 @@ If you use the [Azure landing zone Bicep module(s)](https://github.com/Azure/alz
 
 ### Detect updates with Bicep
 
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In Azure landing zone Bicep, you can also see changes to policies at the Azure landing zone-Bicep [Releases](https://github.com/Azure/Azure landing zone-Bicep/releases) page.
+Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In Azure landing zone Bicep, you can also see changes to policies at the Azure landing zone-Bicep [Releases](https://github.com/Azure/ALZ-Bicep/releases) page.
 
 ### Update with Bicep
 
-Azure landing zone-Bicep provides generic guidance for updating Azure landing zone custom policies to newer policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/Azure landing zone-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+Azure landing zone-Bicep provides generic guidance for updating Azure landing zone custom policies to newer policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
 
 ## Next steps
 
