@@ -1,8 +1,8 @@
 ---
 title: Initial organization alignment
 description: Use the Cloud Adoption Framework for Azure to learn how to complete your initial organization alignment and get your teams ready for cloud adoption.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: SAP on Azure landing zone accelerator
 description: Learn about the SAP on Azure landing zone accelerator.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/04/2022
 ms.topic: conceptual
@@ -197,8 +197,9 @@ SAP customers run various SAP products based on different industry use cases. Th
 In the workflow diagram, *ERP* represents a legacy SAP ECC system or a next-generation SAP S/4 HANA system. *BW* is SAP Business Warehouse. *PI/PO* refers to process integration or process orchestration. Different colors illustrate different SAP products as they appear in the workflow.
 
 ## Implementation
+There are two implementation options:
 
-The [SAP deployment automation framework on Azure](https://github.com/Azure/sap-hana) is a collection of processes combined with a flexible workflow. The framework repository contains code to deploy SAP landscapes in Azure Cloud Services automatically. Templates are separated into the following categories:
+1. The [SAP deployment automation framework on Azure](https://github.com/azure/sap-automation) is a collection of processes combined with a flexible workflow. The framework repository contains code to deploy SAP landscapes in Azure Cloud Services automatically. Templates are separated into the following categories:
 
 - **Terraform on Azure modules.** Use Terraform modules to deploy infrastructure components in Azure, including:
   - Virtual machines
@@ -212,6 +213,34 @@ The [SAP deployment automation framework on Azure](https://github.com/Azure/sap-
 Deploy and install Ansible playbook components on your infrastructure using Terraform on Azure modules.
 
 :::image type="content" source="./media/overview-automation.png" border="false" alt-text="Diagram that shows an overview of an SAP reference implementation.":::
+
+2. [Azure Center for SAP solutions (ACSS)](/azure/center-sap-solutions/overview) brings together a set of Azure services to power a single unified experience to deploy and manage SAP workloads end to end by bringing new services, tools, and frameworks together at one place. 
+
+The foundation of Azure Center for SAP solutions is Microsoft Azure Virtual Instance for SAP solutions. The Virtual Instance for SAP solutions allows you to create and manage SAP systems in a way that makes sense to you, at the SID level or the individual components.
+
+![image](https://user-images.githubusercontent.com/90890670/201013762-5e2ec3ee-0588-4d33-884f-13dc299da7a0.png)
+
+ACSS provides the following capabilities: 
+
+**Guided SAP Deployment**
+
+Azure Center for SAP solutions automates the deployment of SAP S/4HANA systems on Azure. It provides a guided experience to deploy the infrastructure and automatically installs S/4HANA software.
+
+With minimum input, you can choose the right type of deployment based on the latest best practices and reference architectures. You can get sizing recommendations to deploy the SAP system based on the SAPS and Database memory requirements. 
+
+**Registering an Existing SAP System**
+
+If you’re already running SAP systems on Azure or in the process of a migration, you can seamlessly integrate the existing systems with the Azure Center for SAP solutions through a simple registration experience. The registration capability is enabled today for SAP S/4 HANA and NetWeaver ABAP systems running on Linux and Windows OS.
+
+**Intelligent, Seamless SAP Management**
+
+Whether you’re creating a new SAP system or registering an existing system, the following benefits are available right away with ACSS:
+- Quality Check integrated with Azure Advisor to know when infrastructure, Operating System configurations deviate from documented best practices and standards, saving time when troubleshooting and increasing system quality by acting before the deviations become a problem. 
+- Ability to view the SAP system status and health across multiple SAP systems in a single pane of glass. This increases the visibility and the ability to quickly identify problems impacting the SAP systems and its components.
+- Ability to stop and start the SAP system directly from within Azure.
+- Ability to view post-deployment cost at SAP SID level. 
+- Integration with [Microsoft Azure Monitor for SAP solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) for technical monitoring and to correlate telemetry of the SAP system with the telemetry of the OS, DBMS and underlying Azure infrastructure.
+- Ability to search across your SAP systems based on the SID using [Azure Resource Graph](/azure/governance/resource-graph/overview). This makes it easier to discover which Azure resources are part of the SAP landscape. Azure Resource Graph is an Azure service that provides efficient and performant resource exploration with the ability to query at scale across subscriptions driving deeper insights into Azure resources.
 
 ## Next steps
 

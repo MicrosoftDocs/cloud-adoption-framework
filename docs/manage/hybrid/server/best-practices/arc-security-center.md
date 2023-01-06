@@ -2,7 +2,7 @@
 title: Connect Azure Arc-enabled servers to Microsoft Defender for Cloud
 description: Learn how to onboard an Azure Arc-enabled server to Microsoft Defender for Cloud.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

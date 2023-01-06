@@ -2,7 +2,7 @@
 title: Rehost an on-premises dev/test environment on Azure Virtual Machines via Azure Migrate
 description: Learn how Contoso rehosts an on-premises dev/test environment by migrating on-premises machines to Azure via a lift-and-shift approach and the Azure Migrate service.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

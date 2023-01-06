@@ -1,8 +1,8 @@
 ---
 title: Introduction to the modern application platform scenario
 description: Learn about the modern application platform scenario of the Cloud Adoption Framework.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

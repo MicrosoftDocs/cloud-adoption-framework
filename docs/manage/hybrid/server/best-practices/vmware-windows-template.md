@@ -2,7 +2,7 @@
 title: Create a VMware vSphere template for Windows Server 2019
 description: Create a VMware vSphere template for Windows Server 2019.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/09/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

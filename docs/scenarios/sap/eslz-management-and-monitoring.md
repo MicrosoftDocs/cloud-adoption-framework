@@ -2,7 +2,7 @@
 title: Operations baseline for SAP on Azure
 description: Learn more about design considerations and recommendations for managing and monitoring SAP on Azure.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -49,3 +49,5 @@ Here are some design recommendations for SAP on Azure monitoring and management:
 - For each Azure subscription, run an [Azure Availability Zone latency test](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/AvZone-Latency-Test) before zonal deployment to choose low-latency zones for SAP on Azure deployment.
 
 - Implement threat protection for SAP with [Microsoft Sentinel](/azure/sentinel/overview).
+
+- If you are partnering with our customers by managing their SAP estate, consider [Azure Lighthouse](https://learn.microsoft.com/azure/lighthouse/overview). Azure Lighthouse allows managed service providers to use Azure native identity services to authenticate to the customers environment. It puts the control in the hands of the customer, as they can revoke access at any time as well as audit service provider actions. It works with existing APIs, such as the Cloud Solution Provider program. The benefits for the provider include managing tenants without switching contexts and viewing cross-tenant information. Using Azure Lighthouse is an easy choice to maintain trust between customers and providers and streamlines the management of their SAP environments.

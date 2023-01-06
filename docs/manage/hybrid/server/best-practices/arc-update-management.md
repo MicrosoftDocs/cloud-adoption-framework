@@ -2,7 +2,7 @@
 title: Use Update Management in Azure Automation to manage operating system updates for Azure Arc-enabled servers
 description: Learn how to onboard Azure Arc-enabled servers to Update Management in Azure Automation.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

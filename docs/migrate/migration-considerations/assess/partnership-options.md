@@ -1,8 +1,8 @@
 ---
 title: Understand partnership and support options
 description: Use the Cloud Adoption Framework for Azure to understand partnership options and approaches to supporting migration costs.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

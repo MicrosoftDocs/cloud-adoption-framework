@@ -1,8 +1,8 @@
 ---
 title: Get started on a skills readiness path
 description: Explore a skills readiness path so you can help your organization understand and adopt cloud services.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 08/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

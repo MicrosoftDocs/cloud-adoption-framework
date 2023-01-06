@@ -2,8 +2,8 @@
 title: Storage considerations for AKS
 description: Storage considerations for Azure Kubernetes Service (AKS)
 author: nillsf
-ms.author: brblanch
-ms.date: 11/03/2022
+ms.author: martinek
+ms.date: 11/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -50,10 +50,10 @@ For operating system (OS) disks, consider the following factors:
 
 Some workloads need a consistent data store for storage of application data. If your application requires a database, consider exploring the managed databases in Azure, which include the following options: 
 
-- [Azure SQL](/products/azure-sql/)
-- [Azure Database by MySQL](/services/mysql/)
-- [Azure Database for PostGres](/services/postgresql/)
-- [Cosmos DB](/services/cosmos-db/)
+- [Azure SQL](https://azure.microsoft.com/products/azure-sql/)
+- [Azure Database by MySQL](https://azure.microsoft.com/products/mysql/)
+- [Azure Database for PostGres](https://azure.microsoft.com/products/postgresql/)
+- [Cosmos DB](https://azure.microsoft.com/products/cosmos-db/)
 
 ### Storage solutions in AKS
 
@@ -158,7 +158,7 @@ The following sections describe more recommendations for Azure disks, Azure File
 
 For Azure disks, we recommend the following design options:
 
-  - **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](/products/storage/disks/).
+  - **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](https://azure.microsoft.com/products/storage/disks/).
 
   - **Size the node for disks and throughput**. We recommend ensuring that the size of your Kubernetes node is large enough to support the number of disks and the amount of aggregate throughput. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
@@ -178,6 +178,20 @@ For Azure Files, we recommend the following design options:
 
   - **Choose static or dynamically created file shares**. We recommend careful consideration of whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. Storage that is created dynamically can also be deleted dynamically. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files](/azure/aks/azure-files-dynamic-pv).
 
+### Azure NetApp Files
+
+For Azure NetApp Files, we recommend the following design options:
+
+  - **Choose a performance tier based on the application requirements.** Azure NetApp Files offers 3 performance tiers that offer varying classes of performance. For more information, see [Performance considerations for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-performance-considerations).
+  
+  - **Create capacity pools in the same Azure region as the AKS cluster.** For more information, see [Create a capacity pool for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool).
+
+  - **Use the Auto QoS type for capacity pools.** 
+
+  - **Plan your network.** Two options exist for network design: 
+    1. If you use the same VNet for AKS and Azure NetApp Files, create a dedicated subnet for Azure NetApp Files and [delegate the subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) to Microsoft.NetApp/Volumes.
+    2. If you use different VNets, establish VNet peering between them.
+
 ### Blob storage
 
 For blob storage, we recommend the following design options:
@@ -186,7 +200,7 @@ For blob storage, we recommend the following design options:
 
   - **Use CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
 
-  - **Use Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/storage/blobs/authorize-access-azure-active-directory).
+  - **Use Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/azure/storage/blobs/authorize-access-azure-active-directory).
 
   - **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
