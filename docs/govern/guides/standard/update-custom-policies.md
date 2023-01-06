@@ -18,7 +18,7 @@ The article describes high-level manual update steps, and provides references on
 
 The following infographic provides a decision tree for the Azure landing zone custom policies update process:
 
-![Diagram that shows a decision tree for the Azure landing zone custom policy update process.](../../../_images/govern/alz-policy-to-newer-version.png)
+![Diagram that shows a decision tree for the Azure landing zone custom policy update process.](../../../_images/govern/policy-to-newer-version.png)
 
 > [!CAUTION]
 > When you delete existing policy assignments, your environment isn't protected during the time it takes to reassign policies. After you assign updated policies, review your policy Compliance section for any unhealthy resources, and remediate them.
