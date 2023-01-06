@@ -13,7 +13,7 @@ ms.custom: internal
 
 # Why update Azure Landing Zone environments
 
-Azure Landing Zone (ALZ) is a set of pre-built Azure resources and configurations that provide a foundation for a cloud-based application or workload. As a business, it is important to ensure that your ALZ environment is up to date in order to maintain security, platform configuration drift and optimized for new feature releases. 
+Azure Landing Zone (ALZ) is a set of pre-defined Azure resources and configurations that provide a foundation for a cloud-based application or workload. As a business, it is important to ensure that your deployed ALZ environment is up to date in order to maintain security, platform configuration drift and optimized for new feature releases.
 
 Here are a few reasons why keeping your Azure Landing Zone up to date is crucial:
 1. Security: Cybersecurity threats are constantly evolving, and it is important to ensure that your Azure Landing Zone reflect the latest best practices for protecting your data and systems. Keeping your Azure Landing Zone up to date helps to mitigate the risk of a security breach and ensure that your data is properly secured.
