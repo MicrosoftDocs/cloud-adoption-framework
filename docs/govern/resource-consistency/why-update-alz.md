@@ -16,7 +16,7 @@ ms.custom: internal
 Azure Landing Zone (ALZ) is a set of pre-defined Azure resources and configurations that provide a foundation for a cloud-based application or workload. As a business, it is important to ensure that your deployed ALZ environment is up to date in order to maintain security, platform configuration drift and optimized for new feature releases.
 
 Here are a few reasons why keeping your Azure Landing Zone up to date is crucial:
-1. Security: Cybersecurity threats are constantly evolving, and it is important to ensure that your Azure Landing Zone reflect the latest best practices for protecting your data and systems. Keeping your Azure Landing Zone up to date helps to mitigate the risk of a security breach and ensure that your data is properly secured.
+1. Security: Cybersecurity threats are constantly evolving, and it is important to ensure that your Azure Landing Zone reflect the latest best practices for protecting your data and systems. Keeping your Azure Landing Zone up to date helps you mitigate the risk of a security breach and helps you keep your data properly secured.
 2. Platform configuration drift: As Azure Landing Zone continues to be developed, drift relative to your environment will be introduced. Examples of drift include:
     - ALZ Policies could be superseded by built-in Azure policies, or updated to newer versions of ALZ policies.
     - Improvements to network features
