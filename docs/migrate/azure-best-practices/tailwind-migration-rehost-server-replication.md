@@ -43,15 +43,15 @@ Before diving deeply into planning your migration of infrastructure and its depl
 
 ## Step 1: Tooling and replication
 
-Tailwind must decide on the number of appliances that are required for replication and the effects of replication traffic.
+Tailwind Traders must decide on the number of appliances that are required for replication and the effects of replication traffic.
 
-### Capacity planning for core quotas
+### Capacity planning for vCPU quotas
 
-To actively ensure that the Azure subscriptions for the target migration are able to host the virtual machines that are created during the migration (both test and production), subscriptions core quotas must be available for the target VM SKUs. Ensure that [subscription quotas](/azure/azure-portal/supportability/per-vm-quota-requests) for specific VM SKUs are increased for the specific target region.
+To actively ensure that the Azure subscriptions for the target migration are able to host the virtual machines that are created during the migration (both test and production), the vCPU quotas of the subscriptions must be available for the target VM SKUs. Ensure that vCPU quotas for specific VM SKUs are increased for the specific target region. For more information, see [Increase VM-family vCPU quotas](/azure/azure-portal/supportability/per-vm-quota-requests).
 
 ### Server migration tooling planning and implementation
 
-After increasing the core quotas of the subscriptions, Tailwind Traders must prepare to deploy the appliances or agents that are required for replication of their on-premises server infrastructure.
+After increasing the vCPU quotas of the subscriptions, Tailwind Traders must prepare to deploy the appliances or agents that are required for replication of their on-premises server infrastructure.
 
 By using the following workflow, Tailwind can identify the tools that are required for server migration to enable replication of on-premises servers. This workflow aids Tailwind in actively identifying the infrastructure requests that are necessary to successfully enable replication of their migratable estate.
 
@@ -120,49 +120,52 @@ In order to prepare the business and its stakeholders for the migration activiti
 As best practices, Tailwind Traders identifies the following activities for execution prior to a migration failover:
 
 - Design a rollback plan.
+
 - Create the latest backup of the servers.
+
 - Open the firewall prefixes, ports, and protocols that are necessary for traffic between on-premises resources to Azure and within Azure virtual networks and subnets.
+
 - Obtain local administrator credentials or keys for signing in to servers.
+
 - Review the changes for Windows and Linux that are described in [Verify required changes before migrating](/azure/migrate/prepare-for-migration#verify-required-changes-before-migrating) that must be manually configured:
   - For legacy Linux distributions, install Hyper-V drivers as described in [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](/windows-server/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows).
   - For legacy Windows versions such as Windows Server 2003 or Windows Server 2008, install Hyper-V drivers as described in [Prepare Windows Server 2003 machines for migration](/azure/migrate/prepare-windows-server-2003-migration).
+
 - Prepare isolated virtual networks for test migrations.
   - Plan for secure access via RDP or SSH for system management by using a service like [Azure Bastion](/azure/bastion/bastion-overview).
   - Plan for an isolated virtual network in each subscription that contains the migrated VMs. The test migration functionality in Azure Migrate must use a virtual network in the same subscription where the migrated VM will reside.
 
 ### Technical: Post-migration
 
-Tailwind Traders identifies the following activities for execution after the migration failover:
+After the migration failover, Tailwind Traders reviews the post-migration activities for Azure Migrate, based on the following source environments:
 
-- Review the post-migration activities for Azure Migrate, based on the following source environments:
+- [VMware agentless VMs](/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
+- [VMware agent-based VMs](/azure/migrate/tutorial-migrate-vmware-agent#complete-the-migration)
+- [Hyper-V VMs](/azure/migrate/tutorial-migrate-hyper-v#complete-the-migration)
+- [Physical servers](/azure/migrate/tutorial-migrate-physical-virtual-machines#complete-the-migration)
+- [AWS VMs](/azure/migrate/tutorial-migrate-aws-virtual-machines#complete-the-migration)
+- [GCP VMs](/azure/migrate/tutorial-migrate-gcp-virtual-machines#complete-the-migration)
 
-  - [VMware agentless VMs](/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
-  - [VMware agent-based VMs](/azure/migrate/tutorial-migrate-vmware-agent#complete-the-migration)
-  - [Hyper-V VMs](/azure/migrate/tutorial-migrate-hyper-v#complete-the-migration)
-  - [Physical servers](/azure/migrate/tutorial-migrate-physical-virtual-machines#complete-the-migration)
-  - [AWS VMs](/azure/migrate/tutorial-migrate-aws-virtual-machines#complete-the-migration)
-  - [GCP VMs](/azure/migrate/tutorial-migrate-gcp-virtual-machines#complete-the-migration)
+In addition, Tailwind adds the following post-migration activities as best practices:
 
-- In addition, Tailwind adds the following post-migration activities as best practices:
-
-  - Validate sign-in with local credentials or keys for RDP or SSH.
-  - Verify that DNS servers are configured in TCP/IP settings for the OS and that name resolution works correctly.
-  - Verify that the TCP/IP settings for the OS configure the server to receive an IP address via DHCP.
-  - Verify that access to OS licensing is activated and that there's access to cloud-based licensing endpoints (such as Azure endpoints for key management services).
-  - Validate sign-in with domain credentials.
-  - Verify that the application has access to dependencies (such as target URLs or connection strings).
-  - Verify installation or update required Azure agents:
-    - Azure VM agents for Windows or Linux.
-    - Log Analytics agent for Windows or Linux.
-    - Service Map agent for Windows or Linux.
-    - SQL Server IaaS Agent extension.
-  - Validate VM monitoring via a new or existing service.
-  - Validate VM patching via a new or existing service.
-  - Validate VM backup via a new or existing service.
-  - Validate VM antivirus and endpoint protection via a new or existing service.
-  - Tag Azure resources.
-  - Update any existing configuration management database (CMDB).
-  - Conduct a post-mortem and document lessons learned.
+- Validate sign-in with local credentials or keys for RDP or SSH.
+- Verify that DNS servers are configured in TCP/IP settings for the OS and that name resolution works correctly.
+- Verify that the TCP/IP settings for the OS configure the server to receive an IP address via DHCP.
+- Verify that access to OS licensing is activated and that there's access to cloud-based licensing endpoints (such as Azure endpoints for key management services).
+- Validate sign-in with domain credentials.
+- Verify that the application has access to dependencies (such as target URLs or connection strings).
+- Verify installation or update required Azure agents:
+  - Azure VM agents for Windows or Linux.
+  - Log Analytics agent for Windows or Linux.
+  - Service Map agent for Windows or Linux.
+  - SQL Server IaaS Agent extension.
+- Validate VM monitoring via a new or existing service.
+- Validate VM patching via a new or existing service.
+- Validate VM backup via a new or existing service.
+- Validate VM antivirus and endpoint protection via a new or existing service.
+- Tag Azure resources.
+- Update any existing configuration management database (CMDB).
+- Conduct a post-mortem and document lessons learned.
 
 #### Test migration and actual migration
 
@@ -174,10 +177,10 @@ As a first step, Tailwind Traders performs a smoke test to validate that the ser
 
 Tailwind defines a smoke test to be successful when basic server functionality and properties are validated. For example, smoke testing might include:
 
-- The server boots in Azure.
-- The administrator can sign in to the server by using local credentials.
-- TCP/IP settings for DNS, IPv4, and default gateways are updated to the values that are provided via DHCP by the Azure virtual network.
-- OS licensing is activated.
+- Testing whether the server boots in Azure.
+- Testing whether the administrator can sign in to the server by using local credentials.
+- Updating the TCP/IP settings for DNS, IPv4, and default gateways to the values that are provided via DHCP by the Azure virtual network.
+- Activating OS licensing.
 
 Typically, a server administrator or migration partner leads a smoke test.
 
@@ -203,7 +206,7 @@ Further, Tailwind's environment is tightly coupled—it has a large number of se
 
 Tailwind finds value in considering the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT, or where UAT isn't enforced.
 
-[![Diagram of the migration workflow.](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)](./media/tailwind-migration-rehost-server-replication/migration-workflow.png#lightbox)
+:::image type="content" alt-text="Diagram of the migration workflow." source="./media/tailwind-migration-rehost-server-replication/migration-workflow.png" lightbox="./media/tailwind-migration-rehost-server-replication/migration-workflow.png":::
 
 *Figure 2: Testing and migration workflow.*
 
