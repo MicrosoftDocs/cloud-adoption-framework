@@ -258,9 +258,7 @@ After each migration wave, Tailwind also conducts a brief retrospective to discu
 
 ## Conclusion
 
-In this article, Tailwind Traders set up the [Migration and modernization tool](/azure/migrate/migrate-services-overview#migration-and-modernization-tool) and plans for their infrastructure migration activities and workflow.
-
-Not every step described in this article is required for migration of a server. In this case, Tailwind planned for a migration workflow, test plans and pre-migration and post-migration activities, which can be accomplished by proactive and reliable replication.
+In this article, Tailwind Traders set up the Migration and modernization tool, part of Azure Migrate. Tailwind also planned a migration workflow, test plans, and pre-migration and post-migration activities, which can be accomplished by proactive and reliable replication. However, not every server migration requires all of the steps described in this article.
 
 ## Next steps
 
