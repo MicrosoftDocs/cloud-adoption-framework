@@ -1,6 +1,6 @@
 ---
-title: Security considerations for Azure App Service
-description: Learn about design considerations and recommendations for security in the Azure App Service landing zone accelerator
+title: Security considerations for the App Service landing zone accelerator
+description: Learn about design considerations and recommendations for security in the Azure App Service landing zone accelerator.
 author: martinekuan
 ms.author: martinek
 ms.date: 01/06/2023
@@ -10,24 +10,24 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Security considerations for the Azure App Service landing zone accelerator
+# Security considerations for the App Service landing zone accelerator
 
-This article provides design considerations and recommendations for security when using the Azure App Service landing zone accelerator. Security covers multiple aspects including securing application secrets, network isolation, and vulnerability scanning.
+This article provides design considerations and recommendations for security that you can apply when you use the Azure App Service landing zone accelerator. Securing application secrets, network isolation, and vulnerability scanning are some of the considerations covered in this article.
 
 Learn more about the [security](../../../ready/landing-zone/design-area/security.md) design area.
 
 ## Design considerations
 
-The following is a bulleted list of things you must think about when preparing for **any** deployment of App Service:
+When you prepare for a deployment of App Service, take these considerations into account:
 
-- Review your security requirements to determine if they allow your web applications to be run on shared network infrastructure or if they require the complete network/virtual machine isolation available with [App Service Environments](/azure/app-service/environment/overview).
-- Authentication and Authorization: It is important to properly configure authentication and authorization for your Azure App Service, to ensure that only authorized users have access to the app and its resources. This can be done using Azure Active Directory, which provides a secure and scalable solution for managing user identities and access to the app.
-- Network Security: Azure App Service includes several built-in features to help protect the app and its resources from network-based attacks. This includes support for SSL/TLS, IP firewall rules, and DDoS protection. It is important to properly configure these features to ensure that the app is protected from external threats.
-- Application Security: It is also important to ensure that the app itself is secure, and that it follows best practices for protecting sensitive data and preventing common vulnerabilities such as SQL injection and cross-site scripting (XSS). This can be achieved through a combination of secure coding practices, regular security testing, and the use of tools such as Azure Security Center to monitor for potential threats.
+- **Requirements:** Review your security requirements to determine if they allow your web applications to be run on shared network infrastructure or if they require the complete network / virtual machine isolation that's available in an [App Service Environment](/azure/app-service/environment/overview).
+- **Authentication and authorization:** You need to properly configure authentication and authorization for your App Service solution to ensure that only authorized users have access to the app and its resources. You can do this by using Azure Active Directory (Azure AD), which provides an enhanced-security, scalable solution for managing user identities and access to your app.
+- **Network security:** App Service includes several built-in features to help protect your app and its resources from network-based attacks. These features include support for SSL/TLS, IP firewall rules, and distributed denial of service (DDoS) protection. You need to properly configure these features to ensure that your app is protected from external threats.
+- **Application security:** You need to ensure that the app itself is secure, and that it incorporates best practices for protecting sensitive data and preventing common vulnerabilities like SQL injection and cross-site scripting (XSS). You can achieve this goal by using a combination of secure coding practices, regular security testing, and using tools like Azure Security Center to monitor for potential threats.
 
-- Data Security: Finally, it is important to properly protect the data that is stored and processed by the app. This can be done using Azure's built-in features such as Azure Key Vault, which provides secure storage for sensitive data such as cryptographic keys and passwords. It is also important to encrypt data in transit and at rest, and to regularly back up and test your data recovery processes.
+- **Data security:** You also need to properly protect the data that's stored and processed by your app. This can be done using Azure's built-in features such as Azure Key Vault, which provides secure storage for sensitive data such as cryptographic keys and passwords. It is also important to encrypt data in transit and at rest, and to regularly back up and test your data recovery processes.
 
-In summary, security is a critical concern when working with Azure App Service. By following best practices for authentication and authorization, network security, application security, and data security, you can help ensure that your app and its resources are protected from potential threats.
+Security is a critical concern when working with Azure App Service. By following best practices for authentication and authorization, network security, application security, and data security, you can help ensure that your app and its resources are protected from potential threats.
 
 ## Design recommendations
 
