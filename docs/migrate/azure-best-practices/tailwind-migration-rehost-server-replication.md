@@ -82,7 +82,7 @@ With replication appliances and agents configured, Tailwind Traders can start pl
 
 As a best practice, Tailwind plans to enable initial replication for only a subset of their migration waves due to caution about their available bandwidth. The initial replication is a full copy of the servers and consumes more bandwidth as compared to ongoing (delta) replications. Given their bandwidth constraint, Tailwind enables replication for only the migration waves that are nearing test migration and cutover dates.
 
-Tailwind also monitors initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for additional servers. If errors or warnings arise, Tailwind can actively detect and respond before test migration or cutover dates.
+Tailwind also monitors initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for more servers. If errors or warnings arise, Tailwind can actively detect and respond before test migration or cutover dates.
 
 #### Replication tuning
 
@@ -113,7 +113,7 @@ In order to prepare the business and its stakeholders for the migration activiti
   - Application owners (frontend and backend applications)
   - Microsoft Support
   - Partners (if available)
-- A soak test after the cutover of the application to Azure. During the soak period, if any issues arise, then Tailwind must execute the rollback plan. After the soak period has expired, rollback of the application can't be performed.
+- A soak test after the cutover of the application to Azure. During the soak period, if any issues arise, then Tailwind must execute the rollback plan. After the soak period has expired, the application can't be rolled back.
 
 ### Technical: Pre-migration
 
@@ -137,7 +137,7 @@ As best practices, Tailwind Traders identifies the following activities for exec
 
 ### Technical: Post-migration
 
-After the migration failover, Tailwind Traders reviews the post-migration activities for Azure Migrate, based on the following source environments:
+After the migration failover, Tailwind Traders reviews the completion procedures for the following source environments:
 
 - [VMware agentless VMs](/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
 - [VMware agent-based VMs](/azure/migrate/tutorial-migrate-vmware-agent#complete-the-migration)
@@ -149,22 +149,35 @@ After the migration failover, Tailwind Traders reviews the post-migration activi
 In addition, Tailwind adds the following post-migration activities as best practices:
 
 - Validate sign-in with local credentials or keys for RDP or SSH.
+
 - Verify that DNS servers are configured in TCP/IP settings for the OS and that name resolution works correctly.
+
 - Verify that the TCP/IP settings for the OS configure the server to receive an IP address via DHCP.
+
 - Verify that access to OS licensing is activated and that there's access to cloud-based licensing endpoints (such as Azure endpoints for key management services).
+
 - Validate sign-in with domain credentials.
+
 - Verify that the application has access to dependencies (such as target URLs or connection strings).
+
 - Verify installation or update required Azure agents:
   - Azure VM agents for Windows or Linux.
   - Log Analytics agent for Windows or Linux.
   - Service Map agent for Windows or Linux.
   - SQL Server IaaS Agent extension.
+
 - Validate VM monitoring via a new or existing service.
+
 - Validate VM patching via a new or existing service.
+
 - Validate VM backup via a new or existing service.
+
 - Validate VM antivirus and endpoint protection via a new or existing service.
+
 - Tag Azure resources.
+
 - Update any existing configuration management database (CMDB).
+
 - Conduct a post-mortem and document lessons learned.
 
 #### Test migration and actual migration
@@ -202,9 +215,9 @@ After defining test cases, Tailwind Traders develops the following workflow to e
 
 Most of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as *Ready with Conditions*, which might not boot in Azure. Therefore, Tailwind tests those servers in an isolated virtual network to ensure that each server passes a smoke test. For the smoke test, Tailwind performs a test migration in Azure Migrate, which allows for automated clean-up of created resources, such as VMs and network interfaces.
 
-Further, Tailwind's environment is tightly coupled—it has a large number of servers that are interdependent with one another, which results in large migration waves. Tailwind decides to split their large migration waves and to migrate servers together that have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind determines that it should migrate directly into the production virtual network, since that network already has connectivity to their on-premises dependencies. In this path, Tailwind performs the necessary smoke tests in an isolated virtual network and perform UAT in the production virtual network. If successful, Tailwind concludes the migration as a final cutover for the servers.
+Further, Tailwind's environment is tightly coupled—it has a large number of servers that are interdependent with one another, which results in large migration waves. Tailwind decides to split their large migration waves and to migrate servers together that have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind determines that it should migrate directly into the production virtual network, since that network already has connectivity to their on-premises dependencies. In this path, the third in the following diagram, Tailwind performs the necessary smoke tests in an isolated virtual network and performs UAT in the production virtual network. If successful, Tailwind concludes the migration as a final cutover for the servers.
 
-Tailwind considers the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT, or for scenarios that don't require UAT.
+Tailwind considers the first path in the following diagram only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT. Tailwind considers the second path only for scenarios that don't require UAT.
 
 :::image type="content" alt-text="Diagram of the migration workflow." source="./media/tailwind-migration-rehost-server-replication/migration-workflow.png" lightbox="./media/tailwind-migration-rehost-server-replication/migration-workflow.png":::
 
