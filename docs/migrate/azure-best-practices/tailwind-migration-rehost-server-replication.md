@@ -1,6 +1,6 @@
 ---
 title: Migration execution with Azure Migrate for servers
-description: Learn how Tailwind Traders migrates its server to Azure by using Azure Migrate.
+description: Learn how Tailwind Traders migrates its servers to Azure by using the Migration and modernization tool in Azure Migrate.
 author: alejandra8481
 ms.author: martinek
 ms.date: 04/09/2021
