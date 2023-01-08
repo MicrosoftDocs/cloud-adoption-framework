@@ -37,7 +37,7 @@ This article explains these fiscal outcomes within the context of a cloud transf
 
 The cloud can create opportunities that allow you to deliver new products to customers or deliver existing products in a new way. New revenue streams are innovative, entrepreneurial, and exciting for people in the business world.
 
-In some companies, new revenue streams are prone to failure and considered high risk. When a revenue-related outcome is proposed by IT in one of these companies, resistance is likely. Partnering with a business leader who's a proven innovator lends edibility to proposed outcomes, and demonstrating revenue stream validation early in the process can help prevent roadblocks.
+In some companies, new revenue streams are prone to failure and considered high risk. When a revenue-related outcome is proposed by IT in one of these companies, resistance is likely. Partnering with a business leader who's a proven innovator lends credibility to proposed outcomes, and demonstrating revenue stream validation early in the process can help prevent roadblocks.
 
 - **Example:** A company has been selling books for over a hundred years. An employee of the company realizes that the content can be delivered electronically. The employee creates a device that's sold in the bookstore, that allows the same books to be downloaded directly, driving *$x* in new book sales.
 

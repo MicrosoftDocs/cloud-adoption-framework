@@ -30,8 +30,8 @@ Cloud adoption can change aspects of IT operations. These changes require a reev
 
 The following techniques can help avoid governance redundancies or gaps:
 
-- ***Create a service dependency map*** - A service dependency map is a document that lists all your IT services and the people responsible for them. To create a service dependency map, you should outline all the services that your organization provides and then identify the teams or individuals that are responsible for each of those services.
-- ***Create a matrix to track those responsible, accountable, consulted, and informed (RACI)*** - A RACI matrix defines levels of responsibility for a given service.  You should list who is responsible and accountable for each service and who should be consulted and informed in the decision-making process.
+- ***Create a service dependency map***: A service dependency map is a document that lists all your IT services and the people responsible for them. To create a service dependency map, you should outline all the services that your organization provides and then identify the teams or individuals that are responsible for each of those services.
+- ***Track those responsible, accountable, consulted, and informed (RACI)***: A RACI matrix defines levels of responsibility for a given service.  You should list who is responsible and accountable for each service and who should be consulted and informed in the decision-making process.
 
 For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance).
 
@@ -78,7 +78,7 @@ Workload cost governance begins with baseline estimates. Defense teams should pe
 
 Here are some practical steps to creating workload estimates:
 
-**Start with the Return on Investment (ROI) of moving to the cloud** - To calculate the ROI of the cloud, mission owners need to determine the Total Cost of Ownership (TCO) for each individual workload transitioning to the cloud. Azure has a [TCO Calculator](https://azure.microsoft.com/pricing/tco/calculator/) that allows the Mission Owner to estimate cost per instance with several variables:
+**Start with the return on investment (ROI) of moving to the cloud** - To calculate the ROI of the cloud, mission owners need to determine the Total Cost of Ownership (TCO) for each individual workload transitioning to the cloud. Azure has a [TCO Calculator](https://azure.microsoft.com/pricing/tco/calculator/) that allows the Mission Owner to estimate cost per instance with several variables:
 
 - Facilities (building, real estate)
 - Electricity and cooling charges
