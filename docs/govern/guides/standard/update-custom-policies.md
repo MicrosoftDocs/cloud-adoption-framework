@@ -14,7 +14,7 @@ ms.custom: internal
 
 Over time, Azure landing zone custom policies and policy initiatives update to newer versions that you can incorporate into your Azure environment. This article describes how to update Azure landing zone custom policies and policy initiatives when newer versions release.
 
-The article describes high-level manual update steps, and provides references on handling updates for [Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [Bicep](https://aka.ms/alz/bicep) modular implementations. To migrate Azure landing zone custom policies to Azure built-in policies with Bicep, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+The article describes high-level manual update steps, and provides references on handling updates for [Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [Bicep](https://aka.ms/alz/bicep) modular implementations. To migrate Azure landing zone custom policies to Azure built-in policies with Bicep, see [Migrate Azure landing zone policies to Azure built-in policies](../../resource-consistency/update-alz-policies).
 
 The following infographic provides a decision tree for the Azure landing zone custom policies update process:
 
