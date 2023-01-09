@@ -81,13 +81,13 @@ If these benefits meet the needs of mission owners, then a single broker is like
 
 The factors listed will help you determine if the multiple cloud broker approach is the right one.
 
-- ***Ownership*** – Mission owners might need their own cloud brokers. Decision-making groups often need their own tenant to meet mission-objectives and avoid delays due to dependencies.
+- ***Ownership***: Mission owners might need their own cloud brokers. Decision-making groups often need their own tenant to meet mission-objectives and avoid delays due to dependencies.
 
-- ***Isolation*** – Mission owners might need isolated environments for compliance, governance, or identity reasons. Each tenant (instance of Azure Active Directory) represents an isolated identity environment and can create a firm isolation barrier when needed.
+- ***Isolation***: Mission owners might need isolated environments for compliance, governance, or identity reasons. Each tenant (instance of Azure Active Directory) represents an isolated identity environment and can create a firm isolation barrier when needed.
 
-- ***Management*** – Separating complex environments might be ideal for managing and modernizing your cloud workloads. But this management separation creates increased complexity higher in the command chain. It becomes more difficult to have a single view of all cloud assets.
+- ***Management***: Separating complex environments might be ideal for managing and modernizing your cloud workloads. But this management separation creates increased complexity higher in the command chain. It becomes more difficult to have a single view of all cloud assets.
 
-- ***Security*** – Data compliance for varying impact levels might require multiple tenants and multiple cloud brokers authorized and with the experience to manage those impact levels.
+- ***Security***: Data compliance for varying impact levels might require multiple tenants and multiple cloud brokers authorized and with the experience to manage those impact levels.
 
 The multi-cloud-broker strategy can be used at different levels in a defense organization. A broker can be assigned to individual military branches (naval, air, ground) or groups of applications. The choice depends on the needs of your defense organization around ownership, isolation, management, and security.
 
