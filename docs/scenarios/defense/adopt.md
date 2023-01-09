@@ -47,7 +47,7 @@ Modernization is all about maximizing value and should be a priority for mission
 
 **Modernization requirements** - The way cloud services are acquired can affect the pace of modernization. It’s common for defense organizations to operate the landing zone separately from the workloads that sit on top of it. The best approach is to have the cloud-broker build and manage the landing zone while mission owner teams manage the workloads on the platform. However, this separation of duties creates security boundaries but can also stifle modernization. So it’s important that mission owners incentivize technical teams to adopt new technologies so that defense workloads can meet current and future demands. Building modernization into requirements and setting milestones against modernization goals is an effective approach. Require proposals for technical solutions to outline how modernization efforts align to process improvements, application enhancement, and database configurations. The proposed solutions should align with mission objectives.
 
-For more information, see [modernization alignment](/azure/cloud-adoption-framework/modernize/business-alignment/).
+For more information, see [modernization alignment](../../modernize/business-alignment/index.md).
 
 **Consider platform-as-a-service (PaaS)** - Azure infrastructure-as-a-service (IaaS) solutions provide a level of technical control that many defense organizations need. The downside of IaaS control is less productivity. Productivity means doing and getting more with less. The more management technical teams take on the less time they have for innovation.
 
@@ -55,7 +55,7 @@ PaaS solutions provide a balance of control and productivity. If they’re avail
 
 PaaS solutions are platforms. Mission owners control the code and data but offload the management of the underlying infrastructure. Azure handles infrastructure hardening, patching, scaling, and provisioning. Platforms create minimal risk of vendor lock-in and can improve security. Defense organizations can focus more on application security and improving code when they optimize routine security tasks. PaaS solutions can help defense organizations meet mission objectives faster.
 
-For more information, see [PaaS adoption](/azure/cloud-adoption-framework/modernize/modernize-strategies/).
+For more information, see [PaaS adoption](../../modernize/modernize-strategies/index.md).
 
 ## Use DevOps where possible
 
@@ -73,7 +73,7 @@ Defense standards and risk mitigation processes tend to limit the extent that de
 
 For more information on DevOps, see:
 
-- [Process modernization](/azure/cloud-adoption-framework/modernize/modernize-strategies/process-modernization)
+- [Process modernization](../../modernize/modernize-strategies/process-modernization.md)
 - [Azure DevOps](/azure/devops/)
 
 ## Next step
