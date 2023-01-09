@@ -16,7 +16,7 @@ This article builds on several considerations and recommendations defined in the
 
 Here are some key design considerations and recommendations for monitoring and managing SAP on Azure.
 
-- Use [Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) to monitor your SAP workloads on Azure. The solution architecture includes a centralized Azure Log Analytics workspace for establishing a platform and application-layer monitoring. Consider supplementing Azure Monitor for SAP Solutions with SAP Solution Manager. You can add Application Insights to extract all necessary telemetry data while generating alerts and support tickets when telemetry indicates a potential error.
+- Use [Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) to monitor your SAP workloads on Azure. Consider supplementing Azure Monitor for SAP Solutions with SAP Solution Manager. You can add Application Insights to extract all necessary telemetry data while generating alerts and support tickets when telemetry indicates a potential error.
 
 - Implement threat protection with [Microsoft Sentinel Solution for SAP](/Azure/sentinel/sap/deployment-overview). Use Microsoft Sentinel Solution for SAP to monitor your SAP systems and detect sophisticated threats throughout the business logic and application layers.
 
