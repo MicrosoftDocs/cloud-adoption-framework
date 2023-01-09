@@ -34,5 +34,5 @@ For connecting your existing on-premises HPC system to Azure, [hybrid and cloud 
 ## Next steps
 
 - After strategizing the modernization of your HPC environment, define what your [migration](./migrate.md) process and path will consist of.
-- For more information for connecting your existing on-premises HPC system to Azure, review the [options for connecting your on-premises network](/azure/architecture/reference-architecture/hybrid-networking) to Azure.
+- For more information for connecting your existing on-premises HPC system to Azure, review the [options for connecting your on-premises network](/azure/architecture/reference-architectures/hybrid-networking/) to Azure.
 - Consider more design area options in [platform automation and devops recommendations](../../ready/landing-zone/design-area/platform-automation-devops.md) when evaluating further modernization strategies for your HPC environment.

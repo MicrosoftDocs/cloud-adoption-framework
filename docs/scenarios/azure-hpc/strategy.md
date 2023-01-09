@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Strategic impact of Azure high-performance computing (HPC)
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-plan-template.docx) to record your cloud adoption strategy. This article will help expose many technical considerations regarding HPC that have an impact on your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article will help expose many technical considerations regarding HPC that have an impact on your strategy.
 
 ## HPC motivations
 
