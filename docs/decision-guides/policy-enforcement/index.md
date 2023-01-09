@@ -22,7 +22,7 @@ As your cloud estate grows, you will be faced with a corresponding need to maint
 
 Platform-provided policy enforcement mechanisms at the resource or subscription level are usually sufficient for smaller cloud estates. Larger deployments justify a larger enforcement scope and may need to take advantage of more sophisticated enforcement mechanisms involving deployment standards, resource grouping and organization, and integrating policy enforcement with your logging and reporting systems.
 
-The primary factors in determining the scope of your policy enforcement processes is your organization's [cloud governance requirements](../../govern/index.md), the size and nature of your cloud estate, and how your organization is reflected in your [subscription design](../subscriptions/index.md). An increase in size of your estate or a greater need to centrally manage policy enforcement can both justify an increase in enforcement scope.
+The primary factors in determining the scope of your policy enforcement processes is your organization's [cloud governance requirements](../../govern/index.md), the size and nature of your cloud estate, and how your organization is reflected in your [subscription design](../../ready/landing-zone/design-area/resource-org-subscriptions.md). An increase in size of your estate or a greater need to centrally manage policy enforcement can both justify an increase in enforcement scope.
 
 ## Baseline best practices
 
@@ -51,7 +51,7 @@ In Azure, you can apply configuration settings and resource creation rules at th
 
 As your cloud estate grows to span many subscriptions that require enforcement, you will need to focus on a cloud-estate-wide enforcement strategy to ensure policy consistency.
 
-Your [subscription design](../subscriptions/index.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/organize-subscriptions.md) can be used to assign Azure Policy rules across multiple subscriptions.
+Your [subscription design](../../ready/landing-zone/design-area/resource-org-subscriptions.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/organize-subscriptions.md) can be used to assign Azure Policy rules across multiple subscriptions.
 
 ## Automated enforcement
 
