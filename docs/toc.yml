@@ -1412,6 +1412,8 @@ items:
           href: govern/guides/standard/cost-management-improvement.md
         - name: Multicloud scenarios
           href: govern/guides/standard/multicloud-improvement.md
+        - name: Update Azure landing zone custom policies
+          href: govern/guides/standard/update-custom-policies.md
       - name: Governance guide for complex enterprises
         items:
         - name: Overview
