@@ -1552,6 +1552,8 @@ items:
           href: govern/resource-consistency/governance-simple-workload.md
         - name: Governance design for multiple teams
           href: govern/resource-consistency/governance-multiple-teams.md
+        - name: Why update an Azure landing zone?
+          href: govern/resource-consistency/why-update-azure-landing-zone.md
         - name: Migrate Azure Landing Zone policies to Azure Built-in policies
           href: govern/resource-consistency/update-alz-policies.md
       - name: Deployment acceleration
