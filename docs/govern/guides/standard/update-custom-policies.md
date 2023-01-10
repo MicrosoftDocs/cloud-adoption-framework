@@ -12,11 +12,11 @@ ms.custom: internal
 
 # Update Azure landing zone custom policies
 
-Over time, Azure landing zone custom policies and policy initiatives update to newer versions that you can incorporate into your Azure environment. This article describes how to update Azure landing zone custom policies and policy initiatives when newer versions release.
+Over time, Azure landing zone custom policies and policy initiatives update to newer versions that you can incorporate into your Azure environment. This article describes how to update your Azure landing zone custom policies and policy initiatives when newer versions release.
 
 The article describes high-level manual update steps, and provides references on handling updates for [Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [Bicep](https://aka.ms/alz/bicep) modular implementations. To migrate Azure landing zone custom policies to Azure built-in policies with Bicep, see [Migrate Azure landing zone policies to Azure built-in policies](../../resource-consistency/update-alz-policies).
 
-The following infographic provides a decision tree for the Azure landing zone custom policies update process:
+The following infographic provides a decision tree and process flow for Azure landing zone custom policy updates:
 
 ![Diagram that shows a decision tree for the Azure landing zone custom policy update process.](../../../_images/govern/policy-to-newer-version.png)
 
@@ -25,14 +25,14 @@ The following infographic provides a decision tree for the Azure landing zone cu
 
 ## Update steps for Azure landing zone environments
 
-This section describes the general high-level steps to update Azure landing zone custom policies and initiatives to newer versions.
+This section describes the general high-level steps to update your Azure landing zone custom policies and initiatives to newer versions.
 
 ### Detect updates
 
-Use the following authoritative options to determine that one or more Azure landing zone custom policies are updated:
+Use the following authoritative options to determine that one or more of your Azure landing zone custom policies are outdated:
 
 - Periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new), and note that one or more policies are updated, such as [this example](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-11).
-- Use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked **outDated**.
+- Use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outdated.
 
 ### Apply updates
 
@@ -40,21 +40,21 @@ To determine whether to apply updated custom policies to your Azure landing zone
 
 1. Determine whether your Azure estate currently assigns any outdated custom policies at any scope. If you use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), you can see your currently assigned policies by checking the **TenantSummary**.
 1. Determine whether any of the outdated custom policies are part of an Azure landing zone custom policy initiative.
-1. Determine whether your Azure estate currently assigns any outdated custom policy initiatives at any scope.
+1. Determine whether your Azure estate currently assigns any of the outdated custom policy initiatives at any scope.
 
 Depending on the result of the above investigations, take the following actions:
 
 #### Policies not assigned
 
-- If the outdated policy isn't assigned in your Azure estate, and isn't part of an existing custom policy initiative, replace the outdated policy definition with the updated policy definition at the Azure landing zone Intermediate Root Management Group, such as `Contoso`.
+- If the outdated policy isn't assigned in your Azure estate, and isn't part of an existing custom policy initiative, replace the outdated policy definition with the updated policy definition at the Azure landing zone intermediate root management group, such as `Contoso`.
 
-- If a custom policy initiative is updated, but isn't assigned in your Azure estate, replace the outdated custom policy initiative with the updated custom policy initiative at the Azure landing zone Intermediate Root Management Group, for example `Contoso`.
+- If a custom policy initiative is updated, but isn't assigned in your Azure estate, replace the outdated custom policy initiative with the updated custom policy initiative at the Azure landing zone intermediate root management group, for example `Contoso`.
 
 #### Policies with unchanged parameters and not part of a custom policy initiative
 
 If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names and number haven't changed:
 
-- Replace the existing custom policy definition contents with the updated custom policy definition contents at the Azure landing zone Intermediate Root Management Group, for example `Contoso`. For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+- Replace the existing custom policy definition contents with the updated custom policy definition contents at the Azure landing zone intermediate root management group, for example `Contoso`. For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with changed parameters and not part of a custom policy initiative
 
@@ -64,8 +64,8 @@ If the outdated Azure landing zone policy is assigned to any scope in your Azure
 1. Take one of these actions:
    - If the policy assignment includes more than one policy definition, update the policy assignment by removing the outdated policy at all scopes where assigned.
    - If the policy assignment contains only the outdated policy, delete the existing policy assignment at all scopes where assigned.
-1. Delete the outdated policy from the Azure landing zone Intermediate Root Management Group, for example `Contoso`.
-1. Import the updated policy to the Azure landing zone Intermediate Root Management Group.
+1. Delete the outdated policy from the Azure landing zone intermediate root management group, for example `Contoso`.
+1. Import the updated policy to the Azure landing zone intermediate root management group.
 1. Update the existing policy assignments or create new policy assignments by including the updated policy at the prerecorded scopes.
 1. After you reassign the updated custom policy, review the policy Compliance section to validate that resources are in a healthy state.
 
@@ -87,8 +87,8 @@ If the outdated policy is part of an existing custom policy initiative, is assig
    
    You can't delete *initiative parameter(s)* from the custom policy initiative. Consider reusing these parameters.
    
-1. Delete the outdated policy from the Azure landing zone Intermediate Root Management Group, for example `Contoso`.
-1. Import the updated policy to the Azure landing zone Intermediate Root Management Group.
+1. Delete the outdated policy from the Azure landing zone intermediate root management group, for example `Contoso`.
+1. Import the updated policy to the Azure landing zone intermediate root management group.
 1. Add the updated policy to the custom policy initiative.
    - If applicable, reuse the previous initiative parameter(s).
    - If applicable, add other initiative parameters by following existing naming patterns that the custom policy initiative defines.
@@ -103,7 +103,7 @@ If an Azure landing zone custom policy initiative is completely updated, and is 
 
 1. Capture all policy assignments, where they're assigned, and their parameter values for the Azure landing zone custom policy initiative.
 1. Delete the existing policy assignments at all scopes where assigned.
-1. Delete the outdated custom policy initiative from the Intermediate Root Management Group, for example `Contoso`. Before deleting, record all custom policy definition names and IDs, assuming all custom policy definitions are up-to-date.
+1. Delete the outdated custom policy initiative from the intermediate root management group, for example `Contoso`. Before deleting, record all custom policy definition names and IDs, assuming all custom policy definitions are up-to-date.
 1. Import the updated custom policy initiative definition with the appropriate policy references.
 
    You can get updated initiatives at [policySetDefinitions](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions), with a generic `contoso` scope for custom policies. Remember to change the `contoso` scope to your management group hierarchy pseudo root name for each policy definition ID.
