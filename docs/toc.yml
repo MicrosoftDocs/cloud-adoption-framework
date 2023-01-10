@@ -322,6 +322,7 @@ items:
                 href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
               - name: Plan for application delivery
                 href: ready/azure-best-practices/plan-for-app-delivery.md
+
             - name: Network security
               items:
               - name: Plan for inbound and outbound internet connectivity
@@ -340,6 +341,7 @@ items:
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
+                
 
         - name: Resource organization
           items:
@@ -1881,20 +1883,6 @@ items:
           href: ready/azure-best-practices/perimeter-networks.md
         - name: Hub and spoke network topology
           href: ready/azure-best-practices/hub-spoke-network-topology.md
-        - name: Software-defined networks
-          items:
-          - name: Overview
-            href: decision-guides/software-defined-network/index.md
-          - name: PaaS-only
-            href: decision-guides/software-defined-network/paas-only.md
-          - name: Cloud-native
-            href: decision-guides/software-defined-network/cloud-native.md
-          - name: Cloud DMZ
-            href: decision-guides/software-defined-network/cloud-dmz.md
-          - name: Hybrid
-            href: decision-guides/software-defined-network/hybrid.md
-          - name: Hub and spoke model
-            href: decision-guides/software-defined-network/hub-spoke.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
       - name: Cost management
