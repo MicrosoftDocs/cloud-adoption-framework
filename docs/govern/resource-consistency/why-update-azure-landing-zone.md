@@ -1,6 +1,6 @@
 ---
-title: 'Why update Azure Landing Zone environments'
-description: Use the Cloud Adoption Framework for Azure to determine when to update your Azure Landing Zone implementation.
+title: Why update your Azure landing zones?
+description: Learn best practices for keeping your Azure landing zones up to date.
 author: Jfaurskov
 ms.author: Janfaurs
 ms.date: 01/10/2023
@@ -10,26 +10,26 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-# Why update Azure Landing Zone environments
+# Why update your Azure landing zones?
 
-Azure Landing Zone (ALZ) is a set of pre-defined Azure resources and configurations that provide a foundation for a cloud-based application or workload. As a business, it is important to ensure that your deployed ALZ environment is up to date in order to maintain security, platform configuration drift and optimized for new feature releases.
+An Azure landing zone is a set of pre-defined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important to ensure that your deployed landing zone environment is up to date so that you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases.
 
-Here are a few reasons why keeping your Azure Landing Zone up to date is crucial:
-1. Security: Cybersecurity threats are constantly evolving, and it is important to ensure that your Azure Landing Zone reflect the latest best practices for protecting your data and systems. Keeping your Azure Landing Zone up to date helps you mitigate the risk of a security breach and helps you keep your data properly secured.
-2. Platform configuration drift: As Azure Landing Zone continues to be developed, drift relative to your deployed environment will be introduced. Examples of drift include:
-    - ALZ Policies could be superseded by built-in Azure policies or updated to newer versions of ALZ policies.
-    - Improvements to network features
-    - New feature introduction
+Here are a few reasons to keep your landing zone up to date:
+
+- **Maintain improved security.** Cybersecurity threats are constantly evolving. It's important to ensure that your landing zone reflects the latest best practices for protecting your data and systems. Keeping your landing zone up to date helps you mitigate the risk of a security breach and helps you keep your data properly secured.
+- **Avoid platform configuration drift.** As landing zones continue to evolve, drift relative to your deployed environment is introduced. Examples of drift include:
+    - Replacement of landing zone policies by built-in Azure policies or by newer versions of landing zone policies.
+    - Improvements to network features.
+    - New features.
     
-    The longer drift is left unattended, it will incur increasing technical debt, that will require remediating. To avoid high volumes of remediation activities, it is encouraged to regularly evaluate against provided guidance on changes to [Azure Landing Zone](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new).
-3. Optimization for Azure improvements: As new Azure features and services are released, Azure Landing Zone may be modified to include them. Likewise, as older Azure features become deprecated, this may also require changes to Azure Landing Zone.
-4. Getting support. Azure landing zones, as a deployable reference and implementation, is an open-source project, and as such support is limited to community engagement. Being aligned to the current implementation makes community support more likely.
+    The longer drift is left unattended, the more technical debt it incurs. This debt requires remediation. So that you can avoid spending increased time on remediation activities, we encourage you to regularly review the latest [changes to landing zones](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new).
+- **Optimize for Azure improvements.** As new Azure features and services are released, landing zones might be modified to include them. Likewise, as older Azure features are deprecated, changes might also be made to landing zones.
+- **Get support.** A landing zone, as a deployable reference and implementation, is an open-source project, so support is limited to community engagement. Keeping your landing zone aligned to the current implementation makes community support more likely.
 
-In summary, not staying up-to-date with ALZ could reduce your security posture as well as the benefits you are currently leveraging from ALZ. To protect your investment in Azure, you are encouraged to regularly review and update your Azure Landing Zone estate as required. In the following section are links to guidance on how to do so. 
+Neglecting keep to your landing zones up to date could affect your security posture and the benefits that you get from the landing zone. To protect your investment in Azure, regularly review and update your landing zones as needed. See the next section for guidance on how to do that.
 
 ## Next steps
-For current details and guidance on how to update your ALZ implementation, please refer to the following sections.
 
-- [Azure Landing Zone What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new)
-- [Migrate ALZ custom policies to Azure built-in policies](./update-alz-policies.md)
-- [Updating Azure Landing Zone custom policies to new versions](./update-alz-custom-policies.md)
+- [Latest updates to landing zones](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new)
+- [Migrate landing zone custom policies to Azure built-in policies](./update-alz-policies.md)
+- [Update Azure landing zone custom policies](./update-alz-custom-policies.md)
