@@ -37,7 +37,7 @@ You should implement these best practices for any App Service deployment:
 - Take advantage of deployment and scaling features. Use autoscaling to ensure that your app can handle varying levels of traffic and workload without compromised performance or availability.
 
 - Take advantage of App Service security and compliance capabilities. These features, including built-in authentication and authorization, SSL/TLS certificates, and network isolation, can help protect your app and its data from unauthorized access or attack. App Service compliance standards, including HIPAA, PCI DSS, and ISO 27001, can help you ensure that your app is compliant with relevant regulations and industry standards.
-- Use the App Service management and troubleshooting tools, like metrics and problem solving in the Azure portal, Azure PowerShell, and the Azure CLI. Maintain and troubleshoot your app in the cloud so that you can keep it running smoothly and reliably.
+- Use the App Service management and troubleshooting tools, like Azure PowerShell, the Azure CLI, and metrics and problem solving in the Azure portal. Maintain and troubleshoot your app in the cloud so that you can keep it running smoothly and reliably.
 
 Whether you use multi-tenant App Service or a single-tenant App Service Environment, operations management is a crucial consideration. Both options offer a range of benefits. The right choice for your organization depends on your needs and priorities.
 
@@ -52,7 +52,7 @@ If you use multi-tenant App Service, keep these considerations in mind:
 
 If you use an App Service Environment, keep these considerations in mind:
 
-- **Cost.** App Service Environments are generally more expensive than multi-tenant App Service solutions because they offer a dedicated, single-tenant environment. You need to carefully consider your budget and make sure that an App Service Environments is the right choice for your organization.
+- **Cost.** App Service Environments are generally more expensive than multi-tenant App Service solutions because they offer a dedicated, single-tenant environment. You need to carefully consider your budget and make sure that an App Service Environment is the right choice for your organization.
 - **Security and networking.** App Service Environments offer additional security features, like the ability to configure custom firewall rules. These features make them a good choice for organizations that have stringent security requirements.
 
 App Service provides a comprehensive set of operations management capabilities, enabling you to monitor, deploy, and manage your app effectively in the cloud.
