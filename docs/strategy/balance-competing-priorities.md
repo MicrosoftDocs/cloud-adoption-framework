@@ -81,7 +81,7 @@ During migration, adoption teams commonly assume that workloads will be rehosted
 **Competing priorities:**
 
 - **Rehost:** Organizations often equate migration with a *lift-and-shift* approach that replicates all assets to the cloud in their current configuration. This approach results in little drift within the IT portfolio. It's also the fastest way to retire assets in an existing datacenter.
-- **Rearchitect:** Modernizing the architecture of each workload maximizes the value of cloud adoption across cost, performance, and operations. However, this approach is slower and often requires access to each applications' source code.
+- **Rearchitect:** Modernizing the architecture of each workload maximizes the value of cloud adoption across cost, performance, and operations. However, this approach is slower and often requires access to each application's source code.
 
 **Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this choice is based on an initial business assumption and isn't a technical decision. In the Migrate methodology, the cloud adoption team then challenges this assumption for each migrated workload. This methodology follows the assess/migrate/promote approach for each workload or group of workloads to create a migration factory. During the assessment phase, the adoption team evaluates the technical fit and architecture of each workload. That assessment effort seldom results in a pure lift-and-shift approach because many of the components in the architecture tend to be selected for refactoring and modernization.
 
