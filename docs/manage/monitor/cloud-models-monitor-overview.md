@@ -3,7 +3,7 @@ title: Monitoring strategy for cloud deployment models
 description: Learn how to adopt our recommended monitoring strategy for each of the cloud deployment models in Azure.
 author: MGoedtel
 ms.author: martinek
-ms.date: 09/07/2022
+ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -48,6 +48,10 @@ Our recommended approach to monitoring each layer of the stack is summarized in 
 
 The hybrid cloud model is a common first step for organizations that want to approach cloud migration gradually. You carefully select the appropriate subset of applications and infrastructure to begin your migration, while avoiding disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers might be uncertain which platform is the best choice to support their business and IT operational goals.
 
+SCOM MI - a capability within Azure Monitor, brings SCOM monitoring capabilities and configurable health models to Azure Monitor. SCOM MI provides a cloud-based alternative for SCOM customers, enabling monitoring continuity for your environments and accelerating Azure adoptions. By having a managed version of SCOM running in Azure, you can modernize your SCOM deployments to the cloud and migrate the monitored applications and infrastructure at your own pace.
+
+SCOM MI is ideal for customers with existing SCOM investments who are adopting Azure, undergoing Lift n Shift of applications and infrastructure to Azure, or maintaining on-premises environments with Azure connectivity (extended to Azure). SCOM MI enhances Azure Monitor to be the comprehensive solution for monitoring cloud and on-premises environments.  
+
 This section presents several factors that help determine which platform to consider. Keep in mind the following key technical aspects:
 
 - You need to collect data from Azure resources that support the workload, then forward the data to your existing on-premises or managed service provider tools.
@@ -56,7 +60,7 @@ This section presents several factors that help determine which platform to cons
 
 - As part of your modernization strategy to standardize on a single tool to reduce cost and complexity, you need to commit to Azure Monitor for monitoring the resources in Azure and on your corporate network.
 
-Azure Monitor and System Center Operations Manager support the following requirements for monitoring hybrid clouds.
+Azure Monitor, SCOM MI and System Center Operations Manager support the following requirements for monitoring hybrid clouds.
 
 | Requirement | Azure Monitor | Operations Manager |
 |---|---|---|

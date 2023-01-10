@@ -3,7 +3,7 @@ title: Cloud monitoring platforms overview
 description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: Zimmergren
 ms.author: martinek
-ms.date: 12/20/2022
+ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -21,6 +21,10 @@ This article provides a high-level overview of our monitoring platforms to help 
 ## The story of System Center Operations Manager
 
 In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a re-engineered version of the product, System Center Operations Manager. It moved beyond simple monitoring of Windows Server instances and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
+
+In 2022, we extended the capabilities of System Center Operations Manager (SCOM) to Azure. This revolutionary step helps to monitor the on-premises and cloud-based workloads using SCOM cloud-native monitoring.   
+
+The preview of this product is [Azure Monitor System Center Operations Manager Managed Instance](/system-center/scom/operations-manager-managed-instance-overview) (aka) SCOM MI. It brings SCOM monitoring capabilities and configurable health models to Azure Monitor. 
 
 ## The story of Azure Monitor
 
@@ -41,6 +45,8 @@ At the 2018 Ignite conference, we announced that the Azure Monitor brand expande
 
 - **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in a virtual network.
 
+At the 2022 Windows Server Summit, we released a preview of Azure Monitor System Center Operations Manager Managed Instance aka SCOM MI, a capability within Azure Monitor. SCOM MI provides a cloud-based alternative for SCOM customers, enabling monitoring continuity for your environments and accelerating Azure adoptions. By having a managed version of SCOM running in Azure, you can modernize your SCOM deployments to the cloud and migrate the monitored applications and infrastructure at your own pace.  
+
 <!-- docutune:casing "Operational Insights" -->
 
 ## The story of Operations Management Suite (OMS)
@@ -60,6 +66,8 @@ The functionality of the services that were part of OMS didn't change when OMS w
 ### Operations Manager
 
 Operations Manager requires significant infrastructure and maintenance to support a management group, which is a basic unit of functionality. At a minimum, a management group consists of one or more management servers, a SQL Server instance, hosting the operational and reporting data warehouse database, and agents. The complexity of a management group design depends on multiple factors, such as the scope of workloads to monitor, and the number of devices or computers supporting the workloads. If you require high availability and site resiliency, as is commonly the case with enterprise monitoring platforms, the infrastructure requirements, and associated maintenance can increase dramatically.
+
+SCOM MI, on the other hand, doesn’t require significant infrastructure and maintenance. It is Microsoft-managed. While the cloud connected SCOM components (management servers, SQL databases) are managed by Microsoft, removing the responsibility of hardware/software updates and security patches are done by you.  
 
 ![Diagram of Operations Manager management group](./media/monitoring-management-guidance-cloud-and-on-premises/operations-manager-management-group-optimized.svg)
 
