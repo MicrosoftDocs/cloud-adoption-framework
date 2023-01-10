@@ -4,7 +4,7 @@ description: Learn about the SAP on Azure landing zone accelerator.
 author: JefferyMitchell
 ms.author: martinek
 ms.reviewer: tozimmergren
-ms.date: 10/04/2022
+ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
