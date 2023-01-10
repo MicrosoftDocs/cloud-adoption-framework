@@ -1,9 +1,9 @@
 ---
 title: Perimeter networks
-description: Use the Cloud Adoption Framework for Azure to learn how to set up Azure effectively for your organization.
+description: See how the Cloud Adoption Framework for Azure helps you set up perimeter networks effectively for your organization.
 author: tracsman
 ms.author: martinek
-ms.date: 10/12/2021
+ms.date: 01/09/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,57 +12,61 @@ ms.custom: think-tank, virtual-network
 
 # Perimeter networks
 
-[Perimeter networks][perimeter-network] enable secure connectivity between your cloud networks and your on-premises or physical datacenter networks. They also enable secure connectivity to and from the internet. A perimeter network is sometimes called a demilitarized zone or DMZ.
+Perimeter networks, also called demilitarized zones (DMZs), help provide secure connectivity between cloud networks, on-premises or physical datacenter networks, and the internet. 
 
-For effective perimeter networks, incoming packets must flow through security appliances that are hosted in secure subnets. This process must happen before the packets reach the back-end servers. Examples include the firewall, intrusion detection systems, and intrusion prevention systems. Before they leave the network, internet-bound packets from workloads should also flow through the security appliances in the perimeter network. The purposes of this flow are policy enforcement, inspection, and auditing.
+In effective perimeter networks, incoming packets flow through security appliances that are hosted in secure subnets. This process happens before packets can reach backend servers. Security appliances include firewalls, network virtual appliances (NVAs), and other intrusion detection and prevention systems.
 
-Perimeter networks make use of the following Azure features and services:
+Internet-bound packets from workloads must also flow through security appliances in the perimeter network before they can leave the network. The perimeter network can provide policy enforcement, inspection, and auditing.
+
+Perimeter networks use the following Azure features and services:
 
 - [Virtual networks][virtual-networks], [user-defined routes][user-defined-routes], and [network security groups][network-security-groups]
-- [Network virtual appliances (NVAs)][network-virtual-appliances]
-- [Azure Load Balancer][alb]
-- [Azure Application Gateway][appgw] and [Web Application Firewall (WAF)][appgwwaf]
-- [Public IPs][public-ip]
-- [Azure Front Door][afd] with [Web Application Firewall][afdwaf]
+- [Azure Application Gateway][appgw] with [Web Application Firewall (WAF)][appgwwaf]
 - [Azure Firewall][azure-firewall]
+- [Other network virtual appliances (NVAs)][network-virtual-appliances]
+- [Azure Web Application Firewall on Azure Front Door][afdwaf]
+- [Azure Load Balancer][alb]
+- [Public IP addresses][public-ip]
 
-> [!NOTE]
-> Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
->
-> - [Implement a perimeter network between Azure and your on-premises datacenter](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
-> - [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+Central IT teams and security teams are usually responsible for defining operational requirements for perimeter networks. Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
 
-Usually, your central IT team and security teams are responsible for defining requirements to operate your perimeter networks.
+- [Implement a perimeter network between Azure and your on-premises datacenter](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
+- [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+For more information, see [Perimeter networks][perimeter-network].
 
-![Diagram that shows an example of a hub and spoke network topology.](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
+## Perimeter network topology
 
-*Figure 1: Example of a hub and spoke network topology.*
+The following diagram shows an example [hub and spoke network](./hub-spoke-network-topology.md) that enforces two perimeter networks, with access to the internet and to an on-premises network.
 
-The diagram above shows an example [hub and spoke network topology](./hub-spoke-network-topology.md) that implements enforcement of two perimeters with access to the internet and an on-premises network. Both perimeters are in the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business. This support is done via multiple farms of WAFs and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows for connectivity via VPN or Azure ExpressRoute as needed.
+![Diagram that shows an example of a hub and spoke network topology with two perimeter networks.](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
+
+In this network topology, both perimeter networks are in the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business. This support uses multiple farms of WAFs and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows connectivity via virtual private network (VPN) or Azure ExpressRoute as needed.
 
 ## Virtual networks
 
-Perimeter networks are typically built using a [virtual network][virtual-networks]. The network uses multiple subnets to host the different types of services that filter and inspect traffic to or from the internet via NVAs, WAFs, and Azure Application Gateway instances.
+Perimeter networks are typically built within [virtual networks][virtual-networks]. The virtual network uses multiple subnets to host the different types of services that filter and inspect traffic to or from other networks or the internet. These services include NVAs, WAFs, and Azure Application Gateway instances.
 
 ## User-defined routes
 
-You can use [user-defined routes][user-defined-routes] to deploy firewalls, intrusion detection systems, and other virtual appliances. Customers can then route network traffic through these security appliances for security boundary policy enforcement, auditing, and inspection. User-defined routes can be created to guarantee that traffic passes through the specified custom VMs, NVAs, and load balancers.
+In a hub and spoke network topology, you must guarantee that traffic generated by virtual machines (VMs) in the spokes passes through the correct virtual appliances in the hub. This traffic routing requires [user-defined routes][user-defined-routes] in the subnets of the spokes.
 
-In a hub and spoke network example, you need to guarantee that traffic generated by virtual machines in the spoke passes through the correct virtual appliances in the hub. This traffic routing requires a user-defined route defined in the subnets of the spoke. The route sets the front-end IP address of the internal load balancer as the next hop. The internal load balancer distributes the internal traffic to the virtual appliances (load balancer back-end pool).
+User-defined routes can guarantee that traffic passes through specified custom VMs, NVAs, and load balancers. The route sets the front-end IP address of the internal load balancer as the next hop. The internal load balancer distributes the internal traffic to the virtual appliances in the load balancer backend pool.
+
+You can use user-defined routes to deploy firewalls, intrusion detection systems, and other virtual appliances. Customers can route network traffic through these security appliances for security boundary policy enforcement, auditing, and inspection. 
 
 ## Azure Firewall
 
-[Azure Firewall][azure-firewall] is a managed cloud-based service that helps protect your Azure Virtual Network resources. It's a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability. You can centrally create, enforce, and log application and network connectivity policies across subscriptions and virtual networks.
+[Azure Firewall][azure-firewall] is a managed cloud-based firewall service that helps protect your Azure Virtual Network resources. Azure Firewall is a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability. You can use Azure Firewall to centrally create, enforce, and log application and network connectivity policies across subscriptions and virtual networks.
 
-Azure Firewall uses a static public IP address for your virtual network resources. With it, outside firewalls can identify traffic that originates from your virtual network. The service works with Azure Monitor for logging and analytics.
+Azure Firewall uses a static public IP address for virtual network resources. Outside firewalls can use the static public IP to identify traffic that originates from your virtual network. Azure Firewall works with Azure Monitor for logging and analytics.
 
 ## Network virtual appliances
 
-Manage perimeter networks with access to the internet through an Azure Firewall instance or a farm of firewalls or [web application firewalls][afdwaf].
+You can manage perimeter networks with access to the internet through Azure Firewall or through a farm of firewalls or [web application firewalls][afdwaf].
 
-Different lines of business commonly use many web applications. These applications tend to suffer from various vulnerabilities and potential exploits. A Web Application Firewall detects attacks against web applications (HTTP/S) in more depth than a generic firewall. Compared with tradition firewall technology, web application firewalls have a set of specific features to help protect internal web servers from threats.
+Different lines of business use many web applications, which can suffer from various vulnerabilities and potential exploits. A web application firewall detects attacks against HTTP/S web applications in more depth than a generic firewall. Compared with traditional firewall technology, web application firewalls have a set of specific features to help protect internal web servers from threats.
 
-An Azure Firewall instance and a [network virtual appliance][network-virtual-appliances] firewall use a common administration plane with a set of security rules. These rules help protect the workloads hosted in the spokes and control access to on-premises networks. Azure Firewall has built-in scalability, but NVA firewalls can be manually scaled behind a load balancer.
+An Azure Firewall instance and a [network virtual appliance][network-virtual-appliances] firewall use a common administration plane with a set of security rules. These rules help protect the workloads hosted in the spokes and control access to on-premises networks. Azure Firewall has built-in scalability, and NVA firewalls can be manually scaled behind a load balancer.
 
 A firewall farm has less specialized software than a WAF. But it also has a broader application scope to filter and inspect any type of traffic in egress and ingress. If you use an NVA approach, you can find and deploy the software from the Azure Marketplace.
 
@@ -124,8 +128,8 @@ Learn how to efficiently manage common communication or security requirements by
 <!-- links -->
 
 [virtual-networks]: /azure/virtual-network/virtual-networks-overview
-[network-security-groups]: /azure/virtual-network/virtual-network-vnet-plan-design-arm
-[user-defined-routes]: /azure/virtual-network/virtual-networks-udr-overview
+[network-security-groups]: /azure/virtual-network/virtual-network-vnet-plan-design-arm#traffic-filtering
+[user-defined-routes]: /azure/virtual-network/virtual-networks-udr-overview#user-defined
 [network-virtual-appliances]: /azure/architecture/reference-architectures/dmz/nva-ha
 [azure-firewall]: /azure/firewall/overview
 [perimeter-network]: ../../resources/networking-vdc.md
