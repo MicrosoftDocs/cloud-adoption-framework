@@ -32,4 +32,4 @@ Neglecting keep to your landing zones up to date could affect your security post
 
 - [Latest updates to landing zones](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new)
 - [Migrate landing zone custom policies to Azure built-in policies](./update-alz-policies.md)
-- [Update Azure landing zone custom policies](./update-alz-custom-policies.md)
+- [Update Azure landing zone custom policies](/azure/cloud-adoption-framework/govern/guides/standard/update-custom-policies)
