@@ -18,11 +18,11 @@ ms.custom:
 
 Use the SAP on Azure landing zone accelerator to set up and operate workload landing zones inside your Cloud Adoption Framework enterprise-scale landing zone. The landing zone accelerator provides a specific architectural approach and reference implementation for your SAP systems on Azure.
 
-Deploy the SAP on Azure landing zone accelerator after successfully implementing an enterprise-scale landing zone. Before you deploy the SAP on Azure landing zone accelerator, review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
+Deploy the SAP on Azure landing zone accelerator after you successfully implement an enterprise-scale landing zone. Before you deploy the SAP on Azure landing zone accelerator, review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
-## Adopt the accelerator for your architecture
+## Adapt the accelerator to your architecture
 
-The architecture of the SAP on Azure landing zone accelerator varies by customer. Technical considerations and design recommendations lead to trade-offs based on each organization's specific scenario. Follow the core recommendations this article describes to find an architecture that sets your organization on a path to sustainable scaling.
+The architecture of the SAP on Azure landing zone accelerator varies by organization. Technical considerations and design recommendations lead to trade-offs based on each organization's specific scenario. Follow the core recommendations this article describes to find an architecture that sets your organization on a path to sustainable scaling.
 
 The SAP on Azure landing zone accelerator is modular by design, and you can customize environmental variables. A customizable approach to landing zones includes the following assets to support your planning and implementation:
 
