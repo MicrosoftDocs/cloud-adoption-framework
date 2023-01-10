@@ -22,17 +22,17 @@ Keep these considerations for operations management in mind when you use the App
 
 - **Management and troubleshooting.** App Service includes a rich set of management and troubleshooting tools, like the Azure portal, Azure PowerShell, and the Azure CLI. You can use these tools to manage your app's settings, view its performance data, and diagnose and fix problems that arise.
 - **Security and compliance.** App Service provides an enhanced-security environment for your app, with features like built-in authentication and authorization, SSL/TLS certificates, and network isolation. It also meets a wide range of compliance standards, including HIPAA, PCI DSS, and ISO 27001.
-- **Monitoring, alerting and diagnostics.** App Service provides built-in monitoring, alerting, and diagnostic tools to help you track performance and set up alerts for key performance indicators like response time and error rates. These tools provide metrics and logs, and you can also view live stream logs and run custom queries on the data.
-- **Deployment and scaling.** You can use App Service to deploy your app quickly and easily. You can use a variety of deployment methods, like continuous deployment from popular source code repositories like GitHub and Azure DevOps. You can also scale your app up or down based on usage by using built-in autoscaling capabilities or by manually adjusting the number of instances.
+- **Monitoring, alerting, and diagnostics.** App Service provides built-in monitoring, alerting, and diagnostic tools to help you track performance and set up alerts for key performance indicators like response time and error rates. These tools provide metrics and logs, and you can also stream logs in real time and run custom queries on the data.
+- **Deployment and scaling.** You can use App Service to deploy your app quickly and easily. You can use a variety of deployment methods, like continuous deployment from popular source code repositories like GitHub and Azure DevOps. You can also scale your app up or down based on utilization by using built-in autoscaling capabilities or by manually adjusting the number of instances.
 - **Cost management.** You need to carefully manage costs in the cloud. You can easily accumulate significant expenses if you're not cautious. Be sure to consider cost management best practices like using reserved instances and properly sizing your resources.
 
 By keeping these considerations in mind and following the guidance provided by the App Service landing zone accelerator, you can set up a scalable environment for hosting your applications on Azure.
 
 ## Design recommendations
 
-You should implement the following best practices for any App Service deployment.
+You should implement these best practices for any App Service deployment:
 
-- Implement monitoring and diagnostics. For example, you can view live stream logs to see incoming requests to your app and run custom queries on log data to diagnose problems or identify trends. You can also set up alerts that notify you of potential problems or performance degradation so that you can take appropriate actions.
+- Implement monitoring and diagnostics. For example, you can stream live logs to see incoming requests to your app and run custom queries on log data to diagnose problems or identify trends. You can also set up alerts that notify you of potential problems or performance degradation so that you can take appropriate actions.
 
 - Take advantage of deployment and scaling features. Use autoscaling to ensure that your app can handle varying levels of traffic and workload without compromised performance or availability.
 
