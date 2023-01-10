@@ -3,13 +3,12 @@ title: 'Why update Azure Landing Zone environments'
 description: Use the Cloud Adoption Framework for Azure to determine when to update your Azure Landing Zone implementation.
 author: Jfaurskov
 ms.author: Janfaurs
-ms.date: 12/05/2022
+ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: internal
 ---
-
 
 # Why update Azure Landing Zone environments
 
