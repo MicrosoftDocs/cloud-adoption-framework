@@ -74,7 +74,7 @@ For more information about what ACL-based permissions are required for a given o
 > [!NOTE]
 >
 > - Access control lists apply only to security principals in the same tenant, including guest users.
-> - Any user with permissions to attach to a cluster can create Azure Databricks mount points. The service principal credentials or the Azure AD passthrough option configure the mount point. At the time of creation, permissions are not evaluated. Permissions are evaluated when an operation uses the mount point. Any user who can attach to a cluster can attempt to use the mount point.
+> - Any user with permissions to attach to a cluster can create Azure Databricks mount points. Configure the mount point using service principal credentials or the Azure AD passthrough option. At the time of creation, permissions are not evaluated. Permissions are evaluated when an operation uses the mount point. Any user who can attach to a cluster can attempt to use the mount point.
 > - When a user creates a table definition in Azure Databricks or Azure Synapse Analytics, they need to have read access to the underlying data.
 
 ## Configure access to Azure Data Lake Storage
@@ -95,7 +95,7 @@ When you add or remove users from the group, you aren't required to make updates
 
 Even when you use groups, you could have many access control entries at top levels of the directory tree. This situation happens when granular permissions for different groups are required.
 
-![Diagram that shows several security groups requiring access to three data products.](../images/flat-groups-issue.png)
+:::image type="content" source="../images/flat-groups-issue.png" alt-text="Diagram that shows several security groups requiring access to three data products." lightbox="../images/flat-groups-issue.png":::
 
 ### Configure access using both Azure RBAC and access control lists
 
@@ -107,7 +107,7 @@ This approach favors scenarios where most users need read access but only a few 
 
 There are two approaches for nested ACL groups.
 
-### Option 1: The parent run group
+### Option 1: The parent execute group
 
 Before you create files and folders, begin with a parent group. Assign that group run permissions to both default and access ACLs at the container level. Then add the groups that require data access to the parent group.
 
