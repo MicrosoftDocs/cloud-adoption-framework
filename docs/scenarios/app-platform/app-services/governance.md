@@ -1,7 +1,7 @@
 ---
 title: Governance considerations for the App Service landing zone accelerator
 description: Learn about design considerations and recommendations for governance in the Azure App Service landing zone accelerator.
-author: martinekuan
+author: motasem13
 ms.author: martinek
 ms.date: 01/09/2023
 ms.topic: conceptual
