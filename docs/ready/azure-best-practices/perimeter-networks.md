@@ -1,9 +1,9 @@
 ---
 title: Perimeter networks
-description: See how the Cloud Adoption Framework for Azure helps you set up perimeter networks effectively for your organization.
+description: Learn about perimeter networks, and see how to use Azure components to set up effective perimeter networks for your organization.
 author: tracsman
 ms.author: martinek
-ms.date: 01/09/2023
+ms.date: 10/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,13 +12,13 @@ ms.custom: think-tank, virtual-network
 
 # Perimeter networks
 
-Perimeter networks, also called demilitarized zones (DMZs), help provide secure connectivity between cloud networks, on-premises or physical datacenter networks, and the internet. 
+Perimeter networks, sometimes called demilitarized zones (DMZs), help provide secure connectivity between cloud networks, on-premises or physical datacenter networks, and the internet. 
 
 In effective perimeter networks, incoming packets flow through security appliances that are hosted in secure subnets, before the packets can reach back-end servers. Security appliances include firewalls, network virtual appliances (NVAs), and other intrusion detection and prevention systems.
 
 Internet-bound packets from workloads must also flow through security appliances in the perimeter network before they can leave the network. The perimeter network can provide policy enforcement, inspection, and auditing.
 
-Perimeter networks use the following Azure features and services:
+Perimeter networks can use the following Azure features and services:
 
 - [Virtual networks][virtual-networks], [user-defined routes][user-defined-routes], and [network security groups (NSGs)][network-security-groups]
 - [Azure Firewall][azure-firewall]
@@ -104,7 +104,7 @@ Application Gateway helps you optimize web farm productivity by offloading CPU-i
 - URL path-based routing.
 - Hosting multiple websites behind a single application gateway.
 
-The [Application Gateway with WAF][appgwwaf] SKU includes a WAF, and provides protection to web applications from common web vulnerabilities and exploits. You can configure Application Gateway as an internet-facing gateway, an internal-only gateway, or a combination of both.
+The [Application Gateway with WAF SKU][appgwwaf] includes a WAF, and provides protection to web applications from common web vulnerabilities and exploits. You can configure Application Gateway as an internet-facing gateway, an internal-only gateway, or a combination of both.
 
 ## Public IPs
 
