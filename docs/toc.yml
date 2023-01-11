@@ -322,7 +322,6 @@ items:
                 href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
               - name: Plan for application delivery
                 href: ready/azure-best-practices/plan-for-app-delivery.md
-
             - name: Network security
               items:
               - name: Plan for inbound and outbound internet connectivity
