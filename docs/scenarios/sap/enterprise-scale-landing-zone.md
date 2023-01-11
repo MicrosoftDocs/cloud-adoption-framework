@@ -49,7 +49,7 @@ Understanding and planning for all critical areas of your deployment architectur
 
 The following diagram is a conceptual reference architecture that shows the critical design areas in an SAP on Azure landing zone accelerator:
 
-:::image type="content" source="./media/enterprise-scale-architecture-sap.svg" border="false" alt-text="Diagram that depicts the SAP on Azure landing zone accelerator conceptual reference architecture." lightbox="./media/enterprise-scale-architecture-sap.svg":::
+:::image type="content" source="./media/enterprise-scale-architecture-sap.png" border="false" alt-text="Diagram that depicts the SAP on Azure landing zone accelerator conceptual reference architecture." lightbox="./media/enterprise-scale-architecture-sap.svg":::
 
 ### SAP systems high-level architecture
 
