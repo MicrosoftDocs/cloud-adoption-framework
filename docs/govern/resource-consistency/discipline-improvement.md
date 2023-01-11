@@ -58,7 +58,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 
 **Potential activities:**
 
-- Decide on a [subscription design strategy](../../decision-guides/subscriptions/index.md), choosing the subscription patterns that best fit your organization and workload needs.
+- Decide on a [subscription design strategy](../../ready/landing-zone/design-area/resource-org-subscriptions.md), choosing the subscription patterns that best fit your organization and workload needs.
 - Use a [resource consistency](../../decision-guides/resource-consistency/index.md) strategy to enforce architecture guidelines over time.
 - Implement [resource naming, and tagging standards](../../decision-guides/resource-tagging/index.md) for your resources to match your organizational and accounting requirements.
 - To create proactive point-in-time governance, use deployment templates and automation to enforce common configurations and a consistent grouping structure when deploying resources and resource groups.

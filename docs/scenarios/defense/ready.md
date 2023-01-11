@@ -20,9 +20,7 @@ The ready methodology focuses on building the cloud platform. We call this cloud
 
 ## Build a secure landing zone
 
-Within the landing zone, the cloud broker builds the platform environments, and the mission owner manages the workload environments. These workload environments inherit the security controls of the platform. Landing zones are the foundation of workload security and must be secure. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards.
-
-For information on landing zones, see:
+Within the landing zone, the cloud broker builds the platform environments, and the mission owner manages the workload environments. These workload environments inherit the security controls of the platform. Landing zones are the foundation of workload security and must be secure. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards. For information on landing zones, see:
 
 - [Introduction to landing zones](/azure/cloud-adoption-framework/ready/landing-zone/)
 
@@ -50,7 +48,7 @@ We have the following recommendations for operations and management:
 
 **Establish communication channels** - Mission owners should establish communication channels for the cloud broker to use. Communications should be frequent, consistent, and clear. Mission owners should also have availability for field communications for any urgent matters outside the regular meetings. Communication will minimize risk and technical drift from mission objectives. Expectations should be written down, explained, and accessible to the cloud brokers. Regular synchronizations between the cloud broker and mission owner will help ensure the cloud broker understands the security, performance, and financial requirements of mission owners and their workloads.
 
-**Pick operational measurements** – Establish how operational measures will be reviewed. The mission owner and cloud broker should determine how feedback will be received and improvements made.
+**Pick operational measurements** - Establish how operational measures will be reviewed. The mission owner and cloud broker should determine how feedback will be received and improvements made.
 
 **Share core services** - The cloud broker in most instances should offer shared services for mission owners to use. Shared services include Azure Virtual Desktops for secure client computing and a shared DevOps toolset such as Azure DevOps. Cloud brokers can also share a common data platform with governance or a shared container platform. Sharing common services saves money and improves compliance.
 

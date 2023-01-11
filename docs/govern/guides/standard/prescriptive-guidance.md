@@ -106,7 +106,7 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
 - [Resource naming and tagging patterns](../../../decision-guides/resource-tagging/index.md)
 - [Software Defined Networking patterns](../../../decision-guides/software-defined-network/index.md)
-- [Subscription design patterns](../../../decision-guides/subscriptions/index.md)
+- [Subscription design patterns](../../../ready/landing-zone/design-area/resource-org-subscriptions.md)
 
 ## Next steps
 
