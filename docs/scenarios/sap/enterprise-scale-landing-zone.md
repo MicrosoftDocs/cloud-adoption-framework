@@ -22,9 +22,9 @@ Deploy the SAP on Azure landing zone accelerator after you successfully implemen
 
 ## Adapt the accelerator to your architecture
 
-The architecture of the SAP on Azure landing zone accelerator varies by organization. Technical considerations and design recommendations lead to trade-offs based on each organization's specific scenario. Follow the core recommendations this article describes to find an architecture that sets your organization on a path to sustainable scaling.
+The architecture of the SAP on Azure landing zone accelerator varies by organization. Technical considerations and design recommendations lead to configurations that are unique to your organization's specific scenario. The recommendations that this article describes can lead to an architecture that will put your organization on a path to sustainable scaling.
 
-The SAP on Azure landing zone accelerator is modular by design, and you can customize environmental variables. A customizable approach to landing zones includes the following assets to support your planning and implementation:
+The SAP on Azure landing zone accelerator is modular. You can customize environmental variables. The customizable approach to landing zones includes the following assets to support your planning and implementation:
 
 - [Design guidelines](#design-guidelines)
 - [Architecture](#architecture)
@@ -32,7 +32,7 @@ The SAP on Azure landing zone accelerator is modular by design, and you can cust
 
 ## Design guidelines
 
-As you plan your implementation of the Cloud Adoption Framework for Azure enterprise-scale landing zone, you must make decisions in critical design areas. The following articles give you detailed design guidelines and recommendations for each area:
+As you plan the implementation of your enterprise-scale landing zone, you must make decisions in critical design areas. The following articles give you detailed design guidelines and recommendations for each area:
 
 - [Identity and access management](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
