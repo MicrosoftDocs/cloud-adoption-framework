@@ -33,7 +33,7 @@ The following techniques can help avoid governance redundancies or gaps:
 - ***Create a service dependency map***: A service dependency map is a document that lists all your IT services and the people responsible for them. To create a service dependency map, you should outline all the services that your organization provides and then identify the teams or individuals that are responsible for each of those services.
 - ***Track those responsible, accountable, consulted, and informed (RACI)***: A RACI matrix defines levels of responsibility for a given service.  You should list who is responsible and accountable for each service and who should be consulted and informed in the decision-making process.
 
-For more information, see [cloud governance functions](/azure/cloud-adoption-framework/organize/cloud-governance).
+For more information, see [cloud governance functions](../../organize/cloud-governance.md).
 
 ## Automate compliance
 
@@ -49,7 +49,7 @@ Policies in Azure create a firm guardrail and automate the bulk of governance ta
 
 For more on governance automation, see
 
-- [Security governance](/azure/cloud-adoption-framework/secure/security-governance)
+- [Security governance](../../secure/security-governance.md)
 - [Overview of Azure Policy](/azure/governance/policy/)
 - [Compliance in Azure](/azure/azure-government/documentation-government-plan-compliance)
 - [Azure compliance standards](/azure/compliance/)
@@ -70,7 +70,7 @@ Here are a few considerations when building a cost governance strategy:
 
 **Trend analysis** - Conduct trend analysis to drive transparency and allows visibility into active resources and consumption. Anomalous spikes in resource spend and should be brought to the technical team for explanation. It could signal a new phase in operations or a governance gap. Flag and review any new charges or spikes in trends. This form of active cost management helps avoid waste and mitigates risk. Trend analysis can also help manage infrastructure and determine future priorities. Mission owners can see how much money is spent on a given capability. If the money spent doesn’t help meet mission objectives, the future of this resource or workload needs reevaluation.
 
-For more information, see [cost governance](/azure/cloud-adoption-framework/govern/cost-management/) and [cost management & billing](/azure/cost-management-billing/cost-management-billing-overview).
+For more information, see [cost governance](../../govern/cost-management/index.md) and [cost management & billing](/azure/cost-management-billing/cost-management-billing-overview).
 
 ## Create cost baselines
 
@@ -89,12 +89,12 @@ Here are some practical steps to creating workload estimates:
 
 Not all variables require entry, and some services can be difficult to estimate. Mission owners should determine the level of accuracy required to establish this baseline. Once a TCO estimate is created, mission owners should document this data for later analysis.
 
-**Estimate monthly costs for required services** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate. For more information, see [cost tools](/azure/cloud-adoption-framework/govern/cost-management/toolchain).
+**Estimate monthly costs for required services** - The next step in establishing a workload cost baseline is to determine the estimated monthly costs for required services. Monthly estimates tie into budgets and budgets enable business forecasting. The resource organization capabilities in Azure facilitate budgets at different levels in an organization structure. Budgets can be applied at the Management Group, Subscription, or Resource Group level. Additional information on creating, monitoring, and updating budgets within Azure can be found in the Azure Cost Management & Billing documentation. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) can help create monthly estimates and TCO calculator. These estimates should be run for each individual workload to be migrated. Once a monthly Azure workload estimate has been calculated, the mission owner should document this data into a repository or other tracking resource for later analysis. This location should be the same as the TCO estimate. For more information, see [cost tools](../../govern/cost-management/toolchain.md).
 
 For more information on governance, see:
 
-- [Governance guide](/azure/cloud-adoption-framework/govern/guides/complex/)
-- [Governance disciplines](/azure/cloud-adoption-framework/govern/governance-disciplines)
+- [Governance guide](../../govern/guides/complex/index.md)
+- [Governance disciplines](../../govern/governance-disciplines.md)
 
 ## Next step
 

@@ -30,10 +30,10 @@ However, if rework is required, the cloud is ideal for refactoring and rationali
 
 For for information, see:
 
-- [Strategy assessment](/azure/cloud-adoption-framework/strategy/cloud-adoption-strategy-evaluator)
-- [Global deployments](/azure/cloud-adoption-framework/strategy/global-markets)
-- [Define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy)
-- [Recommended skills](/azure/cloud-adoption-framework/strategy/suggested-skills)
+- [Strategy assessment](../../strategy/cloud-adoption-strategy-evaluator.md)
+- [Global deployments](../../strategy/global-markets.md)
+- [Define a security strategy](../../strategy/define-security-strategy.md)
+- [Recommended skills](../../strategy/suggested-skills.md)
 
 ## Identify stakeholders
 
@@ -47,9 +47,9 @@ Here are some recommendations to consider:
 
 For more information, see:
 
-- [Balancing priorities](/azure/cloud-adoption-framework/strategy/balance-competing-priorities)
-- [Strategy resources](/azure/cloud-adoption-framework/resources/tools-templates#strategy)
-- [RACI alignment](/azure/cloud-adoption-framework/organize/raci-alignment)
+- [Balancing priorities](../../strategy/balance-competing-priorities.md)
+- [Strategy resources](../../resources/tools-templates.md#strategy)
+- [RACI alignment](../../organize/raci-alignment.md)
 - [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)
 
 ## Next step

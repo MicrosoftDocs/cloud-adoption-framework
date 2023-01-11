@@ -16,7 +16,7 @@ Azure landing zones for HPC in finance don't have any specific considerations or
 
 ## Previous recommendations 
 
-It might be important to be aware of existing [governance recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
+It might be important to be aware of existing [governance recommendations](../../../ready/landing-zone/design-area/governance.md).
 
 ## Next steps
 
