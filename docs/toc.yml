@@ -340,7 +340,6 @@ items:
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
-                
 
         - name: Resource organization
           items:
