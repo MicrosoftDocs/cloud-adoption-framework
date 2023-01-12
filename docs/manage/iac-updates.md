@@ -46,6 +46,8 @@ For Azure, there are two main options for Infrastructure as Code:
 - Azure Bicep, managed by Microsoft.
 - Terraform, managed by  Hashicorp.
 
+You can learn more about planning for automation of Landing Zones by referencing the [Automation](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/considerations/automation#platform-automation-design-recommendation) article.
+
 ## Benefits of updating ALZs with Infrastructure as Code
 
 The following are the key benefits to using Infrastructure as Code to make your Landing Zone Updates.
@@ -84,7 +86,7 @@ Infrastructure as Code also provides a unique option to catch configuration drif
 
 Periodic Landing Zone updates with Infrastructure as Code will help you catch this configuration drift, and allow you to update the code appropriately, address these misconfigurations via the update, or address them in some other way.
 
-You can review [Operational compliance considerations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-operational-compliance) for additional guidance on monitoring configuration drift.
+You can review [Operational compliance considerations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-operational-compliance#operational-compliance-recommendations) for additional guidance on monitoring configuration drift.
 
 ## Next steps
 
