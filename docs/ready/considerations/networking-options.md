@@ -16,19 +16,19 @@ Designing and implementing Azure networking capabilities is a critical part of y
 
 ## Identify workload networking requirements
 
-As part of your landing zone evaluation and preparation, you need to identify the networking capabilities that your landing zone should support. This process involves assessing each of the applications and services that make up your workloads to determine their connectivity network control requirements. After identifying and documenting the requirements, you can create policies for your landing zone. These policies control the allowed networking resources and configuration based on your workload needs.
+As part of your landing zone evaluation and preparation, you'll identify the networking capabilities that your landing zone should support. This process involves assessing each of the applications and services that make up your workloads to determine their connectivity network control requirements. After you identify and document the requirements, you create policies for your landing zone. These policies control the supported networking resources and configuration based on your workload needs.
 
-For each application or service you'll deploy to your landing zone environment, use the following decision tree as a starting point to help you determine the networking tools or services to use:
+For each application or service you'll deploy to your landing zone environment, the following decision tree is a starting point to help determine the networking tools or services you need:
 
-:::image type="content" source="../../_images/ready/network-decision-tree.png" alt-text="Diagram that shows the CAF Ready Networking Decision Tree for Azure networking services.":::
+:::image type="content" source="../../_images/ready/network-decision-tree.png" alt-text="Diagram that shows the CAF Ready Networking decision tree for Azure networking services.":::
 *Figure 1: The Azure networking service decision tree.*
 
 ### Key questions
 
-Answer the following questions about your workloads to help make decisions when using the Azure networking services decision tree:
+Answer the following questions about your workloads to make decisions about using the Azure networking services decision tree:
 
 - **Will your workloads require a virtual network?**<br/>
-  Managed platform as a service (PaaS) resource types use underlying platform network capabilities that don't always require a virtual network. Your workloads might not require advanced networking features, and you might not need to deploy infrastructure as a service (IaaS) resources. In this case, the default [native networking capabilities provided by PaaS resources](../../decision-guides/software-defined-network/paas-only.md) might meet your workload connectivity and traffic management requirements.
+  Managed platform as a service (PaaS) resource types use underlying platform network capabilities that don't always require a virtual network. Your workloads might not require advanced networking features and you might not need to deploy infrastructure as a service (IaaS) resources. In this case, the default [native networking capabilities provided by PaaS resources](../../decision-guides/software-defined-network/paas-only.md) might meet your workload connectivity and traffic management requirements.
 - **Will your workloads require connectivity between virtual networks and your on-premises datacenter?**<br/>
   Azure provides two solutions for establishing hybrid networking capabilities: Azure VPN Gateway and Azure ExpressRoute. [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) connects your on-premises networks to Azure through Site-to-Site VPNs, similar to how you might set up and connect to a remote branch office. VPN Gateway has a maximum bandwidth of 10 Gbps. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) offers higher reliability and lower latency by using a private connection between Azure and your on-premises infrastructure. Bandwidth options for ExpressRoute range from 50 Mbps to 100 Gbps.
 - **Will you need to inspect and audit outgoing traffic by using on-premises network devices?**<br/>
@@ -42,7 +42,7 @@ Answer the following questions about your workloads to help make decisions when 
 - **Do you need to connect multiple virtual networks?**<br/>
   You can use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) to connect multiple instances of [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview). Peering can support connections across subscriptions and regions. There might be scenarios where you provide shared services across multiple subscriptions or need to manage many network peerings. For these scenarios, consider adopting a [hub and spoke networking architecture](../../decision-guides/software-defined-network/hub-spoke.md) or using [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about). Virtual network peering provides connectivity only between two peered networks. By default, it doesn't provide transitive connectivity across multiple peerings.
 - **Will your workloads be accessible over the internet?**<br/>
-  Azure provides services that are designed to help you manage and secure external access to your applications and services:
+  Azure provides services that help you manage and secure external access to your applications and services:
   - [Azure Firewall](/azure/firewall/overview)
   - [Network appliances](https://azure.microsoft.com/solutions/network-appliances/)
   - [Azure Front Door](/azure/frontdoor/front-door-overview)
@@ -79,12 +79,12 @@ The following table summarizes the primary scenarios that these patterns support
 
 | Scenario | Suggested network architecture |
 | --- | --- |
-| Your Azure-hosted workloads that you deploy to your landing zone use PaaS-only resources. These workloads won't require a virtual network, and aren't part of a wider cloud adoption effort that includes IaaS resources.                                                                                                                                                          | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md)            |
-| Your Azure-hosted workloads will deploy IaaS-based resources like virtual machines, or otherwise require a virtual network. They don't require connectivity to your on-premises environment.                                                                                                                                                                            | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md)      |
-| Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted.                                                                                                                                                                                                                             | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md)            |
-| Your Azure-hosted workloads require limited access to on-premises resources, and you plan to implement mature security policies and secure connectivity between the cloud and your on-premises environment.                                                                                                                                                           | [Hybrid](../../decision-guides/software-defined-network/hybrid.md)                  |
-| You must deploy and manage a large number of VMs and workloads, potentially exceeding [Azure subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits), you need to share services across subscriptions, or you need a more segmented structure for role, application, or permission segregation. | [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md)        |
-| You have many branch offices that need to connect to each other and to Azure.                                                                                                                                                                                                                                                                                         | [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) |
+| Your Azure-hosted workloads that you deploy to your landing zone use PaaS-only resources. These workloads won't require a virtual network, and aren't part of a wider cloud adoption effort that includes IaaS resources. | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md) |
+| Your Azure-hosted workloads will deploy IaaS-based resources like virtual machines, or otherwise require a virtual network. They don't require connectivity to your on-premises environment. | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md) |
+| Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted. | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md) |
+| Your Azure-hosted workloads require limited access to on-premises resources, and you plan to implement mature security policies and secure connectivity between the cloud and your on-premises environment. | [Hybrid](../../decision-guides/software-defined-network/hybrid.md) |
+| You must deploy and manage a large number of VMs and workloads, potentially exceeding [Azure subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). You need to share services across subscriptions. Or you need a more segmented structure for role, application, or permission segregation. | [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) |
+| You have many branch offices that must connect to each other and to Azure. | [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) |
 
 <!-- TODO: Refactor VDC content below. -->
 <!-- docutune:casing "Azure Virtual Datacenter" -->
