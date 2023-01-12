@@ -12,7 +12,9 @@ ms.custom: think-tank
 
 # Rehost an on-premises application by migrating to Azure VMs and Azure SQL Managed Instance
 
-This article shows how the fictional company Contoso migrates a two-tier, front-end application based on Windows .NET from VMware virtual machines (VMs) to an Azure VM by using Azure Migrate. It also shows how Contoso migrates the application database to Azure SQL Managed Instance.
+This article shows how the fictional company Contoso migrates a two-tier, front-end application based on Windows .NET from VMware virtual machines (VMs) to an Azure VM by using Azure Migrate. The article also shows how Contoso migrates the application database to Azure SQL Managed Instance.
+
+[Migration and modernization](/azure/migrate/migrate-services-overview#migration-and-modernization-tool)
 
 SmartHotel360, the application in this example, is open-source software. If you want to use it for your own testing purposes, download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
@@ -391,9 +393,9 @@ Learn about how to [prepare VMs for migration](/azure/migrate/prepare-for-migrat
 
 ## Step 5: Replicate the on-premises VMs
 
-Before the Contoso admins can run a migration to Azure, they need to set up and enable replication.
+Before the Contoso admins can execute server migration to Azure, they need to set up and enable replication.
 
-With discovery completed, they can begin replication of VMware VMs to Azure.
+With discovery completed, the admins can begin replication of VMware VMs to Azure.
 
 1. In the Azure Migrate project, they go to **Servers** > **Azure Migrate: Server Migration**. Then they select **Replicate**.
 
