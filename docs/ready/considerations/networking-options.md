@@ -67,13 +67,13 @@ Azure networking is composed of multiple products and services that provide diff
 | I need to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](/azure/traffic-manager/) <br><br> [Azure Front Door](/azure/frontdoor/) |
 | I need to add private network connectivity to access Microsoft cloud services from my corporate networks, as if they were on-premises and staying in my own datacenter. | [Azure ExpressRoute](/azure/expressroute/) |
 | I want to monitor and diagnose conditions at a network-scenario level. | [Azure Network Watcher](/azure/network-watcher/) |
-| I need native firewall capabilities, with built-in high availability, unrestricted cloud scalability, and zero maintenance. | [Azure Firewall](/azure/firewall/overview) |
+| I need native firewall capabilities with built-in high availability, unrestricted cloud scalability, and zero maintenance. | [Azure Firewall](/azure/firewall/overview) |
 | I need to connect business offices, retail locations, and sites securely. | [Azure Virtual WAN](/azure/virtual-wan/) |
 | I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door](/azure/frontdoor/) |
 
 ## Choose a networking architecture
 
-After identifying the Azure networking services needed to support your workloads, you also need to design the architecture that combines these services to provide your landing zone's cloud networking infrastructure. The Cloud Adoption Framework [Software Defined Networking decision guide](../../decision-guides/software-defined-network/index.md) provides details about common networking architecture patterns used on Azure.
+After you identify the Azure networking services required to support your workloads, you also need to design the architecture that combines these services to provide your landing zone's cloud networking infrastructure. The Cloud Adoption Framework [Software Defined Networking decision guide](../../decision-guides/software-defined-network/index.md) provides details about common networking architecture patterns used on Azure.
 
 The following table summarizes the primary scenarios that these patterns support:
 
@@ -102,7 +102,7 @@ For organizations that meet the following criteria, you might also want to start
 
 ## Follow Azure networking best practices
 
-As part of your networking design process, see these articles:
+As part of your networking design process, refer to these articles:
 
 - [Virtual network planning](/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn about Azure best practices that can help you enhance your network security.
