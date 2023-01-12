@@ -14,6 +14,9 @@ ms.custom: template-overview
 
 This article explains the benefits of using Infrastructure as Code to update Azure Landings Zones.  Organizations will need to continue to update their Landing Zones as they operate, both to ensure configuration is continually correct, and also to respond to needs for changes.
 
+To understand more about why you will want to update your Landing Zone, visit [PLACEHOLDER - Article on WHY update ALZ Environment](./why-update-poc.md)
+
+<!-- The below can be removed if it is covered in the above area.
 Updates to the Landing Zone can be based on a variety of triggers, such as:
 
 - New technologies may become available and need to be deployed as part of the Connectivity, Identity, or Management platform services
@@ -23,6 +26,7 @@ Updates to the Landing Zone can be based on a variety of triggers, such as:
 - Some other business event.
 
 Ultimately, these changes will lead to updates driven either by customer changes, or by new solutions and recommendations that needs to be aligned to.
+-->
 
 ## What does Infrastructure as Code do?
 
