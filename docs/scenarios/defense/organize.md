@@ -26,7 +26,7 @@ A decentralized cloud empowers groups to build their own autonomous solutions an
 
 Mission owners should define role and responsibilities with the cloud broker. As mission owner workloads move to the cloud, cloud brokers should take on more responsibility from the mission owner. It’s tempting for mission owners to map on-premises roles and responsibilities in the cloud, but the two operating models make it an ineffective approach. It’s important to remember that cloud brokers work on the cloud platform for months before mission owners gain access. Mission owners should recall their familiarity with the platform when defining new roles and responsibilities. Mission owners need to enable cloud brokers to build while protecting key assets.
 
-For more information, see [required cloud functions](/azure/cloud-adoption-framework/organize/#understand-required-cloud-functions).
+For more information, see [required cloud functions](../../organize/index.md#understand-required-cloud-functions).
 
 ## Define platform responsibilities
 
@@ -42,7 +42,7 @@ The mission owner and cloud broker share responsibility for the platform. It’s
 
 A frequent area of concern in cloud adoption is financial oversight. Mission owners should assign personnel to manage, monitor, and forecast costs. Financial oversight that performs these duties will help avoid overspending. Mission owners should consider how often they receive debriefs on cloud spend. A briefing at least twice monthly provides the necessary oversight to make changes that prevent overspending. For more information, see:
 
-- [Cloud accounting](/azure/cloud-adoption-framework/strategy/cloud-accounting)
+- [Cloud accounting](../../strategy/cloud-accounting.md)
 - [Cost management strategy](./govern.md#create-a-cost-governance-strategy)
 
 ## Identify other cloud functions
@@ -51,8 +51,8 @@ The mission owner shouldn't manage the cloud solution as a single unit. Other cl
 
 For more information, see:
 
-- [Organize overview](/azure/cloud-adoption-framework/organize/)
-- [Mature organizational structure](/azure/cloud-adoption-framework/organize/organization-structures)
+- [Organize overview](../../organize/index.md)
+- [Mature organizational structure](../../organize/organization-structures.md)
 
 ## Next step
 

@@ -1881,20 +1881,6 @@ items:
           href: ready/azure-best-practices/perimeter-networks.md
         - name: Hub and spoke network topology
           href: ready/azure-best-practices/hub-spoke-network-topology.md
-        - name: Software-defined networks
-          items:
-          - name: Overview
-            href: decision-guides/software-defined-network/index.md
-          - name: PaaS-only
-            href: decision-guides/software-defined-network/paas-only.md
-          - name: Cloud-native
-            href: decision-guides/software-defined-network/cloud-native.md
-          - name: Cloud DMZ
-            href: decision-guides/software-defined-network/cloud-dmz.md
-          - name: Hybrid
-            href: decision-guides/software-defined-network/hybrid.md
-          - name: Hub and spoke model
-            href: decision-guides/software-defined-network/hub-spoke.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
       - name: Cost management
