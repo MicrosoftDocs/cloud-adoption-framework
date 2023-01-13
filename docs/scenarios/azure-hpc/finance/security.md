@@ -14,7 +14,7 @@ ms.date: 11/15/2022
 
 This article provides recommendations for implementing security in HPC environments for the finance sector.  
 
-It's important to understand the previous [security recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) outlined by the Microsoft cloud platform team.
+It's important to understand the previous [security recommendations](../../../ready/landing-zone/design-area/security.md) outlined by the Microsoft cloud platform team.
 
 ## Security baseline recommendations 
 

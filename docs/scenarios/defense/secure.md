@@ -69,7 +69,7 @@ For general security information, see:
 - [Security fundamentals](/azure/security/fundamentals/)
 - [Operational security checklist](/azure/security/fundamentals/operational-checklist)
 - [Cybersecurity reference architectures](/security/cybersecurity-reference-architecture/mcra)
-- [CAF security](/azure/cloud-adoption-framework/secure/)
+- [CAF security](../../secure/index.md)
 
 ## Next step
 

@@ -35,7 +35,7 @@ Deploy every application in the appropriate area of your management group, subsc
 
 - For each business unit, define a management group with a detailed hierarchy reflecting geography first, then environment type (such as production or nonproduction environment).
 
-- Create both a production subscription and a nonproduction subscription for each unique combination of geography or discrete business unit. Plan carefully when creating multiple subscriptions. For more information, see the [subscription decision guide](../../../decision-guides/subscriptions/index.md).
+- Create both a production subscription and a nonproduction subscription for each unique combination of geography or discrete business unit. Plan carefully when creating multiple subscriptions. For more information, see the [subscription decision guide](../../../ready/landing-zone/design-area/resource-org-subscriptions.md).
 
 - Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) within each level of your grouping hierarchy.
 

@@ -569,6 +569,41 @@
          "source_path": "docs/ready/enterprise-scale/network-topology-and-connectivity.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
          "redirect_document_id": false
-      }  
+      },  
+      {
+         "source_path": "docs/decision-guides/subscriptions/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/decision-guides/software-defined-network/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
+         "redirect_document_id": false  
+      },
+      {
+         "source_path": "docs/decision-guides/software-defined-network/paas-only.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology",
+         "redirect_document_id": false  
+      },
+      {
+         "source_path": "docs/decision-guides/software-defined-network/cloud-native.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology",
+         "redirect_document_id": false  
+      },
+      {
+         "source_path": "docs/decision-guides/software-defined-network/cloud-dmz.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology",
+         "redirect_document_id": false  
+      },
+      {
+         "source_path": "docs/decision-guides/software-defined-network/hub-spoke.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology",
+         "redirect_document_id": false  
+      },
+      {
+         "source_path": "docs/decision-guides/software-defined-network/hybrid.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology",
+         "redirect_document_id": false  
+      }
    ]
 }
