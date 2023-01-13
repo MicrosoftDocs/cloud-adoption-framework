@@ -1859,8 +1859,6 @@ items:
           href: ready/considerations/roles.md
         - name: Choose an authentication method
           href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Policy enforcement
-        href: decision-guides/policy-enforcement/index.md
       - name: Resource consistency
         href: decision-guides/resource-consistency/index.md
       - name: Resource tagging
