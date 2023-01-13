@@ -1412,8 +1412,6 @@ items:
           href: govern/guides/standard/cost-management-improvement.md
         - name: Multicloud scenarios
           href: govern/guides/standard/multicloud-improvement.md
-        - name: Update Azure landing zone custom policies
-          href: govern/guides/standard/update-custom-policies.md
       - name: Governance guide for complex enterprises
         items:
         - name: Overview
@@ -1554,8 +1552,10 @@ items:
           href: govern/resource-consistency/governance-multiple-teams.md
         - name: Why update an Azure landing zone?
           href: govern/resource-consistency/why-update-azure-landing-zone.md
-        - name: Migrate Azure Landing Zone policies to Azure Built-in policies
+        - name: Migrate Azure landing zone policies to Azure built-in policies
           href: govern/resource-consistency/update-alz-policies.md
+        - name: Update Azure landing zone custom policies
+          href: govern/guides/standard/update-custom-policies.md
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration
