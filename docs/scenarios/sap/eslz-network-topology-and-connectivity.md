@@ -1,8 +1,8 @@
 ---
 title: Network topology and connectivity for an SAP migration
 description: Understand design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
-author: JefferyMitchell
-ms.author: martinek
+author: pankajmeshramCSA
+ms.author: pameshra
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
