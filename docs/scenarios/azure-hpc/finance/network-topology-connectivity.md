@@ -12,7 +12,7 @@ ms.date: 11/11/2022
 
 # Network topology and connectivity for HPC in the finance sector
 
-This article builds on considerations and recommendations that are described in the Azure landing zone article for [network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity). The guidance in this article can help you examine key design considerations and best practices for networking and connectivity to, from, and within Azure and HPC deployments.
+This article builds on considerations and recommendations that are described in the Azure landing zone article for [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md). The guidance in this article can help you examine key design considerations and best practices for networking and connectivity to, from, and within Azure and HPC deployments.
 
 ## Plan for IP addressing
 
@@ -88,7 +88,7 @@ This section provides key recommendations for encrypting networks between on-pre
 
 ### Design considerations and recommendations
 
- - Traffic performance is an important consideration when you enable encryption. IPsec tunnels encrypt internet traffic by default. Any additional encryption or decryption can negatively affect performance. When you use ExpressRoute, traffic isn't encrypted by default. You need to determine whether HPC traffic should be encrypted. Explore [network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology) and [connectivity](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-azure) to understand network encryption options in enterprise-scale landing zones.
+ - Traffic performance is an important consideration when you enable encryption. IPsec tunnels encrypt internet traffic by default. Any additional encryption or decryption can negatively affect performance. When you use ExpressRoute, traffic isn't encrypted by default. You need to determine whether HPC traffic should be encrypted. Explore [network topology](../../../ready/azure-best-practices/define-an-azure-network-topology.md) and [connectivity](../../../ready/azure-best-practices/connectivity-to-azure.md) to understand network encryption options in enterprise-scale landing zones.
 
 ## Next steps
 
@@ -102,4 +102,4 @@ The following articles provide guidance that you might find helpful during vario
 - [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md) 
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

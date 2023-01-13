@@ -22,7 +22,7 @@ The ready methodology focuses on building the cloud platform. We call this cloud
 
 Within the landing zone, the cloud broker builds the platform environments, and the mission owner manages the workload environments. These workload environments inherit the security controls of the platform. Landing zones are the foundation of workload security and must be secure. Defense organizations often have compliance standards for architecture that apply to landing zones. The cloud broker will be responsible for building a landing zone to meet these standards. For information on landing zones, see:
 
-- [Introduction to landing zones](/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Introduction to landing zones](../../ready/landing-zone/index.md)
 
 Here are a few general architecture recommendations for landing zone deployments:
 
@@ -36,9 +36,9 @@ Here are a few general architecture recommendations for landing zone deployments
 
 For more information, see:
 
-- [Landing zone principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles)
-- [Landing zone design](/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
-- [Landing zone security](/azure/cloud-adoption-framework/ready/considerations/landing-zone-security)
+- [Landing zone principles](../../ready/landing-zone/design-principles.md)
+- [Landing zone design](../../ready/landing-zone/design-areas.md)
+- [Landing zone security](../../ready/considerations/landing-zone-security.md)
 
 ## Define operations and management expectations
 
@@ -58,8 +58,8 @@ We have the following recommendations for operations and management:
 
 For more information, see:
 
-- [Improve landing zone operations](/azure/cloud-adoption-framework/ready/considerations/landing-zone-operations)
-- [Landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance)
+- [Improve landing zone operations](../../ready/considerations/landing-zone-operations.md)
+- [Landing zone governance](../../ready/considerations/landing-zone-governance.md)
 
 ## Next step
 

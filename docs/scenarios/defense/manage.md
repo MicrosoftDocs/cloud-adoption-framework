@@ -24,7 +24,7 @@ In a defense context, the technical and non-technical aspects of operations are 
 
 There are several strategies defense organizations can adopt to improve operations. Technical teams need to know what cloud resources they have (inventory) and know what each resource is doing (visibility). Visibility requires baselines. Baselines make cloud resources measurable, which is critical to security and modernization. Operations teams need to create baselines so that progress and regression can be measured.
 
-For more information, see [resource baselines](/azure/cloud-adoption-framework/manage/azure-management-guide/inventory).
+For more information, see [resource baselines](../../manage/azure-management-guide/inventory.md).
 
 ## Choose a product owner
 
@@ -42,8 +42,8 @@ If contracts are a component of defense operations, foster contract relationship
 
 For more information, see:
 
-- [Management guide](/azure/cloud-adoption-framework/manage/azure-management-guide/)
-- [Management considerations](/azure/cloud-adoption-framework/manage/considerations/)
+- [Management guide](../../manage/azure-management-guide/index.md)
+- [Management considerations](../../manage/considerations/index.md)
 - [Service health](/azure/service-health/service-health-overview)
 
 ## Next step
