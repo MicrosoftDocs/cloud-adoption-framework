@@ -22,8 +22,6 @@ Architectural decision guides help you navigate these potential differences. Eac
 
 The following architectural decision guides cover foundational technology components for all cloud deployments. Use these guides along with the cloud governance example journeys to choose a solution that suits your organization's unique needs.
 
-[Subscriptions](./subscriptions/index.md): Design your cloud deployment's subscription design and account structure to meet your organization's ownership, billing, and management capabilities.
-
 [Identity](./identity/index.md): Integrate cloud-based identity services with your organization's identity resources to manage control and authorization within your IT environment.
 
 [Policy enforcement](./policy-enforcement/index.md): Define and enforce policy rules that align with your organization's governance requirements for cloud-deployed resources and workloads.
@@ -40,7 +38,7 @@ The following architectural decision guides cover foundational technology compon
 
 ## Next steps
 
-Learn how subscriptions and accounts form the base foundation of a cloud deployment.
+Learn about options for managing identity in your cloud environment.
 
 > [!div class="nextstepaction"]
-> [Subscriptions design](./subscriptions/index.md)
+> [Identity decision guide](./identity/index.md)

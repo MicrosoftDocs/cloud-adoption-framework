@@ -12,14 +12,14 @@ ms.date: 11/15/2022
 
 # Manufacturing HPC resource organization
 
-To align with the [Ready methodology](/azure/cloud-adoption-framework/ready/) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
+To align with the [Ready methodology](../../../ready/index.md) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
 
 ## Use single versus multiple Azure subscriptions
 
  - In Azure Active Directory (Azure AD), a tenant is representative of an organization. It's a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for using Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Azure AD.
  - You can choose single or multiple subscriptions based on your organization's needs.
      - Multiple subscriptions allow for easy view billing for each subscription and limit who can access the Microsoft Azure services associated with that subscription. For example, production versus non-production subscriptions, internal versus external, and so on.
-     - Using multiple subscriptions helps in planning for subscriptions limits. For more information on the decision-making process for subscriptions, see [Subscription decision guide](/azure/cloud-adoption-framework/decision-guides/subscriptions/?source=recommendations).
+     - Using multiple subscriptions helps in planning for subscriptions limits. For more information on the decision-making process for subscriptions, see [Subscription decision guide](../../../decision-guides/subscriptions/index.md?source=recommendations).
      - It's recommended that you consider Azure Resource Manager throttle limits when going with multiple versus single subscriptions. For more information on throttle limits, see [Throttling Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling).
 
 ## Use Azure resource naming and tagging conventions
@@ -42,7 +42,7 @@ Resources to name include:
 - Managed disks
 - Public IPs
 
-A sample use case would be to tag all Azure development VMs with the tag of Dev. This tag eases reporting and billing operations because you can pull a report for all things Dev. For more information on a naming and tagging strategy, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+A sample use case would be to tag all Azure development VMs with the tag of Dev. This tag eases reporting and billing operations because you can pull a report for all things Dev. For more information on a naming and tagging strategy, see [Develop your naming and tagging strategy for Azure resources](../../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Next steps
 

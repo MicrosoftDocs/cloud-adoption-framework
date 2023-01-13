@@ -12,11 +12,11 @@ ms.date: 11/09/2022
 
 # Azure identity and access management for HPC in manufacturing 
 
-This article builds on considerations and recommendations that are described in the article [Azure identity and access management design](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). It can help you examine design considerations for identity and access management that are specific to the deployment, on Azure, of HPC applications designed for the manufacturing industry.
+This article builds on considerations and recommendations that are described in the article [Azure identity and access management design](../../../ready/landing-zone/design-area/identity-access.md). It can help you examine design considerations for identity and access management that are specific to the deployment, on Azure, of HPC applications designed for the manufacturing industry.
 
 [Azure Active Directory Domain Services](/azure/active-directory-domain-services/overview) (Azure AD DS) provides managed domain services like domain join and Group Policy. It also provides access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Azure AD DS integrates with your existing Azure Active Directory (Azure AD) tenant. This integration enables users to sign in to services and applications connected to the managed domain by using their existing credentials in Azure AD. You can also use existing groups and user accounts to help secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for hybrid environments.
 
-For more information, see [design recommendations for platform access](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-platform-access#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones).
+For more information, see [design recommendations for platform access](../../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
 ## HPC design considerations
 

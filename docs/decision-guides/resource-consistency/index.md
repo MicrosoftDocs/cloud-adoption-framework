@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Resource consistency decision guide
 
-Azure [subscription design](../subscriptions/index.md) defines how you organize your cloud assets in relation to your organization's structure, accounting practices, and workload requirements. In addition to this level of structure, addressing your organizational governance policy requirements across your cloud estate requires the ability to consistently organize, deploy, and manage resources within a subscription.
+Azure [subscription design](../../ready/landing-zone/design-area/resource-org-subscriptions.md) defines how you organize your cloud assets in relation to your organization's structure, accounting practices, and workload requirements. In addition to this level of structure, addressing your organizational governance policy requirements across your cloud estate requires the ability to consistently organize, deploy, and manage resources within a subscription.
 
 ![Plotting resource consistency options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-resource-consistency.png)
 
@@ -61,7 +61,7 @@ For a more in-depth discussion of enforcing your policy decisions within a cloud
 
 Resource groups let you support extra levels of hierarchy inside your organization within the subscription. Hierarchies support Azure Policy rules and access controls at a resource group level. As the size of your cloud estate grows, you might need to support more complicated cross-subscription governance requirements. Use the Azure Enterprise Agreement's enterprise, department, account, subscription hierarchy.
 
-[Azure management groups](/azure/governance/management-groups/) lets you organize subscriptions into more sophisticated organizational structures. You can group subscriptions in a hierarchy distinct from your Enterprise Agreement's hierarchy. This alternate hierarchy lets you apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. You can use management group hierarchies to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../subscriptions/index.md).
+[Azure management groups](/azure/governance/management-groups/) lets you organize subscriptions into more sophisticated organizational structures. You can group subscriptions in a hierarchy distinct from your Enterprise Agreement's hierarchy. This alternate hierarchy lets you apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. You can use management group hierarchies to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../../ready/landing-zone/design-area/resource-org-subscriptions.md).
 
 ## Automated consistency
 
