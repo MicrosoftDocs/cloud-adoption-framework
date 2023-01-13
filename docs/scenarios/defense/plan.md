@@ -47,7 +47,7 @@ Platform landing zones feature design decisions that include the following disci
 - Resources Consistency
 - Deployment Acceleration
 
-For more information, see [platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
+For more information, see [platform vs. application landing zones](../../ready/landing-zone/index.md#platform-vs-application-landing-zones).
 
 **Core services** - Cloud brokers implement and manage core services such as identity, networking, and management. In most instances, a cloud broker securely connects the new cloud environment to on-premises networks, builds operational environments, and establishes an identity access management (IAM) solution with policy enforcement based on mission requirements.
 
@@ -93,8 +93,8 @@ The multi-cloud-broker strategy can be used at different levels in a defense org
 
 For more information, see:
 
-- [Planning overview](/azure/cloud-adoption-framework/plan/plan-intro)
-- [On-premises assessment](/azure/cloud-adoption-framework/plan/contoso-migration-assessment)
+- [Planning overview](../../plan/plan-intro.md)
+- [On-premises assessment](../../plan/contoso-migration-assessment.md)
 
 ## Next step
 

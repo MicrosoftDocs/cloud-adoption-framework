@@ -16,7 +16,7 @@ The Azure landing zone for high-performance computing (HPC) doesn't have any spe
 
 ## General recommendations
 
-It's important to understand any decisions that were previously made by the cloud platform team regarding [platform automation and DevOps](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops).
+It's important to understand any decisions that were previously made by the cloud platform team regarding [platform automation and DevOps](../../../ready/landing-zone/design-area/platform-automation-devops.md).
 
 ## Next steps
 

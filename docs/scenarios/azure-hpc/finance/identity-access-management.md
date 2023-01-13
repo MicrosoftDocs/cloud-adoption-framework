@@ -12,7 +12,7 @@ ms.date: 11/11/2022
 
 # Finance HPC Azure identity and access management
 
-This article builds on considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Following the guidance in this article helps you use the identity and access management design considerations and recommendations to deploy an HPC application on Microsoft Azure for the financial industry.
+This article builds on considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](../../../ready/landing-zone/design-area/identity-access.md). Following the guidance in this article helps you use the identity and access management design considerations and recommendations to deploy an HPC application on Microsoft Azure for the financial industry.
 
 ## Design considerations
 
@@ -47,7 +47,7 @@ The following are design considerations for deploying your HPC application.
  - If you're using Azure Batch, you can authenticate with Azure Active Directory by way of two different methods - integrated authentication or a service principle. For more information on how to use these different approaches, see [Azure Batch authentication](/azure/batch/batch-aad-auth). If you're using [user subscription mode](/azure/batch/best-practices#pool-configuration-and-naming) (compared to Batch service mode), be sure to grant access to Azure Batch so it can access the subscription. For more information, see [Allow Azure Batch to access the subscription](/azure/batch/batch-account-create-portal#allow-azure-batch-to-access-the-subscription-one-time-operation).
  - If you want to extend your on-premises capabilities to a hybrid environment, you can authenticate through Active Directory with a Read Only domain controller hosted in Azure. This approach minimizes traffic across the link. This integration lets users sign into services and applications connected to the managed domain using their existing credentials. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure.
 
-For more information, see [design recommendations for platform access](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-platform-access#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones).
+For more information, see [design recommendations for platform access](../../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
 ## Next steps
 
