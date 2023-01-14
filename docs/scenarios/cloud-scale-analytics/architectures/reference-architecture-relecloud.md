@@ -34,17 +34,17 @@ The following diagram doesn't represent all Azure services. The diagram is simpl
 
 :::image type="content" source="../images/relecloud.png" alt-text="Diagram of a multiple landing zone architecture for cloud-scale analytics." lightbox="../images/relecloud.png":::
 
-## Data management landing zone
+### Data management landing zone
 
 A key requirement for a cloud-scale analytics implementation is a data management landing zone. This subscription contains resources that are shared across all landing zones, including shared networking components like a firewall or private DNS zones. The data management landing zone also includes resources for data and cloud governance like Azure Policy and Azure Purview.
 
 Relecloud created a data management landing zone when they deployed the data analytics solution for the operations group. When the billing group joins the platform, they use the same data management landing zone to share common resources with the operations group.
 
-## Operations data landing zone
+### Operations data landing zone
 
 The operations group has the following solutions in its data landing zone.
 
-### Operations data applications
+#### Operations data applications
 
 The team has built a [source-aligned data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) that uses Apache Spark jobs in Azure Databricks to ingest service telemetry data and store it in an Azure Data Lake Storage account. The system uses Azure Database for MySQL as an external Hive Metastore (HMS).
 
@@ -52,19 +52,19 @@ This process copies the data as-is from the source system, but doesn't transform
 
 Relecloud customers can create cloud accounts to manage resources and billing in their private clouds. Each customer can have multiple accounts. The analytics team built a data application to import the cloud account data. Because the volume and frequency of data is much lower than for telemetry data, the team doesn't need to use Spark jobs. Instead, they created Azure Data Factory pipelines to copy the data.
 
-### Operations data products
+#### Operations data products
 
 Relecloud analysts get value from the data in the source-aligned data applications by creating new, consumer-aligned data applications. One of these consumer-aligned data applications is a **Cloud service recommender** model. Relecloud data scientists used Azure Machine Learning to build a model that looks at the services a cloud account consumes, and suggests related services that could be useful. The team deploys this model to an Azure Kubernetes Service (AKS) cluster running in the landing zone and managed by Azure Machine Learning. Applications that run outside of cloud-scale analytics can call the AKS endpoint to get recommendations.
 
 After the billing team creates their landing zone, the operations team creates a new data product that their management team requests. The management team wants to know how much revenue the **Cloud service recommender** data application generates. The new **Recommender revenue** data product uses Azure Synapse Analytics to combine data from **Cloud service recommender** and **Revenue by service** into a new data product. Business analysts can connect to Azure Synapse with Microsoft Power BI to find and report insights from this new data product.
 
-## Billing data landing zone
+### Billing data landing zone
 
 The billing group was using an on-premises system to power its analytics, but as the volume of data grew and the company relied more on their work, the system couldn't keep pace. The group modernizes their platform by moving to the cloud.
 
 The billing group doesn't share a landing zone with the operations group, but gets their own landing zone where they have the freedom to build the platform that best suits their needs. The new landing zone is connected to the data management landing zone and all other data landing zones with virtual network peering. This mechanism enables data to be shared securely through the Azure internal network.
 
-### Billing data applications
+#### Billing data applications
 
 To land data from existing systems into the analytics platform, the billing group builds two data applications. The first application ingests the customer data, including the full list of customers and all related data, such as customer addresses, locations, and salesperson assignments. The second application imports the company's invoice history, which includes all billing charges to customers and the related payment data.
 
