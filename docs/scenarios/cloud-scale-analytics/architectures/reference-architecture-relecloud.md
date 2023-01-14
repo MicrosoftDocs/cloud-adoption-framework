@@ -46,11 +46,13 @@ The operations group has the following solutions in its data landing zone.
 
 #### Operations data applications
 
-The team has built a [source-aligned data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) that uses Apache Spark jobs in Azure Databricks to ingest service telemetry data and store it in an Azure Data Lake Storage account. The system uses Azure Database for MySQL as an external Hive Metastore (HMS).
+The team has built a [source-aligned data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) that uses Apache Spark jobs in Azure Databricks to ingest service telemetry data and store it in an Azure Data Lake Storage account.
 
 This process copies the data as-is from the source system, but doesn't transform it. Analysts can work with the copied data in the analytics platform without overloading the source system. Instead of creating a dedicated deployment for this data application, the operations team uses the Databricks workspace in the shared **Ingest & Processing** resource group.
 
 Relecloud customers can create cloud accounts to manage resources and billing in their private clouds. Each customer can have multiple accounts. The analytics team built a data application to import the cloud account data. Because the volume and frequency of data is much lower than for telemetry data, the team doesn't need to use Spark jobs. Instead, they created Azure Data Factory pipelines to copy the data.
+
+Azure Database for MySQL acts as the Hive metastore and Azure SQL Database is the Azure Data Factory metastore.
 
 #### Operations data products
 
@@ -101,4 +103,3 @@ For more information, see the following articles:
 
 - [Azure Machine Learning as a data product for cloud-scale analytics](../best-practices/azure-machine-learning.md)
 - [Use Azure Synapse Analytics with cloud-scale analytics](../best-practices/azure-synapse-analytics-implementation.md)
-- [Use external Hive Metastore for Synapse Spark Pool](/azure/synapse-analytics/spark/apache-spark-external-metastore)
