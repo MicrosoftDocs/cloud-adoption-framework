@@ -14,7 +14,7 @@ ms.custom: internal
 
 A cloud management baseline that spans [inventory and visibility](./inventory.md), [operational compliance](./operational-compliance.md), and [protection and recovery](./protect.md) might provide a sufficient level of cloud management for most workloads in the IT portfolio. However, that baseline is seldom enough to support the full portfolio. This article builds on the most common next step in cloud management, portfolio operations.
 
-A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be common platforms. Depending on the past technical decisions within the company, those platforms could vary widely.
+A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be common platforms. Those platforms could vary widely depending on the past technical decisions within the company.
 
 For some organizations, there will be a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or enterprise resource planning (ERP) systems such as SAP or Oracle.
 
@@ -32,7 +32,7 @@ Much like the debate between centralized IT and CCoE, the difference is one of p
 
 ### Build the service catalog
 
-Cloud management is seldom successful at delivering a service catalog in a silo. Proper development of the catalog requires a partnership across the central IT team or the CCoE. This approach tends to be most successful when an IT organization reaches a CCoE level of maturity, but could be implemented sooner.
+Cloud management is seldom successful at delivering a service catalog in a silo. Proper development of the catalog requires a partnership across the central IT team or the CCoE. This approach tends to be most successful when an IT organization reaches a CCoE level of maturity, but it could be implemented sooner.
 
 When it's building the service catalog within a CCoE model, the cloud platform team builds out the desired-state platform. The cloud governance and cloud security teams validate governance and compliance within the deployment. The cloud management team establishes ongoing operations for that platform. And the cloud automation team packages the platform for scalable, repeatable deployment.
 
@@ -43,7 +43,7 @@ After the platform is packaged, the cloud management team can add it to the grow
 
 ## Define your own platform operations
 
-Although management tools and processes can help improve platform operations, that is often not enough to achieve the desired states of stability and reliability. True platform operations requires a focus on pillars of architecture excellence. When a platform justifies a deeper investment in operations, consider the following five pillars before the platform becomes a part of any service catalog:
+Although management tools and processes can help improve platform operations, that is often not enough to achieve the desired states of stability and reliability. True platform operations require a focus on pillars of architecture excellence. When a platform justifies a deeper investment in operations, consider the following five pillars before the platform becomes a part of any service catalog:
 
 - **Cost optimization:** Manage costs to maximize the value delivered.
 - **Operational excellence:** Follow operational processes that keep a system running in production.
@@ -71,7 +71,7 @@ When modernization isn't an option, cloud management teams commonly prioritize I
 
 ### Other common platform operations
 
-In addition to data platforms, virtual machine hosts tend to be a common platform for operations improvements. Most commonly, cloud platform and cloud management teams invest in improvements to VMware hosts or container solutions. Such investments can improve the stability and reliability of the hosts, which support the VMs, which in turn power the workloads. Proper operations on one host or container can improve the RPO or RTO of several workloads. This approach creates improved business commitments, but distributes the investment. Improved commitments and reduced costs combine to make it much easier to justify improvements to cloud management and platform operations.
+In addition to data platforms, virtual machine hosts tend to be a common platform for operations improvements. Cloud platform and cloud management teams most commonly invest in improvements to VMware hosts or container solutions. Such investments can improve the stability and reliability of the hosts, which support the VMs, which in turn power the workloads. Proper operations on one host or container can improve the RPO or RTO of several workloads. This approach creates improved business commitments, but distributes the investment. Improved commitments and reduced costs combine to make it much easier to justify improvements to cloud management and platform operations.
 
 ## Next steps
 
