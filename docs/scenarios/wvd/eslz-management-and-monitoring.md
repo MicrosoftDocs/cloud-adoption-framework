@@ -99,7 +99,7 @@ Review the following considerations and recommendations for infrastructure manag
 
 - The [security baseline for Azure Virtual Desktop](/security/benchmark/azure/baselines/virtual-desktop-security-baseline#data-protection) has relevant Azure Policy Definitions listed, helping you measure compliance to the Azure Security Benchmark. Using the security baseline helps establish proper security monitoring and governance of your Azure Virtual Desktop infrastructure.
 
-- Use the [Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics) to let admins identify issues through a single interface. With this capability, the service creates activity logs for both user and administrative actions.
+- Use the [Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics)) to let admins identify issues through a single interface. With this capability, the service creates activity logs for both user and administrative actions.
 
 ## Next steps
 
