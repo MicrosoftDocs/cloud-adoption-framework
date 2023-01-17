@@ -80,7 +80,23 @@ This can be avoided if you utilize a Single Azure AD Tenant as the home for all 
 >![TIP]
 > Review this documentation [Resource isolation in a single tenant to secure with Azure Active Directory](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)
 
- 
+### Recommendations
+
+- Use a single Azure AD Tenant, usually the corporate Azure AD Tenant and Only create additional Azure AD Tenants when clear requirements arise that cannot be met using the corporate Azure AD Tenant.
+- Use Azure AD multi-tenant applications, where possible, when creating integrations from operational tooling, such as ServiceNow, when connecting them to multiple Azure AD tenants, as per the [guidance here](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools)
+- If you are an ISV review this specific guidance [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
+- Utilize Azure Lighthouse where possible, to simplify cross-tenant management experiences. [See below]()
+- Create Account Owners, Invoice Section Owners, Subscription Creators on your Enterprise Agreement Enrolments or Microsoft Customer Agreements that are homed in the destination Azure AD Tenant for the Subscriptions they will create to avoid having to [Change Directories on Azure Subscriptions](/azure/role-based-access-control/transfer-subscription) once created.
+  - [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant)
+  - [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants)
+- Review the [Azure Active Directory security operations guide](/azure/active-directory/fundamentals/security-operations-introduction)
+- Keep the number of Global Administrator Accounts to a minimum (ideally <5).
+- Enable [Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) for all Admin accounts to ensure no standing privilege and provide JIT access.
+- Require approval in PIM to activate critical roles such as the Global Administrator Role.
+  - Consider making approvers from multiple teams approve Global Administrator usage.
+- Enable monitoring/notifications on Global Administrator role activation to all required stakeholders.
+- Ensure that the "Access management for Azure resources" setting on Global Administrators is set to `No` where it is not required.
+
 ## Next steps
 
 > [!div class="nextstepaction"]
