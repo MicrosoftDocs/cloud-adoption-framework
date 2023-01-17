@@ -1553,7 +1553,7 @@ items:
         - name: Why update an Azure landing zone?
           href: govern/resource-consistency/why-update-azure-landing-zone.md
         - name: Migrate Azure landing zone policies to Azure built-in policies
-          href: govern/resource-consistency/update-alz-policies.md
+          href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
         - name: Update Azure landing zone custom policies
           href: govern/guides/standard/update-custom-policies.md
       - name: Deployment acceleration
