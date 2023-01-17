@@ -63,7 +63,7 @@ This section details key considerations and recommendations relating to Azure la
 - A single Enterprise Agreement Enrolment can support and provide Subscriptions to multiple Azure AD Tenants by setting the Auth level on the enrolment to Work and School Account Cross Tenant, see: [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant)
 - A single Microsoft Customer Agreement can support and provide Subscriptions to multiple Azure AD Tenants, see: [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants)
 - Consider the limitations that might be introduced and brought to the forefront for application teams and developers when opting for an Azure AD Multi-Tenant architecture in regards to limitations for Azure AD Integration for Azure products and services, such as Azure Virtual Desktop, Azure Files, Azure SQL etc.
-  - See below [section]() detailing this topic further.
+  - See below [section](#azure-products--services-aad-integration) detailing this topic further.
 
 #### Azure Products & Services AAD Integration
 
