@@ -120,7 +120,7 @@ With this right, a rogue administrator can create a private endpoint in an exter
 
 In this scenario, the rogue administrator needs to first configure an external private Azure AD tenant and Azure subscription. Next, they create a private endpoint in their environment by manually specifying the resource ID and group ID of the service in the corporate Azure AD tenant. Finally, they approve the private endpoint on the linked service to allow traffic over the connection across Azure AD tenants.
 
-After the the rogue administrator or service owner approves the private endpoint, data is accessed from the external virtual network.
+After the rogue administrator or service owner approves the private endpoint, data is accessed from the external virtual network.
 
 ### Mitigation for scenario two
 
