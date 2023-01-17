@@ -3,7 +3,7 @@ title: 'Complex enterprise governance: Best practices explained'
 description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a complex enterprise.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/10/2022
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -119,7 +119,7 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Encryption patterns](../../../decision-guides/encryption/index.md)
 - [Identity patterns](../../../decision-guides/identity/index.md)
 - [Logging and reporting patterns](../../../decision-guides/logging-and-reporting/index.md)
-- [Policy enforcement patterns](../../../decision-guides/policy-enforcement/index.md)
+- [Policy enforcement patterns](../../policy-compliance/policy-definition.md)
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
 - [Resource tagging patterns](../../../decision-guides/resource-tagging/index.md)
 - [Software Defined Networking patterns](../../../decision-guides/software-defined-network/index.md)
