@@ -12,14 +12,23 @@ ms.custom: internal
 
 # Manage secrets in a secure way
 
-The management of company sensitive secrets, keys, and certificates (and associated private keys) aligns with a critical process to improve your security posture. This guidance offers several security best practices on how to manage each of these sensitive assets. Some of these best practices might also align with your compliance or attestation requirements.
+Proper management of secrets, keys, certificates, and private keys for certificates is critical to system security. This article provides best practices for managing these assets. Some of the practices might also align with your compliance and attestation requirements.
 
-Before you continue, it's highly recommended to document the following items within your organization so your alignment with these best practices can be put into action:
+Microsoft recommends that you do the following to prepare for implementing best practices:
 
-1. Limitations and exceptions: understand and document how various security configurations have a direct effect to performance and cost. Ensure your documentation aligns with your overall business requirements. Next, review each business requirement to ensure all stakeholders agree and accept the overhead and complexities various security requirements will place on your secrets management implementation.
-2. Identify your compliance and attestation requirements. For example: Center for Internet Security (CIS), National Institute of Standards and Technology (NIST), Health Insurance Portability and Accountability Act (HIPAA), HITRUST, cybersecurity maturity model certification (CMMC), protected B, medium integrity, and medium availability (pbmm), and federal information processing standard (FIPS). With respect to implementation, several of these compliance requirements might be implemented through built-in governance policy-based rule sets within Azure services. For example, there are various security controls in Azure Policy that can be applied to Azure Key Vault.
-3. Identify the personas and their access requirements to the various Azure services. For example, developers and applications might only require read access to the secrets stored in Azure Key Vault within a development environment. On the other hand, operators or administrators will require full management access to all key vaults within each environment.
-4. The overall *observability methodology* used by your organization to ensure your logging, monitoring, auditing, and alerting configurations are aligned with business requirements.
+1. Understand and document how various security configurations affect performance and cost. Ensure that your documentation aligns with your business requirements.
+1. For each business requirement, ensure that all stakeholders accept the overhead and complexities that the requirement places on the implementation of secrets management.
+1. Document your compliance and attestation requirements, for example, requirements that are suggested or mandated by:
+    1. The Center for Internet Security (CIS)
+    1. The National Institute of Standards and Technology (NIST)
+    1. The Health Insurance Portability and Accountability Act of 1996 (HIPAA)
+    1. The HITRUST CSF
+    1. The Cybersecurity Maturity Model Certification (CMMC)
+    1. Canadian Centre for Cyber Security
+    1. Federal Information Processing standards (FIPS).
+1. Determine whether compliance requirements can be implemented by using built-in governance policy-based rule sets in Azure services. For example, there are various security controls in Azure Policy that can be applied to Azure Key Vault.
+1. Identify the personas and the access that they require to the various Azure services. For example, developers and applications might require only read access to the secrets stored in Key Vault in a development environment. On the other hand, operators or administrators require full management access to key vaults.
+1. Identify the overall *observability methodology* that your organization uses to ensure that logging, monitoring, auditing, and alerting configurations align with business requirements.
 
 The following illustration is a high-level logical representation of these processes:
 
@@ -27,79 +36,81 @@ The following illustration is a high-level logical representation of these proce
 
 ## Anticipate limitations and exceptions
 
-To anticipate exceptions to best practices will be difficult and these exceptions might occur within various phases of your cloud journey. Ensure that exceptions and their risks to the business are documented and accepted across all stakeholders. Each Azure service will have limitations or quotas documented that might affect your Azure workload. Review each of the service limits that applies to your workload to ensure they are documented and align with stakeholder expectations.
+Exceptions to best practices can occur in various phases of a cloud journey. Anticipating them is difficult. When you discover one, fix it if possible. Otherwise, document it and get acceptance from stakeholders. Each Azure service has limitations or quotas that are documented. Note the limitations and quotas that apply to your workload and set stakeholder expectations.
 
-There might be other limitations and exceptions that will require documentation and require alignment with your business requirements. For example, when you perform a backup of keys, secrets, and certifications and their number of [object versions allowed](/azure/key-vault/general/service-limits) within Azure Key Vault.
-
-> [!IMPORTANT]
-> The best practice to apply for each exception encountered is: *mitigate as much as possible to ensure your risks are minimized*. If each risk can't be mitigated, ensure your *observability methodology* will enable you to identify any nefarious activities as early as possible with the information that will support your:
->
-> - Time to be notified and time to acknowledge, also known as MTTA
-> - Time to detection, also known as MTTD
-> - Root cause analysis and compromise recovery, also known as MTTR processes.
-
-## External configuration store pattern
-
-Most of these best practices across your enterprise and workloads deployed to the cloud will use a secret store. To understand the external configuration store cloud design pattern will not only provide context, it will provide insights to various issues and considerations that might affect your workload architectural design.
-
-For example, there are rare exceptions to the security best practice of using Azure Key Vault to store secrets, such as connection strings. These exceptions might be revealed during the development implementation phase when conducting performance and load testing. Ensure your business stakeholders state that performance is critical to the workload.
-
-Understanding alternatives to using Azure Key Vault and adhering to the external configuration store design pattern will ensure alignment with best practices and compliance requirements. An alternative might be to have secrets stored closer to the application's compute layer, for example, Azure App Service application settings that will only be accessed by designated and approved personas for the connections that require lower latency.
+There might be other limitations and exceptions that require documentation and require alignment with your business requirements. For example, when you perform a backup of keys, secrets, and certifications, there's a limit on the number of [object versions allowed](/azure/key-vault/general/service-limits) in Key Vault.
 
 > [!IMPORTANT]
-> The overall best practice on how to implement the external configuration store cloud design pattern is to ensure:
+> The best practice to apply for each exception encountered is: *mitigate as much as possible to ensure that your risks are minimized*. If a risk can't be mitigated, ensure that your *observability methodology* makes it possible for you to identify any nefarious activities as early as possible with the information that supports your:
 >
-> - Alignment with your business and compliance requirements
-> - Ensure at a minimum that the appropriate personas, their scope, and their permissions adhere to the least-privilege model
+> - Mean time to be notified and to acknowledge (MTTA)
+> - Mean time to detect (MTTD)
+> - Mean time to recover (MTTR)
+
+## External Configuration Store pattern
+
+Most of the best practices for workloads that are deployed to the cloud use a store for holding secrets. An understanding of the External Configuration Store cloud design pattern provides insights into various issues and considerations that can affect your workload architectural design.
+
+For example, there are rare exceptions to the security best practice of using Key Vault to store secrets, such as connection strings. These exceptions are sometimes revealed when you do performance and load testing during implementation. Ensure that your business stakeholders state that performance is critical to the workload.
+
+Understand the alternatives to using Key Vault and adhere to the External Configuration Store design pattern to align with best practices and compliance requirements. One alternative to Key Vault is to store secrets closer to the compute layer of the application. An example is Azure App Service application settings that are accessed only by designated and approved personas for the connections that require quick response.
+
+> [!IMPORTANT]
+> Reasons for implementing the External Configuration Store cloud design pattern are:
+>
+> - To align with your business and compliance requirements
+> - To ensure adherence to the least privilege security model
 > - Implement observability, for example: logging, monitoring, and alerting
-> - If you use Azure Key Vault:
->   - Implement the security baseline for Azure Key Vault
->   - Enable [Microsoft Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
->   - Enable logging for Azure Key Vault
 
-To learn more, see:
+> [!IMPORTANT]
+> If you use Key Vault:
+>
+> - Implement the security baseline for Key Vault
+> - Enable [Microsoft Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
+> - Enable logging for Key Vault
 
-- [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
-- [External configuration store pattern](/azure/architecture/patterns/external-configuration-store)
-- [Understanding separation of duties within NIST](https://csrc.nist.gov/glossary/term/Separation_of_Duty)
-- [Applying Azure Policy's NIST SP 800-53 R4 controls, including separation of duties](/azure/governance/policy/samples/nist-sp-800-53-r4)
-- [Start with the Azure Key Vault security baseline](/security/benchmark/azure/baselines/key-vault-security-baseline?context=/azure/key-vault/general/context/context)
-- [Review and validate against the Azure Key Vault authentication fundamentals](/azure/key-vault/general/authentication)
-- [Azure Policy regulatory compliance controls for Azure Key Vault](/azure/key-vault/security-controls-policy)
-- [Observability using Azure Key Vault logging](/azure/key-vault/general/logging?tabs=Vault)
+For more information, see:
+
+- [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
+- [External Configuration Store pattern](/azure/architecture/patterns/external-configuration-store)
+- [Separation of Duty (SOD)](https://csrc.nist.gov/glossary/term/Separation_of_Duty)
+- [Details of the NIST SP 800-53 Rev. 4 Regulatory Compliance built-in initiative](/azure/governance/policy/samples/nist-sp-800-53-r4)
+- [Azure security baseline for Key Vault](/security/benchmark/azure/baselines/key-vault-security-baseline?context=/azure/key-vault/general/context/context)
+- [Authentication in Azure Key Vault](/azure/key-vault/general/authentication)
+- [Azure Policy Regulatory Compliance controls for Azure Key Vault](/azure/key-vault/security-controls-policy)
+- [Azure Key Vault logging](/azure/key-vault/general/logging?tabs=Vault)
 
 ## Manage keys in a secure way
 
-There are different types of keys that can be used within various Azure services:
+There are different types of keys that are used in the various Azure services:
 
-- Keys that are cryptographic, such as encryption-at-rest or encryption-in-transit.
-- Keys used for connectivity, also known as a token for authentication (AuthN) and authorization (AuthZ) to various Azure services.
+- Keys that are cryptographic, such as keys for encryption-at-rest and encryption-in-transit.
+- Keys that are used for connectivity, such as tokens for authentication and authorization for various Azure services.
 
-### Keys used for cryptographic keys: Encryption-at-rest
+### Cryptographic keys: Encryption-at-rest
 
-Read the [encryption security fundamentals](/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure.
+For an overview of encryption in Azure, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
 
-The two types of keys for encryption-at-rest are:
+There are two types of keys that are used for encryption-at-rest:
 
 - Platform-managed keys (PMK)
-- Customer-managed keys (CMK), also known as bring-your-own-key (BYOK)
+- Customer-managed keys (CMK), also known as bring-your-own-key (BYOK) keys
 
-As mentioned above, document your various business requirements. For example, what are your encryption-at-rest requirements with respect to key management? Ask yourself: *Are there any limitations or exceptions that I need to be made aware of?*
+As mentioned earlier, document your various business requirements. For example, what are your encryption-at-rest requirements with respect to key management? Ask yourself: *Are there any limitations or exceptions that I need to be aware of?*
 
-You might find limitations or exceptions with various Azure services that might not support customer-managed keys (CMK). Validate and document these items with your business stakeholders for each Azure service within your workload.
-
-> [!IMPORTANT]
-> When CMKs are not required, use PMKs due to operational simplicity as they are managed (including rotation) by the platform.
-
-If your business requires customer-managed keys for encryption-at-rest, ensure you document the various Azure services that support this and their limitations or their release status, such as preview or GA. For example, Azure Monitor supports customer-managed keys and the documents any limitations.
+Some Azure services, because of limitations or exceptions, don't support CMK. Validate and document these items with your business stakeholders for all the Azure services that you use.
 
 > [!IMPORTANT]
->
-> - When you use customer-managed keys, rotation of each key should be conducted on a frequent interval for each of the Azure services in your workloads.
-> - If backups are encrypted with your CMKs, ensure your key rotation allows these backups to be restored successfully.
-> - If your compliance requirements need backups to be stored that span several years, ensure that the keys used to encrypt said backups are available and can successfully restore these backups.
+> When CMK isn't required, use PMK for operational simplicity. With PMK, the platform manages the keys, including rotation.
 
-To learn more about keys used for encryption, see:
+If your business requires CMK for encryption-at-rest, document the various Azure services that support CMK and their limitations and release status, such as preview or general availability (GA). For example, Azure Monitor supports CMK and the documents disclose any limitations.
+
+> [!IMPORTANT]
+> - When you use CMK, your should frequently rotate the keys that the Azure services use.
+> - If backups are encrypted with CMK, ensure that your key rotation makes it possible to restore backups as needed.
+> - If your compliance requirements specify that backups be held for several years, ensure that the keys that were used to encrypt the backups are available and can successfully restore these backups.
+
+For more information about encryption keys, see:
 
 - [Azure Monitor customer-managed key](/azure/azure-monitor/logs/customer-managed-keys?tabs=portal)
 - [Customer-managed keys for Azure Storage encryption](/azure/storage/common/customer-managed-keys-overview)
@@ -108,90 +119,92 @@ To learn more about keys used for encryption, see:
 
 ### Other security-based cloud design patterns
 
-For the following sections on keys (used as tokens) and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
+Two cloud design patterns address security best practices for keys (used as tokens) and secrets. Consider these patterns as you design your workloads. They are:
 
-- **Valet key pattern:** Use a token that provides clients with restricted direct access to a specific resource, in order to offload data transfer from the application.
+- **Valet key pattern:** Use a token that allows clients restricted direct access to a specific resource, in order to offload data transfer from the application.
 
-- **Command and query responsibility segregation (CQRS) pattern:** The command and query responsibility segregation (CQRS) pattern separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.
+- **Command and query responsibility segregation (CQRS) pattern:** Separate read and update operations for a data store. Implementing CQRS in your application can maximize the performance, scalability, and security of the application. An application that implements CQRS can better evolve over time. The CQRS pattern also prevents update commands from causing merge conflicts at the domain level.
 
 > [!IMPORTANT]
 > For each of your workloads, identify various established cloud design patterns that address each of the problem domains to ensure alignment with your business security requirements.
 
-To learn more, see:
+For more information, see:
 
-- [Valet pattern](/azure/architecture/patterns/valet-key)
+- [Valet Key pattern](/azure/architecture/patterns/valet-key)
 - [CQRS pattern](/azure/architecture/patterns/cqrs)
 
-### Keys used as connectivity or tokens: Invocation or within connection strings
+### Connectivity keys
 
-The other type of keys are used for various Azure services for connectivity or tokens, for example, Azure Storage or Azure Service Bus access keys.
+The other types of keys are used for various Azure services for connectivity or tokens. Examples are Azure Storage and Azure Service Bus access keys.
 
-There are limitations or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements will validate the best choice or practice below. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, and so on.
+There are limitations or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements validates the best choice or practice. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, and so on.
 
-Understanding each of these [options](/azure/storage/common/authorize-data-access?toc=/azure/storage/blobs/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) and documenting them to your business requirements will guide you through this decision process.
+Azure Storage has many options for authorizing access to data. They're described in [Authorize access to data in Azure Storage](/azure/storage/common/authorize-data-access?toc=/azure/storage/blobs/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Understand the options and evaluate them based on your business requirements,
 
-Additionally, many Azure services support managed identities for authentication.  [What are managed identities?](/azure/active-directory/managed-identities-azure-resources/overview)
-
-> [!IMPORTANT]
->
-> - Use Azure AD managed identities when your use cases support the capabilities of managed identities for the various Azure services your solution will be composed of.
-> - If Azure AD managed identities is not suitable for your use cases nor available to an Azure service, following a "least-privilege model" by using stored access policies or shared-access signatures (SAS) with explicit access and time-bound values.
-
-Several Azure services might not have the features to use a stored access signature; however, these services might have the following policy features: manage, send, listen. For example, Azure Service Bus, Azure Event Hubs, [Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-security) have these types of security access policies in addition to using Azure Active Directory.
+Many Azure services support managed identities for authentication.  For more information, see [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview).
 
 > [!IMPORTANT]
-> Following a "least-privilege model", when defining and configuring a policy will only provide at the specified scope the necessary operations needed.
+> Use Azure AD managed identities when you can. If you can't, because
+it's not suitable for your use cases or not supported by an Azure service that you use,  follow a least privilege security model—use stored access policies or shared-access signatures (SAS) with explicit access and time-bound values.
 
-Several Azure services use a key to allow an invocation to be performed. For example, non-anonymous Azure Functions have an access code (also known as a key).
-
-> [!IMPORTANT]
-> Ensure the keys used for invocation have a defined purpose. Create several keys for their intended purpose and renew or regenerate these keys on a frequent interval or when the key is compromised.
-
-Lastly, various Azure services have features that support key rotation. Understanding [shared responsibility](/azure/security/fundamentals/shared-responsibility) in the cloud will support your documentation for various workloads.
+If an Azure service doesn't support the use of a stored access signature, maybe it has the following policy features instead: manage, send, listen. For example, Azure Service Bus, Azure Event Hubs, and [Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-security) have these types of security access policies and also use Azure Active Directory.
 
 > [!IMPORTANT]
-> Within each of your workloads, periodically rotate your connection string keys for each of the Azure services. Use automation and an external configuration store, such as Azure Key Vault so that there is minimized disruption. When not using an external configuration store, each of these Azure services have two keys so that they can be used to minimize disruption during your maintenance window.
+> Following a least privilege security model when defining and configuring a policy means that access to information and resources is given only to programs and users that have a legitimate purpose for accessing it.
 
-To learn more about keys used to invocate or within connection strings, see:
+Several Azure services use a key to allow an invocation to be performed. For example, non-anonymous function apps have an access code (also known as a key).
 
-- [Define a stored access policy on Azure Storage](/rest/api/storageservices/define-stored-access-policy)
-- [Manage storage account keys with Key Vault and the Azure CLI](/azure/key-vault/secrets/overview-storage-keys)
-- [Grant limited access to Azure Storage resources using shared access signatures](/azure/storage/common/storage-sas-overview)
-- [Azure Policy regulatory compliance controls for Azure Service Bus](/azure/service-bus-messaging/security-controls-policy)
-- [Samples: `Azure.Security.KeyVault.Administration` using .NET](/samples/azure/azure-sdk-for-net/azuresecuritykeyvaultadministration-samples/)
-- [Managing CMKs with Azure Service Bus](/azure/service-bus-messaging/configure-customer-managed-key)
-- [Automate the rotation of secret for resources that use one set of augmentation credentials](/azure/key-vault/secrets/tutorial-rotation)
-- [Automate the rotation of secret for resources that use two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
+> [!IMPORTANT]
+> Ensure that the keys that are used for invocation have a defined purpose. Create several keys for their intended purpose and renew or regenerate the keys frequently and whenever a key is compromised.
+
+Lastly, various Azure services have features that support key rotation. Understanding [shared responsibility in the cloud](/azure/security/fundamentals/shared-responsibility)  supports your documentation for various workloads.
+
+> [!IMPORTANT]
+> In each of your workloads, periodically rotate your connection string keys for each of the Azure services. Use automation and an external configuration store, such as Key Vault,  to minimize disruption. When not using an external configuration store, each of these Azure services have two keys that you can use to minimize disruption during your maintenance window.
+
+For more information about keys that are used for invocation or in connection strings, see:
+
+- [Define a stored access policy](/rest/api/storageservices/define-stored-access-policy)
+- [Manage storage account keys with Key Vault and the Azure CLI (legacy)](/azure/key-vault/secrets/overview-storage-keys)
+- [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview)
+- [Azure Policy Regulatory Compliance controls for Azure Service Bus Messaging](/azure/service-bus-messaging/security-controls-policy)
+- [Azure.Security.KeyVault.Administration samples for .NET](/samples/azure/azure-sdk-for-net/azuresecuritykeyvaultadministration-samples)
+- [Configure customer-managed keys for encrypting Azure Service Bus data at rest](/azure/service-bus-messaging/configure-customer-managed-key)
+- [Automate the rotation of a secret for resources that use one set of authentication credentials](/azure/key-vault/secrets/tutorial-rotation)
+- [Automate the rotation of a secret for resources that have two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
 
 ## Manage your secrets in a secure way
 
-Secrets store sensitive information and are typically passwords, credentials, or fully qualified connection strings.
+Secrets are sensitive information such as passwords, credentials, and fully qualified connection strings.
 
-Passwords and secrets are managed outside of application artifacts, using tools like Azure Key Vault. API keys, database connection strings, and passwords need to be stored in a secure store and not within the application code or configuration. Using a centrally managed external configuration store simplifies operational tasks like key rotation in addition to improving overall security.
+Passwords and secrets are managed outside of application artifacts by using tools like Key Vault. API keys, database connection strings, and passwords need to be stored in a secure store and not in the application code or configuration. Using a centrally managed external configuration store simplifies operational tasks like key rotation and improves overall security.
 
-Applying automation will improve operational efficiencies and using credentials for various automated runbooks will need to be aligned with your business requirements. For example, a runbook within an Azure Automation account that purges expired data from storage accounts needs to have credentials to perform that action.
+Applying automation improves operational efficiencies. Using credentials for various automated runbooks needs to be aligned with your business requirements. For example, a runbook in an Azure Automation account that purges expired data from storage accounts needs to have credentials to perform that action.
 
 > [!IMPORTANT]
-> Use an external configuration store, such as Azure Key Vault, to store sensitive information. For example, fully qualified connection strings or passwords. Where possible, automate rotation of secrets and store them in Azure Key Vault so that there is minimized disruption.
+> Use an external configuration store like Key Vault to store sensitive information such as fully qualified connection strings or passwords. Where possible, automate rotation of secrets and store them in Key Vault to minimize disruption.
 
-To learn more, see:
+For more information, see:
 
-- [Azure Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)
-- [Azure architecture blog: managing and rotating secrets with Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
-- [Automate the rotation of secret for resources that use one set of authentication credentials](/azure/key-vault/secrets/tutorial-rotation)
-- [Automate the rotation of secret for resources that use two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
-- [Using credentials in Azure Automation runbooks](/azure/automation/shared-resources/credentials?tabs=azure-powershell)
+- [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)
+- [Managing and Rotating Secrets with Azure Key Vault, Managed Services, and some automation – Part 1](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
+- [Automate the rotation of a secret for resources that use one set of authentication credentials](/azure/key-vault/secrets/tutorial-rotation)
+- [Automate the rotation of a secret for resources that have two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
+- [Manage credentials in Azure Automation](/azure/automation/shared-resources/credentials?tabs=azure-powershell)
 
 ## Renew certificates
 
-Certificates are used for encryption, authorize automation actions, device management, and many other functionalities. Certificates are time bound and when they expire without a robust operational model, these expired certificates cause disruption to your workloads.
+Certificates are used for encryption, authorizing automation actions, device management, and many other tasks. Certificates are time bound. When they expire without a robust operational model, they disrupt your workloads.
 
-There are limitations and exceptions, such as authorizing automation actions within Azure Automation accounts when using Desired State Configuration (DSC), and where these certificates are stored.
+There are limitations and exceptions, such as:
+
+- Authorizing automation actions in Azure Automation accounts when using Desired State Configuration (DSC)
+- Certificate storage location
 
 > [!IMPORTANT]
-> Align with the authorized personas, use central storage of these certificates, such as Azure Key Vault, and ensure the expiry dates of SSL/TLS certificates are monitored and there are renewal processes in place that align with your business requirements.
+> Align with the authorized personas, use central storage of these certificates, such as Key Vault, and ensure the expiry dates of SSL/TLS certificates are monitored and that there are renewal processes in place that align with your business requirements.
 
-To learn more, see:
+For more information, see:
 
 - [About Azure Key Vault certificates](/azure/key-vault/certificates/about-certificates)
 - [Renew your Azure Key Vault certificates](/azure/key-vault/certificates/overview-renew-certificate)
@@ -200,4 +213,4 @@ To learn more, see:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Secure DevOps](./secure-devops.md)
+> [Securing the pipeline and CI/CD workflow](secure-devops.md)
