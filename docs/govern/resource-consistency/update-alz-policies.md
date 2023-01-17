@@ -35,9 +35,9 @@ You can detect that one or more Azure landing zone policies are superseded by bu
 
 You can migrate Azure landing zone environments with the following steps:
 
-- Determine if the Azure landing zone policies in scope for migration are currently assigned at any scope in your Azure estate. If you're using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), you can determine policy scope by checking the **TenantSummary**.
-- Check if the Azure landing zone policies being migrated are part of a landing zone custom policy initiative that should be updated.
-- See if Azure landing zone custom policy initiatives in scope for migration are currently assigned at any scope in your Azure estate.
+1. Determine if the Azure landing zone policies in scope for migration are currently assigned at any scope in your Azure estate. If you're using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), you can determine policy scope by checking the **TenantSummary**.
+1. Check if the Azure landing zone policies being migrated are part of a landing zone custom policy initiative that should be updated.
+1. See if Azure landing zone custom policy initiatives in scope for migration are currently assigned at any scope in your Azure estate.
 
 Depending on the results of your investigation, take the following actions.
 
@@ -55,9 +55,9 @@ If an Azure landing zone custom policy initiative is fully superseded by a built
 
 If the policy to be migrated is assigned to any scope in your Azure estate, and isn't part of an existing Azure landing zone custom policy initiative, do these steps:
 
-- Create new policy assignments at the same scopes using the Azure built-in policies with matching settings as per the assignment of the previous Azure landing zone custom policy definition.
-- Delete existing Azure landing zone policy assignment at all scopes, where assigned.
-- Delete the Azure landing zone policy definition from the Azure landing zone intermediate root management group (for example `Contoso`).
+1. Create new policy assignments at the same scopes using the Azure built-in policies with matching settings as per the assignment of the previous Azure landing zone custom policy definition.
+1. Delete existing Azure landing zone policy assignment at all scopes, where assigned.
+1. Delete the Azure landing zone policy definition from the Azure landing zone intermediate root management group (for example `Contoso`).
 
 For detailed guidance on how to do the previous steps, see [Migrate single Azure landing zone custom policy](https://github.com/Azure/Enterprise-Scale/wiki/migrate-alz-policies-to-builtin#migrate-single-alz-custom-policy-to-built-in-policy).
 
@@ -65,16 +65,16 @@ For detailed guidance on how to do the previous steps, see [Migrate single Azure
 
 If the policy to be migrated is part of an Azure landing zone custom policy initiative and is assigned through it at any scope in your Azure estate, follow these steps:
 
-- Update the Azure landing zone custom policy initiative definition with the appropriate policy references. You can find the [updated initiatives here](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions) with a generic *contoso* scope for custom policies.
-- When you update the policy references, remember to change the *contoso* scope for policy definition IDs to your management group hierarchy pseudo root name. Also, update the metadata information on the Azure landing zone custom policy initiative.
+1. Update the Azure landing zone custom policy initiative definition with the appropriate policy references. You can find the [updated initiatives here](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions) with a generic *contoso* scope for custom policies.
+1. When you update the policy references, remember to change the *contoso* scope for policy definition IDs to your management group hierarchy pseudo root name. Also, update the metadata information on the Azure landing zone custom policy initiative.
 
 For detailed guidance on how to do the previous steps, see [How to update child definitions in Azure landing zone custom initiatives](https://github.com/Azure/Enterprise-Scale/wiki/migrate-alz-policies-to-builtin#how-to-update-child-definitions-in-alz-custom-initiatives).
 
 If an Azure landing zone custom policy initiative is fully superseded by a built-in policy initiative, and assigned at any scope in your Azure estate, follow these steps:
 
-- Create new policy initiative assignments at the same scopes. Use the Azure built-in policy initiative with matching settings per the assignment of the previous Azure landing zone custom policy initiative.
-- Delete existing Azure landing zone policy initiative assignment at all scopes, where assigned.
-- Delete the Azure landing zone custom policy initiative from the Azure landing zone intermediate root management group (for example, `Contoso`).
+1. Create new policy initiative assignments at the same scopes. Use the Azure built-in policy initiative with matching settings per the assignment of the previous Azure landing zone custom policy initiative.
+1. Delete existing Azure landing zone policy initiative assignment at all scopes, where assigned.
+1. Delete the Azure landing zone custom policy initiative from the Azure landing zone intermediate root management group (for example, `Contoso`).
 
 ## Update steps for Azure landing zone Terraform module deployments
 
