@@ -52,7 +52,7 @@ Creating a new Azure AD tenant requires additional work to be done to provision,
 - Azure services limitations in supporting multiple Azure AD tenants – Azure workloads that only support identities homed in the tenant to which it is bound to. (see [section]() for more info)
 - No centralized configuration or management for Azure AD tenants – Multiple security policies, management policies, configuration, portals, APIs, JML (Joiners, Movers, Leavers) processes.
 
-For these reasons, organizations need to be clear on why they are deviating from the corporate Azure AD tenant model, to ensure the additional overhead and complexity is justified in meeting the requirement(s). There are valid scenarios where our customers feel this is the case and these are documented later in the [article]().
+For these reasons, organizations need to be clear on why they are deviating from the corporate Azure AD tenant model, to ensure the additional overhead and complexity is justified in meeting the requirement(s). There are valid scenarios where our customers feel this is the case and these are documented later in the [article](multiple-aad-tenants-in-alz-scenarios.md).
 
 Another concern that customers flag to us, is around the power of the Global Administrator (Global Admin) role. The Global Admin role does provide the keys to the kingdom and in the context of Azure, any Global Admin is able to assume control of any Azure subscription linked to the AAD tenant.
 
