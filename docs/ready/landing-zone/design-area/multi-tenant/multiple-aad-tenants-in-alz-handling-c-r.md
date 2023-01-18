@@ -85,7 +85,7 @@ This can be avoided if you utilize a Single Azure AD Tenant as the home for all 
 - Use a single Azure AD Tenant, usually the corporate Azure AD Tenant and Only create additional Azure AD Tenants when clear requirements arise that cannot be met using the corporate Azure AD Tenant.
 - Use Azure AD multi-tenant applications, where possible, when creating integrations from operational tooling, such as ServiceNow, when connecting them to multiple Azure AD tenants, as per the [guidance here](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools)
 - If you are an ISV review this specific guidance [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
-- Utilize Azure Lighthouse where possible, to simplify cross-tenant management experiences. [See below]()
+- Utilize Azure Lighthouse where possible, to simplify cross-tenant management experiences. [See Azure Lighthouse usage in ALZ Multi-Tenant](multiple-aad-tenants-in-alz-handling-lighthouse.md)
 - Create Account Owners, Invoice Section Owners, Subscription Creators on your Enterprise Agreement Enrolments or Microsoft Customer Agreements that are homed in the destination Azure AD Tenant for the Subscriptions they will create to avoid having to [Change Directories on Azure Subscriptions](/azure/role-based-access-control/transfer-subscription) once created.
   - [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant)
   - [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants)
@@ -100,4 +100,4 @@ This can be avoided if you utilize a Single Azure AD Tenant as the home for all 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [TBC](TBC.md)
+> [Handling ALZ across Multiple AAD Tenants - Automation Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-automation.md)
