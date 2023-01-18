@@ -2,7 +2,7 @@
 title: Data innovations
 description: Migrate and modernize your data warehouse, and extend your analytical capabilities to drive new business value.
 author: v-hanki
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

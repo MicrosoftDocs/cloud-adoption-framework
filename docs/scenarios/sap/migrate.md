@@ -2,7 +2,7 @@
 title: Migrate an SAP platform to Azure
 description: Understand how to migrate an SAP platform to Azure.
 author: deepakonics
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -73,7 +73,7 @@ The DBMS needs to be changed, or the internal format of the same DBMS system nee
 - The current OS isn't supported in Azure, requiring an upgrade/replatform.
 - There is a plan to upgrade to SAP S/4HANA during migration.
 
-Explore [migrating an SAP platform to Azure](/learn/modules/migrate-sap-workloads-azure/) Microsoft Learn module to learn more about each process for migrating the SAP platform.
+Explore [Migrating an SAP platform to Azure](/training/modules/migrate-sap-workloads-azure/) to learn more about each process for migrating the SAP platform.
 
 ## Migrate the workload
 

@@ -1,0 +1,65 @@
+items:
+  - name: Defense cloud adoption - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: Defense cloud adoption - Microsoft Cloud Adoption Framework for Azure
+  - name: Command domain
+    items:
+    - name: Strategy
+      href: strategy.md
+    - name: Plan
+      href: plan.md
+    - name: Organize
+      href: organize.md
+  - name: Platform domain
+    items:
+      - name: Ready
+        href: ready.md
+      - name: Govern
+        href: govern.md
+  - name: Mission domain
+    items:
+      - name: Adopt
+        href: adopt.md
+      - name: Secure
+        href: secure.md
+      - name: Manage
+        href: manage.md
+  - name: Best practices
+    items:
+      - name: Zero trust
+        href: /security/zero-trust/zero-trust-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+      - name: Compliance
+        href: /azure/compliance/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+      - name: Secure isolation
+        href: /azure/azure-government/azure-secure-isolation-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+      - name: Trusted internet connection
+        href: /azure/azure-government/compliance/compliance-tic?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+      - name: DoD documentation
+        items: 
+          - name: Overview
+            href: /azure/azure-government/documentation-government-overview-dod?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+          - name: Security 
+            href: /azure/azure-government/documentation-government-plan-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+          - name: Compliance
+            href: /azure/azure-government/documentation-government-plan-compliance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+          - name: Identity
+            href: /azure/azure-government/documentation-government-plan-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+          - name: Monitoring
+            href: /azure/azure-government/documentation-government-manage-oms?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+          - name: Development
+            href: /azure/azure-government/documentation-government-developer-guide?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+          - name: IL5 isolation
+            href: /azure/azure-government/documentation-government-impact-level-5?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+  - name: Microsoft products
+    items:
+      - name: Service compliance
+        href: /azure/compliance/offerings/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+      - name: Services by audit scope
+        href: /azure/azure-government/compliance/azure-services-in-fedramp-auditscope?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+
+  - name: Learn
+    items:
+      - name: U.S. Government learn modules
+        href: /training/browse/?expanded=azure%2Cindustry-solutions%2Cm365&toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fdefense%2Ftoc.json&filter-products=gover&products=azure-sovereign-us
+      - name: CISO workshops
+        href: /security/ciso-workshop/ciso-workshop?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json

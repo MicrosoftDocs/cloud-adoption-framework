@@ -2,7 +2,7 @@
 title: Deployment options for SAP in Azure
 description: Learn more about the dependencies between SAP systems, environments, and landscapes to automate application deployments and management.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -18,7 +18,7 @@ The principles in the Cloud Adoption Framework for Azure can help with automatin
 
 SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](./enterprise-scale-landing-zone.md) to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
 
-The [Microsoft SAP Automation repo](https://github.com/Azure/sap-hana) supports Azure-SAP customers to integrate scripts with current DevOps practices or use the code in its current state and directly from a cloned repository.
+The [Microsoft SAP Automation repo](https://github.com/Azure/sap-automation) supports Azure-SAP customers to integrate scripts with current DevOps practices or use the code in its current state and directly from a cloned repository.
 
 ## SAP architecture
 

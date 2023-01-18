@@ -1,8 +1,8 @@
 ---
 title: Refactor landing zones
 description: Learn about the process for refactoring landing zones.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

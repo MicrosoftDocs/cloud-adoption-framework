@@ -1,8 +1,8 @@
 ---
 title: Access control
 description: Learn about access control best practices in the Cloud Adoption Framework for Azure.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

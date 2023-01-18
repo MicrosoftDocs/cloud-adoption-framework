@@ -2,7 +2,7 @@
 title: DevSecOps controls
 description: Learn about DevSecOps controls and how to integrate security processes and tools into the DevOps development cycle.
 author: texnokot
-ms.author: brblanch
+ms.author: martinek
 ms.date: 08/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -71,7 +71,7 @@ Another option to consider is to use a pre-commit framework if the version contr
 
 Pull requests are standard in the development process. Part of the pull request process is peer reviews that often reveal undiscovered defects, bugs, or issues related to human mistakes. It's good practice to have a security champion or knowledgeable security teammate who can guide the developer during the peer review process before creating a pull request.
 
-Secure coding practice guidelines help developers learn essential secure coding principles and how they should be applied. There are secure coding practices available, such as [OWASP secure coding practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) to incorporate with general coding practices.
+Secure coding practice guidelines help developers learn essential secure coding principles and how they should be applied. There are secure coding practices available, such as [OWASP secure coding practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/) to incorporate with general coding practices.
 
 ## Commit the code
 

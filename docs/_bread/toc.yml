@@ -28,10 +28,15 @@ items:
         tocHref: /azure/security/fundamentals/
         topicHref: /azure/cloud-adoption-framework/ready/azure-best-practices
     - name: Adopt
+      tocHref: /azure/cloud-adoption-framework/adopt/
+      topicHref: /azure/cloud-adoption-framework/adopt
       items:
       - name: Migrate
         tocHref: /azure/cloud-adoption-framework/migrate/
         topicHref: /azure/cloud-adoption-framework/migrate
+      - name: Modernize
+        tocHref: /azure/cloud-adoption-framework/modernize/
+        topicHref: /azure/cloud-adoption-framework/modernize
       - name: Innovate
         tocHref: /azure/cloud-adoption-framework/innovate/
         topicHref: /azure/cloud-adoption-framework/innovate

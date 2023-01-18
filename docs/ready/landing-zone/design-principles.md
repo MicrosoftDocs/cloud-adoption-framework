@@ -3,7 +3,7 @@ title: Azure landing zone design principles
 description: Learn about the design principles that influence the design areas for enterprise-scale landing zone implementations
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/19/2021
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -19,13 +19,13 @@ The principles are intentionally aspirational to help you strive for an optimum 
 Using these principles as part of your implementation will serve as a useful guide for realizing the benefits of cloud technologies. This cloud-orientated way, often called _cloud native_,  represents ways of working and technical options for your organization that are not typically offered with legacy technology approaches.
 
 > [!IMPORTANT] 
-> **Impact of design deviations** 
+> **Impact of design deviations**
 >
 > There might be valid reasons to deviate from the principles. For example, organizational requirements might dictate specific outcomes or approaches to how an Azure environment is designed. In such cases, it's important to understand the impact the deviation will have on the design and future operations. Carefully consider the trade offs outlined for each principle.
 
 Familiarize yourself with these principles to better understand their impact and the trade-offs associated with deviation.
 
-As a general rule, be prepared to balance requirements and functionality because your journey to the  conceptual architecture will evolve over time as requirements change and you learn from your implementation. For example, utilizing preview services and taking dependencies on service roadmaps can remove technical blockers during adoption.
+As a general rule, be prepared to balance requirements and functionality because your journey to the conceptual architecture will evolve over time as requirements change and you learn from your implementation. For example, utilizing preview services and taking dependencies on service roadmaps can remove technical blockers during adoption.
 
 ## Subscription democratization
 
@@ -33,10 +33,12 @@ Utilize subscriptions as a unit of management and scale to accelerate applicatio
 
 To enable the organization to operate effectively at scale, support a subscription with suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This will allow the subscription to be managed and organized efficiently.
 
+> [!TIP]
+> We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+
 #### Impact of deviation
 - [**Decentralized operations**](../../operating-model/compare.md)&mdash;One approach for implementing this principle is to transition operations to business units and workload teams. This allows workload owners to have more control and autonomy of their workloads within the guardrails established by platform foundation. Customers who require [central operations](../../operating-model/compare.md#centralized-operations) and don't want to delegate control of production environments to workload teams or business units, may need to make modifications to their [resource organization](./../landing-zone/design-area/resource-org.md) design and deviate from this principle.
-- **Misalignment with the [operating model](../../operating-model/define.md)**&mdash;Azure landing zone conceptual architecture design  assumes a specific management group and subscription hierarchy for all operations management subscriptions, which might not align with your operating model. However with this deviation, as your organization grows and evolves, your operational model might change, which can lead to a migration of resources into separate subscriptions again, which can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before committing to an approach.
-
+- **Misalignment with the [operating model](../../operating-model/define.md)**&mdash;Azure landing zone conceptual architecture design assumes a specific management group and subscription hierarchy for all operations management subscriptions, which might not align with your operating model. However with this deviation, as your organization grows and evolves, your operational model might change, which can lead to a migration of resources into separate subscriptions again, which can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before committing to an approach.
 
 ## Policy-driven governance
 
@@ -67,11 +69,11 @@ Regardless of the service model, strive to provide a secure environment for all 
 
 #### Impact of deviation
 
-- **Increased complexity in governance policies**&mdash;Segmenting workloads in a way that differs from the [implementation options](implementation-options.md) for management group hierarchy, can create a complex policy and access control structure to govern your environment. For example deviation from the organizational hierarchy structure or grouping by Azure service.
+- **Increased complexity in governance policies**&mdash;Segmenting workloads in a way that differs from the [implementation options](implementation-options.md) for management group hierarchy can create a complex policy and access control structure to govern your environment. For example deviation from the organizational hierarchy structure or grouping by Azure service.
 
 - **Increased operational overhead**&mdash;This trade off introduces the risk of unintentional policy duplication and thereby exceptions, which add to operational and management overheads.
 
-Dev/Test/Production is another common approach considered by customers, you can read more on this in the FAQ question here: [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+Dev/Test/Production is another common approach considered by customers, you can read more on this in the FAQ question here: [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
 
 
 ## Align with Azure-native design and roadmaps

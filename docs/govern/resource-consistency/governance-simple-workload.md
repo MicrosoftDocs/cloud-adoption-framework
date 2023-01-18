@@ -1,8 +1,8 @@
 ---
 title: Governance design for a simple workload
 description: Learn the process for designing a resource governance model in Azure to support a single team and a simple workload.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

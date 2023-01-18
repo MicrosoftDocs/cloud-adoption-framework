@@ -1,8 +1,8 @@
 ---
 title: Cost Management discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Cost Management discipline in each phase of cloud adoption.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -57,7 +57,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
 
 **Potential activities:**
 
-- Align your budgetary plans with the [subscription strategy](../../decision-guides/subscriptions/index.md) that defines your core ownership model.
+- Align your budgetary plans with the [subscription strategy](../../ready/landing-zone/design-area/resource-org-subscriptions.md) that defines your core ownership model.
 - Use the [Resource Consistency discipline strategy](../../decision-guides/resource-consistency/index.md) to enforce architecture and cost guidelines over time.
 - Determine whether any cost anomalies affect your adoption and migration plans.
 

@@ -2,7 +2,7 @@
 title: Develop a plan for cloud-scale analytics
 description: Understand how to build a plan for cloud-scale analytics in Azure.
 author: pratimdas
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

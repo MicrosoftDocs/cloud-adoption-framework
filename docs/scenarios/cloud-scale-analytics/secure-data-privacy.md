@@ -62,7 +62,7 @@ The first two options provide a way to handle **sensitive (personal data)**, and
 - Insights about protection and compliance
 - Policies for data protection reporting
 
-Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row-level and column-level security. As at Jan 2022, Azure Purview has  launched a public preview for access policies to control access to data stored in Blob and Azure Data Lake Storage (ADLS) Gen2. See [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage).
+Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row-level and column-level security. As at Jan 2022, Azure Purview has launched a public preview for access policies to control access to data stored in Blob and Azure Data Lake Storage (ADLS) Gen2. See [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/tutorial-data-owner-policies-storage).
 
 The policy engine should use Azure AD groups to apply policies to data products. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
 
@@ -166,3 +166,4 @@ The dedicated 'restricted' data management landing zone should connect to catalo
 ## Next steps
 
 - [Data Access Management](security-provisioning.md)
+

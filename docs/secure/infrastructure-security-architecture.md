@@ -16,9 +16,9 @@ This article describes an ideal end state for infrastructure security in your or
 
 ## Build scalable, modular Azure landing zones
 
-Microsoft offers the [Cloud Adoption Framework](/azure/cloud-adoption-framework/overview) to provide customers a proven starting point for the cloud journey, including the [Secure methodology](/azure/cloud-adoption-framework/secure/).
+Microsoft offers the [Cloud Adoption Framework](../overview.md) to provide customers a proven starting point for the cloud journey, including the [Secure methodology](./index.md).
 
-Another critical component of the Cloud Adoption Framework in the [Ready methodology](/azure/cloud-adoption-framework/ready/) is the *Azure landing zone*, which accelerates cloud adoption by providing automated implementation of complete architectures and operating environments, including security elements. Security best practices are integrated in Azure landing zones. With landing zones, you can quickly and securely migrate your first workloads with baked-in security and governance best practices.
+Another critical component of the Cloud Adoption Framework in the [Ready methodology](../ready/index.md) is the *Azure landing zone*, which accelerates cloud adoption by providing automated implementation of complete architectures and operating environments, including security elements. Security best practices are integrated in Azure landing zones. With landing zones, you can quickly and securely migrate your first workloads with baked-in security and governance best practices.
 
 While you design and implement your organization's landing zone, use the reference architecture below as a target end-state. It captures mature and scaled-out environmental design considerations.
 
@@ -29,9 +29,9 @@ While you design and implement your organization's landing zone, use the referen
 We recommend using Azure landing zones when possible in your cloud adoption plans. Landing zones provide an architectural starting point. Azure landing zones help you follow security and other best practices whether you deploy a new workload, migrate existing workloads, or improve already-deployed workloads. Using landing zones helps you follow best practices whether you implement them all at once or incrementally.
 
 > [!NOTE]
-> Your organization can customize the Azure landing zone architecture to meet your unique business requirements. To help your organization get started quickly, see this [guidance on reference implementation options](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz). Use configurations that deliver Azure landing zone conceptual architecture and best practices across design areas.
+> Your organization can customize the Azure landing zone architecture to meet your unique business requirements. To help your organization get started quickly, see this [guidance on reference implementation options](../ready/landing-zone/tailoring-alz.md). Use configurations that deliver Azure landing zone conceptual architecture and best practices across design areas.
 
-Azure landing zones contain code that makes it easier for your organization's IT and security teams. Landing zones offer a repeatable, predictable method to apply a templatized implementation. That implementation includes a deployment approach, [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles), and [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Landing zones support security, management, and governance processes, as well as platform automation and DevOps.
+Azure landing zones contain code that makes it easier for your organization's IT and security teams. Landing zones offer a repeatable, predictable method to apply a templatized implementation. That implementation includes a deployment approach, [design principles](../ready/landing-zone/design-principles.md), and [design areas](../ready/landing-zone/design-areas.md). Landing zones support security, management, and governance processes, as well as platform automation and DevOps.
 
 ## Use Zero Trust principles
 

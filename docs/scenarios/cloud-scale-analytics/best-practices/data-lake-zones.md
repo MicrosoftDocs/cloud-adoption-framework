@@ -92,7 +92,7 @@ Your raw data lake is composed of your landing and conformance containers, each 
 
 ### Landing container layout
 
-Your landing container is reserved for raw data  from a recognized source system, loaded by your data agnostic ingestion engine or a data application (source-aligned), unaltered and in its original supported format.
+Your landing container is reserved for raw data from a recognized source system, loaded by your data agnostic ingestion engine or a data application (source-aligned), unaltered and in its original supported format.
 
 ```markdown
 .

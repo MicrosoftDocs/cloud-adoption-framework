@@ -1,8 +1,8 @@
 ---
 title: Azure Virtual Desktop proof of concept
 description: Use the Cloud Adoption Framework to learn about best practices for completing and testing an Azure Virtual Desktop proof of concept.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

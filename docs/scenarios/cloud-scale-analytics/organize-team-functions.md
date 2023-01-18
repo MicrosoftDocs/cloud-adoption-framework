@@ -70,7 +70,7 @@ As the owner of the landing zone, Azure DevOps would route the approval for chan
 
 ### Respond to new data product requests
 
-Data landing zone ops supports data application teams to create new  data products. When a data application teams request assistance, an IT service management solution, for example, an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops would be notified of new requests and approve or decline deployments. Once approved, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
+Data landing zone ops supports data application teams to create new data products. When a data application teams request assistance, an IT service management solution, for example, an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops would be notified of new requests and approve or decline deployments. Once approved, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
 
 ### Adhere to the Azure Well-Architected Framework
 

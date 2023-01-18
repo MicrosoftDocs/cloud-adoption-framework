@@ -1,13 +1,14 @@
 ---
 title: 'Get started: Document foundational alignment decisions'
 description: Understand and document initial decisions required to drive the cloud adoption journey.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/19/2022
+author: martinekuan
+ms.author: martinek
+ms.reviewer: tozimmergren
+ms.date: 11/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, engagement-fy23
 ---
 
 # Get started: Understand and document foundational alignment decisions
@@ -19,9 +20,9 @@ Cloud adoption provides numerous business, technical, and organizational benefit
 
 ## Before you begin
 
-As you work through this guide, use the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) to record each foundational decision you make. The template helps you clarify the configuration of your cloud environment and the reasons behind each decision, and having this information in one place enables you to rapidly onboard team members participating in your cloud adoption lifecycle.
+As you work through this guide, use the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) to record each foundational decision you make. The template helps you clarify the configuration of your cloud environment and the reasons behind each decision. Having this information in one place enables you to rapidly onboard team members participating in your cloud adoption lifecycle.
 
-If you already have an environment running in Azure, you can accelerate your documentation by using the [Azure governance visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
+Suppose you already have an environment running in Azure. In that case, you can accelerate your documentation using the [Azure governance visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
 
 ## Step 1: Understand how Azure works
 
@@ -29,19 +30,19 @@ When using Azure as the cloud provider for your cloud adoption journey, you need
 
 **Involved teams, deliverables, and supporting guidance:**
 
-Everyone involved in your organization's cloud adoption lifecycle should have basic understanding of what Azure is and how it works.
+Everyone involved in your organization's cloud adoption lifecycle should understand what Azure is and how it works.
 
 ## Step 2: Understand initial Azure concepts
 
-Azure is built on a set of [foundational concepts](../ready/considerations/fundamental-concepts.md). You need an understanding of these concepts to have in-depth discussions about technical strategy for your Azure implementation.
+Azure is built on a set of [foundational concepts](../ready/considerations/fundamental-concepts.md). It would help if you understood these concepts to have in-depth discussions about technical strategy for your Azure implementation.
 
 **Involved teams, deliverables, and supporting guidance:**
 
-Everyone involved in implementing of your organization's Azure technology strategy should understand the terms and definitions from Azure's foundational concepts.
+Everyone involved in implementing your organization's Azure technology strategy should understand the terms and definitions of Azure's foundational concepts.
 
 ## Step 3: Review the portfolio
 
-All cloud hosting and environment decisions require you to first with understand of the portfolio of workloads. Microsoft's Cloud Adoption Framework includes tools to help you understand and evaluate the portfolio.
+All cloud hosting and environment decisions require you to understand the portfolio of workloads. Microsoft's Cloud Adoption Framework includes tools to help you understand and evaluate the portfolio.
 
 **Deliverables:**
 
@@ -49,7 +50,7 @@ All cloud hosting and environment decisions require you to first with understand
 
 **Guidance to support deliverable completion:**
 
-- [Fundamental concepts](../ready/considerations/fundamental-concepts.md) help you understand key Azure topics before embarking on your cloud adoption journey.
+- [Fundamental concepts](../ready/considerations/fundamental-concepts.md) help you understand critical Azure topics before embarking on your cloud adoption journey.
 - The [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) and business alignment approach help you understand the workloads and assets that transition to your cloud operations team.
 - The [cloud adoption plan](../plan/plan-intro.md) provides a backlog of workloads and assets slated for cloud adoption.
 - The [Digital estate analysis](../digital-estate/approach.md) approach helps you document existing workloads and assets slated for cloud adoption. In Azure, the digital estate is best represented in the [Azure Migrate](/azure/migrate/migrate-support-matrix) tool.
@@ -76,11 +77,11 @@ Some organizations can use a single workload and its supporting assets to host t
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Your cloud governance team is accountable for defining, enforcing, and automating the portfolio hierarchy to shape corporate policy in the cloud. | <li> Everyone involved in your technical strategy for cloud adoption should be familiar with the portfolio hierarchy and the levels of the hierarchy in use today. |
+| <li> Your cloud governance team is accountable for defining, enforcing, and automating the portfolio hierarchy to shape corporate policy in the cloud. | <li> Everyone involved in your technology strategy for cloud adoption should be familiar with the portfolio hierarchy and the hierarchy levels in use today. |
 
-## Step 5: Establish naming tagging standards across the portfolio
+## Step 5: Establish naming and tagging standards across the portfolio
 
-All existing workloads and assets should be properly named and tagged in accordance with specific naming and tagging standards. Document these standards and make them available as a reference for all team members. You should enforce the standards automatically whenever possible to ensure minimum tagging requirements.
+All existing workloads and assets should be suitably named and tagged following specific naming and tagging standards. Document these standards and make them available as a reference for all team members. You should enforce the standards automatically whenever possible to ensure minimum tagging requirements.
 
 **Deliverables:**
 
@@ -97,11 +98,11 @@ All existing workloads and assets should be properly named and tagged in accorda
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Your cloud governance team is accountable for defining, enforcing, and automating your naming and tagging standards to ensure consistency across the portfolio. | <li> Everyone involved in your technical strategy for cloud adoption should be familiar with your naming and tagging standards before cloud deployment. |
+| <li> Your cloud governance team is accountable for defining, enforcing, and automating your naming and tagging standards to ensure consistency across the portfolio. | <li> Everyone involved in your technology strategy for cloud adoption should be familiar with your naming and tagging standards before cloud deployment. |
 
 ## Step 6: Create a resource organization design to implement the portfolio hierarchy
 
-To ensure consistent alignment with the portfolio hierarchy decisions, you need to create a resource organization design. This design aligns organizational tools from your cloud provider with the portfolio hierarchy that supports your cloud adoption plan. It also helps guide your implementation by clarifying which assets you can deploy into specific boundaries within a cloud environment.
+You must create a resource organization design to ensure consistent alignment with the portfolio hierarchy decisions. This design aligns organizational tools from your cloud provider with the portfolio hierarchy that supports your cloud adoption plan. It also helps guide your implementation by clarifying which assets you can deploy into specific boundaries within a cloud environment.
 
 **Deliverables:**
 
@@ -123,7 +124,7 @@ Build a subscription strategy:
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Your cloud governance team is accountable for defining, implementing, and automating your resource organization design across the portfolio. | <li> Everyone involved in your technical strategy for cloud adoption should be familiar with your resource organization design before cloud deployment. |
+| <li> Your cloud governance team is accountable for defining, implementing, and automating your resource organization design across the portfolio. | <li> Everyone involved in your technology strategy for cloud adoption should be familiar with your resource organization design before cloud deployment. |
 
 ## Step 7: Map capabilities, teams, and RACI to fundamental concepts
 
@@ -135,7 +136,7 @@ Portfolio hierarchy complexity informs organizational structures and methodologi
 
 **Guidance to support deliverable completion:**
 
-- Use the previous steps as a guide for evaluating the [portfolio hierarchy accountability guidance](../resources/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities, if any, might need to be delivered by dedicated organizations or virtual teams.
+- Use the previous steps to evaluate the [portfolio hierarchy accountability guidance](../resources/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities, if any, might need to be delivered by dedicated organizations or virtual teams.
 - Apply the portfolio hierarchy accountability guidance to the RACI (responsible, accountable, consulted, and informed) diagram using [Get started: Align your organization](./org-alignment.md).
 
 <br>

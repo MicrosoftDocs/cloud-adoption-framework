@@ -1,8 +1,8 @@
 ---
 title: Management and monitoring for Azure VMware Solution
 description: Learn how to improve management and monitoring of Azure VMware Solution with this enterprise-scale scenario.
-author: matdavi
-ms.author: janet
+author: Prasad3017
+ms.author: martinek
 ms.date: 08/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -14,7 +14,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 Proper management and monitoring are critical to the success of [Azure VMware Solution](https://azure.microsoft.com/services/azure-vmware/). This enterprise-scale scenario outlines important recommendations for the design of your environment. More guidance is available in the Azure enterprise-scale [landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
 
-As you plan your management and monitoring environment for Azure VMware Solution, it's critical to understand the [shared responsibility matrix](/azure/cloud-adoption-framework/scenarios/azure-vmware/manage). The matrix shows which components Microsoft is responsible for, and which ones that you're responsible for managing and monitoring. Microsoft takes care of the ongoing maintenance, security, and management of cloud resources, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
+As you plan your management and monitoring environment for Azure VMware Solution, it's critical to understand the [shared responsibility matrix](./manage.md). The matrix shows which components Microsoft is responsible for, and which ones that you're responsible for managing and monitoring. Microsoft takes care of the ongoing maintenance, security, and management of cloud resources, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
 
 > [!IMPORTANT]
 > To support Azure VMware Solution, it's important to follow the recommendations below to configure service health alerts.
@@ -69,6 +69,8 @@ Review the following *recommendations* for platform management and monitoring of
 - In a hybrid environment, you can use [Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to monitor communication between on-premises and Azure resources.
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
   - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connection over ExpressRoute Direct and also over ExpressRoute Global Reach.
+- Send your logs to Log Analytics. 
+For more information, see [Send Logs to Log Analytics](/azure/azure-vmware/send-logs-to-log-analytics).
 
 ### VMware tooling recommendations
 
@@ -93,11 +95,17 @@ Review the following recommendations for guest management and for monitoring of 
     | [Azure Update Management](/azure/automation/update-management/overview)             | Manages operating system updates for Windows and Linux machines on-premises and in cloud environments.                                 |
     | [Azure Monitor](/azure/azure-monitor/overview)                                      | Comprehensive monitoring solution for collecting, analyzing, and acting upon telemetry from cloud and on-premises environments.                                                                         |
 
+## Storage considerations
+
+To help with storage-heavy workloads that need more storage capacity than vSAN provides based on the CPU and memory requirements, consider using [Azure NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
+
+Azure VMware Solution supports attaching Network File System (NFS) datastores as a persistent storage option. You can create NFS datastores with Azure NetApp Files volumes and attach them to clusters of your choice. By using NFS datastores backed by Azure NetApp Files, you can extend your storage instead of scaling the clusters. You can also use Azure NetApp Files volumes to replicate data from on-premises or primary VMware environments to a secondary site.
+
+For more information read [Azure NetApp Files datastores for Azure VMware Solution](/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts).
+
 ## Other considerations
 
 - If you use a network virtual appliance, consider monitoring trace logs between on-premises and Azure resources. Ensure monitoring is in place between Azure and Azure VMware Solution.
-
-- To help with storage concerns on the vSAN, consider using [Azure disk pools (preview)](/azure/virtual-machines/disks-pools-deploy) or [Azure NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
 
 ## Next steps
 

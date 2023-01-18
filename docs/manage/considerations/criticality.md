@@ -1,8 +1,8 @@
 ---
 title: Business criticality in cloud management
 description: Use the Cloud Adoption Framework for Azure to understand workload criticality and prevent adverse impact on revenue and profitability.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
