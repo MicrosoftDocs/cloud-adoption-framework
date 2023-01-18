@@ -101,5 +101,9 @@ This can be avoided if you utilize a Single Azure AD Tenant as the home for all 
 
 > [!div class="nextstepaction"]
 > [Handling ALZ across Multiple AAD Tenants - Automation Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-automation.md)
+
+> [!div class="nextstepaction"]
 > [Handling ALZ across Multiple AAD Tenants - Canary Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-canary.md)
+
+> [!div class="nextstepaction"]
 > [Handling ALZ across Multiple AAD Tenants - Azure Lighthouse usage in ALZ Multi-Tenant](multiple-aad-tenants-in-alz-handling-automation.md)

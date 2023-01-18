@@ -51,5 +51,9 @@ This architecture also allows application landing zone owners to be granted acce
 
 > [!div class="nextstepaction"]
 > [Handling ALZ across Multiple AAD Tenants - Automation Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-automation.md)
-> [Handling ALZ across Multiple AAD Tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md.md)
+
+> [!div class="nextstepaction"]
+> [Handling ALZ across Multiple AAD Tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
+
+> [!div class="nextstepaction"]
 > [Handling ALZ across Multiple AAD Tenants - Canary Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-canary.md)
