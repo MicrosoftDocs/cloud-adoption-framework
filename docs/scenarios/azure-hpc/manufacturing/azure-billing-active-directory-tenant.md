@@ -14,11 +14,11 @@ ms.date: 11/11/2022
 
 Azure landing zones for HPC don't have specific considerations or recommendations that affect billing offer decisions, enterprise enrollment, or Azure Active Directory tenant decisions.
 
-But it might be important to understand decisions previously made by the cloud platform team and the existing [enterprise enrollment or Azure Active Directory tenant decisions](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant).
+But it might be important to understand decisions previously made by the cloud platform team and the existing [enterprise enrollment or Azure Active Directory tenant decisions](../../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
 
 ## Review identity management and resource organization considerations
 
-Review the [identity and access management considerations](/azure/cloud-adoption-framework/scenarios/sap/eslz-identity-and-access-management) to understand how to apply the Active Directory tenant in the design of authentication and authorization solutions. You might also want to evaluate the [resource organization considerations](/azure/cloud-adoption-framework/scenarios/sap/eslz-resource-organization) to understand how to organize enrollment into management groups, subscriptions, and resource groups.
+Review the [identity and access management considerations](../../sap/eslz-identity-and-access-management.md) to understand how to apply the Active Directory tenant in the design of authentication and authorization solutions. You might also want to evaluate the [resource organization considerations](../../sap/eslz-resource-organization.md) to understand how to organize enrollment into management groups, subscriptions, and resource groups.
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: Governance, security, and compliance in Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: martinek
-ms.date: 08/10/2022
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -123,7 +123,7 @@ To apply a policy to a resource group:
 To learn more, see:
 
 - [Azure Policy](/azure/governance/policy/)
-- [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
+- [Cloud Adoption Framework: Define corporate policy ](../../govern/policy-compliance/policy-definition.md)
 
 ::: zone-end
 
