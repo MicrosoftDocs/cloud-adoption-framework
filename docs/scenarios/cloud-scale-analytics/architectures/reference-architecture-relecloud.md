@@ -62,7 +62,7 @@ After the billing team creates their landing zone, the operations team creates a
 
 ### Billing data landing zone
 
-The billing group was using an on-premises system to power its analytics, but as the volume of data grew and the company relied more on their work, the system couldn't keep pace. The group modernizes their platform by moving to the cloud.
+The billing group was using an on-premises system to power their analytics, but as the data volume grew and the company relied more on their work, the system couldn't keep pace. The group modernizes their platform by moving to the cloud.
 
 The billing group doesn't share a landing zone with the operations group, but gets their own landing zone where they have the freedom to build the platform that best suits their needs. The new landing zone is connected to the data management landing zone and all other data landing zones with virtual network peering. This mechanism enables data to be shared securely through the Azure internal network.
 
