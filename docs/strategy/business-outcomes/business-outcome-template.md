@@ -1,8 +1,8 @@
 ---
 title: How to use the business outcome template
 description: Learn to use the template to capture business outcomes and develop strategies for the customer transformation journey.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 12/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Innovate with {{Token-LongName}}
 
-The innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses {{Token-Name}} to {{why would you innovate with this scenario}}. For more information, see [Innovate methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/innovate).
+The innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses {{Token-Name}} to {{why would you innovate with this scenario}}. For more information, see [Innovate methodology](/azure/cloud-adoption-framework/innovate).
 
 ## Customer adoption of {{Token-Name}}
 

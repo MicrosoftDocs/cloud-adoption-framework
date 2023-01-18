@@ -20,7 +20,7 @@ If you need help with choosing the right landing zone to deploy for your organiz
 
 ## Hybrid and multicloud in landing zones
 
-[Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) are the output of a multisubscription Azure environment that accounts for:
+[Azure landing zones](../../ready/landing-zone/index.md) are the output of a multisubscription Azure environment that accounts for:
 
 - Scale
 - Security governance
@@ -94,9 +94,9 @@ Azure Arc extends Azure Resource Manager (ARM) APIs so you can represent any wor
 
 ## Configure your initial Azure environment
 
-For each cloud mix, you'll need an Azure environment to support, govern, and manage your cloud resources. The Cloud Adoption Framework's Ready methodology provides a few steps to help you prepare your environment:
+For each cloud mix, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework provides a few steps to help you prepare your environment:
 
-- Review [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
+- Review [What is an Azure landing zone?](../../ready/landing-zone/index.md)
 - Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) and properly evaluate your technical requirements.
 - Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template for your configuration.
 - Learn how to [Transition existing Azure environments to the Azure landing zone conceptual architecture](../../ready/enterprise-scale/transition.md).
@@ -111,7 +111,7 @@ Azure Arc resources can be part of any application. Examples include:
 
 Application landing zone subscriptions can also contain both Azure Arc resources and regular Azure resources.
 
-Since Azure Arc resources are located outside of Azure, you can consider them considered a *metadata resource* in the way they're represented in Azure. Treat Azure Arc resources as any other Azure resource that can be part of your landing zone. It doesn't matter if it's a platform or application, and it follows the [subscription democratization and application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
+Since Azure Arc resources are located outside of Azure, you can consider them considered a *metadata resource* in the way they're represented in Azure. Treat Azure Arc resources as any other Azure resource that can be part of your landing zone. It doesn't matter if it's a platform or application, and it follows the [subscription democratization and application-centric and archetype-neutral](../../ready/landing-zone/design-principles.md) design principles.
 
 [![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
 
@@ -132,7 +132,7 @@ Most customers still have on-premises datacenters present in their environments.
 Customers can treat their on-premises datacenters as normal landing zones and place them into new or existing landing zones as they see fit. Some common approaches include:
 
 - Moving project resources into dedicated landing zone subscriptions for on-premises datacenter resources.
-  - In larger environments with multiple datacenters across the globe, customers might have one landing zone per country. These landing zones also contain the resources from that country to provide a logical separation of the on-premises datacenters into Azure.
+  - In larger environments with multiple datacenters across the globe, customers might have one landing zone per geopolitical region. These landing zones also contain the resources from that region to provide a logical separation of the on-premises datacenters into Azure.
   - This approach can also assist with the security, governance, and compliance requirements for different on-premises datacenters.
 - Moving project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
 

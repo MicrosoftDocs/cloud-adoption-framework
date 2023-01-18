@@ -20,7 +20,7 @@ jobs:
         exempt-pr-labels: keep-open
         stale-pr-message: >
           This pull request has been inactive for 14 days.
-          If you are finished with your changes, don't forget to sign off. For instructions, see the [contributor guide](https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-pull-request-automation?branch=main).
+          If you are finished with your changes, don't forget to sign off. For instructions, see the [contributor guide](https://review.docs.microsoft.com/help/contribute/contribute-how-to-write-pull-request-automation?branch=main).
           
           Cloud Adoption Framework team
           

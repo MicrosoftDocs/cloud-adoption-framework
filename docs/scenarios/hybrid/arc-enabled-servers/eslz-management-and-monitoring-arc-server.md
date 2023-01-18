@@ -14,13 +14,13 @@ ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 
 Azure Arc-enabled servers allow you to manage your Windows and Linux servers and virtual machines that are hosted outside of Azure, on your corporate network, or on a third-party cloud provider.
 
-This article will help you operate Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the [platform level](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring). You will be presented with key recommendations for your operations team, to maintain Azure Arc-enabled servers.
+This article will help you operate Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the [platform level](../../../ready/landing-zone/design-area/management.md). You will be presented with key recommendations for your operations team, to maintain Azure Arc-enabled servers.
 
 ## Architecture
 
 The following diagram shows conceptual reference architecture, that demonstrates how the Azure [connected machine agent](/azure/azure-arc/servers/agent-overview) communicates with the different management and monitoring capabilities in Azure.
 
-[ ![Diagram that shows Azure connected machine agent architecture.](./media/arc-enabled-servers-connected-agent.png)](./media/arc-enabled-servers-connected-agent.png#lightbox)
+[![Diagram that shows Azure connected machine agent architecture.](./media/arc-enabled-servers-connected-agent.png)](./media/arc-enabled-servers-connected-agent.png#lightbox)
 
 ## Design considerations
 
@@ -42,7 +42,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 ### Azure Monitor agents deployment
 
-- The Azure Monitor agents should be automatically deployed to Azure Arc-enabled Windows and Linux servers, through [Azure Policy](/azure/azure-monitor/deploy-scale), as part of the [enterprise-scale landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
+- The Azure Monitor agents should be automatically deployed to Azure Arc-enabled Windows and Linux servers, through [Azure Policy](/azure/azure-monitor/deploy-scale), as part of the [enterprise-scale landing zone](../../../ready/landing-zone/design-area/management.md).
 - Logs should be stored centrally on the Log Analytics workspace, a dedicated platform, and control log access with Azure [role-based access control (RBAC)](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview). If there's a requirement for a separate workspace due to management, data sovereignty, or compliance requirements, using a separate workspace can affect the ability to have a single pane of glass and event correlation, on your Azure Arc-enabled servers across the environment.
 
 ### Azure Monitor configuration
@@ -67,9 +67,9 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey,  review the following:
+For more guidance for your hybrid cloud adoption journey,  review the following resources:
 
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
-- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
-- To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

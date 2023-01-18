@@ -2,7 +2,7 @@
 title: Using cloud economics to develop a cloud adoption strategy
 description: Use the Cloud Adoption Framework for Azure to understand how the cloud can help advance your business strategy.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -32,4 +32,4 @@ The following steps help you document your business strategy efficiently. This a
 
 Take the [Cloud Adoption Strategy Evaluator](/assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab) assessment that will help you build a business case to enable your cloud journey.
 
-Use the results from the assessment—and continue to build your cloud adoption strategy by using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the output of each of the  four steps above, documenting your business strategy.
+Use the results from the assessment—and continue to build your cloud adoption strategy by using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the output of each of the four steps above, documenting your business strategy.

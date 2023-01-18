@@ -12,24 +12,22 @@ ms.custom: think-tank
 
 # Plan for {{Token-LongName}}
 
-[Cloud Adoption Framework's Plan methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/plan) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include {{Token-Name}} into the overall cloud adoption plan.
+The [Plan methodology](/azure/cloud-adoption-framework/plan) of the Cloud Adoption Framework helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include {{Token-Name}} into the overall cloud adoption plan.
 
-Application of the Plan methodology focuses on the [five Rs of rationalizing your digital estate](https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
+Application of the Plan methodology focuses on the [five Rs of rationalizing your digital estate](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
 
 ## {{Token-Name}} estate
 
 Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient?
-https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/inventory
+See the [digital estate inventory](/azure/cloud-adoption-framework/digital-estate/inventory).
 
 ## {{Token-Name}} adoption plan
 
-Do you have a specific devops backlog the customer should use? Or is the standard adoption plan template still sufficient?
-https://docs.microsoft.com/azure/cloud-adoption-framework/plan/template
+Do you have a specific devops backlog the customer should use? Or is the standard adoption plan template still sufficient? Review the [Plan template](/azure/cloud-adoption-framework/plan/template).
 
 ## {{Token-Name}} readiness plan
 
 Are there specific skills or extra training this team should take before getting started?
-
 
 ## Next steps
 

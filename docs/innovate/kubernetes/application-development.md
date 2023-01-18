@@ -2,7 +2,7 @@
 title: Application development and deployment
 description: Learn about site reliability engineering (SRE) using Kubernetes in the Cloud Adoption Framework for application development and deployment.
 author: sabbour
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -49,7 +49,7 @@ As you get started, use the checklist and application development resources in t
   For more information, see:
   - [Project design and layout for successful Kubernetes applications (webinar)](https://info.microsoft.com/ww-OnDemandRegistration-successful-kubernetes-applications-webinar.html)
   - [How Kubernetes deployments work (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=mNK14yXIZF4&index=3)
-  - [Develop and deploy applications on Kubernetes (Microsoft Learn)](/learn/paths/develop-deploy-applications-kubernetes/)
+  - [Develop and deploy applications on Kubernetes](/training/paths/develop-deploy-applications-kubernetes/)
 
 - **Manage application storage.** Understand the performance needs and access methods for pods so that you can provide the appropriate storage options. Also, plan for ways to back up and test the restore process for attached storage.
 
@@ -99,7 +99,7 @@ As you prepare the application for production, use the following checklist. You 
 - **Deploy applications using an automated pipeline and DevOps.** The full automation of all steps between code commit to production deployment allows teams to focus on building code and removes the overhead and potential human error in manual steps. Deploying new code is quicker and less risky, helping teams become more agile, more productive, and more confident about their running code.
 
   To learn more, see:
-  - [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/)
+  - [Evolve your DevOps practices](/training/paths/evolve-your-devops-practices/)
   - [Setting up a Kubernetes build pipeline (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=5irsAdKoEBU&index=6)
   - [Deployment Center for Azure Kubernetes Service](/azure/aks/deployment-center-launcher)
   - [GitHub Actions for deploying to Azure Kubernetes Service](/azure/aks/kubernetes-action)
@@ -131,5 +131,5 @@ Now that the application is in production, how can you optimize your workflow an
 - **Implement site reliability engineering (SRE) practices.** Site reliability engineering (SRE) is a proven approach to maintain crucial system and application reliability while iterating at the speed demanded by the marketplace.
 
   To learn more, see:
-  - [Introduction to site reliability engineering (SRE)](/learn/modules/intro-to-site-reliability-engineering/)
+  - [Introduction to site reliability engineering (SRE)](/training/modules/intro-to-site-reliability-engineering/)
   - [DevOps at Microsoft: Game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre/)

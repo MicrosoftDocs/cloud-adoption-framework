@@ -1,8 +1,8 @@
 ---
 title: Organize and manage multiple Azure subscriptions
 description: Use the Cloud Adoption Framework for Azure to learn about creating a management group hierarchy to simplify managing your subscriptions and resources.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 10/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -38,9 +38,6 @@ Azure provides four levels of management scope:
 
 If you apply any access or policy at one level in the hierarchy, it propagates down to the lower levels. A resource owner or subscription owner can't alter an inherited policy. This limitation helps improve governance.
 
-> [!NOTE]
-> Azure doesn't support tag inheritance yet, but it'll be available soon.
-
 This inheritance model lets you arrange the subscriptions in your hierarchy, so each subscription follows appropriate policies and security controls.
 
 :::image type="content" source="../azure-setup-guide/media/organize-resources/scope-levels.png" alt-text="Diagram that shows the four scope levels for organizing your Azure resources.":::\
@@ -74,6 +71,7 @@ Review the following resources to learn more about organizing and managing your 
 - [Organize your resources with Azure management groups](/azure/governance/management-groups/)
 - [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin)
 - [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
+- [Create Azure policy definitions to enforce rules and effects for your resources](/azure/governance/policy/)
 
 ## Next steps
 

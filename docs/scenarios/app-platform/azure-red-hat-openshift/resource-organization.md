@@ -16,7 +16,7 @@ Resource organization is mostly managed by the platform foundation. Here are som
 
 Subscription and resource group design are key considerations in generic Azure landing zone recommendations. They play a fundamental role in how you manage your Azure Red Hat OpenShift resource organization. Subscriptions are the management boundary for resource governance and isolation. As described in [Management group and subscription organization](../../../ready/landing-zone/design-area/resource-org.md), use subscriptions and management groups to assign policies to the resources within the boundaries.
 
-For example, if you have public and private applications, separate them into different subscriptions named `Corp` and `Online`. Assign different policies to each subscription. The `Corp` subscription has policies that prevent users from creating public IP addresses. The `Online` subscription allows internet connectivity. For more information about which policies are applied at the different levels of an Azure landing zone design and in Azure Red Hat OpenShift, see [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+For example, if you have public and private applications, separate them into different subscriptions, and place them into the appropriate Management Groups named `Corp` and `Online`, or other Management Groups beneath Landing Zones. The subscriptions that live within the `Corp` Management Group have policies that prevent the creation of public IP addresses. The subscriptions that live beneath the `Online` Management Groups allow internet connectivity and public access directly. For more information about which policies are applied at the different levels of an Azure landing zone design, including ARO-specific policies, see [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
 
 ## Design considerations
 
@@ -32,9 +32,12 @@ For example, if you have public and private applications, separate them into dif
 
   - **Workload team-operated, single tenant:** A single cluster host that supports a single workload likely requires a dedicated landing zone for workload team segmentation and control.
 
-  - **Centrally operated, multitenant hosts:** When hosts are centrally managed, operational efficiency comes from consolidating multiple hosts and multiple workloads in shared landing zone environments. Consolidation reduces the number of landing zones and hosts that are dedicated to supporting a single cluster or workload.
+  - **Technology platforms, multitenant hosts:** When hosts are centrally managed, operational efficiency comes from consolidating multiple hosts and multiple workloads in shared landing zone subscriptions. Consolidation reduces the number of landing zones and hosts that are dedicated to supporting a single cluster or workload.
 
-    You might need to add landing zones if segmentation is required to separate workloads based on region, business unit, environment, criticality, or other external constraints.
+    You might need to add landing zone subscriptions if segmentation is required to separate workloads based on region, business unit, environment, criticality, or other external constraints.
+
+      > [!TIP]
+      > Review the [Tailor the Azure landing zone architecture to meet requirements](../../../ready/landing-zone/tailoring-alz.md) before creating any additional Management Groups.
 
   - **Centrally operated, single tenant:** For hostile or regulated workloads that are still centrally operated, it's common to have dedicated hosts for the workloads. You might still experience operational efficiency by consolidating supporting landing zones.
 

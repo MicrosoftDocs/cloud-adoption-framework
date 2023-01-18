@@ -1,9 +1,9 @@
 ---
 title: Security Baseline discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Security Baseline discipline in each phase of cloud adoption.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 09/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -64,7 +64,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 - Determine network boundary policies for your [Software Defined Networking (SDN)](../../decision-guides/software-defined-network/index.md) design to ensure secure virtualized networking capabilities.
 - Evaluate your organization's [least-privilege access](/azure/active-directory/roles/delegate-by-task) policies, and use task-based roles to provide access to specific resources.
 - Apply security and monitoring mechanisms to all cloud services and virtual machines.
-- Automate [security policies](../../decision-guides/policy-enforcement/index.md) where possible.
+- Automate [security policies](../policy-compliance/processes.md#automation-of-monitoring-and-compliance) where possible.
 - Review your Security Baseline policy and determine whether you need to modify your plans according to best practices guidance such as those outlined in the [security development lifecycle](https://www.microsoft.com/sdl).
 
 ## Adopt and migrate

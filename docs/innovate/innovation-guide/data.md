@@ -1,8 +1,8 @@
 ---
 title: Data democratization tools
 description: Learn about data democratization with Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -50,7 +50,6 @@ To create a catalog for your organization:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DataCatalog%2FCatalogs]" submitText="Go to Azure Data Catalog" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -88,7 +87,6 @@ To create a data share:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DataShare%2FAccounts]" submitText="Go to Azure Data Shares" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -125,7 +123,6 @@ To create an Azure Time Series Insights environment:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.TimeSeriesInsights%2FEnvironments]" submitText="Go to Azure Time Series Insights" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

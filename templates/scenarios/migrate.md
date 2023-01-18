@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Migrate {{Token-LongName}}
 
-Establish a driving statement to shape migration of this technology platform. Best practice encourages customers to create a migration statement, using the [Cloud Adoption Framework's migrate methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate). Migrate and modernize existing workloads.
+Establish a driving statement to shape migration of this technology platform. Best practice encourages customers to create a migration statement, using the [Migrate methodology](/azure/cloud-adoption-framework/migrate) of the Cloud Adoption Framework. Migrate and modernize existing workloads.
 
 ## {{Token-Name}} process details
 

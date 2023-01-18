@@ -2,7 +2,7 @@
 title: Networking for Azure Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Virtual Desktop workloads.
 author: danycontre
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Network topology and connectivity for Azure Virtual Desktop
 
-The design and implementation of Azure Virtual Desktop Azure networking capabilities is critical for your Azure Virtual Desktop landing zone. This article builds on several Cloud Adoption Framework [enterprise-scale landing zone's](../../ready/enterprise-scale/network-topology-and-connectivity.md) architectural principles and recommendation to manage network topology and connectivity at scale.
+The design and implementation of Azure Virtual Desktop Azure networking capabilities is critical for your Azure Virtual Desktop landing zone. This article builds on several Cloud Adoption Framework [enterprise-scale landing zone's](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) architectural principles and recommendation to manage network topology and connectivity at scale.
 
 The design foundations include:
 
@@ -48,7 +48,7 @@ The following key requirements and considerations affect your Azure Virtual Desk
 - Internet ingress and egress requirements.
 - NVA use in the current architecture.
 - Azure Virtual Desktop connectivity to a standard hub virtual network or Virtual WAN hub.
-- Session host connection model (native and Remote Desktop Protocol (RDP) Shortpath).
+- Session host connection model (native and Remote Desktop Protocol (RDP) Short path).
 - Traffic inspection requirements for:
   - Internet egress from Azure Virtual Desktop.
   - Internet ingress to Azure Virtual Desktop.

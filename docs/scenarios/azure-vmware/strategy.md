@@ -12,7 +12,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Strategy for Azure VMware Solution adoption
 
-Cloud adoption best practices encourage customers to create a single, centralized cloud adoption strategy using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the progress of your cloud adoption strategy. This article outlines technical considerations of Azure VMware Solution that might affect your strategy.
+Cloud adoption best practices encourage customers to create a single, centralized cloud adoption strategy using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the progress of your cloud adoption strategy. This article outlines technical considerations of Azure VMware Solution that might affect your strategy.
 
 ## Azure VMware Solution motivations
 

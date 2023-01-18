@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Govern {{Token-LongName}}
 
-The [Cloud Adoption Framework provides a methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/govern) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to govern {{Token-Name}}.
+The [Cloud Adoption Framework provides a methodology](/azure/cloud-adoption-framework/govern) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to govern {{Token-Name}}.
 
 ## {{Token-Name}} policies
 

@@ -74,7 +74,7 @@ items:
         href: app-services/governance.md
       - name: Platform automation and DevOps
         href: app-services/platform-automation-and-devops.md
-    - name: Azure Red Hat OpenShift
+    - name: Azure Red Hat OpenShift (ARO)
       items:
       - name: Azure Red Hat OpenShift landing zone accelerator
         href: azure-red-hat-openshift\landing-zone-accelerator.md
@@ -437,10 +437,10 @@ items:
   - name: Build skills on Learn
     items:
     - name: Introduction to Kubernetes on Azure
-      href: /learn/paths/intro-to-kubernetes-on-azure/
+      href: /training/paths/intro-to-kubernetes-on-azure/
     - name: Administer containers in Azure
-      href: /learn/paths/administer-containers-in-azure/
+      href: /training/paths/administer-containers-in-azure/
     - name: Develop and deploy applications on Kubernetes
-      href: /learn/paths/develop-deploy-applications-kubernetes/
+      href: /training/paths/develop-deploy-applications-kubernetes/
     - name: Architect modern applications in Azure
-      href: /learn/paths/architect-modern-apps/
+      href: /training/paths/architect-modern-apps/

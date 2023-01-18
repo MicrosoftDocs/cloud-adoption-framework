@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Manage {{Token-LongName}}
 
-The [Manage methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/manage) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle.
+The [Manage methodology](/azure/cloud-adoption-framework/manage) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle.
 
 Describe how your scenario changes operations management
 

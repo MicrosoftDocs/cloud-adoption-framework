@@ -39,7 +39,7 @@ The following diagram illustrates overall integration for extensions for Azure A
 ## Design recommendations
 
 - **Extension installation**
-  - Standardize the way extensions are installed, whether through the Portal, Azure Policy, CLI, ARM templates, or another mechanism. Verify that extensions have been properly installed after every installation. 
+  - Standardize the way extensions are installed, whether through the Portal, Azure Policy, CLI, ARM templates, or another mechanism. Verify that extensions have been properly installed after every installation.
 
 - **Update extensions**
   - Extensions must be periodically updated. Use the `--auto-upgrade-minor-version` flag to automatically upgrade minor versions of extensions, as described in [Usage of Cluster Extensions](/azure/azure-arc/kubernetes/extensions#usage-of-cluster-extensions). Refer to each extension's documentation to learn which settings can be configured during creation and update.
@@ -50,10 +50,10 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Learn how to [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Learn how to [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli).
 - Review [Cluster extensions](/azure/azure-arc/kubernetes/conceptual-extensions) to learn about Azure Arc-enabled cluster extension architecture.
 - Learn how to [Deploy and manage Azure Arc-enabled Kubernetes cluster extensions](/azure/azure-arc/kubernetes/extensions).
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
-- Learn about Azure Arc in the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

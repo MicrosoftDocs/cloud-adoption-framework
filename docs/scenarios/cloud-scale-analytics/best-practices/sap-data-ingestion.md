@@ -20,7 +20,7 @@ Depending on your organization's data volumes and latency requirements, one of t
 
 [Data Factory](/azure/data-factory/connector-overview) provides several connectors to SAP systems and various databases (including SAP HANA). These can be used to build simple, code-free data transformations in minutes. Delta replication isn't available out of the box but can be achieved with some programming. Azure Data Factory is only supported for batch processing or microbatches at a minimum of 15-minute intervals.
 
-Described as the **PULL** option, this Data Factory option supports single sign-on and Secure Network Communication authentication into SAP. It also provides the option to use code-free data transformations to build resilient data flows that can integrate with Azure Databricks for flexible data preparation and enrichment coding. It's limited to batch processing and requires coding logic to support delta extracts.
+Described as the **PULL** option, this Data Factory option supports single sign-on and Secure Network Communication authentication into SAP. It also provides the option to use code-free data transformations to build resilient data flows that can integrate with Azure Databricks for flexible data preparation and enrichment coding. It's limited to batch processing and requires coding logic to support delta extracts. You may also want to evaluate the new [SAP ODP connector](/azure/data-factory/sap-change-data-capture-introduction-architecture), which leverages the SAP Operational Data Provisioning (ODP) framework. This new connector can connect to all the SAP systems that support ODP to perform full and incremental data loads.
 
 ## SAP Landscape Transformation replication server and business objects data services
 

@@ -82,7 +82,7 @@ Because of these shifts, your cloud adoption program should focus heavily on bus
 
 ### Security disciplines
 
-This transformation will affect each security discipline differently. While each of these disciples is extremely important and requires investment, these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud:
+This transformation will affect each security discipline differently. While each of these disciplines is extremely important and requires investment, these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud:
 
 - **Access control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
 - **Security operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continuously reduce risk of breach
