@@ -14,9 +14,9 @@ ms.custom: think-tank, virtual-network
 
 Perimeter networks, sometimes called demilitarized zones (DMZs), help provide secure connectivity between cloud networks, on-premises or physical datacenter networks, and the internet. 
 
-In effective perimeter networks, incoming packets flow through security appliances that are hosted in secure subnets, before the packets can reach back-end servers. Security appliances include firewalls, network virtual appliances (NVAs), and other intrusion detection and prevention systems.
+In effective perimeter networks, incoming packets flow through security appliances that are hosted in secure subnets, before the packets can reach back-end servers. Security appliances include firewalls, network virtual appliances (NVAs), and other intrusion detection and prevention systems. Internet-bound packets from workloads must also flow through security appliances in the perimeter network before they can leave the network.
 
-Internet-bound packets from workloads must also flow through security appliances in the perimeter network before they can leave the network. The perimeter network can provide policy enforcement, inspection, and auditing.
+Usually, central IT teams and security teams are responsible for defining operational requirements for perimeter networks. Perimeter networks can provide policy enforcement, inspection, and auditing.
 
 Perimeter networks can use the following Azure features and services:
 
@@ -28,12 +28,9 @@ Perimeter networks can use the following Azure features and services:
 - [Azure Load Balancer][alb]
 - [Public IP addresses][public-ip]
 
-Usually, central IT teams and security teams are responsible for defining operational requirements for perimeter networks. The following Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
-
-- [Implement a perimeter network between Azure and your on-premises datacenter](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
-- [Implement a perimeter network between Azure and the internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
-
 For more information about perimeter networks, see [The virtual datacenter: A network perspective][perimeter-network].
+
+For example templates you can use to implement your own perimeter networks, see the reference architecture [Implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
 
 ## Perimeter network topology
 
@@ -53,11 +50,11 @@ In a hub and spoke network topology, you must guarantee that traffic generated b
 
 User-defined routes can guarantee that traffic passes through specified custom VMs, NVAs, and load balancers. The route sets the front-end IP address of the internal load balancer as the next hop. The internal load balancer distributes the internal traffic to the virtual appliances in the load balancer back-end pool.
 
-You can use user-defined routes to deploy firewalls, intrusion detection systems, and other virtual appliances. Customers can route network traffic through these security appliances for security boundary policy enforcement, auditing, and inspection. 
+You can use user-defined routes to direct traffic through firewalls, intrusion detection systems, and other virtual appliances. Customers can route network traffic through these security appliances for security boundary policy enforcement, auditing, and inspection. 
 
 ## Azure Firewall
 
-[Azure Firewall][azure-firewall] is a managed cloud-based firewall service that helps protect your virtual network resources. Azure Firewall is a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability. You can use Azure Firewall to centrally create, enforce, and log application and network connectivity policies across subscriptions and virtual networks.
+[Azure Firewall][azure-firewall] is a managed cloud-based firewall service that helps protect your resources in virtual networks. Azure Firewall is a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability. You can use Azure Firewall to centrally create, enforce, and log application and network connectivity policies across subscriptions and virtual networks.
 
 Azure Firewall uses a static public IP address for virtual network resources. External firewalls can use the static public IP to identify traffic that originates from your virtual network. Azure Firewall works with Azure Monitor for logging and analytics.
 
