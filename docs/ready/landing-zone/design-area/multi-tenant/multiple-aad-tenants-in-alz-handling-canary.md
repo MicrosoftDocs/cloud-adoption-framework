@@ -20,7 +20,7 @@ However, if you are a customer that is following a [Deployment Stamps pattern](/
 > This would more commonly be seen in a Managed Service Provider (MSP) environment where the MSP is managing several Azure AD Tenants for different clients that are all similar apart from their naming.
 
 >[!TIP]
-> Customers following Deployment Stamp style pattern might also benefit from following the [Automation Approach 2 – Shared Application Registration (Multi-Tenant) with Multiple Service Principals](multiple-aad-tenants-in-alz-handling-automation.md#approach-2-–-shared-application-registration-multi-tenant-with-multiple-service-principals)
+> Customers following Deployment Stamp style pattern might also benefit from following the [Automation Approach 2 – Shared Application Registration (Multi-Tenant) with Multiple Service Principals](multiple-aad-tenants-in-alz-handling-automation.md#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals)
 
 ## Next steps
 
