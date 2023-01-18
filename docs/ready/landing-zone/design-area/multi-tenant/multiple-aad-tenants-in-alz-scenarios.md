@@ -50,7 +50,7 @@ Furthermore, an additional scenario for this is when organizations require the u
 
 However, for the above scenarios it is not to say that if your organization has a regulatory or country compliance framework to comply with that you require multiple Azure AD Tenants as the default approach. Most organizations in this scenario can comply with the frameworks within a single Azure AD Tenant by utilizing features such as [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Administrative Units.](/azure/active-directory/roles/administrative-units)
 
-When creating multiple Tenants to comply with these types of compliance frameworks it is important to understand that the additional complexity and operational tasks that will be required to maintain multiple Tenants across an organization as well as the potentially increased costs from additional licensing requirements. See the below section [Considerations and Recommendations for Azure Landing Zones in Multi-Tenant Scenarios]() for more information.
+When creating multiple Tenants to comply with these types of compliance frameworks it is important to understand that the additional complexity and operational tasks that will be required to maintain multiple Tenants across an organization as well as the potentially increased costs from additional licensing requirements. See [Considerations and Recommendations for Azure Landing Zones in Multi-Tenant Scenarios](multiple-aad-tenants-in-alz-handling-c-r.md) for more information.
 
 ## Business Unit or Organizational Isolation and Autonomy Requirements
 

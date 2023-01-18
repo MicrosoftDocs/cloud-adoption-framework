@@ -48,8 +48,8 @@ The “corporate” Azure AD tenant is generally the first tenant provisioned in
 
 Creating a new Azure AD tenant requires additional work to be done to provision, manage and secure and govern the identities. Additional work is also required to establish the required policies and procedures. Collaboration is always best in a single Azure AD tenant moving to a Multi-Tenant model creates a boundary which can result in user friction, management overhead, increase the surface area for risk, and complicate product scenarios and limitations. Some examples include:
 
-- Multiple identities for users and administrators for each tenant – If [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) isn’t utilized then the user, administrator has multiple sets of credentials to manage. ([see the below considerations and recommendations]())
-- Azure services limitations in supporting multiple Azure AD tenants – Azure workloads that only support identities homed in the tenant to which it is bound to. (see [section]() for more info)
+- Multiple identities for users and administrators for each tenant – If [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) isn’t utilized then the user, administrator has multiple sets of credentials to manage. ([see the considerations and recommendations](multiple-aad-tenants-in-alz-handling-c-r.md))
+- Azure services limitations in supporting multiple Azure AD tenants – Azure workloads that only support identities homed in the tenant to which it is bound to. (see [the Azure Products & Services AAD Integration section in Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md#azure-products--services-aad-integration) for more info)
 - No centralized configuration or management for Azure AD tenants – Multiple security policies, management policies, configuration, portals, APIs, JML (Joiners, Movers, Leavers) processes.
 
 For these reasons, organizations need to be clear on why they are deviating from the corporate Azure AD tenant model, to ensure the additional overhead and complexity is justified in meeting the requirement(s). There are valid scenarios where our customers feel this is the case and these are documented later in the [article](multiple-aad-tenants-in-alz-scenarios.md).
@@ -60,7 +60,7 @@ The ownership of this role across internal teams/department can provide a challe
 
 The Azure team are responsible for Azure services and rightfully want to ensure the security of the services of which they manage, and this can result in a level of nervousness when individuals outside of that team have roles with the power to potentially access their environments.
 
-Azure AD does provide controls that help mitigate this problem on a technical level (but it should be noted this is also a people and process discussion), see the [recommendations.]()
+Azure AD does provide controls that help mitigate this problem on a technical level (but it should be noted this is also a people and process discussion), see the [recommendations.](multiple-aad-tenants-in-alz-handling-c-r.md#recommendations)
 
 >[!IMPORTANT]
 > Multiple Azure AD Tenants **are not the recommend** approach for most customers, instead a single Azure AD Tenant, normally the “corporate” Azure AD Tenant, is recommended for most as it can provide the required separation requirements.
