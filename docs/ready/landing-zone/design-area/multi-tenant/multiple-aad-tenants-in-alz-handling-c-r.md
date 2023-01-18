@@ -77,7 +77,7 @@ If multiple Azure AD Tenants where used to host all Azure Subscriptions then thi
 
 This can be avoided if you utilize a Single Azure AD Tenant as the home for all your Azure Subscriptions. This then enables application workload teams to take advantage of the best approach for AuthN/AuthZ for their application/service without having any constraints imposed on them by an architecture choice that they cannot control whilst also keeping a simple architecture to manage, govern and control.
 
->![TIP]
+>[!TIP]
 > Review this documentation [Resource isolation in a single tenant to secure with Azure Active Directory](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)
 
 ### Recommendations
