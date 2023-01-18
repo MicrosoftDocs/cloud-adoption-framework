@@ -1550,6 +1550,12 @@ items:
           href: govern/resource-consistency/governance-simple-workload.md
         - name: Governance design for multiple teams
           href: govern/resource-consistency/governance-multiple-teams.md
+        - name: Why update an Azure landing zone?
+          href: govern/resource-consistency/why-update-azure-landing-zone.md
+        - name: Migrate Azure landing zone policies to Azure built-in policies
+          href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
+        - name: Update Azure landing zone custom policies
+          href: govern/guides/standard/update-custom-policies.md
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration
@@ -1859,8 +1865,6 @@ items:
           href: ready/considerations/roles.md
         - name: Choose an authentication method
           href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Policy enforcement
-        href: decision-guides/policy-enforcement/index.md
       - name: Resource consistency
         href: decision-guides/resource-consistency/index.md
       - name: Resource tagging
