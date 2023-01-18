@@ -18,12 +18,12 @@ As per the outlined information, in this [article](multiple-aad-tenants-in-alz.m
 
 The above diagram shows an example of the Contoso Corporation which has 4 Azure AD Tenants due to mergers and acquisitions as the corporation has grown over time.
 
-| ID  | Azure AD Tenant `*.onmicrosoft.com` Domain | Usage Notes                                                                                                         |
-| --- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| 1   | `contoso.onmicrosoft.com`                  | Primary “Corporate” AAD Tenant used by Contoso Corporation. Azure & Microsoft 365 services are used in this Tenant. |
-| 2 | `fabrikam.onmicrosoft.com` | Primary AAD Tenant used by Fabrikam. Azure & Microsoft 365 services are used in this Tenant. This has remained separated since Acquisition by Contoso Corporation. |
-| 3 | `tailwind.onmicrosoft.com` | Primary AAD Tenant used by Tailwind. Azure & Microsoft 365 services are used in this Tenant. This has remained separated since Acquisition by Contoso Corporation. |
-| 4 | `contoso365test.onmicrosoft.com` | AAD Tenant used by Contoso Corporation for testing Azure AD & Microsoft 365 services and configuration **only**. All Azure environments live within the `contoso.onmicrosoft.com` Azure AD Tenant. |
+| Azure AD Tenant `*.onmicrosoft.com` Domain | Usage Notes                                                                                                                                                                                        |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `contoso.onmicrosoft.com`                  | Primary “Corporate” AAD Tenant used by Contoso Corporation. Azure & Microsoft 365 services are used in this Tenant.                                                                                |
+| `fabrikam.onmicrosoft.com`                 | Primary AAD Tenant used by Fabrikam. Azure & Microsoft 365 services are used in this Tenant. This has remained separated since Acquisition by Contoso Corporation.                                 |
+| `tailwind.onmicrosoft.com`                 | Primary AAD Tenant used by Tailwind. Azure & Microsoft 365 services are used in this Tenant. This has remained separated since Acquisition by Contoso Corporation.                                 |
+| `contoso365test.onmicrosoft.com`           | AAD Tenant used by Contoso Corporation for testing Azure AD & Microsoft 365 services and configuration **only**. All Azure environments live within the `contoso.onmicrosoft.com` Azure AD Tenant. |
 
 The above diagram shows an example of the Contoso Corporation who originally started out with 1 Azure AD Tenant of `contoso.onmicrosoft.com` (ID 1 in the table above). However, over time they made multiple acquisitions of other companies and brought these into the Contoso Corporation. 
 
