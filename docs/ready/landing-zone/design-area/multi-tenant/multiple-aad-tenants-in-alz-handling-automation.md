@@ -67,3 +67,4 @@ In the below example we show a single App Registration in the `contoso.onmicroso
 > [!div class="nextstepaction"]
 > [Handling ALZ across Multiple AAD Tenants - Canary Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-canary.md)
 > [Handling ALZ across Multiple AAD Tenants - Azure Lighthouse usage in ALZ Multi-Tenant](multiple-aad-tenants-in-alz-handling-automation.md)
+> [Handling ALZ across Multiple AAD Tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
