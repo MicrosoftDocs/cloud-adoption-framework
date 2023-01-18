@@ -16,7 +16,7 @@ The design and implementation of Azure Virtual Desktop Azure networking capabili
 
 The design foundations include:
 
-- **Hybrid integration** for connectivity between on-premises, multi-cloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multi-cloud](../hybrid/enterprise-scale-landing-zone.md).
+- **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](../hybrid/enterprise-scale-landing-zone.md).
 - **Performance and reliability at scale** for consistent, low-latency experience, and scalability for workloads.
 - **Zero-trust based network security** to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
 - **Extensibility** for easily expanding network footprint without design rework.
@@ -164,4 +164,7 @@ For networking design process, see:
 
 ## Next steps
 
-[Management and monitoring](./eslz-management-and-monitoring.md)
+Learn about management and monitoring for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Management and monitoring](./eslz-management-and-monitoring.md)

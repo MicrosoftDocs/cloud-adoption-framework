@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Identity and access management considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses [Azure role-based access control (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) with certain conditions outlined in this article.
+Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses [Azure role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview) with certain conditions outlined in this article.
 
 ## RBAC design
 
@@ -40,13 +40,13 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
   > Azure Virtual Desktop does not support B2B or Microsoft accounts.
 - The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Azure AD DS](/azure/active-directory-domain-services/compare-identity-solutions).
+- [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services/). is a supported option, but there are limitations:
+  - You must have password hash synchronization enabled ([configuration guide](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-configure-password-hash-sync)).
+  - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless single sign-on for Microsoft 365 services.
+  
+  For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
 - When joining to an Azure AD DS domain, the account must be part of the Azure AD DC administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
-- Azure AD DS is a supported option, but there are limitations:
-  - You must have password hash synchronization enabled (uncommon when federating Azure AD).
-  - You can only project Azure AD DS into a single virtual network (and single Azure region) that uses a non-public IP address range. You can't add domain controllers to an Azure AD DS domain.
-  - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless Single Sign-On for Microsoft 365 services.
 
-   For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
 - When specifying an organizational unit, use the distinguished name without quotation marks.
 - Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks.
 - The user principal name used to subscribe to Azure Virtual Desktop must exist in the Active Directory domain where the session host virtual machine is joined. For more information about user requirements, see [Azure Virtual Desktop requirements](/azure/virtual-desktop/overview#requirements).
@@ -65,3 +65,10 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Azure Virtual Desktop application groups. For more information, see [Delegated access in Azure Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
 - Create conditional access policies for Azure Virtual Desktop. Such policies can enforce multifactor authentication based on conditions like risky sign-ins to increase an organization's security posture. For more information, see [Enable Azure Active Directory multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 - Configure AD FS to enable single sign-on for users on the corporate network.
+
+## Next steps
+
+Learn about resource organization for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Resource organization](./eslz-resource-organization.md)

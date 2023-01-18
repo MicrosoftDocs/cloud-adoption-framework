@@ -209,3 +209,13 @@ The example above shows one method of image automation using Azure DevOps and a 
 As mentioned above, the Azure Compute Gallery is a service that helps you build structure and organization around your images. These images can be referred to in your IaC deployments of your Azure Virtual Desktop session hosts. The service allows for versioning, grouping, and replication of images.
 
 When you deploy your session hosts with an [ARM template](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates/CreateAndProvisionHostPool) or [Terraform](https://github.com/Azure/terraform/tree/master/quickstart/101-azure-virtual-desktop), we recommend using the resource ID of the image you created in your gallery as the VM custom image source ID. The image that you're using must be replicated via the Azure Compute Gallery service to the Azure regions where you're deploying your Azure Virtual Desktop host pools.
+
+## Next steps
+
+Learn about deploy Azure Virtual Desktop landing zone accelerator for an enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Deploy Azure Virtual Desktop Landing Zone Accelerator](https://github.com/Azure/avdaccelerator)
+
+> [!div class="nextstepaction"]
+> [Review Azure Virtual Desktop Landing Zone Accelerator design areas](./enterprise-scale-landing-zone.md)
