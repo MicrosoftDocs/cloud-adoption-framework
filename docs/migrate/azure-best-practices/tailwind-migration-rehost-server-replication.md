@@ -248,7 +248,7 @@ With the migration activities and workflow defined, Tailwind Traders irons out t
 
 - Ensure that the rollback plan is defined and ready for execution if needed.
 
-- To ensure the migration handover, set the expectations of the operations team that day-2 operations must commence for backup, patching, monitoring, and so on, of Azure servers.
+- Ensure the operations team is ready for migration handover by setting their expectation that backup, patching, monitoring, and so on, of Azure servers must commence on Day 2.
 
 ### Post-go-live
 
