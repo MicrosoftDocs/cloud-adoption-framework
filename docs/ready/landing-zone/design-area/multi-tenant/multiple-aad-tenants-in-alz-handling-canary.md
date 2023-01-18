@@ -12,9 +12,9 @@ ms.custom: think-tank
 
 # Handling ALZ across Multiple AAD Tenants - Canary Considerations & Recommendations
 
-Handling Azure Landing Zones Canary environments when you have multiple Azure AD Tenants is not any different to handling them within a single Azure AD Tenant. So if you are a multi-tenant ALZ consumer then you should follow the [canary guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) in each Azure AD Tenant separately as it is documented and described.
+Handling Azure Landing Zones Canary environments when you have multiple Azure AD Tenants isn't any different to handling them within a single Azure AD Tenant. So if you're a multi-tenant ALZ consumer, then you should follow the [canary guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) in each Azure AD Tenant separately as it's documented and described.
 
-However, if you are a customer that is following a [Deployment Stamps pattern](/azure/architecture/patterns/deployment-stamp) for each of your Azure AD Tenants ALZ deployments (e.g. each of the ALZ deployments are exactly the same in structure, apart from a few naming changes) you might decide that you only need to have a single canary deployment as all of your ALZ deployments are the same.
+However, if you're a customer that is following a [Deployment Stamps pattern](/azure/architecture/patterns/deployment-stamp) for each of your Azure AD Tenants ALZ deployments (for example, each of the ALZ deployments are the same in structure, apart from a few naming changes) you might decide that you only need to have a single canary deployment as all of your ALZ deployments are the same.
 
 >[!NOTE]
 > This would more commonly be seen in a Managed Service Provider (MSP) environment where the MSP is managing several Azure AD Tenants for different clients that are all similar apart from their naming.
