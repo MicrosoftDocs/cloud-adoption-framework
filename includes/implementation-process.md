@@ -39,7 +39,7 @@ At this point, a [cloud-native pattern for encryption](~/decision-guides/encrypt
 
 ## Policy enforcement
 
-The first decision to make regarding Deployment Acceleration is the pattern for enforcement. In this narrative, the governance team decided to implement the [Automated Enforcement](~/decision-guides/policy-enforcement/index.md#automated-enforcement) pattern.
+The first decision to make regarding Deployment Acceleration is the pattern for enforcement. In this narrative, the governance team decided to implement the [Automated Enforcement](../docs/govern/policy-compliance/processes.md#automation-of-monitoring-and-compliance) pattern.
 
 - Azure Security Center will be made available to the security and identity teams to monitor security risks. Both teams are also likely to use Security Center to identify new risks and improve corporate policy.
 - RBAC is required in all subscriptions to govern authentication enforcement.

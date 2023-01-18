@@ -604,6 +604,11 @@
          "source_path": "docs/decision-guides/software-defined-network/hybrid.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology",
          "redirect_document_id": false  
+      },
+      {
+         "source_path": "docs/decision-guides/policy-enforcement/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition",
+         "redirect_document_id": false   
       }
    ]
 }
