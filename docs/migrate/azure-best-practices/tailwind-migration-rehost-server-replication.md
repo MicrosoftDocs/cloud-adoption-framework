@@ -12,15 +12,15 @@ ms.custom: azure-fast-track, think-tank
 
 # Migration execution with Azure Migrate for servers
 
-This article shows how the fictional company Tailwind Traders prepares its deployment plan for the migration of on-premises infrastructure by using the server replication features of Azure Migrate.
+This article shows how the fictional company Tailwind Traders prepares its deployment plan for the migration of on-premises infrastructure to Azure. [Migration and modernization](/azure/migrate/migrate-services-overview?branch=main#migration-and-modernization-tool), a tool that's integrated into Azure Migrate, provides the server replication features described in this scenario.
 
-When you use this example to help plan the migration of your own infrastructure, remember that the sample plan and deployment that are described in this article are specific to Tailwind. Be sure to review your organization's business needs, structure, and technical requirements when making important decisions about migrating your own infrastructure.
+When you use this example to help plan the migration of your own infrastructure, remember that the sample plan and deployment that are described in this article are specific to Tailwind Traders. Be sure to review your organization's business needs, structure, and technical requirements when making important decisions about migrating your own infrastructure.
 
 Whether you need all the elements that are described in this article depends on your migration strategy and needs. For example, you might prefer to redeploy a VM in Azure and redeploy the application instead of replicating the on-premises server to Azure.
 
 ## Overview
 
-For Tailwind Traders to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Tailwind needs to think about the following areas:
+For Tailwind Traders to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Tailwind Traders needs to think about the following areas:
 
 > [!div class="checklist"]
 >
@@ -45,15 +45,15 @@ Before diving deeply into planning your migration of infrastructure and its depl
 
 Tailwind Traders must decide on the number of appliances that are required for replication and the effects of replication traffic.
 
-### Capacity planning for vCPU quotas
+### Capacity planning for virtual CPU quotas
 
-To ensure that the Azure subscriptions for the target migration are able to host the virtual machines that Azure Migrate creates during the migration (both test and production), the vCPU quotas of the subscriptions must be high enough for the target VM SKUs. Ensure that vCPU quotas for specific VM SKUs are increased for the specific target region. For more information, see [Increase VM-family vCPU quotas](/azure/azure-portal/supportability/per-vm-quota-requests).
+To ensure that the Azure subscriptions for the target migration are able to host the virtual machines that Azure Migrate creates during the migration (both test and production), the virtual CPU (vCPU) quotas of the subscriptions must be high enough for the target VM SKUs. Ensure that vCPU quotas for specific VM SKUs are increased for the specific target region. For more information, see [Increase VM-family vCPU quotas](/azure/azure-portal/supportability/per-vm-quota-requests).
 
 ### Server migration tooling planning and implementation
 
 After increasing the vCPU quotas of the subscriptions, Tailwind Traders must prepare to deploy the appliances or agents that are required for replication of their on-premises server infrastructure.
 
-By using the following workflow, Tailwind can identify the tools that are required for server migration to enable replication of on-premises servers. This workflow aids Tailwind in actively identifying the infrastructure requests that are necessary to successfully enable replication of their migratable estate.
+By using the following workflow, Tailwind Traders can identify the tools that are required for server migration to enable replication of on-premises servers. This workflow aids Tailwind Traders in actively identifying the infrastructure requests that are necessary to successfully enable replication of their migratable estate.
 
 :::image type="content" alt-text="Diagram of the replication workflow." source="./media/tailwind-migration-rehost-server-replication/replication-workflow.png" lightbox="./media/tailwind-migration-rehost-server-replication/replication-workflow.png":::
 
@@ -70,7 +70,7 @@ For more information, see these Azure Migrate articles:
   - [Discover, assess, and migrate Amazon Web Services (AWS) VMs to Azure](/azure/migrate/tutorial-migrate-aws-virtual-machines)
   - [Discover, assess, and migrate Google Cloud Platform (GCP) VMs to Azure](/azure/migrate/tutorial-migrate-gcp-virtual-machines)
 
-As a best practice, Tailwind works closely with their virtualization administrators to ensure careful monitoring of key performance counters for CPU, memory, and storage space of the deployed appliances and hypervisor hosts. This monitoring helps to ensure that the virtualization infrastructure has enough resources to handle additional load from replication appliances and agents.
+As a best practice, Tailwind Traders works closely with their virtualization administrators to ensure careful monitoring of key performance counters for CPU, memory, and storage space of the deployed appliances and hypervisor hosts. This monitoring helps to ensure that the virtualization infrastructure has enough resources to handle additional load from replication appliances and agents.
 
 ### Replication
 
@@ -78,11 +78,11 @@ Tailwind Traders plans their migration strategy, monitors the progress, and tune
 
 #### Enable and monitor replication
 
-With replication appliances and agents configured, Tailwind Traders can start planning the replication of their on-premises servers. A collection of applications and their dependencies that must be migrated simultaneously is commonly referred to as a *migration wave* or *migration group*. Tailwind will use the term *migration wave* to maintain consistency across planning activities.
+With replication appliances and agents configured, Tailwind Traders can start planning the replication of their on-premises servers. A collection of applications and their dependencies that must be migrated simultaneously is commonly referred to as a *migration wave* or *migration group*. Tailwind Traders will use the term *migration wave* to maintain consistency across planning activities.
 
-As a best practice, Tailwind plans to enable initial replication for only a subset of their migration waves due to caution about their available bandwidth. The initial replication is a full copy of the servers and consumes more bandwidth as compared to ongoing (delta) replications. Given their bandwidth constraint, Tailwind enables replication for only the migration waves that are nearing test migration and cutover dates.
+As a best practice, Tailwind Traders plans to enable initial replication for only a subset of their migration waves due to caution about their available bandwidth. The initial replication is a full copy of the servers and consumes more bandwidth as compared to ongoing (delta) replications. Given their bandwidth constraint, Tailwind Traders enables replication for only the migration waves that are nearing test migration and cutover dates.
 
-Tailwind also monitors initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for more servers. If errors or warnings arise, Tailwind can actively detect and respond before test migration or cutover dates.
+Tailwind Traders also monitors initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for more servers. If errors or warnings arise, Tailwind Traders can actively detect and respond before test migration or cutover dates.
 
 #### Replication tuning
 
@@ -97,9 +97,9 @@ Based on the observed initial and ongoing replications bandwidth patterns, Tailw
 
 Given the success in deploying the replication toolset and planning for a subset of their migration waves, Tailwind Traders decides to start planning their testing needs and pre-migration and post-migration activities.
 
-Migrations are an orchestration of both business and technical groups. Therefore, Tailwind defines the following activities as *pre-migration* and *post-migration* activities.
+Migrations are an orchestration of both business and technical groups. Therefore, Tailwind Traders defines the following activities as *pre-migration* and *post-migration* activities.
 
-### Business
+### Business: Pre-migration
 
 In order to prepare the business and its stakeholders for the migration activities, Tailwind Traders defines the following items:
 
@@ -110,10 +110,10 @@ In order to prepare the business and its stakeholders for the migration activiti
   - Backup administrators
   - Server administrators
   - Identity administrators
-  - Application owners (frontend and backend applications)
+  - Application owners (front-end and back-end applications)
   - Microsoft Support
   - Partners (if available)
-- A soak test after the cutover of the application to Azure. During the soak period, if any issues arise, then Tailwind must execute the rollback plan. After the soak period has expired, the application can't be rolled back.
+- A soak test after the cutover of the application to Azure. During the soak period, if any issues arise, then Tailwind Traders must execute the rollback plan. After the soak period has expired, the application can't be rolled back.
 
 ### Technical: Pre-migration
 
@@ -121,7 +121,7 @@ As best practices, Tailwind Traders identifies the following activities for exec
 
 - Design a rollback plan.
 
-- Create the latest backup of the servers.
+- Create a current backup of the servers.
 
 - Open the firewall prefixes, ports, and protocols that are necessary for traffic between on-premises resources to Azure and within Azure virtual networks and subnets.
 
@@ -137,7 +137,7 @@ As best practices, Tailwind Traders identifies the following activities for exec
 
 ### Technical: Post-migration
 
-After the migration failover, Tailwind Traders reviews the completion procedures for the following source environments:
+After the migration failover, Tailwind Traders reviews the completion procedures for the source environments in their migration. There are completion procedures available for the following environments:
 
 - [VMware agentless VMs](/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
 - [VMware agent-based VMs](/azure/migrate/tutorial-migrate-vmware-agent#complete-the-migration)
@@ -146,13 +146,13 @@ After the migration failover, Tailwind Traders reviews the completion procedures
 - [AWS VMs](/azure/migrate/tutorial-migrate-aws-virtual-machines#complete-the-migration)
 - [GCP VMs](/azure/migrate/tutorial-migrate-gcp-virtual-machines#complete-the-migration)
 
-In addition, Tailwind adds the following post-migration activities as best practices:
+In addition, Tailwind Traders adds the following post-migration activities as best practices:
 
 - Validate sign-in with local credentials or keys for RDP or SSH.
 
 - Verify that DNS servers are configured in TCP/IP settings for the OS and that name resolution works correctly.
 
-- Verify that the TCP/IP settings for the OS configure the server to receive an IP address via DHCP.
+- Verify that the TCP/IP settings for the OS enable the server to receive an IP address via DHCP.
 
 - Verify that access to OS licensing is activated and that there's access to cloud-based licensing endpoints (such as Azure endpoints for key management services).
 
@@ -186,13 +186,13 @@ Tailwind Traders seeks to understand the need for a test migration, what test ca
 
 ##### Define a smoke test
 
-As a first step, Tailwind Traders performs a smoke test to validate that the servers that are identified for migration boot correctly in Azure. An isolated virtual network should be the context for the smoke test of all the servers that are migrated. Tailwind follows this recommendation and is especially focused on the smoke test for servers that are legacy, highly customized, or contain hardened operating systems. Additionally, Tailwind runs a smoke test for servers that have been marked as *Conditionally Ready* by their Azure Migrate assessments.
+As a first step, Tailwind Traders performs a smoke test to validate that the servers that are identified for migration boot correctly in Azure. An isolated virtual network should be the context for the smoke test of all the servers that are migrated. Tailwind Traders follows this recommendation and is especially focused on the smoke test for servers that are legacy, highly customized, or contain hardened operating systems. Additionally, Tailwind Traders runs a smoke test for servers that have been marked as *Conditionally Ready* by their Azure Migrate assessments.
 
-Tailwind defines a smoke test to be successful when basic server functionality and properties are validated. For example, smoke testing might include:
+Tailwind Traders defines a smoke test to be successful when basic server functionality and properties are validated. For example, smoke testing might include:
 
 - Testing whether the server boots in Azure.
 - Testing whether the administrator can sign in to the server by using local credentials.
-- Updating the TCP/IP settings for DNS, IPv4, and default gateways to the values that are provided via DHCP by the Azure virtual network.
+- Updating the TCP/IP settings for DNS, IPv4, and default gateways to the values that are provided by the Azure virtual network via DHCP.
 - Activating OS licensing.
 
 Typically, a server administrator or migration partner leads a smoke test.
@@ -201,9 +201,9 @@ Typically, a server administrator or migration partner leads a smoke test.
 
 As a second step, Tailwind Traders performs user acceptance testing (UAT) to ensure that the applications are functional and accessible by the expected users. UAT helps to find missed configuration changes that are necessary for a successful migration, which might include hard-coded IP addresses.
 
-Tailwind defines UAT to be successful when application functionality and access to dependencies are validated. For example, UAT might include:
+Tailwind Traders defines UAT to be successful when application functionality and access to dependencies are validated. For example, UAT might include:
 
-- Validate sign-in with domain credentials.
+- Validate sign-in by using domain credentials.
 - Verify that the application has access to dependencies (such as target URLs and connection strings).
 - Validate application functionality with test users.
 
@@ -213,19 +213,19 @@ Typically, application owners lead UAT.
 
 After defining test cases, Tailwind Traders develops the following workflow to encompass the various scenarios it might encounter based on the needs of each application or server.
 
-Most of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as *Ready with Conditions*, which might not boot in Azure. Therefore, Tailwind tests those servers in an isolated virtual network to ensure that each server passes a smoke test. For the smoke test, Tailwind performs a test migration in Azure Migrate, which allows for automated clean-up of created resources, such as VMs and network interfaces.
+Most of Tailwind Traders's scenarios require the second and fifth paths in the following workflow. Tailwind Traders has many legacy servers and other servers marked as *Ready with Conditions*, which might not boot in Azure. Therefore, Tailwind Traders tests those servers in an isolated virtual network to ensure that each server passes a smoke test. For the smoke test, Tailwind Traders performs a test migration in Azure Migrate, which allows for automated clean-up of created resources, such as VMs and network interfaces.
 
-Further, Tailwind's environment is tightly coupled—it has a large number of servers that are interdependent with one another, which results in large migration waves. Tailwind decides to split their large migration waves and to migrate servers together that have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind determines that it should migrate directly into the production virtual network, since that network already has connectivity to their on-premises dependencies. In this path, the third in the following diagram, Tailwind performs the necessary smoke tests in an isolated virtual network and performs UAT in the production virtual network. If successful, Tailwind concludes the migration as a final cutover for the servers.
+Further, Tailwind Traders's environment is tightly coupled—it has a large number of servers that are interdependent with one another, which results in large migration waves. Tailwind Traders decides to split their large migration waves and to migrate servers together that have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind Traders determines that it should migrate directly into the production virtual network, since that network already has connectivity to their on-premises dependencies. In this path, the third in the following diagram, Tailwind Traders performs the necessary smoke tests in an isolated virtual network and performs UAT in the production virtual network. If successful, Tailwind Traders concludes the migration as a final cutover for the servers.
 
-Tailwind considers the first path in the following diagram only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT. Tailwind considers the second path only for scenarios that don't require UAT.
+Tailwind Traders considers the first path in the following diagram only for scenarios where it's possible to migrate all dependencies to an isolated virtual network in order to perform UAT. Tailwind Traders considers the second path only for scenarios that don't require UAT.
 
-:::image type="content" alt-text="Diagram of the migration workflow." source="./media/tailwind-migration-rehost-server-replication/migration-workflow.png" lightbox="./media/tailwind-migration-rehost-server-replication/migration-workflow.png":::
+:::image type="content" alt-text="Diagram of the migration workflow." source="./media/tailwind-migration-rehost-server-replication/tailwind-migration-rehost-server-replication-workflow.svg" lightbox="./media/tailwind-migration-rehost-server-replication/tailwind-migration-rehost-server-replication-workflow.svg":::
 
 *Figure 2: Testing and migration workflow.*
 
 ## Step 3: Final step
 
-As a final step, Tailwind Traders performs the production migrations. Tailwind expects that all hands are required during cutover to ensure end-to-end support. Furthermore, after the soak test concludes, Tailwind looks forward to close-out and for a successful migration to Azure.
+As a final step, Tailwind Traders performs the production migrations. Tailwind Traders expects that all hands are required during cutover to ensure end-to-end support. Furthermore, after the soak test concludes, Tailwind Traders looks forward to close-out and for a successful migration to Azure.
 
 ### Cutover
 
@@ -252,13 +252,13 @@ With the migration activities and workflow defined, Tailwind Traders irons out t
 
 ### Post-go-live
 
-After the cutover successfully concludes, Tailwind Traders prepares to decommission the source servers. Tailwind decides to decommission servers after the soak test concludes.
+After the cutover successfully concludes, Tailwind Traders prepares to decommission the source servers. Tailwind Traders decides to decommission servers after the soak test concludes.
 
-After each migration wave, Tailwind also conducts a brief retrospective to discuss what went well and what can be improved for future migration waves. Tailwind understands these incremental lessons and improvements ensure smoother migrations for all subsequent migration waves.
+After each migration wave, Tailwind Traders also conducts a brief retrospective to discuss what went well and what can be improved for future migration waves. Tailwind Traders understands these incremental lessons and improvements ensure smoother migrations for all subsequent migration waves.
 
 ## Conclusion
 
-In this article, Tailwind Traders set up the Migration and modernization tool, part of Azure Migrate. Tailwind also planned a migration workflow, test plans, and pre-migration and post-migration activities, which can be accomplished by proactive and reliable replication. However, not every server migration requires all of the steps described in this article.
+In this article, Tailwind Traders set up the Migration and modernization tool, part of Azure Migrate. Tailwind Traders also planned a migration workflow, test plans, and pre-migration and post-migration activities, which can be accomplished by proactive and reliable replication. However, not every server migration requires all of the steps described in this article.
 
 ## Next steps
 
