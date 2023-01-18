@@ -25,11 +25,11 @@ The above diagram shows an example of the Contoso Corporation, which has four Az
 | `tailwind.onmicrosoft.com`                 | Primary AAD Tenant used by Tailwind. Azure & Microsoft 365 services are used in this Tenant. This has remained separated since Acquisition by Contoso Corporation.                                 |
 | `contoso365test.onmicrosoft.com`           | AAD Tenant used by Contoso Corporation for testing Azure AD & Microsoft 365 services and configuration **only**. All Azure environments live within the `contoso.onmicrosoft.com` Azure AD Tenant. |
 
-The above diagram shows an example of the Contoso Corporation who originally started out with 1 Azure AD Tenant of `contoso.onmicrosoft.com`. However, over time they made multiple acquisitions of other companies and brought these companies into the Contoso Corporation.
+The above diagram shows an example of the Contoso Corporation who originally started out with one Azure AD Tenant of `contoso.onmicrosoft.com`. However, over time they made multiple acquisitions of other companies and brought these companies into the Contoso Corporation.
 
-These acquisitions of Fabrikam (`fabrikam.onmicrosoft.com`) and Tailwind (`tailwind.onmicrosoft.com`) brought with them existing Azure AD Tenants in which both Microsoft 365 (Exchange Online, SharePoint, OneDrive) and Azure services are used within. It was decided to keep these companies, and associated Azure AD Tenants, separated as there is a potential for parts of Contoso Corporation and its companies to be sold in the future.
+These acquisitions of Fabrikam (`fabrikam.onmicrosoft.com`) and Tailwind (`tailwind.onmicrosoft.com`) brought with them existing Azure AD Tenants in which both Microsoft 365 (Exchange Online, SharePoint, OneDrive) and Azure services are used within. It was decided to keep these companies, and associated Azure AD Tenants, separated as there's a potential for parts of Contoso Corporation and its companies to be sold in the future.
 
-Finally, the Contoso Corporation also has a separate Azure AD Tenant for the sole purpose of testing Azure AD and Microsoft 365 services and features; however, no Azure services are tested in this separate Azure AD Tenant, they are instead tested in the `contoso.onmicrosoft.com` Azure AD Tenant.
+Finally, the Contoso Corporation also has a separate Azure AD Tenant for the sole purpose of testing Azure AD and Microsoft 365 services and features; however, no Azure services are tested in this separate Azure AD Tenant, they're instead tested in the `contoso.onmicrosoft.com` Azure AD Tenant.
 
 >[!TIP]
 > Please review the following guidance for handling testing of Azure landing zones and Azure workloads/resources within Azure landing zones environments:
