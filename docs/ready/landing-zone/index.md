@@ -66,9 +66,9 @@ Deploying the Azure landing zone accelerator requires permissions to create reso
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
-There are other accelerators available for platform landing zones, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md). Application landing zone accelerators are listed in [Archtecture Center](azure/architecture/landing-zones/landing-zone-deploy)
+There are other accelerators available for platform landing zones, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md). Application landing zone accelerators are listed in [Archtecture Center](/azure/architecture/landing-zones/landing-zone-deploy)
 
-The Microsoft Cloud Adoption Framework outlines [Cloud adoption scenarios](azure/cloud-adoption-framework/scenarios/overview) to help you further refine accelerate your cloud adoption journey. There is an [Infrastructure as Code implementations or accelerators](/azure/architecture/landing-zones/landing-zone-deploy.md#Application) for each of these scenarios.
+The Microsoft Cloud Adoption Framework outlines [Cloud adoption scenarios](/azure/cloud-adoption-framework/scenarios/overview) to help you further refine accelerate your cloud adoption journey. There is an [Infrastructure as Code implementations or accelerators](/azure/architecture/landing-zones/landing-zone-deploy.md#Application) for each of these scenarios.
 
 ## Next steps
 
