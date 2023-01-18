@@ -73,7 +73,7 @@ To summarize the challenge, for services that provide a native integration with 
 
 Taking the above into consideration it's important to carefully consider to which Azure AD Tenant your Azure Subscriptions will be associated to, as this will dictate as to which products/services, and their features, are able to be used by application/workload teams that need to support the identities and from which tenant; normally identities in the corporate Azure AD Tenant.
 
-If multiple Azure AD Tenants were used to host all Azure Subscriptions then this could hinder and limit the application workload teams from being able to take advantage of some Azure products and services Azure AD integrations. Leaving the application workload teams to have to develop their applications around these imposed limitations which could lead to a more complex and less secure AuthN/AuthZ posture.
+If multiple Azure AD Tenants were used to host all Azure Subscriptions, then this could hinder and limit the application workload teams from being able to take advantage of some Azure products and services Azure AD integrations. Leaving the application workload teams to have to develop their applications around these imposed limitations that could lead to a more complex and less secure AuthN/AuthZ posture.
 
 This can be avoided if you utilize a Single Azure AD Tenant as the home for all your Azure Subscriptions. This then enables application workload teams to take advantage of the best approach for AuthN/AuthZ for their application/service without having any constraints imposed on them by an architecture choice that they can't control whilst also keeping a simple architecture to manage, govern and control.
 
