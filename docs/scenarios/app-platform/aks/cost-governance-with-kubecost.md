@@ -20,32 +20,14 @@ This section shows how to use [Kubecost](https://www.kubecost.com/) to govern Az
 
 There are several Kubecost installation options. For more information, see [Installing Kubecost](https://docs.kubecost.com/install).
 
-To install Kubecost directly, use the following commands:
-
-```bash
-
-# Create the Kubecost namespace
-
-kubectl create namespace kubecost
-
-# Install Kubecost into the AKS cluster
-
-kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-chart/master/kubecost.yaml --namespace kubecost
-```
-
-To install Kubecost by using Helm 2, use the following commands:
-
-```bash
-helm repo add kubecost https://kubecost.github.io/cost-analyzer/
-helm install kubecost/cost-analyzer --namespace kubecost --name kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
-```
+>[!NOTE]  Starting with Kubernetes version 1.25 the Pod Security Policies are not supported anymore. This broke the simple installation based on Kubernetes manifests as described in [Kubecost Issue 1773](https://github.com/kubecost/cost-analyzer-helm-chart/issues/1773). Please use the Helm 3 installation.
 
 To install Kubecost by using Helm 3, use the following commands:
 
 ```bash
-kubectl create namespace kubecost
 helm repo add kubecost https://kubecost.github.io/cost-analyzer/
-helm install kubecost kubecost/cost-analyzer --namespace kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
+helm repo update
+helm upgrade --install kubecost kubecost/cost-analyzer --namespace kubecost --create-namespace
 ```
 
 After a few minutes, check to make sure that Kubecost is up and running:
