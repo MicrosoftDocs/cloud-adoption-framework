@@ -14,7 +14,7 @@ ms.custom: internal
 
 A cloud management baseline that spans [inventory and visibility](./inventory.md), [operational compliance](./operational-compliance.md), and [protection and recovery](./protect.md) might provide a sufficient level of cloud management for most workloads in the IT portfolio. But that baseline is seldom enough to support the full portfolio. This article builds on the most common next step in cloud management, portfolio operations.
 
-A quick study of the assets in the IT portfolio highlights patterns across the workloads that are supported. Within those workloads, there are common platforms. The platforms could vary widely depending on the past technical decisions within the company.
+A quick study of the assets in the IT portfolio highlights supported patterns across the workloads. Within those workloads, there are common platforms. The platforms could vary widely depending on the past technical decisions within the company.
 
 For some organizations, there's a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or enterprise resource planning (ERP) systems such as SAP or Oracle.
 
@@ -22,9 +22,9 @@ When you understand these commonalities, your cloud management team can speciali
 
 ## Establish a service catalog
 
-The objective of platform operations is to create reliable and repeatable solutions for a cloud adoption team to use. The cloud adoption team can then deliver a platform that provides a higher level of business commitment. That commitment could decrease the likelihood or frequency of downtime, which improves reliability. If there's a system failure, the commitment could also help decrease the amount of data loss or time to recovery. Such a commitment often includes ongoing, centralized operations to support the platform.
+The objective of platform operations is to create reliable and repeatable solutions for a cloud adoption team to use. The cloud adoption team can then deliver a platform that provides a higher level of business commitment. That commitment could decrease the likelihood or frequency of downtime, which improves reliability. If there's a system failure, the commitment can also help decrease the amount of data loss or time to recovery. Such a commitment often includes ongoing, centralized operations to support the platform.
 
-As the cloud management team establishes higher degrees of operational management and specialization related to specific platforms, they add platforms to a growing service catalog. The service catalog provides self-service deployment of platforms in a specific configuration, which adheres to ongoing platform operations. During the business-alignment conversation, cloud management and cloud strategy teams can propose service catalog solutions for the business. The service catalog solutions improve reliability, uptime, and recovery commitments in a controlled, repeatable process.
+As the cloud management team establishes higher degrees of operational management and specialization related to specific platforms, they add platforms to a growing service catalog. The service catalog provides self-service platform deployment in a specific configuration, which adheres to ongoing platform operations. During the business-alignment conversation, cloud management and cloud strategy teams can propose service catalog solutions for the business. The service catalog solutions improve reliability, uptime, and recovery commitments in a controlled, repeatable process.
 
 For reference, some organizations refer to an early-stage service catalog as an *approved list*. The primary difference is that a service catalog comes with ongoing operational commitments from the cloud center of excellence (CCoE). An approved list is similar. It provides a preapproved list of solutions that a team can use in the cloud. But typically there isn't an operational benefit associated with applications on an approved list.
 
