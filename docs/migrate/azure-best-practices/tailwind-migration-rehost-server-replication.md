@@ -217,7 +217,7 @@ Tailwind Traders has many legacy servers and other servers marked as *Ready with
 
 Further, Tailwind Traders's environment is tightly coupled—it has a large number of servers that are interdependent with one another, which results in large migration waves. Tailwind Traders decides to split their large migration waves and to migrate servers together that have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind Traders determines that it should migrate directly into the production virtual network, since that network already has connectivity to their on-premises dependencies. Tailwind Traders performs the necessary smoke tests in an isolated virtual network and performs UAT in the production virtual network. If successful, Tailwind Traders concludes the migration as a final cutover for the servers.
 
-:::image type="content" alt-text="Diagram of the migration workflow." source="./media/tailwind-migration-rehost-server-replication/tailwind-migration-rehost-server-replication-workflow.svg" lightbox="./media/tailwind-migration-rehost-server-replication/migration-workflow.png":::
+:::image type="content" alt-text="Diagram of the migration workflow." source="./media/tailwind-migration-rehost-server-replication/tailwind-migration-rehost-server-replication-workflow.svg" lightbox="./media/tailwind-migration-rehost-server-replication/tailwind-migration-rehost-server-replication-workflow.svg":::
 
 *Figure 2: Testing and migration workflow.*
 
