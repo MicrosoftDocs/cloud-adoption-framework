@@ -579,7 +579,7 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-- Contoso has existing licensing for `WEBVM`. To take advantage of pricing with Azure Hybrid Benefit, Contoso converts the existing Azure VM.
+- Contoso has existing licensing for `WEBVM`. To take advantage of pricing with [Azure Hybrid Benefit](https://azure.microsoft.com/en-us/pricing/hybrid-benefit/), Contoso converts the existing Azure VM.
 - Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
 
 ## Conclusion
