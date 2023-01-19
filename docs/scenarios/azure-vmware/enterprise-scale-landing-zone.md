@@ -72,8 +72,7 @@ This deployment is a lite version of the full AVS Greenfield Deployment and will
 
 ###### Option #2: Manual Build
 
-Please refer Microsoft documentation for manual build of AVS Private Cloud.
-[Click here](https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment)
+[Please refer Microsoft documentation for manual build of AVS Private Cloud.](https://learn.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment)
 
 #### Greenfield deployment
 
@@ -105,8 +104,7 @@ This deployment is a lite version of the full AVS Greenfield Deployment and will
 
 ###### Option #3: Manual Build
 
-Please refer Microsoft documentation for manual build of AVS Private Cloud.
-[Click here](https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment)
+[Please refer Microsoft documentation for manual build of AVS Private Cloud.](https://learn.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment)
 
 ### Deployment summary table
 
@@ -115,7 +113,7 @@ Please refer Microsoft documentation for manual build of AVS Private Cloud.
 |Brownfield Deployment (Azure portal UI)          | Brownfield deployment (Option #1) | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)      |
 |Greenfield Deployment (Azure portal UI)          | Greenfield deployment (Option #1) | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2FPortalUI%2FARM%2FESLZDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2FPortalUI%2FARM%2FESLZdeploy.PortalUI.json)      |
 |Greenfield Deployment (Command line (Bicep/ARM))              | Greenfield deployment (Option #1)| [![Powershell/Azure CLI](./media/powershell.png)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Bicep)          |
-|Greenfield Deployment (Terraform)                            |Greenfield deployment (Option #1) | [![Terraform](./media/terraform.png)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)                  |
+|Greenfield Deployment (Terraform Code)                            |Greenfield deployment (Option #1) | [![Terraform Code](./media/terraform.png)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)                  |
 |Greenfield Deployment (Azure portal UI)         | AVS Greenfield Lite Deployment (Option #2) | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)      |
 
 ## Next steps
