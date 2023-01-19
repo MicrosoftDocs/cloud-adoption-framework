@@ -310,10 +310,10 @@ To be able to migrate the VMs, Contoso must complete the following tasks:
 
 Contoso already set up a network (when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)) that the Migration and modernization tool can use. 
 
-    - SmartHotel360 is a production application, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
-    - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
-    - The application front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`) of the production network.
-    - The application database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`) of the production network.
+- SmartHotel360 is a production application, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+- Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
+- The application front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`) of the production network.
+- The application database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`) of the production network.
 
 ## Step 4: Prepare on-premises VMware for Azure Migrate: Server Migration
 
