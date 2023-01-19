@@ -192,7 +192,7 @@ Tailwind Traders defines a smoke test to be successful when basic server functio
 
 - Testing whether the server boots in Azure.
 - Testing whether the administrator can sign in to the server by using local credentials.
-- Updating the TCP/IP settings for DNS, IPv4, and default gateways to the values that are provided by the Azure virtual network via DHCP.
+- Validate that the TCP/IP settings for DNS, IPv4, and default gateways have been updated via DHCP by the Azure virtual network.
 - Activating OS licensing.
 
 Typically, a server administrator or migration partner leads a smoke test.
