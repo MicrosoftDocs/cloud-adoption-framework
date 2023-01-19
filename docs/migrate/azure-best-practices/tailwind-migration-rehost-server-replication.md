@@ -99,7 +99,7 @@ Given the success in deploying the replication toolset and planning for a subset
 
 Migrations are an orchestration of both business and technical groups. Therefore, Tailwind Traders defines the following activities as *pre-migration* and *post-migration* activities.
 
-### Business: Pre-migration planning
+### Business: Pre-migration planning activities
 
 In order to prepare the business and its stakeholders for the migration activities, Tailwind Traders defines the following items:
 
@@ -115,7 +115,7 @@ In order to prepare the business and its stakeholders for the migration activiti
   - Partners (if available)
 - A soak test after the cutover of the application to Azure. During the soak period, if any issues arise, then Tailwind Traders must execute the rollback plan. After the soak period has expired, the application can't be rolled back.
 
-### Technical: Pre-migration planning
+### Technical: Pre-migration planning activities
 
 As best practices, Tailwind Traders identifies the following activities for execution prior to a migration failover:
 
@@ -135,7 +135,7 @@ As best practices, Tailwind Traders identifies the following activities for exec
   - Plan for secure access via RDP or SSH for system management by using a service like [Azure Bastion](/azure/bastion/bastion-overview).
   - Plan for an isolated virtual network in each subscription that contains the migrated VMs. The test migration functionality in Azure Migrate must use a virtual network in the same subscription where the migrated VM will reside.
 
-### Technical: Post-migration planning
+### Technical: Post-migration planning activities
 
 After the migration failover, Tailwind Traders reviews the completion procedures for the source environments in their migration. There are completion procedures available for the following environments:
 
