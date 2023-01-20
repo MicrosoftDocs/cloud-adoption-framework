@@ -363,6 +363,8 @@ items:
               href: ready/azure-best-practices/resource-abbreviations.md
             - name: Define your tagging strategy
               href: ready/azure-best-practices/resource-tagging.md
+            - name: Resource naming and tagging decision guide
+              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
             - name: Move resources
               href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Design options for specific use cases
@@ -1867,8 +1869,6 @@ items:
           href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Resource consistency
         href: decision-guides/resource-consistency/index.md
-      - name: Resource tagging
-        href: decision-guides/resource-tagging/index.md
       - name: Encryption
         href: decision-guides/encryption/index.md
       - name: Networking
