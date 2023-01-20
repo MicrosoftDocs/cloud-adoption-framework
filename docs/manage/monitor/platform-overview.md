@@ -18,49 +18,6 @@ Many organizations are embracing the latest practices for DevOps agility and clo
 
 This article provides a high-level overview of our monitoring platforms to help you understand how each delivers core monitoring functionality.
 
-## The story of System Center Operations Manager
-
-In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a re-engineered version of the product, System Center Operations Manager. It moved beyond simple monitoring of Windows Server instances. It concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
-
-In 2022, we extended the capabilities of System Center Operations Manager (SCOM) to Azure. This revolutionary step helps to monitor the on-premises and cloud-based workloads using SCOM cloud-native monitoring.
-
-The preview of this product is [Azure Monitor System Center Operations Manager Managed Instance](/system-center/scom/operations-manager-managed-instance-overview) also known as SCOM MI. It brings SCOM monitoring capabilities and configurable health models to Azure Monitor.
-
-## The story of Azure Monitor
-
-When Azure was released in 2010, monitoring of cloud services was provided with the Azure Diagnostics agent, which provided a way to collect diagnostics data from Azure resources. This capability was considered a general monitoring tool rather than an enterprise-class monitoring platform.
-
-Application Insights was introduced to shift with changes in the industry where the proliferation of cloud, mobile, and IoT devices was growing and the introduction of DevOps practices. It grew from application performance monitoring in Operations Manager to service in Azure, where it delivers rich monitoring of web applications written in various languages. In 2015, the preview of Application Insights for Visual Studio was announced, and later, it became known as just Application Insights. It collects details about application performance, requests and exceptions, and traces.
-
-In 2015, Azure Operational Insights was made generally available. It delivered the Log Analytics service that collected and searched data from machines in Azure, on-premises, or other cloud environments and connected to System Center Operations Manager. Intelligence packs were offered that delivered various prepackaged management and monitoring configurations that contained a collection of query and analytic logic, visualizations, and data collection rules for such scenarios as security auditing, health assessments, and alert management. Later, Azure Operational Insights became known as Log Analytics.
-
-In 2016, the preview of Azure Monitor was announced at the Microsoft Ignite conference. It provided a common framework to collect platform metrics, resource diagnostics logs, and subscription-level activity log events from any Azure service that started using the framework. Previously, each Azure service had its own monitoring method.
-
-At the 2018 Ignite conference, we announced that the Azure Monitor brand expanded to include several different services originally developed with independent functionality:
-
-- The original **Azure Monitor**, for collecting platform metrics, resource diagnostics logs, and activity logs for Azure platform resources only.
-- **Application Insights**, for application monitoring.
-- **Log Analytics**, the primary location for collecting and analyzing log data.
-- A new **unified alerting service**, which brought together alert mechanisms from each of the other services mentioned earlier.
-
-- **Azure Network Watcher**, for monitoring, diagnosing and viewing metrics for resources in a virtual network.
-
-At the 2022 Windows Server Summit, we released a preview of Azure Monitor System Center Operations Manager Managed Instance, also known as SCOM MI, a capability within Azure Monitor. SCOM MI provides a cloud-based alternative for SCOM customers, enabling monitoring continuity for your environments and accelerating Azure adoptions. With a managed version of SCOM running in Azure, you can modernize your SCOM deployments to the cloud and migrate the monitored applications and infrastructure at your own pace.  
-
-<!-- docutune:casing "Operational Insights" -->
-
-## The story of Operations Management Suite (OMS)
-
-From 2015 until April 2018, Operations Management Suite (OMS) bundled the following Azure management services for licensing purposes:
-
-- Application Insights
-- Azure Automation
-- Azure Backup
-- Operational Insights (later rebranded as Log Analytics)
-- Site Recovery
-
-The functionality of the services that were part of OMS stayed the same when OMS was discontinued. They were realigned under Azure Monitor.
-
 ## Infrastructure requirements
 
 ### Operations Manager
