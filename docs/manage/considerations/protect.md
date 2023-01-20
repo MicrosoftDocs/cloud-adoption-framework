@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Protect and recover in cloud management
 
-Prior to preparing for a potential workload outage, cloud management teams should first make sure they've met requirements for
+Prior to preparing for a potential workload outage, cloud management teams should first make sure they've met requirements for:
 
 - [inventory and visibility](./inventory.md) 
 - [operational compliance](./operational-compliance.md)
@@ -23,7 +23,7 @@ No technical solution can consistently offer an SLA that guarantees 100 percent 
 
 ## Translate protection and recovery conversations
 
-The workloads that power business operations consist of
+The workloads that power business operations consist of:
 
 - applications
 - data
@@ -36,7 +36,7 @@ At a minimum, cloud management teams should create a baseline approach for each 
 
 ### Recovery time objectives (RTO)
 
-A recovery time objective is the amount of time it should take to recover any system to its state prior to a disaster. This would include the time needed to
+A recovery time objective is the amount of time it should take to recover any system to its state prior to a disaster. This would include the time needed to:
 
 - restore minimal functionality to VMs and applications
 - restore data required by applications.
@@ -75,7 +75,7 @@ Every minute of downtime on those virtual machines could cause lost revenue or r
 
 Each of these models reduces the RTO, which helps businesses restore their business capabilities faster. However, each model also results in significantly increased cloud management costs.
 
-Also note that, apart from replication for high-availability, backup should be enabled for scenarios such as 
+Also note that, apart from replication for high-availability, backup should be enabled for scenarios such as: 
 
 - accidental delete
 - data corruption
