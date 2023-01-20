@@ -115,7 +115,7 @@ Azure Monitor collects data from various sources, including Azure infrastructure
 
 Monitoring solutions use the logs platform in Azure Monitor to provide monitoring for a particular application or service. They typically define data collection from agents or from Azure services, and provide log queries and views to analyze that data. They typically don't provide alert rules, which means that you must define your own alert criteria based on collected data.
 
-Insights, such as Azure Monitor for containers and Azure Monitor for VMs, use the logs and metrics platform of Azure Monitor to provide a customized monitoring experience for an application or service in the Azure portal. They might provide health monitoring and alerting conditions, in addition to customized analysis of collected data.
+Insights, such as Container insights and VM insights, use the logs and metrics platform of Azure Monitor to provide a customized monitoring experience for an application or service in the Azure portal. They might provide health monitoring and alerting conditions, in addition to customized analysis of collected data.
 
 #### Monitoring configuration
 
@@ -137,9 +137,9 @@ Azure Monitor doesn't provide a user-definable method of implementing a service 
 
 - **Application Insights:** Builds a composite map of your web application, and provides a health state for each application component or dependency. This includes alerts status and drill-down to more detailed diagnostics of your application.
 
-- **Azure Monitor for VMs:** Delivers a health-monitoring experience for the guest Azure VMs, similar to that of Operations Manager, when it monitors Windows and Linux virtual machines. It evaluates the health of key operating system components from the perspective of availability and performance to determine the current health state. When it determines that the guest VM is experiencing sustained resource utilization, disk-space capacity, or an issue related to core operating system functionality, it generates an alert to bring this state to your attention.
+- **VM insights:** Delivers a health-monitoring experience for the guest Azure VMs, similar to that of Operations Manager, when it monitors Windows and Linux virtual machines. It evaluates the health of key operating system components from the perspective of availability and performance to determine the current health state. When it determines that the guest VM is experiencing sustained resource utilization, disk-space capacity, or an issue related to core operating system functionality, it generates an alert to bring this state to your attention.
 
-- **Azure Monitor for containers:** Monitors the performance and health of Azure Kubernetes Service or Azure Container Instances. It collects memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the metrics API. It also collects container logs and inventory data about containers and their images. Predefined health criteria that are based on the collected performance data help you identify whether a resource bottleneck or capacity issue exists. You can also understand the overall performance, or the performance from a specific Kubernetes object type (pod, node, controller, or container).
+- **Container insights:** Monitors the performance and health of Azure Kubernetes Service or Azure Container Instances. It collects memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the metrics API. It also collects container logs and inventory data about containers and their images. Predefined health criteria that are based on the collected performance data help you identify whether a resource bottleneck or capacity issue exists. You can also understand the overall performance, or the performance from a specific Kubernetes object type (pod, node, controller, or container).
 
 ## Analyze data
 
@@ -157,7 +157,7 @@ Operations Manager provides four basic ways to analyze data after it has been co
 
 ### Azure Monitor
 
-With the powerful Azure Monitor analytics engine, you can interactively work with log data and combine them with other monitoring data for trending and other data analysis. Views and dashboards allow you to visualize query data in various ways from the Azure portal, and import it into Power BI. Monitoring solutions include queries and views to present the data they collect. Insights such as Application Insights, Azure Monitor for VMs, and Azure Monitor for containers include customized visualizations to support interactive monitoring scenarios.
+With the powerful Azure Monitor analytics engine, you can interactively work with log data and combine them with other monitoring data for trending and other data analysis. Views and dashboards allow you to visualize query data in various ways from the Azure portal, and import it into Power BI. Monitoring solutions include queries and views to present the data they collect. Insights such as Application Insights, VM insights, and Container insights include customized visualizations to support interactive monitoring scenarios.
 
 ## Alerting
 
@@ -195,7 +195,7 @@ The Operations Manager SDK enables Operations Manager to integrate with third-pa
 
 ### Azure Monitor
 
-Azure Monitor collects metrics and logs from Azure resources, with little to no configuration. Monitoring solutions add logic for monitoring an application or service, but they still work within the standard log queries and views in Azure Monitor. Insights, such as Application Insights and Azure Monitor for VMs, use the Azure Monitor platform for data collecting and processing. They also provide other tools to visualize and analyze the data. You can combine data collected by insights with other data, by using core Azure Monitor features such as log queries and alerts.
+Azure Monitor collects metrics and logs from Azure resources, with little to no configuration. Monitoring solutions add logic for monitoring an application or service, but they still work within the standard log queries and views in Azure Monitor. Insights, such as Application Insights and VM insights, use the Azure Monitor platform for data collecting and processing. They also provide other tools to visualize and analyze the data. You can combine data collected by insights with other data, by using core Azure Monitor features such as log queries and alerts.
 
 Monitor supports several methods to collect monitoring or management data from Azure or external resources. You can then extract and forward data from the metric or log stores to your ITSM or monitoring tools. Or you can perform administrative tasks by using the Azure Monitor REST API.
 
