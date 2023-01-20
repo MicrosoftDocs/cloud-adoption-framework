@@ -14,7 +14,7 @@ ms.custom: internal
 
 A cloud management baseline that spans [inventory and visibility](./inventory.md), [operational compliance](./operational-compliance.md), and [protection and recovery](./protect.md) might provide a sufficient level of cloud management for most workloads in the IT portfolio. But that baseline is seldom enough to support the full portfolio. This article builds on the most common next step in cloud management, portfolio operations.
 
-A quick study of the assets in the IT portfolio highlights supported patterns across the workloads. Within those workloads, there are common platforms. The platforms could vary widely depending on the past technical decisions within the company.
+A quick study of the assets in the IT portfolio highlights existing patterns across the supported workloads. Within those workloads, there are common platforms. The platforms could vary widely depending on the past technical decisions within the company.
 
 For some organizations, there's a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or enterprise resource planning (ERP) systems such as SAP or Oracle.
 
@@ -65,7 +65,7 @@ In most scenarios, the cost of improving management commitments is easily justif
 
 ### IaaS data operations
 
-When data hosts in a traditional infrastructure as a service (IaaS) solution, the effort to improve RPO and RTO can be higher. Yet the business stakeholders' desire to achieve better management commitments is seldom affected by a PaaS versus IaaS decision. If anything, an understanding of the fundamental differences in architecture might prompt the business to ask for PaaS solutions or commitments that match what's available on PaaS solutions. Consider modernization of any IaaS data platforms as a first step into platform operations.
+When data is hosted in a traditional infrastructure as a service (IaaS) solution, the effort to improve RPO and RTO can be higher. Yet the business stakeholders' desire to achieve better management commitments is seldom affected by a PaaS versus IaaS decision. If anything, an understanding of the fundamental differences in architecture might prompt the business to ask for PaaS solutions or commitments that match what's available on PaaS solutions. Consider modernization of any IaaS data platforms as a first step into platform operations.
 
 When modernization isn't an option, cloud management teams commonly prioritize IaaS-based data platforms as a first required service in the service catalog. Providing the business with a choice between standalone data servers and clustered, high-availability, data solutions makes the business commitment conversation much easier to facilitate. A basic understanding of the operational improvements and increased costs helps the business make the best decision for its business processes and supporting workloads.
 
