@@ -81,7 +81,7 @@ The following five steps can help your organization move forward with OKRs:
 - **Step 4: Drive.** Maintain rigor and focus by making sure that you share outcomes and results across your organization.
 - **Step 5: Improve.** Continue to improve, revisit, and rethink how to connect more across your organization. OKRs in spreadsheets can be useful, but your organization will benefit most when everyone works together to meet objectives and gains insights from their aligned data.
 
-[Learn more about Microsoft Viva Goals.](https://www.microsoft.com/en-us/microsoft-viva/goals)
+[Learn more about Microsoft Viva Goals.](https://www.microsoft.com/microsoft-viva/goals)
 
 Now that you've measured your business outcomes, you're ready to [understand financial considerations](../financial-considerations/index.md).
 
