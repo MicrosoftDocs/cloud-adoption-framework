@@ -45,11 +45,11 @@ After the platform is packaged, the cloud management team can add it to the grow
 
 Although management tools and processes can improve platform operations, it's often not enough to achieve the desired states of stability and reliability. True platform operations require a focus on pillars of architecture excellence. When a platform justifies a deeper investment in operations, consider the following five pillars before the platform becomes a part of any service catalog:
 
+- **Reliability:** Design systems to recover from failures and continue to function.
+- **Security:** Protect applications and data from threats.
 - **Cost optimization:** Manage costs to maximize the value delivered.
 - **Operational excellence:** Follow operational processes that keep a system running in production.
 - **Performance efficiency:** Scale systems to adapt to changes in load.
-- **Reliability:** Design systems to recover from failures and continue to function.
-- **Security:** Protect applications and data from threats.
 
 The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) provides an approach to evaluating specific workloads for adherence to these pillars, to improve overall operations. You can apply these pillars to both platform operations and workload operations.
 
