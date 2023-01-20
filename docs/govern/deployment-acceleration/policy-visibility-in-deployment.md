@@ -18,7 +18,7 @@ Azure policy is a key tool to ensure solutions adhere to organizational standard
 
 You should integrate policy evaluation into every deployment process that creates or manages resources in Azure. These processes include application deployments and infrastructure as code (IaC) pipelines that use tools like ARM templates or Terraform to create infrastructure.
 
-You should implement policy compliance checks in DevOps pipelines at the beginning of the development process. Configure the pipelines to continue or fail based on the compliance state of resources.
+You should implement policy compliance checks in CI/CD pipelines at the beginning of the development process. Configure the pipelines to continue or fail based on the compliance state of resources.
 
 Use the following resources as a guide to implement compliance checks within your deployment pipelines.
 
