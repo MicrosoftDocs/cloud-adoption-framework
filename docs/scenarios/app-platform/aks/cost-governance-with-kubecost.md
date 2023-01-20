@@ -42,7 +42,7 @@ kubectl port-forward -n kubecost svc/kubecost-cost-analyzer 9090:9090
 
 You can now open your browser and point to `http://127.0.0.1:9090` to open the Kubecost UI. In the Kubecost UI, select your cluster to view cost allocation information.
 
-## Configuring Kubecost with Azure Cloud Integration
+### Configuring Kubecost for Azure cloud integration
 
 To complete your Kubecost installation, you should configure the [Azure Cloud Integration](https://docs.kubecost.com/install-and-configure/install/cloud-integration/azure-out-of-cluster) and the [Azure Rate Card Configuration](https://docs.kubecost.com/install-and-configure/install/cloud-integration/azure-out-of-cluster/azure-config).
 
