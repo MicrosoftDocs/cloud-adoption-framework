@@ -102,7 +102,7 @@ Below is an example from the recommended structure above for the AVD resources a
 ## Additional guidance and examples 
 
 - [Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
-- [Naming and tagging in Azure](../../decision-guides/resource-tagging/index.md)
+- [Naming and tagging in Azure](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
 
 ## Next steps
 
