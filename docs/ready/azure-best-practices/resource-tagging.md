@@ -49,7 +49,7 @@ Use the following tags to increase visibility into the usage of Azure resources.
 
 ## Take action
 
-Review the [resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md).
+Review the [resource naming and tagging decision guide](./resource-naming-and-tagging-decision-guide.md).
 
 ## Next steps
 
