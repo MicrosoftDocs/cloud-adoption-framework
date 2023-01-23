@@ -24,7 +24,7 @@ This article provides a high-level overview of our monitoring platforms to help 
 
 Operations Manager requires significant infrastructure and maintenance to support a management group, a basic unit of functionality. At a minimum, a management group consists of one or more management servers, a SQL Server instance, hosting the operational and reporting data warehouse database, and agents. The complexity of a management group design depends on multiple factors, such as the scope of workloads to monitor and the number of devices or computers supporting the workloads. If you require high availability and site resiliency, as is commonly the case with enterprise monitoring platforms, the infrastructure requirements and associated maintenance can increase dramatically.
 
-[Azure Monitor SCOM Managed Instance](/system-center/scom/operations-manager-managed-instance-overview) (SCOM MI), on the other hand, requires minimal infrastructure and maintenance, as it's fully managed by Microsoft. You no longer have the responsibility of updates and security patching, and you preserve any investments in SCOM since it's compatible with all the existing SCOM management packs.
+[Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview) (SCOM Managed Instance (preview)), on the other hand, requires minimal infrastructure and maintenance, as it's fully managed by Microsoft. You no longer have the responsibility of updates and security patching, and you preserve any investments in SCOM since it's compatible with all the existing SCOM management packs.
 
 ![Diagram of Operations Manager management group](./media/monitoring-management-guidance-cloud-and-on-premises/operations-manager-management-group-optimized.svg)
 
