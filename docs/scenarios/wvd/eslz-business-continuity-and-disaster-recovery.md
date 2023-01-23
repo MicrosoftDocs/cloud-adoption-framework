@@ -165,6 +165,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Make sure that the managed disk for the local VM is large enough to accommodate the local cache of all users' FSLogix profile and Office containers.
 
 - Use Azure Compute Gallery to replicate golden images to different regions.
+  - Golden images do not participate in providing users the ability to connect to their session host VM; however, they play a critical role in how quickly you are able to run the provisioning process of new virtual machines on a host pool and therefore must be backed up and available.
   - Use ZRS to create the image. Maintain at least two copies of the image per region.
 
 - Use Azure Backup to protect critical user data from data loss or logical corruption when you use the Azure Files Standard tier or Premium tier.
