@@ -40,7 +40,7 @@ Due to the nature of identity authentication in workloads, there's no comprehens
 
 Assign the [Append a tag and its value to resources](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2a0e14a6-b0a6-4fab-991a-187a4f81c498) Azure Policy with the tag name set to "IdentityProvider" and the tag value set to "Undefined". This policy will only set the tag value to be "Undefined" if the tag isn't provided.
 
-:::image type="content" source="./media/Tagpolicy.png" alt-text="A picture of the portal page where you add a tag policy.":::
+:::image type="content" source="./media/tag-policy.png" alt-text="A picture of the portal page where you add a tag policy.":::
 
 Resources that use Azure AD as the centralized identity system should be tagged with AzureAD.  All others should be reviewed and defined in the audit process.
 
