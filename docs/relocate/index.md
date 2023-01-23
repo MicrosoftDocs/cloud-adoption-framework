@@ -1,0 +1,70 @@
+---
+title: How to relocate cloud workloads
+description: What it means to relocate workloads in the cloud
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 2/3/2023
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: relocate
+ms.custom: internal, seo-caf-relocate
+keywords: cloud adoption, cloud framework, cloud adoption framework
+---
+# How to relocate cloud workloads
+
+CAF Relocate details the process of relocating workloads in Azure. It shows you how to pick the best relocation methods and tools for your relocation project.
+
+:::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image showing the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
+*Figure 1. The relocate process.*
+
+## What is relocation?
+
+Relocation is a process of moving a workload in Azure to a different Azure region.  While it’s a migration effort, it isn't a migration to the cloud.  Instead, it’s an intercloud migration. As a result, it has some similarities with the process defined in CAF Migrate but also has its own solutions and considerations to take advantage of different Azure regions.
+
+## Why relocate?
+
+Relocation adds flexibility that can help you optimize cost and performance throughout the lifecycle of your workloads. When workloads are first deployed or migrated to Azure, a decision is made about their region.  However, as time |passes, you should review that decision to see if a different region might be a better fit. For example, another region could have services or capabilities unavailable in the current region, or you might want to move your workload closer to a new customer base. Data residency laws might change, or budgets could shift. Rather than work around these changes and encounter cost or performance issues, a relocation might be the best way to proceed for your workload.
+
+*Table 1. Example scenarios that drive relocations.*
+
+| Relocation drivers | Examples |
+| --- | --- |
+| Optimization | Use Azure services and capabilities available in another region. |
+| Compliance | Meet data sovereignty and residency requirements. |
+| Performance | Provide lower latency to end users. |
+
+## How to relocate
+
+We divide the relocation process into two phases. We call the first phase Initiate and the second phase Move. You need to establish the project and then execute it. Let’s look at the two phases of relocation.
+
+**Initiate phase:** The initiate phase is a single-step, one-time process. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and start relocating workloads.
+
+**Move phase:** The Move phase is a four-step process to migrate a workload to a different region. While we plan a relocation around workloads, relocation happens at the service level. To relocate a workload, you relocate all the services that comprise the workload. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover.
+
+*Table 2. The steps of the Move phase and their main goal.*
+
+| Step | Main goal |
+| --- | --- |
+|1. Evaluate| Conduct workload discovery|
+|2. Select| Pick the right relocation method|
+|3. Migrate| Relocate the workload|
+|4. Cutover| Direct traffic to new location|
+
+These steps align to distinct technical actions. The following articles detail how you should approach each step, but here’s an overview of each step to get started. You should follow the final cutover with an official close to the relocation project.
+
+## Next step
+
+We invite you to read relocation best practices and use it as guidance for each workload relocation. The content highlights critical areas to focus on but also refers you to other documentation for deeper technical insight. We assume a basic understanding of Azure regions and service availability. For more information, see:
+
+- [Azure regions decision guide](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
+- [Special conditions to consider when moving a resource](/azure/azure-resource-manager/management/move-support-resources?view=azure-devops)
+- [Azure Products by Region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/)
+- [Azure regions and availability zones](/azure/reliability/availability-zones-overview)
+- [List of region pairs](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies)
+- [Azure Services](/azure/reliability/availability-service-by-category)
+- [How to move resources](/azure/resource-mover/move-region-within-resource-group)
+
+There are a few prerequisites that you need to address before relocating a workload. The Initiate phase provides guidance for these prerequisites.
+
+> [!div class="nextstepaction"]
+> [Initiate](initiate.md)
