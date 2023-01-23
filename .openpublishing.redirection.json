@@ -609,6 +609,11 @@
          "source_path": "docs/decision-guides/policy-enforcement/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition",
          "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/decision-guides/resource-tagging/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide",
+         "redirect_document_id": true   
       }
    ]
 }
