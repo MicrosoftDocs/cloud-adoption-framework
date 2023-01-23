@@ -302,10 +302,15 @@ items:
               items:
               - name: Define an Azure network topology
                 href: ready/azure-best-practices/define-an-azure-network-topology.md
+              - name: Hub and spoke network topology
+                href: ready/azure-best-practices/hub-spoke-network-topology.md
               - name: Traditional Azure networking topology
                 href: ready/azure-best-practices/traditional-azure-networking-topology.md
               - name: Virtual WAN network topology (Microsoft-managed)
                 href: ready/azure-best-practices/virtual-wan-network-topology.md
+              - name: Perimeter networks
+                href: ready/azure-best-practices/perimeter-networks.md
+
               - name: Plan for IP addressing
                 href: ready/azure-best-practices/plan-for-ip-addressing.md
             - name: Connectivity
@@ -1871,6 +1876,16 @@ items:
         href: decision-guides/resource-consistency/index.md
       - name: Encryption
         href: decision-guides/encryption/index.md
+      - name: Networking
+        items:
+        - name: Review networking options
+          href: ready/considerations/networking-options.md
+        - name: Network boundary security
+          href: resources/networking-vdc.md
+        - name: Plan virtual networks
+          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Best practices for network security
+          href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
       - name: Migration tools
