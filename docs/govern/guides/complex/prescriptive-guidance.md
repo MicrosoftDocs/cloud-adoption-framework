@@ -74,7 +74,7 @@ Your resource consistency decisions determine the tools, processes, and efforts 
 
 ### Resource tagging
 
-Resource tagging decisions determine how metadata applies to Azure resources within a subscription to support operations, management, and accounting purposes. In this narrative, the [accounting](../../../decision-guides/resource-tagging/index.md#resource-tagging-patterns) pattern is chosen as the default model for resource tagging.
+Resource tagging decisions determine how metadata applies to Azure resources within a subscription to support operations, management, and accounting purposes. In this narrative, the [accounting](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md#resource-tagging-patterns) pattern is chosen as the default model for resource tagging.
 
 - Tag deployed assets with values for:
   - Department or billing unit
@@ -121,7 +121,7 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Logging and reporting patterns](../../../decision-guides/logging-and-reporting/index.md)
 - [Policy enforcement patterns](../../policy-compliance/policy-definition.md)
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
-- [Resource tagging patterns](../../../decision-guides/resource-tagging/index.md)
+- [Resource tagging patterns](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
 - [Software Defined Networking patterns](../../../decision-guides/software-defined-network/index.md)
 - [Subscription design patterns](../../../ready/landing-zone/design-area/resource-org-subscriptions.md)
 
