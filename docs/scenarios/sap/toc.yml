@@ -37,6 +37,15 @@ items:
   - name: Migrate SAP to Azure
     href: migrate.md
   - name: Innovate with SAP and Azure
+    items:
+    - name: SAP and Data
+      items:
+      - name: Identify SAP Data Sources
+        href: sap-lza-identify-sap-data-sources.md
+      - name: Choosing Azure Connectors
+        href: sap-lza-choosing-azure-connectors.md
+      - name: Performance & Troubleshooting
+        href: sap-lza-data-extraction-performance-troubleshooting.md
     href: innovate.md
   - name: Manage SAP platform and workloads
     href: manage.md
