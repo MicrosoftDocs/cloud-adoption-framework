@@ -1389,8 +1389,6 @@ items:
         items:
         - name: Evaluate
           href: relocate/evaluate.md
-        - name: Evaluate
-          href: relocate/evaluate.md
         - name: Select
           href: relocate/select.md
         - name: Migrate
