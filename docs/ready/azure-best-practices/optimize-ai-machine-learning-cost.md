@@ -168,6 +168,8 @@ Administrators often want to be able to track costs on different resources in Az
 
 Tagging enables you to place customized tags on your workspaces and computes (from Azure Resource Manager templates and Azure Machine Learning studio) to further filter on these resources in Azure Cost Management based on these tags to observe spend patterns. This functionality can be best utilized for internal charge-back scenarios. In addition, tags can be useful for capturing metadata or details associated with the compute, for e.g. a project, a team, certain billing code, etc. This makes tagging very beneficial for measuring how much money you are spending on different resources and therefore, gaining deeper insights into your cost and spend patterns across teams or projects.
 
+There are also system injected tags placed on computes that allow you to filter in the Cost Analysis page by the “Compute type” tag to see a compute wise breakdown of your total spend and determine what category of compute resources might be attributing to the majority of your costs. This is particularly useful for gaining more visibility into your training vs inferencing cost patterns.
+
 ### Govern and restrict compute usage by policy
 
 When you manage an Azure environment with many workloads, it can be a challenge to keep the overview on resource spend. [Azure Policy](/azure/governance/policy/overview) can help control and govern resource spend, by restricting particular usage patterns across the Azure environment.
