@@ -12,7 +12,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Cutover a cloud workload
 
-Cutover is the workload in the new target region. After this step, the workload can be decommissioned in the source region. It’s a good practice to confirm with stakeholders before cutover. Here’s the high-level process of cutover.
+Cutover is the workload in the new target region. After this step, the workload can be decommissioned in the source region. It’s a good practice to confirm with stakeholders before cutover. Here’s the high-level process to cut over a cloud workload.
 
 :::image type="content" source="../_images/relocate/caf-relocate-cutover.png" alt-text="Image showing the relocation process and highlights the Cutover step in the Move phase.. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-cutover.png" border="false":::
 *Figure 1. The Cutover step of relocation.*
