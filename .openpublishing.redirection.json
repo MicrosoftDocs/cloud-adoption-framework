@@ -619,7 +619,7 @@
          "source_path": "docs/ready/considerations/networking-options.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
          "redirect_document_id": false   
-       }
+       },
       {         
          "source_path": "docs/govern/identity-baseline/business-risks.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
