@@ -39,9 +39,7 @@ Cutover is the workload in the new target region. After this step, the workload 
 
 > [!div class="nextstepaction"]
 > [Modernize workloads](/azure/cloud-adoption-framework/modernize/)
-
 > [!div class="nextstepaction"]
 > [Azure Well-Architected Framework](/azure/architecture/framework/)
-
 > [!div class="nextstepaction"]
 > [Azure Well-Architected Review](/assessments/)
