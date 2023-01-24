@@ -620,5 +620,40 @@
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
          "redirect_document_id": false   
        }
+      {         
+         "source_path": "docs/govern/identity-baseline/business-risks.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_document_id": false
+      },                  
+      {
+         "source_path": "docs/govern/identity-baseline/compliance-processes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_document_id": false
+      },                  
+      {
+         "source_path": "docs/govern/identity-baseline/discipline-improvement.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_document_id": false
+      },                  
+      {
+         "source_path": "docs/govern/identity-baseline/metrics-tolerance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_document_id": false
+      },                  
+      {
+         "source_path": "docs/govern/identity-baseline/policy-statements.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_document_id": false
+      },                  
+      {
+         "source_path": "docs/govern/identity-baseline/template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_document_id": false
+      },                  
+      {
+         "source_path": "docs/govern/identity-baseline/toolchain.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_document_id": false
+      }                      
    ]
 }
