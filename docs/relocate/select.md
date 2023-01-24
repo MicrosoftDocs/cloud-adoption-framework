@@ -27,14 +27,14 @@ For each workload, you need to pick a relocation method. The relocation method d
 
 ### Cold relocation (stateless and stateful services)
 
-Cold relocation is for workloads with stateless services or non-essential workloads. It’s the most cost-effective approach to relocation because you don’t duplicate any environments during relocation. Here’s the cold relocation process.
+Cold relocation is for stateless services or workloads that can withstand downtime. It’s the most cost-effective approach to relocation because you don’t duplicate any environments during relocation. Here’s an overview of the cold relocation process.
 
 1. Back up workload data to the new target region.
 1. Take the source region offline and shutdown services.
 1. Deploy the cloud services to the new target region.
 1. Restore workload data.
 
-The process can take a few minutes or a few days depending on the number of services and volume of data.
+Cold relocation can take a few minutes or a few days depending on the number of services and volume of data.
 
 ### Hot relocation (stateful services)
 
