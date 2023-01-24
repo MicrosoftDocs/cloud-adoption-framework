@@ -1,8 +1,7 @@
 ---
 title: Cutover
 description: How to cutover a cloud workload.
-author: SomilGanguly
-author: ismalik_microsoft
+author: SomilGanguly, ismalik_microsoft
 ms.author: ssumner
 ms.date: 2/3/2023
 ms.topic: conceptual
