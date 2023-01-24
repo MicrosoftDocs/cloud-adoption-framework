@@ -41,7 +41,7 @@ This implementation option assumes that the target subscription is already assoc
 
 ### Network topology and connectivity
 
-This implementation option creates a virtual network with subnets for a gateway, firewall, jump box, and landing zone. As a next step iteration, the team would follow the [networking decisions guide](../considerations/networking-options.md) to implement the appropriate form of connectivity between the gateway subnet and other networks. This implementation is in alignment with [network security best practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+This implementation option creates a virtual network with subnets for a gateway, firewall, jump box, and landing zone. As a next step iteration, the team would follow the [networking decisions guide](./design-area/network-topology-and-connectivity.md) to implement the appropriate form of connectivity between the gateway subnet and other networks. This implementation is in alignment with [network security best practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Resource organization
 

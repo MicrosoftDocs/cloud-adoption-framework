@@ -1875,10 +1875,6 @@ items:
         href: decision-guides/resource-consistency/index.md
       - name: Encryption
         href: decision-guides/encryption/index.md
-      - name: Networking
-        items:
-        - name: Review networking options
-          href: ready/considerations/networking-options.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
       - name: Migration tools
