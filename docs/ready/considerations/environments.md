@@ -61,7 +61,7 @@ Adopting multiple environments for an Azure Landing Zone deployment is common wh
 
 Regardless of which approach you follow, you should always:
 - Adopt at least one environment for testing.
-- Use separated Service Principal for test and production purposes to protect your environments.
+- Use separated Service Principals for test and production purposes to protect your environments.
 - Implement automated checks and approvals to validate and approve changes prior to deploying any change to a particular environment
 
 ## Next steps
