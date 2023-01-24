@@ -1,6 +1,6 @@
 ---
 title: How to relocate cloud workloads
-description: What it means to relocate workloads in the cloud
+description: Discover the process for relocating cloud workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -10,12 +10,12 @@ ms.subservice: adopt
 ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
-# How to relocate cloud workloads
+# Relocate cloud workloads
 
 CAF Relocate details the process of relocating workloads in Azure. It shows you how to pick the best relocation methods and tools for your relocation project.
 
 :::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image showing the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
-*Figure 1. The relocate process.*
+*Figure 1. The Relocate process.*
 
 ## What is relocation?
 

@@ -1,6 +1,6 @@
 ---
-title: Select
-description: How to select the right relocation methods and tools for a cloud relocation project.
+title: How to select automation for relocating cloud workloads
+description: Learn how to select the best methods and automated tools for relocating cloud workloads and applications.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -10,16 +10,16 @@ ms.subservice: adopt
 ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
-# Select the right relocation method and tools
+# Select automation for relocating cloud workloads
 
-For each workload, you need to select a relocation method and the correct tools to execute that method. The Select step provides guidance to help you make those decisions. The selections you make depend on the services that comprise your workload and the criticality of the workload.
+For each workload, you need to select the best relocation method and tools for relocation. The Select step provides guidance to help you make those decisions. The selections you make depend on the services and the criticality of the workload.
 
-:::image type="content" source="../_images/relocate/caf-relocate-select.png" alt-text="Image showing the relocation process and highlights the Select process. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-select.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-select.png" alt-text="Image showing the relocation process and highlights the Select step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-select.png" border="false":::
 *Figure 1. The Select step of relocation.*
 
 ## Select a relocation method
 
-For each workload, you need to pick a relocation method. The relocation method depends on the services in the workload and how critical the workload is. Cold relocation is for stateless services and for non-essential workloads. Hot and warm relocation is for mission-critical stateful services. We recommend using a hot relocation strategy if the service supports it. To execute each relocation method, you select and apply service and data relocation tools, which we discuss later. Here we survey the three relocation methods.
+You need to pick a relocation method for each workload. The relocation method depends on the services in the workload and how critical the workload is. Cold relocation is for stateless services and for non-essential workloads. Hot and warm relocation is for mission-critical stateful services. We recommend using a hot relocation strategy if the service supports it. To execute each relocation method, you select and apply service and data relocation tools, which we discuss later. Here we survey the three relocation methods.
 
 :::image type="content" source="../_images/relocate/relocation-methods-decision-tree.png" alt-text="Image showing a decision tree for selecting the right relocation method. There are three decision points. 1. Is downtime okay? If yes, then cold relocation is the right relocation method. 2. Is it a stateless service? If yes, then cold relocation is again the right relocation method. 3. Does the service support synchronous data replication? If yes, then hot relocation is the right relocation method. If no, then warm relocation is the right relocation method." lightbox="../_images/relocate/relocation-methods-decision-tree.png" border="false":::
 
@@ -58,7 +58,7 @@ Warm relocation is for critical workloads with a stateful service that doesn’t
 1. Switch endpoints and validate.
 1. Shut down the workload in the source region.
 
-## Select service relocation tool
+## Select service-relocation automation
 
 There are three primary service relocation tools. The following paragraphs give an overview of each tool choice with links to more guidance. Azure Resource Mover and Azure Site Recovery can move stateless and stateful services. If you use infrastructure as code to move the workload, you’ll need to find a separate data relocation tool.
 
@@ -71,7 +71,7 @@ There are three primary service relocation tools. The following paragraphs give 
 
 **Infrastructure as code (IaC) custom automation.** Infrastructure as code allows you to copy and redeploy Azure services. You can download the JSON view for the services in the source region and deploy  services in the new target region with your preferred infrastructure-as-code tool. For stateful services, you’ll need another tool to relocate workload data. For more information, see [infrastructure as code overview](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code).
 
-## Select data relocation tools
+## Select data-relocation automation
 
 If you used infrastructure as code to relocate your stateful service, you’ll need to pick a data relocation tool to move the data.
 

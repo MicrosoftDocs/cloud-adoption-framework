@@ -1,6 +1,6 @@
 ---
-title: Initiate
-description: How to initiate a cloud relocation project.
+title: How to initiate a cloud relocation project.
+description: Learn how to initiate a cloud relocation project so you can relocate workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -14,7 +14,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The Initiate phase of relocation establishes the relocation project. It’s a single-stage, one-time process to start the relocation program. In this phase, you identify objectives, determine scope, prioritize workloads, and create a relocation plan to meet those objectives. The Initiate step relies on well-known project management best practices. The guidance here's succinct and focuses on four key aspects of this step.
 
-:::image type="content" source="../_images/relocate/caf-relocate-initiate.png" alt-text="Image showing the relocation process and highlights the initiate phase and stage. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-initiate.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-initiate.png" alt-text="Image showing the relocation process and highlights the Initiate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-initiate.png" border="false":::
 *Figure 1. The Initiate step of relocation.*
 
 ## Identify objectives

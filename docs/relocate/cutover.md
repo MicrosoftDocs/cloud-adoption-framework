@@ -1,6 +1,6 @@
 ---
-title: Cutover
-description: How to cutover a cloud workload.
+title: How to cutover a cloud workload.
+description: How to cutover a cloud workload and application.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -10,11 +10,11 @@ ms.subservice: adopt
 ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
-# How to cutover a cloud workload
+# Cutover a cloud workload
 
 Cutover is the workload in the new target region. After this step, the workload can be decommissioned in the source region. It’s a good practice to confirm with stakeholders before cutover. Here’s the high-level process of cutover.
 
-:::image type="content" source="../_images/relocate/caf-relocate-cutover.png" alt-text="Image showing the relocation process and highlights the Cutover process. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-cutover.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-cutover.png" alt-text="Image showing the relocation process and highlights the Cutover step in the Move phase.. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-cutover.png" border="false":::
 *Figure 1. The Cutover step of relocation.*
 
 **(1) Test and validate migrated services and data.** Test and validate the workload and dependencies to ensure the relocation was successful. Investigate and remediate bugs or issues related to scripts built by the relocation delivery team. We recommend running user acceptance tests. It’s a best practice to assign different users to various parts of the application for UAT. You want to receive confirmation from users that the workload functions before switching the endpoints.

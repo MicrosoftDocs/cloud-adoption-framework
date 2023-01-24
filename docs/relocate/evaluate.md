@@ -1,6 +1,6 @@
 ---
-title: Evaluate
-description: How to evaluate workload so you can pick the best relocation methods and tools
+title: How to evaluate a cloud workload for relocation.
+description: How to evaluate workload so you can pick the best relocation methods and tools.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -10,11 +10,11 @@ ms.subservice: adopt
 ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
-# Evaluate workloads for relocation
+# Evaluate a cloud workload for relocation
 
 Evaluate is the first step in the Move phase of relocation. The goal of the Evaluate step is to learn about the workload so you can move it successfully. Every workload you relocate must go through the four steps of the Move phase, starting with evaluate.
 
-:::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Image showing the relocation process and highlights the Evaluate process. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Image showing the relocation process and highlights the Evaluate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
 *Figure 1. The Evaluate step of relocation.*
 
 ## Pick workload(s)
@@ -29,7 +29,7 @@ Where possible, use automated tools to collect information about applications an
 
 **Try Azure Resource Mover first.** You should try to use Azure Resource Mover first. It’s the easiest discovery tool to use, and you can also relocate services and data. Azure Resource Mover only supports a limited number of services, so make sure your services are supported before continuing. For more information, see [supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
-**Use visualization tools.** If Azure Resource Mover doesn't meet all your needs, you can you visualization tools to aid your discovery. Azure has a few different resource-visualization tools that you can use to map dependencies. Pick the tool that best supports your needs.
+**Use visualization tools.** If Azure Resource Mover doesn't meet all your needs, you can use visualization tools to aid your discovery. Azure has a few different resource-visualization tools that you can use to map dependencies. Pick the tool that best supports your needs.
 
 *Resource group visualizer:* The Azure portals lets you visualize the connections between the resources in a resource group. Navigate to the resource group and select “Resource visualizer.”
 
@@ -47,7 +47,7 @@ Where possible, use automated tools to collect information about applications an
 
 You need to determine if the new target region will support your workload. It might seem late in the process to make this evaluation, but you need the discovery details to be certain. Not every region in Azure offers the same service. So you must make sure the services your workload needs to run are available in the target region. We have documentation that lists the products and services available in each region. To determine region supportability for each workload, see [Azure products by region](/explore/global-infrastructure/products-by-region/).
 
-Know if the target region is a paired region or not. This detail doesn’t impact the relocation, but it does affect your business continuity and disaster recovery strategy. For more information, see [Azure geographies](/explore/global-infrastructure/geographies/#geographies).
+Know if the target region is a paired region or not. This detail doesn’t affect the relocation, only the business continuity and disaster recovery strategy in the target region. For more information, see [Azure geographies](/explore/global-infrastructure/geographies/#geographies).
 
 ## Categorize workload services
 

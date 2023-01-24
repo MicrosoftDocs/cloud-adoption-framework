@@ -1,6 +1,6 @@
 ---
-title: Migrate
-description: How to migrate a workload to another region.
+title: How to migrate a cloud workload to another region
+description: Learn how to migrate a cloud workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -10,11 +10,11 @@ ms.subservice: adopt
 ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
-# How to migrate a workload to another region
+# Migrate a cloud workload to another region
 
 The Migrate step of relocation is where you move the workload to the new region. Depending on your workload, you might have a few technical requirements to prepare, but the plan should be clear. You should be ready to execute the migration.
 
-:::image type="content" source="../_images/relocate/caf-relocate-migrate.png" alt-text="Image showing the relocation process and highlights the Migrate process. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-migrate.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-migrate.png" alt-text="Image showing the relocation process and highlights the Migrate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-migrate.png" border="false":::
 *Figure 1. The Migrate step of relocation.*
 
 ## Prepare
