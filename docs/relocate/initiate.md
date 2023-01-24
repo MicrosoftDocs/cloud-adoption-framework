@@ -22,6 +22,7 @@ The Initiate phase of relocation establishes the relocation project. It’s a si
 The need to meet specific objectives drives relocation projects. You should capture these objectives so you can scope and prioritize your relocation efforts. The following table provides examples of relocation objectives.
 
 *Table 1. Example relocation objectives.*
+
 |Objectives |Motivation |Priority|
 | --- | --- | --- |
 |1. Comply with data-residency laws| Meet all legal and ethical standards| High|

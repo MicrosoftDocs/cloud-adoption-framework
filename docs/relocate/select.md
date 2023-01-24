@@ -101,6 +101,7 @@ If you used infrastructure as code to relocate your stateful service, you’ll n
 **Manual backup and restore.** Backup and restore here refers to a process, not a specific tool. Many services in Azure provide redundancy options that let you back up data to a separate region and restore them manually. You need to perform a manual backup and restore for specific services like Azure Key Vault. For more information, see [move Key Vault to another region](/azure/key-vault/general/move-region).
 
 *Table 1. Data migration tools and the relocation method(s) they support.*
+
 |Tools | Relocation method|
 | --- | --- |
 [Geo-replication](/azure/azure-sql/database/active-geo-replication-overview?view=azuresql) |Hot|
