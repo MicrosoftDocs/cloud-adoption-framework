@@ -29,10 +29,7 @@ Cutover is the workload in the new target region. After this step, the workload 
 
 ## Next Step
 
-**Repeat the Move phase for each workload.** If you have more workloads to relocate, return to the Evaluate step and repeat the four steps of the Move phase until you complete the relocation project. Otherwise, you need to formally close the relocation project.
-
-> [!div class="nextstepaction"]
-> [Evaluate](evaluate.md)
+**Repeat the Move phase for each workload.** If you have more workloads to relocate, return to the [Evaluate step](evaluate.md) and repeat the four steps of the Move phase until you complete the relocation project. Otherwise, you need to formally close the relocation project.
 
 **Make the environment operational.** Make sure you turn on or configure your new environments. We recommend following all Azure Advisor recommendations and configuring items such as backups, security controls, logging, and cost reporting.
 
