@@ -55,7 +55,7 @@ This stage is only relevant when the workload requires data migration. Perform d
 
 ## Update connection strings
 
-The connection string configuration depends on the service the application connects to. We recommend searching for “connection string” on our documentation page to find the service-specific guidance and use that guidance to update the connection string. For more information, see the [documentation search page](https://learn.microsoft.com/search/).
+The connection string configuration depends on the service the application connects to. We recommend searching for “connection string” on our documentation page to find the service-specific guidance and use that guidance to update the connection string. For more information, see the [documentation search page](/search/).
 
 ## Next steps
 
