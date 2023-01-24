@@ -1514,20 +1514,14 @@ items:
         items:
         - name: Overview of the identity baseline
           href: govern/identity-baseline/index.md
-        - name: Download the template
-          href: govern/identity-baseline/template.md
-        - name: Understand business risks
-          href: govern/identity-baseline/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/identity-baseline/metrics-tolerance.md
-        - name: Sample Identity Baseline policies
-          href: govern/identity-baseline/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/identity-baseline/compliance-processes.md
-        - name: Improve the identity baseline
-          href: govern/identity-baseline/discipline-improvement.md
-        - name: Azure tools for identity baseline
-          href: govern/identity-baseline/toolchain.md
+        - name: Azure Active Directory governance guidance
+          href: govern/identity-baseline/azure-ad-configuration.md
+        - name: Administrative access governance guidance
+          href: govern/identity-baseline/administrative-access.md
+        - name: Business user access governance guidance
+          href: govern/identity-baseline/business-user-access.md
+        - name: Application access governance guidance
+          href: govern/identity-baseline/application-access.md
       - name: Resource consistency
         items:
         - name: Overview of resource consistency
