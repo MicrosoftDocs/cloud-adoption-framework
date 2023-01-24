@@ -1,7 +1,7 @@
 ---
 title: Cutover
 description: How to cutover a cloud workload.
-author: [SomilGanguly, ismalik_microsoft]
+author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
 ms.topic: conceptual
@@ -44,4 +44,4 @@ Cutover is the workload in the new target region. After this step, the workload 
 > [Azure Well-Architected Framework](/azure/architecture/framework/)
 
 > [!div class="nextstepaction"]
-> [Azure Well-Architected Review](https://learn.microsoft.com/assessments/)
+> [Azure Well-Architected Review](/assessments/)

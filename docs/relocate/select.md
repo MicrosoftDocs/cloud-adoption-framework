@@ -75,12 +75,12 @@ There are three primary service relocation tools. The following paragraphs give 
 
 If you used infrastructure as code to relocate your stateful service, you’ll need to pick a data relocation tool to move the data.
 
-**Geo-replication.** Active geo-replication is a business continuity solution. You can perform quick disaster recovery of individual databases if a regional disaster or large-scale outage occurs. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. For more information, see [geo-replication](/azure/azure-sql/database/active-geo-replication-overview?view=azuresql).
+**Geo-replication.** Active geo-replication is a business continuity solution. You can perform quick disaster recovery of individual databases if a regional disaster or large-scale outage occurs. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. For more information, see [geo-replication](/azure/azure-sql/database/active-geo-replication-overview).
 
 **Synchronous data replication.** Synchronous data replication replicates data in near real-time across regions. It’s the preferred data relocation approach for hot relocation because it limits downtime and data delta migrations after cutover. However, it’s not an Azure tool. This capability is built into some Azure services such as Azure SQL and Azure Cosmos DB. You need to check each service in your workload to see if it’s available. For more information, see:
 
-- [Azure SQL](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database?view=azuresql)
-- [Azure Cosmos DB](/azure/cosmos-db/nosql/how-to-multi-master?tabs=api-async)
+- [Azure SQL](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database)
+- [Azure Cosmos DB](/azure/cosmos-db/nosql/how-to-multi-master)
 
 **Azure Site Recovery.** Azure Site Recovery can relocate services and data. It supports cold and warm relocation strategies. For more information, see [overview Azure Site Recovery](/azure/site-recovery/site-recovery-overview).
 
@@ -92,9 +92,9 @@ If you used infrastructure as code to relocate your stateful service, you’ll n
 **Azure Data Factory.** Azure Data Factory is a fully managed cloud-based data integration service that orchestrates and automates the movement and transformation of data. Azure Data Factory can move data lakes and warehouses. For more information, see:
 
 - [Supported targets and sources](/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats)
-- [Copy data tool](/azure/data-factory/copy-data-tool?tabs=data-factory)
+- [Copy data tool](/azure/data-factory/copy-data-tool)
 
-**Azure Storage Explorer.** Azure Storage Explorer is a standalone app that allows you to relocate Azure Storage data. For more information, see [how to use Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows).
+**Azure Storage Explorer.** Azure Storage Explorer is a standalone app that allows you to relocate Azure Storage data. For more information, see [how to use Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer).
 
 **Azure Backup.** With Azure Backup, you can back up and restore data in another region. We recommend trying Azure Backup first for non-essential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
 
@@ -105,11 +105,11 @@ If you used infrastructure as code to relocate your stateful service, you’ll n
 |Tools | Relocation method|
 | --- | --- |
 [Geo-replication](/azure/azure-sql/database/active-geo-replication-overview?view=azuresql) |Hot|
-|[Synchronous data replication](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database?view=azuresql)|Hot, Warm|
+|[Synchronous data replication](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database)|Hot, Warm|
 |[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)|Warm, Cold|
 |[AzCopy](/azure/storage/common/storage-use-azcopy-v10)|Warm, Cold|
 |[Azure Data Factory](/azure/data-factory/quickstart-get-started)| Warm, Cold |
-|[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)| Warm, Cold|
+|[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer)| Warm, Cold|
 |[Azure Backup](/azure/backup/backup-overview)| Cold|
 |[Manual backup and restore](/azure/key-vault/general/move-region)| Cold|
 
