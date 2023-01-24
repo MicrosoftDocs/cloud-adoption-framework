@@ -24,11 +24,11 @@ When you structure your data platform, consider the structure of your organizati
 
 Avoid situations that have different teams responsible for the various tasks of a solution—tasks such as ingestion, cleansing, aggregation, and serving. Depending on multiple teams can cause a dramatic loss of velocity. For example, if your data consumers on the serving layer need to onboard new data assets or implement functional changes for a particular data asset, they must go through a multi-step process. For this example, the steps are:
 
-1. Your data consumer submits a ticket to each team that'a responsible for a data pipeline stage.
-1. The teams work together in sync because new ingestion services are required. These new services lead to changes in the data cleansing layer, which lead to changes in the data aggregation layer, which in turn lead to changes in the serving layer. The changes can affect every pipeline stage. No team can see the potential effects of processing changes, because there's no overview of the entire end-to-end lifecycle.
-1. The teams work together to design a well-defined release plan so that they don't affect existing consumers and pipelines. This dependency management increases management overhead.
+1. The data consumer submits a ticket to every team that's responsible for a data pipeline stage.
+1. The teams must work together in sync because the layers are interconnected. The new services require changes to the data cleansing layer, which leads to changes in the data aggregation layer, which leads to changes in the serving layer. The changes can affect every pipeline stage.
+1. It's difficult for the teams to see the potential effects of processing changes, because they don't have an overview of the entire end-to-end lifecycle. They must work together to design a well-defined release plan that minimizes effects on existing consumers and pipelines. This dependency management increases management overhead.
 1. As a rule, the teams aren't subject matter experts on the data asset that the data consumer requests. To understand new dataset features or parameter values, they have to consult an expert.
-1. After all changes have been implemented, the data consumer can use the new data asset.
+1. After all changes are implemented, the data consumer is notified that the new data asset is ready to use.
 
 Each large organization has thousands of data consumers. A complicated process like the one described severely decreases velocity in large architectures, since centralized teams become a bottleneck for business units. The result is less innovation and limited effectiveness. Potentially, business units can decide to leave the service and build their own data platform instead.
 
@@ -43,7 +43,7 @@ Cloud-scale analytics addresses scaling challenges by using two core concepts:
 
 You can deploy a single data landing zone, or multiple ones. Data landing zones make it possible for you to discover and manage data by connecting to a data management landing zone. Each data management landing zone is within a single Azure subscription.
 
-Subscriptions are Azure's units of management, billing, and scale. They play a critical role in your large-scale Azure implementation.
+Subscriptions are Azure's units of management, billing, and scale. They play a critical role in your large-scale Azure adoption plan.
 
 ### Scaling with data landing zones
 
@@ -86,7 +86,7 @@ If you implement a data mesh architecture, consider the following factors as you
 
 You can find more considerations in the cloud adoption framework guidance for [subscriptions](../../../ready/landing-zone/design-area/resource-org-subscriptions.md).
 
-Many organizations want efficient scaling of their enterprise data platform. Business units should be able to build their own data solutions and applications to meet their unique requirements. Providing this ability can be a challenge, because many existing data platforms aren't built around the concepts of scalability and decentralized ownership. This lack is clearly seen in the architecture, team structure, and ops model of these data platforms.
+Many organizations want efficient scaling of their enterprise data platform. Business units should be able to build their own data solutions and applications to meet their unique requirements. Providing this ability can be a challenge, because many existing data platforms aren't built around the concepts of scalability and decentralized ownership. This shortcoming is clearly seen in the architecture, team structure, and ops model of these data platforms.
 
 Data landing zones don't create data silos within your organization. The recommended network setup for cloud-scale analytics enables secure and in-place data sharing across landing zones, which in turn enables innovation across data domains and business units. To learn more, see [Network architecture considerations](../eslz-network-considerations-single-region.md).
 
@@ -100,7 +100,7 @@ Cloud-scale analytics uses a common architecture to advocate consistent governan
 Cloud-scale analytics places a strong emphasis on central cataloging and classification to protect data and make it possible for various groups to discover data products.
 
 > [!CAUTION]
-> We recommend against querying data across regions. Instead, make sure data is close to its users while respecting regional boundaries.
+> We recommend against querying data across regions. Instead, make sure that data is close to the compute that uses it, while respecting regional boundaries.
 
 Cloud-scale analytics architecture and the concept of data landing zones make it possible for your organization to easily increase the size of your data platform over time. You can add more data landing zones in a phased approach. Your customers don't need to have multiple landing zones at first. When you adopt this architecture, prioritize a few data landing zones and the data products that they contain. Proper prioritization helps ensure the success of your cloud-scale analytics deployment.
 
@@ -124,7 +124,4 @@ By using the scaling mechanisms of your cloud-scale analytics architecture, your
 
 ## Next steps
 
-- [Architectures overview](overview-architectures.md)
-- [Cloud-scale analytics data management landing zone overview](data-management-landing-zone.md)
-- [Data landing zones](data-landing-zone.md)
-- [What is a data mesh?](what-is-data-mesh.md)
+- [Data standardization](data-standardization.md)
