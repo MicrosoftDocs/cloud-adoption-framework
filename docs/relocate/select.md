@@ -104,7 +104,7 @@ If you used infrastructure as code to relocate your stateful service, you’ll n
 
 |Tools | Relocation method|
 | --- | --- |
-[Geo-replication](/azure/azure-sql/database/active-geo-replication-overview?view=azuresql) |Hot|
+[Geo-replication](/azure/azure-sql/database/active-geo-replication-overview) |Hot|
 |[Synchronous data replication](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database)|Hot, Warm|
 |[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)|Warm, Cold|
 |[AzCopy](/azure/storage/common/storage-use-azcopy-v10)|Warm, Cold|
