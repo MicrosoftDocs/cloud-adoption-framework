@@ -1,7 +1,7 @@
 ---
 title: Migrate
 description: How to migrate a workload to another region.
-author: stephen-sumner
+author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
 ms.topic: conceptual

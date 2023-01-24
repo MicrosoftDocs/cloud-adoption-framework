@@ -1,7 +1,7 @@
 ---
 title: Cutover
 description: How to cutover a cloud workload.
-author: stephen-sumner
+author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
 ms.topic: conceptual

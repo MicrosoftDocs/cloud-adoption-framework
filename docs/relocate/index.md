@@ -1,7 +1,7 @@
 ---
 title: How to relocate cloud workloads
 description: What it means to relocate workloads in the cloud
-author: stephen-sumner
+author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
 ms.topic: conceptual

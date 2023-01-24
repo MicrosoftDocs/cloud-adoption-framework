@@ -1,7 +1,7 @@
 ---
 title: Evaluate
 description: How to evaluate workload so you can pick the best relocation methods and tools
-author: stephen-sumner
+author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
 ms.topic: conceptual

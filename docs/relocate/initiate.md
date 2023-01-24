@@ -1,7 +1,7 @@
 ---
 title: Initiate
 description: How to initiate a cloud relocation project.
-author: stephen-sumner
+author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
 ms.topic: conceptual
