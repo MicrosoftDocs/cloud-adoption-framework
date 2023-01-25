@@ -72,43 +72,32 @@ The following table shows a summary of all SAP connectors available in Azure Dat
 >
 >To learn about overall support for the SAP data integration scenario, see [SAP data integration](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf) whitepaper with detailed introduction on each SAP connector, comparison and guidance.
 
-|SAP Source	Type of data	Azure’s	Supported objects and mode	Protocol and connection	Authentication	Additional information	Parallelization and performance	Data volumes|
-|:----|
-|		Connector						|
-|SAP applications based on NetWeaver AS ABAP such as SAP ECC| S/4HANA| CRM| SRM|BW on HANA| BW/4HANA	Raw data	SAP CDC 	All transparent| pooled and cluster tables support full load and CDC.	RFC calls to NetWeaver application and message server	Basic	Prerequisites	Yes	Large|
-|		(*via SLT)			SNC			|
-|			Certain views (SE11) support full load and CDC.				Fast with built-in parallel loading based on configurable partitioning. 	|
-|								|
-|SAP applications based on NetWeaver AS ABAP such as SAP ECC| S/4HANA| CRM| SRM| BW on HANA| BW/4HANA	Logical objects	SAP CDC	ABAP CDS views support 	RFC calls to NetWeaver application and message server	Basic	Prerequisites	Yes	Large|
-|			full load| many of them support delta (e.g.| based on time stamps| or triggers)		SNC			|
-|							Fast with built-in parallel loading based on configurable partitioning	|
-|			SAP extractors (standard as well as custom) support full load and may also support delta based on configuration.					|
-|								|
-|			BW InfoProviders such as DSO| ADSO| InfoCubes| MultiProvider| CompositeProvider| Query (if exposed as InfoProvider) support full load and may also support delta subject to support in SAP and based on configuration.					|
-|								|
-|								|
-|SAP applications based on NetWeaver AS ABAP such as SAP ECC| S/4 HANA| BW on AnyDB| BW on HANA	Raw data	SAP Table	All transparent| pooled and cluster tables and views (SE11) support full load. You can also extract changes with manual watermarking using timestamp or unique ID column.	RFC calls to NetWeaver application and message server	Basic	Prerequisites	Yes	Large|
-|					SNC			|
-|*BW/4HANA not supported							Fast with built-in parallel loading based on configurable partitioning	|
-|								|
-|BW on AnyDB| BW on HANA	Logical objects	SAP BW Open Hub	BW objects exposed via Open Hub Destination (OHD) local table such as DataSources| DSO| InfoCube| MultiProvider| CompositeProvider| Query (if exposed as InfoProvider) support full load. Delta is supported if the OHD supports delta.	RFC calls to NetWeaver application and message server	Basic	Prerequisites	Yes	Large|
-|								|
-|*BW/4HANA not supported						Create SAP OHD in SAP BW to expose data.	Fast with built-in parallel loading based on OHD specific schema	|
-|								|
-|BW on AnyDB| BW on HANA	Logical objects	SAP BW via MDX	BW InfoCubes and QueryCubes (including BEx queries) support full load. Delta is not supported.	RFC calls to NetWeaver application server	Basic	Prerequisites		Small|
-|								|
-|*BW/4HANA not supported							Slower	|
-|								|
-|SAP ECC| S/4 HANA	Raw data or logical objects	SAP ECC	Any objects exposed by OData services such as SAP tables| views| BAPI objects| extractors| data or IDOCs sent to SAP PI that can be received as OData via relative adapters| support full load. You can also extract changes with manual watermarking using timestamp or unique ID column.	HTTP (OData) calls to NetWeaver application and message server	Basic	Prerequisites		Small|
-|		(*via SAP Gateway)						|
-|						Set up SAP Gateway| activate OData service| and expose entities.	Slower	|
-|								|
-|SAP HANA	Raw data or logical objects	SAP HANA	HANA database row and column tables| information models (analytic and calculation views) and custom query all support full load. You can also extract changes with manual watermarking using timestamp or unique ID column.	ODBC calls to HANA database	Basic	Prerequisites	Yes	Large|
-|					Windows (SSO)			|
-|							Fast with built-in parallel loading based on configurable partitioning	|
-|SAP Cloud for Customer 	Raw data or logical objects	SAP C4C	This is a bi-directional connector; it can copy data from and to SAP C4C. 	HTTP (OData) calls to SaaS service	Basic			Small|
-|(SaaS CRM)								|
-|			Objects that can be exposed by OData services from SAP C4C are supported. 				Slower	|
+
+|SAP Source|Type of data|Azure’s connectors|Supported objects and mode|Protocol and connection|Authentication|Additional information|Parallelization and performance|Data volumes|
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+| | | | | | | | | |
+|SAP applications based on NetWeaver AS ABAP such as SAP ECC, S/4HANA, CRM, SRM,BW on HANA, BW/4HANA|Raw data|SAP CDC ((*via SLT))|All transparent, pooled and cluster tables support full load and CDC.Certain views (SE11) support full load and CDC.
+|RFC calls to NetWeaver application and message server|Basic
+SNC|Prerequisites|Yes
+Fast with built-in parallel loading based on configurable partitioning. |Large|
+|SAP applications based on NetWeaver AS ABAP such as SAP ECC, S/4HANA, CRM, SRM, BW on HANA, BW/4HANA|Logical objects|SAP CDC|ABAP CDS views supportfull load, many of them support delta (e.g., based on time stamps, or triggers)
+SAP extractors (standard as well as custom) support full load and may also support delta based on configuration.
+BW InfoProviders such as DSO, ADSO, InfoCubes, MultiProvider, CompositeProvider, Query (if exposed as InfoProvider) support full load and may also support delta subject to support in SAP and based on configuration.|RFC calls to NetWeaver application and message server|Basic
+SNC|Prerequisites|Yes
+Fast with built-in parallel loading based on configurable partitioning|Large|
+|SAP applications based on NetWeaver AS ABAP such as SAP ECC, S/4 HANA, BW on AnyDB, BW on HANA*BW/4HANA not supported|Raw data|SAP Table|All transparent, pooled and cluster tables and views (SE11) support full load. You can also extract changes with manual watermarking using timestamp or unique ID column.|RFC calls to NetWeaver application and message server|Basic
+SNC|Prerequisites|Yes
+Fast with built-in parallel loading based on configurable partitioning|Large|
+|BW on AnyDB, BW on HANA
+*BW/4HANA not supported|Logical objects|SAP BW Open Hub|BW objects exposed via Open Hub Destination (OHD) local table such as DataSources, DSO, InfoCube, MultiProvider, CompositeProvider, Query (if exposed as InfoProvider) support full load. Delta is supported if the OHD supports delta.|RFC calls to NetWeaver application and message server|Basic|Prerequisites
+Create SAP OHD in SAP BW to expose data.|Yes
+Fast with built-in parallel loading based on OHD specific schema|Large|
+|BW on AnyDB, BW on HANA
+*BW/4HANA not supported|Logical objects|SAP BW via MDX|BW InfoCubes and QueryCubes (including BEx queries) support full load. Delta is not supported.|RFC calls to NetWeaver application server|Basic|Prerequisites|Slower|Small|
+|SAP ECC, S/4 HANA|Raw data or logical objects|SAP ECC  (*via SAP Gateway)|Any objects exposed by OData services such as SAP tables, views, BAPI objects, extractors, data or IDOCs sent to SAP PI that can be received as OData via relative adapters, support full load. You can also extract changes with manual watermarking using timestamp or unique ID column.|HTTP (OData) calls to NetWeaver application and message server|Basic|Prerequisites - Set up SAP Gateway, activate OData service, and expose entities.|Slower|Small|
+|SAP HANA|Raw data or logical objects|SAP HANA|HANA database row and column tables, information models (analytic and calculation views) and custom query all support full load. You can also extract changes with manual watermarking using timestamp or unique ID column.|ODBC calls to HANA database|BasicWindows (SSO)|Prerequisites|Yes
+Fast with built-in parallel loading based on configurable partitioning|Large|
+|SAP Cloud for Customer ((SaaS CRM))|Raw data or logical objects|SAP C4C|This is a bi-directional connector; it can copy data from and to SAP C4C.Objects that can be exposed by OData services from SAP C4C are supported. |HTTP (OData) calls to SaaS service|Basic| |Slower|Small|
 
 
 It is possible that there is more than one connector available for a certain scenario and the choice will depend on which connector offers you the best possible integration capabilities. However, a good starting point is to consider using the connector that integrates with a higher layer (for example, SAP application instead of the database). The following tables show you the suggested decision direction.
