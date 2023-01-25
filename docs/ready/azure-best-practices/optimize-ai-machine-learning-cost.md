@@ -170,6 +170,8 @@ Tagging enables you to place customized tags on your workspaces and computes (fr
 
 There are also system injected tags placed on computes that allow you to filter in the Cost Analysis page by the “Compute type” tag to see a compute wise breakdown of your total spend and determine what category of compute resources might be attributing to the majority of your costs. This is particularly useful for gaining more visibility into your training vs inferencing cost patterns.
 
+![Screenshot of the cost analytics view filtered by compute type](./media/ai-machine-learning-azure-cost-analytics.png)
+
 ### Govern and restrict compute usage by policy
 
 When you manage an Azure environment with many workloads, it can be a challenge to keep the overview on resource spend. [Azure Policy](/azure/governance/policy/overview) can help control and govern resource spend, by restricting particular usage patterns across the Azure environment.
