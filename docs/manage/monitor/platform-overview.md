@@ -3,7 +3,7 @@ title: Cloud monitoring platforms overview
 description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 01/20/2023
+ms.date: 01/25/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -12,7 +12,13 @@ ms.custom: think-tank, engagement-fy23
 
 # Cloud monitoring guide: Monitoring platforms overview
 
-Microsoft provides a range of monitoring capabilities from multiple products: [System Center Operations Manager](/system-center/scom/welcome) (SCOM), designed for on-premises and then extended to the cloud, [Azure Monitor System Center Operations Manager Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview?) (SCOM Managed Instance (preview)), a PaaS offering of System Center Operations Manager hosted in Azure, and Azure Monitor, designed for the cloud but can also monitor on-premises systems. These two offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
+Microsoft provides a range of monitoring capabilities from multiple products: 
+
+- [Azure Monitor](/azure/azure-monitor/overview), designed for the cloud but can also monitor on-premises infrastructure and applications. 
+- [System Center Operations Manager](/system-center/scom/welcome) (SCOM), designed for on-premises and then extended to the cloud.
+- [Azure Monitor System Center Operations Manager Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview?) (SCOM Managed Instance (preview)), a PaaS offering of System Center Operations Manager hosted in Azure.
+
+These offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
 
 Many organizations are embracing the latest practices for DevOps agility and cloud innovations to manage their heterogeneous environments. Yet they're also concerned about their ability to make appropriate and responsible decisions about monitoring those workloads.
 
