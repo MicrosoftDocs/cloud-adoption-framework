@@ -1,6 +1,6 @@
 ---
 title: Azure landing zone design principles
-description: Learn about the design principles that influence the design areas for enterprise-scale landing zone implementations
+description: Learn about the design principles that influence the design areas for enterprise-scale landing zone implementations.
 author: jtracey93
 ms.author: jatracey
 ms.date: 10/18/2022
@@ -10,90 +10,90 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Azure landing zone - design principles
+# Azure landing zone design principles
 
-The Azure landing zone conceptual architecture is universally applied to any Azure landing zone process or implementation. At the foundation of the architecture is a set of core design principles that serve as a compass for subsequent design decisions across critical technical domains. 
+The Azure landing zone conceptual architecture universally applies to any Azure landing zone process or implementation. At the foundation of the architecture, a set of core design principles serve as a compass for subsequent design decisions across critical technical domains.
 
-The principles are intentionally aspirational to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone accelerator or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles described here. 
+The principles are intentionally aspirational, to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone accelerator, or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles this article describes.
 
-Using these principles as part of your implementation will serve as a useful guide for realizing the benefits of cloud technologies. This cloud-orientated way, often called _cloud native_,  represents ways of working and technical options for your organization that are not typically offered with legacy technology approaches.
+Use these principles in your implementation as a useful guide to realize the benefits of cloud technologies. This cloud-oriented or *cloud native* approach represents ways of working and technical options for your organization that legacy technology approaches don't typically offer.
 
-> [!IMPORTANT] 
-> **Impact of design deviations**
->
-> There might be valid reasons to deviate from the principles. For example, organizational requirements might dictate specific outcomes or approaches to how an Azure environment is designed. In such cases, it's important to understand the impact the deviation will have on the design and future operations. Carefully consider the trade offs outlined for each principle.
+Familiarize yourself with these principles to better understand their impact and the tradeoffs associated with deviation.
 
-Familiarize yourself with these principles to better understand their impact and the trade-offs associated with deviation.
+## Impact of design deviations
 
-As a general rule, be prepared to balance requirements and functionality because your journey to the conceptual architecture will evolve over time as requirements change and you learn from your implementation. For example, utilizing preview services and taking dependencies on service roadmaps can remove technical blockers during adoption.
+There might be valid reasons to deviate from the design principles. For example, organizational requirements might dictate specific outcomes or approaches for designing an Azure environment. In such cases, it's important to understand the impact the deviation has on the design and future operations. Carefully consider the tradeoffs each principle outlines.
+
+As a general rule, be prepared to balance requirements and functionality. Your journey to a conceptual architecture evolves over time as requirements change and you learn from your implementation. For example, using preview services and depending on service roadmaps can remove technical blockers during adoption.
 
 ## Subscription democratization
 
-Utilize subscriptions as a unit of management and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of existing workloads. 
+Use subscriptions as units of management, and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Provide subscriptions to business units to support the design, development, and testing of new workloads and the migration of existing workloads.
 
-To enable the organization to operate effectively at scale, support a subscription with suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This will allow the subscription to be managed and organized efficiently.
+To help the organization operate effectively at scale, support a subscription with a suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This hierarchy allows efficient subscription management and organization.
 
 > [!TIP]
-> We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+> For more information about subscription democratization, see the recent YouTube video [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
 
-#### Impact of deviation
-- [**Decentralized operations**](../../operating-model/compare.md)&mdash;One approach for implementing this principle is to transition operations to business units and workload teams. This allows workload owners to have more control and autonomy of their workloads within the guardrails established by platform foundation. Customers who require [central operations](../../operating-model/compare.md#centralized-operations) and don't want to delegate control of production environments to workload teams or business units, may need to make modifications to their [resource organization](./../landing-zone/design-area/resource-org.md) design and deviate from this principle.
-- **Misalignment with the [operating model](../../operating-model/define.md)**&mdash;Azure landing zone conceptual architecture design assumes a specific management group and subscription hierarchy for all operations management subscriptions, which might not align with your operating model. However with this deviation, as your organization grows and evolves, your operational model might change, which can lead to a migration of resources into separate subscriptions again, which can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before committing to an approach.
+### Impact of deviation
+
+- [Decentralized vs. centralized operations](../../operating-model/compare.md). One way to implement this principle transitions operations to business units and workload teams. This reassignment lets workload owners have more control and autonomy over their workloads, within the guardrails of the platform foundation. Organizations that require [central operations](../../operating-model/compare.md#centralized-operations) might not want to delegate control of production environments to workload teams or business units. These organizations might need to modify their [resource organization](./../landing-zone/design-area/resource-org.md) design to deviate from this principle.
+
+- **Operating model misalignment.** Azure landing zone conceptual architecture design assumes a specific management group and subscription hierarchy for all operations management subscriptions. This hierarchy might not align with your [operating model](../../operating-model/define.md). As your organization grows and evolves, your operating model might change. Moving resources into separate subscriptions can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before you commit to an approach.
 
 ## Policy-driven governance
 
-Use Azure Policy to provide guardrails and ensure continued compliance with your organization's platform and the applications deployed onto it. Azure Policy also provides application owners with independence and a secure, unhindered path to the cloud.
+Use Azure Policy to provide guardrails and ensure that the applications you deploy comply with your organization's platform. Azure Policy provides application owners with independence and a secure, unhindered path to the cloud.
 
-#### Impact of deviation
+For more information, review [Adopt policy-driven guardrails](../../ready/enterprise-scale/dine-guidance.md).
 
-**Increase the operation and management overhead**&mdash;By not utilizing Azure Policies to create guardrails within your environment you increase the operation and management overhead of maintaining compliance. Azure Policies help you to restrict and automate your desired compliance state within your environment. 
+### Impact of deviation
 
-As part of your design considerations, review [how Azure Policy can be used inside a landing zone implementation](../../ready/enterprise-scale/dine-guidance.md). 
+**Increased operational and management overhead.** If you don't use policies to create guardrails within your environment, you increase the operational and management overhead of maintaining compliance. Azure Policy helps you restrict and automate your desired compliance state within your environment.
 
 ## Single control and management plane
 
-Avoid dependency on abstraction layers, such as customer-developed portals or tooling. Having a consistent experience for both Central Operations and Workload Operations is highly recommended. Azure provides a unified and consistent control plane which is subject to role-based access and policy-driven controls. This applies across all Azure resources and provisioning channels. Azure can be used to establish a standardized set of policies and controls for governing the entire enterprise estate.
+Avoid dependency on abstraction layers such as customer-developed portals or tooling. It's best to have a consistent experience for both central operations and workload operations. Azure provides a unified and consistent control plane that applies across all Azure resources and provisioning channels. The control plane is subject to role-based access and policy-driven controls. You can use this Azure control plane to establish a standardized set of policies and controls that govern your entire enterprise estate.
 
-#### Impact of deviation
+### Impact of deviation
 
-**Increased complexity of integration**&mdash;Choosing a multi-vendor approach to operate control and management planes might introduce complexity of integration and feature support. Replacing individual components to achieve a "best of breed" design or multi-vendor operations tooling might have limitations and could cause unintended errors due to inherent dependencies. 
+**Increased integration complexity.** A multivendor approach to control and management planes might introduce integration and feature support complexity. Replacing individual components to achieve a "best of breed" design or multivendor operations tooling has limitations, and could cause unintended errors due to inherent dependencies.
 
-For customers who are bringing an existing tooling investment to operations, security, or governance, a review of the Azure services and any dependencies is recommended.
-
+If you're bringing an existing tooling investment to operations, security, or governance, review the Azure services and any dependencies.
 
 ## Application-centric service model
 
-Focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. The design choices shouldn't differentiate between old and new applications, infrastructure as a service (IaaS), or platform as a service (PaaS) applications. 
+Focus on application-centric migrations and development, rather than pure infrastructure lift-and-shift migrations such as moving virtual machines. Design choices shouldn't differentiate among old and new applications, infrastructure as a service (IaaS) applications, or platform as a service (PaaS) applications.
 
-Regardless of the service model, strive to provide a secure environment for all applications deployed on the Azure platform.
+Regardless of the service model, strive to provide a secure environment for all applications you deploy on the Azure platform.
 
-#### Impact of deviation
+### Impact of deviation
 
-- **Increased complexity in governance policies**&mdash;Segmenting workloads in a way that differs from the [implementation options](implementation-options.md) for management group hierarchy can create a complex policy and access control structure to govern your environment. For example deviation from the organizational hierarchy structure or grouping by Azure service.
+- **Increased governance policy complexity.** If you segment workloads differently from the management group hierarchy [implementation options](implementation-options.md), you increase complexity in governance policies and access control structures that govern your environment. Examples include deviation from the organizational hierarchy structure or grouping by Azure service.
 
-- **Increased operational overhead**&mdash;This trade off introduces the risk of unintentional policy duplication and thereby exceptions, which add to operational and management overheads.
+- **Increased operational overhead.** This tradeoff introduces the risk of unintentional policy duplication and exceptions, which add to operational and management overheads.
 
-Dev/Test/Production is another common approach considered by customers, you can read more on this in the FAQ question here: [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
+- **Dev/Test/Production** is another common approach that organizations consider. For more information, see [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture](../../ready/enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
 
 
-## Align with Azure-native design and roadmaps
+## Alignment with Azure-native design and roadmaps
 
-Leverage Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and the Azure landing zone conceptual trajectory.
+Use Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help inform the migration strategy and the Azure landing zone conceptual trajectory.
 
-#### Impact of deviation
+### Impact of deviation
 
-**Increased complexity in integration**&mdash;Introducing third-party solutions into your Azure environment, can create a dependency upon that solution to provide feature support and integration with Azure first party services. 
+**Increased integration complexity.** Introducing third-party solutions into your Azure environment can create a dependency on those solutions to provide feature support and integration with Azure first-party services.
 
-Sometimes bringing existing third-party solution investments into an environment is inevitable. Consider this principle and its tradeoffs carefully in alignment with your requirements. 
+Sometimes bringing existing third-party solution investments into an environment is inescapable. Consider this principle and its tradeoffs carefully to align with your requirements.
 
 ## Next steps
 
-Organizations may be at different stages of their cloud journey when reviewing this guidance. As a result, the actions and recommendations required to progress toward the outcome detailed above may vary. To understand best next actions in relation to where you are in your cloud adoption, review the journey to the target architecture content.
+Organizations might be at different stages of their cloud journeys when they review this guidance. Therefore, the required actions and recommendations to progress toward the preceding outcomes might vary. To understand the best next actions for your cloud adoption stage, review the journey to the target architecture.
 
 > [!div class="nextstepaction"]
 > [Journey to the target architecture](./landing-zone-journey.md)
 
-When you're choosing the right Azure landing zone implementation option, you should understand the [Azure landing zone design areas](./design-areas.md).
+To choose the right Azure landing zone implementation option, understand the Azure landing zone design areas.
 
 > [!div class="nextstepaction"]
 > [Review design areas](./design-areas.md)
