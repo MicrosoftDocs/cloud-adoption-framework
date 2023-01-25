@@ -12,7 +12,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Select automation for relocating cloud workloads
 
-For each workload, you need to select the best relocation method and tools for relocation. The Select step provides guidance to help you make those decisions. The selections you make depend on the services and the criticality of the workload.
+For each workload, you need to select the best relocation strategy. The Select step provides guidance to help you make those decisions. The selections you make depend on the services and the criticality of the workload.
 
 :::image type="content" source="../_images/relocate/caf-relocate-select.png" alt-text="Image showing the relocation process and highlights the Select step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-select.png" border="false":::
 *Figure 1. The Select step of relocation.*
@@ -60,12 +60,16 @@ Warm relocation is for critical workloads with a stateful service that doesn’t
 
 ## Select service-relocation automation
 
-There are three primary service relocation tools. The following paragraphs give an overview of each tool choice with links to more guidance. Azure Resource Mover and Azure Site Recovery can move stateless and stateful services. If you use infrastructure as code to move the workload, you’ll need to find a separate data relocation tool.
+There are three primary service-relocation tools. The following paragraphs give an overview of each tool choice with links to more guidance. Azure Resource Mover and Azure Site Recovery can move stateless and stateful services. If you use infrastructure as code to move the workload, you’ll need to find a separate data relocation tool. You should review the capabilities of each service-relocation tool and select the service-relocation tool that best meets your needs.
 
-**Azure Resource Mover.** Azure Resource Mover is a built-in Azure service that allows you to move Azure resources between regions, subscriptions, and resource groups. We recommend using Azure Resource Mover as a first option for all cold relocations. It supports a limited number of stateful and stateless services. For more information, see [supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
+**Azure Resource Mover.** Azure Resource Mover is a built-in Azure service that allows you to move Azure resources between regions, subscriptions, and resource groups. We recommend using Azure Resource Mover as a first option for all cold relocations. It supports a limited number of stateful and stateless services. For more information, see:
 
-**Azure Site Recovery.** Azure Site Recovery can replicate any application running on a supported virtual machine in Azure. It’s a disaster recovery tool by design, but it can relocate stateful and stateless workloads. It uses a Recovery Services Vault like Azure Backup, but Azure Site Recovery moves services faster than Azure Backup. It requires a few cleanup steps after relocation sine it’s a disaster recovery tool. For more information, see:
+- [Azure Resource Mover overview](/azure/resource-mover/overview)
+- [Supported resources](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
+**Azure Site Recovery.** Azure Site Recovery can replicate any application running on a supported virtual machine in Azure. It’s a disaster recovery tool by design, but it can relocate stateful and stateless workloads. It uses a Recovery Services Vault like Azure Backup and can move services quickly. It requires a few cleanup steps after relocation sine it’s a disaster recovery tool. For more information, see:
+
+- [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview)
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
 - [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
 
@@ -73,7 +77,7 @@ There are three primary service relocation tools. The following paragraphs give 
 
 ## Select data-relocation automation
 
-If you used infrastructure as code to relocate your stateful service, you’ll need to pick a data relocation tool to move the data.
+If you used infrastructure as code to relocate your stateful service, you’ll need to pick a data-relocation tool to move the data.
 
 **Geo-replication.** Active geo-replication is a business continuity solution. You can perform quick disaster recovery of individual databases if a regional disaster or large-scale outage occurs. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. For more information, see [geo-replication](/azure/azure-sql/database/active-geo-replication-overview).
 

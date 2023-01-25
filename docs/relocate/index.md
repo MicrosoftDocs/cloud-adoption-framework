@@ -15,11 +15,11 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 CAF Relocate details the process of relocating workloads in Azure. It shows you how to pick the best relocation methods and tools for your relocation project.
 
 :::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image showing the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
-*Figure 1. The Relocate process.*
+*Figure 1. The relocation lifecycle.*
 
 ## What is relocation?
 
-Relocation is a process of moving a workload in Azure to a different Azure region.  While it’s a migration effort, it isn't a migration to the cloud.  Instead, it’s an intercloud migration. As a result, it has some similarities with the process defined in CAF Migrate but also has its own solutions and considerations to take advantage of different Azure regions.
+Relocation is a process of moving a workload in Azure to a different Azure region.  While it’s a migration effort, it isn't a migration to the cloud.  Instead, it’s a migration with the Azure public cloud. As a result, it has some similarities with the process defined in CAF Migrate but also has its own solutions and considerations to take advantage of different Azure regions.
 
 ## Why relocate?
 
@@ -29,17 +29,17 @@ Relocation adds flexibility that can help you optimize cost and performance thro
 
 | Relocation drivers | Examples |
 | --- | --- |
-| Optimization | Use Azure services and capabilities available in another region. |
+| Business developments | Respond to business changes and expand your global footprint. |
 | Compliance | Meet data sovereignty and residency requirements. |
-| Performance | Provide lower latency to end users. |
+| Proximity | Provide lower latency to end users. |
 
 ## How to relocate
 
-We divide the relocation process into two phases. We call the first phase Initiate and the second phase Move. You need to establish the project and then execute it. Let’s look at the two phases of relocation.
+We divide the relocation lifecycle into two phases. The first phase is Initiate, and it's where you establish the relocation project. The second phase is Move, and it outlines the process to execute the relocation. Let’s look at the two phases of relocation.
 
 **Initiate phase:** The initiate phase is a single-step, one-time process. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and start relocating workloads.
 
-**Move phase:** The Move phase is a four-step process to migrate a workload to a different region. While we plan a relocation around workloads, relocation happens at the service level. To relocate a workload, you relocate all the services that comprise the workload. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover.
+**Move phase:** The Move phase is a four-step process to migrate a workload to a different region. While we plan a relocation around workloads, relocation happens at the service level. To relocate a workload, you relocate all the services that comprise the workload. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
 
 *Table 2. The steps of the Move phase and their main goal.*
 
@@ -50,7 +50,7 @@ We divide the relocation process into two phases. We call the first phase Initia
 |3. Migrate| Relocate the workload|
 |4. Cutover| Direct traffic to new location|
 
-These steps align to distinct technical actions. The following articles detail how you should approach each step, but here’s an overview of each step to get started. You should follow the final cutover with an official close to the relocation project.
+The following articles detail how you should approach each step.
 
 ## Next step
 
