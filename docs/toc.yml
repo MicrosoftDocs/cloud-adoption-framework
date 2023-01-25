@@ -302,10 +302,14 @@ items:
               items:
               - name: Define an Azure network topology
                 href: ready/azure-best-practices/define-an-azure-network-topology.md
+              - name: Hub and spoke network topology
+                href: ready/azure-best-practices/hub-spoke-network-topology.md
               - name: Traditional Azure networking topology
                 href: ready/azure-best-practices/traditional-azure-networking-topology.md
               - name: Virtual WAN network topology (Microsoft-managed)
                 href: ready/azure-best-practices/virtual-wan-network-topology.md
+              - name: Perimeter networks
+                href: ready/azure-best-practices/perimeter-networks.md
               - name: Plan for IP addressing
                 href: ready/azure-best-practices/plan-for-ip-addressing.md
             - name: Connectivity
@@ -363,6 +367,8 @@ items:
               href: ready/azure-best-practices/resource-abbreviations.md
             - name: Define your tagging strategy
               href: ready/azure-best-practices/resource-tagging.md
+            - name: Resource naming and tagging decision guide
+              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
             - name: Move resources
               href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Design options for specific use cases
@@ -1512,20 +1518,14 @@ items:
         items:
         - name: Overview of the identity baseline
           href: govern/identity-baseline/index.md
-        - name: Download the template
-          href: govern/identity-baseline/template.md
-        - name: Understand business risks
-          href: govern/identity-baseline/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/identity-baseline/metrics-tolerance.md
-        - name: Sample Identity Baseline policies
-          href: govern/identity-baseline/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/identity-baseline/compliance-processes.md
-        - name: Improve the identity baseline
-          href: govern/identity-baseline/discipline-improvement.md
-        - name: Azure tools for identity baseline
-          href: govern/identity-baseline/toolchain.md
+        - name: Azure Active Directory governance guidance
+          href: govern/identity-baseline/azure-ad-configuration.md
+        - name: Administrative access governance guidance
+          href: govern/identity-baseline/administrative-access.md
+        - name: Business user access governance guidance
+          href: govern/identity-baseline/business-user-access.md
+        - name: Application access governance guidance
+          href: govern/identity-baseline/application-access.md
       - name: Resource consistency
         items:
         - name: Overview of resource consistency
@@ -1550,25 +1550,20 @@ items:
           href: govern/resource-consistency/governance-simple-workload.md
         - name: Governance design for multiple teams
           href: govern/resource-consistency/governance-multiple-teams.md
+        - name: Why update an Azure landing zone?
+          href: govern/resource-consistency/why-update-azure-landing-zone.md
+        - name: Migrate Azure landing zone policies to Azure built-in policies
+          href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
+        - name: Update Azure landing zone custom policies
+          href: govern/guides/standard/update-custom-policies.md
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration
           href: govern/deployment-acceleration/index.md
-        - name: Download the template
-          href: govern/deployment-acceleration/template.md
-        - name: Understand business risks
-          href: govern/deployment-acceleration/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/deployment-acceleration/metrics-tolerance.md
-        - name: Sample Deployment Acceleration policies
-          href: govern/deployment-acceleration/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/deployment-acceleration/compliance-processes.md
-        - name: Improve deployment acceleration
-          href: govern/deployment-acceleration/discipline-improvement.md
-        - name: Azure tools for deployment acceleration
-          href: govern/deployment-acceleration/toolchain.md
-
+        - name: Consistency and repeatability in deployments
+          href: govern/deployment-acceleration/deployment-consistency-repeatability.md
+        - name: Policy visibility in deployments
+          href: govern/deployment-acceleration/policy-visibility-in-deployment.md
     - name: Govern antipatterns
       href: antipatterns/govern-antipatterns.md
 
@@ -1863,44 +1858,12 @@ items:
           href: ready/considerations/roles.md
         - name: Choose an authentication method
           href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Policy enforcement
-        href: decision-guides/policy-enforcement/index.md
       - name: Resource consistency
         href: decision-guides/resource-consistency/index.md
-      - name: Resource tagging
-        href: decision-guides/resource-tagging/index.md
       - name: Encryption
         href: decision-guides/encryption/index.md
-      - name: Networking
-        items:
-        - name: Review networking options
-          href: ready/considerations/networking-options.md
-        - name: Network boundary security
-          href: resources/networking-vdc.md
-        - name: Plan virtual networks
-          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Best practices for network security
-          href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Perimeter networks
-          href: ready/azure-best-practices/perimeter-networks.md
-        - name: Hub and spoke network topology
-          href: ready/azure-best-practices/hub-spoke-network-topology.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
-      - name: Cost management
-        items:
-        - name: Track costs
-          href: ready/azure-best-practices/track-costs.md
-        - name: Optimize your cloud investment
-          href: /azure/cost-management-billing/costs/cost-mgt-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Create and manage budgets
-          href: /azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Export cost data
-          href: /azure/cost-management-billing/costs/tutorial-export-acm-data?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Optimize costs from recommendations
-          href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Monitor usage and spending
-          href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Migration tools
         href: decision-guides/migrate-decision-guide/index.md
       - name: Storage
@@ -1951,3 +1914,6 @@ items:
         href: resources/azure-scaffold.md
       - name: Virtual datacenter (VDC)
         href: resources/vdc.md
+      - name: Virtual datacenter boundary security
+        href: resources/networking-vdc.md
+

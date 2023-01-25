@@ -58,12 +58,15 @@ For host pool VM resiliency, consider these factors:
    -  Premium SSD, Ultra Disk or Premium SSD v2 - 99.9%
    -  Standard SSD Managed Disks - 99.5%
    -  Standard HDD Managed Disks - 95%   
-- The default resiliency option for Azure Virtual Desktop host pool deployment is to use an availability set. This option ensures host pool resiliency only at the single Azure datacenter level. Azure availability sets for virtual machines have a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
+- The default resiliency option for Azure Virtual Desktop host pool deployment is to use availability zones. 
+
+- Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
+
+- Availability Sets - This option ensures host pool resiliency only at the single Azure datacenter level. Azure availability sets for virtual machines have a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
   > [!NOTE]
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-- Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
 
 Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications that your organization accesses via Azure Virtual Desktop are critical to your business. You might want to separate critical applications from non-critical applications so that you can provision multiple host pools by using different disaster recovery approaches and capabilities.
 
@@ -162,6 +165,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Make sure that the managed disk for the local VM is large enough to accommodate the local cache of all users' FSLogix profile and Office containers.
 
 - Use Azure Compute Gallery to replicate golden images to different regions.
+  - Golden images don't participate in providing users the ability to connect to their session host VM. However, they play a critical role in how quickly you are able to run the provisioning process of new virtual machines on a host pool and therefore must be backed up and available.
   - Use ZRS to create the image. Maintain at least two copies of the image per region.
 
 - Use Azure Backup to protect critical user data from data loss or logical corruption when you use the Azure Files Standard tier or Premium tier.
