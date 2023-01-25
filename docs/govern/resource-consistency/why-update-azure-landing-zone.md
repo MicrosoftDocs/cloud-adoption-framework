@@ -28,12 +28,16 @@ Here are a few reasons to keep your landing zone up to date:
 
 Neglecting keep to your landing zones up to date could affect your security posture and the benefits that you get from the landing zones. To protect your investment in Azure, regularly review and update your landing zones as needed. See the **Next steps** section for guidance on how to do that.
 
-## Azure policy and policy initatives
+## Azure policy and policy initiatives
 
 Over time, Azure landing zone custom policies and policy initiatives might be updated to newer versions or even superseded by new Azure built-in policies. If so, they should be be included in your platform landing zone update cycle.
 
 - [Migrate landing zone custom policies to Azure built-in policies](./migrate-azure-landing-zone-policies.md)
 - [Update Azure landing zone custom policies](../guides/standard/update-custom-policies.md)
+
+## Using Infrastructure-as-Code (IaC) to keep ALZ updated
+
+'To help more easily remain up to date with ALZ in a consistent way, use IaC to maintain your ALZ environment. See the following link for more details on the benefits [Why use Infrastructure as Code to update your ALZ?](../../manage/iac-updates.md).
 
 ## Next steps
 
