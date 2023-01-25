@@ -1,6 +1,6 @@
 ---
 title: How to migrate a cloud workload to another region
-description: Learn how to migrate a cloud workloads and applications to another region.
+description: Learn how to migrate cloud workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023

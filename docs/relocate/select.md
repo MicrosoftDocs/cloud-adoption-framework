@@ -1,6 +1,6 @@
 ---
-title: How to select automation for relocating cloud workloads
-description: Learn how to select the best methods and automated tools for relocating cloud workloads and applications.
+title: How to select a strategy for relocating cloud workloads
+description: Learn how to select the right strategy for relocating cloud workloads and applications.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -10,7 +10,7 @@ ms.subservice: adopt
 ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
-# Select automation for relocating cloud workloads
+# Select a strategy for relocating cloud workloads
 
 For each workload, you need to select the best relocation strategy. The Select step provides guidance to help you make those decisions. The selections you make depend on the services and the criticality of the workload.
 
@@ -19,7 +19,7 @@ For each workload, you need to select the best relocation strategy. The Select s
 
 ## Select a relocation method
 
-You need to pick a relocation method for each workload. The relocation method depends on the services in the workload and how critical the workload is. Cold relocation is for stateless services and for non-essential workloads. Hot and warm relocation is for mission-critical stateful services. We recommend using a hot relocation strategy if the service supports it. To execute each relocation method, you select and apply service and data relocation tools, which we discuss later. Here we survey the three relocation methods.
+There are three main methods for relocating workloads. The relocation method you choose depends on the services in the workload and how critical the workload is essential business functions. Cold relocation is for stateless services and for non-essential workloads. Hot and warm relocation is for mission-critical and stateful services. The method you choose relocation affects service and data relocation tools you use to relocate the workload. Use the following relocation decision tree to get a general idea of the right relocation method and validate your decision by surveying the three relocation methods.
 
 :::image type="content" source="../_images/relocate/relocation-methods-decision-tree.png" alt-text="Image showing a decision tree for selecting the right relocation method. There are three decision points. 1. Is downtime okay? If yes, then cold relocation is the right relocation method. 2. Is it a stateless service? If yes, then cold relocation is again the right relocation method. 3. Does the service support synchronous data replication? If yes, then hot relocation is the right relocation method. If no, then warm relocation is the right relocation method." lightbox="../_images/relocate/relocation-methods-decision-tree.png" border="false":::
 
@@ -67,7 +67,7 @@ There are three primary service-relocation tools. The following paragraphs give 
 - [Azure Resource Mover overview](/azure/resource-mover/overview)
 - [Supported resources](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
-**Azure Site Recovery.** Azure Site Recovery can replicate any application running on a supported virtual machine in Azure. It’s a disaster recovery tool by design, but it can relocate stateful and stateless workloads. It uses a Recovery Services Vault like Azure Backup and can move services quickly. It requires a few cleanup steps after relocation sine it’s a disaster recovery tool. For more information, see:
+**Azure Site Recovery.** Azure Site Recovery can replicate any application running on a supported virtual machine in Azure. It’s a disaster recovery tool by design, but it can relocate stateful and stateless workloads. It uses a Recovery Services Vault like Azure Backup and can move services quickly. It requires a few cleanup steps after relocation since it’s a disaster recovery tool. For more information, see:
 
 - [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview)
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
