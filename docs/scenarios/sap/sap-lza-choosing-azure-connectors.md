@@ -90,3 +90,10 @@ It is possible that there is more than one connector available for a certain sce
 ![Diagram showing an  SAP ECC & S/4 HANA connectors.](./media/sap-eccs4hana-connectors.png)
 
 ![Diagram showing an  SAP BW & BW/4 HANA connectors.](./media/sap-bwbw4hana-connectors.png)
+
+
+## Next step: Learn about different Azure connectors and the recommendations. 
+
+The following articles provide details on performance and troubleshooting when extracting data from SAP using Azure Connectors. 
+
+- [ Performance and Troubleshooting ](./sap-lza-data-extraction-performance-troubleshooting.md)
