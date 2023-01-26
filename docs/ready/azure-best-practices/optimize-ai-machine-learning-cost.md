@@ -144,7 +144,7 @@ Next to VM priority, consider running jobs on various VM SKUs. It might be that 
 
 ### Early-terminate a run when training doesn't converge
 
-When you continuously experiment to improve a model against its baseline, you might be executing various experiment runs, each with slightly different configurations. For one run, you might tweak the input datasets. For another run, you might make a hyperparameter change. Not all changes might be as effective as the other. You detect early that a change didn't have the intended affect on the quality of your model training. To detect if training does not converge, monitor training progress during a run. For example, by logging performance metrics after each training epoch. Consider early terminating the job to free up resources and budget for another trial.
+When you continuously experiment to improve a model against its baseline, you might be executing various experiment runs, each with slightly different configurations. For one run, you might tweak the input datasets. For another run, you might make a hyperparameter change. Not all changes might be as effective as the other. You detect early that a change didn't have the intended effect on the quality of your model training. To detect if training does not converge, monitor training progress during a run. For example, by logging performance metrics after each training epoch. Consider early terminating the job to free up resources and budget for another trial.
 
 ## Plan, manage and share budgets, cost, and quota
 
@@ -170,7 +170,7 @@ Tagging enables you to place customized tags on your workspaces and computes (fr
 
 There are also system injected tags placed on computes that allow you to filter in the Cost Analysis page by the “Compute type” tag to see a compute wise breakdown of your total spend and determine what category of compute resources might be attributing to the majority of your costs. This is particularly useful for gaining more visibility into your training vs inferencing cost patterns.
 
-![Screenshot of the cost analytics view filtered by compute type](./media/ai-machine-learning-azure-cost-analysis.png)
+![Screenshot of the cost analytics view filtered by compute type.](./media/ai-machine-learning-azure-cost-analysis.png)
 
 ### Govern and restrict compute usage by policy
 
