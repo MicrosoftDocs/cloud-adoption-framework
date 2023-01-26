@@ -45,7 +45,7 @@ Where possible, use automated tools to collect information about applications an
 
 ## Find region supportability
 
-You need to determine if the new target region will support your workload. It might seem late in the process to make this evaluation, but you need the discovery details to be certain. Not every region in Azure offers the same service. So you must make sure the services your workload needs to run are available in the target region. We have documentation that lists the products and services available in each region. To determine region supportability for each workload, see [Azure products by region](/explore/global-infrastructure/products-by-region/).
+Not every region in Azure offers the same services, so you must make sure the services your workload needs to run are available in the target region. It might seem late in the process to make this determination, but you need the discovery details to ensure supportability. To determine region supportability for your workload, see the [products and services available in each Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region).
 
 Know if the target region is a paired region or not. This detail doesn’t affect the relocation, only the business continuity and disaster recovery strategy in the target region. For more information, see [Azure geographies](/explore/global-infrastructure/geographies/#geographies).
 
