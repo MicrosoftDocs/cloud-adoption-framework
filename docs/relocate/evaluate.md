@@ -12,7 +12,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Evaluate a cloud workload for relocation
 
-Evaluate is the first step in the Move phase of relocation. The goal of the Evaluate step is to learn about the workload so you can move it successfully. Every workload you relocate must go through the four steps of the Move phase, starting with evaluate.
+Evaluate is the first step in the Move phase of relocation. The goal of the Evaluate step is to understand the workload you want to relocate so you can move it successfully. Every workload you relocate must go through the four steps of the Move phase, starting with the Evaluate step.
 
 :::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Image showing the relocation process and highlights the Evaluate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
 *Figure 1. The Evaluate step of relocation.*
@@ -31,15 +31,15 @@ Where possible, use automated tools to collect information about applications an
 
 **Use visualization tools.** If Azure Resource Mover doesn't meet all your needs, you can use visualization tools to aid your discovery. Azure has a few different resource-visualization tools that you can use to map dependencies. Pick the tool that best supports your needs.
 
-*Resource group visualizer:* The Azure portals lets you visualize the connections between the resources in a resource group. Navigate to the resource group and select “Resource visualizer.”
+- *Resource group visualizer:* The Azure portals lets you visualize the connections between the resources in a resource group. Navigate to the resource group and select “Resource visualizer.”
 
-*Azure Monitor topology:* You can view network dependencies with the topology feature in Azure Monitor. For more information, see [network insights topology](/azure/network-watcher/network-insights-topology).
+- *Azure Monitor topology:* You can view network dependencies with the topology feature in Azure Monitor. For more information, see [network insights topology](/azure/network-watcher/network-insights-topology).
 
-*Application Insights:* Application Insights has an application mapping feature where you can view the logical structure of a distributed application. For more information, see [application map in Azure Application Insights](/azure/azure-monitor/app/app-map?tabs=net).
+- *Application Insights:* Application Insights has an application mapping feature where you can view the logical structure of a distributed application. For more information, see [application map in Azure Application Insights](/azure/azure-monitor/app/app-map?tabs=net).
 
-*Azure Resource Explorer:* Azure Resource Explorer lists every resource in your Azure Active Directory tenant. It gives you visibility but doesn’t indicate dependencies. You must map workload components and dependencies manually. For more information, see [Azure Resource Explorer](https://resources.azure.com/).
+- *Azure Resource Explorer:* Azure Resource Explorer lists every resource in your Azure Active Directory tenant. It gives you visibility but doesn’t indicate dependencies. You must map workload components and dependencies manually. For more information, see [Azure Resource Explorer](https://resources.azure.com/).
 
-*Azure Resource Graph:* Azure Resource Graph allows you to run queries against the resources in an Azure Active Directory tenant. It’s accessible in the portal and from the command line. You must map workload components and dependencies manually. For more information, see [Azure Resource Graph documentation](/azure/governance/resource-graph/shared-query-azure-cli).
+- *Azure Resource Graph:* Azure Resource Graph allows you to run queries against the resources in an Azure Active Directory tenant. It’s accessible in the portal and from the command line. You must map workload components and dependencies manually. For more information, see [Azure Resource Graph documentation](/azure/governance/resource-graph/shared-query-azure-cli).
 
 **Manually create documentation if needed.** If automated discovery approaches aren’t enough, you can conduct a manual assessment of the workloads. Most use interviews with technical experts and technical documentation to get the information needed. Identify product or application owners and interview them. These interviews are optional, but necessary when the team needs to cover gaps in information provided by the tools.
 
