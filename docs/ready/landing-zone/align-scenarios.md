@@ -50,7 +50,7 @@ The following diagram shows the current state of this sample scenario:
 To transition from this scenario's current state to an Azure landing zone conceptual architecture, we suggest this approach:
 
 1. Review the [Azure landing zone conceptual architecture](./index.md) and [Azure landing zone design areas](./design-areas.md).
-2. Deploy the [Azure landing zone accelerator](./index.md#azure-landing-zone-accelerator) into the same Azure AD tenant in parallel with the current environment.
+2. Deploy the [Azure landing zone accelerator](./index.md#azure-landing-zone-portal-accelerator) into the same Azure AD tenant in parallel with the current environment.
 
    Doing so creates a new management group structure. This structure is aligned with Azure landing zones design principles and recommendations. It also ensures that the existing environment is not affected by these changes.
 1. (optional) Work with application or service teams to migrate the workloads deployed in the original subscription into new Azure subscriptions, per the guidance in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). They can be placed into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group – corporate or online.
