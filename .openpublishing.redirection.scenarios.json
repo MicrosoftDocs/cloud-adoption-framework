@@ -127,7 +127,7 @@
     },
     {
       "source_path_from_root": "/docs/scenarios/data-management/architectures/reference-architecture-relecloud.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/reference-architecture-relecloud",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/multizone",
       "redirect_document_id": true
     },
     {
