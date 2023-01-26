@@ -32,7 +32,7 @@ Relecloud scales their analytics platform by adding a new landing zone for the b
 
 The following diagram doesn't represent all Azure services. The diagram is simplified to highlight the core concepts of organizing resources within the architecture.
 
-:::image type="content" source="../images/relecloud.png" alt-text="Diagram of a multiple landing zone architecture for cloud-scale analytics." lightbox="../images/relecloud.png":::
+:::image type="content" source="../images/multizone.png" alt-text="Diagram of a multiple landing zone architecture for cloud-scale analytics." lightbox="../images/multizone.png":::
 
 ### Data management landing zone
 

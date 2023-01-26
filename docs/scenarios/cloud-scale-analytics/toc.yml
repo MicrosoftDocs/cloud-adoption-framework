@@ -147,7 +147,7 @@ items:
       - name: Single data landing zone
         href: ./architectures/reference-architecture-adatum.md
       - name: Multiple data landing zones
-        href: ./architectures/reference-architecture-relecloud.md
+        href: ./architectures/reference-architecture-multizone.md
       - name: Azure Synapse Analytics for landing zones
         href: /azure/architecture/example-scenario/analytics/synapse-analytics-landing-zone 
       - name: Highly sensitive data landing zones
