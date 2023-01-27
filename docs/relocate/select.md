@@ -4,6 +4,7 @@ description: Learn how to select the right strategy for relocating cloud workloa
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
+ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
