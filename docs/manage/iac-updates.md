@@ -82,9 +82,9 @@ For example, if you wanted to replace your Azure Firewall with one using the Pre
 
 ### Catch Configuration Drifts
 
-Infrastructure as Code also provides a unique option to catch configuration drifts during updates.  Not only will the deployment catch changes to the definition file, it will present instances where resources have been configured differently from the definition.
+Infrastructure as Code also provides a unique option to catch configuration drifts during updates.  Not only can the deployment catch changes to the definition file, it can present instances where resources have been configured differently from the definition.
 
-Periodic Landing Zone updates with Infrastructure as Code will help you catch this configuration drift, and allow you to update the code appropriately, address these misconfigurations via the update, or address them in some other way.
+Periodic Landing Zone updates with Infrastructure as Code can help you catch this configuration drift, and allow you to update the code appropriately, address these misconfigurations via the update, or address them in some other way.
 
 You can review [Operational compliance considerations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-operational-compliance#operational-compliance-recommendations) for additional guidance on monitoring configuration drift.
 
