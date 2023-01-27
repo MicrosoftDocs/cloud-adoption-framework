@@ -1,6 +1,6 @@
 ---
 title: How to evaluate a cloud workload for relocation.
-description: How to evaluate workload so you can pick the best relocation methods and tools.
+description: How to evaluate a workload for relocation so you can select the best relocation strategy.
 author: SomilGanguly
 ms.author: ssumner
 ms.date: 2/3/2023
@@ -14,46 +14,46 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 Evaluate is the first step in the Move phase of relocation. The goal of the Evaluate step is to understand the workload you want to relocate so you can move it successfully. Every workload you relocate must go through the four steps of the Move phase, starting with the Evaluate step.
 
-:::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Image showing the relocation process and highlights the Evaluate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Image that shows the relocation process and highlights the Evaluate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the Initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
 *Figure 1. The Evaluate step of relocation.*
 
 ## Pick workload(s)
 
-You should have a prioritized list of workloads, and the list should identify the order you want to relocate your workloads. Each time you visit the evaluate step, pick the workload(s) at the top of the list. For smaller teams, we recommend relocating one workload at a time. It’s a chance to learn and improve with each workload relocation. Larger teams should consider relocating multiple workloads. Bulk relocations can help achieve economies of scale.
+You should have a prioritized list of workloads, and the list should identify the order you want to relocate your workloads. Each time you visit the evaluate step, pick the workload(s) at the top of the list. For smaller teams,you should relocate one workload at a time. It's a chance to learn and improve with each workload relocation. Larger teams should consider relocating multiple workloads. Bulk relocations can help achieve economies of scale.
 
 ## Conduct discovery
 
-Workload discovery is the foundation of relocation. The primary goal is to identity all dependencies and endpoints. Dependencies are resources or services that the workload needs to run. Dependencies include Azure services, third-party apps, licenses, and even partner teams. These dependencies include networking, firewalls, cost, testing, tagging, identities, and policies. You should also identify all the endpoints or IP addresses associated with the workload. Public IP addresses are region specific, and you can’t move them between regions. You can export the configuration of a public IP and deploy to the new target region. For more information, see [move Azure Public IP configuration to another Azure region](/azure/virtual-network/move-across-regions-publicip-powershell).
+Workload discovery is the foundation of relocation. The primary goal is to identity all dependencies and endpoints. Dependencies are resources or services that the workload needs to run. Dependencies include Azure services, third-party apps, licenses, and even partner teams. These dependencies include networking, firewalls, cost, testing, tagging, identities, and policies. You should also identify all the endpoints or IP addresses associated with the workload. Public IP addresses are region specific, and you can't move them between regions. You can export the configuration of a public IP and deploy to the new target region. For more information, see [Move Azure Public IP configuration to another Azure region](/azure/virtual-network/move-across-regions-publicip-powershell).
 
-Where possible, use automated tools to collect information about applications and Azure services that make up your workload. You can use these tools to perform low-level discovery and architecture design discovery for the relocation of a specific workload. We recommend using the following Azure tools and services.
+Where possible, use automated tools to collect information about applications and Azure services that make up your workload. You can use these tools to perform low-level discovery and architecture design discovery for the relocation of a specific workload. You should use the following Azure tools and services.
 
-**Try Azure Resource Mover first.** You should try to use Azure Resource Mover first. It’s the easiest discovery tool to use, and you can also relocate services and data. Azure Resource Mover only supports a limited number of services, so make sure your services are supported before continuing. For more information, see [supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
+**Try Azure Resource Mover first.** You should try to use Azure Resource Mover first. It's the easiest discovery tool to use, and you can also relocate services and data. Azure Resource Mover only supports a limited number of services, so make sure your services are supported before continuing. For more information, see [Supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
 **Use visualization tools.** If Azure Resource Mover doesn't meet all your needs, you can use visualization tools to aid your discovery. Azure has a few different resource-visualization tools that you can use to map dependencies. Pick the tool that best supports your needs.
 
-- *Resource group visualizer:* The Azure portals lets you visualize the connections between the resources in a resource group. Navigate to the resource group and select “Resource visualizer.”
+- *Resource group visualizer:* The Azure portal lets you visualize the connections between the resources in a resource group. Navigate to the resource group and select *Resource visualizer* from the left navigation.
 
-- *Azure Monitor topology:* You can view network dependencies with the topology feature in Azure Monitor. For more information, see [network insights topology](/azure/network-watcher/network-insights-topology).
+- *Azure Monitor topology:* You can view network dependencies with the topology feature in Azure Monitor. For more information, see [Network insights topology](/azure/network-watcher/network-insights-topology).
 
-- *Application Insights:* Application Insights has an application mapping feature where you can view the logical structure of a distributed application. For more information, see [application map in Azure Application Insights](/azure/azure-monitor/app/app-map?tabs=net).
+- *Application Insights:* Application Insights has an application mapping feature where you can view the logical structure of a distributed application. For more information, see [Application map in Azure Application Insights](/azure/azure-monitor/app/app-map?tabs=net).
 
-- *Azure Resource Explorer:* Azure Resource Explorer lists every resource in your Azure Active Directory tenant. It gives you visibility but doesn’t indicate dependencies. You must map workload components and dependencies manually. For more information, see [Azure Resource Explorer](https://resources.azure.com/).
+- *Azure Resource Explorer:* Azure Resource Explorer lists every resource in your Azure Active Directory (Azure AD) tenant. It gives you visibility but doesn't indicate dependencies. You must map workload components and dependencies manually. For more information, see [Azure Resource Explorer](https://resources.azure.com/).
 
-- *Azure Resource Graph:* Azure Resource Graph allows you to run queries against the resources in an Azure Active Directory tenant. It’s accessible in the portal and from the command line. You must map workload components and dependencies manually. For more information, see [Azure Resource Graph documentation](/azure/governance/resource-graph/shared-query-azure-cli).
+- *Azure Resource Graph:* Azure Resource Graph allows you to run queries against the resources in an Azure AD tenant. Resource Graph accessible in the portal and from the command line. You must map workload components and dependencies manually. For more information, see [Azure Resource Graph documentation](/azure/governance/resource-graph/shared-query-azure-cli).
 
-**Manually create documentation if needed.** If automated discovery approaches aren’t enough, you can conduct a manual assessment of the workloads. Most use interviews with technical experts and technical documentation to get the information needed. Identify product or application owners and interview them. These interviews are optional, but necessary when the team needs to cover gaps in information provided by the tools.
+**Manually create documentation if needed.** If automated discovery approaches aren't enough, you can conduct a manual assessment of the workloads. Most manual assessments rely on interviews with technical experts and technical documentation to get the information needed. Identify product or application owners and interview them. These interviews are optional, but necessary when the team needs to cover gaps in the information the tools provide.
 
 ## Find region supportability
 
-You need to determine if the new target region will support your workload. It might seem late in the process to make this evaluation, but you need the discovery details to be certain. Not every region in Azure offers the same service. So you must make sure the services your workload needs to run are available in the target region. We have documentation that lists the products and services available in each region. To determine region supportability for each workload, see [Azure products by region](/explore/global-infrastructure/products-by-region/).
+You need to determine if the target region supports your workload. Not every region in Azure offers the same service. Evaluate the services available and ensure ake sure the services your workload needs to run are available in the target region. It might seem late in the process to make this evaluation, but you need the discovery details to be certain. There's documentation that lists the products and services available in each region. To determine region supportability for each workload, see [Azure products by region](/explore/global-infrastructure/products-by-region/).
 
-Know if the target region is a paired region or not. This detail doesn’t affect the relocation, only the business continuity and disaster recovery strategy in the target region. For more information, see [Azure geographies](/explore/global-infrastructure/geographies/#geographies).
+Know if the target region is a paired region or not. This detail doesn't affect the relocation, only the business continuity and disaster recovery strategy in the target region. For more information, see [Azure geographies](/explore/global-infrastructure/geographies/#geographies).
 
 ## Categorize workload services
 
 Relocation happens at the service level. Most workloads use multiple services. The types of services in the workload decide the relocation methods (cold, hot, warm) and tools used to relocate it. There are two primary types of services, stateful and stateless. You need to categorize each service as stateful or stateless.
 
-**Stateless services.** Stateless services have configuration information only. These services don’t need continuous replication of data to move. Examples include virtual networks, network adapters, load balancers, and network security groups.
+**Stateless services.** Stateless services have configuration information only. These services don't need continuous replication of data to move. Examples include virtual networks, network adapters, load balancers, and network security groups.
 
 **Stateful services.** Stateful services have configuration information and data that need to move. Examples include virtual machines and SQL databases.
 

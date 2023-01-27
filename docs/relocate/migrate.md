@@ -14,14 +14,14 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The Migrate step of relocation is where you move the workload to the new region. Depending on your workload, you might have a few technical requirements to prepare, but the plan should be clear. You should be ready to execute the migration.
 
-:::image type="content" source="../_images/relocate/caf-relocate-migrate.png" alt-text="Image showing the relocation process and highlights the Migrate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-migrate.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-migrate.png" alt-text="Image that shows the relocation process and highlights the Migrate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-migrate.png" border="false":::
 *Figure 1. The Migrate step of relocation.*
 
 ## Prepare
 
-You might need to prepare the target region before relocating the workload. If the relocation adds to your Azure Landing Zone footprint, you should use the ALZ guidance and return for workload guidance. For more information, see [how to add regions to ALZ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-enable-more-azure-regions-when-we-use-azure-landing-zone-architecture). As needed, follow these steps to prepare your workload environment before relocation.
+You might need to prepare the target region before relocating the workload. If the relocation adds to your Azure Landing Zone footprint, you should use the ALZ guidance and return for workload guidance. For more information, see [How to add regions to ALZ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-enable-more-azure-regions-when-we-use-azure-landing-zone-architecture). As needed, follow these steps to prepare your workload environment before relocation.
 
-**Create new subscriptions if needed.** It’s not necessary to create a new subscription when relocating, but the workload might require a subscription change if you’re restructuring the services and resources. Subscriptions serve as a boundary for budgets, policies, and role-based access controls (RBACs). We encourage you to considered relocation as an as-is effort because creating a new subscription adds complexity. You need to validate budgets, policies, and RBACs. If you don’t move all the resource in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to keep the governance and security posture in the new region.
+**Create new subscriptions only if needed.** Only create new subscriptions if you need to restructure the services and resources involved. You should approach relocations as an as-is effort, because creating a new subscription adds complexity. Subscriptions serve as boundaries for budgets, policies, and role-based access controls (RBACs). You need to validate budgets, policies, and RBACs. If you don't move all the resource in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to maintain the governance and security posture in the new region.
 
 **Configure a new domain name if needed.** When there's a change in the custom domain of the workload, you need to configure a new domain name. Create the new hostname, assign it to your application or service, and then validate the name resolution. For more information, see:
 
@@ -33,7 +33,7 @@ You might need to prepare the target region before relocating the workload. If t
 - [Azure Key Vault certificates](/azure/key-vault/certificates/about-certificates)
 - [Certificate creation methods](/azure/key-vault/certificates/create-certificate)
 
-**Relocate Azure Key Vault.** You should relocate your Azure Key Vault before moving your workload. We recommend one key vault per application environment. Key Vaults shouldn’t share secrets across regions to ensure confidentiality. You might need to create a new Azure Key Vault in the new target region.
+**Relocate Azure Key Vault.** You should relocate Azure Key Vault before moving your workload. You should have one key vault per application environment, and your key vault shouldn’t share secrets across regions to ensure confidentiality. You might need to create a new key vault in the new target region to align with this guidance.
 
 ## Migrate services
 
@@ -49,17 +49,17 @@ This stage is only relevant when the workload requires data migration. Perform d
 
 **Migrate source region data.** The approach to migrating source-region data should follow the relocation method for the workload service. The hot, cold, and warm methods have different processes for handling the data in the source region.
 
-**Synchronize data.** The synchronization technique will depend on the architecture of the workload and the demand of the application. For example, in an on-demand sync, changes are pulled when data is accessed for the first time. Pulling and merging of changes occurs only in cases where there's a difference between last and current application access.
+**Synchronize data.** The synchronization technique depends on the architecture of the workload and the demand of the application. For example, in an on-demand sync, changes are pulled when data is accessed for the first time. Pulling and merging of changes occurs only in cases where there's a difference between last and current application access.
 
-**Resolve synchronization conflicts.** Make sure the data in the source and target location are in sync and resolve any data conflicts. For example, Cosmos DB can serialize concurrent writes to ensure data consistency using session consistency and stored procedure in a single-write region. You only want users trying to access data that is available.
+**Resolve synchronization conflicts.** Make sure the data in the source and target location are in sync and resolve any data conflicts. You only want users trying to access data that is available. For example, Azure Cosmos DB can serialize concurrent writes to ensure data consistency.
 
 ## Update connection strings
 
-The connection string configuration depends on the service the application connects to. We recommend searching for “connection string” on our documentation page to find the service-specific guidance and use that guidance to update the connection string. For more information, see the [documentation search page](/search/).
+The connection string configuration depends on the service the application connects to. You can search for “connection string” on our documentation page to find the service-specific guidance and use that guidance to update the connection string. For more information, see the [Technical documentation](docs/).
 
 ## Next steps
 
-You've migrated your workload services and data, now you need to complete the relocation with a cutover.
+You've migrated your workload services and data. Now you need to complete the relocation with a cutover.
 
 > [!div class="nextstepaction"]
 > [Cutover](cutover.md)
