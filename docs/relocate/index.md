@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Relocate cloud workloads
 
-CAF Relocate details the process of relocating workloads in Azure and helps you to pick the best relocation strategies. The guidance defines relocation, identifies reasons to relocate, and outlines the relocation lifecycle.
+CAF Relocate details the process of relocating workloads in Azure and guides you to pick the best relocation strategies. The overview here defines relocation, identifies reasons to relocate, and outlines the relocation lifecycle.
 
 :::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image that shows the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
 *Figure 1. The relocation lifecycle.*
