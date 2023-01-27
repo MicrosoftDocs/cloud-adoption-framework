@@ -20,7 +20,7 @@ CAF Relocate details the process of relocating workloads in Azure and helps you 
 
 ## What is relocation?
 
-Relocation is a process of moving a workload in Azure to a different Azure region.  While it's a migration effort, it isn't a migration to the cloud.  Instead, it's a migration that stays within the Azure public cloud. It has similarities with the process defined in CAF Migrate, but it also has its own solutions and considerations to take advantage of different Azure regions.
+Relocation is the process of moving a workload in Azure to a different Azure region.  While it's a migration effort, it isn't a migration to the cloud.  Instead, it's a migration that stays within the Azure public cloud. It has similarities with the process defined in CAF Migrate, but it also has its own solutions and considerations to take advantage of different Azure regions.
 
 ## Why relocate?
 
