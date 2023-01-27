@@ -14,6 +14,8 @@ ms.custom: think-tank, e2e-data-management
 
 This reference architecture is for organizations that have implemented a basic version of cloud-scale analytics, and are now ready to host new business units to help modernize their analytics operations. This more complex scenario uses multiple landing zones, data applications, and data products.
 
+*Apache Hive and the Hive logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. No endorsement by The Apache Software Foundation is implied by the use of these marks.*
+
 ## Problem statement
 
 Relecloud, the fictional company in this example, is a private cloud provider that offers shared computing and storage resources to global organizations. Although Relecloud provides compute resources, they don't want to constrain their platform with their own internal operations. Therefore, they rely on Microsoft Azure for their internal computing needs.
