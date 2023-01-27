@@ -78,7 +78,7 @@ For example, you could create a new branch of the code to add changes, and be ab
 
 Because Infrastructure as Code deployments are repeatable, you can use the same definition to deploy a second (or more) environment based on the deployment.  This can be valuable for testing changes.
 
-For example, if you wanted to replace your Azure Firewall with one using the Premium SKU, you could deploy a test environment and validate the changes without impacting production.  
+For example, if you wanted to replace your Azure Firewall with one using the Premium SKU, you could deploy a test environment and validate the changes without changing production.  
 
 ### Catch Configuration Drifts
 
