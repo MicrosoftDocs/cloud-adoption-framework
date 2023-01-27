@@ -20,7 +20,7 @@ For each workload, you need to select the best relocation strategy and the right
 
 ## Select a relocation method
 
-There are three main methods for relocating workloads. The relocation method you choose depends on the services in the workload and how critical the workload is essential business functions. Cold relocation is for stateless services and for non-essential workloads. Hot and warm relocation is for mission-critical and stateful services. The method you choose relocation affects service and data relocation tools you use to relocate the workload. Use the following relocation decision tree to get a general idea of the right relocation method and validate your decision by reading the overview of the three relocation methods.
+There are three main methods for relocating workloads. The relocation method you choose depends on the services in the workload and how critical the workload is to essential business functions. Cold relocation is for stateless services and for non-essential workloads. Hot and warm relocation is for mission-critical and stateful services. The method you choose relocation affects service and data relocation tools you use to relocate the workload. Use the following relocation decision tree to get a general idea of the right relocation method and validate your decision by reading the overview of the three relocation methods.
 
 :::image type="content" source="../_images/relocate/relocation-methods-decision-tree.png" alt-text="Image showing a decision tree for selecting the right relocation method. There are three decision points. 1. Is downtime okay? If yes, then cold relocation is the correct relocation method. 2. Is it a stateless service? If yes, then cold relocation is again the correct relocation method. 3. Does the service support synchronous data replication? If yes, then hot relocation is the correct relocation method. If no, then warm relocation is the correct relocation method." lightbox="../_images/relocate/relocation-methods-decision-tree.png" border="false":::
 
@@ -53,7 +53,7 @@ The hot relocation method is for workloads that need minimal to zero downtime. F
 Warm relocation is for critical workloads with a stateful service that doesn't support hot relocation. Warm relocation uses asynchronous data replication and environment replication. Here's the warm relocation process.
 
 1. Start the service in the new target region.
-1. Keep the workload is running in the source region.
+1. Keep the workload running in the source region.
 1. Create a backup of the source data. Back up the data during off-peak hours to minimize potential data loss.
 1. Restore the data in the new target region.
 1. Switch endpoints and validate.
@@ -78,7 +78,7 @@ There are three primary service-relocation tools. The following paragraphs give 
 
 ## Select data-relocation automation
 
-If you used infrastructure as code (IaC) to relocate your stateful service, you need to pick a data-relocation tool to move the data. You should review the capabilities of each data-relocation tool and select tool that meets the needs of your workload. Here are tools you can use for data-relocation.
+If you used infrastructure as code (IaC) to relocate your stateful service, you need to pick a data-relocation tool to move the data. You should review the capabilities of each data-relocation tool and select the tool that meets the needs of your workload. Here are tools you can use for data-relocation.
 
 - **Geo-replication.** Active geo-replication is a business continuity solution. You can perform quick disaster recovery of individual databases if a regional disaster or large-scale outage occurs. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. For more information, see [Geo-replication overview](/azure/azure-sql/database/active-geo-replication-overview).
 
@@ -94,13 +94,13 @@ If you used infrastructure as code (IaC) to relocate your stateful service, you 
 
 - **Azure Backup.** With Azure Backup, you can back up and restore data in another region. You should try Azure Backup first for non-essential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
 
-- **Manual backup and restore.** Backup and restore here refers to a process, not a specific tool. Many services in Azure provide redundancy options that let you back up data to a separate region and restore them manually. You need to perform a manual backup and restore for specific services like Azure Key Vault. For more information, see [Move Key Vault to another region](/azure/key-vault/general/move-region).
+- **Manual backup and restore.** Backup and restore here refers to a process, not a specific tool. Many services in Azure provide redundancy options that let you back up data to a separate region and restore it manually. You need to perform a manual backup and restore for specific services like Azure Key Vault. For more information, see [Move Key Vault to another region](/azure/key-vault/general/move-region).
 
 *Table 1. Data-migration tools and the relocation method(s) they support.*
 
 |Tool | Relocation method|
 | --- | --- |
-[Geo-replication](/azure/azure-sql/database/active-geo-replication-overview) |Hot|
+|[Geo-replication](/azure/azure-sql/database/active-geo-replication-overview) |Hot|
 |[Synchronous data replication](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database)|Hot, Warm|
 |[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)|Warm, Cold|
 |[AzCopy](/azure/storage/common/storage-use-azcopy-v10)|Warm, Cold|

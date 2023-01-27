@@ -28,7 +28,7 @@ The need to meet specific objectives drives relocation projects. You should capt
 | --- | --- | --- |
 |1. Comply with data-residency laws. | Meet all legal and ethical standards. | High|
 |2. Improve application performance for users in a different region. | Meet revenue targets. |Medium|
-|3. Add new service to internal productivity tools. | Increase employee productivity. |Low|
+|3. Add new services to internal productivity tools. | Increase employee productivity. |Low|
 
 ## Determine scope
 
@@ -46,7 +46,7 @@ You should create a relocation plan that addresses service capacity and high-lev
 
 **Use a multi-disciplinary team.** The relocation team needs technical, business, and legal/compliance expertise. The business stakeholders own the workload and should guide the technical team to meet the objectives. You need the legal or compliance teams if the workload is being relocated due to regulatory requirements.
 
-**Know cost factors.** Relocation has a cost. Moving data and using services isn't always free. To minimize cost, you should move data once and avoid duplicating services or environments for long periods of time.  A hidden cost you might not consider comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee.
+**Know cost factors.** Relocation has a cost. Moving data and using services isn't always free. To minimize cost, you should move data once and avoid duplicating services or environments for extended periods of time. A hidden cost you might not consider comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee.
 
 ## Next steps
 

@@ -24,7 +24,7 @@ Cutover is when you direct traffic away from the source region and to the worklo
 
 **Validate traffic.** Validate the traffic is routed to the target region, for example, by running smoke tests. You should communicate the relocation progress to users so they're informed. Also, check the workload metrics and logs to confirmation the workload is working properly.
 
-**Fix if necessary.** If something went wrong, you should implement the failover plan or apply an urgent fix to stabilize the deployment.
+**Fix if necessary.** If something goes wrong, you should implement the failover plan or apply an urgent fix to stabilize the deployment.
 
 **Hand over workload.** When the process is complete, hand the workload over to the IT operations team.
 
