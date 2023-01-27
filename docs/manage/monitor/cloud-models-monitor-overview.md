@@ -99,7 +99,7 @@ For customers who have made significant investments in Operations Manager to ach
 - Do the features in Operations Manager make it the right fit for our IT organization?
 - Does integrating Operations Manager with Azure Monitor provide the cost-effective and comprehensive monitoring solution we require?
 
-If you've already invested in Operations Manager, you don't need to focus on planning a migration to replace it immediately. With Azure or other cloud providers that is an extension of your own on-premises network, the Operations Manager can monitor the guest VMs and Azure resources as if they were on your corporate network. This approach requires a reliable network connection between your network and the virtual network in Azure that has sufficient bandwidth.
+If you've already invested in Operations Manager, you don't need to focus on planning a migration to replace it immediately. With Azure or other cloud providers that are an extension of your own on-premises network, the Operations Manager can monitor the guest VMs and Azure resources as if they were on your corporate network. This approach requires a reliable network connection between your network and the virtual network in Azure that has sufficient bandwidth.
 
 To monitor Azure workloads, you need the following:
 

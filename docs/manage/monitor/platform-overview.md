@@ -12,9 +12,9 @@ ms.custom: think-tank, engagement-fy23
 
 # Cloud monitoring guide: Monitoring platforms overview
 
-Microsoft provides a range of monitoring capabilities from multiple products: 
+Microsoft provides a range of monitoring capabilities from multiple products:
 
-- [Azure Monitor](/azure/azure-monitor/overview), designed for the cloud but can also monitor on-premises infrastructure and applications. 
+- [Azure Monitor](/azure/azure-monitor/overview), designed for the cloud but can also monitor on-premises infrastructure and applications.
 - [System Center Operations Manager](/system-center/scom/welcome) (SCOM), designed for on-premises and then extended to the cloud.
 - [Azure Monitor System Center Operations Manager Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview?) (SCOM Managed Instance (preview)), a PaaS offering of System Center Operations Manager hosted in Azure.
 
@@ -34,9 +34,9 @@ Operations Manager requires significant infrastructure and maintenance to suppor
 
 ### Azure Monitor SCOM Managed Instance (preview)
 
-[Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview) (SCOM Managed Instance (preview)) is a PaaS offering of System Center Operations Manager hosted in Azure. SCOM Managed Instance (preview) requires minimal infrastructure and maintenance as many of the infrastructure components such as the management servers and databases are hosted in Azure and managed by Microsoft; You no longer have to be responsible for patching your management server and databases with the latest upgrades and features. Also, scaling a management server can be done at the click of a button. 
+[Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview) (SCOM Managed Instance (preview)) is a PaaS offering of System Center Operations Manager hosted in Azure. SCOM Managed Instance (preview) requires minimal infrastructure and maintenance as many of the infrastructure components such as the management servers and databases are hosted in Azure and managed by Microsoft; You no longer have to be responsible for patching your management server and databases with the latest upgrades and features. Also, scaling a management server can be done at the click of a button.
 
-![Diagram of Operations Manager Managed Instance (preview) architecture](./media/platform-overview/architecture.png)
+![Diagram of Operations Manager Managed Instance (preview) architecture](./media/platform-overview/architecture.png).
 
 ### Azure Monitor
 
