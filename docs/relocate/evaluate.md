@@ -19,7 +19,7 @@ Evaluate is the first step in the Move phase of relocation. The goal of the Eval
 
 ## Pick workload(s)
 
-You should have a prioritized list of workloads, and the list should identify the order you want to relocate your workloads. Each time you visit the evaluate step, pick the workload(s) at the top of the list. For smaller teams,you should relocate one workload at a time. It's a chance to learn and improve with each workload relocation. Larger teams should consider relocating multiple workloads. Bulk relocations can help achieve economies of scale.
+You should have a prioritized list of workloads, and the list should identify the order you want to relocate your workloads. Each time you visit the evaluate step, pick the workload(s) at the top of the list. For smaller teams, you should relocate one workload at a time. It's a chance to learn and improve with each workload relocation. Larger teams should consider relocating multiple workloads. Bulk relocations can help achieve economies of scale.
 
 ## Conduct discovery
 

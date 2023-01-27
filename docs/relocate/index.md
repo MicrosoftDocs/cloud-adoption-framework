@@ -35,7 +35,7 @@ Relocation adds flexibility that can help you optimize cost and performance thro
 
 ## How to relocate
 
-The relocation lifecycle has two phases. The first phase is Initiate. The Initiate phase is where you establish the relocation project. The second phase is Move. The Move phase is where you plan and execute the relocation. These are project-level steps that define the lifecycle of relocation. They show how to find the right relocation tool and when to use it. But they don't tell you how to use the tool. Let's look at the two phases of relocation.
+The relocation lifecycle has two phases. The first phase is Initiate. The Initiate phase is where you establish the relocation project. The second phase is Move. The Move phase is where you plan and execute the relocation. These steps are at project level and define the lifecycle of relocation. They show you how to find the right relocation tool and when to use it. They aren't tool-level steps and don't tell you how to use the tool you select. The guidance directs you to tool-specific instructions for these details. Here's an overview of the two relocation phases.
 
 **Initiate phase:** The initiate phase has a single-step also called Initiate. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and identify workloads for relocation.
 
