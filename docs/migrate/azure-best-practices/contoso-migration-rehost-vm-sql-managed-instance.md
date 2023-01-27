@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Rehost an on-premises application by migrating to Azure VMs and Azure SQL Managed Instance
 
-This article shows how the fictional company Contoso migrates a two-tier, front-end application based on Windows .NET from VMware virtual machines (VMs) to an Azure VM by using Azure Migrate. The article also shows how Contoso migrates the application database to Azure SQL Managed Instance.
+This article shows how the fictional company Contoso migrates a two-tier, front-end application based on Windows .NET from VMware virtual machines (VMs) to an Azure VM by using Azure Migrate. The article also shows how Contoso migrates the application database to Azure SQL Managed Instance. This migration follows the preparations that are described in [Deploy a migration infrastructure](./contoso-migration-infrastructure.md).
 
 [Migration and modernization](/azure/migrate/migrate-services-overview#migration-and-modernization-tool)
 
@@ -179,15 +179,15 @@ To set up a SQL managed instance, Contoso requires a subnet that meets the follo
 
 ### Set up a virtual network for the managed instance
 
-To set up the virtual network, the Contoso admins:
+To set up the virtual network, the Contoso admins complete the following steps.
 
 1. Create a new virtual network (`VNET-SQLMI-EU2`) in the primary region (`East US 2`). It adds the virtual network to the `ContosoNetworkingRG` resource group.
 
 1. Assign an address space of `10.235.0.0/24`. They ensure that the range doesn't overlap with any other networks in its enterprise.
 
 1. Add two subnets to the network:
-    - `SQLMI-DS-EUS2` (`10.235.0.0/25`).
-    - `SQLMI-SAW-EUS2` (`10.235.0.128/29`). This subnet is used to attach a directory to the managed instance.
+    - `SQLMI-DB-EUS2` (`10.235.0.0/25`).
+    - `SQLMI-SAW-EUS2` (`10.235.0.128/29`). This subnet attaches a directory to the managed instance.
 
       ![Screenshot that shows the Create virtual network pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
 
@@ -198,7 +198,7 @@ To set up the virtual network, the Contoso admins:
 
       ![Screenshot that shows the network peering.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
-1. Set custom DNS settings. DNS points first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
+1. Set custom DNS settings. DNS points first to Contoso's domain controllers in Azure. Azure DNS is secondary. The Contoso's domain controllers are configured as follows:
 
     - Located in the `PROD-DC-EUS2` subnet, in the `East US 2` production network (`VNET-PROD-EUS2`).
     - `CONTOSODC3` address: `10.245.42.4`.
@@ -209,10 +209,12 @@ To set up the virtual network, the Contoso admins:
 
 **Need more help?**
 
-- Read the [SQL Managed Instance overview](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview).
-- Learn how to [create a virtual network for a SQL managed instance](/azure/azure-sql/managed-instance/vnet-existing-add-subnet).
-- Learn how to [set up peering](/azure/virtual-network/virtual-network-manage-peering).
-- Learn how to [update Azure Active Directory DNS settings](/azure/active-directory-domain-services/tutorial-create-instance).
+- [What is Azure SQL Managed Instance?](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
+- [Configure an existing virtual network for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/vnet-existing-add-subnet)
+- [Add, change, or delete a virtual network subnet](/azure/virtual-network/virtual-network-manage-subnet)
+- [Create, change, or delete a virtual network peering](/azure/virtual-network/virtual-network-manage-peering)
+- [Add, change, or delete a virtual network subnet](/azure/virtual-network/virtual-network-manage-subnet)
+- [Create and configure an Azure Active Directory Domain Services managed domain](/azure/active-directory-domain-services/tutorial-create-instance)
 
 ### Set up routing
 
@@ -241,7 +243,7 @@ To set up routing, the Contoso admins complete the following steps:
 
 **Need more help?**
 
-Learn how to [set up routes for a managed instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
+Learn how to [set up routes for a managed instance](/azure/azure-sql/managed-instance/instance-create-quickstart#view-and-fine-tune-network-settings).
 
 ### Create a managed instance
 
@@ -446,7 +448,7 @@ The Contoso admins need to create a Database Migration Service project and then 
 
 1. The admins create a Database Migration Service project. They select the **SQL Server** source server type and **Azure SQL Managed Instance** as the target.
 
-     ![Screenshot that shows the New migration project pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-project.png)
+    ![Screenshot that shows the New migration project pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-project.png)
 
 1. The Migration Wizard opens.
 
@@ -491,7 +493,7 @@ The Contoso admins run a quick test migration and verify the VM is working prope
 
 1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, they select **Test migrated servers**.
 
-     ![Screenshot that shows the Test migrated servers item.](./media/contoso-migration-rehost-linux-vm/test-migrated-servers.png)
+    ![Screenshot that shows the Test migrated servers item.](./media/contoso-migration-rehost-linux-vm/test-migrated-servers.png)
 
 1. They select and hold (or right-click) the VM to test, and then they select **Test migrate**.
 
@@ -565,7 +567,7 @@ The Contoso security team checks the Azure VMs and the SQL managed instance for 
 - Contoso's security team also is considering securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
 - The team enables threat detection on the managed instance. Threat detection sends an alert to Contoso's security team/service desk system to open a ticket if a threat is detected. Learn more about [threat detection for SQL Managed Instance](/azure/azure-sql/managed-instance/threat-detection-configure).
 
-     ![Screenshot that shows the Threat detection screen for SQL Managed Instance.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-security.png)
+    ![Screenshot that shows the Threat detection screen for SQL Managed Instance.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-security.png)
 
 To learn more about security practices for VMs, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
@@ -579,7 +581,7 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-- Contoso has existing licensing for `WEBVM`. To take advantage of pricing with [Azure Hybrid Benefit](https://azure.microsoft.com/en-us/pricing/hybrid-benefit/), Contoso converts the existing Azure VM.
+- Contoso has existing licensing for `WEBVM`. To take advantage of pricing with [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/), Contoso converts the existing Azure VM.
 - Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
 
 ## Conclusion
