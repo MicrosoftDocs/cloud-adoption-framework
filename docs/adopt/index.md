@@ -27,6 +27,9 @@ Migration is when you move your workloads to the cloud. Different forms of migra
 
 - ***Example:*** Migrate applications from on-premises to Azure virtual machines (infrastructure-as-a-service) or Azure App Service (platform-as-a-service).
 
+> [!div class="nextstepaction"]
+> [Migrate](../migrate/index.md)
+
 ## Modernize
 
 Modernization enhances existing applications to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. Generally, modernization moves toward platform-as-a-service (PaaS) solutions to improve your business at scale.
@@ -39,6 +42,9 @@ Modernization enhances existing applications to improve operations, increase eff
 
 - ***Examples:*** Move to managed services. Move from SQL database to Azure SQL database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Container Apps.
 
+> [!div class="nextstepaction"]
+> [Modernize](../modernize/index.md)
+
 ## Innovate
 
 Innovation is when you adopt cloud-native technologies to create customer-focused solutions that rapidly transform business outcomes.
@@ -48,6 +54,9 @@ Innovation is when you adopt cloud-native technologies to create customer-focuse
 - ***Solutions:*** Adopt data and application capabilities to empower adoption and build predictive tools.
 
 - ***Key benefits:*** Predictive analytics, performance, and adaptability.
+
+> [!div class="nextstepaction"]
+> [Innovate](../innovate/index.md)
 
 ## Relocate
 
@@ -61,9 +70,12 @@ Relocation is when you move an Azure workload to a different region in Azure. Yo
 
 - ***Examples:*** Relocate a workload in West US to East US, North Europe to West Europe, or Southeast Asia to East Asia.
 
+> [!div class="nextstepaction"]
+> [Relocate](../relocate/index.md)
+
 ## Next steps
 
-The adopt methodology will help you tailor your cloud adoption approach around your goals. With your goals at the center of each decision, you'll find concrete steps to adopt the cloud and transform your business. See how most businesses change their portfolios to adopt the cloud.
+Follow the guidance that best meets your goals. If you're still considering cloud adoption, it's help to get a sense of what the cloud adoption journey looks like. The next article outlines the typical cloud adoption journey, showing what workloads you should migrate and what order you should migrate them.
 
 > [!div class="nextstepaction"]
 > [Cloud adoption journey](cloud-adoption.md)
