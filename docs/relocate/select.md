@@ -111,7 +111,7 @@ If you used infrastructure as code (IaC) to relocate your stateful service, you 
 
 ## Select cutover approach
 
-Cutover is when you transition from the old workload to the new one. You direct traffic to the workload in the target region and no longer to the source region. The domain name system (DNS) is central to this redirection. As a reminder, DNS tells browsers where to get a response. It resolves domain names to IP addresses. Every domain needs a domain host to manage it. Azure DNS is the Azure domain host service. There are different approaches to workload cutover, and the approach you take depends on the services in your workload. Choose the approach that best meets the needs of your workload.
+Cutover is when you transition from the old workload to the new one. You direct traffic to the workload in the target region and no longer to the source region. The domain name system (DNS) is central to this redirection. As a reminder, DNS tells browsers and API clients where to get a response. It resolves domain names to IP addresses. Every domain needs a domain host to manage it. Azure DNS is the Azure domain host service. There are different approaches to workload cutover, and the approach you take depends on the services in your workload. Choose the approach that best meets the needs of your workload.
 
 - **Azure DNS.** For domains hosted in Azure DNS, you can perform a manual cutover by switching the CNAME. This approach is a business continuity failover process that works for cutover. For more information, see [Manual cutover using Azure DNS](/azure/networking/disaster-recovery-dns-traffic-manager?toc=%2Fazure%2Fdns%2Ftoc.json#manual-failover-using-azure-dns).
 
