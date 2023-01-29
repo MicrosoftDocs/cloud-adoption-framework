@@ -104,7 +104,7 @@ If you used infrastructure as code (IaC) to relocate your stateful service, you 
 |[Synchronous data replication](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database)|Hot, Warm|
 |[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)|Warm, Cold|
 |[AzCopy](/azure/storage/common/storage-use-azcopy-v10)|Warm, Cold|
-|[Azure Data Factory](/azure/data-factory/quickstart-get-started)| Warm, Cold |
+|[Pipelines and activities in Azure Data Factory or Synapse Workspace](/azure/data-factory/concepts-pipelines-activities)| Warm, Cold |
 |[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer)| Warm, Cold|
 |[Azure Backup](/azure/backup/backup-overview)| Cold|
 |[Manual backup and restore](/azure/key-vault/general/move-region)| Cold|
