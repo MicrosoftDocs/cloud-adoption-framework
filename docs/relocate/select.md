@@ -88,7 +88,7 @@ If you used infrastructure as code (IaC) to relocate your stateful service, you 
 
 - **AzCopy.** AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Azure Active Directory or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 
-- **Azure Data Factory.** Azure Data Factory is a fully managed cloud-based data integration service that orchestrates and automates the movement and transformation of data. Azure Data Factory can move data lakes and warehouses. For more information, see [Supported targets and sources](/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats) and [Copy data tool](/azure/data-factory/copy-data-tool).
+- **Pipelines and activities in Azure Data Factory or Synapse Workspace.** Azure Data Factory is a fully managed cloud-based data integration service that orchestrates and automates the movement and transformation of data. Azure Data Factory can move data lakes and warehouses. For more information, see [Supported targets and sources](/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats) and [Copy data tool](/azure/data-factory/copy-data-tool).
 
 - **Azure Storage Explorer.** Azure Storage Explorer is a standalone app that allows you to relocate Azure Storage data. For more information, see [How to use Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer).
 
