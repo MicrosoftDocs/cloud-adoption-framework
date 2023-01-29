@@ -72,7 +72,7 @@ There are three primary service-relocation tools. The following paragraphs give 
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
 - [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
 
-**Infrastructure as code (IaC) custom automation.** IaC allows you to copy and redeploy Azure services. You can download the JSON view for the services in the source region and deploy services in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code).
+**Infrastructure as code (IaC) custom automation.** IaC allows you to copy and redeploy Azure services. If you don't already have it, you can download the Azure Resource Manager template for the services in the source region and deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code).
 
 ## Select data-relocation automation
 
@@ -86,7 +86,7 @@ You need to pick a data-relocation tool to move workload data. For data relocati
 
 - **AzCopy.** AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Azure Active Directory or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 
-- **Azure Data Factory.** Azure Data Factory is a fully managed cloud-based data integration service that orchestrates and automates the movement and transformation of data. Azure Data Factory can move data lakes and warehouses. For more information, see [Supported targets and sources](/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats) and [Copy data tool](/azure/data-factory/copy-data-tool).
+- **Pipelines and activities in Azure Data Factory or Synapse Workspace.** Azure Data Factory is a fully managed cloud-based data integration service that orchestrates and automates the movement and transformation of data. Azure Data Factory can move data lakes and warehouses. For more information, see [Supported targets and sources](/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats) and [Copy data tool](/azure/data-factory/copy-data-tool).
 
 - **Azure Storage Explorer.** Azure Storage Explorer is a standalone app that allows you to relocate Azure Storage data. For more information, see [How to use Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer).
 
@@ -102,14 +102,14 @@ You need to pick a data-relocation tool to move workload data. For data relocati
 |[Synchronous data replication](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database)|Hot, Warm|
 |[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)|Warm, Cold|
 |[AzCopy](/azure/storage/common/storage-use-azcopy-v10)|Warm, Cold|
-|[Azure Data Factory](/azure/data-factory/quickstart-get-started)| Warm, Cold |
+|[Pipelines and activities in Azure Data Factory or Synapse Workspace](/azure/data-factory/concepts-pipelines-activities)| Warm, Cold |
 |[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer)| Warm, Cold|
 |[Azure Backup](/azure/backup/backup-overview)| Cold|
 |[Manual backup and restore](/azure/key-vault/general/move-region)| Cold|
 
 ## Select cutover approach
 
-Cutover is when you transition from the old workload to the new one. You direct traffic to the workload in the target region and no longer to the source region. The domain name system (DNS) is central to this redirection. As a reminder, DNS tells browsers where to get a response. It resolves domain names to IP addresses. Every domain needs a domain host to manage it. Azure DNS is the Azure domain host service. There are different approaches to workload cutover, and the approach you take depends on the services in your workload. Choose the approach that best meets the needs of your workload.
+Cutover is when you transition from the old workload to the new one. You direct traffic to the workload in the target region and no longer to the source region. The domain name system (DNS) is central to this redirection. As a reminder, DNS tells browsers and API clients where to get a response. It resolves domain names to IP addresses. Every domain needs a domain host to manage it. Azure DNS is the Azure domain host service. There are different approaches to workload cutover, and the approach you take depends on the services in your workload. Choose the approach that best meets the needs of your workload.
 
 - **Azure DNS.** For domains hosted in Azure DNS, you can perform a manual cutover by switching the CNAME. This approach is a business continuity failover process that works for cutover. For more information, see [Manual cutover using Azure DNS](/azure/networking/disaster-recovery-dns-traffic-manager?toc=%2Fazure%2Fdns%2Ftoc.json#manual-failover-using-azure-dns).
 
