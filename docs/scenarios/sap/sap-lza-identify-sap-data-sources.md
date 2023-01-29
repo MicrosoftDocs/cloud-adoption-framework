@@ -13,25 +13,25 @@ ms.custom: think-tank, e2e-sap
 # Identify SAP Data Sources 
 SAP systems contain data from across the organization which can be used to derive insights. In many cases, this data is siloed and is not integrated with other data sources inside and outside of the organization. Following is an overview of the most relevant SAP applications that serve as the source of a Data Integration initiative
 
-- a. SAP Business Suite is a set of core applications such as SAP ERP, SAP Customer Relationship Management (CRM), SAP Supply Chain Management (SCM), and SAP Supplier Relationship Management (SRM). Those applications run both on SAP HANA, SAP’s in-memory database or any non-SAP database such as Oracle, Microsoft SQL Server, or IBM Db2. 
+- SAP Business Suite is a set of core applications such as [SAP ERP](https://www.sap.com/uk/products/erp/what-is-sap-erp.html), [SAP Customer Relationship Management (CRM)](https://www.sap.com/uk/products/crm.html), [SAP Supply Chain Management (SCM)](https://www.sap.com/uk/products/scm.html), and [SAP Supplier Relationship Management (SRM)](https://help.sap.com/docs/SAP_SUPPLIER_RELATIONSHIP_MANAGEMENT?locale=en-US&version=7.04%20SP05). Those applications run both on SAP HANA, SAP’s in-memory database or any non-SAP database such as Oracle, Microsoft SQL Server, or IBM Db2. 
 
-- b. SAP ERP is the most widely used SAP solution for enterprise resource planning. It provides core business functions such as accounting, logistics and human capital management.
+- [SAP ERP](https://www.sap.com/uk/products/erp/what-is-sap-erp.html) is the most widely used SAP solution for enterprise resource planning. It provides core business functions such as accounting, logistics and human capital management.
 
-- c. SAP S/4HANA is a new product and the next generation of business applications. SAP S/4HANA comes with new data and business models as well as an HTML5-based user interface.  As the name implies, SAP S/4HANA runs only on SAP HANA and provides both OLAP and OLTP capabilities in real time. 
+- [SAP S/4HANA](https://www.sap.com/uk/products/erp/s4hana-private-edition.html) is a new product and the next generation of business applications. SAP S/4HANA comes with new data and business models as well as an HTML5-based user interface.  As the name implies, SAP S/4HANA runs only on SAP HANA and provides both OLAP and OLTP capabilities in real time. 
 
-- d. SAP BW and SAP BW/4HANA are SAP’s data warehousing solutions. They present the most common source of SAP business data since almost all SAP customers use those solutions as an enterprise data warehouse, departmental data mart or big data platform, loading data from operational SAP source systems. SAP BW/4HANA, again, runs only on SAP HANA with a simplified data architecture and open analytics features. Both solutions deliver an integrated data warehousing experience with data modelling, acquisition, integration, and tiering in one place. 
+- SAP BW and [SAP BW/4HANA](https://www.sap.com/products/technology-platform/bw4hana-data-warehousing.html) are SAP’s data warehousing solutions. They present the most common source of SAP business data since almost all SAP customers use those solutions as an enterprise data warehouse, departmental data mart or big data platform, loading data from operational SAP source systems. SAP BW/4HANA, again, runs only on SAP HANA with a simplified data architecture and open analytics features. Both solutions deliver an integrated data warehousing experience with data modelling, acquisition, integration, and tiering in one place. 
 
 In addition to SAP Business Warehouse, SAP Business Warehouse powered by SAP HANA and SAP BW/4HANA, customers may also deploy the following cloud-based analytics and planning solutions in their landscape:
-- SAP Analytics Cloud
-- SAP Data Warehouse Cloud
+- [SAP Analytics Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-analytics-cloud?region=all&tab=service_plan&provider=azure&commercialModel=subscription)
+- [SAP Data Warehouse Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-data-warehouse-cloud?region=all&tab=service_plan&provider=azure&service_plan=standard&commercialModel=subscription)
 
 SAP SaaS solutions:
-- SAP S/4HANA Cloud, public edition which is the SaaS version of SAP S/4HANA
-- SAP Customer Experience solutions such as SAP Commerce Cloud, SAP Sales Cloud and SAP Service Cloud
-- SAP Ariba for direct and indirect spend
-- SAP Concur for travel and expense
-- SAP Fieldglass for external workforce management
-- SAP SuccessFactors for Human Capital Management
+- [SAP S/4HANA Cloud](https://www.sap.com/products/erp/s4hana.html), public edition which is the SaaS version of SAP S/4HANA
+- SAP Customer Experience solutions such as [SAP Commerce Cloud](https://www.sap.com/products/crm/commerce-cloud.html), [SAP Sales Cloud](https://www.sap.com/products/crm/sales-cloud.html) and [SAP Service Cloud](https://www.sap.com/products/service-management/service-cloud.html)
+- [SAP Ariba](https://discovery-center.cloud.sap/serviceCatalog/sap-analytics-cloud?commercialModel=subscription&provider=azure&tab=service_plan&region=all) for direct and indirect spend
+- [SAP Concur](https://www.concur.co.uk/) for travel and expense
+- [SAP Fieldglass](https://www.fieldglass.com/) for external workforce management
+- [SAP SuccessFactors](https://www.fieldglass.com/) for Human Capital Management
 
 The community curated list of SAP products on Wikipedia lists more than 100 SAP products for business, industry or platform software (Wikipedia 2021, List of SAP products - Wikipedia) 
 [List of SAP products - Wikipedia](https://en.wikipedia.org/wiki/List_of_SAP_products). Due to this wide variety of solution portfolio and deployment options, this article focuses on the most common and relevant products in customer environments. 
@@ -58,14 +58,14 @@ The community curated list of SAP products on Wikipedia lists more than 100 SAP 
 - Consider technical debt of existing SAP BW transformations and investments
 
 - Data Analysis - Once the source system is identified, and its capabilities and limitations well known, consider the following items in data analysis: 
-  - a. Source business object, 
-  - b. type of data (master data, transactional data or language-dependent text data), 
-  - c. source tables and/or views, primary key columns, 
-  - e. full load vs. delta load, data change patterns, data volume, data compression, 
-  - f. extraction in batches vs. near-real time replication (Note that the minimum interval of a schedule trigger in Azure Synapse is one minute), 
-  - g. data access methods provided by the source system, 
-  - h. native Azure or 3rd party ETL tools and data connectors most suitable for the use case, 
-  - i. In case of SAP CDC connector, type of ODP provider/context, e.g., SAPI (DataSources/Extractors), BW (SAP   NetWeaver Business Warehouse), ABAP_CDS (ABAP Core Data Services) or HANA (HANA Information Views), in case of ABAP CDS views, the view's supported capabilities and analytics annotations.
+  - Source business object, 
+  - type of data (master data, transactional data or language-dependent text data), 
+  - source tables and/or views, primary key columns, 
+  - full load vs. delta load, data change patterns, data volume, data compression, 
+  - extraction in batches vs. near-real time replication (Note that the minimum interval of a schedule trigger in Azure Synapse is one minute), 
+  - data access methods provided by the source system, 
+  - native Azure or 3rd party ETL tools and data connectors most suitable for the use case, 
+  - In case of SAP CDC connector, type of ODP provider/context, e.g., SAPI (DataSources/Extractors), BW (SAP   NetWeaver Business Warehouse), ABAP_CDS (ABAP Core Data Services) or HANA (HANA Information Views), in case of ABAP CDS views, the view's supported capabilities and analytics annotations.
 
 
 **Design Recommendations**
@@ -77,24 +77,13 @@ The community curated list of SAP products on Wikipedia lists more than 100 SAP 
 
 - Azure Data Factory and Azure Synapse Analytics pipelines provide multiple connectors for data extraction from SAP sources. https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP Data Integration using Azure Data Factory.pdf For SAP CDC connector specifically, see Transform data from an SAP ODP source with the SAP CDC connector in Azure Data Factory or Azure Synapse Analytics - Azure Data Factory & Azure Synapse | Microsoft Learn.
 
-- If one is using the [CDC (Change Data Capture) connector](https://learn.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-introduction-architecture), the following are the data providers and recommendations. 
+- If one is using the [CDC (Change Data Capture) connector](https://learn.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-introduction-architecture), the following are the data providers and recommendations based on source system.  
 
-   - If the customer is using ECC then following are the options
-	 - ECC extractors - An SAP extractor is a program that can be used to retrieve data in a SAP source system and transfer it to an SAP Business Warehouse or Business Intelligence system. It has all the logic that can be used to extract data in an SAP source system and transfer it to an SAP BW or BI system   -- Check if you or your partner have experience and skills with BW Extractors. If you have these skills, then extractors are preferred option. Ensure your partner has implementation and operation experience as well for successful project. 
-
-	 - [SLT(System Landscape Transformation Replication Server)](https://www.sap.com/products/technology-platform/landscape-replication-server.html) – If extractors cannot be used or if database trigger option is required, then you can rely on original tables and work via SLT. 
-
-    - If the customer is using S/4 Hana 
-	  - ABAP CDS views (TBD – Pankaj to add details to explain) - preferred option to extract data. Data is easier to consume (multi-dimensional model), technology is easier to handle than since CDS views are like database views and can be easily understood without deep sap knowledge. Custom CDS views are easier to create and much more powerful as well. 
-	  - Extractors – Exists in S/4 HANA to fill certain gaps. The use case is for the situations where we do not have CDS views, and the gap is filled with Extractors. (Off course the same consideration as above in terms of skills) 
-      - SLT – This means connecting to Tables. Another option is if the above two do not fit the use case. 
-
-    - If the source system is BW (BW & BW/4 HANA) 
-      - BW Objects (Infoproviders , Infoobjects) – preferred method (TBD – Pankaj to add details to explain) - this is the preferred method and in most of the cases it is recommended to go directly to BW objects since we already have the data available in InfoProviders & InfoObjects.  
-      - ABAP CDS Views (for exceptional use cases) - 
-      - BW Extractors (for exceptional use cases) 
-      -	SLT (for exceptional use cases) 
-    For CDS, BW extractor and SLT – These are used for exceptional use cases for example if there are capabilities like CDC not available in the BW Objects then either of the options could be used. 
+| SAP Source | Data Providers |
+|-------------|--------------|
+| ECC                 | 1\. ECC extractors \- An SAP extractor is a program that can be used to retrieve data in an SAP source system and transfer it to an SAP Business Warehouse or Business Intelligence system. It has all the logic that can be used to extract data in an SAP source system and transfer it to an SAP BW or BI system. It is advisable to check if you or your partner have experience and skills with BW Extractors. If these skillsets are available, then extractors are the preferred option. Ensure your partner has implementation and operation experience as well for a successful project.<br>2.SLT (SAP Landscape Transformation Replication Server) – If extractors cannot be used or if database trigger option is required, then you can rely on original tables and work via SLT. |
+| S/4 HANA            | 1\. ABAP CDS views - SAP CDS stands for SAP Core Data Services. SAP CDS is an infrastructure for data modelling that enables data models to be defined and consumed on the database server rather than the application server. SAP CDS Views are of 2 types: HANA CDS Views and ABAP CDS views. SAP ABAP CDS views are defined at the application server level. This is the preferred option to extract data. Data is easier to consume (multi-dimensional model), technology is easier to handle since CDS views are like database views and can be easily understood without deep sap knowledge. Custom CDS views are easier to create and much more powerful as well.<br>2\. Extractors – Exists in S/4 HANA to fill certain gaps. The use case is for the situations where we do not have CDS views, and the gap is filled with Extractors. Ensure you or your partner has implementation and operational experience for a successfull project.<br>3\.  SLT (SAP Landscape Transformation Replication Server)– This means connecting to Tables. Another option is if the above two do not fit the use case. |
+| BW (BW & BW/4 HANA) | 1\. BW Objects (Infoproviders , Infoobjects) – This is the preferred method and in most of the cases it is recommended to go directly to BW objects since the data is already available in InfoProviders & InfoObjects. <br>2\. ABAP CDS Views (for exceptional use cases) -<br>3\. BW Extractors (for exceptional use cases)<br>4\. SLT (for exceptional use cases)<br>Note : For CDS, BW extractor and SLT – These are used for exceptional use cases for example if there are capabilities like CDC not available in the BW Objects then either of the options could be used. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
     **Note – If we are talking about all the connectors the providers options will be more.** 
        
 -  In case of using SAP CDC connector, check whether customer is using SAP SLT or not. In some case customer has the licenses to use SAP SLT but the infrastructure is not there and that is going to be an additional cost. 
