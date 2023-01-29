@@ -13,18 +13,18 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Relocate cloud workloads
 
-CAF Relocate details the process of relocating workloads in Azure and guides you to pick the best relocation strategies. The overview here defines relocation, identifies reasons to relocate, and outlines the relocation lifecycle.
+The CAF relocation guidance shows you how to set up a relocation program and relocate one or more workloads.
 
 :::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image that shows the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
 *Figure 1. The relocation lifecycle.*
 
 ## What is relocation?
 
-Relocation is the process of moving a workload in Azure to a different Azure region.  While it's a migration effort, it isn't a migration to the cloud.  Instead, it's a migration that stays within the Azure public cloud. It has similarities with the process defined in CAF Migrate, but it also has its own solutions and considerations to take advantage of different Azure regions.
+Relocation is the process of moving a workload in Azure to a different region in Azure. While it's a migration effort, it isn't a migration to the cloud. Instead, it's a migration that stays within the Azure public cloud. It has similarities with the process defined in the [migrate guidance](../migrate/index.md), but it also has its own solutions and considerations to take advantage of different Azure regions.
 
 ## Why relocate?
 
-Relocation adds flexibility that can help you optimize cost and performance throughout the lifecycle of your workloads. When workloads are first deployed or migrated to Azure, a decision is made about their region.  However, as time passes, you should review that decision to see if a different region might be a better fit. For example, another region could have services or capabilities unavailable in the current region, or you might want to move your workload closer to a new customer base. Data residency laws might change, or budgets could shift. Rather than work around these changes and encounter cost or performance issues, a relocation might be the best way to proceed for your workload.
+Relocation adds flexibility that can help you optimize cost and performance throughout the lifecycle of your workloads. When workloads are first deployed or migrated to Azure, you make a decision about their region. However, as time passes, you should review that decision to see if a different region might be a better fit. For example, another region could have services or capabilities unavailable in the current region, or you might want to move your workload closer to a new customer base. Data residency laws might change, or budgets could shift. Rather than work around these changes and encounter cost or performance issues, a relocation might be the best way to proceed for your workload.
 
 *Table 1. Example scenarios that drive relocations.*
 
@@ -51,7 +51,7 @@ The relocation lifecycle has two phases. The first phase is Initiate. The Initia
 |3. Migrate| Relocate the workload. |
 |4. Cutover| Direct traffic to new location. |
 
-## Next step
+## Assumptions
 
 You should read relocation best practices and use them as guidance for each workload relocation. The following articles detail how you should approach each step. The content highlights critical areas to focus on but also refers you to other documentation for deeper technical insight. It assumes a basic understanding of Azure regions and service availability. For more information, see:
 

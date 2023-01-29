@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Initiate a cloud relocation project
 
-The Initiate phase is a single-step process to establish the relocation process. In this phase, you identify objectives, determine scope, prioritize workloads, and create a relocation plan to meet those objectives. The Initiate step relies on well-known project management best practices. The guidance here's succinct and focuses on four key aspects of this step.
+The Initiate phase is a single-step process to establish the relocation process. The guidance in the Initiate phase is more important for large relocation efforts with multiple workloads in scope. For small relocation with a single workload in scope, you can skip to [create a relocation plan](#create-a-relocation-plan). The goal of the Initiate phase is to provide stakeholders with the information they want and get the relocation the resources it needs. Here's a framework for initiating a relocation.
 
 :::image type="content" source="../_images/relocate/caf-relocate-initiate.png" alt-text="Image that shows the relocation process and highlights the Initiate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-initiate.png" border="false":::
 *Figure 1. The Initiate step of relocation.*
@@ -32,11 +32,11 @@ The need to meet specific objectives drives relocation projects. You should capt
 
 ## Determine scope
 
-The objectives for relocation determine the scope of the project. With your objectives in place, you can identify the workloads you need to relocate to meet those objectives. As a reminder, a workload is a collection of services, applications, and data that support a defined process. The workload should be the smallest unit of relocation. Anything smaller becomes difficult to manage. For more information, see [What is a workload?](/azure/cloud-adoption-framework/plan/workloads#what-is-a-workload).
+With objectives in place, you can identify the workloads you need to relocate to meet those objectives. As a reminder, a workload is a collection of services, applications, and data that support a defined process. For planning and scoping, the workload should be the smallest unit of relocation. Anything smaller makes planning difficult to manage. In execution, you relocate workloads by migrating workload services and components, but for planning, focus on the workload as a whole. For more information, see [What is a workload?](/azure/cloud-adoption-framework/plan/workloads#what-is-a-workload).
 
 ## Prioritize workloads
 
-The order you relocate workloads should be intentional and should reflect the priority of your objectives (see *Table 1*). Any technical dependencies, such as platforms and landing zones, should go first. Outside of technical dependencies, the order is up to you. For more information, see [Platform vs application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
+The order you relocate workloads should reflect the priority of your objectives (see *Table 1*). Any technical dependencies, such as platforms and landing zones, should go first. Outside of technical dependencies, the order is up to you. For more information, see [Platform vs application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
 
 ## Create a relocation plan
 
@@ -46,11 +46,11 @@ You should create a relocation plan that addresses service capacity and high-lev
 
 **Use a multi-disciplinary team.** The relocation team needs technical, business, and legal/compliance expertise. The business stakeholders own the workload and should guide the technical team to meet the objectives. You need the legal or compliance teams if the workload is being relocated due to regulatory requirements.
 
-**Know cost factors.** Relocation has a cost. Moving data and using services isn't always free. To minimize cost, you should move data once and avoid duplicating services or environments for extended periods of time. A hidden cost you might not consider comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee.
+**Know cost factors.** Relocation has a cost. Moving data and using services isn't always free. To minimize cost, you should move data once and avoid duplicating services or environments for extended periods of time. A hidden cost comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee.
 
-## Next steps
+## Next step
 
-With the relocation project initiated, you enter the Move phase of relocation. The Move phase has five stages: evaluate, select, migrate, cutover, and close. Each workload goes through the first four stages. You repeat these four stages until you've relocated every workload.
+The next step is the Move phase of relocation. The Move phase has four steps: evaluate, select, migrate, and cutover. You might have one or more workloads to relocate. Regardless of number, you should work through these four steps for any workload you want to relocate.
 
 > [!div class="nextstepaction"]
 > [Evaluate](evaluate.md)

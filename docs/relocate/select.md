@@ -61,12 +61,10 @@ Warm relocation is for critical workloads with a stateful service that doesn't s
 
 ## Select service-relocation automation
 
-There are three primary service-relocation tools. The following paragraphs give an overview of each tool choice with links to more guidance. Azure Resource Mover and Azure Site Recovery can move stateless and stateful services. If you use infrastructure as code (IaC) to move the workload, you need to find a separate data relocation tool. You should review the capabilities of each service-relocation tool and select the service-relocation tool that best meets your needs.
+There are three primary service-relocation tools. The following paragraphs give an overview of each tool choice with links to more guidance. Azure Resource Mover and Azure Site Recovery can move stateless and stateful services. If you use infrastructure as code (IaC) to move the workload, you need to find a separate data relocation tool. You should review the capabilities of each service-relocation tool and select the tool that best meets your needs.
 
-**Azure Resource Mover.** Azure Resource Mover is a built-in Azure service that allows you to move Azure resources between regions, subscriptions, and resource groups. For all cold relocation, you should try Azure Resource Mover first. It supports a limited number of stateful and stateless services. For more information, see:
-
-- [Azure Resource Mover overview](/azure/resource-mover/overview)
-- [Supported resources](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
+**Azure Resource Mover.** Azure Resource Mover is a built-in Azure service that allows you to move Azure resources between regions, subscriptions, and resource groups. For all cold relocation, you should try Azure Resource Mover first. It supports a limited number of stateful and stateless services. For more information, see [Azure Resource Mover overview](/azure/resource-mover/overview)
+ and [Supported resources](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
 **Azure Site Recovery.** Azure Site Recovery can replicate any application running on a supported virtual machine in Azure. It's a disaster recovery tool by design, but it can also relocate stateful and stateless workloads. Site Recovery uses a Recovery Services Vault like Azure Backup does and can move services quickly. It requires a few cleanup steps after relocation since it's a disaster recovery tool. For more information, see:
 
@@ -78,9 +76,9 @@ There are three primary service-relocation tools. The following paragraphs give 
 
 ## Select data-relocation automation
 
-If you used infrastructure as code (IaC) to relocate your stateful service, you need to pick a data-relocation tool to move the data. You should review the capabilities of each data-relocation tool and select the tool that meets the needs of your workload. Here are tools you can use for data-relocation.
+You need to pick a data-relocation tool to move workload data. For data relocation, you need to have the service running in the target region before moving the data. Review the [relocation methods](#select-a-relocation-method) to get a sense of the sequence. Here's a list of tools you can use to relocate data.  The list starts with hot relocation tools and finishes with cold (see *Table 1* for the schema). The list isn't in order of preference. So you need to evaluate each tool and pick the right one for your workload.
 
-- **Geo-replication.** Active geo-replication is a business continuity solution. You can perform quick disaster recovery of individual databases if a regional disaster or large-scale outage occurs. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. For more information, see [Geo-replication overview](/azure/azure-sql/database/active-geo-replication-overview).
+- **Geo-replication.** Active geo-replication is a business continuity solution. You can perform quick disaster recovery of individual databases if a regional disaster or large-scale outage occurs. Once geo-replication is set up, you can initiate a geo-failover to a different Azure region. For more information, see [Geo-replication overview](/azure/azure-sql/database/active-geo-replication-overview).
 
 - **Synchronous data replication.** Synchronous data replication replicates data in near real-time across regions. It's the preferred data relocation approach for hot relocation because it limits downtime and data delta migrations after cutover. This capability is built into some Azure services such as Azure SQL and Azure Cosmos DB. You need to check each service in your workload to see if it's available. For more information, see [Azure SQL](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database) and [Azure Cosmos DB](/azure/cosmos-db/nosql/how-to-multi-master).
 

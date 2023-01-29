@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Cut over a cloud workload
 
-Cutover is when you direct traffic away from the source region and to the workload in the target region. After cutover, you can decommission the workload in the source region. It's a good practice to confirm with stakeholders before cutover because users start interacting with the new workload after cutover. Here's the high-level process to cut over a cloud workload.
+Cutover is when you direct traffic away from the source region and to the workload in the target region. After cutover, you can decommission the workload in the source region. To reduce costs and data deltas, you want to period between migration and cutover to be short. Here's the high-level process to cut over a cloud workload.
 
 :::image type="content" source="../_images/relocate/caf-relocate-cutover.png" alt-text="Image that shows the relocation process and highlights the Cutover step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-cutover.png" border="false":::
 *Figure 1. The Cutover step of relocation.*
@@ -26,15 +26,13 @@ Cutover is when you direct traffic away from the source region and to the worklo
 
 **Fix if necessary.** If something goes wrong, you should implement the failover plan or apply an urgent fix to stabilize the deployment.
 
-**Hand over workload.** When the process is complete, hand the workload over to the IT operations team.
+**Review operational configurations.** Make sure you turn on or configure the new workload environments. You should follow all Azure Advisor recommendations and configuring items such as backups, security controls, logging, and cost reporting.
 
 ## Next steps
 
-**Review operational configurations.** Make sure you turn on or configure the new workload environments. You should follow all Azure Advisor recommendations and configuring items such as backups, security controls, logging, and cost reporting.
-
 **Repeat the Move phase for each workload.** If you have more workloads to relocate, return to the [Evaluate step](evaluate.md) and repeat the four steps of the Move phase until you complete the relocation project. Otherwise, you need to formally close the relocation project.
 
-**Close project.** After the final cutover, you should close the relocation project. Stakeholders should review and approve. Project closure signals that the relocation team is moving on to other priorities and the operations team should assume full responsibility. Closure should take place two weeks after relocating the final workload. You need time to assess the success of the relocation and create a report for stakeholders to review. Business and technical stakeholders should review the report and approve.
+**Close project.** After you're done relocating, you should officially close the relocation project. Closure should take place two weeks after the final cutover. You need time to assess the success of the relocation and create a report for stakeholders to review. Business and technical stakeholders should review the report and approve.
 
 **Modernize workloads.** Depending on the state of your workload, you might want to continue with our adopt guidance for modernizing workloads with Azure platform-as-a-service solutions (PaaS) or conduct a well-architected review to determine areas of improvement.
 
