@@ -74,7 +74,7 @@ There are three primary service-relocation tools. The following paragraphs give 
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
 - [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
 
-**Infrastructure as code (IaC) custom automation.** IaC allows you to copy and redeploy Azure services. You can download the JSON view for the services in the source region and deploy services in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code).
+**Infrastructure as code (IaC) custom automation.** IaC allows you to copy and redeploy Azure services. If you don't already have it, you can download the Azure Resource Manager template for the services in the source region and deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code).
 
 ## Select data-relocation automation
 
