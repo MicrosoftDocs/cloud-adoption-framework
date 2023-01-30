@@ -1540,7 +1540,7 @@ items:
           href: govern/resource-consistency/tagging.md
         - name: Managing business constraints
           href: govern/resource-consistency/business-constraints.md
-        - name: Why update an Azure landing zone?
+        - name: Keep your Azure landing zone up to date
           href: govern/resource-consistency/keep-azure-landing-zone-up-to-date.md
         - name: Migrate Azure landing zone policies to Azure built-in policies
           href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
