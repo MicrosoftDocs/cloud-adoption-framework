@@ -54,7 +54,7 @@ The connection string configuration depends on the service the application conne
 
 ## Managed identities
 
-System-assigned managed identities have a lifecycle bound to the Azure resource. Therefore the relocation strategy of the Azure resource determines how the system-assigned Managed Identity is handled. If a new instance of the resource is created in the target, then you have to assign th new system-assigned Managed Identity the same permissions as the system-assigned Managed Identity in source region. User-assigned Managed Identity have an independent lifecycle, and you can map the user-assigned Managed Identity to the new resource in the target region.
+System-assigned managed identities have a lifecycle bound to the Azure resource. Therefore the relocation strategy of the Azure resource determines how the system-assigned Managed Identity is handled. If a new instance of the resource is created in the target, then you have to assign the new system-assigned Managed Identity the same permissions as the system-assigned Managed Identity in source region. User-assigned Managed Identity have an independent lifecycle, and you can map the user-assigned Managed Identity to the new resource in the target region.
 
 ## Next steps
 
