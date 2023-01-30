@@ -739,6 +739,11 @@
          "source_path": "docs/govern/resource-consistency/toolchain.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency",
          "redirect_document_id": false
-      }         
+      },
+      {
+         "source_path": "docs/govern/resource-consistency/why-update-azure-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency/keep-azure-landing-zone-up-to-date",
+         "redirect_document_id": false
+      }       
    ]
 }
