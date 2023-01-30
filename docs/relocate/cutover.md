@@ -26,7 +26,7 @@ Cutover is when you direct traffic away from the source region and to the worklo
 
 **Fix if necessary.** If something goes wrong, you should implement the failover plan or apply an urgent fix to stabilize the deployment.
 
-**Review operational configurations.** Make sure you turn on or configure the new workload environments. You should follow all Azure Advisor recommendations and configuring items such as backups, security controls, logging, and cost reporting.
+**Review operational configurations.** Make sure you turn on or configure the new workload environments, including the updated artifacts (config files, wikis, readme), infrastructure as code (IaC), pipelines for your new environment. You should follow all Azure Advisor recommendations and configuring items such as backups, security controls, logging, and cost reporting.
 
 ## Next steps
 

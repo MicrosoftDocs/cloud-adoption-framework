@@ -13,14 +13,14 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Relocate cloud workloads
 
-The CAF relocation guidance shows you how to set up a relocation program and relocate one or more workloads.
+The relocate guidance shows you how to set up a relocation program and relocate one or more workloads.
 
 :::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image that shows the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
 *Figure 1. The relocation lifecycle.*
 
 ## What is relocation?
 
-Relocation is the process of moving a workload in Azure to a different region in Azure. While it's a migration effort, it isn't a migration to the cloud. Instead, it's a migration that stays within the Azure public cloud. It has similarities with the process defined in the [migrate guidance](../migrate/index.md), but it also has its own solutions and considerations to take advantage of different Azure regions.
+Relocation is the process of moving a workload in Azure to a different region in Azure. A workload is a collection of services, applications, and data that support a defined process. It serves as a boundary for services that should remain together. Relocation is a migration effort, but it isn't a migration to the cloud. Instead, it's a migration that stays within the Azure public cloud. Relocation has similarities with the process defined in the [migrate guidance](../migrate/index.md), but it also has its own solutions and considerations to take advantage of different Azure regions. The relocate guidance outlines these solutions and considerations.
 
 ## Why relocate?
 

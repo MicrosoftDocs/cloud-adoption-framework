@@ -24,21 +24,15 @@ You might need to prepare the target region before relocating the workload. If t
 
 **Create new subscriptions only if needed.** Only create new subscriptions if you need to restructure the services and resources involved. You should approach relocations as an as-is effort, because creating a new subscription adds complexity. Subscriptions serve as boundaries for budgets, policies, and role-based access controls (RBACs). For any new subscription, you need to validate budgets, policies, and RBACs. If you don't move all the resources in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to maintain the governance and security posture.
 
-**Configure a new domain name if needed.** When there's a change in the custom domain of the workload, you need to configure a new domain name. Create the new hostname, assign it to your application or service, and then validate the name resolution. For more information, see:
+**Configure a new domain name if needed.** When there's a change in the custom domain of the workload, you need to configure a new domain name. Create the new hostname, assign it to your application or service, and then validate the name resolution. You might also plan to lower and configure the time-to-live (TTL) and set it in the cutover stage for auto expiry. For more information, see [Add your custom domain](/azure/active-directory/fundamentals/add-custom-domain) and [Map DNS name to App Service plan](/azure/app-service/manage-custom-dns-buy-domain#prepare-the-app).
 
-- [Add your custom domain](/azure/active-directory/fundamentals/add-custom-domain)
-- [Map DNS name to App Service plan](/azure/app-service/manage-custom-dns-buy-domain#prepare-the-app)
-
-**Create new SSL/TLS certificates if needed.** You need to create new SSL/TLS certificates (X.509) for any new domain name. These certificates enable public-private key encryption and secure network communication (HTTPS). Use Azure Key Vault to create or import X.509 certificates. For more information, see:
-
-- [Azure Key Vault certificates](/azure/key-vault/certificates/about-certificates)
-- [Certificate creation methods](/azure/key-vault/certificates/create-certificate)
+**Create new SSL/TLS certificates if needed.** You need to create new SSL/TLS certificates (X.509) for any new domain name. These certificates enable public-private key encryption and secure network communication (HTTPS). Use Azure Key Vault to create or import X.509 certificates. For more information, see [Azure Key Vault certificates](/azure/key-vault/certificates/about-certificates) and [Certificate creation methods](/azure/key-vault/certificates/create-certificate)
 
 **Relocate Azure Key Vault.** You should relocate Azure Key Vault before moving your workload. You should have one key vault per application environment, and your key vault shouldn’t share secrets across regions to ensure confidentiality. You might need to create a new key vault in the new target region to align with this guidance.
 
 ## Migrate services
 
-You can begin migrating the services in your workload. For execution, follow available guidance for the relocation tool you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation. Infrastructure-as-code automation also has guidance, though the specific steps depend on your scripts. For more information, see:
+You can begin migrating the services in your workload. For execution, follow available guidance for the relocation automation you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation. Infrastructure-as-code automation also has guidance, though the specific steps depend on your scripts. For more information, see:
 
 - [Azure Resource Mover tutorials](/azure/resource-mover/tutorial-move-region-virtual-machines)
 - [Azure Site Recovery tutorials](/azure/site-recovery/azure-to-azure-how-to-enable-replication)
@@ -46,7 +40,7 @@ You can begin migrating the services in your workload. For execution, follow ava
 
 ## Migrate data
 
-This stage is only relevant when the workload requires data migration. Perform data migration with the chosen tool.  Before the cutover to the workload in the target region, you must ensure that the related data is in sync with the source region. Data consistency is an important aspect that requires care.  Here's ordered guidance for migrating workload data.
+This stage is only relevant when the workload requires data migration. Perform data migration with the chosen automation. Before the cutover to the workload in the target region, you must ensure that the related data is in sync with the source region. Data consistency is an important aspect that requires care.  Here's ordered guidance for migrating workload data.
 
 **Migrate source region data.** The approach to migrating source-region data should follow the relocation method for the workload service. The hot, cold, and warm methods have different processes for managing the data in the source region.
 
@@ -57,6 +51,10 @@ This stage is only relevant when the workload requires data migration. Perform d
 ## Update connection strings
 
 The connection string configuration depends on the service the application connects to. You can search for “connection string” on our documentation page to find the service-specific guidance and use that guidance to update the connection string. For more information, see the [Technical documentation](/docs/).
+
+## Managed identities
+
+System-assigned managed identities have a lifecycle bound to the Azure resource. Therefore the relocation strategy of the Azure resource determines how the system-assigned Managed Identity is handled. If a new instance of the resource is created in the target, then you have to assign th new system-assigned Managed Identity the same permissions as the system-assigned Managed Identity in source region. User-assigned Managed Identity have an independent lifecycle, and you can map the user-assigned Managed Identity to the new resource in the target region.
 
 ## Next steps
 

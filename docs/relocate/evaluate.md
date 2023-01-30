@@ -52,7 +52,7 @@ Know if the target region is a paired region or not and if it supports availabil
 
 ## Categorize workload services
 
-Relocation happens at the service and component level. Most workloads use multiple services. The types of services in the workload decide the relocation methods (cold, hot, warm) and tools used to relocate it. There are two primary types of services, stateful and stateless. You need to categorize each service as stateful or stateless.
+Relocation happens at the service and component level. Most workloads use multiple services. There are two primary types of services, stateful and stateless. You need to categorize each service as stateful or stateless. This knowledge helps you determine dependencies, understand service integrations, and narrows your relocation automation options.
 
 **Stateless services.** Stateless services have configuration information only. These services don't need continuous replication of data to move. Examples include virtual networks, network adapters, load balancers, and network security groups.
 
