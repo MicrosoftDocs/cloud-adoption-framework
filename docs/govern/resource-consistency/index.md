@@ -65,3 +65,4 @@ Consider the resource consistency guidance for the following areas.
 - [Resource naming](naming.md)
 - [Resource tagging](tagging.md)
 - [Business constraints](business-constraints.md)
+- [Keep landing zones up to date](keep-azure-landing-zone-up-to-date.md)

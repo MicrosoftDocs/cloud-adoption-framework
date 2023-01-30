@@ -1,5 +1,5 @@
 ---
-title: Why update your Azure landing zones?
+title: Keep your Azure landing zone up to date
 description: Learn best practices for keeping your Azure landing zones up to date.
 author: Jfaurskov
 ms.author: Janfaurs
@@ -10,9 +10,11 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-# Why update your Azure landing zones?
+# Keep your Azure landing zone up to date
 
 An Azure landing zone is a set of pre-defined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important to ensure that your deployed landing zone environment is up to date so that you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases.
+
+## Why update your Azure landing zones?
 
 Here are a few reasons to keep your landing zone up to date:
 
@@ -28,7 +30,7 @@ Here are a few reasons to keep your landing zone up to date:
 
 Neglecting keep to your landing zones up to date could affect your security posture and the benefits that you get from the landing zones. To protect your investment in Azure, regularly review and update your landing zones as needed. See the **Next steps** section for guidance on how to do that.
 
-## Azure policy and policy initatives
+## Keep policies and policy initatives up to date
 
 Over time, Azure landing zone custom policies and policy initiatives might be updated to newer versions or even superseded by new Azure built-in policies. If so, they should be be included in your platform landing zone update cycle.
 
