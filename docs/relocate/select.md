@@ -116,7 +116,7 @@ Cutover is when you transition from the old workload to the new one. You direct 
 
 - **App Service.** Application-layer services, such as Azure App Service, have features that allow you to update the domain name. For more information, see [Migrate an active DNS name to Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain?tabs=a%2Cazurecli).
 
-Some other examples includes Azure Front Door, Application Gateway, Azure API Management, and others.
+- **Gateway Routing.** - If the workload already uses the [Gateway Routing pattern](/azure/architecture/patterns/gateway-routing) with a service such as Azure Front Door, Application Gateway, or Azure API Management, you can often make a region migration cutover using their backend targets and routing rules features.
 
 ## Next step
 
