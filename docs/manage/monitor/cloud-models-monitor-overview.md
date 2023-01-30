@@ -3,7 +3,7 @@ title: Monitoring strategy for cloud deployment models
 description: Learn how to adopt our recommended monitoring strategy for each of the cloud deployment models in Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 01/25/2023
+ms.date: 01/27/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -62,28 +62,28 @@ This section presents several factors that help determine which platform to cons
 
 Azure Monitor, SCOM Managed Instance (preview), and System Center Operations Manager support the following requirements for monitoring hybrid clouds.
 
-| Requirement | Azure Monitor | Operations Manager |
-|---|---|---|
-| Infrastructure requirements | No | Yes <br><br> Requires, at a minimum, a management server and a SQL Server instance to host the operational database and the reporting data warehouse database. The complexity increases when high availability and disaster recovery are required, and there are machines in multiple sites, untrusted systems, and other complex design considerations. |
-| Limited connectivity: no internet or isolated network | No | Yes |
-| Limited connectivity: controlled internet access | Yes | Yes |
-| Limited connectivity: frequently disconnected | Yes | Yes |
-| Configurable health monitoring | No | Yes |
-| Web app availability test (isolated network) | Yes, limited <br><br> Azure Monitor has limited support in this area and requires custom firewall exceptions. | Yes |
-| Web app availability test (globally distributed) | No | Yes |
-| Monitor VM workloads | Yes, limited <br><br> Can collect IIS and SQL Server error logs, Windows events, and performance counters. Requires creating custom queries, alerts, and visualizations. | Yes <br><br> Supports monitoring most server workloads with available management packs. Requires either the Log Analytics Windows agent or Operations Manager agent on the VM, reporting back to the management group on the corporate network. |
-| Monitor Azure IaaS | Yes | Yes <br><br> Supports monitoring most of the infrastructure from the corporate network. Tracks availability state, metrics, and alerts for Azure VMs, SQL, and storage via the Azure management pack. |
-| Monitor Azure PaaS | Yes | Yes, limited <br><br> Based on what's supported in the Azure management pack. |
-| Azure service monitoring | Yes | Yes <br><br> Although there's no native monitoring of Azure Service Health provided today through a management pack, you can create custom workflows to query Service Health alerts. Use the Azure REST API to get alerts through your existing notifications. |
-| Modern web application monitoring | Yes | No |
-| Legacy web application monitoring | Yes, limited, varies by SDK <br><br> Supports monitoring older versions of .NET and Java web applications. | Yes, limited |
-| Monitor Azure Kubernetes Service containers | Yes | No |
-| Monitor Docker or Windows containers | Yes | No |
-| Network performance monitoring | Yes | Yes, limited <br><br> Supports availability checks and collects basic statistics from network devices by using the Simple Network Management Protocol (SNMP) from the corporate network. |
-| Interactive data analysis | Yes | No <br><br> Relies on SQL Server Reporting Services canned or custom reports, third-party visualization solutions, or a custom Power BI implementation. There are scale and performance limitations with the Operations Manager data warehouse. Integrate with Azure Monitor Logs as an alternative for data aggregation requirements. You achieve integration by configuring the Log Analytics connector. |
-| End-to-end diagnostics, root-cause analysis, and timely troubleshooting | Yes | Yes, limited <br><br> Supports end-to-end diagnostics and troubleshooting only for on-premises infrastructure and applications. Uses other System Center components or partner solutions. |
-| Interactive visualizations | Yes | Yes, limited <br><br> Delivers essential dashboards with its HTML5 web console or an advanced experience from partner solutions, such as Squared Up and Savision. |
-| Integration with IT or DevOps tools | Yes | Yes, limited |
+| Requirement | Azure Monitor | Operations Manager | SCOM Managed Instance (preview) |
+|---|---|---|---|
+| Infrastructure requirements | No | Yes <br><br> Requires, at a minimum, a management server and a SQL Server instance to host the operational database and the reporting data warehouse database. The complexity increases when high availability and disaster recovery are required, and there are machines in multiple sites, untrusted systems, and other complex design considerations. | Yes, limited <br><br> Requires, at a minimum, connectivity to Active Directory Domain, availability of Azure SQL Managed  |
+| Limited connectivity: no internet or isolated network | No | Yes | No |
+| Limited connectivity: controlled internet access | Yes | Yes | Yes |
+| Limited connectivity: frequently disconnected | Yes | Yes | Yes |
+| Configurable health monitoring | No | Yes | Yes |
+| Web app availability test (isolated network) | Yes, limited <br><br> Azure Monitor has limited support in this area and requires custom firewall exceptions. | Yes | Yes, limited <br><br> SCOM Managed Instance (preview) has limited support in this area and requires custom firewall exceptions. |
+| Web app availability test (globally distributed) | No | Yes | No |
+| Monitor VM workloads | Yes, limited <br><br> Can collect IIS and SQL Server error logs, Windows events, and performance counters. Requires creating custom queries, alerts, and visualizations. | Yes <br><br> Supports monitoring most server workloads with available management packs. Requires either the Log Analytics Windows agent or Operations Manager agent on the VM, reporting back to the management group on the corporate network. | Yes <br><br> Supports monitoring most of the server workloads with available management packs. Requires the Operations Manager agent on the VM, reporting back to the managed instance. |
+| Monitor Azure IaaS | Yes | Yes <br><br> Supports monitoring most of the infrastructure from the corporate network. Tracks availability state, metrics, and alerts for Azure VMs, SQL, and storage via the Azure management pack. | Yes <br><br>Supports monitoring most of the infrastructure. Tracks availability state, metrics, and alerts for Azure VMs, SQL, and storage via the Azure management pack. |
+| Monitor Azure PaaS | Yes | Yes, limited <br><br> Based on what's supported in the Azure management pack. | Yes, limited <br><br> Based on what's supported in the Azure management pack. |
+| Azure service monitoring | Yes | Yes <br><br> Although there's no native monitoring of Azure Service Health provided today through a management pack, you can create custom workflows to query Service Health alerts. Use the Azure REST API to get alerts through your existing notifications. | Yes <br><br> Although there's no native monitoring of Azure Service Health provided today through a management pack, you can create custom workflows to query Service Health alerts. Use the Azure REST API to get alerts through your existing notifications. |
+| Modern web application monitoring | Yes | No | No |
+| Legacy web application monitoring | Yes, limited, varies by SDK <br><br> Supports monitoring older versions of .NET and Java web applications. | Yes, limited | Yes, limited |
+| Monitor Azure Kubernetes Service containers | Yes | No | Yes, limited <br><br> Monitoring is available through a management pack. |
+| Monitor Docker or Windows containers | Yes | No | No |
+| Network performance monitoring | Yes | Yes, limited <br><br> Supports availability checks and collects basic statistics from network devices by using the Simple Network Management Protocol (SNMP) from the corporate network. | Yes, limited <br><br> Supports availability checks, and collects basic statistics from network devices by using the Simple Network Management Protocol (SNMP) from the corporate network. |
+| Interactive data analysis | Yes | No <br><br> Relies on SQL Server Reporting Services canned or custom reports, third-party visualization solutions, or a custom Power BI implementation. There are scale and performance limitations with the Operations Manager data warehouse. Integrate with Azure Monitor Logs as an alternative for data aggregation requirements. You achieve integration by configuring the Log Analytics connector. | Yes, limited <br><br> Relies on Power BI implementation or third-party visualization solutions. |
+| End-to-end diagnostics, root-cause analysis, and timely troubleshooting | Yes | Yes, limited <br><br> Supports end-to-end diagnostics and troubleshooting only for on-premises infrastructure and applications. Uses other System Center components or partner solutions. | Yes <br><br> Supports end-to-end diagnostics and troubleshooting only for workloads. |
+| Interactive visualizations | Yes | Yes, limited <br><br> Delivers essential dashboards with its HTML5 web console or an advanced experience from partner solutions, such as Squared Up and Savision. | Yes, limited <br><br> Delivers essential dashboards with its HTML5 web console or an advanced experience from partner solutions, such as Squared Up and Savision. |
+| Integration with IT or DevOps tools | Yes | Yes, limited | Yes, limited |
 
 ### Collect and stream monitoring data to third-party or on-premises tools
 
