@@ -54,7 +54,7 @@ The following table illustrates a few common use scenario requirements and the r
 | Deliver high availability and elastic scaling to open-source mobile and web apps with a managed community MariaDB database service | [Azure Database for MariaDB](/azure/mariadb/overview) |
 | Build applications with guaranteed low latency and high availability anywhere, at any scale, or migrate Cassandra, MongoDB, Gremlin, and other NoSQL workloads to the cloud | [Azure Cosmos DB](/azure/cosmos-db/introduction) |
 | Modernize existing Cassandra data clusters and apps, and enjoy flexibility and freedom with managed instance service | [Azure Managed Instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/introduction) |
-| Build a fully managed elastic data warehouse that has security at every level of scale at no extra cost. | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) |
+| Build a fully managed elastic data warehouse that has security at every level of scale at no extra cost | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) |
 | Power fast, scalable applications with an open-source-compatible in-memory data store | [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview) |
 
 ## Database feature comparison
