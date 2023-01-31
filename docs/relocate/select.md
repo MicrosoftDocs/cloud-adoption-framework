@@ -53,7 +53,7 @@ Warm relocation is for critical workloads that don't support hot relocation. War
 1. Keep the workload running in the source region.
 1. Create a backup of the source data. It's a best practice to create the backup during off-peak hours. You should also enable data-in replication to synchronize the data and minimize the data delta.
 1. Restore the data in the new target region.
-1. Switch endpoints and validate.
+1. Switch and validate endpoints.
 1. Shut down the workload in the source region.
 
 ## Select service-relocation automation
