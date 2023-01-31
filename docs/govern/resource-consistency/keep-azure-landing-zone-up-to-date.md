@@ -32,7 +32,7 @@ Neglecting keep to your landing zones up to date could affect your security post
 
 ## Keep policies and policy initatives up to date
 
-Over time, Azure landing zone custom policies and policy initiatives might be updated to newer versions or even superseded by new Azure built-in policies. If so, they should be be included in your platform landing zone update cycle.
+Over time, Azure landing zone custom policies and policy initiatives might be updated to newer versions or even superseded by new Azure built-in policies. If so, they should be included in your platform landing zone update cycle.
 
 - [Migrate landing zone custom policies to Azure built-in policies](./migrate-azure-landing-zone-policies.md)
 - [Update Azure landing zone custom policies](../guides/standard/update-custom-policies.md)
