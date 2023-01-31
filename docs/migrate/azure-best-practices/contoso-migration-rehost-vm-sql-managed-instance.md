@@ -181,7 +181,7 @@ To set up a SQL managed instance, Contoso requires a subnet that meets the follo
 
 To set up the virtual network, the Contoso admins complete the following steps.
 
-1. Create a new virtual network (`VNET-SQLMI-EU2`) in the primary region (`East US 2`). It adds the virtual network to the `ContosoNetworkingRG` resource group.
+1. Create a new virtual network (`VNET-SQLMI-EUS2`) in the primary region (`East US 2`). It adds the virtual network to the `ContosoNetworkingRG` resource group.
 
 1. Assign an address space of `10.235.0.0/24`. They ensure that the range doesn't overlap with any other networks in its enterprise.
 
