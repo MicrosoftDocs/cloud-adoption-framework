@@ -35,7 +35,8 @@ SAP Parameters for RFC - RZ12 **-** The following parameter can restrict the num
 
 - **Connection to SAP using Logon Group -** SHIR should connect SAP using an SAP Logon Group (via message server) and not to a specific application server to ensure workload distribution across all available application servers.
 
-NOTE - Even dataflow spark cluster and SHIR are very powerful, multiple internal SAP copy activities (for example, 16) can be triggered and executed. But if SAP server's concurrent connection number is small (for example, 8), it will also impact the perf to read data from SAP side.
+> [!NOTE]
+> Even dataflow spark cluster and SHIR are very powerful, multiple internal SAP copy activities (for example, 16) can be triggered and executed. But if SAP server's concurrent connection number is small (for example, 8), it will also impact the perf to read data from SAP side.
 
 - The recommendation is to start with 4vCPUs and 16 GB VMs for SHIR. Here is the correction of Dialog work process in SAP with SHIR.
 
@@ -56,7 +57,8 @@ The partitioning process for SAP CDC connector is explained below and it works t
 
 There are two places where one can scale which is at Self Hosted IR & Azure IR. Customer should look at the CPU consumption of SHIR. They have the option of scale up and scale out for SHIR. Scaling out increase availability and resiliency. Should not start with huge IRs and scale up to a decent performance
 
-Note – If you are reaching up to 70% capacity, scale up or scale out for SHIR
+> [!NOTE]
+> If you are reaching up to 70% capacity, scale up or scale out for SHIR
 
 ![how the partitioning process works in SAP CDC connector ](./media/sap-partition2.png)
 
@@ -64,10 +66,9 @@ Partition is mostly useful for initial or large full loads and typically not req
 
 The idea of partitioning is to split this large initial dataset into multiple smaller disjoint subsets of equal size (ideally) which can be processed in parallel thereby reducing the time to produce the data from the source table into ODQ in a linear way. ( provided that there are sufficient resources on the SAP side to handle the load)
 
-**Note**
-
-- Number of partitions executed in parallel are limited by number of driver cores in the Azure IR. This is a current limitation and work is under progress to resolve it.
-- Each unit/package in ODQMON is a single file in staging folder.
+> [!NOTE]
+>- Number of partitions executed in parallel are limited by number of driver cores in the Azure IR. This is a current limitation and work is under progress to resolve it.
+>- Each unit/package in ODQMON is a single file in staging folder.
 
 ### SAP Change Data Capture Connector
 
@@ -95,7 +96,9 @@ If a very small cluster is being used to run the Mapping Data Flow, this could a
 
 Use the Optimize tab to define the partitions. The option that one can use in the CDC connector for is source partitioning.
 
-Note – There is a direct relation between the number of partitions with SHIR cores and Azure Integration runtime nodes.
+> [!NOTE]
+>- There is a direct relation between the number of partitions with SHIR cores and Azure Integration runtime nodes.
+>- SAP CDC connector listed as Odata subscriber type "Odata access for Operational Data Provisioning" under ODQMON in the SAP system,  because it is using  existing subscriber type Odata, instead of creating dedicated subscriber type for ADF/Synapse.
 
 ### SAP Table Connector
 
@@ -136,7 +139,8 @@ Recommendations –
 
   - If multiple batch jobs are triggered in the SAP system and each batch job's start-time has big difference, please change the size of Azure Integration Runtime (IR). Increasing the number of driver nodes in Azure Integration Runtime will increase the parallelism of batch jobs in the SAP side.
 
-**NOTE** - Please note that the maximum number of driver nodes for Azure IR is 16 and one cannot go beyond that. Currently each driver node can only trigger one batch processes but this limitation might change in the future. This is a current limitation.
+> [!NOTE]
+> Please note that the maximum number of driver nodes for Azure IR is 16 and one cannot go beyond that. Currently each driver node can only trigger one batch processes but this limitation might change in the future. This is a current limitation.
 
 - Check the logs in SHIR - **Self-hosted Integration Runtime Virtual Machine.**
 
