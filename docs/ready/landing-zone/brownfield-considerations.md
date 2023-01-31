@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Brownfield landing zone considerations
 
-A brownfield deployment takes place in parallel to existing legacy software applications and systems. When you need to resolve a brownfield deployment scenario, consider your existing Microsoft Azure environment as the place to start. This article summarizes guidance found elsewhere in the Cloud Adoption Framework Ready documentation For more information, see [Introduction to the Cloud Adoption Framework Ready methodology](/shows/azure-enablement/an-introduction-to-the-cloud-adoption-framework-ready-methodology).
+A brownfield deployment is an existing environment that requires modification to align to the Azure landing zone target architecture and best practices. When you need to resolve a brownfield deployment scenario, consider your existing Microsoft Azure environment as the place to start. This article summarizes guidance found elsewhere in the Cloud Adoption Framework Ready documentation For more information, see [Introduction to the Cloud Adoption Framework Ready methodology](/shows/azure-enablement/an-introduction-to-the-cloud-adoption-framework-ready-methodology).
 
 ## Resource organization
 
