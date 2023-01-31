@@ -347,6 +347,11 @@ items:
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
 
+        - name: Databases
+          items:
+          - name: Review data options
+            href: ready/considerations/data-options.md
+
         - name: Resource organization
           items:
           - name: Overview
@@ -1858,14 +1863,6 @@ items:
           href: ready/considerations/storage-options.md
         - name: Storage security guide
           href: /azure/storage/blobs/security-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Databases
-        items:
-        - name: Review data options
-          href: ready/considerations/data-options.md
-        - name: Database security best practices
-          href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Choose a deployment option in Azure SQL Database
-          href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
       - name: AI + machine learning
         items:
         - name: Organize and set up Azure Machine Learning
