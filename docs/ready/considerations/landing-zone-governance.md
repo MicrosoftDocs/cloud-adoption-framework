@@ -76,7 +76,7 @@ The following list of guides and best practices provide examples of ways to impr
 
 - [Organize subscriptions](../landing-zone/design-area/resource-org.md): Understand how to organize and manage multiple subscriptions.
 
-- [Why update your Azure landing zones?](../../govern/resource-consistency/why-update-azure-landing-zone.md): Why you should update your Azure landing zone environment, and how to get more information.
+- [Keep your Azure landing zone up to date](../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md): Why you should update your Azure landing zone environment, and how to get more information.
 
 ## Next steps
 
