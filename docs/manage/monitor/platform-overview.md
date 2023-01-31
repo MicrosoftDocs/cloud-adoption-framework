@@ -36,7 +36,7 @@ Operations Manager requires significant infrastructure and maintenance to suppor
 
 [Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview) (SCOM Managed Instance (preview)) is a PaaS offering of System Center Operations Manager hosted in Azure. SCOM Managed Instance (preview) requires minimal infrastructure and maintenance as many of the infrastructure components such as the management servers and databases are hosted in Azure and managed by Microsoft; You no longer have to be responsible for patching your management server and databases with the latest upgrades and features. Also, scaling a management server can be done at the click of a button.
 
-![Diagram of Operations Manager Managed Instance (preview) architecture](./media/platforms/scom-managed-instance-architecture.png).
+![Diagram of Operations Manager Managed Instance (preview) architecture.](./media/platforms/scom-managed-instance-architecture.png).
 
 ### Azure Monitor
 
