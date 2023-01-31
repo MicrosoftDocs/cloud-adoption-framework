@@ -14,7 +14,7 @@ ms.custom: think-tank, engagement-fy23
 
 This article describes our recommended monitoring strategy for each of the cloud deployment models based on the following criteria:
 
-- You maintain your commitment to [System Center Operations Manager](/system-center/scom/key-concepts), or another enterprise monitoring platform because it's integrated with your IT operations processes, knowledge, and expertise or because certain functionality isn't available yet in Azure Monitor.
+- You maintain your commitment to [System Center Operations Manager](/system-center/scom/key-concepts), or another enterprise monitoring platform because it's integrated with your IT operations processes, knowledge, and expertise or because certain functionality isn't available in Azure Monitor.
 - You monitor workloads on-premises, in the public cloud, or just in the cloud.
 - Your cloud migration strategy includes modernizing IT operations and moving to our cloud monitoring services and solutions.
 - You might have critical systems that are air-gapped, physically isolated, hosted in a private cloud, or on physical hardware, which needs to be monitored.
@@ -27,7 +27,7 @@ The strategy delivers a complete, service-oriented monitoring perspective, and i
 
 ## Azure cloud monitoring
 
-[Azure Monitor](/azure/azure-monitor/overview) is a comprehensive solution for collecting, analyzing, and acting on telemetry from your Azure and on-premises environments. It's designed for virtual machine (VM) workloads or complex cloud architectures that use microservices and other platform resources.
+[Azure Monitor](/azure/azure-monitor/overview) is a comprehensive solution for collecting, analyzing, and acting on signals from your Azure and on-premises environments. It's designed for virtual machine (VM) workloads or complex cloud architectures that use microservices and other platform resources.
 
 Azure Monitor examines all layers of the stack, starting with tenant services such as Azure Active Directory (Azure AD) Domain Services, subscription-level events, and Azure Service Health.
 
