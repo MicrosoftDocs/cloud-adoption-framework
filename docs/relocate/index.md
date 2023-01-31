@@ -16,7 +16,6 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 The relocate guidance shows you how to set up a relocation program and relocate one or more workloads.
 
 :::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image that shows the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
-*Figure 1. The relocation lifecycle.*
 
 ## What is relocation?
 
@@ -25,8 +24,6 @@ Relocation is the process of moving a workload in Azure to a different region in
 ## Why relocate?
 
 Relocation adds flexibility that can help you optimize cost and performance throughout the lifecycle of your workloads. When workloads are first deployed or migrated to Azure, you make a decision about their region. However, as time passes, you should review that decision to see if a different region might be a better fit. For example, another region could have services or capabilities unavailable in the current region, or you might want to move your workload closer to a new customer base. Data residency laws might change, or budgets could shift. Rather than work around these changes and encounter cost or performance issues, a relocation might be the best way to proceed for your workload.
-
-*Table 1. Example scenarios that drive relocations.*
 
 | Relocation drivers | Examples |
 | --- | --- |
@@ -41,8 +38,6 @@ The relocation lifecycle has two phases. The first phase is Initiate. The Initia
 **Initiate phase:** The initiate phase has a single-step also called Initiate. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and identify workloads for relocation.
 
 **Move phase:** The Move phase is a four-step process to plan and move a workload to a different region. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
-
-*Table 2. The steps of the Move phase and their main goal.*
 
 | Step | Main goal |
 | --- | --- |

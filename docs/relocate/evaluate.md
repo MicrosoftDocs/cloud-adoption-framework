@@ -16,7 +16,6 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 Evaluate is the first step in the Move phase of relocation. The goal of the Evaluate step is to understand the workload you want to relocate so you can move it successfully. Every workload you relocate must go through the four steps of the Move phase, starting with the Evaluate step.
 
 :::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Image that shows the relocation process and highlights the Evaluate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the Initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
-*Figure 1. The Evaluate step of relocation.*
 
 ## Pick workload(s)
 
@@ -54,9 +53,9 @@ Know if the target region is a paired region or not and if it supports availabil
 
 Relocation happens at the service and component level. Most workloads use multiple services. There are two primary types of services, stateful and stateless. You need to categorize each service as stateful or stateless. This knowledge helps you determine dependencies, understand service integrations, and narrows your relocation automation options.
 
-**Stateless services.** Stateless services have configuration information only. These services don't need continuous replication of data to move. Examples include virtual networks, network adapters, load balancers, and network security groups.
+**Stateless services:** Stateless services have configuration information only. These services don't need continuous replication of data to move. Examples include virtual networks, network adapters, load balancers, and network security groups.
 
-**Stateful services.** Stateful services have configuration information and data that need to move. Examples include virtual machines and SQL databases.
+**Stateful services:** Stateful services have configuration information and data that need to move. Examples include virtual machines and SQL databases.
 
 ## Next steps
 

@@ -16,13 +16,10 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 The Initiate phase is a single-step process to establish the relocation process. The guidance in the Initiate phase is more important for large relocation efforts with multiple workloads in scope. For small relocation with a single workload in scope, you can skip to [create a relocation plan](#create-a-relocation-plan). The goal of the Initiate phase is to provide stakeholders with the information they want and get the relocation the resources it needs. Here's a framework for initiating a relocation.
 
 :::image type="content" source="../_images/relocate/caf-relocate-initiate.png" alt-text="Image that shows the relocation process and highlights the Initiate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-initiate.png" border="false":::
-*Figure 1. The Initiate step of relocation.*
 
 ## Identify objectives
 
 The need to meet specific objectives drives relocation projects. You should capture these objectives so you can scope and prioritize your relocation efforts. The following table provides examples of relocation objectives.
-
-*Table 1. Example relocation objectives.*
 
 |Objective |Motivation |Priority|
 | --- | --- | --- |
@@ -36,7 +33,7 @@ With objectives in place, you can identify the workloads you need to relocate to
 
 ## Prioritize workloads
 
-The order you relocate workloads should reflect the priority of your objectives (see *Table 1*). Any technical dependencies, such as platforms and landing zones, should go first. Outside of technical dependencies, the order is up to you. For more information, see [Platform vs application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
+The order you relocate workloads should reflect the priority of your objectives. Any technical dependencies, such as platforms and landing zones, should go first. Outside of technical dependencies, the order is up to you. For more information, see [Platform vs application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
 
 ## Create a relocation plan
 

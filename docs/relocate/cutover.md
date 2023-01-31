@@ -16,7 +16,6 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 Cutover is when you direct traffic away from the source region and to the workload in the target region. After cutover, you can decommission the workload in the source region. To reduce costs and data deltas, you want the period between migration and cutover to be short. Here's the high-level process to cut over a cloud workload.
 
 :::image type="content" source="../_images/relocate/caf-relocate-cutover.png" alt-text="Image that shows the relocation process and highlights the Cutover step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-cutover.png" border="false":::
-*Figure 1. The Cutover step of relocation.*
 
 **Test and validate migrated services and data.** Test and validate the workload and dependencies to ensure the relocation was successful. Investigate and remediate bugs or issues related to scripts built by the relocation delivery team. You should run user acceptance tests (UATs). It's a best practice to assign different users to various parts of the application for UAT. You want to receive confirmation from users that the workload functions before switching the endpoints.
 
