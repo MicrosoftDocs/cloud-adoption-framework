@@ -61,7 +61,7 @@ The following table illustrates a few common use scenario requirements and the r
 
 The following table illustrates features available in Azure database services
 
-|                  |Azure SQL DB |Azure SQL Managed Instanace |Azure Database for PostgreSQL |Azure Database for MySQL |Azure Database for MariaDB |Azure Managed Instance for Apache Cassandra |Azure Cosmos DB |Azure Cache for Redis |Azure Cosmos DB for MongoDB |Azure Cosmos DB for Gremlin
+|                  |Azure SQL DB |Azure SQL Managed Instance |Azure Database for PostgreSQL |Azure Database for MySQL |Azure Database for MariaDB |Azure Managed Instance for Apache Cassandra |Azure Cosmos DB |Azure Cache for Redis |Azure Cosmos DB for MongoDB |Azure Cosmos DB for Gremlin
 |------------------|---------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 |**Database Type**|Relational |Relational |Relational |Relational | Relational |NoSQL |NoSQL |In-Memory |NoSQL |Graph
 |**Data Model**|Relational  |Relational |Relational |Relational | Relational |Multi-Model: Document, Wide-column, Key-Value, Graph |Wide-column |Key-Value |Document |Graph
