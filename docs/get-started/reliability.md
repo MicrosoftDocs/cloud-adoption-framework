@@ -57,10 +57,9 @@ Not all workloads are created equal. In any environment, there are workloads tha
 
 Enterprise reliability requires consistent application of the management baseline. That consistency comes from appropriate corporate policy, IT processes, and automated tools. These resources govern the implementation of the management baseline for all affected resources.
 
-**Deliverables:**
+**Deliverable:**
 
-- Ensure proper application of the management baseline for all affected systems.
-- Document your Resource Consistency policies, processes, and design guidance in the [Resource Consistency discipline template](../govern/resource-consistency/template.md).
+Ensure proper application of the management baseline for all affected systems.
 
 **Guidance to support deliverable completion:**
 

@@ -194,7 +194,7 @@ To learn more about management levels and organization, see:
 - [Create additional subscriptions to scale your Azure environment](../azure-best-practices/scale-subscriptions.md)
 - [Organize and manage multiple Azure subscriptions](../azure-best-practices/organize-subscriptions.md)
 - [What are Azure management groups?](/azure/governance/management-groups/overview)
-- [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
+- [Resource access management in Azure](../../get-started/how-azure-resource-manager-works.md)
 - [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
 For more information about resource naming and tagging, see:
