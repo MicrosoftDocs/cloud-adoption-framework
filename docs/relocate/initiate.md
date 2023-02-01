@@ -29,7 +29,7 @@ The need to meet specific objectives drives relocation projects. You should capt
 
 ## Determine scope
 
-With objectives in place, you can identify the workloads you need to relocate to meet those objectives. When you plan and scope a relocation project, the workload should be the smallest unit of relocation. Anything smaller makes planning difficult to manage. In execution, you relocate workloads by migrating workload services and components, but for planning, focus on the workload as a whole. For more information, see [What is a workload?](/azure/cloud-adoption-framework/plan/workloads#what-is-a-workload).
+You should use the objectives to scope your relocation plan. Identify all the workloads in scope of these objectives. The workload should be the smallest unit of relocation during scoping. Anything smaller, such as environment or service, makes planning difficult to manage. In execution, you relocate workloads by migrating workload services and components. But for planning and scoping, focus on the workload as a whole. For more information, see [What is a workload?](/azure/cloud-adoption-framework/plan/workloads#what-is-a-workload).
 
 ## Prioritize workloads
 
