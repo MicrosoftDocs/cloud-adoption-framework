@@ -59,15 +59,15 @@ For more information, see [Innovate](../innovate/index.md).
 
 Relocation is when you move an Azure workload to a different region in Azure. You can relocate a workload anytime after migration. Relocation evaluations should be a regular part of your workload lifecycle so your workload evolves with your business needs.
 
-- ***Goals:*** Respond to business changes and expand your global footprint, meet data sovereignty and residency requirements, provide lower latency to end users.
+- ***Goals:*** Respond to business changes and expand your global footprint, meet data sovereignty and residency requirements, and provide lower latency to end users.
 
 - ***Solutions:*** Adopt the location, services, and capabilities of a new Azure region.
 
 - ***Key benefits:*** Respond to business changes, expand global footprint, meet data sovereignty and residency requirements, provide lower latency to end users.
 
-- ***Examples:*** Relocate a workload in West US to East US, North Europe to West Europe, or Southeast Asia to East Asia.
+- ***Examples:*** Relocate a workload in West US to East US or North Europe to East Asia.
 
-For more information, see [Relocate](../relocate/index.md)
+For more information, see [Relocate](../relocate/index.md).
 
 ## Next steps
 
