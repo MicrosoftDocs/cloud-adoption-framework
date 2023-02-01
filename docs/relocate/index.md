@@ -13,13 +13,13 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Relocate cloud workloads
 
-The relocate guidance shows you how to set up a relocation program and relocate one or more workloads.
+The relocate guidance shows you how to set up a relocation project and relocate one or more workloads.
 
 :::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Image that shows the relocation process. There are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
 
 ## What is relocation?
 
-Relocation is the process of moving a workload or workload component in Azure to a different Azure region. A workload is a collection of applications, environments, services, and data that support a defined process. A workload can have one or many applications. Relocating a workload to a different region is a type of migration. As such, it has similarities with the process defined in the [migrate guidance](../migrate/index.md). But it also has its own solutions and considerations to implement. The relocate guidance outlines these distinctive solutions and considerations and helps you navigate the process.
+Relocation is the process of moving a workload or workload component in Azure to a different Azure region. A workload is a collection of applications, environments, services, and data that support a defined process. A workload can have one or many applications. Relocating a workload to a different region is a type of migration. As such, it has similarities with the process defined in the [migrate guidance](../migrate/index.md). But it also has its own solutions and considerations to implement. The relocate guidance outlines these distinctive solutions and considerations to help you navigate the process.
 
 :::image type="content" source="../_images/relocate/single-multi-workload-highres.png" alt-text="Image that shows two workloads. There's a workload with a single application in it. The other workload has n applications in it, representing an indefinite number of applications. The applications in each workload show a production and non-production environments. In each environment, there's three representational services, one for compute, one for the database, and the other for an indefinite number of other Azure services." lightbox="../_images/relocate/single-multi-workload-highres.png" border="false":::
 
