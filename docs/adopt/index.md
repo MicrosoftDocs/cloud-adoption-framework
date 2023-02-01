@@ -71,7 +71,7 @@ For more information, see [Relocate](../relocate/index.md).
 
 ## Next steps
 
-Follow the guidance that best meets your goals. If you're still considering cloud adoption, it's help to get a sense of what the cloud adoption journey looks like. The next article outlines the typical cloud adoption journey, showing what workloads you should migrate and what order you should migrate them.
+Follow the guidance that best meets your goals. If you're still considering cloud adoption, it's help to get a sense of what the cloud adoption journey looks like. The next article outlines the typical cloud adoption journey, showing what workloads you should migrate and the order you should migrate them.
 
 > [!div class="nextstepaction"]
 > [Cloud adoption journey](cloud-adoption.md)
