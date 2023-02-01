@@ -19,7 +19,7 @@ This article provides design considerations and recommendations for identity and
 - Decide which cluster identity to use ([managed identity](/azure/aks/use-managed-identity) or [service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli)).
 - Decide how to authenticate cluster access: based on client certificates or via [Azure Active Directory (Azure AD)](/azure/aks/managed-aad).
 - Decide on a [multitenancy cluster](/azure/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
-  - Choose a method for isolation. Methods include namespace, network policy, compute (node pool), and cluster.
+  - Choose a method for isolation. Methods include namespace, [network policy](/azure/aks/use-network-policies) (Only allowed by [Azure CNI](/azure/aks/azure-cni-overlay)), compute (node pool), and cluster.
   - Determine the Kubernetes RBAC roles and compute allocation per application team, for isolation.
   - Decide whether application teams can read other workloads in their clusters or in other clusters.
 - Determine the permissions for custom Azure RBAC roles for your [AKS landing zone](../../../ready/landing-zone/design-area/identity-access.md).
