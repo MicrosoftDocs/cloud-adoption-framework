@@ -3,7 +3,7 @@ title: How to evaluate a cloud workload for relocation.
 description: How to evaluate a workload for relocation so you can select the best relocation strategy.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 2/3/2023
+ms.date: 02/03/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

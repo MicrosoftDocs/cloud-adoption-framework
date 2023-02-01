@@ -3,7 +3,7 @@ title: How to cut over a cloud workload.
 description: How to cut over a cloud workload and application.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 2/3/2023
+ms.date: 02/03/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

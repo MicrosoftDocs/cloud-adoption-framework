@@ -3,7 +3,7 @@ title: How to adopt the cloud
 description: The adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 2/3/2023
+ms.date: 02/03/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -27,8 +27,7 @@ Migration is when you move your workloads to the cloud. Different forms of migra
 
 - ***Example:*** Migrate applications from on-premises to Azure virtual machines (infrastructure-as-a-service) or Azure App Service (platform-as-a-service).
 
-> [!div class="nextstepaction"]
-> [Migrate](../migrate/index.md)
+For more information, see [Migrate](../migrate/index.md).
 
 ## Modernize
 
@@ -42,8 +41,7 @@ Modernization enhances existing applications to improve operations, increase eff
 
 - ***Examples:*** Move to managed services. Move from SQL database to Azure SQL database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Container Apps.
 
-> [!div class="nextstepaction"]
-> [Modernize](../modernize/index.md)
+For more information, see [Modernize](../modernize/index.md).
 
 ## Innovate
 
@@ -55,8 +53,7 @@ Innovation is when you adopt cloud-native technologies to create customer-focuse
 
 - ***Key benefits:*** Predictive analytics, performance, and adaptability.
 
-> [!div class="nextstepaction"]
-> [Innovate](../innovate/index.md)
+For more information, see [Innovate](../innovate/index.md).
 
 ## Relocate
 
@@ -70,8 +67,7 @@ Relocation is when you move an Azure workload to a different region in Azure. Yo
 
 - ***Examples:*** Relocate a workload in West US to East US, North Europe to West Europe, or Southeast Asia to East Asia.
 
-> [!div class="nextstepaction"]
-> [Relocate](../relocate/index.md)
+For more information, see [Relocate](../relocate/index.md)
 
 ## Next steps
 
