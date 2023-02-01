@@ -45,6 +45,8 @@ items:
           href: get-started/what-is-azure.md
         - name: Azure fundamental concepts
           href: ready/considerations/fundamental-concepts.md
+        - name: How does Azure Resource Manager work?
+          href: get-started/how-azure-resource-manager-works.md        
         - name: Portfolio hierarchy
           href: resources/fundamental-concepts/hosting-hierarchy.md
         - name: Azure hierarchy support
@@ -302,10 +304,14 @@ items:
               items:
               - name: Define an Azure network topology
                 href: ready/azure-best-practices/define-an-azure-network-topology.md
+              - name: Hub and spoke network topology
+                href: ready/azure-best-practices/hub-spoke-network-topology.md
               - name: Traditional Azure networking topology
                 href: ready/azure-best-practices/traditional-azure-networking-topology.md
               - name: Virtual WAN network topology (Microsoft-managed)
                 href: ready/azure-best-practices/virtual-wan-network-topology.md
+              - name: Perimeter networks
+                href: ready/azure-best-practices/perimeter-networks.md
               - name: Plan for IP addressing
                 href: ready/azure-best-practices/plan-for-ip-addressing.md
             - name: Connectivity
@@ -340,6 +346,11 @@ items:
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
+
+        - name: Databases
+          items:
+          - name: Review data options
+            href: ready/considerations/data-options.md
 
         - name: Resource organization
           items:
@@ -557,6 +568,8 @@ items:
         items:
         - name: Migration guide overview
           href: migrate/azure-migration-guide/index.md
+        - name: Migration tools decision guide
+          href: migrate/azure-migration-guide/migration-tools-decision-guide.md
         - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
         - name: Deploy workloads
@@ -1531,69 +1544,40 @@ items:
         items:
         - name: Overview of the identity baseline
           href: govern/identity-baseline/index.md
-        - name: Download the template
-          href: govern/identity-baseline/template.md
-        - name: Understand business risks
-          href: govern/identity-baseline/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/identity-baseline/metrics-tolerance.md
-        - name: Sample Identity Baseline policies
-          href: govern/identity-baseline/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/identity-baseline/compliance-processes.md
-        - name: Improve the identity baseline
-          href: govern/identity-baseline/discipline-improvement.md
-        - name: Azure tools for identity baseline
-          href: govern/identity-baseline/toolchain.md
+        - name: Azure Active Directory governance guidance
+          href: govern/identity-baseline/azure-ad-configuration.md
+        - name: Administrative access governance guidance
+          href: govern/identity-baseline/administrative-access.md
+        - name: Business user access governance guidance
+          href: govern/identity-baseline/business-user-access.md
+        - name: Application access governance guidance
+          href: govern/identity-baseline/application-access.md
       - name: Resource consistency
         items:
         - name: Overview of resource consistency
           href: govern/resource-consistency/index.md
-        - name: Download the template
-          href: govern/resource-consistency/template.md
-        - name: Understand business risks
-          href: govern/resource-consistency/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/resource-consistency/metrics-tolerance.md
-        - name: Sample Resource Consistency policies
-          href: govern/resource-consistency/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/resource-consistency/compliance-processes.md
-        - name: Improve resource consistency
-          href: govern/resource-consistency/discipline-improvement.md
-        - name: Azure tools for resource consistency
-          href: govern/resource-consistency/toolchain.md
-        - name: Resource access management
-          href: govern/resource-consistency/resource-access-management.md
-        - name: Governance design for a simple workload
-          href: govern/resource-consistency/governance-simple-workload.md
-        - name: Governance design for multiple teams
-          href: govern/resource-consistency/governance-multiple-teams.md
-        - name: Why update an Azure landing zone?
-          href: govern/resource-consistency/why-update-azure-landing-zone.md
+        - name: Management groups guidance
+          href: govern/resource-consistency/management-group-structure.md
+        - name: Resource naming guidance
+          href: govern/resource-consistency/naming.md
+        - name: Resource tagging guidance
+          href: govern/resource-consistency/tagging.md
+        - name: Managing business constraints
+          href: govern/resource-consistency/business-constraints.md
+        - name: Keep your Azure landing zone up to date
+          href: govern/resource-consistency/keep-azure-landing-zone-up-to-date.md
         - name: Migrate Azure landing zone policies to Azure built-in policies
           href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
         - name: Update Azure landing zone custom policies
-          href: govern/guides/standard/update-custom-policies.md
+          href: govern/guides/standard/update-custom-policies.md          
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration
           href: govern/deployment-acceleration/index.md
-        - name: Download the template
-          href: govern/deployment-acceleration/template.md
-        - name: Understand business risks
-          href: govern/deployment-acceleration/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/deployment-acceleration/metrics-tolerance.md
-        - name: Sample Deployment Acceleration policies
-          href: govern/deployment-acceleration/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/deployment-acceleration/compliance-processes.md
-        - name: Improve deployment acceleration
-          href: govern/deployment-acceleration/discipline-improvement.md
-        - name: Azure tools for deployment acceleration
-          href: govern/deployment-acceleration/toolchain.md
-
+        - name: Consistency and repeatability in deployments
+          href: govern/deployment-acceleration/deployment-consistency-repeatability.md
+        - name: Policy visibility in deployments
+          href: govern/deployment-acceleration/policy-visibility-in-deployment.md
     - name: Govern antipatterns
       href: antipatterns/govern-antipatterns.md
 
@@ -1888,38 +1872,14 @@ items:
         href: decision-guides/resource-consistency/index.md
       - name: Encryption
         href: decision-guides/encryption/index.md
-      - name: Networking
-        items:
-        - name: Review networking options
-          href: ready/considerations/networking-options.md
-        - name: Network boundary security
-          href: resources/networking-vdc.md
-        - name: Plan virtual networks
-          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Best practices for network security
-          href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Perimeter networks
-          href: ready/azure-best-practices/perimeter-networks.md
-        - name: Hub and spoke network topology
-          href: ready/azure-best-practices/hub-spoke-network-topology.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
-      - name: Migration tools
-        href: decision-guides/migrate-decision-guide/index.md
       - name: Storage
         items:
         - name: Review storage options
           href: ready/considerations/storage-options.md
         - name: Storage security guide
           href: /azure/storage/blobs/security-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Databases
-        items:
-        - name: Review data options
-          href: ready/considerations/data-options.md
-        - name: Database security best practices
-          href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Choose a deployment option in Azure SQL Database
-          href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
       - name: AI + machine learning
         items:
         - name: Organize and set up Azure Machine Learning
@@ -1954,3 +1914,6 @@ items:
         href: resources/azure-scaffold.md
       - name: Virtual datacenter (VDC)
         href: resources/vdc.md
+      - name: Virtual datacenter boundary security
+        href: resources/networking-vdc.md
+

@@ -48,7 +48,6 @@ For a deeper understanding of governance, read the overview of the [Five Discipl
 
 - [Cost Management discipline](../../govern/cost-management/template.md)
 - [Security Baseline discipline](../../govern/security-baseline/template.md)
-- [Resource Consistency discipline](../../govern/resource-consistency/template.md)
 - [Identity Baseline discipline](../../govern/identity-baseline/template.md)
 - [Deployment Acceleration discipline](../../govern/deployment-acceleration/template.md)
 
