@@ -18,9 +18,9 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## February 2023
 
-### CAF Relocate
+### Relocate
 
-The CAF relocate guidance details the process of relocating workloads in Azure. Relocation is the process of moving a workload in Azure to a different Azure region. CAF Relocate walks you through five relocation steps (initiate, evaluate, select, migrate, cutover) and shows you how to pick the right relocation strategy for each workload.
+The new relocate guidance details the process of moving a workload hosted in Azure to a different Azure region. Relocate walks you through five steps (initiate, evaluate, select, migrate, cutover) and shows you how to pick the right relocation strategy for each workload you want to move.
 
 > [!div class="nextstepaction"]
 > [Relocate](../relocate/index.md)
