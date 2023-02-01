@@ -19,7 +19,7 @@ The relocate guidance shows you how to set up a relocation program and relocate 
 
 ## What is relocation?
 
-Relocation is the process of moving a workload or workload component in Azure to a different region in Azure. A workload is a collection of services, applications, and data that support a defined process. It serves as a boundary for resources that you should relocate together. Relocation is a migration effort, but it isn't a migration to the cloud. Instead, it's a migration within the Azure public cloud. Relocation has similarities with the process defined in the [migrate guidance](../migrate/index.md), but it also has its own solutions and considerations to take advantage of different Azure regions. The relocate guidance here outlines these solutions and considerations.
+Relocation is the process of moving a workload or workload component in Azure to a different Azure region. A workload is a collection of applications, services, and data that support a defined process. It serves as a boundary for resources that you should relocate together. Relocating a workload is a migration effort, but it isn't a migration to the cloud. Instead, it's a migration within the Azure public cloud. Relocation has similarities with the process defined in the [migrate guidance](../migrate/index.md), but it also has its own solutions and considerations to take advantage of different Azure regions. The relocate guidance here outlines these solutions and considerations.
 
 ## Why relocate?
 
