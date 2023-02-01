@@ -76,6 +76,8 @@ If your service-relocation automation doesn't move data, you also need to pick a
 
 - **Synchronous data replication:** Synchronous data replication replicates data in near real-time across regions. It's the preferred data relocation approach for hot relocation because it limits downtime and data delta migrations after cutover. This capability is built into some Azure services such as Data Sync in [Azure SQL](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database). You need to check each service in your workload to see if it supports synchronous data replication.
 
+- **Geo-replication:** Geo-replication can be a useful data relocation tool for the Azure services that support it. The way a geo-replication feature handles data and the underlying service instance is varies across supported Azure services. Before using geo-replication for data relocation, you need to understand the geo-replication feature of the particular service you're relocating. For examples, see [Azure SQL](/azure/azure-sql/database/active-geo-replication-overview) and [Cosmos DB](/azure/cosmos-db/how-to-manage-database-account#addremove-regions-from-your-database-account).
+
 - **Azure Site Recovery:** Azure Site Recovery can relocate services and data. It supports cold and warm relocation strategies. For more information, see [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview).
 
 - **AzCopy:** AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Azure Active Directory or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
@@ -91,6 +93,7 @@ If your service-relocation automation doesn't move data, you also need to pick a
 |Tool | Relocation method|
 | --- | --- |
 |[Synchronous data replication](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database)|Hot, Warm|
+|[Geo-replication](/azure/azure-sql/database/active-geo-replication-overview) | Hot, Warm |
 |[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)|Warm, Cold|
 |[AzCopy](/azure/storage/common/storage-use-azcopy-v10)|Warm, Cold|
 |[Pipelines and activities in Azure Data Factory or Synapse Workspace](/azure/data-factory/concepts-pipelines-activities)| Warm, Cold |
