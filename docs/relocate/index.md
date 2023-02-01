@@ -60,7 +60,7 @@ You should read relocation best practices and use them as guidance for each work
 - [Azure Services](/azure/reliability/availability-service-by-category)
 - [How to move resources](/azure/resource-mover/move-region-within-resource-group)
 
-There are a few prerequisites that you need to address before relocating a workload. The Initiate phase provides guidance for these prerequisites.
+Whether you're relocating multiple workloads or just one, you can aid the success of relocation with some formal relocation planning. The Initiate phase provides required guidance.
 
 > [!div class="nextstepaction"]
 > [Initiate](initiate.md)
