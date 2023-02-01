@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Select a relocation strategy for cloud workloads
 
-For each workload, you need to select the best relocation strategy and the right automation tools for that strategy. The Select step of the relocation lifecycle gives you guidance to make these decisions. The selections you make depend on the services and the criticality of the workload.
+The Select step is a part of relocation planning for each workload. Before you migrate, you need to select the best relocation method, service relocation automation, and data relocation automation. This article lays out the options and guides you toward a decision. Ultimately, the selections you make depend on the services and the criticality of the workload.
 
 :::image type="content" source="../_images/relocate/caf-relocate-select.png" alt-text="Image that shows the relocation process and highlights the Select step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-select.png" border="false":::
 
@@ -72,7 +72,7 @@ There are three primary service-relocation approaches. The following paragraphs 
 
 ## Select data-relocation automation
 
-You need to pick a data-relocation tool to move workload data. For data relocation, you need to have the service running in the target region before moving the data. Review the [relocation methods](#select-a-relocation-method) to get a sense of the sequence. Here's a list of tools you can use to relocate data. The list starts with hot relocation tools and finishes with cold. The list isn't in order of preference. So you need to evaluate each tool and pick the right one for your workload.
+If your service-relocation automation doesn't move data, you also need to pick a data-relocation automation. For data relocation, you need to have the service running in the target region before moving the data. Review the [relocation methods](#select-a-relocation-method) to get a sense of the sequence. Here's a list of automation tools you can use to relocate data. The list starts with hot relocation tools and finishes with cold. It isn't in order of preference. Evaluate each automation tool and pick the right one for your workload.
 
 - **Geo-replication:** Active geo-replication is a business continuity solution. Once geo-replication is set up, you can initiate a geo-failover of the data to a different Azure region. For more information, see [Geo-replication overview](/azure/azure-sql/database/active-geo-replication-overview).
 
@@ -111,7 +111,7 @@ Cutover is when you transition from the old workload to the new one. You direct 
 
 - **App Service:** Application-layer services, such as Azure App Service, have features that allow you to update the domain name. For more information, see [Migrate an active DNS name to Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain?tabs=a%2Cazurecli).
 
-- **Gateway Routing:** If the workload already uses the [Gateway Routing pattern](/azure/architecture/patterns/gateway-routing) with a service such as Azure Front Door, Application Gateway, or Azure API Management, you can often make a region migration cutover by using their backend targets and routing-rules features.
+- **Gateway Routing:** If the workload uses the [Gateway Routing pattern](/azure/architecture/patterns/gateway-routing) with a service, such as Azure Front Door, Application Gateway, or Azure API Management, you can often make a region migration cutover. You use their backend targets and routing-rules features.
 
 ## Next step
 
