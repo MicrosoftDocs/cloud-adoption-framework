@@ -3,7 +3,7 @@ title: Automation disciplines for Azure Arc-enabled servers
 description: Understand the design considerations and recommendations for automation of Azure Arc-enabled servers
 author: DCMattyG
 ms.author: magarret
-ms.date: 10/07/2021
+ms.date: 02/02/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -28,7 +28,6 @@ The following are some design considerations before onboarding Azure Arc-enabled
 
 - Your machines run a [supported operating system](/azure/azure-arc/servers/agent-overview#supported-operating-systems) for the Azure connected machine agent.
 - Your machines have the [required software](/azure/azure-arc/servers/agent-overview#software-requirements) installed before deploying the Azure connected machine agent.
-- You've reviewed the [Azure subscription and service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) for Azure Arc-enabled servers.
 
 ### Network connectivity
 
