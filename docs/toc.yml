@@ -347,6 +347,11 @@ items:
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
 
+        - name: Storage
+          items:
+          - name: Review storage options
+            href: ready/considerations/storage-options.md
+
         - name: Databases
           items:
           - name: Review data options
@@ -568,6 +573,8 @@ items:
         items:
         - name: Migration guide overview
           href: migrate/azure-migration-guide/index.md
+        - name: Migration tools decision guide
+          href: migrate/azure-migration-guide/migration-tools-decision-guide.md
         - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
         - name: Deploy workloads
@@ -1855,14 +1862,6 @@ items:
         href: decision-guides/encryption/index.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
-      - name: Migration tools
-        href: decision-guides/migrate-decision-guide/index.md
-      - name: Storage
-        items:
-        - name: Review storage options
-          href: ready/considerations/storage-options.md
-        - name: Storage security guide
-          href: /azure/storage/blobs/security-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: AI + machine learning
         items:
         - name: Organize and set up Azure Machine Learning
