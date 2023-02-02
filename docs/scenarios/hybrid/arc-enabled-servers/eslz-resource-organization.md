@@ -3,7 +3,7 @@ title: Resource organization for Azure Arc-enabled servers
 description: Evaluate how resources will be organized when working with Azure Arc-enabled servers
 author: lanicolas
 ms.author: matgri
-ms.date: 02/02/2023
+ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

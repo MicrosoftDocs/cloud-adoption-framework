@@ -3,7 +3,7 @@ title: Automation disciplines for Azure Arc-enabled servers
 description: Understand the design considerations and recommendations for automation of Azure Arc-enabled servers
 author: DCMattyG
 ms.author: magarret
-ms.date: 02/02/2023
+ms.date: 10/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
