@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Select a relocation strategy for cloud workloads
 
-Before you starting migrating the workload to another region, you need to plan your relocation strategy. The strategy includes the relocation method, service-relocation automation, and data-relocation automation. This article lays out the options for each strategy component and guides you toward a decision. Ultimately, the selections you make depend on the services and the criticality of the workload.
+Before you start migrating the workload to another region, you need to plan your relocation strategy. The strategy includes the relocation method, service-relocation automation, and data-relocation automation. This article lays out the options for each strategy component and guides you toward a decision. Ultimately, the selections you make depend on the services and the criticality of the workload.
 
 :::image type="content" source="../_images/relocate/caf-relocate-select.png" alt-text="Image that shows the relocation process and highlights the Select step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the initiate phase, and it has one step called initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-select.png" border="false":::
 
@@ -76,7 +76,7 @@ If your service-relocation automation doesn't move data, you also need to pick a
 
 - **Synchronous data replication:** Synchronous data replication replicates data in near real-time across regions. It's the preferred data relocation approach for hot relocation because it limits downtime and data delta migrations after cutover. This capability is built into some Azure services such as Data Sync in [Azure SQL](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database). You need to check each service in your workload to see if it supports synchronous data replication.
 
-- **Geo-replication:** Geo-replication can be a useful data relocation tool for the Azure services that support it. The way a geo-replication feature handles data and the underlying service instance is varies across supported Azure services. Before using geo-replication for data relocation, you need to understand the geo-replication feature of the particular service you're relocating. For examples, see [Azure SQL](/azure/azure-sql/database/active-geo-replication-overview) and [Cosmos DB](/azure/cosmos-db/how-to-manage-database-account#addremove-regions-from-your-database-account).
+- **Geo-replication:** Geo-replication can be a useful data relocation tool for the Azure services that support it. The way a geo-replication feature handles data and the underlying service instance varies across supported Azure services. Before using geo-replication for data relocation, you need to understand the geo-replication feature of the particular service you're relocating. For examples, see [Azure SQL](/azure/azure-sql/database/active-geo-replication-overview) and [Cosmos DB](/azure/cosmos-db/how-to-manage-database-account#addremove-regions-from-your-database-account).
 
 - **Azure Site Recovery:** Azure Site Recovery can relocate services and data. It supports cold and warm relocation strategies. For more information, see [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview).
 
