@@ -19,7 +19,7 @@ The relocate guidance shows you how to set up a relocation project and relocate 
 
 ## What is relocation?
 
-Relocation is the process of moving a workload or workload component in Azure to a different Azure region. A workload is a collection of applications, environments, services, and data that support a defined process. A workload can have one or many applications. Relocating a workload to a different region is a type of migration. As such, it has similarities with the process defined in the [migrate guidance](../migrate/index.md). But it also has its own solutions and considerations to implement. The relocate guidance outlines these distinctive solutions and considerations to help you navigate the process.
+Relocation is the process of moving a workload or workload component in Azure to a different Azure region. A workload is a collection of applications, environments, services, and data that support a defined process. A workload can have one or many applications. Relocating a single or multi-app workload to a different region is a type of migration and has similarities with the process defined in the [migrate guidance](../migrate/index.md). But relocation also has its own solutions and considerations to implement, and the relocate guidance here outlines these distinctive features to help you navigate the relocation process.
 
 :::image type="content" source="../_images/relocate/single-multi-workload-highres.png" alt-text="Image that shows two workloads. There's a workload with a single application in it. The other workload has n applications in it, representing an indefinite number of applications. The applications in each workload show a production and non-production environments. In each environment, there's three representational services, one for compute, one for the database, and the other for an indefinite number of other Azure services." lightbox="../_images/relocate/single-multi-workload-highres.png" border="false":::
 
@@ -35,18 +35,19 @@ Relocation adds flexibility that can help you optimize cost and performance thro
 
 ## How to relocate
 
-The relocation lifecycle has two phases. The first phase is Initiate. The Initiate phase is where you establish the relocation project. The second phase is Move. The Move phase is where you plan and execute the relocation. These steps are at project level and define the lifecycle of relocation. They show you how to find the right relocation tool and when to use it. They aren't tool-level steps and don't tell you how to use the tool you select. The guidance directs you to tool-specific instructions for these details. Here's an overview of the two relocation phases.
+The relocation lifecycle has two phases. The first phase is to initiate the relocation and establish the relocation project. The second phase is to move the workload by planning and executing the relocation. The process in this guidance is at project level and defines the lifecycle of a relocation project. It guides you to pick the right relocation method and automation tool for each workload. The guidance doesn't tell you how to use the tool you select but directs you to tool-specific instructions. Here's an overview of the relocation process.
 
 **Initiate phase:** The initiate phase has a single-step also called Initiate. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and identify workloads for relocation.
 
 **Move phase:** The Move phase is a four-step process to plan and move a workload to a different region. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
 
-| Step | Main goal |
+| Relocate step | Main goal |
 | --- | --- |
-|1. Evaluate| Conduct workload discovery. |
-|2. Select| Pick the right relocation method. |
-|3. Migrate| Relocate the workload. |
-|4. Cutover| Direct traffic to new location. |
+|1. Initiate | Establish relocation project. |
+|2. Evaluate| Conduct workload discovery. |
+|3. Select| Pick the right relocation method. |
+|4. Migrate| Relocate the workload. |
+|5. Cutover| Direct traffic to new location. |
 
 ## Assumptions
 
