@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Azure Virtual Desktop planning
+# Virtual Desktop planning
 
-Azure Virtual Desktop deployment scenarios follow the same Migrate methodology as other migration efforts.
+Virtual Desktop deployment scenarios follow the same Migrate methodology as other migration efforts.
 
 This consistent approach allows migration factories or existing migration teams to adopt the process with little change to non-technical requirements.
 
@@ -20,13 +20,13 @@ This consistent approach allows migration factories or existing migration teams 
 
 ## Plan your migration
 
-As with other migrations, your team will assess workloads, deploy them, and then release them to end users. However, Azure Virtual Desktop includes specific requirements that will necessitate a review of the Azure landing zones during the assessment of the workloads. The process will also require a proof of concept prior to the first deployment.
+As with other migrations, your team will assess workloads, deploy them, and then release them to end users. However, Azure Virtual Desktop or Citrix DaaS includes specific requirements that will necessitate a review of the Azure landing zones during the assessment of the workloads. The process will also require a proof of concept prior to the first deployment.
 
 To build your plan, see the [cloud adoption plan DevOps template](../../plan/template.md) for an existing migration backlog in Azure DevOps. Use the template to create a detailed plan of activities.
 
 ## Business justification
 
-Part of your planning requires articulating the business benefits of moving to Azure Virtual Desktop.
+Part of your planning requires articulating the business benefits of moving to Azure Virtual Desktop or Citrix DaaS.
 
 The following items should be included in a business case:
 
@@ -47,6 +47,13 @@ The following items should be included in a business case:
 - All Azure Virtual Desktop virtual machines are charged at the base compute rate. Azure Virtual Desktop is entitled through another license that you probably already own (Microsoft 365 E3+), that includes a Windows license.
 
 - All Windows 7 virtual machines in Azure Virtual Desktop receive free extended security updates until January 14, 2023.
+
+- Citrix DaaS enables using the capabilities of Microsoft Azure while also supporting a broader range of identity providers, OS types, peripherals, collaboration solutions, and locations, such as existing on-premises datacenters. This extensibility enables deployment of Azure Virtual Desktop use cases while supporting existing systems with a consistent user experience to streamline the migration process. 
+
+- Citrix DaaS enables securely access to Windows, Linux, and Web apps and Windows and Linux virtual desktops.
+
+- Citrix DaaS manage apps and desktops centrally across multiple resource locations or clouds while maintaining a great end-user experience.
+
 
 ## Next steps
 

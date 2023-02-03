@@ -168,14 +168,6 @@ The Azure Virtual Desktop connection flow uses:
 
 A networking setup with the same capabilities as the one on the source environment or that at least has connectivity to identity and DNS services is required to deploy and recover these resources to a target environment.
 
-## Follow Azure networking best practices
-
-For networking design process, see:
-
-- [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
-- [Azure best practices for network security](/azure/security/fundamentals/network-best-practices). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md). Get more guidance about how to implement Azure networking to support workloads.
-
 ## Next steps
 
 [Management and monitoring](./eslz-management-and-monitoring.md)
