@@ -45,7 +45,7 @@ SAP Parameters for RFC - RZ12 **-** The following parameter can restrict the num
   3. Check the CPU, Memory, Network, Disk settings of the physical machine where SHIR is installed.
   4. Check how many "diawp.exe" is running on the SHIR machine. Theoretically, one "diawp.exe" can run one copy activity. The number of "diawp.exe" is based on machine's CPU, Memory, Network and Disk settings.
 
-![Task Manager showing Dialog work processes ](./media/dailogwp.png)
+![Task Manager showing Dialog work processes ](./media/dialogwp.png)
 
 **Suggestion -** If you want to run multiple partitions in parallel on SHIR at the same time, please use powerful Virtual Machine to setup SHIR or use scale out using SHIR High Availability and Scalability feature to have multiple nodes. Please see the details here. [https://learn.microsoft.com/en-us/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#high-availability-and-scalability](https://learn.microsoft.com/en-us/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#high-availability-and-scalability)
 
@@ -148,53 +148,49 @@ Recommendations –
 
 - **Sending logs to support:** Go to SHIR vm -\> Integration Runtime configuration manager -\> Diagnostic -\> Send Logs. This will send the logs from last 7 days and provide you a "report ID". You will need this report ID and RunId of your run. DONT FORGET to copy the "Report ID" shown to you when you have sent it as you only see it once.
 
-- When using SAP CDC connector
+- When using SAP CDC connector with SLT Scenario
 
-**SAP CDC using SAP SLT scenario**
+    - Ensure that all pre-requisites are met.
+       SLT scenario - Roles required for the SLT user (eg ADFSLTUSER) in OLTP systems (eg ECC) for SLT replication to work. --\> [2658517 - What authorizations and roles are needed? - SLT](https://launchpad.support.sap.com/#/notes/2658517)
 
-1. Ensure that all pre-requisites are met.
+    - If you face errors using SLT scenario, please see the recommendations for analysis. 
+       Isolate and test the scenario within SAP solution first, i.e. test it outside of ADF by running the test program provided by SAP **RODPS\_REPL\_TEST** in **SE38.** If the issue is on the SAP side, you will get the same error when using this report. You can further analyse the data extraction in SAP using transaction code **ODQMON**.
 
-SLT scenario - Roles required for the SLT user (eg ADFSLTUSER) in OLTP systems (eg ECC) for SLT replication to work. --\> [2658517 - What authorizations and roles are needed? - SLT](https://launchpad.support.sap.com/#/notes/2658517)
+       If the replication works using this test report, but not with ADF, then contact the Azure / ADF support.
 
-1. If you face errors using SLT scenario, please see the recommendations for analysis
+       Here is an example screenshot
 
-Isolate and test the scenario within SAP solution first, i.e. test it outside of ADF by running the test program provided by SAP **RODPS\_REPL\_TEST** in **SE38.** If the issue is on the SAP side, you will get the same error when using this report. You can further analyse the data extraction in SAP using transaction code **ODQMON**.
+       **SE38 --\> RODPS\_REPL\_TEST**
 
-If the replication works using this test report, but not with ADF, then contact the Azure / ADF support.
+       ![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test.png)
 
-Here is an example screenshot
+       ![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test-1.png)
 
-**SE38 --\> RODPS\_REPL\_TEST**
+       ![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test-2.png)
 
-![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test.png)
+       **Transaction code: ODQMON**
 
-![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test1.png)
+       ![ SAP transaction ODQMON  ](./media/odqmon.png)
 
-![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test2.png)
+    - ADF Linked Service connecting to SLT system doesn't show SLT Mass Transfer IDs when you refresh "Context"
 
-**Transaction code: ODQMON**
+       ![ ADF Linked Service  ](./media/adf-linked-service.png)
 
-![ SAP transaction ODQMON  ](./media/odqmon.png)
+       In order to run the ODP/ODQ replication scenario for SAP LT Replication Server, activate the following BAdI (Business Add-In) implementation.
 
-1. ADF Linked Service connecting to SLT system doesn't show SLT Mass Transfer IDs when you refresh "Context"
+       BAdi : BADI\_ODQ\_QUEUE\_MODEL
 
-![ ADF Linked Service  ](./media/adf-linked-service.png)
+       Enhancement Implementation : ODQ\_ENH\_SLT\_REPLICATION
 
-In order to run the ODP/ODQ replication scenario for SAP LT Replication Server, activate the following BAdI (Business Add-In) implementation.
+       Activate it using the expert function "Activate / Deactivate BAdI Implementation" in transaction LTRC.
 
-BAdi : BADI\_ODQ\_QUEUE\_MODEL
+       ![ SAP transaction LTRC  ](./media/ltrc-1.png)
 
-Enhancement Implementation : ODQ\_ENH\_SLT\_REPLICATION
+       ![ SAP transaction LTRC  ](./media/ltrc-2.png)
 
-Activate it using the expert function "Activate / Deactivate BAdI Implementation" in transaction LTRC.
+       ![ SAP transaction LTRC  ](./media/ltrc-3.png)
 
-![ SAP transaction LTRC  ](./media/ltrc-1.png)
-
-![ SAP transaction LTRC  ](./media/ltrc-2.png)
-
-![ SAP transaction LTRC  ](./media/ltrc-3.png)
-
-![ SAP transaction LTRC  ](./media/ltrc-4.png)
+       ![ SAP transaction LTRC  ](./media/ltrc-4.png)
 
 
 
