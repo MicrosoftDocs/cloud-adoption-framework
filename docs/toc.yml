@@ -1399,6 +1399,23 @@ items:
             href: innovate/considerations/devices.md
           - name: Predict and influence
             href: innovate/considerations/predict.md
+    - name: Relocate
+      items:
+      - name: Overview
+        href: relocate/index.md
+      - name: Initiate
+        href: relocate/initiate.md
+      - name: Move
+        items:
+        - name: Evaluate
+          href: relocate/evaluate.md
+        - name: Select
+          href: relocate/select.md
+        - name: Migrate
+          href: relocate/migrate.md
+        - name: Cutover
+          href: relocate/cutover.md
+                
 
   - name: Govern
     items:
