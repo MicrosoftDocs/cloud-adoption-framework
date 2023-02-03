@@ -27,16 +27,16 @@ There are different ways to connect to SAP system for Data Integration. It is im
 
 - Use the transaction RZ12 to modify values for Max concurrent connections
 
-SAP Parameters for RFC - RZ12 **-** The following parameter can restrict the number of RFC calls allowed for one user / one application, so ensure this isn't causing a bottleneck.
+   SAP Parameters for RFC - RZ12 **-** The following parameter can restrict the number of RFC calls allowed for one user / one application, so ensure this isn't causing a bottleneck.
 
-  ![RZ12 transaction ](./media/sap-rfc.png)
+   ![RZ12 transaction ](./media/sap-rfc.png)
 
-  ![RZ12 transaction ](./media/sap-rfc-quotas.png)
+   ![RZ12 transaction ](./media/sap-rfc-quotas.png)
 
 - **Connection to SAP using Logon Group -** SHIR should connect SAP using an SAP Logon Group (via message server) and not to a specific application server to ensure workload distribution across all available application servers.
 
-    > [!NOTE]
-    > Even dataflow spark cluster and SHIR are very powerful, multiple internal SAP copy activities (for example, 16) can be triggered and executed. But if SAP server's concurrent connection number is small (for example, 8), it will also impact the perf to read data from SAP side.
+      > [!NOTE]
+      > Even dataflow spark cluster and SHIR are very powerful, multiple internal SAP copy activities (for example, 16) can be triggered and executed. But if   SAP server's concurrent connection number is small (for example, 8), it will also impact the perf to read data from SAP side.
 
 - The recommendation is to start with 4vCPUs and 16 GB VMs for SHIR. Here is the correction of Dialog work process in SAP with SHIR.
 
@@ -45,7 +45,7 @@ SAP Parameters for RFC - RZ12 **-** The following parameter can restrict the num
   3. Check the CPU, Memory, Network, Disk settings of the physical machine where SHIR is installed.
   4. Check how many "diawp.exe" is running on the SHIR machine. Theoretically, one "diawp.exe" can run one copy activity. The number of "diawp.exe" is based on machine's CPU, Memory, Network and Disk settings.
 
-  ![Task Manager showing Dialog work processes ](./media/dialogwp.png)
+   ![Task Manager showing Dialog work processes ](./media/dialogwp.png)
 
 **Suggestion -** If you want to run multiple partitions in parallel on SHIR at the same time, please use powerful Virtual Machine to setup SHIR or use scale out using SHIR High Availability and Scalability feature to have multiple nodes. Please see the details here. [https://learn.microsoft.com/en-us/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#high-availability-and-scalability](https://learn.microsoft.com/en-us/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#high-availability-and-scalability)
 
@@ -77,22 +77,19 @@ The idea of partitioning is to split this large initial dataset into multiple sm
 - Consider checking SAP to Stage duration.
 - Consider checking the runtime performance in the Sink.
 - Consider performance optimization for better throughput using partitioning feature.
-
-#### Design considerations when running the pipelines using CDC
-
 - If the SAP to stage duration is slow, consider resizing SHIR to higher specifications.
 
-  ![SAP to Stage duration ](./media/sap-to-stage.png)
+    ![SAP to Stage duration ](./media/sap-to-stage.png)
 
 - Check the Sink Processing time and see if the runtime in the sink is too slow
 
-  ![ Sink Processing ](./media/sink-processing.png)
+    ![ Sink Processing ](./media/sink-processing.png)
 
-If a very small cluster is being used to run the Mapping Data Flow, this could affect the performance at sink. Please use big size cluster (for example, 16 + 256 cores) which will impact the perf of reading data from stage and writing into sink.
+    If a very small cluster is being used to run the Mapping Data Flow, this could affect the performance at sink. Please use big size cluster (for example, 16 + 256 cores) which will impact the perf of reading data from stage and writing into sink.
 
 - For large data volumes we recommend partitioning the load into multiple partitions to run parallel jobs however keep the partition number less than or equal to Azure Integration runtime core ( aka Spark Cluster core).
 
-  ![ Partitioning ](./media/sap-partition-azureir.png)
+    ![ Partitioning ](./media/sap-partition-azureir.png)
 
 Use the Optimize tab to define the partitions. The option that one can use in the CDC connector for is source partitioning.
 
@@ -109,23 +106,23 @@ Use the Optimize tab to define the partitions. The option that one can use in th
 - Consider Single file design for target Sink.
 - Benchmarking the throughput when using large data volumes.
 
-#### Design Recommendations when using Table connector
+#### Design recommendations when using Table connector
 
 - **Partitioning:** Partitioning in SAP table connector effectively splits one underlying select statement into several using where clauses on a suitable field (for example, a field with high cardinality). If your SAP table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter _maxPartitionsNumber_) such that the partitions are small enough to avoid memory dumps in SAP, but large enough to speed up extraction.
 
 - **Parallelism:** Degree of copy parallelism (parameter _parallelCopies_) works in tandem with partitioning and instructs the SHIR to make multiple parallel    RFC calls to the SAP system. For example, if you set this parameter to four, the service concurrently generates and runs four queries based on your specified partition option and settings, and each query retrieves a portion of data from your SAP table.
 
-   For optimum results, the number of partitions should be a multiple of number of the degree of copy parallelism.
+     For optimum results, the number of partitions should be a multiple of number of the degree of copy parallelism.
 
-   When copying data from SAP table to binary sinks, the actual parallel count is adjusted automatically based on the amount of memory available in SHIR. Therefore, it is recommended to record the SHIR VM size for each test cycle in addition to the degree of copy parallelism and the number of partitions. Observe the performance of SHIR VM, performance of source SAP system, desired vs actual degree of parallelism and use an iterative process to identify the optimum settings and the ideal size for SHIR VM considering all ingestion pipelines that will simultaneously load data from one or multiple SAP systems.
+     When copying data from SAP table to binary sinks, the actual parallel count is adjusted automatically based on the amount of memory available in SHIR. Therefore, it is recommended to record the SHIR VM size for each test cycle in addition to the degree of copy parallelism and the number of partitions. Observe the performance of SHIR VM, performance of source SAP system, desired vs actual degree of parallelism and use an iterative process to identify the optimum settings and the ideal size for SHIR VM considering all ingestion pipelines that will simultaneously load data from one or multiple SAP systems.
 
-   Note the observed number of RFC calls to SAP against the configured degree of parallelism. If you observe that the number of RFC calls to SAP is less than the degree of parallism, verify that the SHIR virtual machine has enough memory and CPU resources available and choose a larger virtual machine if necessary. Another reason for this is that the source SAP system is configured to limit the number of parallel connections, this is explained in generic recommendations in this article.
+     Note the observed number of RFC calls to SAP against the configured degree of parallelism. If you observe that the number of RFC calls to SAP is less than the degree of parallism, verify that the SHIR virtual machine has enough memory and CPU resources available and choose a larger virtual machine if necessary. Another reason for this is that the source SAP system is configured to limit the number of parallel connections, this is explained in generic recommendations in this article.
 
 - **Number of files:** When copying data into a file-based data store and the targeted sink is configured to be a folder, then multiple files are generated by default, but if you set the "fileName" property in the sink, the data will be written to a single file. It's recommended to write to a folder as multiple files to obtain a much higher write throughput compared to writing to a single file.
 
 - **Performance benchmarking:** When it comes to ingesting large amounts of data, we recommend performance benchmarking exercise by varying different parameters such as partitioning, degree of parallelism, number of files to determine the optimum setting for the given architecture, volume and type of data. Gather data from various tests in following format.
 
-![ Performance Benchmark ](./media/performance-benchmark.png)
+     ![ Performance Benchmark ](./media/performance-benchmark.png)
 
 ## Troubleshooting
 
@@ -139,8 +136,8 @@ Recommendations –
 
   - If multiple batch jobs are triggered in the SAP system and each batch job's start-time has big difference, please change the size of Azure Integration Runtime (IR). Increasing the number of driver nodes in Azure Integration Runtime will increase the parallelism of batch jobs in the SAP side.
 
-    > [!NOTE]
-    > Please note that the maximum number of driver nodes for Azure IR is 16 and one cannot go beyond that. Currently each driver node can only trigger one batch processes but this limitation might change in the future. This is a current limitation.
+      > [!NOTE]
+      > Please note that the maximum number of driver nodes for Azure IR is 16 and one cannot go beyond that. Currently each driver node can only trigger one batch processes but this limitation might change in the future. This is a current limitation.
 
 - Check the logs in SHIR - **Self-hosted Integration Runtime Virtual Machine.**
 
