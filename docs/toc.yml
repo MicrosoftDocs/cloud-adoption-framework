@@ -1861,10 +1861,10 @@ items:
           href: ready/considerations/roles.md
         - name: Choose an authentication method
           href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Storage
-          items:
-          - name: Review storage options
-            href: ready/considerations/storage-options.md
+      - name: Storage
+        items:
+        - name: Review storage options
+          href: ready/considerations/storage-options.md
       - name: Databases
         items:
         - name: Review data options
