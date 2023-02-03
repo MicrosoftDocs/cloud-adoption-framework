@@ -304,14 +304,10 @@ items:
               items:
               - name: Define an Azure network topology
                 href: ready/azure-best-practices/define-an-azure-network-topology.md
-              - name: Hub and spoke network topology
-                href: ready/azure-best-practices/hub-spoke-network-topology.md
               - name: Traditional Azure networking topology
                 href: ready/azure-best-practices/traditional-azure-networking-topology.md
               - name: Virtual WAN network topology (Microsoft-managed)
                 href: ready/azure-best-practices/virtual-wan-network-topology.md
-              - name: Perimeter networks
-                href: ready/azure-best-practices/perimeter-networks.md
               - name: Plan for IP addressing
                 href: ready/azure-best-practices/plan-for-ip-addressing.md
             - name: Connectivity
@@ -346,16 +342,6 @@ items:
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
-
-        - name: Storage
-          items:
-          - name: Review storage options
-            href: ready/considerations/storage-options.md
-
-        - name: Databases
-          items:
-          - name: Review data options
-            href: ready/considerations/data-options.md
 
         - name: Resource organization
           items:
@@ -1875,6 +1861,20 @@ items:
           href: ready/considerations/roles.md
         - name: Choose an authentication method
           href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Storage
+          items:
+          - name: Review storage options
+            href: ready/considerations/storage-options.md
+      - name: Databases
+        items:
+        - name: Review data options
+          href: ready/considerations/data-options.md
+      - name: Networking
+        items:
+        - name: Hub and spoke network topology
+          href: ready/azure-best-practices/hub-spoke-network-topology.md
+        - name: Perimeter networks
+          href: ready/azure-best-practices/perimeter-networks.md
       - name: Resource consistency
         href: decision-guides/resource-consistency/index.md
       - name: Encryption
