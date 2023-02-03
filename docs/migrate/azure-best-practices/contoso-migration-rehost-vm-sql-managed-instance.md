@@ -300,8 +300,11 @@ The Contoso admins complete the following steps:
 
 **Need more help?**
 
-- Learn how to [set up Azure Database Migration Service](/azure/dms/quickstart-create-data-migration-service-portal).
-- Learn how to [create and use SAS](/azure/storage/common/storage-sas-overview).
+- [Tutorial: Migrate SQL Server to Azure SQL Managed Instance online in Azure Data Studio](/azure/dms/tutorial-sql-server-managed-instance-online-ads)
+- [Quickstart: Create an instance of the Azure Database Migration Service by using the Azure portal](/azure/dms/quickstart-create-data-migration-service-portal)
+- [Generate a SAS token](/azure/data-explorer/kusto/api/connection-strings/generate-sas-token)
+- [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview)
+- [Create a service SAS for a container or blob](/azure/storage/blobs/sas-service-create)
 
 ## Step 3: Prepare Azure for the Migration and modernization tool
 
