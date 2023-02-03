@@ -161,6 +161,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/infrastructure/misc/hybrid-consistency.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/plan",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/infrastructure/virtual-machines/basic-workload.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
          "redirect_document_id": false
