@@ -1891,8 +1891,6 @@ items:
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
         - name: Machine learning operations
           href: ready/azure-best-practices/ai-machine-learning-mlops.md
-      - name: Create hybrid cloud consistency
-        href: ready/considerations/hybrid-consistency.md
 
     - name: Additional resources
       items:

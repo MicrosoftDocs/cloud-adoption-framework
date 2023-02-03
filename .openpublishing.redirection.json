@@ -162,8 +162,8 @@
       },
       {
          "source_path": "docs/infrastructure/misc/hybrid-consistency.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/hybrid-consistency",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/plan",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/infrastructure/virtual-machines/basic-workload.md",
@@ -749,6 +749,11 @@
          "source_path": "docs/decision-guides/migrate-decision-guide/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide",
          "redirect_document_id": true   
+      },
+      {
+         "source_path": "docs/ready/considerations/hybrid-consistency.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/plan",
+         "redirect_document_id": false   
       }       
    ]
 }
