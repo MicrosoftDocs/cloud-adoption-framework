@@ -35,8 +35,8 @@ There are different ways to connect to SAP system for Data Integration. It is im
 
 - **Connection to SAP using Logon Group -** SHIR should connect SAP using an SAP Logon Group (via message server) and not to a specific application server to ensure workload distribution across all available application servers.
 
-      > [!NOTE]
-      > Even dataflow spark cluster and SHIR are very powerful, multiple internal SAP copy activities (for example, 16) can be triggered and executed. But if   SAP server's concurrent connection number is small (for example, 8), it will also impact the perf to read data from SAP side.
+    > [!NOTE]
+    > Even dataflow spark cluster and SHIR are very powerful, multiple internal SAP copy activities (for example, 16) can be triggered and executed. But if   SAP server's concurrent connection number is small (for example, 8), it will also impact the perf to read data from SAP side.
 
 - The recommendation is to start with 4vCPUs and 16 GB VMs for SHIR. Here is the correction of Dialog work process in SAP with SHIR.
 
