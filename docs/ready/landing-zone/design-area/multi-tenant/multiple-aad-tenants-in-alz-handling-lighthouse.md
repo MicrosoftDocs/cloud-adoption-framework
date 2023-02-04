@@ -22,7 +22,7 @@ Review the below considerations, recommendations and common scenarios relating t
 - Azure Lighthouse only supports delegations of Subscriptions or Resource Groups, not Management Groups or tenants
   - However, there's a solution to onboarding multiple subscriptions within a Management Group as documented [here](/azure/lighthouse/how-to/onboard-management-group)
     - This policy follows the Azure landing zones design principle of [Policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance)
-- Review the limitations on RBAC roles support with Azure Lighthouse in Role support for Azure Lighthouse.
+- Review the limitations on RBAC roles support with Azure Lighthouse in [Role support for Azure Lighthouse](/azure/lighthouse/concepts/tenants-users-roles#role-support-for-azure-lighthouse).
 
 ## Recommendations
 
@@ -33,11 +33,9 @@ Review the below considerations, recommendations and common scenarios relating t
 - Utilize Azure Active Directory Privileged Identity Management (PIM) as part of your Azure Lighthouse delegations as documented [here](/azure/lighthouse/how-to/create-eligible-authorizations)
   - This feature requires Azure Active Directory Premium P2 licensing but only from the source/managing Azure Active Directory tenant
 
-## Azure Landing Zones Specific Scenarios
+## Azure Landing Zones Specific Scenario - Azure Lighthouse + Private DNS at Scale
 
-Below is a list of ALZ specific scenarios where Azure Lighthouse is used across multiple Azure Active Directory tenants.
-
-### 1 - Azure Lighthouse + Private DNS at Scale
+Below is an ALZ specific scenarios where Azure Lighthouse is used across multiple Azure Active Directory tenants to assist with Private link and DNS integration.
 
 Using Azure Lighthouse to allow Azure Policy for Private Endpoints Private DNS Zone automatic linking, as per [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale), in "spoke" Azure Active Directory tenants to the centralized Private DNS Zones in the "Hub" Azure Active Directory tenant.
 
@@ -48,10 +46,4 @@ This architecture also allows application landing zone owners to be granted acce
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple AAD tenants - Automation Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-automation.md)
-
-> [!div class="nextstepaction"]
 > [Handling ALZ across Multiple AAD tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
-
-> [!div class="nextstepaction"]
-> [Handling ALZ across Multiple AAD tenants - Canary Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-canary.md)
