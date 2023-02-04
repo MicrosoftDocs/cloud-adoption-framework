@@ -16,7 +16,7 @@ This page details considerations and recommendations regarding automating your A
 
 ## Approaches
 
-There are two approaches that can be taken when automating the deployment of Azure landing zones across multiple Azure AD Tenants. Each of which are documented.
+There are two approaches that can be taken when automating the deployment of Azure landing zones across multiple Azure AD Tenants.
 
 ### Approach 1 – Complete Isolation
 
