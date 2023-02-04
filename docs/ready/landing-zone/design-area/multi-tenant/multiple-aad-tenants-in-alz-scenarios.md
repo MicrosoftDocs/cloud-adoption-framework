@@ -75,7 +75,7 @@ ISVs delivering their SaaS (Software as a Service) products to their customers, 
 
 Having separation between the ISVs corporate Azure AD Tenant, including Azure usage, for their business-as-usual activities such as e-mail, file sharing, internal applications etc. and a separate Azure AD Tenant where the Azure Subscriptions are for hosting and delivering the SaaS applications the ISV provides to their end customers is a very common and sensible approach to protecting both themselves and their customers from security incidents etc.
 
-This is already detailed in the Azure landing zones guidance here in: [Independent software vendor (ISV) considerations for Azure landing zones.](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
+This is already detailed in the Azure landing zones guidance here in: [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone).
 
 ## Tenant Level Testing / Microsoft 365 Testing
 
