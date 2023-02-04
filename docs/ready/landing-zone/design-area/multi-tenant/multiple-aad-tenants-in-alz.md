@@ -38,7 +38,7 @@ The rest of this document will detail the scenarios for multiple Azure AD Tenant
 
 ## Why not one?
 
-We advise customers to use the existing corporate Azure AD tenant for Azure subscriptions for the best productivity and collaboration experience across the platform.
+It is recommended to use your existing corporate Azure AD tenant for Azure subscriptions for the best productivity and collaboration experience across the platform.
 
 Within a single tenant, development teams and application owners can be granted least privileged roles to create non-production instances of Azure resources and trusted apps, as well as test apps, test users and groups, and test policies for those objects. The following article describes how to delegate administration with a single tenant: [Resource isolation in a single tenant to secure with Azure Active Directory.](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)
 
