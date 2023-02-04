@@ -87,7 +87,7 @@ There are some activities and features within the Microsoft Cloud products, serv
 
 When you're wanting to perform testing that matches or is similar to the scenarios above a separate Azure AD Tenant is your only option and therefore this is recommended.
 
-However, this separate Azure AD Tenant is **not** for hosting any Azure Subscriptions that contain any workloads; regardless of environment (for example dev/test). These should instead be contained in your regular “production” Azure AD Tenant.
+However, this separate Azure AD Tenant is **not** for hosting any Azure Subscriptions that contain any workloads; regardless of environment, for example dev/test. To be clear, even dev/test environments should instead be contained in your regular “production” Azure AD Tenant.
 
 >[!TIP]
 > Please review the guidance below for handling testing of Azure landing zones and Azure workloads/resources within Azure landing zones environments:
