@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale support for Citrix on Azure
 description: Learn about a reference implementation of a Citrix Cloud and Azure landing zone accelerator environment.
-author: bebaur
+author: BenMartinBaur
 ms.author: wasaleem
 ms.date: 02/08/2023
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-avd
 
 Employees need a consistent experience and seamless access to vital applications and insights whether they work in the office, on the road, or at home. In this reference implementation, Citrix and Microsoft partner to accelerate the future of work.
 
-This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started), it's best to use this enterprise-scale desktop virtualization solution after you implement an [enterprise-scale landing zone](../../ready/landing-zone.md). For more guidance, see [Landing zone implementation options](../../ready/landing-zone/implementation-options.md).
+This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started), it's best to use this enterprise-scale desktop virtualization solution after you implement an [enterprise-scale landing zone](../../../ready/landing-zone.md). For more guidance, see [Landing zone implementation options](../../../ready/landing-zone/implementation-options.md).
 
 ## Architecture
 
@@ -44,15 +44,14 @@ The previous list doesn't cover all Citrix capabilities when deployed with Micro
 
 ## Design guidelines
 
-The design guidelines for the Cloud Adoption Framework for Citrix Cloud in an Azure enterprise-scale landing zone cover eight critical areas:
+The design guidelines for the Cloud Adoption Framework for Citrix Cloud in an Azure enterprise-scale landing zone cover the following critical areas:
 
-- [Enterprise enrollment](../eslz-enterprise-enrollment.md)
-- [Identity and access management](../landing-zone-for-citrix/ctx-identity-and-access-management.md)
-- [Network topology and connectivity](../landing-zone-for-citrix/ctx-network-topology-and-connectivity.md)
-- [Resource organization](../landing-zone-for-citrix/ctx-resource-organization.md)
-- [Security, governance, and compliance](../landing-zone-for-citrix/ctx-security-governance-and-compliance.md)
-- [Management and monitoring](../landing-zone-for-citrix/ctx-management-and-monitoring.md)
-- [Business continuity and disaster recovery](../landing-zone-for-citrix/ctx-business-continuity-and-disaster-recovery.md)
+- [Identity and access management](citrix-identity-and-access-management.md)
+- [Network topology and connectivity](citrix-network-topology-and-connectivity.md)
+- [Resource organization](citrix-resource-organization.md)
+- [Security, governance, and compliance](citrix-security-governance-and-compliance.md)
+- [Management and monitoring](citrix-management-and-monitoring.md)
+- [Business continuity and disaster recovery](citrix-business-continuity-and-disaster-recovery.md)
 
 Design guidance for [Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/citrix-daas-azure.html) is available on Citrix TechZone. This guidance highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
 
@@ -60,4 +59,4 @@ Design guidance for [Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-
 
 Review the critical design considerations and recommendations for identity and access management specific to the deployment of Citrix on Azure.
 
-- [Identity and access management](./ctx-identity-and-access-management.md)
+- [Identity and access management](citrix-identity-and-access-management.md)

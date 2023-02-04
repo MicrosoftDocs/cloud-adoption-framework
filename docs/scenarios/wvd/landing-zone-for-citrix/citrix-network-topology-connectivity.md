@@ -1,7 +1,7 @@
 ---
 title: Networking for Citrix on Azure
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Citrix on Azure workloads.
-author: bebaur
+author: BenMartinBaur
 ms.author: martinek
 ms.date: 02/08/2023
 ms.topic: conceptual
@@ -18,7 +18,7 @@ This article describes a reference architecture that demonstrates major design a
 
 The following architectural diagram shows a multiple subscription Citrix Cloud and Azure environment.
 
-[![Diagram of a reference architecture that demonstrates major design areas and design best practices in a Citrix Cloud and Azure multiple subscription environment.](../media/citrix-cloud-azure-virtual-desktop-architecture-multiple.png)](../media/citrix-cloud-azure-virtual-desktop-architecture-multiple.png#lightbox)
+[![Diagram of a reference architecture that demonstrates major design areas and design best practices in a Citrix Cloud and Azure multiple subscription environment.](../media/citrix-cloud-azure-virtual-desktop-multiple.png)](../media/citrix-cloud-azure-virtual-desktop-multiple.png#lightbox)
 
 ## Architectural components
 
@@ -63,7 +63,7 @@ Citrix also provides guidance for Azure network segmentation and logically segme
 
 Create separate single-session and multisession virtual networks or subnets to enable growth of both network types without impacting the scalability of the other type. For example, filling a shared multisession and single-session subnet with virtual desktop infrastructure (VDI) results in creating a new hosting unit to support an application use case. This new hosting unit forces the usage of multiple machine catalogs, the Citrix name for resource pools, to support scaling the application or migrating the existing app catalogs to a new subnet.
 
-If you use [workload subscriptions](https://www.citrix.com/blogs/2020/10/14/citrix-tips-citrix-on-azure-enterprise-scale-landing-zones-part-1/) as part of a multisubscription architecture, consider Citrix Machine Creation Service (MCS) [limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#machine-creation-services-mcs-limits) on the number of virtual machines (VMs) per Azure subscription as you plan for [IP addressing](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity#plan-for-ip-addressing) and your virtual network design.
+If you use [workload subscriptions](https://www.citrix.com/blogs/2020/10/14/citrix-tips-citrix-on-azure-enterprise-scale-landing-zones-part-1/) as part of a multisubscription architecture, consider Citrix Machine Creation Service (MCS) [limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#machine-creation-services-mcs-limits) on the number of virtual machines (VMs) per Azure subscription as you plan for [IP addressing](../../../ready/enterprise-scale/network-topology-and-connectivity.md#plan-for-ip-addressing) and your virtual network design.
 
 #### Segment by tenant, business unit, or security zone
 
@@ -79,5 +79,5 @@ To learn more about Azure networking best practices and how to plan for virtual 
 
 Review the critical design considerations and recommendations for management and monitoring specific to the deployment of Citrix on Azure.
 
-- [Management and monitoring](./ctx-management-and-monitoring.md)
+- [Management and monitoring](citrix-management-and-monitoring.md)
 
