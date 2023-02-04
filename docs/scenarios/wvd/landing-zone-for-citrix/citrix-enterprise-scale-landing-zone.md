@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-avd
 
 Employees need a consistent experience and seamless access to vital applications and insights whether they work in the office, on the road, or at home. In this reference implementation, Citrix and Microsoft partner to accelerate the future of work.
 
-This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started), it's best to use this enterprise-scale desktop virtualization solution after you implement an [enterprise-scale landing zone](../../../ready/landing-zone.md). For more guidance, see [Landing zone implementation options](../../../ready/landing-zone/implementation-options.md).
+This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started), it's best to use this solution after you implement an [enterprise-scale landing zone](../../../ready/landing-zone/index.md). For more information, see [Landing zone implementation options](../../../ready/landing-zone/implementation-options.md).
 
 ## Architecture
 
@@ -33,7 +33,7 @@ This solution is ideal for the following scenarios:
 - Advanced security capabilities are required to accommodate user workflows or maintain compliance. Security requirements can include session recording, screen capture and keylogging protection, and granular peripheral controls such as USB, clipboard, and printing.
 - The workload uses 3D graphics or requires connectivity over challenging low bandwidth or high latency networks.
 - A unified platform for secure remote access to virtual desktops and physical workstations is required.
-- Built-in image lifecycle and provisioning tools are needed to assist in streamlining management of large, complex portfolios of virtual apps or virtual desktops.
+- Built-in image lifecycle and provisioning tools are needed to help streamline management of large, complex portfolios of virtual apps or virtual desktops.
 - A software vendor recommends using Citrix for application delivery.
 - Support for Linux workloads is required.
 - Support for non-persistent workloads is required.
