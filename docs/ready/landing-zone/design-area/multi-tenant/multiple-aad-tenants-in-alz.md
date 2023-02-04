@@ -56,7 +56,7 @@ Creating a new Azure AD tenant requires extra work to be done to provision, mana
 
 For these reasons, organizations need to be clear on why they're deviating from the corporate Azure AD tenant model, to ensure the extra overhead and complexity is justified in meeting the requirements. There are valid scenarios where our customers feel this is the case and these are documented in the [scenarios article](multiple-aad-tenants-in-alz-scenarios.md).
 
-Another concern that customers flag to us, is around the power of the Global Administrator (Global Admin) role. The Global Admin role does provide the keys to the kingdom and in the context of Azure, any Global Admin is able to assume control of any Azure subscription linked to the AAD tenant.
+Another concern is around the power of the Global Administrator (Global Admin) role. The Global Admin role does provide the keys to the kingdom and in the context of Azure, any Global Admin is able to assume control of any Azure subscription linked to the AAD tenant.
 
 The ownership of this role across internal teams/department can provide a challenge as the “Identity” team and the “Azure” team are often in different teams, departments, org structures.
 
