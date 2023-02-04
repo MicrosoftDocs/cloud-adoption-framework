@@ -84,7 +84,7 @@ This can be avoided if you utilize a Single Azure AD Tenant as the home for all 
 
 ### Recommendations
 
-- Use a single Azure AD Tenant, usually the corporate Azure AD Tenant and Only create more Azure AD Tenants when clear requirements arise that can't be met using the corporate Azure AD Tenant.
+- Use a single Azure AD Tenant, usually the corporate Azure AD Tenant and Only create more Azure AD Tenants when clear and justified requirements arise that can't be met using the corporate Azure AD Tenant.
 - Use Azure AD multi-tenant applications, were possible, when creating integrations from operational tooling, such as ServiceNow, when connecting them to multiple Azure AD tenants, as per the [guidance here](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools)
 - If you're an ISV review this specific guidance [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
 - Utilize Azure Lighthouse were possible, to simplify cross-tenant management experiences. [See Azure Lighthouse usage in ALZ Multi-Tenant](multiple-aad-tenants-in-alz-handling-lighthouse.md)
