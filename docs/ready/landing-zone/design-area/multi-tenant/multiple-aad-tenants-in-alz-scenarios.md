@@ -67,7 +67,7 @@ However, it's more common in scenarios like this, that there are no centralized 
 > 
 > However, this creates challenges for end-users, increases complexity in securing, managing, and governing multiple tenants, and potentially increases licensing costs for the organizations as licences such as Azure AD Premium do not span multiple Azure AD Tenants.
 > 
-> We would encourage organizations in this situation to resolve the operational challenges to ensure teams can work together in a single Azure AD Tenant rather than creating multiple Azure AD Tenants as a workaround.
+> We encourage organizations in this situation to resolve the operational challenges to ensure teams can work together in a single Azure AD Tenant rather than creating multiple Azure AD Tenants as a workaround.
 
 ## Independent Software Vendor (ISV) Delivering SaaS Applications from Azure
 
