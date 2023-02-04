@@ -35,7 +35,7 @@ Review the below considerations, recommendations and common scenarios relating t
 
 ## Azure Landing Zones Specific Scenarios
 
-Below is a list of ALZ specific scenarios where we've seen the usage of Azure Lighthouse in with ALZ when operating multiple Azure AD Tenants.
+Below is a list of ALZ specific scenarios where Azure Lighthouse is used across multiple Azure AD Tenants.
 
 ### 1 - Azure Lighthouse + Private DNS at Scale
 
