@@ -58,7 +58,7 @@ For these reasons, organizations need to be clear on why they're deviating from 
 
 Another concern is around the power of the Global Administrator (Global Admin) role. The Global Admin role does provide the keys to the kingdom and in the context of Azure, any Global Admin is able to assume control of any Azure subscription linked to the AAD tenant.
 
-The ownership of this role across internal teams/department can provide a challenge as the “Identity” team and the “Azure” team are often in different teams, departments, org structures.
+The ownership of this role across internal teams/department can provide a challenge as the Identity team and the Azure team are often in different teams, departments, org structures.
 
 The teams that operate Azure, as detailed [here](/azure/cloud-adoption-framework/organize/#understand-required-cloud-functions), are responsible for Azure services and rightfully want to ensure the security of the services of which they manage, and this can result in a level of nervousness when individuals outside of that team have roles with the power to, potentially, access their environments.
 
@@ -68,6 +68,7 @@ Azure Active Directory does provide controls that help mitigate this problem on 
 > Multiple Azure Active Directory tenants **are not the recommend** approach for most customers, instead a single Azure Active Directory tenant, normally the “corporate” Azure Active Directory tenant, is recommended for most as it can provide the required separation requirements.
 > 
 > This is documented in the following pieces of guidance:
+> 
 > - [Define Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-ad-define)
 > - [Azure security best practices](/azure/cloud-adoption-framework/secure/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity)
 > - [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
