@@ -28,7 +28,7 @@ Review the below considerations, recommendations and common scenarios relating t
 
 - Review [Azure Lighthouse in enterprise scenarios](/azure/lighthouse/concepts/enterprise)
 - If you're an ISV review [Azure Lighthouse in ISV scenarios](/azure/lighthouse/concepts/isv-scenarios)
-- Use Azure Lighthouse in both directions between Azure Active Directory tenants to simplify management activities and reduce complex AuthN/AuthZ scenarios
+- Use Azure Lighthouse in both directions between Azure Active Directory tenants to simplify management activities and reduce complex authentication and authorization scenarios
   - Removes reliance on Azure Active Directory B2B (Guest) accounts for user and workload identities or having separate accounts for some activities
 - Utilize Azure Active Directory Privileged Identity Management (PIM) as part of your Azure Lighthouse delegations as documented [here](/azure/lighthouse/how-to/create-eligible-authorizations)
   - This feature requires Azure Active Directory Premium P2 licensing but only from the source/managing Azure Active Directory tenant

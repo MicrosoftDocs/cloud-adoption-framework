@@ -51,14 +51,14 @@ This section details key considerations and recommendations relating to Azure la
 - Always start with a ["why not one?" approach](multiple-aad-tenants-in-alz.md#why-not-one) to your Azure Active Directory tenant design
   - This is typically the organizations corporate Azure Active Directory tenant, where the users identities exist and service like Microsoft 365 are running in.
   - Only create more Azure Active Directory tenants when clear requirements arise that can't be met using the corporate Azure Active Directory tenant.
-- Consider utilizing Azure Active Directory [Administrative Units](/azure/active-directory/roles/administrative-units) to provide management segregation and isolation of users and groups (for example different teams) within a single Azure Active Directory tenant, instead of creating multiple Azure Active Directory tenants
+- Consider utilizing Azure Active Directory [Administrative Units](/azure/active-directory/roles/administrative-units) to provide management segregation and isolation of users, groups, and devices (for example different teams) within a single Azure Active Directory tenant, instead of creating multiple Azure Active Directory tenants
 - Consider the extra complexities in managing, governing, configuring, monitoring and securing multiple Azure Active Directory tenants
   - A single Azure Active Directory tenant is simpler to manage, govern and secure
 - Consider your JML (Joiners, Movers, Leavers) process, workflows and tooling
   - Can these support and handle multiple Azure Active Directory tenants?
 - Consider the impact to end-users having to manage, govern and secure multiple identities for themselves
 - Consider the impact on cross-tenant collaboration, especially from an end-users perspective, before deciding on multiple Azure Active Directory tenants
-  - The collaboration experience and support between users inside a single Azure Active Directory tenant is best
+  - The Microsoft 365 collaboration experience and support between users inside a single Azure Active Directory tenant is optimal
 - Consider the impact to auditing and regulatory compliance checks across multiple Azure Active Directory tenants before choosing an approach
 - Consider the increase in licensing costs when multiple Azure Active Directory tenants are used
   - Licenses for products like Azure Active Directory Premium P1/P2 or Microsoft 365 services don't span across Azure Active Directory tenants
@@ -71,20 +71,20 @@ This section details key considerations and recommendations relating to Azure la
 
 Today many, if not all Azure products & services don't support Azure Active Directory B2B as part of their native AAD integration and there are only several services that support AAD B2B authentication as part of their AAD integrations. it's safer to that by default services don't support Azure Active Directory B2B as part of their Azure Active Directory integration.
 
-To summarize the challenge, for services that provide a native integration with Azure Active Directory, such as Azure Storage, Azure SQL, Azure Files, Azure Virtual Desktop, they provide a "one-click", or "no-click", style approach to integrate with AAD where they require [AuthN/AuthZ](/azure/active-directory/develop/authentication-vs-authorization) scenarios as part of their service or offering. However, this is commonly only supported against the “home tenant” (the Azure Subscription relationship to AAD is detailed further [here](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)), while only some services might enable support for AAD B2B/B2C scenarios.
+To summarize the challenge, for services that provide a native integration with Azure Active Directory, such as Azure Storage, Azure SQL, Azure Files, Azure Virtual Desktop, they provide a "one-click", or "no-click", style approach to integrate with AAD where they require [authentication and authorization](/azure/active-directory/develop/authentication-vs-authorization) scenarios as part of their service or offering. However, this is commonly only supported against the “home tenant” (the Azure Subscription relationship to AAD is detailed further [here](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)), while only some services might enable support for AAD B2B/B2C scenarios.
 
 Taking the above into consideration it's important to carefully consider to which Azure Active Directory tenant your Azure Subscriptions will be associated to, as this will dictate as to which products/services, and their features, are able to be used by application/workload teams that need to support the identities and from which tenant; normally identities in the corporate Azure Active Directory tenant.
 
-If multiple Azure Active Directory tenants were used to host all Azure Subscriptions, then this could hinder and limit the application workload teams from being able to take advantage of some Azure products and services Azure Active Directory integrations. Leaving the application workload teams to have to develop their applications around these imposed limitations that could lead to a more complex and less secure AuthN/AuthZ posture.
+If multiple Azure Active Directory tenants were used to host all Azure Subscriptions, then this could hinder and limit the application workload teams from being able to take advantage of some Azure products and services Azure Active Directory integrations. Leaving the application workload teams to have to develop their applications around these imposed limitations that could lead to a more complex and less secure authentication and authorization posture.
 
-This can be avoided if you utilize a Single Azure Active Directory tenant as the home for all your Azure Subscriptions. This then enables application workload teams to take advantage of the best approach for AuthN/AuthZ for their application/service without having any constraints imposed on them by an architecture choice that they can't control whilst also keeping a simple architecture to manage, govern and control.
+This can be avoided if you utilize a single Azure Active Directory tenant as the home for all your Azure Subscriptions. This then enables application workload teams to take advantage of the best approach for authentication and authorization for their application/service without having any constraints imposed on them by an architecture choice that they can't control whilst also keeping a simple architecture to manage, govern and control.
 
 >[!TIP]
 > Review this documentation [Resource isolation in a single tenant to secure with Azure Active Directory](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)
 
 ### Recommendations
 
-- Use a single Azure Active Directory tenant, usually the corporate Azure Active Directory tenant and Only create more Azure Active Directory tenants when clear and justified requirements arise that can't be met using the corporate Azure Active Directory tenant.
+- Use a single Azure Active Directory tenant, usually the corporate Azure Active Directory tenant and only create more Azure Active Directory tenants when clear and justified requirements arise that can't be met using the corporate Azure Active Directory tenant.
 - Use Azure Active Directory multi-tenant applications, were possible, when creating integrations from operational tooling, such as ServiceNow, when connecting them to multiple Azure Active Directory tenants, as per the [guidance here](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools)
 - If you're an ISV review this specific guidance [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
 - Utilize Azure Lighthouse were possible, to simplify cross-tenant management experiences. [See Azure Lighthouse usage in ALZ multi-tenant](multiple-aad-tenants-in-alz-handling-lighthouse.md)
