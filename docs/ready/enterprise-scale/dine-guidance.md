@@ -28,7 +28,7 @@ For example, consider a scenario where a new landing zone subscription is provis
 >[!NOTE]
 > You can disable the preceding options at any time or during deployment of the Azure landing zone reference implementations.
 >  
-> The preceding list shows a subset of all the policies that are assigned as part of the Azure landing zone accelerator. For a full list of policies that can be assigned by the Azure landing zone reference implementation, see [Policies included in enterprise-scale landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+> The preceding list shows a subset of all the policies that are assigned as part of the Azure landing zone accelerator. For a full list of policies that can be assigned by the Azure landing zone reference implementation, see [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies).
 >
 > The [Azure landing zones bicep repo](https://github.com/Azure/ALZ-Bicep) is modular. The above default policies can be deployed with the [ALZ Default Policy Assignments module](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults/README.md).  
 
