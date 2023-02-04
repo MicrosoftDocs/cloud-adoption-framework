@@ -29,7 +29,7 @@ Usually as part of the acquisition there is a project to consolidate the two Azu
 >[!IMPORTANT]
 > A custom domain name (for example, `contoso.com`) can only be associated to one Azure AD Tenant at a time. Hence a common goal to consolidate tenants so that a single custom domain name can be used by all identities when a merger or acquisition scenario has occurred.
 
-However, due to the complexities of such a consolidation of two Azure AD tenants into one, sometimes the tenants are left alone and remain separate.
+However, due to the complexities of such a consolidation of two Azure AD tenants into one, sometimes the tenants are left alone and remain separate for an extended or indefinite period of time.
 
 This scenario can also occur when the organizations or companies wish to remain separate as individual entities so that they might be acquired again in the future by other organizations. Therefore, by keeping the Azure AD Tenants isolated and not performing a consolidation of them, there's less work to perform in the event of a future merger or acquisition of a single entity.
 
