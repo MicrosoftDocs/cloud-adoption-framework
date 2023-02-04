@@ -12,7 +12,9 @@ ms.custom: think-tank
 
 # Handling ALZ across Multiple AAD Tenants - Considerations & Recommendations
 
-As per the outlined information, in this [article](multiple-aad-tenants-in-alz.md), on how Management Groups, Azure Policy and Subscriptions interact and operate with Azure AD Tenants and the limitation of these operating only within a single Azure AD Tenant, this means that if multiple Azure AD Tenants exist or are required for an organization then Azure landing zones must be deployed into each of the Azure AD Tenants separately. As shown in the diagram.
+As per the outlined information, in this [article](multiple-aad-tenants-in-alz.md), on how Management Groups, Azure Policy and Subscriptions interact and operate with Azure AD Tenants and the limitation of these operating only within a single Azure AD Tenant, this means that if multiple Azure AD Tenants exist or are required for an organization then Azure landing zones must be deployed into each of the Azure AD Tenants separately.
+
+## Topology of Azure landing zones with multiple Azure AD tenants
 
 [![Diagram of multiple Azure AD Tenants with Azure Landing Zones deployed](media/alz-multi-tenant-2.png)](media/alz-multi-tenant-2.png#lightbox)
 
