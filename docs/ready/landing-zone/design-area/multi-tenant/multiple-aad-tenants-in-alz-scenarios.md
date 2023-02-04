@@ -37,7 +37,7 @@ This scenario can also occur when the organizations or companies wish to remain 
 
 Some organizations are in scope of strict regulatory or country compliance controls and frameworks (for example UK Official, Sarbanes Oxley (SOX) or NIST) that leads to organizations creating multiple Azure AD Tenants to meet and comply with these frameworks.
 
-Another similar scenario is when an organization has offices and users around the globe, some of which fall into stricter data residency regulations. Although this particular requirement can usually be addressed within a single Azure AD Tenant and also utilizing features such as [Microsoft 365 Multi-Geo.](/microsoft-365/enterprise/microsoft-365-multi-geo)
+Another similar scenario is when an organization has offices and users around the globe, some of which fall into stricter data residency regulations. Although this particular requirement is usually addressed within a single Azure AD Tenant utilizing features such as [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo).
 
 Furthermore, an additional scenario for this is when organizations require the use of [Azure Government (US Government)](/azure/azure-government/documentation-government-welcome) or [Azure China (operated by 21Vianet)](/azure/china/overview-operations) these national Azure cloud instances require their own Azure AD Tenants. These Azure AD Tenants are solely for that national Azure cloud instances and are used for the Azure Subscriptions identity and access management services within that Azure cloud instance.
 
