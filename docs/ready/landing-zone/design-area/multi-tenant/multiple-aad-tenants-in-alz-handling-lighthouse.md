@@ -12,9 +12,7 @@ ms.custom: think-tank
 
 # Handling ALZ across Multiple AAD Tenants - Azure Lighthouse usage in ALZ Multi-Tenant
 
-[Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, higher automation, and enhanced governance across resources.
-
-Azure Lighthouse can be adopted in ALZ scenarios whether in single or multi-tenant architectures.
+[Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, higher automation, and enhanced governance across resources. Azure Lighthouse can be adopted in ALZ scenarios whether in single or multi-tenant architectures.
 
 Review the below considerations, recommendations and common scenarios relating to Azure Lighthouse in ALZ deployments.
 
