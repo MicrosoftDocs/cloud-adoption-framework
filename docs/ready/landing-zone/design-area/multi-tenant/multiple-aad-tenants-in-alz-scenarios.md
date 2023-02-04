@@ -24,7 +24,7 @@ There are many reasons that an organization might end up with multiple Azure AD 
 
 As organizations grow over time, it's common that they might acquire other companies or organizations as they expand. These acquisitions are highly likely to have existing Azure AD Tenants already established hosting and providing services to the company or organization like, Microsoft 365 (Exchange Online, SharePoint, OneDrive, Teams, etc.), Dynamics 365 and Microsoft Azure.
 
-Sometimes as part of the acquisition there might be a project to consolidate the two Azure AD Tenants into a single Azure AD Tenant to reduce the management overhead and also improve the collaboration experiences as well as presenting a single brand identity to other companies and organizations.
+Usually as part of the acquisition there is a project to consolidate the two Azure AD Tenants into a single Azure AD Tenant to reduce the management overhead and also improve the collaboration experiences as well as presenting a single brand identity to other companies and organizations.
 
 >[!IMPORTANT]
 > A custom domain name (for example, `contoso.com`) can only be associated to one Azure AD Tenant at a time. Hence a common goal to consolidate tenants so that a single custom domain name can be used by all identities when a merger or acquisition scenario has occurred.
