@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Multiple Azure AD Tenants in ALZ - Scenarios
 
-There are many reasons that an organization might end up with multiple Azure AD Tenants or investigate whether they need multiple Azure AD Tenants. The most common scenarios we see are listed:
+There are a few reasons that an organization might justify multiple Azure AD Tenants or investigate whether they need multiple Azure AD Tenants. The most common scenarios are:
 
 - [Mergers and Acquisitions](#mergers-and-acquisitions)
 - [Regulatory or Country Compliance Requirements](#regulatory-or-country-compliance-requirements)
