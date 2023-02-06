@@ -15,7 +15,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 Evaluate is the first step in the Move phase of relocation. The goal of the Evaluate step is to understand the workload you want to relocate so you can move it successfully. Every workload you relocate must go through the four steps of the Move phase, starting with the Evaluate step.
 
-:::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Diagram showing the relocation process and highlights the Evaluate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the Initiate phase, and it has one step called Initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-evaluate.png" alt-text="Diagram showing the relocation process and highlights the Evaluate step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the Initiate phase, and it has one step called Initiate. The second phase is the Move phase, and it has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-evaluate.png" border="false":::
 
 ## Pick workload(s)
 
