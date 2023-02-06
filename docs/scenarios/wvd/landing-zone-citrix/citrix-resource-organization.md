@@ -16,9 +16,9 @@ This article provides considerations that you should take into account when you 
 
 ## Citrix design recommendations
 
-The following sections provide recommendations for labelling and organizing resources when you deploy Citrix on Azure.
+The following sections provide recommendations for labeling and organizing resources when you deploy Citrix on Azure.
 
-Additional design guidance for Citrix DaaS on Azure is available on [Citrix TechZone](https://docs.citrix.com/en-us/tech-zone/toc/by-solution/daas-for-azure/design-guidance.html). This article highlights the system, workload, user, and network considerations for aligning Citrix deployments with Cloud Adoption Framework design principles. 
+Additional design guidance for Citrix DaaS on Azure is available on [Citrix TechZone](https://docs.citrix.com/en-us/tech-zone/toc/by-solution/daas-for-azure/design-guidance.html). The article highlights the system, workload, user, and network considerations for aligning Citrix deployments with Cloud Adoption Framework design principles. 
 
 ### Citrix Cloud naming and tagging
 
@@ -26,7 +26,7 @@ Naming and tagging standards help you organize resources and simplify resource m
 
 Maintaining consistency across resources can help you identify deviation from agreed-upon policies. [Prescriptive guidance for resource tagging](/azure/cloud-adoption-framework/govern/guides/complex/prescriptive-guidance#resource-tagging) describes how one of the following patterns can help you deploy governance practices. Similar patterns are available for using tags to evaluate regulatory compliance.
 	
-A standardized naming convention is the starting point for organizing cloud-hosted resources. Properly structured naming systems enable you to quickly identify resources for management and accounting purposes. If you have existing IT naming conventions for other parts of your organization, consider whether you will align your cloud naming conventions with them or make your cloud naming conventions unique and separate.
+A standardized naming convention is the starting point for organizing cloud-hosted resources. Properly structured naming systems enable you to quickly identify resources for management and accounting purposes. If you have existing IT naming conventions for other parts of your organization, consider whether you'll align your cloud naming conventions with them or make your cloud naming conventions unique and separate.
 	
 Azure naming schemes should align with the associated resources in Citrix Cloud. For example, when you use multiple subscriptions for a Citrix deployment, use naming schemes for [machine catalogs in Citrix Cloud](https://docs.citrix.com/en-us/citrix-daas/install-configure/machine-catalogs-manage.html) that identify the subscription that they're associated with. For example, you could use **MC-USEast2Sub01-Win10-HR** and **MC-USEast2Sub02-Win10-HR** to represent Windows 10 VDIs deployed for HR across two subscriptions in US East 2. You can aggregate multiple catalogs across multiple subscriptions or regions into a [delivery group](https://docs.citrix.com/en-us/citrix-daas/install-configure/delivery-groups-manage.html) to make it easy to manage these disparate resources for a use case. In this example, the highlighted catalogs could then be aggregated into **DG-USEast2-Win10-HR**.
 
@@ -46,7 +46,5 @@ You can start with single subscription and switch to a multiple-subscription app
 
 ## Next steps
 
-Review the critical design considerations and recommendations for network topology and connectivity for the deployment of Citrix on Azure:
-
-- [Network topology and connectivity](./citrix-network-topology-connectivity.md)
+- [Network topology and connectivity for Citrix on Azure](./citrix-network-topology-connectivity.md)
 - [Naming and tagging in Azure](../../decision-guides/resource-tagging/index.md)
