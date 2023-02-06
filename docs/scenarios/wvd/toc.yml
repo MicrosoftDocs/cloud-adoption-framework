@@ -42,17 +42,17 @@ items:
     - name: Citrix on Azure design areas
       items:
       - name: Identity and access management
-        href: landing-zone-citrix/ctx-identity-access-management.md
+        href: landing-zone-citrix/citrix-identity-access-management.md
       - name: Network topology and connectivity
-        href: landing-zone-citrix/ctx-network-topology-connectivity.md
+        href: landing-zone-citrix/citrix-network-topology-connectivity.md
       - name: Resource organization
-        href: landing-zone-citrix/ctx-resource-organization.md
+        href: landing-zone-citrix/citrix-resource-organization.md
       - name: Security, governance and compliance
-        href: landing-zone-citrix/ctx-security-governance-compliance.md
+        href: landing-zone-citrix/citrix-security-governance-compliance.md
       - name: Management baseline
-        href: landing-zone-citrix/ctx-management-monitoring.md
+        href: landing-zone-citrix/citrix-management-monitoring.md
       - name: Business continuity and disaster recovery
-        href: landing-zone-citrix/ctx-business-continuity-disaster-recovery.md
+        href: landing-zone-citrix/citrix-business-continuity-disaster-recovery.md
 
   - name: Migrate your virtual desktop platform
     items:
