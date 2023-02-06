@@ -15,7 +15,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 Before you start migrating the workload to another region, you need to plan your relocation strategy. The strategy includes the relocation method, service-relocation automation, and data-relocation automation. This article lays out the options for each strategy component and guides you toward a decision. Ultimately, the selections you make depend on the services and the criticality of the workload.
 
-:::image type="content" source="../_images/relocate/caf-relocate-select.png" alt-text="Diagram showing the relocation process and highlights the Select step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the Initiate phase, and it has one step called Initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-select.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate-select.png" alt-text="Diagram showing the relocation process and highlights the Select step in the Move phase. In the relocation process, there are two phases and five steps. The first phase is the Initiate phase, and it has one step called Initiate. The second phase is the Move phase, and it has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate-select.png" border="false":::
 
 ## Select a relocation method
 
