@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Security governance and compliance for Citrix on Azure
 
-Security governance and compliance is critical to Citrix DaaS deployments on Azure. To achieve operational excellence and success, design your Citrix DaaS environment with appropriate policies.
+Security governance and compliance are critical to Citrix DaaS deployments on Azure. To achieve operational excellence and success, design your Citrix DaaS environment with appropriate policies.
 
 ## Design considerations and recommendations
 
@@ -180,7 +180,7 @@ Assign the **Citrix_Machine_Catalog** custom role to the **Citrix_MachineCatalog
 
 The NSGs are stateful, so they allow return traffic that can apply to a VM, a subnet, or both. When both subnet and VM NSGs exist, the subnet NSGs apply first for inbound traffic, and the VM NSGs apply first for outbound traffic. By default, all traffic between hosts is allowed within a virtual network, along with all inbound traffic from a load balancer. By default, only outbound internet traffic is allowed, and all other outbound traffic is denied.
  
-By using NSGs to allow only expected traffic in the Citrix Cloud environment, you can limit potential attack vectors and significantly increase deployment security. The following tables lists the required networking ports and protocols that a Citrix deployment must allow. This list includes only the ports the Citrix infrastructure uses, and doesn't include the ports your applications use. Be sure to define all ports in the NSG that protects the VMs.
+By using NSGs to allow only expected traffic in the Citrix Cloud environment, you can limit potential attack vectors and significantly increase deployment security. The following table lists the required networking ports and protocols that a Citrix deployment must allow. This list includes only the ports the Citrix infrastructure uses, and doesn't include the ports your applications use. Be sure to define all ports in the NSG that protects the VMs.
 
 | Source | Destination | Protocol | Port | Purpose |
 |----|----|----|----|----|

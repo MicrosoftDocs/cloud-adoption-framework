@@ -177,7 +177,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Hybrid connectivity must be highly available in both the primary region and the secondary region.
   - Active Directory authentication must be available in the disaster recovery region or connectivity to the on-premises domain must be guaranteed.
 
-Design considerations for Citrix technologies are summarized in [Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix TechZone. This guide assists with business continuity and disaster recovery (BCDR) architecture planning and considerations for both on-prem and Azure deployments of Citrix DaaS.
+[Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix TechZone summarizes design considerations for Citrix technologies. This guide assists with business continuity and disaster recovery (BCDR) architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
 
 ## Next steps
 
