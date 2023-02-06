@@ -46,7 +46,7 @@ You should only create more Azure Active Directory tenants when clear requiremen
 
 The “corporate” Azure Active Directory tenant is generally the first tenant provisioned in the organization (with Microsoft 365). This tenant is used for corporate application access, Microsoft 365 services and supports the collaboration within an organization.  The primary reason to start with this existing is because the work to provision, manage, secure, lifecycle of the identities is already established. This makes the task of onboarding new apps, resources, subscriptions easier, as it’s a mature, understood environment with established process, procedures, and controls.
 
-### Complexities with multiple Azure AD tenants
+### Complexities with multiple Azure Active Directory tenants
 
 Creating a new Azure Active Directory tenant requires extra work to be done to provision, manage and secure and govern the identities. Extra work is also required to establish the required policies and procedures. Collaboration is always best in a single Azure Active Directory tenant, moving to a multi-tenant model creates a boundary, which can result in user friction, management overhead, increase the attack surface area and therefore also the security risk, and complicate product scenarios and limitations. Some examples include:
 
