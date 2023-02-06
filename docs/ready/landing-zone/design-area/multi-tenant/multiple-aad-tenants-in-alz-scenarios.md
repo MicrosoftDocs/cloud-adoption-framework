@@ -18,7 +18,8 @@ There are a few reasons that an organization might justify multiple Azure Active
 - [Regulatory or Country Compliance Requirements](#regulatory-or-country-compliance-requirements)
 - [Business Unit or Organizational Isolation and Autonomy Requirements](#business-unit-or-organizational-isolation-and-autonomy-requirements)
 - [Independent Software Vendor (ISV) Delivering SaaS Applications from Azure](#independent-software-vendor-isv-delivering-saas-applications-from-azure)
-- [tenant Level Testing / Microsoft 365 Testing](#tenant-level-testing--microsoft-365-testing)
+- [Tenant Level Testing / Microsoft 365 Testing](#tenant-level-testing--microsoft-365-testing)
+- [Grass Roots / Shadow IT / Start-ups](#grass-roots--shadow-it--start-ups)
 
 ## Mergers and Acquisitions
 
@@ -92,6 +93,19 @@ However, this separate Azure Active Directory tenant is **not** for hosting any 
 >
 > - [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
 > - [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
+
+## Grass Roots / Shadow IT / Start-ups
+
+In some organizations there might be teams that are looking to innovate quickly that might lead to this team creating a separate Azure Active Directory tenant to help them move as quickly as possible whilst, intentionally or unintentionally, avoiding central/platform team's process and guidance for getting access to an Azure environment to be able to do their innovation.
+
+This is also common where start-ups are created and they setup their own Azure Active Directory tenant to run, host and operate the business and services from. Normally this is to be expected however, when start-ups are acquired the additional Azure Active Directory tenant creates a decision point for the acquiring organizations IT teams to decide what to do going forward.
+
+For more information review the [Mergers and Acquisitions](#mergers-and-acquisitions) and [Independent Software Vendor (ISV) Delivering SaaS Applications from Azure](#independent-software-vendor-isv-delivering-saas-applications-from-azure) sections on this page to help your organization decide on what to do if you are faced with this scenario.
+
+>[!IMPORTANT]
+> We highly encourage platform teams to have an easily accessible and efficient process for giving teams access to an Azure Sandbox Subscription/s that are homed within the corporate/primary Azure Active Directory tenant for the organization to help shadow IT scenarios from occurring and creating challenges in the future for all parties involved.
+>
+> Review the [Management groups guidance within the Resource organization design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) for more information on Sandboxes.
 
 ## Summary
 
