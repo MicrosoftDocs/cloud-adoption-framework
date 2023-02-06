@@ -16,9 +16,9 @@ Security governance and compliance is critical to Citrix DaaS deployments on Azu
 
 ## Design considerations and recommendations
 
-[Azure Policy](/azure/governance/policy/overview) is an important tool for Citrix on Azure deployments. Policies can help you adhere to security standards set by your cloud platform team, and provide automatic enforcement and reporting to support continuous regulatory compliance.
+[Azure Policy](/azure/governance/policy/overview) is an important tool for Citrix on Azure deployments. Policies can help you adhere to security standards set by your cloud platform team. Policies provide automatic enforcement and reporting to support continuous regulatory compliance.
 
-Review your policy baseline with your platform team per [Design area: Azure governance](../../../ready/enterprise-scale/security-governance-and-compliance.md#plan-for-governance). Apply policy definitions at the top-level root management group so you can assign them at inherited scopes.
+Review your policy baseline with your platform team per the [Design area: Azure governance](../../../ready/enterprise-scale/security-governance-and-compliance.md#plan-for-governance) guidelines. Apply policy definitions at the top-level root management group so you can assign them at inherited scopes.
 
 The following sections focus on identity, networking, and antivirus recommendations.
 
@@ -78,7 +78,7 @@ Narrow-scope service principals, while limited in scope, are still granted broad
 
 #### Citrix_Hosting_Connection role
 
-The JSON description of the **Citrix_Hosting_Connection** role has the minimum permissions needed to create a hosting connection. If you use only snapshots or only disks for machine catalog master images, you can remove the unused permission from the `actions` list.
+The following JSON description of the **Citrix_Hosting_Connection** role has the minimum permissions needed to create a hosting connection. If you use only snapshots or only disks for machine catalog master images, you can remove the unused permission from the `actions` list.
 
 ```json
 {
