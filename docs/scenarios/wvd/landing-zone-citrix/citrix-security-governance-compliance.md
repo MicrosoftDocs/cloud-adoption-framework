@@ -51,12 +51,12 @@ Depending on your Citrix Cloud and Azure AD configuration, you can add one or mo
 | Enterprise Application ID | Purpose |
 |:----|:----|
 | f9c0e999-22e7-409f-bb5e-956986abdf02 | Default connection between Azure AD and Citrix Cloud |
-| 1b32f261-b20c-4399-8368-c8f0092b4470 | Administrator invitations and signins |
-| e95c4605-aeab-48d9-9c36-1a262ef8048e | Workspace subscriber signin |
+| 1b32f261-b20c-4399-8368-c8f0092b4470 | Administrator invitations and sign-ins |
+| e95c4605-aeab-48d9-9c36-1a262ef8048e | Workspace subscriber sign-in |
 | 5c913119-2257-4316-9994-5e8f3832265b | Default connection between Azure AD and Citrix Cloud with Citrix Endpoint Management |
 | e067934c-b52d-4e92-b1ca-70700bd1124e | Legacy connection between Azure AD and Citrix Cloud with Citrix Endpoint Management | 
 
-Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Azure AD API. For example, the Workspace subscriber signin application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Azure Active Directory Permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html). 
+Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Azure AD API. For example, the Workspace subscriber sign-in application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Azure Active Directory Permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html). 
 
 ### Built-in roles
 
@@ -199,7 +199,7 @@ By using NSGs to allow only expected traffic in the Citrix Cloud environment, yo
 | VDA | \*.nssvc.net <br> \*.c.nssv.net <br> \*.g.nssv.net | TCP UDP | 443 | Gateway service domains and subdomains |
 | Citrix Provisioning Services | Cloud Connectors | HTTPS | 443 | Citrix Cloud Studio integration |
 | Citrix License Server | Citrix Cloud | HTTPS | 443 | Citrix Cloud Licensing integration |
-| CVAD Remote Powershell SDK | Citrix Cloud | HTTPS | 443 | Any system running remote PowerShell scripts via the SDK |
+| CVAD Remote PowerShell SDK | Citrix Cloud | HTTPS | 443 | Any system running remote PowerShell scripts via the SDK |
 | WEM Agent | WEM Service | HTTPS | 443 | Agent to service communication |
 | WEM Agent | Cloud Connectors | TCP | 443 | Registration traffic |
 
