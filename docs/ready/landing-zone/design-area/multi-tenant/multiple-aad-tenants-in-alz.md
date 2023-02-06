@@ -36,7 +36,7 @@ Your organization might be required to use multiple Azure Active Directory tenan
 
 The rest of this document will detail the scenarios for multiple Azure Active Directory tenants we commonly see for organizations as well as recommendations and considerations for Azure landing zone deployment and operations.
 
-## Why not one?
+## Why a single Azure Active Directory tenant is sufficient
 
 It is recommended to use your existing corporate Azure Active Directory tenant for Azure subscriptions for the best productivity and collaboration experience across the platform.
 

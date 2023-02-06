@@ -48,7 +48,7 @@ This section details key considerations and recommendations relating to Azure la
 
 ### Considerations
 
-- Always start with a ["why not one?" approach](multiple-aad-tenants-in-alz.md#why-not-one) to your Azure Active Directory tenant design
+- Always start with a [single tenant approach](multiple-aad-tenants-in-alz.md#why-a-single-azure-active-directory-tenant-is-sufficient) to your Azure Active Directory tenant design
   - This is typically the organizations corporate Azure Active Directory tenant, where the users identities exist and service like Microsoft 365 are running in.
   - Only create more Azure Active Directory tenants when clear requirements arise that can't be met using the corporate Azure Active Directory tenant.
 - Consider utilizing Azure Active Directory [Administrative Units](/azure/active-directory/roles/administrative-units) to provide management segregation and isolation of users, groups, and devices (for example different teams) within a single Azure Active Directory tenant, instead of creating multiple Azure Active Directory tenants
