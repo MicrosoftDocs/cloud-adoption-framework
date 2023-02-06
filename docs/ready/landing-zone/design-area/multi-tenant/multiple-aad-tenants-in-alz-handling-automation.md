@@ -29,6 +29,9 @@ For this reason we document multiple approaches below with guidance and diagrams
 
 There are two approaches that can be taken when automating the deployment of Azure landing zones across multiple Azure Active Directory tenants.
 
+>[!IMPORTANT]
+> This page is scoped to automating the deployment and operation of Azure Landing Zones as the platform in each Azure Active Directory tenant your organization might have. The approaches, recommendations, and considerations in this page are **not** intended to be used by application teams deploying and operating their services and applications into their landing zones (subscriptions). More information on the different types of landing zones can be found here in [Platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
+
 ### Approach 1 – Complete Isolation
 
 In this approach, the primary objective is to keep each Azure Active Directory tenant completely isolated from each other across all automation components:
