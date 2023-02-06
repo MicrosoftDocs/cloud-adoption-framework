@@ -31,20 +31,6 @@ items:
         href: eslz-business-continuity-and-disaster-recovery.md
       - name: Platform automation and DevOps
         href: eslz-platform-automation-and-devops.md
-    - name: Citrix on Azure design areas
-      items:
-      - name: Identity and access management
-        href: landing-zone-for-citrix/ctx-identity-and-access-management.md
-      - name: Network topology and connectivity
-        href: landing-zone-for-citrix/ctx-network-topology-and-connectivity.md
-      - name: Resource organization
-        href: landing-zone-for-citrix/ctx-resource-organization.md
-      - name: Security, governance and compliance disciplines
-        href: landing-zone-for-citrix/ctx-security-governance-and-compliance.md
-      - name: Management baseline
-        href: landing-zone-for-citrix/ctx-management-and-monitoring.md
-      - name: Business continuity and disaster recovery
-        href: landing-zone-for-citrix/ctx-business-continuity-and-disaster-recovery.md
     - name: Implementation options
       items:
       - name: Enterprise-scale landing zone for Azure Virtual Desktop
@@ -52,7 +38,21 @@ items:
       - name: Azure Architecture Center - Azure Virtual Desktop
         href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
       - name: Enterprise-scale landing zone for Citrix on Azure
-        href: landing-zone-for-citrix/ctx-enterprise-scale-landing-zone.md
+        href: landing-zone-citrix/citrix-enterprise-scale-landing-zone.md
+    - name: Citrix on Azure design areas
+      items:
+      - name: Identity and access management
+        href: landing-zone-citrix/citrix-identity-access-management.md
+      - name: Network topology and connectivity
+        href: landing-zone-citrix/citrix-network-topology-connectivity.md
+      - name: Resource organization
+        href: landing-zone-citrix/citrix-resource-organization.md
+      - name: Security, governance and compliance
+        href: landing-zone-citrix/citrix-security-governance-compliance.md
+      - name: Management baseline
+        href: landing-zone-citrix/citrix-management-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: landing-zone-citrix/citrix-business-continuity-disaster-recovery.md
 
   - name: Migrate your virtual desktop platform
     items:
