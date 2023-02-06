@@ -21,18 +21,23 @@ All of these resources are deployed within a single Azure Active Directory (AAD)
 
 Multiple Subscriptions can trust the same Azure Active Directory tenant. Each Subscription can only trust a single Azure Active Directory tenant. Read more on the relationship between an Azure Subscription and an Azure Active Directory tenant here in, [Add an existing Azure subscription to your tenant.](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 
->[!NOTE]
-> This article only covers the scope of Azure in detail. It does not cover guidance for Microsoft 365 or other Microsoft Cloud offerings, such as Dynamics 365 or Power Platform in the same level of detail.
-
 [![Diagram of single Azure Active Directory tenant with Azure Landing Zones deployed](media/alz-multi-tenant-1.png)](media/alz-multi-tenant-1.png#lightbox)
 
 As shown in the diagram above Management Groups, Azure Policies and Azure Subscriptions are deployed, following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), within a single Azure Active Directory tenant.
 
 Your organization might be required to use multiple Azure Active Directory tenants for many reasons, that is detailed [here](multiple-aad-tenants-in-alz-scenarios.md), and therefore guidance on [how to deploy and manage](multiple-aad-tenants-in-alz-handling-automation.md) the Azure landing zone deployment into each of these tenants is required alongside [considerations and recommendations](multiple-aad-tenants-in-alz-handling-c-r.md) for handling these multiple Azure Active Directory tenants.
 
+>[!NOTE]
+> This article only covers the scope of Azure in detail. It does not cover guidance for Microsoft 365 or other Microsoft Cloud offerings, such as Dynamics 365 or Power Platform in the same level of detail.
+>
+> It also focuses on the platform rather than applications that are built on top of the platform, see [platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones), in regards to tenants. If you are looking for guidance around application architecture and multiple Azure Active Directory tenants then review the following resources:
+>
+> - [Multi-tenant apps in Azure Active Directory](/azure/active-directory/develop/application-model#multi-tenant-apps)
+> - [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
+
 ## Why a single Azure Active Directory tenant is sufficient
 
-Before understanding the reasons you might require multiple Azure Active Directory tenants, it is first important to understand why a single Azure Active Directory tenant is normally sufficient and should be the default starting point for all organizations.
+Before understanding the reasons you might require multiple Azure Active Directory tenants, it's first important to understand why a single Azure Active Directory tenant is normally sufficient and should be the default starting point for all organizations.
 
 It is recommended to use your existing corporate Azure Active Directory tenant for Azure subscriptions for the best productivity and collaboration experience across the platform.
 
