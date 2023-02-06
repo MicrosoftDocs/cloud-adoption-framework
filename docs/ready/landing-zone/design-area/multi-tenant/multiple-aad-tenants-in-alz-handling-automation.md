@@ -42,6 +42,7 @@ In this approach, the primary objective is to keep each Azure Active Directory t
 - Identities used for performing tasks from automation. This could be:
   - Managed Identities assigned to self-hosted runners
   - Service Principals (SPNs)
+  - Users/Administrators
 
 [![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the complete isolation automation approach](media/alz-multi-tenant-3.png)](media/alz-multi-tenant-3.png#lightbox)
 
@@ -49,6 +50,12 @@ This approach does mean there are more components to manage that are duplicated 
 
 >[!NOTE]
 > If your organization only allows the use of Managed Identities for platform automation, then you must use this approach; or one that logs into each tenant individually. This is due to the limitation that Managed Identities do not support cross-tenant scenarios today, as documented [here](/azure/active-directory/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant).
+
+#### Identities for platform administrators and developers - Approach 1
+
+In this approach identities should also be isolated in each Azure Active Directory tenant, which therefore means each platform administrator/developer will require a separate user account within each tenant to use to perform operations within that tenant. These accounts will also be used to access the developer tooling, like GitHub or Azure DevOps, for each of the tenants. Careful considerations should be taken in regards to administrator and developer productivity impacts following this approach.
+
+Azure Active Directory B2B and/or Azure Lighthouse could be used, but this would bring into questions the reasoning for having separate Azure Active Directory tenants.
 
 ### Approach 2 – Shared Application Registration (multi-tenant) with Multiple Service Principals
 
@@ -75,6 +82,12 @@ You might decide to have separate pipelines for each Azure Active Directory tena
 > The role of Owner and User Access Role are typically required in all Azure landing zone deployment scenarios which therefore rules Azure Lighthouse out as an option for the entire platform automation deployment aspect of Azure landing zones.
 > 
 > However, it can still be useful in some scenarios as documented in [Azure Lighthouse usage in ALZ multi-tenant](multiple-aad-tenants-in-alz-handling-lighthouse.md)
+
+#### Identities for platform administrators and developers - Approach 2
+
+In this approach platform administrators and developers primarily only need access to the managing Azure Active Directory tenant, which will also grant them access to the developer tooling, like GitHub or Azure DevOps, that all the tenants are deployed and operated from.
+
+They might also have access into the other Azure Active Directory tenants via Azure Active Directory B2B or Azure Lighthouse using their same account from the managing tenant or they might have separate accounts as detailed in [approach one](#approach-1--complete-isolation).
 
 ## Next steps
 
