@@ -58,7 +58,7 @@ This section details key considerations and recommendations relating to Azure la
   - Can these support and handle multiple Azure Active Directory tenants?
 - Consider the impact to end-users having to manage, govern and secure multiple identities for themselves
 - Consider the impact on cross-tenant collaboration, especially from an end-users perspective, before deciding on multiple Azure Active Directory tenants
-  - The Microsoft 365 collaboration experience and support between users inside a single Azure Active Directory tenant is optimal
+  - The Microsoft 365 collaboration experience and support between users within a single Azure Active Directory tenant is optimal
 - Consider the impact to auditing and regulatory compliance checks across multiple Azure Active Directory tenants before choosing an approach
 - Consider the increase in licensing costs when multiple Azure Active Directory tenants are used
   - Licenses for products like Azure Active Directory Premium P1/P2 or Microsoft 365 services don't span across Azure Active Directory tenants

@@ -30,7 +30,7 @@ Now the Azure landing zones architecture is understood, we can detail what this 
 
 [![Diagram of single Azure Active Directory tenant with Azure Landing Zones deployed](media/alz-multi-tenant-1.png)](media/alz-multi-tenant-1.png#lightbox)
 
-As shown in the diagram above Management Groups, Azure Policies and Azure Subscriptions are deployed, following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), inside of a single Azure Active Directory tenant.
+As shown in the diagram above Management Groups, Azure Policies and Azure Subscriptions are deployed, following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), within a single Azure Active Directory tenant.
 
 Your organization might be required to use multiple Azure Active Directory tenants for many reasons, that will be covered later in this article, and therefore guidance on how to deploy and manage the Azure landing zone deployment into each of these tenants is required alongside recommendations and considerations for handling these multiple Azure Active Directory tenants.
 
