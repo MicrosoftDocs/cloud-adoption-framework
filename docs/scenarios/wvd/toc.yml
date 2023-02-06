@@ -47,7 +47,7 @@ items:
         href: landing-zone-citrix/citrix-network-topology-connectivity.md
       - name: Resource organization
         href: landing-zone-citrix/citrix-resource-organization.md
-      - name: Security, governance and compliance
+      - name: Security governance and compliance
         href: landing-zone-citrix/citrix-security-governance-compliance.md
       - name: Management baseline
         href: landing-zone-citrix/citrix-management-monitoring.md
