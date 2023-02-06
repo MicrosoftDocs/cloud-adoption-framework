@@ -1,5 +1,5 @@
 ---
-title: Handling ALZ across Multiple AAD tenants - Azure Lighthouse usage in ALZ multi-tenant
+title: Handling ALZ across Multiple Azure Active Directory tenants - Azure Lighthouse usage in ALZ multi-tenant
 description: Understand how Azure Lighthouse can be used in environments with Multiple Azure Active Directory tenants with Azure Landing Zones
 author: jtracey93
 ms.author: jatracey
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Handling ALZ across Multiple AAD tenants - Azure Lighthouse usage in ALZ multi-tenant
+# Handling ALZ across Multiple Azure Active Directory tenants - Azure Lighthouse usage in ALZ multi-tenant
 
 [Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, higher automation, and enhanced governance across resources. Azure Lighthouse can be adopted in ALZ scenarios whether in single or multi-tenant architectures.
 
@@ -46,4 +46,4 @@ This architecture also allows application landing zone owners to be granted acce
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple AAD tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
+> [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)

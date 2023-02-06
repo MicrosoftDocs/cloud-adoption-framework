@@ -1,5 +1,5 @@
 ---
-title: Handling ALZ across Multiple AAD tenants - Automation Considerations & Recommendations
+title: Handling ALZ across Multiple Azure Active Directory tenants - Automation Considerations & Recommendations
 description: Review the automation considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure Landing Zones
 author: jtracey93
 ms.author: jatracey
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Handling ALZ across Multiple AAD tenants - Automation Considerations & Recommendations
+# Handling ALZ across Multiple Azure Active Directory tenants - Automation Considerations & Recommendations
 
 This page details considerations and recommendations regarding automating your Azure landing zones deployments when handling multiple Azure Active Directory tenants.
 
@@ -65,4 +65,4 @@ In the example we show a single App Registration in the `contoso.onmicrosoft.com
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple AAD Tenants - Canary Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-canary.md)
+> [Handling ALZ across Multiple Azure Active Directory Tenants - Canary Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-canary.md)

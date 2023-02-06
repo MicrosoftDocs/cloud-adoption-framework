@@ -1,5 +1,5 @@
 ---
-title: Handling ALZ across Multiple AAD tenants - Considerations & Recommendations
+title: Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations
 description: Review the considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure Landing Zones
 author: jtracey93
 ms.author: jatracey
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Handling ALZ across Multiple AAD tenants - Considerations & Recommendations
+# Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations
 
 As per the outlined information, in this [article](multiple-aad-tenants-in-alz.md), on how Management Groups, Azure Policy and Subscriptions interact and operate with Azure Active Directory tenants and the limitation of these operating only within a single Azure Active Directory tenant, this means that if multiple Azure Active Directory tenants exist or are required for an organization then Azure landing zones must be deployed into each of the Azure Active Directory tenants separately.
 
@@ -22,10 +22,10 @@ The above diagram shows an example of the Contoso Corporation, which has four Az
 
 | Azure Active Directory tenant `*.onmicrosoft.com` Domain | Usage Notes                                                                                                                                                                                        |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `contoso.onmicrosoft.com`                  | Primary “Corporate” AAD tenant used by Contoso Corporation. Azure & Microsoft 365 services are used in this tenant.                                                                                |
-| `fabrikam.onmicrosoft.com`                 | Primary AAD tenant used by Fabrikam. Azure & Microsoft 365 services are used in this tenant. This has remained separated since Acquisition by Contoso Corporation.                                 |
-| `tailwind.onmicrosoft.com`                 | Primary AAD tenant used by Tailwind. Azure & Microsoft 365 services are used in this tenant. This has remained separated since Acquisition by Contoso Corporation.                                 |
-| `contoso365test.onmicrosoft.com`           | AAD tenant used by Contoso Corporation for testing Azure Active Directory & Microsoft 365 services and configuration **only**. All Azure environments live within the `contoso.onmicrosoft.com` Azure Active Directory tenant. |
+| `contoso.onmicrosoft.com`                  | Primary Corporate Azure Active Directory tenant used by Contoso Corporation. Azure & Microsoft 365 services are used in this tenant.                                                                                |
+| `fabrikam.onmicrosoft.com`                 | Primary Azure Active Directory tenant used by Fabrikam. Azure & Microsoft 365 services are used in this tenant. This has remained separated since Acquisition by Contoso Corporation.                                 |
+| `tailwind.onmicrosoft.com`                 | Primary Azure Active Directory tenant used by Tailwind. Azure & Microsoft 365 services are used in this tenant. This has remained separated since Acquisition by Contoso Corporation.                                 |
+| `contoso365test.onmicrosoft.com`           | Azure Active Directory tenant used by Contoso Corporation for testing Azure Active Directory & Microsoft 365 services and configuration **only**. All Azure environments live within the `contoso.onmicrosoft.com` Azure Active Directory tenant. |
 
 The above diagram shows an example of the Contoso Corporation who originally started out with one Azure Active Directory tenant of `contoso.onmicrosoft.com`. However, over time they made multiple acquisitions of other companies and brought these companies into the Contoso Corporation.
 
@@ -65,13 +65,13 @@ This section details key considerations and recommendations relating to Azure la
 - A single Enterprise Agreement Enrollment can support and provide Subscriptions to multiple Azure Active Directory tenants by setting the Auth level on the enrollment to Work and School Account Cross tenant, see: [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant)
 - A single Microsoft Customer Agreement can support and provide Subscriptions to multiple Azure Active Directory tenants, see: [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants)
 - Consider the limitations that might be introduced and brought to the forefront for application teams and developers when opting for an Azure Active Directory multi-tenant architecture relating to limitations for Azure Active Directory Integration for Azure products and services, such as Azure Virtual Desktop, Azure Files, Azure SQL etc.
-  - See [Azure Products & Services AAD Integration section](#azure-products--services-aad-integration) detailing this topic further.
+  - See [Azure Products & Services Azure Active Directory Integration section](#azure-products--services-aad-integration) detailing this topic further.
 
-#### Azure Products & Services AAD Integration
+#### Azure Products & Services Azure Active Directory Integration
 
-Today many, if not all Azure products & services don't support Azure Active Directory B2B as part of their native AAD integration and there are only several services that support AAD B2B authentication as part of their AAD integrations. it's safer to that by default services don't support Azure Active Directory B2B as part of their Azure Active Directory integration.
+Today many, if not all Azure products & services don't support Azure Active Directory B2B as part of their native Azure Active Directory integration and there are only several services that support Azure Active Directory B2B authentication as part of their Azure Active Directory integrations. it's safer to that by default services don't support Azure Active Directory B2B as part of their Azure Active Directory integration.
 
-To summarize the challenge, for services that provide a native integration with Azure Active Directory, such as Azure Storage, Azure SQL, Azure Files, Azure Virtual Desktop, they provide a "one-click", or "no-click", style approach to integrate with AAD where they require [authentication and authorization](/azure/active-directory/develop/authentication-vs-authorization) scenarios as part of their service or offering. However, this is commonly only supported against the “home tenant” (the Azure Subscription relationship to AAD is detailed further [here](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)), while only some services might enable support for AAD B2B/B2C scenarios.
+To summarize the challenge, for services that provide a native integration with Azure Active Directory, such as Azure Storage, Azure SQL, Azure Files, Azure Virtual Desktop, they provide a "one-click", or "no-click", style approach to integrate with Azure Active Directory where they require [authentication and authorization](/azure/active-directory/develop/authentication-vs-authorization) scenarios as part of their service or offering. However, this is commonly only supported against the “home tenant” (the Azure Subscription relationship to Azure Active Directory is detailed further [here](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)), while only some services might enable support for Azure Active Directory B2B/B2C scenarios.
 
 Taking the above into consideration it's important to carefully consider to which Azure Active Directory tenant your Azure Subscriptions will be associated to, as this will dictate as to which products/services, and their features, are able to be used by application/workload teams that need to support the identities and from which tenant; normally identities in the corporate Azure Active Directory tenant.
 
@@ -102,4 +102,4 @@ This can be avoided if you utilize a single Azure Active Directory tenant as the
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple AAD Tenants - Automation Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-automation.md)
+> [Handling ALZ across Multiple Azure Active Directory Tenants - Automation Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-automation.md)

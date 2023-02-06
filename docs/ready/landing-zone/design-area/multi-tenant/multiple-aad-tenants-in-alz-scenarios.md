@@ -114,4 +114,4 @@ As detailed in the scenarios there are multiple reasons that might lead your org
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple AAD tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
+> [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
