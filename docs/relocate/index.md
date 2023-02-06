@@ -15,7 +15,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The relocate guidance shows you how to set up a relocation project and relocate one or more workloads.
 
-:::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Diagram showing the relocation process. There are two phases and five steps. The first phase is the Initiate phase, and it has one step called Initiate. The second phase is the Move phase. It has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
+:::image type="content" source="../_images/relocate/caf-relocate.png" alt-text="Diagram showing the relocation process. There are two phases and five steps. The first phase is the Initiate phase, and it has one step called Initiate. The second phase is the Move phase, and it has four steps that you repeat for each workload. The steps are Evaluate, Select, Migrate, and Cutover." lightbox="../_images/relocate/caf-relocate.png" border="false":::
 
 ## What is relocation?
 
