@@ -58,6 +58,9 @@ For these reasons, organizations need to be clear on why they're deviating from 
 
 Another concern is around the power of the Global Administrator (Global Admin) role. The Global Admin role does provide the highest level of permissions available within an Azure Active Directory tenant and in the context of Azure, any Global Admin is able to assume control of any Azure subscription linked to the Azure Active Directory tenant, as documented [here](/azure/role-based-access-control/elevate-access-global-admin).
 
+>[!IMPORTANT]
+> [Azure Active Directory Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) should be used to help protect this, and other privileged, roles within Azure Active Directory and Azure.
+
 The ownership of this role across internal teams/department can provide a challenge as the Identity team and the Azure team are often in different teams, departments, org structures.
 
 The teams that operate Azure, as detailed [here](/azure/cloud-adoption-framework/organize/#understand-required-cloud-functions), are responsible for Azure services and rightfully want to ensure the security of the services of which they manage, and this can result in a level of nervousness when individuals outside of that team have roles with the power to, potentially, access their environments.
