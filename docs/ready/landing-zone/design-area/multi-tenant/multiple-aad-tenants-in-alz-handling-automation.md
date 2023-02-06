@@ -12,7 +12,18 @@ ms.custom: think-tank
 
 # Handling ALZ across Multiple Azure Active Directory tenants - Automation Considerations & Recommendations
 
-This page details considerations and recommendations regarding automating your Azure landing zones deployments when handling multiple Azure Active Directory tenants.
+When your organization has multiple Azure Active Directory tenants with Azure Landing Zones (ALZ) in each of them, one or multiple times, automation is key to successfully operating and maintaining the ALZ deployment at scale across all of the tenants. There are however multiple approaches to automating ALZ deployments across multiple tenants and the decision on which approach to take will depend on the reasons your organization has multiple Azure Active Directory tenants.
+
+For example, if you have multiple Azure Active Directory Tenants because you are an ISV, then it's likely that you want to keep your corporate and SaaS solutions Azure Active Directory tenants separate in all aspects to reduce the risk of of any operation or deployment to either tenant could ever impact the other, whether intended or by mistake.
+
+For this reason we document multiple approaches below with guidance and diagrams on how these look and work to help you chose the correct approach based on your requirements as well as considerations and recommendations regarding automating your Azure landing zones deployments when handling multiple Azure Active Directory tenants.
+
+>[!NOTE]
+> If you haven't read the following pages already then it is highly recommended to do so before carrying on with this page:
+>
+> - [Multiple Azure Active Directory tenants in ALZ - Overview](multiple-aad-tenants-in-alz.md)
+> - [Multiple Azure Active Directory tenants in ALZ - Scenarios](multiple-aad-tenants-in-alz-scenarios.md)
+> - [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
 
 ## Approaches
 
