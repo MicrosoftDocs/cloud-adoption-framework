@@ -60,4 +60,4 @@ Design guidance for [Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-
 
 Review the critical design considerations and recommendations for identity and access management specific to the deployment of Citrix on Azure.
 
-- [Identity and access management](citrix-identity-and-access-management.md)
+- [Identity and access management](citrix-identity-access-management.md)
