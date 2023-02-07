@@ -12,24 +12,26 @@ ms.custom: internal
 
 <!-- TODO: Refactor terms: "design area", "well-architected" -->
 
-# Azure landing zone design areas
+# Azure landing zone design areas and conceptual architecture
 
-Each Azure landing zone implementation option provides a deployment approach and defined design principles. Learn about these design areas before choosing an implementation option.
+The Azure landing zone conceptual architecture below is an example of scaled-out target architecture intended to help organizations operate successful cloud environments that drive their business while maintaining best practices for security and governance. Each Azure landing zone implementation option provides a deployment approach and defined design principles. Learn about these design areas before choosing an implementation option. Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) and modify it to fit your specific business and technical requirements when planning your landing zone implementation.
 
-![Azure landing zone design areas](./media/alz-design-areas.svg)
+:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
 ## Environment design areas
 
-Whatever the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends.
+Whatever the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends. The desing areas are indicated with the letters "A" through "I" to illustrate the heriarchy of resource organization in the conceptual archtecture. 
 
 | Design area | Objective | Relevant methodology |
 |--|--|--|
-| [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
-| [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
-| [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
-| [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
+| ![The letter A](./media/a.png) [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
+| ![The letter B](./media/b.png) [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
+| ![The letter E](./media/e.png) [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
+| ![The letter C](./media/c.png) [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
 
 ## Compliance design areas
+
+![Azure landing zone design areas](./media/alz-design-areas.svg)
 
 Security, governance, and compliance are key topics when designing and building an Azure environment. These topics help you start from strong foundations and ensure that solid ongoing processes and controls are in place.
 
@@ -39,10 +41,10 @@ As the organization's cloud environment develops, these compliance design areas 
 
 | Design area | Objective | Relevant methodology |
 |--|--|--|
-| [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. | Secure |
-| [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
-| [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
-| [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
+| ![The letter F](./media/f.png) [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. | Secure |
+| ![The letter D](./media/d.png) , ![The letter G](./media/g.png), ![The letter H](./media/h.png)[Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
+| ![The letter C](./media/c.png), ![The letter D](./media/d.png) [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
+| ![The letter I](./media/i.png) [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
 
 ## Design area process
 
