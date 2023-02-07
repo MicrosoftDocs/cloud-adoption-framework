@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Citrix: Management baseline considerations for Citrix on Azure
+# Management baseline considerations for Citrix on Azure
 
 Management and monitoring are critical to any customer that deploys Citrix DaaS (desktop as a service) on Azure. To achieve operational excellence and success you should properly design your Citrix DaaS environment with management and monitoring in mind.
 
@@ -47,7 +47,7 @@ Here is the list of perfmon counters to monitor for all Citrix servers in the de
 - Memory\Available Bytes
   - This counter is the amount of memory that's not allocated to processes or cache.
   - Alert when the available amount of RAM is under 20% of the total RAM for a 5-minute interval.
-  - Use Task Manager or Citrix Monitor to determine which processes are consuming the most CPU. Identify any configuration changes that could reduce that level of RAM consumption. Use this metric with the Memory Pages/sec and Paging File %usage counters.
+  - Use Task Manager or Citrix Monitor to determine which processes are consuming the most RAM. Identify any configuration changes that could reduce that level of RAM consumption. Use this metric with the Memory Pages/sec and Paging File %usage counters.
   - If all processes are consuming the expected amount of memory, then it's time to increase the capacity of the server or the delivery group.
 - Memory\Pages/sec
   - This counter is the number of pages per second that are swapped from disk to running memory.
@@ -60,9 +60,9 @@ Here is the list of perfmon counters to monitor for all Citrix servers in the de
   - Use Task Manager to look for applications that are causing the page file usage. Investigate possible alternative configurations. Use this metric with the Memory Available Bytes and Memory Pages/sec counters.
   - If possible, increase the amount of RAM available to the host.
 - LogicalDisk\%Disk Time (_total)
-  - This counter represents the amount of time that the Logical disk is active.
+  - This counter represents the amount of time that the logical disk is active.
   - Alert when the % disk time is greater than 90% for 15 minutes.
-  - using Task Manager or Citrix Monitor to look for applications that are causing the high disk usage. Investigate what might be causing the high disk usage. Use this metric with other logical and physical disk metrics.
+  - Use Task Manager or Citrix Monitor to look for applications that are causing the high disk usage. Investigate what might be causing the high disk usage. Use this metric with other logical and physical disk metrics.
   - If all activity looks normal, look for a way to move the applications to disks that have higher performing disk subsystems.
 - LogicalDisk\Current disk queue length
   - This counter represents the number transactions that waiting for the logical disk to process requests.
@@ -70,19 +70,19 @@ Here is the list of perfmon counters to monitor for all Citrix servers in the de
   - Use Task Manager or Citrix Monitor to look for applications that are causing the high disk usage. Investigate what might be causing the high disk usage. Use this metric with other logical and physical disk metrics.
   - If all activity looks normal, look for a way to move the applications to disks that have higher performing disk subsystems.
 - PhysicalDisk\%Disk Time (_total)
-  - This counter represents the amount of time that phe Physical disk is active.
+  - This counter represents the amount of time that the Physical disk is active.
   - Alert when the % disk time is greater than 90% for 15 minutes.
   - Use Task Manager or Citrix Monitor to look for applications that are causing the high disk usage. Investigate what might be causing the high disk usage. Use this metric with other logical and physical disk metrics.
   - If all activity looks normal, look for a way to move the applications to disks that have higher performing disk subsystems.
 - PhysicalDisk\Current disk queue length
-  - This counter represents the number transactions that waiting for the physical disk to process them.
+  - This counter represents the number of transactions that are waiting for the physical disk to process their disk requests.
   - Alert when the current disk queue is greater than 3 for 15 minutes.
   - Use Task Manager or Citrix Monitor to look for applications that are causing the high disk usage. Investigate what might be causing the high disk usage. Use this metric with other logical and physical disk metrics.
   - If all activity looks normal, look for a way to move the applications to disks that have higher performing disk subsystems.
 - Network Interface\Bytes Total/sec
   - This counter shows the rate at which the network adaptor is processing data packets for the network.
-  - Alert when Bytes Total per second is greater than 80% of the NIC’s capacity for 5 minutes.
-  - Use Task Manager Ltp ;ook for applications that are causing the high network usage. Try to determine what might be causing the high network utilization. Use this metric with other logical and physical network metrics.
+  - Alert when Bytes Total per second is greater than 80% of the NIC capacity for 5 minutes.
+  - Use Task Manager to look for applications that are causing the high network usage. Try to determine what might be causing the high network utilization. Use this metric with other logical and physical network metrics.
   - If all activity looks normal, look for a way to increase the network bandwidth or increase the capacity to the delivery group.
 - User Input Delay per Session\Max Input Delay
   - This metric provides the maximum input delay for the session in milliseconds. The metric measures the time from when the user provides mouse or keyboard input until the input is processed by the system.
@@ -100,7 +100,7 @@ Here are some general recommendations and practices to consider as you use these
 - Set your monitoring data retention to as short a period as possible for your business requirements. Most monitoring data is only useful for a short period of time. Save costs by not storing monitoring data long-term. Create an automation job to clean up stale data in your storage accounts.
 - Azure includes alerts for metrics, logs, service outages, planned maintenance, monthly cost, and security. Using alerts can be a life saver. This article provides many recommendations about alerts to create for your Citrix deployment. Implement the ones that make the most sense in your environment. Send critical alerts via SMS and email to ensure they're acted upon quickly. Set a reminder on your calendar each quarter to update the alert notification lists.
 - Monitoring and alerting on a metric comes with a monthly cost. Choose wisely which metrics to track. If you don't plan on taking action when an alert fires, then consider whether the metric has value.
-- Setup a custom dashboard for your Citrix resource groups and enable links to key services such as Sentinel, Service Health, Traffic Analytics, and Advisor. Include on the dashboard charts that show the performance of your ExpressRoute or VPN connections, your Cloud Connectors, and Citrix VDA hosts. to protect sensitive information, restrict dashboard access to only those individuals who need it..
+- Set up a custom dashboard for your Citrix resource groups and enable links to key services such as Sentinel, Service Health, Traffic Analytics, and Advisor. On the dashboard, include  charts that show the performance of your ExpressRoute or VPN connections, your Cloud Connectors, and Citrix VDA hosts. To protect sensitive information, restrict dashboard access to only those individuals who need it.
 - When troubleshooting an issue, look at multiple data sources to help correlate the symptoms to the root cause. For instance, if the average logon duration is high, you can view the metrics in Azure to determine where resource constraints exist.
 - Enabling Traffic Analytics and NSG logs is the best way to see if traffic is originating from unexpected locations. Using this information you can streamline your network communications. Use the information to create Azure policies that block inbound traffic from those unexpected locations.
 
