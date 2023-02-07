@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Strategic benefits of an Azure Virtual Desktop
+# Strategic benefits of a virtual desktop
 
 When you plan your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
@@ -65,6 +65,12 @@ When deciding whether to adopt Azure Virtual Desktop, your cloud strategy should
 - Infrastructure hosting contracts lock in vendors for multiple years. If your contracts for hosting, managed services, or maintenance are nearing renewal, consider migrating to Azure services for greater agility, innovation opportunities, and streamlined operation of your mission-critical platforms.
 
 - Refresh and contract renewals can be triggered by upgrade cycles of on-premises virtual desktop services or a business driver to adopt Azure Virtual Desktop. Cloud adoption provides opportunities to reduce costs, innovate, optimize, and be more agile.
+
+## Reasons to move to Citrix DaaS
+
+Citrix DaaS simplifies the delivery and management of virtual apps and desktop technologies, helping organizations extend existing on-premises software deployments or move completely to the cloud.
+
+Citrix DaaS enables secure access to Windows, Linux, and Web apps, and Windows and Linux virtual desktops. Citrix DaaS lets you manage apps and desktops centrally across multiple resource locations or clouds while maintaining a great end user experience.
 
 ## Build a business justification for cloud migration
 
