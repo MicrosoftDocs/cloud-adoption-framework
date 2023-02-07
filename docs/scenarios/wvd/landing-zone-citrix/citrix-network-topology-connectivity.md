@@ -81,5 +81,5 @@ To learn more about Azure networking best practices and how to plan for virtual 
 
 Review the critical design considerations and recommendations for management and monitoring specific to the deployment of Citrix on Azure.
 
-- [Management and monitoring](citrix-management-and-monitoring.md)
+- [Management and monitoring](citrix-management-monitoring.md)
 
