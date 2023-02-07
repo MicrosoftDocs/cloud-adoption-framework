@@ -12,9 +12,12 @@ ms.custom: think-tank, e2e-avd
 
 # Business continuity and disaster recovery considerations for Citrix on Azure
 
+This article describes how you can improve business continuity and disaster recovery (BDCR) for a Citrix on Azure environment. 
+
 ## Citrix design considerations
 
-Design considerations for Citrix technologies are summarized in [Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix Tech Zone. This guide assists with business continuity and disaster recovery (BCDR) architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
+Design considerations for Citrix technologies are summarized in [Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix Tech Zone. This guide assists with BCDR architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
+
 When you deploy Citrix on Azure, we recommended that you follow the same design considerations for [optimal storage for profile and Office containers](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery#optimal-storage-for-profile-and-office-containers), [golden image availability](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery#golden-image-availability), and [infrastructure and application dependencies](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery#infrastructure-and-application-dependencies) that you would follow for Azure Virtual Desktop.
 
 Because Azure VM availability isn't guaranteed by default (including for reserved instances), we recommend that you use the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature to ensure sufficient availability within the required regions when it's most needed. 
