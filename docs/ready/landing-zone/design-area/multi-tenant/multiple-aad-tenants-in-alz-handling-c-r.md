@@ -65,9 +65,12 @@ This section details key considerations and recommendations relating to Azure la
 - A single Enterprise Agreement Enrollment can support and provide Subscriptions to multiple Azure Active Directory tenants by setting the Auth level on the enrollment to Work and School Account Cross tenant, see: [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant)
 - A single Microsoft Customer Agreement can support and provide Subscriptions to multiple Azure Active Directory tenants, see: [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants)
 - Consider the limitations that might be introduced and brought to the forefront for application teams and developers when opting for an Azure Active Directory multi-tenant architecture relating to limitations for Azure Active Directory Integration for Azure products and services, such as Azure Virtual Desktop, Azure Files, Azure SQL etc.
-  - See [Azure Products & Services Azure Active Directory Integration section](#azure-products--services-aad-integration) detailing this topic further.
+  - See [Azure Products & Services Azure Active Directory Integration section](#azure-products--services-azure-active-directory-integration) detailing this topic further.
+- Consider utilizing [Azure Active Directory B2B](/azure/active-directory/external-identities/what-is-b2b) to simplify and enhance user experience and administration when your organization has multiple Azure Active Directory Tenants
 - The Microsoft identity platform, using Azure Active Directory with B2B and B2C capabilities, to enable developers to create applications in a single Azure subscription, within a single tenant, to support users from a many identity sources.
   - Review [Multi-tenant apps](/azure/active-directory/develop/application-model#multi-tenant-apps)
+  - Review [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
+- Consider utilizing the various features available for multi-tenant organizations as detailed in [What is a multi-tenant organization in Azure Active Directory?](/azure/active-directory/multi-tenant-organizations/overview)
 
 #### Azure Products & Services Azure Active Directory Integration
 
@@ -100,6 +103,12 @@ This can be avoided if you utilize a single Azure Active Directory tenant as the
   - Consider making approvers from multiple teams approve Global Administrator usage.
 - Enable monitoring/notifications on Global Administrator role activation to all required stakeholders.
 - Ensure that the "Access management for Azure resources" setting on Global Administrators is set to `No` were it's not required.
+- Enable and configure the following Azure Active Directory services and features to simplify the mutli-tenant experiences for administration and users within your organization:
+  - [B2B collaboration](/azure/active-directory/external-identities/what-is-b2b)
+  - [B2B direct connect](/azure/active-directory/external-identities/b2b-direct-connect-overview)
+  - [Cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview)
+  - [Cross-tenant synchronization (preview)](/azure/active-directory/multi-tenant-organizations/cross-tenant-synchronization-overview)
+- If you are an organization with Azure Active Directory tenant in multiple Microsoft Clouds, like Microsoft Azure commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration (Preview)](/azure/active-directory/external-identities/cross-cloud-settings) to simplify users experiences when collaborating across tenants
 - Application teams and developers should review the following resources when constructing applications and services for multi-tenancy
   - [Multi-tenant apps in Azure Active Directory](/azure/active-directory/develop/application-model#multi-tenant-apps)
   - [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
