@@ -10,7 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Citrix: Identity and access considerations for Citrix on Azure
+# Identity and access considerations for Citrix on Azure
+
+This article discusses the various ways of providing identity and access control services for Citrix.
 
 ## Design considerations
 
