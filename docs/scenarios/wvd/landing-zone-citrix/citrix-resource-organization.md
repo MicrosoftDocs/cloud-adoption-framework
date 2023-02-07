@@ -42,7 +42,7 @@ The following considerations can help you decide between a single-subscription o
 
 In a multiple-subscription architecture, you should deploy management components in a Citrix Shared Services subscription. The virtual apps and desktops should be contained in Workload subscriptions. [Azure management groups](/azure/governance/management-groups/overview) aren't needed for every Citrix deployment on Azure. However, if you use a multiple-subscription approach, management groups can help you simplify the application of Azure governance requirements to the overall Citrix deployment.
 
-You can start with single subscription and switch to a multiple-subscription approach later. [Host connections](https://docs.citrix.com/en-us/citrix-daas/install-configure/resource-location/azure-resource-manager.html#connection-to-azure-resource-manager) in Citrix Cloud are modular and enable you to add new Azure subscriptions and share images across subscriptions for flexible growth. During the design process, establish the requirements and process to add new subscriptions so the team is prepared operationally if this becomes a requirement.
+You can start with a single subscription and switch to a multiple-subscription approach later. [Host connections](https://docs.citrix.com/en-us/citrix-daas/install-configure/resource-location/azure-resource-manager.html#connection-to-azure-resource-manager) in Citrix Cloud are modular and enable you to add new Azure subscriptions and share images across subscriptions for flexible growth. During the design process, establish the requirements and process to add new subscriptions so the team is prepared operationally if this becomes a requirement.
 
 ## Next steps
 

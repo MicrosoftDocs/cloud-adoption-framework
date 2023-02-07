@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-avd
 
 Employees need a consistent experience and seamless access to vital applications and insights whether they work in the office, on the road, or at home. In this reference implementation, Citrix and Microsoft partner to accelerate the future of work.
 
-This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started), it's best to use this solution after you implement an [enterprise-scale landing zone](../../../ready/landing-zone/index.md). For more information, see [Landing zone implementation options](../../../ready/landing-zone/implementation-options.md).
+This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator#getting-started), it's best to use this solution after you implement an [enterprise-scale landing zone](../../../ready/landing-zone/index.md). For more information, see [Landing zone implementation options](../../../ready/landing-zone/implementation-options.md).
 
 ## Potential use cases
 
@@ -40,7 +40,7 @@ The following diagram shows a reference architecture that demonstrates major des
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in a Citrix Cloud and Azure environment.](../media/citrix-cloud-azure-virtual-desktop-architecture.png)](../media/citrix-cloud-azure-virtual-desktop-architecture.png#lightbox)
 
-Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx) here.
+[Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
 ## Design guidelines
 
@@ -48,10 +48,10 @@ Design guidelines for the Cloud Adoption Framework for Citrix Cloud in an Azure 
 
 - [Enterprise enrollment](../eslz-enterprise-enrollment.md)
 - [Identity and access management](citrix-identity-access-management.md)
-- [Network topology and connectivity](citrix-network-topology-connectivity.md)
 - [Resource organization](citrix-resource-organization.md)
-- [Security, governance, and compliance](citrix-security-governance-compliance.md)
+- [Network topology and connectivity](citrix-network-topology-connectivity.md)
 - [Management and monitoring](citrix-management-monitoring.md)
+- [Security governance and compliance](citrix-security-governance-compliance.md)
 - [Business continuity and disaster recovery](citrix-business-continuity-disaster-recovery.md)
 
 Design guidance for [Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/citrix-daas-azure.html) is available on Citrix TechZone. This guidance highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
