@@ -290,7 +290,7 @@ items:
                 href: ready/landing-zone/design-area/multi-tenant/overview.md
               - name: Scenarios
                 href: ready/landing-zone/design-area/multi-tenant/scenarios.md
-              - name: Handling ALZ across multiple tenants
+              - name: Handling Azure Landing Zones across multiple tenants
                 items:
                   - name: Considerations & recommendations
                     href: ready/landing-zone/design-area/multi-tenant/considerations-recommendations.md
