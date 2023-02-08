@@ -27,4 +27,4 @@ However, if you're a customer that is following a [Deployment Stamps pattern](/a
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Azure Lighthouse usage in Azure Landing Zones multi-tenant scenarios](lighhouse.md)
+> [Azure Lighthouse usage in Azure Landing Zones multi-tenant scenarios](lighthouse.md)

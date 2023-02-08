@@ -284,22 +284,22 @@ items:
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
-          - name: Multiple Azure AD Tenants in ALZ
+          - name: Azure Landing Zones and multiple Azure Active Directory tenants
             items:
               - name: Overview
-                href: ready/landing-zone/design-area/multi-tenant/multiple-aad-tenants-in-alz.md
+                href: ready/landing-zone/design-area/multi-tenant/overview.md
               - name: Scenarios
-                href: ready/landing-zone/design-area/multi-tenant/multiple-aad-tenants-in-alz-scenarios.md
-              - name: Handling ALZ across Multiple AAD Tenants
+                href: ready/landing-zone/design-area/multi-tenant/scenarios.md
+              - name: Handling ALZ across multiple tenants
                 items:
                   - name: Considerations & recommendations
-                    href: ready/landing-zone/design-area/multi-tenant/multiple-aad-tenants-in-alz-handling-c-r.md
-                  - name: Automation Considerations & recommendations
-                    href: ready/landing-zone/design-area/multi-tenant/multiple-aad-tenants-in-alz-handling-automation.md
-                  - name: Canary Considerations & recommendations
-                    href: ready/landing-zone/design-area/multi-tenant/multiple-aad-tenants-in-alz-handling-canary.md
-                  - name: Azure Lighthouse usage in ALZ Multi-Tenant
-                    href: ready/landing-zone/design-area/multi-tenant/multiple-aad-tenants-in-alz-handling-lighthouse.md
+                    href: ready/landing-zone/design-area/multi-tenant/considerations-recommendations.md
+                  - name: Automation considerations & recommendations
+                    href: ready/landing-zone/design-area/multi-tenant/automation.md
+                  - name: Canary considerations & recommendations
+                    href: ready/landing-zone/design-area/multi-tenant/canary.md
+                  - name: Azure Lighthouse considerations, recommendations and usage scenarios
+                    href: ready/landing-zone/design-area/multi-tenant/lighthouse.md
 
         - name: Identity and access management
           items:
