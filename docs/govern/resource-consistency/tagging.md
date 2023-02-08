@@ -36,9 +36,9 @@ Your tags should include context about the resource's associated workload or app
 
 Use the following resources to help define your tagging strategy:
 
-- Apply the [minimum suggested tags](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging#minimum-suggested-tags) listed in the ready methodology.
+- Apply the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md#minimum-suggested-tags) listed in the ready methodology.
 - Use an owner tag to capture the owner of the resource.
-- Consider implementing relevant [other common tagging examples](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging#other-common-tagging-examples) from the ready methodology.
+- Consider implementing relevant [other common tagging examples](../../ready/azure-best-practices/resource-tagging.md#other-common-tagging-examples) from the ready methodology.
 
 ## Enforce
 

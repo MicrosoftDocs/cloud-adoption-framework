@@ -36,7 +36,7 @@ Cutover is when you direct traffic away from the source region and to the worklo
 **Modernize workloads.** Depending on the state of your workload, you might want to continue with our adopt guidance for modernizing workloads with Azure platform-as-a-service solutions (PaaS) or conduct a well-architected review to determine areas of improvement.
 
 > [!div class="nextstepaction"]
-> [Modernize workloads](/azure/cloud-adoption-framework/modernize/)
+> [Modernize workloads](../modernize/index.md)
 > [!div class="nextstepaction"]
 > [Azure Well-Architected Framework](/azure/architecture/framework/)
 > [!div class="nextstepaction"]

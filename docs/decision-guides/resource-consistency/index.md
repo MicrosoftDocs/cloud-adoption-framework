@@ -55,7 +55,7 @@ By combining resource groups and standardized Resource Manager templates, you ca
 
 For example, you might have a requirement that all virtual machines deployed within your subscription connect to a common subnet managed by your central IT team. Use a standard template for deploying workload VMs to create a separate resource group for the workload and deploy the required VMs there. This resource group has a policy rule to only allow network interfaces within the resource group to be joined to the shared subnet.
 
-For a more in-depth discussion of enforcing your policy decisions within a cloud deployment, see [Policy enforcement](../policy-enforcement/index.md).
+For a more in-depth discussion of enforcing your policy decisions within a cloud deployment, see [Policy enforcement](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition).
 
 ## Hierarchical consistency
 

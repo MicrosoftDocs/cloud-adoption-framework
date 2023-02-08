@@ -12,7 +12,7 @@ ms.date: 11/17/2022
 
 # Manufacturing HPC network topology and connectivity
 
-This guidance builds on considerations and recommendations defined in the Azure landing zone article for [network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity). Following the guidance in this article helps you examine key design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
+This guidance builds on considerations and recommendations defined in the Azure landing zone article for [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md). Following the guidance in this article helps you examine key design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and HPC deployments.
 
 ## Plan for IP address, virtual network, and subnets
 
@@ -116,7 +116,7 @@ Design considerations for HPC implementations:
  - Traffic isn't currently encrypted when you use Azure ExpressRoute to configure private peering.
  - It isn't necessary to encrypt traffic over ExpressRoute for HPC deployments. IPsec tunnels encrypt internet traffic by default. Encryption or decryption could negatively affect the traffic's performance.
 
-It's up to the customer to determine whether HPC traffic should be encrypted. Explore [network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#define-network-encryption-requirements) to understand network encryption options in enterprise-scale landing zones.
+It's up to the customer to determine whether HPC traffic should be encrypted. Explore [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md#define-network-encryption-requirements) to understand network encryption options in enterprise-scale landing zones.
 
 It's vital to plan for IP address needs in Azure to ensure that:
 
