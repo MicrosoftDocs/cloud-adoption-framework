@@ -36,7 +36,7 @@ Infrastructure as Code technologies are *idempotent* meaning that running it mul
 
 This means that if you have an Infrastructure as Code definition for an Azure resource, you can run that definition as often as you want and it will only create a change if:
 
-- The definition has changed, to add, remove, or modify resources.
+- The definition has changed, to add new resources, remove resource previously deployed, or modify resource previously deployed.
 - The deployed resource has drifted from the configuration, to reset the configuration to the defined one.
 
 This means that Infrastructure as Code is exceptional at restoring state, removing resources that are no longer needed, and managing the lifecycle of resources through many changes.
