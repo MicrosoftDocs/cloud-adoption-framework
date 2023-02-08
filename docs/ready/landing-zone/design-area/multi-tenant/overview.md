@@ -1,5 +1,5 @@
 ---
-title: Multiple Azure Active Directory tenants in Azure Landing Zones
+title: Azure Landing Zones and multiple Azure Active Directory tenants
 description: Understand how multiple Azure Active Directory tenants work within the context of Azure Landing Zones
 author: jtracey93
 ms.author: jatracey
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Multiple Azure Active Directory tenants in Azure Landing Zones
+# Azure Landing Zones and multiple Azure Active Directory tenants
 
 Azure landing zones are built upon [Management Groups](/azure/governance/management-groups/overview) to which [Azure Policies](/azure/governance/policy/overview) are assigned to and Subscriptions placed into the Management Groups to provide the required governance controls that an organization needs to meet its security and compliance needs.
 
@@ -83,4 +83,4 @@ Azure Active Directory does provide controls that help mitigate this problem on 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Multiple Azure Active Directory tenants in ALZ - Scenarios](scenarios.md)
+> [Scenarios for multiple Azure Active Directory tenants](scenarios.md)

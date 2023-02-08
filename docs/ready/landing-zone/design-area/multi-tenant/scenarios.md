@@ -1,5 +1,5 @@
 ---
-title: Multiple Azure Active Directory tenants in ALZ - Scenarios
+title: Scenarios for multiple Azure Active Directory tenants
 description: Understand the scenarios when Multiple Azure Active Directory tenants could be required in relation to Azure Landing Zones
 author: jtracey93
 ms.author: jatracey
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Multiple Azure Active Directory tenants in ALZ - Scenarios
+# Scenarios for multiple Azure Active Directory tenants
 
 There are a few reasons that an organization might justify multiple Azure Active Directory tenants or investigate whether they need multiple Azure Active Directory tenants. The most common scenarios are:
 
@@ -114,4 +114,4 @@ As detailed in the scenarios there are multiple reasons that might lead your org
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](considerations-recommendations.md)
+> [Considerations & Recommendations for multi-tenant Azure Landing Zone scenarios](considerations-recommendations.md)

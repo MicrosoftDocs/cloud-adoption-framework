@@ -1,5 +1,5 @@
 ---
-title: Handling ALZ across Multiple Azure Active Directory tenants - Automation Considerations & Recommendations
+title: Automating Azure Landing Zones across multiple tenants
 description: Review the automation considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure Landing Zones
 author: jtracey93
 ms.author: jatracey
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Handling ALZ across Multiple Azure Active Directory tenants - Automation Considerations & Recommendations
+# Automating Azure Landing Zones across multiple tenants
 
 When your organization has multiple Azure Active Directory tenants with Azure Landing Zones (ALZ) in each of them, one or multiple times, automation is key to successfully operating and maintaining the ALZ deployment at scale across all of the tenants. There are however multiple approaches to automating ALZ deployments across multiple tenants and the decision on which approach to take will depend on the reasons your organization has multiple Azure Active Directory tenants.
 
@@ -21,9 +21,9 @@ For this reason we document multiple approaches below with guidance and diagrams
 >[!NOTE]
 > If you haven't read the following pages already then it is highly recommended to do so before carrying on with this page:
 >
-> - [Multiple Azure Active Directory tenants in ALZ - Overview](overview.md)
-> - [Multiple Azure Active Directory tenants in ALZ - Scenarios](scenarios.md)
-> - [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](considerations-recommendations.md)
+> - [Scenarios for multiple Azure Active Directory tenants](overview.md)
+> - [Scenarios for multiple Azure Active Directory tenants](scenarios.md)
+> - [Considerations & Recommendations for multi-tenant Azure Landing Zone scenarios](considerations-recommendations.md)
 
 ## Approaches
 
@@ -92,4 +92,4 @@ They might also have access into the other Azure Active Directory tenants via Az
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory Tenants - Canary Considerations & Recommendations](canary.md)
+> [Azure Landing Zones Canary approach with multiple tenants](canary.md)

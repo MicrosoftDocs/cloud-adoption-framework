@@ -1,5 +1,5 @@
 ---
-title: Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations
+title: Considerations & Recommendations for multi-tenant Azure Landing Zone scenarios
 description: Review the considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure Landing Zones
 author: jtracey93
 ms.author: jatracey
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations
+# Considerations & Recommendations for multi-tenant Azure Landing Zone scenarios
 
 As per the outlined information, in this [article](overview.md), on how Management Groups, Azure Policy and Subscriptions interact and operate with Azure Active Directory tenants and the limitation of these operating only within a single Azure Active Directory tenant, this means that if multiple Azure Active Directory tenants exist or are required for an organization then Azure landing zones must be deployed into each of the Azure Active Directory tenants separately.
 
@@ -116,4 +116,4 @@ This can be avoided if you utilize a single Azure Active Directory tenant as the
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory Tenants - Automation Considerations & Recommendations](automation.md)
+> [Automating Azure Landing Zones across multiple tenants](automation.md)
