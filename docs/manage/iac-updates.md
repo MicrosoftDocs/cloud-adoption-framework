@@ -86,7 +86,7 @@ Infrastructure as Code also provides a unique option to catch configuration drif
 
 Periodic Landing Zone updates with Infrastructure as Code can help you catch this configuration drift, and allow you to update the code appropriately, address these misconfigurations via the update, or address them in some other way.
 
-You can review [Operational compliance considerations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-operational-compliance#operational-compliance-recommendations) for additional guidance on monitoring configuration drift.
+You can review [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance#operational-compliance-recommendations)
 
 ## Next steps
 
