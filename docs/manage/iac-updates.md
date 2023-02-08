@@ -16,18 +16,6 @@ This article explains the benefits of using Infrastructure as Code to update Azu
 
 To understand more about why you will want to update your Landing Zone, visit [Keep your Azure landing zone up to date](../govern/resource-consistency/keep-azure-landing-zone-up-to-date)
 
-<!-- The below can be removed if it is covered in the above area.
-Updates to the Landing Zone can be based on a variety of triggers, such as:
-
-- New technologies may become available and need to be deployed as part of the Connectivity, Identity, or Management platform services
-- There might be changes to Azure Policies, based on refinements on the defined Policies by Microsoft or changing use cases for customer created policies
-- There may be the need to expand the Landing Zone to more regions
-- There may be the need to broaden the management group structure to accommodate new architecture patterns or to address acquisitions
-- Some other business event.
-
-Ultimately, these changes will lead to updates driven either by customer changes, or by new solutions and recommendations that needs to be aligned to.
--->
-
 ## What does Infrastructure as Code do?
 
 Infrastructure as Code, abbreviated as IaC, refers to the practice and tools for managing the lifecycle of infrastructure resources using machine-readable definition files.  The definition for the infrastructure is written, and then can be versioned, deployed through pipelines, and become a part of the deployment for workloads.
@@ -68,11 +56,11 @@ This means that instead of having an operator or engineer compile the informatio
 
 Due to the programmatic nature of the deployments, Infrastructure as Code can be used to reduce human error while making changes.  Because it only changes what is defined, and it has preview options, it can reduce outages caused by failed or incomplete changes.  In addition, there are improved options for testing.
 
-### Version Control
+### Version Control and History
 
-Because Infrastructure as Code deployments are backed by a definition file, you can use source control to manage the versions of your definitions.
+Because Infrastructure as Code deployments are backed by a definition file, you can use source control to manage the versions of your definitions.  Depending on the method of Infrastructure as Code you use, you can also reference Deployments in Azure (for Bicep) or your state file (for Terraform) to review the history of deployments that have previously taken place.
 
-For example, you could create a new branch of the code to add changes, and be able to keep those separate from the "production" deployment definition until you are ready to make changes.
+Using source control practices, a new branch of your Infrastructure as Code should be created to add changes and revisions.  This branch's history in your source control system will capture the iterations and changes.  Deployments with it can be done to a test environment (see [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md)) until the changes are ready to be merged in and deployed to production.  All throughout this cycle, the deployment records will capture what version was used, and what resources were deployed, giving you a highly visible history.
 
 ### Testing Environments
 
@@ -84,6 +72,14 @@ For example, if you wanted to replace your Azure Firewall with one using the Pre
 
 Infrastructure as Code also provides a unique option to catch configuration drifts during updates.  Not only can the deployment catch changes to the definition file, it can present instances where resources have been configured differently from the definition.
 
+When you make a change to resources via the portal, CLI, or other non-Infrastructure as Code method, the change will go through.  When you next run a deployment through Infrastructure as Code, the comparison to the code defined state and the actual state in the portal is able to be flagged (using what-if or plan functions).  This can be used to identify that an environment has been modified outside of the code file.
+
+Once identified, Infrastructure as Code can be run to reset the resources to the correct configuration.  This is the default in Terraform, but requires using a Complete function in Bicep.  This can let you repair unauthorized changes.
+
+Changes that are defined in the portal can be cumbersome to implement back in to Infrastructure as Code.  They require updating the code to match the current state, which often involves reviewing each resource changed and updating its parameters to match the "as is" configuration.
+
+As a result, if you are using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts who have access to make changes directly, such as using Privileged Identity Management.  See [Security Baseline discipline overview](../govern/security-baseline/) and [Identity Baseline discipline overview](../identity/security-baseline/) for guidance on this.
+
 Periodic Landing Zone updates with Infrastructure as Code can help you catch this configuration drift, and allow you to update the code appropriately, address these misconfigurations via the update, or address them in some other way.
 
 You can review [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance#operational-compliance-recommendations)
@@ -92,5 +88,5 @@ You can review [Operational compliance considerations](../ready/landing-zone/des
 
 You can learn more about managing Azure Landing Zones with Infrastructure as Code by referencing these two repositories:
 
-- [ALZ Bicep](https://github.com/Azure/ALZ-Bicep)
-- [ALZ Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale)
+- [ALZ Bicep](https://aka.ms/alz/bicep)
+- [ALZ Terraform](https://aka.ms/alz/terraform)
