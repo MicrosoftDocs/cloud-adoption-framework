@@ -116,7 +116,7 @@ Design considerations for HPC implementations:
  - Traffic isn't currently encrypted when you use Azure ExpressRoute to configure private peering.
  - It isn't necessary to encrypt traffic over ExpressRoute for HPC deployments. IPsec tunnels encrypt internet traffic by default. Encryption or decryption could negatively affect the traffic's performance.
 
-It's up to the customer to determine whether HPC traffic should be encrypted. Explore [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md#define-network-encryption-requirements) to understand network encryption options in enterprise-scale landing zones.
+It's up to the customer to determine whether HPC traffic should be encrypted. Explore [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) to understand network encryption options in enterprise-scale landing zones.
 
 It's vital to plan for IP address needs in Azure to ensure that:
 
