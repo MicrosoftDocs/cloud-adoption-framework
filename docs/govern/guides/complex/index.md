@@ -27,15 +27,15 @@ These best practices serve as a foundation for your organization to quickly and 
 
 ### Resource organization
 
+Refer to the [management group](azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscription](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment.  The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
+
 The following diagram contains the governance MVP hierarchy for resource organization.
 
 ![Diagram of resource organization.](../../../_images/govern/resource-organization.png)
 
-Deploy every application in the appropriate area of your management group, subscription, and resource group hierarchy. During deployment planning, your cloud governance team needs to create the necessary nodes in this hierarchy to empower your cloud adoption teams.
+#### Additional recommendations
 
-- For each business unit, define a management group with a detailed hierarchy reflecting geography first, then environment type (such as production or nonproduction environment).
-
-- Create both a production subscription and a nonproduction subscription for each unique combination of geography or discrete business unit. Plan carefully when creating multiple subscriptions. For more information, see the [subscription decision guide](../../../ready/landing-zone/design-area/resource-org-subscriptions.md).
+- Deploy every application in the appropriate area of your management group, subscription, and resource group hierarchy. During deployment planning, your cloud governance team needs to create the necessary nodes in this hierarchy to empower your cloud adoption teams.
 
 - Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) within each level of your grouping hierarchy.
 
@@ -43,9 +43,7 @@ Deploy every application in the appropriate area of your management group, subsc
 
 - Consider [region selection](../../../migrate/azure-best-practices/multiple-regions.md) so you can ensure that networking, monitoring, and auditing are in place for failover/failback and confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services/).
 
-![Resource organization example for a large enterprise.](../../../_images/govern/large-enterprise-resource-organization.png)
-
-These patterns provide room for growth without unnecessarily complicating your hierarchy.
+The Azure landing zone conceptual architecture patterns provide room for growth without unnecessarily complicating your hierarchy.
 
 [!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
