@@ -1,6 +1,6 @@
 ---
 title: Subscription vending
-description: 
+description: Subscription vending
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 02/28/2023
@@ -29,7 +29,7 @@ Consistency/standardizing --> velocity to onboard apps to Azure
 
 Subscription vending is often setup, managed and operated by a Platform Team/CCoE. It is then consumed, normally via an integration with an ITSM tool to handle business approval logic, by anyone across the organization.
 
-:::image type="content" source="./media/subscription-vending-steps.png" alt-text="Diagram showing the place of subscription vending in the workload lifecycle." lightbox="./media/subscription-vending-steps.png" border="false":::
+:::image type="content" source="./media/subscription-vending-steps.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-steps.png" border="false":::
 
 ### Business logic and approval
 
