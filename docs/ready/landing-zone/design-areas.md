@@ -2,15 +2,14 @@
 title: Azure landing zone design areas
 description: Learn how to evaluate a set of standard considerations that are used to define all Azure landing zones.
 author: martinekuan
-ms.author: martinek
-ms.date: 12/07/2021
+ms.author: tozimmergren
+ms.reviewer: tozimmergren
+ms.date: 02/08/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
-
-<!-- TODO: Refactor terms: "design area", "well-architected" -->
 
 # Azure landing zone design areas and conceptual architecture
 
@@ -20,14 +19,14 @@ The Azure landing zone conceptual architecture below is an example of scaled-out
 
 ## Environment design areas
 
-Whatever the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends. The desing areas are indicated with the letters "A" through "I" to illustrate the heriarchy of resource organization in the conceptual archtecture. 
+Whatever the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends. The design areas are indicated with the letters "A" through "I" to illustrate the hierarchy of resource organization in the conceptual architecture.
 
-| Design area | Objective | Relevant methodology |
-|--|--|--|
-| ![The letter A](./media/a.png) [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
-| ![The letter B](./media/b.png) [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
-| ![The letter E](./media/e.png) [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
-| ![The letter C](./media/c.png) [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
+| Legend | Design area | Objective | Relevant methodology |
+|--|--|--|--|
+| ![The letter A](./media/diagram-legends/a.png) | [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
+| ![The letter B](./media/diagram-legends/b.png) | [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
+| ![The letter E](./media/diagram-legends/e.png) | [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
+| ![The letter C](./media/diagram-legends/c.png) | [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
 
 ## Compliance design areas
 
@@ -37,14 +36,14 @@ Security, governance, and compliance are key topics when designing and building 
 
 The tools and processes you implement for managing environments play an important role in detecting and responding to issues. These tools work alongside the controls that help maintain and demonstrate compliance.
 
-As the organization's cloud environment develops, these compliance design areas will be the focus for iterative refinement. This refinement might be because of new applications that introduce specific new requirements, or the business requirements changing. For example, in response to a new compliance standard.
+As the organization's cloud environment develops, these compliance design areas are the focus for iterative refinement. This refinement might be because of new applications that introduce specific new requirements, or the business requirements changing. For example, in response to a new compliance standard.
 
-| Design area | Objective | Relevant methodology |
-|--|--|--|
-| ![The letter F](./media/f.png) [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. | Secure |
-| ![The letter D](./media/d.png) , ![The letter G](./media/g.png), ![The letter H](./media/h.png)[Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
-| ![The letter C](./media/c.png), ![The letter D](./media/d.png) [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
-| ![The letter I](./media/i.png) [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
+| Legend | Design area | Objective | Relevant methodology |
+|--|--|--|--|
+| ![The letter F](./media/diagram-legends/f.png) | [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. | Secure |
+| ![The letter D](./media/diagram-legends/d.png) , ![The letter G](./media/diagram-legends/g.png), ![The letter H](./media/diagram-legends/h.png) | [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
+| ![The letter C](./media/diagram-legends/c.png), ![The letter D](./media/diagram-legends/d.png) | [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
+| ![The letter I](./media/diagram-legends/i.png) | [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
 
 ## Design area process
 
@@ -52,13 +51,13 @@ These design areas describe what to consider before deploying a landing zone. To
 
 Evaluating each of the design areas sequentially provides a process that simplifies the design of any complex environments. If you've already addressed one or more of the design areas to your satisfaction, move on to the next area.
 
-In this process, you'll be provided with a list of roles or functions that are typically required to make design decisions. You'll also see a series of considerations, recommendations, and scope boundaries to help shape the discussion and decision-making process.
+In this process, you're provided with a list of roles or functions that are typically required to make design decisions. You also see a series of considerations, recommendations, and scope boundaries to help shape the discussion and decision-making process.
 
 ## Next steps
 
 You can implement these design areas over time so that you can grow into your cloud operating model. Review the methodologies related to each of the design areas to understand in more detail the considerations and decisions required to implement a landing zone.
 
-Within each design area, you'll find considerations to help shape your internal discussions and recommendations. These considerations provide specific guidance to help align your journey to the Azure landing zone conceptual architecture.
+Within each design area, you find considerations to help shape your internal discussions and recommendations. These considerations provide specific guidance to help align your journey to the Azure landing zone conceptual architecture.
 
 Alternately, there are rich, opinionated implementation options that start with a defined position on each design area.
 
