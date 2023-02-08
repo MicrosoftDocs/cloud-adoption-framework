@@ -48,7 +48,7 @@ For Azure, there are two main options for Infrastructure as Code:
 
 You can learn more about planning for automation of Landing Zones by referencing the [Automation](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/considerations/automation#platform-automation-design-recommendation) article.
 
-## Benefits of updating ALZs with Infrastructure as Code
+## Benefits of updating ALZ with Infrastructure as Code
 
 The following are the key benefits to using Infrastructure as Code to make your Landing Zone Updates.
 
