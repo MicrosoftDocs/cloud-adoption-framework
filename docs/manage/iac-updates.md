@@ -92,5 +92,5 @@ You can review [Operational compliance considerations](https://learn.microsoft.c
 
 You can learn more about managing Azure Landing Zones with Infrastructure as Code by referencing these two repositories:
 
-- [ALZ Bicep](https://github.com/Azure/ALZ-Bicep)
+- [ALZ Bicep](https://aka.ms/alz/bicep)
 - [ALZ Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale)
