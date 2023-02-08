@@ -421,8 +421,8 @@ items:
             items:
             - name: Automation
               href: ready/considerations/automation.md
-            - name: Subscription automation
-              href: read/considerations/
+          - name: Subscription vending
+            href: ready/landing-zone/design-area/subscription-vending.md
           - name: DevOps
             items:
             - name: DevOps considerations
