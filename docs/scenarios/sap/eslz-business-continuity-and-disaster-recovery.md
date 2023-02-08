@@ -29,7 +29,7 @@ Your organization needs to design platform-level capabilities that can help appl
 Your architecture needs to incorporate principles that address on-premises business continuity and disaster recovery (BCDR) scenarios. These principles also apply on Azure. The main difference is that Azure might have more hardware capacity than your on-premises environment to compensate for a host failure. You can auto-recover even the largest Azure VMs by setting them up to restart on another server. Set up your Azure deployments to use the same conditions as your on-premises deployments. If you deployed on-premises systems or bare-metal hardware by using automatic failover cluster configurations, deploy them the same way on Azure.
 - Service/business process availability.
 - Recovery time objectives (RTOs) during failure or disaster scenarios. 
-- Recovery point objectives (RPOs) for a failure scenarios. For example, its the amount of acceptable data loss for your SAP application if a recovery needs to be done during a widespread failure that affect a datacenter or an Azure region.
+- Recovery point objectives (RPOs) for failure scenarios. 
 - Operational and lifecycle management tasks with technology that fills in for failure scenarios. These management tasks include patching guest operating systems and database management systems, cloning, and refreshing the SAP systems.
 
 > [!TIP]
