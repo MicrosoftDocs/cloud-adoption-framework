@@ -39,7 +39,7 @@ This means that if you have an Infrastructure as Code definition for an Azure re
 - The definition has changed, to add, remove, or modify resources.
 - The deployed resource has drifted from the configuration, to reset the configuration to the defined one.
 
-This means that Infrastructure as Code is exceptional at restoring state, removing resources that are no longer needed, and managing the life cycle of resources through many changes.
+This means that Infrastructure as Code is exceptional at restoring state, removing resources that are no longer needed, and managing the lifecycle of resources through many changes.
 
 For Azure, there are two main options for Infrastructure as Code:
 
