@@ -150,20 +150,9 @@ If you use availability zones in your SAP solution, design all other Azure servi
 - Beside Azure native shared storage services, traditional NFS cluster (Based on DRBD Replication), Gluster FS or Clusterd Shared Disk with Storage Space Direct could be utilized used as an alternative shared storage solution to run SAP workload on Azure. Specially when Azure native shared storage services are either not available in the targeted Azure region or does not support target architecture. Please check [Azure Products by Region](https://azure.microsoft.com/global-infrastructure/services/) to find the available storage services in different Azure Region.
 - Please follow [Storage recommendation and guidelines for setting up Disater Recovery](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/sap/disaster-recovery-overview-guide#storage) to learn different storage options available for SAP Workload on Azure. 
 
-### Backup/restore
-
-### Design recommendations for backup and restore
-
-- You can use Azure Backup to back up SAP application server and central-services VMs.
-- You can use Azure Backup for backing up the Databases in SAP landscape like SAP HANA, MSSQL, Oracle etc. For more information, explore the support matrix for [backing up SAP HANA databases on Azure VMs](/azure/backup/sap-hana-backup-support-matrix).
-- Test the backup and recovery times to verify if they meet your RTO.
-- Ideally, avoid pulling your backups from Azure into your on-premises backup infrastructure, especially with large databases. This option impacts how much bandwidth the ExpressRoute circuits consume.
-
 ## Backup and restore
 
 The following sections describe design considerations and recommendations for backup and restore in an SAP scenario.
-
-### Design considerations for backup and restore
 
 Although backup and restore isn't typically considered an adequate high-availability solution for a production SAP workload, the technology provides other benefits. Most companies that use SAP applications need to follow compliance regulations that require the storage of backups for many years. It's also essential to have a backup and be able to restore from it in other scenarios. The assumption is that you've already established and are following backup and restore best practices for SAP applications, which means that you can:
 
