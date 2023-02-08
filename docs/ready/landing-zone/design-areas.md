@@ -41,8 +41,8 @@ As the organization's cloud environment develops, these compliance design areas 
 | Legend | Design area | Objective | Relevant methodology |
 |--|--|--|--|
 | ![The letter F](./media/diagram-legends/f.png) | [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. | Secure |
-| ![The letter D](./media/diagram-legends/d.png) , ![The letter G](./media/diagram-legends/g.png), ![The letter H](./media/diagram-legends/h.png) | [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
-| ![The letter C](./media/diagram-legends/c.png), ![The letter D](./media/diagram-legends/d.png) | [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
+| ![The letter D](./media/diagram-legends/d.png) ![The letter G](./media/diagram-legends/g.png) ![The letter H](./media/diagram-legends/h.png) | [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
+| ![The letter C](./media/diagram-legends/c.png) ![The letter D](./media/diagram-legends/d.png) | [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
 | ![The letter I](./media/diagram-legends/i.png) | [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
 
 ## Design area process
