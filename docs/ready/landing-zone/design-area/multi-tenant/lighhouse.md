@@ -39,11 +39,11 @@ Below is an ALZ specific scenarios where Azure Lighthouse is used across multipl
 
 Using Azure Lighthouse to allow Azure Policy for Private Endpoints Private DNS Zone automatic linking, as per [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale), in "spoke" Azure Active Directory tenants to the centralized Private DNS Zones in the "Hub" Azure Active Directory tenant.
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using Azure Lighthouse in the Private DNS at Scale scenario](media/alz-multi-tenant-5.png)](media/alz-multi-tenant-5.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using Azure Lighthouse in the Private DNS at Scale scenario](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
 
 This architecture also allows application landing zone owners to be granted access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations, if a different approach is being used to manage the Private Endpoints DNS configuration.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
+> [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](considerations-recommendations.md)

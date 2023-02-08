@@ -22,9 +22,9 @@ However, if you're a customer that is following a [Deployment Stamps pattern](/a
 > This would more commonly be seen in a Managed Service Provider (MSP) environment where the MSP is managing several Azure Active Directory tenants for different clients that are all similar apart from their naming.
 
 >[!TIP]
-> Customers following Deployment Stamp style pattern might also benefit from following the [Automation Approach 2 – Shared Application Registration (multi-tenant) with Multiple Service Principals](multiple-aad-tenants-in-alz-handling-automation.md#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals)
+> Customers following Deployment Stamp style pattern might also benefit from following the [Automation Approach 2 – Shared Application Registration (multi-tenant) with Multiple Service Principals](automation.md#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals)
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory tenants - Azure Lighthouse usage in ALZ multi-tenant](multiple-aad-tenants-in-alz-handling-automation.md)
+> [Handling ALZ across Multiple Azure Active Directory tenants - Azure Lighthouse usage in ALZ multi-tenant](automation.md)

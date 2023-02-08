@@ -109,9 +109,9 @@ For more information review the [Mergers and Acquisitions](#mergers-and-acquisit
 
 ## Summary
 
-As detailed in the scenarios there are multiple reasons that might lead your organization to require multiple Azure Active Directory Tenants. However, when creating multiple tenants to meet the requirements within these scenarios it's important to understand that the additional complexity and operational tasks that will be required to maintain multiple tenants across an organization as well as the potentially increased costs from additional licensing requirements. For more information, [Considerations and Recommendations for Azure Landing Zones in multi-tenant Scenarios](multiple-aad-tenants-in-alz-handling-c-r.md) for more information.
+As detailed in the scenarios there are multiple reasons that might lead your organization to require multiple Azure Active Directory Tenants. However, when creating multiple tenants to meet the requirements within these scenarios it's important to understand that the additional complexity and operational tasks that will be required to maintain multiple tenants across an organization as well as the potentially increased costs from additional licensing requirements. For more information, [Considerations and Recommendations for Azure Landing Zones in multi-tenant Scenarios](considerations-recommendations.md) for more information.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
+> [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](considerations-recommendations.md)

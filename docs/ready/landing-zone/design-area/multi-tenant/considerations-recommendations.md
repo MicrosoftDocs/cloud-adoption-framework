@@ -12,11 +12,11 @@ ms.custom: think-tank
 
 # Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations
 
-As per the outlined information, in this [article](multiple-aad-tenants-in-alz.md), on how Management Groups, Azure Policy and Subscriptions interact and operate with Azure Active Directory tenants and the limitation of these operating only within a single Azure Active Directory tenant, this means that if multiple Azure Active Directory tenants exist or are required for an organization then Azure landing zones must be deployed into each of the Azure Active Directory tenants separately.
+As per the outlined information, in this [article](overview.md), on how Management Groups, Azure Policy and Subscriptions interact and operate with Azure Active Directory tenants and the limitation of these operating only within a single Azure Active Directory tenant, this means that if multiple Azure Active Directory tenants exist or are required for an organization then Azure landing zones must be deployed into each of the Azure Active Directory tenants separately.
 
 ## Topology of Azure landing zones with multiple Azure AD tenants
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed](media/alz-multi-tenant-2.png)](media/alz-multi-tenant-2.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed](media/contoso-multi-tenant.png)](media/contoso-multi-tenant.png#lightbox)
 
 The above diagram shows an example of the Contoso Corporation, which has four Azure Active Directory tenants due to mergers and acquisitions as the corporation has grown over time.
 
@@ -48,11 +48,11 @@ This section details key considerations and recommendations relating to Azure la
 
 ### Considerations
 
-- Always start with a [single tenant approach](multiple-aad-tenants-in-alz.md#why-a-single-azure-active-directory-tenant-is-sufficient) to your Azure Active Directory tenant design
+- Always start with a [single tenant approach](overview.md#why-a-single-azure-active-directory-tenant-is-sufficient) to your Azure Active Directory tenant design
   - This is typically the organizations corporate Azure Active Directory tenant, where the users identities exist and service like Microsoft 365 are running in.
   - Only create more Azure Active Directory tenants when clear requirements arise that can't be met using the corporate Azure Active Directory tenant.
 - Consider utilizing Azure Active Directory [Administrative Units](/azure/active-directory/roles/administrative-units) to provide management segregation and isolation of users, groups, and devices (for example different teams) within a single Azure Active Directory tenant, instead of creating multiple Azure Active Directory tenants
-- Consider the extra [complexities](multiple-aad-tenants-in-alz.md#complexities-with-multiple-azure-active-directory-tenants) in managing, governing, configuring, monitoring and securing multiple Azure Active Directory tenants
+- Consider the extra [complexities](overview.md#complexities-with-multiple-azure-active-directory-tenants) in managing, governing, configuring, monitoring and securing multiple Azure Active Directory tenants
   - A single Azure Active Directory tenant is simpler to manage, govern and secure
 - Consider your JML (Joiners, Movers, Leavers) process, workflows and tooling
   - Can these support and handle multiple Azure Active Directory tenants?
@@ -92,7 +92,7 @@ This can be avoided if you utilize a single Azure Active Directory tenant as the
 - Use a single Azure Active Directory tenant, usually the corporate Azure Active Directory tenant and only create more Azure Active Directory tenants when clear and justified requirements arise that can't be met using the corporate Azure Active Directory tenant.
 - Use Azure Active Directory multi-tenant applications, were possible, when creating integrations from operational tooling, such as ServiceNow, when connecting them to multiple Azure Active Directory tenants, as per the [guidance here](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools)
 - If you're an ISV review this specific guidance [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
-- Utilize Azure Lighthouse were possible, to simplify cross-tenant management experiences. [See Azure Lighthouse usage in ALZ multi-tenant](multiple-aad-tenants-in-alz-handling-lighthouse.md)
+- Utilize Azure Lighthouse were possible, to simplify cross-tenant management experiences. [See Azure Lighthouse usage in ALZ multi-tenant](lighthouse.md)
 - Create Account Owners, Invoice Section Owners, Subscription Creators on your Enterprise Agreement Enrollments or Microsoft Customer Agreements that are homed in the destination Azure Active Directory tenant for the Subscriptions they'll create to avoid having to [Change Directories on Azure Subscriptions](/azure/role-based-access-control/transfer-subscription) once created.
   - [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant)
   - [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants)
@@ -116,4 +116,4 @@ This can be avoided if you utilize a single Azure Active Directory tenant as the
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory Tenants - Automation Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-automation.md)
+> [Handling ALZ across Multiple Azure Active Directory Tenants - Automation Considerations & Recommendations](automation.md)

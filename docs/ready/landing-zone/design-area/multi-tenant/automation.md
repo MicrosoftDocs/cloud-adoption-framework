@@ -21,9 +21,9 @@ For this reason we document multiple approaches below with guidance and diagrams
 >[!NOTE]
 > If you haven't read the following pages already then it is highly recommended to do so before carrying on with this page:
 >
-> - [Multiple Azure Active Directory tenants in ALZ - Overview](multiple-aad-tenants-in-alz.md)
-> - [Multiple Azure Active Directory tenants in ALZ - Scenarios](multiple-aad-tenants-in-alz-scenarios.md)
-> - [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-c-r.md)
+> - [Multiple Azure Active Directory tenants in ALZ - Overview](overview.md)
+> - [Multiple Azure Active Directory tenants in ALZ - Scenarios](scenarios.md)
+> - [Handling ALZ across Multiple Azure Active Directory tenants - Considerations & Recommendations](considerations-recommendations.md)
 
 ## Approaches
 
@@ -44,7 +44,7 @@ In this approach, the primary objective is to keep each Azure Active Directory t
   - Service Principals (SPNs)
   - Users/Administrators
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the complete isolation automation approach](media/alz-multi-tenant-3.png)](media/alz-multi-tenant-3.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the complete isolation automation approach](media/automation-approach-1.png)](media/automation-approach-1.png#lightbox)
 
 This approach does mean there are more components to manage that are duplicated per Azure Active Directory tenant, however, this might be a requirement for some organizations that have regulatory compliance controls enforced upon them that mandates this type of segregation and isolation.
 
@@ -61,7 +61,7 @@ Azure Active Directory B2B and/or Azure Lighthouse could be used, but this would
 
 In this approach, an Application Registration is created in the managing Azure Active Directory tenant then in every Azure Active Directory tenant that you wish to manage a Service Principal (SPN) is created in that tenant based on the Application Registration. This then allows the workers running the pipeline tasks and steps to log in to any of the Azure Active Directory tenants with a single set of credentials, simplifying operations.
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the Shared Application Registration (multi-tenant) with Multiple Service Principals automation approach](media/alz-multi-tenant-4.png)](media/alz-multi-tenant-4.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the Shared Application Registration (multi-tenant) with Multiple Service Principals automation approach](media/automation-approach-2.png)](media/automation-approach-2.png#lightbox)
 
 In the example we show a single App Registration in the `contoso.onmicrosoft.com` Azure Active Directory tenant and then an Enterprise Application in each of the Azure Active Directory tenants that is linked to the App Registration. This allows a pipeline to authenticate and authorize to all the Azure Active Directory tenants using the single App Registration. This scenario is documented further here in [Making your application multi-tenant](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
 
@@ -81,7 +81,7 @@ You might decide to have separate pipelines for each Azure Active Directory tena
 > 
 > The role of Owner and User Access Role are typically required in all Azure landing zone deployment scenarios which therefore rules Azure Lighthouse out as an option for the entire platform automation deployment aspect of Azure landing zones.
 > 
-> However, it can still be useful in some scenarios as documented in [Azure Lighthouse usage in ALZ multi-tenant](multiple-aad-tenants-in-alz-handling-lighthouse.md)
+> However, it can still be useful in some scenarios as documented in [Azure Lighthouse usage in ALZ multi-tenant](lighthouse.md)
 
 #### Identities for platform administrators and developers - Approach 2
 
@@ -92,4 +92,4 @@ They might also have access into the other Azure Active Directory tenants via Az
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Handling ALZ across Multiple Azure Active Directory Tenants - Canary Considerations & Recommendations](multiple-aad-tenants-in-alz-handling-canary.md)
+> [Handling ALZ across Multiple Azure Active Directory Tenants - Canary Considerations & Recommendations](canary.md)
