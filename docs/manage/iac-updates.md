@@ -43,7 +43,7 @@ This means that Infrastructure as Code is exceptional at restoring state, removi
 
 For Azure, there are two main options for Infrastructure as Code:
 
-- Azure Bicep, managed by Microsoft.
+- Azure Bicep, managed by Microsoft, specifically for ALZ visit [ALZ Bicep repository](https://aka.ms/alz/bicep).
 - Terraform, managed by  Hashicorp.
 
 You can learn more about planning for automation of Landing Zones by referencing the [Automation](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/considerations/automation#platform-automation-design-recommendation) article.
