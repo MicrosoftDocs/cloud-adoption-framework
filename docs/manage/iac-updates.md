@@ -32,7 +32,7 @@ Ultimately, these changes will lead to updates driven either by customer changes
 
 Infrastructure as Code, abbreviated as IaC, refers to the practice and tools for managing the lifecycle of infrastructure resources using machine-readable definition files.  The definition for the infrastructure is written, and then can be versioned, deployed through pipelines, and become a part of the deployment for workloads.
 
-Infrastructure as code technologies is *idempotent* meaning that running it multiple times with the same definition will not change the result beyond the initial application.  Configuring infrastructure through scripts, such as the Azure CLI or Azure PowerShell, are *declarative* meaning that the scripts contain a set of actions that will be repeated each time it is run.
+Infrastructure as Code technologies are *idempotent* meaning that running it multiple times with the same definition will not change the result beyond the initial application.  Configuring infrastructure through scripts, such as the Azure CLI or Azure PowerShell, are *declarative* meaning that the scripts contain a set of actions that will be repeated each time it is run.
 
 This means that if you have an Infrastructure as Code definition for an Azure resource, you can run that definition as often as you want and it will only create a change if:
 
