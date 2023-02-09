@@ -46,17 +46,17 @@ After clarifying the company's goals and requirements, Contoso designs and revie
 
 ### Current architecture
 
-- Contoso has one main datacenter (`contoso-datacenter`), which is located in New York City. It has a fiber-optic connection to the internet from Metro Ethernet Networks that provides 500 megabits per second. The main datacenter is fully virtualized by VMware products. Contoso has two VMware hosts running ESXi 6.5 that are managed by vCenter Server 6.5.
+- Contoso has one main datacenter, `contoso-datacenter`, which is located in New York City. It has a fiber-optic connection to the internet from Metro Ethernet Networks that provides 500 megabits per second. The main datacenter is fully virtualized by VMware products. Contoso has two VMware hosts running ESXi 6.5 that are managed by vCenter Server 6.5.
 
-- Contoso has three additional local branches across the United States. Each branch is connected locally to the internet by using business-class connections, and each branch is connected to the main datacenter via VPN with IPsec. This configuration allows Contoso's entire network to always be connected, and it optimizes internet connectivity. 
+- Contoso has three branches across the United States. Each branch is connected locally to the internet by using business-class connections, and each branch is connected to the main datacenter via VPN with IPsec. This configuration allows Contoso's entire network to always be connected, and it optimizes internet connectivity. 
 
 - Contoso uses DNS servers on its internal network.
 
 - Contoso uses Active Directory for identity management.
 
-- Contoso has an on-premises domain controller (`contosodc1`). The domain controllers at local branches run on physical servers. The domain controllers run on VMware VMs. The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`) running on a VM.
+- Contoso has an on-premises domain controller, `contosodc1`. The domain controllers at local branches run on physical servers. The domain controllers run on VMware VMs. The VMware environment is managed by vCenter Server 6.5, `vcenter.contoso.com`, running on a VM.
 
-- SmartHotel360 is tiered across two VMs (`WEBVM` and `SQLVM`) that are located on a VMware host running ESXi version 6.5 (`contosohost1.contoso.com`).
+- SmartHotel360 is tiered across two VMs, `WEBVM` and `SQLVM`, that are located on a VMware host running ESXi version 6.5, `contosohost1.contoso.com`.
 
 :::image type="content" alt-text="Diagram of the current Contoso architecture." source="./media/contoso-migration-rehost-vm-sql-managed-instance/contoso-architecture.png":::
 
