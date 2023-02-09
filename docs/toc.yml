@@ -284,21 +284,21 @@ items:
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
-          - name: Azure Landing Zones and multiple Azure Active Directory tenants
+          - name: Handling Azure Landing Zones across multiple tenants
             items:
               - name: Overview
                 href: ready/landing-zone/design-area/multi-tenant/overview.md
               - name: Scenarios
                 href: ready/landing-zone/design-area/multi-tenant/scenarios.md
-              - name: Handling Azure Landing Zones across multiple tenants
+              - name: Considerations & recommendations
                 items:
-                  - name: Considerations & recommendations
+                  - name: General
                     href: ready/landing-zone/design-area/multi-tenant/considerations-recommendations.md
-                  - name: Automation considerations & recommendations
+                  - name: Automation
                     href: ready/landing-zone/design-area/multi-tenant/automation.md
-                  - name: Canary considerations & recommendations
+                  - name: Canary environments
                     href: ready/landing-zone/design-area/multi-tenant/canary.md
-                  - name: Azure Lighthouse considerations, recommendations and usage scenarios
+                  - name: Azure Lighthouse
                     href: ready/landing-zone/design-area/multi-tenant/lighthouse.md
 
         - name: Identity and access management
