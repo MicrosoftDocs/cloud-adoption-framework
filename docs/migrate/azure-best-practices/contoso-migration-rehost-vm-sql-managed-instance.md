@@ -16,6 +16,9 @@ This article shows how the fictional company Contoso migrates a two-tier, front-
 
 SmartHotel360, the application in this example, is open-source software. If you want to use it for your own testing purposes, download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
+> [!NOTE]
+> The reference application in this article, SmartHotel360, has been archived. For a newer example, see [Tailwind Traders](https://github.com/Microsoft/TailwindTraders) on GitHub.
+
 ## Business drivers
 
 Contoso's IT leadership team works closely with the company's business partners to understand what they want this migration to achieve. They want it to accomplish the following goals:
