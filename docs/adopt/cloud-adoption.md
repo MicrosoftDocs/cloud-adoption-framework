@@ -17,7 +17,7 @@ Cloud adoption journeys tend to follow similar trajectories. Variations exist, b
 
 :::image type="content" source="../_images/adopt/cloud-adoption-journey.png" alt-text="Diagram showing portfolio migration modernization approach." border="false":::
 
-An important consideration in adopting the right cloud solution is the balance of control versus productivity. Infrastructure-as-a-service (IaaS) solutions give you the most control but require more time to maintain. Platform-as-a-service (PaaS) and software-as-a-service (SaaS) solutions transfer management responsibility to Azure and allow your teams to focus on being productive. The balance needed between control and productivity is different for every organization, and it will change over time as your priorities change.
+An important consideration in adopting the right cloud solution is the balance of control versus productivity. Infrastructure as a service (IaaS) solutions give you the most control but require more time to maintain. Platform as a service (PaaS) and software as a service (SaaS) solutions transfer management responsibility to Azure and allow your teams to focus on being productive. The balance needed between control and productivity is different for every organization, and it will change over time as your priorities change.
 
 For the initial cloud adoption, a typical organization retires 35% of its applications, replaces 15% of its portfolio, and migrates 50% with only necessary modifications (replatform or rehost).
 
@@ -27,22 +27,22 @@ We recommend retiring any workloads your organization doesn't need. You'll need 
 
 ## Replace (15%)
 
-Most organizations replace about 15% of their applications with software-as-a-service (SaaS) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").
+Most organizations replace about 15% of their applications with software as a service (SaaS) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").
 
 *Table 1 - Examples of replacing workloads with SaaS and low-code solutions*
 
 | From | To |
 | --- | --- |
-|Custom line of <br>business (LOB)<br>apps|[Power Apps](/power-apps/powerapps-overview)|
+|Custom line of <br>business (LOB)<br>applications|[Power Apps](/power-apps/powerapps-overview)|
 |DevOps tools|[GitHub](/training/modules/introduction-to-github/)|
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|
-|Industry <br>verticals|[3rd-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas&page=1li)|
+|Industry <br>verticals|[Third-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas&page=1li)|
 
 ## Migrate (rehost or replatform) (50%)
 
 A typical business will migrate about half of its existing workloads. Within these workloads, there are normally three tiers of difficulty. About 35% are easy to move. The next 10% are more difficult because they're more complex or more important, and only the last 5% require extra planning to execute.
 
-There are many migration approaches. Rehosting ("lift-and-shift") and replatforming ("modernize") are the most common, and our recommended approaches for cloud adoption. But it can be difficult to decide which one meets your needs, so we have guidance on deciding which approach is right for you. For more information, see [migrate or modernize?](migrate-or-modernize.md).
+There are many migration approaches. Rehosting ("lift-and-shift") and replatforming ("modernize") are the most common, and our recommended approaches for cloud adoption. But it can be difficult to decide which one meets your needs, so we have guidance on deciding which approach is right for you. For more information, see [Migrate or modernize?](migrate-or-modernize.md).
 
 ### First to move (35%)
 
