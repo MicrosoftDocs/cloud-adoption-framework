@@ -16,18 +16,18 @@ Subscription vending provides a mechanism for programmatically issuing subscript
 
 :::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing the place of subscription vending in the workload lifecycle." lightbox="./media/subscription-vending-high-res.png" border="false":::
 
-Subscription vending builds on the concept of subscription democratization. Subscription vending is a means to achieve sub democratization at application landing zone. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
+Subscription vending builds on the concept of subscription democratization. It's a means to achieve subscription democratization for application landing zone. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
 - [Democratized approach to subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization)  
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
 
 ## Why subscription vending?
 
-Consistency/standardizing --> velocity to onboard apps to Azure
+Subscription vending standardizes workload deployments. The consistency helps you onboard apps to Azure faster.
 
-## How to do subscription vending
+## How to implement subscription vending
 
-Subscription vending is often setup, managed and operated by a Platform Team/CCoE. It is then consumed, normally via an integration with an ITSM tool to handle business approval logic, by anyone across the organization.
+The platform team often sets up, manages, and operates the subscription vending process. It's a best practice to use an IT service management (ITSM) tool to streamline the business approval process.
 
 :::image type="content" source="./media/subscription-vending-steps.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-steps.png" border="false":::
 
@@ -69,7 +69,7 @@ For example, some applications may require private and hybrid connectivity, bi-d
 
 Other applications may not require this same type of connectivity and may only require isolated Virtual Networks that contain services and resources that interact directly with the internet, protected by the various Azure Networking security services, or with other applications via services link Private Link.
 
-<In the future link to new doc about ALZ and Networking Patterns in relation to Management Group hierarchy – ETA March 2023>
+<!--In the future link to new doc about ALZ and Networking Patterns in relation to Management Group hierarchy – ETA March 2023-->
 
 Further reading:
 
@@ -117,7 +117,7 @@ Azure reserves the first four and last IP address in a subnet. For more informat
 
 ### Create subscriptions programmatically
 
-**1. Know what commercial agreement you have.** You need a commercial agreement to create a subscription programmatically. To create a subscription, you need to assume a role with the permissions to do so. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation. For more information, see:
+**1. Know the commercial agreement you have.** You need a commercial agreement to create a subscription programmatically. To create a subscription, you need to assume a role with the permissions to do so. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation. For more information, see:
 
 - [EA required role](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement#prerequisites)
 - [MCA required role(s)](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-customer-agreement#prerequisites)
