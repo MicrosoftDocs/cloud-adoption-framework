@@ -55,7 +55,6 @@ Review the following considerations and recommendation for infrastructure manage
 
 ### Design considerations: Infrastructure
 
-- Use the same Log Analytics workspace that's used for the Azure Virtual Desktop platform.
 - The session host performance counters are collected and logged.
 - Use network performance monitoring for user experience management.
 - Set up an alerting model around the collected logs and metrics.
@@ -63,8 +62,9 @@ Review the following considerations and recommendation for infrastructure manage
 
 ### Design recommendations: Infrastructure
 
+- Use the same Log Analytics workspace that's used for the Azure Virtual Desktop platform.
 - Use a centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
-- Set up the performance counters according to the [documentation](/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
+- Configure diagnostic settings, events and performance counters by implementing [AVD Insights workbook](/azure/virtual-desktop/insights).
 - Set up the Network Performance Monitor in the same region as your Azure Virtual Network and session hosts.
 - Incorporate Azure policies and governance for enterprise-scale into the Azure Virtual Desktop landing zone.
 

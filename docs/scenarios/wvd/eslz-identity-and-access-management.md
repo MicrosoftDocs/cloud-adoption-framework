@@ -16,20 +16,9 @@ Azure Virtual Desktop is a managed service that provides a Microsoft control pla
 
 ## RBAC design
 
-RBAC supports separation of duties for the various teams and individuals that manage the deployment of Azure Virtual Desktop. As part of your landing zone design you should decide who assumes the various roles. You then create a security group for each role to simplify adding and removing users to and from the roles.
+RBAC supports separation of duties for the various teams and individuals that manage the deployment of Azure Virtual Desktop. As part of the landing zone design, decisions will need to be make on who assumes the various roles and then a security group be created for each role to simplify adding and removing users to and from roles.
 
-Azure Virtual Desktop has custom Azure roles designed for each functional area. Configuration details are in [Built-in roles for Azure Virtual Desktop](/azure/virtual-desktop/rbac). Common roles include:
-
-- **Desktop Virtualization Contributor:** This role lets you manage all aspects of the deployment but doesn't grant access to compute resources.
-- **Desktop Virtualization Reader:** This role lets you view everything in the deployment but doesn't let you make changes.
-- **Desktop Virtualization Host Pool Contributor:** This role lets you manage all aspects of host pools, including access to resources. To create virtual machines you need another role, Virtual Machine Contributor. You will also need Application Group Contributor and Workspace Contributor roles to create host pools using the portal, or you can use the Desktop Virtualization Contributor role.
-- **Desktop Virtualization Host Pool Reader:** This role lets you view everything in the host pool, but doesn't let you make changes.
-- **Desktop Virtualization Application Group Contributor:** This role lets you manage all aspects of application groups. To publish application groups to users, or to user groups, you need the User Access Administrator role.
-- **Desktop Virtualization Application Group Reader:** This role lets you view everything in the application group, but doesn't let you make changes.
-- **Desktop Virtualization Workspace Contributor:** This role lets you manage all aspects of workspaces. To get information on applications added to the application groups, you need the Desktop Virtualization Application Group Reader role.
-- **Desktop Virtualization Workspace Reader:** This role lets you view everything in the workspace, but doesn't let you make changes.
-- **Desktop Virtualization User Session Operator:** This role lets you send messages, disconnect sessions, and use the logoff function to sign sessions out of the session host. However, it doesn't let you perform session host management like removing session host, changing drain mode, and so on.
-- **Desktop Virtualization Session Host Operator:** This role lets you view and remove session hosts, and change drain mode. You can't add session hosts using the Azure portal because you don't have write permission for host pool objects.
+Azure Virtual Desktop has custom Azure roles designed for each functional area. Configuration details are in [Built-in roles for Azure Virtual Desktop](/azure/virtual-desktop/rbac).
 
 [Azure built-in roles](/azure/role-based-access-control/built-in-roles) can be created and defined as part of the Cloud Adoption Framework for Azure deployment. RBAC roles that are specific to Azure Virtual Desktop may need to be combined with other Azure RBAC roles to provide the complete set of permissions users need for Azure Virtual Desktop and for other Azure services like virtual machines and networking.
 
