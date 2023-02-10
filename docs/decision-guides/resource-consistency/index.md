@@ -28,9 +28,9 @@ In Azure, [resource groups](/azure/azure-resource-manager/management/overview#re
 
 Resource groups are containers for resources with a common lifecycle and shared management constraints, such as policy or Azure role-based access control requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
-* Are the contents of the resource group developed together?
-* Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
-* Are the contents of the resource group retired together?
+- Are the contents of the resource group developed together?
+- Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
+- Are the contents of the resource group retired together?
 
 If you answered *no* to any of the above points, place the resource in another resource group.
 
