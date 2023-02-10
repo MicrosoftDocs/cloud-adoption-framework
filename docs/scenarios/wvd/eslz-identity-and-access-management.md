@@ -22,7 +22,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 
 [Azure built-in roles](/azure/role-based-access-control/built-in-roles) can be created and defined as part of the Cloud Adoption Framework for Azure deployment. RBAC roles that are specific to Azure Virtual Desktop may need to be combined with other Azure RBAC roles to provide the complete set of permissions users need for Azure Virtual Desktop and for other Azure services like virtual machines and networking.
 
-## Design considerations
+## Azure Virtual Desktop design considerations
 
 - Azure Virtual Desktop users must be sourced from either the same instance of on-premises Active Directory Domain Services (AD DS) that is synchronized to Azure Active Directory (Azure AD), or an instance of Azure AD Domain Services (Azure AD DS) synchronized from Azure AD.
   > [!NOTE]
@@ -31,11 +31,9 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Azure AD DS](/azure/active-directory-domain-services/compare-identity-solutions).
 - [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services/). is a supported option, but there are limitations:
   - You must have password hash synchronization enabled ([configuration guide](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-configure-password-hash-sync)).
-  - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless single sign-on for Microsoft 365 services.
-  
+  - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless single sign-on for Microsoft 365 services.  
   For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
 - When joining to an Azure AD DS domain, the account must be part of the Azure AD DC administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
-
 - When specifying an organizational unit, use the distinguished name without quotation marks.
 - Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks.
 - The user principal name used to subscribe to Azure Virtual Desktop must exist in the Active Directory domain where the session host virtual machine is joined. For more information about user requirements, see [Azure Virtual Desktop requirements](/azure/virtual-desktop/overview#requirements).
