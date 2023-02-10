@@ -48,7 +48,7 @@ The following key requirements and considerations affect your Azure Virtual Desk
 - Internet ingress and egress requirements.
 - NVA use in the current architecture.
 - Azure Virtual Desktop connectivity to a standard hub virtual network or Virtual WAN hub.
-- Session host connection model (native and Remote Desktop Protocol (RDP) Short path).
+- Session host connection model (native and [RDP Shortpath](/azure/virtual-desktop/rdp-shortpath).
 - Traffic inspection requirements for:
   - Internet egress from Azure Virtual Desktop.
   - Internet ingress to Azure Virtual Desktop.
@@ -139,7 +139,7 @@ You can learn more information on QoS, see [Implement Quality of Service (QoS) f
 
 ### Internet
 
-Azure Virtual Desktop compute resources and clients require access to specific public endpoints. This creates the need for internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure virtual Desktop requirements are met.
+Azure Virtual Desktop compute resources and clients require access to specific public endpoints. This creates the need for internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure Virtual Desktop requirements are met.
 
 See [Required URL list and check tool](/azure/virtual-desktop/safe-url-list) to understand the requirements for AVD session hosts and client devices.
 
