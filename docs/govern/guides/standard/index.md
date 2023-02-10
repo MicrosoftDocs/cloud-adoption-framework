@@ -27,27 +27,23 @@ These best practices serve as a foundation for your organization to quickly and 
 
 ### Resource organization
 
+Refer to the [management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscription](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment.  The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
+
 The following diagram contains the governance MVP hierarchy for resource organization.
 
 ![Diagram of resource organization.](../../../_images/govern/resource-organization.png)
 
-Deploy every application in the appropriate area of your management group, subscription, and resource group hierarchy. During deployment planning, your cloud governance team needs to create the necessary nodes in this hierarchy to empower your cloud adoption teams.
+#### Additional recommendations
 
-- Create one management group for each type of environment (such as production, development, and test).
+- Deploy every application in the appropriate area of your management group, subscription, and resource group hierarchy. During deployment planning, your cloud governance team needs to create the necessary nodes in this hierarchy to empower your cloud adoption teams.
 
-- Create two subscriptions: one for production workloads and one for nonproduction workloads.
-
-- Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) at each level of your grouping hierarchy.
+- Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) within each level of your grouping hierarchy.
 
 - Consider content lifecycle when you deploy resource groups: things that are developed together, managed together, and retire together go together. For more information on resource group best practices, see the [resource consistency decision guide](../../../decision-guides/resource-consistency/index.md).
 
 - Consider [region selection](../../../migrate/azure-best-practices/multiple-regions.md) so you can ensure that networking, monitoring, and auditing are in place for failover/failback and confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services/).
 
-The following diagram provides an example of this pattern in use.
-
-![Resource organization example for a mid-market company.](../../../_images/govern/mid-market-resource-organization.png)
-
-These patterns provide room for growth without unnecessarily complicating your hierarchy.
+The Azure landing zone conceptual architecture patterns provide room for growth without unnecessarily complicating your hierarchy.
 
 [!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
