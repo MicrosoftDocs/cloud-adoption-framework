@@ -1,0 +1,96 @@
+---
+title: Sandbox environments
+description: Guidance for the architecture of sandbox environments
+author: Mr-MSFT
+ms.author: isiahhudson
+ms.date: 02/13/2023
+ms.topic: overview
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+---
+
+# Sandbox Overview
+
+A sandbox environment is an isolated environment that enables users to do testing and experimentation without impacting any other environments (Production, Development, UAT, etc.). Azure sandboxes provide users with a controlled environment to test and experiment with Azure resources. Sandbox environments are also great places to conduct POCs (proof of concepts) with Azure resources. Each sandbox is its own Azure subscription controlled by Azure policies applied at the Sandboxes management group level. A sandbox can be used by one person or a team depending on its purpose.
+
+Sandbox environments are the ultimate hands-on learning tool for Azure. Below are some common use cases:
+
+-   Developers need a controlled Azure environment to quickly test application design patterns.
+-   Cloud architect wants a sandbox environment to evaluate Azure resources or conduct a PoC for an Azure service or resource before formally approving them for their organization.
+-   A cloud engineer wants a sandbox environment to better understand what happens when a specific setting is changed on an Azure resource.
+
+# Sandbox Architecture
+
+### Management Group and Subscription Layout
+
+![Single use case sandbox architecture](./media/single-usecase-sandbox.png)
+
+All subscriptions created for the sandboxes will be placed in the Sandboxes management group. This allows Azure polices specifically created for sandboxes to be placed at the management group level.
+
+An Azure policy initiative should be created with the following built-in policies and assigned to the Sandbox management group:
+
+| Azure Policy                                                                                                                                                                                                                                                                                                       | Description                                                                                                                                                                    |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Azure service blacklist](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/General/InvalidResourceTypes_Deny.json) Or [Azure service whitelist](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/General/AllowedResourceTypes_Deny.json) | Azure service blacklist: block selected Azure services from being deployed to sandbox. Azure service whitelist: Only allow specified Azure services to be deployed to sandbox. |
+| [Allowed Azure regions](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/General/AllowedLocations_Deny.json)                                                                                                                                                                  | Limit the Azure regions that can be used by the sandbox environments                                                                                                           |
+| [Allowed virtual machine SKUs](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Compute/VMSkusAllowed_Deny.json)                                                                                                                                                              | Limit the VM SKUs that can be deployed to the sandbox environments                                                                                                             |
+
+The policy below should also be used to support the sandbox environments. The below policy is already a part of the Azure landing zone default policy set.
+
+| Azure Policy                                                                                                                                                                      | Description                                                                                                                                         |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Deny VNet peering cross subscription](https://github.com/Azure/Enterprise-Scale/blob/main/src/resources/Microsoft.Authorization/policyDefinitions/Deny-VNET-Peer-Cross-Sub.json) | Deny any VNet peering with VNets outside of the sandbox subscription. This helps the sandbox environments stay isolated from a network perspective. |
+
+Each sandbox is given its own subscription. This allows costs to be more easily tracked and the sandboxes easily cancelled when budgets or the expiration date of the sandbox has been reached.
+
+### Networking
+
+Any networking in a sandbox is left to the sandbox user to create. The sandbox user can build a network that fits their needs. To keep the sandbox isolated it is important to ensure the networks created inside the sandbox are not peered with other networks outside of the sandbox. This ensures each sandbox is its own isolated environment. The “[Deny VNet peering cross subscription](https://github.com/Azure/Enterprise-Scale/blob/main/src/resources/Microsoft.Authorization/policyDefinitions/Deny-VNET-Peer-Cross-Sub.json)” Azure policy helps to ensure sandbox users cannot peer to a VNet outside of the sandbox environment.
+
+### Restricting Azure Resources
+
+An organization will want to control which Azure resources are eligible to be deployed to sandboxes. One way of controlling the eligible Azure resources is to create a blacklist. The blacklist approach allows sandbox users to deploy any Azure service to their sandbox except any that are explicitly blacklisted.
+
+Another approach to controlling the Azure resources that can be deployed to the sandbox is whitelisting. Sandbox users can only deploy Azure resources that are on the whitelist. This approach allows an organization to restrict the sandbox user to only deploy services explicitly allowed.
+
+Some organizations may want to deploy both types of sandboxes to satisfy multiple use cases. For example, cloud architects may be allowed to use the blacklist sandboxes so that they can test and experiment with any Azure service. However, the organization may want developers to use whitelisted sandboxes so that they could be restricted to only using Azure services formally approved by the organization. The diagram below shows an example of manage group layout that supports both the architects (blacklist) and developers (whitelist) use cases.
+
+![Multiple use case sandbox architecture](/media/multi-usecase-sandbox.png)
+
+### Audit Logging
+
+It is important from a security perspective to ensure audit logging from any sandbox environment is retained. A diagnostic setting that sends at least the administrative and security log categories should be created and added to each sandbox subscription. They should ultimately be stored in a destination (like a Log Analytics workspace) so the logs can be reviewed if necessary, or integrated with a SIEM like [Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/overview).
+
+### Sandbox Permissions
+
+The sandbox user(s) are given Contributor access to the sandbox subscription.
+
+# Additional Considerations
+
+## Sandbox Expiration
+
+Sandboxes should be cancelled or deleted at some point in time. Having a strategy to remove a sandbox is a cost savings and security measure. Cost and expiration dates are two important variables for determining when a sandbox should be removed.
+
+### Cost
+
+Each sandbox should be given a budget based on the purpose of the sandbox. Assigning a budget to the sandbox allows alerts to be fired when the cost breaches pre-determined thresholds. These alerts help keep costs for each sandbox contained.
+
+A key concern for any cloud-based sandbox environment is cost tracking. Azure cost management allows the creation of budgets. The [budgets feature](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets#create-a-budget-in-the-azure-portal) allows alerts to be generated when actual spending or forecasted spending cross configured thresholds.
+
+Whenever a sandbox is deployed an Azure cost management budget is created for it and placed on the subscription. This budget alerts the sandbox users when spending thresholds are crossed (50%, 75%, and 100%). When the 100% spend threshold is crossed the subscription is [cancelled](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or deleted. An automation must be created by the organization to cancel or delete the sandbox when the 100% threshold alert is fired. The alert alone is just a warning mechanism.
+
+All sandboxes should have a budget assigned.
+
+### Expiration Date
+
+Most organizations will want to expire and delete sandboxes after a certain period. Expiring sandboxes provide cost control and security benefits. Sandbox environments are created for testing and learning purposes. Ideally once the sandbox user performs their test or gains the intended knowledge it makes sense to expire the sandbox as it is no longer needed. The subscription for the sandbox is cancelled or deleted after the expiration date. Each sandbox should be given an expiration date. When that date is reached the sandbox subscription should be [cancelled](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or deleted.
+
+An Azure [tag](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json) with an expiration date can be placed on the subscription when a sandbox is created. An automation can then be created to cancel or delete the subscription when the expiration date is reached.
+
+All sandboxes should have an expiration date.
+
+### Information Protection
+
+One concern most organizations have about sandbox environments is ensuring sensitive data doesn’t find its way in. The first line of defense for information protection is always user education. Users should be given disclaimers/information before being assigned a sandbox that clearly states any sensitive data should not be added to the sandbox.
+
+[Microsoft Purview](https://learn.microsoft.com/en-us/azure/purview/overview) is a service that can be used to provide information protection for sandbox environments. Purview can be used to alert if data labeled by the organization as sensitive were to be added to sandbox environments.
