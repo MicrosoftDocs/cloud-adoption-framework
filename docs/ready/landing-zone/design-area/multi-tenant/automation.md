@@ -59,7 +59,7 @@ Azure Active Directory B2B and/or Azure Lighthouse could be used, but this would
 
 ### Approach 2 – Shared Application Registration (multi-tenant) with Multiple Service Principals
 
-In this approach, an Application Registration is created in the managing Azure Active Directory tenant then in every Azure Active Directory tenant that you wish to manage a Service Principal (SPN) is created in that tenant based on the Application Registration. This then allows the workers running the pipeline tasks and steps to log in to any of the Azure Active Directory tenants with a single set of credentials, simplifying operations.
+In this approach, an Application Registration is created in the managing Azure Active Directory tenant. Then in every Azure Active Directory tenant that you wish to manage a Service Principal (SPN) is created in that tenant based on the Application Registration. This then allows the workers running the pipeline tasks and steps to log in to any of the Azure Active Directory tenants with a single set of credentials, simplifying operations.
 
 [![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the Shared Application Registration (multi-tenant) with Multiple Service Principals automation approach](media/automation-approach-2.png)](media/automation-approach-2.png#lightbox)
 
