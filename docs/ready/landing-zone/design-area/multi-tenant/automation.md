@@ -21,7 +21,7 @@ For this reason we document multiple approaches below with guidance and diagrams
 >[!NOTE]
 > If you haven't read the following pages already then it is highly recommended to do so before carrying on with this page:
 >
-> - [Scenarios for multiple Azure Active Directory tenants](overview.md)
+> - [Overview for multiple Azure Active Directory tenants](overview.md)
 > - [Scenarios for multiple Azure Active Directory tenants](scenarios.md)
 > - [Considerations & Recommendations for multi-tenant Azure Landing Zone scenarios](considerations-recommendations.md)
 
