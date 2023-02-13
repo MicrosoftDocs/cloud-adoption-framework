@@ -55,7 +55,7 @@ This approach does mean there are more components to manage that are duplicated 
 
 In this approach identities should also be isolated in each Azure Active Directory tenant, which therefore means each platform administrator/developer will require a separate user account within each tenant to use to perform operations within that tenant. These accounts will also be used to access the developer tooling, like GitHub or Azure DevOps, for each of the tenants. Careful considerations should be taken in regards to administrator and developer productivity impacts following this approach.
 
-Azure Active Directory B2B and/or Azure Lighthouse could be used, but this would bring into questions the reasoning for having separate Azure Active Directory tenants.
+Azure Active Directory B2B and/or Azure Lighthouse could be used, but this would bring into question the reasoning for having separate Azure Active Directory tenants.
 
 ### Approach 2 – Shared Application Registration (multi-tenant) with Multiple Service Principals
 
