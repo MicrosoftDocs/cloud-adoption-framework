@@ -31,7 +31,7 @@ This means that if you have an Infrastructure as Code definition for an Azure re
 
 This means that Infrastructure as Code is exceptional at restoring state, removing resources that are no longer needed, and managing the lifecycle of resources through many changes.
 
-For Azure, there are two main options for Infrastructure as Code:
+For Azure landing zones, there are two main options for Infrastructure as Code:
 
 - Azure Bicep, managed by Microsoft, specifically for ALZ visit [ALZ Bicep repository](https://aka.ms/alz/bicep).
 - Terraform, managed by Hashicorp, specifically for ALZ visit [ALZ Terraform registry](https://aka.ms/alz/tf/repo).
