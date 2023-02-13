@@ -26,7 +26,7 @@ The following architectural decision guides cover foundational technology compon
 
 [Resource consistency](./resource-consistency/index.md): Ensure that the deployment and organization of your cloud-based resources enforce your organization's resource management and policy requirements.
 
-[Resource tagging](./resource-tagging/index.md): Organize your cloud-based resources to optimize resource utilization and cost, and to support your organization's billing models, cloud accounting approaches, and management. Resource tagging requires consistent and well-organized naming and metadata practices.
+[Resource tagging](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide): Organize your cloud-based resources to optimize resource utilization and cost, and to support your organization's billing models, cloud accounting approaches, and management. Resource tagging requires consistent and well-organized naming and metadata practices.
 
 [Encryption](./encryption/index.md): Secure your sensitive data using encryption that meets your organization's compliance and security policy requirements.
 

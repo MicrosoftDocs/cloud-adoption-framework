@@ -39,8 +39,8 @@ Develop fully automated pull request (PR) and continuous integration and continu
 
 Implement zero-trust access control at the control plane level. Limit the ability to deploy to principals that run automated processes. Zero-trust access control will prevent users from deploying changes manually. Limit the use of secrets, where possible. Use automation to rotate keys.
 
-- Read and understand the design considerations and consider the design recommendations in [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones)
-- If the Azure built-in roles don't meet your needs, consider the [suggested role definitions](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones#rbac-recommendations) listed in Azure identity and access for landing zones.
+- Read and understand the design considerations and consider the design recommendations in [Azure identity and access for landing zones](../../ready/landing-zone/design-area/identity-access-landing-zones.md)
+- If the Azure built-in roles don't meet your needs, consider the [suggested role definitions](../../ready/landing-zone/design-area/identity-access-landing-zones.md#rbac-recommendations) listed in Azure identity and access for landing zones.
 - Use Azure AD managed identities for Azure resources to avoid credential-based authentication. When secrets, keys or certificates are required, store them in Azure Key Vault.
 - Apply fully automated key-rotation processes that run periodically within each required solution.
 - Use Azure AD Privileged Identity Management (PIM) to establish zero-trust and least privilege access.
