@@ -14,13 +14,15 @@ ms.custom: template-overview
 
 This article explains the benefits of using Infrastructure as Code to update Azure Landings Zones.  Organizations will need to continue to update their Landing Zones as they operate, both to ensure configuration is continually correct, and also to respond to needs for changes.
 
+Because Infrastructure as Code can be used to manage the whole life cycle, and excels at managing resources that it has deployed, organizations should plan to deploy their Azure Landing Zones with Infrastructure as Code.  Attempting to bring non-IaC deployed resources in to the management scope of IaC can be a time consuming effort.  
+
 To understand more about why you will want to update your Landing Zone, visit [Keep your Azure landing zone up to date](../govern/resource-consistency/keep-azure-landing-zone-up-to-date)
 
 ## What does Infrastructure as Code do?
 
 Infrastructure as Code, abbreviated as IaC, refers to the practice and tools for managing the lifecycle of infrastructure resources using machine-readable definition files.  The definition for the infrastructure is written, and then can be versioned, deployed through pipelines, and become a part of the deployment for workloads.
 
-Infrastructure as Code technologies are *idempotent* meaning that running it multiple times with the same definition will not change the result beyond the initial application.  Configuring infrastructure through scripts, such as the Azure CLI or Azure PowerShell, are *declarative* meaning that the scripts contain a set of actions that will be repeated each time it is run.
+Infrastructure as Code technologies are *declarative* meaning that running it multiple times with the same definition will not change the result beyond the initial application.  Configuring infrastructure through scripts, such as the Azure CLI or Azure PowerShell, are *imperative* meaning that the scripts contain a set of actions that will be repeated each time it is run.
 
 This means that if you have an Infrastructure as Code definition for an Azure resource, you can run that definition as often as you want and it will only create a change if:
 
