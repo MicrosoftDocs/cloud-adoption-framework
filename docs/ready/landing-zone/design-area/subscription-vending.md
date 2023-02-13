@@ -3,7 +3,7 @@ title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 02/28/2023
+ms.date: 02/20/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -23,7 +23,7 @@ Subscription vending builds on the concept of subscription democratization. It's
 
 ## Why subscription vending?
 
-Subscription vending standardizes workload deployments. The consistency helps you onboard apps to Azure faster.
+Subscription vending standardizes workload deployments. The consistency helps onboard apps to Azure faster.
 
 ## How to implement subscription vending
 
@@ -34,7 +34,7 @@ The platform team often sets up, manages, and operates the subscription vending 
 ### Business logic and approval
 
 In this step normally customers would capture the request, including details like budgets and owners, from the requestor of the new Azure Subscription in their existing ITSM tooling.
-The ITSM tooling would also normally handle the business approval logic, like sign off from finance and managers, and once approved it would pass the request information to the subscription vending modules via an integration, normally a webhook or calling a REST API directly from the ITSM tooling.
+The ITSM tooling would also normally handle the business approval logic, like sign-off from finance and managers, and once approved it would pass the request information to the subscription vending modules via an integration, normally a webhook or calling a REST API directly from the ITSM tooling.
 
 ### Submit Subscription Deployment
 
@@ -49,7 +49,7 @@ Management Groups in Azure provide a means of organizing subscriptions and apply
 
 Pick management group at creation. Deploy the workload subscription in the management group that enforces the policies needed for that workload.
 
-Manage subscription management groups. You need to ensure a subscription is under in right management group at initial creation and over time as governance requirements change. If you are using infrastructure as code (IaC), you can use Bicep or Terraform to update the management group of the subscription. For more information, see:
+Manage subscription management groups. You need to ensure a subscription is under in right management group at initial creation and over time as governance requirements change. If you're using infrastructure as code (IaC), you can use Bicep or Terraform to update the management group of the subscription. For more information, see:
 
 - [Move subscription to new management group (Bicep)](/azure/templates/microsoft.management/managementgroups/subscriptions)
 - [Move subscription to new management group (Terraform)](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_subscription_association)
@@ -61,9 +61,9 @@ Further reading:
 
 ### Understand networking
 
-Many organizations have a common network infrastructure to enable private communication between services. Architectures such as hub & spoke, and Azure Virtual WAN are commonly used to deliver this – [see define an Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology). Networking is an expansive topic so not all the following sections may apply.
+Many organizations have a common network infrastructure to enable private communication between services. Architectures such as hub & spoke, and Azure Virtual WAN are commonly used to deliver this – [see define an Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology). Networking is a broad subject. Some of the following guidance might not be applicable to your environment.
 
-When vending new Azure Subscriptions, you will have captured the networking requirements for the workloads/resources to be provisioned into the new subscription at the time of the request. Based on this it is common for customers to have different networking patterns to support the differing needs of different application architectures.
+When vending new Azure Subscriptions, you'll have captured the networking requirements for the workloads/resources to be provisioned into the new subscription at the time of the request. Based on this it's common for customers to have different networking patterns to support the differing needs of different application architectures.
 
 For example, some applications may require private and hybrid connectivity to on-premises, and other applications also on the same routing domain/segment; these applications would be placed into subscriptions that are placed within the ‘corp’ management group as this would be compliant with the policy controls that are inherited by subscriptions within this part of the management group hierarchy. This would then allow the subscriptions to create virtual networks and peer back to central hub networks, normally in the platform connectivity subscriptions.
 
@@ -88,17 +88,17 @@ Due to the number of available configuration parameters for a subnet, it can bec
 
 We recommend the use of Azure Policy to audit or enforce compliance on Virtual Networks at scale, following the [design principle of policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) or use Azure Virtual Network Manager Security Admin rules to achieve similar outcomes for NSGs.
 
-We also recommend that the platform/network teams should only create a Virtual Network in the application team’s subscription if it requires peering back to a hub Virtual Network or Virtual WAN Hub. Furthermore, if it does require peering we still suggest creating a blank Virtual Network with no Subnets and then allow the application teams to create Subnets as they require for their application/service. The platform/network team remain in control of the Virtual Networks governance/security posture via Azure Policies assigned to the Management Group hierarchy that the Subscription is placed in and/or via Azure Virtual Network Manager security admin rules.
+We also recommend that the platform/network teams should only create a Virtual Network in the application team’s subscription if it requires peering back to a hub Virtual Network or Virtual WAN Hub. Furthermore, if it does require peering we still suggest creating a blank Virtual Network with no Subnets and then allow the application teams to create subnets as they require for their application/service. The platform/network team remains in control of the Virtual Networks governance/security posture via Azure Policies assigned to the Management Group hierarchy that the Subscription is placed in and/or via Azure Virtual Network Manager security admin rules.
 
 #### IP address management
 
-When connecting to a common network topology that is in a single routing domain, it is critical that unique and non-overlapping IP addressing is used for each virtual network within the routing domain. These are the Virtual Networks that require peering to a central hub Virtual Network or Virtual WAN Hub.
+When connecting to a common network topology that is in a single routing domain, it's critical that unique and non-overlapping IP addressing is used for each virtual network within the routing domain. These are the Virtual Networks that require peering to a central hub Virtual Network or Virtual WAN Hub.
 
 Commonly customers have an IP Address Management (IPAM) system in place, and some may have this accessible behind an API so IP Address blocks can be assigned programmatically also. This can also be built into your Subscription vending process by making a call to the IPAM API as a step before creating the subscription and associated Virtual Networks to request an IP address space to pass into the subscription and Virtual Networks creation input parameters.
 
 IP address exhaustion is a common concern for some customers and therefore a key point to keep in mind is that Azure Virtual Networks can have their Address Spaces expanded or added to, with non-contiguous IP Address blocks, at any time. For more information, see the [Manage a Virtual Network](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range).
 
-With this in mind it is therefore recommended that you appropriately size your Virtual Networks at the time of creation in an effort to conserve IP addresses. The table below shows how many usable IP addresses you can have in Azure Virtual Networks for common subnet sizes to help you plan appropriately.
+With this in mind it's therefore recommended that you appropriately size your Virtual Networks at the time of creation to conserve IP addresses. The following table shows how many usable IP addresses you can have in Azure Virtual Networks for common subnet sizes to help you plan appropriately.
 
 |Usable Azure IP Addresses Required|Subnet Size|
 |---|---|
@@ -123,14 +123,14 @@ Azure reserves the first four and last IP address in a subnet. For more informat
 
 Without a commercial agreement, you can still use the modules. Create subscriptions in the Azure portal and deploy the modules programmatically.
 
-**2. Create the subscription programmatically.** Follow the guidance in the Azure Architecture Center to programmatically create subscriptions. A common strategy for this is to use infrastructure as code (IaC). There are subscription vending Bicep and Terraform modules to help you adopt a subscription vending model. Consider using semi-structured data (JSON/YAML) in your source control repository to provide the inputs to the above modules. You should use GitHub actions or Azure DevOps Pipelines to orchestrate the automation.
+**2. Create the subscription programmatically.** Follow the guidance in the Azure Architecture Center to programmatically create subscriptions. A common strategy for this is to use infrastructure as code (IaC). There are subscription vending Bicep and Terraform modules to help you adopt a subscription vending model. Consider using semi-structured data (JSON/YAML) in your source control repository to provide the inputs to the above modules. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
 
-**3. Use tags for cost management.** You should assign tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements. Azure Cost Management provides greater functionality, e.g. you can create reports for subscriptions with specific tags. For more information, see:
+**3. Use tags for cost management.** You should assign tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements. Azure Cost Management provides greater functionality, for example, you can create reports for subscriptions with specific tags. For more information, see:
 
 - [How tags are used in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data)
 - [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
 
-**4. Use production and non-production subscriptions.** Finally, the workload type must be specified in the API request for a new subscription. This can either be Production or DevTest. DevTest results in lower resource charges but has additional [terms](/offers/ms-azr-0148p/). Note DevTest offer is not available for MPA. For more information, see:
+**4. Use production and non-production subscriptions.** Finally, the workload type must be specified in the API request for a new subscription. This can either be Production or DevTest. DevTest results in lower resource charges but has other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
 
 - [Azure billing offers and Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
 - [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
@@ -138,27 +138,27 @@ Without a commercial agreement, you can still use the modules. Create subscripti
 
 **5. Grant subscription owner role.** For every new subscription, you need to designate a subscription owner. You should grant the Owner role to one Azure Active Directory principal.
 
-**6. Create Azure AD groups.** In addition to the subscription owner, you should use Azure AD groups to manage access to the subscription. For elevated (e.g. write) access we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Wherever possible, limit the number of subscription owners and use the minimum required level of access.
+**6. Create Azure AD groups.** In addition to the subscription owner, you should use Azure AD groups to manage access to the subscription. For elevated (for example, write) access we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Wherever possible, limit the number of subscription owners and use the minimum required level of access.
 
-Rather than create service principals for each subscription, use managed identity wherever possible. With managed identities, you don’t have to manage secrets or keys. Service principals usually are granted standing access to resources and are not subject to PIM. For more information, see [IAM design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
-<Can’t add constrained delegation as no public docs yet>
+Rather than create service principals for each subscription, use managed identity wherever possible. With managed identities, you don’t have to manage secrets or keys. Service principals usually are granted standing access to resources and aren't subject to PIM. For more information, see [IAM design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
+<!--Can’t add constrained delegation as no public docs yet-->
 
 ### Set budgets
 
-Cloud financial management should be a shared responsibility between the platform and workload team. Organizations should use budgets to control spending. They are useful for auditing spending against current and forecast usage. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs.
+Cloud financial management should be a shared responsibility between the platform and workload team. Organizations should use budgets to control spending. They're useful for auditing spending against current and forecast usage. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs.
 
-We recommend you create budget alerts to notify the subscription owners if the budget is about to be exceeded. Budgets are not hard limits. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
+We recommend you create budget alerts to notify the subscription owners if the budget is about to be exceeded. Budgets aren't hard limits. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
 
 ### Scale
 
 The subscription vending model allows you to scale your environment and drive operational efficiency. While subscription vending is highly scalable, it does have a quota. Here are two features of subscription quotas and scaling that you should consider.
 
-**Understand subscription limits.** You should be aware of some service limits when deploying multiple thousands of subscriptions. When approaching these limits, consider a subscription re-use model. Examples of scenarios appropriate for this are: Developer sandboxes, training environments, or SaaS providers using a subscription per customer. Consider subscription re-use if:
+**Understand subscription limits.** You should be aware of some service limits when deploying multiple thousands of subscriptions. When approaching these limits, consider a subscription reuse model. Examples of scenarios appropriate for this are: Developer sandboxes, training environments, or SaaS providers using a subscription per customer. Consider subscription reuse if:
 
-1. You are an EA customer using more than 5,000 total subscriptions, including those that have been cancelled.
-2. You are an MCA customer and plan to have more than 5,000 active subscriptions.
+1. You're an EA customer using more than 5,000 total subscriptions, including canceled subscriptions
+2. You're an MCA customer and plan to have more than 5,000 active subscriptions
 
-**Request additional quota if needed.** Requesting additional quota is part of the subscription vending process. The default quotas are defined by your subscription offer type. You can request quote increases manually, after provisioning, using the Azure Portal. It’s easier if you automate this process by using the available APIs. However, you must handle the situation where the quota request fails. Consider running a script to manage this and handle any errors. For more information, see:
+**Request additional quota if needed.** Requesting extra quota is part of the subscription vending process. The default quotas are defined by your subscription offer type. You can request quote increases manually, after provisioning, using the Azure portal. It’s easier if you automate this process by using the available APIs. However, you must handle the situation where the quota request fails. Consider running a script to manage this and handle any errors. For more information, see:
 
 - [Microsoft.Capacity](/rest/api/reserved-vm-instances/quotaapi)
 - [Microsoft.Quota](/rest/api/quota/)
