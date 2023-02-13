@@ -74,6 +74,8 @@ For example, if you wanted to replace your Azure Firewall with one using the Pre
 
 Infrastructure as Code also provides a unique option to catch configuration drifts during updates.  Not only can the deployment catch changes to the definition file, it can present instances where resources have been configured differently from the definition.
 
+Periodic Landing Zone updates with Infrastructure as Code can help you catch this configuration drift, and allow you to update the code appropriately, address these misconfigurations via the update, or address them in some other way.
+
 When you make a change to resources via the portal, CLI, or other non-Infrastructure as Code method, the change will go through.  When you next run a deployment through Infrastructure as Code, the comparison to the code defined state and the actual state in the portal is able to be flagged (using what-if or plan functions).  This can be used to identify that an environment has been modified outside of the code file.
 
 Once identified, Infrastructure as Code can be run to reset the resources to the correct configuration.  This is the default in Terraform, but requires using a Complete function in Bicep.  This can let you repair unauthorized changes.
@@ -81,8 +83,6 @@ Once identified, Infrastructure as Code can be run to reset the resources to the
 Changes that are defined in the portal can be cumbersome to implement back in to Infrastructure as Code.  They require updating the code to match the current state, which often involves reviewing each resource changed and updating its parameters to match the "as is" configuration.
 
 As a result, if you are using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts who have access to make changes directly, such as using Privileged Identity Management.  See [Security Baseline discipline overview](../govern/security-baseline/) and [Identity Baseline discipline overview](../identity/security-baseline/) for guidance on this.
-
-Periodic Landing Zone updates with Infrastructure as Code can help you catch this configuration drift, and allow you to update the code appropriately, address these misconfigurations via the update, or address them in some other way.
 
 You can review [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance#operational-compliance-recommendations)
 
