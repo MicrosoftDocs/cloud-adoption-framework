@@ -35,7 +35,7 @@ Review the below considerations, recommendations and common scenarios relating t
 
 ## Azure Landing Zones Specific Scenario - Azure Lighthouse + Private DNS at Scale
 
-Below is an ALZ specific scenarios where Azure Lighthouse is used across multiple Azure Active Directory tenants to assist with Private link and DNS integration.
+Below is an ALZ specific scenarios where Azure Lighthouse is used across multiple Azure Active Directory tenants to assist with Private Link and DNS integration.
 
 Using Azure Lighthouse to allow Azure Policy for Private Endpoints Private DNS Zone automatic linking, as per [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale), in "spoke" Azure Active Directory tenants to the centralized Private DNS Zones in the "Hub" Azure Active Directory tenant.
 
