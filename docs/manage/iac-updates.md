@@ -12,7 +12,7 @@ ms.custom: template-overview
 
 # Why use Infrastructure as Code to update your ALZ?
 
-This article explains the benefits of using Infrastructure as Code to update Azure Landings Zones.  Organizations will need to continue to update their Landing Zones as they operate, both to ensure configuration is continually correct, and also to respond to needs for changes.
+This article explains the benefits of using Infrastructure as Code to update Azure landing zones.  Organizations will need to continue to update their landing zones as they operate, both to ensure configuration is continually correct, and also to respond to needs for changes.
 
 Because Infrastructure as Code can be used to manage the whole life cycle, and excels at managing resources that it has deployed, organizations should plan to deploy their Azure Landing Zones with Infrastructure as Code.  Attempting to bring non-IaC deployed resources in to the management scope of IaC can be a time consuming effort.  
 
