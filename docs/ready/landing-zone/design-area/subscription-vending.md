@@ -33,8 +33,8 @@ The platform team often sets up, manages, and operates the subscription vending 
 
 ### Business logic and approval
 
-In this step normally customers would capture the request, including details like budgets, owners, etc. from the requestor of the new Azure Subscription in their existing ITSM tooling, like ServiceNow etc.
-The ITSM tooling would also normally handle the business approval logic, like sign off from finance and managers etc., and once approved it would pass the request information to the subscription vending modules via an integration, normally a webhook or calling a REST API directly from the ITSM tooling.
+In this step normally customers would capture the request, including details like budgets and owners, from the requestor of the new Azure Subscription in their existing ITSM tooling.
+The ITSM tooling would also normally handle the business approval logic, like sign off from finance and managers, and once approved it would pass the request information to the subscription vending modules via an integration, normally a webhook or calling a REST API directly from the ITSM tooling.
 
 ### Submit Subscription Deployment
 
@@ -65,7 +65,7 @@ Many organizations have a common network infrastructure to enable private commun
 
 When vending new Azure Subscriptions, you will have captured the networking requirements for the workloads/resources to be provisioned into the new subscription at the time of the request. Based on this it is common for customers to have different networking patterns to support the differing needs of different application architectures.
 
-For example, some applications may require private and hybrid connectivity, bi-directionally, to on-premises and other applications also on the same routing domain/segment; these applications would be placed into subscriptions that are placed within the ‘corp’ management group as this would be compliant with the policy controls that are inherited by subscriptions within this part of the management group hierarchy. This would then allow the subscriptions to create virtual networks and peer back to central hub networks, normally in the platform connectivity subscriptions.
+For example, some applications may require private and hybrid connectivity to on-premises, and other applications also on the same routing domain/segment; these applications would be placed into subscriptions that are placed within the ‘corp’ management group as this would be compliant with the policy controls that are inherited by subscriptions within this part of the management group hierarchy. This would then allow the subscriptions to create virtual networks and peer back to central hub networks, normally in the platform connectivity subscriptions.
 
 Other applications may not require this same type of connectivity and may only require isolated Virtual Networks that contain services and resources that interact directly with the internet, protected by the various Azure Networking security services, or with other applications via services link Private Link.
 
@@ -96,7 +96,7 @@ When connecting to a common network topology that is in a single routing domain,
 
 Commonly customers have an IP Address Management (IPAM) system in place, and some may have this accessible behind an API so IP Address blocks can be assigned programmatically also. This can also be built into your Subscription vending process by making a call to the IPAM API as a step before creating the subscription and associated Virtual Networks to request an IP address space to pass into the subscription and Virtual Networks creation input parameters.
 
-IP Address exhaustion is a common concern for some customers and therefore a key point to keep in mind is that Azure Virtual Networks can have their Address Spaces expanded or added to, with non-contiguous IP Address blocks, at any time. For more information, see the [Manage a Virtual Network](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range).
+IP address exhaustion is a common concern for some customers and therefore a key point to keep in mind is that Azure Virtual Networks can have their Address Spaces expanded or added to, with non-contiguous IP Address blocks, at any time. For more information, see the [Manage a Virtual Network](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range).
 
 With this in mind it is therefore recommended that you appropriately size your Virtual Networks at the time of creation in an effort to conserve IP addresses. The table below shows how many usable IP addresses you can have in Azure Virtual Networks for common subnet sizes to help you plan appropriately.
 
@@ -136,7 +136,7 @@ Without a commercial agreement, you can still use the modules. Create subscripti
 - [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
 - [Create Azure subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 
-**5. Grant subscription owner role.** For every new subscription, you need to designate a subscription owner. You should grant the Owner role to one Azure Active Directory principal. It’s a best practice to assign the role needed for subscription creation by using a managed identity.
+**5. Grant subscription owner role.** For every new subscription, you need to designate a subscription owner. You should grant the Owner role to one Azure Active Directory principal.
 
 **6. Create Azure AD groups.** In addition to the subscription owner, you should use Azure AD groups to manage access to the subscription. For elevated (e.g. write) access we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Wherever possible, limit the number of subscription owners and use the minimum required level of access.
 
