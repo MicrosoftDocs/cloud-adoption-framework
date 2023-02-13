@@ -27,7 +27,7 @@ Subscription vending standardizes workload deployments. The consistency helps yo
 
 ## How to implement subscription vending
 
-The platform team often sets up, manages, and operates the subscription vending process. It's a best practice to use an IT service management (ITSM) tool to streamline the business approval process.
+The platform team often sets up, manages, and operates the subscription vending process. Anyone across the organization should be able to use the subscription vending process, and you can use an IT service management (ITSM) tool to provide it.
 
 :::image type="content" source="./media/subscription-vending-steps.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-steps.png" border="false":::
 
@@ -68,8 +68,6 @@ When vending new Azure Subscriptions, you will have captured the networking requ
 For example, some applications may require private and hybrid connectivity, bi-directionally, to on-premises and other applications also on the same routing domain/segment; these applications would be placed into subscriptions that are placed within the ‘corp’ management group as this would be compliant with the policy controls that are inherited by subscriptions within this part of the management group hierarchy. This would then allow the subscriptions to create virtual networks and peer back to central hub networks, normally in the platform connectivity subscriptions.
 
 Other applications may not require this same type of connectivity and may only require isolated Virtual Networks that contain services and resources that interact directly with the internet, protected by the various Azure Networking security services, or with other applications via services link Private Link.
-
-<!--In the future link to new doc about ALZ and Networking Patterns in relation to Management Group hierarchy – ETA March 2023-->
 
 Further reading:
 
@@ -159,7 +157,6 @@ The subscription vending model allows you to scale your environment and drive op
 
 1. You are an EA customer using more than 5,000 total subscriptions, including those that have been cancelled.
 2. You are an MCA customer and plan to have more than 5,000 active subscriptions.
-[link to azure resource graph service limit]
 
 **Request additional quota if needed.** Requesting additional quota is part of the subscription vending process. The default quotas are defined by your subscription offer type. You can request quote increases manually, after provisioning, using the Azure Portal. It’s easier if you automate this process by using the available APIs. However, you must handle the situation where the quota request fails. Consider running a script to manage this and handle any errors. For more information, see:
 
