@@ -12,7 +12,7 @@ ms.date: 11/11/2022
 
 # Network topology and connectivity for Azure HPC in energy
 
-The guidance in this article can help you examine design considerations and best practices that relate to networking and connectivity for Microsoft Azure and high-performance computing (HPC) deployments. The following suggestions build on considerations and recommendations defined in the Azure landing zone article for [network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
+The guidance in this article can help you examine design considerations and best practices that relate to networking and connectivity for Microsoft Azure and high-performance computing (HPC) deployments. The following suggestions build on considerations and recommendations defined in the Azure landing zone article for [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md).
 
 ## IP addressing, virtual networks, and subnets
 

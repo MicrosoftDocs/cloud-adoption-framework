@@ -105,7 +105,7 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Policy enforcement patterns](../../policy-compliance/policy-definition.md)
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
 - [Resource naming and tagging patterns](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
-- [Software Defined Networking patterns](../../../decision-guides/software-defined-network/index.md)
+- [Software Defined Networking patterns](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
 - [Subscription design patterns](../../../ready/landing-zone/design-area/resource-org-subscriptions.md)
 
 ## Next steps
