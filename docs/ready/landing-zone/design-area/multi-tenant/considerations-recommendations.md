@@ -52,6 +52,7 @@ This section details key considerations and recommendations relating to Azure la
   - This is typically the organizations corporate Azure Active Directory tenant, where the users identities exist and service like Microsoft 365 are running in.
   - Only create more Azure Active Directory tenants when clear requirements arise that can't be met using the corporate Azure Active Directory tenant.
 - Consider utilizing Azure Active Directory [Administrative Units](/azure/active-directory/roles/administrative-units) to provide management segregation and isolation of users, groups, and devices (for example different teams) within a single Azure Active Directory tenant, instead of creating multiple Azure Active Directory tenants
+- Consider utilizing sandbox subscriptions for initial application workload development and investigation, as documented in [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](https://aka.ms/alz/dtp)
 - Consider the extra [complexities](overview.md#complexities-with-multiple-azure-active-directory-tenants) in managing, governing, configuring, monitoring and securing multiple Azure Active Directory tenants
   - A single Azure Active Directory tenant is simpler to manage, govern and secure
 - Consider your JML (Joiners, Movers, Leavers) process, workflows and tooling
@@ -90,6 +91,7 @@ This can be avoided if you utilize a single Azure Active Directory tenant as the
 ### Recommendations
 
 - Use a single Azure Active Directory tenant, usually the corporate Azure Active Directory tenant and only create more Azure Active Directory tenants when clear and justified requirements arise that can't be met using the corporate Azure Active Directory tenant.
+  - Utilize sandbox subscriptions to provide application teams safe, controlled and isolated development environments within the same single Azure Active Directory tenant, as documented here in [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](https://aka.ms/alz/dtp)
 - Use Azure Active Directory multi-tenant applications, were possible, when creating integrations from operational tooling, such as ServiceNow, when connecting them to multiple Azure Active Directory tenants, as per the [guidance here](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools)
 - If you're an ISV review this specific guidance [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
 - Utilize Azure Lighthouse where possible, to simplify cross-tenant management experiences. [See Azure Lighthouse usage in ALZ multi-tenant](lighthouse.md)
