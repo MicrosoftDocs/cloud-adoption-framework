@@ -27,7 +27,13 @@ For this reason we document multiple approaches below with guidance and diagrams
 
 ## Approaches
 
-There are two approaches that can be taken when automating the deployment of Azure landing zones across multiple Azure Active Directory tenants.
+There are two approaches that can be taken when automating the deployment of Azure landing zones across multiple Azure Active Directory tenants. 
+
+[Approach 1 – Complete Isolation](#approach-1--complete-isolation) is the most common approach in multi-tenant scenarios to keep the required separation and isolation between Azure Active Directory tenants, that is the most common requirement of using a multi-tenant approach to start with.
+
+[Approach 2 – Shared Application Registration (multi-tenant) with Multiple Service Principals](#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals) is more commonly used in Managed Service Provider (MSP) scenarios where a [Deployment Stamps pattern](/azure/architecture/patterns/deployment-stamp) can be used to automate the deployment of an almost identical architecture across multiple tenants at scale.
+
+Both of these approaches are provided as examples and inspiration. You can mix and match the approaches in your deployments based upon your organizations requirements.
 
 >[!IMPORTANT]
 > This page is scoped to automating the deployment and operation of Azure landing zones as the platform in each Azure Active Directory tenant your organization might have. The approaches, recommendations, and considerations in this page are **not** intended to be used by application teams deploying and operating their services and applications into their landing zones (subscriptions). More information on the different types of landing zones can be found here in [Platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
@@ -61,16 +67,17 @@ Azure Active Directory B2B and/or Azure Lighthouse could be used, but this would
 
 In this approach, an Application Registration is created in the managing Azure Active Directory tenant. Then in every Azure Active Directory tenant that you wish to manage a Service Principal (SPN) is created in that tenant based on the Application Registration. This then allows the workers running the pipeline tasks and steps to log in to any of the Azure Active Directory tenants with a single set of credentials, simplifying operations.
 
+>[!TIP]
+> Review [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) if you are looking to understand the relationship between Application Registrations and Enterprise Applications (Service Principles) .
+
 [![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using the Shared Application Registration (multi-tenant) with Multiple Service Principals automation approach](media/automation-approach-2.png)](media/automation-approach-2.png#lightbox)
+
+>[!IMPORTANT]
+> In this approach the single Application Registration, and the associated Enterprise Applications (Service Principals), should be monitored highly for any abnormal activity in your Security Information and Event Management (SIEM) tooling as this is a highly privileged account. It should send alerts, and potentially automatically take action, depending on the alert severity.
 
 In the example we show a single App Registration in the `contoso.onmicrosoft.com` Azure Active Directory tenant and then an Enterprise Application in each of the Azure Active Directory tenants that is linked to the App Registration. This allows a pipeline to authenticate and authorize to all the Azure Active Directory tenants using the single App Registration. This scenario is documented further here in [Making your application multi-tenant](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
 
->[!NOTE]
-> When using a centralized pipeline, you might need to build a small mapping table that contains data correlating the Azure Active Directory tenants and other metadata, like the environment, associated subscriptions, organization name, identity object ID to use to authentication and authorization etc.
->
-> This data can then be called upon during the run of the pipeline in a step that uses some logic and conditions to control which Azure Active Directory tenant is deployed to and with which identities.
->
-> This could be stored in services like Azure Cosmos DB or Azure Table Storage.
+When using a centralized pipeline, you might need to build a small mapping table that contains data correlating the Azure Active Directory tenants and other metadata, like the environment, associated subscriptions, organization name, identity object ID to use to authentication and authorization etc. This data can then be called upon during the run of the pipeline in a step that uses some logic and conditions to control which Azure Active Directory tenant is deployed to and with which identities. This could be stored in services like Azure Cosmos DB or Azure Table Storage.
 
 The handling of multiple environments (for example Development, Test, Production) can also be controlled in the same way using the same, or separate Application Registrations and Enterprise Applications alongside pipelines.
 
@@ -78,9 +85,9 @@ You might decide to have separate pipelines for each Azure Active Directory tena
 
 >[!NOTE]
 > Azure Lighthouse works in a similar way to as described in this approach. However, Azure Lighthouse does not allow the assignment of the RBAC Owner, User Access Administrator and roles with DataActions permissions, as documented in [Role support for Azure Lighthouse.](/azure/lighthouse/concepts/tenants-users-roles#role-support-for-azure-lighthouse)
-> 
+>
 > The role of Owner and User Access Role are typically required in all Azure landing zone deployment scenarios which therefore rules Azure Lighthouse out as an option for the entire platform automation deployment aspect of Azure landing zones.
-> 
+>
 > However, it can still be useful in some scenarios as documented in [Azure Lighthouse usage in ALZ multi-tenant](lighthouse.md)
 
 #### Identities for platform administrators and developers - Approach 2
