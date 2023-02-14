@@ -58,4 +58,4 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 Learn about resource organization for an Azure Virtual Desktop enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Resource organization](./eslz-network-topology-and-connectivity.md)
+> [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)

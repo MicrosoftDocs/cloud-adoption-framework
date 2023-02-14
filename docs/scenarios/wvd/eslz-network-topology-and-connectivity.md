@@ -159,4 +159,4 @@ A networking setup with the same capabilities as the one on the source environme
 Learn about management and monitoring for an Azure Virtual Desktop enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Management and monitoring](./eslz-resource-organization.md)
+> [Resource organization](./eslz-resource-organization.md)
