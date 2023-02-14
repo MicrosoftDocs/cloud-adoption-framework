@@ -41,7 +41,7 @@ Using Azure Lighthouse to allow Azure Policy for Private Endpoints Private DNS Z
 
 [![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using Azure Lighthouse in the Private DNS at Scale scenario](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
 
-This architecture also allows application landing zone owners to be granted access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations, if a different approach is being used to manage the Private Endpoints DNS configuration.
+This architecture also allows application landing zone owners to be granted access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations. This is useful to be aware of if a different approach is being used to manage the Private Endpoints DNS configuration, rather than Azure Policy; as per the [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale) documentation.
 
 ## Next steps
 
