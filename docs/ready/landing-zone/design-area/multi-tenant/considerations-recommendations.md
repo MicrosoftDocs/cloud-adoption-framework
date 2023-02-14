@@ -72,6 +72,7 @@ This section details key considerations and recommendations relating to Azure la
   - Review [Multi-tenant apps](/azure/active-directory/develop/application-model#multi-tenant-apps)
   - Review [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
 - Consider utilizing the various features available for multi-tenant organizations as detailed in [What is a multi-tenant organization in Azure Active Directory?](/azure/active-directory/multi-tenant-organizations/overview)
+- Consider the additional work involved in [Keep your Azure landing zone up to date](/azure/cloud-adoption-framework/govern/resource-consistency/keep-azure-landing-zone-up-to-date).
 
 #### Azure Products & Services Azure Active Directory Integration
 
