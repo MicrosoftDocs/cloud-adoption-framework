@@ -9,7 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Sandbox Overview
+# Sandbox Environments
+## Sandbox Overview
 
 A sandbox environment is an isolated environment that enables users to do testing and experimentation without impacting any other environments (Production, Development, UAT, etc.). Azure sandboxes provide users with a controlled environment to test and experiment with Azure resources. Sandbox environments are also great places to conduct POCs (proof of concepts) with Azure resources. Each sandbox is its own Azure subscription controlled by Azure policies applied at the Sandboxes management group level. A sandbox can be used by one person or a team depending on its purpose.
 
@@ -19,7 +20,7 @@ Sandbox environments are the ultimate hands-on learning tool for Azure. Below ar
 -   Cloud architect wants a sandbox environment to evaluate Azure resources or conduct a PoC for an Azure service or resource before formally approving them for their organization.
 -   A cloud engineer wants a sandbox environment to better understand what happens when a specific setting is changed on an Azure resource.
 
-# Sandbox Architecture
+## Sandbox Architecture
 
 ### Management Group and Subscription Layout
 
@@ -65,9 +66,9 @@ It is important from a security perspective to ensure audit logging from any san
 
 The sandbox user(s) are given Contributor access to the sandbox subscription.
 
-# Additional Considerations
+## Additional Considerations
 
-## Sandbox Expiration
+### Sandbox Expiration
 
 Sandboxes should be cancelled or deleted at some point in time. Having a strategy to remove a sandbox is a cost savings and security measure. Cost and expiration dates are two important variables for determining when a sandbox should be removed.
 
@@ -93,4 +94,4 @@ All sandboxes should have an expiration date.
 
 One concern most organizations have about sandbox environments is ensuring sensitive data doesn’t find its way in. The first line of defense for information protection is always user education. Users should be given disclaimers/information before being assigned a sandbox that clearly states any sensitive data should not be added to the sandbox.
 
-[Microsoft Purview](https://learn.microsoft.com/en-us/azure/purview/overview) is a service that can be used to provide information protection for sandbox environments. Purview can be used to alert if data labeled by the organization as sensitive were to be added to sandbox environments.
+[Microsoft Purview](https://learn.microsoft.com/azure/purview/overview) is a service that can be used to provide information protection for sandbox environments. Purview can be used to alert if data labeled by the organization as sensitive were to be added to sandbox environments.
