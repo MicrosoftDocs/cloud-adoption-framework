@@ -26,9 +26,7 @@ Virtual desktop migrations are motivated by a few common target outcomes:
 
 - **Safe access**. Employees need access to corporate data and applications from their devices.
 
-- **Support end users**. As workloads are migrated to the cloud, employees need more support for a low-latency, optimized experience.
-
-Azure Virtual Desktop forms a mission-critical platform for many organizations. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. To understand the strategy for an Azure Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
+- **Support end users**. As workloads are migrated to the cloud, employees need more support for a low-latency, optimized experience. Azure Virtual Desktop forms a mission-critical platform for many organizations. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. To understand the strategy for an Azure Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
 
 - **Empower IT**. The IT team wants to transform the workplace, which often starts with transforming employees' user experience.
 
