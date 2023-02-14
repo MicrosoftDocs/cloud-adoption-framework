@@ -53,6 +53,8 @@ This section details key considerations and recommendations relating to Azure la
   - Only create more Azure Active Directory tenants when clear requirements arise that can't be met using the corporate Azure Active Directory tenant.
 - Consider utilizing Azure Active Directory [Administrative Units](/azure/active-directory/roles/administrative-units) to provide management segregation and isolation of users, groups, and devices (for example different teams) within a single Azure Active Directory tenant, instead of creating multiple Azure Active Directory tenants
 - Consider utilizing sandbox subscriptions for initial application workload development and investigation, as documented in [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](https://aka.ms/alz/dtp)
+- Migrating Azure Subscriptions between Azure Active Directory tenants is often complex and requires pre and post migration activities to be completed to enable a migration. Review [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription) guidance for more information.
+  - Often it is simpler to rebuild the application workload in a new Azure Subscription in the destination tenant to give you more control over the migration.
 - Consider the extra [complexities](overview.md#complexities-with-multiple-azure-active-directory-tenants) in managing, governing, configuring, monitoring and securing multiple Azure Active Directory tenants
   - A single Azure Active Directory tenant is simpler to manage, govern and secure
 - Consider your JML (Joiners, Movers, Leavers) process, workflows and tooling
