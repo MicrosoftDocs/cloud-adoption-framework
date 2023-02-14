@@ -81,9 +81,6 @@ The following list provides a recommended set of functions for the platform team
 - Policy management and enforcement (holistic)
 - Security monitoring and audits (holistic)
 - Network management (holistic)
-- Policy management and enforcement (holistic)
-- Security monitoring and audits (holistic)
-- Cost management (holistic)
 
 ### Define functions for your application workload teams
 
