@@ -29,7 +29,7 @@ Development can take many forms, including:
 - Scripting.
 - Automation, such as these examples:
   - **Infrastructure deployment**, for instance, automating a Terraform deployment.
-  - **Infrastructure configuration**, such as using an Azure Resource Manager template to deploy an Azure Network Security Group and create security group rules.
+  - **Infrastructure configuration**, such as using an Azure Resource Manager template or Bicep to deploy an Azure Network Security Group and create security group rules.
   - **Operational tasks**, like using Azure Functions to run scheduled tasks by running code on predefined timed intervals.
 - Code to be deployed to firmware.
 - Mobile apps, an aggregation of application-level code with platform services, deployed as a system.

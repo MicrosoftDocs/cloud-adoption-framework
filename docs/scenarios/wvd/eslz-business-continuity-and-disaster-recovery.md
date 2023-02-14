@@ -165,6 +165,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Make sure that the managed disk for the local VM is large enough to accommodate the local cache of all users' FSLogix profile and Office containers.
 
 - Use Azure Compute Gallery to replicate golden images to different regions.
+  - Golden images don't participate in providing users the ability to connect to their session host VM. However, they play a critical role in how quickly you are able to run the provisioning process of new virtual machines on a host pool and therefore must be backed up and available.
   - Use ZRS to create the image. Maintain at least two copies of the image per region.
 
 - Use Azure Backup to protect critical user data from data loss or logical corruption when you use the Azure Files Standard tier or Premium tier.
@@ -175,6 +176,8 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Network infrastructure, as part of a hub-and-spoke architecture or as a virtual wide area network (virtual WAN) architecture must be available in the secondary region.
   - Hybrid connectivity must be highly available in both the primary region and the secondary region.
   - Active Directory authentication must be available in the disaster recovery region or connectivity to the on-premises domain must be guaranteed.
+
+[Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix TechZone summarizes design considerations for Citrix technologies. This guide assists with business continuity and disaster recovery (BCDR) architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
 
 ## Next steps
 

@@ -35,8 +35,23 @@ There are many third-party tools that can provide value-added extraction and ing
 These services differ in their technical architecture. Qlik Replicate and Simplement Data Liberator provide near-real-time replication by identifying changes in source database logs. Kagool Velocity uses an add-on to SAP NetWeaver and submits a request for comments to the application layer to expose data. Compared to options mentioned earlier, these options provide better out-of-the-box functionality and near-real-time support, but they require third-party technologies.
 
 ## Recommendation
-
-Our recommendation is a hybrid option comprised of several options that serve as an ingestion strategy for SAP data. SAP SLT, BODS, and Qlik are used to extract the data from SAP transactional systems (like SAP ECC), and Data Factory pulls the data into Azure to convert it to the Parquet format before writing to Azure Data Lake Storage. It takes advantage of the existing framework by independently extracting data from SAP NetWeaver Business Warehouse.
+- Our primary recommendation is use the SAP ODP connector as:
+  
+  - It provides a single connector to connect to SAP ECC Extractors, SAP S/4HANA CDS Views, SAP BW, SAP BW4/HANA, SAP SLT, SAP HANA Views.
+  
+  - It makes use of the existing CDS views and custom created views that are already provided making it easier to extract data from SAP S/4HANA and SAP BW.
+  
+  - It can use SLT that allows for trigger based data capture at the table level.
+  
+  - Using the data flows in Azure Data Factory and Synapse Pipelines, makes data extractions simple with no need for watermarking.
+  
+  - Data flows provides inbuilt capabilities for applying  changes in the sink using the correct order based on the ODP metadata and completely hides the complexities required for the developers to create custom code to handle inserts/updates/deletes/upserts.
+  
+  - Data flows uses the ODQ framework’s recovery mechanism transparently requiring no custom logic to run recovery during failed extractions.
+  
+  - Data flows offer advantage of high throughputs (through parallel reads, partioning etc) to improve the performance of data extractions.
+  
+- Using a hybrid approach is also an available option and may consist of several options that serve as an ingestion strategy for SAP data. SAP SLT, BODS, and Qlik are used to extract the data from SAP transactional systems (like SAP ECC), and Data Factory pulls the data into Azure to convert it to the Parquet format before writing to Azure Data Lake Storage. It takes advantage of the existing framework by independently extracting data from SAP NetWeaver Business Warehouse.
 
 ## Next steps
 
