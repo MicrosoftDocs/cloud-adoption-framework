@@ -148,7 +148,7 @@ Here's how Contoso plans to set up the deployment:
 >
 > - **Step 2: Prepare Azure Database Migration Service.** Contoso must register the database migration provider, create an instance, and then create a Database Migration Service project. Contoso also must set up a shared access signature (SAS) uniform resource identifier (URI) for the instance of Database Migration Service. An SAS URI provides delegated access to resources in Contoso's storage account so that Contoso can grant limited permissions to storage objects. Contoso sets up an SAS URI so that Azure Database Migration Service can access the storage account container to which the service uploads the SQL Server backup files.
 >
-> - **Step 3: Prepare Azure for the Migration and modernization tool.** Contoso adds this tool that's part of Azure Migrate to its Azure Migrate project.
+> - **Step 3: Prepare Azure for the Migration and modernization tool.** Contoso adds this tool that's part of Azure Migrate to its Azure Migrate project. Migration and modernization was previously named Azure Migrate: Server Migration.
 >
 > - **Step 4: Prepare on-premises VMware for the Migration and modernization tool.** Contoso prepares accounts for VM discovery and prepares to connect to Azure VMs after migration.
 >
