@@ -284,7 +284,7 @@ items:
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
-          - name: Handling Azure Landing Zones across multiple tenants
+          - name: Handling Azure landing zones across multiple tenants
             items:
               - name: Overview
                 href: ready/landing-zone/design-area/multi-tenant/overview.md

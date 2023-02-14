@@ -1,6 +1,6 @@
 ---
 title: Scenarios for multiple Azure Active Directory tenants
-description: Understand the scenarios when Multiple Azure Active Directory tenants could be required in relation to Azure Landing Zones
+description: Understand the scenarios when Multiple Azure Active Directory tenants could be required in relation to Azure landing zones
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -109,7 +109,7 @@ For more information review the [Mergers and Acquisitions](#mergers-and-acquisit
 
 ## Summary
 
-As detailed in the scenarios there are multiple reasons that might lead your organization to require multiple Azure Active Directory Tenants. However, when creating multiple tenants to meet the requirements within these scenarios it's important to understand that the additional complexity and operational tasks that will be required to maintain multiple tenants across an organization as well as the potentially increased costs from additional licensing requirements. For more information, [Considerations and Recommendations for Azure Landing Zones in multi-tenant Scenarios](considerations-recommendations.md) for more information.
+As detailed in the scenarios there are multiple reasons that might lead your organization to require multiple Azure Active Directory Tenants. However, when creating multiple tenants to meet the requirements within these scenarios it's important to understand that the additional complexity and operational tasks that will be required to maintain multiple tenants across an organization as well as the potentially increased costs from additional licensing requirements. For more information, [Considerations and Recommendations for Azure landing zones in multi-tenant Scenarios](considerations-recommendations.md) for more information.
 
 ## Next steps
 

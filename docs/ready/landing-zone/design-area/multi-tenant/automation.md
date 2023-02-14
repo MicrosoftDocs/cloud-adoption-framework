@@ -1,6 +1,6 @@
 ---
-title: Automating Azure Landing Zones across multiple tenants
-description: Review the automation considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure Landing Zones
+title: Automating Azure landing zones across multiple tenants
+description: Review the automation considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure landing zones
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -10,9 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Automating Azure Landing Zones across multiple tenants
+# Automating Azure landing zones across multiple tenants
 
-When your organization has multiple Azure Active Directory tenants with Azure Landing Zones (ALZ) in each of them, one or multiple times, automation is key to successfully operating and maintaining the ALZ deployment at scale across all of the tenants. There are however multiple approaches to automating ALZ deployments across multiple tenants and the decision on which approach to take will depend on the reasons your organization has multiple Azure Active Directory tenants.
+When your organization has multiple Azure Active Directory tenants with Azure landing zones (ALZ) in each of them, one or multiple times, automation is key to successfully operating and maintaining the ALZ deployment at scale across all of the tenants. There are however multiple approaches to automating ALZ deployments across multiple tenants and the decision on which approach to take will depend on the reasons your organization has multiple Azure Active Directory tenants.
 
 For example, if you have multiple Azure Active Directory Tenants because you are an ISV, then it's likely that you want to keep your corporate and SaaS solutions Azure Active Directory tenants separate in all aspects to reduce the risk of of any operation or deployment to either tenant could ever impact the other, whether intended or by mistake.
 
@@ -30,7 +30,7 @@ For this reason we document multiple approaches below with guidance and diagrams
 There are two approaches that can be taken when automating the deployment of Azure landing zones across multiple Azure Active Directory tenants.
 
 >[!IMPORTANT]
-> This page is scoped to automating the deployment and operation of Azure Landing Zones as the platform in each Azure Active Directory tenant your organization might have. The approaches, recommendations, and considerations in this page are **not** intended to be used by application teams deploying and operating their services and applications into their landing zones (subscriptions). More information on the different types of landing zones can be found here in [Platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
+> This page is scoped to automating the deployment and operation of Azure landing zones as the platform in each Azure Active Directory tenant your organization might have. The approaches, recommendations, and considerations in this page are **not** intended to be used by application teams deploying and operating their services and applications into their landing zones (subscriptions). More information on the different types of landing zones can be found here in [Platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones).
 
 ### Approach 1 – Complete Isolation
 
@@ -44,7 +44,7 @@ In this approach, the primary objective is to keep each Azure Active Directory t
   - Service Principals (SPNs)
   - Users/Administrators
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the complete isolation automation approach](media/automation-approach-1.png)](media/automation-approach-1.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using the complete isolation automation approach](media/automation-approach-1.png)](media/automation-approach-1.png#lightbox)
 
 This approach does mean there are more components to manage that are duplicated per Azure Active Directory tenant, however, this might be a requirement for some organizations that have regulatory compliance controls enforced upon them that mandates this type of segregation and isolation.
 
@@ -61,7 +61,7 @@ Azure Active Directory B2B and/or Azure Lighthouse could be used, but this would
 
 In this approach, an Application Registration is created in the managing Azure Active Directory tenant. Then in every Azure Active Directory tenant that you wish to manage a Service Principal (SPN) is created in that tenant based on the Application Registration. This then allows the workers running the pipeline tasks and steps to log in to any of the Azure Active Directory tenants with a single set of credentials, simplifying operations.
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using the Shared Application Registration (multi-tenant) with Multiple Service Principals automation approach](media/automation-approach-2.png)](media/automation-approach-2.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using the Shared Application Registration (multi-tenant) with Multiple Service Principals automation approach](media/automation-approach-2.png)](media/automation-approach-2.png#lightbox)
 
 In the example we show a single App Registration in the `contoso.onmicrosoft.com` Azure Active Directory tenant and then an Enterprise Application in each of the Azure Active Directory tenants that is linked to the App Registration. This allows a pipeline to authenticate and authorize to all the Azure Active Directory tenants using the single App Registration. This scenario is documented further here in [Making your application multi-tenant](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
 
@@ -92,4 +92,4 @@ They might also have access into the other Azure Active Directory tenants via Az
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Azure Landing Zones Canary approach with multiple tenants](canary.md)
+> [Azure landing zones Canary approach with multiple tenants](canary.md)

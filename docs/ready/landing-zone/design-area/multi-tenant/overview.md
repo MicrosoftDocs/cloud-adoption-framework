@@ -1,6 +1,6 @@
 ---
-title: Azure Landing Zones and multiple Azure Active Directory tenants
-description: Understand how multiple Azure Active Directory tenants work within the context of Azure Landing Zones
+title: Azure landing zones and multiple Azure Active Directory tenants
+description: Understand how multiple Azure Active Directory tenants work within the context of Azure landing zones
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Azure Landing Zones and multiple Azure Active Directory tenants
+# Azure landing zones and multiple Azure Active Directory tenants
 
 Azure landing zones are built upon [Management Groups](/azure/governance/management-groups/overview) to which [Azure Policies](/azure/governance/policy/overview) are assigned to and Subscriptions placed into the Management Groups to provide the required governance controls that an organization needs to meet its security and compliance needs.
 
@@ -21,7 +21,7 @@ All of these resources are deployed within a single Azure Active Directory (AAD)
 
 Multiple Subscriptions can trust the same Azure Active Directory tenant. Each Subscription can only trust a single Azure Active Directory tenant. Read more on the relationship between an Azure Subscription and an Azure Active Directory tenant here in, [Add an existing Azure subscription to your tenant.](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 
-[![Diagram of single Azure Active Directory tenant with Azure Landing Zones deployed](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
+[![Diagram of single Azure Active Directory tenant with Azure landing zones deployed](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
 
 As shown in the diagram above Management Groups, Azure Policies and Azure Subscriptions are deployed, following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), within a single Azure Active Directory tenant.
 

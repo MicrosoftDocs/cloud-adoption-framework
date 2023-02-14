@@ -1,6 +1,6 @@
 ---
 title: Considerations & Recommendations for multi-tenant Azure Landing Zone scenarios
-description: Review the considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure Landing Zones
+description: Review the considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure landing zones
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -16,7 +16,7 @@ As per the outlined information, in this [article](overview.md), on how Manageme
 
 ## Topology of Azure landing zones with multiple Azure AD tenants
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed](media/contoso-multi-tenant.png)](media/contoso-multi-tenant.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed](media/contoso-multi-tenant.png)](media/contoso-multi-tenant.png#lightbox)
 
 The above diagram shows an example of the Contoso Corporation, which has four Azure Active Directory tenants due to mergers and acquisitions as the corporation has grown over time.
 
@@ -42,7 +42,7 @@ Finally, the Contoso Corporation also has a separate Azure Active Directory tena
 >[!NOTE]
 > Azure landing zones is deployed within a single Azure Active Directory tenant. This means if you have multiple Azure Active Directory tenants that you wish to deploy Azure resources within that you wish to control, govern and monitor using Azure landing zones, you must deploy Azure landing zones within each of those tenants individually.
 
-## Considerations and Recommendations for Azure Landing Zones in multi-tenant Scenarios
+## Considerations and Recommendations for Azure landing zones in multi-tenant Scenarios
 
 This section details key considerations and recommendations relating to Azure landing zones and Azure Active Directory multi-tenant scenarios and usage.
 
@@ -116,4 +116,4 @@ This can be avoided if you utilize a single Azure Active Directory tenant as the
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Automating Azure Landing Zones across multiple tenants](automation.md)
+> [Automating Azure landing zones across multiple tenants](automation.md)

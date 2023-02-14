@@ -1,6 +1,6 @@
 ---
-title: Azure Lighthouse usage in Azure Landing Zones multi-tenant scenarios
-description: Understand how Azure Lighthouse can be used in environments with Multiple Azure Active Directory tenants with Azure Landing Zones
+title: Azure Lighthouse usage in Azure landing zones multi-tenant scenarios
+description: Understand how Azure Lighthouse can be used in environments with Multiple Azure Active Directory tenants with Azure landing zones
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Azure Lighthouse usage in Azure Landing Zones multi-tenant scenarios
+# Azure Lighthouse usage in Azure landing zones multi-tenant scenarios
 
 [Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, higher automation, and enhanced governance across resources. Azure Lighthouse can be adopted in ALZ scenarios whether in single or multi-tenant architectures.
 
@@ -33,13 +33,13 @@ Review the below considerations, recommendations and common scenarios relating t
 - Utilize Azure Active Directory Privileged Identity Management (PIM) as part of your Azure Lighthouse delegations as documented [here](/azure/lighthouse/how-to/create-eligible-authorizations)
   - This feature requires Azure Active Directory Premium P2 licensing but only from the source/managing Azure Active Directory tenant
 
-## Azure Landing Zones Specific Scenario - Azure Lighthouse + Private DNS at Scale
+## Azure landing zones Specific Scenario - Azure Lighthouse + Private DNS at Scale
 
 Below is an ALZ specific scenarios where Azure Lighthouse is used across multiple Azure Active Directory tenants to assist with Private Link and DNS integration.
 
 Using Azure Lighthouse to allow Azure Policy for Private Endpoints Private DNS Zone automatic linking, as per [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale), in "spoke" Azure Active Directory tenants to the centralized Private DNS Zones in the "Hub" Azure Active Directory tenant.
 
-[![Diagram of multiple Azure Active Directory tenants with Azure Landing Zones deployed using Azure Lighthouse in the Private DNS at Scale scenario](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
+[![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using Azure Lighthouse in the Private DNS at Scale scenario](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
 
 This architecture also allows application landing zone owners to be granted access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations, if a different approach is being used to manage the Private Endpoints DNS configuration.
 
