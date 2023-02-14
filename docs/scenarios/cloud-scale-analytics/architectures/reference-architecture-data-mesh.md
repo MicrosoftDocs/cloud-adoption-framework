@@ -1,6 +1,6 @@
 ---
 title: A financial institution scenario for data mesh
-description: Learn about the data mesh scenario for cloud-scale analytics in Azure.
+description: Learn about a data mesh scenario for cloud-scale analytics in Azure that uses landing zones, data integrations, and data products.
 author: PietheinStrengholt
 ms.author: pstrengholt
 ms.date: 02/28/2022
@@ -13,30 +13,30 @@ adobe-target: true
 
 # A financial institution scenario for data mesh
 
-This reference architecture is for customers that want to use cloud-scale analytics for scalability and *data mesh* architectures. It demonstrates a more complex scenario, with multiple landing zones, data integrations, and data products.
+This reference architecture is for customers that want to use cloud-scale analytics for scalability and *data mesh* architectures. It demonstrates a complex scenario with landing zones, data integrations, and data products.
 
 ## Customer profile
 
-A fictitious enterprise, Woodgrove Bank, is a large financial services company with a world-wide footprint. On-premises and cloud deployment systems house Woodgrove Bank's data. Within the Woodgrove Bank architecture, there are several data warehouse systems for consolidated marketing and integrated reporting. This architecture includes several data lakes for ad hoc analytics and data discovery. Many Woodgrove Bank applications are interconnected via application integration patterns, which are mostly API-based or event-based.
+A fictitious enterprise, Woodgrove Bank, is a large financial services company with a world-wide footprint. Woodgrove Bank's data is housed in on-premises and cloud deployment systems. Within the Woodgrove Bank architecture, there are several data warehouse systems for consolidated marketing and integrated reporting. This architecture includes several data lakes for ad hoc analytics and data discovery. Woodgrove Bank applications are interconnected via application integration patterns, which are mostly API-based or event-based.
 
 ## The current situation
 
-Woodgrove Bank finds it challenging to distribute data toward different locations because of the complexity of data warehousing. Integrating new data is time consuming, and it's tempting to duplicate data. Woodgrove Bank also finds it difficult to oversee the end-to-end data landscape because of point-to-point connectivity. The bank underestimated the demand for intensive data consumption. New use cases are introduced quickly, one after another. Data governance, such as data ownership and quality, and costs are hard to control. Keeping current with regulations is difficult because Woodgrove Bank doesn't know exactly where its data resides.
+It’s challenging for Woodgrove Bank to distribute data to different locations because of the complexity of data warehousing. Integrating new data is time consuming, and it's tempting to duplicate data. Woodgrove Bank finds it difficult to oversee the end-to-end data landscape because of point-to-point connectivity. The bank underestimated the demand for intensive data consumption. New use cases are introduced quickly, one after another. Data governance, such as data ownership and quality, and costs are hard to control. Keeping current with regulations is difficult because Woodgrove Bank doesn't know exactly where its data resides.
 
 ## Architecture solution: Data mesh
 
-Over the past several years, organizations have recognized that data is at the heart of everything. Data opens new efficiencies, drives innovation, unlocks new business models, and increases customer satisfaction. Becoming data-driven, such as using data at scale, remains a top priority for most companies.
+Over the past several years, organizations have recognized that data is at the heart of everything. Data opens new efficiencies, drives innovation, unlocks new business models, and increases customer satisfaction. It’s a top priority for companies to use data-driven methods, like data at scale.
 
-It's challenging to reach a stage where the deeper value of data is accessible to all organization members. Legacy and tightly interconnected systems, centralized huge platforms, and complex governance can be significant barriers to generating value out of data.
+Reaching a stage where the deeper value of data is accessible to all organization members is challenging. Legacy and tightly interconnected systems, centralized monolithic platforms, and complex governance can be significant barriers to generating value out of data.
 
 ### About data mesh
 
 The concept of data mesh, a term coined by Zhamak Dehghani, encompasses data, technology, processes, and organization. Conceptually, it's an accessible approach to managing data where various domains use their own data. Data mesh challenges the idea of conventional centralization of data. Rather than looking at data as one huge repository, data mesh considers the decomposition of independent data products. This shift, from centralized to federated ownership, is backed by a modern and self-service data platform, which is typically designed by using cloud-native technologies.
 
-To break down the data mesh concept into building blocks, here are some key points to consider:
+When you break down the data mesh concept into building blocks, here are some key points to consider:
 
 - **Data as a product**: Each (organizational) domain operates its data end to end. Accountability lies with the data owner within the domain. Pipelines become a first-class concern of the domains themselves.
-- **Federated computational data governance**: To ensure that each data owner can trust the others and share its data products, an enterprise data governance body must be established to implement data quality, central visibility of data ownership, data access management, and data privacy policies.
+- **Federated computational data governance**: To ensure that each data owner can trust the others and share its data products, an enterprise data governance body must be established. The governance body implements data quality, central visibility of data ownership, data access management, and data privacy policies.
 - **Domain-oriented data ownership**: The enterprise should ideally define and model each data-domain node within the mesh by applying the principles of domain-oriented design.
 - **Self-serve data platform**: A data mesh requires a self-serve data platform that allows users to remove the technical complexity and focus on their individual data use cases.
 
@@ -44,9 +44,9 @@ To break down the data mesh concept into building blocks, here are some key poin
 
 Data-as-a-product thinking and a self-service platform model aren't new to Microsoft. Microsoft has observed best practices of distributed platforms, pipelines across domains, federated ownership, and self-explanatory data for many years.
 
-Woodgrove Bank can transition to data mesh by using cloud-scale analytics. Cloud-scale analytics is an open-source and prescriptive blueprint for designing and quickly deploying modern data platforms. It's coupled with Azure's best practices and design principles and is aligned with Azure Well-Architected Framework. Cloud-scale analytics gives enterprises an 80 percent prepared viewpoint, and the remaining 20 percent is customizable.
+Woodgrove Bank can transition to data mesh by using cloud-scale analytics. Cloud-scale analytics is an open-source and prescriptive blueprint for designing and quickly deploying modern data platforms. It's coupled with Azure's best practices and design principles and is aligned with Azure Well-Architected Framework. Cloud-scale analytics gives enterprises an 80 percent prescribed viewpoint, and the remaining 20 percent is customizable.
 
-Cloud-scale analytics offers enterprises a strategic design path toward data mesh, and it can be used to quickly set up such an architecture. It offers a blueprint, including core data platform services, for data management.
+Cloud-scale analytics offers enterprises a strategic design path toward data mesh, and it can be used to quickly set up such an architecture. It offers a blueprint, including core data platform services for data management.
 
 At the highest level, cloud-scale analytics use a data management capability, which is enabled through the data management landing zone. This zone is responsible for the federated data governance of an organization of the (self-service) platform, and the data domains that drive business value through data products. The benefit of this approach is that it removes technical complexity, while adhering to the same standards. It ensures that there's no proliferation of technology. It also allows enterprises to start modular, with a small footprint, and then grow over time.
 
@@ -54,15 +54,15 @@ The data management landing zone, as you can see in the following diagram, surro
 
 :::image type="content" source="../images/data-mesh-plane.png" alt-text="Diagram showing how data mesh intelligently distributes data products between data domains." lightbox="../images/data-mesh-plane.png":::
 
-Cloud-scale analytics also advocates the application of consistent governance that uses a common architecture when data products are distributed. The framework allows direct communication between domains, while staying fully in control by placing a strong emphasis on central cataloging and classification to protect data and allow various groups to discover data. It places an umbrella on top of your data estate.
+Cloud-scale analytics also advocates the application of consistent governance that uses a common architecture when data products are distributed. The framework allows direct communication between domains. It stays in control by placing an emphasis on central cataloging and classification to protect data and allow groups to discover data. It places an umbrella on top of your data estate.
 
 ### Data domains
 
-When you use cloud-scale analytics as a strategic path, you need to think of the decomposition of your architecture and the resulting granularity. Data mesh decomposes data by not following the borders of technologies. Instead, it applies the principles of domain-driven design (DDD), an approach to software development that involves complex systems for larger organizations. DDD is popular because of its impact on modern software and application development practices, such as microservices.
+When you use cloud-scale analytics as a strategic path, you need to think of the decomposition of your architecture and the resulting granularity. Data mesh decomposes data by not following the borders of technologies. Instead, it applies the principles of domain-driven design (DDD), an approach to software development that involves complex systems for larger organizations. DDD is popular because of its effect on modern software and application development practices, such as microservices.
 
-One of the patterns from domain-driven design is known as *bounded context*. Bounded contexts are used to set the logical boundaries of a domain's solution space to better manage complexity. It's important that teams understand which aspects, including data, they can change on their own and which are shared dependencies that they need to coordinate with others. Data mesh embraces bounded context. It uses this pattern to describe how organizations can coordinate around data domains and focus on delivering data as a product. Each data domain owns and operates multiple data products with its own technology stack, which is independent from the others.
+One of the patterns from domain-driven design is known as *bounded context*. Bounded contexts are used to set the logical boundaries of a domain's solution space to better manage complexity. It's important that teams understand which aspects, including data, they can change and which are shared dependencies to coordinate with others. Data mesh embraces bounded context. It uses this pattern to describe how organizations can coordinate around data domains and focus on delivering data as a product. Each data domain owns and operates multiple data products with its own technology stack, which is independent from the others.
 
-:::image type="content" source="../images/data-mesh-architecture.png" alt-text="Diagram showing data mesh architecture." lightbox="../images/data-mesh-architecture.png":::
+:::image type="content" source="../images/data-mesh-architecture.png" alt-text="Diagram showing the data mesh architecture." lightbox="../images/data-mesh-architecture.png":::
 
 #### Data products
 
@@ -98,11 +98,11 @@ You can use managed identities to ensure that a least privilege access model is 
 
 #### Evolve toward the future
 
-Cloud-scale analytics is designed with data mesh in mind. Cloud-scale analytics provides a proven approach by which organizations can share data across many data domains. This framework governs the architecture by ring-fencing it with data management services and allows domains to have the autonomy to make choices.
+Cloud-scale analytics is designed with data mesh in mind. Cloud-scale analytics provides a proven approach by which organizations can share data across many data domains. This framework allows domains to have the autonomy to make choices and it governs the architecture by ring-fencing it with data management services.
 
-A consideration to keep in mind, when you're implementing data mesh, is how to logically group and organize your domains. This requires an enterprise view and is likely a cultural shift for your organization. The shift requires you to federate data ownership among data domains and owners who are accountable for providing their data as products. It also requires teams to conform to centralized capabilities that are offered by the data management landing zone. This new approach might require individual teams to give up their current mandates, which are likely to generate resistance. You might have to make certain political choices and strike a balance between centralized and decentralized approaches.
+When you're implementing data mesh, logically group and organize your domains. This approach requires an enterprise view and is likely a cultural shift for your organization. The shift requires you to federate data ownership among data domains and owners who are accountable for providing their data as products. It also requires teams to conform to centralized capabilities that are offered by the data management landing zone. This new approach might require individual teams to give up their current mandates, which are likely to generate resistance. You might have to make certain political choices and strike a balance between centralized and decentralized approaches.
 
-You can scale a data mesh architecture by adding more landing zones to the architecture for individual domains. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This pattern allows you to share data products and resources across zones. By splitting into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
+You can scale a data mesh architecture by adding more landing zones to the architecture for individual domains. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This pattern allows you to share data products and resources across zones. When you split into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
 
 ## Learn more
 
