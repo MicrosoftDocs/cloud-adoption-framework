@@ -23,7 +23,9 @@ Multiple Subscriptions can trust the same Azure Active Directory tenant. Each Su
 
 [![Diagram of single Azure Active Directory tenant with Azure landing zones deployed](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
 
-As shown in the diagram above Management Groups, Azure Policies and Azure Subscriptions are deployed, following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), within a single Azure Active Directory tenant.
+As shown in the diagram above Management Groups, Azure Policies and Azure Subscriptions are deployed, following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), within a single Azure Active Directory tenant. 
+
+This is the recommended approach for the majority of organizations based on their requirements to give them the best collaboration experience possible, whilst allowing them to control, govern and isolate users and resources within a single Azure Active Directory tenant. Review the rest of this page to understand why and how, alongside the additional supporting and linked to content.
 
 Your organization might be required to use multiple Azure Active Directory tenants for many reasons, that is detailed [here](scenarios.md), and therefore guidance on [how to deploy and manage](automation.md) the Azure landing zone deployment into each of these tenants is required alongside [considerations and recommendations](considerations-recommendations.md) for handling these multiple Azure Active Directory tenants.
 
