@@ -21,12 +21,12 @@ The Azure landing zone conceptual architecture below is an example of scaled-out
 
 Whatever the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends. The design areas are indicated with the letters "A" through "I" to illustrate the hierarchy of resource organization in the conceptual architecture.
 
-| Legend | Design area | Objective | Relevant methodology |
-|--|--|--|--|
-| ![The letter A](./media/diagram-legends/a.png) | [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
-| ![The letter B](./media/diagram-legends/b.png) | [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
-| ![The letter E](./media/diagram-legends/e.png) | [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
-| ![The letter C](./media/diagram-legends/c.png) | [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
+| Legend | Design area | Objective |
+|--|--|--|
+| ![The letter A](./media/diagram-legends/a.png) | [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. |
+| ![The letter B](./media/diagram-legends/b.png) | [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. |
+| ![The letter E](./media/diagram-legends/e.png) | [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. |
+| ![The letter C](./media/diagram-legends/c.png) | [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. |
 
 ## Compliance design areas
 
@@ -38,12 +38,12 @@ The tools and processes you implement for managing environments play an importan
 
 As the organization's cloud environment develops, these compliance design areas are the focus for iterative refinement. This refinement might be because of new applications that introduce specific new requirements, or the business requirements changing. For example, in response to a new compliance standard.
 
-| Legend | Design area | Objective | Relevant methodology |
-|--|--|--|--|
-| ![The letter F](./media/diagram-legends/f.png) | [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. | Secure |
-| ![The letter D](./media/diagram-legends/d.png) ![The letter G](./media/diagram-legends/g.png) ![The letter H](./media/diagram-legends/h.png) | [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
-| ![The letter C](./media/diagram-legends/c.png) ![The letter D](./media/diagram-legends/d.png) | [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
-| ![The letter I](./media/diagram-legends/i.png) | [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
+| Legend | Design area | Objective |
+|--|--|--|
+| ![The letter F](./media/diagram-legends/f.png) | [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. |
+| ![The letter D](./media/diagram-legends/d.png) ![The letter G](./media/diagram-legends/g.png) ![The letter H](./media/diagram-legends/h.png) | [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. |
+| ![The letter C](./media/diagram-legends/c.png) ![The letter D](./media/diagram-legends/d.png) | [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. |
+| ![The letter I](./media/diagram-legends/i.png) | [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. |
 
 ## Design area process
 
