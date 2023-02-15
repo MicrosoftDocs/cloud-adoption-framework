@@ -42,7 +42,7 @@ When planning your virtual network topology, you should consider:
 - How to set up DNS.
 - How to implement Azure availability zones.
 
-## Best practice: Plan IP address space
+## Best practice: Plan an IP address space
 
 When you create virtual networks as part of your migration, it's important to plan out your virtual network IP address space.
 
@@ -208,32 +208,32 @@ When setting up a Site-to-Site VPN:
 
 When you create a VPN gateway in Azure, you must use a special subnet named `GatewaySubnet`. When you create this subnet, note these best practices:
 
-- `GatewaySubnet` can have a maximum prefix length of 29 (for example, `10.119.255.248/29`). The current recommendation is that you use a prefix length of 27 (for example, `10.119.255.224/27`).
+- `GatewaySubnet` can have a maximum prefix length of 29, for example `10.119.255.248/29`. The current recommendation is that you use a prefix length of 27, for example `10.119.255.224/27`.
 - When you define the address space of the gateway subnet, use the last part of the virtual network address space.
-- When you're using the Azure gateway subnet, never deploy any VMs or other devices to the gateway subnet. For example, an Azure Application Gateway.
-- Don't assign a network security group (NSG) to this subnet. It will cause the gateway to stop functioning.
+- When you use the Azure gateway subnet, never deploy VMs or other devices, like an Azure Application Gateway, to the gateway subnet.
+- Don't assign a network security group (NSG) to this subnet. It causes the gateway to stop functioning.
 
 ## Best practice: Implement Azure Virtual WAN for branch offices
 
-For multiple VPN connections, Azure Virtual WAN is a networking service that provides optimized and automated, branch-to-branch connectivity through Azure.
+For multiple VPN connections, Azure Virtual WAN is a networking service that provides optimized and automated branch-to-branch connectivity through Azure.
 
-- Virtual WAN allows you to connect and configure branch devices to communicate with Azure. You can do this configuration manually, or by using preferred provider devices through an Azure Virtual WAN partner.
+- Azure Virtual WAN allows you to connect and configure branch devices to communicate with Azure. You can do this configuration manually or by using preferred provider devices through an Azure Virtual WAN partner.
 - Using preferred provider devices allows for simple use, connectivity, and configuration management.
-- The Azure Virtual WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale, site-to-site connectivity.
+- The Azure Virtual WAN built-in dashboard provides instant troubleshooting insights that save time and provide an easy way to track large-scale, site-to-site connectivity.
 
 **Learn more:** Learn about [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about).
 
 ### Best practice: Implement ExpressRoute for mission-critical connections
 
-The Azure ExpressRoute service extends your on-premises infrastructure into the Microsoft cloud. ExpressRoute creates private connections between the virtual Azure datacenter and on-premises networks. Here are a few implementation details:
+The Azure ExpressRoute service extends your on-premises infrastructure into the Microsoft Cloud. ExpressRoute creates private connections between the virtual Azure datacenter and on-premises networks. Here are a few implementation details:
 
-- ExpressRoute connections can be over an any-to-any (IP VPN) network, a point-to-point Ethernet network, or through a connectivity provider. They don't go over the public internet.
-- ExpressRoute connections offer higher security, reliability, and higher speeds (up to 10 Gbps), along with consistent latency.
-- ExpressRoute is useful for virtual datacenters, as customers can get the benefits of compliance rules associated with private connections.
-- With ExpressRoute Direct, you can connect directly to Microsoft routers at 100 Gbps, for larger bandwidth needs.
+- ExpressRoute connections can be over an any-to-any (IP VPN) network, a point-to-point Ethernet network, or through a connectivity provider. The connections don't go over the public internet.
+- ExpressRoute connections offer higher security, reliability, and higher speeds (up to 10 Gbps), and consistent latency.
+- ExpressRoute is useful for virtual datacenters because customers can get the benefits of the compliance rules that are associated with private connections.
+- With ExpressRoute Direct, you can connect directly to Microsoft routers at 100 Gbps for larger bandwidth needs.
 - ExpressRoute uses BGP to exchange routes between on-premises networks, Azure instances, and Microsoft public addresses.
 
-Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a Site-to-Site VPN to establish connectivity between the virtual datacenter and on-premises resources. Then you migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
+Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a Site-to-Site VPN to establish connectivity between the virtual datacenter and on-premises resources. You migrate to an ExpressRoute connection after a physical interconnection with your service provider is established.
 
 **Learn more:**
 
@@ -242,28 +242,28 @@ Deploying ExpressRoute connections usually involves engaging with an ExpressRout
 
 ### Best practice: Optimize ExpressRoute routing with BGP communities
 
-When you have multiple ExpressRoute circuits, you've got more than one path to connect to Microsoft. As a result, suboptimal routing can happen and your traffic might take a longer path to reach Microsoft, and Microsoft to your network. The longer the network path, the higher the latency. Latency directly affects application performance and the user experience.
+When you have multiple ExpressRoute circuits, you have more than one path to connect to Microsoft. As a result, suboptimal routing can happen. Your traffic might take a longer path to reach Microsoft and Microsoft might take longer to your reach network. The longer the network path, the higher the latency. Latency affects application performance and the user experience.
 
 **Example:**
 
 Let's review an example:
 
-- You have two offices in the US, one in Los Angeles and one in New York City.
-- Your offices are connected on a WAN, which can be either your own backbone network or your service provider's IP VPN.
-- You have two ExpressRoute circuits, one in `West US` and one in `East US`, which are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
+- You have two offices in the United States, one in Los Angeles and one in New York City.
+- Your offices are connected on a WAN, which can be your own backbone network or your service provider's IP VPN.
+- You have two ExpressRoute circuits, one in `West US` and one in `East US`, which are connected on the WAN. You have two paths to connect to the Microsoft network.
 
 **Problem:**
 
-Now imagine that you have an Azure deployment (for example, Azure App Service) in both `West US` and `East US`.
+Now imagine that you have an Azure deployment, like Azure App Service, in `West US` and `East US`.
 
 - You want users in each office to access their nearest Azure services for an optimal experience.
-- So, you want to connect users in Los Angeles to Azure `West US`, and users in New York to Azure `East US`.
-- This connection works for east coast users, but not for users on the west coast. The problem is:
-  - On each ExpressRoute circuit, we advertise both prefixes in Azure: `East US` (`23.100.0.0/16`) and Azure `West US` (`13.100.0.0/16`).
-  - Without knowing which prefix is from which region, prefixes aren't treated differently.
-  - Your WAN network can assume that both prefixes are closer to `East US` than `West US`, and then route users from both offices to the ExpressRoute circuit in `East US`. This routing provides a worse experience for users in the Los Angeles office.
+- So, you want to connect users in Los Angeles to Azure `West US` and users in New York to Azure `East US`.
+- This connection works for east coast users but not for users on the west coast. The problem is:
+  - On each ExpressRoute circuit, we advertise both prefixes in Azure, `East US` `23.100.0.0/16` and Azure `West US` `13.100.0.0/16`.
+  - Without knowing which prefix is from which region, prefixes are treated the same.
+  - Your WAN network can assume that both prefixes are closer to `East US` than `West US` and then route users from both offices to the ExpressRoute circuit in `East US`. This routing isn't optimal for users in the Los Angeles office.
 
-![Diagram that shows a VPN with a route path through the wrong circuit.](./media/migrate-best-practices-networking/bgp1.png)
+:::image type="content" source="./media/migrate-best-practices-networking/bgp1.png" alt-text="Diagram that shows a VPN with a route path through the wrong circuit.":::
 *Figure 6: BGP communities unoptimized connection.*
 
 **Solution:**
