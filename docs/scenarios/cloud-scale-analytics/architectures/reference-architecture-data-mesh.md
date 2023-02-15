@@ -90,7 +90,7 @@ The following diagram illustrates a cross-domain data mesh architecture that use
 
 :::image type="content" source="../images/data-mesh-integration.png" alt-text="Diagram showing data integration." lightbox="../images/data-mesh-integration.png":::
 
-The network design allows data products to be shared across domains by using minimal cost, providing a single point of failure, and without using bandwidth limitations. To help ensure security, you can use the Microsoft *Zero Trust* security model. Cloud-scale analytics proposes the use of network isolation through private endpoints and private network communication, an identity-driven data access model that uses MIs, UMIs, and nested security groups, following the *principle of least privilege*.
+The network design allows data products to be shared across domains by using minimal cost and eliminating a single point of failure and bandwidth limitations. To help ensure security, you can use the Microsoft *Zero Trust* security model. Cloud-scale analytics proposes the use of network isolation through private endpoints and private network communication, an identity-driven data access model that uses MIs, UMIs, and nested security groups, following the *principle of least privilege*.
 
 You can use managed identities to ensure that a least privilege access model is followed. Applications and services in this model have limited access to data products. Azure policies, with the upcoming data policies, are used to enable self-service and enforce compliant resources within all data products, at scale. With this design, you can have uniform data access, while staying fully in control via centralized data governance and auditing.
 
