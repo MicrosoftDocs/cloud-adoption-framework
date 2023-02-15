@@ -113,4 +113,4 @@ Microsoft resources:
 
 Article by data mesh founder Zhamak Dehghani:
 
-- [How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh](https://martinfowler.com/articles/data-monolith-to-mesh.html)
+- [How to move beyond a monolithic data lake to a distributed data mesh](https://martinfowler.com/articles/data-monolith-to-mesh.html)
