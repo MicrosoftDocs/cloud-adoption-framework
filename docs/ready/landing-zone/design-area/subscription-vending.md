@@ -23,11 +23,11 @@ Subscription vending builds on the concept of subscription democratization. It's
 
 ## Why subscription vending?
 
-Subscription vending standardizes workload deployments. The consistency helps onboard apps to Azure faster.
+Subscription vending standardizes and automates workload deployments. It improves the velocity of application teams, so they can onboard and deploy workloads faster.
 
 ## How to implement subscription vending
 
-Subscription vending process has seven components and typically involves three teams. The Cloud Center of Excellence (CCoE) team handles the business logic and approval. The platform team receives the subscription request, creates a subscription, and performs a handoff with the application team. The application teams sets the budget, deploys workloads, and manages workload operations.
+Subscription vending process involves three teams. The Cloud Center of Excellence (CCoE) establishes the business logic and approval process, and the platform team manages the subscription creation and governance. This process allows the application team focus on deploying the workload to meet business needs faster.
 
 :::image type="content" source="./media/subscription-vending-steps.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-steps.png" border="false":::
 
@@ -66,6 +66,8 @@ For more information, see:
 
 #### Virtual networks
 
+[Need intro]
+
 **Platform team governs virtual network.** The platform team should enforce virtual network governance via Azure policy assigned to the management group hierarchy or Azure Virtual Network Manager and Security Admin Rules. For more information, see [Policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) and [How to block high risk ports](/azure/virtual-network-manager/how-to-block-high-risk-ports).
 
 **Give the application team autonomy.** In most scenarios, the application teams should create the virtual networks and subnets for their workload. It can become cumbersome for the platform team to manage workload subscriptions.
@@ -95,7 +97,7 @@ You should use an IP Address Management (IPAM) system to streamline IP address a
 
 ### Subscription placement
 
-The platform team should review the governance requirements for the subscription and quota limits of your enterprise agreement before creating the subscription.
+The platform team should use the networking requirements and governance requirements to place the subscription in the management group hierarchy. They should also review the subscription quota limits before creating the subscription.
 
 #### Management groups
 
