@@ -754,6 +754,11 @@
          "source_path": "docs/ready/considerations/hybrid-consistency.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/plan",
          "redirect_document_id": false   
-      }       
+      },
+      {
+         "source_path": "docs/infrastructure/mainframe-migration/myths-and-facts.md",
+         "redirect_url": "/azure/cloud-adoption-framework/infrastructure/mainframe-migration/",
+         "redirect_document_id": false   
+      }
    ]
 }
