@@ -1,6 +1,6 @@
 ---
-title: Best practices to set up networking for migrated Azure workloads
-description: Use the Cloud Adoption Framework for Azure to learn best practices that help you set up networking for your migrated workloads.
+title: Best practices to set up networking for workloads migrated to Azure 
+description: Learn how to use the Cloud Adoption Framework for Azure to implement best practices that help you set up networking for your migrated workloads.
 author: martinekuan
 ms.author: martinek
 ms.date: 12/29/2021
@@ -15,7 +15,7 @@ ms.custom: internal
 As you plan and design for migration, and the migration itself, one of the most critical steps is the design and implementation of Azure networking. This article describes best practices for networking when you're migrating to infrastructure as a service (IaaS) and platform as a service (PaaS) implementations in Azure.
 
 > [!IMPORTANT]
-> The best practices and opinions described in this article are based on the Azure platform and service features available at the time of writing. Features and capabilities change over time. Not all recommendations might be applicable for your deployment, so select those that work for you.
+> The best practices and opinions described in this article are based on the Azure platform and service features available at the time of writing. Features and capabilities change over time. All recommendations might not be applicable for your deployment, so select those that work for you.
 
 ## Design virtual networks
 
@@ -27,12 +27,12 @@ Azure provides virtual networks with these capabilities:
 - You can implement multiple virtual networks within each Azure subscription and Azure region.
 - Each virtual network is isolated from other virtual networks.
 - Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918), expressed in classless interdomain routing (CIDR) notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
-- Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same region or different regions; resources in one virtual network can connect to resources in other virtual networks.
+- Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same region or different regions. Resources in one virtual network can connect to resources in other virtual networks.
 - By default, Azure routes traffic between:
-  - Subnets within a virtual network
-  - Connected virtual networks
-  - On-premises networks
-  - The internet
+  - Subnets within a virtual network.
+  - Connected virtual networks.
+  - On-premises networks.
+  - The internet.
 
 When planning your virtual network topology, you should consider:
 
@@ -42,18 +42,18 @@ When planning your virtual network topology, you should consider:
 - How to set up DNS.
 - How to implement Azure availability zones.
 
-## Best practice: Plan IP addressing
+## Best practice: Plan IP address space
 
 When you create virtual networks as part of your migration, it's important to plan out your virtual network IP address space.
 
-Assign an address space that isn't larger than a CIDR range of `/16` for each virtual network. Virtual networks allow for the use of 65,536 IP addresses. Assigning a smaller prefix than `/16`, such as a `/15`, which has 131,072 addresses, will result in the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
+Assign an address space that isn't larger than a CIDR range of `/16` for each virtual network. Virtual networks allow for the use of 65,536 IP addresses. If you assign a smaller prefix than `/16`, such as a `/15`, which has 131,072 addresses, the excess IP addresses become unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
 
 Other tips for planning are:
 
 - The virtual network address space shouldn't overlap with on-premises network ranges.
-- Overlapping addresses can cause networks that can't be connected, and routing that doesn't work properly.
-- If networks overlap, you'll need to redesign the network.
-- If you absolutely can't redesign the network, network address translation (NAT) can help. However, it should be avoided as much as possible.
+- Overlapping addresses can cause networks that can't be connected and routing that doesn't work properly.
+- If networks overlap, you need to redesign the network.
+- If you can't redesign the network, network address translation (NAT) can help, but it should be avoided if possible.
 
 **Learn more:**
 
@@ -67,12 +67,12 @@ A hub and spoke network topology isolates workloads while sharing services, such
 
 Consider the following information:
 
-- Implementing a hub and spoke topology in Azure centralizes common services. These services might be connections to on-premises networks, firewalls, and isolation between virtual networks. The hub virtual network provides a central point of connectivity to on-premises networks, and a place to host services used by workloads hosted in spoke virtual networks.
+- Implementing a hub and spoke topology in Azure centralizes common services. These services might be connections to on-premises networks, firewalls, and isolation between virtual networks. The hub virtual network provides a central point of connectivity to on-premises networks, and a place to host services that are used by workloads hosted in spoke virtual networks.
 - A hub and spoke configuration is typically used by larger enterprises. Smaller networks might consider a simpler design to save on costs and complexity.
-- You can use spoke virtual networks to isolate workloads, with each spoke managed separately from other spokes. Each workload can include multiple tiers, and multiple subnets that are connected with Azure load balancers.
-- You can implement hub and spoke virtual networks in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This association creates decentralized management of each workload, while sharing services maintained in the hub network.
+- You can use spoke virtual networks to isolate workloads, with each spoke managed separately from other spokes. Each workload can include multiple tiers with multiple subnets that are connected with Azure load balancers.
+- You can implement hub and spoke virtual networks in different resource groups and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same or different Azure Active Directory (Azure AD) tenants. This association creates decentralized management of each workload, while sharing services maintained in the hub network.
 
-![Diagram that shows a hub and spoke topology.](./media/migrate-best-practices-networking/hub-spoke.png)
+:::image type="content" source="./media/migrate-best-practices-networking/hub-spoke.png" alt-text="Diagram that shows a hub and spoke topology.":::
 *Figure 1: Hub and spoke topology.*
 
 **Learn more:**
@@ -83,18 +83,18 @@ Consider the following information:
 
 ## Best practice: Design subnets
 
-To provide isolation within a virtual network, you segment it into one or more subnets, and give a portion of the virtual network's address space to each subnet.
+To provide isolation within a virtual network, segment it into one or more subnets, and give a portion of the virtual network's address space to each subnet.
 
 - You can create multiple subnets within each virtual network.
 - By default, Azure routes network traffic between all subnets in a virtual network.
 - Your subnet decisions are based on your technical and organizational requirements.
 - You create subnets by using CIDR notation.
 
-When you're deciding on network range for subnets, Azure keeps five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of `/29` (with eight IP addresses), Azure will keep five addresses. In this case, you only have three usable addresses that can be assigned to hosts on the subnet. For most cases, use `/28` as the smallest subnet.
+When you're deciding on the network range for subnets, Azure keeps five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of `/29` (with eight IP addresses), Azure will keep five addresses. In this case, you only have three usable addresses that can be assigned to hosts on the subnet. For most cases, use `/28` as the smallest subnet.
 
 **Example:**
 
-The table shows an example of a virtual network with an address space of `10.245.16.0/20` segmented into subnets, for a planned migration.
+The following table shows an example of a virtual network with an address space of `10.245.16.0/20` segmented into subnets for a planned migration.
 
 | Subnet | CIDR | Addresses | Usage |
 | --- | --- | --- | --- |
@@ -109,14 +109,14 @@ The table shows an example of a virtual network with an address space of `10.245
 
 ## Best practice: Set up a DNS server
 
-Azure adds a DNS server by default when you deploy a virtual network. You can use this server to rapidly build virtual networks and deploy resources. But this DNS server only provides services to the resources on that virtual network. To connect multiple virtual networks together, you need more name resolution capabilities. You'll also need these capabilities to connect to an on-premises server from virtual networks. For example, you might need Active Directory to resolve DNS names between virtual networks. To resolve the DNS names, deploy your own custom DNS server in Azure.
+Azure adds a DNS server by default when you deploy a virtual network. You can use this server to rapidly build virtual networks and deploy resources. But this DNS server only provides services to the resources on that virtual network. To connect multiple virtual networks together, you need more name resolution capabilities. You also need these capabilities to connect to an on-premises server from virtual networks. For example, you might need Active Directory to resolve DNS names between virtual networks. To resolve the DNS names, deploy your own custom DNS server in Azure.
 
-- DNS servers in a virtual network can forward DNS queries to the recursive resolvers in Azure. This forwarding enables you to resolve host names within that virtual network. For example, a domain controller that runs in Azure can respond to DNS queries for its own domains, and forward all other queries to Azure.
-- DNS forwarding allows VMs to see both your on-premises resources (via the domain controller) and Azure-provided host names (using the forwarder). You can access the recursive resolvers in Azure by using the virtual IP address `168.63.129.16`.
-- DNS forwarding also enables DNS resolution between virtual networks, and allows on-premises machines to resolve host names provided by Azure.
+- DNS servers in a virtual network can forward DNS queries to the recursive resolvers in Azure. Forwarding enables you to resolve host names within that virtual network. For example, a domain controller that runs in Azure can respond to DNS queries for its own domains and forward all other queries to Azure.
+- DNS forwarding allows VMs to see your on-premises resources via the domain controller and Azure-provided host names by using the forwarder. You can access the recursive resolvers in Azure by using the virtual IP address `168.63.129.16`.
+- DNS forwarding enables DNS resolution between virtual networks and allows on-premises machines to resolve host names provided by Azure.
   - To resolve a VM host name, the DNS server VM must be in the same virtual network. You can then configure the server VM to forward host name queries to Azure.
   - Because the DNS suffix is different in each virtual network, you can use conditional forwarding rules to send DNS queries to the correct virtual network for resolution.
-- When you use your own DNS servers, you can specify multiple DNS servers for each virtual network. You can also specify multiple DNS servers per network interface (for Azure Resource Manager), or per cloud service (for the classic deployment model).
+- When you use your own DNS servers, you can specify multiple DNS servers for each virtual network. You can specify multiple DNS servers per network interface for Azure Resource Manager or per cloud service for the classic deployment model.
 - DNS servers specified for a network interface or cloud service take precedence over DNS servers specified for the virtual network.
 - In Azure Resource Manager, you can specify DNS servers for a virtual network and a network interface, but the best practice is to use the setting only on virtual networks.
 
@@ -137,9 +137,8 @@ Here are a few more points to be aware of as you set up Availability Zones:
 - Zone-redundant services replicate your applications and data across Availability Zones to protect from single points of failure.
 
 - With Availability Zones, Azure offers an SLA of 99.99 percent for VM uptime.
-
-    ![Diagram that shows availability zones within an Azure region.](./media/migrate-best-practices-networking/availability-zone.png)
-
+    
+    :::image type="content" source="./media/migrate-best-practices-networking/availability-zone.png" alt-text="Diagram that shows availability zones within an Azure region.":::
     *Figure 3: Availability zones.*
 
 - You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone. Then you can replicate them in other zones. Azure services that support availability zones fall into two categories:
@@ -147,7 +146,7 @@ Here are a few more points to be aware of as you set up Availability Zones:
   - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
 - To provide zonal fault tolerance, you can deploy a standard Azure Load Balancer instance with internet-facing workloads or application tiers.
 
-    ![Diagram that shows a standard Azure load balancer.](./media/migrate-best-practices-networking/load-balancer.png)
+    :::image type="content" source="./media/migrate-best-practices-networking/load-balancer.png" alt-text="Diagram that shows a standard Azure load balancer.":::
     *Figure 4: Load balancer.*
 
 **Learn more:**
@@ -156,22 +155,22 @@ Here are a few more points to be aware of as you set up Availability Zones:
 
 ## Design hybrid cloud networking
 
-For a successful migration, it's critical to connect on-premises corporate networks to Azure. This connection creates an always-on connection known as a hybrid-cloud network, where services are provided from the Azure cloud to corporate users. There are two options for creating this type of network:
+For a successful migration, you must connect on-premises corporate networks to Azure. This connection creates an always-on connection known as a hybrid cloud network where services are provided from the Azure Cloud to corporate users. There are two options for creating this type of network:
 
 - **Site-to-Site VPN:** You establish a Site-to-Site VPN connection between your compatible on-premises VPN device and an Azure VPN gateway that's deployed in a virtual network. Any authorized, on-premises resource can access virtual networks. Site-to-Site communications are sent through an encrypted tunnel over the internet.
-- **Azure ExpressRoute:** You establish an Azure ExpressRoute connection between your on-premises network and Azure, through an ExpressRoute partner. This connection is private, and traffic doesn't go over the internet.
+- **Azure ExpressRoute:** You establish an Azure ExpressRoute connection between your on-premises network and Azure through an ExpressRoute partner. This connection is private, and traffic doesn't go over the internet.
 
 **Learn more:**
 
-- Learn more about [hybrid-cloud networking](/azure/architecture/reference-architectures/hybrid-networking/vpn).
+- Learn more about [hybrid cloud networking](/azure/architecture/reference-architectures/hybrid-networking/vpn).
 
 ## Best practice: Implement a highly available Site-to-Site VPN
 
-To implement a Site-to-Site VPN, you set up a VPN gateway in Azure.
+To implement a Site-to-Site VPN, set up a VPN gateway in Azure.
 
 - A VPN gateway is a specific type of virtual network gateway. It sends encrypted traffic between an Azure virtual network and an on-premises location over the public internet.
-- A VPN gateway can also send encrypted traffic between virtual networks in Azure over the Microsoft network.
-- Each virtual network can have only one VPN gateway.
+- A VPN gateway can send encrypted traffic between virtual networks in Azure over the Microsoft network.
+- Each virtual network can only have one VPN gateway.
 - You can create multiple connections to the same VPN gateway. When you create multiple connections, all VPN tunnels share the available gateway bandwidth.
 
 Every Azure VPN gateway consists of two instances in an active-standby configuration:
@@ -180,19 +179,19 @@ Every Azure VPN gateway consists of two instances in an active-standby configura
 - The switchover causes a brief interruption.
 - For planned maintenance, connectivity should be restored within 10 to 15 seconds.
 - For unplanned issues, the connection recovery takes longer, up to 1.5 minutes in the worst case.
-- Point-to-Site VPN client connections to the gateway are disconnected, and users need to reconnect from client machines.
+- Point-to-Site VPN client connections to the gateway are disconnected, and users must reconnect from client machines.
 
 When setting up a Site-to-Site VPN:
 
 - You need a virtual network whose address range doesn't overlap with the on-premises network to which the VPN will connect.
-- You create a gateway subnet in the network.
-- You create a VPN gateway, specify the gateway type (VPN), and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
-- You create a local network gateway on-premises, and configure your on-premises VPN device.
-- You create a failover Site-to-Site VPN connection between the virtual network gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. The route-based option also supports both Site-to-Site (from any computer) and Point-to-Site (from a single computer) connections, concurrently.
-- You specify the gateway SKU that you want to use. This SKU depends on your workload requirements, throughput, features, and SLAs.
+- Create a gateway subnet in the network.
+- When you create a VPN gateway, specify the gateway type (VPN), and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
+- Create a local network gateway on-premises, and configure your on-premises VPN device.
+- Create a failover Site-to-Site VPN connection between the virtual network gateway and the on-premises device. Using a route-based VPN allows for active-passive or active-active connections to Azure. The route-based option supports Site-to-Site (from any computer) and Point-to-Site (from a single computer) connections concurrently.
+- Specify the gateway SKU that you want to use. This SKU depends on your workload requirements, throughput, features, and SLAs.
 - Border Gateway Protocol (BGP) is an optional feature. You can use it with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your virtual networks.
 
-![Diagram that shows a site-to-site VPN.](./media/migrate-best-practices-networking/vpn.png)
+:::image type="content" source="./media/migrate-best-practices-networking/vpn.png" alt-text="Diagram that shows the connections of a site-to-site VPN.":::
 *Figure 5: Site-to-Site VPN.*
 
 **Learn more:**
@@ -201,7 +200,7 @@ When setting up a Site-to-Site VPN:
 - Read the [Azure VPN gateways overview](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 - Learn about [highly available VPN connections](/azure/vpn-gateway/vpn-gateway-highlyavailable).
 - Learn about [planning and designing a VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
-- Review [VPN Gateway settings](/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings).
+- Review [VPN gateway settings](/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings).
 - Review [gateway SKUs](/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku).
 - Read about [setting up BGP with Azure VPN gateways](/azure/vpn-gateway/vpn-gateway-bgp-overview).
 
