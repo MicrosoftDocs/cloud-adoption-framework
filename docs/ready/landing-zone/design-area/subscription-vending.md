@@ -47,6 +47,52 @@ With the approval process in place, you can start receiving subscription request
 
 **Consider deployment parameters.** Before deployment, the platform team should consider the placement of the subscription and its networking requirements. You can configure these values for each deployment by updating the parameters.
 
+### Gather networking requirements
+
+**Understand the workload.** Subscription vending supports workload deployment, and the workload determines the networking requirements. The subscription request should gather the workload networking requirements. You should know whether the workload needs hybrid connectivity, internet access, and private communication with other workloads.
+
+<!--Previous content: The When vending new Azure Subscriptions, you'll have captured the networking requirements for the workloads to be provisioned into the new subscription at the time of the request. Based on this it's common for customers to have different networking patterns to support the differing needs of different application architectures. For example, some applications may require private and hybrid connectivity to on-premises, and other applications also on the same routing domain/segment; these applications would be placed into subscriptions that are placed within the 'corp' management group as this would be compliant with the policy controls that are inherited by subscriptions within this part of the management group hierarchy. This would then allow the subscriptions to create virtual networks and peer back to central hub networks, normally in the platform connectivity subscriptions.
+
+Other applications may not require this same type of connectivity and may only require isolated Virtual Networks that contain services and resources that interact directly with the internet, protected by the various Azure Networking security services, or with other applications via services link Private Link.-->
+
+**Determine place in network topology** The needs of the workload should determine its location in. If you don't have a defined network typology, follow the [design area guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) to decide . For more information, see [Define an Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology).
+
+For more information, see:
+
+- [Tailor Azure landing zone to meet your requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+- [Subscription considerations and recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)
+- [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
+- [DNS for on-premises and Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources)
+
+#### Virtual networks
+
+**Platform team governs virtual network.** The platform team should enforce virtual network governance via Azure policy assigned to the management group hierarchy or Azure Virtual Network Manager and Security Admin Rules. For more information, see [Policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) and [How to block high risk ports](/azure/virtual-network-manager/how-to-block-high-risk-ports).
+
+**Give the application team autonomy.** In most scenarios, the application teams should create the virtual networks and subnets for their workload. It can become cumbersome for the platform team to manage workload subscriptions.
+
+**Platform team creates virtual networks peered to central hub.** The platform team should create virtual networks for the application team only if they need to peer to a hub virtual network (hub-spoke topology) or virtual WAN hub. This network should be empty with no subnets. Allow the application teams to create subnets required for the workload.
+
+<!--Previous content: A key consideration is the ownership and management of the Virtual Networks and the Subnets they contain. Depending on the [type of landing zone](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones), these resources may be centrally managed by a platform/network team, or they may be split between a platform/network team and the application team managing the resources and services within the subscription.
+
+Due to the number of available configuration parameters for a subnet, it can become cumbersome for platform/network teams to manage these centrally for application team's subscriptions. However, if subnet creation is delegated to an application team, assurances on Network Security Groups (NSGs) and any User Defined Routing (UDRs) configuration must be put in place.
+
+We recommend the use of Azure Policy to audit or enforce compliance on Virtual Networks at scale, following the [design principle of policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) or use Azure Virtual Network Manager Security Admin rules to achieve similar outcomes for NSGs.
+
+We also recommend that the platform/network teams should only create a Virtual Network in the application team's subscription if it requires peering back to a hub Virtual Network or Virtual WAN Hub. Furthermore, if it does require peering we still suggest creating a blank Virtual Network with no Subnets and then allow the application teams to create subnets as they require for their application/service. The platform/network team remains in control of the Virtual Networks governance/security posture via Azure Policies assigned to the Management Group hierarchy that the Subscription is placed in and/or via Azure Virtual Network Manager security admin rules.-->
+
+#### IP address management
+
+**Use non-overlapping IP addresses** When connecting to a common network topology that is in a single routing domain, it's critical that unique and non-overlapping IP addressing is used for each virtual network within the routing domain. These are the Virtual Networks that require peering to a central hub Virtual Network or Virtual WAN Hub.
+
+You should use an IP Address Management (IPAM) system to streamline IP address assignment. To automate, place the IPAM behind an API and assign address blocks programmatically. You can include the API call in the subscription vending deployment pipeline and add the address space as a deployment parameter.
+
+**Size virtual networks properly.** You should size your virtual networks at the time of creation to conserve IP addresses. Azure reserves the first four and last IP address in a subnet. For more information, see [IP addresses](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets).
+
+**Modify address space as needed.** You can add or delete address space of a virtual network without downtime. For more information, see:
+
+- [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
+- [Add or remove address range](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range)
+
 ### Subscription placement
 
 The platform team should review the governance requirements for the subscription and quota limits of your enterprise agreement before creating the subscription.
@@ -68,7 +114,7 @@ Management groups help you organize and govern subscriptions. For more informati
 
 Each subscription offer type defines has a service limit. As you approach that limit, you should start reusing subscriptions.
 
-**Reuse subscriptions.** You can repurpose a subscription instead of creating a new one. Subscription reuse is best suited for developer sandboxes, training environments, or SaaS providers using a subscription per customer. Consider subscription reuse if:
+**Reuse subscriptions.** You can repurpose a subscription instead of creating a new one. Subscription reuse is best suited for developer sandboxes, training environments, or SaaS providers using one subscription per customer. Consider subscription reuse if:
 
 1. You're an EA customer using more than 5,000 total subscriptions, including canceled subscriptions
 2. You're an MCA customer and plan to have more than 5,000 active subscriptions
@@ -79,63 +125,11 @@ Each subscription offer type defines has a service limit. As you approach that l
 - [Microsoft.Quota](/rest/api/quota/)
 - [Microsoft.Support](/rest/api/support/quota-payload)
 
-### Networking requirements
-
-Many organizations have a common network infrastructure to enable private communication between services.
-
-**Understand the workload.** Subscription vending supports workload deployment, and the workload determines the networking requirements. The subscription request should gather the workload networking requirements. You should know whether the workload needs hybrid connectivity, internet access, and private communication with other workloads.
-
-<!--The When vending new Azure Subscriptions, you'll have captured the networking requirements for the workloads to be provisioned into the new subscription at the time of the request. Based on this it's common for customers to have different networking patterns to support the differing needs of different application architectures. For example, some applications may require private and hybrid connectivity to on-premises, and other applications also on the same routing domain/segment; these applications would be placed into subscriptions that are placed within the 'corp' management group as this would be compliant with the policy controls that are inherited by subscriptions within this part of the management group hierarchy. This would then allow the subscriptions to create virtual networks and peer back to central hub networks, normally in the platform connectivity subscriptions.
-
-Other applications may not require this same type of connectivity and may only require isolated Virtual Networks that contain services and resources that interact directly with the internet, protected by the various Azure Networking security services, or with other applications via services link Private Link.-->
-
-For more information:
-
-- [Tailor Azure landing zone to meet your requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
-- [Subscription considerations and recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)
-- [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
-- [DNS for on-premises and Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources)
-
-**Determine network topology.** It's common to want to establish a connection to a vWAN hub or peering hub network. We recommend that you follow the [design area guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) to help you decide which, if any, are right for your organization based on your requirements for this topic. For more information, see [Define an Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology).
-
-#### Virtual network and subnets
-
-A key consideration is the ownership and management of the Virtual Networks and the Subnets they contain. Depending on the [type of landing zone](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones), these resources may be centrally managed by a platform/network team, or they may be split between a platform/network team and the application team managing the resources and services within the subscription.
-
-Due to the number of available configuration parameters for a subnet, it can become cumbersome for platform/network teams to manage these centrally for application team's subscriptions. However, if subnet creation is delegated to an application team, assurances on Network Security Groups (NSGs) and any User Defined Routing (UDRs) configuration must be put in place.
-
-We recommend the use of Azure Policy to audit or enforce compliance on Virtual Networks at scale, following the [design principle of policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) or use Azure Virtual Network Manager Security Admin rules to achieve similar outcomes for NSGs.
-
-We also recommend that the platform/network teams should only create a Virtual Network in the application team's subscription if it requires peering back to a hub Virtual Network or Virtual WAN Hub. Furthermore, if it does require peering we still suggest creating a blank Virtual Network with no Subnets and then allow the application teams to create subnets as they require for their application/service. The platform/network team remains in control of the Virtual Networks governance/security posture via Azure Policies assigned to the Management Group hierarchy that the Subscription is placed in and/or via Azure Virtual Network Manager security admin rules.
-
-#### IP address management
-
-When connecting to a common network topology that is in a single routing domain, it's critical that unique and non-overlapping IP addressing is used for each virtual network within the routing domain. These are the Virtual Networks that require peering to a central hub Virtual Network or Virtual WAN Hub.
-
-Commonly customers have an IP Address Management (IPAM) system in place, and some may have this accessible behind an API so IP Address blocks can be assigned programmatically also. This can also be built into your Subscription vending process by making a call to the IPAM API as a step before creating the subscription and associated Virtual Networks to request an IP address space to pass into the subscription and Virtual Networks creation input parameters.
-
-IP address exhaustion is a common concern for some customers and therefore a key point to keep in mind is that Azure Virtual Networks can have their Address Spaces expanded or added to, with non-contiguous IP Address blocks, at any time. For more information, see the [Manage a Virtual Network](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range).
-
-With this in mind it's therefore recommended that you appropriately size your Virtual Networks at the time of creation to conserve IP addresses. The following table shows how many usable IP addresses you can have in Azure Virtual Networks for common subnet sizes to help you plan appropriately.
-
-|Usable Azure IP Addresses Required|Subnet Size|
-|---|---|
-|1 – 3|/29|
-|4 – 11|/28|
-|12 – 27|/27|
-|28 – 59|/26|
-|60 – 123|/25|
-|124 – 251|/24|
-|125 – 498|/23|
-|499 – 1020|/22|
-
-Azure reserves the first four and last IP address in a subnet. For more information, see [IP addresses](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets).
-
 ### Create subscription programmatically
 
 The pipeline should consume the request information in the form of a JSON document (commonly referred to as a parameters file). These pipelines or workflows then trigger the creation of a new Azure Subscription as per the request details. This deployment is likely to trigger multiple other deployments depending on the input parameter values provided. For example, whether to deploy a Virtual Network in the newly provisioned Subscription and whether to peer it back to a hub Virtual Network.
 
-**1. Know the commercial agreement you have.** You need a commercial agreement to create a subscription programmatically. To create a subscription, you need to assume a role with the permissions to do so. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation. For more information, see:
+**Know the commercial agreement you have.** You need a commercial agreement to create a subscription programmatically. To create a subscription, you need to assume a role with the permissions to do so. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation. For more information, see:
 
 - [EA required role](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement#prerequisites)
 - [MCA required role(s)](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-customer-agreement#prerequisites)
@@ -163,15 +157,15 @@ Without a commercial agreement, you can still use the modules. Create subscripti
 Rather than create service principals for each subscription, use managed identity wherever possible. With managed identities, you don't have to manage secrets or keys. Service principals usually are granted standing access to resources and aren't subject to PIM. For more information, see [IAM design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 <!--Can’t add constrained delegation as no public docs yet-->
 
+**7. Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application to set budgets and deploy workloads.
+
 ### Set budget
 
-Cloud financial management should be a shared responsibility between the platform and workload team. Organizations should use budgets to control spending. They're useful for auditing spending against current and forecast usage. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs.
-
-We recommend you create budget alerts to notify the subscription owners if the budget is about to be exceeded. Budgets aren't hard limits. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
+The the platform and workload teams share responsibility for the financial health of the subscription. The application create budgets to control spending. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs. They're useful for auditing spending against current and forecast usage. Budgets aren't hard limits, so you should create budget alerts to notify the subscription owners if the budget is about to be exceeded. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
 
 ### Deploy & operate
 
-
+With the subscription in place, the application team can create and deploy the workload.
 
 ## Next steps
 
