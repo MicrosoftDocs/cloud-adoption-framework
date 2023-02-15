@@ -840,8 +840,6 @@ items:
           items:
           - name: Overview
             href: infrastructure/mainframe-migration/index.md
-          - name: Myths and facts
-            href: infrastructure/mainframe-migration/myths-and-facts.md
           - name: Switch from mainframes to Azure
             href: infrastructure/mainframe-migration/migration-strategies.md
           - name: Mainframe application migration
