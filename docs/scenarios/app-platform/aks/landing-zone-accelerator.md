@@ -1,8 +1,8 @@
 ---
 title: AKS landing zone accelerator
 description: Overview of the AKS landing zone accelerator.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -39,8 +39,9 @@ These articles provide guidelines for creating your landing zone based on the de
 - [Network topology and connectivity](./network-topology-and-connectivity.md)
 - [Resource organization](./resource-organization.md)
 - [Security](./security.md)
-- [Management](./management.md)
+- [Management and BCDR](./management.md)
 - [Platform automation and DevOps](./platform-automation-and-devops.md)
+- [Storage](./storage.md)
 
 ## Example conceptual reference architecture
 

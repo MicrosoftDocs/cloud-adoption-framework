@@ -2,7 +2,7 @@
 title: What is machine learning?
 description: Get started with Azure Machine Learning, MLOps, and machine learning deployment tools.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -57,7 +57,7 @@ Machine learning operations (MLOps) is based on [DevOps](https://azure.microsoft
 - Faster deployment of models into production
 - Quality assurance
 
-When you have the right model, you can easily use it in a web service, on an IoT device, or from Power BI. For more information, see [Deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where).
+When you have the right model, you can easily use it in a web service, on an IoT device, or from Power BI. For more information, see [Deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-managed-online-endpoints).
 
 Then you can manage your deployed models by using the [Azure Machine Learning SDK for Python](/python/api/overview/azure/ml/), [Azure Machine Learning studio](https://ml.azure.com/), or the [Azure Machine Learning CLI](/azure/machine-learning/reference-azure-machine-learning-cli).
 

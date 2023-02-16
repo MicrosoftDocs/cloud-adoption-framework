@@ -2,7 +2,7 @@
 title: Transitioning existing Azure environments to the Azure landing zone conceptual architecture
 description: Onboard existing environments to an Azure landing zone conceptual architecture
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

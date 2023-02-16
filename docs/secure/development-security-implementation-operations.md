@@ -34,7 +34,7 @@ Ensure your organization's developers use consistent tooling and focus on the se
 
 ## DevSecOps controls
 
-Learn how you to [integrate security processes and tools](/azure/cloud-adoption-framework/secure/devsecops-controls) into your DevOps development process.
+Learn how you to [integrate security processes and tools](./devsecops-controls.md) into your DevOps development process.
 
 Learn how to implement secure and rapid innovation for your organization:
 
@@ -48,4 +48,4 @@ For more information about core DevOps security controls in the Azure Security B
 > [Infrastructure and development security best practices overview](security-best-practices-introduction.md)
 
 > [!div class="nextstepaction"]
-> [Security considerations](../strategy/define-security-strategy.md)
+> [Define a security strategy](../strategy/define-security-strategy.md)

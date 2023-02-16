@@ -33,7 +33,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 
 [Azure built-in roles](/azure/role-based-access-control/built-in-roles) can be created and defined as part of the Cloud Adoption Framework for Azure deployment. RBAC roles that are specific to Azure Virtual Desktop may need to be combined with other Azure RBAC roles to provide the complete set of permissions users need for Azure Virtual Desktop and for other Azure services like virtual machines and networking.
 
-## Design considerations
+## Azure Virtual Desktop design considerations
 
 - Azure Virtual Desktop users must be sourced from either the same instance of on-premises Active Directory Domain Services (AD DS) that is synchronized to Azure Active Directory (Azure AD), or an instance of Azure AD Domain Services (Azure AD DS) synchronized from Azure AD.
   > [!NOTE]
@@ -43,7 +43,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - When joining to an Azure AD DS domain, the account must be part of the Azure AD DC administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Azure AD DS is a supported option, but there are limitations:
   - You must have password hash synchronization enabled (uncommon when federating Azure AD).
-  - You can only project Azure AD DS into a single virtual network (and single Azure region) that uses a non-public IP address range. You can't add domain controllers to an Azure AD DS domain.
+  - You can only project Azure AD DS into a single virtual network (and single Azure region) that uses a non-public IP address range.
   - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless Single Sign-On for Microsoft 365 services.
 
    For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
@@ -54,14 +54,3 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Azure Virtual Desktop. For more information, see [Hybrid Azure AD joined certificate trust deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - When using Windows Hello for Business or smart-card authentication, the initiating client must be able to communicate with the domain controller because these authentication methods use Kerberos to sign in. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
 - Single sign-on can improve user experience, but it requires additional configuration and is only supported using Active Directory Federation Services. For more information, see [Configure AD FS single sign-on for Azure Virtual Desktop](/azure/virtual-desktop/configure-adfs-sso).
-
-## Design recommendations
-
-- Use Azure AD Connect to synchronize all identities to a single Azure AD tenant. For more information, see [What is Azure AD Connect?](/azure/active-directory/hybrid/whatis-azure-ad-connect) .
-- Ensure Azure Virtual Desktop session hosts can communicate with Azure AD DS or AD DS.
-- Use the Kerberos Key Distribution Center proxy solution to proxy smart-card authentication traffic and to sign in remotely. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
-- Segregate session host virtual machines into Active Directory organization units for each host pool to more easily manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
-- Use a solution like Local Administrator Password Solution (LAPS) to rotate local administrator passwords on Azure Virtual Desktop session hosts frequently. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
-- For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Azure Virtual Desktop application groups. For more information, see [Delegated access in Azure Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
-- Create conditional access policies for Azure Virtual Desktop. Such policies can enforce multifactor authentication based on conditions like risky sign-ins to increase an organization's security posture. For more information, see [Enable Azure Active Directory multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
-- Configure AD FS to enable single sign-on for users on the corporate network.

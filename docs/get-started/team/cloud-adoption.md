@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Build a cloud adoption team'
 description: Establish a cloud adoption team's scope, deliverables, and the capabilities to prepare for successful cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -11,6 +11,8 @@ ms.custom: internal
 ---
 
 # Get started: Build a cloud adoption team
+
+Enterprises employ cloud adoption as a method to increase the flexibility of their services while lowering cost and risk. Companies do this by using cloud computing which allows them to store, manage and process large amount of data on remote computers housed in the internet
 
 Cloud adoption teams are the modern-day equivalent of technical implementation teams or project teams. The nature of the cloud might require more fluid team structures.
 

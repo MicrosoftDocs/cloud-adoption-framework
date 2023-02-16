@@ -1,9 +1,9 @@
 ---
 title: Management groups
 description: Learn about the resource organization and management group design considerations and recommendations.
-author: DominicAllen
-ms.author: doalle
-ms.date: 01/04/2022
+author: martinekuan
+ms.author: martinek
+ms.date: 06/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -58,12 +58,15 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Don't create management groups for production, testing, and development environments. If necessary, separate these groups into different subscriptions in the same management group. To review further guidance on this topic, see:
 
-  - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+  - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
 
-## Management groups in the Azure landing zone accelerator
+## Management groups in the Azure landing zone accelerator and Azure landing zone Bicep repository
 
-The following decisions have been made and included in the implementation for the management group structure. These decisions are part of the Azure landing zone accelerator.
+The following decisions have been made and included in the implementation for the management group structure. These decisions are part of the Azure landing zone accelerator and the [management groups module of the Azure landing zone bicep repo](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/managementGroups).
+
+> [!NOTE]
+> The management group hierarchy can be modified in the Azure landing zone bicep module by editing [managementGroups.bicep](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/managementGroups/managementGroups.bicep).
 
 ![Diagram that shows the Azure landing zone accelerator management group structure.](./media/sub-org.png)
 

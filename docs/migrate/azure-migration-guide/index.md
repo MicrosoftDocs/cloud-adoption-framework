@@ -2,7 +2,7 @@
 title: Introduction to the Azure migration guide
 description: Use the Cloud Adoption Framework for Azure to learn how to effectively migrate your organization's services to Azure.
 author: matticusau
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: think-tank, fasttrack-new, AQC
 
 # Azure migration guide overview
 
-The [Cloud Adoption Framework's Migrate methodology](../index.md) guides readers through an iterative process of migrating one workload, or a small collection of workloads per release. In each iteration, you'll follow a process to assess, migrate, optimize, and promote to ensure that workloads are ready to meet production demands. That cloud-agnostic process can guide migration to any cloud provider.
+The [Migrate methodology](../index.md) of the Cloud Adoption Framework guides readers through an iterative process of migrating one workload, or a small collection of workloads per release. In each iteration, you'll follow a process to assess, migrate, optimize, and promote to ensure that workloads are ready to meet production demands. That cloud-agnostic process can guide migration to any cloud provider.
 
 This article guides you through a simplified version of the process to migrate from your on-premises environment to Azure.
 
@@ -35,7 +35,7 @@ This guide is the suggested path for your first migration to Azure. It exposes y
 > - [**Optimize and promote.**](optimize-and-transform.md) Optimize for cost and performance balance before you promote your workload to production.
 > - [**Get assistance.**](assistance.md) Get help and support during your migration or post-migration activities.
 
-In alignment with the best practices in the [Cloud Adoption Framework's Ready methodology](../../ready/index.md), deploy a landing zone before you continue with this guide.
+In alignment with the best practices in the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, deploy a landing zone before you continue with this guide.
 
 ## [When to use this guide](#tab/WhenToUseThisGuide)
 

@@ -1,9 +1,9 @@
 ---
 title: Review your storage options
 description: Use the Cloud Adoption Framework for Azure to learn how to review your storage options for Azure workloads.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/06/2021
+author: martinekuan
+ms.author: martinek
+ms.date: 10/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -25,11 +25,11 @@ Azure Storage is the Azure platform's managed service for providing cloud storag
 
 ### Key questions
 
-Answer the following questions about your workloads to help you make decisions about your storage needs:
+Answer the following questions about your workloads to help make decisions about your storage needs:
 
 - **Do your workloads require disk storage to support the deployment of infrastructure as a service (IaaS) virtual machines?** [Azure managed disks](/azure/virtual-machines/managed-disks-overview) provide virtual disk capabilities for IaaS virtual machines.
 - **Will you need to provide downloadable images, documents, or other media as part of your workloads?** [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) hosts static files, which are then accessible for download over the internet. For more information, see [Static website hosting in Azure Storage](/azure/storage/blobs/storage-blob-static-website).
-- **Will you need a location to store virtual machine logs, application logs, and analytics data?** You can use Blob Storage to store Azure Monitor log data. See [Storage Analytics](/azure/storage/common/storage-analytics).
+- **Will you need a location to store virtual machine logs, application logs, and analytics data?** You can use Blob Storage to store Azure Monitor log data. See [Azure Storage Analytics](/azure/storage/common/storage-analytics).
 - **Will you need to provide a location for backup, disaster recovery, or archiving workload-related data?** Blob Storage provides backup and disaster recovery capabilities. For more information, see [Backup and disaster recovery for Azure IaaS disks](/azure/virtual-machines/backup-and-disaster-recovery-for-azure-iaas-disks).
 
   You can also use Blob Storage to back up other resources, like on-premises or IaaS virtual machine-hosted SQL Server data. See [SQL Server Backup and Restore](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service).
@@ -39,8 +39,8 @@ Answer the following questions about your workloads to help you make decisions a
   - [Azure Files](/azure/storage/files/storage-files-introduction) provides file shares accessible over SMB 3.0 and HTTPS.
 - **Will you need to support hybrid cloud storage for on-premises high-performance computing (HPC) workloads?** [Avere vFXT for Azure](/azure/avere-vfxt/avere-vfxt-overview) is a hybrid caching solution. You can expand your on-premises storage capabilities by using cloud-based storage. Avere vFXT for Azure is optimized for read-heavy HPC workloads that involve 1,000 to 40,000 CPU cores. Avere vFXT for Azure can integrate with on-premises hardware network attached storage (NAS), Blob Storage, or both.
 - **Will you need to perform large-scale archiving and syncing of your on-premises data?** [Azure Data Box](/azure/databox/) products are designed to help you move large amounts of data from your on-premises environment to the cloud.
-  - [Azure Data Box Gateway](/azure/databox-gateway/data-box-gateway-overview) is a virtual device that is on-premises. Data Box Gateway helps you manage large-scale data migration to the cloud.
-  - [Azure Stack Edge](/azure/databox-online/) accelerates processing and the secure transfer of data to Azure. If you need to analyze, transform, or filter data before you move it to the cloud, use Data Stack Edge.
+  - [Azure Data Box Gateway](/azure/databox-gateway/data-box-gateway-overview) is a virtual device that's on-premises. Data Box Gateway helps you manage large-scale data migration to the cloud.
+  - [Azure Stack Edge](/azure/databox-online/) accelerates processing and the secure transfer of data to Azure. If you need to analyze, transform, or filter data before you move it to the cloud, use Azure Data Box.
 - **Do you want to expand an existing on-premises file share to use cloud storage?** [Azure File Sync](/azure/storage/file-sync/file-sync-introduction) lets you use the Azure Files service as an extension of file shares that are hosted on your on-premises Windows Server computers. The syncing service transforms Windows Server into a quick cache of your Azure file share. It allows your on-premises computers that access the share to use any protocol that's available on Windows Server.
 
 ## Common storage scenarios
@@ -62,7 +62,7 @@ Azure offers multiple products and services for different storage capabilities. 
 | I have containers with persistent volumes. | [Azure Files](/azure/storage/files/storage-files-introduction) or [Standard SSD, Premium SSD, or Ultra Disk Storage](/azure/virtual-machines/disks-types) | File (RWX) and block (RWO) volumes driver options are available for both Azure Kubernetes Service and custom Kubernetes deployments. Persistent volumes can map to either an Azure disk storage disk or a managed Azure Files share. Choose premium versus standard options based on workload requirements for persistent volumes. |
 | I have a data lake such as a Hadoop cluster for HDFS data. | [Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) or [Standard SSD or Premium SSD](/azure/virtual-machines/disks-types) | The Data Lake Storage Gen2 feature of Blob Storage provides server-side HDFS compatibility and petabyte scale for parallel analytics. It also offers high availability and reliability. Software like Cloudera can use Premium SSD or Standard SSD on controller/worker nodes, if needed. |
 | I have an SAP or SAP HANA deployment. | [Premium SSD or Ultra Disk Storage](/azure/virtual-machines/disks-types) | Ultra Disk Storage is optimized to offer submillisecond latency for tier-1 SAP workloads. Premium SSD, coupled with M-series virtual machines, offers a general-availability option. | For the highest throughput at low latency, use [Azure NetApp Files](/azure/architecture/reference-architectures/sap/sap-s4hana) for your SAP and SAP HANA deployment.
-| I have a disaster recovery site with strict RPO/RTO that syncs from my primary servers. | [Azure page blobs](/azure/storage/blobs/storage-blob-pageblob-overview) | Page blobs are used by replication software to enable low-cost replication to Azure without the need for compute virtual machines until failover occurs. For more information, see [Backup and disaster recovery for Azure IaaS disks](/azure/virtual-machines/backup-and-disaster-recovery-for-azure-iaas-disks). **Note:** Page blobs support a maximum of 8 TB. |
+| I have a disaster re  covery site with strict RPO/RTO that syncs from my primary servers. | [Azure page blobs](/azure/storage/blobs/storage-blob-pageblob-overview) | Page blobs are used by replication software to enable low-cost replication to Azure without the need for compute virtual machines until failover occurs. For more information, see [Backup and disaster recovery for Azure IaaS disks](/azure/virtual-machines/backup-and-disaster-recovery-for-azure-iaas-disks). **Note:** Page blobs support a maximum of 8 TB. |
 
 ### File and object storage scenarios
 
@@ -78,7 +78,7 @@ Azure offers multiple products and services for different storage capabilities. 
 | I run data replication to a disaster recovery site. | [Azure Files](/azure/storage/files/storage-files-introduction), [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) or [Azure File Sync](/azure/storage/file-sync/file-sync-introduction) | Azure File Sync removes the need for a disaster recovery server and stores files in native Azure SMB shares. Fast disaster recovery rebuilds any data on a failed on-premises server quickly. You can even keep multiple server locations in sync or use cloud tiering to store only relevant data on-premises.<br/><br/>Azure NetApp Files provides a storage based feature called [Cross region replication](/azure/azure-netapp-files/cross-region-replication-introduction) which can be used to replicate data to other Azure regions which does not use any VM or application server resources, and is highly optimized to replicate only changed data blocks between updates.
 | I manage data transfer in disconnected scenarios. | [Azure Stack Edge](/azure/databox-online/) or [Data Box Gateway](/azure/databox-online/) | Using Data Stack Edge or Data Box Gateway, you can copy data in disconnected scenarios. When the gateway is offline, it saves all files you copy in the cache, then uploads them when you're connected. |
 | I manage an ongoing data pipeline to the cloud. | [Azure Stack Edge](/azure/databox-online/) or [Data Box Gateway](/azure/databox-online/) | Move data to the cloud from systems that are constantly generating data by having them copy that data to the storage gateway. |
-| I have bursts of data that arrive at the same time. | [Azure Stack Edge](/azure/databox-online/) or [Data Box Gateway](/azure/databox-online/) | Manage large quantities of data that arrive at the same time. Some examples are when an autonomous car pulls into the garage or a gene sequencing machine that finishes its analysis. Copy all that data to Data Box Gateway at fast local speeds. Then let the gateway upload it as your network allows. |
+| I have bursts of data that arrive at the same time. | [Azure Stack Edge](/azure/databox-online/) or [Data Box Gateway](/azure/databox-online/) | Manage large quantities of data that arrive at the same time. Some examples are when an autonomous car pulls into the garage or a gene sequencing machine finishes its analysis. Copy all that data to Data Box Gateway at fast local speeds. Then, let the gateway upload it as your network allows. |
 
 ### Plan based on data workloads
 
@@ -96,20 +96,20 @@ Azure offers multiple products and services for different storage capabilities. 
 | I need to process data before transferring it to Azure. | [Azure Stack Edge](/azure/databox-online/) | |
 | I need to support continuous data ingestion in an automated way by using local cache. | [Data Box Gateway](/azure/databox-gateway/data-box-gateway-overview) | |
 
-## Learn more about Azure Storage services
+## Learn more about Azure storage services
 
-After you identify the Azure tools that best match your requirements, use this detailed documentation to learn about yourself with these services:
+After you identify the Azure tools that best match your requirements, use this detailed documentation to learn more about these services:
 
 | Service | Description |
 |---|---|
-| [Blob Storage](/azure/storage/blobs/storage-blobs-introduction) | Blob Storage is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that doesn't adhere to a specific data model or definition, such as text or binary data. <br><br> Use Blob Storage for the following needs: <li> Serving images or documents directly to a browser. <li> Storing files for distributed access. <li> Streaming video and audio. <li> Writing to log files. <li> Storing data for backup and restore, disaster recovery, and archiving. <li> Storing data for analysis by an on-premises or Azure-hosted service. |
-| [Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) | Blob Storage supports Data Lake Storage Gen2, Microsoft's enterprise big data analytics solution for the cloud. Data Lake Storage Gen2 offers a hierarchical file system, with the advantages of Blob Storage, including low-cost tiered storage, high availability, strong consistency, and disaster recovery capabilities. |
-| [Azure disk storage](/azure/virtual-machines/managed-disks-overview) | Azure disk storage offers persistent, high-performance block storage to power Azure Virtual Machines. Azure disks are highly durable, secure, and offer the industry's only single-instance service-level agreement (SLA) for virtual machines that use [Premium SSD or Ultra Disk Storage](/azure/virtual-machines/disks-types). Azure disks provide high availability with availability sets and Availability Zones for your Azure Virtual Machines fault domains. Azure manages disks as a top-level resource. Azure Resource Manager capabilities are provided, such as Azure role-based access control (Azure RBAC), policy, and tagging by default. |
+| [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) | Blob Storage is an object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that doesn't adhere to a specific data model or definition, such as text or binary data. <br><br> Use Blob Storage for the following needs: <li> Serving images or documents directly to a browser. <li> Storing files for distributed access. <li> Streaming video and audio. <li> Writing to log files. <li> Storing data for backup and restore, disaster recovery, and archiving. <li> Storing data for analysis by an on-premises or Azure-hosted service. |
+| [Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) | Blob Storage supports Data Lake Storage Gen2, Microsoft's enterprise big data analytics solution for the cloud. Data Lake Storage Gen2 offers a hierarchical file system, with the advantages of Blob Storage. It also includes low-cost tiered storage, high availability, strong consistency, and disaster recovery capabilities. |
+| [Azure disk storage](/azure/virtual-machines/managed-disks-overview) | Azure disk storage offers persistent, high-performance block storage to power Azure Virtual Machines. Azure disks are highly durable, secure, and offer the industry's only single-instance, service-level agreement (SLA) for virtual machines that use [Azure Premium SSD or Azure Ultra Disk Storage](/azure/virtual-machines/disks-types). Azure disks provide high availability with availability sets and availability zones for your Azure Virtual Machines fault domains. Azure manages disks as a top-level resource. Azure Resource Manager capabilities are provided, such as Azure role-based access control (Azure RBAC), policy, and tagging by default. |
 | [Azure Files](/azure/storage/files/storage-files-introduction) | Azure Files provides fully managed, native SMB file shares, without the need to run a virtual machine. You can mount an Azure Files share as a network drive to any Azure virtual machine or on-premises computer. |
-| [Azure File Sync](/azure/storage/file-sync/file-sync-introduction) | Azure File Sync can be used to centralize your file shares in Azure Files. Azure File Sync offers the flexibility, performance, and compatibility of an on-premises file server. |
+| [Azure File Sync](/azure/storage/file-sync/file-sync-introduction) | Use Azure File Sync to centralize your file shares in Azure Files. Azure File Sync offers the flexibility, performance, and compatibility of an on-premises file server. |
 | [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) | The Azure NetApp Files service is an enterprise-class, high-performance, metered file storage service. Azure NetApp Files supports any workload type and is highly available by default. You can select service and performance levels and set up snapshots through the service. |
-| [Azure Stack Edge](/azure/databox-online/) | Azure Stack Edge is an on-premises network device that moves data into and out of Azure. Data Stack Edge has AI-enabled edge compute to preprocess data during upload. Data Box Gateway is a virtual version of the device but with the same data transfer capabilities. |
-| [Data Box Gateway](/azure/databox-gateway/data-box-gateway-overview) | Data Box Gateway is a storage solution that enables you to seamlessly send data to Azure. Data Box Gateway is a virtual device based on a virtual machine provisioned in your virtualized environment or hypervisor. The virtual device is on-premises and you write data to it by using the NFS and SMB protocols. The device then transfers your data to Azure block blobs or page blobs, or to Azure Files. |
+| [Azure Stack Edge](/azure/databox-online/) | Azure Stack Edge is an on-premises network device that moves data into and out of Azure. Data Stack Edge has AI-enabled edge compute to pre-process data during upload. Data Box Gateway is a virtual version of the device but with the same data transfer capabilities. |
+| [Data Box Gateway](/azure/databox-gateway/data-box-gateway-overview) | Data Box Gateway is a storage solution that enables you to seamlessly send data to Azure. It's a virtual device based on a virtual machine provisioned in your virtualized environment or hypervisor. The virtual device is on-premises and you write data to it by using the NFS and SMB protocols. The device then transfers your data to Azure block blobs, page blobs, or to Azure Files. |
 | [Avere vFXT for Azure](/azure/avere-vfxt/avere-vfxt-overview) | Avere vFXT for Azure is a filesystem caching solution for data-intensive HPC tasks. Take advantage of cloud computing's scalability to make your data accessible, even for data that's stored in your own on-premises hardware. |
 
 ## Data redundancy and availability
@@ -122,15 +122,15 @@ Azure Storage has various redundancy options to help ensure durability and high 
 - Read-access GRS (RA-GRS)
 - Geo-zone-redundant storage (GZRS)
 
-To learn more about these capabilities and how you can decide on the best redundancy option for your use cases, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy).
+To learn more about these capabilities and how to decide on the best redundancy option for your use cases, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy).
 
-SLAs for storage services provide guarantees that are financially backed. For more information, see [SLA for managed disks](https://azure.microsoft.com/support/legal/sla/managed-disks), [SLA for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines), and [SLA for storage accounts](https://azure.microsoft.com/support/legal/sla/storage).
+SLAs for storage services provide financially backed guarantees. For more information, see [SLA for managed disks](https://azure.microsoft.com/support/legal/sla/managed-disks), [SLA for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines), and [SLA for storage accounts](https://azure.microsoft.com/support/legal/sla/storage).
 
 For help with planning the right solution for Azure disks, see [Backup and disaster recovery for Azure disk storage](/azure/virtual-machines/backup-and-disaster-recovery-for-azure-iaas-disks).
 
 ## Security
 
-To help you protect your data in the cloud, Azure Storage offers several best practices for data security and encryption:
+To help protect your data in the cloud, Azure Storage offers several best practices for data security and encryption:
 
 - Secure the storage account by using Azure RBAC and Azure Active Directory (Azure AD).
 - Secure data in transit between an application and Azure by using client-side encryption, HTTPS, or SMB 3.0.
@@ -138,17 +138,17 @@ To help you protect your data in the cloud, Azure Storage offers several best pr
 - Grant delegated access to the data objects in Azure Storage by using shared access signatures.
 - Use analytics to track the authentication method that someone is using when they access storage in Azure.
 
-These security features apply to Azure Blob Storage (block and page) and to Azure Files. For more information, see [Security recommendations for Blob storage](/azure/storage/blobs/security-recommendations).
+These security features apply to Azure Blob Storage (block and page) and to Azure Files. For more information, see [Security recommendations for Blob Storage](/azure/storage/blobs/security-recommendations).
 
-Azure Storage provides encryption at rest and safeguards your data. Azure Storage encryption is enabled by default for managed disks, snapshots, and images in all the Azure regions. All new managed disks, snapshots, images, and new data written to existing managed disks are encrypted at rest using keys managed by Microsoft. For more information, see [Azure Storage encryption](/azure/storage/common/storage-service-encryption) and [Managed Disks and Storage Service Encryption](/azure/virtual-machines/faq-for-disks#managed-disks-and-storage-service-encryption).
+Azure Storage provides encryption at rest and safeguards your data. Azure Storage encryption is enabled by default for managed disks, snapshots, and images in all the Azure regions. All new managed disks, snapshots, images, and new data written to existing managed disks are encrypted at rest using keys managed by Microsoft. For more information, see [Azure Storage encryption](/azure/storage/common/storage-service-encryption) and [Managed disks and storage service encryption](/azure/virtual-machines/faq-for-disks#managed-disks-and-storage-service-encryption).
 
-Azure Disk Encryption allows you to encrypt managed disks that are attached to IaaS virtual machines at rest and in transit. [Azure Key Vault](/azure/key-vault/) stores your keys. For Windows, the drives are encrypted by using industry-standard [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview) encryption technology. For Linux, the disks are encrypted by using the [dm-crypt](https://wikipedia.org/wiki/Dm-crypt) subsystem. The encryption process is integrated with Azure Key Vault to allow you to control and manage the disk encryption keys. For more information, see [Azure Disk Encryption for virtual machines and virtual machine scale sets](/azure/security/fundamentals/azure-disk-encryption-vms-vmss).
+Azure Disk Encryption lets you encrypt managed disks that are attached to IaaS virtual machines at rest and in transit. [Azure Key Vault](/azure/key-vault/) stores your keys. For Windows, encrypt the drives by using industry-standard [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview) encryption technology. For Linux, encrypt the disks by using the [dm-crypt](https://wikipedia.org/wiki/Dm-crypt) subsystem. The encryption process integrates with Azure Key Vault so you can control and manage the disk encryption keys. For more information, see [Azure Disk Encryption for virtual machines and virtual machine scale sets](/azure/security/fundamentals/azure-disk-encryption-vms-vmss).
 
 ## Regional availability
 
-You can use Azure to deliver services at the scale that you need to reach your customers and partners wherever they are. Checking the regional availability of a service beforehand can help you make the right decision for your workload and customer needs. To check availability, see [Managed disks available by region](https://azure.microsoft.com/global-infrastructure/services/?products=managed-disks) and [Azure Storage available by region](https://azure.microsoft.com/global-infrastructure/services/?products=storage).
+You can use Azure to deliver scaled services to reach your customers and partners wherever they are. Checking the regional availability of a service beforehand can help you make the right decision for your workload and customer needs. To check availability, see [Managed disks available by region](https://azure.microsoft.com/global-infrastructure/services/?products=managed-disks) and [Azure Storage available by region](https://azure.microsoft.com/global-infrastructure/services/?products=storage).
 
-Managed disks are available in all Azure regions that have Premium SSD and Standard SSD offerings. Ultra Disk Storage is offered in several Availability Zones. Verify the regional availability when you plan mission-critical, top-tier workloads that require Ultra Disk Storage.
+Managed disks are available in all Azure regions that have Azure Premium SSD and Standard SSD offerings. Azure Ultra Disk Storage is offered in several availability zones. Verify the regional availability when you plan mission-critical, top-tier workloads that require Ultra Disk Storage.
 
 Hot and cool Blob Storage, Data Lake Storage Gen2, and Azure Files storage are available in all Azure regions. Archival blob storage, premium file shares, and premium lock Blob Storage are limited to certain regions. Refer to the regions page to check the current status.
 

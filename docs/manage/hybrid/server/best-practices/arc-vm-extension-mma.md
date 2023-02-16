@@ -2,7 +2,7 @@
 title: Deploy the Log Analytics agent to Azure Arc Linux and Windows servers
 description: Learn how to manage extensions and use an Azure Resource Manager template to deploy the Log Analytics agent to Azure Arc Linux and Windows servers.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

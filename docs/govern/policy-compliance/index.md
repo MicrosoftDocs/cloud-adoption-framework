@@ -1,8 +1,8 @@
 ---
 title: Prepare corporate IT policy for the cloud
 description: Help enable an expanded governance model with key activities like incremental corporate policy changes and automated enforcement.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

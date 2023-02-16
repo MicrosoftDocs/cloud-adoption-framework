@@ -16,7 +16,7 @@ Development security is a broad technical area with multiple distinct elements. 
 
 Development security requires protecting the application or code itself, and the underlying infrastructure, platform, or device.
 
-![Diagram shows attacker opportunities, including I T infrastructure attacks.](./media/development-lifecycle-attacker-opportunities.png)
+:::image type="content" source="media/development-lifecycle-attacker-opportunities.png" border="false" alt-text="Diagram shows attacker opportunities, including IT infrastructure attacks." lightbox="media/development-lifecycle-attacker-opportunities.png":::
 
 ## Integrated security practices
 
@@ -29,7 +29,7 @@ Development can take many forms, including:
 - Scripting.
 - Automation, such as these examples:
   - **Infrastructure deployment**, for instance, automating a Terraform deployment.
-  - **Infrastructure configuration**, such as using an Azure Resource Manager template to deploy an Azure Network Security Group and create security group rules.
+  - **Infrastructure configuration**, such as using an Azure Resource Manager template or Bicep to deploy an Azure Network Security Group and create security group rules.
   - **Operational tasks**, like using Azure Functions to run scheduled tasks by running code on predefined timed intervals.
 - Code to be deployed to firmware.
 - Mobile apps, an aggregation of application-level code with platform services, deployed as a system.

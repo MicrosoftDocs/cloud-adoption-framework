@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Environment design and configuration'
 description: Get started with unblocking the design and configuration of your cloud environment.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -177,7 +177,7 @@ As the cloud adoption team begins their first few migrations, the cloud platform
 **Guidance to support deliverable completion:**
 
 - [Refactor landing zones](../ready/landing-zone/refactor.md)
-- [Test-driven development of landing zones](/docs/ready/considerations/azure-test-driven-development)
+- [Test-driven development of landing zones](../ready/considerations/development-strategy-test-driven-development.md)
 - [Expand landing zone governance](../ready/considerations/landing-zone-governance.md)
 - [Expand landing zone operations](../ready/considerations/landing-zone-operations.md)
 - [Expand landing zone security](../ready/considerations/landing-zone-security.md)

@@ -2,7 +2,7 @@
 title: Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
 description: Learn how Contoso rehosts an on-premises Linux application by migrating it to Azure VMs and Azure Database for MySQL.
 author: givenscj
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

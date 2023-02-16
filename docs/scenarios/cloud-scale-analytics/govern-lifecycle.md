@@ -24,7 +24,7 @@ Data products can have different lifecycles. In a typical lifecycle pattern, new
 
 Data lifecycles can differ from this typical pattern, though. Some data remains unused after its initial ingestion, or is rarely accessed once it's been stored. Some data products might expire days or months after their creation, while other data products are actively used and modified across their entire lifetimes.
 
-Most countries have regulations that dictate how long you're required to store data, such as personal data and accounting data. A particular country might require you to retain primary documentation five years for data such as incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. It also might require secondary documentation be retained for three to five years, which includes things like letters, agreements, and notes.
+Most places have regulations that dictate how long you're required to store data, such as personal data and accounting data. A particular country/region might require you to retain primary documentation five years for data such as incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. It also might require secondary documentation be retained for three to five years, which includes things like letters, agreements, and notes.
 
 ## Managing data lifecycles
 

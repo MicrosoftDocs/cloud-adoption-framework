@@ -2,7 +2,7 @@
 title: Plan for landing zone network segmentation
 description: Examine key design considerations and recommendations surrounding network segmentation with Azure landing zones.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

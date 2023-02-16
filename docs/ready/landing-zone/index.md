@@ -1,8 +1,8 @@
 ---
 title: What is an Azure landing zone?
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -17,6 +17,8 @@ An Azure landing zone is the output of a multi-subscription Azure environment th
 A landing zone is an environment for hosting your workloads, pre-provisioned through code. Watch the following video to learn more.
 
 <!-- markdownlint-disable MD034 -->
+
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xdvm]
 
@@ -40,7 +42,7 @@ There are two types of landing zones:
   - **Technology platforms**: With technology platforms such as AKS or AVS, the underlying service is often centrally managed. The applications running on top of the service have delegated responsibilities to application teams. This results in modified controls or access permissions compared to centrally managed landing zones.  
   - **Workload**: A platform administration team delegates the entire landing zone to a workload team to fully manage and support the environment; whilst still being controlled by the policies applied from the Management Groups above that the platform team control. This might include adding additional policies at the subscription scope and using alternative tooling for deploying, securing or monitoring workloads that is fully controlled and operated by the workload team.
 
-Whether you're starting on your first production application on Azure or you're operating a complex portfolio of tech platforms and workloads, the Azure landing zone implementation options can be tailored to your needs. See [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) for further information.
+Whether you're starting on your first production application on Azure or you're operating a complex portfolio of tech platforms and workloads, the Azure landing zone implementation options can be tailored to your needs. See [Tailor the Azure landing zone architecture to meet requirements](./tailoring-alz.md) for further information.
 
 ## Azure landing zone conceptual architecture
 
@@ -52,19 +54,21 @@ While your specific implementation might vary, as a result of specific business 
 
 Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) and modify it to fit your specific business and technical requirements when planning your landing zone implementation.
 
-:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.png":::
+:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
-## Azure landing zone accelerator
+## Azure landing zone portal accelerator
 
-For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone accelerator**.
+For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone portal accelerator**.
 
-The accelerator is an Azure-portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
+Accelerators are Infrastructure as Code implementations that deploy both platform and application landing zones. This accelerator is an Azure portal-based deployment for those who plan to manage their environment with the Azure portal. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies. 
 
-Deploying the Azure landing zone accelerator requires permissions for creating resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
+Deploying the Azure landing zone accelerator requires permissions to create resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
-There are other deployment options available, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md).
+There are other accelerators available for platform landing zones, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md). Application landing zone accelerators are listed in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy)
+
+The Microsoft Cloud Adoption Framework outlines [cloud adoption scenarios](../../scenarios/overview.md) to help you further refine and accelerate your cloud adoption journey, for application and workload deployment. There are [Infrastructure as Code implementations or accelerators](/azure/architecture/landing-zones/landing-zone-deploy#application) for each of these scenarios.
 
 ## Next steps
 
@@ -72,5 +76,3 @@ At the foundation of the architecture is a set of core design principles that se
 
 > [!div class="nextstepaction"]
 > [Design principles](./design-principles.md)
-
-

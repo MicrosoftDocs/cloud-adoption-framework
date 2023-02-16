@@ -1,8 +1,8 @@
 ---
 title: Qualitative and quantitative data feedback
 description: Learn how to use Azure tools to collect quantitative and qualitative feedback on web apps and APIs hosted in GitHub.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -43,7 +43,6 @@ To view quantitative data on your applications:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents]" submitText="Go to Application Insights" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -87,7 +86,6 @@ To view quantitative data on your APIs:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService]" submitText="Go to API Management Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -127,7 +125,6 @@ To create a DevOps project:
 2. Select **create DevOps project**.
 3. Select **runtime, framework, and service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -155,8 +152,6 @@ To view current deployments in your pipeline:
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites]" submitText="Go to App Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

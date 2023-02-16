@@ -2,7 +2,7 @@
 title: Examples of global reach outcomes
 description: Use the Cloud Adoption Framework for Azure to understand global reach outcomes in the context of a cloud transformation.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

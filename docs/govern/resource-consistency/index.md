@@ -1,49 +1,68 @@
 ---
-title: Resource Consistency discipline overview
-description: Understand the approach to developing a Resource Consistency discipline as part of a cloud governance strategy.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 09/17/2019
+title: Resource consistency in the Cloud Adoption Framework for Azure
+description: The resource consistency discipline in the Cloud Adoption Framework for Azure provides guidance on establishing policies related to the operational management of an environment, application, or workload.
+author: robbagby
+ms.author: robbag
+ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: internal
 ---
 
-# Resource Consistency discipline overview
+# Resource Consistency discipline
 
-Resource consistency is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md) within the [Cloud Adoption Framework governance model](../index.md). This discipline focuses on ways of establishing policies related to the operational management of an environment, application, or workload. IT operations teams often provide monitoring of applications, workload, and asset performance. They also commonly execute the tasks required to meet scale demands, remediate performance service-level agreement (SLA) violations, and proactively avoid performance SLA violations through automated remediation. Within the Five Disciplines of Cloud Governance, the Resource Consistency discipline ensures resources are consistently configured in such a way that they can be discoverable by IT operations, are included in recovery solutions, and can be onboarded into repeatable operations processes.
+Resource consistency is one of the Five Disciplines of Cloud Governance within the Cloud Adoption Framework governance model. This discipline will provide guidance on how to ensure your resources are configured consistently. This consistency will allow your IT operations to discover your resources, include them in recovery solutions, and onboard them into repeatable operations processes.
 
-> [!NOTE]
-> Resource Consistency discipline does not replace the existing IT teams, processes, and procedures that allow your organization to effectively manage cloud-based resources. The primary purpose of this discipline is to identify potential business risks and provide risk-mitigation guidance to the IT staff that are responsible for managing your resources in the cloud. As you develop governance policies and processes make sure to involve relevant IT teams in your planning and review processes.
+## Governed vs. ungoverned resources
 
-This section of the Cloud Adoption Framework outlines how to develop a Resource Consistency discipline as part of your cloud governance strategy. The primary audience for this guidance is your organization's cloud architects and other members of your cloud governance team. The decisions, policies, and processes that emerge from this discipline should involve engagement and discussions with relevant members of the IT teams responsible for implementing and managing your organization's resource consistency solutions.
+[Gartner defines IT Governance](https://www.gartner.com/en/information-technology/glossary/it-governance) "... as the processes that ensure the effective and efficient use of IT in enabling an organization to achieve its goals." A resource can be considered governed if the processes are in place to ensure compliance with business standards. Resources that aren't in compliance are necessarily ungoverned resources, as there are no processes in place to remediate and make them compliant.
 
-If your organization lacks in-house expertise in resource consistency strategies, consider engaging external consultants as a part of this discipline. Also consider engaging [Microsoft Consulting Services](https://www.microsoft.com/industry/services/consulting), the [Microsoft FastTrack](https://azure.microsoft.com/programs/azure-fasttrack/) cloud adoption service, or other external cloud adoption experts for discussing how best to organize, track, and optimize your cloud-based assets.
+Examples of ungoverned resources regarding the resource consistency discipline include:
 
-## Policy statements
+- Any resource without required tags
+- Any resource not following organization's naming standards
+- Any resource not properly located in the defined hierarchical structure
+- Any resource deployed in an unauthorized region
 
-Actionable policy statements and the resulting architecture requirements serve as the foundation of a Resource Consistency discipline. Use [sample policy statements](./policy-statements.md). These samples can serve as a starting point for defining your Resource Consistency policies.
+## Tooling
 
-> [!CAUTION]
-> The sample policies come from common customer experiences. To better align these policies to specific cloud governance needs, execute the following steps to create policy statements that meet your unique business needs.
+The following tools are available to govern Azure resources.
 
-## Develop governance policy statements
+- [Azure Policy](/azure/governance/policy/overview) is the primary tool to enforce resource consistency of Azure resources and assess compliance at-scale. Azure Policies can be deployed to either audit or enforce compliance.
+- [Azure Resource Graph](/azure/governance/resource-graph/overview) queries can be used for auditing or reporting on resource consistency.
+- [Azure Resource Manager template specs](/azure/azure-resource-manager/templates/template-specs) support resource consistency. Administrators can validate the content of the templates to ensure they're following standards.
 
-The following steps offer examples and potential options to consider when developing your Resource Consistency discipline. Use each step as a starting point for discussions within your cloud governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to manage Resource Consistency discipline risks.
+## Orphaned resources
 
-| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
-|--|--|
-| <br> ![Template icon](../../_images/govern/process-template.png) | <br> [Resource Consistency discipline template](./template.md): Download the template for documenting a Resource Consistency discipline. |
-| <br> ![Risks icon](../../_images/govern/process-risks.png) | <br> [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Resource Consistency discipline. |
-| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | <br> [Indicators and metrics](./metrics-tolerance.md): Indicators to understand whether it's the right time to invest in the Resource Consistency discipline. |
-| <br> ![Adherence icon](../../_images/govern/process-enforce.png) | <br> [Policy adherence processes](./compliance-processes.md): Suggested processes for supporting policy compliance in the Resource Consistency discipline. |
-| <br> ![Maturity icon](../../_images/govern/process-maturity.png) | <br> [Maturity](./discipline-improvement.md): Align cloud management maturity with phases of cloud adoption. |
-| <br> ![Toolchain icon](../../_images/govern/process-toolchain.png) | <br> [Toolchain](./toolchain.md): Azure services that can be implemented to support the Resource Consistency discipline. |
+Orphaned resources are resources that aren't currently in use, such as resources left behind after you decommission a workload. The most common example of orphaning a resource occurs when you delete a Virtual Machine, but leave the NIC and disks. This can be intentional if you want to later rebuild a VM with the same disks.
 
-## Next steps
+Orphaned resources should be governed along with active resources. Use Azure Resource Graph queries to identify orphaned resources in your organization and determine if they're governed or not.
 
-Get started by evaluating [business risks](./business-risks.md) in a specific environment.
+The following two Azure Resource Graph query lists disks and network cards not connected to a virtual machine.
 
-> [!div class="nextstepaction"]
-> [Understand business risks](./business-risks.md)
+```bash
+resources
+| where type =~ 'Microsoft.Compute/disks'
+| where managedBy == "" and diskState != 'ActiveSAS'
+or (diskState == 'Unattached' or diskState != 'ActiveSAS')
+| project name, resourceGroup, subscriptionId, tenantId, properties.diskState
+
+resources
+| where type == "microsoft.network/networkinterfaces"
+| extend vm = properties.virtualMachine
+| where isnull(vm.id)
+| project name, resourceGroup, subscriptionId, tenantId, vm.id
+```
+
+## Manage resource consistency
+
+In this discipline, you'll learn which areas are important to govern regarding resource consistency. These areas include Azure management groups, resource naming and tagging, and business constraints such as restricting resource types or sizes. For each area, you'll receive prescriptive guidance on what to govern, and how to enforce and audit compliance with standards.
+
+Consider the resource consistency guidance for the following areas.
+
+- [Management groups](management-group-structure.md)
+- [Resource naming](naming.md)
+- [Resource tagging](tagging.md)
+- [Business constraints](business-constraints.md)
+- [Keep landing zones up to date](keep-azure-landing-zone-up-to-date.md)

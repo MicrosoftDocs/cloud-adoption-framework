@@ -1,8 +1,8 @@
 ---
 title: Introduction to hybrid and multicloud
 description: Learn about hybrid and multicloud.
-author: brianblanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -57,7 +57,7 @@ We recognize that there are many valid reasons for customers to choose to distri
 
 - Minimize or avoid single cloud provider lock-in
 - Business units, subsidiaries, or acquired companies have already adopted different cloud platforms
-- Different cloud providers may have regulatory and data sovereignty requirements in different countries
+- Different cloud providers may have regulatory and data sovereignty requirements in different geopolitical regions
 - Improve business continuity and disaster recovery by duplicating workloads across two cloud providers
 - Maximize performance by running applications close to user locations, which may require hybrid or multicloud adoption
 - Enable easy migration for some data platforms or industry-specific applications by adopting multicloud strategies

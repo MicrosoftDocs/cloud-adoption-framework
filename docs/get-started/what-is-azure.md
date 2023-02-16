@@ -1,8 +1,8 @@
 ---
 title: How does Azure work?
 description: Learn the basics about the internal structure and functioning of the Azure cloud platform and cloud virtualization.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 01/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,6 +15,8 @@ ms.custom: internal
 Azure is Microsoft's public cloud platform. Azure offers a large collection of services, which includes platform as a service (PaaS), infrastructure as a service (IaaS), and managed database service capabilities. However, what exactly is Azure, and how does it work?
 
 <!-- markdownlint-disable MD034 -->
+
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2ixGo]
 
@@ -36,7 +38,7 @@ Azure is a huge collection of servers and networking hardware, which runs a comp
 
 ## Next steps
 
-Learn more about cloud adoption with the Microsoft Cloud Adoption Framework for Azure.
+Learn about how resources are deployed in Azure with the Azure Resource Manager.
 
 > [!div class="nextstepaction"]
-> [Microsoft Cloud Adoption Framework for Azure](../index.yml)
+> [Microsoft Cloud Adoption Framework for Azure](how-azure-resource-manager-works.md)

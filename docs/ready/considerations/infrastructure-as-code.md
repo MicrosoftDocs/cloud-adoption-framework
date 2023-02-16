@@ -92,7 +92,7 @@ Bicep modules commonly use:
 You have several options for publishing and sharing Bicep modules.
 
 - **Public registry:** The public module registry is hosted in a Microsoft container registry (MCR). Its source code and the modules it contains are stored in [GitHub](https://github.com/azure/bicep-registry-modules).
-- **Private registry:** You can use Azure container registry to publish modules to a private registry. For information on publishing modules to a registry in a CI/CD pipeline, see [Bicep and GitHub Actions](/learn/modules/publish-reusable-bicep-code-using-github-actions/), or if you prefer, [Bicep and Azure Pipelines](/learn/modules/publish-reusable-bicep-code-using-azure-pipelines/).
+- **Private registry:** You can use Azure container registry to publish modules to a private registry. For information on publishing modules to a registry in a CI/CD pipeline, see [Bicep and GitHub Actions](/training/modules/publish-reusable-bicep-code-using-github-actions/), or if you prefer, [Bicep and Azure Pipelines](/training/modules/publish-reusable-bicep-code-using-azure-pipelines/).
 - **Template Spec:** You can use [template specs](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) to publish Bicep modules. Template specs are meant to be complete templates, but Bicep allows you to use template specs to deploy modules.
 - **Version control system:** You can load modules directly from version control tools like GitHub or Azure DevOps.
 
@@ -124,7 +124,7 @@ You have several options for publishing and sharing Terraform modules:
 
   - If taking a declarative approach, specify your desired outcome rather than how you want it done.
 
-- Consider deployment scopes. Have a good understanding of [Azure management levels and hierarchy](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources). Each IaC deployment must know the scope at which Azure resources are deployed.
+- Consider deployment scopes. Have a good understanding of [Azure management levels and hierarchy](../azure-setup-guide/organize-resources.md). Each IaC deployment must know the scope at which Azure resources are deployed.
 
 - Determine whether you should use an Azure native or Azure non-native IaC tool. Some points to consider:
 
@@ -144,7 +144,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Use Azure native tools for IaC in the following scenarios:
 
-  - You want to use only Azure native tools. Your organization might have prior ARM template deployment experience.
+  - You want to use only Azure native tools. Your organization might have prior ARM or Bicep template deployment experience..
 
   - Your organization wants to have immediate support for all preview and GA versions of Azure services.
 
@@ -158,7 +158,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Publish and use IaC modules from public registries in the following scenarios:
 
-  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/terraform-module).
+  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](../landing-zone/terraform-module.md).
 
   - You want to use modules that are maintained, updated, and supported by Microsoft, Terraform, or other module providers.
 

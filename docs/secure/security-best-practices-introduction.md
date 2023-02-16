@@ -14,9 +14,13 @@ ms.custom: internal
 
 This article contains [infrastructure](infrastructure-security-overview.md) and [development](development-security-strategy-overview.md) security best practices and recommendations that help improve the security of workloads, data, and services in Azure.
 
-Infrastructure and development security best practices are in two parts, each with their own section. Each section covers the full lifecycle of strategy, architecture, implementation, operations, and governance. The guidance supplements Microsoft tools and security guides, including [Microsoft Cloud Adoption Framework for Azure overview](/azure/cloud-adoption-framework/overview), [Azure Security Benchmark (ASB) introduction](/security/benchmark/azure/introduction), and other supporting technical documentation.
+## Guidance
 
-You can implement ASB security controls to individual service baselines throughout your organization's benchmark planning, approval, and implementation processes across high level control domains:
+Infrastructure and development security best practices are in two parts, each with their own section. Each section covers the full lifecycle of strategy, architecture, implementation, operations, and governance. The guidance supplements Microsoft tools and security guides, including [Microsoft Cloud Adoption Framework for Azure overview](../overview.md), [Azure Security Benchmark introduction](/security/benchmark/azure/introduction), and other supporting technical documentation.
+
+## Service baselines
+
+You can implement Azure Security Benchmark security controls to individual service baselines throughout your organization's benchmark planning, approval, and implementation processes across high-level control domains:
 
 - [Network security (NS)](/security/benchmark/azure/security-controls-v3-network-security)
 - [Identity Management (IM)](/security/benchmark/azure/security-controls-v3-identity-management)
