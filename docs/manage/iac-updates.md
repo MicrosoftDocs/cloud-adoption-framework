@@ -36,7 +36,7 @@ For Azure landing zones, there are two main options for Infrastructure as Code:
 - Azure Bicep, managed by Microsoft, specifically for ALZ visit [ALZ Bicep repository](https://aka.ms/alz/bicep).
 - Terraform, managed by Hashicorp, specifically for ALZ visit [ALZ Terraform registry](https://aka.ms/alz/tf/repo).
 
-You can learn more about planning for automation of Landing Zones by referencing the [Automation](../ready/considerations/automation#platform-automation-design-recommendation.md) article.
+You can learn more about planning for automation of Landing Zones by referencing the [Automation](../ready/considerations/automation.md#platform-automation-design-recommendation) article.
 
 ## Benefits of updating ALZ with Infrastructure as Code
 
@@ -82,7 +82,7 @@ Once identified, Infrastructure as Code can be run to reset the resources to the
 
 Changes that are defined in the portal can be cumbersome to implement back in to Infrastructure as Code.  They require updating the code to match the current state, which often involves reviewing each resource changed and updating its parameters to match the "as is" configuration.
 
-As a result, if you are using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts who have access to make changes directly, such as using Privileged Identity Management.  See [Security Baseline discipline overview](../govern/security-baseline/index.md) and [Identity Baseline discipline overview](../identity/security-baseline/index.md) for guidance on this.
+As a result, if you are using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts who have access to make changes directly, such as using Privileged Identity Management.  See [Security Baseline discipline overview](../govern/security-baseline/index.md) and [Identity Baseline discipline overview](../govern/identity-baseline/index.md) for guidance on this.
 
 You can review [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md#operational-compliance-recommendations)
 
