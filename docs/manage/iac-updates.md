@@ -16,7 +16,7 @@ This article explains the benefits of using Infrastructure as Code to update Azu
 
 Because Infrastructure as Code can be used to manage the whole life cycle, and excels at managing resources that it has deployed, organizations should plan to deploy their Azure Landing Zones with Infrastructure as Code.  Attempting to bring non-IaC deployed resources in to the management scope of IaC can be a time consuming effort.  
 
-To understand more about why you will want to update your Landing Zone, visit [Keep your Azure landing zone up to date](../govern/resource-consistency/keep-azure-landing-zone-up-to-date)
+To understand more about why you will want to update your Landing Zone, visit [Keep your Azure landing zone up to date](../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md)
 
 ## What does Infrastructure as Code do?
 
@@ -36,7 +36,7 @@ For Azure landing zones, there are two main options for Infrastructure as Code:
 - Azure Bicep, managed by Microsoft, specifically for ALZ visit [ALZ Bicep repository](https://aka.ms/alz/bicep).
 - Terraform, managed by Hashicorp, specifically for ALZ visit [ALZ Terraform registry](https://aka.ms/alz/tf/repo).
 
-You can learn more about planning for automation of Landing Zones by referencing the [Automation](../ready/considerations/automation#platform-automation-design-recommendation) article.
+You can learn more about planning for automation of Landing Zones by referencing the [Automation](../ready/considerations/automation#platform-automation-design-recommendation.md) article.
 
 ## Benefits of updating ALZ with Infrastructure as Code
 
@@ -82,9 +82,9 @@ Once identified, Infrastructure as Code can be run to reset the resources to the
 
 Changes that are defined in the portal can be cumbersome to implement back in to Infrastructure as Code.  They require updating the code to match the current state, which often involves reviewing each resource changed and updating its parameters to match the "as is" configuration.
 
-As a result, if you are using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts who have access to make changes directly, such as using Privileged Identity Management.  See [Security Baseline discipline overview](../govern/security-baseline/) and [Identity Baseline discipline overview](../identity/security-baseline/) for guidance on this.
+As a result, if you are using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts who have access to make changes directly, such as using Privileged Identity Management.  See [Security Baseline discipline overview](../govern/security-baseline/index.md) and [Identity Baseline discipline overview](../identity/security-baseline/index.md) for guidance on this.
 
-You can review [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance#operational-compliance-recommendations)
+You can review [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md#operational-compliance-recommendations)
 
 ## Next steps
 
