@@ -12,11 +12,11 @@ ms.custom: internal
 
 # Subscription vending
 
-Subscription vending provides a mechanism for programmatically issuing subscriptions to teams that need to deploy workloads.  
+Subscription vending provides a mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads.  
 
 :::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing the place of subscription vending in the workload lifecycle." lightbox="./media/subscription-vending-high-res.png" border="false":::
 
-Subscription vending builds on the concept of subscription democratization. It's a means to achieve subscription democratization for application landing zone. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
+Subscription vending builds on the concept of subscription democratization. It's a means to achieve subscription democratization for application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
 - [Democratized approach to subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization)  
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
@@ -39,13 +39,13 @@ Subscription vending process involves three teams. The Cloud Center of Excellenc
 
 Subscription vending should be available to anyone in your organization can request a subscription. You need need to establish an approval process for workload subscription creation before you can offer subscription vending. Setup is a one-time step that you update as needed. A CCoE or similar entity typically establishes the approval mechanisms to standardize the onboarding process for the application team.
 
-**Automate if possible.** An automated approval process for subscriptions is ideal. An IT service management (ITSM) tool is a common approach for automating subscription approval.
+**Automate if possible.** An automated approval process for subscriptions is ideal. An IT service management (ITSM) tool is a common approach for automating subscription request capture and approval.
 
-**Gather subscription information at intake.** The business logic should allow someone to request a subscription and provide subscription details, such as anticipated budgets and subscription owners. The information you gather should feed your deployment parameters and stakeholder approval needs.
+**Gather subscription information at intake.** The business logic should allow app teams to request a subscription and provide subscription requirements, such as anticipated budgets, subscription owners, networking expectations, and business criticality & confidentiality classification. The information you gather should feed your deployment parameters and stakeholder approval needs.
 
 ### Receive a subscription request
 
-With the approval process in place, you can start receiving subscription requests. Each request needs approval per the approval process. The platform team should assume responsibility of subscription creation process after approval. They maintain control until they handoff the subscription to the application team.
+With the approval process in place, you can start receiving subscription requests. Each request needs approval per the approval process defined by the CCoE. The platform team should assume responsibility of subscription creation process after approval. The platform team maintains control until they handoff the subscription to the application team.
 
 **Connect approval to deployment pipeline.** It's a best practice to tie the business logic of the approval process into the subscription deployment pipeline managed by the platform team. Azure DevOps pipelines or GitHub Actions workflows are common solutions for the subscription deployment pipeline.
 
@@ -59,7 +59,7 @@ With the approval process in place, you can start receiving subscription request
 
 Other applications may not require this same type of connectivity and may only require isolated Virtual Networks that contain services and resources that interact directly with the internet, protected by the various Azure Networking security services, or with other applications via services link Private Link.-->
 
-**Determine place in network topology** The needs of the workload should determine its location in. If you don't have a defined network typology, follow the [design area guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) to decide . For more information, see [Define an Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology).
+**Determine place in network topology** The needs of the workload should determine its location in. If you don't have a defined network typology, follow the [design area guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) to decide. For more information, see [Define an Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology).
 
 For more information, see:
 
@@ -90,7 +90,7 @@ We also recommend that the platform/network teams should only create a Virtual N
 
 **Use non-overlapping IP addresses** When connecting to a common network topology that is in a single routing domain, it's critical that unique and non-overlapping IP addressing is used for each virtual network within the routing domain. These are the Virtual Networks that require peering to a central hub Virtual Network or Virtual WAN Hub.
 
-You should use an IP Address Management (IPAM) system to streamline IP address assignment. To automate, place the IPAM behind an API and assign address blocks programmatically. You can include the API call in the subscription vending deployment pipeline and add the address space as a deployment parameter.
+You should integrate your automation into your IP Address Management (IPAM) system to streamline IP address assignment.
 
 **Size virtual networks properly.** You should size your virtual networks at the time of creation to conserve IP addresses. Azure reserves the first four and last IP address in a subnet. For more information, see [IP addresses](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets).
 
@@ -107,8 +107,7 @@ The platform team should use the networking requirements and governance requirem
 
 Management groups help you organize and govern subscriptions. For more information, see [Management groups overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
-**Use management groups for subscription governance:** Deploy the workload subscription in the management group that enforces the policies needed for that workload.
- Apply Azure policies to the management group so each subscription inherits the controls.
+**Use management groups for subscription governance:** Deploy the workload subscription in the management group that enforces the policies needed for that workload's classification and needs.
 
 **Move subscriptions to new management groups as needed.** The governance requirements of workloads and subscriptions change of time. You should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
 
@@ -133,7 +132,7 @@ Each subscription offer type defines has a service limit. As you approach that l
 
 ### Create subscription programmatically
 
-The pipeline should consume the request information in the form of a JSON document (commonly referred to as a parameters file). These pipelines or workflows then trigger the creation of a new Azure Subscription as per the request details. This deployment is likely to trigger multiple other deployments depending on the input parameter values provided. For example, whether to deploy a Virtual Network in the newly provisioned Subscription and whether to peer it back to a hub Virtual Network.
+The pipeline should consume the request information in the form of a JSON document (commonly referred to as a parameters file). These pipelines or workflows then trigger the creation of a new Azure Subscription as per the request details. This deployment is likely to trigger multiple other deployments depending on the input parameter values provided. For example, whether to deploy a Virtual Network in the newly provisioned Subscription and whether to peer it back to a hub.
 
 **Know the commercial agreement you have.** You need a commercial agreement to create a subscription programmatically. To create a subscription, you need to assume a role with the permissions to do so. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation. For more information, see:
 
@@ -143,14 +142,14 @@ The pipeline should consume the request information in the form of a JSON docume
 
 Without a commercial agreement, you can still use the modules. Create subscriptions in the Azure portal and deploy the modules programmatically.
 
-**2. Create the subscription programmatically.** Follow the guidance in the Azure Architecture Center to programmatically create subscriptions. A common strategy for this is to use infrastructure as code (IaC). There are subscription vending Bicep and Terraform modules to help you adopt a subscription vending model. Consider using semi-structured data (JSON/YAML) in your source control repository to provide the inputs to the above modules. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
+**2. Create the subscription programmatically.** A common strategy for this is to use infrastructure as code (IaC). There are example subscription vending [Bicep](LINK) and [Terraform](LINK) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
 
 **3. Use tags for cost management.** You should assign tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements. Azure Cost Management provides greater functionality, for example, you can create reports for subscriptions with specific tags. For more information, see:
 
 - [How tags are used in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data)
 - [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
 
-**4. Use production and non-production subscriptions.** Finally, the workload type must be specified in the API request for a new subscription. This can either be Production or DevTest. DevTest results in lower resource charges but has other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
+**4. Use production and non-production subscriptions.** Finally, the workload type must be specified in the request for a new subscription. This can either be Production or DevTest. DevTest results in lower resource charges but has other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
 
 - [Azure billing offers and Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
 - [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
@@ -158,12 +157,12 @@ Without a commercial agreement, you can still use the modules. Create subscripti
 
 **5. Grant subscription owner role.** For every new subscription, you need to designate a subscription owner. You should grant the Owner role to one Azure Active Directory principal.
 
-**6. Create Azure AD groups.** In addition to the subscription owner, you should use Azure AD groups to manage access to the subscription. For elevated (for example, write) access we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Wherever possible, limit the number of subscription owners and use the minimum required level of access.
+**6. Create Azure AD groups.** In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
 Rather than create service principals for each subscription, use managed identity wherever possible. With managed identities, you don't have to manage secrets or keys. Service principals usually are granted standing access to resources and aren't subject to PIM. For more information, see [IAM design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 <!--Can’t add constrained delegation as no public docs yet-->
 
-**7. Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application to set budgets and deploy workloads.
+**7. Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application team to set their own budgets and deploy & operate their workloads.
 
 ### Set budget
 
@@ -171,7 +170,7 @@ The the platform and workload teams share responsibility for the financial healt
 
 ### Deploy & operate
 
-With the subscription in place, the application team can create and deploy the workload.
+With the subscription in place, the application team can create, deploy, and operate the workload, with the placement and governance set forth by the vending process.
 
 ## Next steps
 
