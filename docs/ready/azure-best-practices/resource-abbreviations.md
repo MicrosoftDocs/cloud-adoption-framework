@@ -3,7 +3,7 @@ title: Abbreviation examples for Azure resources
 description: Abbreviation examples for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 12/7/2022
+ms.date: 2/10/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,9 +15,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 This page gives you abbreviation examples for many of the resources in Azure. Below you'll find *abbreviations* mapped to *resource* and *resource provider namespace*.
 
-## Azure Naming Tool
-
-The Azure Naming Tool generates Azure-compliant names and can help you standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
+**Azure Naming Tool:** You can use the Azure Naming Tool to standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 <!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
@@ -209,8 +207,9 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
-| SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 | Maps account | `Microsoft.Maps/accounts` | `map` |
+| SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
+| WebPubSub | `Microsoft.SignalRService/webPubSub` | `wps` |
 
 ## Integration
 

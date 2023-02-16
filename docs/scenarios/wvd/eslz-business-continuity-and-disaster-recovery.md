@@ -21,7 +21,7 @@ A good business continuity and disaster recovery (BCDR) strategy keeps your crit
 
 To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
-For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/virtual-desktop/disaster-recovery).
+For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr).
 
 ## Design considerations
 
@@ -176,6 +176,8 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Network infrastructure, as part of a hub-and-spoke architecture or as a virtual wide area network (virtual WAN) architecture must be available in the secondary region.
   - Hybrid connectivity must be highly available in both the primary region and the secondary region.
   - Active Directory authentication must be available in the disaster recovery region or connectivity to the on-premises domain must be guaranteed.
+
+[Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix TechZone summarizes design considerations for Citrix technologies. This guide assists with business continuity and disaster recovery (BCDR) architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
 
 ## Next steps
 

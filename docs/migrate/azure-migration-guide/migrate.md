@@ -16,7 +16,7 @@ In this phase of the adoption journey, use the output of the assessment phase to
 
 ## [Native migration tools](#tab/Tools)
 
-The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
+The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](./migration-tools-decision-guide.md).
 
 ### Azure Migrate
 
