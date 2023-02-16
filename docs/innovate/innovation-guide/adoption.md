@@ -41,11 +41,6 @@ To view quantitative data on your applications:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -84,11 +79,6 @@ To view quantitative data on your APIs:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -115,8 +105,6 @@ Azure Boards and Azure Pipelines require a portal that's separate from GitHub an
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ### Action
 
 To create a DevOps project:
@@ -124,9 +112,6 @@ To create a DevOps project:
 1. Go to **Azure DevOps Projects**.
 2. Select **create DevOps project**.
 3. Select **runtime, framework, and service**.
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -150,10 +135,6 @@ To view current deployments in your pipeline:
 3. Select **Deployment Center** in the **deployment** section of the **app services** pane.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 

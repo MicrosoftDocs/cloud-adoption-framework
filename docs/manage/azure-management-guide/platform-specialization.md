@@ -119,11 +119,6 @@ Any managed applications you're servicing are displayed.
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Manage service catalog applications

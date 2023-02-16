@@ -64,11 +64,6 @@ To set up a Service Health alert:
 2. Select **Health alerts**.
 3. Create a Service Health alert.
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -92,11 +87,6 @@ A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) is
 
 ::: zone target="chromeless"
 
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
