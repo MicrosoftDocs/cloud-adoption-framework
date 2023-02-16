@@ -23,7 +23,11 @@ Subscription vending builds on the concept of subscription democratization. It's
 
 ## Why subscription vending?
 
-Subscription vending standardizes and automates workload deployments. It improves the velocity of application teams, so they can onboard and deploy workloads faster.
+Subscription vending standardizes the process for accessing an application landing zone in Azure. It provides subscription approval consistency, improved onboarding velocity, and facilitates workload governance at scale.
+
+- **Approval consistency:** The cloud center of excellence (CCoE) can ensure a consistent request and approval process that enables application teams to quickly onboard to Azure.
+- **Improved velocity:** Application teams can access application landing zones faster and onboard workloads quicker.
+- **Governance at scale:** The platform team can enforce governance on application landing zones without slowing application teams or creating unmanageable overhead for themselves.
 
 ## How to implement subscription vending
 
