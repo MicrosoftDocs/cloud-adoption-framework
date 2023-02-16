@@ -48,11 +48,6 @@ A data scientist can use Azure Machine Learning to train and build a model by us
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -89,11 +84,6 @@ To get started with a Cognitive Services API:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -119,11 +109,6 @@ To get started with Azure Bot Service:
 1. Select **Create**. Then follow the steps in the portal to provision the service.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -152,11 +137,6 @@ To get started:
 1. Follow the steps in the portal to provision the service.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
