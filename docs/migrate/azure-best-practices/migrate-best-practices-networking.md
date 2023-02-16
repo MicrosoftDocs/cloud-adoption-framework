@@ -270,13 +270,13 @@ Now imagine that you have an Azure deployment, like Azure App Service, in `West 
 
 To optimize routing for both offices, you need to know which prefix is from Azure `West US` and which prefix is from Azure `East US`. You can encode this information by using BGP community values.
 
-- You assign a unique BGP community value to each Azure region. For example, 12076:51004 for `East US`; 12076:51006 for `West US`.
+- Assign a unique BGP community value to each Azure region, like 12076:51004 for `East US` or 12076:51006 for `West US`.
 - Now that it's clear which prefix belongs to which Azure region, you can configure a preferred ExpressRoute circuit.
 - Because you're using BGP to exchange routing information, you can use BGP's local preference to influence routing.
-- In our example, you assign a higher local preference value to `13.100.0.0/16` in `West US` than in `East US`. Similarly, you assign a higher local preference value to `23.100.0.0/16` in `East US` than in `West US`.
+- The example assigns a local preference value to `13.100.0.0/16` in `West US` that's higher than the value in `East US`. It also assigns a local preference value to `23.100.0.0/16` in `East US` that's higher than the value in `West US`.
 - This configuration ensures that when both paths to Microsoft are available, users in Los Angeles connect to the `West US` region by using the west circuit, and users in New York connect to the `East US` region by using the east circuit.
 
-![Diagram that shows a VPN with a route path through the correct circuit.](./media/migrate-best-practices-networking/bgp2.png)
+:::image type="content" source="./media/migrate-best-practices-networking/bgp2.png" alt-text="Diagram that shows a VPN with a route path through the correct circuit.":::
 *Figure 7: BGP communities optimized connection.*
 
 **Learn more:**
@@ -285,7 +285,7 @@ To optimize routing for both offices, you need to know which prefix is from Azur
 
 ## Secure virtual networks
 
-The responsibility for securing virtual networks is shared between Microsoft and you. Microsoft provides many networking features, and services that help keep resources secure. When you're designing security for virtual networks, it's best to:
+You and Microsoft share responsibility for securing virtual networks. Microsoft provides many networking features and services that help keep resources secure. When you're designing security for virtual networks, it's best to:
 
 - Implement a perimeter network.
 - Use filtering and security groups.
@@ -305,19 +305,19 @@ Although Microsoft invests heavily in protecting the cloud infrastructure, you m
 
 - A perimeter network protects internal network resources from an untrusted network.
 - It's the outermost layer that's exposed to the internet. It generally sits between the internet and the enterprise infrastructure, usually with some form of protection on both sides.
-- In a typical enterprise network topology, the core infrastructure is heavily fortified at the perimeters, with multiple layers of security devices. The boundary of each layer consists of devices and policy enforcement points.
+- In a typical enterprise network topology, the core infrastructure is heavily fortified at the perimeters with multiple layers of security devices. The boundary of each layer consists of devices and policy enforcement points.
 - Each layer can include a combination of the network security solutions, such as:
-  - Firewalls
-  - Denial of service (DoS) prevention
-  - Intrusion detection and intrusion protection systems (IDS/IPS)
-  - VPN devices
+  - Firewalls.
+  - Denial of service (DoS) prevention.
+  - Intrusion detection and intrusion protection systems (IDS/IPS).
+  - VPN devices.
 - Policy enforcement on the perimeter network can use firewall policies, access control lists (ACLs), or specific routing.
-- As incoming traffic arrives from the internet, it's intercepted and handled by a combination of defense solutions. The solutions block attacks and harmful traffic, while allowing legitimate requests into the network.
-- Incoming traffic can route directly to resources in the perimeter network. The perimeter network resource can then communicate with other resources deeper in the network, moving traffic forward into the network after validation.
+- As incoming traffic arrives from the internet, it's intercepted and handled by a combination of defense solutions. The solutions block attacks and harmful traffic while allowing legitimate requests into the network.
+- Incoming traffic can route directly to resources in the perimeter network. The perimeter network resource can then communicate with other resources deeper in the network, which moves traffic forward into the network after validation.
 
-Here's an example of a single subnet perimeter network in a corporate network, with two security boundaries.
+Here's an example of a single subnet perimeter network in a corporate network. The subnet perimeter network has two security boundaries.
 
-![Diagram that shows an Azure Virtual Network perimeter network deployment.](./media/migrate-best-practices-networking/perimeter.png)
+:::image type="content" source="./media/migrate-best-practices-networking/perimeter.png" alt-text="Diagram that shows an Azure Virtual Network perimeter network deployment.":::
 *Figure 8: Perimeter network deployment.*
 
 **Learn more:**
@@ -326,9 +326,9 @@ Here's an example of a single subnet perimeter network in a corporate network, w
 
 ## Best practice: Filter virtual network traffic with NSGs
 
-Network security groups (NSGs) contain multiple inbound and outbound security rules that filter traffic going to and from resources. Filtering can be by source and destination IP address, port, and protocol.
+Network security groups (NSGs) contain multiple inbound and outbound security rules that filter traffic going to and from resources. Traffic can be filtered by source and destination IP address, port, and protocol.
 
-- NSGs contain security rules that allow or deny inbound network traffic to (or outbound network traffic from) several types of Azure resources. For each rule, you can specify source and destination, port, and protocol.
+- NSGs contain security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. For each rule, you can specify the source and destination, port, and protocol.
 - NSG rules are evaluated by priority by using five-tuple information to allow or deny the traffic. Five-tuple information is source, source port, destination, destination port, and protocol.
 - A flow record is created for existing connections. Communication is allowed or denied based on the connection state of the flow record.
 - A flow record allows an NSG to be stateful. For example, if you specify an outbound security rule to any address over port 80, you don't need an inbound security rule to respond to the outbound traffic. You only need to specify an inbound security rule if communication is started externally.
@@ -342,22 +342,22 @@ To secure virtual networks, consider attack vectors. Note the following points:
 
 - Using only subnet NSGs simplifies your environment, but only secures traffic into your subnet. This traffic is known as north/south traffic.
 - Traffic between VMs on the same subnet is known as east/west traffic.
-- It's important to use both forms of protection. If a hacker gains access from the outside, they'll be stopped when trying to attack machines located in the same subnet.
+- It's important to use both forms of protection. If a hacker gains access from the outside, they're stopped if they try to attack machines located in the same subnet.
 
 ### Use service tags on NSGs
 
-A service tag represents a group of IP address prefixes. Using a service tag helps minimize complexity when you create NSG rules.
+A service tag represents a group of IP address prefixes. Using a service tag minimizes complexity when you create NSG rules.
 
 - You can use service tags instead of specific IP addresses when you create rules.
-- Microsoft manages the address prefixes associated with a service tag, and automatically updates the service tag as addresses change.
-- You can't create your own service tag, or specify which IP addresses are included within a tag.
+- Microsoft manages the address prefixes associated with a service tag and automatically updates the service tag as addresses change.
+- You can't create your own service tag or specify which IP addresses are included within a tag.
 
-Service tags take the manual work out of assigning a rule to groups of Azure services. For example, if you want to allow a subnet containing web servers to access to Azure SQL Database, you can create an outbound rule to port 1433, and use the **Sql** service tag.
+Service tags take the manual work out of assigning a rule to groups of Azure services. For example, if you want to allow a subnet that contains web servers to access Azure SQL Database, you can create an outbound rule to port 1433, and use the **Sql** service tag.
 
 - This **Sql** tag denotes the address prefixes of the Azure SQL Database and Azure SQL Data Warehouse services.
 - If you specify **Sql** as the value, traffic is allowed or denied to SQL.
 - If you only want to provide access to **Sql** in a specific region, you can specify that region. For example, if you want to provide access only to Azure SQL Database in the East US region, you can specify **Sql.EastUS** for the service tag.
-- The tag represents the service, but not specific instances of the service. For example, the tag represents the Azure SQL Database service, but doesn't represent a particular SQL Database or server.
+- The tag represents the service but not specific instances of the service. For example, the tag represents the Azure SQL Database service but doesn't represent a particular SQL Database or server.
 - All address prefixes represented by this tag are also represented by the **Internet** tag.
 
 **Learn more:**
@@ -369,13 +369,13 @@ Service tags take the manual work out of assigning a rule to groups of Azure ser
 
 Application security groups enable you to configure network security as a natural extension of an application structure.
 
-- You can group VMs and define network security policies based on application security groups.
-- Application security groups enable you to reuse your security policy at scale, without manual maintenance of explicit IP addresses.
-- Application security groups handle the complexity of explicit IP addresses and multiple rule sets, allowing you to focus on your business logic.
+- Group VMs and define network security policies based on application security groups.
+- Application security groups enable you to reuse your security policy at scale without manual maintenance of explicit IP addresses.
+- Application security groups handle the complexity of explicit IP addresses and multiple rule sets, which allows you to focus on your business logic.
 
 **Example:**
 
-![Diagram that shows an example application security group.](./media/migrate-best-practices-networking/asg.png)
+:::image type="content" source="./media/migrate-best-practices-networking/asg.png" alt-text="Diagram that shows an example application security group.":::
 *Figure 9: Application security group example.*
 
 | Network interface | Application security group |
@@ -385,15 +385,15 @@ Application security groups enable you to configure network security as a natura
 | `NIC3` | `AsgLogic` |
 | `NIC4` | `AsgDb` |
 
-In our example, each network interface belongs to only one application security group, but in fact an interface can belong to multiple groups, following Azure limits. None of the network interfaces have an associated NSG. `NSG1` is associated with both subnets, and contains the following rules:
+In the previous table, each network interface belongs to only one application security group, but an interface can belong to multiple groups if it follows Azure limits. None of the network interfaces have an associated NSG. `NSG1` is associated with both subnets and contains the following rules:
 
 | Rule name | Purpose | Details |
 | --- | --- | --- |
-| `Allow-HTTP-Inbound-Internet` | Allow traffic from the internet to the web servers. Inbound traffic from the internet is denied by the `DenyAllInbound` default security rule, so no other rule is needed for the `AsgLogic` or `AsgDb` application security groups. | Priority: `100`<br><br> Source: `internet` <br><br> Source port: `*` <br><br> Destination: `AsgWeb` <br><br> Destination port: `80` <br><br> Protocol: `TCP` <br><br> Access: `Allow` |
+| `Allow-HTTP-Inbound-Internet` | Allows traffic from the internet to the web servers. Inbound traffic from the internet is denied by the `DenyAllInbound` default security rule, so no other rule is needed for the `AsgLogic` or `AsgDb` application security groups. | Priority: `100`<br><br> Source: `internet` <br><br> Source port: `*` <br><br> Destination: `AsgWeb` <br><br> Destination port: `80` <br><br> Protocol: `TCP` <br><br> Access: `Allow` |
 | `Deny-Database-All` | `AllowVNetInBound` default security rule allows all communication between resources in the same virtual network. This rule is needed to deny traffic from all resources. | Priority: `120` <br><br> Source: `*` <br><br> Source port: `*` <br><br> Destination: `AsgDb` <br><br> Destination port: `1433` <br><br> Protocol: `All` <br><br> Access: `Deny` |
-| `Allow-Database-BusinessLogic` | Allow traffic from the `AsgLogic` application security group to the `AsgDb` application security group. The priority for this rule is higher than the `Deny-Database-All` rule, so this rule is processed first. So traffic from the `AsgLogic` application security group is allowed, and all other traffic is blocked. | Priority: `110` <br><br> Source: `AsgLogic` <br><br> Source port: `*` <br><br> Destination: `AsgDb` <br><br> Destination port: `1433` <br><br> Protocol: `TCP` <br><br> Access: `Allow` |
+| `Allow-Database-BusinessLogic` | Allows traffic from the `AsgLogic` application security group to the `AsgDb` application security group. The priority for this rule is higher than the `Deny-Database-All` rule, so this rule is processed first. Traffic from the `AsgLogic` application security group is allowed, and all other traffic is blocked. | Priority: `110` <br><br> Source: `AsgLogic` <br><br> Source port: `*` <br><br> Destination: `AsgDb` <br><br> Destination port: `1433` <br><br> Protocol: `TCP` <br><br> Access: `Allow` |
 
-The rules that specify an application security group as the source or destination are only applied to the network interfaces that are members of the application security group. If the network interface isn't a member of an application security group, the rule isn't applied to the network interface. Even though the network security group is associated with the subnet.
+The rules that specify an application security group as the source or destination are only applied to the network interfaces that are members of the application security group. If the network interface isn't a member of an application security group, the rule isn't applied to the network interface even though the network security group is associated with the subnet.
 
 **Learn more:**
 
@@ -404,10 +404,10 @@ The rules that specify an application security group as the source or destinatio
 Virtual network service endpoints extend your virtual network private address space and identity to Azure services over a direct connection.
 
 - Endpoints allow you to secure critical Azure service resources to your virtual networks only. Traffic from your virtual network to the Azure service always remains on the Azure backbone network.
-- Virtual network private address space can be overlapping, and can't be used to uniquely identify traffic originating from a virtual network.
-- After you enable service endpoints in your virtual network, you can secure Azure service resources by adding a virtual network rule to the service resources. This addition provides improved security by fully removing public internet access to resources, and allowing traffic only from your virtual network.
+- A virtual network private address space can be overlapping and can't be used to uniquely identify traffic originating from a virtual network.
+- After you enable service endpoints in your virtual network, you can secure Azure service resources by adding a virtual network rule. This addition improves security by removing public internet access to resources and allowing traffic only from your virtual network.
 
-![Diagram that shows service endpoints.](./media/migrate-best-practices-networking/endpoint.png)
+:::image type="content" source="./media/migrate-best-practices-networking/endpoint.png" alt-text="Diagram that shows virtual network service endpoints.":::
 *Figure 10: Service endpoints.*
 
 **Learn more:**
@@ -418,12 +418,12 @@ Virtual network service endpoints extend your virtual network private address sp
 
 Public IP addresses in Azure can be associated with VMs, load balancers, application gateways, and VPN gateways.
 
-- Public IP addresses allow internet resources to communicate inbound to Azure resources, and Azure resources to communicate outbound to the internet.
-- Public IP addresses are created using either a Basic SKU or Standard SKU. Standard SKUs can be assigned to any service, but are configured on VMs, load balancers, and application gateways.
-- A Basic public IP address doesn't have an NSG automatically configured. You can configure your own, and assign rules to control access. Standard SKU IP addresses have an NSG, and rules assigned by default.
+- Public IP addresses allow internet resources to communicate inbound to Azure resources and allow Azure resources to communicate outbound to the internet.
+- Public IP addresses are created by using a Basic SKU or Standard SKU. Standard SKUs can be assigned to any service but are configured on VMs, load balancers, and application gateways.
+- A Basic public IP address doesn't have an NSG automatically configured. You can configure your own and assign rules to control access. Standard SKU IP addresses have an NSG, and rules are assigned by default.
 - As a best practice, VMs shouldn't be configured with a public IP address.
   - If you need a port opened, it should only be for web services, such as port 80 or 443.
-  - Standard remote management ports, such as SSH (22) and RDP (3389), along with all other ports, should be set to deny by using NSGs.
+  - Standard remote management ports, such as SSH (22) and RDP (3389), and all other ports, should be set to deny by using NSGs.
 - A better practice is to put VMs behind Azure Load Balancer or Azure Application Gateway. Then, if you need access to remote management ports, you can use the just-in-time VM access in Microsoft Defender for Cloud.
 
 **Learn more:**
@@ -437,20 +437,20 @@ Azure has platform-level security features, including Azure Firewall, Azure Web 
 
 ## Best practice: Deploy Azure Firewall
 
-Azure Firewall is a managed, cloud-based, network security service that helps protect your virtual network resources. It's a fully stateful, managed firewall, with built-in high availability and unrestricted cloud scalability.
+Azure Firewall is a managed, cloud-based network security service that helps protect your virtual network resources. It's a fully stateful, managed firewall with built-in high availability and unrestricted cloud scalability.
 
-![Diagram that shows Azure Firewall.](./media/migrate-best-practices-networking/firewall.png)
+:::image type="content" source="./media/migrate-best-practices-networking/firewall.png" alt-text="Diagram that shows Azure Firewall for a virtual network.":::
 *Figure 11: Azure Firewall.*
 
 Here are a few points to be aware of if you deploy the service:
 
 - Azure Firewall can centrally create, enforce, and log application and network connectivity policies across subscriptions and virtual networks.
-- Azure Firewall uses a static, public IP address for your virtual network resources. Now, outside firewalls can identify traffic originating from your virtual network.
+- Azure Firewall uses a static, public IP address for your virtual network resources. Outside firewalls can identify traffic originating from your virtual network.
 - Azure Firewall is fully integrated with Azure Monitor for logging and analytics.
 - When you're creating Azure Firewall rules, it's best to use the FQDN tags.
   - An FQDN tag represents a group of FQDNs associated with well-known Microsoft services.
   - You can use an FQDN tag to allow the required outbound network traffic through the firewall.
-- For example, to manually allow Windows Update network traffic through your firewall, you would need to create multiple application rules. By using FQDN tags, you create an application rule, and include the Windows Update tag. With this rule in place, network traffic to Microsoft Windows Update endpoints can flow through your firewall.
+- For example, to manually allow Windows Update network traffic through your firewall, you need to create multiple application rules. By using FQDN tags, you create an application rule and include the Windows Update tag. With this rule in place, network traffic to Microsoft Windows Update endpoints can flow through your firewall.
 
 **Learn more:**
 
@@ -459,15 +459,15 @@ Here are a few points to be aware of if you deploy the service:
 
 ## Best practice: Deploy Web Application Firewall
 
-Web applications are increasingly targets of malicious attacks that exploit commonly known vulnerabilities. Exploits include SQL injection attacks and cross-site scripting attacks. Preventing such attacks in application code can be challenging. They can require rigorous maintenance, patching, and monitoring at multiple layers of the application topology.
+Web applications are increasingly targets of malicious attacks that exploit commonly known vulnerabilities. Exploits include SQL injection attacks and cross-site scripting attacks. It can be challenging to prevent attacks in application code. They can require rigorous maintenance, patching, and monitoring at multiple layers of the application topology.
 
-Web Application Firewall (WAF), a feature of Azure Application Gateway, helps make security management much simpler, and helps application administrators guard against threats or intrusions. You can react to security threats faster, by patching known vulnerabilities at a central location, instead of securing individual web applications. You can easily convert existing application gateways to Application Gateway that is enabled for Web Application Firewall.
+Web Application Firewall (WAF), a feature of Azure Application Gateway, makes security management simpler and helps application administrators guard against threats or intrusions. You can react to security threats faster by patching known vulnerabilities at a central location instead of securing individual web applications. You can easily convert existing application gateways to Application Gateway that's enabled for Web Application Firewall.
 
 Here are some more notes about WAF:
 
 - WAF provides centralized protection of your web applications from common exploits and vulnerabilities.
 - You don't need to modify your code to make use of WAF.
-- It can protect multiple web apps at the same time, behind Application Gateway.
+- It can protect multiple web apps, at the same time, behind Application Gateway.
 - WAF is integrated with Microsoft Defender for Cloud.
 - You can customize WAF rules and rule groups to suit your application requirements.
 - As a best practice, you should use a WAF in front of any web-facing application, including applications on Azure VMs or in Azure App Service.
@@ -481,7 +481,7 @@ Here are some more notes about WAF:
 
 Network Watcher provides tools to monitor resources and communications in an Azure virtual network. For example, you can monitor communications between a VM and an endpoint, such as another VM or FQDN. You can also view resources and resource relationships in a virtual network, or diagnose network traffic issues.
 
-![Screenshot that shows Azure Network Watcher.](./media/migrate-best-practices-networking/network-watcher.png)
+:::image type="content" source="./media/migrate-best-practices-networking/network-watcher.png" alt-text="Screenshot that shows Azure Network Watcher.":::
 
 *Figure 12: Network Watcher.*
 
@@ -492,7 +492,7 @@ Here are a few more details:
 - As a best practice, use Network Watcher to review NSG flow logs.
   - NSG flow logs in Network Watcher allow you to view information about ingress and egress IP traffic through an NSG.
   - Flow logs are written in JSON format.
-  - Flow logs show outbound and inbound flows on a per-rule basis, and the network interface (NIC) to which the flow applies. They also show five-tuple information about the flow, and whether the traffic was allowed or denied.
+  - Flow logs show outbound and inbound flows on a per-rule basis, and they show the network interface (NIC) to which the flow applies. They show five-tuple information about the flow and whether the traffic was allowed or denied.
 
 **Learn more:**
 
@@ -501,34 +501,34 @@ Here are a few more details:
 
 ## Use partner tools in Azure Marketplace
 
-For more complex network topologies, you might use security products from Microsoft partners, in particular network virtual appliances (NVAs).
+For more complex network topologies, you might use security products from Microsoft partners, like network virtual appliances (NVAs).
 
-- An NVA is a VM that does a network function, such as a firewall, WAN optimization, or other network function.
+- An NVA is a VM that does a network function, such as a firewall or WAN optimization.
 - NVAs bolster virtual network security and network functions. They can be deployed for:
-  - Highly available firewalls
-  - Intrusion prevention
-  - Intrusion detection
-  - WAFs
-  - WAN optimization
-  - Routing
-  - Load balancing
-  - VPN
-  - Certificate management
-  - Active Directory
-  - Multifactor authentication
-- NVAs are available from many vendors in [Azure Marketplace](https://azuremarketplace.microsoft.com/).
+  - Highly available firewalls.
+  - Intrusion prevention.
+  - Intrusion detection.
+  - WAFs.
+  - WAN optimization.
+  - Routing.
+  - Load balancing.
+  - VPN.
+  - Certificate management.
+  - Azure Active Directory.
+  - Multifactor authentication.
+- NVAs are available from vendors in [Azure Marketplace](https://azuremarketplace.microsoft.com/).
 
 ## Best practice: Implement firewalls and NVAs in hub networks
 
-In the hub, you normally manage the perimeter network (with access to the internet) through Azure Firewall, a firewall farm, or a WAF. The following table provides comparisons of these firewall options.
+In the hub, you typically manage the perimeter network (with access to the internet) through Azure Firewall, a firewall farm, or a WAF. The following table provides comparisons of these firewall options.
 
 | Firewall type | Details |
 | --- | --- |
-| WAFs | Web applications are common, and tend to suffer from vulnerabilities and potential exploits. WAFs are designed to detect attacks against web applications (HTTP/HTTPS). Compared with traditional firewall technology, WAFs have a set of specific features that protect internal web servers from threats. |
-| Azure Firewall | Like NVA firewall farms, Azure Firewall uses a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. Azure Firewall also helps control access to on-premises networks. Azure Firewall has built-in scalability. |
-| NVA firewalls | Like Azure Firewall, NVA firewall farms have a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. NVA firewalls also help control access to on-premises networks. NVA firewalls can be manually scaled behind a load balancer. <br><br> Though an NVA firewall has less specialized software than a WAF, it has broader application scope to filter and inspect any type of traffic in egress and ingress. |
+| **WAFs** | Web applications are common, but they tend to suffer from vulnerabilities and potential exploits. WAFs are designed to detect attacks against web applications (HTTP/HTTPS). Compared to traditional firewall technology, WAFs have a set of specific features that protect internal web servers from threats. |
+| **Azure Firewall** | Like NVA firewall farms, Azure Firewall uses a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. Azure Firewall helps control access to on-premises networks and has built-in scalability. |
+| **NVA firewalls** | Like Azure Firewall, NVA firewall farms have a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. NVA firewalls help control access to on-premises networks, and they can be manually scaled behind a load balancer. <br><br> An NVA firewall has less specialized software than a WAF, but it has broader application scope to filter and inspect any type of traffic in egress and ingress. |
 
-We recommend using one set of Azure firewalls (or NVAs) for traffic originating on the internet, and another for traffic originating on-premises. Using only one set of firewalls for both is a security risk, as it provides no security perimeter between the two sets of network traffic. Using separate firewall layers reduces the complexity of checking security rules, and it's clear which rules correspond to which incoming network request.
+We recommend using one set of Azure firewalls or NVAs for traffic originating on the internet and another set for traffic originating on-premises. Using only one set of firewalls for both locations is a security risk because it lacks a security perimeter between the two sets of network traffic. Separate firewall layers reduces the complexity of checking security rules, and it's clear which rules correspond to which incoming network request.
 
 **Learn more:**
 
