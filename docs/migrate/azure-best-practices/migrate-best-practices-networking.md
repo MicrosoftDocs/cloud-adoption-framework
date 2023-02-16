@@ -99,13 +99,13 @@ The following table shows an example of a virtual network with an address space 
 | Subnet | CIDR | Addresses | Usage |
 | --- | --- | --- | --- |
 | `DEV-FE-EUS2` | `10.245.16.0/22` | 1019 | Front-end or web-tier VMs |
-| `DEV-APP-EUS2` | `10.245.20.0/22` | 1019 | Application-tier VMs |
+| `DEV-APP-EUS2` | `10.245.20.0/22` | 1019 | Application tier VMs |
 | `DEV-DB-EUS2` | `10.245.24.0/23` | 507 | Database VMs |
 
 **Learn more:**
 
 - Learn about [designing subnets](/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation).
-- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](../index.md).
+- Learn how to [prepare the networking infrastructure for migration](../index.md).
 
 ## Best practice: Set up a DNS server
 
@@ -130,7 +130,7 @@ Azure adds a DNS server by default when you deploy a virtual network. You can us
 
 ## Best practice: Set up Availability Zones
 
-Availability Zones increase high-availability to protect your applications and data from datacenter failures. Availability Zones are unique physical locations within an Azure region. Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. To ensure resiliency, there's a minimum of three separate zones in all enabled regions. The physical separation of Availability Zones within a region protects applications and data from datacenter failures.
+Availability Zones increase high availability to protect your applications and data from datacenter failures. Availability Zones are unique physical locations within an Azure region. Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. To ensure resiliency, there's a minimum of three separate zones in all enabled regions. The physical separation of Availability Zones within a region protects applications and data from datacenter failures.
 
 Here are a few more points to be aware of as you set up Availability Zones:
 
@@ -141,7 +141,7 @@ Here are a few more points to be aware of as you set up Availability Zones:
     :::image type="content" source="./media/migrate-best-practices-networking/availability-zone.png" alt-text="Diagram that shows availability zones within an Azure region.":::
     *Figure 3: Availability zones.*
 
-- You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone. Then you can replicate them in other zones. Azure services that support availability zones fall into two categories:
+- You can plan and build high availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone. Then you can replicate them in other zones. Azure services that support availability zones fall into two categories:
   - **Zonal services:** You associate a resource with a specific zone, such as VMs, managed disks, or IP addresses.
   - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
 - To provide zonal fault tolerance, you can deploy a standard Azure Load Balancer instance with internet-facing workloads or application tiers.
@@ -237,8 +237,8 @@ Deploying ExpressRoute connections usually involves engaging with an ExpressRout
 
 **Learn more:**
 
-- Read an [overview](/azure/expressroute/expressroute-introduction) of ExpressRoute.
-- Learn about [ExpressRoute Direct](/azure/expressroute/expressroute-erdirect-about).
+- Read an [overview](/azure/expressroute/expressroute-introduction) of Azure ExpressRoute.
+- Learn about [Azure ExpressRoute Direct](/azure/expressroute/expressroute-erdirect-about).
 
 ### Best practice: Optimize ExpressRoute routing with BGP communities
 
@@ -354,7 +354,7 @@ A service tag represents a group of IP address prefixes. Using a service tag min
 
 Service tags take the manual work out of assigning a rule to groups of Azure services. For example, if you want to allow a subnet that contains web servers to access Azure SQL Database, you can create an outbound rule to port 1433, and use the **Sql** service tag.
 
-- This **Sql** tag denotes the address prefixes of the Azure SQL Database and Azure SQL Data Warehouse services.
+- This **Sql** tag denotes the address prefixes of Azure SQL Database and Azure SQL Data Warehouse services.
 - If you specify **Sql** as the value, traffic is allowed or denied to SQL.
 - If you only want to provide access to **Sql** in a specific region, you can specify that region. For example, if you want to provide access only to Azure SQL Database in the East US region, you can specify **Sql.EastUS** for the service tag.
 - The tag represents the service but not specific instances of the service. For example, the tag represents the Azure SQL Database service but doesn't represent a particular SQL Database or server.
@@ -399,9 +399,9 @@ The rules that specify an application security group as the source or destinatio
 
 - Learn about [application security groups](/azure/virtual-network/network-security-groups-overview#application-security-groups).
 
-### Best practice: Secure access to PaaS by using virtual network service endpoints
+### Best practice: Secure access to PaaS by using Azure Virtual Network service endpoints
 
-Virtual network service endpoints extend your virtual network private address space and identity to Azure services over a direct connection.
+Azure Virtual Network service endpoints extend your virtual network private address space and identity to Azure services over a direct connection.
 
 - Endpoints allow you to secure critical Azure service resources to your virtual networks only. Traffic from your virtual network to the Azure service always remains on the Azure backbone network.
 - A virtual network private address space can be overlapping and can't be used to uniquely identify traffic originating from a virtual network.
@@ -412,7 +412,7 @@ Virtual network service endpoints extend your virtual network private address sp
 
 **Learn more:**
 
-- Learn about [virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview).
+- Learn about [Azure Virtual Network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview).
 
 ## Best practice: Control public IP addresses
 
@@ -429,7 +429,7 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 **Learn more:**
 
 - [Public IP addresses in Azure](/azure/virtual-network/ip-services/public-ip-addresses)
-- [Manage virtual machine access by using just-in-time](/azure/security-center/security-center-just-in-time)
+- [Manage virtual machines access by using just-in-time](/azure/security-center/security-center-just-in-time)
 
 ## Take advantage of Azure security features for networking
 
@@ -532,11 +532,11 @@ We recommend using one set of Azure firewalls or NVAs for traffic originating on
 
 **Learn more:**
 
-- Learn about [using NVAs in an Azure virtual network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
+- Learn about [using NVAs in an Azure virtual network](/azure/architecture/example-scenario/firewalls/).
 
 ## Next steps
 
 Review other best practices:
 
-- [Best practices](./migrate-best-practices-security-management.md) for security and management after migration.
-- [Best practices](./migrate-best-practices-costs.md) for cost management after migration.
+- Best practices for [security and management after migration](./migrate-best-practices-security-management.md).
+- Best practices for [cost management after migration](./migrate-best-practices-costs.md).
