@@ -36,7 +36,7 @@ For Azure landing zones, there are two main options for Infrastructure as Code:
 - Azure Bicep, managed by Microsoft, specifically for ALZ visit [ALZ Bicep repository](https://aka.ms/alz/bicep).
 - Terraform, managed by Hashicorp, specifically for ALZ visit [ALZ Terraform registry](https://aka.ms/alz/tf/repo).
 
-You can learn more about planning for automation of Landing Zones by referencing the [Automation](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/considerations/automation#platform-automation-design-recommendation) article.
+You can learn more about planning for automation of Landing Zones by referencing the [Automation](../ready/considerations/automation#platform-automation-design-recommendation) article.
 
 ## Benefits of updating ALZ with Infrastructure as Code
 
