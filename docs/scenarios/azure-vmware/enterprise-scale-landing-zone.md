@@ -48,72 +48,17 @@ The following architecture diagram is an example that shows design areas and bes
 
 The AVS Accelerator can be used as initial deployment of Azure VMware Solution in the enterprise environment. You can develop and customize the code to expand its functionality and/or adapt to your Enterprise-Scale Azure Landing Zones environment.
 
-There's a brownfield and greenfield deployment option. The brownfield deployment is for existing Azure environments and the greenfield deployment is for new Azure environments.
+There are various implementaion options for AVS using automation. These methodologies can be used in both "Brownfield" and "Greenfiled" scenarios.
 
-- **Brownfield deployment**
+#### Automated AVS Implementation Options
 
-In Brownfield deployment scenarios customer have a pre-existing Azure enviroment with different levels of maturity. The idea is to leverage the existing environment and build on top of it. The AVS Accelerator can be used to deploy AVS resources and dependent services in the existing environment.
+| Implementation option                                 | Description                        | Deployment Link to Github Repo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Deploy AVS and dependencies with connection to Azure using _Portal UI_     | This deployment is best suited for those looking to provision a new AVS Private Cloud using the portal UI. It is a full fledged version of deployment and helps you create all the different supporting components like Azure connectivity, monitoring and addons. The automation will let you choose and deploy: <br/>a) AVS Private Cloud <br/>b) Choose New or Existing virtual network (VNet) <br/>c) Deploy Azure Route Server for VPN Connections (Optional) <br/>d)Deploy AVS Monitoring (Optional) <br/>e) Deploy HCX and SRM (Optional)        | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json) |
+|  Deploy AVS and dependencies with connection to Azure using Azure _Powershell Commands_  | This deployment is best suited for those looking to provision a new AVS Private Cloud using Azure Powershell module. It is a full fledged version of deployment and helps you create all the different supporting components like Azure connectivity, monitoring and addons. The automation will let you choose and deploy: <br/>a) AVS Private Cloud <br/>b) Choose New or Existing virtual network (VNet) <br/>c) Deploy Azure Route Server for VPN Connections (Optional) <br/>d)Deploy AVS Monitoring (Optional) <br/>e) Deploy HCX and SRM (Optional)           | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Bicep)                                                                                                                                                                                                                                                                                                                                                                                    |
+| Deploy AVS and dependencies with connection to Azure using Azure _Terraform_ module             | This deployment is best suited for those looking to provision a new AVS Private Cloud using Terraform. It is a full fledged version of deployment and helps you create all the different supporting components like Azure connectivity, monitoring and addons. The automation will let you choose and deploy: <br/>a) AVS Private Cloud <br/>b) Choose New or Existing virtual network (VNet) <br/>c) Deploy Azure Route Server for VPN Connections (Optional) <br/>d)Deploy AVS Monitoring (Optional) <br/>e) Deploy HCX and SRM (Optional)          | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)                                                                                                                                                                                                                                                                                                                                                                                       |
+| Deploy AVS _without_ any connection to Azure using Azure _Portal UI_          | This is a lighter version of the deployment better suited for running a POC or pilot. It is an automated(ARM/Bicep/Terraform) way of deploying following resource:<br/>a) New AVS Private Cloud - Allows for a custom resource group name and Private Cloud Name or Choose an existing AVS Private Cloud. <br/>b) Deploy AVS Monitoring (Optional). <br/>c) Deploy HCX and SRM (Optional). | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json) |
 
-**Here are the two options for a brownfield build:**
-
-1. AVS Greenfield Lite Deployment
-2. Manual Build
-
-###### Option #1: AVS Greenfield Lite Deployment
-
-This deployment is a lite version of the full AVS Greenfield Deployment. It is an automated(ARM/Bicep/Terraform) way of deploying following resource:
-
-- New AVS Private Cloud - Allows for a custom resource group name and Private Cloud Name or Choose an existing AVS Private Cloud.
-- Deploy AVS Monitoring (Optional).
-- Deploy HCX and SRM (Optional).
-
-###### Option #2: Manual Build
-
-Manual build is a deployment option for customers who want to deploy AVS resources and dependent services manually. This is used when the customer wants to deploy AVS resources and dependent services in an existing environment for a proof of concept or a pilot. Please not that this is not recommended for production deployments.
-
-For more information, see [Plan the Azure VMWare Solution deployment.](https://learn.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment)
-
-#### Greenfield deployment
-
-Greenfield deployments are net new AVS environments. In this scenario a customer starts fresh and builds the VMware environment on Azure from scratch.
-
-##### Options for Greenfield Build
-
-1. AVS Greenfield Deployment
-2. AVS Greenfield Lite Deployment
-3. Manual Build
-
-###### Option #1: AVS Greenfield Deployment
-
-This deployment is best suited for those looking to provision a new AVS Private Cloud. This option is a full fledged version where it helps you create all the different components for AVS connectivity. The automation will let you choose and deploy the following:
-
-- AVS Private Cloud
-- Choose New or Existing virtual network (VNet)
-- Deploy Azure Route Server for VPN Connections (Optional)
-- Deploy AVS Monitoring (Optional)
-- Deploy HCX and SRM (Optional)
-
-###### Option #2: AVS Greenfield Lite Deployment
-
-This deployment is a lite version of the full AVS Greenfield Deployment. It does a minimal deployment of different components required for AVS and will deploy the following:
-
-- New AVS Private Cloud - Allows for a custom resource group name and Private Cloud Name or Choose an existing AVS Private Cloud
-- Deploy AVS Monitoring (Optional)
-- Deploy HCX and SRM (Optional)
-
-###### Option #3: Manual Build
-
-[Please refer Microsoft documentation for manual build of AVS Private Cloud.](https://learn.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment)
-
-### Deployment summary table
-
-| Deployment option | Deployment Scenario | Deployment instructions |
-|---|---|---|
-|Brownfield Deployment (Azure portal UI)          | Brownfield deployment (Option #1) | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)      |
-|Greenfield Deployment (Azure portal UI)          | Greenfield deployment (Option #1) | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2FPortalUI%2FARM%2FESLZDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2FPortalUI%2FARM%2FESLZdeploy.PortalUI.json)      |
-|Greenfield Deployment (Command line (Powershell))              | Greenfield deployment (Option #1)| [![Powershell/Azure CLI](./media/powershell.png)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Bicep)          |
-|Greenfield Deployment (Terraform Code)                            |Greenfield deployment (Option #1) | [![Terraform Code](./media/terraform.png)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)                  |
-|Greenfield Deployment (Azure portal UI)         | AVS Greenfield Lite Deployment (Option #2) | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)      |
 
 ## Next steps
 
