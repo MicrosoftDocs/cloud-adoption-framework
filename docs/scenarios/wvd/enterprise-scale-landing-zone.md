@@ -34,7 +34,7 @@ Learn the guidelines that direct the design of the Cloud Adoption Framework for 
 - [Resource organization](./eslz-resource-organization.md)
 - [Management and monitoring](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
+- [Security governance and compliance](./eslz-security-governance-and-compliance.md)
 - [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
 
 ### Architecture
