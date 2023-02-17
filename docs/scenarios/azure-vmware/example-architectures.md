@@ -47,7 +47,7 @@ Key points about the networking scenarios:
 - You can use L4-L7 load balancer NVAs in Azure VMware Solution.
 - You can use NSX-T Data Center Firewall for any of these scenarios.
 
-The following sections outline architectural patterns for Azure VMware Solution private clouds. This list is not exhaustive. For more information, see [Azure VMware Solution networking and interconnectivity concepts](https://learn.microsoft.com/azure/azure-vmware/concepts-networking).
+The following sections outline architectural patterns for Azure VMware Solution private clouds. This list is not exhaustive. For more information, see [Azure VMware Solution networking and interconnectivity concepts](/azure/azure-vmware/concepts-networking).
 
 ## Secured Virtual WAN hub with default route propagation
 
