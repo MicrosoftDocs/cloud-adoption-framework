@@ -19,7 +19,7 @@ Azure AD is also used by software as a service (SaaS) applications such as Micro
 Ask basic security questions during the Azure AD design phase, such as how your organization manages credentials and how it controls human, application, and programmatic access.
 
 >[!TIP]
-> If you are considering, or have, multiple Azure Active Directory tenants please review [Azure Landing Zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
+> If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
 
 **Design considerations:**
 
