@@ -3,7 +3,7 @@ title: Business continuity and disaster recovery for an SAP migration
 description: Learn about business continuity and disaster recovery for SAP migrations.
 author: pankajmeshramCSA
 ms.author: pameshra
-ms.date: 12/28/2022
+ms.date: 02/21/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -19,18 +19,11 @@ This article builds on some of the considerations and recommendations that are d
 
 ## Scenario and scope
 
-Your organization needs to design platform-level capabilities that can help application workloads meet their requirements. SAP applications that run an organization's most critical business processes require:
-
+Your architecture needs to incorporate principles that address on-premises business continuity and disaster recovery (BCDR) scenarios. These principles also apply on Azure. The main difference is that Azure might have more hardware capacity than your on-premises environment to compensate for a host failure. You can auto-recover even the largest Azure VMs by setting them up to restart on another server. Set up your Azure deployments to use the same conditions as your on-premises deployments. If you deployed on-premises systems or bare-metal hardware by using automatic failover cluster configurations, deploy them the same way on Azure. SAP applications that run an organization's most critical business processes require:
 - Service and business process availability.
-- Recovery time objectives (RTOs) for failure or disaster scenarios. For example, you should have an RTO for a failure scenario that's limited to a component of the SAP system and another for a widespread failure that affects a datacenter or Azure region.
-- Recovery point objectives (RPOs) for a failure scenario that's limited to a component of an SAP system or a widespread failure that affects a datacenter or an Azure region.
-- Operational and lifecycle management tasks, with technology that fills gaps during failure scenarios. These management tasks include patching guest operating systems and database management systems, cloning, and refreshing the SAP systems.
-
-Your architecture needs to incorporate principles that address on-premises business continuity and disaster recovery (BCDR) scenarios. These principles also apply on Azure. The main difference is that Azure might have more hardware capacity than your on-premises environment to compensate for a host failure. You can auto-recover even the largest Azure VMs by setting them up to restart on another server. Set up your Azure deployments to use the same conditions as your on-premises deployments. If you deployed on-premises systems or bare-metal hardware by using automatic failover cluster configurations, deploy them the same way on Azure.
-- Service/business process availability.
-- Recovery time objectives (RTOs) during failure or disaster scenarios. 
+- Recovery time objectives (RTOs) for failure or disaster scenarios. 
 - Recovery point objectives (RPOs) for failure scenarios. 
-- Operational and lifecycle management tasks with technology that fills in for failure scenarios. These management tasks include patching guest operating systems and database management systems, cloning, and refreshing the SAP systems.
+- Operational and lifecycle management tasks, and technology that fills in during failure scenarios. These management tasks include patching guest operating systems and database management systems, cloning, and refreshing the SAP systems.
 
 > [!TIP]
 > Agree on a high availability and disaster recovery (HADR) solution for each of the archetypes in your SAP landscape early on. Ensure that all SAP components are covered with an appropriate solution.
