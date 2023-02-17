@@ -18,6 +18,9 @@ Azure AD is also used by software as a service (SaaS) applications such as Micro
 
 Ask basic security questions during the Azure AD design phase, such as how your organization manages credentials and how it controls human, application, and programmatic access.
 
+>[!TIP]
+> If you are considering, or have, multiple Azure Active Directory tenants please review [Azure Landing Zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
+
 **Design considerations:**
 
 - An Azure subscription can only trust one Azure AD tenant at a time, further information can be found at [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
