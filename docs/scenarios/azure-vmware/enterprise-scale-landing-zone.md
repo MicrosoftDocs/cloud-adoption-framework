@@ -4,7 +4,7 @@ description: Learn how enterprise-scale can accelerate the adoption of Microsoft
 author: pgandham
 ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 17/02/2023
+ms.date: 02/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
