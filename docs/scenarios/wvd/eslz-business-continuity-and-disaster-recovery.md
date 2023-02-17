@@ -2,7 +2,7 @@
 title: Business continuity and disaster recovery for Azure Virtual Desktop
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for an Azure Virtual Desktop environment.
 author: igorpag
-ms.author: brblanch
+ms.author: martinek
 ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Business continuity and disaster recovery considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. The service is free of charge. Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
+Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. Costs for the service are included as part of eligible licenses, see [Azure Virtual Desktop Pricing](https://azure.microsoft.com/pricing/details/virtual-desktop/). Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
@@ -21,7 +21,7 @@ A good business continuity and disaster recovery (BCDR) strategy keeps your crit
 
 To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
-For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/virtual-desktop/disaster-recovery).
+For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr).
 
 ## Design considerations
 
@@ -39,6 +39,7 @@ For an Azure Virtual Desktop host pool, you can use either an *active-active* or
 - For virtual machines (VMs) in each region, invert the Cloud Cache registry entry that specifies locations to give precedence to the local cache registry.
 - Load balancing incoming user connections can't take proximity into account. All hosts are equal, and users might be directed to a remote (and not optimal) Azure Virtual Desktop host pool VM.
 - This configuration is limited to a *pooled* (shared) host pool type. For a *personal* (dedicated) type, when a desktop is assigned to a user on a certain session host VM, the desktop doesn't change, even if the VM isn't available.
+- Cloud Cache doesn't improve the users' sign-on and sign out experience when using poor performing storage. It's common for environments using Cloud Cache to have slightly slower sign-on and sign out times, relative to using traditional VHDLocations, using the same storage. [Review the FSLogix Cloud Cache documentation for recommendations regarding local cache storage](/fslogix/cloud-cache-resiliency-availability-cncpt).
 - The active-active host pool configuration often is complex. It isn't considered a performance optimization or a cost optimization.
 
 #### Active-passive host pool
@@ -53,15 +54,19 @@ For host pool VM resiliency, consider these factors:
 
 - When you create a new Azure Virtual Desktop host pool, you can choose from different [availability options](/azure/virtual-machines/availability).
 - It's important to select the right option for your requirements when you create the VM. You can't later change availability options for the VM.
-- The default resiliency option for Azure Virtual Desktop host pool deployment is to use an availability set. This option ensures host pool resiliency only at the single Azure datacenter level. Azure availability sets for virtual machines have a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
+-  If you plan to deploy a Single VM Instance, the SLA would depend on the type of the Storage Disk it uses: 
+   -  Premium SSD, Ultra Disk or Premium SSD v2 - 99.9%
+   -  Standard SSD Managed Disks - 99.5%
+   -  Standard HDD Managed Disks - 95%   
+- The default resiliency option for Azure Virtual Desktop host pool deployment is to use availability zones. 
+
+- Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
+
+- Availability Sets - This option ensures host pool resiliency only at the single Azure datacenter level. Azure availability sets for virtual machines have a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
   > [!NOTE]
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-- Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
-
-  > [!NOTE]
-  > You must use an Azure Resource Manager template (ARM template) to specify zones. Currently, this option isn't available in the Azure portal.
 
 Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications that your organization accesses via Azure Virtual Desktop are critical to your business. You might want to separate critical applications from non-critical applications so that you can provision multiple host pools by using different disaster recovery approaches and capabilities.
 
@@ -113,6 +118,15 @@ Preventing data loss in critical user data is important. For backup protection, 
 
 If Azure Virtual Desktop users need access to on-premises resources, it's critical that you consider high availability in the network infrastructure that's required to connect to the resources. Assess and evaluate the resiliency of your authentication infrastructure, and consider BCDR aspects for dependent applications and other resources. These considerations will help ensure availability in the secondary disaster recovery location.
 
+### Data Locations for Azure Virtual Desktop
+
+Azure Virtual Desktop stores various information for service objects, such as host pool names, application group names, workspace names, and user principal names. Data is categorized into different types, such as customer input, customer data, diagnostic data, and service-generated data. For more information, see [Data locations for Azure Virtual Desktop](/azure/virtual-desktop/data-locations#data-locations).
+
+Stored information is encrypted at rest, and geo-redundant mirrors are maintained within the geography. Data generated by the Azure Virtual Desktop service is replicated within the Azure geography for disaster recovery purposes.
+
+User-created or app-related information, such as app settings and user data, resides in the Azure region you choose and isn't managed by the Azure Virtual Desktop service.
+
+
 ## Design recommendations
 
 We recommend that you incorporate these best practices into your infrastructure design:
@@ -125,7 +139,11 @@ We recommend that you incorporate these best practices into your infrastructure 
 For most scenarios, we recommend that you use Azure Files or Azure NetApp Files to store FSLogix user profile and Office containers.
 
 - Split user profile and Office containers.
-- We recommend these options for container storage types, in this order: Azure Files Premium tier, Azure NetApp Files Standard tier, and Azure NetApp Files Premium tier.
+- We recommend these options for container storage types, in this order: 
+
+   1. Azure Files Premium tier
+   1. Azure NetApp Files Standard tier
+   1. Azure NetApp Files Premium tier
 - The optimum storage type depends on the resources and latency that your workload requires.
 - For optimal performance, place FSLogix containers in storage that's close to the VM the user is signed in to. It's best to keep the containers in the same datacenter.
 
@@ -147,6 +165,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Make sure that the managed disk for the local VM is large enough to accommodate the local cache of all users' FSLogix profile and Office containers.
 
 - Use Azure Compute Gallery to replicate golden images to different regions.
+  - Golden images don't participate in providing users the ability to connect to their session host VM. However, they play a critical role in how quickly you are able to run the provisioning process of new virtual machines on a host pool and therefore must be backed up and available.
   - Use ZRS to create the image. Maintain at least two copies of the image per region.
 
 - Use Azure Backup to protect critical user data from data loss or logical corruption when you use the Azure Files Standard tier or Premium tier.
@@ -157,6 +176,8 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Network infrastructure, as part of a hub-and-spoke architecture or as a virtual wide area network (virtual WAN) architecture must be available in the secondary region.
   - Hybrid connectivity must be highly available in both the primary region and the secondary region.
   - Active Directory authentication must be available in the disaster recovery region or connectivity to the on-premises domain must be guaranteed.
+
+[Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix TechZone summarizes design considerations for Citrix technologies. This guide assists with business continuity and disaster recovery (BCDR) architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
 
 ## Next steps
 

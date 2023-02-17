@@ -1,8 +1,8 @@
 ---
 title: Data democratization tools
 description: Learn about data democratization with Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -48,11 +48,6 @@ To create a catalog for your organization:
 1. Go to **Azure Data Catalog**.
 2. Select **Create**.
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ## [Share](#tab/Share)
@@ -85,11 +80,6 @@ To create a data share:
 1. Go to **Azure Data Shares**.
 2. Select **Create data share**.
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ## [Insights](#tab/Insights)
@@ -120,10 +110,5 @@ To create an Azure Time Series Insights environment:
 1. Go to **Azure Time Series Insights environments**.
 2. Select **Create Time Series Insights environment**.
 3. Point this environment to an event source, either Azure IoT Hub or Event Hubs.
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end

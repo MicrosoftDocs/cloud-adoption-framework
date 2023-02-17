@@ -1,8 +1,8 @@
 ---
 title: Understand technical considerations
 description: Understand cloud economics and the technical considerations to help you build a business case to migrate to the cloud
-author: WendyRing
-ms.author: wering
+author: martinekuan
+ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/18/2022
 ms.topic: conceptual
@@ -51,7 +51,7 @@ Projected business outcomes can be synchronized with the [sustainability benefit
 
 Resource-intensive workloads can be discovered using [Azure Migrate](/azure/migrate/migrate-services-overview).
 
-Customers can also benefit from taking the [Strategic Migration Assessment](/assessments/?id=Strategic-Migration-Assessment), analyzing the diversity of their workloads and the potential Azure destination mapping. Depending on the results and underlying complexity, one can define migration waves. Assess the carbon intensity using the [Emissions savings estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html), which supports comparing the existing footprint of a workload compared to one in Azure, based on [The Carbon Benefits of Cloud Computing: a Study of the Microsoft Cloud](https://www.microsoft.com/download/details.aspx?id=56950).
+Customers can also benefit from taking the [Strategic Migration Assessment](/assessments/Strategic-Migration-Assessment/), analyzing the diversity of their workloads and the potential Azure destination mapping. Depending on the results and underlying complexity, one can define migration waves. Assess the carbon intensity using the [Emissions savings estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html), which supports comparing the existing footprint of a workload compared to one in Azure, based on [The Carbon Benefits of Cloud Computing: a Study of the Microsoft Cloud](https://www.microsoft.com/download/details.aspx?id=56950).
 
 Identifying the first workload targeted for migration from a sustainability standpoint can be performed using the 80:20 rule – 80% of the emissions derive from 20% of the workload. This is a generic suggestion, of course, as a customer needs to perform their assessment based on the unique needs of its landscape and desired business outcomes.
 

@@ -1,9 +1,9 @@
 ---
-title: Adopt the cloud
-description: Cloud adoption has three paths (migration, modernization, and innovation). Learn about each cloud adoption approach. Discover its goals, solutions, and benefits.
+title: How to adopt the cloud
+description: The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 09/02/2022
+ms.date: 02/03/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -11,45 +11,67 @@ ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 
-# Adopt the cloud
+# Cloud adoption
 
-Adopt the cloud to improve your business or organization. The adopt methodology is where you start using the cloud and experiencing its benefits.
-
-There are three common approaches for adopting the cloud: migration, modernization, and innovation. Each approach has different solutions and provides unique benefits. The approach you take depends on the goals you have for cloud adoption (*see figure*).
-
-:::image type="content" source="../_images/adopt/cloud-adoption-approaches.png" alt-text="Image showing three cloud adoption approaches and their goals. The three approaches to adopting the cloud are migrate, modernize, and innovate. " border="false":::
-
-Here's a brief overview of each approach to get you started. Focus on the goals of each approach. If they align with your cloud adoption goals, then explore that approach further to find implementation guidance.
+The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure. These four processes align to different phases and goals in cloud adoption journey. This article provides an overview of each process, so you can find the right guidance for your objectives.
 
 ## Migrate
 
-The migrate approach is where you move your workloads to the cloud. Different forms of migration exist, but we'll focus on rehosting. Rehosting is also known as the "lift-and-shift" approach. In this approach, you move an existing workload to infrastructure-as-a-service (IaaS) solutions in the cloud and don't modify the workload.
+Migration is when you move your workloads to the cloud. Different forms of migration exist, but the guidance focuses on rehosting, also known as the "lift-and-shift" approach. With rehosting, you move an existing workload to comparable solutions in the cloud without modifying the workload.
 
-- *Goals:* Quickly exit on-premises, enhance security, and improve operations.
-- *Solutions:* Adopt IaaS solutions in the cloud.
-- *Key benefits:* Cost, security, availability, visibility, performance. You don't have to worry about acquiring, managing, and securing hardware.
-- *Example:* Migrate applications from on-premises to IaaS solutions in the cloud.
+- ***Goals:*** Quickly exit on-premises, enhance security, and improve operations.
+
+- ***Solutions:*** Adopt comparable solutions in the cloud.
+
+- ***Key benefits:*** Cost, security, availability, visibility, performance. You don't have to worry about acquiring, managing, and securing hardware.
+
+- ***Example:*** Migrate applications from on-premises to Azure virtual machines (infrastructure as a service) or Azure App Service (platform as a service).
+
+For more information, see [Migrate](../migrate/index.md).
 
 ## Modernize
 
-The modernize approach is where you enhance existing applications to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. Modernizing uses managed platform-as-a-service solutions (PaaS) to improve your business at scale.
+Modernization enhances existing applications to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. Generally, modernization moves toward platform as a service (PaaS) solutions to improve your business at scale.
 
-- *Goals:* Reduce technical debt, modernize applications, and modernize data platforms.
-- *Solutions:* Adopt platform-as-a-service (PaaS) solutions across workload clusters.
-- *Key benefits:* Cost, security, availability, visibility, performance, and operations. You don't have to manage the underlying infrastructure and can focus on scaling your business.
-- *Examples*: Move to managed services. Move from SQL database to Azure SQL database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Container Apps.
+- ***Goals:*** Reduce technical debt, modernize applications, and modernize data platforms.
+
+- ***Solutions:*** Adopt more platform as a service (PaaS) solutions across workload clusters.
+
+- ***Key benefits:*** Cost, security, availability, visibility, performance, and operations. You don't have to manage the underlying infrastructure and can focus on scaling your business.
+
+- ***Examples:*** Move to managed services. Move from SQL Server to Azure SQL Database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Azure Container Apps.
+
+For more information, see [Modernize](../modernize/index.md).
 
 ## Innovate
 
-The innovate approach is where you adopt cloud-native technologies to create customer-focused solutions that rapidly transform business outcomes.
+Innovation is when you adopt cloud-native technologies to create customer-focused solutions that rapidly transform business outcomes.
 
-- *Goals:* Reposition your business, reposition technical solutions, and find innovative data plays.
-- *Solutions:* Adopt data and application capabilities to empower adoption and build predictive tools.
-- *Key benefits:* Predictive analytics, performance, and adaptability.
+- ***Goals:*** Reposition your business, reposition technical solutions, and find innovative data plays.
+
+- ***Solutions:*** Adopt data and application capabilities to empower adoption and build predictive tools.
+
+- ***Key benefits:*** Predictive analytics, performance, and adaptability.
+
+For more information, see [Innovate](../innovate/index.md).
+
+## Relocate
+
+Relocation is when you move an Azure workload to a different region in Azure. You can relocate a workload anytime after migration. Relocation evaluations should be a regular part of your workload lifecycle so your workload evolves with your business needs.
+
+- ***Goals:*** Respond to business changes and expand your global footprint, meet data sovereignty and residency requirements, and provide lower latency to end users.
+
+- ***Solutions:*** Adopt the location, services, and capabilities of a new Azure region.
+
+- ***Key benefits:*** Respond to business changes, expand global footprint, meet data sovereignty and residency requirements, provide lower latency to end users.
+
+- ***Examples:*** Relocate a workload in West US to East US or North Europe to East Asia.
+
+For more information, see [Relocate](../relocate/index.md).
 
 ## Next steps
 
-The adopt methodology will help you tailor your cloud adoption approach around your goals. With your goals at the center of each decision, you'll find concrete steps to adopt the cloud and transform your business. See how most businesses change their portfolios to adopt the cloud.
+Follow the guidance that best meets your goals. If you're still considering cloud adoption, it's help to get a sense of what the cloud adoption journey looks like. The next article outlines the typical cloud adoption journey, showing what workloads you should migrate and the order you should migrate them.
 
 > [!div class="nextstepaction"]
 > [Cloud adoption journey](cloud-adoption.md)

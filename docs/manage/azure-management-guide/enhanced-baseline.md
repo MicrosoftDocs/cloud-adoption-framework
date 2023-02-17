@@ -1,8 +1,8 @@
 ---
 title: Enhanced management baseline in Azure
 description: Use the Cloud Adoption Framework for Azure to understand common improvements to the management baseline.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -81,11 +81,6 @@ To create or manage runbooks:
 1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 ::: zone target="docs"

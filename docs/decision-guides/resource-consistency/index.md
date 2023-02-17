@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Resource consistency decision guide
 
-Azure [subscription design](../subscriptions/index.md) defines how you organize your cloud assets in relation to your organization's structure, accounting practices, and workload requirements. In addition to this level of structure, addressing your organizational governance policy requirements across your cloud estate requires the ability to consistently organize, deploy, and manage resources within a subscription.
+Azure [subscription design](../../ready/landing-zone/design-area/resource-org-subscriptions.md) defines how you organize your cloud assets in relation to your organization's structure, accounting practices, and workload requirements. In addition to this level of structure, addressing your organizational governance policy requirements across your cloud estate requires the ability to consistently organize, deploy, and manage resources within a subscription.
 
 ![Plotting resource consistency options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-resource-consistency.png)
 
@@ -28,9 +28,9 @@ In Azure, [resource groups](/azure/azure-resource-manager/management/overview#re
 
 Resource groups are containers for resources with a common lifecycle and shared management constraints, such as policy or Azure role-based access control requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
-* Are the contents of the resource group developed together?
-* Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
-* Are the contents of the resource group retired together?
+- Are the contents of the resource group developed together?
+- Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
+- Are the contents of the resource group retired together?
 
 If you answered *no* to any of the above points, place the resource in another resource group.
 
@@ -55,13 +55,13 @@ By combining resource groups and standardized Resource Manager templates, you ca
 
 For example, you might have a requirement that all virtual machines deployed within your subscription connect to a common subnet managed by your central IT team. Use a standard template for deploying workload VMs to create a separate resource group for the workload and deploy the required VMs there. This resource group has a policy rule to only allow network interfaces within the resource group to be joined to the shared subnet.
 
-For a more in-depth discussion of enforcing your policy decisions within a cloud deployment, see [Policy enforcement](../policy-enforcement/index.md).
+For a more in-depth discussion of enforcing your policy decisions within a cloud deployment, see [Policy enforcement](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition).
 
 ## Hierarchical consistency
 
 Resource groups let you support extra levels of hierarchy inside your organization within the subscription. Hierarchies support Azure Policy rules and access controls at a resource group level. As the size of your cloud estate grows, you might need to support more complicated cross-subscription governance requirements. Use the Azure Enterprise Agreement's enterprise, department, account, subscription hierarchy.
 
-[Azure management groups](/azure/governance/management-groups/) lets you organize subscriptions into more sophisticated organizational structures. You can group subscriptions in a hierarchy distinct from your Enterprise Agreement's hierarchy. This alternate hierarchy lets you apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. You can use management group hierarchies to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../subscriptions/index.md).
+[Azure management groups](/azure/governance/management-groups/) lets you organize subscriptions into more sophisticated organizational structures. You can group subscriptions in a hierarchy distinct from your Enterprise Agreement's hierarchy. This alternate hierarchy lets you apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. You can use management group hierarchies to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../../ready/landing-zone/design-area/resource-org-subscriptions.md).
 
 ## Automated consistency
 

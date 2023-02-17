@@ -76,6 +76,8 @@ The following list of guides and best practices provide examples of ways to impr
 
 - [Organize subscriptions](../landing-zone/design-area/resource-org.md): Understand how to organize and manage multiple subscriptions.
 
+- [Keep your Azure landing zone up to date](../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md): Why you should update your Azure landing zone environment, and how to get more information.
+
 ## Next steps
 
 Cloud adoption will continue to expand with each wave or release of new workloads. To stay ahead of these requirements, cloud platform teams should periodically review the landing zone design areas.

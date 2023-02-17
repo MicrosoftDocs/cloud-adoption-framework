@@ -2,7 +2,7 @@
 title: Database-restore points for Azure Synapse Analytics
 description: Learn how to use Azure Synapse Analytics features to address database-restore and disaster recovery requirements.
 author: v-hanki
-ms.author: brblanch
+ms.author: martinek
 ms.date: 9/16/2022
 ms.reviewer: ssumner
 ms.topic: conceptual

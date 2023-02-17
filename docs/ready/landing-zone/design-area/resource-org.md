@@ -1,8 +1,8 @@
 ---
 title: Resource organization design area overview
 description: See an overview of the resource organization design area for cloud deployments.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 12/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -26,8 +26,6 @@ The critical resource organization design area establishes consistent patterns f
 - Management group design
 
 The initial scope of this exercise assumes a subscription design that aligns with the Azure landing zone conceptual architecture. Workload- or application-level subscription and landing zone assignment supports separation of duties and subscription democratization requirements.
-
-**Out of scope:** Alternative subscription design patterns are out of scope for this discussion. For alternative subscription design patterns, see [Subscription design patterns](../../../decision-guides/subscriptions/index.md).
 
 The following assumptions are the basis for workload subscription design pattern guidance:
 

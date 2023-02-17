@@ -1,8 +1,8 @@
 ---
 title: Deploy a migration landing zone in Azure
 description: Learn how to deploy a migration landing zone in Azure. Use this landing zone to move an on-premises environment into Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 12/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -41,7 +41,7 @@ This implementation option assumes that the target subscription is already assoc
 
 ### Network topology and connectivity
 
-This implementation option creates a virtual network with subnets for a gateway, firewall, jump box, and landing zone. As a next step iteration, the team would follow the [networking decisions guide](../considerations/networking-options.md) to implement the appropriate form of connectivity between the gateway subnet and other networks. This implementation is in alignment with [network security best practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+This implementation option creates a virtual network with subnets for a gateway, firewall, jump box, and landing zone. As a next step iteration, the team would follow the [networking decisions guide](./design-area/network-topology-and-connectivity.md) to implement the appropriate form of connectivity between the gateway subnet and other networks. This implementation is in alignment with [network security best practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Resource organization
 
@@ -102,9 +102,9 @@ The following decisions are represented in the landing zone blueprint.
 
 | Component                    | Decisions                                                                                         | Alternative approaches                                                                                                                                                                                                                                                                |
 |------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Migration tools              | Azure Site Recovery will be deployed and an Azure Migrate project will be created.                | [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)                                                                                                                                                                                               |
+| Migration tools              | Azure Site Recovery will be deployed and an Azure Migrate project will be created.                | [Migration tools decision guide](../../migrate/azure-migration-guide/migration-tools-decision-guide.md)                                                                                                                                                                                               |
 | Logging and monitoring       | Operational insights workspace and diagnostic storage account will be provisioned.                |                                                                                                                                                                                                                                                                                       |
-| Network                      | A virtual network will be created with subnets for a gateway, firewall, jump box, and landing zone. | [Networking decisions](../considerations/networking-options.md)                                                                                                                                                                                                                       |
+| Network                      | A virtual network will be created with subnets for a gateway, firewall, jump box, and landing zone. | [Networking decisions](./design-area/network-topology-and-connectivity.md)                                                                                                                                                                                                                       |
 | Identity                     | It's assumed that the subscription is already associated with an Azure AD instance. | [Identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) |
 | Policy                       | This blueprint currently assumes that no Azure policies are to be applied.                        |                                                                                                                                                                                                                                                                                       |
 | Subscription design          | N/A - designed for a single production subscription.                                              | [Create initial subscriptions](../azure-best-practices/initial-subscriptions.md)                                                                                                                                                                                                      |

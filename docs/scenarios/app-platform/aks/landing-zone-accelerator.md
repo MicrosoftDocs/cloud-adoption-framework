@@ -1,8 +1,8 @@
 ---
 title: AKS landing zone accelerator
 description: Overview of the AKS landing zone accelerator.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

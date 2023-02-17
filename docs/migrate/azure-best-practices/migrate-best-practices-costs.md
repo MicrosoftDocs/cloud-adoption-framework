@@ -1,8 +1,8 @@
 ---
 title: Best practices to cost and size workloads migrated to Azure
 description: Use the Cloud Adoption Framework for Azure to learn best practices to cost and size workloads migrated to Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

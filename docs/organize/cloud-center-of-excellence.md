@@ -1,8 +1,8 @@
 ---
 title: Cloud center of excellence (CCoE) functions
 description: Understand the functions of a cloud center of excellence (CCoE), including the source, scope, and deliverables.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -50,7 +50,7 @@ The objective of the CCoE is to:
 
 ## Meeting cadence
 
-The CCoE is staffed by four high-demand teams. It's important to allow for organic collaboration and to track growth through a common repository or solution catalog. Maximize natural interactions, but minimize meetings. Recurring meetings, such as release meetings that are hosted by the cloud adoption team, can provide data inputs. However, after this function matures, try to limit dedicated meetings. Hosting a meeting after each release plan is shared can provide a minimum touch point for this team.
+It's important to allow for organic collaboration and to track growth through a common repository or solution catalog. Maximize natural interactions, but minimize meetings. Recurring meetings, such as release meetings that are hosted by the cloud adoption team, can provide data inputs. However, after this function matures, try to limit dedicated meetings. Hosting a meeting after each release plan is shared can provide a minimum touch point for this team.
 
 ## Solutions and controls
 

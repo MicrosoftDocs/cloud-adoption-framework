@@ -3,7 +3,7 @@ title: Abbreviation examples for Azure resources
 description: Abbreviation examples for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 9/30/2022
+ms.date: 2/10/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,9 +15,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 This page gives you abbreviation examples for many of the resources in Azure. Below you'll find *abbreviations* mapped to *resource* and *resource provider namespace*.
 
-## Azure Naming Tool
-
-The Azure Naming Tool generates Azure-compliant names and can help you standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
+**Azure Naming Tool:** You can use the Azure Naming Tool to standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 <!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
@@ -47,13 +45,15 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
-| Front Door instance | `Microsoft.Network/frontDoors` | `fd` |
+| Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
+| Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
+| Front Door (classic) | `Microsoft.Network/frontDoors` | `afd` |
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
 | Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw` |
-| NAT gateway | Microsoft.Network/natGateways | `ng` |
+| NAT gateway | `Microsoft.Network/natGateways` | `ng` |
 | Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic`|
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
@@ -207,8 +207,9 @@ The Azure Naming Tool generates Azure-compliant names and can help you standardi
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
-| SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 | Maps account | `Microsoft.Maps/accounts` | `map` |
+| SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
+| WebPubSub | `Microsoft.SignalRService/webPubSub` | `wps` |
 
 ## Integration
 

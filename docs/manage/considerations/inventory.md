@@ -1,8 +1,8 @@
 ---
 title: Inventory and visibility in Azure cloud management
 description: Learn about what to manage (inventory) and how those managed workloads and assets change over time (visibility).
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

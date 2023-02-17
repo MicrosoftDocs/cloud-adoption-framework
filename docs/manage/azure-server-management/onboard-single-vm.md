@@ -1,8 +1,8 @@
 ---
 title: Enable server management services on a VM
 description: Use the Cloud Adoption Framework for Azure to learn how to enable Azure server management services on a single VM.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

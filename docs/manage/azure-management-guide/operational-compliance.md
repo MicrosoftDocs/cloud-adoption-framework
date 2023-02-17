@@ -1,9 +1,9 @@
 ---
 title: Operational compliance in Azure
 description: Learn how to ensure business stability through operational compliance by reducing the likelihood of outages or vulnerabilities.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -68,11 +68,6 @@ To apply a policy to a resource group:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -118,7 +113,7 @@ To learn more, see:
 
 - [Azure Policy](/azure/governance/policy/)
 - [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration)
-- [Cloud Adoption Framework policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
+- [Cloud Adoption Framework: Define corporate policy](../../govern/policy-compliance/policy-definition.md)
 
 ## Azure Blueprints
 

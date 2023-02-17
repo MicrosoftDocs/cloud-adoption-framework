@@ -2,7 +2,7 @@
 title: Cloud adoption plan antipatterns
 description: Learn how to avoid ineffective cloud adoption solutions by avoiding common antipatterns.
 author: mahia127
-ms.author: brblanch
+ms.author: martinek
 ms.date: 08/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,7 +15,7 @@ ms.custom: think-tank
 Customers often experience antipatterns while adopting a cloud solution. Either the solution is ineffective or there are unintended consequences. Typical scenarios include:
 
 - Misaligned operating models lead to increased time to market, misunderstandings, and increased pressure on IT departments.
-- Companies sometimes choose the wrong service model when they assume that platform-as-a-service (PaaS) decreases costs.
+- Companies sometimes choose the wrong service model when they assume that platform as a service (PaaS) decreases costs.
 - When an organization's architecture changes, major replacement projects can result. Managing these projects is often complex and cost intensive.
 
 ## Antipattern: Choose the wrong cloud operating model
@@ -41,7 +41,7 @@ Review strategic priorities, portfolio scope, requirements, and constraints. Exp
 
 ## Antipattern: Choose the wrong service model
 
-Companies sometimes assume that PaaS solutions cost less than infrastructure-as-a-service (IaaS) solutions. This assumption can lead to the wrong choice of service model. Cost-conscious companies often make this mistake when their main reason for moving to the cloud is to lower costs. These companies forget that they also need to change processes when they adopt PaaS, especially when they move certain responsibilities to cloud providers. Switching to PaaS introduces fundamental changes in coordination efforts, engineering practices, and delivery pipelines. Unexpected cost increases and delays can result.
+Companies sometimes assume that PaaS solutions cost less than infrastructure as a service (IaaS) solutions. This assumption can lead to the wrong choice of service model. Cost-conscious companies often make this mistake when their main reason for moving to the cloud is to lower costs. These companies forget that they also need to change processes when they adopt PaaS, especially when they move certain responsibilities to cloud providers. Switching to PaaS introduces fundamental changes in coordination efforts, engineering practices, and delivery pipelines. Unexpected cost increases and delays can result.
 
 ### Example: Choose PaaS over IaaS
 
@@ -60,7 +60,7 @@ Gradually modernize and adopt PaaS later, after the workload is already in the c
 
 ## Antipattern: Replace architecture
 
-Applications that are based on PaaS and software-as-a-service (SaaS) are relatively easy to maintain. They usually require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
+Applications that are based on PaaS and software as a service (SaaS) are relatively easy to maintain. They usually require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
 
 ### Example: Choose replacement over modernization
 
@@ -72,7 +72,7 @@ Before you replace a large or complex application environment, consider incremen
 
 When deciding on an innovation strategy, explore different modernization options. Evaluate these options in a proof of concept (POC).
 
-Understand your company's [digital estate](../digital-estate/index.md), and evaluate digital assets according to [the five Rs of cloud rationalization](../digital-estate/5-rs-of-rationalization.md). Determine which of the *five Rs* works best for modernizing or migrating your assets:
+Understand your company's [digital estate](../digital-estate/index.md), and evaluate digital assets according to the [five Rs of cloud rationalization](../digital-estate/5-rs-of-rationalization.md). Determine which of the *five Rs* works best for modernizing or migrating your assets:
 
 - Rehost
 - Refactor

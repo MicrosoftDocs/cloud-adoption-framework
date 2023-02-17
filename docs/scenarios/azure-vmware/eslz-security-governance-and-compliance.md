@@ -2,7 +2,7 @@
 title: Security, governance, and compliance disciplines for Azure VMware Solution
 description: Understand security, governance, and compliance considerations for Azure VMware Solution, and design recommendations and best practices to mitigate risks.
 author: Mahesh-MSFT
-ms.author: janet
+ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -49,6 +49,8 @@ Consider the following factors when deciding which systems, users, or devices ca
   - **Unified firewall rule management** prevents duplicate or missing firewall rules from increasing the risk of unauthorized access. Firewall architecture contributes to the larger network management and environment security posture for Azure VMware Solution. Use a stateful managed firewall architecture that allows for traffic flow, inspection, centralized rule management, and event collection.
 
   - **DDoS protection** protects Azure VMware Solution workloads from attacks that cause financial loss or poor user experience. Apply DDoS protection on the Azure virtual network that hosts the ExpressRoute termination gateway for the Azure VMware Solution connection. Consider using Azure Policy for automatic enforcement of DDoS protection.
+
+- **VSAN Encryption with Customer Managed Keys(CMK)** allows Azure VMware Solution VSAN datastores to be encrypted with a customer provided encryption key stored in Azure Key Vault.  Use this feature to fulfill custom VSAN encryption requirements such as custom key rotation policies or to manage key lifecycle events. For detailed implementation guidance and limits, see [Configure customer-managed key encryption at rest in Azure VMware Solution](/azure/azure-vmware/configure-customer-managed-keys)
 
 - **Controlled vCenter Server access:** Uncontrolled access to the Azure VMware Solution vCenter Server can increase attack surface area. Use a dedicated privileged access workstation (PAW) to securely access Azure VMware Solution vCenter Server and NSX-T Manager. Create a user group and add individual user account to this user group.
 

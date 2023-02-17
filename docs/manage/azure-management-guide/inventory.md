@@ -1,8 +1,8 @@
 ---
 title: Inventory and visibility in Azure
 description: Learn the tools that provide both an inventory and visibility into the inventory's run state to collect operational data.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -64,11 +64,6 @@ To set up a Service Health alert:
 2. Select **Health alerts**.
 3. Create a Service Health alert.
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -92,11 +87,6 @@ A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) is
 
 ::: zone target="chromeless"
 
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 

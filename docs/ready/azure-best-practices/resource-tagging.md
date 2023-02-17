@@ -1,8 +1,8 @@
 ---
 title: Define your tagging strategy
 description: Learn about recommendations for tagging your Azure resources and assets and how to define your tagging strategy.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 12/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -49,7 +49,7 @@ Use the following tags to increase visibility into the usage of Azure resources.
 
 ## Take action
 
-Review the [resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md).
+Review the [resource naming and tagging decision guide](./resource-naming-and-tagging-decision-guide.md).
 
 ## Next steps
 

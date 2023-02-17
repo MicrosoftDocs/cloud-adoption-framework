@@ -1,8 +1,8 @@
 ---
 title: Design guidance for Azure Virtual Desktop
 description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -102,4 +102,4 @@ Below is an example from the recommended structure above for the AVD resources a
 ## Next steps
 
 - [Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
-- [Naming and tagging in Azure](../../decision-guides/resource-tagging/index.md)
+- [Naming and tagging in Azure](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
