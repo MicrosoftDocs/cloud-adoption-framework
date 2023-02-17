@@ -3,7 +3,7 @@ title: Enterprise-scale example architectures connectivity to Azure VMware Solut
 description: Examine example for scenarios for implementing networking and connectivity for Azure VMware Solution deployments.
 author: sablair
 ms.author: janet
-ms.date: 12/19/2022
+ms.date: 2/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -11,7 +11,7 @@ ms.custom: think-tank, e2e-azure-vmware
 ---
 
 
-# Example architectures for **Azure VMWare Solutions**
+# Example architectures for **Azure VMware Solutions**
 
 
 
