@@ -90,7 +90,7 @@ To provide isolation within a virtual network, segment it into one or more subne
 - Your subnet decisions are based on your technical and organizational requirements.
 - You create subnets by using CIDR notation.
 
-When you're deciding on the network range for subnets, Azure keeps five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of `/29` (with eight IP addresses), Azure will keep five addresses. In this case, you only have three usable addresses that can be assigned to hosts on the subnet. For most cases, use `/28` as the smallest subnet.
+When you're deciding on the network range for subnets, Azure keeps five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of `/29` (with eight IP addresses), Azure keeps five addresses. In this case, you only have three usable addresses that can be assigned to hosts on the subnet. For most cases, use `/28` as the smallest subnet.
 
 **Example:**
 
@@ -183,7 +183,7 @@ Every Azure VPN gateway consists of two instances in an active-standby configura
 
 When setting up a Site-to-Site VPN:
 
-- You need a virtual network whose address range doesn't overlap with the on-premises network to which the VPN will connect.
+- You need a virtual network whose address range doesn't overlap with the on-premises network to which the VPN connects.
 - Create a gateway subnet in the network.
 - When you create a VPN gateway, specify the gateway type (VPN), and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - Create a local network gateway on-premises, and configure your on-premises VPN device.
@@ -492,7 +492,7 @@ Here are a few more details:
 - As a best practice, use Network Watcher to review NSG flow logs.
   - NSG flow logs in Network Watcher allow you to view information about ingress and egress IP traffic through an NSG.
   - Flow logs are written in JSON format.
-  - Flow logs show outbound and inbound flows on a per-rule basis, and they show the network interface (NIC) to which the flow applies. They show five-tuple information about the flow and whether the traffic was allowed or denied.
+  - Flow logs show outbound and inbound flows on a per-rule basis, and they show the network interface (NIC) to which the flow applies. They show five-tuple information about the flow and whether the traffic is allowed or denied.
 
 **Learn more:**
 
@@ -528,7 +528,7 @@ In the hub, you typically manage the perimeter network (with access to the inter
 | **Azure Firewall** | Like NVA firewall farms, Azure Firewall uses a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. Azure Firewall helps control access to on-premises networks and has built-in scalability. |
 | **NVA firewalls** | Like Azure Firewall, NVA firewall farms have a common administration mechanism and a set of security rules to protect workloads hosted in spoke networks. NVA firewalls help control access to on-premises networks, and they can be manually scaled behind a load balancer. <br><br> An NVA firewall has less specialized software than a WAF, but it has broader application scope to filter and inspect any type of traffic in egress and ingress. |
 
-We recommend using one set of Azure firewalls or NVAs for traffic originating on the internet and another set for traffic originating on-premises. Using only one set of firewalls for both locations is a security risk because it lacks a security perimeter between the two sets of network traffic. Separate firewall layers reduces the complexity of checking security rules, and it's clear which rules correspond to which incoming network request.
+We recommend using one set of Azure firewalls or NVAs for traffic originating on the internet and another set for traffic originating on-premises. Using only one set of firewalls for both locations is a security risk because it lacks a security perimeter between the two sets of network traffic. Separate firewall layers reduce the complexity of checking security rules, and it's clear which rules correspond to which incoming network request.
 
 **Learn more:**
 
