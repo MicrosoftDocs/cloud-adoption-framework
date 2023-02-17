@@ -53,14 +53,14 @@ For a glossary, data storage cost estimations, and more troubleshooting guidance
 
 Review the following considerations and recommendation for infrastructure management and monitoring of Azure Virtual Desktop.
 
-### Design considerations: Infrastructure
+### Design considerations
 
 - The session host performance counters are collected and logged.
 - Use network performance monitoring for user experience management.
 - Set up an alerting model around the collected logs and metrics.
 - Use Windows Update Management for the session hosts between feature updates.
 
-### Design recommendations: Infrastructure
+### Design recommendations
 
 - Use the same Log Analytics workspace that's used for the Azure Virtual Desktop platform.
 - Use a centralized Azure Monitor Log Analytics workspace in the region of your session hosts.

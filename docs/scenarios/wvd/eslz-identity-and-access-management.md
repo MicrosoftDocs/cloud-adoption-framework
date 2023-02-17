@@ -12,11 +12,11 @@ ms.custom: think-tank, e2e-avd
 
 # Identity and access management considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses [Azure role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview) with certain conditions outlined in this article.
+Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview) with certain conditions outlined in this article.
 
 ## RBAC design
 
-RBAC supports separation of duties for the various teams and individuals that manage the deployment of Azure Virtual Desktop. As part of the landing zone design, decisions will need to be make on who assumes the various roles and then a security group be created for each role to simplify adding and removing users to and from roles.
+RBAC supports separation of duties for the various teams and individuals that manage the deployment of Azure Virtual Desktop. As part of the landing zone design, decisions will need to be made on who assumes the various roles and then a security group be created for each role to simplify adding and removing users to and from roles.
 
 Azure Virtual Desktop has custom Azure roles designed for each functional area. Configuration details are in [Built-in roles for Azure Virtual Desktop](/azure/virtual-desktop/rbac).
 
@@ -29,7 +29,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
   > Azure Virtual Desktop does not support B2B or Microsoft accounts.
 - The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Azure AD DS](/azure/active-directory-domain-services/compare-identity-solutions).
-- [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services/). is a supported option, but there are limitations:
+- [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services/) is a supported option, but there are limitations:
   - You must have password hash synchronization enabled ([configuration guide](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-configure-password-hash-sync)).
   - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless single sign-on for Microsoft 365 services.  
   For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
@@ -55,7 +55,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 
 ## Next steps
 
-Learn about resource organization for an Azure Virtual Desktop enterprise-scale scenario.
+Learn about network topology and connectivity for an Azure Virtual Desktop enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
 > [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)

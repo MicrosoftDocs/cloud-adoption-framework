@@ -212,10 +212,12 @@ When you deploy your session hosts with an [ARM template](https://github.com/Azu
 
 ## Next steps
 
-Learn about deploy Azure Virtual Desktop landing zone accelerator for an enterprise-scale scenario.
+Learn how to deploy using the Azure Virtual Desktop landing zone accelerator for an enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Deploy Azure Virtual Desktop Landing Zone Accelerator](https://github.com/Azure/avdaccelerator)
+> [1. Review Azure Virtual Desktop Landing Zone Accelerator design areas](./enterprise-scale-landing-zone.md)
 
 > [!div class="nextstepaction"]
-> [Review Azure Virtual Desktop Landing Zone Accelerator design areas](./enterprise-scale-landing-zone.md)
+> [2. Azure Virtual Desktop Landing Zone Accelerator Github repository](https://github.com/Azure/avdaccelerator)
+
+

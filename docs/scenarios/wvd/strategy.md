@@ -26,7 +26,7 @@ Virtual desktop migrations are motivated by a few common target outcomes:
 
 - **Safe access**. Employees need access to corporate data and applications from their devices.
 
-- **Support end users**. As workloads are migrated to the cloud, employees need more support for a low-latency, optimized experience. Azure Virtual Desktop forms a mission-critical platform for many organizations. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. To understand the strategy for an Azure Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
+- **Support end users**. As workloads are migrated to the cloud, employees need more support for a low-latency, optimized experience. Azure Virtual Desktop forms a mission-critical platform for many organizations. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. Understanding the strategy for an Azure Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
 
 - **Empower IT**. The IT team wants to transform the workplace, which often starts with transforming employees' user experience.
 
@@ -74,7 +74,7 @@ Citrix DaaS enables secure access to Windows, Linux, and Web apps, and Windows a
 
 [Creating a business case for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts that are associated with Azure Virtual Desktop.
 
-The [2021 Forrester study on the total economic impact of Microsoft Azure for Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
+The [2021 Forrester study on the total economic impact of Microsoft Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
@@ -91,7 +91,7 @@ In the approach outlined in this article series, the existing Citrix, VMware, or
 
 ![Diagram of the virtual desktop migration scenario.](../../_images/migrate/wvd/scenario-solution.png)
 
-When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team will only be responsible for support of the desktop images, available applications, identity service provide (Active directory, Azure AD Domain Services or Azure AD) and user profiles, while getting the benefits of Microsoft managed broker, gateway, diagnostics and web access services as part of the Azure Virtual Desktop (AVD) offering.
+When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team will only be responsible for support of the desktop images, available applications, identity service provider (Active directory, Azure AD Domain Services or Azure AD) and user profiles, while getting the benefits of Microsoft managed broker, gateway, diagnostics and web access services as part of the Azure Virtual Desktop (AVD) offering.
 
 ## How to measure progress on adopting Azure Virtual Desktop
 
