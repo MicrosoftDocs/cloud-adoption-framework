@@ -22,7 +22,7 @@ Set of reference implementations that help you prepare your landing zones for mi
 
 :::image type="content" source="../../ready/enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../ready/enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
-For more information on the design areas labeled A-I in the visual, see [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas).
+_For more information on the design areas labeled A-I in the visual, see [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas)._
 
 Azure landing zones were designed with hybrid and multicloud in mind. To support hybrid and multicloud, the reference architecture requires two additions:
 

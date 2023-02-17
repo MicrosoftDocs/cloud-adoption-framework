@@ -23,7 +23,7 @@ When preparing any environment for sustained cloud adoption, we use the [Azure l
 
 [![Diagram that shows a conceptual architecture of an Azure landing zone](../../_images/ready/alz-arch-cust-inline.png)](../../_images/ready/alz-arch-cust-expanded.png#lightbox)
 
-For more information on the design areas labeled A-I in the visual, see [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas).
+_For more information on the design areas labeled A-I in the visual, see [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas)._
 
 When developing a long-term vision for landing zones, consider the design above. Working within this scenario, we focus on the most appropriate starting point to meet your strategic and planning requirements related to modern application platforms. This article is about the starting point, not necessarily all of the details required to reach the longer-term target.
 
