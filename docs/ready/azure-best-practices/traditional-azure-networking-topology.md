@@ -1,6 +1,6 @@
 ---
 title: Traditional Azure networking topology
-description: Learn about key design considerations and recommendations surrounding network topologies in Azure.
+description: Learn about key design considerations and recommendations surrounding network topologies in Microsoft Azure.
 author: sitarant
 ms.author: sitarant
 ms.date: 08/18/2021
@@ -13,7 +13,7 @@ ms.custom: think-tank
 # Traditional Azure networking topology
 
 > [!IMPORTANT]
-> Try the new [Topology (Preview)](/azure/network-watcher/network-insights-topology) experience, which offers a visualization of Azure resources for ease of inventory management and monitoring network at scale. Use the Topology preview to visualize resources and their dependencies across subscriptions, regions and locations. [Click](https://ms.portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/overview) to navigate to the experience.
+> Try the new [Topology (Preview)](/azure/network-watcher/network-insights-topology) experience, which offers a visualization of Azure resources for ease of inventory management and monitoring network at scale. Use the Topology preview to visualize resources and their dependencies across subscriptions, regions and locations. [Select this link](https://ms.portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/overview) to navigate to the experience.
 
 
 Explore key design considerations and recommendations surrounding network topologies in Microsoft Azure.
@@ -148,7 +148,7 @@ The following figure shows both options:
 
 - When two Azure regions need to connect, evaluate and use global virtual network peering or the same ExpressRoute circuits to connect both hub virtual networks.
 
-- When more than two Azure regions need to connect, then the recommendation is for hub virtual networks in each region to connect to the same ExpressRoute circuits. Global virtual network peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple virtual networks. The following diagram shows how to connect hub-and-poke networks in three regions:
+- When more than two Azure regions need to connect, then we recommend that the hub virtual networks in each region connect to the same ExpressRoute circuits. Global virtual network peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple virtual networks. The following diagram shows how to connect hub-and-spoke networks in three regions:
 
 ![Diagram that illustrates ExpressRoute providing hub-to-hub connectivity between multiple regions.](./media/multiregion-hub-to-hub-er.png)
 
