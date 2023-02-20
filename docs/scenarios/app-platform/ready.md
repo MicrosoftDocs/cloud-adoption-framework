@@ -39,7 +39,7 @@ The questions influence landing zone design since each suggests a need for a cen
 
 ## Demonstrating actionable scope
 
-To maximize output during initial implementations, the remainder of this guide focuses on implementing Azure Kubernetes Services (AKS) with the ability to add an overlay for Azure App Service on Kubernetes with Azure Arc. This approach narrows the scope of options by providing a reference architecture and implementation.
+To maximize output during initial implementations, the remainder of this guide focuses on implementing Azure Kubernetes Service (AKS) with the ability to add an overlay for Azure App Service on Kubernetes with Azure Arc. This approach narrows the scope of options by providing a reference architecture and implementation.
 
 To establish a foundation for other [Azure products](./azure-products.md) for modern application platforms, see the [container architectures](/azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json) tab in the left navigation for rich architecture and implementation references for each tool.
 
