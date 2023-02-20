@@ -60,6 +60,8 @@ Azure regions might have a finite number of resources. As a result, available ca
 
   - For virtual machine capacity reservations, see [On-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview).
 
+- Consider re-using unused or decommissioned subscriptions as per the guidance in [Should we create a new Azure Subscription every time or can we, and should we, re-use Azure Subscriptions? - Azure landing zones FAQ](../../enterprise-scale/faq.md#should-we-create-a-new-azure-subscription-every-time-or-can-we-and-should-we-re-use-azure-subscriptions)
+
 ### Tenant transfer restriction design considerations
 
 Each Azure subscription is linked to a single Azure AD tenant, which acts as an identity provider (IdP) for your Azure subscription. The Azure AD tenant is used to authenticate users, services, and devices.
