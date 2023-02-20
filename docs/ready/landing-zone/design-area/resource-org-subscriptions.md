@@ -154,6 +154,10 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Ensure that any required services and features are available within your chosen deployment regions.
 
+### Automation recommendations
+
+- Build a Susbcription Vending process to automate the creation of Subcriptions for application teams via a request workflow as descrbied in [Subscription vending](subscription-vending.md)
+
 ### Tenant transfer restriction recommendations
 
 - Configure the following settings to prevent users from transferring Azure subscriptions to or from your Azure AD tenant:

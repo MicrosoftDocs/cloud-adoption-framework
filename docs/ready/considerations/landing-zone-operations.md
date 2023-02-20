@@ -87,6 +87,7 @@ The following links provide best practices for improving landing zone operations
   - [Failure mode analysis](/azure/architecture/resiliency/failure-mode-analysis?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Recover from a region wide service disruption](/azure/architecture/resiliency/recovery-loss-azure-region?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Recover from data corruption or accidental deletion](/azure/architecture/framework/resiliency/data-management?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- Build a Susbcription Vending process to automate the creation of Subcriptions for application teams via a request workflow as descrbied in [Subscription vending](subscription-vending.md)
 
 ## Next steps
 
