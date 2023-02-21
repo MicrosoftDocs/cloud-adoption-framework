@@ -23,7 +23,7 @@ Your architecture needs to incorporate principles that address on-premises busin
 - Service and business process availability.
 - Recovery time objectives (RTOs) for failure or disaster scenarios. 
 - Recovery point objectives (RPOs) for failure scenarios. 
-- Operational and lifecycle management tasks, and technology that fills in during failure scenarios. These management tasks include patching guest operating systems and database management systems, cloning, and refreshing the SAP systems.
+- Operational and lifecycle management tasks, and technology that fills in during failure scenarios. These management tasks include patching guest operating systems and database management systems, cloning, and refreshing SAP systems.
 
 > [!TIP]
 > Agree on a high availability and disaster recovery (HADR) solution for each of the archetypes in your SAP landscape early on. Ensure that all SAP components are covered with an appropriate solution.
