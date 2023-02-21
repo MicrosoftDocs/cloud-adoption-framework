@@ -53,7 +53,7 @@ Subscription vending provides a standard process for application teams to reques
 
 ### Automate networking
 
-The subscription automation needs set up the required networking components, and it needs to be flexible enough to meet the needs of each application teams. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete address space of a virtual network without downtime if your size requirements change. For more information, see:
+The subscription automation needs set up the required networking components, and it needs to be flexible enough to meet the needs of each application team. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete address space of a virtual network without downtime if your size requirements change. For more information, see:
 
 - [IP address restrictions](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets)
 - [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
@@ -76,7 +76,7 @@ The platform team should use the networking and governance requirements to place
 
 **Build flexible automation.** Your automation should be flexible enough (1) to deploy one workload to multiple subscriptions and (2) adapt to subscription service limits.
 
-*One workload to many subscriptions:* Some workloads need to span several subscriptions. For example, workloads that use a storage account per Azure Active Directory tenant often use dozens of subscriptions.
+*One workload to many subscriptions:* Some workloads need to span several subscriptions. For example, multi-tenant architectures that use isolated storage accounts per tenant often use dozens of subscriptions.
 
 *Subscription service limits:* An enterprise with several thousand subscriptions should have automation that can deploy to old subscription or co-locate workloads in a subscription to avoid the limits. The ideal use cases for subscription reuse are developer sandboxes, training environments, or software-as-a-service (SaaS) providers using one subscription per customer. MCA customers nearing 5,000 active subscriptions should consider subscription reuse. EA customers, should reuse subscription when nearing 5,000 active and cancelled subscriptions.
 
@@ -113,15 +113,15 @@ Finally, the workload type must be specified in the request for a new subscripti
 - [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
 - [Create Azure subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 
-#### Designate subscription owner
+#### Set up identity and RBAC
 
-The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
+**Designate subscription owner.** The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
 
-#### Create Azure AD groups
+**Create Azure AD groups.** In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
-In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
+**Establish automation accounts.** In the request process, need to know if there's standing permissions to non-human identities. You should use automation to create these and favor managed identity for those. It's important to note these identities are granted standing access to resources and aren't subject to PIM.
 
-Rather than create service principals for each subscription, use managed identity wherever possible. With managed identities, you don't have to manage secrets or keys. Service principals usually are granted standing access to resources and aren't subject to PIM. For more information, see [IAM design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
+ For more information, see [IAM design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
 #### Hand off to application team
 
