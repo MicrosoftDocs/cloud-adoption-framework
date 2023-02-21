@@ -96,7 +96,7 @@ You need a commercial agreement to create a subscription programmatically. Witho
 
 #### Use infrastructure as code (IaC)
 
-A common strategy for this is to use IaC. There are example subscription vending [Bicep](LINK) and [Terraform](LINK) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
+A common strategy for this is to use IaC. There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
 
 #### Use tags for cost management
 
