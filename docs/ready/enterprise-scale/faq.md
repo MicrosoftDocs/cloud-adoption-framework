@@ -1,6 +1,6 @@
 ---
 title: Azure landing zone frequently asked questions (FAQ)
-description: The Azure landing zone frequently asked questions (FAQ) provides answers to common questions asked about the Azure landing zone architecture.
+description: The Azure landing zone frequently asked questions (FAQ) provide answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
 ms.author: martinek
 ms.date: 04/12/2021
@@ -44,9 +44,9 @@ Some examples of policy-driven governance are:
 
   Instead of repeating code or manual activities when a new subscription is created, the `DeployIfNotExists` policy definition automatically deploys and configures them for you.
 
-## What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?
+## What if we can't or aren't yet ready to utilize DeployIfNotExists (DINE) policies?
 
-We have a dedicated page that walks through the various phases and options you have to either "disable" DINE policies or use our 3 phase approach to adopt them over time within your environment.
+We have a dedicated page that walks through the various phases and options you have to either "disable" DINE policies or use our three phase approach to adopt them over time within your environment.
 
 See the guidance [Adopting policy driven guardrails](./dine-guidance.md)
 
@@ -93,7 +93,7 @@ So, if you have 30 different workloads that each require a management group and 
 
 #### Example of a suboptimal management group hierarchy
 
-[ ![Diagram of an example of a sub-optimal management group hierarchy for Azure landing zone architecture when handling dev/test/production landing zones.](./media/eslz-dev-test-prod-bad.png) ](./media/eslz-dev-test-prod-bad.png#lightbox)
+[![Diagram of an example of a sub-optimal management group hierarchy for Azure landing zone architecture when handling dev/test/production landing zones.](./media/eslz-dev-test-prod-bad.png)](./media/eslz-dev-test-prod-bad.png#lightbox)
 
 To summarize, there should be no difference in policies applied between "dev/test/production" environments if you develop and build them to production standard from the start. There's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for landing zone users and owners. You might also consider using "sandbox" subscriptions for true development purposes where a less restricted environment is required, such as when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
 
@@ -110,7 +110,7 @@ A common challenge to this approach is that you might need some policies to appl
 
 #### Example of an optimal management group hierarchy aligned to Azure landing zone architecture
 
-[ ![Diagram of an example of a of a optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones](./media/eslz-dev-test-prod-good.png) ](./media/eslz-dev-test-prod-good.png#lightbox)
+[![Diagram of an example of a of a optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones](./media/eslz-dev-test-prod-good.png)](./media/eslz-dev-test-prod-good.png#lightbox)
 
 *Some management groups have been removed for illustration clarity purposes.*
 
@@ -129,7 +129,7 @@ The region selector on the **Deployment location** tab is also used to select wh
 - Automation account
 - Resource groups (for the other resources)
 
-If you deploy a networking topology on the **Network topology and connectivity** tab, you'll need to select an Azure region to deploy the networking resources to. This region can be different from the region selected on the **Deployment location** tab. Depending on the topology you select, the networking resources that you deploy might include:
+If you deploy a networking topology on the **Network topology and connectivity** tab, you need to select an Azure region to deploy the networking resources to. This region can be different from the region selected on the **Deployment location** tab. Depending on the topology you select, the networking resources that you deploy might include:
 
 - Azure Virtual WAN (including Virtual WAN Hub)
 - Azure Virtual Network
@@ -180,7 +180,7 @@ The below high-level steps can be used as a set of steps to follow to expand int
 6. Establish Virtual Network Peering between the new hub Virtual Network and the other hub Virtual Networks
 7. Create and configure any required routing: Azure Route Server, User-Defined Routes etc.
 8. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
-   - Some customers might do this on their Active Directory Domain Controllers which might be part of the Identity platform landing zone subscription
+   - Some customers might do this on their Active Directory Domain Controllers that might be part of the Identity platform landing zone subscription
 
 You can now connect application landing zone spokes via Virtual Network Peering to the new hub Virtual Network in the new region, to host your workloads.
 
@@ -205,81 +205,71 @@ You can now connect application landing zone spokes via Virtual Network Connecti
 > Review the Azure landing zone design area for [identity and access management](../landing-zone/design-area/identity-access.md)
 
 1. Decide on whether a new platform landing zone subscription is needed or not
-   - The same existing subscription is generally recommended to use for most customers across multiple regions for identity
+   - The same existing subscription is recommended to use for most customers across multiple regions for identity
 2. Create new Resource Group in subscription in the new target region
 3. Create new Virtual Network in the new target region
 4. Establish Virtual Network Peering back to the newly created regional hub Virtual Network in the connectivity subscription
 5. Deploy identity workloads, like Active Directory Domain Controller Virtual Machines into new Virtual Network
-    - You might need to perform additional setup and configuration of the workloads once provisioned, like:
+    - You might need to perform more setup and configuration of the workloads once provisioned, like:
       - Promoting the Active Directory Domain Controller Virtual Machines to the existing Active Directory Domain
       - Create new Active Directory sites & subnets
       - Configuring DNS Server settings like Conditional Forwarders
 
-## Should we create a new Azure Subscription every time or can we, and should we, re-use Azure Subscriptions?
+## Should we create a new Azure Subscription every time or can we, and should we, reuse Azure Subscriptions?
 
-### What is subscription re-use?
+### What is subscription reuse?
 
-Subscription re-use is the process of re-issuing an existing Subscription to a new owner. There should be a process to reset the Subscription to a known clean state and then re-assigned to a new owner.
+Subscription reuse is the process of reissuing an existing Subscription to a new owner. There should be a process to reset the Subscription to a known clean state and then reassigned to a new owner.
 
-### Why should I consider re-using subscriptions?
+### Why should I consider reusing subscriptions?
 
-In general, we recommend that customers adopt the [Subscription Democratization design principal](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization), however there are specific circumstances where this is either not possible or recommended.
+In general, we recommend that customers adopt the [Subscription Democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization). However, there are specific circumstances where subscription reuse isn't  possible or recommended.
 
 > [!TIP]
 > Watch the YouTube video on the Subscription Democratization design principal here: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
 
-If you are covered by one of the following circumstances or scenarios, then you should consider subscription re-use:
+You should consider subscription reuse if meet one of the following circumstances:
 
-- If you are an EA customer and plan to create more than 5,000 subscriptions on a single EA Account Owner Account (billing account) (this includes deleted subscriptions)
-- If you are an MCA/MPA customer and plan to have more than 5,000 active subscriptions
-- If you are a PAYG customer
-- If you are using a Microsoft Azure Sponsorship
-- Or you match one of the below scenarios
+- You have an Enterprise Agreement (EA) and plan to create more than 5,000 subscriptions on a single EA Account Owner Account (billing account), including deleted subscriptions.
+- You have a Microsoft Customer Agreement (MCA) or Microsoft Partner Agreement MPA and plan to have more than 5,000 active subscriptions
+- You're a pay-as-you-go customer
+- You use a Microsoft Azure Sponsorship
+- You commonly create:
+    1. Ephemeral lab or sandbox environments
+    1. Demo environments for proofs-of-concept (POCs) or minimum viable products (MVP), including independent software vendors (ISV) for customer demo/trial access
+    1. Training environments, such as MSPs/Trainer's learner environments
 
-#### Scenarios
+### How do I reuse subscriptions?
 
-1. Ephemeral Lab/Sandbox Environments
-2. Demo Environments - POCs/MVPs
-    - Can also apply in ISV scenarios for providing customer demo/trial access
-3. Training environments
-    - MSPs/Trainer's learner environments
+If you match one of the above scenarios or considerations, then you might need to consider reusing existing decommissioned or unused subscriptions and reassigning them to a new owner and purpose.
 
-### How do I re-use subscriptions?
+#### Clean up old subscription
 
-If you match one of the above scenarios or considerations then you might need to consider re-using existing decommissioned or unused subscriptions and re-assigning them to a new owner and purpose.
+You first need to clean up the old subscription for reuse. You need to perform the following actions on a subscription before it's ready for reuse:
 
-#### Clean-up
-
-To prepare the Azure Subscriptions for re-use you will need to ensure you perform the following activates upon the subscription before it is ready to be re-used:
-
-- Remove Resource Groups and contained resources
-- Remove Role Assignments, including Privileged Identity Management (PIM) Role Assignments, at the Subscription scope
-- Remove Custom Role-based Access Control (RBAC) Definitions, at the Subscription scope
-- Remove Policy Definitions, Initiatives, Assignments and Exemptions at the Subscription scope
-- Remove deployments at the Subscription scope
-- Remove tags at the Subscription scope
-- Remove any Resource Locks at the Subscription scope
-- Remove any Azure Cost Management Budgets at the Subscription scope
-- Reset Microsoft Defender for Cloud plans to Free Tiers
-  - Unless organizational requirements mandates these are set to the paid tiers (normally enforced via Azure Policy)
-- Remove Subscription Activity Logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations
-  - Unless organizational requirements mandates these are always forwarded whilst a Subscription is active
-- Remove any Azure Lighthouse Delegations at the Subscription scope
-- Remove any hidden resources from the Subscription
+- Remove Resource Groups and contained resources.
+- Remove Role Assignments, including Privileged Identity Management (PIM) Role Assignments, at the subscription scope.
+- Remove Custom Role-based Access Control (RBAC) Definitions, at the subscription scope.
+- Remove Policy Definitions, Initiatives, Assignments and Exemptions at the Subscription scope.
+- Remove deployments at the subscription scope.
+- Remove tags at the subscription scope.
+- Remove any Resource Locks at the subscription scope.
+- Remove any Azure Cost Management Budgets at the subscription scope.
+- Reset Microsoft Defender for Cloud plans to Free Tiers unless organizational requirements mandate these logs are set to the paid tiers. You normally enforce these requirements via Azure Policy.
+- Remove subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations unless organizational requirements mandate forwarding these logs while a subscription is active.
+- Remove any Azure Lighthouse Delegations at the subscription scope.
+- Remove any hidden resources from the subscription.
 
 >[!TIP]
-> Using `Get-AzResource` or `az resource list -o table` targeted at the Subscription scope will help you find any hidden or remaining resources to remove before re-assigning.
+> Using `Get-AzResource` or `az resource list -o table` targeted at the subscription scope will help you find any hidden or remaining resources to remove before re-assigning.
 
-#### Re-assignment
+#### Reassign the subscription
 
-Once the Azure Subscription has been cleaned up from its previous usage, it can now be re-assigned. Below are some common activities that you might want to perform as part of the re-assignment process:
+You can reassign the subscription after you clean up the subscription. Here are some common activities that you might want to perform as part of the reassignment process:
 
-- Add new tags and set values for them on the Subscription
-- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the Subscription scope for the new owners
-  - Typically these assignments would be to Azure Active Directory Groups instead of individuals
-- Place the Subscription into the desired Management Group based on it's governance requirements
-- Create new Azure Cost Management Budgets and set alerts to new owners when thresholds met
-- Set Microsoft Defender for Cloud plans to desired Tiers
-  - Typically this is enforced via Azure Policy once placed into the correct Management Group
-- Configure Subscription Activity Logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations
-  - Typically this is enforced via Azure Policy once placed into the correct Management Group
+- Add new tags and set values for them on the Subscription.
+- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the Subscription scope for the new owners. Typically these assignments would be to Azure Active Directory Groups instead of individuals.
+- Place the Subscription into the desired Management Group based on its governance requirements.
+- Create new Azure Cost Management Budgets and set alerts to new owners when thresholds met.
+- Set Microsoft Defender for Cloud plans to desired Tiers. You should enforce this setting via Azure Policy once placed into the correct Management Group.
+- Configure Subscription Activity Logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations. You should enforce this setting via Azure Policy once placed into the correct Management Group.
