@@ -162,7 +162,7 @@ The following sections contain recommendations to help you plan and create subsc
 
 ### Automation recommendations
 
-- Build a Susbcription Vending process to automate the creation of Subcriptions for application teams via a request workflow as descrbied in [Subscription vending](subscription-vending.md)
+- Build a Subscription vending process to automate the creation of Subscriptions for application teams via a request workflow as described in [Subscription vending](subscription-vending.md).
 
 ### Tenant transfer restriction recommendations
 
