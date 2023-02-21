@@ -14,7 +14,7 @@ ms.custom: internal
 
 Subscription vending provides a platform mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads. The following diagram shows where subscription vending fits in the platform and workload lifecycles.
 
-:::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing four steps. Step 1 is create platform subscriptions. Step 2 is create platform. Step 3 is establish subscription vending. Step 4 is deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, has overlap with both the platform and application landing zone. Step 4 is an application focused step." lightbox="./media/subscription-vending-high-res.png" border="false":::
+:::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing four steps. Step 1 is create platform subscriptions. Step 2 is create platform. Step 3 is to establish subscription vending. Step 4 is to deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, overlaps with both the platform and application landing zone. Step 4 is an application focused step." lightbox="./media/subscription-vending-high-res.png" border="false":::
 
 Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
@@ -23,7 +23,7 @@ Subscription vending builds on the concept of subscription democratization and a
 
 ## Why subscription vending?
 
-Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for workload landing zones. By simplifying the subscription process and putting it under the governance of the organization, app teams can focus on deploying their workloads with greater confidence and efficiency.
+Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for workload landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
 
 - **Streamlined process:** Subscription vending provides an official front door for application teams to request subscriptions, eliminating the need for them to navigate the subscription process on their own.
 - **Improved velocity:** Application teams can access application landing zones faster and onboard workloads quicker.
@@ -39,11 +39,11 @@ To implement the subscription vending model, you need to establish an approval p
 
 **Automate process.** You should automate the process of subscription request capture and approval for faster provisioning and improved compliance.
 
-**Integrate with existing tooling.** It's recommended to integrate the subscription vending approval process into your existing ITSM tool. The integration can simplify the approval process, reduce manual effort, and improve efficiency while reducing errors. It also makes maintenance and updates easier over time.
+**Integrate with existing tooling.** You should integrate the subscription vending approval process into your existing ITSM tool. The integration can simplify the approval process, reduce manual effort, and improve efficiency while reducing errors. It also makes maintenance and updates easier over time.
 
-**Connect to deployment pipeline.** It's a best practice to tie the business logic of the approval process into the subscription deployment pipeline managed by the platform team. Azure DevOps pipelines or GitHub Actions workflows are common solutions for the subscription deployment pipeline.
+**Connect to deployment pipeline.** It's a best practice to tie the business logic of the approval process into the subscription deployment pipeline managed by the platform team. Azure Pipelines or GitHub Actions workflows are common solutions for the subscription deployment pipeline.
 
-**Gather requirements at intake.** The business logic should allow application teams to request a subscription and provide subscription requirements, such as anticipated budgets, subscription owners, networking expectations, and business criticality & confidentiality classification. Gathering this information at the beginning of the process will inform your deployment parameters and stakeholder approval needs. The intake process should also give the platform team enough information to place the workload in the management group hierarchy.
+**Gather requirements at intake.** The business logic should allow application teams to request a subscription and provide subscription requirements. These requirements should include anticipated budgets, subscription owners, networking expectations, and business criticality & confidentiality classification. Gathering this information at the beginning of the process informs your deployment parameters and stakeholder approval needs. The intake process should also give the platform team enough information to place the workload in the management group hierarchy.
 
 With the approval process in place, application teams can start submitting subscription requests.
 
@@ -61,7 +61,7 @@ The subscription automation needs set up the required networking components, and
 
 **Use IP address management (IPAM) tool.** You should use and integrate an IPAM system into the vending process to streamline IP address assignment.
 
-**Grant app team autonomy.** Application teams are typically delegated with the rights to create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
+**Grant app team autonomy.** You should grant application teams with the rights to create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
 
 **Enforce networking governance.** The platform team should enforce virtual network governance via (1) Azure policy assigned to the management group hierarchy or (2) Azure Virtual Network Manager and Security Admin Rules. For more information, see:
 
@@ -78,7 +78,7 @@ The platform team should use the networking and governance requirements to place
 
 *One workload to many subscriptions:* Some workloads need to span several subscriptions. For example, multi-tenant architectures that use isolated storage accounts per tenant often use dozens of subscriptions.
 
-*Subscription service limits:* An enterprise with several thousand subscriptions should have automation that can deploy to old subscription or co-locate workloads in a subscription to avoid the limits. The ideal use cases for subscription reuse are developer sandboxes, training environments, or software-as-a-service (SaaS) providers using one subscription per customer. MCA customers nearing 5,000 active subscriptions should consider subscription reuse. EA customers, should reuse subscription when nearing 5,000 active and cancelled subscriptions.
+*Subscription service limits:* An enterprise with several thousand subscriptions should have automation that can deploy to old subscription or co-locate workloads in a subscription to avoid the limits. The ideal use cases for subscription reuse are developer sandboxes, training environments, or software-as-a-service (SaaS) providers using one subscription per customer. MCA customers nearing 5,000 active subscriptions should consider subscription reuse. EA customers, should reuse subscription when nearing 5,000 active and canceled subscriptions.
 
 You can request quote increases manually using the Azure portal after provisioning. It's easier if you automate this process by using the available APIs. However, the quota request can fail, so you should run a script to handle any errors. For more information, see [Microsoft.Capacity](/rest/api/reserved-vm-instances/quotaapi), [Microsoft.Quota](/rest/api/quota/), and [Microsoft.Support](/rest/api/support/quota-payload)
 
@@ -96,18 +96,18 @@ You need a commercial agreement to create a subscription programmatically. Witho
 
 #### Use infrastructure as code (IaC)
 
-A common strategy for this is to use IaC. There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
+A common strategy for subscription vending is to use IaC. There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
 
 #### Use tags for cost management
 
-You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements. Azure Cost Management provides greater functionality, for example, you can create reports for subscriptions with specific tags. For more information, see:
+You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements, Azure Cost Management provides greater functionality. For example, you can create reports for subscriptions with specific tags. For more information, see:
 
-- [How tags are used in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data)
+- [How to use tags in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data)
 - [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
 
 #### Use production and non-production subscriptions
 
-Finally, the workload type must be specified in the request for a new subscription. This can either be Production or DevTest. DevTest results in lower resource charges but has other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
+In the request for a new subscription, ou must specify whether the workload is for Production or DevTest. DevTest environments result in lower resource charges but has other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
 
 - [Azure billing offers and Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
 - [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
@@ -119,9 +119,9 @@ Finally, the workload type must be specified in the request for a new subscripti
 
 **Create Azure AD groups.** In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
-**Establish automation accounts.** In the request process, need to know if there's standing permissions to non-human identities. You should use automation to create these and favor managed identity for those. It's important to note these identities are granted standing access to resources and aren't subject to PIM.
+**Establish automation accounts.** Automation accounts (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these managed identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources.
 
- For more information, see [IAM design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
+ For more information, see [the identity design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
 #### Hand off to application team
 
@@ -129,7 +129,7 @@ After the platform team creates the subscription, they should hand off the subsc
 
 ### Set budget
 
-The the platform and workload teams share responsibility for the financial health of the subscription. The application create budgets to control spending. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs. They're useful for auditing spending against current and forecast usage. Budgets aren't hard limits, so you should create budget alerts to notify the subscription owners if the budget is about to be exceeded. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
+The platform and workload teams share responsibility for the financial health of the subscription. The application team creates budgets to control spending. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs. They're useful for auditing spending against current and forecast usage. Budgets aren't hard limits, so you should create budget alerts to notify the subscription owners if the workload is about to exceed the budget. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
 
 ## Next steps
 
