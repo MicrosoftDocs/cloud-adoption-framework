@@ -12,11 +12,11 @@ ms.custom: internal
 
 # Subscription vending
 
-Subscription vending provides a mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads.  
+Subscription vending provides a platform mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads. The following diagram shows where subscription vending fits in the platform workload lifecycle.
 
-:::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing the place of subscription vending in the workload lifecycle." lightbox="./media/subscription-vending-high-res.png" border="false":::
+:::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing four steps. Step 1 is create platform subscriptions. Step 2 is create platform. Step 3 is establish subscription vending. Step 4 is deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, has overlap with both the platform and application landing zone. Step 4 is an application focused step." lightbox="./media/subscription-vending-high-res.png" border="false":::
 
-Subscription vending builds on the concept of subscription democratization. It's a means to achieve subscription democratization for application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
+Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
 - [Democratized approach to subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization)  
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
@@ -145,7 +145,7 @@ The the platform and workload teams share responsibility for the financial healt
 
 ## Next steps
 
-With the subscription in place, the application team can create, deploy, and operate the workload, with the placement and governance set forth by the vending process.
+With the subscription in place, the application team can create, deploy, and operate the workload with the placement and governance set forth by the vending process.
 
 As the governance requirements of a workload changes, you should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
 
@@ -153,4 +153,3 @@ As the governance requirements of a workload changes, you should move subscripti
 - [Move subscription to new management group (Bicep)](/azure/templates/microsoft.management/managementgroups/subscriptions)
 - [Move subscription to new management group (Terraform)](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_subscription_association)
 - [Tailor Azure landing zone to meet your requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
-
