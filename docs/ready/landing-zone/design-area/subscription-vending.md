@@ -82,9 +82,11 @@ The platform team should use the networking and governance requirements to place
 
 You can request quote increases manually using the Azure portal after provisioning. It's easier if you automate this process by using the available APIs. However, the quota request can fail, so you should run a script to handle any errors. For more information, see [Microsoft.Capacity](/rest/api/reserved-vm-instances/quotaapi), [Microsoft.Quota](/rest/api/quota/), and [Microsoft.Support](/rest/api/support/quota-payload)
 
-### Create subscription programmatically
+### Create and configure subscription
 
-You need a commercial agreement to create a subscription programmatically. Without a commercial agreement, you can still automate a large portion of the process. Create subscriptions in the Azure portal, and then apply the automation against the new, empty subscription.
+It's recommend that you create subscriptions programmatically. You need a customer agreement to create subscriptions programmatically. For customers with a customer agreement, use the following the guidance to create your subscriptions programmatically.
+
+Without a commercial agreement, you can still automate a large portion of the subscription vending process. Create subscriptions in the Azure portal and then apply the automation against the empty new subscription.
 
 **Know your commercial agreement.** To create a subscription, you need to assume a role with the right permissions. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation:
 
@@ -92,7 +94,7 @@ You need a commercial agreement to create a subscription programmatically. Witho
 - [MCA required role(s)](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-customer-agreement#prerequisites)
 - [MPA required role](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-partner-agreement#prerequisites)
 
-**Use infrastructure as code (IaC).** A common strategy for subscription vending is to use IaC. There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
+**Use infrastructure as code (IaC).** A common strategy for subscription vending is to create subscription programmatically by using IaC. You need a commercial agreement to create a subscription programmatically. There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
 
 **Use tags for cost management.** You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements, Azure Cost Management provides greater functionality. For example, you can create reports for subscriptions with specific tags. For more information, see:
 
