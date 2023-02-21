@@ -59,9 +59,9 @@ The subscription automation needs set up the required networking components, and
 - [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
 - [Add or remove address range](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range)
 
-**Use IP address management (IPAM) tool.** You should use an IPAM system to streamline IP address assignment.
+**Use IP address management (IPAM) tool.** You should use and integrate an IPAM system into the vending process to streamline IP address assignment.
 
-**Grant app team autonomy.** Application teams should create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
+**Grant app team autonomy.** Application teams are typically delegated with the rights to create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
 
 **Enforce networking governance.** The platform team should enforce virtual network governance via (1) Azure policy assigned to the management group hierarchy or (2) Azure Virtual Network Manager and Security Admin Rules. For more information, see:
 
@@ -100,7 +100,7 @@ A common strategy for this is to use IaC. There are example subscription vending
 
 #### Use tags for cost management
 
-You should assign tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements. Azure Cost Management provides greater functionality, for example, you can create reports for subscriptions with specific tags. For more information, see:
+You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements. Azure Cost Management provides greater functionality, for example, you can create reports for subscriptions with specific tags. For more information, see:
 
 - [How tags are used in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data)
 - [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
