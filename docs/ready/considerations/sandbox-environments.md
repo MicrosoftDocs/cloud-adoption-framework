@@ -13,7 +13,11 @@ ms.subservice: ready
 
 ## Sandbox Overview
 
-A sandbox environment is an isolated environment that enables users to do testing and experimentation without impacting any other environments (Production, Development, UAT, etc.). Azure sandboxes provide users with a controlled environment to test and experiment with Azure resources. Sandbox environments are also great places to conduct POCs (proof of concepts) with Azure resources. Each sandbox is its own Azure subscription controlled by Azure policies applied at the Sandboxes Management Group level. A sandbox can be used by one person or a team depending on its purpose.
+A sandbox environment is an isolated environment that enables users to do testing and experimentation without impacting any other environments (Production, Development, UAT, etc.). Azure sandboxes provide users with a controlled environment to test and experiment with Azure resources. Sandbox environments are also great places to conduct POCs (proof of concepts) with Azure resources. Each sandbox is its own Azure subscription controlled by Azure policies applied at the Sandboxes Management Group level and also what it inherits from the Management Group hierarchy above it. A sandbox can be used by one person or a team depending on its purpose.
+
+>[!TIP]
+> Review the default Azure landing zones policy assignments that are documented here in [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies)
+
 
 Sandbox environments are the best place for hands on Azure learning. Below are some common use cases:
 
