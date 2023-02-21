@@ -49,23 +49,11 @@ With the approval process in place, application teams can start submitting subsc
 
 ### Receive subscription requests
 
-Subscription vending provides a standard process for application teams to request a subscription. It's important that you socialize the availability of subscription vending and ensure subscription requests are easy to make. After the application team submits a subscription request, the platform team assumes control of the process. The platform teams maintains control until they create the subscription and deliver the subscription to the application team.
-
-<!-- Stephen's version
-
-**Determine place in network topology** The needs of the workload should determine its location in the Management Group hierarchy. If you don't have a defined network typology, follow the [design area guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity). For more information, see:
-
-- [Tailor Azure landing zone to meet your requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
-- [Define an Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology)
-- [Subscription considerations and recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)
-- [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
-- [DNS for on-premises and Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources)
-
--->
+Subscription vending provides a standard process for application teams to request a subscription. It's important that you socialize the availability of subscription vending and ensure subscription requests are easy to make. After the application team submits a subscription request, the platform team assumes control of the process. The platform team maintains control until they create the subscription and deliver the subscription to the application team.
 
 ### Automate networking
 
-The subscription automation needs set up the required networking components. It needs to be flexible enough to meet the needs of each application teams. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete address space of a virtual network without downtime if your size requirements change. For more information, see:
+The subscription automation needs set up the required networking components, and it needs to be flexible enough to meet the needs of each application teams. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete address space of a virtual network without downtime if your size requirements change. For more information, see:
 
 - [IP address restrictions](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets)
 - [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
@@ -84,11 +72,11 @@ The subscription automation needs set up the required networking components. It 
 
 The platform team should use the networking and governance requirements to place the subscription in the management group hierarchy. They should also review the subscription quota limits before creating the subscription.
 
-**Identify management group.** Management groups help you organize and govern subscriptions and workload deployments. Locate or create a management group that enforces the policies needed for that workload's classification and needs.
+**Identify management group.** Management groups help you organize and govern subscriptions and workload deployments. Locate or create a management group that enforces the policies needed for the classification and need of each workload.
 
 **Build flexible automation.** Your automation should be flexible enough (1) to deploy one workload to multiple subscriptions and (2) adapt to subscription service limits.
 
-*Multi-tenant workloads:* Some workloads need to span several subscriptions. For example, workloads that use a storage account per Azure Active Directory tenant often use dozens of subscriptions.
+*One workload to many subscriptions:* Some workloads need to span several subscriptions. For example, workloads that use a storage account per Azure Active Directory tenant often use dozens of subscriptions.
 
 *Subscription service limits:* An enterprise with several thousand subscriptions should have automation that can deploy to old subscription or co-locate workloads in a subscription to avoid the limits. The ideal use cases for subscription reuse are developer sandboxes, training environments, or software-as-a-service (SaaS) providers using one subscription per customer. MCA customers nearing 5,000 active subscriptions should consider subscription reuse. EA customers, should reuse subscription when nearing 5,000 active and cancelled subscriptions.
 
