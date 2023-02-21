@@ -49,7 +49,7 @@ To implement the subscription vending model, you need to establish an approval p
 
 With the approval process in place, application teams can start submitting subscription requests.
 
-### Make subscription request
+### Make a subscription request
 
 Subscription vending provides a standard process for application teams to request a subscription. It's important that you socialize the availability of subscription vending and ensure subscription requests are easy to make. After the application team submits a subscription request, the platform team assumes control of the process. The platform team maintains control until they create the subscription and deliver the subscription to the application team.
 
