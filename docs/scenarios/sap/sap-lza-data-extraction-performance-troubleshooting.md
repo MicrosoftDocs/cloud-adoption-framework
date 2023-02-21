@@ -95,7 +95,7 @@ Use the Optimize tab to define the partitions. The option that one can use in th
 
 > [!NOTE]
 >- There is a direct relation between the number of partitions with SHIR cores and Azure Integration runtime nodes.
->- SAP CDC connector listed as Odata subscriber type "Odata access for Operational Data Provisioning" under ODQMON in the SAP system,  because it is using  existing subscriber type Odata, instead of creating dedicated subscriber type for ADF/Synapse.
+>- The  SAP CDC connector listed as Odata subscriber type "Odata access for Operational Data Provisioning" under ODQMON in the SAP system.
 
 ### SAP Table Connector
 
