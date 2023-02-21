@@ -31,11 +31,13 @@ Subscription vending offers several benefits to organizations that need to deplo
 
 ## How to implement subscription vending
 
+Subscription vending involves three teams. The Cloud Center of Excellence (CCoE) establishes the business logic and approval process. When ready, the application teams make subscription requests. The platform team uses the request to create and configure the subscription before handing off the subscription to the application team. The application team sets the budget, deploys the workload, and maintains operations. The following guidance provides more details on each step.
+
 :::image type="content" source="./media/subscription-vending-process.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-process.png" border="false":::
 
 ### Establish business logic and approval process
 
-To implement the subscription vending model, you need to establish an approval process that collects essential subscription information. The Cloud Center of Excellence should program the approval process and establish business rules around the information to collect.
+To implement the subscription vending model, you need to establish an approval process that collects essential subscription information. The Cloud Center of Excellence (CCoE) should program the approval process and establish business rules around the information to collect.
 
 **Automate process.** You should automate the process of subscription request capture and approval for faster provisioning and improved compliance.
 
@@ -47,11 +49,11 @@ To implement the subscription vending model, you need to establish an approval p
 
 With the approval process in place, application teams can start submitting subscription requests.
 
-### Receive subscription requests
+### Make subscription request
 
 Subscription vending provides a standard process for application teams to request a subscription. It's important that you socialize the availability of subscription vending and ensure subscription requests are easy to make. After the application team submits a subscription request, the platform team assumes control of the process. The platform team maintains control until they create the subscription and deliver the subscription to the application team.
 
-### Automate networking
+### Configure networking
 
 The subscription automation needs set up the required networking components, and it needs to be flexible enough to meet the needs of each application team. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete address space of a virtual network without downtime if your size requirements change. For more information, see:
 
