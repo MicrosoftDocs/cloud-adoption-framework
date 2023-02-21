@@ -143,23 +143,14 @@ After the platform team creates the subscription, they should hand off the subsc
 
 The the platform and workload teams share responsibility for the financial health of the subscription. The application create budgets to control spending. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs. They're useful for auditing spending against current and forecast usage. Budgets aren't hard limits, so you should create budget alerts to notify the subscription owners if the budget is about to be exceeded. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
 
-### Deploy & operate
+## Next steps
 
 With the subscription in place, the application team can create, deploy, and operate the workload, with the placement and governance set forth by the vending process.
 
-**Management group updates.** As the governance requirements of a workload changes, you should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
+As the governance requirements of a workload changes, you should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
 
 - [Management groups overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
 - [Move subscription to new management group (Bicep)](/azure/templates/microsoft.management/managementgroups/subscriptions)
 - [Move subscription to new management group (Terraform)](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_subscription_association)
 - [Tailor Azure landing zone to meet your requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
-
-## Next steps
-
-Azure Architecture Center
-
-- [Bicep subscription vending implementation](/azure/architecture/landing-zones/bicep/subscription-terraform-bicep)
-
-- [Terraform subscription vending implementation](/azure/architecture/landing-zones/terraform/subscription-vending-terraform)
-
 
