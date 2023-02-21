@@ -78,11 +78,11 @@ The platform team should use the networking and governance requirements to place
 
 **Build flexible automation.** Your automation should be flexible enough (1) to deploy one workload to multiple subscriptions and (2) adapt to subscription service limits.
 
-*One workload to many subscriptions:* Some workloads need to span several subscriptions. For example, multi-tenant architectures that use isolated storage accounts per tenant often use dozens of subscriptions.
+- *One workload to many subscriptions:* Some workloads need to span several subscriptions. For example, multi-tenant architectures that use isolated storage accounts per tenant often use dozens of subscriptions.
 
-*Subscription service limits:* An enterprise with several thousand subscriptions should have automation that can deploy to old subscription or co-locate workloads in a subscription to avoid the limits. The ideal use cases for subscription reuse are developer sandboxes, training environments, or software-as-a-service (SaaS) providers using one subscription per customer. MCA customers nearing 5,000 active subscriptions should consider subscription reuse. EA customers, should reuse subscription when nearing 5,000 active and canceled subscriptions.
+- *Subscription service limits:* An enterprise with several thousand subscriptions should have automation that can deploy to old subscription or co-locate workloads in a subscription to avoid the limits. For more information, see [Azure landing zones FAQ](../../enterprise-scale/faq.md#should-we-create-a-new-azure-subscription-every-time-or-should-we-reuse-azure-subscriptions).
 
-You can request quote increases manually using the Azure portal after provisioning. It's easier if you automate this process by using the available APIs. However, the quota request can fail, so you should run a script to handle any errors. For more information, see [Microsoft.Capacity](/rest/api/reserved-vm-instances/quotaapi), [Microsoft.Quota](/rest/api/quota/), and [Microsoft.Support](/rest/api/support/quota-payload)
+    You can request quote increases manually using the Azure portal after provisioning. It's easier if you automate this process by using the available APIs. However, the quota request can fail, so you should run a script to handle any errors. For more information, see [Microsoft.Capacity](/rest/api/reserved-vm-instances/quotaapi), [Microsoft.Quota](/rest/api/quota/), and [Microsoft.Support](/rest/api/support/quota-payload)
 
 ### Create and configure subscription
 
@@ -111,11 +111,11 @@ Without a commercial agreement, you can still automate a large portion of the su
 
 **Set up identity and role-based access controls (RBACs).** Managing access to resources within an Azure subscription is critical for maintaining a secure and compliant environment. To control access, it's essential to set up identity and RBACs. This setup involves designating a subscription owner, creating Azure AD groups to manage access, and establishing automation accounts to deploy workloads.
 
-*Designate subscription owner.* The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
+- *Designate subscription owner.* The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
 
-*Create Azure AD groups.* In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
+- *Create Azure AD groups.* In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
-*Establish automation accounts.* Automation accounts (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these managed identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources.
+- *Establish automation accounts.* Automation accounts (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these managed identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources.
 
  For more information, see [the identity design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
