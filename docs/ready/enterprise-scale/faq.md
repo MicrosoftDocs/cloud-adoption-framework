@@ -214,3 +214,72 @@ You can now connect application landing zone spokes via Virtual Network Connecti
       - Promoting the Active Directory Domain Controller Virtual Machines to the existing Active Directory Domain
       - Create new Active Directory sites & subnets
       - Configuring DNS Server settings like Conditional Forwarders
+
+## Should we create a new Azure Subscription every time or can we, and should we, re-use Azure Subscriptions?
+
+### What is subscription re-use?
+
+Subscription re-use is the process of re-issuing an existing Subscription to a new owner. There should be a process to reset the Subscription to a known clean state and then re-assigned to a new owner.
+
+### Why should I consider re-using subscriptions?
+
+In general, we recommend that customers adopt the [Subscription Democratization design principal](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization), however there are specific circumstances where this is either not possible or recommended.
+
+> [!TIP]
+> Watch the YouTube video on the Subscription Democratization design principal here: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+
+If you are covered by one of the following circumstances or scenarios, then you should consider subscription re-use:
+
+- If you are an EA customer and plan to create more than 5,000 subscriptions on a single EA Account Owner Account (billing account) (this includes deleted subscriptions)
+- If you are an MCA/MPA customer and plan to have more than 5,000 active subscriptions
+- If you are a PAYG customer
+- If you are using a Microsoft Azure Sponsorship
+- Or you match one of the below scenarios
+
+#### Scenarios
+
+1. Ephemeral Lab/Sandbox Environments
+2. Demo Environments - POCs/MVPs
+    - Can also apply in ISV scenarios for providing customer demo/trial access
+3. Training environments
+    - MSPs/Trainer's learner environments
+
+### How do I re-use subscriptions?
+
+If you match one of the above scenarios or considerations then you might need to consider re-using existing decommissioned or unused subscriptions and re-assigning them to a new owner and purpose.
+
+#### Clean-up
+
+To prepare the Azure Subscriptions for re-use you will need to ensure you perform the following activates upon the subscription before it is ready to be re-used:
+
+- Remove Resource Groups and contained resources
+- Remove Role Assignments, including Privileged Identity Management (PIM) Role Assignments, at the Subscription scope
+- Remove Custom Role-based Access Control (RBAC) Definitions, at the Subscription scope
+- Remove Policy Definitions, Initiatives, Assignments and Exemptions at the Subscription scope
+- Remove deployments at the Subscription scope
+- Remove tags at the Subscription scope
+- Remove any Resource Locks at the Subscription scope
+- Remove any Azure Cost Management Budgets at the Subscription scope
+- Reset Microsoft Defender for Cloud plans to Free Tiers
+  - Unless organizational requirements mandates these are set to the paid tiers (normally enforced via Azure Policy)
+- Remove Subscription Activity Logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations
+  - Unless organizational requirements mandates these are always forwarded whilst a Subscription is active
+- Remove any Azure Lighthouse Delegations at the Subscription scope
+- Remove any hidden resources from the Subscription
+
+>[!TIP]
+> Using `Get-AzResource` or `az resource list -o table` targeted at the Subscription scope will help you find any hidden or remaining resources to remove before re-assigning.
+
+#### Re-assignment
+
+Once the Azure Subscription has been cleaned up from its previous usage, it can now be re-assigned. Below are some common activities that you might want to perform as part of the re-assignment process:
+
+- Add new tags and set values for them on the Subscription
+- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the Subscription scope for the new owners
+  - Typically these assignments would be to Azure Active Directory Groups instead of individuals
+- Place the Subscription into the desired Management Group based on it's governance requirements
+- Create new Azure Cost Management Budgets and set alerts to new owners when thresholds met
+- Set Microsoft Defender for Cloud plans to desired Tiers
+  - Typically this is enforced via Azure Policy once placed into the correct Management Group
+- Configure Subscription Activity Logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations
+  - Typically this is enforced via Azure Policy once placed into the correct Management Group
