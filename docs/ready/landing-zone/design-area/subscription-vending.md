@@ -86,46 +86,36 @@ You can request quote increases manually using the Azure portal after provisioni
 
 You need a commercial agreement to create a subscription programmatically. Without a commercial agreement, you can still automate a large portion of the process. Create subscriptions in the Azure portal, and then apply the automation against the new, empty subscription.
 
-#### Know your commercial agreement
-
- To create a subscription, you need to assume a role with the right permissions. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation:
+**Know your commercial agreement.** To create a subscription, you need to assume a role with the right permissions. The permissions and scope of the role depend on the commercial agreement you have. Determine the type of commercial agreement you have, then use the following links to assume the right permissions for subscription creation:
 
 - [EA required role](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement#prerequisites)
 - [MCA required role(s)](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-customer-agreement#prerequisites)
 - [MPA required role](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-partner-agreement#prerequisites)
 
-#### Use infrastructure as code (IaC)
+**Use infrastructure as code (IaC).** A common strategy for subscription vending is to use IaC. There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
 
-A common strategy for subscription vending is to use IaC. There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
-
-#### Use tags for cost management
-
-You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements, Azure Cost Management provides greater functionality. For example, you can create reports for subscriptions with specific tags. For more information, see:
+**Use tags for cost management.** You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Azure Cost Management. Although you receive billing reports with your commercial agreements, Azure Cost Management provides greater functionality. For example, you can create reports for subscriptions with specific tags. For more information, see:
 
 - [How to use tags in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data)
 - [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
 
-#### Use production and non-production subscriptions
-
-In the request for a new subscription, ou must specify whether the workload is for Production or DevTest. DevTest environments result in lower resource charges but has other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
+**Use production and non-production subscriptions.** In the request for a new subscription, ou must specify whether the workload is for Production or DevTest. DevTest environments result in lower resource charges but has other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
 
 - [Azure billing offers and Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
 - [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
 - [Create Azure subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 
-#### Set up identity and RBAC
+**Set up identity and role-based access controls (RBACs).** Managing access to resources within an Azure subscription is critical for maintaining a secure and compliant environment. To control access, it's essential to set up identity and RBACs. This setup involves designating a subscription owner, creating Azure AD groups to manage access, and establishing automation accounts to deploy workloads.
 
-**Designate subscription owner.** The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
+*Designate subscription owner.* The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
 
-**Create Azure AD groups.** In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
+*Create Azure AD groups.* In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
-**Establish automation accounts.** Automation accounts (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these managed identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources.
+*Establish automation accounts.* Automation accounts (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these managed identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources.
 
  For more information, see [the identity design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
-#### Hand off to application team
-
-After the platform team creates the subscription, they should hand off the subscription to the application team to set their own budgets and deploy & operate their workloads.
+**Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application team to set their own budgets and deploy & operate their workloads.
 
 ### Set budget
 
