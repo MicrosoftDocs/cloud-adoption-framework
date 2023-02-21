@@ -119,7 +119,7 @@ Without a commercial agreement, you can still automate a large portion of the su
 
 **Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application team to set their own budgets and deploy & operate their workloads.
 
-### Set budget
+### Set subscription budget
 
 The platform and workload teams share responsibility for the financial health of the subscription. The application team creates budgets to control spending. Delegate budget creation to the application landing zone team and associated teams to empower them to control their costs. They're useful for auditing spending against current and forecast usage. Budgets aren't hard limits, so you should create budget alerts to notify the subscription owners if the workload is about to exceed the budget. For shared services, such as API Management, consider using [Azure Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
 
