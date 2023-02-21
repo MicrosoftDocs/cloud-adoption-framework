@@ -64,7 +64,7 @@ Azure regions might have a finite number of resources. As a result, available ca
 
   - For virtual machine capacity reservations, see [On-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview).
 
-- Consider reusing unused or decommissioned subscriptions as per the guidance in [Should we create a new Azure Subscription every time or can we, and should we, reuse Azure Subscriptions? - Azure landing zones FAQ](../../enterprise-scale/faq.md#should-we-create-a-new-azure-subscription-every-time-or-can-we-and-should-we-re-use-azure-subscriptions)
+- Consider reusing unused or decommissioned subscriptions as per the guidance in [Should we create a new Azure Subscription every time or can we, and should we, reuse Azure Subscriptions? - Azure landing zones FAQ](../../enterprise-scale/faq.md#should-we-create-a-new-azure-subscription-every-time-or-should-we-reuse-azure-subscriptions).
 
 ### Tenant transfer restriction design considerations
 

@@ -215,7 +215,7 @@ You can now connect application landing zone spokes via Virtual Network Connecti
       - Create new Active Directory sites & subnets
       - Configuring DNS Server settings like Conditional Forwarders
 
-## Should we create a new Azure Subscription every time or can we, and should we, reuse Azure Subscriptions?
+## Should we create a new Azure Subscription every time or should we reuse Azure Subscriptions?
 
 ### What is subscription reuse?
 
