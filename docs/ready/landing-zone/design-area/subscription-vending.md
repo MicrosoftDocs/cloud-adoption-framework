@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Subscription vending
 
-Subscription vending provides a platform mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads. The following diagram shows where subscription vending fits in the platform workload lifecycle.
+Subscription vending provides a platform mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads. The following diagram shows where subscription vending fits in the platform and workload lifecycles.
 
 :::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing four steps. Step 1 is create platform subscriptions. Step 2 is create platform. Step 3 is establish subscription vending. Step 4 is deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, has overlap with both the platform and application landing zone. Step 4 is an application focused step." lightbox="./media/subscription-vending-high-res.png" border="false":::
 
