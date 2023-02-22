@@ -207,6 +207,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
+| Communication Services | `Microsoft.Communication/communicationServices` | `acs` |
 | Maps account | `Microsoft.Maps/accounts` | `map` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 | WebPubSub | `Microsoft.SignalRService/webPubSub` | `wps` |
