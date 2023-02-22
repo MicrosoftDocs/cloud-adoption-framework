@@ -32,7 +32,7 @@ To understand how to architect Azure Virtual Desktop, review the [Azure Virtual 
 
 For guidance on specific elements of the cloud adoption journey, see:
 
-- [Review Azure Virtual Desktop Landing Zone Accelerator design areas](./enterprise-scale-landing-zone.md)
+- [Review Azure Virtual Desktop landing zone accelerator design areas](./enterprise-scale-landing-zone.md)
 - [Complete an Azure Virtual Desktop proof of concept](./proof-of-concept.md)
 - [Assess for Azure Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Azure Virtual Desktop instances](./migrate-deploy.md)

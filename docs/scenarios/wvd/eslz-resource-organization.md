@@ -25,7 +25,7 @@ Consider using tagging strategies to help organize your resources.
 
 ## Design considerations
 
-The following sections list things you should consider when planning your organization's AVD structure.
+The following sections list things you should consider when planning your organization's Azure Virtual Desktop structure.
 
 ### Number of virtual machines
 
@@ -39,7 +39,7 @@ If you instead manage an enterprise environment with over 5,000 VMs per subscrip
 
 When you deploy hosts, which regions should you choose?
 
-We generally recommend that you store all resources in the same Azure Region as your deployment of AVD. The main resources involved are:
+We generally recommend that you store all resources in the same Azure Region as your deployment of Azure Virtual Desktop. The main resources involved are:
 
 - Metadata (Services Objects), such as Host Pools, Application Groups, and Workspaces
 - Session Hosts (Virtual Desktops) compute, such as virtual machines, disks, and network interfaces.
@@ -56,7 +56,7 @@ We generally recommend that you store all resources in the same Azure Region as 
 
 ## Design recommendations
 
-The following sections offer recommendations for labeling and organizing resources in AVD.
+The following sections offer recommendations for labeling and organizing resources in Azure Virtual Desktop.
 
 ### Naming and tagging
 
@@ -77,10 +77,10 @@ Subscriptions serve as a scale unit so component workloads can scale within your
 Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns. The following diagrams show the structure and Resource Groups we recommend you create and use as administrative domains and lifecycle purposes for each Azure Region you deploy.
 
 ```text
-    - Azure Virtual Desktop Service Objects:  Create a Resource Group for AVD Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.  
+    - Azure Virtual Desktop Service Objects:  Create a Resource Group for Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.  
     - Networking:  Generally created as part of the Cloud Adoption Framework Landing zone
     - Storage:  If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts
-    - Session hosts compute: Create a Resource Group for Virtual Machines, Disks and Network Interfaces. These have a different life cycle than the AVD Service Objects. 
+    - Session hosts compute: Create a Resource Group for Virtual Machines, Disks and Network Interfaces. These have a different life cycle than the Azure Virtual Desktop Service Objects. 
     - Shared Resources:  Create a Resource Group for shared resources like custom VM images, this encourages self-service so you could have a subscription for each business line, for instance.
     
     - Basic Structure:
@@ -93,11 +93,11 @@ Subscriptions provide a management boundary for governance and isolation, which 
             - rg-<Azure-Region>-avd-<Workload>-storage
 ```
 
-Below is an example from the recommended structure above for the AVD resources already deployed.
+Below is an example from the recommended structure above for the Azure Virtual Desktop resources already deployed.
 
-:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-1.png" alt-text="Screenshot showing A V D Shared Resources Subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-1.png":::
+:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-1.png":::
 
-:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-2.png" alt-text="Screenshot showing A V D Service Objects and compute Subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-2.png":::
+:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD Service Objects and compute subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-2.png":::
 
 ## Additional guidance and examples 
 

@@ -12,13 +12,13 @@ ms.custom: think-tank, e2e-avd
 
 # Platform automation and DevOps considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop (AVD) is a managed service that provides a Microsoft control plane for your desktop virtualization environment.
+Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your desktop virtualization environment.
 
-This article focuses on the operational tasks you need to run an AVD environment. You can apply each recommendation in this article individually. You don't need to implement every recommendation for automation to be worthwhile.
+This article focuses on the operational tasks you need to run an Azure Virtual Desktop environment. You can apply each recommendation in this article individually. You don't need to implement every recommendation for automation to be worthwhile.
 
 ## Design considerations
 
-Review the following considerations while planning and designing your AVD environment.
+Review the following considerations while planning and designing your Azure Virtual Desktop environment.
 
 ### Integrate with DevOps
 
@@ -60,13 +60,13 @@ There are many automation tools for creating gold images, including the Packer p
 
 Applications can be made available to your users two ways: installed in the image, or delivered dynamically per user.
 
-Applications installed in the image should be universal to your users and a part of your automated image creation process. Image-installed applications can include security products, the Microsoft 365 suite, etc.
+Applications installed in the image should be universal to your users and a part of your automated image creation process. Image-installed applications can include security products and the Microsoft 365 suite.
 
-Applications dynamically delivered per user should include everything else that requires a more flexible approach. Dynamically delivered applications can include applications restricted to a specific group, applications that aren't compatible with other applications, etc.
+Applications dynamically delivered per user should include everything else that requires a more flexible approach. Dynamically delivered applications can include applications that are restricted to a specific group and applications that aren't compatible with other applications.
 
 ### Language deployment
 
-As your Azure Virtual Desktop environments start to scale out, you may need to localize images into the native language for your users. You can start from the local language if you prefer, or you can add more languages to your image on build. Consider this requirement while selecting your base image. The pre-optimized Windows 10 gallery image, for example, both with and without Microsoft 365, is only supplied in United States English (en-US).
+As your Azure Virtual Desktop environments start to scale out, you might need to localize images into the native language for your users. You can start from the local language if you prefer, or you can add more languages to your image on build. Consider this requirement while selecting your base image. The pre-optimized Windows 10 gallery image, for example, both with and without Microsoft 365, is only supplied in United States English (en-US).
 
 > [!NOTE]
 > If you're using Windows 10 Enterprise multi-session, you can't build it using a different language. In this case, you must adapt the provided gallery image. To adapt the existing en-US gallery image, install the additional languages before you install other applications.
@@ -93,7 +93,7 @@ Method two:
 
 ## Design recommendations
 
-Review the following recommendations as you design your organization's AVD environment.
+Review the following recommendations as you design your organization's Azure Virtual Desktop environment.
 
 ### Source code management
 
@@ -164,7 +164,7 @@ Other considerations for Packer file storage:
 The Azure Compute Gallery service is the simplest way to build structure and organization around your gold images. It provides:
 
 - Global replication of images to different Azure regions.
-  - Make sure you've deployed images in the regions AVD session hosts (VMs) deploy to.
+  - Make sure you've deployed images in the regions that Azure Virtual Desktop session hosts (VMs) deploy to.
 - Image versioning and grouping for easier management. Versioning and grouping are helpful for rolling back Azure Virtual Desktop host pools to previous image versions.
 - Highly available images with zone-redundant storage (ZRS) accounts in regions that support Availability Zones. ZRS offers better resilience against zonal failures.
 - Azure Virtual Desktop image sharing across subscriptions, and even between Azure AD tenants, through role-based access control (RBAC).
@@ -212,12 +212,12 @@ When you deploy your session hosts with an [ARM template](https://github.com/Azu
 
 ## Next steps
 
-Learn how to deploy using the Azure Virtual Desktop landing zone accelerator for an enterprise-scale scenario.
+Learn how to deploy Azure Virtual Desktop by using the landing zone accelerator for enterprise-scale scenarios.
 
 > [!div class="nextstepaction"]
-> [1. Review Azure Virtual Desktop Landing Zone Accelerator design areas](./enterprise-scale-landing-zone.md)
+> [1. Azure Virtual Desktop landing zone accelerator design areas](./enterprise-scale-landing-zone.md)
 
 > [!div class="nextstepaction"]
-> [2. Azure Virtual Desktop Landing Zone Accelerator Github repository](https://github.com/Azure/avdaccelerator)
+> [2. Azure Virtual Desktop landing zone accelerator Github repository](https://github.com/Azure/avdaccelerator)
 
 
