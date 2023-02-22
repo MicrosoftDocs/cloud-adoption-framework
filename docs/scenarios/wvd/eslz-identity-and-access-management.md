@@ -44,7 +44,7 @@ Azure Virtual Desktop provides custom Azure roles that are designed for each fun
 
 ## Design recommendations
 
-- Use Azure AD Connect to synchronize all identities to a single Azure AD tenant. For more information, see [What is Azure AD Connect?](/azure/active-directory/hybrid/whatis-azure-ad-connect) .
+- Use Azure AD Connect to synchronize all identities to a single Azure AD tenant. For more information, see [What is Azure AD Connect?](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 - Ensure that Azure Virtual Desktop session hosts can communicate with Azure AD DS or AD DS.
 - Use the Kerberos Key Distribution Center proxy solution to proxy smart-card authentication traffic and to enable remote sign-in. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Segregate session host virtual machines into Active Directory organizational units for each host pool to make it easier to manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
