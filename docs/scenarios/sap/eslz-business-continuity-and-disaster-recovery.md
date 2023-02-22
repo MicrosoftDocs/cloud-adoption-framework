@@ -132,7 +132,7 @@ If you use availability zones in your SAP solution, design all other Azure servi
 
   |Storage type|High-availability configuration support|
   | :------------------------------ | :------------------------------------------- |
-  | Azure shared disks (LRS or ZRS)  | Windows Server Failover Cluster. For configuration details, see [Design SAP HA with WSFC](/azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk) . | |
+  | Azure shared disks (LRS or ZRS)  | Windows Server Failover Cluster. For configuration details, see [Design SAP HA with WSFC](/azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk) . | 
   | NFS on Azure Files (LRS or ZRS) | Pacemaker-based cluster on Linux environments. You should check the [availability of NFS in different regions.](https://azure.microsoft.com/global-infrastructure/services/?products=storage&regions=all). |
   | NFS on Azure NetApp Files       | Pacemaker-based cluster on Linux environments. For more information, see [Azure NetApp Files for SAP virtual machines](/azure/virtual-machines/workloads/sap/hana-vm-operations-netapp).  |
   | SMB on Azure Files (LRS or ZRS) | Windows Server Failover Cluster. For configuration details, see [High availability for SAP NetWeaver on Azure VMs on Windows with Azure Files Premium SMB for SAP applications](/azure/virtual-machines/workloads/sap/high-availability-guide-windows-azure-files-smb).  |
