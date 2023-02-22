@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Enterprise-scale support for Microsoft Azure Virtual Desktop
 
-The Microsoft Azure Virtual Desktop (AVD) landing zone accelerator provides a specific architectural approach and reference implementation for preparing landing zone subscriptions for an enterprise Azure Virtual Desktop (AVD) deployment.
+The Microsoft Azure Virtual Desktop landing zone accelerator provides a specific architectural approach and reference implementation for preparing landing zone subscriptions for an enterprise Azure Virtual Desktop deployment.
 
 Its reference implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a particular focus on the enterprise-scale design principles. Although this implementation can be deployed in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites), it's recommended that you implement an enterprise-scale landing zone first, [enterprise-scale overview](../../ready/enterprise-scale/index.md) and review the [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the enterprise-scale for Azure Virtual Desktop solution.
 
@@ -39,7 +39,7 @@ Learn the guidelines that direct the design of the Cloud Adoption Framework for 
 
 ### Architecture
 
-The following diagram shows a conceptual reference architecture that demonstrates major design areas and design best practices in an AVD environment.
+The following diagram shows a conceptual reference architecture that demonstrates major design areas and design best practices in an Azure Virtual Desktop environment.
 
 [![Diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
 
@@ -54,8 +54,8 @@ Deploy a custom image based on the latest version of the Azure Marketplace image
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-custom-image.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-custom-image.json)
 
-**AVD Accelerator Baseline:**
-Deploy Azure Virtual Desktop (AVD) resources and dependent services for establishing the baseline
+**Azure Virtual Desktop Accelerator Baseline:**
+Deploy Azure Virtual Desktop resources and dependent services for establishing the baseline.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-baseline.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-baseline.json)
 
