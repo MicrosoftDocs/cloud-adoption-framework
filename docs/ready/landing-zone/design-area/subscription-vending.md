@@ -18,16 +18,17 @@ Subscription vending provides a platform mechanism for programmatically issuing 
 
 Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
+- [Platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones)
 - [Democratized approach to subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization)  
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
 
 ## Why subscription vending?
 
-Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for workload landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
+Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for application landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
 
 - **Streamlined process:** Subscription vending provides an official front door for application teams to request subscriptions, eliminating the need for them to navigate the subscription process on their own.
 - **Improved velocity:** Application teams can access application landing zones faster and onboard workloads quicker.
-- **Efficient governance:** The platform team can enforce governance on workload landing zones with minimal overhead.
+- **Efficient governance:** The platform team can enforce governance on application landing zones with minimal overhead.
 
 ## How to implement subscription vending
 
@@ -41,7 +42,7 @@ To implement the subscription vending model, you need to establish an approval p
 
 **Automate process.** You should automate the process of subscription request capture and approval for faster provisioning and improved compliance.
 
-**Integrate with existing tooling.** You should integrate the subscription vending approval process into your existing ITSM tool. The integration can simplify the approval process, reduce manual effort, and improve efficiency while reducing errors. It also makes maintenance and updates easier over time.
+**Integrate with existing tooling.** You should integrate the subscription vending approval process into your existing ITSM tool. The integration can simplify the approval process, reduce manual effort, and improve efficiency while reducing errors. It also makes maintenance and updates easier over time as well as helping with compliance reporting for audits when they occur.
 
 **Connect to deployment pipeline.** It's a best practice to tie the business logic of the approval process into the subscription deployment pipeline managed by the platform team. Azure Pipelines or GitHub Actions workflows are common solutions for the subscription deployment pipeline.
 
@@ -55,7 +56,7 @@ Subscription vending provides a standard process for application teams to reques
 
 ### Configure networking
 
-The subscription automation needs set up the required networking components, and it needs to be flexible enough to meet the needs of each application team. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete address space of a virtual network without downtime if your size requirements change. For more information, see:
+The subscription automation needs to set up the required networking components, and it needs to be flexible enough to meet the needs of each application team. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete address space of a virtual network without downtime if your size requirements change. For more information, see:
 
 - [IP address restrictions](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets)
 - [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
@@ -72,7 +73,9 @@ The subscription automation needs set up the required networking components, and
 
 ### Determine subscription placement
 
-The platform team should use the networking and governance requirements to place the subscription in the management group hierarchy. They should also review the subscription quota limits before creating the subscription.
+The platform team should use the networking and governance requirements to place the subscription in the management group hierarchy. They should also review the subscription quota limits before creating the subscription. For more information, see:
+
+- [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 
 **Identify management group.** Management groups help you organize and govern subscriptions and workload deployments. Locate or create a management group that enforces the policies needed for the classification and need of each workload.
 
