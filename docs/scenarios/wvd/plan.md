@@ -38,7 +38,7 @@ The following items should be included in a business case:
 
 - Azure is a hyperscale cloud that provides services at massive scale. This functionality provides substantial agility to your organization. Microsoft hosts services in an ever-increasing number of Azure regions, enabling the infrastructure or services to be closer to your end users.
 
-- Azure Virtual Desktop provides, at multi-session cost, the rich Windows 10 and Windows 11 experience that users expect. Azure Virtual Desktop enables the scale of Windows Server, provided by Remote Desktop Services, combined with the user experience of Windows 10 and Windows 11, without compromising of application compatibility. Windows 10 and Windows 11 Enterprise multi-session runs only on Azure Virtual Desktop.
+- Azure Virtual Desktop provides, at multi-session cost, the rich Windows 10 and Windows 11 experience that users expect. Azure Virtual Desktop enables the scale of Windows Server, provided by Remote Desktop Services, combined with the user experience of Windows 10 and Windows 11, without compromising application compatibility. Windows 10 and Windows 11 Enterprise multi-session runs only on Azure Virtual Desktop.
 
 - There's no requirement for Client Access Licenses (CALs) with Windows 10 and Windows 11 Enterprise multi-session.
 

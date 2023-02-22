@@ -68,7 +68,7 @@ For host pool VM resiliency, consider these factors:
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
 
-Before you approach BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with different disaster recovery approaches and capabilities.
+Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so that you can provision multiple host pools with different disaster recovery approaches and capabilities.
 
 ### Optimal storage for profile and Office containers
 
@@ -183,7 +183,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
 
 - Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or on-premises.
   - Network infrastructure, as part of a hub-and-spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
-  - Hybrid connectivity must be highly available in both the primary and secondary regions.
+  - Hybrid connectivity must be highly available in the primary and secondary regions.
   - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
 
 - Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
