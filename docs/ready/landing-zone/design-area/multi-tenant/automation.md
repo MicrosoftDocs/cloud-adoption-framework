@@ -23,7 +23,7 @@ The following sections provide diagrams and guidance about the approaches that y
 >
 > - [Overview for multiple Azure Active Directory tenants](overview.md)
 > - [Scenarios for multiple Azure Active Directory tenants](scenarios.md)
-> - [Considerations & Recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md)
+> - [Considerations & recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md)
 
 ## Approaches
 
@@ -31,7 +31,7 @@ There are two approaches to automate the deployment of Azure landing zones acros
 
 [Approach 1 – Complete isolation](#approach-1--complete-isolation) is the most common approach in multi-tenant scenarios. This approach keeps the required separation and isolation between Azure Active Directory tenants, which is the most common requirement when using a multi-tenant approach.
 
-[Approach 2 – Shared application registration (multi-tenant) with multiple service principals](#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals) is more commonly used in Managed Service Provider (MSP) scenarios. In this approach, a [Deployment Stamps pattern](/azure/architecture/patterns/deployment-stamp) can be used to automate the deployment of an almost identical architecture across multiple tenants at scale.
+[Approach 2 – Shared application registration (multi-tenant) with multiple service principals](#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals) is more commonly used in Managed Service Provider (MSP) scenarios. In this approach, a [deployment stamps pattern](/azure/architecture/patterns/deployment-stamp) can be used to automate the deployment of an almost identical architecture across multiple tenants at scale.
 
 Both of these approaches are provided as examples and inspiration. You can mix and match the approaches in your deployments based on your organization's requirements.
 
@@ -46,7 +46,7 @@ In this approach, the primary objective is to keep each Azure Active Directory t
 - GitHub Actions or Azure Pipelines (including self-hosted runners, if being utilized).
 - Identities used for performing tasks from automation, like managed identities assigned to self-hosted runners, service principal names (SPNs), users, or administrators.
 
-:::image type="content" source="media/automation-approach-1.png" alt-text="Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using the complete isolation automation approach" lightbox="media/automation-approach-1.png":::
+:::image type="content" source="media/automation-approach-1.png" alt-text="Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using the complete isolation automation approach." lightbox="media/automation-approach-1.png":::
 
 In this approach, there are more components to manage that are duplicated per an Azure Active Directory tenant, but this might be a requirement for some organizations that have regulatory compliance controls enforced on them that mandates this type of segregation and isolation.
 

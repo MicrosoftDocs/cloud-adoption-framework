@@ -1,6 +1,6 @@
 ---
-title: Azure landing zones Canary approach with multiple tenants
-description: Review the canary considerations and recommendations when handling multiple Azure Active Directory tenants alongside Azure landing zones
+title: Azure landing zones canary approach with multiple tenants
+description: Learn about the considerations and recommendations for the canary approach to use when handling multiple Azure Active Directory tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -10,19 +10,19 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Azure landing zones Canary approach with multiple tenants
+# Azure landing zones canary approach with multiple tenants
 
-Handling Azure landing zones Canary environments when you have multiple Azure Active Directory tenants isn't any different to handling them within a single Azure Active Directory tenant. So if you're a multi-tenant ALZ consumer, then you should follow the [canary guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) in each Azure Active Directory tenant separately as it's documented and described.
+Handling Azure landing zones canary environments when you have multiple Azure Active Directory tenants isn't any different to handling them within a single Azure Active Directory tenant. If you're a multi-tenant ALZ consumer, follow the [canary guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) in each Azure Active Directory tenant separately.
 
-## Deployment Stamps Approach
+## Deployment stamps approach
 
-However, if you're a customer that is following a [Deployment Stamps pattern](/azure/architecture/patterns/deployment-stamp) for each of your Azure Active Directory tenants ALZ deployments (for example, each of the ALZ deployments are the same in structure, apart from a few naming changes) you might decide that you only need to have a single canary deployment as all of your ALZ deployments are the same.
+If you're a customer that's following a [deployment stamps pattern](/azure/architecture/patterns/deployment-stamp) for each of your Azure Active Directory tenants ALZ deployments (for example, each of the ALZ deployments is the same in structure, apart from a few naming changes), you might only need to have a single canary deployment because all your ALZ deployments are the same.
 
 >[!NOTE]
-> This would more commonly be seen in a Managed Service Provider (MSP) environment where the MSP is managing several Azure Active Directory tenants for different clients that are all similar apart from their naming.
+> This approach is common in a Managed Service Provider (MSP) environment where the MSP is managing several Azure Active Directory tenants for different clients that are all similar, except for their naming.
 
 >[!TIP]
-> Customers following Deployment Stamp style pattern might also benefit from following the [Automation Approach 2 – Shared Application Registration (multi-tenant) with Multiple Service Principals](automation.md#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals)
+> Customers that follow the deployment stamp style pattern might also benefit from following the [Automation approach 2 – Shared application registration (multi-tenant) with multiple service principals](automation.md#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals).
 
 ## Next steps
 
