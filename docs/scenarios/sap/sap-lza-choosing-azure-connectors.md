@@ -68,7 +68,6 @@ The following image shows the broader choices available depending on which SAP a
 | SAP BW  | [SAP Table](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP BW OpenHub](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-business-warehouse-open-hub), [SAP BW via MDX](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-business-warehouse?tabs=data-factory) | [SAP CDC](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-change-data-capture)                                    |
 | SAP ECC, SAP S/4 HANA  | [SAP Table](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP ECC](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-ecc?tabs=data-factory)   | [SAP CDC](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-change-data-capture)                                   |
 
-![Diagram showing an overview of all different connectors.](./media/sap-connectors-overview.png)
 
 The following table shows a summary of all SAP connectors available in Azure Data Factory and Azure Synapse Analytics for different SAP sources and scenarios along with the connector’s capabilities.
 <[!Tip!]
