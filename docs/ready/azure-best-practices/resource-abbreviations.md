@@ -91,6 +91,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
 | Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
+| Communication Services | `Microsoft.Communication/communicationServices` | `acs` |
 | Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
 | Function app | `Microsoft.Web/sites` | `func` |
 | Gallery | `Microsoft.Compute/galleries` | `gal` |
@@ -207,7 +208,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
-| Communication Services | `Microsoft.Communication/communicationServices` | `acs` |
 | Maps account | `Microsoft.Maps/accounts` | `map` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 | WebPubSub | `Microsoft.SignalRService/webPubSub` | `wps` |
