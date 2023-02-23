@@ -110,7 +110,7 @@ A common challenge to this approach is that you might need some policies to appl
 
 #### Example of an optimal management group hierarchy aligned to Azure landing zone architecture
 
-[![Diagram of an example of a of a optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones](./media/eslz-dev-test-prod-good.png)](./media/eslz-dev-test-prod-good.png#lightbox)
+[![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/eslz-dev-test-prod-good.png)](./media/eslz-dev-test-prod-good.png#lightbox)
 
 *Some management groups have been removed for illustration clarity purposes.*
 
@@ -160,9 +160,7 @@ You might want to expand into or use more Azure regions once you've completed th
 
 ### High-level approach
 
-The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure landing zone for Networking & Identity:
-
-1. Decide on new Azure Region to expand into
+The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure landing zone for Networking & Identity. First, decide on new Azure Region to expand into.
 
 #### Networking
 
@@ -219,16 +217,16 @@ You can now connect application landing zone spokes via Virtual Network Connecti
 
 ### What is subscription reuse?
 
-Subscription reuse is the process of reissuing an existing Subscription to a new owner. There should be a process to reset the Subscription to a known clean state and then reassigned to a new owner.
+Subscription reuse is the process of reissuing an existing subscription to a new owner. There should be a process to reset the subscription to a known clean state and then reassigned to a new owner.
 
 ### Why should I consider reusing subscriptions?
 
 In general, we recommend that customers adopt the [Subscription Democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization). However, there are specific circumstances where subscription reuse isn't  possible or recommended.
 
 > [!TIP]
-> Watch the YouTube video on the Subscription Democratization design principal here: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+> Watch the YouTube video on the Subscription Democratization design principle here: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
 
-You should consider subscription reuse if meet one of the following circumstances:
+You should consider subscription reuse if you meet one of the following circumstances:
 
 - You have an Enterprise Agreement (EA) and plan to create more than 5,000 subscriptions on a single EA Account Owner Account (billing account), including deleted subscriptions.
 - You have a Microsoft Customer Agreement (MCA) or Microsoft Partner Agreement MPA and plan to have more than 5,000 active subscriptions
@@ -250,7 +248,7 @@ You first need to clean up the old subscription for reuse. You need to perform t
 - Remove Resource Groups and contained resources.
 - Remove Role Assignments, including Privileged Identity Management (PIM) Role Assignments, at the subscription scope.
 - Remove Custom Role-based Access Control (RBAC) Definitions, at the subscription scope.
-- Remove Policy Definitions, Initiatives, Assignments and Exemptions at the Subscription scope.
+- Remove Policy Definitions, Initiatives, Assignments and Exemptions at the subscription scope.
 - Remove deployments at the subscription scope.
 - Remove tags at the subscription scope.
 - Remove any Resource Locks at the subscription scope.
@@ -267,9 +265,9 @@ You first need to clean up the old subscription for reuse. You need to perform t
 
 You can reassign the subscription after you clean up the subscription. Here are some common activities that you might want to perform as part of the reassignment process:
 
-- Add new tags and set values for them on the Subscription.
-- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the Subscription scope for the new owners. Typically these assignments would be to Azure Active Directory Groups instead of individuals.
-- Place the Subscription into the desired Management Group based on its governance requirements.
+- Add new tags and set values for them on the subscription.
+- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the subscription scope for the new owners. Typically these assignments would be to Azure Active Directory Groups instead of individuals.
+- Place the subscription into the desired Management Group based on its governance requirements.
 - Create new Azure Cost Management Budgets and set alerts to new owners when thresholds met.
 - Set Microsoft Defender for Cloud plans to desired Tiers. You should enforce this setting via Azure Policy once placed into the correct Management Group.
-- Configure Subscription Activity Logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations. You should enforce this setting via Azure Policy once placed into the correct Management Group.
+- Configure subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations. You should enforce this setting via Azure Policy once placed into the correct Management Group.
