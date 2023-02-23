@@ -116,7 +116,7 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz
 
 - *Create Azure AD groups.* In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
-- *Establish service principals.* Service principals (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources. We recommend you use managed identities to avoid the need to manage secrets.
+- *Establish workload identities.* Workload identities (service principles) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather workload identity needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the workload identity can't use PIM and receives standing access to resources. We recommend you use managed identities to avoid the need to manage secrets.
 
  For more information, see [the identity design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
