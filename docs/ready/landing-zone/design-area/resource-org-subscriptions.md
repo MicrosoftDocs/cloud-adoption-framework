@@ -42,10 +42,10 @@ The following sections contain considerations to help you plan and create subscr
 - Subscriptions provide a management boundary for governance and isolation that clearly separates concerns.
 
 - Create separate platform subscriptions for management (monitoring), connectivity, and identity when they're required.
-    - Establish a dedicated management subscription in your platform management group to support global management capabilities like Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
-      - Establish a dedicated identity subscription in your platform management group to host Windows Server Active Directory domain controllers when needed.
-      - Establish a dedicated connectivity subscription in your platform management group to host an Azure Virtual WAN hub, private Domain Name System (DNS), ExpressRoute circuit, and other networking resources. A dedicated subscription ensures that all your foundation network resources are billed together and isolated from other workloads.
-      - Use subscriptions as a democratized unit of management aligned with your business needs and priorities.
+  - Establish a dedicated management subscription in your platform management group to support global management capabilities like Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
+    - Establish a dedicated identity subscription in your platform management group to host Windows Server Active Directory domain controllers when needed.
+    - Establish a dedicated connectivity subscription in your platform management group to host an Azure Virtual WAN hub, private Domain Name System (DNS), ExpressRoute circuit, and other networking resources. A dedicated subscription ensures that all your foundation network resources are billed together and isolated from other workloads.
+    - Use subscriptions as a democratized unit of management aligned with your business needs and priorities.
 
 - Use manual processes to limit Azure AD tenants to only Enterprise Agreement enrollment subscriptions. Using a manual process prevents the creation of Microsoft Developer Network subscriptions at the root management group scope.
   - For support, submit an [Azure Support ticket](https://azure.microsoft.com/support/create-ticket/).
@@ -63,6 +63,8 @@ Azure regions might have a finite number of resources. As a result, available ca
 - Consider that subscription quotas aren't capacity guarantees and are applied on a per-region basis.
 
   - For virtual machine capacity reservations, see [On-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview).
+
+- Consider reusing unused or decommissioned subscriptions as per the guidance in [Should we create a new Azure Subscription every time or can we, and should we, reuse Azure Subscriptions? - Azure landing zones FAQ](../../enterprise-scale/faq.md#should-we-create-a-new-azure-subscription-every-time-or-should-we-reuse-azure-subscriptions).
 
 ### Tenant transfer restriction design considerations
 
@@ -157,6 +159,10 @@ The following sections contain recommendations to help you plan and create subsc
 - Raise support requests for quota increases under subscription provisioning, such as for total available VM cores within a subscription. Ensure that your quota limits are set before your workloads exceed the default limits.
 
 - Ensure that any required services and features are available within your chosen deployment regions.
+
+### Automation recommendations
+
+- Build a Subscription vending process to automate the creation of Subscriptions for application teams via a request workflow as described in [Subscription vending](subscription-vending.md).
 
 ### Tenant transfer restriction recommendations
 
