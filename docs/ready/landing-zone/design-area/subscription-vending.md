@@ -14,7 +14,9 @@ ms.custom: internal
 
 Subscription vending provides a platform mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads. The following diagram shows where subscription vending fits in the platform and workload lifecycles.
 
-:::image type="content" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing four steps. Step 1 is to create the platform subscriptions. Step 2 is to create the platform. Step 3 is to establish subscription vending. Step 4 is to deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, overlaps with both the platform and application landing zone. Step 4 is an application focused step." lightbox="./media/subscription-vending-high-res.png" border="false":::
+:::image type="complex" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing four steps." lightbox="./media/subscription-vending-high-res.png" border="false":::
+Step 1 is to create the platform subscriptions. Step 2 is to create the platform. Step 3 is to establish subscription vending. Step 4 is to deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, overlaps with both the platform and application landing zone. Step 4 is an application focused step.
+:::image-end:::
 
 Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
@@ -130,7 +132,7 @@ The platform and workload teams share responsibility for the financial health of
 
 With the subscription in place, the application team can deploy and operate the workload with the governance set forth by the vending process.
 
-As the governance requirements of a workload changes, you should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
+As the governance requirements of a workload change, you should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
 
 - [Management groups overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
 - [Move subscription to new management group (Bicep)](/azure/templates/microsoft.management/managementgroups/subscriptions)
