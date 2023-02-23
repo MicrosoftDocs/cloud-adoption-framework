@@ -13,7 +13,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Abbreviation examples for Azure resources
 
-This page gives you abbreviation examples for many of the resources in Azure. Below you'll find *abbreviations* mapped to *resource* and *resource provider namespace*.
+This page gives you abbreviation examples for many of the resources in Azure. The following table has *abbreviations* mapped to *resource* and *resource provider namespace*.
 
 **Azure Naming Tool:** You can use the Azure Naming Tool to standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
 
