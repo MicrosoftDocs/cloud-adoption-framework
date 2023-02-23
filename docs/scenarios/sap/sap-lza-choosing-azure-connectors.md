@@ -85,15 +85,15 @@ It is possible that there is more than one connector available for a certain sce
 
 ### SAP ECC, S/4 HANA, SAP Application Integration
     "I want to extract data from SAP ECC, S/4 HANA or other SAP Applications"
-    &rarr;
+    <span>&#10230;</span>
     | ADF conector Options     | SAP CDC     | SAP Table   | SAP ECC     |
-    | -----------              | ----------- | ----------- | ----------- |
+    
 
 ### SAP BW Integration
     "I want to extract data from SAP BW, B/4 HANA "
-    &rarr;
+    <span>&#10230;</span>
     | ADF conector Options | SAP Table     | SAP BW Open Hub   | SAP BW via MDX    |
-    | -----------          | -----------   | -----------       | ----------- |
+   
      
     
 ![Diagram showing an  SAP ECC & S/4 HANA connectors.](./media/sap-eccs4hana-connectors.png)
