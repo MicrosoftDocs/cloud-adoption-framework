@@ -85,7 +85,7 @@ The following scope and role settings will create the required visibility into c
   - **Shared services.** When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub and spoke model. In this scenario, the CCoE likely has Contributor or Owner access to that subscription, making additional scope assignment for Cost Management Contributor unnecessary.
   - **CCoE automation/controls.** The CCoE commonly provides controls and automated deployment scripts to cloud adoption teams. The CCoE has a responsibility to understand how these accelerators affect costs. To gain that visibility, the team needs Cost Management Contributor access to any resource groups or subscriptions running those accelerators.
 
-- **Cloud operations team.** Responsibility for managing ongoing costs of production environments requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access to the Landing Zone and Platform root management groups.
+- **Cloud operations team.** Responsibility for managing ongoing costs of production environments requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access to the Landing Zone and Platform management group nodes.
 
   - The general recommendation puts production and nonproduction assets in separate subscriptions that are governed by nodes of the management group hierarchy associated with production environments. In a well-managed environment, members of the operations team likely have Owner or Contributor access to production subscriptions already, making the Cost Management Contributor role unnecessary.
 
