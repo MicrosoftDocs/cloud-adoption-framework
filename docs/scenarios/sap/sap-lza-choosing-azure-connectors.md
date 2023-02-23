@@ -88,12 +88,12 @@ The following table shows a summary of all SAP connectors available in Azure Dat
 
 It is possible that there is more than one connector available for a certain scenario and the choice will depend on which connector offers you the best possible integration capabilities. However, a good starting point is to consider using the connector that integrates with a higher layer (for example, SAP application instead of the database). The following tables show you the suggested decision direction from left to right. 
 
-#### SAP ECC, S/4 HANA, SAP Application Integration
+ ** SAP ECC, S/4 HANA, SAP Application Integration **
     "I want to extract data from SAP ECC, S/4 HANA or other SAP Applications"
     ![Diagram showing an  SAP ECC & S/4 HANA connectors.](./media/sap-s4hana-connector-decision.png)
     
 
-#### SAP BW Integration
+ ** SAP BW Integration **
     "I want to extract data from SAP BW, B/4 HANA "
     ![Diagram showing an  SAP BW & BW/4 HANA connectors.](./media/sap-bw4-hana-decision.png)
     
