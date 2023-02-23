@@ -86,24 +86,17 @@ The following table shows a summary of all SAP connectors available in Azure Dat
 | SAP HANA | Raw data or logical objects| SAP HANA | HANA database row and column tables, information models (analytic and calculation views) and custom query all support full load. You can also extract changes with manual watermarking using timestamp or unique ID column | ODBC calls to HANA database|  Basic, Windows (SSO) | Prerequisites | Yes,  Fast with built-in parallel loading based on configurable partitioning | Large |
 | SAP Cloud for Customer (SaaS CRM) | Raw data or logical objects | SAP C4C | This is a bi-directional connector; it can copy data from and to SAP C4C | Objects that can be exposed by OData services from SAP C4C are supported | HTTP (OData) calls to SaaS service | Basic | Slower | Small |
 
-It is possible that there is more than one connector available for a certain scenario and the choice will depend on which connector offers you the best possible integration capabilities. However, a good starting point is to consider using the connector that integrates with a higher layer (for example, SAP application instead of the database). The following tables show you the suggested decision direction.
+It is possible that there is more than one connector available for a certain scenario and the choice will depend on which connector offers you the best possible integration capabilities. However, a good starting point is to consider using the connector that integrates with a higher layer (for example, SAP application instead of the database). The following tables show you the suggested decision direction from left to right. 
 
-### SAP ECC, S/4 HANA, SAP Application Integration
+#### SAP ECC, S/4 HANA, SAP Application Integration
     "I want to extract data from SAP ECC, S/4 HANA or other SAP Applications"
-    <span>&#10230;</span>
-    | ADF conector Options     | SAP CDC     | SAP Table   | SAP ECC     |
+    ![Diagram showing an  SAP ECC & S/4 HANA connectors.](./media/sap-s4hana-connector-decision.png)
     
 
-### SAP BW Integration
+#### SAP BW Integration
     "I want to extract data from SAP BW, B/4 HANA "
-    <span>&#10230;</span>
-    | ADF conector Options | SAP Table     | SAP BW Open Hub   | SAP BW via MDX    |
-   
-     
+    ![Diagram showing an  SAP BW & BW/4 HANA connectors.](./media/sap-bw4-hana-decision.png)
     
-![Diagram showing an  SAP ECC & S/4 HANA connectors.](./media/sap-eccs4hana-connectors.png)
-
-![Diagram showing an  SAP BW & BW/4 HANA connectors.](./media/sap-bwbw4hana-connectors.png)
 
 ## Next step: Learn about Performance and Troubleshooting
 
