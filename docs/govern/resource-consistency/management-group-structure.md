@@ -14,7 +14,7 @@ ms.custom: internal
 
 Management groups are a key construct for managing resource consistency. Management groups are logical containers for subscriptions that are arranged hierarchically. You can apply policies and manage access at the management group level and all child management groups and subscriptions inherit the policies and role assignments.
 
-:::image type="complex" source="../../ready/landing-zone/design-area/media/sub-org.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
+:::image type="complex" source="../../ready/landing-zone/design-area/media/sub-organization.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
 Diagram of a root management group holding both management groups and subscriptions. Some child management groups hold management groups, some hold subscriptions, and some hold both.
 :::image-end:::
 
