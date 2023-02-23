@@ -68,7 +68,7 @@ The following decisions have been made and included in the implementation for th
 > [!NOTE]
 > The management group hierarchy can be modified in the Azure landing zone bicep module by editing [managementGroups.bicep](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/managementGroups/managementGroups.bicep).
 
-![Diagram that shows the Azure landing zone accelerator management group structure.](./media/sub-org.png)
+![Diagram that shows the Azure landing zone accelerator management group structure.](./media/sub-organization.png)
 
 | Management group| Description |
 |---|---|
