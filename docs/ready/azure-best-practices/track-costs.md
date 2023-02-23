@@ -37,7 +37,7 @@ There are several approaches to organizing assets. Microsoft's enterprise-scale 
 
 The following model for management groups, subscriptions, and resource groups will create a hierarchy that allows each team to have the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Blueprints or Azure Policy to the subscriptions within this structure to quickly block future cost errors.
 
-![Diagram that shows the Azure landing zone accelerator management group structure.](../landing-zone/media/sub-org.png)
+![Diagram that shows the Azure landing zone accelerator management group structure.](../landing-zone/media/sub-organization.png)
 *Figure 2: Resource organization for a large enterprise.*
 
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. But the following articles can help you apply the approach to a resource organization that best fits your company:
