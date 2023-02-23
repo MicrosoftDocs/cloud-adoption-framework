@@ -20,9 +20,7 @@ This section shows how to use [Kubecost](https://www.kubecost.com/) to govern Az
 
 There are several Kubecost installation options. For more information, see [Installing Kubecost](https://docs.kubecost.com/install).
 
-> [!NOTE] Starting with Kubernetes version 1.25 the Pod Security Policies are not supported anymore. This broke the simple installation based on Kubernetes manifests as described in [Kubecost Issue 1773](https://github.com/kubecost/cost-analyzer-helm-chart/issues/1773). Please use the Helm 3 installation.
-
-To install a basic configuration of Kubecost by using Helm 3, use the following commands:
+The recommended installation method is the Helm 3 chart. To install a basic configuration of Kubecost by using Helm 3, use the following commands:
 
 ```bash
 helm repo add kubecost https://kubecost.github.io/cost-analyzer/
