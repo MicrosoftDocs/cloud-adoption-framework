@@ -79,9 +79,9 @@ The platform team should use the networking and governance requirements to place
 
 **Identify the right management group.** Management groups help you organize and govern subscriptions and workload deployments. Locate or create a management group that enforces the policies needed for the classification and need of each workload.
 
-**Build flexible automation.** Your automation should be flexible enough (1) to deploy one workload to multiple subscriptions and (2) adapt to subscription service limits.
+**Build flexible automation.** Your automation should be flexible enough (1) to deploy multiple subscriptions and (2) adapt to subscription service limits.
 
-- *One workload to many subscriptions:* Some workloads need to span several subscriptions. For example, multi-tenant architectures that use isolated storage accounts per tenant often use dozens of subscriptions.
+- *Multiple subscriptions:* Some workloads need several subscriptions. For example, some workloads have several instances separated by subscription. Alternatively, SaaS architectures that use dedicated resources per customer often use dozens of subscriptions.
 
 - *Subscription service limits:* An enterprise with several thousand subscriptions should have automation that can deploy to an old subscription or co-locate workloads in a subscription to avoid the limits. For more information, see [Azure landing zones FAQ](../../enterprise-scale/faq.md#should-we-create-a-new-azure-subscription-every-time-or-should-we-reuse-azure-subscriptions).
 
@@ -116,7 +116,7 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz
 
 - *Create Azure AD groups.* In addition to the subscription owner, you should ensure the vending process uses your Azure AD group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
-- *Establish automation accounts.* Automation accounts (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these managed identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources.
+- *Establish service principals.* Service principals (non-human identities) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather automation account needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the accounts can't use PIM and receive standing access to resources. We recommend you use managed identities to avoid the need to manage secrets.
 
  For more information, see [the identity design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
