@@ -44,7 +44,7 @@ The following diagram shows a conceptual reference architecture demonstrating ma
 
 [![Diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
 
-_For more information on the design areas labeled A-J in the visual, see [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas)._
+_For more information on the design areas labeled A-J in the visual, see the Azure Landing Zone [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas). For information about the design areas for Azure Virtual Desktop, see [Network topology and connectivity for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-network-topology-and-connectivity)_
 
 ## Deploy Azure Virtual Desktop with the landing zone accelerator
 
