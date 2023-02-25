@@ -1,6 +1,6 @@
 ---
 title: Scenarios for multiple Azure Active Directory tenants
-description: Understand the scenarios when Multiple Azure Active Directory tenants could be required in relation to Azure landing zones
+description: Learn about the scenarios when multiple Azure Active Directory tenants and when they're required in Azure landing zones.
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
