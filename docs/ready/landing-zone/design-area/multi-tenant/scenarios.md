@@ -12,106 +12,106 @@ ms.custom: think-tank
 
 # Scenarios for multiple Azure Active Directory tenants
 
-There are a few reasons that an organization might justify multiple Azure Active Directory tenants or investigate whether they need multiple Azure Active Directory tenants. The most common scenarios are:
+There are a few reasons why an organization might need, or might want to investigate, multiple Azure Active Directory tenants. The most common scenarios are:
 
-- [Mergers and Acquisitions](#mergers-and-acquisitions)
-- [Regulatory or Country Compliance Requirements](#regulatory-or-country-compliance-requirements)
-- [Business Unit or Organizational Isolation and Autonomy Requirements](#business-unit-or-organizational-isolation-and-autonomy-requirements)
-- [Independent Software Vendor (ISV) Delivering SaaS Applications from Azure](#independent-software-vendor-isv-delivering-saas-applications-from-azure)
-- [Tenant Level Testing / Microsoft 365 Testing](#tenant-level-testing--microsoft-365-testing)
-- [Grass Roots / Shadow IT / Start-ups](#grass-roots--shadow-it--start-ups)
+- [Mergers and acquisitions](#mergers-and-acquisitions)
+- [Regulatory or country compliance requirements](#regulatory-or-country-compliance-requirements)
+- [Business unit or organizational isolation and autonomy requirements](#business-unit-or-organizational-isolation-and-autonomy-requirements)
+- [Independent software vendor (ISV) delivering SaaS applications from Azure](#independent-software-vendor-isv-delivering-saas-applications-from-azure)
+- [Tenant level testing / Microsoft 365 testing](#tenant-level-testing--microsoft-365-testing)
+- [Grassroots / Shadow IT / start-ups](#grassroots--shadow-it--start-ups)
 
-## Mergers and Acquisitions
+## Mergers and acquisitions
 
-As organizations grow over time, it's common that they might acquire other companies or organizations as they expand. These acquisitions are highly likely to have existing Azure Active Directory tenants already established hosting and providing services to the company or organization like, Microsoft 365 (Exchange Online, SharePoint, OneDrive, Teams, etc.), Dynamics 365 and Microsoft Azure.
+As organizations grow over time, they might acquire other companies or organizations. These acquisitions are likely to have existing Azure Active Directory tenants already established that host and provide services, such as Microsoft 365 (Exchange Online, SharePoint, OneDrive, or Teams), Dynamics 365, and Microsoft Azure, to the company or organization.
 
-Usually as part of the acquisition there is a project to consolidate the two Azure Active Directory tenants into a single Azure Active Directory tenant to reduce the management overhead and also improve the collaboration experiences as well as presenting a single brand identity to other companies and organizations.
+Typically, in an acquisition, the two Azure Active Directory tenants are consolidated into a single Azure Active Directory tenant. This consolidation reduces the management overhead, improves the collaboration experience, and presents a single brand identity to other companies and organizations.
 
 >[!IMPORTANT]
-> A custom domain name (for example, `contoso.com`) can only be associated to one Azure Active Directory tenant at a time. Hence a common goal to consolidate tenants so that a single custom domain name can be used by all identities when a merger or acquisition scenario has occurred.
+> A custom domain name (for example, `contoso.com`) can only be associated with one Azure Active Directory tenant at a time. So, consolidating tenants is preferred because a single custom domain name can be used by all identities when a merger or acquisition scenario occurs.
 
-However, due to the complexities of such a consolidation of two Azure Active Directory tenants into one, sometimes the tenants are left alone and remain separate for an extended or indefinite period of time.
+Because of the complexities of consolidating two Azure Active Directory tenants into one, sometimes the tenants are left alone and remain separate for an extended or indefinite period of time.
 
-This scenario can also occur when the organizations or companies wish to remain separate as individual entities so that they might be acquired again in the future by other organizations. Therefore, by keeping the Azure Active Directory tenants isolated and not performing a consolidation of them, there's less work to perform in the event of a future merger or acquisition of a single entity.
+This scenario can also occur when the organizations or companies want to remain separate because other organizations might acquire their company in the future. If an organization keeps the Azure Active Directory tenants isolated and they don't consolidate them, there's less work if there's a future merger or acquisition of a single entity.
 
-## Regulatory or Country Compliance Requirements
+## Regulatory or country/region compliance requirements
 
-Some organizations are in scope of strict regulatory or country compliance controls and frameworks (for example UK Official, Sarbanes Oxley (SOX) or NIST) that leads to organizations creating multiple Azure Active Directory tenants to meet and comply with these frameworks.
+Some organizations have strict regulatory or country/region compliance controls and frameworks (for example, UK Official, Sarbanes Oxley (SOX), or NIST). Organizations might create multiple Azure Active Directory tenants to meet and comply with these frameworks.
 
-Another similar scenario is when an organization has offices and users around the globe, some of which fall into stricter data residency regulations. Although this particular requirement is usually addressed within a single Azure Active Directory tenant utilizing features such as [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo).
+Some organizations that have offices and users around the globe with stricter data residency regulations might also create multiple Azure Active Directory tenants. But this particular requirement is usually addressed within a single Azure Active Directory tenant using features, such as [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo).
 
-Furthermore, an additional scenario for this is when organizations require the use of [Azure Government (US Government)](/azure/azure-government/documentation-government-welcome) or [Azure China (operated by 21Vianet)](/azure/china/overview-operations). These national Azure cloud instances require their own Azure Active Directory tenants. These Azure Active Directory tenants are solely for that national Azure cloud instances and are used for the Azure Subscriptions identity and access management services within that Azure cloud instance.
+Another scenario is when organizations require [Azure Government (US Government)](/azure/azure-government/documentation-government-welcome) or [Azure China (operated by 21Vianet)](/azure/china/overview-operations). These national Azure cloud instances require their own Azure Active Directory tenants. The Azure Active Directory tenants are solely for that national Azure cloud instance and are used for the Azure subscriptions identity and access management services within that Azure cloud instance.
 
 >[!TIP]
-> More information on Azure national cloud’s identity scenarios can be found below:
+> For more information about Azure national cloud’s identity scenarios, see:
 >
 > - [Azure Government Identity](/azure/azure-government/documentation-government-plan-identity#identity-scenarios-for-subscription-administration-in-azure-government)
 > - [Azure China Cross-border connectivity and interoperability](/azure/china/overview-connectivity-and-interoperability)
 > - [Azure Active Directory authentication & national clouds](/azure/active-directory/develop/authentication-national-cloud)
 
-However, for the above scenarios it's not to say that if your organization has a regulatory or country compliance framework to comply with that you require multiple Azure Active Directory tenants as the default approach. Most organizations in this scenario can comply with the frameworks within a single Azure Active Directory tenant by utilizing features such as [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Administrative Units](/azure/active-directory/roles/administrative-units).
+Like in the previous scenarios, if your organization has a regulatory or country/region compliance framework to comply with, you might not require multiple Azure Active Directory tenants as the default approach. Most organizations can comply with the frameworks within a single Azure Active Directory tenant by using features, such as [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Administrative units](/azure/active-directory/roles/administrative-units).
 
-## Business Unit or Organizational Isolation and Autonomy Requirements
+## Business unit or organizational isolation and autonomy requirements
 
-Some organizations might have complex internal structures across multiple business units or might require a high level of isolation and autonomy between differing parts of their organization.
+Some organizations might have complex internal structures across multiple business units, or they might require a high level of isolation and autonomy between parts of their organization.
 
-When this scenario occurs and it's deemed that the tools and guidance provided in [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant) can't provide the level of isolation that is required you might then have to deploy, manage and operate multiple Azure Active Directory tenants.
+When this scenario occurs, and the tools and guidance in [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant) can't provide the required level of isolation, you might have to deploy, manage, and operate multiple Azure Active Directory tenants.
 
-However, it's more common in scenarios like this, that there are no centralized functions that are responsible for deploying, managing, and operating these multiple tenants and instead they're handed over, in full, to the separated business unit or part of the organization to run and manage. Whilst potentially, a centralized architecture, strategy or CCoE style team might still provide guidance and recommendations on best practices that must be configured within the separate Azure Active Directory tenant.
+In scenarios like this, it’s more common that there are no centralized functions that are responsible for deploying, managing, and operating these multiple tenants. Instead, they're handed over in full to the separated business unit or part of the organization to run and manage. A centralized architecture, strategy, or CCoE style team might still provide guidance and recommendations on best practices that must be configured in the separate Azure Active Directory tenant.
 
 >[!WARNING]
-> Organizations that have operational roles and responsibilities challenges between different teams that operate the organizations Azure Active Directory tenant and Azure should prioritize creating and agreeing upon a clear RACI between the two teams. This ensures that both teams can work and deliver their services to the organization and provide value back to the business in a timely manner.
+> Organizations that have operational roles and responsibilities creates challenges between teams that operate the organization’s Azure Active Directory tenant. Azure should prioritize creating and agreeing upon a clear RACI between the two teams. This action ensures that both teams can work and deliver their services to the organization and provide value back to the business in a timely manner.
 > 
-> In organizations where the cloud infrastructure and development teams using Azure have a reliance on an identity team that have control over the corporate Azure Active Directory tenant for the organization, for things like Service Principal creation or Group creation and management, and do not have an agreed RACI between these teams often show a lack of process and understanding between them, which ultimately leads to friction between the teams and across the organization. This sometimes leads to the belief that multiple Azure Active Directory tenants is the only way to overcome this challenge.
+> Some organizations have cloud infrastructure and development teams that use Azure. The organizations rely on an identity team that has control over the corporate Azure Active Directory tenant for service principal creation or group creation and management. If there isn’t an agreed RACI, there’s often a lack of process and understanding between the teams, which leads to friction between the teams and across the organization. Some organizations believe that multiple Azure Active Directory tenants is the only way to overcome this challenge.
 > 
-> However, this creates challenges for end-users, increases complexity in securing, managing, and governing multiple tenants, and potentially increases licensing costs for the organizations as licenses such as Azure Active Directory Premium do not span multiple Azure Active Directory tenants. Although sometimes, [Azure Active Directory B2B](/azure/active-directory/external-identities/what-is-b2b) usage can help alleviate some licensing duplication for some features and services. You should review each feature and services licensing terms and supportability for Azure Active Directory B2B eligibility if you plan to use Azure Active Directory B2B in your deployment.
+> But multiple Azure Active Directory tenants creates challenges for end users, increases complexity in securing, managing, and governing multiple tenants, and potentially increases licensing costs. Licenses, such as Azure Active Directory Premium, don't span multiple Azure Active Directory tenants. Sometimes, [Azure Active Directory B2B](/azure/active-directory/external-identities/what-is-b2b) usage can alleviate licensing duplication for some features and services. If you plan to use Azure Active Directory B2B in your deployment, review each feature and service's licensing terms and supportability for Azure Active Directory B2B eligibility.
 > 
-> We encourage organizations in this situation to resolve the operational challenges to ensure teams can work together in a single Azure Active Directory tenant rather than creating multiple Azure Active Directory tenants as a workaround.
+> Organizations in this situation should resolve the operational challenges to ensure that teams can work together in a single Azure Active Directory tenant rather than create multiple Azure Active Directory tenants as a workaround.
 
-## Independent Software Vendor (ISV) Delivering SaaS Applications from Azure
+## Independent software vendor (ISV) delivering SaaS applications from Azure
 
-ISVs delivering their SaaS (Software as a Service) products to their customers, might benefit from having multiple Azure Active Directory tenants for their Azure usage. 
+ISVs that deliver their SaaS (software as a service) products to their customers might benefit from having multiple Azure Active Directory tenants for their Azure usage. 
 
-Having separation between the ISVs corporate Azure Active Directory tenant, including Azure usage, for their business-as-usual activities such as e-mail, file sharing, internal applications etc. and a separate Azure Active Directory tenant where the Azure Subscriptions are for hosting and delivering the SaaS applications the ISV provides to their end customers is a very common and sensible approach to protecting both themselves and their customers from security incidents etc.
+If you’re an ISV, you might have separation between your corporate Azure Active Directory tenant, including Azure usage, for your business-as-usual activities, such as e-mail, file sharing, and internal applications. You might also have a separate Azure Active Directory tenant where Azure subscriptions host and deliver the SaaS applications that you provide to your end customers. This approach is common and sensible because it protects you and your customers from security incidents.
 
-This is already detailed in the Azure landing zones guidance here in: [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone).
+For more information, see [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone).
 
-## Tenant Level Testing / Microsoft 365 Testing
+## Tenant level testing / Microsoft 365 testing
 
-There are some activities and features within the Microsoft Cloud products, services and offerings that dictate the only way to test them is in a separate Azure Active Directory tenant. Some examples of this are:
+Some activities and features in the Microsoft Cloud products, services, and offerings can only be tested in a separate Azure Active Directory tenant. Some examples are:
 
-- Microsoft 365 – Exchange Online, SharePoint, Teams
-- Azure Active Directory – Azure Active Directory Connect, Azure Active Directory Identity Protection Risk Levels, SaaS applications.
-- Testing scripts that utilize the Microsoft Graph API and could impact and make changes to production.
+- Microsoft 365 – Exchange Online, SharePoint, and Teams
+- Azure Active Directory – Azure Active Directory Connect, Azure Active Directory Identity Protection Risk Levels, and SaaS applications
+- Testing scripts that use the Microsoft Graph API and can effect and make changes to production
 
-When you're wanting to perform testing that matches or is similar to the scenarios above a separate Azure Active Directory tenant is your only option and therefore this is recommended.
+When you want to perform testing like the previous scenarios, a separate Azure Active Directory tenant is your only option.
 
-However, this separate Azure Active Directory tenant is **not** for hosting any Azure Subscriptions that contain any workloads; regardless of environment, for example dev/test. To be clear, even dev/test environments should instead be contained in your regular “production” Azure Active Directory tenant.
+But the separate Azure Active Directory tenant is **not** for hosting Azure subscriptions that contain workloads, regardless of the environment, for example dev/test. Even dev/test environments should instead be contained in your regular "production” Azure Active Directory tenant.
 
 >[!TIP]
-> Please review the guidance below for handling testing of Azure landing zones and Azure workloads/resources within Azure landing zones environments:
+> For information about how to handle testing Azure landing zones and Azure workloads or resources within Azure landing zones environments, see:
 >
 > - [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
 > - [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
 
-## Grass Roots / Shadow IT / Start-ups
+## Grassroots / Shadow IT / start-ups
 
-In some organizations there might be teams that are looking to innovate quickly that might lead to this team creating a separate Azure Active Directory tenant to help them move as quickly as possible whilst, intentionally or unintentionally, avoiding central/platform team's process and guidance for getting access to an Azure environment to be able to do their innovation.
+If a team wants to innovate quickly, they might create a separate Azure Active Directory tenant to help them move as quickly as possible. They might, intentionally or unintentionally, avoid the central/platform team's process and guidance for getting access to an Azure environment to do their innovation.
 
-This is also common where start-ups are created and they setup their own Azure Active Directory tenant to run, host and operate the business and services from. Normally this is to be expected however, when start-ups are acquired the additional Azure Active Directory tenant creates a decision point for the acquiring organizations IT teams to decide what to do going forward.
+This scenario is common in start-ups where they set up their own Azure Active Directory tenant to run, host, and operate the business and services from. It's typically to be expected, but when start-ups are acquired, the extra Azure Active Directory tenant creates a decision point where the acquiring organization’s IT teams decide what to do going forward.
 
-For more information review the [Mergers and Acquisitions](#mergers-and-acquisitions) and [Independent Software Vendor (ISV) Delivering SaaS Applications from Azure](#independent-software-vendor-isv-delivering-saas-applications-from-azure) sections on this page to help your organization decide on what to do if you are faced with this scenario.
+For more information about how to navigate this scenario, see the [Mergers and acquisitions](#mergers-and-acquisitions) and [Independent software vendor (ISV) delivering SaaS applications from Azure](#independent-software-vendor-isv-delivering-saas-applications-from-azure) sections in this article.
 
 >[!IMPORTANT]
-> We highly encourage platform teams to have an easily accessible and efficient process for giving teams access to an Azure Sandbox Subscription/s that are homed within the corporate/primary Azure Active Directory tenant for the organization to help shadow IT scenarios from occurring and creating challenges in the future for all parties involved.
+> We highly recommend platform teams have an easily accessible and efficient process to give teams access to an Azure sandbox subscription or subscriptions that are homed in the corporate or primary Azure Active Directory tenant for the organization. This process prevents Shadow IT scenarios from occurring and prevents challenges in the future for all parties involved.
 >
-> Review the [Management groups guidance within the Resource organization design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) for more information on Sandboxes.
+> For more information about sandboxes, see [Management groups guidance within the resource organization design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
 ## Summary
 
-As detailed in the scenarios there are multiple reasons that might lead your organization to require multiple Azure Active Directory Tenants. However, when creating multiple tenants to meet the requirements within these scenarios it's important to understand that the additional complexity and operational tasks that will be required to maintain multiple tenants across an organization as well as the potentially increased costs from additional licensing requirements. For more information, [Considerations and Recommendations for Azure landing zones in multi-tenant Scenarios](considerations-recommendations.md) for more information.
+As detailed in the scenarios, there are several reasons why your organization might require multiple Azure Active Directory tenants. But when you create multiple tenants to meet the requirements within these scenarios, it adds complexity and operational tasks to maintain the multiple tenants and potentially adds costs for licensing requirements. For more information, see [Considerations and recommendations for Azure landing zones in multi-tenant scenarios](considerations-recommendations.md).
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Considerations & Recommendations for multi-tenant Azure Landing Zone scenarios](considerations-recommendations.md)
+> [Considerations and recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md)

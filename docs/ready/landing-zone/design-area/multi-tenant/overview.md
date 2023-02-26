@@ -12,12 +12,12 @@ ms.custom: think-tank
 
 # Azure landing zones and multiple Azure Active Directory tenants
 
-Azure landing zones are built on [management groups](/azure/governance/management-groups/overview). [Azure policies](/azure/governance/policy/overview) are assigned and subscriptions are placed into the management groups to provide the required governance controls that an organization needs to meet its security and compliance needs.
+Azure landing zones are built on [management groups](/azure/governance/management-groups/overview). [Azure policies](/azure/governance/policy/overview) are assigned and subscriptions are placed into management groups to provide the required governance controls that an organization needs to meet its security and compliance needs.
 
 >[!TIP]
 > See [Security control mapping with Azure landing zones](/azure/cloud-adoption-framework/ready/control-mapping/security-control-mapping) to learn how to use Azure landing zone and Azure Policy to help achieve your organization's security, compliance, and regulatory needs.
 
-These resources are deployed within a single Azure Active Directory (AAD) tenant. Management groups and most other Azure resources, like Azure Policy, only support operating within a single Azure Active Directory tenant. An Azure subscription relies on an Azure Active Directory tenant to authenticate users, services, and devices against Azure Resource Manager (ARM) to control plane operations and some Azure services, like Azure Storage, for data plane operations.
+These resources are deployed within a single Azure Active Directory (Azure AD) tenant. Management groups and most other Azure resources, like Azure Policy, only support operating within a single Azure Active Directory tenant. An Azure subscription relies on an Azure Active Directory tenant to authenticate users, services, and devices against Azure Resource Manager (ARM) to control plane operations and some Azure services, like Azure Storage, for data plane operations.
 
 Multiple subscriptions can rely on the same Azure Active Directory tenant. Each subscription can only rely on a single Azure Active Directory tenant. For more information, see [Add an existing Azure subscription to your tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
 
@@ -25,7 +25,7 @@ Multiple subscriptions can rely on the same Azure Active Directory tenant. Each 
 
 As shown in the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) within a single Azure Active Directory tenant.
 
-This is the recommended approach for the majority of organizations based on their requirements. This approach gives organizations the best collaboration experience possible and allows them to control, govern, and isolate users and resources within a single Azure Active Directory tenant.
+This approach is recommended for most organizations based on their requirements. This approach gives organizations the best collaboration experience possible and allows them to control, govern, and isolate users and resources within a single Azure Active Directory tenant.
 
 Your organization might be required to use multiple Azure Active Directory tenants for many [scenarios](scenarios.md). See [how to deploy and manage](automation.md) the Azure landing zone deployment into each of these tenants and [considerations and recommendations](considerations-recommendations.md) for handling multiple Azure Active Directory tenants.
 
@@ -39,7 +39,7 @@ Your organization might be required to use multiple Azure Active Directory tenan
 
 ## Why a single Azure Active Directory tenant is sufficient
 
-There are reasons you might require multiple Azure Active Directory tenants, but it's important to understand why a single Azure Active Directory tenant is typically sufficient and should be the default starting point for all organizations.
+There are reasons you might require multiple Azure Active Directory tenants, but it's important to understand why a single Azure Active Directory tenant is typically sufficient. It should be the default starting point for all organizations.
 
 Use your existing corporate Azure Active Directory tenant for Azure subscriptions for the best productivity and collaboration experience across the platform.
 
@@ -47,7 +47,7 @@ Within a single tenant, development teams and application owners can have the le
 
 Only create more Azure Active Directory tenants when there are requirements that can't be met by using the corporate Azure Active Directory tenant.
 
-With Microsoft 365, the corporate Azure Active Directory tenant is generally the first tenant provisioned in the organization. This tenant is used for corporate application access and Microsoft 365 services. It supports the collaboration within an organization. The reason to start with this existing tenant is because it’s already been provisioned, managed, and secured, and the defined lifecycle of the identities is likely already established. This course makes the task of onboarding new apps, resources, and subscriptions easier. It’s a mature, understood environment with established process, procedures, and controls.
+With Microsoft 365, the corporate Azure Active Directory tenant is generally the first tenant provisioned in the organization. This tenant is used for corporate application access and Microsoft 365 services. It supports the collaboration within an organization. The reason to start with this existing tenant is because it’s already been provisioned, managed, and secured. The defined lifecycle of the identities is likely already established. This course makes the task of onboarding new apps, resources, and subscriptions easier. It’s a mature, understood environment with established process, procedures, and controls.
 
 ### Complexities with multiple Azure Active Directory tenants
 
@@ -69,7 +69,7 @@ The ownership of this role across internal teams and departments can provide a c
 
 The teams that operate Azure are responsible for Azure services and want to ensure the security of the services that they manage. When individuals outside of that team have roles with the power to potentially access their environments, the security is weaker. For more information, see [Understand required cloud functions](/azure/cloud-adoption-framework/organize/#understand-required-cloud-functions).
 
-Azure Active Directory provides controls that help mitigate this problem on a technical level, but this is also a people and process discussion. For more information, see [Recommendations](considerations-recommendations.md#recommendations).
+Azure Active Directory provides controls that help mitigate this problem on a technical level, but this issue is also a people and process discussion. For more information, see [Recommendations](considerations-recommendations.md#recommendations).
 
 >[!IMPORTANT]
 > Multiple Azure Active Directory tenants **are not the recommend** approach for most customers. A single Azure Active Directory tenant, typically the corporate Azure Active Directory tenant, is recommended for most customers because it provides the necessary separation requirements.

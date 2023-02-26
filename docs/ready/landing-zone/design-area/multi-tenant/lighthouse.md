@@ -20,7 +20,7 @@ The following considerations and recommendations describe common scenarios for A
 
 - Azure Lighthouse isn't supported across Azure clouds, such as Azure public cloud to Azure US Government cloud. For more information, see [Cross-region and cloud considerations](/azure/lighthouse/overview#cross-region-and-cloud-considerations).
 - Azure Lighthouse supports delegations of subscriptions or resource groups, not management groups or tenants. For a solution to onboarding multiple subscriptions within a management group, see [Onboard all subscriptions in a management group](/azure/lighthouse/how-to/onboard-management-group). This policy follows the Azure landing zones design principle of [policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance).
-- For information about the limitations on RBAC roles support with Azure Lighthouse, see [Role support for Azure Lighthouse](/azure/lighthouse/concepts/tenants-users-roles#role-support-for-azure-lighthouse).
+- For information about the limitations of role support with Azure Lighthouse, see [Role support for Azure Lighthouse](/azure/lighthouse/concepts/tenants-users-roles#role-support-for-azure-lighthouse).
 
 ## Recommendations
 
@@ -34,11 +34,11 @@ The following considerations and recommendations describe common scenarios for A
 
 The following diagram is an Azure landing zone scenario where Azure Lighthouse is used across multiple Azure Active Directory tenants to assist with Private Link and DNS integration.
 
-By using Azure Lighthouse, Azure Policy for Private Endpoints Private DNS Zone is automatically linked in **spoke** Azure Active Directory tenants to the centralized Private DNS Zones in the **hub** Azure Active Directory tenant. For more information, see [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
+When you use Azure Lighthouse, Azure Policy for Private Endpoints Private DNS Zone is automatically linked in **spoke** Azure Active Directory tenants to the centralized Private DNS Zones in the **hub** Azure Active Directory tenant. For more information, see [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 [![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using Azure Lighthouse in the Private DNS at scale scenario.](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
 
-By using this architecture, application landing zone owners have access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations. This access is useful if a different approach is used to manage the Private Endpoints DNS configuration, rather than Azure Policy. For more information, see [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
+When you use this architecture, application landing zone owners have access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations. This access is useful if a different approach is used to manage the Private Endpoints DNS configuration, rather than Azure Policy. For more information, see [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 ## Next steps
 

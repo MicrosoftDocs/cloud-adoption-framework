@@ -48,7 +48,7 @@ In this approach, the primary objective is to keep each Azure Active Directory t
 
 :::image type="content" source="media/automation-approach-1.png" alt-text="Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using the complete isolation automation approach." lightbox="media/automation-approach-1.png":::
 
-In this approach, there are more components to manage that are duplicated per an Azure Active Directory tenant, but this might be a requirement for some organizations that have regulatory compliance controls enforced on them that mandates this type of segregation and isolation.
+In this approach, there are more components to manage that are duplicated per an Azure Active Directory tenant. Some organizations might have regulatory compliance controls enforced on them that mandates this type of segregation and isolation.
 
 >[!NOTE]
 > If your organization only allows the use of managed identities for platform automation, you must use this approach or an approach that logs into each tenant individually. Managed identities don't support cross-tenant scenarios. For more information, see [this FAQ](/azure/active-directory/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant).
@@ -61,7 +61,7 @@ Azure Active Directory B2B and/or Azure Lighthouse can be used, but this option 
 
 ### Approach 2 – Shared application registration (multi-tenant) with multiple service principals
 
-In this approach, an application registration is created in the managing Azure Active Directory tenant. In every Azure Active Directory tenant that you want to manage, a service principal name (SPN) is created in that tenant, based on the application registration. This action allows the workers running the pipeline tasks and steps to log in to any of the Azure Active Directory tenants with a single set of credentials.
+In this approach, an application registration is created in the managing Azure Active Directory tenant. In every Azure Active Directory tenant that you want to manage, a service principal name (SPN) is created in that tenant, based on the application registration. This action allows the workers running the pipeline tasks and steps to sign in to any of the Azure Active Directory tenants with a single set of credentials.
 
 >[!TIP]
 > For information about the relationship between application registrations and enterprise applications (service principles), see [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
@@ -73,9 +73,9 @@ In this approach, an application registration is created in the managing Azure A
 
 In the previous example, a single app registration is in the `contoso.onmicrosoft.com` Azure Active Directory tenant, and an enterprise application is in each of the Azure Active Directory tenants that's linked to the app registration. This setup allows a pipeline to authenticate and authorize to all the Azure Active Directory tenants by using the single app registration. For more information, see [Making your application multi-tenant](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant).
 
-When using a centralized pipeline, you might need to build a small mapping table that contains data correlating the Azure Active Directory tenants and other metadata, such as the environment, associated subscriptions, organization name, and identity object ID used for authentication and authorization. This data can be called on during the run of the pipeline in a step that uses some logic and conditions to control which Azure Active Directory tenant it's deployed to and with which identities. This can be stored in services, such as Azure Cosmos DB or Azure Table storage.
+When you use a centralized pipeline, you might need to build a small mapping table that contains data correlating the Azure Active Directory tenants and other metadata, such as the environment, associated subscriptions, organization name, and identity object ID used for authentication and authorization. This data can be called on during the run of the pipeline in a step that uses some logic and conditions to control which Azure Active Directory tenant it's deployed to and with which identities. The data can be stored in services, such as Azure Cosmos DB or Azure Table storage.
 
-Handling multiple environments, such as development, test, or production, can be controlled in the same way by using the same, or separate, application registrations and enterprise applications with pipelines.
+When you handle multiple environments, such as development, test, or production, they can be controlled in the same way by using the same, or separate, application registrations and enterprise applications with pipelines.
 
 You might decide to have separate pipelines for each Azure Active Directory tenant or use a single pipeline. The choice is yours based on your requirements.
 
@@ -88,7 +88,7 @@ You might decide to have separate pipelines for each Azure Active Directory tena
 
 In this approach, platform administrators and developers usually only need access to the managing Azure Active Directory tenant. This access grants them access to the developer tooling, like GitHub or Azure DevOps, that all tenants are deployed to and operated from.
 
-They might also have access into the other Azure Active Directory tenants via Azure Active Directory B2B or Azure Lighthouse by using their same account from the managing tenant, or they might have separate accounts, like [the example in the first approach](#approach-1--complete-isolation).
+They might also have access into the other Azure Active Directory tenants via Azure Active Directory B2B or Azure Lighthouse. They use their same account from the managing tenant, or they might have separate accounts, like [the example in the first approach](#approach-1--complete-isolation).
 
 ## Next steps
 
