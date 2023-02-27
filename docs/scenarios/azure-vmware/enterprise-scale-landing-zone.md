@@ -52,7 +52,7 @@ The following architecture diagram is an example that shows design areas and bes
 
 [![Azure VMware Solution landing zone accelerator architecture](./media/azure-vmware-eslz-architecture.png)](./media/azure-vmware-eslz-architecture.png#lightbox)
 
-_For more information on the design areas labeled A-I in the visual, see the Azure Landing Zone [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas). For information about the design areas for the Azure VMWare Solution landing zone accelerator, see [Network topology and connectivity for Azure VMware Solution](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-network-topology-connectivity)_
+_For more information on the design areas labeled A-I in the visual, see the Azure Landing Zone [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas). To learn more about the design areas for the Azure VMWare Solution landing zone accelerator, see [network topology and connectivity for Azure VMware Solution](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-network-topology-connectivity)_
 
 ## Next steps
 
