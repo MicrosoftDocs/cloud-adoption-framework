@@ -56,7 +56,7 @@ In short, **no**. Use Azure Policy to control, govern, and keep your workloads a
 
 ## What is Cloud Adoption Framework Landing zones for Terraform (aztfmod)?
 
-The Cloud Adoption Framework landing zones (aka aztfmod) [open source project (OOS)](https://aztfmod.github.io/documentation/docs/intro/) is a community driven project owned and maintained outside of the Azure landing zone core team and the Azure GitHub organization. If your organization chooses to use this OOS project, consideration should be given to the support available as this is driven by the community effort through GitHub. 
+The Cloud Adoption Framework landing zones (aka aztfmod) [open source project (OSS)](https://aztfmod.github.io/documentation/docs/intro/) is a community driven project owned and maintained outside of the Azure landing zone core team and the Azure GitHub organization. If your organization chooses to use this OSS project, consideration should be given to the support available as this is driven by the community effort through GitHub.
 
 ## What if we already have resources in our landing zones and later assign an Azure Policy definition that includes them in its scope?
 
