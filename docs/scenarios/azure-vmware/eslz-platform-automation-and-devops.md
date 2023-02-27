@@ -27,10 +27,16 @@ This article covers considerations and recommendations in the following areas:
 - Considerations on automation technologies to use for deployment and management, like Azure CLI, Azure Resource Manager (ARM), Bicep, and PowerShell.
 
 ## Deployment strategy
+AVS can be deployed manually or using curated automated toolings.
+
+
+
 
 ### Manual deployment
 
 You can configure and deploy an Azure VMware Solution private cloud graphically through the Azure portal. This option is suitable for smaller-scale deployments. If you want to deploy large-scale Azure VMware Solution topologies in a repeatable manner, consider an automated deployment. You can also configure connectivity to the private cloud, and then scale it manually via the Azure portal.
+
+
 
 **Considerations:**
 
@@ -47,6 +53,13 @@ You can configure and deploy an Azure VMware Solution private cloud graphically 
 ### Automated deployment
 
 You can use automated deployments to deploy Azure VMware Solution environments in a repeatable fashion. You can then design and deploy the environments on-demand. This usage leads to an efficient deployment mechanism to roll out multiple environments and regions at scale. They also provide for a low-risk, on-demand, and repeatable deployment process.
+
+#### Automated AVS Implementation Options
+
+| Implementation option                                 | Description                        | Deployment Link to Github Repo |
+| ------------------------------------------------- | ------------------------------------------ | --------------------------|
+| Deploy AVS and dependencies ***with*** a connection to Azure  | This deployment is best suited provisioning a new AVS Private Cloud. It's a full-fledged version of deployment and helps you create all the different supporting components. These components include Azure connectivity, monitoring and addons. <br><br> There are three deployment options: Azure portal UI, PowerShell, and Terraform. Each deployment option lets you choose to deploy the following resources: <br><br/>▪ AVS Private Cloud <br/>▪ Choose New or Existing virtual network (VNet) <br/>▪ Deploy Azure Route Server for VPN Connections (_Optional_) <br/>▪ Deploy AVS Monitoring (_Optional_) <br/>▪ Deploy HCX and SRM (_Optional_)        | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)(_Azure Portal UI_) <br><br> [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Bicep)(_Powershell_)   <br><br>[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)(_Terraform module_) |
+| Deploy AVS ***without*** a connection to Azure| This deployment is a lighter version. It's better suited for a proof of concept (POC) or pilot. It lets you deploy the following resources:<br><br>▪ New AVS Private Cloud: (1) custom resource group name and Private Cloud name or (2) choose an existing AVS Private Cloud. <br/>▪ Deploy AVS Monitoring (_Optional_). <br/>▪ Deploy HCX and SRM (_Optional_). | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json) (_Azure Portal UI_) |
 
 **Considerations:**
 
