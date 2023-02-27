@@ -16,7 +16,7 @@ When you've achieved the [Ready](../index.md) state and implemented [Azure landi
 
 ## The Manage methodology
 
-The [Manage methodology](../../manage/index.md) of the Cloud Adoption Framework provides guidance for establishing tooling for a management baseline and building operations management capacity across landing zones. It also outlines ways to extend your management baseline and build additional resiliency. We'll use the basic structure of the [Azure Management Guide](../../manage/azure-management-guide/index.md) to improve operations across landing zones.
+The [Manage methodology](../../manage/index.md) of the Cloud Adoption Framework provides guidance for establishing tooling for a management baseline and building operations management capacity across landing zones. It also outlines ways to extend your management baseline and build extra resiliency. We use the basic structure of the [Azure Management Guide](../../manage/azure-management-guide/index.md) to improve operations across landing zones.
 
 :::image type="content" source="../../_images/manage/caf-manage.png" alt-text="Screenshot showing the Manage methodology of the Cloud Adoption Framework." border="false":::
 *Figure 1: The Manage methodology of the Cloud Adoption Framework.*
@@ -43,11 +43,11 @@ Protect and recover is the final discipline in any cloud-management baseline, ai
 
 Once you've established a management baseline, you need to understand the criticality and impact of each workload within a landing zone in order to drive ongoing management improvements.
 
-When an organization moves to the cloud, management and operations naturally shift a bit. This creates an opportunity to develop tighter business alignment by defining criticality, understanding business impact, and defining business commitments. See [Create business alignment in cloud management](../../manage/considerations/business-alignment.md).
+When an organization moves to the cloud, management and operations naturally shift a bit. This shift creates an opportunity to develop tighter business alignment by defining criticality, business impact, and business commitments. See [Create business alignment in cloud management](../../manage/considerations/business-alignment.md).
 
 ### Define criticality
 
-Most businesses have a small number of workloads that are too important to fail, while other workloads can go months at a time without being used. Understanding the criticality of each workload in the IT portfolio is the first step toward establishing mutual commitments to cloud management. See [Business criticality in cloud management](../../manage/considerations/criticality.md).
+Most businesses have a few workloads that are too important to fail, while other workloads can go months at a time without being used. Understanding the criticality of each workload in the IT portfolio is the first step toward establishing mutual commitments to cloud management. See [Business criticality in cloud management](../../manage/considerations/criticality.md).
 
 ### Understand business impact
 
@@ -67,11 +67,11 @@ Review the design and operations of specific workloads, platforms, or full landi
 
 ### Platform specialization
 
-Platform specialization means investing in ongoing operations of a shared platform, distributing the investment across multiple workloads. See [Platform specialization for cloud management](../../manage/azure-management-guide/platform-specialization.md) and [Platform operations in cloud management](../../manage/considerations/platform.md).
+Platform specialization means to invest in ongoing operations of a shared platform, distributing the investment across multiple workloads. See [Platform specialization for cloud management](../../manage/azure-management-guide/platform-specialization.md) and [Platform operations in cloud management](../../manage/considerations/platform.md).
 
 ### Workload specialization
 
-Workload specialization means investing in ongoing operations of a specific workload, generally reserved for mission-critical workloads. See [Workload specialization for cloud management](../../manage/azure-management-guide/workload-specialization.md) and [Workload operations in cloud management](../../manage/considerations/workload.md).
+Workload specialization means to invest in ongoing operations of a specific workload, generally reserved for mission-critical workloads. See [Workload specialization for cloud management](../../manage/azure-management-guide/workload-specialization.md) and [Workload operations in cloud management](../../manage/considerations/workload.md).
 
 ## Landing zone operations best practices
 
@@ -87,6 +87,7 @@ The following links provide best practices for improving landing zone operations
   - [Failure mode analysis](/azure/architecture/resiliency/failure-mode-analysis?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Recover from a region wide service disruption](/azure/architecture/resiliency/recovery-loss-azure-region?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Recover from data corruption or accidental deletion](/azure/architecture/framework/resiliency/data-management?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- Build a Subscription Vending process to automate the creation of subscriptions for application teams via a request workflow as described in [Subscription vending](../landing-zone/design-area/subscription-vending.md)
 
 ## Next steps
 

@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Naming overview
 
-Well-defined naming conventions  provide consistency, prevent naming clashes and, along with [resource tagging](tagging.md), allow administrators to quickly locate and manage resources. [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) notes that an effective naming convention composes resource names from important information about each resource, such as:
+Well-defined naming conventions  provide consistency, prevent naming clashes and, along with [resource tagging](tagging.md), allow administrators to quickly locate and manage resources. [Define your naming convention](../../ready/azure-best-practices/resource-naming.md) notes that an effective naming convention composes resource names from important information about each resource, such as:
 
 - Resource type
 - Workload
@@ -23,7 +23,7 @@ For example, a public IP resource for a production SharePoint workload in the We
 
 ![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
-*Diagram 1: Components of an Azure resource name from [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).*
+*Diagram 1: Components of an Azure resource name from [Define your naming convention](../../ready/azure-best-practices/resource-naming.md).*
 
 Naming rules and restrictions, such as scope, name length, or valid characters, differ by resource type in Azure. The example in the table below illustrates how resources have differing constraints. 
 
@@ -42,8 +42,8 @@ Establish a comprehensive naming convention before you begin any large cloud dep
 
 Use the following resources to understand the components of a good naming convention, determine abbreviations for resource types, understand naming constraints for resources, and naming resources.
 
-- Read [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) to learn about the important components of a well-defined naming convention, and see some example names for common Azure resource types.
-- Read or reference [Abbreviation examples for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to help determine the abbreviations you'll use for the Azure resources you're using.
+- Read [Define your naming convention](../../ready/azure-best-practices/resource-naming.md) to learn about the important components of a well-defined naming convention, and see some example names for common Azure resource types.
+- Read or reference [Abbreviation examples for Azure resources](../../ready/azure-best-practices/resource-abbreviations.md) to help determine the abbreviations you'll use for the Azure resources you're using.
 - Read or reference [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules) to understand the rules and restrictions on names for the Azure resources you're using.
 - Install and configure the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) with the organizational standards you determined above. Use the tool to generate names for resources.
 
@@ -85,7 +85,7 @@ The following snippet from a [custom policy example in Azure Samples](https://gi
 
 Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to identify resources that aren't compliant with your naming standards. Because there are no predefined naming standards, you will custom graph queries.
 
-The following Azure Resource Graph example query identifies improperly named virtual networks as per [resource naming guidance](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+The following Azure Resource Graph example query identifies improperly named virtual networks as per [resource naming guidance](../../ready/azure-best-practices/resource-naming.md).
 
 ```azurecli
 Resources

@@ -76,7 +76,7 @@ items:
     - name: Azure Virtual Desktop security best practices
       href: /azure/virtual-desktop/security-guide
     - name: Azure security baseline for Azure Virtual Desktop
-      href: /security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline
+      href: /security/benchmark/azure/baselines/azure-virtual-desktop-security-baseline
     - name: Virtual desktop machine sizing
       href: /windows-server/remote/remote-desktop-services/virtual-machine-recs?context=/azure/virtual-desktop/context/context
     - name: Configure device redirections

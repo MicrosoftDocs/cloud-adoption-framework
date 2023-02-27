@@ -156,7 +156,7 @@ Use service-specific policies to prevent this scenario across the customer tenan
 }
 ```
 
-This policy shows an example for Azure Storage. Replicate the same policy definition for other services like [Key Vault](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/KeyVault/params.policyDefinition.Deny-KeyVault-PrivateEndpointConnections.json), [cognitive services](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/CognitiveServices/params.policyDefinition.Deny-CognitiveServices-PrivateEndpointConnections.json), and [SQL Server](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Sql/params.policyDefinition.Deny-Sql-PrivateEndpointConnections.json).
+This policy shows an example for Azure Storage. Replicate the same policy definition for other services like [Key Vault](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/KeyVault/params.policyDefinition.Deny-KeyVault-PrivateEndpointConnections.json), [cognitive services](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/CognitiveServices/params.policyDefinition.Deny-CognitiveServices-PrivateEndpointConnections.json), and [SQL Server](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Sql/params.policyDefinition.Deny-Sql-PrivateEndpointConnections.json). Note that Azure App Service doesn't support this mitigation at this time.
 
 To further improve manageability, bundle the service-specific policies into an initiative. The policy denies the approval of private endpoint connections to private endpoints that are hosted outside of the subscription of the respective service. It doesn't deny the rejection or removal of private endpoint connections, which is the behavior customers want. Auto-approval workflows, such as connection C, aren't affected by this policy.
 
@@ -166,7 +166,7 @@ Also, assign the policy to the top-level management group and use exemptions whe
 
 ### Considerations for scenario two
 
- Azure Synapse Analytics and Azure Data Factory offer managed virtual networks and managed private endpoints. Because of these new capabilities, the policy blocks the secure and private usage of these services.
+Azure Synapse Analytics and Azure Data Factory offer managed virtual networks and managed private endpoints. Because of these new capabilities, the policy blocks the secure and private usage of these services.
 
 It's recommended that you use an **Audit** effect instead of a **Deny** effect in the policy definition you use in the [scenario two mitigation](#mitigation-for-scenario-two). This change helps you keep track of private endpoints being created in separate subscriptions and tenants. You can also use policy exemptions for the respective data platform scopes.
 
@@ -263,4 +263,4 @@ It's recommended that you assign the policy to the top-level management group an
 It's important to understand the recommended connectivity models for inbound and outbound connectivity to and from the public internet. The next article reviews design considerations, design recommendations, and recommended content for further reading.
 
 > [!div class="nextstepaction"]
-> [Inbound and outbound connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
+> [Inbound and outbound connectivity](../landing-zone/design-area/network-topology-and-connectivity.md)
