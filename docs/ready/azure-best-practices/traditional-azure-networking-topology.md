@@ -13,7 +13,7 @@ ms.custom: think-tank
 # Traditional Azure networking topology
 
 > [!IMPORTANT]
-> Try the new [Topology (Preview)](/azure/network-watcher/network-insights-topology) experience, which offers a visualization of Azure resources for ease of inventory management and monitoring network at scale. Use the Topology preview to visualize resources and their dependencies across subscriptions, regions and locations. [Select this link](https://ms.portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/overview) to navigate to the experience.
+> Try the new [Topology (Preview)](/azure/network-watcher/network-insights-topology) experience, which offers a visualization of Azure resources for ease of inventory management and monitoring network at scale. Use the Topology preview to visualize resources and their dependencies across subscriptions, regions and locations. [Select this link](https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/overview) to navigate to the experience.
 
 
 Explore key design considerations and recommendations surrounding network topologies in Microsoft Azure.
@@ -44,7 +44,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
   - Network-to-network traffic might experience more latency, because traffic must hairpin at the Microsoft Enterprise Edge (MSEE) routers.
 
-  - The ExpressRoute gateway SKU limits bandwidth.
+  - The ExpressRoute gateway SKU constrains bandwidth.
 
   - Deploy and manage UDRs if you need to inspect or log UDRs for traffic across virtual networks.
 
@@ -60,7 +60,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - A VPN gateway's maximum aggregated throughput is 10 gigabits per second. A VPN gateway supports up to 30 site-to-site or network-to-network tunnels.
 
-- If NVA is part of the architecture, consider Azure Route Server to simplify dynamic routing between your network virtual appliance (NVA) and your virtual network. Azure Route Server allows you to exchange routing information directly through Border Gateway Protocol (BGP) routing protocol between any NVA that supports the BGP routing protocol and the Azure software defined network (SDN) in the Azure virtual network (VNet) without the need to manually configure or maintain route tables.
+- If an NVA is part of the architecture, consider Azure Route Server to simplify dynamic routing between your network virtual appliance (NVA) and your virtual network. Azure Route Server allows you to exchange routing information directly through Border Gateway Protocol (BGP) routing protocol between any NVA that supports the BGP routing protocol and the Azure software defined network (SDN) in the Azure virtual network (VNet) without the need to manually configure or maintain route tables.
 
 **Design recommendations:**
 
@@ -138,7 +138,7 @@ The following figure shows this topology.
 
   - Global virtual network peering provides a low latency and high throughput connection but generates [traffic fees](/azure/virtual-network/virtual-network-peering-overview#pricing).
 
-  - Routing via ExpressRoute might lead to increased latency (due to MSEE hairpin), and the [ExpressRoute gateway SKU](/azure/expressroute/expressroute-about-virtual-network-gateways#gwsku) limits the throughput.
+  - Routing via ExpressRoute might lead to increased latency (due to the MSEE hairpin), and the selected [ExpressRoute gateway SKU](/azure/expressroute/expressroute-about-virtual-network-gateways#gwsku) limits the throughput.
 
 The following figure shows both options:
 
