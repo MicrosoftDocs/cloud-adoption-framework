@@ -175,6 +175,14 @@ Nearly all organizations must comply with various government or industry regulat
 
 - Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of your Azure Virtual Landing Zones.
 
-## Next steps
+## Recommended security best practices and baselines
+
 - [Azure Virtual Desktop recommended security practices](/azure/virtual-desktop/security-guide)
 - [Security baseline for Azure Virtual Desktop based on Azure Security Benchmark](/security/benchmark/azure/baselines/virtual-desktop-security-baseline)
+
+## Next steps
+
+Learn about platform automation and DevOps for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)

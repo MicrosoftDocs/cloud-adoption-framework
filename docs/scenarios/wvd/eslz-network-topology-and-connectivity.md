@@ -29,38 +29,26 @@ The design foundations include:
 
 - [**Azure Virtual WAN**](/azure/virtual-wan/virtual-wan-about) is a networking service that brings networking, security, and routing functions together in a single operational interface.
 
-    The capabilities of Azure Virtual Wide-Area Network (WAN) include:
-
-  - Branch connectivity automation from Virtual WAN partner devices such as SD-WAN or customer premises equipment (CPE) based virtual private networks (VPNs)
-  - Site-to-site VPN connectivity
-  - Remote user point-to-site VPN connectivity
-  - Private Azure ExpressRoute connectivity
-  - Intra-cloud connectivity like transitive connectivity for virtual networks
-  - VPN ExpressRoute interconnectivity
-  - Routing
-  - Azure Firewall
-  - Encryption for private connectivity
-
 - [**Network virtual appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
 
 - In [**Forced tunneling**](/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm#:~:text=Forced%20tunneling%20in%20Azure%20is%20configured%20via%20virtual,virtual%20networks%2C%20see%20User-defined%20routes%20and%20IP%20forwarding.) scenario all internet-bound traffic originating on Azure VMs is routed or "forced" to go through an inspection and auditing appliance. Unauthorized internet access can potentially lead to information disclosure or other types of security breaches without the traffic inspection or audit.
 
-- [**Network Security Group (NSG)**](/azure/virtual-network/network-security-groups-overview) is used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
+- [**Network security groups (NSGs)**](/azure/virtual-network/network-security-groups-overview) are used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
 
-- [**Application Security Group (ASG)**](/azure/virtual-network/application-security-groups) enable you to configure network security as a natural extension of an application's structure. It allows you to group virtual machines and define network security policies based on those groups. You can reuse your security policy at scale without manual maintenance of explicit IP addresses.
+- [**Application security groups**](/azure/virtual-network/application-security-groups) enable you to configure network security as a natural extension of an application's structure. You can use them to group virtual machines and define network security policies based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
 
 - [**User Defined Routes (UDR)**](/azure/virtual-network/virtual-networks-udr-overview) can be used to override Azure's default system routes, or to add additional routes to a subnet's route table.
 
 ## Networking scenarios
 
-To establish the Azure Virtual Desktop landing zone, the design and implementation networking capabilities is critical. Azure networking products and services support a wide variety of capabilities. Which architecture to choose and how to structure services depends on your organization's workloads, governance, and requirements.
+To establish the Azure Virtual Desktop landing zone, the design and implementation of networking capabilities is critical. Azure networking products and services support a wide variety of capabilities. Which architecture to choose and how to structure services depends on your organization's workloads, governance, and requirements.
 
-The following key requirements and considerations that affect your Azure Virtual Desktop deployment decision:
+The following key requirements and considerations affect your Azure Virtual Desktop deployment decisions:
 
 - Internet ingress and egress requirements.
 - NVA use in the current architecture.
 - Azure Virtual Desktop connectivity to a standard hub virtual network or Virtual WAN hub.
-- Session host connection model (native and Remote Desktop Protocol (RDP) Shortpath).
+- Session host connection model (native and [RDP Shortpath](/azure/virtual-desktop/rdp-shortpath)).
 - Traffic inspection requirements for:
   - Internet egress from Azure Virtual Desktop.
   - Internet ingress to Azure Virtual Desktop.
@@ -68,11 +56,9 @@ The following key requirements and considerations that affect your Azure Virtual
   - Azure Virtual Desktop to other Azure Virtual Network.
   - Traffic within the Azure Virtual Desktop virtual network.
 
-The following scenarios describe the most common networking for Azure Virtual Desktop. This list isn't exhaustive. For more scenarios.
+The most common networking scenario for Azure Virtual Desktop is hub and spoke with hybrid connectivity.
 
-The most common networking scenarios for Azure Virtual Desktop include:
-
-## Scenario: Hub & Spoke with hybrid connectivity
+## Scenario: Hub and spoke with hybrid connectivity
 
 ### Customer profile
 
@@ -106,7 +92,7 @@ You can implement this scenario with:
 ### Considerations
 
 - This scenario doesn't account for client direct network connectivity to session public or private (no RDP Shortpath) hosts.
-- Azure Virtual Desktop control plane Gateway (public endpoint) manages client connections. Therefore AVD clients can create outbound connections to required AVD URLs (check required URL list under general design considerations and recommendations).
+- Azure Virtual Desktop control plane gateway (public endpoint) manages client connections. Therefore, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information, see [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list).
 - No public IPs or any other public inbound path to session hosts is needed, traffic from clients to session hosts flows through Azure Virtual Desktop control plane gateway.
 - No virtual network peering between Azure Virtual Desktop spokes, all the traffic goes through the connectivity hub.
 - Outbound internet connection from Azure Virtual Desktop session hosts goes through the default Azure outbound NAT using dynamic Azure public IPs (no customer control on outbound public IPs used).
@@ -120,13 +106,13 @@ You can implement this scenario with:
 
 Here are some general design considerations and recommendations for Azure Virtual Desktop network topology and connectivity:
 
-### Hub-spoke vs. Virtual Wide Area Network (WAN) network topology
+### Hub and spoke vs. Virtual Wide Area Network (WAN) network topology
 
-Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/virtual-wan/virtual-wan-about#transit-er), but doesn't support hub-spoke topology.
+Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/virtual-wan/virtual-wan-about#transit-er), but doesn't support hub-and-spoke topology.
 
 ### Identity services
 
-Identity services connectivity requirements of Azure Virtual Desktop session hosts depends on the identity model that is chosen.
+The identity services connectivity requirements of Azure Virtual Desktop session hosts depend on the identity model.
 
 - Azure AD Domain Services (AD DS) joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
 - [Azure AD (Azure AD) joined VMs](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-azure-active-directory-join): Azure Virtual Desktop session hosts create outbound connections to Azure AD public endpoints, therefore no private connectivity configurations required.
@@ -149,11 +135,11 @@ The connection latency varies depending on the location of the users and the vir
 
 RDP Shortpath for managed networks provides a direct UDP-based transport between Remote Desktop Client and Session host. RDP Shortpath for managed networks enables configuration of Quality of Service (QoS) policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic that's sensitive to network delays to "cut in line" in front of traffic that's less sensitive.
 
-You can learn more information on QoS, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos)
+For more information, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos).
 
 ### Internet
 
-Azure Virtual Desktop compute resources and clients require access to specific public endpoints that creates the need for internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure virtual Desktop requirements are met.
+Azure Virtual Desktop compute resources and clients require access to specific public endpoints, so they need internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure Virtual Desktop requirements are met.
 
 See [Required URL list and check tool](/azure/virtual-desktop/safe-url-list) to understand the requirements for AVD session hosts and client devices.
 
@@ -170,4 +156,7 @@ A networking setup with the same capabilities as the one on the source environme
 
 ## Next steps
 
-[Management and monitoring](./eslz-management-and-monitoring.md)
+Learn about resource organization for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Resource organization](./eslz-resource-organization.md)
