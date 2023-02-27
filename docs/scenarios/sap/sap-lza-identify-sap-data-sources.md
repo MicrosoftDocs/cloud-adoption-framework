@@ -29,9 +29,9 @@ SAP SaaS solutions:
 - [SAP S/4HANA Cloud](https://www.sap.com/products/erp/s4hana.html), public edition which is the SaaS version of SAP S/4HANA
 - SAP Customer Experience solutions such as [SAP Commerce Cloud](https://www.sap.com/products/crm/commerce-cloud.html), [SAP Sales Cloud](https://www.sap.com/products/crm/sales-cloud.html) and [SAP Service Cloud](https://www.sap.com/products/service-management/service-cloud.html)
 - [SAP Ariba](https://discovery-center.cloud.sap/serviceCatalog/sap-analytics-cloud?commercialModel=subscription&provider=azure&tab=service_plan&region=all) for direct and indirect spend
-- [SAP Concur](https://www.concur.co.uk/) for travel and expense
+- [SAP Concur](https://www.concur.com/) for travel and expense
 - [SAP Fieldglass](https://www.fieldglass.com/) for external workforce management
-- [SAP SuccessFactors](https://www.fieldglass.com/) for Human Capital Management
+- [SAP SuccessFactors](https://www.sap.com/products/hcm.html) for Human Capital Management
 
 The community curated list of SAP products on Wikipedia lists more than 100 SAP products for business, industry or platform software (Wikipedia 2021, List of SAP products - Wikipedia) 
 [List of SAP products - Wikipedia](https://en.wikipedia.org/wiki/List_of_SAP_products). Due to this wide variety of solution portfolio and deployment options, this article focuses on the most common and relevant products in customer environments. 

@@ -21,7 +21,7 @@ There are different ways to connect to SAP system for Data Integration. It is im
 - Ensure right SAP parameters are set for Max concurrent connection.
 - Consider using SAP logon group for better performance and load distribution.
 - Ensure the SHIR virtual machine is sized adequately and is highly available
-- When dealing with very large datasets, check if the connector you are using provide partitioning capability. Many of our SAP connectors support partitioning and parallelising capabilities to speed up data loads. This allow data to be packaged into many smaller chunks which may be loaded using several parallel processes. Check connector specific documentation for more details. ( TBD – high level guidance here )
+- When dealing with very large datasets, check if the connector you are using provide partitioning capability. Many of our SAP connectors support partitioning and parallelising capabilities to speed up data loads. This allow data to be packaged into many smaller chunks which may be loaded using several parallel processes. Check connector specific documentation for more details.
 
 ### Generic Recommendations
 
