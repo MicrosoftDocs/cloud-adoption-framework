@@ -13,7 +13,7 @@ adobe-target: true
 
 # A financial institution scenario for data mesh
 
-This scenario is for customers that want to use cloud-scale analytics for scalability and *data mesh* architectures. It demonstrates a complex scenario with landing zones, data integrations, and data products.
+This reference architecture is for customers that want to use cloud-scale analytics for scalability and *data mesh* architectures. It demonstrates a complex scenario with landing zones, data integrations, and data products.
 
 ## Customer profile
 
