@@ -30,54 +30,44 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 | Policy definition | `Microsoft.Authorization/policyDefinitions` | \<*optional*> |
 | Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 
-## Networking
+## AI + machine learning
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
-| Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
-| Bastion | `Microsoft.Network/bastionHosts` | `bas` |
-| CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
-| CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
-| Connections | `Microsoft.Network/connections`| `con` |
-| DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
-| DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
-| Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
-| Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
-| ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
-| Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
-| Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
-| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
-| Front Door (classic) | `Microsoft.Network/frontDoors` | `afd` |
-| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
-| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
-| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
-| Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw` |
-| NAT gateway | `Microsoft.Network/natGateways` | `ng` |
-| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic`|
-| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
-| Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
-| Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |
-| Private Link | `Microsoft.Network/privateLinkServices` | `pl` |
-| Private endpoint | `Microsoft.Network/privateEndpoints` | `pep` |
-| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip`|
-| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre`|
-| Route filter | `Microsoft.Network/routeFilters` | `rf` |
-| Route server | `Microsoft.Network/virtualHubs` | `rtserv` |
-| Route table | `Microsoft.Network/routeTables` | `rt` |
-| Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
-| Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
-| User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
-| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
-| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer`|
-| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
-| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
-| VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
-| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
-| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst` |
-| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
-| Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
-| Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
+| Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
+| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
+| Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
+
+## Analytics and IoT
+
+| Resource | Resource provider namespace | Abbreviation |
+|--|--|--|
+| Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
+| Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
+| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
+| Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
+| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
+| Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
+| Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
+| Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
+| Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
+| Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
+| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh` |
+| Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
+| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
+| Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
+| Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
+| HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
+| HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
+| HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
+| HDInsight - Spark cluster | `Microsoft.HDInsight/clusters` | `spark` |
+| HDInsight - Storm cluster | `Microsoft.HDInsight/clusters` | `storm` |
+| HDInsight - ML Services cluster | `Microsoft.HDInsight/clusters` | `mls` |
+| IoT hub | `Microsoft.Devices/IotHubs` | `iot` |
+| Provisioning services | `Microsoft.Devices/provisioningServices` | `provs` |
+| Provisioning services certificate | `Microsoft.Devices/provisioningServices/certificates` | `pcert` |
+| Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi` |
+| Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi` |
 
 ## Compute and Web
 
@@ -143,65 +133,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |
 | SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi` |
 
-## Storage
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
-| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
-| Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
-| File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
-| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
-| Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
-
-## AI and Machine Learning
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
-| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
-| Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
-
-## Analytics and IoT
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
-| Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
-| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
-| Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
-| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
-| Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
-| Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
-| Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
-| Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
-| Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
-| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh` |
-| Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
-| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
-| Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
-| Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
-| HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
-| HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
-| HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
-| HDInsight - Spark cluster | `Microsoft.HDInsight/clusters` | `spark` |
-| HDInsight - Storm cluster | `Microsoft.HDInsight/clusters` | `storm` |
-| HDInsight - ML Services cluster | `Microsoft.HDInsight/clusters` | `mls` |
-| IoT hub | `Microsoft.Devices/IotHubs` | `iot` |
-| Provisioning services | `Microsoft.Devices/provisioningServices` | `provs` |
-| Provisioning services certificate | `Microsoft.Devices/provisioningServices/certificates` | `pcert` |
-| Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi` |
-| Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi` |
-
-## Azure Virtual Desktop
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| Virtual desktop host pool | `Microsoft.DesktopVirtualization/hostPools` | `vdpool` |
-| Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
-| Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
-| Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
-
 ## Developer tools
 
 | Resource | Resource provider namespace | Abbreviation |
@@ -210,6 +141,12 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 | Maps account | `Microsoft.Maps/accounts` | `map` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 | WebPubSub | `Microsoft.SignalRService/webPubSub` | `wps` |
+
+## DevOps
+
+| Resource | Resource provider namespace | Abbreviation |
+|--|--|--|
+| Azure Managed Grafana | `Microsoft.Dashboard/grafana` | `amg` |
 
 ## Integration
 
@@ -243,6 +180,75 @@ This page gives you abbreviation examples for many of the resources in Azure. Be
 | Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr` |
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms` |
 | Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv` |
+
+## Networking
+
+| Resource | Resource provider namespace | Abbreviation |
+|--|--|--|
+| Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
+| Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
+| Bastion | `Microsoft.Network/bastionHosts` | `bas` |
+| CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
+| CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
+| Connections | `Microsoft.Network/connections`| `con` |
+| DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
+| Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
+| Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
+| ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
+| Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
+| Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
+| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
+| Front Door (classic) | `Microsoft.Network/frontDoors` | `afd` |
+| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
+| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
+| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
+| Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw` |
+| NAT gateway | `Microsoft.Network/natGateways` | `ng` |
+| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic`|
+| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
+| Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
+| Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |
+| Private Link | `Microsoft.Network/privateLinkServices` | `pl` |
+| Private endpoint | `Microsoft.Network/privateEndpoints` | `pep` |
+| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip`|
+| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre`|
+| Route filter | `Microsoft.Network/routeFilters` | `rf` |
+| Route server | `Microsoft.Network/virtualHubs` | `rtserv` |
+| Route table | `Microsoft.Network/routeTables` | `rt` |
+| Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
+| Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
+| User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
+| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
+| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer`|
+| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
+| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
+| VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
+| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
+| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst` |
+| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
+| Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
+| Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
+
+## Storage
+
+| Resource | Resource provider namespace | Abbreviation |
+|--|--|--|
+| Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
+| Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
+| Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
+| File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
+| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
+| Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
+
+## Virtual desktop infrastructure
+
+| Resource | Resource provider namespace | Abbreviation |
+|--|--|--|
+| Virtual desktop host pool | `Microsoft.DesktopVirtualization/hostPools` | `vdpool` |
+| Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
+| Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
+| Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
 
 ## Deprecated product names
 
