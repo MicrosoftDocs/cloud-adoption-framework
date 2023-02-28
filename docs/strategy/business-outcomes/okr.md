@@ -7,7 +7,7 @@ ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
 ---
 
 <!-- docutune:casing Ally.io -->

@@ -53,16 +53,24 @@ For a glossary, data storage cost estimations, and more troubleshooting guidance
 
 Review the following considerations and recommendations for infrastructure management and monitoring of Azure Virtual Desktop.
 
-- Use the same Log Analytics workspace that's used for the Azure Virtual Desktop platform.
+### Design considerations
 
+- Collect and log session host performance counters.
+- Use network performance monitoring for user experience management.
+- Set up an alerting model for the collected logs and metrics.
 - Use Windows Update Management for the session hosts between feature updates.
 
-- Design an alerting strategy to maintain a good user experience. Read [configure alerts](/azure/virtual-desktop/insights#optional-configure-alerts) to proactively troubleshoot issues and act on performance signals that might require attention.
+### Design recommendations
 
-- Use a centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
+- Use the same Log Analytics workspace that you use for the Azure Virtual Desktop platform.
+- Use a centralized Log Analytics workspace in the region that contains your session hosts.
+- Configure diagnostic settings, events, and performance counters by implementing an [Azure Virtual Desktop Insights workbook](/azure/virtual-desktop/insights).
+- Set up Network Performance Monitor in the same region as your Azure Virtual Network and session hosts.
+- Incorporate Azure policies and governance for enterprise-scale into the Azure Virtual Desktop landing zone.
 
-- Consider the governance and security monitoring needs of your infrastructure. Incorporate Azure policies and governance for enterprise-scale into the Azure Virtual Desktop landing zone.
+## Next steps
 
-- The [security baseline for Azure Virtual Desktop](/security/benchmark/azure/baselines/virtual-desktop-security-baseline#data-protection) has relevant Azure Policy Definitions listed, helping you measure compliance to the Azure Security Benchmark. Using the security baseline helps establish proper security monitoring and governance of your Azure Virtual Desktop infrastructure.
+Learn about business continuity and disaster recovery for an Azure Virtual Desktop enterprise-scale scenario.
 
-- Use the [Log Analytics for the diagnostics feature](/azure/virtual-desktop/diagnostics-log-analytics)) to let admins identify issues through a single interface. With this capability, the service creates activity logs for both user and administrative actions.
+> [!div class="nextstepaction"]
+> [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)

@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 # Azure Virtual Desktop Azure landing zone review
 
-Before implementing Azure Virtual Desktop, the environment needs an Azure landing zone capable of hosting desktops and any supporting workloads. The following checklist can help the team evaluate the landing zone for compatibility. Guidance in the [Ready methodology](../../ready/index.md) of this framework can help the team build a compatible Azure landing zone, if one has not been provided.
+Before you implement Azure Virtual Desktop, the environment needs an Azure landing zone capable of hosting desktops and any supporting workloads. The following checklist can help the team evaluate the landing zone for compatibility. Guidance in the [Ready methodology](../../ready/index.md) of this framework can help the team build a compatible Azure landing zone, if one has not been provided.
 
 ## Evaluate compatibility
 
@@ -32,6 +32,7 @@ To understand how to architect Azure Virtual Desktop, review the [Azure Virtual 
 
 For guidance on specific elements of the cloud adoption journey, see:
 
+- [Review Azure Virtual Desktop landing zone accelerator design areas](./enterprise-scale-landing-zone.md)
 - [Complete an Azure Virtual Desktop proof of concept](./proof-of-concept.md)
 - [Assess for Azure Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Azure Virtual Desktop instances](./migrate-deploy.md)

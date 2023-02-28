@@ -7,7 +7,7 @@ ms.date: 02/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Cloud adoption plan and Azure DevOps

@@ -7,7 +7,7 @@ ms.date: 6/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Subscription considerations and recommendations
