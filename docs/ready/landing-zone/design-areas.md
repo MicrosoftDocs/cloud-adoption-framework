@@ -8,7 +8,7 @@ ms.date: 02/08/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Azure landing zone design areas and conceptual architecture

@@ -8,9 +8,10 @@ ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: 
+ms.custom:
 - internal
 - engagement-fy23
+- UpdateFrequency2
 ---
 
 # What business outcomes are associated with transformation journeys?

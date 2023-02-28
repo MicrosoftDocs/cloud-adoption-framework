@@ -7,7 +7,7 @@ ms.date: 09/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Silos and fiefdoms
