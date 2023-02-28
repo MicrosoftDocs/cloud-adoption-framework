@@ -18,7 +18,7 @@ The following considerations and recommendations describe common scenarios for A
 
 ## Considerations
 
-- Azure Lighthouse isn't supported across Azure clouds, such as Azure public cloud to Azure US Government cloud. For more information, see [Cross-region and cloud considerations](/azure/lighthouse/overview#cross-region-and-cloud-considerations).
+- Azure Lighthouse isn't supported across Azure clouds, such as Azure public cloud to Azure Government cloud. For more information, see [Cross-region and cloud considerations](/azure/lighthouse/overview#cross-region-and-cloud-considerations).
 - Azure Lighthouse supports delegations of subscriptions or resource groups, not management groups or tenants. For a solution to onboarding multiple subscriptions within a management group, see [Onboard all subscriptions in a management group](/azure/lighthouse/how-to/onboard-management-group). This policy follows the Azure landing zones design principle of [policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance).
 - For information about the limitations of role support with Azure Lighthouse, see [Role support for Azure Lighthouse](/azure/lighthouse/concepts/tenants-users-roles#role-support-for-azure-lighthouse).
 

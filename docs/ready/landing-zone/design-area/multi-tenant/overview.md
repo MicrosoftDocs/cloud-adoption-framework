@@ -1,6 +1,6 @@
 ---
 title: Azure landing zones and multiple Azure Active Directory tenants
-description: Learn how multiple Azure Active Directory tenants work within the context of Azure landing zones.
+description: Learn how multiple Azure Active Directory tenants work within the context of Azure landing zones and the benefits of using a single tenant.
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -23,7 +23,7 @@ Multiple subscriptions can rely on the same Azure Active Directory tenant. Each 
 
 [![Diagram of a single Azure Active Directory tenant with Azure landing zones deployed.](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
 
-As shown in the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) within a single Azure Active Directory tenant.
+In the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) within a single Azure Active Directory tenant.
 
 This approach is recommended for most organizations based on their requirements. This approach gives organizations the best collaboration experience possible and allows them to control, govern, and isolate users and resources within a single Azure Active Directory tenant.
 
@@ -54,7 +54,7 @@ With Microsoft 365, the corporate Azure Active Directory tenant is generally the
 When you create a new Azure Active Directory tenant, it requires extra work to provision, manage, secure, and govern the identities. You must also establish the required policies and procedures. Collaboration is best in a single Azure Active Directory tenant. Moving to a multi-tenant model creates a boundary, which can result in user friction, management overhead, and increase the attack surface area, which can cause a security risk and complicates product scenarios and limitations. Some examples include:
 
 - **Multiple identities for users and administrators for each tenant** – If [Azure Active Directory B2B](/azure/active-directory/external-identities/what-is-b2b) isn’t used, the user has multiple sets of credentials to manage. For more information, see [Considerations and recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md).
-- **Azure services limitations in supporting multiple Azure Active Directory tenants** – Azure workloads that only support identities homed in the tenant to which it's bound to. For more information, see [Azure products and services Azure Active Directory integration](considerations-recommendations.md#azure-products--services-azure-active-directory-integration).
+- **Azure services limitations in supporting multiple Azure Active Directory tenants** – Azure workloads that only support identities homed in the tenant to which it's bound to. For more information, see [Azure products and services Azure Active Directory integration](considerations-recommendations.md#azure-products-and-services-azure-active-directory-integration).
 - **No centralized configuration or management for Azure Active Directory tenants** – Multiple security policies, management policies, configuration, portals, APIs, and JML (joiners, movers, and leavers) processes.
 - **Billing and licensing complexities and potential requirement for license duplication for Azure Active Directory Premium licenses** - For more information, see [Considerations and recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md).
 
@@ -72,7 +72,7 @@ The teams that operate Azure are responsible for Azure services and want to ensu
 Azure Active Directory provides controls that help mitigate this problem on a technical level, but this issue is also a people and process discussion. For more information, see [Recommendations](considerations-recommendations.md#recommendations).
 
 >[!IMPORTANT]
-> Multiple Azure Active Directory tenants **are not the recommend** approach for most customers. A single Azure Active Directory tenant, typically the corporate Azure Active Directory tenant, is recommended for most customers because it provides the necessary separation requirements.
+> Multiple Azure Active Directory tenants **are not the recommended** approach for most customers. A single Azure Active Directory tenant, typically the corporate Azure Active Directory tenant, is recommended for most customers because it provides the necessary separation requirements.
 > 
 > For more information, see:
 > 

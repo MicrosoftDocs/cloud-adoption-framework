@@ -15,7 +15,7 @@ ms.custom: think-tank
 There are a few reasons why an organization might need, or might want to investigate, multiple Azure Active Directory tenants. The most common scenarios are:
 
 - [Mergers and acquisitions](#mergers-and-acquisitions)
-- [Regulatory or country compliance requirements](#regulatory-or-country-compliance-requirements)
+- [Regulatory or country/region compliance requirements](#regulatory-or-countryregion-compliance-requirements)
 - [Business unit or organizational isolation and autonomy requirements](#business-unit-or-organizational-isolation-and-autonomy-requirements)
 - [Independent software vendor (ISV) delivering SaaS applications from Azure](#independent-software-vendor-isv-delivering-saas-applications-from-azure)
 - [Tenant level testing / Microsoft 365 testing](#tenant-level-testing--microsoft-365-testing)
