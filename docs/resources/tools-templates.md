@@ -7,7 +7,7 @@ ms.date: 01/13/2022
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency5
 ---
 
 # Tools and templates
