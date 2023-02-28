@@ -59,7 +59,7 @@ If the policy to be migrated is assigned to any scope in your Azure estate, and 
 1. Delete existing Azure landing zone policy assignment at all scopes, where assigned.
 1. Delete the Azure landing zone policy definition from the Azure landing zone intermediate root management group (for example `Contoso`).
 
-For detailed guidance on how to do the previous steps, see [Migrate single Azure landing zone custom policy](https://github.com/Azure/Enterprise-Scale/wiki/migrate-alz-policies-to-builtin#migrate-single-alz-custom-policy-to-built-in-policy).
+For detailed guidance on how to do the previous steps, see [Migrate single Azure landing zone custom policy](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in#migrate-single-alz-custom-policy-to-built-in-policy).
 
 #### Policies assigned through Azure landing zone custom policy initiative
 
@@ -68,7 +68,7 @@ If the policy to be migrated is part of an Azure landing zone custom policy init
 1. Update the Azure landing zone custom policy initiative definition with the appropriate policy references. You can find the [updated initiatives here](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions) with a generic *contoso* scope for custom policies.
 1. When you update the policy references, remember to change the *contoso* scope for policy definition IDs to your management group hierarchy pseudo root name. Also, update the metadata information on the Azure landing zone custom policy initiative.
 
-For detailed guidance on how to do the previous steps, see [How to update child definitions in Azure landing zone custom initiatives](https://github.com/Azure/Enterprise-Scale/wiki/migrate-alz-policies-to-builtin#how-to-update-child-definitions-in-alz-custom-initiatives).
+For detailed guidance on how to do the previous steps, see [How to update child definitions in Azure landing zone custom initiatives](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in#how-to-update-child-definitions-in-alz-custom-initiatives).
 
 If an Azure landing zone custom policy initiative is fully superseded by a built-in policy initiative, and assigned at any scope in your Azure estate, follow these steps:
 
