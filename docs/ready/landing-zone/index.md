@@ -56,6 +56,8 @@ Use this architecture as a starting point. Download the [Visio file](https://raw
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
+_For more information on the design areas labeled A-J in the visual, see the Azure Landing Zone [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas). To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-network-topology-and-connectivity)_
+
 ## Azure landing zone portal accelerator
 
 For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone portal accelerator**.
