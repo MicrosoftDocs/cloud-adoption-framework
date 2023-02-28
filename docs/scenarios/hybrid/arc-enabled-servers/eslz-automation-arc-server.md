@@ -28,7 +28,6 @@ The following are some design considerations before onboarding Azure Arc-enabled
 
 - Your machines run a [supported operating system](/azure/azure-arc/servers/agent-overview#supported-operating-systems) for the Azure connected machine agent.
 - Your machines have the [required software](/azure/azure-arc/servers/agent-overview#software-requirements) installed before deploying the Azure connected machine agent.
-- You've reviewed the [Azure subscription and service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) for Azure Arc-enabled servers.
 
 ### Network connectivity
 
@@ -59,7 +58,7 @@ The following are general design recommendations for Azure Arc-enabled servers:
 ### Environment preparation
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled servers and centralize management and monitoring of these resources.
-- Evaluate and develop an IT-aligned [tagging strategy](../../../decision-guides/resource-tagging/index.md) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
+- Evaluate and develop an IT-aligned [tagging strategy](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
 - Create a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to connect machines non-interactively using Azure PowerShell or from the Azure portal.
 
 ### Onboard Azure Arc-enabled servers

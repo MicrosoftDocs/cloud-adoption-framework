@@ -80,7 +80,7 @@ Subscriptions aren't tied to a specific Azure region, but each Azure resource de
 The following resources provide detailed information about the concepts discussed in this article:
 
 - [How does Azure work?](../../get-started/what-is-azure.md)
-- [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
+- [Resource access management in Azure](../../get-started/how-azure-resource-manager-works.md)
 - [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview)
 - [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview)
 - [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)

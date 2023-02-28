@@ -24,13 +24,9 @@ The following architectural decision guides cover foundational technology compon
 
 [Identity](./identity/index.md): Integrate cloud-based identity services with your organization's identity resources to manage control and authorization within your IT environment.
 
-[Policy enforcement](./policy-enforcement/index.md): Define and enforce policy rules that align with your organization's governance requirements for cloud-deployed resources and workloads.
-
 [Resource consistency](./resource-consistency/index.md): Ensure that the deployment and organization of your cloud-based resources enforce your organization's resource management and policy requirements.
 
-[Resource tagging](./resource-tagging/index.md): Organize your cloud-based resources to optimize resource utilization and cost, and to support your organization's billing models, cloud accounting approaches, and management. Resource tagging requires consistent and well-organized naming and metadata practices.
-
-[Software Defined Networking](./software-defined-network/index.md): Use rapid deployment along with modification of virtualized networking capabilities to deploy secure workloads to the cloud. Software-defined networks can support agile workflows, isolate resources, and integrate cloud-based systems with your organization's existing IT infrastructure.
+[Resource tagging](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide): Organize your cloud-based resources to optimize resource utilization and cost, and to support your organization's billing models, cloud accounting approaches, and management. Resource tagging requires consistent and well-organized naming and metadata practices.
 
 [Encryption](./encryption/index.md): Secure your sensitive data using encryption that meets your organization's compliance and security policy requirements.
 

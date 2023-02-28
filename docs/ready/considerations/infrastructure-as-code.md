@@ -144,7 +144,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Use Azure native tools for IaC in the following scenarios:
 
-  - You want to use only Azure native tools. Your organization might have prior ARM template deployment experience.
+  - You want to use only Azure native tools. Your organization might have prior ARM or Bicep template deployment experience..
 
   - Your organization wants to have immediate support for all preview and GA versions of Azure services.
 

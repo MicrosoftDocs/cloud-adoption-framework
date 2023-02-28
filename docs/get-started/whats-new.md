@@ -16,16 +16,48 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## February 2023
+
+### CAF relocate
+
+The new relocate guidance details the process of moving a workload hosted in Azure to a different Azure region. Relocate walks you through five steps (initiate, evaluate, select, migrate, cutover) and shows you how to pick the right relocation strategy for each workload you want to move. For more information, see [Relocate overview](../relocate/index.md).
+
+## January 2023
+
+### Why update your Azure landing zones
+
+An Azure landing zone is a set of pre-defined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important that your deployed landing zone environment is kept up to date so you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases. Explore the benefits of [keeping your Azure landing zone updated, secure, and optimized](/azure/cloud-adoption-framework/govern/resource-consistency/keep-azure-landing-zone-up-to-date).
+
+### Migrate Azure landing zone policies to Azure built-in policies
+
+Azure landing zone custom policies and policy initiatives might be deprecated or superseded by Azure built-in policies over time. If so, they should be removed or migrated. Explore how to [migrate Azure landing zone custom policies and policy initiatives to Azure built-in policies](../govern/resource-consistency/migrate-azure-landing-zone-policies.md).
+
+### Update Azure landing zone custom policies and policy initiatives
+
+Azure landing zone custom policies and policy initiatives update to newer versions that can then incorporate into an Azure environment. Learn how to [update your Azure landing zone custom policies and policy initiatives when newer versions release](../govern/guides/standard/update-custom-policies.md).
+
+### Azure App Service Cloud Adoption Framework Design guidelines for the App Service Landing Zone Accelerator
+
+We're excited to announce updates to our Azure App Service Cloud Adoption Framework Design Guidelines for the App Service Landing Zone Accelerator. These changes improve the security, governance, platform automation, operations management, identity and access management, and network topology and connectivity considerations for your App Service deployments.
+
+| Article | Description |
+|-----------------------------|----------------------------------------------------------------------------------------------| 
+| [Security considerations for the App Service landing zone accelerator](../scenarios/app-platform/app-services/security.md) | Security considerations are updated to include new guidance on implementing authentication and authorization, network security, application security, and data security for securing your App Service resources. |
+| [Governance considerations for the App Service landing zone accelerator](../scenarios/app-platform/app-services/governance.md) | Governance considerations are updated to include new guidance on implementing deployment strategy, data management, monitoring, logging, cost management, resource management, and access control for enforcing compliance and governance standards. |
+| [Platform automation and DevOps for the App Service landing zone accelerator](../scenarios/app-platform/app-services/platform-automation-and-devops.md) | Platform automation and DevOps for the landing zone accelerator is updated to include new guidance on implementing Infrastructure as a code, deployment strategy and Azure DevOps for automating the deployment and management of your App Service resources.
+| [Operations management considerations for the App Service landing zone accelerator](../scenarios/app-platform/app-services/management.md) | Operations management considerations are updated to include new guidance on implementing Scaling, Monitoring, Alerting, Diagnostics, Security, and Compliance in your App Service resources. |
+| [Identity and access management](../scenarios/app-platform/app-services/identity-and-access-management.md) | Identity and access management considerations for the App Service landing zone accelerator are updated to include new guidance on implementing security and control over network access to Multitenant App Service and App Service Environment. |
+| [Network topology and connectivity](../scenarios/app-platform/app-services/network-topology-and-connectivity.md) | Network topology and connectivity considerations for the App Service landing zone accelerator are updated to include new guidance on implementing security and control over network access to Multitenant App Service and App Service Environment. |
+
+We encourage you to review these updates and incorporate them into your App Service deployments. As always, we welcome your feedback and suggestions for future improvements.
+
 ## December 2022
 
 ### Defense cloud adoption scenario
 
 The Defense cloud adoption scenario provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The Defense cloud adoption scenario provides recommendations to help navigate those challenges so mission owners can focus on meeting mission objectives.
 
-We invite you to explore Defense cloud adoption scenario and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
-
-> [!div class="nextstepaction"]
-> [Defense cloud adoption scenario](../scenarios/defense/index.md)
+We invite you to [explore the Defense cloud adoption scenario](../scenarios/defense/index.md) and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
 
 ### HPC landing zone accelerator
 

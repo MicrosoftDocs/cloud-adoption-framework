@@ -49,10 +49,9 @@ The operations management baseline, outlined in the Microsoft Cloud Adoption Fra
 
 As the management baseline is improved, it's important to ensure that those improvements carry through to the Resource Consistency governance discipline. Doing so ensures the application of the enhanced baseline in all managed environments.
 
-**Deliverables:**
+**Deliverable:**
 
-- Ensure proper application of the enhanced management baseline for all affected systems.
-- Document your policies, processes, and design guidance for resource consistency in the [Resource Consistency discipline template](../govern/resource-consistency/template.md).
+Ensure proper application of the enhanced management baseline for all affected systems.
 
 **Guidance to support deliverable completion:**
 
