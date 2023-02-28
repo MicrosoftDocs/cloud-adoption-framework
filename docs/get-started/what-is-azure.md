@@ -7,7 +7,7 @@ ms.date: 01/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # How does Azure work?

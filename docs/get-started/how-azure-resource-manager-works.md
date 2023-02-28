@@ -7,7 +7,7 @@ ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Resource access management in Azure
