@@ -1,6 +1,6 @@
 ---
 title: Scenarios for multiple Azure Active Directory tenants
-description: Learn about the scenarios when multiple Azure Active Directory tenants and when they're required in Azure landing zones.
+description: Learn about the scenarios for multiple Azure Active Directory tenants, and learn when they're required in Azure landing zones.
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -94,7 +94,7 @@ But the separate Azure Active Directory tenant is **not** for hosting Azure subs
 > - [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
 > - [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
 
-## Grassroots / Shadow IT / start-ups
+## Grassroots / Shadow IT / Start-ups
 
 If a team wants to innovate quickly, they might create a separate Azure Active Directory tenant to help them move as quickly as possible. They might, intentionally or unintentionally, avoid the central/platform team's process and guidance for getting access to an Azure environment to do their innovation.
 

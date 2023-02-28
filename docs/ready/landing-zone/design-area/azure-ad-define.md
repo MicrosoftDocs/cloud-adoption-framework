@@ -45,7 +45,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Add one or more custom domains to your Azure AD tenant as per [Add your custom domain name using the Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)
 
-  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in you on-premises Active Directory Domain Services environment.
+  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in your on-premises Active Directory Domain Services environment.
 
 - Define your Azure single sign-on strategy, using Azure AD Connect, based on one of the supported [topologies](/azure/active-directory/hybrid/plan-connect-topologies).
 
