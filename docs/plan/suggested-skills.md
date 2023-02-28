@@ -7,7 +7,7 @@ ms.date: 08/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Get started on a skills readiness path
