@@ -3,7 +3,7 @@
      {
       "source_path_from_root": "/docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-data-mesh.md",
       "redirect_url": "/docs/scenarios/cloud-scale-analytics/architectures/data-mesh-scenario.md",
-      "redirect_document_id": true
+      "redirect_document_id": false
      },
      {
       "source_path_from_root": "/docs/scenarios/data-management/eslz-provision-platform.md",
