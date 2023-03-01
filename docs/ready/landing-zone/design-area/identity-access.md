@@ -49,6 +49,9 @@ These articles examine design considerations and recommendations related to iden
 - [Platform access](identity-access-platform-access.md)
 - [Prerequisites for a landing zone](identity-access-landing-zones.md)
 
+>[!TIP]
+> If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
+
 ## Next steps
 
 > [!div class="nextstepaction"]

@@ -18,6 +18,9 @@ Azure AD is also used by software as a service (SaaS) applications such as Micro
 
 Ask basic security questions during the Azure AD design phase, such as how your organization manages credentials and how it controls human, application, and programmatic access.
 
+>[!TIP]
+> If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
+
 **Design considerations:**
 
 - An Azure subscription can only trust one Azure AD tenant at a time, further information can be found at [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
@@ -42,7 +45,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Add one or more custom domains to your Azure AD tenant as per [Add your custom domain name using the Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)
 
-  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in you on-premises Active Directory Domain Services environment.
+  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in your on-premises Active Directory Domain Services environment.
 
 - Define your Azure single sign-on strategy, using Azure AD Connect, based on one of the supported [topologies](/azure/active-directory/hybrid/plan-connect-topologies).
 
