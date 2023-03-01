@@ -54,6 +54,10 @@ See the guidance [Adopting policy driven guardrails](./dine-guidance.md)
 
 In short, **no**. Use Azure Policy to control, govern, and keep your workloads and landing zones compliant. It isn't designed to deploy entire workloads and other tooling. Use the Azure portal or infrastructure-as-code offerings (ARM Templates, Bicep, Terraform) to deploy and manage your workload and get the autonomy you need.
 
+## What is Cloud Adoption Framework Landing zones for Terraform (aztfmod)?
+
+The Cloud Adoption Framework landing zones (aka aztfmod) [open source project (OSS)](https://aztfmod.github.io/documentation/docs/intro/) is a community driven project owned and maintained outside of the Azure landing zone core team and the Azure GitHub organization. If your organization chooses to use this OSS project, consideration should be given to the support available as this is driven by the community effort through GitHub.
+
 ## What if we already have resources in our landing zones and later assign an Azure Policy definition that includes them in its scope?
 
 Review the following documentation sections:
