@@ -155,7 +155,7 @@ items:
       - name: Highly sensitive data landing zones
         href: ./architectures/reference-architecture-lamna.md
       - name: Financial institution scenario for data mesh
-        href: ./architectures/reference-architecture-data-mesh.md
+        href: ./architectures/data-mesh-scenario.md
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
