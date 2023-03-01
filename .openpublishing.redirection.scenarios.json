@@ -2,7 +2,7 @@
   "redirections": [
      {
       "source_path_from_root": "/docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-data-mesh.md",
-      "redirect_url": "/docs/scenarios/cloud-scale-analytics/architectures/data-mesh-scenario.md",
+      "redirect_url": "/docs/scenarios/cloud-scale-analytics/architectures/data-mesh-scenario",
       "redirect_document_id": false
      },
      {
