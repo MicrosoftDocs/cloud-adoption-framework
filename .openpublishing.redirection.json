@@ -759,6 +759,11 @@
          "source_path": "docs/infrastructure/mainframe-migration/myths-and-facts.md",
          "redirect_url": "/azure/cloud-adoption-framework/infrastructure/mainframe-migration/",
          "redirect_document_id": false   
-      }
+      },
+      {
+         "source_path": "docs/ready/landing-zone/terraform-module.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
+         "redirect_document_id": false   
+      }      
    ]
 }

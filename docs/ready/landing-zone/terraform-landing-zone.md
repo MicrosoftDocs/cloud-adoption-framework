@@ -2,12 +2,13 @@
 title: Introduction to Terraform landing zones
 description: Get Cloud Adoption Framework recommendations to use Terraform with Microsoft Azure in an enterprise context.
 author: arnaudlh
-ms.author: arnaul
+ms.author: tozimmergren
+ms.reviewer: tozimmergren
 ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, UpdateFrequency.5
+ms.custom: think-tank, UpdateFrequency5
 ---
 
 <!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
@@ -15,7 +16,7 @@ ms.custom: think-tank, UpdateFrequency.5
 # Cloud Adoption Framework Terraform landing zones
 
 > [!NOTE]
-> This article describes one of two ways to implement landing zones on Azure by using Terraform. For guidance on choosing the right approach, see [this article](deploy-landing-zones-with-terraform.md).
+> This article has been archived and will not be maintained. For updated guidance on using Terraform for Azure landing zones, see [Deploy Azure landing zones by using Terraform](/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform).
 
 Azure provides multiple native services for deploying your landing zones. Other tools can also help with this effort. One tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp.
 
