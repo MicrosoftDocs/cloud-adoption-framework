@@ -1,6 +1,6 @@
 ---
 title: Data lake zones and containers
-description: Learn about the three Azure Data Lake Storage Gen2 accounts that should be provisioned for each data landing zone.
+description: Learn about the three Azure Data Lake Storage Gen2 accounts that can be provisioned for each data landing zone.
 author: mboswell
 ms.author: mboswell
 ms.date: 04/04/2022
@@ -18,7 +18,7 @@ For an overview of data lakes, see [Overview of Azure Data Lake Storage for clou
 
 ## Overview
 
-Your three data lake accounts should align to the typical data lake layers.
+Align your three data lake accounts to the typical data lake layers.
 
 | Lake number | Layers      | Container number | Container name |
 |-------------|-------------|--------------|-------------------|
@@ -44,28 +44,28 @@ When your data agnostic ingestion engine or onboarding application registers a n
 
 For more information on teams, see [Understand roles and teams for cloud-scale analytics in Azure](../organize-roles-teams.md).
 
-Each data product should have two folders in the data products container, which your data product team should own.
+Each data product should have two folders in the data products container, which your data product team owns.
 
 In a standardized container's enriched layer, there are two folders per source system, divided by classification. With this structure, your team can store data that has different security and data classifications separately and assign them different security access.
 
 Your standardized container needs a general folder for *confidential or below* data and a *sensitive* folder for personal data. Control access to these folders by using access control lists (ACLs). You can create a dataset with all personal data removed, and store it in your general folder. You can have another dataset that includes all personal data in your *sensitive* personal data folder.
 
-A combination of access control lists (ACLs) and Azure Active Directory (Azure AD) groups restrict data access. These lists and groups control what other groups can and can't access. Data owners and data application teams can approve or reject access to their data assets.
+A combination of ACLs and Azure Active Directory (Azure AD) groups restrict data access. These lists and groups control what other groups can and can't access. Data owners and data application teams can approve or reject access to their data assets.
 
 For more information, see [Data access management](../../data-management/security-provisioning.md) and [Restricted data](../../data-management/secure-data-privacy.md#restricted-data).
 
 > [!WARNING]
-> Some software products don't support mounting the root of a data lake container. Because of this limitation, each data lake container in raw, curated, enriched, and development layers should contain a single folder that branches off to multiple folders. Set up your folder permissions carefully. When you create a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) doesn't have a default ACL.
+> Some software products don't support mounting the root of a data lake container. Because of this limitation, each data lake container in raw, curated, enriched, and development layers should contain a single folder that branches off to multiple folders. Set up your folder permissions carefully. When you create a new folder from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL. A child file's ACL doesn't have a default ACL.
 >
 >For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## Raw layer or data lake one
 
-Think of the raw layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or CSV, but you might encounter scenarios where it's more cost effective to store the file contents as a column in a compressed file format, like Avro, Parquet, or Databricks Delta Lake.
+Think of the raw layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might store the data in its original format, such as JSON or CSV. Or it might be cost effective to store the file contents as a column in a compressed file format, like Avro, Parquet, or Databricks Delta Lake.
 
 This raw data is immutable. Keep your raw data locked down, and if you give permissions to any consumers, automated or human, ensure that they're read-only. You can organize this layer by using one folder per source system. Give each ingestion process write access to only its associated folder.
 
-When you load data from source systems into the raw zone, you can choose to do either:
+When you load data from source systems into the raw zone, you can choose to do:
 
 - **Full loads** to extract a full data set.
 - **Delta loads** to load only changed data.
@@ -86,11 +86,11 @@ The differences between full loads and delta loads are:
   - The source system maintains a timestamp field that identifies if data has been added, updated, or deleted.
   - The source system creates and updates files on data changes.
 
-Your raw data lake is composed of your landing and conformance containers, which each use a 100% mandatory folder structure specific to its purpose.
+Your raw data lake is composed of your landing and conformance containers. Each container uses a 100% mandatory folder structure specific to its purpose.
 
 ### Landing container layout
 
-Your landing container is reserved for raw data that's from a recognized source system and is loaded by your data agnostic ingestion engine or a source-aligned data application, unaltered and in its original supported format.
+Your landing container is reserved for raw data that's from a recognized source system. Your data agnostic ingestion engine or a source-aligned data application loads the data, which is unaltered and in its original supported format.
 
 ```markdown
 .
@@ -215,23 +215,23 @@ Data assets in this zone are typically highly governed and well documented. Assi
 
 Your data consumers can bring other useful data products along with the data ingested into your standardized container.
 
-In this scenario, your data platform should allocate an analytics sandbox area for these consumers. In the sandbox, they can generate valuable insights by using the curated data and data products that they bring. For example, if a data science team wants to determine the best product placement strategy for a new region, they can bring other data products, like customer demographics and usage data, from similar products in that region. The team can use the high-value sales insights from this data to analyze the product market fit and offering strategy.
+In this scenario, your data platform can allocate an analytics sandbox area for these consumers. In the sandbox, they can generate valuable insights by using the curated data and data products that they bring. For example, if a data science team wants to determine the best product placement strategy for a new region, they can bring other data products, like customer demographics and usage data, from similar products in that region. The team can use the high-value sales insights from this data to analyze the product market fit and offering strategy.
 
 > [!NOTE]
-> The analytics sandbox area is a working area for an individual or a small group of collaborators. The sandbox area's folders have a special set of policies that prevent attempts to use this area as part of a production solution. These policies include limits on total available storage and limits on how long data can be stored.
+> The analytics sandbox area is a working area for an individual or a small group of collaborators. The sandbox area's folders have a special set of policies that prevent attempts to use this area as part of a production solution. These policies limit the total available storage and limit how long data can be stored.
 
-These data products are usually of unknown quality and accuracy. They're still categorized as data products, but are temporary and only relevant to the user group using the data.
+These data products are usually of unknown quality and accuracy. They're still categorized as data products, but are temporary and only relevant to the user group that's using the data.
 
-Sometimes these data products mature, and your enterprise should consider how to promote these data products to your curated data layer. To keep your data product teams responsible for new data products, provide the teams with a dedicated folder on your curated data zone. They can store new results in it and share them with other teams across your organization.
+When these data products mature, your enterprise can promote these data products to your curated data layer. To keep your data product teams responsible for new data products, provide the teams with a dedicated folder on your curated data zone. They can store new results in the folder and share them with other teams across your organization.
 
 > [!NOTE]
-> For every Azure Synapse workspace you create, use data lake three to create a container you can use as primary storage. This stops Azure Synapse workspaces from interfering with your curated and enriched zones' throughput limits.
+> For every Azure Synapse workspace you create, use data lake three to create a container to use as primary storage. This container stops Azure Synapse workspaces from interfering with your curated and enriched zones' throughput limits.
 
 ## Example of data flow into products and analytics sandbox
 
-The following diagram joins this article's sections together and shows how data flows through to a data products and analytic sandbox.
+The following diagram compiles the information in this article and shows how data flows through to a data products and analytics sandbox.
 
-:::image type="content" source="../media/data-flow-data-products.png" alt-text="Data flow into product container and analytics sandbox" lightbox="../media/data-flow-data-products.png":::
+:::image type="content" source="../media/data-flow-data-products.png" alt-text="Diagram showing a data flow into product container and analytics sandbox." lightbox="../media/data-flow-data-products.png":::
 
 ## Next steps
 
