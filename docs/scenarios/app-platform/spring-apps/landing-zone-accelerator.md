@@ -11,7 +11,7 @@ ms.subservice: caf-scenario-spring-apps
 
 # Azure Spring Apps landing zone accelerator
 
-Azure Spring Apps landing zone accelerator is intended for an **application team** that's **building and deploying Spring Boot applications** in a typical enterprise landing zone design. As the workload owner, you'll find **architectural guidance** to help you achieve the target technical state with confidence.  
+Azure Spring Apps landing zone accelerator is intended for an **application team** that's **building and deploying Spring Boot applications** in a typical enterprise landing zone design. As the workload owner, use the **architectural guidance** to achieve your target technical state with confidence.  
 
 ## What's included in the accelerator
 
@@ -26,7 +26,7 @@ The landing zone accelerator approach provides design considerations, reference 
     - [Governance](./governance.md)
 
 
-- **Reference architecture** provides design guidance that apply the recommendations for an example spring app. The practical approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using Spring boot apps.
+- **Reference architecture** provides design guidance that applies the recommendations for an example spring app. The practical approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using Spring boot apps.
 
     [![Diagram that shows Azure App Service landing zone accelerator architecture.](./media/spring-apps-landing-zone-accelerator-architecture.jpg)](./media/spring-apps-landing-zone-accelerator-architecture.jpg#lightbox)
 
@@ -38,9 +38,9 @@ The landing zone accelerator approach provides design considerations, reference 
 
 ## Integration with platform landing zones
 
-The accelerator assumes that the enterprise (platform) landing zones are based on [Azure landing zone](../../../ready/landing-zone/index.md) guidance. The platform landing zones have shared services that are managed by centralized teams so that you can focus your efforts on application development and workload resources. 
+The accelerator assumes that the enterprise (platform) landing zones are based on [Azure landing zone](../../../ready/landing-zone/index.md) guidance. The platform landing zones have shared services that are managed by centralized teams, so that you can focus your efforts on application development and workload resources. 
 
-It's highly recommended that you have understand the integration points between the shared resources and workload resources. If there are changes required in the platform, work with the centralized team to get them to implemented with a shared responsibility mindset. For example, communicate the expected potential of the workload so that the central networking team can allocate a virtual network with address space that's large enough to accomodate that growth.
+It's highly recommended that you have a good understanding of the **integration points between the shared resources and workload resources**. If there are changes required in the platform, work with the centralized team to get the changes implemented with a **shared responsibility mindset**. For example, communicate the expected potential of the workload early so that the central networking team can allocate a virtual network with address space that's large enough to accommodate that growth.
 
 
 ## Next steps
