@@ -28,7 +28,7 @@ The landing zone accelerator approach provides design considerations, reference 
 
 - **Reference architecture** provides design guidance that apply the recommendations for an example spring app. The practical approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using Spring boot apps.
 
-    [![Diagram that shows Azure App Service landing zone accelerator architecture.](./media/landing-zone-accelerator/reference-implementation.png)](./media/landing-zone-accelerator/reference-implementation.png#lightbox)
+    [![Diagram that shows Azure App Service landing zone accelerator architecture.](./media/spring-apps-landing-zone-accelerator-architecture.jpg)](./media/spring-apps-landing-zone-accelerator-architecture.jpg#lightbox)
 
 - **Reference implementation** accompanies the architecture and demonstrates the best practices, provides infrastructure-as-code templates a sample spring app.
 
