@@ -1664,7 +1664,7 @@ items:
     - name: How to update ALZ
       items:
       - name: Why use Infrastructure as Code to update your ALZ
-        href: manage/iac-updates.md
+        href: manage/infrastructure-as-code-updates.md
 
     - name: Management considerations
       items:

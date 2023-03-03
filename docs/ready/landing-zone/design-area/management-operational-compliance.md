@@ -28,7 +28,7 @@ Monitoring your environments for configuration drift is an important part of ens
 
 Use this technique as part of your organization's management approach within landing zones, where can assist help ensure resources stay in line with an expected configuration.
 
-In addition, using Infrastructure as Code can help you monitor for configuration drift, as well as help you keep your landing zone up to date.  To learn more, see [Keep your Azure landing zone up to date](../../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md) and [Why use Infrastructure as Code to update your ALZ?](../../../manage/iac-updates.md).
+In addition, using Infrastructure as Code can help you monitor for configuration drift, as well as help you keep your landing zone up to date.  To learn more, see [Keep your Azure landing zone up to date](../../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md) and [Why use Infrastructure as Code to update your ALZ?](../../../manage/infrastructure-as-code-updates.md).
 
 Learn about the [guest configuration feature of Azure Policy](/azure/governance/policy/concepts/guest-configuration). Consider how you can use it as part of your landing zone management toolkit.
 

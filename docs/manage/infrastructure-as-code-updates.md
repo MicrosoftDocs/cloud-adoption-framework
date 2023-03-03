@@ -6,7 +6,7 @@ ms.author: bstephenson
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.date: 1/11/2022
+ms.date: 03/03/2023
 ms.custom: template-overview
 ---
 
@@ -42,7 +42,7 @@ You can learn more about planning for automation of Landing Zones by referencing
 
 The following are the key benefits to using Infrastructure as Code to make your Landing Zone Updates.
 
-### Reduces Effort
+### Reduces effort
 
 Using Infrastructure as Code to perform updates takes less effort than making changes manually.  The IaC deployment helps answer:
 
@@ -54,23 +54,23 @@ When an Infrastructure as Code tool set is run, it can be used to produce a comp
 
 This means that instead of having an operator or engineer compile the information for the change, the tool set can do that.
 
-### Reduced Error
+### Reduced error
 
 Due to the programmatic nature of the deployments, Infrastructure as Code can be used to reduce human error while making changes.  Because it only changes what is defined, and it has preview options, it can reduce outages caused by failed or incomplete changes.  In addition, there are improved options for testing.
 
-### Version Control and History
+### Version control and history
 
 Because Infrastructure as Code deployments are backed by a definition file, you can use source control to manage the versions of your definitions.  Depending on the method of Infrastructure as Code you use, you can also reference Deployments in Azure (for Bicep) or your state file (for Terraform) to review the history of deployments that have previously taken place.
 
 Using source control practices, a new branch of your Infrastructure as Code should be created to add changes and revisions.  This branch's history in your source control system will capture the iterations and changes.  Deployments with it can be done to a test environment (see [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md)) until the changes are ready to be merged in and deployed to production.  All throughout this cycle, the deployment records will capture what version was used, and what resources were deployed, giving you a highly visible history.
 
-### Testing Environments
+### Testing environments
 
 Because Infrastructure as Code deployments are repeatable, you can use the same definition to deploy a second (or more) environment based on the deployment.  This can be valuable for testing changes.
 
 For example, if you wanted to replace your Azure Firewall with one using the Premium SKU, you could deploy a test environment and validate the changes without changing production.  
 
-### Catch Configuration Drifts
+### Catch configuration drifts
 
 Infrastructure as Code also provides a unique option to catch configuration drifts during updates.  Not only can the deployment catch changes to the definition file, it can present instances where resources have been configured differently from the definition.
 
