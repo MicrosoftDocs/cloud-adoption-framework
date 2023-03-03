@@ -1,5 +1,5 @@
 ---
-title: Different connectors and choosing the Optimal one
+title: SAP connectors for Azure Synapse/Data Factory and choosing the Optimal one
 description: Learn more about the best practices on Integrating SAP Data with Azure Data Services for SAP on Azure.
 author: shah-manish
 ms.author: shah-manish
@@ -13,8 +13,10 @@ ms.custom: think-tank, e2e-sap
 **APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
 
 # Different connectors and electing the optimal one
+This article is part 2 of the SAP Extend and Innovate Data Best practices series. To Identify SAP Data sources, please refer to 
+[ Identify SAP Data Sources ](./sap-lza-identify-sap-data-sources.md)
 
-SAP applications often run several mission critical and core business processes, and therefore generate a huge amount valuable business data. Moreover, there are a plethora of different SAP applications and solutions across both OLTP such as ECC, CRM, SCM, as well as OLAP such as BW. In addition, SAP applications expose data in several different ways. Therefore, SAP data integration can be a large and complex project.
+SAP applications often run several mission critical and core business processes, and therefore generate a huge amount valuable business data. Moreover, there are a plethora of different SAP applications and solutions across both OLTP such as ECC, CRM, SCM, as well as OLAP such as BW. In addition, SAP applications expose data in several different ways. By combining SAP and non-SAP data and applying advanced data services, such as analytics and AI, customers are extracting real-time and predictive insights for improved business outcomes. Therefore, SAP data integration can be a large and complex project.
 
 # Design considerations for integrating SAP data with Azure
 
@@ -44,7 +46,7 @@ We recommend the following considerations to help you determine your approach an
 > 
 > Check if your SAP data extraction scenario affects SAP Licensing.
 > 
-> You can use ABAP [SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azure) for tighter integration of SAP data with Azure.
+> You can use [ABAP SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azure) for tighter integration of SAP data with Azure.
 
 ## Choosing the optimal connector
 

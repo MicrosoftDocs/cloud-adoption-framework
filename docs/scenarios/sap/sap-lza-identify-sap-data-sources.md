@@ -10,6 +10,10 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
+Digital transformation requires a seamless combination of intelligence derived from data across business operations to help our customers meet their business objectives. For enterprise customers typical SAP applications are utilized as enterprise resource planning system (ERP), Line of Business (LoB) SaaS applications, enterprise data-warehouses, business intelligence or integration platforms. In SAP, there is so much data locked in silos that could be harnessed to drive business transformation. There is a strong momentum of SAP customers to leverage Microsoft Azure as their platform of choice for infrastructure and their SAP workloads. 
+
+One customers deploy the SAP landscape following best practices from SAP Landing zone accelerator, the next step is innovation with Azure Data Services. Hence combining and extending SAP workloads on Azure, deployed and operated as Infrastructure as a Service (IaaS) or SaaS with Azure Data Services, is the logical next step for our customers and partners. By combining SAP and non-SAP data and applying advanced data services, such as analytics and AI, customers are extracting real-time and predictive insights for improved business outcomes. 
+
 # Identify SAP Data Sources 
 SAP systems contain data from across the organization which can be used to derive insights. In many cases, this data is siloed and is not integrated with other data sources inside and outside of the organization. Following is an overview of the most relevant SAP applications that serve as the source of a Data Integration initiative
 
@@ -33,8 +37,6 @@ SAP SaaS solutions:
 - [SAP Fieldglass](https://www.fieldglass.com/) for external workforce management
 - [SAP SuccessFactors](https://www.sap.com/products/hcm.html) for Human Capital Management
 
-The community curated list of SAP products on Wikipedia lists more than 100 SAP products for business, industry or platform software (Wikipedia 2021, List of SAP products - Wikipedia) 
-[List of SAP products - Wikipedia](https://en.wikipedia.org/wiki/List_of_SAP_products). Due to this wide variety of solution portfolio and deployment options, this article focuses on the most common and relevant products in customer environments. 
 
 
 **Design considerations:**
@@ -51,11 +53,14 @@ The community curated list of SAP products on Wikipedia lists more than 100 SAP 
 
 - For data extraction from SAP BW on anyDB or SAP HANA, consider the SAP NetWeaver OpenHub and SAP OpenHub for S/4HANA licenses which are also included in SAP HANA, enterprise edition. Note also that SAP BW/4HANA doesn't require an OpenHub license. For additional details about terms and conditions, refer to [SAP Software Use Rights (SUR)](https://assets.cdn.sap.com/agreements/product-use-and-support-terms/sur/sap-software-use-rights-english-v1-2022.pdf) document in SAP Trust Center. 
 
-- One of the possible ODP providers of SAP CDC connector is SAP Landscape Transformation Replication Server (SLT). It is a trigger-based data replication technology that allows real-time replication from SAP and/or non-SAP sources to SAP and/or non-SAP targets. For SLT licensing, see the attachment in SAP Note 2707835. The license is determined by the target system of the replication. If the license of target system includes the use of SLT, no separate SLT license is needed. In any other SLT case, including the use of SAP CDC connector, an SLT Full License is required. 
+- The ODP(Operational Data Provisioning) framework is part of many SAP systems, including SAP ECC and SAP S/4HANA. It is also contained in SAP BW and SAP BW/4HANA. One of the possible ODP providers of SAP CDC connector is SAP Landscape Transformation Replication Server (SLT). It is a trigger-based data replication technology that allows real-time replication from SAP and/or non-SAP sources to SAP and/or non-SAP targets. For SLT licensing, see the attachment in SAP Note [2707835 - SLT Licensing](https://launchpad.support.sap.com/#/notes/2707835). The license is determined by the target system of the replication. If the license of target system includes the use of SLT, no separate SLT license is needed. In any other SLT case, including the use of SAP CDC connector, an SLT Full License is required. 
 
 - Within a customer organization, there are separate teams supporting data integration and SAP projects. Often the data team is unaware of existing OpenHub licenses which enables data extraction from SAP BW using the OpenHub interface. 
 
 - Consider technical debt of existing SAP BW transformations and investments
+
+- Azure Data Factory and Azure Synapse Analytics pipelines provide multiple connectors for data extraction from SAP sources. 
+  Consider the [Whitepaper](https:// github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf). For SAP CDC connector specifically, please see [SAP CDC page](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-change-data-capture) 
 
 - Data Analysis - Once the source system is identified, and its capabilities and limitations well known, consider the following items in data analysis: 
   - Source business object, 
@@ -65,7 +70,7 @@ The community curated list of SAP products on Wikipedia lists more than 100 SAP 
   - extraction in batches vs. near-real time replication (Note that the minimum interval of a schedule trigger in Azure Synapse is one minute), 
   - data access methods provided by the source system, 
   - native Azure or 3rd party ETL tools and data connectors most suitable for the use case, 
-  - In case of SAP CDC connector, type of ODP provider/context, e.g., SAPI (DataSources/Extractors), BW (SAP   NetWeaver Business Warehouse), ABAP_CDS (ABAP Core Data Services) or HANA (HANA Information Views), in case of ABAP CDS views, the view's supported capabilities and analytics annotations.
+  - In case of SAP CDC connector, type of ODP provider/context, e.g., SAPI (DataSources/Extractors), BW (SAP NetWeaver Business Warehouse), ABAP CDS (ABAP Core Data Services) or HANA (HANA Information Views), in case of ABAP CDS views, the view's supported capabilities and analytics annotations.
 
 
 **Design Recommendations**
@@ -74,8 +79,6 @@ The community curated list of SAP products on Wikipedia lists more than 100 SAP 
 
 - There may be cases where data extraction from an SAP ERP system into Azure makes more sense, such as in case of a standalone SAP ERP with no SAP BW connection, or data in SAP ERP tables that do not require the transformation logic in an existing SAP BW and can be extracted by means of data connectors available in Azure.  One of the use cases is a customer already using SAP BW as a source and there are a few tables that need to be extracted in full load directly from SAP ERP system.  Another scenario is a customer source itself is an SAP ERP system and this one requires bigger data set.
 - If the SAP BW system has many transformations on top of data extracted from SAP ERP systems, then you may consider SAP BW Open Hub connector to extract data from SAP BW. Look at your organization’s data strategy and skill sets. You may already be investing in Azure Data Services which could influence the choice of the source SAP system. 
-
-- Azure Data Factory and Azure Synapse Analytics pipelines provide multiple connectors for data extraction from SAP sources. https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP Data Integration using Azure Data Factory.pdf For SAP CDC connector specifically, see Transform data from an SAP ODP source with the SAP CDC connector in Azure Data Factory or Azure Synapse Analytics - Azure Data Factory & Azure Synapse | Microsoft Learn.
 
 - If one is using the [CDC (Change Data Capture) connector](https://learn.microsoft.com/en-us/azure/data-factory/sap-change-data-capture-introduction-architecture), the following are the data providers and recommendations based on source system.  
 
