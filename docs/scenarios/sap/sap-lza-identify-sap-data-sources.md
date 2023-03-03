@@ -60,7 +60,7 @@ SAP SaaS solutions:
 - Consider technical debt of existing SAP BW transformations and investments
 
 - Azure Data Factory and Azure Synapse Analytics pipelines provide multiple connectors for data extraction from SAP sources. 
-  Consider the [Whitepaper](https:// github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf). For SAP CDC connector specifically, please see [SAP CDC page](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-change-data-capture) 
+  Consider the [Whitepaper](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf). For SAP CDC connector specifically, please see [SAP CDC page](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-change-data-capture) 
 
 - Data Analysis - Once the source system is identified, and its capabilities and limitations well known, consider the following items in data analysis: 
   - Source business object, 
