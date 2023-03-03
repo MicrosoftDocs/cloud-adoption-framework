@@ -39,7 +39,7 @@ Over time, Azure landing zone custom policies and policy initiatives might be up
 
 ## Using Infrastructure-as-Code (IaC) to keep ALZ updated
 
-To help more easily remain up to date with ALZ in a consistent way, use IaC to maintain your ALZ environment. See the following link for more details on the benefits [Why use Infrastructure as Code to update your ALZ?](../../manage/iac-updates.md)
+Maintain your ALZ environment with IaC to consistently stay updated with ALZ. To learn more about the benefits and details, see [Why use Infrastructure as Code to update your ALZ?](../../manage/iac-updates.md)
 
 ## Next steps
 
