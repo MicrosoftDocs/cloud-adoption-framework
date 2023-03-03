@@ -94,7 +94,7 @@ Azure Policy is used throughout governance processes. It's also highly valuable 
 
 Azure Policy guest configuration currently only audits settings inside the machine. It doesn't apply configurations.
 
-Maintaining Azure Policy assignments and updating them as your governance process requires is an important part of this process.  Using Infrastructure as Code can help you update and maintain your policy infrastructure.  To learn more, see [Why use Infrastructure as Code to update your ALZ?](../iac-updates.md).
+An important part of this process is maintaining and updating Azure Policy assignments and updating them as your governance process requires.  Using Infrastructure as Code can help you update and maintain your policy infrastructure.  To learn more, see [Why use Infrastructure as Code to update your ALZ?](../iac-updates.md).
 
 ::: zone target="chromeless"
 
