@@ -47,13 +47,13 @@ The following diagram shows a conceptual reference architecture demonstrating ma
 _For more information on the design areas labeled A-J in the visual, see the Azure Landing Zone [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas). To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-network-topology-and-connectivity)_
 
 ### Guidance for regional expansion
-While having a Azure Virtual Desktop deployment in a single Azure region will be enough for many customers, some customers may require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
+While having an Azure Virtual Desktop deployment in a single Azure region will be enough for many customers, some customers may require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
 
-**1. Scenario A:** Customer requires to deploy additional Azure Virtual Desktop Virtual Machines, but there is no additional capacity in the existing Azure region.
+- **Scenario A:** Customer requires to deploy additional Azure Virtual Desktop Virtual Machines, but there is no additional capacity in the existing Azure region.
 
-**2. Scenario B:** Customers have a need to deploy Azure Virtual Desktop Virtual Machines closer to where their users and on-premises datacenters are located.
+- **Scenario B:** Customers have a need to deploy Azure Virtual Desktop Virtual Machines closer to where their users and on-premises datacenters are located.
 
-The following are the network considerations for both Azure Virtual Desktop expansion scenarios
+The following are the network considerations for both Azure Virtual Desktop expansion scenarios.
 
 The following list describes the key networking considerations to implement in the new Azure region when expanding a Azure Virtual Desktop deployment into a secondary Azure region for **Scenario A:**
 
