@@ -123,27 +123,27 @@ There are many offerings in the market that provide this capability. Azure Polic
 
 ### Approve service controls
 
-The governance team must now approve the work done in the last two stages.
+The governance team must approve the work done in the last two stages.
 
-As this approval stage is with the governance team, the previous two stages can be completed by other teams. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
+This approval stage is with the governance team, so the previous two stages can be completed by other teams. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
 
 ### Release service controls
 
 Releasing changed controls for services that have an existing service guidance is different than releasing new service guidance.
 
-With modification of an existing service guidance, remember that there are adoption teams using the current service guidance in their work. Large changes might break their current projects.
+When you modify existing service guidance, remember that there are adoption teams that use the current service guidance in their work. Large changes might break their current projects.
 
-When doing incremental reviews of service guidance, you can look at how a service is being used to determine what effect new controls might create.
+When you do incremental reviews of service guidance, you can look at how a service is being used to determine what effect new controls might create.
 
-To start with, release new controls in an audit mode. Such a release automatically triggers the policy alerting engine to start notifications to the application owners about any remediation they must implement.
+Release new controls in an audit mode. This type of release triggers the policy alerting engine to send notifications to the application owners about remediation that they must implement.
 
 #### Service governance, release, and version control
 
-The design imperatives must have a version and release cycle and be tied back to the service guidance. The service guidance must have a version and release cycle and be tied back to the policy controls. Finally, the policy controls must have versions and be released in manageable waves.
+The design imperatives must have a version and release cycle, and they must tie back to the service guidance. The service guidance must have a version and release cycle, and it must tie back to the policy controls. The policy controls must have versions and must be released in manageable waves.
 
-- All of these steps should happen with release cycles
-- Services must be available on a set date
-- Policy controls must be advertised on a release cycle
+- All of these steps should happen with release cycles.
+- Services must be available on a set date.
+- Policy controls must be advertised on a release cycle.
 
 ## Artifacts generated
 
@@ -151,38 +151,38 @@ The design imperatives must have a version and release cycle and be tied back to
 
 There are four key artifacts developed throughout this process.
 
-- The **Service control requirements** are the outline of the key controls that are required across all services. This document is published above the reference documentation for cloud adoption teams. This positioning ensures that they've reviewed and understand the controls that are being built into the systems. This document must be available so that others can help the development of a service review. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
+- The **service control requirements** are the outline of the key controls that are required across all services. This document is published before the reference documentation for cloud adoption teams. This positioning ensures that they review and understand the controls that are being built into the systems. This document must be available so that others can help the development of a service review. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
 
-- The **Service review schedule** is a document that outlines when the services are being reviewed, how long the expected wait for a review is, and lets adoption teams know when a new service becomes available. They'll also know when existing services might change and need more implementation of controls.
+- The **service review schedule** is a document that outlines when the services are reviewed, how long the expected wait for a review is, and when a new service becomes available for adoption teams. It also notifies the adoption team when existing services might change and need more implementation of controls.
 
-- **Service guidance**, is a per service document that outlines the key components around a service:
+- **Service guidance** is a per service document that outlines the key components around a service, such as:
 
-  - When the service should be used
-  - Any restrictions on what it should be used for
-  - A list of controls that are enforced by the platform
-  - A list of controls that the developer should implement
+  - When the service is used.
+  - Restrictions on what the service is used for.
+  - A list of controls that are enforced by the platform.
+  - A list of controls that the developer implements.
 
-  Cloud adoption teams refer to these documents for services they can pick up and use, and then plan the implementation of their project around the controls and components. The service guidance should also list any Azure policies and supporting functions that have been implemented. This guidance ensures that a reference can be enforced between the policy and service controls.
+  Cloud adoption teams refer to these documents for services that they can pick up and use. They plan the implementation of their project around the controls and components. The service guidance also lists Azure policies and supporting functions that are implemented. This guidance ensures that a reference is enforced between the policy and service controls.
 
 - **Azure policies and supporting functions** are the components or technical implementation of the controls that go into the platform. This code is version-controlled and deployed. These code items must act in enforcing the policy and include the code for reporting compliance of the policy.
 
-### Starting with a baseline
+### Start with a baseline
 
-When starting this process, most organizations will already have an Azure footprint. To ensure the least disruptive implementation of service governance, it's best to baseline off the current implementation and then start service reviews. This method avoids stifling innovation or blocking new projects while the governance team is starting.
+When starting this process, most organizations already have an Azure footprint. To ensure the least disruptive implementation of service governance, it's best to baseline off the current implementation and then start service reviews. This method avoids stifling innovation or blocking new projects while the governance team is starting.
 
-1. Create a service guidance for every service that's currently used in your organization with the current service controls.
+1. Create a service guidance for every service that's used in your organization with the current service controls.
 
    For example, if key vaults are used and there are no controls enforced on them, create a service guidance for `A key vault with no controls`. If storage accounts are in use and a policy enforces encryption, create the storage account guidance with the control that encryption will be enforced.
 
-2. Trigger a service review for all services that are currently in use, adding them all to the service review schedule.
+2. Trigger a service review for all services that are in use, which adds them to the service review schedule.
 
-3. Start a rollout of the new or changed controls in line with the service review policy, giving product teams time to remediate their services.
+3. Start a rollout of the new or changed controls in line with the service review policy, which gives product teams time to remediate their services.
 
-In this stage, as the baseline, all services currently in production use are approved with their current policy controls.
+In this stage, as the baseline, all services in production use are approved with their current policy controls.
 
-From here, the process is ready to start working with the service guidance as if it were going through a normal review.
+The process is ready to start working with the service guidance as if it were going through a normal review.
 
-For example, if your organization has deployed virtual machines (VM) to production today, and the only policy governing that is tagging, then the MVP for the VM service guidance only documents the control around tagging.
+For example, if your organization deploys virtual machines (VM) to production today, and the only policy governing that is tagging, then the MVP for the VM service guidance only documents the control around tagging.
 
 If more controls need to be enforced for virtual machines, a new version of the service guidance is written. The new controls are implemented and go through the release cycle for the new service guidance version.
 
