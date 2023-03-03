@@ -194,6 +194,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
 | DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS private resolver | `Microsoft.Network/dnsResolvers` | `dnspr` |
 | DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
