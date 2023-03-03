@@ -32,7 +32,7 @@ The network topology and connectivity design area is critical for establishing a
 - Review our best practices for planning, deploying, and maintaining [Azure VNet hub and spoke topologies](../../azure-best-practices/hub-spoke-network-topology.md)
 - Consider [Azure Virtual Network Manager (Preview)](/azure/virtual-network-manager/overview) to centralize network security group (NSG) security rules across multiple VNets
 - [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) unifies networking, security, and routing to help businesses build hybrid cloud architectures safer and faster
-- Access Azure data services privately with [Azure Private Link](/azure/private-link/private-link-overview). The Private Link service ensures your users and applications communicate with key Azure services by using the Azure backbone network and private IP addresses in Azure VNET instead of using the public Internet.
+- Access Azure data services privately with [Azure Private Link](/azure/private-link/private-link-overview). The Private Link service ensures your users and applications communicate with key Azure services by using the Azure backbone network and private IP addresses instead of using the public Internet.
 
 The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice network design and configuration guidance integrated within them.
 
@@ -53,7 +53,7 @@ Network topology is a critical element of landing zone architecture because it d
 - [Define an Azure network topology](../../azure-best-practices/define-an-azure-network-topology.md) explores technologies and topology approaches for Azure deployments.
 - [Traditional Azure networking topology](../../azure-best-practices/traditional-azure-networking-topology.md) explores the option of implementing a traditional Azure networking topology.
 - [Virtual WAN network topology (Microsoft-managed)](../../azure-best-practices/virtual-wan-network-topology.md) explores the option of implementing a Virtual WAN network topology.
-- [Plan for IP addressing](../../azure-best-practices/plan-for-ip-addressing.md) provides guidance on planning IP addressing for a hybrid implementation. Your organization's IP address space shouldn't overlap across other on-premises locations and Azure regions.
+- [Plan for IP addressing](../../azure-best-practices/plan-for-ip-addressing.md) provides guidance on planning IP addressing for a hybrid implementation. Your organization's IP address space shouldn't overlap across on-premises locations and Azure regions.
 
 ## Connectivity
 
