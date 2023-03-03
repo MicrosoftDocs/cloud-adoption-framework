@@ -2,25 +2,26 @@
 title: Enterprise-scale for Microsoft Azure VMware Solution
 description: Learn how enterprise-scale can accelerate the adoption of Microsoft Azure VMware Solution.
 author: pgandham
-ms.author: martinek
-ms.date: 06/06/2022
+ms.author: tozimmergren
+ms.reviewer: tozimmergren
+ms.date: 02/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-azure-vmware, think-tank
+ms.custom: e2e-azure-vmware, think-tank, engagement-fy23
 ---
 
 # Azure VMware Solution landing zone accelerator
 
-Azure VMware Solution landing zone accelerator is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, with a focus on the design principles of enterprise-scale.
+Azure VMware Solution landing zone accelerator is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, focusing on enterprise-scale design principles.
 
-The following guidance provides design considerations for implementing a scalable Azure VMware Solution in your landing zone. The design decisions your organization makes, based on this guidance, lays the groundwork for scalability.
+The following guidance provides design considerations for implementing a scalable Azure VMware Solution in your landing zone. Based on this guidance, your organization's design decisions lays the groundwork for scalability.
 
-Customers adopt Azure VMware Solution in various ways. You can adopt the enterprise-scale for your Azure VMware Solution set to produce an architecture that fits your needs and puts your organization on a path to sustainable scale.
+Customers adopt Azure VMware Solution in various ways. You can adapt the enterprise scale for your Azure VMware Solution set to produce an architecture that fits your needs and puts your organization on a path to a sustainable scale.
 
 Azure VMware Solution landing zone accelerator provides these assets to support your project:
 
-- A modular approach, so that you can customize environment variables
+- A modular approach to customize environment variables
 - Design guidelines to aid in evaluating critical decisions
 - Landing zone architecture
 - An implementation that includes:
@@ -50,6 +51,8 @@ The following articles provide guidelines for creating your landing zone:
 The following architecture diagram is an example that shows design areas and best practices.
 
 [![Azure VMware Solution landing zone accelerator architecture](./media/azure-vmware-eslz-architecture.png)](./media/azure-vmware-eslz-architecture.png#lightbox)
+
+_For more information on the design areas labeled A-I in the visual, see the Azure Landing Zone [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas). To learn more about the design areas for the Azure VMWare Solution landing zone accelerator, see [network topology and connectivity for Azure VMware Solution](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-network-topology-connectivity)_
 
 ## Next steps
 

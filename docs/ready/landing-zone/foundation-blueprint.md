@@ -10,6 +10,7 @@ ms.subservice: ready
 ms.custom:
   - internal
   - engagement-fy23
+  - UpdateFrequency.5
 ---
 
 <!-- docutune:ignore "CAF Foundation blueprint" -->

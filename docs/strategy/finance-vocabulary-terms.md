@@ -7,7 +7,7 @@ ms.date: 4/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: template-concept
+ms.custom: template-concept, UpdateFrequency2
 ---
 
 # Glossary of common finance terms

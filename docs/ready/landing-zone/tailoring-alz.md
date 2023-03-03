@@ -7,7 +7,7 @@ ms.date: 3/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Tailor the Azure landing zone architecture to meet requirements

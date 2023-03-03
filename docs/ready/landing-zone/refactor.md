@@ -7,7 +7,7 @@ ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Refactor landing zones

@@ -7,7 +7,7 @@ ms.date: 08/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal, template-concept
+ms.custom: internal, template-concept, UpdateFrequency2
 ---
 
 # Create a business case for cloud migration

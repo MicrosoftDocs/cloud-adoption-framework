@@ -26,9 +26,7 @@ Virtual desktop migrations are motivated by a few common target outcomes:
 
 - **Safe access**. Employees need access to corporate data and applications from their devices.
 
-- **Support end users**. As workloads are migrated to the cloud, employees need more support for a low-latency, optimized experience.
-
-- **Optimize costs**. The costs of current or proposed virtual desktop experiences need to be optimized to help organizations scale their remote work more effectively.
+- **Support end users**. As workloads are migrated to the cloud, employees need more support for a low-latency, optimized experience. Azure Virtual Desktop forms a business-critical platform for many organizations. The cloud adoption plan for this platform can directly and indirectly affect cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. Understanding the strategy for an Azure Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
 
 - **Empower IT**. The IT team wants to transform the workplace, which often starts with transforming employees' user experience.
 
@@ -36,7 +34,7 @@ You can support realization of these outcomes by virtualizing desktops in the cl
 
 ## Strategic impact of Azure Virtual Desktop
 
-Azure Virtual Desktop is a mission-critical platform for many organizations. When Azure Virtual Desktop is foundational to an organization's business processes, services throughout the organization's cloud portfolio depend on it. The adoption plan for Azure Virtual Desktop can directly and indirectly affect cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically an organization's first platform in the cloud, it can be the most important. Understanding the strategy for migrating to Azure Virtual Desktop and how to achieve the outcomes that you want in the future is critical to the success of all your plans for cloud adoption.
+Azure Virtual Desktop is a business-critical platform for many organizations. When Azure Virtual Desktop is foundational to an organization's business processes, services throughout the organization's cloud portfolio depend on it. The adoption plan for Azure Virtual Desktop can directly and indirectly affect cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically an organization's first platform in the cloud, it can be the most important. Understanding the strategy for migrating to Azure Virtual Desktop and how to achieve the outcomes that you want in the future is critical to the success of all your plans for cloud adoption.
 
 This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx), and other resources from the Cloud Adoption Framework, to capture the strategic impact of adopting Azure Virtual Desktop.
 
@@ -62,7 +60,7 @@ When deciding whether to adopt Azure Virtual Desktop, your cloud strategy should
 
 - Refreshing on-premises virtual desktop infrastructure requires significant capital expenditures. If it's time to refresh your virtual desktop infrastructure, cloud adoption can be a timely strategy to reduce costs.
 
-- Infrastructure hosting contracts lock in vendors for multiple years. If your contracts for hosting, managed services, or maintenance are nearing renewal, consider migrating to Azure services for greater agility, innovation opportunities, and streamlined operation of your mission-critical platforms.
+- Infrastructure hosting contracts lock in vendors for multiple years. If your contracts for hosting, managed services, or maintenance are nearing renewal, consider migrating to Azure services for greater agility, innovation opportunities, and streamlined operation of your business-critical platforms.
 
 - Refresh and contract renewals can be triggered by upgrade cycles of on-premises virtual desktop services or a business driver to adopt Azure Virtual Desktop. Cloud adoption provides opportunities to reduce costs, innovate, optimize, and be more agile.
 
@@ -76,7 +74,7 @@ Citrix DaaS enables secure access to Windows, Linux, and Web apps, and Windows a
 
 [Creating a business case for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts that are associated with Azure Virtual Desktop.
 
-A study by Forrester Consulting, [The Total Economic Impact of Microsoft Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/), offers an analysis in which the following justifications are typically defendable:
+The [2021 Forrester study on the total economic impact of Microsoft Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis in which the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
@@ -87,13 +85,13 @@ Actual returns are likely to vary for individual customers. However, the tables 
 
 Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. You can create transparency between your cloud strategy team and other stakeholders by affirming that the business justification might change significantly during planning stages. Look for consensus that there's enough value to gather inventory and develop a plan, as described in [Azure Virtual Desktop planning](./plan.md). After your digital estate is cataloged and assessed, you can refine your business case and present clear plans for financial returns.
 
-## Approach: Azure Virtual Desktop refactor and modernization
+## Approach: Azure Virtual Desktop refactoring and modernization
 
 In the approach outlined in this article series, the existing Citrix, VMware, or Remote Desktop Services farms are modernized and replaced with Azure Virtual Desktop. In this scenario, desktop images are either migrated to Azure or new images are generated. Similarly, user profiles are either migrated to Azure or new profiles are created. Usually, the client solution is enabled and largely unchanged by this migration effort.
 
 ![Diagram of the virtual desktop migration scenario.](../../_images/migrate/wvd/scenario-solution.png)
 
-When your organization's migration to the cloud is complete, the overhead and costs of managing a virtual desktop farm are eliminated. They're replaced by a cloud-native solution that manages the virtual desktop experience for you. Your team will only be responsible for support of the desktop images, available applications, Azure Active Directory, and user profiles.
+When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team is responsible only for support of the desktop images, available applications, identity service provider (Active Directory, Azure AD Domain Services, or Azure AD), and user profiles. You get the benefits of Microsoft managed broker, gateway, diagnostics, and web access services as part of the Azure Virtual Desktop offering.
 
 ## How to measure progress on adopting Azure Virtual Desktop
 
