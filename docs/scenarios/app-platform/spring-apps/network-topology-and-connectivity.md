@@ -1,6 +1,6 @@
 ---
 title: Networking considerations for the Azure Spring Apps landing zone accelerator
-description: The Azure Spring Apps landing zone accelerator set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting Azure Spring Apps.
+description: Networking considerations and recommendations for a Spring Boot workload.
 author: pagewriter-msft
 ms.author: prwilk
 ms.date: 03/01/2023
@@ -11,7 +11,7 @@ ms.subservice: caf-scenario-spring-apps
 
 # Networking considerations for the Azure Spring Apps landing zone accelerator
 
-This article provides design considerations and recommendations for designing the network in which the  Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
+This article provides design considerations and recommendations for designing a network in which the  Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
 
 The centralized platform team of the organization selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). Regardless of that choice, you will need to deploy the workload in the spoke network. Follow these design considerations and recommendations as best practices for subnetting, ingress and egress controls. 
 
@@ -31,4 +31,53 @@ The centralized platform team of the organization selects the [networking topolo
 
 ## Design recommendations
 
-- Azure Spring Apps requires two dedicated subnets. One subnet has the service runtime and the other for the application(s).
+These recommendations provide prescriptive guidance for the preceding set of recommendations.
+
+•	Azure recommends using a Hub and Spoke design with Network Security Groups to filter east-west traffic  (e.g. restricting traffic to your service runtime subnet) and Azure Firewall for north-south traffic (e.g. egress traffic to the internet).
+•	The Hub virtual network communicates with the internet while the Spoke virtual network hosts Azure Spring Apps.
+
+
+##### Virtual network and subnets
+
+- Azure Spring Apps requires `Owner` permission to your virtual network. This role is required to grant a dedicated and dynamic service principal for deployment and maintenance. For more information, see [Deploy Azure Spring Apps in a virtual network](/azure/spring-apps/how-to-deploy-in-azure-virtual-network).
+
+- Azure Spring Apps deployed in a private network provides a fully qualified domain name (FQDN) that's accessible only within the private network. Create an Azure Private DNS Zone for the IP address of your spring app, linking the private DNS to your virtual network and finally by assigning a private FQDN within Azure Spring Apps. For step-by-step instructions, see Refer [Access your application in a private network](/azure/spring-apps/access-app-virtual-network).
+
+
+- Azure Spring Apps requires two dedicated subnets. One subnet has the service runtime and the other for the Spring Boot application.
+
+    The minimum CIDR block size of each of these subnets is /28. Each subnet can only include a single Spring Apps service instance. The number of spring apps that you can deploy within an instance depends on the size of the subnet. For information about the maximum app instances by subnet range, see [Using smaller subnet ranges](/azure/spring-apps/how-to-deploy-in-azure-virtual-network?tabs=azure-portal#using-smaller-subnet-ranges).
+
+- If you use Azure Application Gateway as the reverse proxy in front of Azure Spring Apps, you'll need another subnet for that instance.
+
+- Use Network Security Groups (NSGs) on subnets to filter east-west traffic, that is,  restricting traffic to your service runtime subnet. 
+
+- Resource Groups and subnets managed by Azure Spring Apps deployment must not be modified. TBD: How?
+
+##### Egress traffic
+
+- By default, Azure Spring Apps has unrestricted outbound internet access. Use an NVA such as Azure Firewall to filter north-south traffic. Take advantage of Azure Firewall in the centralized hub network to reduce the management overhead. 
+
+    > [!NOTE]
+    >Egress traffic to Azure Spring components is required to support the service instances. For information about specific endpoints and ports, see [Azure Spring Apps network requirements](/azure/spring-apps/vnet-customer-responsibilities#azure-spring-apps-network-requirements)
+
+- Azure Spring Apps provide a User Defined Route (UDR) Outbound Type to fully control egress traffic path. Note that OutboundType should be defined when a new Azure Spring Apps service instance is created. It cannot be updated afterwards. Also, OutboundType can be configured only with a virtual network. For more information, see [Customize Azure Spring Apps egress with a user-defined route](/azure/spring-apps/concept-outbound-type).
+
+- The application will need to communicate with other Azure services in the solution. It's  recommended that you use Azure Private Link for supported services if private connectivity is required by your applications.
+
+
+##### Ingress traffic
+ 
+- Use a reverse proxy to ensure that your workloads are to prevent malicious users from trying to bypass the web application firewall (WAF) or circumvent throttling limits, for example. Azure Application Gateway with integrated WAF is recommended.
+
+    Use the assigned endpoint of the Spring Cloud Gateway app as the back-end pool of the Application Gateway. This endpoint resolves to a private IP address in the Azure Spring Apps' Service Runtime subnet.
+
+    Add an NSG on the Service Runtime subnet that allows traffic only from the Application Gateway subnet, Spring Apps subnet and Azure Load Balancer.
+ 
+    > [!NOTE]
+    > You can choose an alternative for the reverse proxy are such as Azure Front Door or non-Azure services. For information about configuration options, see [Expose Azure Spring Apps through a reverse proxy](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy).
+
+- Azure Spring Apps are deployed in a virtual network or outside the network. For addional considerations, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
+
+> [!div class="nextstepaction"] 
+> [Security](./security.md)
