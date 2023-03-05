@@ -13,7 +13,11 @@ ms.subservice: caf-scenario-spring-apps
 
 This article provides design considerations and recommendations for designing a network in which the  Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
 
-The centralized platform team of the organization selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). Regardless of that choice, you'll need to deploy the workload in the spoke network. Follow these design considerations and recommendations as best practices for subnetting, ingress, and egress controls. 
+The centralized platform team of the organization selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). Regardless of that choice, you'll need to deploy the workload in the spoke network. 
+
+> For information about platform design based on Azure landing zone, see [Platform design: Network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
+
+Follow these design considerations and recommendations as best practices for subnetting, ingress, and egress controls. 
 
 ## Design considerations
 
@@ -74,6 +78,10 @@ These recommendations provide prescriptive guidance for the preceding set of rec
     > You can choose an alternative for the reverse proxy are such as Azure Front Door or non-Azure services. For information about configuration options, see [Expose Azure Spring Apps through a reverse proxy](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy).
 
 - Azure Spring Apps are deployed in a virtual network or outside the network. For additional considerations, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
+
+## Next steps
+
+- Review the critical design areas to make complete considerations and recommendations for your architecture. 
 
 > [!div class="nextstepaction"] 
 > [Security](./security.md)
