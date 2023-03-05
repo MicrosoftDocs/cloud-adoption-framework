@@ -24,46 +24,42 @@ This article covers considerations and recommendations in the following areas:
 - Automated scale considerations and implementation details.
 - Considerations for VMware SDDC-level automation within a private cloud.
 - Recommendations on automation approaches extended from an enterprise landing zone.
-- Considerations on automation technologies to use for deployment and management, like Azure CLI, Azure Resource Manager (ARM), Bicep, and PowerShell.
+- Considerations on automation technologies to use for deployment and management, like Azure CLI, Azure Resource Manager, Bicep, and PowerShell.
 
 ## Deployment strategy
-AVS can be deployed manually or using curated automated toolings.
 
-
-
+Azure VMware Solution can be deployed manually or using curated automated toolings.
 
 ### Manual deployment
 
 You can configure and deploy an Azure VMware Solution private cloud graphically through the Azure portal. This option is suitable for smaller-scale deployments. If you want to deploy large-scale Azure VMware Solution topologies in a repeatable manner, consider an automated deployment. You can also configure connectivity to the private cloud, and then scale it manually via the Azure portal.
 
-
-
 **Considerations:**
 
 - You can use [manual deployments](/azure/azure-vmware/tutorial-create-private-cloud) for initial pilots and small-scale environments. You can also use them where you don't have an existing automation or infrastructure-as-code practice in place.
-- When you deploy Azure VMware Solution via the Azure portal, [Azure CLI](/cli/azure/vmware/private-cloud#az_vmware_private_cloud_create), or [Azure PowerShell modules](/powershell/module/az.vmware/new-azvmwareprivatecloud), you'll see a series of terms and conditions about data protection in the solution. If you're using the ARM APIs directly or deploying via an ARM or Bicep template, consider reviewing these [terms and conditions](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.AVS?tab=Overview) before deploying automation.
+- When you deploy Azure VMware Solution via the Azure portal, [Azure CLI](/cli/azure/vmware/private-cloud#az_vmware_private_cloud_create), or [Azure PowerShell modules](/powershell/module/az.vmware/new-azvmwareprivatecloud), you see a series of terms and conditions about data protection in the solution. If you're using the Azure Resource Manager APIs directly or deploying via an Azure Resource Manager or Bicep template, consider reviewing these [terms and conditions](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.AVS?tab=Overview) before deploying automation.
 - For on-demand environments that are spun-up as required, consider automating the Azure VMware Solution private cloud creation process to limit the amount of manual interaction.
 - You can use the deployments blade of the target resource group within the Azure portal to monitor the private cloud creation process. Once you've deployed the private cloud, confirm that it's in the *Succeeded* status before proceeding. If the private cloud shows a [*Failed* status](/azure/azure-vmware/fix-deployment-failures), you might be unable to connect to vCenter Server. Removal and redeployment of the private cloud might be required.
 
 **Recommendations:**
 
-- If you choose a manual deployment method, it's important to document the configuration you use to provision the private cloud. Once deployed, [download the deployment template](/azure/azure-resource-manager/templates/export-template-portal#export-template-after-deployment) you used for documentation purposes. This template artifact contains the ARM template used to deploy the private cloud. It also has a parameters file that contains the configuration you selected.
+- If you choose a manual deployment method, it's important to document the configuration you use to provision the private cloud. Once deployed, [download the deployment template](/azure/azure-resource-manager/templates/export-template-portal#export-template-after-deployment) you used for documentation purposes. This template artifact contains the ARM template used to deploy the private cloud. The template artifact also has a parameters file that contains the configuration you selected.
 - If you're going to interact with the private cloud in the Azure portal regularly, we recommend placing a [resource lock](/azure/azure-resource-manager/management/lock-resources) to restrict resource deletion. You can also use read-only resource locks to restrict scale operations.
 
 ### Automated deployment
 
 You can use automated deployments to deploy Azure VMware Solution environments in a repeatable fashion. You can then design and deploy the environments on-demand. This usage leads to an efficient deployment mechanism to roll out multiple environments and regions at scale. They also provide for a low-risk, on-demand, and repeatable deployment process.
 
-#### Automated AVS Implementation Options
+#### Automated Azure VMware Solution implementation options
 
-| Implementation option                                 | Description                        | Deployment Link to Github Repo |
+| Implementation option                                 | Description                        | Deployment link to GitHub repo |
 | ------------------------------------------------- | ------------------------------------------ | --------------------------|
-| Deploy AVS and dependencies ***with*** a connection to Azure  | This deployment is best suited provisioning a new AVS Private Cloud. It's a full-fledged version of deployment and helps you create all the different supporting components. These components include Azure connectivity, monitoring and addons. <br><br> There are three deployment options: Azure portal UI, PowerShell, and Terraform. Each deployment option lets you choose to deploy the following resources: <br><br/>▪ AVS Private Cloud <br/>▪ Choose New or Existing virtual network (VNet) <br/>▪ Deploy Azure Route Server for VPN Connections (_Optional_) <br/>▪ Deploy AVS Monitoring (_Optional_) <br/>▪ Deploy HCX and SRM (_Optional_)        | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)(_Azure Portal UI_) <br><br> [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Bicep)(_Powershell_)   <br><br>[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)(_Terraform module_) |
-| Deploy AVS ***without*** a connection to Azure| This deployment is a lighter version. It's better suited for a proof of concept (POC) or pilot. It lets you deploy the following resources:<br><br>▪ New AVS Private Cloud: (1) custom resource group name and Private Cloud name or (2) choose an existing AVS Private Cloud. <br/>▪ Deploy AVS Monitoring (_Optional_). <br/>▪ Deploy HCX and SRM (_Optional_). | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json) (_Azure Portal UI_) |
+| Deploy Azure VMware Solution and dependencies ***with*** a connection to Azure  | This deployment is best suited to provision a new Azure VMware Solution private cloud. It's a full-fledged version of deployment and helps you create all the different supporting components. These components include Azure connectivity, monitoring and addons. <br><br> There are three deployment options: Azure portal UI, PowerShell, and Terraform. Each deployment option lets you choose to deploy the following resources: <br><br/>▪ Azure VMware Solution private cloud <br/>▪ Choose New or Existing virtual network (VNet) <br/>▪ Deploy Azure Route Server for VPN Connections (_Optional_) <br/>▪ Deploy Azure VMware Solution Monitoring (_Optional_) <br/>▪ Deploy HCX and SRM (_Optional_)        | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json)(_Azure portal UI_) <br><br> [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Bicep)(_PowerShell_)   <br><br>[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/AVS-Landing-Zone/GreenField/Terraform)(_Terraform module_) |
+| Deploy Azure VMware Solution ***without*** a connection to Azure| This deployment is a lighter version. It's better suited for a proof of concept (POC) or pilot. It lets you deploy the following resources:<br><br>▪ New Azure VMware Solution private cloud: (1) custom resource group name and private cloud name or (2) choose an existing Azure VMware Solution private cloud. <br/>▪ Deploy Azure VMware Solution Monitoring (_Optional_). <br/>▪ Deploy HCX and SRM (_Optional_). | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale-for-AVS%2Fmain%2FAVS-Landing-Zone%2FGreenField%2520Lite%2FPortalUI%2FARM%2FGreenFieldLiteDeploy.PortalUI.json) (_Azure portal UI_) |
 
 **Considerations:**
 
-- An Azure VMware Solution private cloud deployment might take [several hours to complete](/azure/azure-vmware/faq#how-long-does-it-take-to-provision-the-initial-three-hosts-in-a-cluster). Consider monitoring this process by using the ARM deployment status or the status property on the private cloud. You might use a deployment pipeline or programmatically deploy via PowerShell or the Azure CLI. If so, ensure that appropriate timeout values are selected to accommodate the private cloud provisioning process.
+- An Azure VMware Solution private cloud deployment might take [several hours to complete](/azure/azure-vmware/faq#how-long-does-it-take-to-provision-the-initial-three-hosts-in-a-cluster). Consider monitoring this process by using the Azure Resource Manager deployment status or the status property on the private cloud. You might use a deployment pipeline or programmatically deploy via PowerShell or the Azure CLI. If so, ensure that appropriate timeout values are selected to accommodate the private cloud provisioning process.
 - You can pre-allocate address ranges for private clouds and workload networks ahead of time per the recommendations in [Network topology and connectivity](./eslz-network-topology-connectivity.md). Then, add them into environment configuration or parameter files. The address range overlap isn't validated at deploy time. This lack of validation can lead to issues if two private clouds have the same address range. Issues can also happen if the range overlaps with existing networks within Azure or on-premises.
 - You can use service principals for deployment to provide least privileged access. You can also use [Azure role-based access control (RBAC)](/azure/role-based-access-control/best-practices) to limit access for the deployment process.
 - You can use a [DevOps strategy](/azure/devops/pipelines/overview-azure) for private cloud deployment, using pipelines for automated and repeatable deployments without relying on local tools.
@@ -93,7 +89,7 @@ For more information about recommended network topologies, see [Network topology
   - Use the NSX-T Data Center workload networking within the Azure portal to set up Domain Name System (DNS) zones for private DNS integration.
   - For network topologies that only require a single tier-one gateway, use NSX-T Data Center workload networking within the Azure portal.
   - For advanced configurations, you can use NSX-T Manager directly.
-  - Consider the level of skill of your network administrators. If they have little or no knowledge of VMware NSX-T Data Center, consider using the Azure portal instead to reduce risk for network operations.
+  - Consider the level of skill of your network administrators. If your network administrators have little or no knowledge of VMware NSX-T Data Center, consider using the Azure portal instead to reduce risk for network operations.
 
 **Recommendations:**
 
@@ -115,9 +111,9 @@ By default, an Azure VMware Solution cluster has a fixed number of hosts defined
 **Recommendations:**
 
 - Put hard limits in place for both scale-in and scale-out operations outside of quota.
-- [Request quota](/azure/azure-vmware/request-host-quota-azure-vmware-solution) ahead of time so it doesn't impact a scale operation. Quota isn't a guarantee for capacity, but rather the ability to deploy up to a specific limit. Review the quota limit regularly to ensure there's always headroom.
+- [Request quota](/azure/azure-vmware/request-host-quota-azure-vmware-solution) ahead of time so it doesn't affect a scale operation. Quota isn't a guarantee for capacity, but rather the ability to deploy up to a specific limit. Review the quota limit regularly to ensure there's always headroom.
 - Ensure any automated scaling system is monitored and that it alerts you when a scale operation is done. This alert ensures there are no unexpected scale events.
-- Use Azure Monitor Metrics to confirm cluster capacity before scale-in operations to ensure there's adequate headroom. Pay attention to CPU, memory, and storage before, during, and after any scale operations. This attention to capacity ensures that it doesn't impact the service-level agreement (SLA).
+- Use Azure Monitor Metrics to confirm cluster capacity before scale-in operations to ensure there's adequate headroom. Pay attention to CPU, memory, and storage before, during, and after any scale operations. This attention to capacity ensures that it doesn't affect the service-level agreement (SLA).
 
 ## Azure integration
 
@@ -129,17 +125,17 @@ Consider the deployment lifecycle of each component you plan to automate. Group 
 
 ## Automation tooling
 
-An Azure VMware Solution private cloud exists as a resource within the ARM, providing interaction via several different automation tools. First-party Microsoft tooling generated from the ARM specifications tends to support features shortly after being released. From an automation perspective, the considerations in this article are provided in a way that can be applied across different toolsets.
+An Azure VMware Solution private cloud exists as a resource within the Azure Resource Manager, providing interaction via several different automation tools. First-party Microsoft tooling generated from the Azure Resource Manager specifications tends to support features shortly after being released. From an automation perspective, the considerations in this article are provided in a way that can be applied across different toolsets.
 
 **Considerations:**
 
-- Use declarative tooling like ARM and Bicep templates so that you can define configuration as a single artifact. Command-line and script-based tooling like Azure CLI and PowerShell requires a step-by-step approach to execution that's more in line with manual deployment.
+- Use declarative tooling like Azure Resource Manager and Bicep templates so that you can define configuration as a single artifact. Command-line and script-based tooling like Azure CLI and PowerShell requires a step-by-step approach to execution that's more in line with manual deployment.
 - You can use third-party automation tooling like [Terraform](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/vmware_private_cloud) to deploy Azure VMware Solution and Azure native services. It's important to make sure that the features you want to use within Azure VMware Solution are currently included within the available resources.
 - When taking a script-based approach to deployment, always consider the implications of failure-to-deploy and monitor appropriately. For Azure VMware Solution specifically, consider monitoring both the deployment and the private cloud status. For more information on monitoring Azure VMware Solution, see [Management and monitoring for Azure VMware Solution](./eslz-management-and-monitoring.md).
 
 **Recommendations:**
 
-- Use [Azure CLI](/cli/azure/vmware), [PowerShell](/powershell/module/az.vmware/), or a declarative template like [ARM or Bicep](/azure/templates/) to deploy Azure VMware Solution in an automated manner.
+- Use [Azure CLI](/cli/azure/vmware), [PowerShell](/powershell/module/az.vmware/), or a declarative template like [Azure Resource Manager or Bicep](/azure/templates/) to deploy Azure VMware Solution in an automated manner.
 - Where possible, use *what-if* to confirm changes before execution, pausing on resource deletion for verification.
 - For operations that are single deployment, but still require infrastructure as code, use Azure Blueprints. Azure Blueprints provides stamped and repeatable deployments without the need for automation pipelines.
 
@@ -147,10 +143,10 @@ An Azure VMware Solution private cloud exists as a resource within the ARM, prov
 
 You should implement Azure VMware Solution deployment automation as a series of repeatable steps, ideally via a workflow or pipeline. It's important to scope out the required steps that you plan to include within the deployment. These steps might include:
 
-- Private cloud deployment
-- ExpressRoute gateway connectivity
-- Global Reach connectivity
-- Simplified NSX-T Data Center DHCP, DNS, and segment creation
+- Private cloud deployment.
+- ExpressRoute gateway connectivity.
+- Global Reach connectivity.
+- Simplified NSX-T Data Center DHCP, DNS, and segment creation.
 
 After you deploy your private cloud, you can deploy resources within the private cloud. For more information, see [VMware SDDC platform automation](#vmware-platform-automation).
 
@@ -178,7 +174,7 @@ Within an Azure VMware Solution private cloud, you might also choose to automate
 
 - In an Azure VMware Solution private cloud, the admin user has administrative access to NSX-T Data Center by default. Because of this default access, consider the impact of changes made via [PowerCLI](https://developer.vmware.com/powercli) or the NSX-T Data Center APIs directly. Making modifications to Microsoft-managed components like the transport zone and tier-zero gateway aren't permitted, and caution is advised.
 - Private connectivity is required from the VM running PowerCLI to the Azure VMware Solution private cloud to interact with NSX-T Data Center.
-- You can control workload networking via ARM. This control enables a subset of operations to be done via the ARM API, which then enables operations via Azure CLI and PowerShell using Azure RBAC instead of NSX-T Data Center identity.
+- You can control workload networking via Azure Resource Manager. This control enables a subset of operations to be done via the Azure Resource Manager API, which then enables operations via Azure CLI and PowerShell using Azure RBAC instead of NSX-T Data Center identity.
 
 ### Terraform vSphere and NSX-T Data Center providers
 
@@ -197,7 +193,7 @@ Within an Azure VMware Solution private cloud, you might also choose to automate
 
 ## Workload-level automation
 
-Within individual workloads on Azure VMware Solution, you can choose to set up automation on a per-VM level. This automation is achieved in the same way as on-premises and is out of scope for this article. Examples of this automation include SCCM, Chef, Puppet, and Ansible. You can also use Azure Automation for VM-level configuration using the on-premises agent.
+Within individual workloads on Azure VMware Solution, you can choose to set up automation on a per-VM level. This automation is achieved in the same way as on-premises and is out of scope for this article. Examples of this automation include Microsoft Configuration Manager, Chef, Puppet, and Ansible. You can also use Azure Automation for VM-level configuration using the on-premises agent.
 
 ## Next steps
 
