@@ -13,7 +13,7 @@ ms.subservice: caf-scenario-spring-apps
 
 This article provides design considerations and recommendations for designing a network in which the  Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
 
-The centralized platform team of the organization selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). Regardless of that choice, you will need to deploy the workload in the spoke network. Follow these design considerations and recommendations as best practices for subnetting, ingress and egress controls. 
+The centralized platform team of the organization selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). Regardless of that choice, you'll need to deploy the workload in the spoke network. Follow these design considerations and recommendations as best practices for subnetting, ingress, and egress controls. 
 
 ## Design considerations
 
@@ -21,21 +21,17 @@ The centralized platform team of the organization selects the [networking topolo
  
  - **Subnetting**.  Consider the scalability of the application when deciding the size of the subnet and number of applications.
 
-    If you are planning to use existing subnets or decide to bring your own route tables, have policies in place to make sure that rules added by Azure Spring Apps aren't updated or deleted.
+    If you're planning to use existing subnets or decide to bring your own route tables, have policies in place to make sure that rules added by Azure Spring Apps aren't updated or deleted.
 
- - **Egress (outbound) traffic**. Traffic going from the virtual network must be routed through Azure Firewall or network virtual appliance (NVA). 
+ - **Egress (outbound/north-south) traffic**. Traffic going from the virtual network must be routed through Azure Firewall or network virtual appliance (NVA). 
 
     Consider the limitations of the built-in load balancer provided by Azure Spring Apps. Based on your requirements, you might need to customize egress paths by using User Defined Routing (UDR), for instance to route all traffic through an NVA. 
 
-- **Ingress (inbound) traffic**. Consider using a reverse proxy for traffic going to Azure Spring Apps. Based on your requirements, choose native options such as Azure Application Gateway, Front Door, regional services such as API Management (APIM). If those options don't meet your the needs of the workload, non-Azure services can be considered.    
+- **Ingress (inbound/east-west) traffic**. Consider using a reverse proxy for traffic going to Azure Spring Apps. Based on your requirements, choose native options such as Azure Application Gateway, Front Door, regional services such as API Management (APIM). If those options don't meet the needs of the workload, non-Azure services can be considered.    
 
 ## Design recommendations
 
 These recommendations provide prescriptive guidance for the preceding set of recommendations.
-
-•	Azure recommends using a Hub and Spoke design with Network Security Groups to filter east-west traffic  (e.g. restricting traffic to your service runtime subnet) and Azure Firewall for north-south traffic (e.g. egress traffic to the internet).
-•	The Hub virtual network communicates with the internet while the Spoke virtual network hosts Azure Spring Apps.
-
 
 ##### Virtual network and subnets
 
@@ -61,14 +57,14 @@ These recommendations provide prescriptive guidance for the preceding set of rec
     > [!NOTE]
     >Egress traffic to Azure Spring components is required to support the service instances. For information about specific endpoints and ports, see [Azure Spring Apps network requirements](/azure/spring-apps/vnet-customer-responsibilities#azure-spring-apps-network-requirements)
 
-- Azure Spring Apps provide a User Defined Route (UDR) Outbound Type to fully control egress traffic path. Note that OutboundType should be defined when a new Azure Spring Apps service instance is created. It cannot be updated afterwards. Also, OutboundType can be configured only with a virtual network. For more information, see [Customize Azure Spring Apps egress with a user-defined route](/azure/spring-apps/concept-outbound-type).
+- Azure Spring Apps provide a User Defined Route (UDR) Outbound Type to fully control egress traffic path. OutboundType should be defined when a new Azure Spring Apps service instance is created. It can't be updated afterwards. Also, OutboundType can be configured only with a virtual network. For more information, see [Customize Azure Spring Apps egress with a user-defined route](/azure/spring-apps/concept-outbound-type).
 
 - The application will need to communicate with other Azure services in the solution. It's  recommended that you use Azure Private Link for supported services if private connectivity is required by your applications.
 
 
 ##### Ingress traffic
  
-- Use a reverse proxy to ensure that your workloads are to prevent malicious users from trying to bypass the web application firewall (WAF) or circumvent throttling limits, for example. Azure Application Gateway with integrated WAF is recommended.
+- Use a reverse proxy to ensure that malicious users are prevented from trying to bypass the web application firewall (WAF) or circumvent throttling limits. Azure Application Gateway with integrated WAF is recommended.
 
     Use the assigned endpoint of the Spring Cloud Gateway app as the back-end pool of the Application Gateway. This endpoint resolves to a private IP address in the Azure Spring Apps' Service Runtime subnet.
 
@@ -77,7 +73,7 @@ These recommendations provide prescriptive guidance for the preceding set of rec
     > [!NOTE]
     > You can choose an alternative for the reverse proxy are such as Azure Front Door or non-Azure services. For information about configuration options, see [Expose Azure Spring Apps through a reverse proxy](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy).
 
-- Azure Spring Apps are deployed in a virtual network or outside the network. For addional considerations, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
+- Azure Spring Apps are deployed in a virtual network or outside the network. For additional considerations, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
 
 > [!div class="nextstepaction"] 
 > [Security](./security.md)

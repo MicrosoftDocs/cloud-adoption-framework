@@ -90,6 +90,21 @@ items:
         href: azure-red-hat-openshift\operations.md
       - name: Platform automation 
         href: azure-red-hat-openshift\platform-automation-devops.md
+    - name: Azure Spring Apps (ARO)
+      items:
+      - name: Azure Spring Apps landing zone accelerator
+        href: spring-apps\landing-zone-accelerator.md
+      - name: Identity and access management
+        href: spring-apps\identity-access-management.md
+      - name: Network topology and connectivity
+        href: spring-apps\network-topology-connectivity.md
+      - name: Security
+        href: spring-apps\security.md
+      - name: Operations management
+        href: spring-apps\management.md
+      - name: Governance 
+        href: spring-apps\governance.md
+
   - name: Migrate to modern application platforms
     href: migrate.md
   - name: Innovation on modern application platforms
