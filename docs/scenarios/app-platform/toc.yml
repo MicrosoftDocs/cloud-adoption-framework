@@ -90,7 +90,7 @@ items:
         href: azure-red-hat-openshift\operations.md
       - name: Platform automation 
         href: azure-red-hat-openshift\platform-automation-devops.md
-    - name: Azure Spring Apps (ARO)
+    - name: Azure Spring Apps
       items:
       - name: Azure Spring Apps landing zone accelerator
         href: spring-apps\landing-zone-accelerator.md

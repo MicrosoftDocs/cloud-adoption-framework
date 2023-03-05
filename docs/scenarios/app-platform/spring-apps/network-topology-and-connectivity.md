@@ -11,9 +11,9 @@ ms.subservice: caf-scenario-spring-apps
 
 # Networking considerations for the Azure Spring Apps landing zone accelerator
 
-This article provides design considerations and recommendations for designing a network in which the  Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
+This article provides design considerations and recommendations for the network in which the  Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
 
-The centralized platform team of the organization selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). Regardless of that choice, you'll need to deploy the workload in the spoke network. 
+The networking design area is shared responsibility between the centralized platform team and the application team of an organization. The platform team selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). The application team is responsible for the design choices of the spoke network. The workload is expected to have dependencies on shared services managed by the platform. The application team must understand the implications of those dependencies and communicate their requirements so that the overall goals of the workload are met. 
 
 > For information about platform design based on Azure landing zone, see [Platform design: Network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
 
@@ -81,7 +81,7 @@ These recommendations provide prescriptive guidance for the preceding set of rec
 
 ## Next steps
 
-- Review the critical design areas to make complete considerations and recommendations for your architecture. 
+Review the critical design areas to make complete considerations and recommendations for your architecture. 
 
 > [!div class="nextstepaction"] 
 > [Security](./security.md)

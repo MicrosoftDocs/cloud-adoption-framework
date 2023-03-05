@@ -45,7 +45,7 @@ It's highly recommended that you have a good understanding of the **integration 
 
 ## Next steps
 
-- Review the critical design areas to make complete considerations and recommendations for your architecture. 
+Review the critical design areas to make complete considerations and recommendations for your architecture. 
 
 > [!div class="nextstepaction"] 
 > [Identity and access management](./identity-and-access-management.md)

@@ -18,7 +18,19 @@ Content coming soon.
 
 This article provides design considerations and recommendations for identity and access management when you use Azure Spring Apps landing zone accelerator. This covers multiple aspects including authentication, access management, operator access
 
-Design considerations
+## Design considerations
+
+- Managed identities
+
+- Role-based access control (RBAC)
+
+- Configuration access
+
+- Authentication
+
+- Authorization
+
+
 • Decide whether to use system-assigned or user-assigned managed identities when apps in ASA connects to back-end resources that are protected by Azure Active Directory (Azure AD).
 • Decide how to authenticate access: based on client certificates or via Azure Active Directory (Azure AD).
 • Decide on the configuration server options
