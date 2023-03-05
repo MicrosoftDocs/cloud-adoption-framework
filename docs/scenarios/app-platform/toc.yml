@@ -95,9 +95,9 @@ items:
       - name: Azure Spring Apps landing zone accelerator
         href: spring-apps\landing-zone-accelerator.md
       - name: Identity and access management
-        href: spring-apps\identity-access-management.md
+        href: spring-apps\identity-and-access-management.md
       - name: Network topology and connectivity
-        href: spring-apps\network-topology-connectivity.md
+        href: spring-apps\network-topology-and-connectivity.md
       - name: Security
         href: spring-apps\security.md
       - name: Operations management
