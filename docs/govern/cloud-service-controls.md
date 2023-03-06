@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Implement cloud service controls
 
-Your organization might find it difficult to implement cloud governance at a pace that sustains a high level of innovation and implements the right level of control for the environment.
+Your organization might find it difficult to implement cloud governance at a pace that sustains a high level of innovation and achieves the right level of control for the environment.
 
 The following process outlines a possible governance implementation, which allows for a controlled and measured implementation. This process is non-disruptive no matter where your organization is in their cloud journey.
 
@@ -22,15 +22,15 @@ Determine the controls and measures that you want to implement as part of your o
 
 ![Diagram that shows the service review process.](../_images/govern/cloud-policy-breakdown.png)
 
-Implementing organizational cloud policy stretches across many layers of the implementation process. These layers include platform-wide controls, individual service controls, and application controls. The higher the level of control, the more coverage it gets. The more complex the implementation is, the easier it is to ensure that the cloud policy covers all the cloud adoption team needs.
+When you implement an organizational cloud policy, it stretches across many layers of the implementation process. These layers include platform-wide controls, individual service controls, and application controls. The higher the level of control, the more coverage it gets. The more complex the implementation is, the easier it is to ensure that the cloud policy covers all of the cloud adoption team's needs.
 
 | Control level | Suitability                                  | Considerations                                                                                                                                                               | Examples                            |
 | ------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| Platform      | Broad coverage             | Hard to implement service-specific management or remediation. Ensure that the desired outcome isn't negated by the application implementation.                               | Resource tagging or allowed regions |
-| Cloud service | Tailored for individual services             | Control must be implemented individually for each service. Ensure that the desired outcome isn't negated by the application implementation.                              | Data encryption or monitoring       |
+| Platform      | Broad coverage             | Hard to implement service-specific management or remediation. Ensure that the application implementation doesn't negate the desired outcome.                               | Resource tagging or allowed regions |
+| Cloud service | Tailored for individual services             | Control must be implemented individually for each service. Ensure that the application implementation doesn't negate the desired outcome.                               | Data encryption or monitoring       |
 | Adoption team | Tailored for each application implementation | Control must be implemented for each new application. Hard to standardize implementation. Multiple teams have to implement different controls for the desired outcome. | Application failover logic          |
 
-Cloud services have the strongest and most complex level of control. They provide technical implementation with fine control of each service and allow multiple adoption teams to use single implementations. The process of implementing controls at the cloud service layer requires a level of scale to ensure that all services that your organization needs are covered.
+Cloud services have the strongest and most complex level of control. They provide technical implementation with fine control of each service and allow multiple adoption teams to use single implementations. The process of implementing controls at the cloud service layer requires a level of scale to ensure all services that your organization needs are covered.
 
 ## Levels of service governance
 
@@ -39,7 +39,7 @@ This level of implementation can be delivered in several layers. The governance 
 | Service governance      | Outline                                                                    | Adoption team responsibilities                                                                                                   | Governance team responsibilities                                    |
 | ----------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | None                    | Services aren't centrally governed.                                           | The cloud adoption teams must build corporate policy into the end solution.                                                             | Identify and implement platform-wide controls.                       |
-| Basic (allowlist and blocklist) | Services are allowed or blocked with no other controls.                 | The application teams build corporate policy into the end solution. Only services that have been approved by the governance team are used. | Review and approve the use of services.         |
+| Basic (allowlist and blocklist) | Services are allowed or blocked with no other controls.                 | The application teams build corporate policy into the end solution. Only services that the governance team approves are used. | Review and approve the use of services.         |
 | Service review process  | Services are individually reviewed and controls are placed around each service. | The application teams should build with confidence. Only the services that have been through a service review are available.                    | Complete service governance and implement controls for each service. |
 
 These different approaches are the extreme ends of the spectrum. Many organizations choose an approach between these models. For example, most organizations allow some cloud services with a few controls, some are allowed without controls, and access to others are denied.
@@ -68,19 +68,19 @@ The number of policies that are used to implement the block service is a balance
 
 There are often exceptions for the use of a service. After the exception is approved through the organizational process, [Azure Policy exemptions](/azure/governance/policy/concepts/exemption-structure) allow the implementation of the service in a targeted area.
 
-If a single policy is implemented with all the denied services listed, granting an exception for a single service grants an exception to all denied services. Upfront implementation is simpler, but releases more control with exceptions.
+If a single policy is implemented with all the denied services listed, then granting an exception for the single service also grants an exception to the denied services. Upfront implementation is simpler but releases more control with exceptions.
 
-If policies are implemented to block each service individually, exceptions only release control of that one policy. This implementation allows for more control in the exception process, but creates greater work in the implementation of the initial block policy set.
+If policies are implemented to block each service individually, exceptions only release control of that one policy. This implementation allows for more control in the exception process but creates greater work in the implementation of the initial block policy set.
 
-Your organization should balance the outcome of these two processes when you decide on your own approach.
+Your organization should balance the outcome of these two processes when you decide on your approach.
 
 ## Service review process
 
-When you implement cloud policy at the service level, it gives greater control and allows for granular solutions but requires more effort. This type of implementation requires a strong process to get the best result.
+When you implement cloud policy at the service level, it allows for greater control and granular solutions but requires more effort. This type of implementation requires a strong process to get the best result.
 
 This example is a four step process.
 
-![Infographic of the service review process.](../_images/govern/service-review-process.png)
+[![Infographic of the service review process.](../_images/govern/service-review-process.png)](../_images/govern/service-review-process.png#lightbox)
 
 Triggers for a service review process are:
 
@@ -95,7 +95,7 @@ The schedule for the service review backlog is published for the adoption and op
 
 The next part of the process contains steps that are iterative for each of the cloud services that are used. This part is continual for much of the cloud governance team. The core of this process takes the imperatives that have been defined and interprets them into controls for each service.
 
-To select a service for review, base your decision on components, such as:
+To select a service for review, base your decision on components such as:
 
 - The internal demand for the service complexity of the implementation.
 - The review timing of the last review of the service.
@@ -119,17 +119,17 @@ The controls defined in the previous section are now implemented in cloud contro
 
 The controls of the service are interpreted into their technical implementation on the service. The controls are identified in their implementation of the Azure environment. For example, when you require encryption on a storage account, it requires that you set a property on the storage account, which becomes the technical requirement of that control.
 
-There are many offerings in the market that provide this capability. Azure Policy is native to Azure, and it's recommended. Azure Policy reports the current state versus the desired outcome and enforces the controls.
+There are many offerings in the market that provide this capability. Azure Policy is recommended because it's native to Azure. Azure Policy reports the current state versus the desired outcome and enforces the controls.
 
 ### Approve service controls
 
-The governance team must approve the work done in the last two stages.
+The governance team must approve the work that's done in the last two stages.
 
-This approval stage is with the governance team, so the previous two stages can be completed by other teams. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
+Because the governance team approves this stage, other teams can complete the previous two stages. This process is outlined in [Scale the review process within an organization](#scale-the-review-process-within-an-organization).
 
 ### Release service controls
 
-Releasing changed controls for services that have an existing service guidance is different than releasing new service guidance.
+The process for releasing changed controls for services that have an existing service guidance is different than releasing new service guidance.
 
 When you modify existing service guidance, remember that there are adoption teams that use the current service guidance in their work. Large changes might break their current projects.
 
@@ -147,19 +147,19 @@ The design imperatives must have a version and release cycle, and they must tie 
 
 ## Artifacts generated
 
-![Diagram that shows the artifacts generated.](../_images/govern/artifacts-process.png)
+[![Diagram that shows the artifacts generated.](../_images/govern/artifacts-process.png)](../_images/govern/artifacts-process.png#lightbox)
 
 There are four key artifacts developed throughout this process.
 
-- The **service control requirements** are the outline of the key controls that are required across all services. This document is published before the reference documentation for cloud adoption teams. This positioning ensures that they review and understand the controls that are being built into the systems. This document must be available so that others can help the development of a service review. This process is outlined in [Scaling the review process within an organization](#scaling-the-review-process-within-an-organization).
+- The **service control requirements** are the outline of the key controls that are required across all services. This document is published before the reference documentation for cloud adoption teams. This positioning ensures that they review and understand the controls that are being built into the systems. This document must be available so that others can help the development of a service review. This process is outlined in [Scale the review process within an organization](#scale-the-review-process-within-an-organization).
 
-- The **service review schedule** is a document that outlines when the services are reviewed, how long the expected wait for a review is, and when a new service becomes available for adoption teams. It also notifies the adoption team when existing services might change and need more implementation of controls.
+- The **service review schedule** is a document that outlines when the services are reviewed, how long the expected wait for a review is, and when a new service becomes available for adoption teams. It also notifies the adoption team when existing services might change and therefore need more implementation of controls.
 
 - **Service guidance** is a per service document that outlines the key components around a service, such as:
 
   - When the service is used.
   - Restrictions on what the service is used for.
-  - A list of controls that are enforced by the platform.
+  - A list of controls that the platform enforces.
   - A list of controls that the developer implements.
 
   Cloud adoption teams refer to these documents for services that they can pick up and use. They plan the implementation of their project around the controls and components. The service guidance also lists Azure policies and supporting functions that are implemented. This guidance ensures that a reference is enforced between the policy and service controls.
@@ -168,7 +168,7 @@ There are four key artifacts developed throughout this process.
 
 ### Start with a baseline
 
-When starting this process, most organizations already have an Azure footprint. To ensure the least disruptive implementation of service governance, it's best to baseline off the current implementation and then start service reviews. This method avoids stifling innovation or blocking new projects while the governance team is starting.
+When organizations start this process, they usually have an existing Azure footprint. To ensure the least disruptive implementation of service governance, it's best to baseline off the current implementation and then start service reviews. This method avoids stifling innovation or blocking new projects while the governance team is starting.
 
 1. Create a service guidance for every service that's used in your organization with the current service controls.
 
@@ -196,7 +196,7 @@ There are several stages that ensure adoption teams aren't blocked during the cr
 
 ![Diagram that shows a new service control lifecycle.](../_images/govern/new-service-control-lifecycle.png)
 
-Organizations can decide to allow adoption teams to start using the service in a disconnected sandbox environment. The sandbox lets the adoption team start working with the service and prototype solutions. The sandbox environment doesn't have any policy controls for the service. A review hasn't been done, so generic compensating controls should be enforced on the environment. These compensating controls might include:
+Adoption teams can use the service in a disconnected sandbox environment. The sandbox lets the adoption team start working with the service and prototype solutions. The sandbox environment doesn't have any policy controls for the service. A review hasn't been done, so generic compensating controls should be enforced on the environment. These compensating controls might include:
 
 - Agreement from the adoption team to try to work within the cloud policy.
 - Agreement to not store any company data in the sandbox environment.
@@ -218,13 +218,13 @@ After deployment, migrate the production controls back to the development and te
 
 ### Scale the review process within an organization
 
-The combination of the scale of the cloud services and the depth of the service review process often creates a large work effort. To avoid this backlog of work being the sole responsibility of the governance team, it's possible to scale through the adoption teams to complete the work. The governance team retains control and approval in this process. **Final approval of content stays with the governance team**.
+The combination of the scale of the cloud services and the depth of the service review process often creates a large work effort. To avoid this backlog of work being the sole responsibility of the governance team, you can scale through the adoption teams to complete the work. The governance team retains control and approval in this process. **Final approval of content stays with the governance team**.
 
 Changes often happen with the cloud, or your organization, that make it difficult to keep controls current. To help with this issue, enable people outside the cloud governance team to implement parts of the work.
 
-When you implement a clear set of service control requirements, it allows other teams to work on the first two stages of the process for a service, and they can contribute a large amount of content.
+When you implement a clear set of service control requirements, it allows other teams to work on the first two stages of the process for a service. They can contribute a large amount of content.
 
-The cloud has many services. The cloud governance team can prepare a backlog for all of these services to go through a service review, but they can't keep pace with the demands of a large organization. Services in the cloud change at a continuing rate, which places more demand on the need for a service review of the previously defined services. Projects might require new types of services quickly that they were unable to predict the demand for. Their immediate demand shouldn't become a problem for the cloud governance team. That demand must be addressed by the cloud adoption team that needs the service.
+The cloud has many services. The cloud governance team can prepare a backlog for all of these services to go through a service review, but they can't keep pace with the demands of a large organization. Services in the cloud change at a continuing rate, which places more demand on the need for a service review of the previously defined services. Projects might require new types of services quickly that they were unable to predict the demand for. Their immediate demand shouldn't become a problem for the cloud governance team. The cloud adoption team that needs the service must address that demand.
 
 If the service control requirements are written clearly, teams outside the governance team can complete the first two steps of the service review process.
 
