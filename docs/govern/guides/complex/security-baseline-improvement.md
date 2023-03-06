@@ -84,9 +84,11 @@ The following changes to policy will help remediate the new risks and guide impl
 1. The cloud vendor must be capable of supporting the existing edge device solution and any required configurations to protect any publicly exposed network boundary.
 1. The cloud vendor must be capable of supporting a shared connection to the global WAN, with data transmission routed through the existing edge device solution.
 1. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
-1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets. 18. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
+1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets. 
+1. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
 1. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
-1. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users. 1. Cloud governance processes must include quarterly reviews with identity baseline teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
+1. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users. 
+1. Cloud governance processes must include quarterly reviews with identity baseline teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
 ## Incremental improvement of best practices
 
