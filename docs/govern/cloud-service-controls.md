@@ -139,7 +139,7 @@ Release new controls in an audit mode. This type of release triggers the policy 
 
 #### Service governance, release, and version control
 
-The design imperatives must have a version and release cycle, and they must tie back to the service guidance. The service guidance must have a version and release cycle, and it must tie back to the policy controls. The policy controls must have versions and must be released in manageable waves.
+The design imperatives must have a version and release cycle, and they must tie back to the service guidance. The service guidance must have a version and release cycle, and it must tie back to the policy controls. The policy controls must have versions and must be released in manageable waves by using the following guidelines:
 
 - All of these steps should happen with release cycles.
 - Services must be available on a set date.
@@ -190,45 +190,45 @@ If more controls need to be enforced for virtual machines, a new version of the 
 
 A main component of the service review process is to prevent services that don't have a current published service guidance from being deployed into the environment. It prevents the deployment of services that haven't had a risk assessment performed against the current cloud policy.
 
-A staged approach for allowing service use in different environments gives adoption teams earlier access to controls while reducing the exposure of services without controls.
+A staged approach that allows service use in different environments gives adoption teams earlier access to controls and reduces the exposure of services without controls.
 
 There are several stages that ensure adoption teams aren't blocked during the creation of new service guidance. The process accelerates their ability to start using services. The first stage (`Sandbox`) is for the adoption team to nominate the new service that they need for a service review.
 
 ![Diagram that shows a new service control lifecycle.](../_images/govern/new-service-control-lifecycle.png)
 
-Here, organizations can decide to allow adoption teams to start using the service in a disconnected sandbox environment. The sandbox lets the adoption team start working with the service and educate themselves by prototyping solutions. The sandbox environment doesn't have any policy controls for the service. As no review has been done, generic compensating controls should be enforced on the environment. These compensating controls might include:
+Organizations can decide to allow adoption teams to start using the service in a disconnected sandbox environment. The sandbox lets the adoption team start working with the service and prototype solutions. The sandbox environment doesn't have any policy controls for the service. A review hasn't been done, so generic compensating controls should be enforced on the environment. These compensating controls might include:
 
-- Agreement from the adoption team to try to work within the cloud policy
-- Agreement to not store any company data in the sandbox environment
-- Limited network connectivity to the corporate environment
-- Limited connectivity to outside services
+- Agreement from the adoption team to try to work within the cloud policy.
+- Agreement to not store any company data in the sandbox environment.
+- Limited network connectivity to the corporate environment.
+- Limited connectivity to outside services.
 
-Once a draft version of the service review has been done, the service can be provisionally approved for use in a development and test environment. At this point, the code for the controls might not be complete, but basic guidance about how the service is deployed has been written. The developers can start to work in the dev/test environment with the understanding that the service might require reworking later. For example, if new controls are added as part of the final implementation of the production controls, some rework might be needed.
+After a draft version of the service review is done, the service is provisionally approved for use in a development and test environment. At this point, the code for the controls might not be complete, but basic guidance about how the service is deployed has been written. The developers can start to work in the dev/test environment with the understanding that the service might require reworking later. For example, if new controls are added as part of the final implementation of the production controls, some rework might be needed.
 
-For the release of service controls, and to authorize application teams to deploy the service into the production environment, the following tasks must be complete:
+To release service controls, and to authorize application teams to deploy the service into the production environment, complete the following tasks:
 
-- Service guidance is completed
-- Policy controls are code complete and tested
-- Approval of service controls is complete
-- Policy controls are released to production
+- Service guidance is completed.
+- Policy controls are code complete and tested.
+- Approval of service controls is complete.
+- Policy controls are released to production.
 
 Now the adoption team can deploy the final production controls with confidence.
 
-After deployment, the production controls are then migrated back to the development and test environment. This migration might cause rework for the development environment but ensures that the full controls are in place.
+After deployment, migrate the production controls back to the development and test environment. This migration might cause rework for the development environment but ensures that the full controls are in place.
 
-### Scaling the review process within an organization
+### Scale the review process within an organization
 
 The combination of the scale of the cloud services and the depth of the service review process often creates a large work effort. To avoid this backlog of work being the sole responsibility of the governance team, it's possible to scale through the adoption teams to complete the work. The governance team retains control and approval in this process. **Final approval of content stays with the governance team**.
 
-Changes often happen with the cloud, or your organization, that make it difficult to keep controls current. Enabling people outside the cloud governance team to implement parts of the work helps.
+Changes often happen with the cloud, or your organization, that make it difficult to keep controls current. To help with this issue, enable people outside the cloud governance team to implement parts of the work.
 
-The implementation of a clear set of service control requirements allows other teams to work on the first two stages of the process for a service, contributing a large amount of content.
+When you implement a clear set of service control requirements, it allows other teams to work on the first two stages of the process for a service, and they can contribute a large amount of content.
 
-The cloud has many services. Although the cloud governance team can prepare a backlog for all of these services to go through a service review, there's no way that they can keep pace with the demands of a large organization. Services in the cloud change at a continuing rate, placing more demand on the need for a service review of previously defined services. Projects might require new types of services quickly that they were unable to predict the demand for. Their immediate demand shouldn't become a problem for the cloud governance team. That demand must be addressed by the cloud adoption team that needs the service.
+The cloud has many services. The cloud governance team can prepare a backlog for all of these services to go through a service review, but they can't keep pace with the demands of a large organization. Services in the cloud change at a continuing rate, which places more demand on the need for a service review of the previously defined services. Projects might require new types of services quickly that they were unable to predict the demand for. Their immediate demand shouldn't become a problem for the cloud governance team. That demand must be addressed by the cloud adoption team that needs the service.
 
 If the service control requirements are written clearly, teams outside the governance team can complete the first two steps of the service review process.
 
-With the approval and release steps still controlled by the governance team, organizations can scale the service review process while keeping centralized control.
+With the approval and release steps still controlled by the governance team, organizations can scale the service review process and keep centralized control.
 
 For example, a cloud adoption team might need a new service that hasn't been through a review. To get the service review completed more quickly, they can use the documentation in the imperatives to identify and produce the controls. This method moves them all the way through the technical implementation and policy code for the cloud governance team. The cloud adoption team then gets quicker access to the service and can be interpreted as a *first user pays* scenario for the implementation of new services.
 
