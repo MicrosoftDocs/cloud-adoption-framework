@@ -11,11 +11,11 @@ ms.subservice: caf-scenario-spring-apps
 
 # Networking considerations for the Azure Spring Apps landing zone accelerator
 
-This article provides design considerations and recommendations for the network in which the  Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
+This article provides design considerations and recommendations for the network in which the Spring Boot workload is placed. Your target design will depend on the requirements of the workload and the security and compliance requirements of your organization.  
 
 The networking design area is shared responsibility between the centralized platform team and the application team of an organization. The platform team selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which could be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). The application team is responsible for the design choices of the spoke network. The workload is expected to have dependencies on shared services managed by the platform. The application team must understand the implications of those dependencies and communicate their requirements so that the overall goals of the workload are met. 
 
-> For information about platform design based on Azure landing zone, see [Platform design: Network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
+> For information about the platform design, see [Platform design: Network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
 
 Follow these design considerations and recommendations as best practices for subnetting, ingress, and egress controls. 
 
