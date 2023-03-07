@@ -3,7 +3,7 @@ title: How to adopt the cloud
 description: The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 02/03/2023
+ms.date: 03/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: adopt
@@ -13,33 +13,29 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 # Cloud adoption
 
-The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure. These four processes align to different phases and goals in cloud adoption journey. This article provides an overview of each process, so you can find the right guidance for your objectives.
+The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure. These four processes align to different phases in cloud adoption journey. Each phase has distinct goals, solutions, and benefits. This article provides an overview of each process, so you can find the right guidance.
 
 ## Migrate
 
-Migration is when you move your workloads to the cloud. Different forms of migration exist, but the guidance focuses on rehosting, also known as the "lift-and-shift" approach. With rehosting, you move an existing workload to comparable solutions in the cloud without modifying the workload.
+Migration is when you move workloads to the cloud. Different types of migration exist, and the migrate guidance shows you how to pick the migration strategy that aligns with your objectives.
 
-- ***Goals:*** Quickly exit on-premises, enhance security, and improve operations.
+- ***Goals:*** Meet business demands, exit on-premises environment, and align to Well-Architected Framework principles.
 
-- ***Solutions:*** Adopt comparable solutions in the cloud.
+- ***Solutions:*** Adopt cloud solutions based on business need.
 
-- ***Key benefits:*** Cost, security, availability, visibility, performance. You don't have to worry about acquiring, managing, and securing hardware.
-
-- ***Example:*** Migrate applications from on-premises to Azure virtual machines (infrastructure as a service) or Azure App Service (platform as a service).
+- ***Key benefits:*** Improve security, reliability, performance, and operations with managed solutions. Easily integrate new solutions and design patterns. No need to acquire, manage, and secure hardware.
 
 For more information, see [Migrate](../migrate/index.md).
 
 ## Modernize
 
-Modernization enhances existing applications to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. Generally, modernization moves toward platform as a service (PaaS) solutions to improve your business at scale.
+Modernization enhances existing workloads to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership. Generally, modernization moves toward platform as a service (PaaS) solutions to improve your business at scale.
 
 - ***Goals:*** Reduce technical debt, modernize applications, and modernize data platforms.
 
-- ***Solutions:*** Adopt more platform as a service (PaaS) solutions across workload clusters.
+- ***Solutions:*** Integrate other services and modify code meet business goals.
 
-- ***Key benefits:*** Cost, security, availability, visibility, performance, and operations. You don't have to manage the underlying infrastructure and can focus on scaling your business.
-
-- ***Examples:*** Move to managed services. Move from SQL Server to Azure SQL Database. Containerize applications and migrate from virtual machines to Azure Kubernetes Service or Azure Container Apps.
+- ***Key benefits:*** Optimize cost, security, reliability, performance, and operations for increased productivity.
 
 For more information, see [Modernize](../modernize/index.md).
 
@@ -51,7 +47,7 @@ Innovation is when you adopt cloud-native technologies to create customer-focuse
 
 - ***Solutions:*** Adopt data and application capabilities to empower adoption and build predictive tools.
 
-- ***Key benefits:*** Predictive analytics, performance, and adaptability.
+- ***Key benefits:*** Improve predictive analytics, performance, and adaptability.
 
 For more information, see [Innovate](../innovate/index.md).
 
@@ -64,8 +60,6 @@ Relocation is when you move an Azure workload to a different region in Azure. Yo
 - ***Solutions:*** Adopt the location, services, and capabilities of a new Azure region.
 
 - ***Key benefits:*** Respond to business changes, expand global footprint, meet data sovereignty and residency requirements, provide lower latency to end users.
-
-- ***Examples:*** Relocate a workload in West US to East US or North Europe to East Asia.
 
 For more information, see [Relocate](../relocate/index.md).
 
