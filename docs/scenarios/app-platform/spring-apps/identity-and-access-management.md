@@ -25,14 +25,15 @@ As the workload owner, follow these best practices to make sure that the applica
 
 ## Design considerations
 
-- **Managed identities**. The application should authenticate itself to the backend services that are part of the workload. This will protect the services from unauthorized access with Azure Active Directory (Azure AD) without needing to store and manage credentials. 
+- **Access from the application to other services**. The application should authenticate itself when connecting to backend services that are part of the workload. This will protect the services from unauthorized access. Consider features of Azure Active Directory (Azure AD) to prevent the overhead of storing and managing credentials. 
 
+- **Access to the application**. Access must be authenticated based on client certificates or via Azure Active Directory (Azure AD). 
 
-- Role-based access control (RBAC)
+- **Role-based access control (RBAC)** 
 
 - Configuration data access
 
-- Authentication
+
 
 - Authorization
 
@@ -60,6 +61,12 @@ As the workload owner, follow these best practices to make sure that the applica
 
 
 ## Design recommendations
+
+##### Managed identities
+
+Use managed identities for the application so that it's authenticated through Azure AD. Of the [types of managed identifies](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types), decide which type is appropriate per use case. Consider the tradeoffs with ease of management. For example, if the application needs to access multiple resources, user-assigned managed identities are recommended. However, if you want permissions to be tied to the application lifecycle, system-managed identities might be better suited. For more information, see [Choose system or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
+
+
 - Azure Spring Apps Identities
 	- Use your own managed identity for Azure Spring Apps
 	- Use system-assigned and user-assigned managed identities separately 
