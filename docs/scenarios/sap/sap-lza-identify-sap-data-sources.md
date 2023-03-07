@@ -10,8 +10,8 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-Digital transformation requires a seamless combination of intelligence derived from data across business operations to help our customers meet their business objectives. For enterprise customers typical SAP applications are utilized as enterprise resource planning system (ERP), Line of Business (LoB) SaaS applications, enterprise data-warehouses, business intelligence or integration platforms. In SAP, there is so much data locked in silos that could be harnessed to drive business transformation. There is a strong momentum of SAP customers to leverage Microsoft Azure as their platform of choice for infrastructure and their SAP workloads. 
-
+# Overview
+Digital transformation requires a seamless combination of intelligence derived from data across business operations for enterprises to meet their business objectives. Enterprises typically utilize SAP applications as enterprise resource planning system (ERP), Line of Business (LoB) SaaS applications, enterprise data-warehouses, business intelligence or integration platforms. The siloed data in SAP systems could be harnessed to drive business transformation. As you progress through your cloud adoption journey and move business critical workloads to Azure, moving SAP workloads to Azure should be considered among your priorities to optimally integrate into your Azure environment.
 Once customers deploy the SAP landscape following best practices from SAP Landing zone accelerator, the next step is innovation with Azure Data Services. Hence combining and extending SAP workloads on Azure, deployed and operated as Infrastructure as a Service (IaaS) or SaaS with Azure Data Services, is the logical next step for our customers and partners. By combining SAP and non-SAP data and applying advanced data services, such as analytics and AI, customers are extracting real-time and predictive insights for improved business outcomes. 
 
 # Identify SAP Data Sources 
@@ -41,7 +41,7 @@ SAP SaaS solutions:
 
 **Design considerations:**
 
-- Source System: Consider choosing your source system based in existing implementations and business use case The source SAP environment is mostly given and cannot be changed. Document the source SAP solution along with OS and database version. An upgrade to a newer OS, SAP NetWeaver and database version will mostly not be possible in the short term. Options to access a SaaS solution may be more limited than a legacy and on-premises solution. Hence, first get familiar with the current solution’s capabilities and limitations concerning the nature of data and its extraction based on business requirements.
+- Source System: Consider choosing your source system based in existing implementations and business use case. The source SAP environment would be on a certain version ( SAP, OS and DB versions). Document the source SAP solution along with OS and database version. Typically an upgrade to a newer OS, SAP NetWeaver and database version are conducted as part of Software lifecycle management which may have a frequency of once or twice a year and depends on the customer. This effectively means quick changes to software versions are not possible in the short term. Options to access a SaaS solution may be more limited than a legacy and on-premises solution, so first get familiar with the current solution’s capabilities and limitations concerning the nature of data and its extraction based on business requirements.
 
 - Licensing - Understand the existing licenses available and figure out the licensing impact before extracting data from SAP systems. Ensure to work with your SAP counterparts. Since licensing is a complex topic and the policies may change over time, always contact your SAP account team for guidance. Please refer to these guides from SAP for more information on licensing 
 

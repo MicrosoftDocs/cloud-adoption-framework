@@ -59,8 +59,7 @@ The partitioning process for SAP CDC connector is explained below and it works t
 
 ![Data extraction resources  ](./media/sap-partition1.png)
 
-There are two places where one can scale which is at Self Hosted IR & Azure IR. Customer should look at the CPU consumption of SHIR. They have the option of scale up and scale out for SHIR. Scaling out increase availability and resiliency. Should not start with huge IRs and scale up to a decent performance
-
+Scaling can be performed on the Self Hosted IR and the Azure IR depending on your performance requirements.  Reviewing the CPU consumption of the SHIR will provide you metrics to help you decide on your scaling approach. The SHIR can be vertically or horizontally scaled based on your needs.  We recommend that your deploy the Azure IR at a SKU on the lower end and then scaling up to meet your performance requirements as determined through load testing rather than starting at a higher end unnecessarily.
 > [!NOTE]
 > If you are reaching up to 70% capacity, scale up or scale out for SHIR
 
