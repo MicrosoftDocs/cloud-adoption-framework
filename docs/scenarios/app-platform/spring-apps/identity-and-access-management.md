@@ -62,14 +62,13 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 - Azure Spring Apps Identities
 	- Use your own managed identity for Azure Spring Apps
 	- Use system-assigned and user-assigned managed identities separately 
-	- 
 	- Use Privileged Identity Management in Azure AD and identity and access management in Azure landing zones.
 
 ##### Secure internet communication
 
-	- Use certificates issued by a certificate authority, extended validation certificates or wildcard certificates
-	- Use self-signed certificated only for non-prod environments
-	- Securely load certificates from Azure Key Vault
+- Use certificates issued by a certificate authority, extended validation certificates or wildcard certificates
+- Use self-signed certificated only for non-prod environments
+- Securely load certificates from Azure Key Vault
 
 ##### Role-based access controls
 

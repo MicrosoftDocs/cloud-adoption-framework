@@ -18,7 +18,7 @@ Content coming soon.
 
 
 
-Management and Operations considerations for Azure Spring Apps
+Management and operational considerations for Azure Spring Apps
 
 This article provides design considerations and recommendations for operations management when using the Azure Spring Apps. While Azure Spring Apps aims to simplify the overall management of your application, the below list covers common operational aspects that need to be addressed.
 

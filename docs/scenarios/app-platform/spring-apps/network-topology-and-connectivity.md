@@ -27,6 +27,8 @@ Follow these design considerations and recommendations as best practices for sub
 
     If you're planning to use existing subnets or decide to bring your own route tables, have policies in place to make sure that rules added by Azure Spring Apps aren't updated or deleted.
 
+    Another aspect is security. Consider rules that will allow or deny traffic into the subnet.
+
  - **Egress (outbound/north-south) traffic**. Traffic going from the virtual network must be routed through Azure Firewall or network virtual appliance (NVA). 
 
     Consider the limitations of the built-in load balancer provided by Azure Spring Apps. Based on your requirements, you might need to customize egress paths by using User Defined Routing (UDR), for instance to route all traffic through an NVA. 
