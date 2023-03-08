@@ -14,7 +14,7 @@ ms.date: 03/03/2023
 
 This article explains the benefits of using Infrastructure as Code to update Azure landing zones.  Organizations need to continue to update their landing zones as they operate to ensure configurations are continually correct and respond to needs for changes.
 
-Because Infrastructure as Code can manage the whole life cycle and excels at managing resources that it has deployed, organizations should plan to deploy their Azure Landing Zones with Infrastructure as Code.  Attempting to bring non-IaC deployed resources in to the management scope of IaC can be a time-consuming effort.  
+Because Infrastructure as Code can manage the whole life cycle and excels at managing resources that it has deployed, organizations should plan to deploy their Azure Landing Zones with Infrastructure as Code.  Attempting to bring non-IaC deployed resources in to the management scope of IaC will involve some additional effort.  Most organizations are better served starting with IaC deployments to reduce effort later.
 
 To understand more about why you'll want to update your Landing Zone, visit [Keep your Azure landing zone up to date](../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md)
 
