@@ -35,7 +35,7 @@ Modernization enhances existing workloads to improve operations, increase effici
 
 - ***Solutions:*** Integrate other services and modify code meet business goals.
 
-- ***Key benefits:*** Optimize cost, security, reliability, performance, and operations for increased productivity.
+- ***Key benefits:*** Optimize cost, security, reliability, performance, and operations for increased productivity. You don't need to maintain the underlying infrastructure, so you can focus on your core business.
 
 For more information, see [Modernize](../modernize/index.md).
 
