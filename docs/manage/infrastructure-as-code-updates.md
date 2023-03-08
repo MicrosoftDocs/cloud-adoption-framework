@@ -22,7 +22,7 @@ To understand more about why you'll want to update your Landing Zone, visit [Kee
 
 Infrastructure as Code, abbreviated as IaC, refers to the practice and tools for managing the lifecycle of infrastructure resources using machine-readable definition files.  The definition for the infrastructure is written and then can be versioned, deployed through pipelines, and become a part of the deployment for workloads.
 
-Infrastructure as Code technologies are *declarative* meaning that running it multiple times with the same definition won't change the result beyond the initial application.  Configuring infrastructure through scripts, such as the Azure CLI or Azure PowerShell, are *imperative* meaning that the scripts contain a set of actions that will be repeated each time it's run.
+Infrastructure as Code technologies are *declarative* meaning that when it runs, it sets the configuration to what is described in the code, regardless of its current state.  Configuring infrastructure through scripts, such as the Azure CLI or Azure PowerShell, are *imperative* meaning that the scripts perform a set of actions; the result will depend on the current state plus the state after the actions.
 
 This means that if you have an Infrastructure as Code definition for an Azure resource, you can run that definition as often as you want, and it will only create a change if:
 
