@@ -30,7 +30,7 @@ The following video shows how the Secure methodology helps guide security improv
 
 ## Map to concepts, frameworks, and standards
 
-Security is a standalone organizational discipline and an attribute that's integrated or overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses different frameworks to operate, capture risk, and plan controls. The disciplines in the CAF Secure methodology relate to other security concepts and guidance in the following ways:
+Security is a standalone organizational discipline and an attribute that's integrated or overlaid on other disciplines. It's difficult to precisely define and map in detail. The security industry uses different frameworks to operate, capture risk, and plan controls. The disciplines in the CAF Secure methodology relate to other security concepts and guidance in the following ways:
 
 - **Zero Trust:** Microsoft believes all security disciplines should follow the Zero Trust principles, which are *assume breach*, *verify explicitly*, and *use least privilege access*. These principles underpin any sound [security strategy](../strategy/define-security-strategy.md) and must be balanced with *business enablement* goals. The first and most visible part of Zero Trust is in access control, so it's highlighted in the description of access control security discipline.
 
@@ -64,9 +64,9 @@ Security organizations experience two types of major transformations at the same
 
 ## Guide lasting transformation
 
-To transform how the business and tech teams view security, it requires aligning security closely to the priorities, processes, and risk framework. Key areas that drive success are:
+To transform how the business and tech teams view security requires aligning security to the priorities, processes, and risk framework. Key areas that drive success are:
 
-- **Culture:** The culture of security must be focused on safely meeting the business mission, not impeding it. Security must become a normalized part of the culture of the organization. The internet where the business operates is open and allows adversaries to attempt attacks at any time. This cultural shift requires improved processes, partnerships, and ongoing leadership support at all levels to communicate the change, model the behavior, and reinforce the shift.
+- **Culture:** The culture of security must be focused on safely meeting the business mission, not impeding it. Security must become a normalized part of the culture of the organization. The internet, where the business operates, is open and allows adversaries to attempt attacks at any time. This cultural shift requires improved processes, partnerships, and ongoing leadership support at all levels to communicate the change, model the behavior, and reinforce the shift.
 - **Risk ownership:** The accountability for security risk should be assigned to the same roles that own all other risks. This accountability frees security up to be a trusted advisor and subject matter expert rather than a scapegoat. Security should be responsible for sound and balanced advice that's communicated in the language of those leaders but shouldn't be held accountable for decisions they don't own.
 - **Security talent:**  Security talent is in a chronic shortage and organizations should plan how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skill sets, mature security teams are diversifying their strategy by focusing on:
   - **Growing security skill sets and knowledge** within existing teams in IT and within the business. These skills are especially important for DevOps teams with a DevSecOps approach. The skills can take many forms, such as a security help desk, identifying and training champions within the community, or job swapping programs.
@@ -78,7 +78,7 @@ Because of these shifts, your cloud adoption program should focus heavily on bus
 
 - **Risk insights:** Align and integrate security insights and risk signals or sources to the business initiatives. Ensure that repeatable processes educate teams on the application of those insights and hold teams accountable for improvements.
 - **Security integration:** Integrate security knowledge, skills, and insights into daily operations of the business and IT environment. Incorporate repeatable processes and deep partnership at all levels of the organization.
-- **Operational resiliency:** Ensure that the organization is resilient by continuing operations during an attack (even if at a degraded state). Ensure that the organization rapidly bounces back to full operation.
+- **Operational resiliency:** Ensure that the organization is resilient by continuing operations during an attack (even if at a degraded state). The organization should rapidly bounce back to full operation.
 
 ### Security disciplines
 
