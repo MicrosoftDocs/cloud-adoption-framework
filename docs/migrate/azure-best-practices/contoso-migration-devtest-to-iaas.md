@@ -145,9 +145,7 @@ Contoso already set up a network that can be for Azure Migrate: Server Migration
      [![Screenshot of downloading the OVA file in the Discover machines window.](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png)](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png#lightbox)  
     *Figure 3: Download the .OVA file.*
 
- 1. Open the imported image and configure the tool.
-
- 1. Set up the prerequisites.
+ 1. Open the imported image and configure the tool. Set up the prerequisites.
 
     [![Screenshot of the section for setting up prerequisites.](./media/contoso-migration-devtest-to-iaas/migration-setup-prerequisites.png)](./media/contoso-migration-devtest-to-iaas/migration-setup-prerequisites.png#lightbox)  
     *Figure 4: Setting up the prerequisites.*
