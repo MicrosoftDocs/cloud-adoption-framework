@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 **APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
 
-# Different connectors and electing the optimal one
+# Different connectors and selecting the optimal one
 This article is part 2 of the SAP Extend and Innovate Data Best practices series. To Identify SAP Data sources, please refer to 
 [ Identify SAP Data Sources ](./sap-lza-identify-sap-data-sources.md)
 
