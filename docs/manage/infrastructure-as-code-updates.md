@@ -80,7 +80,9 @@ Periodic Landing Zone updates with Infrastructure as Code can help you catch thi
 
 When you make a change to resources via the portal, CLI, or other non-Infrastructure as Code method, the change goes through.  When you next run a deployment through Infrastructure as Code, the comparison to the code-defined state and the actual state in the portal can be flagged (using what-if or plan functions).  This can be used to identify that an environment has been modified outside of the code file.
 
-Once identified, Infrastructure as Code can be run to reset the resources to the correct configuration.  This is the default in Terraform but requires using a Complete mode deployment in Bicep.  This can let you repair unauthorized changes.
+Once identified, Infrastructure as Code can be run to attempt to align the deployment with the definition.  This can be used to identify issues and remediate many scenarios, depending on the nature of the issues, the nature of the run, and how the changes were made.  For example, Terraform will attempt to restore the baseline to resources it has deployed previously, and a `Complete` mode deployment in Bicep will remove resources in a resource group that are not part of the definition.  These can be excellent tools to detect and repair configuration drift, even if they might not be able to address all issues.
+
+To understand more about how these processes work, read about [Comparing Out of Band Changes - Out of Band Changes](https://learn.microsoft.com/azure/developer/terraform/comparing-terraform-and-bicep?tabs=comparing-bicep-terraform-integration-features#out-of-band-changes) to understand how these different approaches are tackled.  For Terraform, there is a helpful article on [Detecting and Managing Drift with Terraform](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform)
 
 Changes that are defined in the portal can be cumbersome to implement back in to Infrastructure as Code.  They require updating the code to match the current state, often involving reviewing each resource change and updating its parameters to match the "as is" configuration.
 
